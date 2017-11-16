@@ -6,7 +6,7 @@ Before you create the availability group, you need to:
 - Install SQL Server.
 
 >[!NOTE]
->On Linux, you must create an availability group before you add it as a cluster resource to be managed by the cluster. This document provides an example that creates the availability group. For distribution-specific instructions to create the cluster and add the availability group as a cluster resource, see the links under [Next steps](#next-steps).
+>On Linux, you must create an availability group before you add it as a cluster resource to be managed by the cluster. This document provides an example that creates the availability group. For distribution-specific instructions to create the cluster and add the availability group as a cluster resource, see the links under "Next steps."
 
 1. Update the computer name for each host.
 
@@ -23,8 +23,8 @@ Before you create the availability group, you need to:
 
 2. Configure the hosts file.
 
->[!NOTE]
->If hostnames are registered with their IP in the DNS server, you don't need to do the following steps. Validate that all the nodes intended to be part of the availability group configuration can communicate with each other. (A ping to the hostname should reply with the corresponding IP address.) Also, make sure that the /etc/hosts file doesn't contain a record that maps the localhost IP address 127.0.0.1 with the hostname of the node.
+    >[!NOTE]
+    >If hostnames are registered with their IP in the DNS server, you don't need to do the following steps. Validate that all the nodes intended to be part of the availability group configuration can communicate with each other. (A ping to the hostname should reply with the corresponding IP address.) Also, make sure that the /etc/hosts file doesn't contain a record that maps the localhost IP address 127.0.0.1 with the hostname of the node.
 
 
    The hosts file on every server contains the IP addresses and names of all servers that will participate in the availability group. 
@@ -106,7 +106,7 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-At this point your primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the mssql user, or give permission to the mssql user to access these files. 
+At this point, your primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the mssql user, or give permission to the mssql user to access these files. 
 
 For example, on the source server, the following command copies the files to the target machine. Replace the `**<node2>**` values with the names of the SQL Server instances that will host the replicas. 
 
@@ -180,3 +180,5 @@ The TCP port on the firewall must be open for the listener port.
 >For the SQL Server 2017 release, the only authentication method supported for the database mirroring endpoint is `CERTIFICATE`. The `WINDOWS` option will be enabled in a future release.
 
 For more information, see [The database mirroring endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+
+

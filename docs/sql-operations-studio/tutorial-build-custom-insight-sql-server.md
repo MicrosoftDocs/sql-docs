@@ -38,30 +38,30 @@ In this step, run a sql script to query the current active sessions.
 1. To open a new editor, press **Ctrl+N** . 
 1. Change the connection context to **TutorialDB**.
 
-1. Paste the following query into the query editor.
+1. Paste the following query into the query editor:
 
    ```sql
    SELECT count(session_id) as [Active Sessions]
    FROM sys.dm_exec_sessions
    WHERE status = 'running'
    ```
-1. Save the query in the editor to a *.sql file. For this tutorial, save the script as *activeSession.sql*.
+1. Save the query in the editor to a \*.sql file. For this tutorial, save the script as *activeSessions.sql*.
 1. To execute the query, press **F5**.
-1. After [!INCLUDE[name-sos](../includes/name-sos-short.md)] returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
+1. After the query results are displayed, click **View as Chart**, then click the **Chart Viewer** tab.
 1. Change **Chart Type** to **count**. These settings render a count chart.
 
-## Generate an insight widget setting
+## Add the custom insight to the database dashboard
 
 1. To open the insight widget configuration, click **Create Insight** on *Chart Viewer*:
    ![configuration](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
 2. Copy the insight configuration (the JSON data). 
 
-3. Press **Ctrl+Comma** and to open *User Settings*.
+3. Press **Ctrl+Comma** to open *User Settings*.
 
 4. Type *dashboard* in *Search Settings*.
 
-1. To configure an insight widget for SQL Server, click **Edit** for *dashboard.server.widgets*.
+1. Click **Edit** for *dashboard.server.widgets*.
 
    ![dashboard settings](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
 
@@ -91,7 +91,7 @@ In this step, run a sql script to query the current active sessions.
             }
         }
    ```
-6. Save the *User Settings* file and Open the *TutorialDB* database dashboard to see the active sessions widget:
+6. Save the *User Settings* file and open the *TutorialDB* database dashboard to see the active sessions widget:
 
    ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png) 
 

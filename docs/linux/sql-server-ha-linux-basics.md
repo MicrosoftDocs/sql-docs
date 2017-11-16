@@ -92,6 +92,7 @@ Similar to Windows Server, Linux distributions have a built-in firewall. If your
 For additional ports that may be used by Samba, refer to [https://wiki.samba.org/index.php/Samba_port_usage](https://wiki.samba.org/index.php/Samba_port_usage).
 Conversely, the name of the service under Linux can also be added as an exception instead of the port. For example, High-Availability for Pacemaker. Refer to your distribution for the names if this is the direction you wish to pursue. For example, on Red Hat the command to add Pacemaker is
 `sudo firewall-cmd --permanent --add-service=high-availability`
+
 **Firewall documentation:**
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SUSE](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
@@ -105,16 +106,25 @@ Use the instructions below to install the HA package and SQL Server Agent if the
 > If you will not use SQL Server Agent for log shipping or any other use, it does not have to be installed, so package `mssql-server-agent` can be skipped.
 
 **Red Hat**
-`sudo yum install mssql-server-ha mssql-server-agent`
-`sudo systemctl restart mssql-server`
+
+```bash
+sudo yum install mssql-server-ha mssql-server-agent
+`sudo systemctl restart mssql-server
+```
 
 **SUSE**
-`sudo zypper install mssql-server-ha mssql-server-agent`
-`sudo systemctl restart mssql-server`
+
+```bash
+sudo zypper install mssql-server-ha mssql-server-agent
+sudo systemctl restart mssql-server
+```
 
 **Ubuntu**
-`sudo apt-get install mssql-server-ha mssql-server-agent`
-`sudo systemctl restart mssql-server`
+
+```bash
+sudo apt-get install mssql-server-ha mssql-server-agent
+sudo systemctl restart mssql-server
+```
 
 The other optional packages for SQL Server on Linux, SQL Server Full-Text Search (`mssql-server-fts`) and SQL Server Integration Services (`mssql-server-is`), are not required for high availability either for an FCI or an AG.
 
@@ -132,8 +142,10 @@ All of the currently supported distributions ship a high availability add on/ext
 > [!NOTE]
 > The cluster stack is commonly referred to as Pacemaker in the Linux world.
 
-This solution in some ways is similar to, but in many ways is different from deploying clustered configurations using Windows Server. In Windows Server, the availability form of clustering called a Failover Cluster (WSFC) is built into the operating system and the feature that enables the creation of a WSFC, Failover Clustering, is disabled by default. AGs and FCIs are built on top of a WSFC, and share tight integration because of the specific resource DLL that is provided by SQL Server. This tightly coupled solution is possibly by and large because it is all from one vendor.
+This solution in some ways is similar to, but in many ways is different from deploying clustered configurations using Windows Server. In Windows Server, the availability form of clustering called a Failover Cluster (WSFC) is built into the operating system, and the feature that enables the creation of a WSFC, Failover Clustering, is disabled by default. AGs and FCIs are built on top of a WSFC, and share tight integration because of the specific resource DLL that is provided by SQL Server. This tightly coupled solution is possibly by and large because it is all from one vendor.
+
 ![](./media/sql-server-ha-linux-basics/image1.png)
+
 On Linux, while each supported distribution has Pacemaker available, each distribution can customize and have slightly different implementations and versions. Some of the differences will be reflected in the instructions in this document. The clustering layer is open source, so even though it ships with the distributions, it is not tightly integrated in the same way a WSFC is under Windows Server. This is why Microsoft provides `mssql-server-ha` so that SQL Server and Pacemaker stack can provide as close to, but not exactly the same, experience for AGs and FCIs under Windows Server.
 For full documentation on Pacemaker, including a more in-depth explanation of what everything is with full reference information for RHEL and SUSE. Ubuntu does not have a guide for availability.
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
@@ -228,38 +240,57 @@ This section will document the tasks that must be done to configure both SQL Ser
 
 #### Install the HA add on
 Use the syntax below to install the packages for each distribution of Linux that make up the HA add on. On SUSE, the HA add on gets initialized when the cluster is created.
+
 **RHEL**
 1.  Register the server using the syntax below. You will be prompted for a valid username and password.
+    
     `sudo subscription-manager register`
 2.  List the available pools for registration.
+    
     `sudo subscription-manager list --available`
 3.  Run the following command to associate RHEL high availability with the subscription.
+    
     `sudo subscription-manager attach --pool=*PoolID*`
+    
     where *PoolId* is the pool ID for the high availability subscription from the previous step.
 4.  Enable the repository to be able to use the high availability add on.
+    
     `sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms`
 5.  Install Pacemaker.
+    
     `sudo yum install pacemaker pcs fence-agents-all resource-agents`
 
 **Ubuntu**
+
 `sudo apt-get install pacemaker pcs fence-agents resource-agents`
 
 **SUSE**
+
 Install the High Availability pattern in YaST or do it as part of the main installation of the server. This can be done with an ISO/DVD as a source or getting it from online.
 
 #### Prepare the nodes for Pacemaker (RHEL and Ubuntu only)
 Pacemaker itself uses a user created on the distribution named *hacluster*. This gets created when the HA add on is installed on RHEL and Ubuntu.
 1.  On each server that will serve as a node of the Pacemaker cluster, create the password for a user that will be used by the cluster. The name used in the examples will be *hacluster*, but any name can be used. The name and password must be the same on all nodes participating in the Pacemaker cluster.
+    
     `sudo passwd hacluster`
-2.  On each node that will be part of the Pacemaker cluster, enable and start the `pcsd` service. With the following commands:
-    RHEL and Ubuntu
-    `sudo systemctl enable pcsd`
-    `sudo systemctl start pcsd`
+2.  On each node that will be part of the Pacemaker cluster, enable and start the `pcsd` service with the following commands (RHEL and Ubuntu):
+
+    ```bash
+    sudo systemctl enable pcsd
+    sudo systemctl start pcsd
+    ```
+
     Then execute
-    `sudo systemctl status pcsd`
+    
+    ```bash
+    sudo systemctl status pcsd
+    ```
+    
     to ensure that `pcsd` is started.
 3.  Enable the pacemaker service on each possible node of the Pacemaker cluster.
+
     `sudo systemctl start pacemaker`
+
     On Ubuntu, you will see an error
     *pacemaker Default-Start contains no runlevels, aborting.*
     This is a known issue. Despite the error, enabling the pacemaker service is successful, and this is a bug that will be fixed at some point in the future.
@@ -269,20 +300,28 @@ Pacemaker itself uses a user created on the distribution named *hacluster*. This
 This section will document how to create the cluster for each distribution of Linux.
 
 **RHEL**
+
 These instructions will show how to configure a Pacemaker cluster on RHEL.
 1.  Authorize the nodes.
+    
     `sudo pcs cluster auth *Node1 Node2 … NodeN* -u hacluster`
+    
     where *NodeX* is the name of the node.
 2.  Create the cluster
+    
     `sudo pcs cluster setup --name *NameforCluster Nodelist* --start --all --enable`
+    
     where *PMClusterName* is the name assigned to the Pacemaker cluster and *Nodelist* is the list of names of the nodes separated by a space.
 
 **Ubuntu**
-1.  Configuring Ubuntu is similar to RHEL. However, there is one major difference: when the Pacemaker packages are installed, it creates a base configuration for the cluster and enables and starts pcsd. If you try to configure the Pacemaker cluster by following the RHEL instructions exactly, you will get an error. To fix this problem, perform the following steps: Remove the default Pacemaker configuration from each node.
+Configuring Ubuntu is similar to RHEL. However, there is one major difference: when the Pacemaker packages are installed, it creates a base configuration for the cluster and enables and starts pcsd. If you try to configure the Pacemaker cluster by following the RHEL instructions exactly, you will get an error. To fix this problem, perform the following steps: 
+1.  Remove the default Pacemaker configuration from each node.
+    
     `sudo pcs cluster destroy`
 2.  Follow the steps in the RHEL section for creating the Pacemaker cluster.
 
 **SUSE/SLES**
+
 The process for creating a Pacemaker cluster is completely different on SUSE than it is on RHEL and Ubuntu. The steps below document how to create a cluster with SUSE.
 1.  Start the cluster configuration process by running sudo `ha-cluster-init` on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SUSE’s built-in fencing that is storage-based. This can be configured later.
 2.  You will be prompted to configure Corosync. You will be asked for the network address to bind to as well as the multicast address and port. The network address will be the subnet that you are using. For example, 192.191.190.0. You can accept the defaults and hit enter at every prompt, or change if necessary.
@@ -290,14 +329,17 @@ The process for creating a Pacemaker cluster is completely different on SUSE tha
 4.  Finally, you will be asked if you want to configure an IP address for administration. This is optional, but functions similar to the IP address for a WSFC in the sense that it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This, too, is optional.
 5.  Ensure that the cluster is up and running by issuing `sudo crm status`.
 6.  Change the hacluster password
+    
     `sudo passwd hacluster`
 8.  If you configured an IP address for administration, you can test it in a browser. This will also test the password change for `hacluster`.
     ![](./media/sql-server-ha-linux-basics/image2.png)
 9.  On another SUSE server that will be a node of the cluster, run
+    
     `sudo ha-cluster-join`
 10. When prompted, enter the name or IP address of the server that was configured as the first node of the cluster in the previous steps. The server will be added as a node to the existing cluster.
 11. Verify the node was added by issuing `sudo crm status`.
 12. Change the hacluster password
+    
     `sudo passwd hacluster`
 13. Repeat Steps 8-11 for all other servers to be added to the cluster.
 

@@ -36,19 +36,19 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 In this step, run a sql script to query the current active sessions.
 
 1. To open a new editor, press **Ctrl+N** . 
-2. Change the connection context to **TutorialDB**.
+1. Change the connection context to **TutorialDB**.
 
-2. Paste the following query into the query editor.
+1. Paste the following query into the query editor.
 
    ```sql
    SELECT count(session_id) as [Active Sessions]
    FROM sys.dm_exec_sessions
    WHERE status = 'running'
    ```
+1. Save the query in the editor to a *.sql file. For this tutorial, save the script as *activeSession.sql*.
 1. To execute the query, press **F5**.
-3. After [!INCLUDE[name-sos](../includes/name-sos-short.md)] returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
-4. Change **Chart Type** to **count**. These settings render a count chart.
-5. Save the query in the editor to a *.sql file. For this tutorial, save the script as *activeSession.sql*.
+1. After [!INCLUDE[name-sos](../includes/name-sos-short.md)] returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
+1. Change **Chart Type** to **count**. These settings render a count chart.
 
 ## Generate an insight widget setting
 

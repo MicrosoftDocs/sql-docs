@@ -1,7 +1,7 @@
 ---
 title: "Resource governance for machine learning in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/13/2017"
+ms.date: "11/16/2017"
 ms.prod:
  -  "sql-server-2016"
  -  "sql-server-2017"
@@ -35,15 +35,15 @@ This section provides information about how you can manage resources used by ext
 
 You can use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to manage the resources used by the external runtimes for R and Python.  For machine learning, resource governance involves these tasks:
 
-+ Identifying scripts that use excessive server resources.  
++ Identifying scripts that use excessive server resources.
   
-     The administrator needs to be able to terminate or throttle jobs that are consuming too many resources.  
+     The administrator needs to be able to terminate or throttle jobs that are consuming too many resources.
   
-+ Mitigating unpredictable workloads.  
++ Mitigating unpredictable workloads.
   
      For example, if multiple machine learning jobs are running concurrently on the server, the resulting resource contention could lead to unpredictable performance or threaten completion of the workload. However, if resource pools are used, the jobs can be isolated from each other.
   
--   Prioritizing workloads.  
+-   Prioritizing workloads.
   
      The administrator or architect needs to be able to specify workloads that must take precedence, or guarantee certain workloads to complete if there is resource contention.
 
@@ -61,15 +61,15 @@ SQL Server supports three types of default resource pools:
   
  In addition, you can create *user-defined resource pools* to allocate resources to the database engine or other applications, and create *user-defined external resource pools* to manage R and other external processes.
   
- For a good introduction to terminology and general concepts, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
+ For a good introduction to terminology and general concepts, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).
 
   
-## Resource management using Resource Governor 
+## Resource management walkthrough with Resource Governor
 
-If you are new to Resource Governor, see this topic for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [How To: Create a Resource Pool for R](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)   
+If you are new to Resource Governor, see this topic for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [Create a resource pool for external scripts](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
   
- You can use the *external resource pool* mechanism to manage the resources used by the following executables that are used in machine learning:  
-  
+ You can use the *external resource pool* mechanism to manage the resources used by the following executables that are used in machine learning:
+
 + Rterm.exe and satellite processes
 + Python.exe and satellite processes
 + BxlServer.exe and satellite processes
@@ -93,4 +93,4 @@ Therefore, if there is a resource issue that needs to be mitigated immediately, 
 
 [Create a resource pool for machine learning](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
 
-[Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
+[Resource Governor resource pools](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

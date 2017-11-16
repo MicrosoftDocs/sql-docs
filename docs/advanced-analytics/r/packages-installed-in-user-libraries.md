@@ -1,7 +1,7 @@
 ---
 title: "Avoiding errors on R packages installed in user libraries | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2017"
+ms.date: "11/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
 caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Avoiding errors on R packages installed in user libraries
@@ -29,7 +29,7 @@ R developers who need to install new R packages are accustomed to installing pac
 For example, in a typical R development environment, the user would add the  location of the package to the R environment variable `libPath`, or reference the full package path, like this:
 
 ```R
-library("c:/Users/<username>/R/win-library/packagename")  
+library("c:/Users/<username>/R/win-library/packagename")
 ```
 
 However, this can never work when running R solutions in SQL Server, because R packages must be installed to a specific default library that is associated with the instance.
@@ -62,6 +62,6 @@ If you take the package management approach based on database roles, it is not n
 
     + Edit code to ensure that packages are loaded from the default library, not from ad hoc directories or user libraries.
 
-+ Avoid ad hoc package installation as part of a solution. Check your code to make sure that there are no calls to uninstalled packages, or code that installs packages dynamically. If you don’t have permissions, the code will fail, and if you do have permissions, you should install the packages separately from other code that you want to execute.
++ Avoid ad hoc package installation as part of a solution. Check your code to make sure that there are no calls to uninstalled packages, or code that installs packages dynamically. If you don’t have permissions to install packages, the code will fail. Even if you do have permissions to install packages, you should do so separately from other code that you want to execute.
 
-+ Modify any direct paths to R package libraries. If a package is installed in the default library, the R runtime will load the package from the default library, even if a different library is specified in the R code.
++ Update your code to remove direct references to the paths of R packages or R libraries. If a package is installed in the default library, the R runtime will load the package from the default library, even if a different library is specified in the R code.

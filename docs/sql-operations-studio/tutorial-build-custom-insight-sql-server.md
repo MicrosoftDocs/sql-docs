@@ -45,7 +45,7 @@ In this step, run a sql script to query the current active sessions.
    FROM sys.dm_exec_sessions
    WHERE status = 'running'
    ```
-1. Save the query in the editor to a \*.sql file. For this tutorial, save the script as *activeSessions.sql*.
+1. Save the query in the editor to a \*.sql file. For this tutorial, save the script as *activeSession.sql*.
 1. To execute the query, press **F5**.
 1. After the query results are displayed, click **View as Chart**, then click the **Chart Viewer** tab.
 1. Change **Chart Type** to **count**. These settings render a count chart.

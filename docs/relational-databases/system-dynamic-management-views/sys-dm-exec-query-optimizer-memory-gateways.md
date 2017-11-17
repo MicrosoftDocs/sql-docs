@@ -4,8 +4,11 @@ description: "Returns the current status of resource semaphores used to throttle
 ms.custom: ""
 ms.date: "04/06/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology:
   - "database-engine"
 ms.tgt_pltfrm: ""

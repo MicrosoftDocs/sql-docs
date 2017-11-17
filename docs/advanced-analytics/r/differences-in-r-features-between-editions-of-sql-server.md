@@ -1,7 +1,7 @@
 ---
 title: "Differences in machine learning features between editions of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/09/2017"
+ms.date: "11/16/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -56,7 +56,7 @@ ms.workload: "Inactive"
 
 -   **Azure SQL Database**
   
-     R Services is available in Azure SQL Database as a preview feature, beginning fall 2017. See this article for details about current restrictions: [Using R in Azure SQl Database](using-r-in-azure-sql-database.md).
+     After an initial test release, R Services is currently **not** available in Azure SQL Database, pending further development. 
 
 ### External script languages supported
 

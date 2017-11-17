@@ -3,8 +3,11 @@ title: "Trace Flags (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,7 +30,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # DBCC TRACEON - Trace Flags (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Trace flags are used to temporarily set specific server characteristics or to switch off a particular behavior. For example, if trace flag 3205 is set when an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts, hardware compression for tape drivers is disabled. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems.
   

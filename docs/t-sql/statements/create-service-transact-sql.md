@@ -3,8 +3,11 @@ title: "CREATE SERVICE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -28,7 +31,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new service. A [!INCLUDE[ssSB](../../includes/sssb-md.md)] service is a name for a specific task or set of tasks. [!INCLUDE[ssSB](../../includes/sssb-md.md)] uses the name of the service to route messages, deliver messages to the correct queue within a database, and enforce the contract for a conversation.  
   

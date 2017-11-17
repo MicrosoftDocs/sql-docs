@@ -1,5 +1,5 @@
 ---
-title: "Modulo (Transact-SQL) | Microsoft Docs"
+title: "% (Modulus) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
@@ -14,14 +14,18 @@ ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "modulo"
+  - "modulus"
   - "% (Modulo)"
+  - "% (Modulus)"
   - "MOD_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "% (modulo operator)"
+  - "% (modulus operator)"
   - "remainder of division operation"
   - "modulo operator (%)"
+  - "modulus operator (%)"
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 caps.latest.revision: 42
 author: "BYHAM"
@@ -29,8 +33,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ms.workload: "Active"
 ---
-# Modulo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+# % (Modulus) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the remainder of one number divided by another.  
   
@@ -100,7 +105,7 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Modulo EQUALS &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [%= &#40;Modulus Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
  [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   

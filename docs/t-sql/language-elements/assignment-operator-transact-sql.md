@@ -1,5 +1,5 @@
 ---
-title: "Assignment Operator (Transact-SQL) | Microsoft Docs"
+title: "= (Assignment Operator) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
@@ -27,8 +27,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Assignment Operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+
+# = (Assignment Operator) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   The equal sign (=) is the only [!INCLUDE[tsql](../../includes/tsql-md.md)] assignment operator. In the following example, the `@MyCounter` variable is created, and then the assignment operator sets `@MyCounter` to a value returned by an expression.  
   
@@ -50,6 +51,7 @@ GO
   
 ## See Also  
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

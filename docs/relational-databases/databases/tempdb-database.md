@@ -134,7 +134,7 @@ manager: "jhubbard"
  
  Preallocate space for all tempdb files by setting the file size to a value large enough to accommodate the typical workload in the environment. This prevents tempdb from expanding too frequently, which can affect performance. The tempdb database should be set to autogrow, but this should be used to increase disk space for unplanned exceptions. 
 
- Data files should be of equal size within each [filegroup](../../relational-databases/databases/database-files-and-filegroups.md#Filegroups), as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a proportional-fill algorithm that favors allocations in files with more free space. Dividing tempdb into multiple data files of equal size provides a high degree of parallel efficiency in operations that use tempdb. 
+ Data files should be of equal size within each [filegroup](../../relational-databases/databases/database-files-and-filegroups.md#filegroups), as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a proportional-fill algorithm that favors allocations in files with more free space. Dividing tempdb into multiple data files of equal size provides a high degree of parallel efficiency in operations that use tempdb. 
  
  Set the file growth increment to a reasonable size to avoid the tempdb database files from growing by too small a value. If the file growth is too small, compared to the amount of data that is being written to tempdb, tempdb may have to constantly expand. This will affect performance.
  

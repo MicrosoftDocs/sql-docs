@@ -2,10 +2,13 @@
 title: "Connection libraries for Microsoft SQL Databases | Microsoft Docs"
 description: "Provides download links for modules which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
 author: MightyPen
-ms.service:
-ms.prod: "sql-server"
+ms.service: ""
+ms.component: "connect"
+ms.suite: "sql"
+ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
 ms.technology: "dbe-data-tier-apps"
-ms.custom: "develop apps"
+ms.custom: ""
 ms.workload: "data-management"
 ms.topic: article
 ms.date: 08/09/2017

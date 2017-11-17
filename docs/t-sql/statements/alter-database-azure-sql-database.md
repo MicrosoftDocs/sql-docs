@@ -1,13 +1,13 @@
 ---
 title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: 
+ms.prod: ""
+ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
+ms.component: "t-sql|statements"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # ALTER DATABASE (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Modifies a  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Changes the name of a database, the edition and service objective of a database, join an elastic pool, and sets database options.  
   

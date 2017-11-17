@@ -3,8 +3,11 @@ title: "Bitwise Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,7 +26,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Bitwise Operators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Bitwise operators perform bit manipulations between two expressions of any of the data types of the integer data type category.  
   Bitwise operators convert two integer values to binary bits, perform the AND, OR, or NOT operation on each bit, producing a result. Then converts the result to an integer.  

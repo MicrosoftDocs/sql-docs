@@ -3,8 +3,11 @@ title: "ALTER DATABASE File and Filegroup Options (Transact-SQL) | Microsoft Doc
 ms.custom: ""
 ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -48,7 +51,7 @@ manager: "cguyer"
 ms.workload: "Active"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifies the files and filegroups associated with the database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Adds or removes files and filegroups from a database, and changes the attributes of a database or its files and filegroups. For other ALTER DATABASE options, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   

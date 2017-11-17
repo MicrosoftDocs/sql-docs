@@ -1,13 +1,13 @@
 ---
 title: "Firewall Rules Stored Procedures (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "07/28/2016"
-ms.prod: 
+ms.prod: ""
+ms.prod_service: "sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
+ms.component: "system-stored-procedures"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,7 +27,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Firewall Rules Stored Procedures (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   This section contains the following stored procedures that set or delete firewall rules. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] firewall rules can be used with [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. For more information, see [Configure Azure SQL Database firewall rules - overview](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
   

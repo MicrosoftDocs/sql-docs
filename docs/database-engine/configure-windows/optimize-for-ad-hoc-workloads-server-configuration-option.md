@@ -1,7 +1,7 @@
 ---
 title: "optimize for ad hoc workloads Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
+ms.date: "11/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,11 +29,25 @@ ms.workload: "On Demand"
   
  The compiled plan stub is one of the cacheobjtypes displayed by the sys.dm_exec_cached_plans catalog view. It has a unique sql handle and plan handle. The compiled plan stub does not have an execution plan associated with it and querying for the plan handle will not return an XML Showplan.  
   
- Trace flag 8032 reverts the cache limit parameters to the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RTM setting which in general allows caches to be larger. Use this setting when frequently reused cache entries do not fit into the cache and when the optimize for ad hoc workloads Server Configuration Option has failed to resolve the problem with plan cache.  
+ [Trace flag 8032](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) reverts the cache limit parameters to the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RTM setting which in general allows caches to be larger. Use this setting when frequently reused cache entries do not fit into the cache and when the optimize for ad hoc workloads Server Configuration Option has failed to resolve the problem with plan cache.  
   
 > [!WARNING]  
 >  Trace flag 8032 can cause poor performance if large caches make less memory available for other memory consumers, such as the buffer pool.  
-  
+
+## Recommendations
+If the number of single-use plans take a significant portion of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] memory in an OLTP server, and these plans are Ad-hoc plans, use this server option to decrease memory usage with these objects.
+To find the number of single-use cached plans, run the following query:
+
+```t-sql
+SELECT objtype, cacheobjtype, 
+  AVG(usecounts) AS Avg_UseCount, 
+  SUM(refcounts) AS AllRefObjects, 
+  SUM(CAST(size_in_bytes AS bigint))/1024/1024 AS Size_MB
+FROM sys.dm_exec_cached_plans
+WHERE objtype = 'Adhoc' AND usecounts = 1
+GROUP BY objtype, cacheobjtype;
+```
+
 ## See Also  
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  

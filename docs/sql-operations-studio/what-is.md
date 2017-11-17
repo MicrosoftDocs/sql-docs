@@ -2,7 +2,7 @@
 title: What is SQL Operations Studio (preview)? | Microsoft Docs
 description: SQL Operations Studio (preview) is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running. 
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "11/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -16,7 +16,9 @@ ms.workload: "Inactive"
 
 # What is [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T255/player]
 
 **[Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

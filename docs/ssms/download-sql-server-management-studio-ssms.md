@@ -156,33 +156,6 @@ The following are issues and limitations with this 17.3 release:
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Log an issue or suggestion at Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 
 
-## Installing non-English SSMS on English OS computers
-[??DOES THIS ALSO WORK FOR SETTING ENGLISH SSMS ON NON-ENGLISH OS??]
-
-SSMS builds produce installers for multiple languages, but those installers block installation on systems whose system code page doesn't match the SSMS language. 
-
-To unblock installation of a foreign language SSMS on your English OS: 
-
-The following steps differ depending on your version of Windows. This is the steps for Windows 10:
-
-1. Install the Windows language pack for the language you want SSMS to use. 
-   - **Settings** > **Time & language** > **Region & language** > **Add a language**
-
-1. Set the system locale to use the language pack installed in the previous step. After installing SSMS, you'll set the system locale back to English.
-   
-  1. **Settings** > **Time & language** > **Region & language** > **Additional date, time, & regional settings**.
-  2. Now select **Change location**, then click the **Administrative** tab, and select **Change system locale**.
-  3. Set **Current system locale** to use the language pack you installed in the previous steps.
-
-1. Install SSMS and run it!
-2. Open **Tools** > **Options**, and select **International Settings**.
-3. Click **Get additional languages**, and select the VS Shell language to match SSMS [??THIS IS CONFUSING TO ME - NEED CLARIFICATION HERE??]
-
-> [!NOTE]
-> If **Get additional languages** isn't available, edit *c:\\Program Files (x86)\\Microsoft SQL Server\\140\\Tools\\Binn\\ManagementStudio\\ssms.pkgundef* and delete this line:
-> *[$RootKey$\\ToolsOptionsPages\\Environment\\International Settings]*
-
-Once the language pack is installed, run SSMS again and pick the language you installed on the International Settings options page. When you run SSMS again it will be fully localized. [??THIS IS CONFUSING TO ME - DIDN'T WE JUST DO THIS IN THE STEPS ABOVE??]
 
 
 ## See Also

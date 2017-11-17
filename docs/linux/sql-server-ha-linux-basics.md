@@ -47,8 +47,8 @@ Some common commands; each of these have various switches and options that can b
 ### Ensure that files can be copied
 One thing that anyone using SQL Server on Linux should be able to do is copy files from one server to another. This task will be very important for AG configurations as will be shown later in this article.
 
-Things like permission issues can exist on Linux as well as on Windows Server-based installations. However, those familiar with how to copy from server to server on Windows may not be familiar with how it is done on Linux. A common method is to use the command line utility `scp`, which stands for secure copy. Behind the scenes, `scp` uses OpenSSH. SSH stands for secure shell. Depending on the Linux distribution, OpenSSH itself may not be installed. If it is not, OpenSSH will need to be installed first. For more information on configuring OpenSSH, see the information at the links for each distribution below:
--   [Red Hat Enterprise Linux](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
+Things like permission issues can exist on Linux as well as on Windows Server-based installations. However, those familiar with how to copy from server to server on Windows may not be familiar with how it is done on Linux. A common method is to use the command line utility `scp`, which stands for secure copy. Behind the scenes, `scp` uses OpenSSH. SSH stands for secure shell. Depending on the Linux distribution, OpenSSH itself may not be installed. If it is not, OpenSSH will need to be installed first. For more information on configuring OpenSSH, see the information at the following links for each distribution:
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
 -   [SUSE](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -58,19 +58,19 @@ When using `scp`, you must provide the credentials of the server if it is not th
 
 will copy the file MyAGCert.cer to the folder specified on the other server. Note that you must have permissions – and possibly ownership – of the file to copy it, so `chown` may also need to be employed before copying. Similarly, on the receiving side, the right user needs access to manipulate the file. For example, to restore that certificate file the `mssql` user must be able to access it.
 
-Samba, which is the Linux variant of server message block (SMB), can also be used to create shares accessed by UNC paths such as `\\SERVERNAME\SHARE`. For more information on configuring Samba, see the information at the links for each distribution below:
--   [Red Hat Enterprise Linux](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
+Samba, which is the Linux variant of server message block (SMB), can also be used to create shares accessed by UNC paths such as `\\SERVERNAME\SHARE`. For more information on configuring Samba, see the information at the following links for each distribution:
+-   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
 -   [SUSE](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
 -   [Ubuntu](https://help.ubuntu.com/community/Samba)
 
 Windows Server-based SMB shares can also be used; SMB shares do not need to be Linux-based as long as the client portion of Samba is configured properly on the Linux server hosting SQL Server and the share has the right access. For those in a mixed environment, this would be one way to leverage existing infrastructure for Linux-based SQL Server deployments.
 
-One thing that is important is that the version of Samba deployed should be SMB 3.0 compliant. When SMB support was added in SQL Server 2012, it required all shared support SMB 3.0. If using Samba for the share and not Windows Server, the Samba-based share should be using Samba 4.0 or later, and ideally 4.3 or later which supports SMB 3.1.1. A good source of information on SMB and Linux is [http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+One thing that is important is that the version of Samba deployed should be SMB 3.0 compliant. When SMB support was added in SQL Server 2012, it required all shared support SMB 3.0. If using Samba for the share and not Windows Server, the Samba-based share should be using Samba 4.0 or later, and ideally 4.3 or later, which supports SMB 3.1.1. A good source of information on SMB and Linux is [http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Finally, using a network file system (NFS) share is an option. Using NFS is not an option on Windows Server-based deployments of SQL Server and can only be used for Linux-based deployments.
 
 ### Configure the firewall
-Similar to Windows Server, Linux distributions have a built-in firewall. If your company is using an external firewall to the servers, disabling the firewalls in Linux may be acceptable. However, regardless of where the firewall is enabled, ports will need to be opened. The table below documents the common ports needed for highly available SQL Server deployments on Linux.
+Similar to Windows Server, Linux distributions have a built-in firewall. If your company is using an external firewall to the servers, disabling the firewalls in Linux may be acceptable. However, regardless of where the firewall is enabled, ports will need to be opened. The following table documents the common ports needed for highly available SQL Server deployments on Linux.
 
 | Port Number | Type     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -97,6 +97,7 @@ Similar to Windows Server, Linux distributions have a built-in firewall. If your
 | Variable    | TCP/UDP  | NFS – port for `STATD_PORT` (found in `/etc/sysconfig/nfs` on Red Hat)                                                 |
 
 For additional ports that may be used by Samba, refer to [https://wiki.samba.org/index.php/Samba_port_usage](https://wiki.samba.org/index.php/Samba_port_usage).
+
 Conversely, the name of the service under Linux can also be added as an exception instead of the port. For example, High-Availability for Pacemaker. Refer to your distribution for the names if this is the direction you wish to pursue. For example, on Red Hat the command to add Pacemaker is
 
 `sudo firewall-cmd --permanent --add-service=high-availability`
@@ -116,7 +117,7 @@ Use the instructions below to install the HA package and SQL Server Agent if the
 > [!NOTE]
 > If you will not use SQL Server Agent for log shipping or any other use, it does not have to be installed, so package `mssql-server-agent` can be skipped.
 
-**Red Hat**
+**RHEL**
 
 ```bash
 sudo yum install mssql-server-ha mssql-server-agent
@@ -143,7 +144,7 @@ The other optional packages for SQL Server on Linux, SQL Server Full-Text Search
 As noted above, the only clustering mechanism currently supported by Microsoft for AGs and FCIs is Pacemaker with Corosync. This section will cover the basic information to understand the solution as well as how to plan and deploy it for SQL Server configurations.
 
 ### HA add on/extension basics
-All of the currently supported distributions ship a high availability add on/extension which is based on the Pacemaker clustering stack. This stack incorporates two key components: Pacemaker and Corosync. All of the components of the stack are:
+All of the currently supported distributions ship a high availability add on/extension, which is based on the Pacemaker clustering stack. This stack incorporates two key components: Pacemaker and Corosync. All of the components of the stack are:
 -   Pacemaker – The core clustering component, and does things like coordinate things across the clustered machines.
 -   Corosync – A framework and set of APIs that provides things such as quorum, the ability to restart failed processes, and so on.
 -   libQB – Provides things such as logging.
@@ -162,6 +163,7 @@ On Linux, while each supported distribution has Pacemaker available, each distri
 For full documentation on Pacemaker, including a more in-depth explanation of what everything is with full reference information, for RHEL and SUSE:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
 -   [SUSE](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html)
+
 Ubuntu does not have a guide for availability.
 
 For more information about the whole stack, also [see the official Pacemaker documentation page](http://clusterlabs.org/doc/) on the Clusterlabs site.
@@ -175,29 +177,30 @@ A node is a server participating in the cluster. A Pacemaker cluster natively su
 #### Resource
 Both a WSFC and a Pacemaker cluster have the concept of a resource. A resource is specific functionality that runs in context of the cluster, such as a disk or an IP address. For example, under Pacemaker there are both FCI and AG resources that can get created. This is not dissimilar to what is done in a WSFC where you see either a SQL Server resource for an FCI or an AG resource when configuring an AG, but not exactly the same due to the underlying Pacemaker differences on how SQL Server integrates with it.
 
-Pacemaker has standard and clone resources. Clone resources are ones that run simultaneously on all nodes. An example would be an IP address that would run on multiple nodes for load balancing purposes. Any resource that gets created for FCIs use a standard resource since only one node can host a FCI at any given time.
+Pacemaker has standard and clone resources. Clone resources are ones that run simultaneously on all nodes. An example would be an IP address that would run on multiple nodes for load balancing purposes. Any resource that gets created for FCIs uses a standard resource since only one node can host a FCI at any given time.
 
-When an AG is created, it requires a specialized form of a Clone resource called a multi-state resource. While an AG only has one primary replica, the AG itself is running across all nodes that it is configure to work on and can potentially allow things such as read only access. Because this is a “live” use of the node, the resources have the concept of two states: Master and Slave. For more information see [https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
+When an AG is created, it requires a specialized form of a Clone resource called a multi-state resource. While an AG only has one primary replica, the AG itself is running across all nodes that it is configured to work on and can potentially allow things such as read-only access. Because this is a “live” use of the node, the resources have the concept of two states: Master and Slave. For more information, see [https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### Resource groups/sets
 Similar to Roles in a WSFC, a Pacemaker cluster has the concept of a resource group. A resource group (called a set in SUSE) is a collection of resources that function together and can fail over from one node to another as a single unit. A resource group cannot contain resources that are configured as master/slave, thus, they cannot be used for AGs. While a resource group can be used for FCIs, it is not generally a recommended configuration.
 
 #### Constraints
-WSFCs have various parameters for resources as well as things like dependencies, which tells the WSFC of a parent/child relationship between two different resources. A dependency is just a rule telling the WSFC which resource needs to be online first.
+WSFCs have various parameters for resources as well as things like dependencies, which tell the WSFC of a parent/child relationship between two different resources. A dependency is just a rule telling the WSFC which resource needs to be online first.
 
 A Pacemaker cluster does not have the concept of dependencies, but there are constraints. There are three kinds of constraints: colocation, location, and ordering.
 -   A colocation constraint enforces whether or not two resources should be running on the same node.
 -   A location constraint tells the Pacemaker cluster where a resource can (or cannot) run.
 -   An ordering constraint tells the pacemaker the order in which the resources should start.
-    > [!NOTE]
-    > Colocation constraints are not required for resources in a resource group since all of those are seen as a single unit.
+
+> [!NOTE]
+> Colocation constraints are not required for resources in a resource group since all of those are seen as a single unit.
 
 #### Quorum, fence agents, and STONITH
 Quorum under Pacemaker is somewhat similar to a WSFC in terms of concept. The whole purpose of a cluster’s quorum mechanism is to ensure that the cluster stays up and running. Both a WSFC and the HA add ons for the Linux distributions have the concept of voting, where each node counts towards quorum. You want a majority of the votes up, otherwise, in a worst case scenario, the cluster will be shut down.
 
 Unlike a WSFC, there is no witness resource to work with quorum. Like a WSFC, the goal is to keep the number of voters odd. The individual sections for AGs and FCIs will discuss quorum for those configurations since they each have different considerations.
 
-WSFCs monitor the status of the nodes participating and handles them when a problem occurs. Later versions of WSFCs offer such features as quarantining a node that is misbehaving or unavailable (i.e. node is not on, network communication is down, etc.). On the Linux side, this type of functionality is provided by a fence agent. The concept is sometimes referred to as fencing. However, these fence agents are generally specific to the deployment, and often provided by hardware vendors and some software vendors, such as those who provide hypervisors. For example, VMware provides a fence agent that can be used for Linux VMs virtualized using vSphere.
+WSFCs monitor the status of the nodes participating and handle them when a problem occurs. Later versions of WSFCs offer such features as quarantining a node that is misbehaving or unavailable (i.e. node is not on, network communication is down, etc.). On the Linux side, this type of functionality is provided by a fence agent. The concept is sometimes referred to as fencing. However, these fence agents are generally specific to the deployment, and often provided by hardware vendors and some software vendors, such as those who provide hypervisors. For example, VMware provides a fence agent that can be used for Linux VMs virtualized using vSphere.
 
 Quorum and fencing ties into another concept called STONITH, or Shoot the Other Node in the Head. STONITH is required to have a supported Pacemaker cluster on all Linux distributions.
 For more information:
@@ -208,7 +211,7 @@ The `corosync.conf` file contains the configuration of the cluster. It is locate
 
 #### Cluster log location
 Logs for a Pacemaker cluster are different depending on the distribution.
--   Red Hat Enterprise Linux and SUSE - `/var/log/cluster/corosync.log`
+-   RHEL and SUSE - `/var/log/cluster/corosync.log`
 -   Ubuntu – `/var/log/corosync/corosync.log`
 
 To change the default logging location, modify `corosync.conf`.
@@ -217,7 +220,7 @@ To change the default logging location, modify `corosync.conf`.
 This section will discuss the important planning points for a Pacemaker cluster.
 
 #### Virtualizing Linux-based Pacemaker clusters for SQL Server
-Using virtual machines to deploy Linux-based SQL Server deployments for AGs and FCIs are covered by the same rules as their Windows Server-based counterparts. There is a base set of rules for supportability of virtualized SQL Server deployments provided by Microsoft in [Microsoft Support KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)). Different hypervisors such as Microsoft’s Hyper-V and VMware’s ESXi may have different variances on top of that due to differences in the platforms themselves.
+Using virtual machines to deploy Linux-based SQL Server deployments for AGs and FCIs are covered by the same rules as their Windows Server-based counterparts. There is a base set of rules for supportability of virtualized SQL Server deployments provided by Microsoft in [Microsoft Support KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Different hypervisors such as Microsoft’s Hyper-V and VMware’s ESXi may have different variances on top of that due to differences in the platforms themselves.
 
 When it comes to AGs and FCIs under virtualization, ensure that anti-affinity is set for the nodes of a given Pacemaker cluster. When configured for high availability in an AG or FCI configuration, the VMs hosting SQL Server should never be running on the same hypervisor host. For example, if a two node FCI is deployed, there would need to be *at least* three hypervisor hosts so that there is somewhere for one of the VMs hosting a node to go in the event of a host failure, especially if using features like Live Migration or vMotion.
 
@@ -229,7 +232,7 @@ For more specifics, consult:
 >RHEL with a Pacemaker cluster with STONITH is not yet supported by Hyper-V. Until that is supported, for more information and updates, consult [https://access.redhat.com/articles/29440#3physical_host_mixing](https://access.redhat.com/articles/29440#3physical_host_mixing).
 
 #### Networking
-Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedicated IP address for the Pacemaker cluster itself. AGs and FCIs will require IP addresses (see the documentation for each for more information), but not names since there is no network name resource. SUSE does allow the configuration of an IP address for administration purposes, but it is not required. This can be see later in the section “Create the Pacemaker Cluster.”
+Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedicated IP address for the Pacemaker cluster itself. AGs and FCIs will require IP addresses (see the documentation for each for more information), but not names since there is no network name resource. SUSE does allow the configuration of an IP address for administration purposes, but it is not required. This can be seen later in the section “Create the Pacemaker Cluster.”
 
 Like a WSFC, Pacemaker would prefer redundant networking, meaning distinct network cards (NICs or pNICs for physical) having individual IP addresses. In terms of the cluster configuration, each IP address would have what is known as its own ring. However, as with WSFCs today, many implementations are virtualized or in the public cloud where there is really only a single virtualized NIC (vNIC) presented to the server. If all pNICs and vNICs are connected to the same physical or virtual switch, there is no true redundancy at the network layer, so configuring multiple NICs is a bit of an illusion to the virtual machine. Network redundancy is usually built into the hypervisor for virtualized deployments, and is definitely built into the public cloud.
 
@@ -266,7 +269,7 @@ This section will document the tasks that must be done to configure both SQL Ser
 Use the syntax below to install the packages for each distribution of Linux that make up the HA add on. On SUSE, the HA add on gets initialized when the cluster is created.
 
 **RHEL**
-1.  Register the server using the syntax below. You will be prompted for a valid username and password.
+1.  Register the server using the following syntax. You will be prompted for a valid username and password.
     
     `sudo subscription-manager register`
 2.  List the available pools for registration.
@@ -338,10 +341,12 @@ These instructions will show how to configure a Pacemaker cluster on RHEL.
     where *PMClusterName* is the name assigned to the Pacemaker cluster and *Nodelist* is the list of names of the nodes separated by a space.
 
 **Ubuntu**
+
 Configuring Ubuntu is similar to RHEL. However, there is one major difference: when the Pacemaker packages are installed, it creates a base configuration for the cluster and enables and starts pcsd. If you try to configure the Pacemaker cluster by following the RHEL instructions exactly, you will get an error. To fix this problem, perform the following steps: 
 1.  Remove the default Pacemaker configuration from each node.
     
     `sudo pcs cluster destroy`
+    
 2.  Follow the steps in the RHEL section for creating the Pacemaker cluster.
 
 **SUSE/SLES**
@@ -355,16 +360,19 @@ The process for creating a Pacemaker cluster is completely different on SUSE tha
 6.  Change the hacluster password
     
     `sudo passwd hacluster`
+    
 8.  If you configured an IP address for administration, you can test it in a browser. This will also test the password change for `hacluster`.
     ![](./media/sql-server-ha-linux-basics/image2.png)
 9.  On another SUSE server that will be a node of the cluster, run
     
     `sudo ha-cluster-join`
+    
 10. When prompted, enter the name or IP address of the server that was configured as the first node of the cluster in the previous steps. The server will be added as a node to the existing cluster.
 11. Verify the node was added by issuing `sudo crm status`.
 12. Change the hacluster password
     
     `sudo passwd hacluster`
+    
 13. Repeat Steps 8-11 for all other servers to be added to the cluster.
 
 ## Next steps

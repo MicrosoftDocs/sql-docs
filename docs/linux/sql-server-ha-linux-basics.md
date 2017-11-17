@@ -252,7 +252,7 @@ This section documents how a Linux-based cluster can interact with a WSFC or wit
 #### WSFC
 Currently, there is no direct way for a WSFC and a Pacemaker cluster to work together. This means that there is no way to create an AG or FCI that works across a WSFC and Pacemaker. However, there are two interoperability solutions, both of which are designed for AGs. The only way an FCI can participate in a cross-platform configuration is if it is participating as an instance in one of the two scenarios:
 -   An AG with a cluster type of None. For more information, see the Availability Groups documentation.
--   A distributed AG, which is a special type of availability group that allows two different AGs to be configured as their own availability group. For more information on distributed AGs, see the documentation [Distributed Availability Groups](../database-engine/availability-groups/windows/distributed-availability-groups).
+-   A distributed AG, which is a special type of availability group that allows two different AGs to be configured as their own availability group. For more information on distributed AGs, see the documentation [Distributed Availability Groups](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
 #### Other Linux distributions
 On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a Red Hat node cannot be part of a Pacemaker cluster that has a SUSE node. The main reason for this was stated above: the distributions may have different versions and functionality, so things could not work properly. Mixing distributions has the same story as mixing WSFCs and Linux: NONE and distributed AGs.

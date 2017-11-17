@@ -1,7 +1,7 @@
 ---
 title: "STUFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2017"
+ms.date: "11/17/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

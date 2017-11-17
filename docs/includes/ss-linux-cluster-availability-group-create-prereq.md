@@ -35,7 +35,7 @@ Before you create the availability group, you need to:
    sudo ip addr show
    ```
 
-   Update `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`.
+   Update `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`:
 
    ```bash
    sudo vi /etc/hosts
@@ -43,14 +43,13 @@ Before you create the availability group, you need to:
 
    The following example shows `/etc/hosts` on **node1** with additions for **node1**, **node2**, and **node3**. In this document, **node1** refers to the server that hosts the primary replica. And **node2** and **node3** refer to servers that host the secondary replicas.
 
-
-   ```
-   127.0.0.1   localhost localhost4 localhost4.localdomain4
-   ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.12 node1
-   10.128.16.77 node2
-   10.128.15.33 node3
-   ```
+    ```
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
+    10.128.18.12 node1
+    10.128.16.77 node2
+    10.128.15.33 node3
+    ```
 
 ### Install SQL Server
 

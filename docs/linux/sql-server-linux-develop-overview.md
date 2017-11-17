@@ -17,7 +17,7 @@ ms.workload: "On Demand"
 
 You can create applications that connect to and use SQL Server 2017 on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
 
-> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153]
+> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > These same development options also enable you to target SQL Server on other platforms. Applications can target SQL Server running on-premises or in the cloud, on Linux, Windows, or Docker on macOS. Or you can target Azure SQL Database and Azure SQL Data Warehouse.

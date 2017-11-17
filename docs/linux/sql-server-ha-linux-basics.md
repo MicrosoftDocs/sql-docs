@@ -21,17 +21,14 @@ Besides backup and restore, the same three availability features are available o
 
 On Windows Server, FCIs in all configurations always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in SQL Server 2017 that is discussed later in this paper. A WSFC does not exist in Linux. How clustering is implemented in Linux is discussed in the section [Pacemaker for Always On Availability Groups and Failover Cluster Instances on Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
-## Common tasks for availability configurations of SQL Server on Linux
-This section covers tasks that are common to all Linux-based SQL Server deployments.
-
 ### A quick Linux primer
-While some Linux installations may be installed with an interface, the majority are not. That means that nearly everything at the OS layer is done via command line. The common term for this command line in the Linux world is a *bash shell*.
+While some Linux installations may be installed with an interface, the majority are not, meaning that nearly everything at the OS layer is done via command line. The common term for this command line in the Linux world is a *bash shell*.
 
-In Linux, many commands need to be executed with elevated privileges, much like many things need to be done in Windows Server as an administrator. There are two main methods to do this:
+In Linux, many commands need to be executed with elevated privileges, much like many things need to be done in Windows Server as an administrator. There are two main methods to execute with elevated privileges:
 1. Run in the context of the proper user. To change to a different user, use the command `su`. If `su` is executed on its own without a username, as long as you know the password, you will now be in a shell as *root*.
 2. The more common and security conscious way to run things is to use `sudo` before executing anything. Many of the examples in this paper will use `sudo`.
 
-Some common commands; each of these have various switches and options that can be researched online:
+Some common commands, each of which have various switches and options that can be researched online:
 -   `cd` – change the directory
 -   `chmod` – change the permissions of a file or directory
 -   `chown` – change the ownership of a file or directory
@@ -42,7 +39,10 @@ Some common commands; each of these have various switches and options that can b
 -   `rm` – delete a file locally on a server
 -   `rmdir` – delete a folder (directory)
 -   `systemctl` – start, stop, or enable services
--   Text editor commands. On Linux, there are various text editor options such as vi and emacs.
+-   Text editor commands. On Linux, there are various text editor options, such as vi and emacs.
+
+## Common tasks for availability configurations of SQL Server on Linux
+This section covers tasks that are common to all Linux-based SQL Server deployments.
 
 ### Ensure that files can be copied
 One thing that anyone using SQL Server on Linux should be able to do is copy files from one server to another. This task is very important for AG configurations, as will be shown later in this article.
@@ -111,9 +111,9 @@ On a Windows Server-based SQL Server installation, some components are installed
 
 For those new to SQL Server, SQL Server Agent is SQL Server’s built-in job scheduler. It is a common way for DBAs to schedule things like backups and other SQL Server maintenance. Unlike a Windows Server-based installation of SQL Server where SQL Server Agent is a completely different service, on Linux, SQL Server Agent runs in context of SQL Server itself.
 
-When AGs or FCIs are configured on a Windows Server-based configuration, they are cluster-aware. This means that SQL Server has specific resource DLLs that a WSFC knows about (sqagtres.dll and sqsrvres.dll for FCIs, hadrres.dll for AGs) and are used by the WSFC to ensure that the SQL Server clustered functionality is up, running, and functioning properly. Because clustering is external not only to SQL Server but Linux itself, Microsoft had to code the equivalent of a resource DLL for Linux-based AG and FCI deployments. This is the `mssql-server-ha` package, also known as the SQL Server resource agent for Pacemaker.
+When AGs or FCIs are configured on a Windows Server-based configuration, they are cluster-aware. Cluster awareness means that SQL Server has specific resource DLLs that a WSFC knows about (sqagtres.dll and sqsrvres.dll for FCIs, hadrres.dll for AGs) and are used by the WSFC to ensure that the SQL Server clustered functionality is up, running, and functioning properly. Because clustering is external not only to SQL Server but Linux itself, Microsoft had to code the equivalent of a resource DLL for Linux-based AG and FCI deployments. This is the `mssql-server-ha` package, also known as the SQL Server resource agent for Pacemaker.
 
-Use the instructions below to install the HA package and SQL Server Agent if they are not installed already. Installing the HA package after installing SQL Server requires a restart of SQL Server for it to be able to be used by SQL Server. These instructions assume that the repositories for the Microsoft packages have already been set up since SQL Server should be installed at this point.
+Use the instructions below to install the HA package and SQL Server Agent if they are not installed already. Installing the HA package after installing SQL Server requires a restart of SQL Server for it to be able to be used by SQL Server. These instructions assume that the repositories for the Microsoft packages have already been set up, since SQL Server should be installed at this point.
 > [!NOTE]
 > If you will not use SQL Server Agent for log shipping or any other use, it does not have to be installed, so package `mssql-server-agent` can be skipped.
 
@@ -172,7 +172,7 @@ For more information about the whole stack, also [see the official Pacemaker doc
 This section documents the common concepts and terminology for a Pacemaker implementation.
 
 #### Node
-A node is a server participating in the cluster. A Pacemaker cluster natively supports up to 16 nodes. This can be exceeded if Corosync is not running on additional nodes, but Corosync is required for SQL Server. Therefore, the maximum number of nodes a cluster can have for any SQL Server-based configuration is 16; this is the Pacemaker limit, and has nothing to do with maximum limitations for AGs or FCIs imposed by SQL Server. See the individual documentation for AGs and FCIs for limitations that are specific to those features.
+A node is a server participating in the cluster. A Pacemaker cluster natively supports up to 16 nodes. This number can be exceeded if Corosync is not running on additional nodes, but Corosync is required for SQL Server. Therefore, the maximum number of nodes a cluster can have for any SQL Server-based configuration is 16; this is the Pacemaker limit, and has nothing to do with maximum limitations for AGs or FCIs imposed by SQL Server. See the [individual documentation for AGs and FCIs] for limitations that are specific to those features.
 
 #### Resource
 Both a WSFC and a Pacemaker cluster have the concept of a resource. A resource is specific functionality that runs in context of the cluster, such as a disk or an IP address. For example, under Pacemaker there are both FCI and AG resources that can get created. This is not dissimilar to what is done in a WSFC where you see either a SQL Server resource for an FCI or an AG resource when configuring an AG, but not exactly the same due to the underlying Pacemaker differences on how SQL Server integrates with it.
@@ -193,7 +193,7 @@ A Pacemaker cluster does not have the concept of dependencies, but there are con
 -   An ordering constraint tells the pacemaker the order in which the resources should start.
 
 > [!NOTE]
-> Colocation constraints are not required for resources in a resource group since all of those are seen as a single unit.
+> Colocation constraints are not required for resources in a resource group, since all of those are seen as a single unit.
 
 #### Quorum, fence agents, and STONITH
 Quorum under Pacemaker is somewhat similar to a WSFC in terms of concept. The whole purpose of a cluster’s quorum mechanism is to ensure that the cluster stays up and running. Both a WSFC and the HA add ons for the Linux distributions have the concept of voting, where each node counts towards quorum. You want a majority of the votes up, otherwise, in a worst case scenario, the cluster will be shut down.
@@ -207,7 +207,7 @@ For more information, see:
 -   [RHEL](https://access.redhat.com/solutions/15575)
 
 #### corosync.conf
-The `corosync.conf` file contains the configuration of the cluster. It is located in `/etc/corosync`. In the course of normal day-to-day operations, this should never have to be edited if the cluster is set up properly.
+The `corosync.conf` file contains the configuration of the cluster. It is located in `/etc/corosync`. In the course of normal day-to-day operations, this file should never have to be edited if the cluster is set up properly.
 
 #### Cluster log location
 Logs for a Pacemaker cluster are different depending on the distribution.
@@ -220,28 +220,28 @@ To change the default logging location, modify `corosync.conf`.
 This section discusses the important planning points for a Pacemaker cluster.
 
 #### Virtualizing Linux-based Pacemaker clusters for SQL Server
-Using virtual machines to deploy Linux-based SQL Server deployments for AGs and FCIs are covered by the same rules as their Windows Server-based counterparts. There is a base set of rules for supportability of virtualized SQL Server deployments provided by Microsoft in [Microsoft Support KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Different hypervisors such as Microsoft’s Hyper-V and VMware’s ESXi may have different variances on top of that due to differences in the platforms themselves.
+Using virtual machines to deploy Linux-based SQL Server deployments for AGs and FCIs are covered by the same rules as their Windows Server-based counterparts. There is a base set of rules for supportability of virtualized SQL Server deployments provided by Microsoft in [Microsoft Support KB 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Different hypervisors such as Microsoft’s Hyper-V and VMware’s ESXi may have different variances on top of that, due to differences in the platforms themselves.
 
 When it comes to AGs and FCIs under virtualization, ensure that anti-affinity is set for the nodes of a given Pacemaker cluster. When configured for high availability in an AG or FCI configuration, the VMs hosting SQL Server should never be running on the same hypervisor host. For example, if a two node FCI is deployed, there would need to be *at least* three hypervisor hosts so that there is somewhere for one of the VMs hosting a node to go in the event of a host failure, especially if using features like Live Migration or vMotion.
 
 For more specifics, consult:
--   Hyper-V Documentation – [Using Guest Clustering for High Availability](https://technet.microsoft.com/en-us/library/dn440540(v=ws.11).aspx)
+-   Hyper-V Documentation – [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
 -   Whitepaper (written for Windows Server-based deployments, but most of the concepts still apply) – [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >RHEL with a Pacemaker cluster with STONITH is not yet supported by Hyper-V. Until that is supported, for more information and updates, consult [https://access.redhat.com/articles/29440#3physical_host_mixing](https://access.redhat.com/articles/29440#3physical_host_mixing).
 
 #### Networking
-Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedicated IP address for the Pacemaker cluster itself. AGs and FCIs will require IP addresses (see the documentation for each for more information), but not names since there is no network name resource. SUSE does allow the configuration of an IP address for administration purposes, but it is not required. This can be seen later in the section “Create the Pacemaker Cluster.”
+Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedicated IP address for the Pacemaker cluster itself. AGs and FCIs will require IP addresses (see the documentation for each for more information), but not names since there is no network name resource. SUSE does allow the configuration of an IP address for administration purposes, but it is not required, as can be seen later in the section [Create the Pacemaker Cluster](#create).
 
 Like a WSFC, Pacemaker would prefer redundant networking, meaning distinct network cards (NICs or pNICs for physical) having individual IP addresses. In terms of the cluster configuration, each IP address would have what is known as its own ring. However, as with WSFCs today, many implementations are virtualized or in the public cloud where there is really only a single virtualized NIC (vNIC) presented to the server. If all pNICs and vNICs are connected to the same physical or virtual switch, there is no true redundancy at the network layer, so configuring multiple NICs is a bit of an illusion to the virtual machine. Network redundancy is usually built into the hypervisor for virtualized deployments, and is definitely built into the public cloud.
 
-One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. For more information on multiple subnets and Linux clusters, see the topic “Configuring Multiple Subnet Always On Availability Groups and Failover Cluster Instances with Pacemaker”.
+One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. For more information on multiple subnets and Linux clusters, see the topic [Configuring Multiple Subnet Always On Availability Groups and Failover Cluster Instances with Pacemaker].
 
 #### Quorum and STONITH
 Quorum will be discussed in the AG and FCI sections, as the configuration and what is required is related to those specific deployments of SQL Server.
 
-STONITH is required for a supported Pacemaker cluster. Use the documentation from the distribution to configure STONITH. An example is the one at [https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) for SUSE. There is also a STONITH agent for VMware vCenter for ESXI-based solutions. For more information, go [needs link].
+STONITH is required for a supported Pacemaker cluster. Use the documentation from the distribution to configure STONITH. An example is the one at [https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) for SUSE. There is also a STONITH agent for VMware vCenter for ESXI-based solutions. For more information, see [needs link].
 
 > [!NOTE]
 > As of the writing of this article, Hyper-V does not have a solution for STONITH. This is true for on premises deployments and also impacts Azure-based Pacemaker deployments using certain distributions such as Red Hat.
@@ -252,7 +252,7 @@ This section documents how a Linux-based cluster can interact with a WSFC or wit
 #### WSFC
 Currently, there is no direct way for a WSFC and a Pacemaker cluster to work together. This means that there is no way to create an AG or FCI that works across a WSFC and Pacemaker. However, there are two interoperability solutions, both of which are designed for AGs. The only way an FCI can participate in a cross-platform configuration is if it is participating as an instance in one of the two scenarios:
 -   An AG with a cluster type of None. For more information, see the Availability Groups documentation.
--   A distributed AG, which is a special type of availability group that allows two different AGs to be configured as their own availability group. For more information on distributed AGs, see the documentation [Distributed Availability Groups](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups).
+-   A distributed AG, which is a special type of availability group that allows two different AGs to be configured as their own availability group. For more information on distributed AGs, see the documentation [Distributed Availability Groups](./sql/database-engine/availability-groups/windows/distributed-availability-groups).
 
 #### Other Linux distributions
 On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a Red Hat node cannot be part of a Pacemaker cluster that has a SUSE node. The main reason for this was stated above: the distributions may have different versions and functionality, so things could not work properly. Mixing distributions has the same story as mixing WSFCs and Linux: NONE and distributed AGs.
@@ -323,6 +323,7 @@ Pacemaker itself uses a user created on the distribution named *hacluster*. This
     This is a known issue. Despite the error, enabling the pacemaker service is successful, and this is a bug that will be fixed at some point in the future.
 4.  Next, create and start the Pacemaker cluster. There is one difference between Red Hat and Ubuntu at this step. While on both distributions, installing pcs will configure a default configuration file for the Pacemaker cluster, on Red Hat, executing this command will destroy any existing configuration and create a new cluster.
 
+<a id="create"></a>
 #### Create the Pacemaker cluster 
 This section documents how to create the cluster for each distribution of Linux.
 
@@ -352,16 +353,16 @@ Configuring Ubuntu is similar to RHEL. However, there is one major difference: w
 **SUSE/SLES**
 
 The process for creating a Pacemaker cluster is completely different on SUSE than it is on RHEL and Ubuntu. The steps below document how to create a cluster with SUSE.
-1.  Start the cluster configuration process by running sudo `ha-cluster-init` on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SUSE’s built-in fencing that is storage-based. This can be configured later.
-2.  You will be prompted to configure Corosync. You will be asked for the network address to bind to as well as the multicast address and port. The network address will be the subnet that you are using. For example, 192.191.190.0. You can accept the defaults and hit enter at every prompt, or change if necessary.
-3.  Next, you will be asked if you want to configure SBD, which is the disk-based fencing. This can be done later if desired. If it is not, unlike RHEL and Ubuntu, `stonith-enabled` will by default be set to false.
-4.  Finally, you will be asked if you want to configure an IP address for administration. This is optional, but functions similar to the IP address for a WSFC in the sense that it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This, too, is optional.
+1.  Start the cluster configuration process by running sudo `ha-cluster-init` on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SUSE’s built-in fencing that is storage-based. NTP and watchdog can be configured later.
+2.  You will be prompted to configure Corosync. You will be asked for the network address to bind to, as well as the multicast address and port. The network address will be the subnet that you are using. For example, 192.191.190.0. You can accept the defaults and click **Enter** at every prompt, or change if necessary.
+3.  Next, you will be asked if you want to configure SBD, which is the disk-based fencing. This can be done later if desired. If it is not configured, unlike on RHEL and Ubuntu, `stonith-enabled` will by default be set to false.
+4.  Finally, you will be asked if you want to configure an IP address for administration. This IP address is optional, but functions similar to the IP address for a WSFC in the sense that it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This, too, is optional.
 5.  Ensure that the cluster is up and running by issuing `sudo crm status`.
 6.  Change the hacluster password
     
     `sudo passwd hacluster`
     
-8.  If you configured an IP address for administration, you can test it in a browser. This will also test the password change for `hacluster`.
+8.  If you configured an IP address for administration, you can test it in a browser, which will also test the password change for `hacluster`.
     ![](./media/sql-server-ha-linux-basics/image2.png)
 9.  On another SUSE server that will be a node of the cluster, run
     

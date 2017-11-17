@@ -1,13 +1,13 @@
 ---
 title: "Indexes for Memory-Optimized Tables | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "11/6/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service:
-ms.suite: ""
+ms.service: ""
+ms.component: "in-memory-oltp"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -20,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Indexes for Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 This article describes the types of indexes that are available for a memory-optimized table. The article:  

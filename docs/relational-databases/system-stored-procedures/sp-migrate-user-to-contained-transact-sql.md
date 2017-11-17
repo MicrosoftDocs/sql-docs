@@ -3,8 +3,11 @@ title: "sp_migrate_user_to_contained (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,7 +27,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_migrate_user_to_contained (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Converts a database user that is mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, to a contained database user with password. In a contained database, use this procedure to remove dependencies on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the database is installed. **sp_migrate_user_to_contained** separates the user from the original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, so that settings such as password and default language can be administered separately for the contained database. **sp_migrate_user_to_contained** can be used before moving the contained database to a different instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to eliminate dependencies on the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance logins.  
   

@@ -2,9 +2,12 @@
 title: "SELECTs and JOINs From System Views for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "extended-events"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
   - "xevents"
@@ -18,7 +21,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 This article explains the two sets of system views that relate to extended events in Microsoft SQL Server, and in the Azure SQL Database cloud service. The article illustrates:

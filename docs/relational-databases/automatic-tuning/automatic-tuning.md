@@ -3,9 +3,12 @@ title: "Automatic tuning | Microsoft Docs"
 description: Learn about automatic tuning in SQL Server and Azure SQL Database
 ms.custom: ""
 ms.date: "08/16/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "automatic-tuning"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,7 +23,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Automatic tuning
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems.
 

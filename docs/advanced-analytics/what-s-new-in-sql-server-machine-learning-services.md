@@ -1,6 +1,6 @@
 ---
 title: "What&#39;s new in Machine Learning Services | Microsoft Docs"
-ms.date: "11/03/2017"
+ms.date: "11/16/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,9 +22,6 @@ In SQL Server 2016, Microsoft introduced SQL Server R Services, a feature that s
 In SQL Server 2017, database-integrated machine learning became even more powerful, with addition of support for the popular Python language. Along with the support for new languages comes a new name: **Machine Learning Services (In-Database)**.
 
 Catch the latest announcement here! [Python in SQL Server 2017: enhanced in-database machine learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
-
-[!NOTE]
-> Now you can run R in Azure SQL databases! For more information, see [this article](r/using-r-in-azure-sql-database.md), or this blog from the SQL Server development team: [Announcing preview of Machine Learning Services with R support in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/).
 
 ## What's new in SQL Server 2017
 
@@ -112,7 +109,7 @@ For more information, see [Install pre-trained models in SQL Server](r/install-p
 
 This release includes many improvements in package management for SQL Server. These include:
 
-- Database roles to help the DBA manage and audit permissions
+- Database roles to help the DBA manage packages and assign permissions to install packages
 - The CREATE EXTERNAL LIBRARY statement in T-SQL, to help DBAs manage packages without needing to know R
 - A rich set of R functions to help install, remove, or list packages owned by users
 

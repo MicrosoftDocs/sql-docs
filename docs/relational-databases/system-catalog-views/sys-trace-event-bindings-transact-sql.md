@@ -3,8 +3,11 @@ title: "sys.trace_event_bindings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,7 +29,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # sys.trace_event_bindings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   The **sys.trace_event_bindings** catalog view contains a list of all possible usage combinations of events and columns. For each event listed in the **trace_event_id** column, all available columns are listed in the **trace_column_id** column. Not all available columns are populated each time a given event occurs. These values do not change for a given version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

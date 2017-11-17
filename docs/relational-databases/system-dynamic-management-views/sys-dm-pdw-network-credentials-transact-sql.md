@@ -2,10 +2,12 @@
 title: "sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: ""
+ms.prod: "sql-non-specified"
+ms.prod_service: "pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.suite: ""
+ms.service: ""
+ms.component: "dmv's"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,7 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_network_credentials (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Returns a list of all network credentials stored in the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance for all target servers. Results are listed for the Control node, and every Compute node.  
   

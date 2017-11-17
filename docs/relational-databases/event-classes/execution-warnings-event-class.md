@@ -2,9 +2,12 @@
 title: "Execution Warnings Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Execution Warnings Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Execution Warnings event class indicates memory grant warnings that occurred during the execution of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statement or stored procedure. This event class can be monitored to determine if queries had to wait one second or more for memory before proceeding, or if the initial attempt to get memory failed. Information about query wait periods can help uncover contention issues in the system that can affect performance.  
   
 ## Execution Warnings Event Class Data Columns  

@@ -2,9 +2,12 @@
 title: "CLR Table-Valued Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -25,6 +28,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # CLR Table-Valued Functions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A table-valued function is a user-defined function that returns a table.  
   
  Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extends the functionality of table-valued functions by allowing you to define a table-valued function in any managed language. Data is returned from a table-valued function through an **IEnumerable** or **IEnumerator** object.  

@@ -2,9 +2,12 @@
 title: "Atomic Blocks | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/26/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Atomic Blocks in Native Procedures
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   **BEGIN ATOMIC** is part of the ANSI SQL standard. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports atomic blocks at the top-level of natively compiled stored procedures, as well as for natively compiled, scalar user-defined functions. For more information about these functions, see [Scalar User-Defined Functions for In-Memory OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   

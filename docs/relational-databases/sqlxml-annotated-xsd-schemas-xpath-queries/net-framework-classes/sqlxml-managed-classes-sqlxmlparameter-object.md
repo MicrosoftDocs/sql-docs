@@ -2,9 +2,12 @@
 title: "SqlXmlParameter Object (SQLXML Managed Classes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -23,6 +26,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SQLXML Managed Classes - SqlXmlParameter Object
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The SqlXmlParameter object supports these properties:  
   
  Name  

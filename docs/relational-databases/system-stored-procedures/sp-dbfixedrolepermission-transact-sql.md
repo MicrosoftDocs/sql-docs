@@ -3,8 +3,11 @@ title: "sp_dbfixedrolepermission (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,7 +27,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_dbfixedrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Displays the permissions of a fixed database role. **sp_dbfixedrolepermission** returns correct information in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. The output does not reflect the changes to the permissions hierarchy that were implemented in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see[Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
   

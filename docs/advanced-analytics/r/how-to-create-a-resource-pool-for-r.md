@@ -26,7 +26,7 @@ The process includes multiple steps:
 
 1.  Review status of any existing resource pools. It is important that you understand what services are using existing resources.
 2.  Modify server resource pools.
-3.  Create a new resource pool for external processes.  
+3.  Create a new resource pool for external processes.
 4.  Create a classification function to identify external script requests.
 5.  Verify that the new external resource pool is capturing R or Python jobs from the specified clients or accounts.
 
@@ -86,7 +86,7 @@ The process includes multiple steps:
   
     > [!NOTE]
     >  These are just suggested settings to start with; you should evaluate your machine learning tasks in light of other server processes to determine the correct balance for your environment and workload.
-  
+
 ## Create a user-defined external resource pool
   
 1.  Any changes to the configuration of Resource Governor are enforced across the server as a whole and affect  workloads that use the default pools for the server, as well as workloads that use the external pools.
@@ -122,7 +122,7 @@ A classification function examines incoming tasks and determines whether the tas
   
      For more information, see [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md).
   
-2.  In the classifier function for each resource pool, you define the type of statements or incoming requests that should be assigned to the resource pool.
+2.  In the classifier function for each resource pool, define the type of statements or incoming requests that should be assigned to the resource pool.
   
      For example, the following function returns the name of the schema assigned to the user-defined external resource pool if the application that sent the request is either 'Microsoft R Host' or 'RStudio'; otherwise it returns the default resource pool.
   
@@ -149,7 +149,7 @@ A classification function examines incoming tasks and determines whether the tas
     ```
 
 ## Verify new resource pools and affinity
-  
+
 To verify that the changes have been made, you should check the configuration of server memory and CPU for each of the workload groups associated with these instance resource pools:
 
 + the default pool for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server
@@ -179,7 +179,7 @@ To verify that the changes have been made, you should check the configuration of
     **Sample results**
     
     |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
-    |-|-|-|-|-|-|  
+    |-|-|-|-|-|-|
     |2|default|100|20|0|2|
     |256|ds_ep|100|40|0|1|
   
@@ -198,7 +198,7 @@ To verify that the changes have been made, you should check the configuration of
 For more information about managing server resources, see:
 
 +  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
++ [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 For an overview of resource governance for machine learning, see:
 

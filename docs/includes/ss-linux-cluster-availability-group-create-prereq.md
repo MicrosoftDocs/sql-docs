@@ -27,9 +27,9 @@ Before you create the availability group, you need to:
     >If hostnames are registered with their IP in the DNS server, you don't need to do the following steps. Validate that all the nodes intended to be part of the availability group configuration can communicate with each other. (A ping to the hostname should reply with the corresponding IP address.) Also, make sure that the /etc/hosts file doesn't contain a record that maps the localhost IP address 127.0.0.1 with the hostname of the node.
 
 
-   The hosts file on every server contains the IP addresses and names of all servers that will participate in the availability group. 
+    The hosts file on every server contains the IP addresses and names of all servers that will participate in the availability group. 
 
-   The following command returns the IP address of the current server:
+    The following command returns the IP address of the current server:
 
    ```bash
    sudo ip addr show
@@ -82,7 +82,7 @@ For more information about this XE session, see [AlwaysOn extended events](http:
 
 ## Create a database mirroring endpoint user
 
-The following Transact-SQL script creates a login named `dbm_login` and a user named `dbm_user`. Update the script with a strong password. Run the following command on all SQL Server instances to create the database mirroring endpoint user:
+The following Transact-SQL script creates a login named `dbm_login` and a user named `dbm_user`. Update the script with a strong password. To create the database mirroring endpoint user, run the following command on all SQL Server instances:
 
 ```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -93,7 +93,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 The SQL Server service on Linux uses certificates to authenticate communication between the mirroring endpoints. 
 
-The following Transact-SQL script creates a master key and a certificate. It then backs up the certificate and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server instance, and run the following Transact-SQL script to create the certificate:
+The following Transact-SQL script creates a master key and a certificate. It then backs up the certificate and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server instance. To create the certificate, run the following Transact-SQL script:
 
 ```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -124,7 +124,7 @@ chown mssql:mssql dbm_certificate.*
 
 ## Create the certificate on secondary servers
 
-The following Transact-SQL script creates a master key and a certificate from the backup that you created on the primary SQL Server replica. The command also authorizes the user to access the certificate. Update the script with strong passwords. The decryption password is the same password that you used to create the .pvk file in a previous step. Run the following script on all secondary servers to create the certificate:
+The following Transact-SQL script creates a master key and a certificate from the backup that you created on the primary SQL Server replica. The command also authorizes the user to access the certificate. Update the script with strong passwords. The decryption password is the same password that you used to create the .pvk file in a previous step. To create the certificate, run the following script on all secondary servers:
 
 ```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';

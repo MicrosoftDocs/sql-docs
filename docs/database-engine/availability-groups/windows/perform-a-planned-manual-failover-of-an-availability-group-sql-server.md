@@ -46,8 +46,8 @@ This topic describes how to perform a manual failover without data loss (a *plan
   
 ###  <a name="Prerequisites"></a> Prerequisites and restrictions 
   
--   The target secondary replica and the primary replica must both be running in synchronous-commit availability mode. 
--   The target secondary replica must currently be synchronized with the primary replica. All the secondary databases on this secondary replica must be joined to the availability group. They also must be synchronized with their corresponding primary databases (that is, the local secondary databases must be SYNCHRONIZED). 
+-   Both the target secondary replica and the primary replica must be running in synchronous-commit availability mode. 
+-   Currently, the target secondary replica must be synchronized with the primary replica. All the secondary databases on this secondary replica must be joined to the availability group. They also must be synchronized with their corresponding primary databases (that is, the local secondary databases must be SYNCHRONIZED). 
   
     > [!TIP] 
     >  To determine the failover readiness of a secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) dynamic management view. Or you can look at the **Failover Readiness** column of the [AlwaysOn group dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
@@ -102,10 +102,10 @@ This topic describes how to perform a manual failover without data loss (a *plan
     Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg  
     ```  
   
- To set up and use the SQL Server PowerShell provider: 
+    To set up and use the SQL Server PowerShell provider: 
   
--   [SQL Server PowerShell provider](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
--   [Get help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
+    -   [SQL Server PowerShell provider](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
+    -   [Get help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
 ##  <a name="FollowUp"></a> Follow up: After you manually fail over an availability group 
  If you failed over outside of the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the Windows Server failover clustering nodes to reflect your new availability group configuration. For more information, see [Windows Server failover clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 

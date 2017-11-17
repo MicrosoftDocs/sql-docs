@@ -252,7 +252,7 @@ This section documents how a Linux-based cluster can interact with a WSFC or wit
 #### WSFC
 Currently, there is no direct way for a WSFC and a Pacemaker cluster to work together. This means that there is no way to create an AG or FCI that works across a WSFC and Pacemaker. However, there are two interoperability solutions, both of which are designed for AGs. The only way an FCI can participate in a cross-platform configuration is if it is participating as an instance in one of the two scenarios:
 -   An AG with a cluster type of None. For more information, see the Availability Groups documentation.
--   A distributed AG, which is a special type of availability group that allows two different AGs to be configured as their own availability group. For more information on distributed AGs, see the documentation [Distributed Availability Groups](./sql/database-engine/availability-groups/windows/distributed-availability-groups).
+-   A distributed AG, which is a special type of availability group that allows two different AGs to be configured as their own availability group. For more information on distributed AGs, see the documentation [Distributed Availability Groups](../database-engine/availability-groups/windows/distributed-availability-groups).
 
 #### Other Linux distributions
 On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a Red Hat node cannot be part of a Pacemaker cluster that has a SUSE node. The main reason for this was stated above: the distributions may have different versions and functionality, so things could not work properly. Mixing distributions has the same story as mixing WSFCs and Linux: NONE and distributed AGs.
@@ -297,31 +297,31 @@ Install the High Availability pattern in YaST or do it as part of the main insta
 
 #### Prepare the nodes for Pacemaker (RHEL and Ubuntu only)
 Pacemaker itself uses a user created on the distribution named *hacluster*. This gets created when the HA add on is installed on RHEL and Ubuntu.
-1.  On each server that will serve as a node of the Pacemaker cluster, create the password for a user that will be used by the cluster. The name used in the examples will be *hacluster*, but any name can be used. The name and password must be the same on all nodes participating in the Pacemaker cluster.
-    
-    `sudo passwd hacluster`
-2.  On each node that will be part of the Pacemaker cluster, enable and start the `pcsd` service with the following commands (RHEL and Ubuntu):
+1. On each server that will serve as a node of the Pacemaker cluster, create the password for a user that will be used by the cluster. The name used in the examples will be *hacluster*, but any name can be used. The name and password must be the same on all nodes participating in the Pacemaker cluster.
+   
+   `sudo passwd hacluster`
+2. On each node that will be part of the Pacemaker cluster, enable and start the `pcsd` service with the following commands (RHEL and Ubuntu):
 
-    ```bash
-    sudo systemctl enable pcsd
-    sudo systemctl start pcsd
-    ```
+   ```bash
+   sudo systemctl enable pcsd
+   sudo systemctl start pcsd
+   ```
 
-    Then execute
-    
-    ```bash
-    sudo systemctl status pcsd
-    ```
-    
-    to ensure that `pcsd` is started.
-3.  Enable the Pacemaker service on each possible node of the Pacemaker cluster.
+   Then execute
+   
+   ```bash
+   sudo systemctl status pcsd
+   ```
+   
+   to ensure that `pcsd` is started.
+3. Enable the Pacemaker service on each possible node of the Pacemaker cluster.
 
-    `sudo systemctl start pacemaker`
+   `sudo systemctl start pacemaker`
 
-    On Ubuntu, you will see an error
-    *pacemaker Default-Start contains no runlevels, aborting.*
-    This is a known issue. Despite the error, enabling the pacemaker service is successful, and this is a bug that will be fixed at some point in the future.
-4.  Next, create and start the Pacemaker cluster. There is one difference between Red Hat and Ubuntu at this step. While on both distributions, installing pcs will configure a default configuration file for the Pacemaker cluster, on Red Hat, executing this command will destroy any existing configuration and create a new cluster.
+   On Ubuntu, you will see an error
+   *pacemaker Default-Start contains no runlevels, aborting.*
+   This is a known issue. Despite the error, enabling the pacemaker service is successful, and this is a bug that will be fixed at some point in the future.
+4. Next, create and start the Pacemaker cluster. There is one difference between Red Hat and Ubuntu at this step. While on both distributions, installing pcs will configure a default configuration file for the Pacemaker cluster, on Red Hat, executing this command will destroy any existing configuration and create a new cluster.
 
 <a id="create"></a>
 #### Create the Pacemaker cluster 
@@ -329,51 +329,51 @@ This section documents how to create the cluster for each distribution of Linux.
 
 **RHEL**
 
-These instructions will show how to configure a Pacemaker cluster on RHEL.
-1.  Authorize the nodes.
-    
-    `sudo pcs cluster auth *Node1 Node2 … NodeN* -u hacluster`
-    
-    where *NodeX* is the name of the node.
-2.  Create the cluster
-    
-    `sudo pcs cluster setup --name *NameforCluster Nodelist* --start --all --enable`
-    
-    where *PMClusterName* is the name assigned to the Pacemaker cluster and *Nodelist* is the list of names of the nodes separated by a space.
+These instructions show how to configure a Pacemaker cluster on RHEL.
+1. Authorize the nodes.
+   
+   `sudo pcs cluster auth *Node1 Node2 … NodeN* -u hacluster`
+   
+   where *NodeX* is the name of the node.
+2. Create the cluster
+   
+   `sudo pcs cluster setup --name *NameforCluster Nodelist* --start --all --enable`
+   
+   where *PMClusterName* is the name assigned to the Pacemaker cluster and *Nodelist* is the list of names of the nodes separated by a space.
 
 **Ubuntu**
 
 Configuring Ubuntu is similar to RHEL. However, there is one major difference: when the Pacemaker packages are installed, it creates a base configuration for the cluster and enables and starts pcsd. If you try to configure the Pacemaker cluster by following the RHEL instructions exactly, you will get an error. To fix this problem, perform the following steps: 
-1.  Remove the default Pacemaker configuration from each node.
-    
-    `sudo pcs cluster destroy`
-    
-2.  Follow the steps in the RHEL section for creating the Pacemaker cluster.
+1. Remove the default Pacemaker configuration from each node.
+   
+   `sudo pcs cluster destroy`
+   
+2. Follow the steps in the RHEL section for creating the Pacemaker cluster.
 
 **SUSE/SLES**
 
 The process for creating a Pacemaker cluster is completely different on SUSE than it is on RHEL and Ubuntu. The steps below document how to create a cluster with SUSE.
-1.  Start the cluster configuration process by running sudo `ha-cluster-init` on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SUSE’s built-in fencing that is storage-based. NTP and watchdog can be configured later.
-2.  You will be prompted to configure Corosync. You will be asked for the network address to bind to, as well as the multicast address and port. The network address will be the subnet that you are using. For example, 192.191.190.0. You can accept the defaults and click **Enter** at every prompt, or change if necessary.
-3.  Next, you will be asked if you want to configure SBD, which is the disk-based fencing. This can be done later if desired. If it is not configured, unlike on RHEL and Ubuntu, `stonith-enabled` will by default be set to false.
-4.  Finally, you will be asked if you want to configure an IP address for administration. This IP address is optional, but functions similar to the IP address for a WSFC in the sense that it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This, too, is optional.
-5.  Ensure that the cluster is up and running by issuing `sudo crm status`.
-6.  Change the hacluster password
-    
-    `sudo passwd hacluster`
-    
-8.  If you configured an IP address for administration, you can test it in a browser, which will also test the password change for `hacluster`.
-    ![](./media/sql-server-ha-linux-basics/image2.png)
-9.  On another SUSE server that will be a node of the cluster, run
-    
-    `sudo ha-cluster-join`
-    
-10. When prompted, enter the name or IP address of the server that was configured as the first node of the cluster in the previous steps. The server will be added as a node to the existing cluster.
+1. Start the cluster configuration process by running sudo `ha-cluster-init` on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SUSE’s built-in fencing that is storage-based. NTP and watchdog can be configured later.
+2. You will be prompted to configure Corosync. You will be asked for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you are using. For example, 192.191.190.0. You can accept the defaults and click **Enter** at every prompt, or change if necessary.
+3. Next, you will be asked if you want to configure SBD, which is the disk-based fencing. This can be done later if desired. If it is not configured, unlike on RHEL and Ubuntu, `stonith-enabled` will by default be set to false.
+4. Finally, you will be asked if you want to configure an IP address for administration. This IP address is optional, but functions similar to the IP address for a WSFC in the sense that it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This, too, is optional.
+5. Ensure that the cluster is up and running by issuing `sudo crm status`.
+6. Change the hacluster password
+   
+   `sudo passwd hacluster`
+   
+8. If you configured an IP address for administration, you can test it in a browser, which also tests the password change for `hacluster`.
+   ![](./media/sql-server-ha-linux-basics/image2.png)
+9. On another SUSE server that will be a node of the cluster, run
+   
+   `sudo ha-cluster-join`
+   
+10. When prompted, enter the name or IP address of the server that was configured as the first node of the cluster in the previous steps. The server is added as a node to the existing cluster.
 11. Verify the node was added by issuing `sudo crm status`.
 12. Change the hacluster password
-    
-    `sudo passwd hacluster`
-    
+   
+   `sudo passwd hacluster`
+   
 13. Repeat Steps 8-11 for all other servers to be added to the cluster.
 
 ## Next steps

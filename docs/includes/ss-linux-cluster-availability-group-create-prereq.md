@@ -25,11 +25,11 @@ Before you create the availability group, you need to:
 
     >[!NOTE]
     >If hostnames are registered with their IP in the DNS server, you don't need to do the following steps. Validate that all the nodes intended to be part of the availability group configuration can communicate with each other. (A ping to the hostname should reply with the corresponding IP address.) Also, make sure that the /etc/hosts file doesn't contain a record that maps the localhost IP address 127.0.0.1 with the hostname of the node.
+    >
 
+   The hosts file on every server contains the IP addresses and names of all servers that will participate in the availability group. 
 
-    The hosts file on every server contains the IP addresses and names of all servers that will participate in the availability group. 
-
-    The following command returns the IP address of the current server:
+   The following command returns the IP address of the current server:
 
    ```bash
    sudo ip addr show

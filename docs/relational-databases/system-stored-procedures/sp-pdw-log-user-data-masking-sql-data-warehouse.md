@@ -3,9 +3,11 @@ title: "sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: ""
+ms.prod_service: "sql-data-warehouse, pdw"
 ms.service: "sql-data-warehouse"
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-data-warehouse"
 ms.tgt_pltfrm: ""
@@ -20,7 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # sp_pdw_log_user_data_masking (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Use **sp_pdw_log_user_data_masking** to enable user data masking in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] activity logs. User data masking affects the statements on all databases on the appliance.  
   

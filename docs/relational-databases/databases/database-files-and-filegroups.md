@@ -1,7 +1,7 @@
 ---
 title: "Database Files and Filegroups | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/11/2016"
+ms.date: "11/16/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -59,7 +59,6 @@ ms.workload: "Active"
  By default, the data and transaction logs are put on the same drive and path. This is done to handle single-disk systems. However, this may not be optimal for production environments. We recommend that you put data and log files on separate disks.  
 
 ### Logical and Physical File Names
-
 SQL Server files have two names: 
 
 **logical_file_name:**  The logical_file_name is the name used to refer to the physical file in all Transact-SQL statements. The logical file name must comply with the rules for SQL Server identifiers and must be unique among logical file names in the database.
@@ -71,7 +70,6 @@ SQL Server data and log files can be put on either FAT or NTFS file systems. We 
 When multiple instances of SQL Server are run on a single computer, each instance receives a different default directory to hold the files for the databases created in the instance. For more information, see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
 ### Data File Pages
-
 Pages in a SQL Server data file are numbered sequentially, starting with zero (0) for the first page in the file. Each file in a database has a unique file ID number. To uniquely identify a page in a database, both the file ID and the page number are required. The following example shows the page numbers in a database that has a 4-MB primary data file and a 1-MB secondary data file.
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
@@ -79,20 +77,15 @@ Pages in a SQL Server data file are numbered sequentially, starting with zero (0
 The first page in each file is a file header page that contains information about the attributes of the file. Several of the other pages at the start of the file also contain system information, such as allocation maps. One of the system pages stored in both the primary data file and the first log file is a database boot page that contains information about the attributes of the database. For more information about pages and page types, see Understanding Pages and Extents.
 
 ### File Size
-
 SQL Server files can grow automatically from their originally specified size. When you define a file, you can specify a specific growth increment. Every time the file is filled, it increases its size by the growth increment. If there are multiple files in a filegroup, they will not autogrow until all the files are full. Growth then occurs in a round-robin fashion.
 
 Each file can also have a maximum size specified. If a maximum size is not specified, the file can continue to grow until it has used all available space on the disk. This feature is especially useful when SQL Server is used as a database embedded in an application where the user does not have convenient access to a system administrator. The user can let the files autogrow as required to reduce the administrative burden of monitoring free space in the database and manually allocating additional space. 
 
-
 ## Database Snapshot Files
-
 The form of file that is used by a database snapshot to store its copy-on-write data depends on whether the snapshot is created by a user or used internally:
 
 * A database snapshot that is created by a user stores its data in one or more sparse files. Sparse file technology is a feature of the NTFS file system. At first, a sparse file contains no user data, and disk space for user data has not been allocated to the sparse file. For general information about the use of sparse files in database snapshots and how database snapshots grow, see [View the Size of the Sparse File of a Database Snapshot](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md). 
 * Database snapshots are used internally by certain DBCC commands. These commands include DBCC CHECKDB, DBCC CHECKTABLE, DBCC CHECKALLOC, and DBCC CHECKFILEGROUP. An internal database snapshot uses sparse alternate data streams of the original database files. Like sparse files, alternate data streams are a feature of the NTFS file system. The use of sparse alternate data streams allows for multiple data allocations to be associated with a single file or folder without affecting the file size or volume statistics. 
-
-
   
 ## Filegroups  
  Every database has a primary filegroup. This filegroup contains the primary data file and any secondary files that are not put into other filegroups. User-defined filegroups can be created to group data files together for administrative, data allocation, and placement purposes.  
@@ -112,10 +105,9 @@ The form of file that is used by a database snapshot to store its copy-on-write 
  The PRIMARY filegroup is the default filegroup unless it is changed by using the ALTER DATABASE statement. Allocation for the system objects and tables remains within the PRIMARY filegroup, not the new default filegroup.  
 
 ### File and Filegroup Example
+ The following example creates a database on an instance of SQL Server. The database has a primary data file, a user-defined filegroup, and a log file. The primary data file is in the primary filegroup and the user-defined filegroup has two secondary data files. An ALTER DATABASE statement makes the user-defined filegroup the default. A table is then created specifying the user-defined filegroup. (This example uses a generic path `c:\Program Files\Microsoft SQL Server\MSSQL.1` to avoid specifying a version of SQL Server.)
 
-The following example creates a database on an instance of SQL Server. The database has a primary data file, a user-defined filegroup, and a log file. The primary data file is in the primary filegroup and the user-defined filegroup has two secondary data files. An ALTER DATABASE statement makes the user-defined filegroup the default. A table is then created specifying the user-defined filegroup. (This example uses a generic path `c:\Program Files\Microsoft SQL Server\MSSQL.1` to avoid specifying a version of SQL Server.)
-
-```
+```t-sql
 USE master;
 GO
 -- Create the database with the default data
@@ -167,7 +159,28 @@ GO
 The following illustration summarizes the results of the previous example.
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
-  
+
+## File and Filegroup Fill Strategy
+Filegroups use a proportional fill strategy across all the files within each filegroup. As data is written to the filegroup, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] writes an amount proportional to the free space in the file to each file within the filegroup, instead of writing all the data to the first file until full. It then writes to the next file. For example, if file f1 has 100 MB free and file f2 has 200 MB free, one extent is allocated from file f1, two extents from file f2, and so on. In this way, both files become full at about the same time, and simple striping is achieved.
+
+As soon as all the files in a filegroup are full, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] automatically expands one file at a time in a round-robin manner to allow for more data, provided that the database is set to grow automatically. For example, a filegroup is made up of three files, all set to automatically grow. When space in all the files in the filegroup is exhausted, only the first file is expanded. When the first file is full and no more data can be written to the filegroup, the second file is expanded. When the second file is full and no more data can be written to the filegroup, the third file is expanded. If the third file becomes full and no more data can be written to the filegroup, the first file is expanded again, and so on.
+
+## Rules for Designing Files and Filegroups
+The following rules pertain to files and filegroups:
+- A file or filegroup cannot be used by more than one database. For example, file sales.mdf and sales.ndf, which contain data and objects from the sales database, cannot be used by any other database.
+- A file can be a member of only one filegroup.
+- Transaction log files are never part of any filegroups.
+
+## Recommendations
+Following are some general recommendations when you are working with files and filegroups: 
+- Most databases will work well with a single data file and a single transaction log file.
+- If you use multiple files, create a second filegroup for the additional file and make that filegroup the default filegroup. In this way, the primary file will contain only system tables and objects.
+- To maximize performance, create files or filegroups on different available disks as possible. Put objects that compete heavily for space in different filegroups.
+- Use filegroups to enable placement of objects on specific physical disks.
+- Put different tables used in the same join queries in different filegroups. This will improve performance, because of parallel disk I/O searching for joined data.
+- Put heavily accessed tables and the nonclustered indexes that belong to those tables on different filegroups. This will improve performance, because of parallel I/O if the files are located on different physical disks.
+- Do not put the transaction log file(s) on the same physical disk that has the other files and filegroups.
+
 ## Related Content  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
@@ -175,4 +188,4 @@ The following illustration summarizes the results of the previous example.
   
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
-  
+ [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 

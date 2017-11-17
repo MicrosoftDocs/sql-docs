@@ -3,8 +3,11 @@ title: "Always On Availability Groups Dynamic Management Views - Functions | Mic
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,7 +24,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Always On Availability Groups Dynamic Management Views - Functions
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This section contains the dynamic management views and functions that are related to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   

@@ -1,7 +1,7 @@
 ---
 title: "Install Machine Learning Server Standalone or R Server Standalone | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/31/2017"
+ms.date: "11/16/2017"
 ms.prod: 
   - "sql-server-2016"
   - "sql-server-2017"
@@ -20,22 +20,22 @@ ms.workload: "On Demand"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone)
 
-SQL Server setup includes the option to install a machine learning server that runs outside of SQL Server. This option might be useful if you need to develop high performance machine learning solutions that can use remote compute contexts, or that can be deployed to multiple platforms, including:
+SQL Server setup includes the option to install a machine learning server that runs outside of SQL Server. This option might be useful if you need to develop high-performance machine learning solutions that can use remote compute contexts, or that can be deployed to multiple platforms, including:
   
   + An instance of SQL Server 2016 or SQL Server 2017 where machine learning is enabled
   + An instance of R Server or Machine Learning Server in a Hadoop or Spark cluster
   + R Server or Machine Learning Server in Linux
 
-This article describes how to use SQL Server setup to install the standalone version of Microsoft R Server and Machine Learning Server. If you have an Enterprise Edition or Software Assurance, installing the standalone machine learning server is free.
+This article describes how to use SQL Server setup to install the standalone version of Machine Learning Server or Microsoft R Server. If you have an Enterprise Edition or Software Assurance, installing the standalone machine learning server is free.
 
-+ [Install R Server](#bkmk_installRServer)  - SQL Server 2016
-+ [Install Machine Learning Server](#bkmk_installMLServer) -SQL Server 2017
++ [Install R Server](#bkmk_installRServer)  - uses SQL Server 2016 setup
++ [Install Machine Learning Server](#bkmk_installMLServer) - uses SQL Server 2017 setup
 + [Upgrade an existing instance of Microsoft R Server](#bkmk_upgrade)
 + [Help me decide what to install](#bkmk_tips)
 
 ##  <a name="bkmk_installMLServer"></a> Install Machine Learning Server (Standalone)
 
-This feature requires an Enterprise license or equivalent for **SQL Server 2017**. 
+This feature requires an Enterprise license or equivalent for **SQL Server 2017**.
 
 If you have installed a previous version of Microsoft R Server, we recommend that you uninstall it first.
 
@@ -57,7 +57,14 @@ If the computer does not have Internet access, you should download the component
 
      ![Install Machine Learning Server Standalone](media/2017setup-features-page-mlsvr-rpy.png "Start installation of Machine Learning Server Standalone")
     
-    All other options should be ignored. Do not select the options under **Shared Features** if you are running setup on a computer where Machine Learning Services has already been installed for SQL Server in-database analytics, as this creates duplicate libraries. We recommend that you install Machine Learning Server (Standalone) on a separate computer from SQL Server Machine Learning Services.
+    All other options should be ignored. 
+    
+    > [!NOTE]
+    > Avoid installing the **Shared Features** if the computer already has Machine Learning Services installed for SQL Server in-database analytics. This creates duplicate libraries.
+    > 
+    > Also, whereas R or Python scripts running in SQL Server are managed by SQL Server so as not to conflict with memory used by other database engine services, the standalone machine learning server has no such constraints, and can interfere with other database operations. Finally, remote access via RDP session, which is often used for operationalization, is typically blocked by database administrators.
+    > 
+    > For these reasons, we generally recommend that you install Machine Learning Server (Standalone) on a separate computer from SQL Server Machine Learning Services.
 
 5.  Accept the license terms for downloading and installing the machine learning components. If you install both languages, a separate licensing agreement is required for Microsoft R and for Python.
     
@@ -77,7 +84,7 @@ If you have installed any previous version of the Revolution Analytics tools or 
 
 1. Run SQL Server 2016 setup. We recommend that you install Service Pack 1 or later.
 
-2. On the **Installation** tab, click **New R Server (Standalone) installation** .
+2. On the **Installation** tab, click **New R Server (Standalone) installation**.
     
      ![Start setup of R Server Standalone](media/2016-setup-installation-rsvr.png "Start setup of R Server Standalone")
     
@@ -87,9 +94,16 @@ If you have installed any previous version of the Revolution Analytics tools or 
     
     ![Feature selections for R Server Standalone](media/2016setup-rserver-features.png "Feature selections for R Server Standalone")
     
-    All other options can be ignored. Do not install the SQL Server database engine or SQL Server R Services.
+    All other options can be ignored. 
     
-4.  Accept the license terms for downloading and installing Microsoft R Open. When the **Accept** button becomes unavailable, you can click **Next**. 
+    > [!NOTE]
+    > Avoid installing the **Shared Features** if you are running setup on a computer where R Services has already been installed for SQL Server in-database analytics. This creates duplicate libraries.
+    > 
+    > Whereas R scripts running in SQL Server are managed by SQL Server so as not to conflict with memory used by other database engine services, the standalone R Server has no such constraints, and can interfere with other database operations.
+    > 
+    > We generally recommend that you install Machine Learning Server (Standalone) on a separate computer from SQL Server Machine Learning Services.
+
+4.  Accept the license terms for downloading and installing Microsoft R Open. When the **Accept** button becomes unavailable, you can click **Next**.
     
     Installation of these components, and any prerequisites they might require, might take a while.
     
@@ -141,7 +155,7 @@ The following table lists the paths for each installation.
 
 A development IDE is not installed as part of setup. Additional tools are not required, as all the standard tools are included that would be provided with a distribution of R or Python.
 
-We recommend that you try the the new release of [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]. Visual Studio supports both R and Python, as well as database development tools, connectivity with SQL Server, and BI tools. However, you can use any preferred development environment, including RStudio.
+We recommend that you try the new release of [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]. Visual Studio supports both R and Python, as well as database development tools, connectivity with SQL Server, and BI tools. However, you can use any preferred development environment, including RStudio.
 
 ## Troubleshooting
 

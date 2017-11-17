@@ -3,9 +3,11 @@ title: "RENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/13/2016"
 ms.prod: ""
+ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
-ms.suite: ""
+ms.component: "t-sql|statements"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # RENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   

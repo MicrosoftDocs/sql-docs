@@ -22,11 +22,11 @@ Besides backup and restore, the same three availability features are available o
 On Windows Server, FCIs in all configurations always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in SQL Server 2017 that is discussed later in this paper. A WSFC does not exist in Linux. How clustering is implemented in Linux is discussed in the section [Pacemaker for Always On Availability Groups and Failover Cluster Instances on Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
 ## A quick Linux primer
-While some Linux installations may be installed with an interface, the majority are not, meaning that nearly everything at the OS layer is done via command line. The common term for this command line in the Linux world is a *bash shell*.
+While some Linux installations may be installed with an interface, most are not, meaning that nearly everything at the OS layer is done via command line. The common term for this command line in the Linux world is a *bash shell*.
 
 In Linux, many commands need to be executed with elevated privileges, much like many things need to be done in Windows Server as an administrator. There are two main methods to execute with elevated privileges:
 1. Run in the context of the proper user. To change to a different user, use the command `su`. If `su` is executed on its own without a username, as long as you know the password, you will now be in a shell as *root*.
-2. The more common and security conscious way to run things is to use `sudo` before executing anything. Many of the examples in this paper will use `sudo`.
+2. The more common and security conscious way to run things is to use `sudo` before executing anything. Many of the examples in this paper use `sudo`.
 
 Some common commands, each of which have various switches and options that can be researched online:
 -   `cd` – change the directory
@@ -154,7 +154,7 @@ All of the currently supported distributions ship a high availability add on/ext
 > [!NOTE]
 > The cluster stack is commonly referred to as Pacemaker in the Linux world.
 
-This solution in some ways is similar to, but in many ways is different from deploying clustered configurations using Windows Server. In Windows Server, the availability form of clustering called a Failover Cluster (WSFC) is built into the operating system, and the feature that enables the creation of a WSFC, Failover Clustering, is disabled by default. AGs and FCIs are built on top of a WSFC, and share tight integration because of the specific resource DLL that is provided by SQL Server. This tightly coupled solution is possible by and large because it is all from one vendor.
+This solution is in some ways similar to, but in many ways different from deploying clustered configurations using Windows Server. In Windows Server, the availability form of clustering called a Failover Cluster (WSFC) is built into the operating system, and the feature that enables the creation of a WSFC, Failover Clustering, is disabled by default. AGs and FCIs are built on top of a WSFC, and share tight integration because of the specific resource DLL that is provided by SQL Server. This tightly coupled solution is possible by and large because it is all from one vendor.
 
 ![](./media/sql-server-ha-linux-basics/image1.png)
 
@@ -236,7 +236,7 @@ Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedic
 
 Like a WSFC, Pacemaker would prefer redundant networking, meaning distinct network cards (NICs or pNICs for physical) having individual IP addresses. In terms of the cluster configuration, each IP address would have what is known as its own ring. However, as with WSFCs today, many implementations are virtualized or in the public cloud where there is really only a single virtualized NIC (vNIC) presented to the server. If all pNICs and vNICs are connected to the same physical or virtual switch, there is no true redundancy at the network layer, so configuring multiple NICs is a bit of an illusion to the virtual machine. Network redundancy is usually built into the hypervisor for virtualized deployments, and is definitely built into the public cloud.
 
-One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. For more information on multiple subnets and Linux clusters, see the topic [Configuring Multiple Subnet Always On Availability Groups and Failover Cluster Instances with Pacemaker].
+One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. For more information on multiple subnets and Linux clusters, see the article [Configuring Multiple Subnet Always On Availability Groups and Failover Cluster Instances with Pacemaker].
 
 ### Quorum and STONITH
 Quorum is discussed in the [AG] and [FCI] articles, as the configuration and what is required is related to those specific deployments of SQL Server.

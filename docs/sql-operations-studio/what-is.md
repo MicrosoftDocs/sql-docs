@@ -18,7 +18,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.
 
-> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T255]
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T255/player]
 
 **[Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

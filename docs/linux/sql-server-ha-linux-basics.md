@@ -11,7 +11,7 @@ manager: "jhubbard"
 
 # SQL Server availability basics for Linux deployments
 
-Starting with SQL Server 2017, SQL Server is supported on both Linux and Windows Server. As with any Windows Server-based SQL Server deployment, SQL Server databases and instances need to be highly available under Linux. This paper covers the technical aspects of planning and deploying highly available Linux-based SQL Server databases and instances, as well as some of the differences from Windows Server-based installations. Because SQL Server may be new for Linux professionals, and Linux may be new for SQL Server professionals, this paper at times introduces concepts that may be familiar to some and unfamiliar to others.
+Starting with SQL Server 2017, SQL Server is supported on both Linux and Windows Server. As with any Windows Server-based SQL Server deployment, SQL Server databases and instances need to be highly available under Linux. This article covers the technical aspects of planning and deploying highly available Linux-based SQL Server databases and instances, as well as some of the differences from Windows Server-based installations. Because SQL Server may be new for Linux professionals, and Linux may be new for SQL Server professionals, the article at times introduces concepts that may be familiar to some and unfamiliar to others.
 
 ## SQL Server availability options for Linux deployments
 Besides backup and restore, the same three availability features are available on Linux as for Windows Server-based deployments:
@@ -19,14 +19,14 @@ Besides backup and restore, the same three availability features are available o
 -   Always On Failover Cluster Instances (FCIs)
 -   [Log Shipping](sql-server-linux-use-log-shipping.md)
 
-On Windows Server, FCIs in all configurations always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in SQL Server 2017 that is discussed later in this paper. A WSFC does not exist in Linux. How clustering is implemented in Linux is discussed in the section [Pacemaker for Always On Availability Groups and Failover Cluster Instances on Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
+On Windows Server, FCIs in all configurations always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in SQL Server 2017 that is discussed [later in this article]. A WSFC does not exist in Linux. How clustering is implemented in Linux is discussed in the section [Pacemaker for Always On Availability Groups and Failover Cluster Instances on Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
 ## A quick Linux primer
 While some Linux installations may be installed with an interface, most are not, meaning that nearly everything at the OS layer is done via command line. The common term for this command line in the Linux world is a *bash shell*.
 
 In Linux, many commands need to be executed with elevated privileges, much like many things need to be done in Windows Server as an administrator. There are two main methods to execute with elevated privileges:
 1. Run in the context of the proper user. To change to a different user, use the command `su`. If `su` is executed on its own without a username, as long as you know the password, you will now be in a shell as *root*.
-2. The more common and security conscious way to run things is to use `sudo` before executing anything. Many of the examples in this paper use `sudo`.
+2. The more common and security conscious way to run things is to use `sudo` before executing anything. Many of the examples in this article use `sudo`.
 
 Some common commands, each of which have various switches and options that can be researched online:
 -   `cd` – change the directory
@@ -45,7 +45,7 @@ Some common commands, each of which have various switches and options that can b
 This section covers tasks that are common to all Linux-based SQL Server deployments.
 
 ### Ensure that files can be copied
-One thing that anyone using SQL Server on Linux should be able to do is copy files from one server to another. This task is very important for AG configurations, as will be shown later in this article.
+One thing that anyone using SQL Server on Linux should be able to do is copy files from one server to another. This task is very important for AG configurations, as will be shown [later in this article].
 
 Things like permission issues can exist on Linux as well as on Windows Server-based installations. However, those familiar with how to copy from server to server on Windows may not be familiar with how it is done on Linux. A common method is to use the command-line utility `scp`, which stands for secure copy. Behind the scenes, `scp` uses OpenSSH. SSH stands for secure shell. Depending on the Linux distribution, OpenSSH itself may not be installed. If it is not, OpenSSH will need to be installed first. For more information on configuring OpenSSH, see the information at the following links for each distribution:
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
@@ -109,7 +109,8 @@ Conversely, the name of the service under Linux can also be added as an exceptio
 ### Install SQL Server packages for availability
 On a Windows Server-based SQL Server installation, some components are installed even in a basic engine install, while others are not. Under Linux, only the SQL Server Engine is installed as part of the installation process. Everything else is optional. For highly available SQL Server instances under Linux, two packages should be installed at the same time as SQL Server: SQL Server Agent (`mssql-server-agent`) and the high availability agent (`mssql-server-ha`). While SQL Server Agent is technically optional, it is SQL Server’s scheduler for jobs and is required by log shipping, so installation is recommended. On Windows Server-based installations, SQL Server agent is not optional.
 
-For those new to SQL Server, SQL Server Agent is SQL Server’s built-in job scheduler. It is a common way for DBAs to schedule things like backups and other SQL Server maintenance. Unlike a Windows Server-based installation of SQL Server where SQL Server Agent is a completely different service, on Linux, SQL Server Agent runs in context of SQL Server itself.
+>[!NOTE]
+>For those new to SQL Server, SQL Server Agent is SQL Server’s built-in job scheduler. It is a common way for DBAs to schedule things like backups and other SQL Server maintenance. Unlike a Windows Server-based installation of SQL Server where SQL Server Agent is a completely different service, on Linux, SQL Server Agent runs in context of SQL Server itself.
 
 When AGs or FCIs are configured on a Windows Server-based configuration, they are cluster-aware. Cluster awareness means that SQL Server has specific resource DLLs that a WSFC knows about (sqagtres.dll and sqsrvres.dll for FCIs, hadrres.dll for AGs) and are used by the WSFC to ensure that the SQL Server clustered functionality is up, running, and functioning properly. Because clustering is external not only to SQL Server but Linux itself, Microsoft had to code the equivalent of a resource DLL for Linux-based AG and FCI deployments. This is the `mssql-server-ha` package, also known as the SQL Server resource agent for Pacemaker.
 
@@ -172,7 +173,7 @@ For more information about the whole stack, also see the [official Pacemaker doc
 This section documents the common concepts and terminology for a Pacemaker implementation.
 
 #### Node
-A node is a server participating in the cluster. A Pacemaker cluster natively supports up to 16 nodes. This number can be exceeded if Corosync is not running on additional nodes, but Corosync is required for SQL Server. Therefore, the maximum number of nodes a cluster can have for any SQL Server-based configuration is 16; this is the Pacemaker limit, and has nothing to do with maximum limitations for AGs or FCIs imposed by SQL Server. See the [individual documentation for AGs and FCIs] for limitations that are specific to those features.
+A node is a server participating in the cluster. A Pacemaker cluster natively supports up to 16 nodes. This number can be exceeded if Corosync is not running on additional nodes, but Corosync is required for SQL Server. Therefore, the maximum number of nodes a cluster can have for any SQL Server-based configuration is 16; this is the Pacemaker limit, and has nothing to do with maximum limitations for AGs or FCIs imposed by SQL Server. See the individual documentation for [Always On Availability Groups] and [Failover Cluster Instances] for limitations that are specific to those features.
 
 #### Resource
 Both a WSFC and a Pacemaker cluster have the concept of a resource. A resource is specific functionality that runs in context of the cluster, such as a disk or an IP address. For example, under Pacemaker there are both FCI and AG resources that can get created. This is not dissimilar to what is done in a WSFC, where you see either a SQL Server resource for an FCI or an AG resource when configuring an AG, but is not exactly the same due to the underlying Pacemaker differences in how SQL Server integrates with it.
@@ -216,7 +217,7 @@ Logs for a Pacemaker cluster are different depending on the distribution.
 
 To change the default logging location, modify `corosync.conf`.
 
-## Planning Pacemaker clusters for SQL Server
+## Plan Pacemaker clusters for SQL Server
 This section discusses the important planning points for a Pacemaker cluster.
 
 ### Virtualizing Linux-based Pacemaker clusters for SQL Server

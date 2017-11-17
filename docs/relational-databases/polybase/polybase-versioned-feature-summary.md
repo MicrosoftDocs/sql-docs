@@ -20,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # PolyBase Versioned Feature Summary
-
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Summary of PolyBase features available for SQL Server products and services.  
   
 ## Feature Summary for Product Releases  

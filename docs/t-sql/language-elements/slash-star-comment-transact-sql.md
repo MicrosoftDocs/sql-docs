@@ -1,5 +1,5 @@
 ---
-title: "Slash Star Comment (Transact-SQL) | Microsoft Docs"
+title: "Slash Star (Block Comment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
 ms.prod: "sql-non-specified"
@@ -30,8 +30,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Slash Star Comment (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+# Slash Star (Block Comment) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 
   Indicates user-provided text. The text between the /* and \*/ is not evaluated by the server.  
   

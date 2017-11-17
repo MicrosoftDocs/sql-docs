@@ -1,5 +1,5 @@
 ---
-title: "^= (Bitwise Exclusive OR EQUALS) (Transact-SQL) | Microsoft Docs"
+title: "^= (Bitwise Exclusive OR Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
 ms.prod: "sql-non-specified"
@@ -20,6 +20,8 @@ dev_langs:
 helpviewer_keywords: 
   - "^= (bitwise exclusive OR equals)"
   - "compound operators, ^="
+  - "assignment operators, ^="
+  - "augmented operators, ^="
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
 caps.latest.revision: 15
 author: "BYHAM"
@@ -27,8 +29,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# ^= (Bitwise Exclusive OR EQUALS) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+# ^= (Bitwise Exclusive OR Assignment) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Performs a bitwise exclusive OR operation between two integer values, and sets a value to the result of the operation.  
   

@@ -89,7 +89,7 @@
 
 #### [Download sample data](tutorials/sqldev-py1-download-the-sample-data.md)
 #### [Import data to SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
-#### [Explore and visualize Data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
+#### [Explore and visualize data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
 #### [Create data features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
@@ -122,6 +122,7 @@
 
 ### [Avoid errors with user package libraries for R](r/packages-installed-in-user-libraries.md)
 
+### [Add SQLRUserGroup as a database user](r/add-sqlrusergroup-to-database.md)
 
 ## Data exploration and modeling
 

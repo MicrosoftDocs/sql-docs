@@ -3,8 +3,11 @@ title: "Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Aliasing allows the temporary substitution of a short and easy-to-remember string in place of a table or column name in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)] queries. Table aliases are often used in JOIN queries because the JOIN syntax requires fully qualified object names when referencing columns.  
   

@@ -3,8 +3,11 @@ title: "sys.fn_virtualservernodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, pdw"
+ms.service: ""
+ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -29,7 +32,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # sys.fn_virtualservernodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Returns a list of failover clustered instance nodes on which an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can run. This information is useful in failover clustering environments.  
   

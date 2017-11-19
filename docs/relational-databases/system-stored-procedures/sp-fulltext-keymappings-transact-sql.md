@@ -3,8 +3,11 @@ title: "sp_fulltext_keymappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, pdw"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,7 +29,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # sp_fulltext_keymappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Returns mappings between document identifiers (DocIds) and full-text key values. The DocId column contains values for a **bigint** integer that maps to a particular full-text key value in a full-text indexed table. DocId values that satisfy a search condition are passed from the Full-Text Engine to the Database Engine, where they are mapped to full-text key values from the base table being queried. The full-text key column is a unique index that is required on one column of the table.  
   

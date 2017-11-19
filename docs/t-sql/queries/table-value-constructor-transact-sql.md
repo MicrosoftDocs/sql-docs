@@ -3,8 +3,11 @@ title: "Table Value Constructor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,7 +27,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Table Value Constructor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Specifies a set of row value expressions to be constructed into a table. The [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor allows multiple rows of data to be specified in a single DML statement. The table value constructor can be specified in the VALUES clause of the INSERT statement, in the USING \<source table> clause of the MERGE statement, and in the definition of a derived table in the FROM clause.  
   

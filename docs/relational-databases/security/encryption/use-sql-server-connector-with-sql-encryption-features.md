@@ -23,7 +23,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Use SQL Server Connector with SQL Encryption Features
-
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
   Common [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption activities using an asymmetric key protected by the Azure Key Vault include the following three areas.  
   
 -   Transparent Data Encryption by using an Asymmetric Key from Azure Key Vault  

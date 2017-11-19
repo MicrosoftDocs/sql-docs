@@ -3,8 +3,11 @@ title: "sp_sequence_get_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-data-warehouse"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -25,7 +28,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_sequence_get_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
 
   Returns a range of sequence values from a sequence object. The sequence object generates and issues the number of values requested and provides the application with metadata related to the range.  
   

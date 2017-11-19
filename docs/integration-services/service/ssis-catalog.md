@@ -42,7 +42,7 @@ ms.workload: "Active"
 > [!NOTE]
 > If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that the **SSISDB** database is attached to, stops or does not respond, the ISServerExec.exe process ends. A message is written to a Windows Event log.  
 >   
->  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources failover as part of a cluster failover, the running packages do not restart. You can use checkpoints to restart packages. For more information, see [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+>  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources fail over as part of a cluster failover, the running packages do not restart. You can use checkpoints to restart packages. For more information, see [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## Features and capabilities  
   
@@ -151,7 +151,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 -   DES  
   
- When you deploy an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]server, the catalog automatically encrypts the package data and sensitive values. The catalog also automatically decrypts the data when you retrieve it. The SSISDB catalog uses the **ServerStorage** protection level. For more information, see [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
+ When you deploy an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, the catalog automatically encrypts the package data and sensitive values. The catalog also automatically decrypts the data when you retrieve it. The SSISDB catalog uses the **ServerStorage** protection level. For more information, see [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
  Changing the encryption algorithm is a time-intensive operation. First, the server has to use the previously specified algorithm to decrypt all configuration values. Then, the server has to use the new algorithm to re-encrypt the values. During this time, there cannot be other [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] operations on the server. Thus, to enable [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] operations to continue uninterrupted, the encryption algorithm is a read-only value in the  dialog box in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -186,7 +186,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 ### Managing Permissions  
  You can manage permissions by using the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI, stored procedures, and the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace.  
   
- To manage permissions using the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI, use the following dialog boxes.  
+ To manage permissions using the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI, use the following dialog boxes: 
   
 -   For a folder, use the **Permissions** page of the [Folder Properties Dialog Box](../../integration-services/service/folder-properties-dialog-box.md).  
   
@@ -194,10 +194,10 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 -   For an environment, use the **Permissions** page in the [NIB: Environment Properties Dialog Box](http://msdn.microsoft.com/en-us/6a91a8d4-0006-4cfd-9759-3e4295ae452b).  
   
- To manage permissions using Transact-SQL, call [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md) and [catalog.revoke_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md). To view effective permissions for the current principal for all objects, query [catalog.effective_object_permissions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md). This topic provides descriptions of the different types of permissions. To view permissions that have been explicitly assigned to the user, query [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md).  
+ To manage permissions using Transact-SQL, call [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md), and [catalog.revoke_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md). To view effective permissions for the current principal for all objects, query [catalog.effective_object_permissions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md). This topic provides descriptions of the different types of permissions. To view permissions that have been explicitly assigned to the user, query [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md).  
   
 ##  <a name="Folders"></a> Folders  
- A folder contains one or more projects and environments in the **SSISDB** catalog. You can use the [catalog.folders &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md) view to access information about folders in the catalog. You can use the following stored procedures to manage folders.  
+ A folder contains one or more projects and environments in the **SSISDB** catalog. You can use the [catalog.folders &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md) view to access information about folders in the catalog. You can use the following stored procedures to manage folders:  
   
 -   [catalog.create_folder &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
   
@@ -210,7 +210,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 ##  <a name="ProjectsAndPackages"></a> Projects and Packages  
  Each project can contain multiple packages. Both projects and packages can contain parameters and references to environments. You can access the parameters and environment references by using the [Configure Dialog Box](../../integration-services/service/configure-dialog-box.md).  
   
- You can carry out other project tasks by calling the following stored procedures.  
+ You can carry out other project tasks by calling the following stored procedures: 
   
 -   [catalog.delete_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md)  
   
@@ -320,7 +320,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 5.  Click **Enable automatic execution of Integration Services stored procedure at SQL Server startup** to enable the [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md) stored procedure to run each time the [!INCLUDE[ssIS](../../includes/ssis-md.md)] server instance is restarted.  
   
-     The stored procedure performs maintenance of the state of operations for the SSISDB catalog. It fixes the status of any packages there were running if and when the [!INCLUDE[ssIS](../../includes/ssis-md.md)] server instance goes down.  
+     The stored procedure performs maintenance of the state of operations for the SSISDB catalog. It fixes the status of any packages there were running if the [!INCLUDE[ssIS](../../includes/ssis-md.md)] server instance goes down.  
   
 6.  Enter a password, and then click **Ok**.  
   
@@ -381,10 +381,10 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 |Property Name (Catalog Properties dialog box)|Property Name (catalog.catalog_property view)|Description|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Encryption Algorithm Name|ENCRYPTION_CLEANUP_ENABLED|Specifies the type of encryption that is used to encrypt the sensitive parameter values in the catalog. The following are the possible values:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (default)|  
-|Validation Timeout (seconds)|VALIDATION_TIMEOUT|Specify the maxium number of seconds a project validation or a package validation can run before it is stopped. The default value is 300 seconds.<br /><br /> Performing the validation is an asynchronous operation. The larger the project or package is, the longer it will take to validate.<br /><br /> For information on validating projects and packages, see [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  
+|Validation Timeout (seconds)|VALIDATION_TIMEOUT|Specify the maximum number of seconds a project validation or a package validation can run before it is stopped. The default value is 300 seconds.<br /><br /> Performing the validation is an asynchronous operation. The larger the project or package is, the longer it takes to validate.<br /><br /> For information on validating projects and packages, see [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  
 |Clean Logs Periodically|OPERATION_CLEANUP_ENABLED|Set the property to True to indicate that the SQL Server Agent job, operations cleanup, runs. Otherwise, set the property to False.|  
-|Retention Period (days)|RETENTION_WINDOW|Specify the maximum age of allowable operations data (in days). Data that is older than the specified number of days will be removed by the SQL Agent job, operations cleanup.|  
-|Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|Specify how many versions of a project will be stored in the catalog. Older versions of projects that exceed the maximum will be removed when the project version cleanup job runs.|  
+|Retention Period (days)|RETENTION_WINDOW|Specify the maximum age of allowable operations data (in days). Data that is older than the specified number of days are removed by the SQL Agent job, operations cleanup.|  
+|Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|Specify how many versions of a project are stored in the catalog. Older versions of projects that exceed the maximum are removed when the project version cleanup job runs.|  
 
 ## Back up, Restore, and Move the SSIS Catalog
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -411,25 +411,25 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 3.  Back up the SSISDB database by using the **Backup Database** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [How to: Back Up a Database (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812).  
   
-4.  Generate the CREATE LOGIN script for ##MS_SSISServerCleanupJobLogin##, by doing the following. For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
+4.  Generate the CREATE LOGIN script for ##MS_SSISServerCleanupJobLogin##, by doing the following things. For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
     1.  In Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the **Security** node and then expand the **Logins** node.  
   
     2.  Right-click **##MS_SSISServerCleanupJobLogin##**, and then click **Script Login as** > **CREATE To** > **New Query Editor Window**.  
   
-5.  If you will be restoring the SSISDB database to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the SSISDB catalog was never created, generate the CREATE PROCEDURE script for sp_ssis_startup, by doing the following. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
+5.  If you are restoring the SSISDB database to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the SSISDB catalog was never created, generate the CREATE PROCEDURE script for sp_ssis_startup, by doing the following things. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
     1.  In Object Explorer, expand the **Databases** node and then expand the **master** > **Programmability** > **Stored Procedures** node.  
   
-    2.  Right click **dbo.sp_ssis_startup**, and then click **Script Stored Procedure as** > **CREATE To** > **New Query Editor Window**.  
+    2.  Right-click **dbo.sp_ssis_startup**, and then click **Script Stored Procedure as** > **CREATE To** > **New Query Editor Window**.  
   
 6.  Confirm that SQL Server Agent has been started  
   
-7.  If you will be restoring the SSISDB database to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the SSISDB catalog was never created, generate a script for the SSIS Server Maintenance Job by doing the following. The script is created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent automatically when the SSISDB catalog is created. The job helps clean up cleanup operation logs outside the retention window and remove older versions of projects.  
+7.  If you are restoring the SSISDB database to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the SSISDB catalog was never created, generate a script for the SSIS Server Maintenance Job by doing the following things. The script is created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent automatically when the SSISDB catalog is created. The job helps clean up cleanup operation logs outside the retention window and remove older versions of projects.  
   
     1.  In Object Explorer, expand the **SQL Server Agent** node and then expand the **Jobs** node.  
   
-    2.  Right click SSIS Server Maintenance Job, and then click **Script Job as** > **CREATE To** > **New Query Editor Window**.  
+    2.  Right-click SSIS Server Maintenance Job, and then click **Script Job as** > **CREATE To** > **New Query Editor Window**.  
   
 ### To Restore the SSIS Database  
   
@@ -460,7 +460,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
     ```  
   
-3.  Restore the SSISDB database from the backup by using the **Restore Database** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see the following topics.  
+3.  Restore the SSISDB database from the backup by using the **Restore Database** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see the following topics:  
   
     -   [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -470,7 +470,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 4.  Execute the scripts that you created in the [To Back up the SSIS Database](#backup) for ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup, and SSIS Server Maintenance Job. Confirm that SQL Server Agent has been started.  
   
-5.  Run the following statement to set the sp_ssis_startup prodecure for autoexecution. For more information, see [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md).  
+5.  Run the following statement to set the sp_ssis_startup procedure for autoexecution. For more information, see [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md).  
   
     ```  
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
@@ -496,11 +496,11 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
         >  Confirm that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account has permissions to read the backup key file.  
   
         > [!NOTE]  
-        >  You will see the following warning message displayed in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] if the database master key has not yet been encrypted by the service master key. Ignore the warning message.  
+        >  You see the following warning message displayed in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] if the database master key has not yet been encrypted by the service master key. Ignore the warning message.  
         >   
         >  **The current master key cannot be decrypted. The error was ignored because the FORCE option was specified.**  
         >   
-        >  The FORCE argument specifies that the restore process should continue even if the current database master key is not open. For the SSISDB catalog, because the database master key has not been opened on the instance where you are restoring the database, you will see this message.  
+        >  The FORCE argument specifies that the restore process should continue even if the current database master key is not open. For the SSISDB catalog, because the database master key has not been opened on the instance where you are restoring the database, you see this message.  
   
     -   **Method 2**  
   
@@ -524,17 +524,17 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
      Ensure that the Integration Services (SSIS) relevant objects are created in the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the SSISDB catalog has not yet been created.  
 
 ## Upgrade the SSIS Catalog (SSISDB)
-  Run the SSISDB Upgrade Wizard to upgrade the SSIS Catalog database, SSISDB, when the database is older than the current version of the SQL Server instance. This occurs when one of the following conditions is true.  
+  Run the SSISDB Upgrade Wizard to upgrade the SSIS Catalog database, SSISDB, when the database is older than the current version of the SQL Server instance. The database may be older when one of the following conditions is true.  
   
 -   You restored the database from an older version of SQL Server.  
   
--   You did not remove the database from an Always On Availability Group before upgrading the SQL Server instance. This prevents the automatic upgrade of the database. For more info, see [Upgrading SSISDB in an availability group](#Upgrade).  
+-   You did not remove the database from an Always On Availability Group before upgrading the SQL Server instance. This condition prevents the automatic upgrade of the database. For more info, see [Upgrading SSISDB in an availability group](#Upgrade).  
   
  The wizard can only upgrade the database on a local  server instance.  
   
 ### Upgrade the SSIS Catalog (SSISDB) by running the SSISDB Upgrade Wizard  
   
-1.  Backup the SSIS Catalog database, SSISDB.  
+1.  Back up the SSIS Catalog database, SSISDB.  
   
 2.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the local server, and then expand **Integration Services Catalogs**.  
   
@@ -574,9 +574,9 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 3.  [Upgrading SSISDB in an availability group](#Upgrade)  
   
 ###  <a name="prereq"></a> Prerequisites  
- You must perform the following pre-requisite steps before enabling Always On support for the SSISDB database.  
+Do the following prerequisite steps before enabling Always On support for the SSISDB database.  
   
-1.  Set up a Windows failover cluster. See [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) blog post for instructions. You should install the feature and tools on all cluster nodes.  
+1.  Set up a Windows failover cluster. See [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) blog post for instructions. Install the feature and tools on all cluster nodes.  
   
 2.  Install SQL Server 2016 with Integration Services (SSIS) feature on each node of the cluster.  
   
@@ -593,7 +593,10 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 > [!IMPORTANT]  
 > -   You must perform these steps on the **primary node** of the availability group.
 > -   You must enable **SSIS support for Always On** *after* you add SSISDB to an Always On Availability Group.  
-  
+
+> [!NOTE]
+> For more info about this procedure, see the following walkthrough with additional screen shots by SQL Server MVP Marcos Freccia: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+
 ####  <a name="Step1"></a> Step 1: Create Integration Services Catalog  
   
 1.  Launch **SQL Server Management Studio** and connect to a SQL Server instance in the cluster that you want to set as the **primary node** of Always On high availability group for SSISDB.  
@@ -607,21 +610,23 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 5.  Enter a **password**, and then click **Ok**. The password protects the database master key that is used for encrypting the catalog data. Save the password in a secure location. It is recommended that you also back up the database master key. For more information, see [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ####  <a name="Step2"></a> Step 2: Add SSISDB to an Always On Availability Group  
- Adding the SSISDB database to an Always On Availability Group is almost same as adding any other user database into an availability group. See [Use the Availability Group Wizard](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
+Adding the SSISDB database to an Always On Availability Group is almost same as adding any other user database into an availability group. See [Use the Availability Group Wizard](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
- You need to provide the password that you specified while creating the SSIS Catalog in the **Select Databases** page of the **New Availability Group** wizard.  
+Provide the password that you specified while creating the SSIS Catalog in the **Select Databases** page of the **New Availability Group** wizard.
+
+When you're prompted to **Select your data synchronization preference**, select **Skip initial data synchronization**.
   
  ![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
   
 ####  <a name="Step3"></a> Step 3: Enable SSIS support for Always On  
- After you create the Integration Service Catalog, right click the **Integration Service Catalogs** node, and click **Enable Always On Support….** You should see the following **Enable Support for Always On** dialog box. If this menu item is disabled, confirm that you have all the prerequisites installed and click **Refresh**.  
+ After you create the Integration Service Catalog, right-click the **Integration Service Catalogs** node, and click **Enable Always On Support.** You should see the following **Enable Support for Always On** dialog box. If this menu item is disabled, confirm that you have all the prerequisites installed and click **Refresh**.  
   
  ![Enable Support for Always On](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
   
 > [!WARNING]  
 >  Auto-failover of SSISDB database is not supported until you enable SSIS Support for Always On.  
   
- The newly added secondary replicas from the Always On availability group will be shown in the table. Click **Connect…** button for each replica in the list and enter authentication credentials to connect to the replica. The user account must be a member of sysadmin group on each replica to enable SSIS support for Always On. After you successfully connect to each replica, click **OK** to enable SSIS support for Always On.  
+ The newly added secondary replicas from the Always On availability group are shown in the table. Click **Connect…** button for each replica in the list and enter authentication credentials to connect to the replica. The user account must be a member of sysadmin group on each replica to enable SSIS support for Always On. After you successfully connect to each replica, click **OK** to enable SSIS support for Always On.  
  
 If the **Enable Always On support** option on the context menu appears to be disabled after you've completed the other prerequisites, try these things:
 1.  Refresh the context menu by clicking the **Refresh** option.
@@ -629,25 +634,25 @@ If the **Enable Always On support** option on the context menu appears to be dis
 3.  Make sure the SQL Server version is 13.0 or higher. SSIS supports Always On only on SQL Server 2016 and later versions.
 
 ###  <a name="Upgrade"></a> Upgrading SSISDB in an availability group  
- If you're upgrading SQL Server from a previous version, and SSISDB is in an Always On availability group, your upgrade may be blocked by the “SSISDB in Always On Availability Group check” rule. This blocking occurs because upgrade runs in single-user mode, while an availability database must be a multi-user database. Therefore, during upgrade or patching, all availability databases including SSISDB are taken offline and are not upgraded or patched. To let upgrade continue, you have to to first remove SSISDB from the availability group, then upgrade or patch each node, then add SSISDB back to the availability group.  
+ If you're upgrading SQL Server from a previous version, and SSISDB is in an Always On availability group, your upgrade may be blocked by the “SSISDB in Always On Availability Group check” rule. This blocking occurs because upgrade runs in single-user mode, while an availability database must be a multi-user database. Therefore, during upgrade or patching, all availability databases including SSISDB are taken offline and are not upgraded or patched. To let upgrade continue, first remove SSISDB from the availability group, then upgrade or patch each node, then add SSISDB back to the availability group.  
   
- If you are blocked by the “SSISDB in Always On Availability Group check” rule, you have to follow these steps to upgrade SQL Server.  
+ If you are blocked by the “SSISDB in Always On Availability Group check” rule, follow these steps to upgrade SQL Server.  
   
 1.  Remove the SSISDB database from the availability group. For more info, see [Remove a Secondary Database from an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md) and [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
   
-2.  Click **Re-run** in the upgrade wizard. The “SSISDB in Always On Availability Group check” rule will pass.  
+2.  Click **Rerun** in the upgrade wizard. The “SSISDB in Always On Availability Group check” rule passes.  
   
 3.  Click the **Next** to continue the upgrade.  
   
 4.  After you have upgraded all the nodes, add the SSISDB database back to the Always On availability group. For more info, see [Add a Database to an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
   
- If you're not blocked when you upgrade SQL Server,  and SSISDB is in an Always On availability group, you have to upgrade SSISDB separately after you upgrade the SQL Server database engine. Use the SSIS Upgrade Wizard to upgrade the SSISDB as described in the following procedure.  
+ If you're not blocked when you upgrade SQL Server, and SSISDB is in an Always On availability group, upgrade SSISDB separately after you upgrade the SQL Server database engine. Use the SSIS Upgrade Wizard to upgrade the SSISDB as described in the following procedure.  
   
-1.  Move the SSISDB database out of the availability group, or delete the availability group if SSISDB is the only database in the availability group. You have to launch **SQL Server Management Studio** on the **primary node** of the availability group to perform this task.  
+1.  Move the SSISDB database out of the availability group, or delete the availability group if SSISDB is the only database in the availability group. Launch **SQL Server Management Studio** on the **primary node** of the availability group to perform this task.  
   
 2.  Remove the SSISDB database from all **replica nodes**.  
   
-3.  Upgrade the SSISDB database on the **primary node**. In**Object Explorer** in SQL Server Management Studio, expand **Integration Services Catalogs**, right-click **SSISDB**, and then select **Database Upgrade**. Follow the instructions in the **SSISDB Upgrade Wizard** to upgrade the database. You have to launch the **SSIDB Upgrade Wizard** locally on the **primary node**.  
+3.  Upgrade the SSISDB database on the **primary node**. In**Object Explorer** in SQL Server Management Studio, expand **Integration Services Catalogs**, right-click **SSISDB**, and then select **Database Upgrade**. Follow the instructions in the **SSISDB Upgrade Wizard** to upgrade the database. Launch the **SSIDB Upgrade Wizard** locally on the **primary node**.  
   
 4.  Follow the instructions in [Step 2: Add SSISDB to an Always On Availability Group](#Step2) to add the SSISDB back to an availability group.  
   

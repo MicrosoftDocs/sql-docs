@@ -3,8 +3,11 @@ title: "CONTAINSTABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2015"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -39,7 +42,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # CONTAINSTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns a table of zero, one, or more rows for those columns containing precise or fuzzy (less precise) matches to single words and phrases, the proximity of words within a certain distance of one another, or weighted matches. CONTAINSTABLE is used in the [FROM clause](../../t-sql/queries/from-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement and is referenced as if it were a regular table name. It performs a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types.  
   

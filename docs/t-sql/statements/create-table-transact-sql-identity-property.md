@@ -3,8 +3,11 @@ title: "IDENTITY (Property) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,7 +30,7 @@ manager: "cguyer"
 ms.workload: "Active"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Creates an identity column in a table. This property is used with the CREATE TABLE and ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   

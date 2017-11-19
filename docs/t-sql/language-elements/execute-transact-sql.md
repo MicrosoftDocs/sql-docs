@@ -3,8 +3,11 @@ title: "EXECUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -36,7 +39,8 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ms.workload: "Active"
 ---
-# EXECUTE-Transact-SQL
+
+# EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Executes a command string or character string within a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, or one of the following modules: system stored procedure, user-defined stored procedure, CLR stored procedure, scalar-valued user-defined function, or extended stored procedure. The EXECUTE statement can be used to send pass-through commands to linked servers. Additionally, the context in which a string or command is executed can be explicitly set. Metadata for the result set can be defined by using the WITH RESULT SETS options.

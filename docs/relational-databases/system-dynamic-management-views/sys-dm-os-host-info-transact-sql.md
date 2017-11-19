@@ -3,8 +3,11 @@ title: "sys.dm_os_host_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,9 +29,9 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_host_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns one row that displays operating system version information.  
+Returns one row that displays operating system version information.  
   
 |Column name |Data type |Description |  
 |-----------------|---------------|-----------------|  

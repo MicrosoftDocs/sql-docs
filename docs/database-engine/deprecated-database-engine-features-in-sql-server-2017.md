@@ -1,11 +1,13 @@
 ---
 title: "Deprecated Database Engine Features in SQL Server 2017 | Microsoft Docs"
-ms.custom: 
-  - "SQL2017_New_Updated"
+ms.custom: ""
 ms.date: "06/09/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,7 +24,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Deprecated Database Engine Features in SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
   

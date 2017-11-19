@@ -2,11 +2,12 @@
 title: "Install SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -20,6 +21,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server Database Engine
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications in your enterprise.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports up to 50 instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on a single computer. To create a typical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation, see [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  

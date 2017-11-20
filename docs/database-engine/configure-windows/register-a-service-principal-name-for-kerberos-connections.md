@@ -74,34 +74,34 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Named instance**  
   
--   *MSSQLSvc/\<FQDN>:[port* | *instancename]*, where:  
+-   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]**, where:  
   
-    -   *MSSQLSvc* is the service that is being registered.  
+    -   **MSSQLSvc** is the service that is being registered.  
   
-    -   *\<FQDN>* is the fully qualified domain name of the server.  
+    -   **\<FQDN>** is the fully qualified domain name of the server.  
   
-    -   *port* is the TCP port number.  
+    -   **\<port>** is the TCP port number.  
   
-    -   *instancename* is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+    -   **\<instancename>** is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
 **Default instance**  
   
--   *MSSQLSvc/\<FQDN>:port* | *MSSQLSvc/\<FQDN>*, where:  
+-   **MSSQLSvc/\<FQDN>:\<port>** | **MSSQLSvc/\<FQDN>**, where:  
   
-    -   *MSSQLSvc* is the service that is being registered.  
+    -   **MSSQLSvc** is the service that is being registered.  
   
-    -   *\<FQDN>* is the fully qualified domain name of the server.  
+    -   **\<FQDN>** is the fully qualified domain name of the server.  
   
-    -   *port* is the TCP port number.  
+    -   **\<port>** is the TCP port number.  
   
     > [!NOTE]
     > The new SPN format does not require a port number. This means that a multiple-port server or a protocol that does not use port numbers can use Kerberos authentication.  
    
 |||  
 |-|-|  
-|MSSQLSvc/\<FQDN>:port|The provider-generated, default SPN when TCP is used. *port* is a TCP port number.|  
-|MSSQLSvc/<FQDN>|The provider-generated, default SPN for a default instance when a protocol other than TCP is used. <FQDN> is a fully-qualified domain name.|  
-|MSSQLSvc/<FQDN>:<instancename>|The provider-generated, default SPN for a named instance when a protocol other than TCP is used. <instancename> is the name of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/\<FQDN>:<port>|The provider-generated, default SPN when TCP is used. \<port> is a TCP port number.|  
+|MSSQLSvc/\<FQDN>|The provider-generated, default SPN for a default instance when a protocol other than TCP is used. \<FQDN> is a fully-qualified domain name.|  
+|MSSQLSvc/\<FQDN>:\<instancename>|The provider-generated, default SPN for a named instance when a protocol other than TCP is used. \<instancename> is the name of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 
 > [!NOTE]  
 > In the case of a TCP/IP connection, where the TCP port is included in the SPN, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must enable the TCP protocol for a user to connect by using Kerberos authentication. 
@@ -118,29 +118,29 @@ To register the SPN manually, the administrator must use the Setspn.exe tool tha
   
 Setspn.exe is a command line tool that enables you to read, modify, and delete the Service Principal Names (SPN) directory property. This tool also enables you to view the current SPNs, reset the account's default SPNs, and add or delete supplemental SPNs.  
   
-The following example illustrates the syntax used to register manually register an SPN for a TCP/IP connection.  
+The following example illustrates the syntax used to register manually register an SPN for a TCP/IP connection using a domain user account:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 redmond\accountname  
 ```  
   
 > [!NOTE]
-> If an SPN already exists, it must be deleted before it can be reregistered. You do this by using the `setspn` command together with the `-D` switch. The following examples illustrate how to manually register a new instance-based SPN. For a default instance, use:  
+> If an SPN already exists, it must be deleted before it can be reregistered. You do this by using the `setspn` command together with the `-D` switch. The following examples illustrate how to manually register a new instance-based SPN. For a default instance using a domain user account, use:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname  
 ```  
   
 For a named instance, use:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname  
 ```  
   
 ##  <a name="Client"></a> Client Connections  
  User-specified SPNs are supported in client drivers. However, if an SPN is not provided, it will be generated automatically based on the type of a client connection. For a TCP connection, an SPN in the format *MSSQLSvc*/*FQDN*:[*port*] is used for both the named and default instances.  
   
-For named pipes and shared memory connections, an SPN in the format *MSSQLSvc/FQDN:instancename* is used for a named instance and *MSSQLSvc/FQDN* is used for the default instance.  
+For named pipes and shared memory connections, an SPN in the format *MSSQLSvc/\<FQDN>:\<instancename>* is used for a named instance and *MSSQLSvc/\<FQDN>* is used for the default instance.  
   
  **Using a service account as an SPN**  
   

@@ -6,10 +6,14 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: H1Hack27Feb2017
+ms.custom: ""
 ms.workload: "On Demand"
 ---
 # Configure SQL Server 2017 container images on Docker

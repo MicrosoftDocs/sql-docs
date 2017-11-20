@@ -76,7 +76,7 @@ In this step, run a sql script to query the current active sessions.
 
    ```json
     "dashboard.database.widgets": [
-            {
+        {
             "name": "My-Widget",
             "gridItemConfig": {
                 "sizex": 2,
@@ -97,6 +97,7 @@ In this step, run a sql script to query the current active sessions.
                 }
             }
         }
+    ]
    ```
 
 7. Save the *User Settings* file and open the *TutorialDB* database dashboard to see the active sessions widget:
@@ -105,7 +106,7 @@ In this step, run a sql script to query the current active sessions.
 
 ## Add details to custom insight
 
-1. To open a new editor, press **Ctrl+N** .
+1. To open a new editor, press **Ctrl+N**.
 
 2. Change the connection context to **TutorialDB**.
 
@@ -125,7 +126,7 @@ In this step, run a sql script to query the current active sessions.
 
    ```json
     "dashboard.database.widgets": [
-            {
+        {
             "name": "My-Widget",
             "gridItemConfig": {
                 "sizex": 2,
@@ -151,6 +152,7 @@ In this step, run a sql script to query the current active sessions.
                 }
             }
         }
+    ]
    ```
 
 7. Save the *User Settings* file and open the *TutorialDB* database dashboard. Click the ellipsis (...) button next to *My-Widget* to show the details:

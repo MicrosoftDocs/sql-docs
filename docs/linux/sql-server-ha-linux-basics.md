@@ -237,10 +237,10 @@ Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedic
 
 Like a WSFC, Pacemaker would prefer redundant networking, meaning distinct network cards (NICs or pNICs for physical) having individual IP addresses. In terms of the cluster configuration, each IP address would have what is known as its own ring. However, as with WSFCs today, many implementations are virtualized or in the public cloud where there is really only a single virtualized NIC (vNIC) presented to the server. If all pNICs and vNICs are connected to the same physical or virtual switch, there is no true redundancy at the network layer, so configuring multiple NICs is a bit of an illusion to the virtual machine. Network redundancy is usually built into the hypervisor for virtualized deployments, and is definitely built into the public cloud.
 
-One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. For more information on multiple subnets and Linux clusters, see the article [needs link Configuring Multiple Subnet Always On Availability Groups and Failover Cluster Instances with Pacemaker].
+One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. For more information on multiple subnets and Linux clusters, see the article [Configuring Multiple Subnet Always On Availability Groups and Failover Cluster Instances with Pacemaker].
 
 ### Quorum and STONITH
-Quorum is discussed in the [needs link AG] and [needs link FCI] articles, as the configuration and what is required is related to those specific deployments of SQL Server.
+Quorum is discussed in the [Always On Availability Groups] and [Failover Cluster Instances with Pacemaker] articles, as the configuration and what is required is related to those specific deployments of SQL Server.
 
 STONITH is required for a supported Pacemaker cluster. Use the documentation from the distribution to configure STONITH. An example is the one at [https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) for SUSE. There is also a STONITH agent for VMware vCenter for ESXI-based solutions. For more information, see [needs link].
 

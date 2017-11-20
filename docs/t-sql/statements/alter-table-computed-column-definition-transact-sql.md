@@ -20,7 +20,7 @@ ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 caps.latest.revision: 62
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER TABLE computed_column_definition (Transact-SQL)

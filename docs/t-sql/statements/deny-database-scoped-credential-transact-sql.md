@@ -24,7 +24,7 @@ ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 caps.latest.revision: 2
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DENY Database Scoped Credential (Transact-SQL)

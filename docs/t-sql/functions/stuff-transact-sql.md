@@ -29,7 +29,7 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 caps.latest.revision: 40
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # STUFF (Transact-SQL)

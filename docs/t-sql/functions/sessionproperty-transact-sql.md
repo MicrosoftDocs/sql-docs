@@ -25,7 +25,7 @@ ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SESSIONPROPERTY (Transact-SQL)

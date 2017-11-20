@@ -27,7 +27,7 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE SERVICE (Transact-SQL)

@@ -29,7 +29,7 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 caps.latest.revision: 49
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # System Stored Procedures (Transact-SQL)

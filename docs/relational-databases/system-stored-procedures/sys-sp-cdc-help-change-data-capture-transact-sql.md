@@ -27,7 +27,7 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_help_change_data_capture (Transact-SQL)

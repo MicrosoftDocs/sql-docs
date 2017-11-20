@@ -22,7 +22,7 @@ ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 caps.latest.revision: 10
 author: "jeannt"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)

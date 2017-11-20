@@ -20,7 +20,7 @@ ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
 caps.latest.revision: 12
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-1 - Creating a Database

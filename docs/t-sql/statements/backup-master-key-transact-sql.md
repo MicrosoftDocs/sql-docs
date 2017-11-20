@@ -30,7 +30,7 @@ ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # BACKUP MASTER KEY (Transact-SQL)

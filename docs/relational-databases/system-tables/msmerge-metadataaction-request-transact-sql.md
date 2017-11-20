@@ -25,7 +25,7 @@ ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_metadataaction_request (Transact-SQL)

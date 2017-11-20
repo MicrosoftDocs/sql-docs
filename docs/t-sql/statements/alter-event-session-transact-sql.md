@@ -25,7 +25,7 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 caps.latest.revision: 46
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER EVENT SESSION (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpmergeconflictrows (Transact-SQL)

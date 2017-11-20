@@ -23,7 +23,7 @@ ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Write (Database Engine)

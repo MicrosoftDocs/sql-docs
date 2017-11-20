@@ -23,7 +23,7 @@ ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CERTPRIVATEKEY (Transact-SQL)

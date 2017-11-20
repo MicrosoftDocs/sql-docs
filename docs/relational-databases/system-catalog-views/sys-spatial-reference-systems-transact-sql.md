@@ -26,7 +26,7 @@ ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.spatial_reference_systems (Transact-SQL)

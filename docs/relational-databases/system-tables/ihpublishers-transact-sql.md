@@ -25,7 +25,7 @@ ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IHpublishers (Transact-SQL)

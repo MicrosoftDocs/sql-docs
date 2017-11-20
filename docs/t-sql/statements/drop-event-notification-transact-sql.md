@@ -27,7 +27,7 @@ ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP EVENT NOTIFICATION (Transact-SQL)

@@ -26,7 +26,7 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_databases

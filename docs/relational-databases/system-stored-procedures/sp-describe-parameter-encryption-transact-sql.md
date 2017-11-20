@@ -23,7 +23,7 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 caps.latest.revision: 10
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_describe_parameter_encryption (Transact-SQL)

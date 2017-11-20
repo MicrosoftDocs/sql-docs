@@ -25,7 +25,7 @@ ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmergesubscriptions (Transact-SQL)

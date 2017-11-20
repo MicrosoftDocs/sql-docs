@@ -24,7 +24,7 @@ ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # COLUMN_PRIVILEGES (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_addlinkedsrvlogin (Transact-SQL)

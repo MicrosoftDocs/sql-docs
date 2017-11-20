@@ -24,7 +24,7 @@ ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # NEWID (Transact-SQL)

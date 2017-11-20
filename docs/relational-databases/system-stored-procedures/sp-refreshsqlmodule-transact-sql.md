@@ -31,7 +31,7 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_refreshsqlmodule (Transact-SQL)

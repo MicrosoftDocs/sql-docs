@@ -32,7 +32,7 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 caps.latest.revision: 49
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SET DATEFORMAT (Transact-SQL)

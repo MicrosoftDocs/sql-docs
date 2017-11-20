@@ -25,7 +25,7 @@ ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.message_type_xml_schema_collection_usages (Transact-SQL)

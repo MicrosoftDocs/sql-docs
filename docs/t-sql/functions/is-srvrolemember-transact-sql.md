@@ -25,7 +25,7 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 caps.latest.revision: 65
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # IS_SRVROLEMEMBER (Transact-SQL)

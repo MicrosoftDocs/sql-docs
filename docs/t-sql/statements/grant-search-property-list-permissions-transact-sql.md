@@ -23,7 +23,7 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 caps.latest.revision: 10
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GRANT Search Property List Permissions (Transact-SQL)

@@ -22,7 +22,7 @@ ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REVOKE Certificate Permissions (Transact-SQL)

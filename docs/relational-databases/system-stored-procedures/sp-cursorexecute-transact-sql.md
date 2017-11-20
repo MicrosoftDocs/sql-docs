@@ -23,7 +23,7 @@ ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 caps.latest.revision: 7
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_cursorexecute (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IHsubscriptions (Transact-SQL)

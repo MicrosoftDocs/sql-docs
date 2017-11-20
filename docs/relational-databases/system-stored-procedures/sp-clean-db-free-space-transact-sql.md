@@ -24,7 +24,7 @@ ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 caps.latest.revision: 12
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_clean_db_free_space (Transact-SQL)

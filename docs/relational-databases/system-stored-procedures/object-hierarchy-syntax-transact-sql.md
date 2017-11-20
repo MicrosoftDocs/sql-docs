@@ -20,7 +20,7 @@ ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Object Hierarchy Syntax (Transact-SQL)

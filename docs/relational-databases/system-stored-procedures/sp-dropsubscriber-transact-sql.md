@@ -23,7 +23,7 @@ ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dropsubscriber (Transact-SQL)

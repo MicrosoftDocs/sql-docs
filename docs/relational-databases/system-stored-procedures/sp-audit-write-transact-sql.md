@@ -23,7 +23,7 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_audit_write (Transact-SQL)

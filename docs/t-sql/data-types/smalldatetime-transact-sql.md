@@ -27,7 +27,7 @@ ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 caps.latest.revision: 50
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # smalldatetime (Transact-SQL)

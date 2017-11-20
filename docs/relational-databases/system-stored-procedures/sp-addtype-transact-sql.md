@@ -23,7 +23,7 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addtype (Transact-SQL)

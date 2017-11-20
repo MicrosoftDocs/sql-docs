@@ -24,7 +24,7 @@ ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # LEAD (Transact-SQL)

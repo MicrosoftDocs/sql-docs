@@ -23,7 +23,7 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addapprole (Transact-SQL)

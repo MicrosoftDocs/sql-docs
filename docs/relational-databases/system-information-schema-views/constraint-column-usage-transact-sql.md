@@ -24,7 +24,7 @@ ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
 caps.latest.revision: 40
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CONSTRAINT_COLUMN_USAGE (Transact-SQL)

@@ -26,7 +26,7 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sql_variant (Transact-SQL)

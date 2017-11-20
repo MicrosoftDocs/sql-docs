@@ -23,7 +23,7 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 caps.latest.revision: 54
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_settriggerorder (Transact-SQL)

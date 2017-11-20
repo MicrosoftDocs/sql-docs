@@ -25,7 +25,7 @@ ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSqreader_history (Transact-SQL)

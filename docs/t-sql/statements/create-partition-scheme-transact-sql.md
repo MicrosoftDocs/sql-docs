@@ -34,7 +34,7 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_agent_parameter (Transact-SQL)

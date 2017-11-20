@@ -23,7 +23,7 @@ ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_spatial_geometry_index_xml (Transact-SQL)

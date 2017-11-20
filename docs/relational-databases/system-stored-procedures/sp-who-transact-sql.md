@@ -23,7 +23,7 @@ ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 caps.latest.revision: 48
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sp_who (Transact-SQL)

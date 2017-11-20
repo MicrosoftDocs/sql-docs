@@ -30,7 +30,7 @@ ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET LOCK_TIMEOUT (Transact-SQL)

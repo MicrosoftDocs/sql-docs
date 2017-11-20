@@ -28,7 +28,7 @@ ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # USER (Transact-SQL)

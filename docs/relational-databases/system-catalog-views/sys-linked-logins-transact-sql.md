@@ -25,7 +25,7 @@ ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.linked_logins (Transact-SQL)

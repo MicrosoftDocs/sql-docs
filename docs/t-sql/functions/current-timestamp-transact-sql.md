@@ -36,7 +36,7 @@ ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
 caps.latest.revision: 48
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CURRENT_TIMESTAMP (Transact-SQL)

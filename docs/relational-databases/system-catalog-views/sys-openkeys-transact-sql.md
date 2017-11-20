@@ -25,7 +25,7 @@ ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.openkeys (Transact-SQL)

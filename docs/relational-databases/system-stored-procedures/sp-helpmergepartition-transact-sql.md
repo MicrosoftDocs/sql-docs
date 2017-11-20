@@ -23,7 +23,7 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpmergepartition (Transact-SQL)

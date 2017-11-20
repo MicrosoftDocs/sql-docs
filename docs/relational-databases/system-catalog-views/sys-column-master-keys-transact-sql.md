@@ -33,7 +33,7 @@ ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.column_master_keys (Transact-SQL)

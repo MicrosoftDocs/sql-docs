@@ -27,7 +27,7 @@ ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CLOSE SYMMETRIC KEY (Transact-SQL)

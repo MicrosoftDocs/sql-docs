@@ -25,7 +25,7 @@ ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSpeer_response (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmergepartitioninfo (Transact-SQL)

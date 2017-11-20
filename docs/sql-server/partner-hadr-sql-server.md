@@ -7,17 +7,22 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: ''
 ms.assetid: 
-ms.service: sql-server
+ms.service: "database-engine"
+ms.component: ""
+ms.suite: "sql"
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: ""
 ms.date: 09/17/2017    
+ms.prod: "sql-server"
+ms.prod_service: "sql-non-specified"
 ms.author: mikeray
 
 ---
 # SQL Server high availability and disaster recovery partners
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 To provide high availability and disaster recovery for your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with high availability and disaster recovery solutions supporting Microsoft SQL Server.
 
 ## Our high availability and disaster recovery partners

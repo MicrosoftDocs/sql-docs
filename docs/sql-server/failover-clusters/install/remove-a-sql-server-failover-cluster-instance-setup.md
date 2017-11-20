@@ -2,9 +2,12 @@
 title: "Remove a SQL Server Failover Cluster Instance (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "failover-clusters"
+ms.prod_service: "sql-non-specified"
+ms.service: "database-engine"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -22,6 +25,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Remove a SQL Server Failover Cluster Instance (Setup)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use this procedure to uninstall a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustered instance.  
   
 > [!IMPORTANT]  

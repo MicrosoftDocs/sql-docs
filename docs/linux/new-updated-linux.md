@@ -6,15 +6,19 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: rothja
-ms.service: na
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: ""
 ms.workload: linux-sql
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 09/27/2017
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
 ms.author: genemi
 ---
 # New and Recently Updated: SQL Server on Linux docs

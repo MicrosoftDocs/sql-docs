@@ -1,12 +1,15 @@
 ---
 title: "Installation and configuration | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: "world-wide-importers"
+ms.prod_service: "sql-non-specified"
+ms.service: "samples"
+ms.component: ""
 ms.technology:
   - "samples"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
@@ -18,6 +21,7 @@ robots: noindex,nofollow
 ms.workload: "On Demand"
 ---
 # Installation and configuration
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World Importers OLTP database installation and configuration instructions.
 
 ## Prerequisites

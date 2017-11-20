@@ -6,19 +6,23 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: na
+ms.service: ""
+ms.component: ""
+ms.suite: "pro-bi"
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: ""
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 09/27/2017
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services"
 ms.author: genemi
 ms.workload: dmx-data-mining-extensions
 ---
 # New and Recently Updated: Data Mining Extensions (DMX) for SQL Server
-
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 
 Nearly every day Microsoft updates some of its existing articles on its [Docs.Microsoft.com](http://docs.microsoft.com/) documentation website. This article displays excerpts from recently updated articles. Links to new articles might also be listed.

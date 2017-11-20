@@ -2,11 +2,12 @@
 title: "View and Read SQL Server Setup Log Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2016"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -25,8 +26,9 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-
 # View and Read SQL Server Setup Log Files
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 Each execution of Setup creates log files are created with a new timestamped log folder at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is run in an unattended mode, the logs are created at % temp%\sqlsetup*.log. All files in the logs folder are archived into the Log\*.cab file in their respective log folder.  
   
  A typical Setup request goes through three execution phases:  

@@ -1,7 +1,7 @@
 ---
 title: "Rename a Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "11/20/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -41,6 +41,9 @@ ms.workload: "Active"
      [Transact-SQL](#TsqlProcedure)  
   
 -   **Follow Up:**  [After renaming a database](#FollowUp)  
+
+> [!NOTE]
+> To rename a database in Azure SQL Database, use the [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) statement. To rename a database in Azure SQL Data Warehouse or Parallel Data Warehouse, use the [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql) statement.
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -88,7 +91,7 @@ GO
  Back up the **master** database after you rename any database.  
   
 ## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Database Identifiers](../../relational-databases/databases/database-identifiers.md)  
   
   

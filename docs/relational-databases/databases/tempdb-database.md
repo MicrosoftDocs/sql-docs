@@ -56,17 +56,6 @@ Operations within **tempdb** are minimally logged. This enables transactions to 
 > [!NOTE]
 > The default value for the number of data files is based on the general guidelines in [KB 2154845](http://support.microsoft.com/kb/2154845/).  
   
-## Performance Improvements in tempdb  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **tempdb** performance is improved in the following ways:  
-  
-- Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to execute very quickly and reduces page allocation contention.  
-- Allocation page latching protocol is improved. This reduces the number of UP (update) latches that are used.  
-- Logging overhead for **tempdb** is reduced. This reduces disk I/O bandwidth consumption on the **tempdb** log file.  
-- Setup adds multiple tempdb data files during a new instance installation. This task can be accomplished with the new UI input control on the **Database Engine Configuration** section and a command line parameter /SQLTEMPDBFILECOUNT. By default, setup will add as many tempdb data files as the logical processor count or 8, whichever is lower.  
-- When there are multiple **tempdb** data files, all files will autogrow at same time and by the same amount depending on growth settings. Trace flag 1117 is no longer required.  
-- All allocations in **tempdb** use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.  
-- For the primary filegroup, the AUTOGROW_ALL_FILES property is turned on and the property cannot be modified.  
-  
 ### Moving the tempdb Data and Log Files  
  To move the **tempdb** data and log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
   
@@ -165,6 +154,17 @@ GO
  
  Put the tempdb database on disks that differ from those that are used by user databases.
 
+## Performance improvements in tempdb  
+ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], **tempdb** performance is further optimized in the following ways:  
+  
+- Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to execute very quickly and reduces page allocation contention.  
+- Allocation page latching protocol is improved. This reduces the number of UP (update) latches that are used.  
+- Logging overhead for **tempdb** is reduced. This reduces disk I/O bandwidth consumption on the **tempdb** log file.  
+- Setup adds multiple tempdb data files during a new instance installation. This task can be accomplished with the new UI input control on the **Database Engine Configuration** section and a command line parameter /SQLTEMPDBFILECOUNT. By default, setup will add as many tempdb data files as the logical processor count or 8, whichever is lower.  
+- When there are multiple **tempdb** data files, all files will autogrow at same time and by the same amount depending on growth settings. Trace flag 1117 is no longer required.  
+- All allocations in **tempdb** use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.  
+- For the primary filegroup, the AUTOGROW_ALL_FILES property is turned on and the property cannot be modified. 
+
 ## Capacity Planning for tempdb
  Determining the appropriate size for tempdb in a production environment depends on many factors. As described previously in this topic, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:
 - Set autogrow on for tempdb.
@@ -229,16 +229,11 @@ GO
 
 ## Related Content  
  [SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
-  
  [System Databases](../../relational-databases/databases/system-databases.md)  
-  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
  [Move Database Files](../../relational-databases/databases/move-database-files.md)  
   
 ## See Also  
  [Working with tempdb in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
-  
  [Troubleshooting Insufficient Disk Space in tempdb](http://msdn.microsoft.com/library/ms176029.aspx) 

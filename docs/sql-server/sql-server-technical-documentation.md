@@ -1,9 +1,13 @@
 ---
 title: "SQL Server Documentation | Microsoft Docs"
 ms.date: "10/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql-server"
+ms.prod_service: "sql-non-specified"
+ms.service: "server-general"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -25,7 +29,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SQL Server Documentation
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 

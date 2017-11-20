@@ -1,10 +1,13 @@
 ---
 title: "Perform a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
-ms.custom: 
+ms.custom: ""
 ms.date: "10/04/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "dma"
+ms.service: ""
+ms.component: "dma"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-dma"
 ms.tgt_pltfrm: ""

@@ -2,11 +2,12 @@
 title: "Upgrade Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -28,6 +29,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Upgrade Analysis Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Analysis Services instances can be upgraded to a SQL Server version of the same server mode to take advantage of features introduced in the current release, as described in [What's new in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  You can upgrade each instance in-place, independently of other instances running on the same hardware. However, most administrators choose to install a new instance of the new version for application testing before transferring production workloads onto the new server. But for development or test servers, an in-place upgrade might be more convenient.  

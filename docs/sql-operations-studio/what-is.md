@@ -2,7 +2,7 @@
 title: What is SQL Operations Studio (preview)? | Microsoft Docs
 description: SQL Operations Studio (preview) is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running. 
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "11/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -16,8 +16,11 @@ ms.workload: "Inactive"
 
 # What is [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free tool that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.<br>
 
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T255/player]
+
+<br>
 **[Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
 
@@ -32,7 +35,7 @@ T-SQL code snippets generate the proper T-SQL syntax to create databases, tables
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] also provides functionality to create custom T-SQL code snippets. To learn more, see [Create and use code snippets](code-snippets.md).
 
 
-## Customizable Server and Database Dashboards featuring Insightful monitoring widgets
+## Customizable Server and Database Dashboards
 
 Create rich customizable dashboards to monitor and quickly troubleshoot performance bottlenecks in your databases. To learn about insight widgets, and database (and server) dashboards, see [Manage servers and databases with insight widgets](insight-widgets.md).
 

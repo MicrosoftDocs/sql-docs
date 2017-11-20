@@ -4,7 +4,7 @@ description: "Learn how to configure an Azure SQL Database and Data Warehouse to
 keywords:
 services: "sql-database"
 documentationcenter:
-author: "becczhang"
+author: "aliceku"
 manager: "cguyer"
 editor:
 ms.assetid:
@@ -15,7 +15,7 @@ ms.tgt_pltfrm:
 ms.devlang: "na"
 ms.topic: "article"
 ms.date: "08/07/2017"
-ms.author: "rebeccaz"
+ms.author: "aliceku"
 ms.workload: "Inactive"
 ---
 # PowerShell: Enable Transparent Data Encryption using your own key from Azure Key Vault
@@ -61,7 +61,7 @@ If you are creating a server, use the [New-AzureRmSqlServer](/powershell/module/
 
 ## Step 2. Grant Key Vault permissions to your server
 
-Use the [Set-AzureRmKeyValutAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet to grant your server access to the key vault before using a key from it for TDE.
+Use the [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) cmdlet to grant your server access to the key vault before using a key from it for TDE.
 
    ```powershell
    Set-AzureRmKeyVaultAccessPolicy  `

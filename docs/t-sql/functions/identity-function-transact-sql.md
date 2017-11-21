@@ -27,7 +27,7 @@ ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # IDENTITY (Function) (Transact-SQL)

@@ -30,7 +30,7 @@ ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SUM (Transact-SQL)

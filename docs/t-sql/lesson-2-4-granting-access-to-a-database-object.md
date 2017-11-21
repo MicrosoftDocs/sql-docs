@@ -20,7 +20,7 @@ ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 2-4 - Granting Access to a Database Object

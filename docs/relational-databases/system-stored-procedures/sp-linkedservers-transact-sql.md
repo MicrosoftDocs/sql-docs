@@ -23,7 +23,7 @@ ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_linkedservers (Transact-SQL)

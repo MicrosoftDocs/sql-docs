@@ -29,7 +29,7 @@ ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DROP STATISTICS (Transact-SQL)

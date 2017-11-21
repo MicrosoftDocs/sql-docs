@@ -2,9 +2,12 @@
 title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-server"
+ms.prod_service: "sql-non-specified"
+ms.service: "ssdt"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Compute capacity limits by edition of SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This article discusses compute capacity limits for editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and how they differ in physical and virtualized environments with hyperthreaded processors.  
   
  ![Mappings to compute capacity limits](../sql-server/media/compute-capacity-limits.gif "Mappings to compute capacity limits")  

@@ -25,7 +25,7 @@ ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSsnapshotdeliveryprogress (Transact-SQL)

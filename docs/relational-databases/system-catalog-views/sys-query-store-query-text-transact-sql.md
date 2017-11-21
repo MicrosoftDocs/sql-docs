@@ -26,7 +26,7 @@ ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.query_store_query_text (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_renamedb (Transact-SQL)

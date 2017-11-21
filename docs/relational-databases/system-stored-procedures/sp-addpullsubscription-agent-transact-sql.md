@@ -23,7 +23,7 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 caps.latest.revision: 44
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addpullsubscription_agent (Transact-SQL)

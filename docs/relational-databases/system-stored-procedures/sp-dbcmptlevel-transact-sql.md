@@ -23,7 +23,7 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 caps.latest.revision: 110
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dbcmptlevel (Transact-SQL)

@@ -30,7 +30,7 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # TRUNCATE TABLE (Transact-SQL)

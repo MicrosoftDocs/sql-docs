@@ -18,7 +18,7 @@ ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
 caps.latest.revision: 19
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_2576

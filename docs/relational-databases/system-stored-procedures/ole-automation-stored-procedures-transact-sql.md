@@ -21,7 +21,7 @@ ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OLE Automation Stored Procedures (Transact-SQL)

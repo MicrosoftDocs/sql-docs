@@ -40,7 +40,7 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 caps.latest.revision: 136
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CAST and CONVERT (Transact-SQL)

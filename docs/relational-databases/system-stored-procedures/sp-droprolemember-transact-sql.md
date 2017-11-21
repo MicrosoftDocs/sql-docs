@@ -23,7 +23,7 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_droprolemember (Transact-SQL)

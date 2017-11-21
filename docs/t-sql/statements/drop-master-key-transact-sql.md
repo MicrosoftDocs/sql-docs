@@ -29,7 +29,7 @@ ms.assetid: 5ccef797-408f-4964-80da-965d8e1ccba7
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DROP MASTER KEY (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.plan_guides (Transact-SQL)

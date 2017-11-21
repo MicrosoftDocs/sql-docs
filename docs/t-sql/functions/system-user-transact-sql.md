@@ -31,7 +31,7 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 caps.latest.revision: 44
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SYSTEM_USER (Transact-SQL)

@@ -22,7 +22,7 @@ ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # System Base Tables

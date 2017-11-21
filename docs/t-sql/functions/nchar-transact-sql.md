@@ -24,7 +24,7 @@ ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # NCHAR (Transact-SQL)

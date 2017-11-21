@@ -21,7 +21,7 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_MSchange_merge_agent_properties (Transact-SQL)

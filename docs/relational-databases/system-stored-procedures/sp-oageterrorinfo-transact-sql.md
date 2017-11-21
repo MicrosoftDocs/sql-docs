@@ -23,7 +23,7 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_OAGetErrorInfo (Transact-SQL)

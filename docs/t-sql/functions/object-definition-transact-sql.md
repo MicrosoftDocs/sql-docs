@@ -26,7 +26,7 @@ ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OBJECT_DEFINITION (Transact-SQL)

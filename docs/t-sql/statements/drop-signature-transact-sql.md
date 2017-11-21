@@ -28,7 +28,7 @@ ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP SIGNATURE (Transact-SQL)

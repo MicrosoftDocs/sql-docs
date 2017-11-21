@@ -23,7 +23,7 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_tables_ex (Transact-SQL)

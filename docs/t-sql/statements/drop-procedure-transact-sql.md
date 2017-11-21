@@ -30,7 +30,7 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 caps.latest.revision: 51
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DROP PROCEDURE (Transact-SQL)

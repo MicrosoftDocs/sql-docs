@@ -28,7 +28,7 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET ANSI_WARNINGS (Transact-SQL)

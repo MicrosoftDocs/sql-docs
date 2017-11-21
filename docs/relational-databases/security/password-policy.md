@@ -38,7 +38,7 @@ ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Password Policy

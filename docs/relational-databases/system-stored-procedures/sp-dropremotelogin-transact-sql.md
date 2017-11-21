@@ -23,7 +23,7 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dropremotelogin (Transact-SQL)

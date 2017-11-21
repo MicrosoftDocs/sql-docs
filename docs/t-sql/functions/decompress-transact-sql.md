@@ -21,7 +21,7 @@ ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 caps.latest.revision: 8
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DECOMPRESS (Transact-SQL)

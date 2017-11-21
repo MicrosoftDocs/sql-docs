@@ -28,7 +28,7 @@ ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 caps.latest.revision: 35
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FILE_IDEX (Transact-SQL)

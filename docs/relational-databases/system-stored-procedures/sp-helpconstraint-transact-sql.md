@@ -23,7 +23,7 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpconstraint (Transact-SQL)

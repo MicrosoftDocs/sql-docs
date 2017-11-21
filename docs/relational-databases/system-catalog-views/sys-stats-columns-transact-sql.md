@@ -25,7 +25,7 @@ ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.stats_columns (Transact-SQL)

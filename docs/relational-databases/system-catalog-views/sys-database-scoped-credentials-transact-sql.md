@@ -23,7 +23,7 @@ ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 caps.latest.revision: 2
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_scoped_credentials (Transact-SQL)

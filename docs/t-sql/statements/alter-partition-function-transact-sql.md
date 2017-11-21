@@ -31,7 +31,7 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER PARTITION FUNCTION (Transact-SQL)

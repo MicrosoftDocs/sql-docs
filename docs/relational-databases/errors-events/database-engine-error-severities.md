@@ -22,7 +22,7 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Engine Error Severities

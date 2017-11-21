@@ -25,7 +25,7 @@ ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_partition_groups (Transact-SQL)

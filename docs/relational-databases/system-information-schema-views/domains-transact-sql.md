@@ -24,7 +24,7 @@ ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 caps.latest.revision: 44
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DOMAINS (Transact-SQL)

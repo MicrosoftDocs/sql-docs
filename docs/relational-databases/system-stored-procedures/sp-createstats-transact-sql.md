@@ -23,7 +23,7 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 caps.latest.revision: 47
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_createstats (Transact-SQL)

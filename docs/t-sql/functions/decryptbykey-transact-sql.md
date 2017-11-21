@@ -26,7 +26,7 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DECRYPTBYKEY (Transact-SQL)

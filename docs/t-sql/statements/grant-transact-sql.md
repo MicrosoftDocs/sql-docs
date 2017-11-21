@@ -30,7 +30,7 @@ ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 caps.latest.revision: 64
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # GRANT (Transact-SQL)

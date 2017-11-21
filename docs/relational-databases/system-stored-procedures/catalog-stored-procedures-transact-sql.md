@@ -24,7 +24,7 @@ ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Catalog Stored Procedures (Transact-SQL)

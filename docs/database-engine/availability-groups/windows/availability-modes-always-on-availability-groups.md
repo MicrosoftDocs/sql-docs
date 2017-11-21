@@ -2,11 +2,12 @@
 title: "Availability Modes (Always On Availability Groups) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -26,7 +27,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Availability Modes (Always On Availability Groups)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the *availability mode* is a replica property that determines whether a given availability replica can run in synchronous-commit mode. For each availability replica, the availability mode must be configured for either synchronous-commit mode, asynchronous-commit, or configuration only mode.  If the primary replica is configured for *asynchronous-commit mode*, it does not wait for any secondary replica to write incoming transaction log records to disk (to *harden the log*). If a given secondary replica is configured for asynchronous-commit mode, the primary replica does not wait for that secondary replica to harden the log. If both the primary replica and a given secondary replica are both configured for *synchronous-commit mode*, the primary replica waits for the secondary replica to confirm that it has hardened the log (unless the secondary replica fails to ping the primary replica within the primary's *session-timeout period*). 
   

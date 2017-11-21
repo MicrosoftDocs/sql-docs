@@ -26,7 +26,7 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 caps.latest.revision: 78
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER TABLE column_definition (Transact-SQL)

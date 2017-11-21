@@ -32,7 +32,7 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 caps.latest.revision: 159
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # ALTER DATABASE SET Options (Transact-SQL) 

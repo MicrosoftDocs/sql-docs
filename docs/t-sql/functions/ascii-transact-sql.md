@@ -26,7 +26,7 @@ ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # ASCII (Transact-SQL)

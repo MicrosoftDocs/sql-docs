@@ -23,7 +23,7 @@ ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_grantdbaccess (Transact-SQL)

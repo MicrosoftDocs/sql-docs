@@ -23,7 +23,7 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helppeerrequests (Transact-SQL)

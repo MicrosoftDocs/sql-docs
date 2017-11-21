@@ -23,7 +23,7 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_MSchange_snapshot_agent_properties (Transact-SQL)

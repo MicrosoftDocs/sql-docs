@@ -25,7 +25,7 @@ ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSrepl_errors (Transact-SQL)

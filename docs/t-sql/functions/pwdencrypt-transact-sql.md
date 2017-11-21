@@ -23,7 +23,7 @@ ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
 caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # PWDENCRYPT (Transact-SQL)

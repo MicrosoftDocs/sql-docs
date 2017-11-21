@@ -25,7 +25,7 @@ ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_identity_range_allocations (Transact-SQL)

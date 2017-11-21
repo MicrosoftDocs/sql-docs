@@ -2,7 +2,7 @@
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "11/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -80,9 +80,15 @@ To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete t
 - Ubuntu 16.04
 
 
+
 ## Next Steps
 
 See one of the following quickstarts to get started:
 - [Connect & Query SQL Server](quickstart-sql-server.md)
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
+
+Contribute to [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+- [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
+
+[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) and [usage data collection](usage-data-collection.md).

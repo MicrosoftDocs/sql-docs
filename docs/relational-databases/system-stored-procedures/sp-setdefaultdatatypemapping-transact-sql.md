@@ -23,7 +23,7 @@ ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_setdefaultdatatypemapping (Transact-SQL)

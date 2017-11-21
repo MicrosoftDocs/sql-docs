@@ -32,7 +32,7 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 caps.latest.revision: 57
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # rowversion (Transact-SQL)

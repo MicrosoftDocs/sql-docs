@@ -25,7 +25,7 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSdistribution_agents (Transact-SQL)

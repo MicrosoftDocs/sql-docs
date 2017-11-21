@@ -32,7 +32,7 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 caps.latest.revision: 92
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CREATE TYPE (Transact-SQL)

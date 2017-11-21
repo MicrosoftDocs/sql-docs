@@ -30,7 +30,7 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SEND (Transact-SQL)

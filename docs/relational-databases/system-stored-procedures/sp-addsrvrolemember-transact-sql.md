@@ -23,7 +23,7 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_addsrvrolemember (Transact-SQL)

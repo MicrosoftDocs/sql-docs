@@ -26,7 +26,7 @@ ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DROP TYPE (Transact-SQL)

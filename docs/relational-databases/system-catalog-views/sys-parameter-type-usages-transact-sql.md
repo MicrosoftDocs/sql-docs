@@ -25,7 +25,7 @@ ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.parameter_type_usages (Transact-SQL)

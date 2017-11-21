@@ -24,7 +24,7 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # LAST_VALUE (Transact-SQL)

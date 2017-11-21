@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2012 SP3 Release Notes | Microsoft Docs"
-ms.prod: "sql-server-2012"
+ms.prod: "sql-server"
+ms.prod_service: "sql-non-specified"
+ms.service: "server-general"
+ms.component: ""
 ms.technology: "server-general"
 ms.custom: ""
 ms.date: "05/17/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -16,6 +19,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SQL Server 2012 SP3 Release Notes
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 These Release Notes describe issues you need to know before you install or troubleshoot SQL Server 2012 Service Pack 3. Release Notes are available online only, not on the installation media. They are updated periodically as issues are discovered. For a list o enhancements and fixes, see [SQL Server 2012 Service Pack 3 release information](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information) for more information.  
   
 ## Choose the Correct File to Download and Install  

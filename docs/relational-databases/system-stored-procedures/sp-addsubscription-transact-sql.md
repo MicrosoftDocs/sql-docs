@@ -21,7 +21,7 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 caps.latest.revision: 53
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_addsubscription (Transact-SQL)

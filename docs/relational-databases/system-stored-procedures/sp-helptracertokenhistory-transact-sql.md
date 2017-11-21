@@ -23,7 +23,7 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helptracertokenhistory (Transact-SQL)

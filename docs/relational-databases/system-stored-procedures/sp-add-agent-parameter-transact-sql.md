@@ -23,7 +23,7 @@ ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_agent_parameter (Transact-SQL)

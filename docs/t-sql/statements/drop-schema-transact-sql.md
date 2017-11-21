@@ -27,7 +27,7 @@ ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
 caps.latest.revision: 51
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DROP SCHEMA (Transact-SQL)

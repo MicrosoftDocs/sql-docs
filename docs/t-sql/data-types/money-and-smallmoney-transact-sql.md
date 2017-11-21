@@ -29,7 +29,7 @@ ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 caps.latest.revision: 36
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # money and smallmoney (Transact-SQL)

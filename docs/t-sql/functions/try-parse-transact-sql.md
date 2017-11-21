@@ -23,7 +23,7 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # TRY_PARSE (Transact-SQL)

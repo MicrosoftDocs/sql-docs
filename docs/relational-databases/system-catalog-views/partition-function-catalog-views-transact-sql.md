@@ -21,7 +21,7 @@ ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Partition Function Catalog Views (Transact-SQL)

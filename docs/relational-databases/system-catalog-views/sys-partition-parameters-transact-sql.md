@@ -25,7 +25,7 @@ ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.partition_parameters (Transact-SQL)

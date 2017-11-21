@@ -23,7 +23,7 @@ ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_restoredbreplication (Transact-SQL)

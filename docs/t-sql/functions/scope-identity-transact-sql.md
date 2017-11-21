@@ -26,7 +26,7 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 caps.latest.revision: 36
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SCOPE_IDENTITY (Transact-SQL)

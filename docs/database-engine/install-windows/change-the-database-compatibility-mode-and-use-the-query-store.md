@@ -2,11 +2,12 @@
 title: "Change the Database Compatibility Mode and Use the Query Store | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -21,8 +22,9 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-
 # Change the Database Compatibility Mode and Use the Query Store
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 In SQL Server 2016 and SQL Server 2017, some changes are only enabled once the DATABASE_COMPATIBILITY level for a database has been changed. This was done for several reasons:  
   
 - Since upgrade is a one-way operation (it is not possible to downgrade the file format), there is value in separating the enablement of new features to a separate operation within the database.  It is possible to revert a setting to a prior DATABASE_COMPATIBILITY level.  The new model reduces the number of things that must happen during an outage window.  

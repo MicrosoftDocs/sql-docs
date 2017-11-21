@@ -25,7 +25,7 @@ ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_settingshistory (Transact-SQL)

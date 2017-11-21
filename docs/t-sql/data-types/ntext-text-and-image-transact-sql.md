@@ -27,7 +27,7 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # ntext, text, and image (Transact-SQL)

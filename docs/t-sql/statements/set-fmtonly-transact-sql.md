@@ -27,7 +27,7 @@ ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
 caps.latest.revision: 48
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET FMTONLY (Transact-SQL)

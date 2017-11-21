@@ -2,11 +2,12 @@
 title: "Configure SQL Server on a Server Core Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod:
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -21,6 +22,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure SQL Server on a Server Core Installation
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Configure and Manage Server Core on Windows Server  

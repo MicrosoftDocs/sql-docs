@@ -20,7 +20,7 @@ ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # cursor (Transact-SQL)

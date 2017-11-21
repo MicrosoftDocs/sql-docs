@@ -23,7 +23,7 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_resetsnapshotdeliveryprogress (Transact-SQL)

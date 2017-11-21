@@ -23,7 +23,7 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_refreshview (Transact-SQL)

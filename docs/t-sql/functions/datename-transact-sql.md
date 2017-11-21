@@ -30,7 +30,7 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 caps.latest.revision: 59
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DATENAME (Transact-SQL)

@@ -18,7 +18,7 @@ ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 robots: noindex,nofollow
 ms.workload: "Inactive"
 ---

@@ -64,7 +64,7 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 caps.latest.revision: 281
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # ALTER TABLE (Transact-SQL)

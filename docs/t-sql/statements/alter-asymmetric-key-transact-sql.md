@@ -28,7 +28,7 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER ASYMMETRIC KEY (Transact-SQL)

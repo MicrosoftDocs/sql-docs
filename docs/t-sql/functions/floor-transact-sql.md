@@ -25,7 +25,7 @@ ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # FLOOR (Transact-SQL)

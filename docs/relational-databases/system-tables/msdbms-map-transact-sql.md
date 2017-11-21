@@ -25,7 +25,7 @@ ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSdbms_map (Transact-SQL)

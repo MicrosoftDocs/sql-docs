@@ -29,7 +29,7 @@ ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 caps.latest.revision: 45
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DISABLE TRIGGER (Transact-SQL)

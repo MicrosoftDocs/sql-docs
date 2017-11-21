@@ -26,7 +26,7 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_cleanup_change_table (Transact-SQL)

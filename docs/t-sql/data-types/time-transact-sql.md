@@ -27,7 +27,7 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 caps.latest.revision: 45
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # time (Transact-SQL)

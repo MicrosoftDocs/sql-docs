@@ -27,7 +27,7 @@ ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # &#x40;&#x40;MAX_PRECISION (Transact-SQL)

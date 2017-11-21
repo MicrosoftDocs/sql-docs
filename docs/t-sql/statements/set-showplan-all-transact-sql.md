@@ -32,7 +32,7 @@ ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 caps.latest.revision: 40
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET SHOWPLAN_ALL (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DENY Endpoint Permissions (Transact-SQL)

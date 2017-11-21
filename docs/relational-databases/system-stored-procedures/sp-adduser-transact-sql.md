@@ -23,7 +23,7 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_adduser (Transact-SQL)

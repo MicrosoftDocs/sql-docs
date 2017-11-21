@@ -27,7 +27,7 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SOUNDEX (Transact-SQL)

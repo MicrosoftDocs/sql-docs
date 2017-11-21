@@ -23,7 +23,7 @@ ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_browsemergesnapshotfolder (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_scan (Transact-SQL)

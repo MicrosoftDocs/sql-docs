@@ -23,7 +23,7 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addrole (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetRoot (Database Engine)

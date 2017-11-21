@@ -23,7 +23,7 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helptrigger (Transact-SQL)

@@ -24,7 +24,7 @@ ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # COS (Transact-SQL)

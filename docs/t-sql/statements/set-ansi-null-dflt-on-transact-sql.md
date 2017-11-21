@@ -31,7 +31,7 @@ ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SET ANSI_NULL_DFLT_ON (Transact-SQL)

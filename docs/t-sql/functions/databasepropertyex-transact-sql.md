@@ -25,7 +25,7 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 caps.latest.revision: 84
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DATABASEPROPERTYEX (Transact-SQL)

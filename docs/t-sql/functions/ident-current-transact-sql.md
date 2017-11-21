@@ -26,7 +26,7 @@ ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 caps.latest.revision: 49
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # IDENT_CURRENT (Transact-SQL)

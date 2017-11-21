@@ -23,7 +23,7 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addsynctriggers (Transact-SQL)

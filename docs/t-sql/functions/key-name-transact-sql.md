@@ -23,7 +23,7 @@ ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # KEY_NAME (Transact-SQL)

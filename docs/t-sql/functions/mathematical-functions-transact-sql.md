@@ -22,7 +22,7 @@ ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Mathematical Functions (Transact-SQL)

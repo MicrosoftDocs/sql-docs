@@ -25,7 +25,7 @@ ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET CONTEXT_INFO (Transact-SQL)

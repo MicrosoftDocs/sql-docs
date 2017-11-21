@@ -22,7 +22,7 @@ ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GRANT Assembly Permissions (Transact-SQL)

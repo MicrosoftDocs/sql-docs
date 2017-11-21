@@ -7,17 +7,22 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: ''
 ms.assetid: 
-ms.service: sql-server
+ms.service: "database-engine"
+ms.component: ""
+ms.suite: "sql"
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: ""
 ms.date: 17/09/2017    
+ms.prod: "sql-server"
+ms.prod_service: "sql-non-specified"
 ms.author: mikeray
 
 ---
 # SQL Server development partners
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 For support developing SQL Server database solutions, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with development solutions for Microsoft SQL Server.
 
 ## Our development partners

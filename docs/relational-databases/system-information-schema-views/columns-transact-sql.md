@@ -24,7 +24,7 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 caps.latest.revision: 48
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # COLUMNS (Transact-SQL)

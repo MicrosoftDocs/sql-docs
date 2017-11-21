@@ -23,7 +23,7 @@ ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSsubscriber_schedule (Transact-SQL)

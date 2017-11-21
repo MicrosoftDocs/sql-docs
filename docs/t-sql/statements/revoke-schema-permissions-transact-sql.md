@@ -22,7 +22,7 @@ ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REVOKE Schema Permissions (Transact-SQL)

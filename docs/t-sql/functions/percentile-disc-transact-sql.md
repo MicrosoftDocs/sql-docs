@@ -24,7 +24,7 @@ ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # PERCENTILE_DISC (Transact-SQL)

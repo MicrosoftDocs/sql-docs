@@ -25,7 +25,7 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # IDENT_INCR (Transact-SQL)

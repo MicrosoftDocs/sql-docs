@@ -25,7 +25,7 @@ ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.data_spaces (Transact-SQL)

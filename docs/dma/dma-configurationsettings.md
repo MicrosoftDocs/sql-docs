@@ -1,10 +1,13 @@
 ---
 title: "Configuration settings (SQL Server Data Migration Assistant) | Microsoft Docs"
-ms.custom: 
+ms.custom: ""
 ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "dma"
+ms.service: ""
+ms.component: "dma"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-dma"
 ms.tgt_pltfrm: ""

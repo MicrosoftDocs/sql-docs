@@ -26,7 +26,7 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 caps.latest.revision: 53
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # COLUMNS_UPDATED (Transact-SQL)

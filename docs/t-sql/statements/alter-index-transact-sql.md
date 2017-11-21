@@ -49,7 +49,7 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 caps.latest.revision: 222
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # ALTER INDEX (Transact-SQL)

@@ -2,9 +2,12 @@
 title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "ssdt"
+ms.prod_service: "sql-non-specified"
+ms.service: "ssdt"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssdt"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SQL Server Data Tools (SSDT) provides project templates and design surfaces for building SQL Server content types — relational databases, Analysis Services models, Reporting Services reports, and Integration Services packages.  
   
 It's based on a Visual Studio shell and co-released with SQL Server. New versions of SSDT integrate the latest features of SQL Server. Older versions include the templates and design environment that were current for that release.  

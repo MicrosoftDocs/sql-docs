@@ -23,7 +23,7 @@ ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)

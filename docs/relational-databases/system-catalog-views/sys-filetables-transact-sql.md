@@ -25,7 +25,7 @@ ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.filetables (Transact-SQL)

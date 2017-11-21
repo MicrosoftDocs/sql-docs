@@ -30,7 +30,7 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PERMISSIONS (Transact-SQL)

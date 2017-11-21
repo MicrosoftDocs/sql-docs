@@ -23,7 +23,7 @@ ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helprole (Transact-SQL)

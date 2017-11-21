@@ -30,7 +30,7 @@ ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # &#x40;&#x40;PROCID (Transact-SQL)

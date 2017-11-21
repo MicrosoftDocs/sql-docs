@@ -23,7 +23,7 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_validname (Transact-SQL)

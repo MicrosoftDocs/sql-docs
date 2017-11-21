@@ -25,7 +25,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  

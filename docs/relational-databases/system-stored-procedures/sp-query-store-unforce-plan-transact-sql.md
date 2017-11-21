@@ -26,7 +26,7 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 caps.latest.revision: 8
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_query_store_unforce_plan (Transact-SQL)

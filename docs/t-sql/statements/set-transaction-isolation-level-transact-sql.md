@@ -32,7 +32,7 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 caps.latest.revision: 80
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)

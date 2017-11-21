@@ -34,7 +34,7 @@ ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OPEN MASTER KEY (Transact-SQL)

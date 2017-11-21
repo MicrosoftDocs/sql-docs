@@ -21,7 +21,7 @@ ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Scalar Types Catalog Views (Transact-SQL)

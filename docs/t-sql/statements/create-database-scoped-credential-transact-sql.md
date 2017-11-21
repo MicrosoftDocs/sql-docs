@@ -27,7 +27,7 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)

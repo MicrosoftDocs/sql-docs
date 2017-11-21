@@ -23,7 +23,7 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_publication_validation (Transact-SQL)

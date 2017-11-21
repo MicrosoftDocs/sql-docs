@@ -23,7 +23,7 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetLevel (Database Engine)

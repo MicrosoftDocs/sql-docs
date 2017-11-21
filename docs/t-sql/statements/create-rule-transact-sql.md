@@ -35,7 +35,7 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE RULE (Transact-SQL)

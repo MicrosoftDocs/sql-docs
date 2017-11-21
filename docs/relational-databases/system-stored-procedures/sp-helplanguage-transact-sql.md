@@ -24,7 +24,7 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 caps.latest.revision: 19
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helplanguage (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpsort (Transact-SQL)

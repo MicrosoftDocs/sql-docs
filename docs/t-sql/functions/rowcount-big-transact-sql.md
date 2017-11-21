@@ -27,7 +27,7 @@ ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ROWCOUNT_BIG (Transact-SQL)

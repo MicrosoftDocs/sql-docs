@@ -23,7 +23,7 @@ ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # xp_loginconfig (Transact-SQL)

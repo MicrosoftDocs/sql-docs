@@ -25,7 +25,7 @@ ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.trigger_event_types (Transact-SQL)

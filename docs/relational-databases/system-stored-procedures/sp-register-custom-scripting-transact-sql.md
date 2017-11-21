@@ -23,7 +23,7 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_register_custom_scripting (Transact-SQL)

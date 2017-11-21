@@ -26,7 +26,7 @@ ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # TYPE_ID (Transact-SQL)

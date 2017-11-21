@@ -23,7 +23,7 @@ ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_get_query_template (Transact-SQL)

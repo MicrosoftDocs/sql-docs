@@ -26,7 +26,7 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 caps.latest.revision: 18
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.query_store_runtime_stats (Transact-SQL)

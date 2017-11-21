@@ -27,7 +27,7 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_disable_table (Transact-SQL)

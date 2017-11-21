@@ -25,7 +25,7 @@ ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.key_constraints (Transact-SQL)

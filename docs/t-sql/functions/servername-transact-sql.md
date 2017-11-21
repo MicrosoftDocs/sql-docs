@@ -24,7 +24,7 @@ ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # &#x40;&#x40;SERVERNAME (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # xp_sprintf (Transact-SQL)

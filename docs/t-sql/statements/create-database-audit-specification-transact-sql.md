@@ -28,7 +28,7 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)

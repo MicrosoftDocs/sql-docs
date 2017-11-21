@@ -22,7 +22,7 @@ ms.assetid: ac24d700-3144-4ab5-9fa8-8c014001cc71
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Rowset Functions (Transact-SQL)

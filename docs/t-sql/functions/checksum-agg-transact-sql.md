@@ -25,7 +25,7 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CHECKSUM_AGG (Transact-SQL)

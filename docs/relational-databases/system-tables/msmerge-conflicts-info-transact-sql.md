@@ -25,7 +25,7 @@ ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 caps.latest.revision: 19
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_conflicts_info (Transact-SQL)

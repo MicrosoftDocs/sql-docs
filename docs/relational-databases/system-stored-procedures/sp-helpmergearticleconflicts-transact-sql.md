@@ -23,7 +23,7 @@ ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpmergearticleconflicts (Transact-SQL)

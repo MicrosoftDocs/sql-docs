@@ -23,7 +23,7 @@ ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_create_plan_guide_from_handle (Transact-SQL)

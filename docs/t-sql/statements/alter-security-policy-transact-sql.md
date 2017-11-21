@@ -25,7 +25,7 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER SECURITY POLICY (Transact-SQL)

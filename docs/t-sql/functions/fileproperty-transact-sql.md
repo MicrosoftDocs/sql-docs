@@ -28,7 +28,7 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 caps.latest.revision: 35
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FILEPROPERTY (Transact-SQL)

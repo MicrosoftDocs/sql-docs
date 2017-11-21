@@ -23,7 +23,7 @@ ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DENY Certificate Permissions (Transact-SQL)

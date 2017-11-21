@@ -24,7 +24,7 @@ ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OPEN SYMMETRIC KEY (Transact-SQL)

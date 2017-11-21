@@ -23,7 +23,7 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_approlepassword (Transact-SQL)

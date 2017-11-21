@@ -23,7 +23,7 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 caps.latest.revision: 19
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpxactsetjob (Transact-SQL)

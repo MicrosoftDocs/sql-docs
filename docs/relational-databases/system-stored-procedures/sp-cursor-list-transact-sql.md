@@ -23,7 +23,7 @@ ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_cursor_list (Transact-SQL)

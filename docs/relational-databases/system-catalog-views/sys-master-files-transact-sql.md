@@ -25,7 +25,7 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 caps.latest.revision: 56
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.master_files (Transact-SQL)

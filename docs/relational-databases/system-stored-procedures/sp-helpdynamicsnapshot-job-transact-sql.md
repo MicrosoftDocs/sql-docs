@@ -29,7 +29,7 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpdynamicsnapshot_job (Transact-SQL)

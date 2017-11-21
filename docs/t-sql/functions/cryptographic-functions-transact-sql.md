@@ -25,7 +25,7 @@ ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Cryptographic functions (Transact-SQL)

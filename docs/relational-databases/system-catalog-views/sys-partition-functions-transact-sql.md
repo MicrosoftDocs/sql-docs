@@ -25,7 +25,7 @@ ms.assetid: 96515727-728b-4bea-804a-36ce915b8b75
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.partition_functions (Transact-SQL)

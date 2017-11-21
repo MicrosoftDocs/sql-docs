@@ -25,7 +25,7 @@ ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ENCRYPTBYCERT (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addmergealternatepublisher (Transact-SQL)

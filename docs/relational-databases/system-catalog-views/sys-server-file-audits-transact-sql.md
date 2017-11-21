@@ -25,7 +25,7 @@ ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.server_file_audits (Transact-SQL)

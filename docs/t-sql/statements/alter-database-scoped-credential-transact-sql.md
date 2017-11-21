@@ -22,7 +22,7 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)

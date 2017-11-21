@@ -25,7 +25,7 @@ ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.column_type_usages (Transact-SQL)

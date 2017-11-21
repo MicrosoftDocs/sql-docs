@@ -26,7 +26,7 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 caps.latest.revision: 74
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # UPDATE STATISTICS (Transact-SQL)

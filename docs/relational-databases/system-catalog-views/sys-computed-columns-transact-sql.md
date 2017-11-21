@@ -25,7 +25,7 @@ ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 caps.latest.revision: 48
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.computed_columns (Transact-SQL)

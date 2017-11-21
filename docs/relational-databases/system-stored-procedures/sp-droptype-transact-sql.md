@@ -23,7 +23,7 @@ ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_droptype (Transact-SQL)

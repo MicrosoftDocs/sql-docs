@@ -23,7 +23,7 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_helpdb (Transact-SQL)

@@ -21,7 +21,7 @@ ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
 caps.latest.revision: 6
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extended Events Catalog Views (Transact-SQL)

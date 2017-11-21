@@ -25,7 +25,7 @@ ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.procedures (Transact-SQL)

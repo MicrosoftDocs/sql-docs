@@ -23,7 +23,7 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_bindefault (Transact-SQL)

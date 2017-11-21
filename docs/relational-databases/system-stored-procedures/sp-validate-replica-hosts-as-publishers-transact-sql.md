@@ -23,7 +23,7 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_validate_replica_hosts_as_publishers (Transact-SQL)

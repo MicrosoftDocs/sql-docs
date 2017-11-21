@@ -27,7 +27,7 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 caps.latest.revision: 12
 author: "jeannt"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)

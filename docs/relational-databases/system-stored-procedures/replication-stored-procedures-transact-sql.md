@@ -22,7 +22,7 @@ ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Replication Stored Procedures (Transact-SQL)

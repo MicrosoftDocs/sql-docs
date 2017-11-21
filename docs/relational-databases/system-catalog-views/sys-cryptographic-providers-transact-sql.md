@@ -25,7 +25,7 @@ ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.cryptographic_providers (Transact-SQL)

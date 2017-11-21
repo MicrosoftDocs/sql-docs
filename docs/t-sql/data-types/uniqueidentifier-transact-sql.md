@@ -25,7 +25,7 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # uniqueidentifier (Transact-SQL)

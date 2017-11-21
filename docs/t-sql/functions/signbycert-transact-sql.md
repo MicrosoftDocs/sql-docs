@@ -29,7 +29,7 @@ ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SIGNBYCERT (Transact-SQL)

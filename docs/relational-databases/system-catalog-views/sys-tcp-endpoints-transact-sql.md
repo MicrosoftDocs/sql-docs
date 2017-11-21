@@ -25,7 +25,7 @@ ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.tcp_endpoints (Transact-SQL)

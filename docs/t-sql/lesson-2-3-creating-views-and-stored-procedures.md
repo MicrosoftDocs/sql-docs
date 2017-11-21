@@ -20,7 +20,7 @@ ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 2-3 - Creating Views and Stored Procedures

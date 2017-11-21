@@ -23,7 +23,7 @@ ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REVOKE Search Property List Permissions (Transact-SQL)

@@ -18,7 +18,7 @@ ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
 caps.latest.revision: 5
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Trigger Functions (Transact-SQL)

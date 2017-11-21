@@ -29,7 +29,7 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 caps.latest.revision: 64
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE EVENT NOTIFICATION (Transact-SQL)

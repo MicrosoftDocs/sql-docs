@@ -26,7 +26,7 @@ ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 caps.latest.revision: 3
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GRANT Database Scoped Credential Permissions (Transact-SQL)

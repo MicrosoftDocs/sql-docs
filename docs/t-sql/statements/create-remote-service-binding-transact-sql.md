@@ -43,7 +43,7 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 caps.latest.revision: 46
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)

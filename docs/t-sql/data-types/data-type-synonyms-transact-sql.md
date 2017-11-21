@@ -22,7 +22,7 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 caps.latest.revision: 18
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Data type synonyms (Transact-SQL)

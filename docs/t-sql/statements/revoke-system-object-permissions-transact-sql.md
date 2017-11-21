@@ -21,7 +21,7 @@ ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REVOKE System Object Permissions (Transact-SQL)

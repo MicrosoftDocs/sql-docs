@@ -18,7 +18,7 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Migrate Sensitive Data Protected by Always Encrypted

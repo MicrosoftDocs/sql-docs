@@ -28,7 +28,7 @@ ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 caps.latest.revision: 69
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER PROCEDURE (Transact-SQL)

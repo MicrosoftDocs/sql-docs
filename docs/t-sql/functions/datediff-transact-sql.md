@@ -36,7 +36,7 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 caps.latest.revision: 52
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DATEDIFF (Transact-SQL)

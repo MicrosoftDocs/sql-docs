@@ -21,7 +21,7 @@ ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 caps.latest.revision: 10
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_get_redirected_publisher (Transact-SQL)

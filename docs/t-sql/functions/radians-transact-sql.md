@@ -23,7 +23,7 @@ ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RADIANS (Transact-SQL)

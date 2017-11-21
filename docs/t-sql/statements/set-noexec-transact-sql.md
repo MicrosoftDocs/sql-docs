@@ -28,7 +28,7 @@ ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET NOEXEC (Transact-SQL)

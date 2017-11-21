@@ -23,7 +23,7 @@ ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 caps.latest.revision: 36
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_column_privileges (Transact-SQL)

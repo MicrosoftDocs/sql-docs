@@ -24,7 +24,7 @@ ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Security Functions (Transact-SQL)

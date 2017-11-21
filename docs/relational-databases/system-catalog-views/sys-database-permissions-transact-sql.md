@@ -25,7 +25,7 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 caps.latest.revision: 50
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.database_permissions (Transact-SQL)

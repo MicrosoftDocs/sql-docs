@@ -25,7 +25,7 @@ ms.assetid: e960df1a-13fc-43ee-ba91-34c1b719ac2c
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.foreign_keys (Transact-SQL)

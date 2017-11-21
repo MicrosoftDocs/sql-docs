@@ -24,7 +24,7 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Collations

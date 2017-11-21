@@ -23,7 +23,7 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_articlefilter (Transact-SQL)

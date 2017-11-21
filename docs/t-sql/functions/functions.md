@@ -25,7 +25,7 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # What are the SQL database functions?

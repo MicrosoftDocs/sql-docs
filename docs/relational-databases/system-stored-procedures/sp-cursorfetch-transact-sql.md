@@ -23,7 +23,7 @@ ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 caps.latest.revision: 10
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_cursorfetch (Transact-SQL)

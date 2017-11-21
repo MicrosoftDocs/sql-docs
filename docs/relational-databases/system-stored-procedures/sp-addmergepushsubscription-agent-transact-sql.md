@@ -23,7 +23,7 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addmergepushsubscription_agent (Transact-SQL)

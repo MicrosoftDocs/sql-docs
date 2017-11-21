@@ -21,7 +21,7 @@ ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XML Schemas (XML Type System) Catalog Views (Transact-SQL)

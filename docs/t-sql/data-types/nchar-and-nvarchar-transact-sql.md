@@ -21,7 +21,7 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 caps.latest.revision: 44
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # nchar and nvarchar (Transact-SQL)

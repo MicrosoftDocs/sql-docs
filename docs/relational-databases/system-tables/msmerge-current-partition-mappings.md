@@ -25,7 +25,7 @@ ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_current_partition_mappings

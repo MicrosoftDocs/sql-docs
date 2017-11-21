@@ -26,7 +26,7 @@ ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SETUSER (Transact-SQL)

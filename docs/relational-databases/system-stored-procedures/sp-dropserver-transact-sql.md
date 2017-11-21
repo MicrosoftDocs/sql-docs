@@ -23,7 +23,7 @@ ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_dropserver (Transact-SQL)

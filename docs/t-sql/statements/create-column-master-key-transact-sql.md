@@ -32,7 +32,7 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)

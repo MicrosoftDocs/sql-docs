@@ -23,7 +23,7 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dropmessage (Transact-SQL)

@@ -24,7 +24,7 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # System Information Schema Views (Transact-SQL)

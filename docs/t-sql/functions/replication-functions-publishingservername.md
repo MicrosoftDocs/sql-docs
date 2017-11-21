@@ -24,7 +24,7 @@ ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Functions - PUBLISHINGSERVERNAME

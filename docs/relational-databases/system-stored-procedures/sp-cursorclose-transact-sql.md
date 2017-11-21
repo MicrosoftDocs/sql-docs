@@ -23,7 +23,7 @@ ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 caps.latest.revision: 7
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_cursorclose (Transact-SQL)

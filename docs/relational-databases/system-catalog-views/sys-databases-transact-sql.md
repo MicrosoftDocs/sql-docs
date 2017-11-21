@@ -25,7 +25,7 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 caps.latest.revision: 152
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sys.databases (Transact-SQL)

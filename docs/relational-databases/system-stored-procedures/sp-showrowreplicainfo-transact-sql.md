@@ -23,7 +23,7 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_showrowreplicainfo (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpreplicationoption (Transact-SQL)

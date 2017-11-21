@@ -25,7 +25,7 @@ ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IHpublishercolumnconstraints (Transact-SQL)

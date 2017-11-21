@@ -23,7 +23,7 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_lookupcustomresolver (Transact-SQL)

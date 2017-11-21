@@ -23,7 +23,7 @@ ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SMALLDATETIMEFROMPARTS (Transact-SQL)

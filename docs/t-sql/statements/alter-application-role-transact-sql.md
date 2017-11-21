@@ -26,7 +26,7 @@ ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 caps.latest.revision: 46
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER APPLICATION ROLE (Transact-SQL)

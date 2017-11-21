@@ -18,7 +18,7 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # MSSQLSERVER_18456

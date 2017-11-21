@@ -25,7 +25,7 @@ ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSrepl_originators (Transact-SQL)

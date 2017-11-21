@@ -27,7 +27,7 @@ ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DATALENGTH (Transact-SQL)

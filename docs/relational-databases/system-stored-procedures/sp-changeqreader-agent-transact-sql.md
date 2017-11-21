@@ -23,7 +23,7 @@ ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_changeqreader_agent (Transact-SQL)

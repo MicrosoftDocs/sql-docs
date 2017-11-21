@@ -25,7 +25,7 @@ ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.symmetric_keys (Transact-SQL)

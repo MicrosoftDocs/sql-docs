@@ -25,7 +25,7 @@ ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 caps.latest.revision: 18
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # IS_ROLEMEMBER (Transact-SQL)

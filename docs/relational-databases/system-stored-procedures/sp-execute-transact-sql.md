@@ -23,7 +23,7 @@ ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_execute (Transact-SQL)

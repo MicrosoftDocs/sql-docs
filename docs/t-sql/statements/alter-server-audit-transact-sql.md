@@ -25,7 +25,7 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER SERVER AUDIT  (Transact-SQL)

@@ -27,7 +27,7 @@ ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_get_ddl_history (Transact-SQL)

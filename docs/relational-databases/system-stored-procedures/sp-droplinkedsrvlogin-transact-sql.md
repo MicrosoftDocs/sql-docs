@@ -23,7 +23,7 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_droplinkedsrvlogin (Transact-SQL)

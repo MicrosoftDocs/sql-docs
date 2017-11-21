@@ -28,7 +28,7 @@ ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.column_encryption_keys  (Transact-SQL)

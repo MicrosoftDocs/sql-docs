@@ -23,7 +23,7 @@ ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # cdc.index_columns (Transact-SQL)

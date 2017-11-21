@@ -23,7 +23,7 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_sproc_columns (Transact-SQL)

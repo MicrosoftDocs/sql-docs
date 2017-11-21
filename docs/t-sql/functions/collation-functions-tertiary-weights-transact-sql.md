@@ -25,7 +25,7 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Collation Functions - TERTIARY_WEIGHTS (Transact-SQL)

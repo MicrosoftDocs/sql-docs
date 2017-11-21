@@ -23,7 +23,7 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_prepare (Transact SQL)

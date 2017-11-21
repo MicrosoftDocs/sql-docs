@@ -33,7 +33,7 @@ ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)

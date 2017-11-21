@@ -28,7 +28,7 @@ ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CREATE SYNONYM (Transact-SQL)

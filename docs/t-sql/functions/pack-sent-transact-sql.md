@@ -28,7 +28,7 @@ ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # &#x40;&#x40;PACK_SENT (Transact-SQL)

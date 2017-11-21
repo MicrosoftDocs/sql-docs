@@ -31,7 +31,7 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 caps.latest.revision: 63
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # OBJECT_ID (Transact-SQL)

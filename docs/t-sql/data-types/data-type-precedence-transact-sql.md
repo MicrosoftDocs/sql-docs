@@ -24,7 +24,7 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Data type precedence (Transact-SQL)

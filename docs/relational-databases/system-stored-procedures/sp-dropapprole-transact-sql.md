@@ -23,7 +23,7 @@ ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dropapprole (Transact-SQL)

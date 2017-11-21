@@ -25,7 +25,7 @@ ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_past_partition_mappings (Transact-SQL)

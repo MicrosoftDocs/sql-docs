@@ -20,7 +20,7 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 caps.latest.revision: 12
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View a SQL Server Audit Log

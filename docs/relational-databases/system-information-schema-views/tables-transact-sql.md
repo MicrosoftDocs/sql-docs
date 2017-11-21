@@ -24,7 +24,7 @@ ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # TABLES (Transact-SQL)

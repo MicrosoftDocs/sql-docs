@@ -23,7 +23,7 @@ ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 caps.latest.revision: 45
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dropextendedproperty (Transact-SQL)

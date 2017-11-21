@@ -27,7 +27,7 @@ ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 caps.latest.revision: 52
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # AVG (Transact-SQL)

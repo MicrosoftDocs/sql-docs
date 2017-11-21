@@ -26,7 +26,7 @@ ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LOG10 (Transact-SQL)

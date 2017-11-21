@@ -28,7 +28,7 @@ ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
 caps.latest.revision: 36
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # LTRIM (Transact-SQL)

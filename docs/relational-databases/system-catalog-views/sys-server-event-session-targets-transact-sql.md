@@ -26,7 +26,7 @@ ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.server_event_session_targets (Transact-SQL)

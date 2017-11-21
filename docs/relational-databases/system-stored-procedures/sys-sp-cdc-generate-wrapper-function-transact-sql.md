@@ -26,7 +26,7 @@ ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_generate_wrapper_function (Transact-SQL)

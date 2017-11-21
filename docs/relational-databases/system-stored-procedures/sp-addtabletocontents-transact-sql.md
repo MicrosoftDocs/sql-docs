@@ -23,7 +23,7 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addtabletocontents (Transact-SQL)

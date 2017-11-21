@@ -25,7 +25,7 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)

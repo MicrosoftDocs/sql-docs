@@ -23,7 +23,7 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_addlogin (Transact-SQL)

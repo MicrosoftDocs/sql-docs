@@ -25,7 +25,7 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 caps.latest.revision: 47
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # LEN (Transact-SQL)

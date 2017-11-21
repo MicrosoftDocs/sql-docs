@@ -23,7 +23,7 @@ ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_droparticle (Transact-SQL)

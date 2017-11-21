@@ -29,7 +29,7 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 caps.latest.revision: 65
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SUBSTRING (Transact-SQL)

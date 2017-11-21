@@ -23,7 +23,7 @@ ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_copysubscription (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # MAX (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_ivindexhasnullcols (Transact-SQL)

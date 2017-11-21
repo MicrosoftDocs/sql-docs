@@ -24,7 +24,7 @@ ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DOMAIN_CONSTRAINTS (Transact-SQL)

@@ -21,7 +21,7 @@ ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Server-wide Configuration Catalog Views (Transact-SQL)

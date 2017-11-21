@@ -27,7 +27,7 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # APPLOCK_TEST (Transact-SQL)

@@ -26,7 +26,7 @@ ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 caps.latest.revision: 10
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP COLUMN ENCRYPTION KEY (Transact-SQL)

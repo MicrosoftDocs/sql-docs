@@ -23,7 +23,7 @@ ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.masked_columns (Transact-SQL)

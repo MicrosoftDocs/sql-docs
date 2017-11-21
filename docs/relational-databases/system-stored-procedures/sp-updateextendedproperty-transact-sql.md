@@ -23,7 +23,7 @@ ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_updateextendedproperty (Transact-SQL)

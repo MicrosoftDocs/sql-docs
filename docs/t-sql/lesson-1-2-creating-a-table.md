@@ -18,7 +18,7 @@ ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Lesson 1-2 - Creating a Table

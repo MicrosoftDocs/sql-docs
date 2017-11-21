@@ -28,7 +28,7 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_check_subset_filter (Transact-SQL)

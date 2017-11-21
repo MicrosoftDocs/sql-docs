@@ -24,7 +24,7 @@ ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # TABLE_PRIVILEGES (Transact-SQL)

@@ -21,7 +21,7 @@ ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Endpoints Catalog Views (Transact-SQL)

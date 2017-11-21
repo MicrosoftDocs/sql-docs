@@ -29,7 +29,7 @@ ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # TODATETIMEOFFSET (Transact-SQL)

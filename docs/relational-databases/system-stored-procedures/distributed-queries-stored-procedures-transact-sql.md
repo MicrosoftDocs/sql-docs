@@ -21,7 +21,7 @@ ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Distributed Queries Stored Procedures (Transact-SQL)

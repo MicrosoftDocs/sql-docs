@@ -25,7 +25,7 @@ ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 caps.latest.revision: 46
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # REVERSE (Transact-SQL)

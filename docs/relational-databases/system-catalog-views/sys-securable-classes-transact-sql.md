@@ -25,7 +25,7 @@ ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.securable_classes (Transact-SQL)

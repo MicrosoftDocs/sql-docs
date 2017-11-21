@@ -23,7 +23,7 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SESSION_CONTEXT (Transact-SQL)

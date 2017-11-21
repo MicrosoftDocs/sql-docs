@@ -25,7 +25,7 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_start_job (Transact-SQL)

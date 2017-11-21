@@ -23,7 +23,7 @@ ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_getsubscriptiondtspackagename (Transact-SQL)

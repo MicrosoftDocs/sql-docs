@@ -23,7 +23,7 @@ ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_vupgrade_replication (Transact-SQL)

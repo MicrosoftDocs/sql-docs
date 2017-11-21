@@ -27,7 +27,7 @@ ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FILEGROUP_ID (Transact-SQL)

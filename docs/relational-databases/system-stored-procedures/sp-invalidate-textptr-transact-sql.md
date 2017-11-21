@@ -23,7 +23,7 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_invalidate_textptr (Transact-SQL)

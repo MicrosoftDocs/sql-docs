@@ -25,7 +25,7 @@ ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.services (Transact-SQL)

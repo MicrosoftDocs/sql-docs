@@ -29,7 +29,7 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 caps.latest.revision: 51
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)

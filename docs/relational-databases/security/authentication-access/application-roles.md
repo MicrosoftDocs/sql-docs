@@ -26,7 +26,7 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Application Roles

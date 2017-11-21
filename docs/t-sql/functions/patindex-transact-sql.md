@@ -27,7 +27,7 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 caps.latest.revision: 53
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # PATINDEX (Transact-SQL)

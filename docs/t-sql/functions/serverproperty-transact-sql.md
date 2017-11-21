@@ -28,7 +28,7 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 caps.latest.revision: 128
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SERVERPROPERTY (Transact-SQL)

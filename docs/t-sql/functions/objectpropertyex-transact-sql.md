@@ -27,7 +27,7 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 caps.latest.revision: 76
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OBJECTPROPERTYEX (Transact-SQL)

@@ -28,7 +28,7 @@ ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SET OFFSETS (Transact-SQL)

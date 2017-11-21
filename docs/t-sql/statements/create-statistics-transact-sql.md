@@ -31,7 +31,7 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 caps.latest.revision: 105
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE STATISTICS (Transact-SQL)

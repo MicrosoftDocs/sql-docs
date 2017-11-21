@@ -25,7 +25,7 @@ ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_dynamic_snapshots (Transact-SQL)

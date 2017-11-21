@@ -23,7 +23,7 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helprolemember (Transact-SQL)

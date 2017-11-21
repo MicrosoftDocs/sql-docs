@@ -27,7 +27,7 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)

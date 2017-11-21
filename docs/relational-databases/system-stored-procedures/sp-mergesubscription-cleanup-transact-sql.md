@@ -23,7 +23,7 @@ ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_mergesubscription_cleanup (Transact-SQL)

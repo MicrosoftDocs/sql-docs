@@ -23,7 +23,7 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_indexes (Transact-SQL)

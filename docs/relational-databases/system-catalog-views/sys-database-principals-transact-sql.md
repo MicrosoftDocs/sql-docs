@@ -25,7 +25,7 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 caps.latest.revision: 46
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.database_principals (Transact-SQL)

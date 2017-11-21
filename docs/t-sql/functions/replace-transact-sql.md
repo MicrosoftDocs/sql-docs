@@ -27,7 +27,7 @@ ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # REPLACE (Transact-SQL)

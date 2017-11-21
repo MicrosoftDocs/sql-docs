@@ -23,7 +23,7 @@ ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_OAStop (Transact-SQL)

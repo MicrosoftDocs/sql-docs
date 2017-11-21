@@ -35,7 +35,7 @@ ms.assetid: bebe3b65-2b3e-4c73-bf80-ff1132c680a7
 caps.latest.revision: 46
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # GETDATE (Transact-SQL)

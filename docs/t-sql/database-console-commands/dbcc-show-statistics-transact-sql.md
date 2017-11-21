@@ -146,7 +146,7 @@ For each histogram step:
 The query optimizer defines the histogram steps according to their statistical significance. It uses a maximum difference algorithm to minimize the number of steps in the histogram while maximizing the difference between the boundary values. The maximum number of steps is 200. The number of histogram steps can be fewer than the number of distinct values, even for columns with fewer than 200 boundary points. For example, a column with 100 distinct values can have a histogram with fewer than 100 boundary points.
   
 ## Density Vector  
-The query optimizer uses densities to enhance cardinality estimates for queries that return multiple columns from the same table or indexed view. The density vector contains one density for each prefix of columns in the statistics object. For example, if a statistics object has the key columns CustomerId, ItemId, Price, density is calculated on each of the following column prefixes.
+The query optimizer uses densities to enhance cardinality estimates for queries that return multiple columns from the same table or indexed view. The density vector contains one density for each prefix of columns in the statistics object. For example, if a statistics object has the key columns `CustomerId`, `ItemId` and `Price`, density is calculated on each of the following column prefixes.
   
 |Column prefix|Density calculated on|  
 |---|---|
@@ -160,7 +160,7 @@ The query optimizer uses densities to enhance cardinality estimates for queries 
 ## Permissions for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 In order to view the statistics object, the user must own the table or the user must be a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.
   
-SQL Server 2012 SP1 modifies the permission restrictions and allows users with SELECT permission to use this command. Note that the following requirements exist for SELECT permissions to be sufficient to run the command:
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 modifies the permission restrictions and allows users with SELECT permission to use this command. Note that the following requirements exist for SELECT permissions to be sufficient to run the command:
 -   Users must have permissions on all columns in the statistics object  
 -   Users must have permission on all columns in a filter condition (if one exists)  
 -   The table cannot have a row-level security policy.  

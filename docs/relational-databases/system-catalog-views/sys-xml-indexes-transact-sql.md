@@ -25,7 +25,7 @@ ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.xml_indexes (Transact-SQL)

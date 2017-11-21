@@ -25,7 +25,7 @@ ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSreplication_queue (Transact-SQL)

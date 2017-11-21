@@ -18,7 +18,7 @@ ms.assetid: 100d5670-e2d8-425c-a927-2b4dfe453e28
 caps.latest.revision: 4
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Date and time types

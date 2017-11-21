@@ -23,7 +23,7 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_changemergefilter (Transact-SQL)

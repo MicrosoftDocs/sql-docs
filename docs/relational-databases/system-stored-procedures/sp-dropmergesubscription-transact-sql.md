@@ -23,7 +23,7 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dropmergesubscription (Transact-SQL)

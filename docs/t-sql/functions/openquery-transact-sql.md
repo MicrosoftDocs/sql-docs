@@ -28,7 +28,7 @@ ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # OPENQUERY (Transact-SQL)

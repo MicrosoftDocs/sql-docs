@@ -24,7 +24,7 @@ ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CHECK_CONSTRAINTS (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helppullsubscription (Transact-SQL)

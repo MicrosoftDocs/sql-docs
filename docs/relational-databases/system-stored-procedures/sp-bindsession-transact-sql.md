@@ -23,7 +23,7 @@ ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_bindsession (Transact-SQL)

@@ -26,7 +26,7 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_usage (Azure SQL Database)

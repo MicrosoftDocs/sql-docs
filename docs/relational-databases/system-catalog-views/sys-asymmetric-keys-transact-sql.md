@@ -25,7 +25,7 @@ ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 caps.latest.revision: 35
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.asymmetric_keys (Transact-SQL)

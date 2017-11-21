@@ -23,7 +23,7 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dbremove (Transact-SQL)

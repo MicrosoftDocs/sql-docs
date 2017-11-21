@@ -26,7 +26,7 @@ ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 caps.latest.revision: 7
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DATEDIFF_BIG (Transact-SQL)

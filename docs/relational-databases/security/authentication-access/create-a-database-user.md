@@ -29,7 +29,7 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---   
 # Create a Database User

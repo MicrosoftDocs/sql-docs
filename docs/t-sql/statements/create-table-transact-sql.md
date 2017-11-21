@@ -52,7 +52,7 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CREATE TABLE (Transact-SQL)

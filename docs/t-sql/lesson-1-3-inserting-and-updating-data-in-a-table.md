@@ -20,7 +20,7 @@ ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Lesson 1-3 - Inserting and Updating Data in a Table

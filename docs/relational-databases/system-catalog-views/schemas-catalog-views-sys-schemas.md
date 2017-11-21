@@ -25,7 +25,7 @@ ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 caps.latest.revision: 35
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Schemas Catalog Views - sys.schemas

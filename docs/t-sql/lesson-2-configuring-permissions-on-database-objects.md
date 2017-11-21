@@ -20,7 +20,7 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 caps.latest.revision: 12
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 2: Configuring Permissions on Database Objects

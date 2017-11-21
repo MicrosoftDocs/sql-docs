@@ -25,7 +25,7 @@ ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 caps.latest.revision: 36
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.server_permissions (Transact-SQL)

@@ -29,7 +29,7 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET TEXTSIZE (Transact-SQL)

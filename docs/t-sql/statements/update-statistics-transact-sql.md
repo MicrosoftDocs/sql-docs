@@ -1,7 +1,7 @@
 ---
 title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "11/20/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -26,7 +26,7 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 caps.latest.revision: 74
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # UPDATE STATISTICS (Transact-SQL)
@@ -293,7 +293,7 @@ UPDATE STATISTICS Customer;
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
-  
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 
 

@@ -26,7 +26,7 @@ ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
 caps.latest.revision: 50
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # ROW_NUMBER (Transact-SQL)

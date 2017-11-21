@@ -23,7 +23,7 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_link_publication (Transact-SQL)

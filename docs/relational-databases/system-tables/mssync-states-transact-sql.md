@@ -25,7 +25,7 @@ ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSsync_states (Transact-SQL)

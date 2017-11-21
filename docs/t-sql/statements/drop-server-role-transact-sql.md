@@ -24,7 +24,7 @@ ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP SERVER ROLE (Transact-SQL)

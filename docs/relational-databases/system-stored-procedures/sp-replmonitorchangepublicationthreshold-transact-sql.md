@@ -23,7 +23,7 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_replmonitorchangepublicationthreshold (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_autostats (Transact-SQL)

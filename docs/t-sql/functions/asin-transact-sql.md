@@ -25,7 +25,7 @@ ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
 caps.latest.revision: 35
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ASIN (Transact-SQL)

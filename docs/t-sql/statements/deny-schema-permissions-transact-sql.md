@@ -23,7 +23,7 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DENY Schema Permissions (Transact-SQL)

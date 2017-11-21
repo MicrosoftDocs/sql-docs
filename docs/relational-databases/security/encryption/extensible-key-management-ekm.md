@@ -20,7 +20,7 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: 46
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Extensible Key Management (EKM)

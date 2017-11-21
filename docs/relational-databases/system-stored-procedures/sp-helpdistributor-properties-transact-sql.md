@@ -23,7 +23,7 @@ ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpdistributor_properties (Transact-SQL)

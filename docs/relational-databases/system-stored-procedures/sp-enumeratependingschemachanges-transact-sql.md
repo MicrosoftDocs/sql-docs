@@ -23,7 +23,7 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_enumeratependingschemachanges (Transact-SQL)

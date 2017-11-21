@@ -25,7 +25,7 @@ ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSqreader_agents (Transact-SQL)

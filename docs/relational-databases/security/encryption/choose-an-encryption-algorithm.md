@@ -21,7 +21,7 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 36
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Choose an Encryption Algorithm

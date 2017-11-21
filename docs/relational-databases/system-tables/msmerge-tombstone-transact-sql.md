@@ -25,7 +25,7 @@ ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_tombstone (Transact-SQL)

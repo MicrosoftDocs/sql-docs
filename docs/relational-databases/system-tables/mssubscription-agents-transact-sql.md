@@ -25,7 +25,7 @@ ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSsubscription_agents (Transact-SQL)

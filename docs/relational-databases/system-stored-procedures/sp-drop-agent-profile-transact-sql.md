@@ -23,7 +23,7 @@ ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_drop_agent_profile (Transact-SQL)

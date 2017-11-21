@@ -29,7 +29,7 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SUSER_NAME (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 caps.latest.revision: 4
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # TRIM (Transact-SQL)

@@ -27,7 +27,7 @@ ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
 caps.latest.revision: 44
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # COUNT_BIG (Transact-SQL)

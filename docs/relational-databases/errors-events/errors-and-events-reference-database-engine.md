@@ -20,7 +20,7 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Errors and Events Reference (Database Engine)

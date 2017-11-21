@@ -26,7 +26,7 @@ ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sequences (Transact-SQL)

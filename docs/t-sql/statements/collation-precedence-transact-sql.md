@@ -31,7 +31,7 @@ ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Collation Precedence (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_tables (Transact-SQL)

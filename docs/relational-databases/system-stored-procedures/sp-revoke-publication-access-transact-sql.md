@@ -23,7 +23,7 @@ ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_revoke_publication_access (Transact-SQL)

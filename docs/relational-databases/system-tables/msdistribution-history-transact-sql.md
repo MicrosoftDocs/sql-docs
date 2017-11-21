@@ -25,7 +25,7 @@ ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSdistribution_history (Transact-SQL)

@@ -26,7 +26,7 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GETANSINULL (Transact-SQL)

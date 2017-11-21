@@ -22,7 +22,7 @@ ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REVOKE Asymmetric Key Permissions (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_indexoption (Transact-SQL)

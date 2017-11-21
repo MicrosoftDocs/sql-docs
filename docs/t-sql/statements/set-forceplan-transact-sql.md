@@ -29,7 +29,7 @@ ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 caps.latest.revision: 40
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SET FORCEPLAN (Transact-SQL)

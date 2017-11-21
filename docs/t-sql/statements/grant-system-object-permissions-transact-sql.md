@@ -22,7 +22,7 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # GRANT System Object Permissions (Transact-SQL)

@@ -34,7 +34,7 @@ ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SYSDATETIME (Transact-SQL)

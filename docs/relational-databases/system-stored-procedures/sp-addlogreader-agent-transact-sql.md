@@ -23,7 +23,7 @@ ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addlogreader_agent (Transact-SQL)

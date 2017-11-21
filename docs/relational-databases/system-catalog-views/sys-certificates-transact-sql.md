@@ -25,7 +25,7 @@ ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 caps.latest.revision: 39
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.certificates (Transact-SQL)

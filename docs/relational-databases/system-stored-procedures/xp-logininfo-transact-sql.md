@@ -23,7 +23,7 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # xp_logininfo (Transact-SQL)

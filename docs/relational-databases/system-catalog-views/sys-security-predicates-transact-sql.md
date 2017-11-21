@@ -29,7 +29,7 @@ ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.security_predicates (Transact-SQL)

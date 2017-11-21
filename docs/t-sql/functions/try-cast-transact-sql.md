@@ -23,7 +23,7 @@ ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 caps.latest.revision: 10
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # TRY_CAST (Transact-SQL)

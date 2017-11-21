@@ -27,7 +27,7 @@ ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP FULLTEXT STOPLIST (Transact-SQL)

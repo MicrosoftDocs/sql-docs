@@ -15,8 +15,8 @@ Starting with SQL Server 2017, SQL Server is supported on both Linux and Windows
 
 ## SQL Server availability options for Linux deployments
 Besides backup and restore, the same three availability features are available on Linux as for Windows-based deployments:
--   Always On Availability Groups (AGs)
--   Always On Failover Cluster Instances (FCIs)
+-   [Always On Availability Groups (AGs)]
+-   [Always On Failover Cluster Instances (FCIs)]
 -   [Log Shipping](sql-server-linux-use-log-shipping.md)
 
 On Windows, FCIs in all configurations always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in SQL Server 2017 that is discussed [later in this paper]. A WSFC does not exist in Linux. How clustering is implemented in Linux is discussed in the section [Pacemaker for Always On Availability Groups and Failover Cluster Instances on Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
@@ -183,7 +183,7 @@ Pacemaker has standard and clone resources. Clone resources are ones that run si
 When an AG is created, it requires a specialized form of a clone resource called a multi-state resource. While an AG only has one primary replica, the AG itself is running across all nodes that it is configured to work on and can potentially allow things such as read-only access. Because this is a “live” use of the node, the resources have the concept of two states: Master and Slave. For more information, see [Multi-state resources: Resources that have multiple modes](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### Resource groups/sets
-Similar to Roles in a WSFC, a Pacemaker cluster has the concept of a resource group. A resource group (called a set in SLES) is a collection of resources that function together and can fail over from one node to another as a single unit. A resource group cannot contain resources that are configured as master/slave, thus, they cannot be used for AGs. While a resource group can be used for FCIs, it is not generally a recommended configuration.
+Similar to roles in a WSFC, a Pacemaker cluster has the concept of a resource group. A resource group (called a set in SLES) is a collection of resources that function together and can fail over from one node to another as a single unit. A resource group cannot contain resources that are configured as master/slave, thus, they cannot be used for AGs. While a resource group can be used for FCIs, it is not generally a recommended configuration.
 
 #### Constraints
 WSFCs have various parameters for resources as well as things like dependencies, which tell the WSFC of a parent/child relationship between two different resources. A dependency is just a rule telling the WSFC which resource needs to be online first.

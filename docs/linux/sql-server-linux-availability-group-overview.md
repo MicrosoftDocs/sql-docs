@@ -114,7 +114,7 @@ In CU1 there is a known bug in the logging in the corosync.log file that is gene
 
 ## Multiple availability groups 
 
-More than one AG can be created per Pacemaker cluster or set of servers. The only limitation is system resources. [An example is shown in the picture below where there are two AGs – LinuxAG and LinuxAG2]. The AG ownership is shown by the Master, and in this case, both are owned by LinAGN1. Different AGs can be owned by different nodes; they do not need to all be running on the same node.
+More than one AG can be created per Pacemaker cluster or set of servers. The only limitation is system resources. [An example is shown in the picture below where there are two AGs – LinuxAG and LinuxAG2]. The AG ownership is shown by the Master[, and in this case, both are owned by LinAGN1]. Different AGs can be owned by different nodes; they do not need to all be running on the same node.
 
 ## Drive and folder location for databases
 

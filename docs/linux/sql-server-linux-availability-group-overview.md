@@ -140,11 +140,11 @@ An AG that has a cluster type of External or one that is WSFC cannot have its re
 
 An AG with a cluster type of None can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown below where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
 
-![Hybrid None](./media/sql-server-linux-availability-group-overview/media/image1.png)
+![Hybrid None](./media/sql-server-linux-availability-group-overview/image1.png)
 
 A distributed AG can also cross OS boundaries, but the underlying AGs are bound by the rules for how they are configured, such as one configured with External being Linux-only. But the other AG that it is joined to could be configured using a WSFC. An example is shown below.
 
-![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/media/image2.png)
+![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
 Distributed AGs are also supported for upgrades from SQL Server 2016 to SQL Server 2017. For more information on how to achieve this, see [the article “x”].
 

@@ -216,7 +216,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Within an existing publication, you can use **sp_changearticle** to change an article without having to drop and re-create the entire publication.  
   
 > [!NOTE]  
->  When changing the value of *schema_option*, the system does not perform a bitwise update. This means that when you set *schema_option* using **sp_changearticle**, existing bit settings may be turned off. To retain the existing settings, you should perform [& (Bitwise AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md) between the value that you are setting and the current value of *schema_option*, which can be determined by executing [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
+>  When changing the value of *schema_option*, the system does not perform a bitwise update. This means that when you set *schema_option* using **sp_changearticle**, existing bit settings may be turned off. To retain the existing settings, you should perform [| (Bitwise OR)](../../t-sql/language-elements/bitwise-and-transact-sql.md) between the value that you are setting and the current value of *schema_option*, which can be determined by executing [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## Valid Schema Options  
  The following table describes the allowable values of *schema_option* based upon the replication type (shown across the top) and the article type (shown down the first column).  

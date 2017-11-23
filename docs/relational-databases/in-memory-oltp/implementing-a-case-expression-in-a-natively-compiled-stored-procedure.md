@@ -1,7 +1,7 @@
 ---
 title: "Implementing a CASE Expression in a Natively Compiled Stored Procedure | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/24/2017"
+ms.date: "11/21/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -22,8 +22,10 @@ ms.workload: "Inactive"
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  CASE expressions are supported in natively compiled stored procedures. The following example demonstrates a way to use
-the CASE expression in a query. The workaround described for CASE expressions in natively compiled modules would be no longer needed.
+**Applies to:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] and SQL Server starting [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+
+CASE expressions are supported in natively compiled T-SQL modules. The following example demonstrates a way to use
+the CASE expression in a query. 
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.
@@ -42,12 +44,11 @@ GO
   
 EXEC dbo.usp_SOHOnlineOrderResult  
 GO  
-```  
+``` 
 
+**Applies to:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] and SQL Server starting [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
-
-  CASE expressions are *not* supported in natively compiled stored procedures. The following sample shows a way to implement the functionality of a CASE expression in a natively compiled stored procedure.  
+  CASE expressions are *not* supported in natively compiled T-SQL modules. The following sample shows a way to implement the functionality of a CASE expression in a natively compiled stored procedure.  
   
  The code samples uses a table variable to construct a single result set. This is suitable only when processing a limited number of rows, because it involves creating an additional copy of the data rows.  
   

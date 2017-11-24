@@ -24,10 +24,11 @@ ms.workload: "On Demand"
 
   For using In-Memory OLTP in Azure DB see [Get started with In-Memory in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
- In addition to the [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), the following are requirements to use In-Memory OLTP:  
+ In addition to the [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), the following are requirements to use In-Memory OLTP:  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 (or later), any edition. For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM (pre-SP1) you need Enterprise, Developer, or Evaluation edition.
-    - Note: In-Memory OLTP requires the 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    > [!NOTE]
+    > In-Memory OLTP requires the 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] needs enough memory to hold the data in memory-optimized tables and indexes, as well as additional memory to support the online workload. See [Estimate Memory Requirements for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) for more information.  
 
@@ -56,6 +57,6 @@ ms.workload: "On Demand"
   
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
- [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)
+ [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)  
  [Memory Architecture guide](../../relational-databases/memory-management-architecture-guide.md)
   

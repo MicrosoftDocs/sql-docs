@@ -266,9 +266,9 @@ The kind of page protection used is an attribute of the database containing the 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is non-uniform memory access (NUMA) aware, and performs well on NUMA hardware without special configuration. As clock speed and the number of processors increase, it becomes increasingly difficult to reduce the memory latency required to use this additional processing power. To circumvent this, hardware vendors provide large L3 caches, but this is only a limited solution. NUMA architecture provides a scalable solution to this problem. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has been designed to take advantage of NUMA-based computers without requiring any application changes. For more information, see [How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## See Also
-[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md)
+[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Reading Pages](../relational-databases/reading-pages.md)   
-[Writing Pages](../relational-databases/writing-pages.md)
-[How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)
-[Requirements for Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
+[Writing Pages](../relational-databases/writing-pages.md)   
+[How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
+[Requirements for Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
 [Resolve Out Of Memory Issues Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

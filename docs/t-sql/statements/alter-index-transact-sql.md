@@ -245,7 +245,7 @@ PARTITION
    
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- Is the partition number of a partitioned index that is to be rebuilt or reorganized. *partition_number* is a constant expression that can reference variables. These include user-defined type variables or functions and user-defined functions, but cannot reference a [!INCLUDE[t-sql](../../includes/t-sql-md.md)] statement. *partition_number* must exist or the statement fails.  
+ Is the partition number of a partitioned index that is to be rebuilt or reorganized. *partition_number* is a constant expression that can reference variables. These include user-defined type variables or functions and user-defined functions, but cannot reference a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. *partition_number* must exist or the statement fails.  
   
  WITH **(**\<single_partition_rebuild_index_option>**)**  
    

@@ -307,7 +307,7 @@ ms.workload: "Active"
  
 #### Automatic index and statistics management
 
-Leverage solutions such as [Adaptive Index Defrag](http://aka.ms/AID) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
+Leverage solutions such as [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
   
 ## See Also  
   [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   

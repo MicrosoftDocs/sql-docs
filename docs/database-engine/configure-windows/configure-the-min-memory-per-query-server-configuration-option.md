@@ -1,7 +1,7 @@
 ---
 title: "Configure the min memory per query Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
+ms.date: "11/24/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -57,7 +57,9 @@ ms.workload: "Inactive"
   
 -   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor tries to determine the optimal amount of memory to allocate to a query. The min memory per query option lets the administrator specify the minimum amount of memory any single query receives. Queries generally receive more memory than this if they have hash and sort operations on a large volume of data. Increasing the value of min memory per query may improve performance for some small to medium-sized queries, but doing so could lead to increased competition for memory resources. The min memory per query option includes memory allocated for sorting.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor tries to determine the optimal amount of memory to allocate to a query. The min memory per query option lets the administrator specify the minimum amount of memory any single query receives. Queries generally receive more memory than this if they have hash and sort operations on a large volume of data. Increasing the value of min memory per query may improve performance for some small to medium-sized queries, but doing so could lead to increased competition for memory resources. The min memory per query option includes memory allocated for sort operations.  
+
+-    Do not set the min memory per query server configuration option too high, especially on very busy systems, because the query has to wait until it can secure the minimum memory requested or until the value specified in the query wait server configuration option is exceeded. If more memory is available than the specified minimum value required to execute the query, the query is allowed to make use of the additional memory, provided that the memory can be used effectively by the query. 
   
 ###  <a name="Security"></a> Security  
   

@@ -27,7 +27,7 @@ ms.workload: "Inactive"
 # Configure the min memory per query Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes how to configure the **min memory per query** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **min memory per query** option specifies the minimum amount of memory (in kilobytes) that will be allocated for the execution of a query. For example, if **min memory per query** is set to 2,048 KB, the query is guaranteed to get at least that much total memory. The default value is 1,024 KB. The minimum value 512 KB, and the maximum is 2,147,483,647 KB (2 GB).  
+  This topic describes how to configure the **min memory per query** server configuration option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **min memory per query** option specifies the minimum amount of memory (in kilobytes) that will be allocated for the execution of a query. For example, if **min memory per query** is set to 2,048 KB, the query is guaranteed to get at least that much total memory. The default value is 1,024 KB. The minimum value 512 KB, and the maximum is 2,147,483,647 KB (2 GB).  
   
  **In This Topic**  
   
@@ -51,7 +51,7 @@ ms.workload: "Inactive"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The amount of min memory per query has precedence over the [index create memory Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md). If you modify both options and the index create memory is less than min memory per query, you receive a warning message, but the value is set. During query execution you receive another similar warning.  
+-   The amount of min memory per query has precedence over the [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) option. If you modify both options and the index create memory is less than min memory per query, you receive a warning message, but the value is set. During query execution you receive another similar warning.  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
@@ -96,8 +96,7 @@ GO
 EXEC sp_configure 'min memory per query', 3500 ;  
 GO  
 RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
 ##  <a name="FollowUp"></a> Follow Up: After you configure the min memory per query option  

@@ -35,7 +35,7 @@ ms.workload: "Active"
 
 Use the two server memory options, **min server memory** and **max server memory**, to reconfigure the amount of memory (in megabytes) that is managed by the SQL Server Memory Manager for a SQL Server process used by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-The default setting for **min server memory** is 0, and the default setting for **max server memory** is 2147483647 MB. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources.  
+The default setting for **min server memory** is 0, and the default setting for **max server memory** is 2,147,483,647 MB. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources.  
 
 The minimum memory amount allowable for **max server memory** is 128 MB.
   
@@ -76,7 +76,7 @@ To set a fixed amount of memory:
   
 3.  Under **Server Memory Options**, enter the same amount that you want for **Minimum server memory** and **Maximum server memory**.  
   
-     Use the default settings to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to change its memory requirements dynamically based on available system resources. The default setting for **min server memory** is 0, and the default setting for **max server memory** is 2147483647 megabytes (MB). However, it is recommended to set a **max server memory** as detailed above. 
+     Use the default settings to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to change its memory requirements dynamically based on available system resources. The default setting for **min server memory** is 0, and the default setting for **max server memory** is 2,147,483,647 megabytes (MB). However, it is recommended to set a **max server memory** as detailed above. 
   
 ## Lock Pages in Memory (LPIM) 
 This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock Pages in Memory** option is set to ON in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows *Lock Pages in Memory* (LPIM) user right.  
@@ -169,6 +169,6 @@ FROM sys.dm_os_process_memory;
  [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) 
  [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits) 
  [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits) 
- [Editions and supported features of SQL Server 2017 on Linux](../../sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits) 
+ [Editions and supported features of SQL Server 2017 on Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits) 
  [Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
  

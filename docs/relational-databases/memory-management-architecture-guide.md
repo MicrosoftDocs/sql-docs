@@ -25,7 +25,14 @@ ms.workload: "Inactive"
 # Memory Management Architecture Guide
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-## Memory Architecture
+## Windows Virtual Memory Manager  
+The committed regions of address space are mapped to the available physical memory by the Windows Virtual Memory Manager (VMM).  
+  
+For more information on the amount of physical memory supported by different operating systems, see the Windows documentation on [Memory Limits for Windows Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx).  
+  
+Virtual memory systems allow the over-commitment of physical memory, so that the ratio of virtual-to-physical memory can exceed 1:1. As a result, larger programs can run on computers with a variety of physical memory configurations. However, using significantly more virtual memory than the combined average working sets of all the processes can cause poor performance. 
+
+## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Architecture
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dynamically acquires and frees memory as required. Typically, an administrator does not have to specify how much memory should be allocated to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], although the option still exists and is required in some environments.
 
@@ -42,9 +49,12 @@ One of the primary design goals of all database software is to minimize disk I/O
  
 ### Providing the maximum amount of memory to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-By using AWE and the Locked Pages in Memory privilege, you can provide the following amounts of memory to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine. (The following table includes a column for 32-bit versions which are no longer available.)
+By using AWE and the Locked Pages in Memory privilege, you can provide the following amounts of memory to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine. 
 
-| |32-bit <sup>1</sup> |64-bit
+> [!NOTE]
+> The following table includes a column for 32-bit versions, which are no longer available.
+
+| |32-bit <sup>1</sup> |64-bit|
 |-------|-------|-------| 
 |Conventional memory |All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions. Up to process virtual address space limit: <br>- 2 GB<br>- 3 GB with /3gb boot parameter <sup>2</sup> <br>- 4 GB on WOW64 <sup>3</sup> |All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions. Up to process virtual address space limit: <br>- 7 TB with IA64 architecture (IA64 not supported in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and above)<br>- Operating system maximum with x64 architecture <sup>4</sup>
 |AWE mechanism (Allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to go beyond the process virtual address space limit on 32-bit platform.) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise, and Developer editions: Buffer pool is capable of accessing up to 64 GB of memory.|Not applicable <sup>5</sup> |
@@ -53,23 +63,69 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 <sup>1</sup> 32-bit versions are not available starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb is an operating system boot parameter. For more information, visit the MSDN Library.  
 <sup>3</sup> WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] runs on a 64-bit operating system.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supports the maximum of the operating system maximum..  
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supports the operating system maximum.  
 <sup>5</sup> Note that the sp_configure awe enabled option was present on 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but it is ignored.    
 <sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory.
 
 > [!NOTE]
-> Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes of memory on a 32-bit operating system requires Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](http://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](http://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 documentation.   
+> Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](http://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](http://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
 
-## Virtual Memory Manager  
-The committed regions of address space are mapped to the available physical memory by the Windows Virtual Memory Manager (VMM).  
-  
-For more information on the amount of physical memory supported by different operating systems, see the Windows documentation [Memory Limits for Windows Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx).  
-  
-Virtual memory systems allow the over-commitment of physical memory, so that the ratio of virtual-to-physical memory can exceed 1:1. As a result, larger programs can run on computers with a variety of physical memory configurations. However, using significantly more virtual memory than the combined average working sets of all the processes can cause poor performance.  
- 
+## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]
+
+In earlier versions of SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
+-  **Single-page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. THe buffer pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
+-  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8-KB.
+-  **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
+-  Memory allocations for **[thread stacks](../relational-databases/memory-management-architecture-guide.md#stacksizes)** in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process.
+-  **Direct Windows allocations (DWA)**, for memory allocation requests made directly to Windows. These include Windows heap usage and direct virtual allocations made by modules that are loaded into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. Examples of such memory allocation requests include allocations from extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), and allocations from linked server providers.
+
+Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)],  Single-lage allocations, Multi-Page allocations and CLR allocations are all consolidated into a **"Any size" Page Allocator**, and it's included in memory limits that are controlled by *max server memory (MB)* and *min server memory (MB)* configuration options. This change provided a more accurate sizing ability for all memory requirements that go through the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager. 
+
+> [!IMPORTANT]
+> Carefully review your current *max server memory (MB)* and *min server memory (MB)* configurations after you upgrade to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. This is because starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], such configurations now include and account for more memory allocations compared to earlier versions. 
+> These changes apply to both 32-bit and 64-bit versions of [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and 64-bit versions of [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+
+The following table indicates whether a specific type of memory allocation is controlled by the *max server memory (MB)* and *min server memory (MB)* configuration options:
+
+|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|
+|-------|-------|-------|
+|Single-page allocations|Yes|Yes, consolidated into "any size" page allocations|
+|Multi-page allocations|No|Yes, consolidated into "any size" page allocations|
+|CLR allocations|No|Yes|
+|Thread stacks memory|No|No|
+|Direct allocations from Windows|No|No|
+
+Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might allocate more memory than the value specified in the max server memory setting. This behavior may occur when the ***Total Server Memory (KB)*** value has already reached the ***Target Server Memory (KB)*** setting (as specified by max server memory). If there is insufficient contiguous free memory to meet the demand of multi-page memory requests (more than 8 KB) because of memory fragmentation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform over-commitment instead of rejecting the memory request. 
+
+As soon as this allocation is performed, the *Resource Monitor* background task starts to signal all memory consumers to release the allocated memory, and tries to bring the *Total Server Memory (KB)* value below the *Target Server Memory (KB)* specification. Therefore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory usage could briefly exceed the max server memory setting. In this situation, the *Total Server Memory (KB)* performance counter reading will exceed the max server memory and *Target Server Memory (KB)* settings.
+
+This behavior is typically observed during the following operations: 
+-  Large Columnstore index queries.
+-  Columnstore index (re)builds, which use large volumes of memory to perform Hash and Sort operations.
+-  Backup operations that require large memory buffers.
+-  Tracing operations that have to store large input parameters.
+
+## Changes to "memory_to_reserve" starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]
+
+In earlier versions of SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager set aside a part of the process virtual address space (VAS) for use by the **Multi-Page Allocator (MPA)**, **CLR Allocator**, memory allocations for **thread stacks** in the SQL Server process, and **Direct Windows allocations (DWA)**. This part of the virtual address space is also known as "Mem-To-Leave" or "non-Buffer Pool" region.
+
+The virtual address space that is reserved for these allocations is determined by the ***memory_to_reserve*** configuration option. The default value that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses is 256 MB. To override the default value, use the SQL Server *-g* startup parameter.  Refer to the documentation page on [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
+
+Because starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8-KB, the *memory_to_reserve* value does not include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
+
+The following table indicates whether a specific type of memory allocation falls into the *memory_to_reserve* region of the virtual address space for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process:
+
+|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|
+|-------|-------|-------|
+|Single-page allocations|No|No, consolidated into "any size" page allocations|
+|Multi-page allocations|Yes|No, consolidated into "any size" page allocations|
+|CLR allocations|Yes|Yes|
+|Thread stacks memory|Yes|Yes|
+|Direct allocations from Windows|Yes|Yes|
+
 ## Dynamic Memory Management
 
-The default memory management behavior of the Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine is to acquire as much memory as it needs without creating a memory shortage on the system. The Database Engine does this by using the Memory Notification APIs in Microsoft Windows.
+The default memory management behavior of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] is to acquire as much memory as it needs without creating a memory shortage on the system. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does this by using the Memory Notification APIs in Microsoft Windows.
 
 When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is using memory dynamically, it queries the system periodically to determine the amount of free memory. Maintaining this free memory prevents the operating system (OS) from paging. If less memory is free, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] releases memory to the OS. If more memory is free, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] may allocate more memory. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adds memory only when its workload requires more memory; a server at rest does not increase the size of its virtual address space.  
   
@@ -201,9 +257,9 @@ Database pages can use one of two optional mechanisms that help insure the integ
 Torn page protection, introduced in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, is primarily a way of detecting page corruptions due to power failures. For example, an unexpected power failure may leave only part of a page written to disk. When torn page protection is used, a 2-bit signature is placed at the end of each 512-byte sector in the page (after having copied the original two bits into the page header). The signature alternates between binary 01 and 10 with every write, so it is always possible to tell when only a portion of the sectors made it to disk: if a bit is in the wrong state when the page is later read, the page was written incorrectly and a torn page is detected. Torn page detection uses minimal resources; however, it does not detect all errors caused by disk hardware failures.
 
 #### Checksum Protection  
-Checksum protection, introduced in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005, provides stronger data integrity checking. A checksum is calculated for the data in each page that is written, and stored in the page header. Whenever a page with a stored checksum is read from disk, the database engine recalculates the checksum for the data in the page and raises error 824 if the new checksum is different from the stored checksum. Checksum protection can catch more errors than torn page protection because it is affected by every byte of the page, however, it is moderately resource intensive. When checksum is enabled, errors caused by power failures and flawed hardware or firmware can be detected any time the buffer manager reads a page from disk.
+Checksum protection, introduced in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], provides stronger data integrity checking. A checksum is calculated for the data in each page that is written, and stored in the page header. Whenever a page with a stored checksum is read from disk, the database engine recalculates the checksum for the data in the page and raises error 824 if the new checksum is different from the stored checksum. Checksum protection can catch more errors than torn page protection because it is affected by every byte of the page, however, it is moderately resource intensive. When checksum is enabled, errors caused by power failures and flawed hardware or firmware can be detected any time the buffer manager reads a page from disk.
 
-The kind of page protection used is an attribute of the database containing the page. Checksum protection is the default protection for databases created in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 and later. The page protection mechanism is specified at database creation time, and may be altered by using ALTER DATABASE. You can determine the current page protection setting by querying the page_verify_option column in the [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the *IsTornPageDetectionEnabled* property of the [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md) function. If the page protection setting is changed, the new setting does not immediately affect the entire database. Instead, pages adopt the current protection level of the database whenever they are written next. This means that the database may be composed of pages with different kinds of protection. 
+The kind of page protection used is an attribute of the database containing the page. Checksum protection is the default protection for databases created in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] and later. The page protection mechanism is specified at database creation time, and may be altered by using ALTER DATABASE. You can determine the current page protection setting by querying the page_verify_option column in the [sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the *IsTornPageDetectionEnabled* property of the [DATABASEPROPERTYEX](../t-sql/functions/databasepropertyex-transact-sql.md) function. If the page protection setting is changed, the new setting does not immediately affect the entire database. Instead, pages adopt the current protection level of the database whenever they are written next. This means that the database may be composed of pages with different kinds of protection. 
 
 ## Understanding Non-uniform Memory Access
 
@@ -214,3 +270,5 @@ The kind of page protection used is an attribute of the database containing the 
 [Reading Pages](../relational-databases/reading-pages.md)   
 [Writing Pages](../relational-databases/writing-pages.md)
 [How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)
+[Requirements for Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
+[Resolve Out Of Memory Issues Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues)

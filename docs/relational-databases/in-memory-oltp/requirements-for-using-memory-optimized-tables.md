@@ -57,5 +57,5 @@ ms.workload: "On Demand"
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
  [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)
- [Memory Architecture guide](../../relational-databases/memory-management-architecture-guide)
+ [Memory Architecture guide](../../relational-databases/memory-management-architecture-guide.md)
   

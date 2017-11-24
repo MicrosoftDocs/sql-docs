@@ -1,11 +1,11 @@
 ---
 title: "ALTER INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "11/24/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
-ms.component: "t-sql|statements"
+ms.component: "tsql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -14,7 +14,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER INDEX"
-  - "ALTER_INDEX_t-sql"
+  - "ALTER_INDEX_TSQL"
 dev_langs: 
   - "t-sql"
 helpviewer_keywords: 
@@ -45,6 +45,8 @@ helpviewer_keywords:
   - "indexes [SQL Server], options"
   - "ALLOW_PAGE_LOCKS option"
   - "page locks [SQL Server]"
+  - "index rebuild [SQL Server]"
+  - "index reorganize [SQL Server]"
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 caps.latest.revision: 222
 author: "edmacauley"
@@ -53,7 +55,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # ALTER INDEX (Transact-SQL)
-[!INCLUDE[t-sql-appliesto-ss2008-all-md](../../includes/t-sql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifies an existing table or view index (relational or XML) by disabling, rebuilding, or reorganizing the index; or by setting options on the index.  
   
@@ -643,7 +645,7 @@ Abort a running or paused index operation that was declared as resumable. You ha
   
  An index cannot be reorganized or rebuilt if the filegroup in which it is located is offline or set to read-only. When the keyword ALL is specified and one or more indexes are in an offline or read-only filegroup, the statement fails.  
   
-## Rebuilding Indexes  
+## <a name="rebuilding-indexes"></a> Rebuilding Indexes  
  Rebuilding an index drops and re-creates the index. This removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When ALL is specified, all indexes on the table are dropped and rebuilt in a single transaction. FOREIGN KEY constraints do not have to be dropped in advance. When indexes with 128 extents or more are rebuilt, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits.  
   
  Rebuilding or reorganizing small indexes often does not reduce fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it.  
@@ -662,14 +664,14 @@ Abort a running or paused index operation that was declared as resumable. You ha
   
 4.  Requires space on the physical media to store two copies of the columnstore index while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original clustered columnstore index.  
   
-## Reorganizing Indexes  
+## <a name="reorganizing-indexes"></a> Reorganizing Indexes  
  Reorganizing an index uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value. To view the fill factor setting, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  When ALL is specified, relational indexes, both clustered and nonclustered, and XML indexes on the table are reorganized. Some restrictions apply when specifying ALL, see the definition for ALL in the Arguments section.  
   
  For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
-## Disabling Indexes  
+## <a name="disabling-indexes"></a> Disabling Indexes  
  Disabling an index prevents user access to the index, and for clustered indexes, to the underlying table data. The index definition remains in the system catalog. Disabling a nonclustered index or clustered index on a view physically deletes the index data. Disabling a clustered index prevents access to the data, but the data remains unmaintained in the B-tree until the index is dropped or rebuilt. To view the status of an enabled or disabled index, query the **is_disabled** column in the **sys.indexes** catalog view.  
   
  If a table is in a transactional replication publication, you cannot disable any indexes that are associated with primary key columns. These indexes are required by replication. To disable an index, you must first drop the table from the publication. For more information, see [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
@@ -692,7 +694,7 @@ Abort a running or paused index operation that was declared as resumable. You ha
 |ALLOW_PAGE_LOCKS = ON|To the heap and any associated nonclustered indexes.|  
 |ALLOW_PAGE_LOCKS = OFF|Fully to the nonclustered indexes. This means that all page locks are not allowed on the nonclustered indexes. On the heap, only the shared (S), update (U) and exclusive (X) locks for the page are not allowed. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can still acquire an intent page lock (IS, IU or IX) for internal purposes.|  
   
-## Online Index Operations  
+## <a name="online-index-operations"></a> Online Index Operations  
  When rebuilding an index and the ONLINE option is set to ON, the underlying objects, the tables and associated indexes, are available for queries and data modification. You can also rebuild online a portion of an index residing on a single partition. Exclusive table locks are held only for a very short amount of time during the alteration process.  
   
  Reorganizing an index is always performed online. The process does not hold locks long term and, therefore, does not block queries or updates that are running.  
@@ -707,7 +709,7 @@ Abort a running or paused index operation that was declared as resumable. You ha
   
  All other online index operations performed at the same time fail. For example, you cannot rebuild two or more indexes on the same table concurrently, or create a new index while rebuilding an existing index on the same table.  
 
-### Resumable index operations
+### <a name="resumable-indexes"></a>Resumable index operations
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
@@ -743,7 +745,6 @@ The following functionality is disabled for resumable index rebuild operations
 > [!NOTE]
 > The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). As before in case of a failure an error will be issued as well. 
 
-  
  For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
  ### WAIT_AT_LOW_PRIORITY with online index operations  

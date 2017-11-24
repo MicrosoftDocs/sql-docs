@@ -114,8 +114,6 @@ ms.workload: "On Demand"
   
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
-## Related Tasks  
-  
 ## Related Content  
  [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  

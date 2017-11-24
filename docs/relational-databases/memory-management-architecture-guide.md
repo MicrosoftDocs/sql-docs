@@ -70,7 +70,7 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 > [!NOTE]
 > Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](http://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](http://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
 
-## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]
+## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In earlier versions of SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
 -  **Single-page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. THe buffer pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
@@ -82,12 +82,12 @@ In earlier versions of SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversio
 Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)],  Single-lage allocations, Multi-Page allocations and CLR allocations are all consolidated into a **"Any size" Page Allocator**, and it's included in memory limits that are controlled by *max server memory (MB)* and *min server memory (MB)* configuration options. This change provided a more accurate sizing ability for all memory requirements that go through the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager. 
 
 > [!IMPORTANT]
-> Carefully review your current *max server memory (MB)* and *min server memory (MB)* configurations after you upgrade to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. This is because starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], such configurations now include and account for more memory allocations compared to earlier versions. 
+> Carefully review your current *max server memory (MB)* and *min server memory (MB)* configurations after you upgrade to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. This is because starting in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], such configurations now include and account for more memory allocations compared to earlier versions. 
 > These changes apply to both 32-bit and 64-bit versions of [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and 64-bit versions of [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
 The following table indicates whether a specific type of memory allocation is controlled by the *max server memory (MB)* and *min server memory (MB)* configuration options:
 
-|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|
+|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Single-page allocations|Yes|Yes, consolidated into "any size" page allocations|
 |Multi-page allocations|No|Yes, consolidated into "any size" page allocations|
@@ -95,7 +95,7 @@ The following table indicates whether a specific type of memory allocation is co
 |Thread stacks memory|No|No|
 |Direct allocations from Windows|No|No|
 
-Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might allocate more memory than the value specified in the max server memory setting. This behavior may occur when the ***Total Server Memory (KB)*** value has already reached the ***Target Server Memory (KB)*** setting (as specified by max server memory). If there is insufficient contiguous free memory to meet the demand of multi-page memory requests (more than 8 KB) because of memory fragmentation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform over-commitment instead of rejecting the memory request. 
+Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might allocate more memory than the value specified in the max server memory setting. This behavior may occur when the ***Total Server Memory (KB)*** value has already reached the ***Target Server Memory (KB)*** setting (as specified by max server memory). If there is insufficient contiguous free memory to meet the demand of multi-page memory requests (more than 8 KB) because of memory fragmentation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform over-commitment instead of rejecting the memory request. 
 
 As soon as this allocation is performed, the *Resource Monitor* background task starts to signal all memory consumers to release the allocated memory, and tries to bring the *Total Server Memory (KB)* value below the *Target Server Memory (KB)* specification. Therefore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory usage could briefly exceed the max server memory setting. In this situation, the *Total Server Memory (KB)* performance counter reading will exceed the max server memory and *Target Server Memory (KB)* settings.
 
@@ -105,17 +105,17 @@ This behavior is typically observed during the following operations:
 -  Backup operations that require large memory buffers.
 -  Tracing operations that have to store large input parameters.
 
-## Changes to "memory_to_reserve" starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]
+## Changes to "memory_to_reserve" starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In earlier versions of SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager set aside a part of the process virtual address space (VAS) for use by the **Multi-Page Allocator (MPA)**, **CLR Allocator**, memory allocations for **thread stacks** in the SQL Server process, and **Direct Windows allocations (DWA)**. This part of the virtual address space is also known as "Mem-To-Leave" or "non-Buffer Pool" region.
 
-The virtual address space that is reserved for these allocations is determined by the ***memory_to_reserve*** configuration option. The default value that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses is 256 MB. To override the default value, use the SQL Server *-g* startup parameter.  Refer to the documentation page on [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
+The virtual address space that is reserved for these allocations is determined by the ***memory_to_reserve*** configuration option. The default value that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses is 256 MB. To override the default value, use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* startup parameter. Refer to the documentation page on [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
 
-Because starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8-KB, the *memory_to_reserve* value does not include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
+Because starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8-KB, the *memory_to_reserve* value does not include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
 
 The following table indicates whether a specific type of memory allocation falls into the *memory_to_reserve* region of the virtual address space for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process:
 
-|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|
+|Type of memory allocation| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Single-page allocations|No|No, consolidated into "any size" page allocations|
 |Multi-page allocations|Yes|No, consolidated into "any size" page allocations|
@@ -271,4 +271,4 @@ The kind of page protection used is an attribute of the database containing the 
 [Writing Pages](../relational-databases/writing-pages.md)
 [How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)
 [Requirements for Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
-[Resolve Out Of Memory Issues Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues)
+[Resolve Out Of Memory Issues Using Memory-Optimized Tables](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

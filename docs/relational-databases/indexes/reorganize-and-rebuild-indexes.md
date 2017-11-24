@@ -150,7 +150,7 @@ ms.workload: "Active"
      **Version ghost rows**  
      The number of ghost records that are being retained due to an outstanding snapshot isolation transaction.  
   
-##  <a name="TsqlProcedureFrag"></a> Check index fragmentation using [!INCLUDE[tsql](../includes/tsql-md.md)]  
+##  <a name="TsqlProcedureFrag"></a> Check index fragmentation using [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 #### To check the fragmentation of an index  
   
@@ -244,7 +244,7 @@ ms.workload: "Active"
   
 8.  Click **OK.**  
   
-## <a name="TsqlProcedureReorg"></a> Remove fragmentation using [!INCLUDE[tsql](../includes/tsql-md.md)] 
+## <a name="TsqlProcedureReorg"></a> Remove fragmentation using [!INCLUDE[tsql](../../includes/tsql-md.md)] 
   
 #### To reorganize a defragmented index  
   

@@ -246,7 +246,7 @@ ms.workload: "Active"
   
 ## <a name="TsqlProcedureReorg"></a> Remove fragmentation using [!INCLUDE[tsql](../../includes/tsql-md.md)] 
   
-#### To reorganize a defragmented index  
+#### To reorganize a fragmented index  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -283,7 +283,7 @@ ms.workload: "Active"
     GO  
     ```  
   
-#### To rebuild a defragmented index  
+#### To rebuild a fragmented index  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

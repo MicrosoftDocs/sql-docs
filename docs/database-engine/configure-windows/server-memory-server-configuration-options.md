@@ -60,7 +60,7 @@ Use **max_server_memory** to guarantee the OS does not experience detrimental me
  -  From the total OS memory, reserve 1GB-4GB to the OS itself.
  -  Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of ***stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup> + -g startup parameter <sup>3</sup>*** (or 256MB by default if *-g* is not set). What remains should be the max_server_memory setting for a single instance setup.
  
-<sup>1</sup> Refer to the [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md#stacksizes) for information on thread stach sizes per architecture.
+<sup>1</sup> Refer to the [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md#stacksizes) for information on thread stack sizes per architecture.
 <sup>2</sup> Refer to the documentation page on how to [Configure the max worker threads Server Configuration Option](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md), for information on the calculated default worker threads for a given number of affinitized CPUs in the current host.
 <sup>3</sup> Refer to the documentation page on [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
 

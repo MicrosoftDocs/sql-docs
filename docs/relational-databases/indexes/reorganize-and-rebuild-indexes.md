@@ -93,7 +93,7 @@ ms.workload: "Active"
 #### <a name="Permissions"></a> Permissions  
  Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
   
-## <a name="SSMSProcedureFrag"></a> Using SQL Server Management Studio  
+## <a name="SSMSProcedureFrag"></a> Check index fragmentation using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### To check the fragmentation of an index  
   
@@ -150,7 +150,7 @@ ms.workload: "Active"
      **Version ghost rows**  
      The number of ghost records that are being retained due to an outstanding snapshot isolation transaction.  
   
-##  <a name="TsqlProcedureFrag"></a> Using Transact-SQL  
+##  <a name="TsqlProcedureFrag"></a> Check index fragmentation using [!INCLUDE[tsql](../includes/tsql-md.md)]  
   
 #### To check the fragmentation of an index  
   
@@ -190,7 +190,7 @@ ms.workload: "Active"
   
  For more information, see [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-##  <a name="SSMSProcedureReorg"></a> Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+##  <a name="SSMSProcedureReorg"></a> Remove fragmentation using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### To reorganize or rebuild an index  
   
@@ -244,7 +244,7 @@ ms.workload: "Active"
   
 8.  Click **OK.**  
   
-## <a name="TsqlProcedureReorg"></a> Using Transact-SQL  
+## <a name="TsqlProcedureReorg"></a> Remove fragmentation using [!INCLUDE[tsql](../includes/tsql-md.md)] 
   
 #### To reorganize a defragmented index  
   

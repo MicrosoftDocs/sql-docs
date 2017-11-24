@@ -123,7 +123,7 @@ The following table indicates whether a specific type of memory allocation falls
 |Thread stacks memory|Yes|Yes|
 |Direct allocations from Windows|Yes|Yes|
 
-## Dynamic Memory Management
+## <a name="stacksizes"></a> Dynamic Memory Management
 
 The default memory management behavior of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] is to acquire as much memory as it needs without creating a memory shortage on the system. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] does this by using the Memory Notification APIs in Microsoft Windows.
 
@@ -150,7 +150,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
  
-<a name="stacksizes"></a> Memory for thread stacks<sup>1</sup>, CLR<sup>2</sup>, extended procedure .dll files, the OLE DB providers referenced by distributed queries, automation objects referenced in [!INCLUDE[tsql](../includes/tsql-md.md)] statements, and any memory allocated by a non [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DLL are **not** controlled by max server memory.
+Memory for thread stacks<sup>1</sup>, CLR<sup>2</sup>, extended procedure .dll files, the OLE DB providers referenced by distributed queries, automation objects referenced in [!INCLUDE[tsql](../includes/tsql-md.md)] statements, and any memory allocated by a non [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DLL are **not** controlled by max server memory.
 
 <sup>1</sup> Refer to the documentation page on how to [Configure the max worker threads Server Configuration Option](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md), for information on the calculated default worker threads for a given number of affinitized CPUs in the current host. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stack sizes are as follows:
 

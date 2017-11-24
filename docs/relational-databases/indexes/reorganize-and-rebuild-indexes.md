@@ -311,5 +311,5 @@ Leverage solutions such as [Adaptive Index Defrag](http://github.com/Microsoft/t
   
 ## See Also  
   [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   
-  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
+  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
   [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

@@ -27,6 +27,7 @@ ms.workload: "On Demand"
  In addition to the [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), the following are requirements to use In-Memory OLTP:  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 (or later), any edition. For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM (pre-SP1) you need Enterprise, Developer, or Evaluation edition.
+    
     > [!NOTE]
     > In-Memory OLTP requires the 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -44,7 +45,7 @@ ms.workload: "On Demand"
   
      To install report generation ([Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (to manage In-Memory OLTP via [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Object Explorer), [download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).   
   
-## Important Notes on Using [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
+## Important Notes on using [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
 -   Starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there is no limit on the size of memory-optimized tables, other than available memory. 
 

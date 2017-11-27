@@ -58,10 +58,12 @@ The server options **min server memory** and **max server memory** can be set to
   
 <a name="max_server_memory"></a> Use **max_server_memory** to guarantee the OS does not experience detrimental memory pressure. To set max server memory configuration, monitor overall consumption of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process in order to determine memory requirements. To be more accurate with these calculations for a single instance:
  -  From the total OS memory, reserve 1GB-4GB to the OS itself.
- -  Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of ***stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup> + -g startup parameter <sup>3</sup>*** (or 256MB by default if *-g* is not set). What remains should be the max_server_memory setting for a single instance setup.
+ -  Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of ***stack size <sup>1</sup> * calculated max worker threads <sup>2</sup> + -g startup parameter <sup>3</sup>*** (or 256MB by default if *-g* is not set). What remains should be the max_server_memory setting for a single instance setup.
  
 <sup>1</sup> Refer to the [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md#stacksizes) for information on thread stack sizes per architecture.
+
 <sup>2</sup> Refer to the documentation page on how to [Configure the max worker threads Server Configuration Option](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md), for information on the calculated default worker threads for a given number of affinitized CPUs in the current host.
+
 <sup>3</sup> Refer to the documentation page on [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
 
 ## How to configure memory options using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  

@@ -25,11 +25,11 @@ For more info about the Package Deployment Wizard, see [Deploy Integration Servi
 ## Validate connection managers
 
 The wizard checks certain connection managers for the following issues, which may cause the connection to fail:
-- **Windows authentication**. Validation raises a warning if a connection string uses Windows authentication. Windows authentication requires additional configuration steps. For more info, see [Connect to on-premises data sources with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
-- **File path**. Validation raises a warning if a connection string contains a hard-coded local file path like `C:\\...`. Packages that contain an absolute path may fail.
-- **UNC path**. Validation raises a warning if a connection string contains a UNC path. Packages that contain a UNC path may fail, typically because a UNC path requires Windows authentication to access.
-- **Host name**. Validation raises a warning if a server property contains host name instead of IP address. Packages that contain host name may fail, typically because the Azure virtual network requires the correct DNS configuration to support DNS name resolution.
-- **Provider or driver**. Validation raises a warning if the provider or driver is not supported. Only a small number of built-in providers and drivers are supported at this time.
+- **Windows authentication**. If a connection string uses Windows authentication, validation raises a warning. Windows authentication requires additional configuration steps. For more info, see [Connect to on-premises data sources with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
+- **File path**. If a connection string contains a hard-coded local file path like `C:\\...`, validation raises a warning. Packages that contain an absolute path may fail.
+- **UNC path**. If a connection string contains a UNC pathif a connection string contains a UNC path, validation raises a warning. Packages that contain a UNC path may fail, typically because a UNC path requires Windows authentication to access.
+- **Host name**. If a server property contains host name instead of IP address, validation raises a warning. Packages that contain host name may fail, typically because the Azure virtual network requires the correct DNS configuration to support DNS name resolution.
+- **Provider or driver**. If a provider or driver is not supported, validation raises a warning. Only a small number of built-in providers and drivers are supported at this time.
 
 The wizard does the following validation checks for the connection managers in the list.
 

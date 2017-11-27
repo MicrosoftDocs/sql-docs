@@ -63,30 +63,30 @@ ms.workload: "Inactive"
 6.  Click **OK** to close the dialog box.  
 
 ## Connect with Kerberos authentication
-There are two options to set up the on-premises environment so as to use Kerberos Authentication in HDFS connector. You can choose the option that better fits your circumstances.
--   Option 1: [Join gateway machine in Kerberos realm](#kerberos-join-realm)
--   Option 2: [Enable mutual trust between Windows domain and Kerberos realm](#kerberos-mutual-trust)
+There are two options to set up the on-premises environment so you can use Kerberos Authentication with the Hadoop Connection Manager. You can choose the option that better fits your circumstances.
+-   Option 1: [Join the SSIS computer to the Kerberos realm](#kerberos-join-realm)
+-   Option 2: [Enable mutual trust between the Windows domain and the Kerberos realm](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>Option 1: Join gateway machine in Kerberos realm
+### <a name="kerberos-join-realm"></a>Option 1: Join the SSIS computer to the Kerberos realm
 
 #### Requirements:
 
--   The gateway machine needs to join the Kerberos realm and can’t join any Windows domain.
+-   The gateway computer needs to join the Kerberos realm and can’t join any Windows domain.
 
 #### How to configure:
 
-**On the gateway machine:**
+**On the SSIS computer:**
 
 1.	Run the **Ksetup** utility to configure the Kerberos KDC server and realm.
 
-    The machine must be configured as a member of a workgroup since a Kerberos realm is different from a Windows domain.  Set the Kerberos realm and add a KDC server as described in the following section. Replace *REALM.COM* with your own respective realm as needed.
+    The computer must be configured as a member of a workgroup since a Kerberos realm is different from a Windows domain. Set the Kerberos realm and add a KDC server as shown in the following example. Replace *REALM.COM* with your own respective realm as needed.
 
     ```    
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
 
-	**Restart** the machine after executing these two commands.
+	Restart the computer after executing these two commands.
 
 2.	Verify the configuration with **Ksetup** command. The output should look like the following sample:
 
@@ -97,10 +97,10 @@ There are two options to set up the on-premises environment so as to use Kerbero
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>Option 2: Enable mutual trust between Windows domain and Kerberos realm
+### <a name="kerberos-mutual-trust"></a>Option 2: Enable mutual trust between the Windows domain and the Kerberos realm
 
 #### Requirements:
--   The gateway machine must join a Windows domain.
+-   The gateway computer must join a Windows domain.
 -   You need permission to update the domain controller's settings.
 
 #### How to configure:
@@ -110,7 +110,7 @@ There are two options to set up the on-premises environment so as to use Kerbero
 
 **On the KDC server:**
 
-1.	Edit the KDC configuration in **krb5.conf** file to let KDC trust Windows Domain referring to the following configuration template. By default, the configuration is located at **/etc/krb5.conf**.
+1.	Edit the KDC configuration in **krb5.conf** file to let KDC trust the Windows Domain by referring to the following configuration template. By default, the configuration is located at **/etc/krb5.conf**.
 
     ```
     [logging]
@@ -148,13 +148,13 @@ There are two options to set up the on-premises environment so as to use Kerbero
         }
     ```
 
-    **Restart** the KDC service after configuration.
+    Restart the KDC service after configuration.
 
-2.	Prepare a principal named **krbtgt/REALM.COM@AD.COM** in KDC server with the following command:
+2.	Prepare a principal named **krbtgt/REALM.COM@AD.COM** on the KDC server with the following command:
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
-3.	In **hadoop.security.auth_to_local** HDFS service configuration file, add `RULE:[1:$1@$0](.*@AD.COM)s/@.*//`.
+3.	In the **hadoop.security.auth_to_local** HDFS service configuration file, add `RULE:[1:$1@$0](.*@AD.COM)s/@.*//`.
 
 **On the domain controller:**
 
@@ -165,37 +165,37 @@ There are two options to set up the on-premises environment so as to use Kerbero
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.	Establish trust from Windows Domain to Kerberos Realm. [password] is the password for the principal **krbtgt/REALM.COM@AD.COM**.
+2.	Establish trust from the Windows Domain to the Kerberos Realm. In the following example, `[password]` is the password for the principal **krbtgt/REALM.COM@AD.COM**.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 
-3.	Select encryption algorithm used in Kerberos.
+3.	Select an encryption algorithm to use with Kerberos.
 
     1. Go to Server Manager > Group Policy Management > Domain > Group Policy Objects > Default or Active Domain Policy, and Edit.
 
     2. In the **Group Policy Management Editor** popup window, go to Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options, and configure **Network security: Configure Encryption types allowed for Kerberos**.
 
-    3. Select the encryption algorithm you want to use when connect to KDC. Typically you can select any of the options.
+    3. Select the encryption algorithm you want to use when to connect to the KDC. Typically you can select any of the options.
 
         ![Configure encryption types for Kerberos](media/hadoop-connection-manager/config-encryption-types-for-kerberos.png)
 
-    4. Use **Ksetup** command to specify the encryption algorithm to be used on the specific REALM.
+    4. Use the **Ksetup** command to specify the encryption algorithm to be used on the specific REALM.
 
     `C:> ksetup /SetEncTypeAttr REALM.COM DES-CBC-CRC DES-CBC-MD5 RC4-HMAC-MD5 AES128-CTS-HMAC-SHA1-96 AES256-CTS-HMAC-SHA1-96`
 
-4.	To use the Kerberos principal in Windows Domain, create the mapping between the domain account and Kerberos principal.
+4.	To use the Kerberos principal in the Windows Domain, create the mapping between the domain account and Kerberos principal.
 
     1. Start the Administrative tools > **Active Directory Users and Computers**.
 
     2. Configure advanced features by clicking **View** > **Advanced Features**.
 
-    3. Locate the account to which you want to create mappings, and right-click to view **Name Mappings** > click **Kerberos Names** tab.
+    3. Locate the account to which you want to create mappings, right-click to view **Name Mappings**, and then click the **Kerberos Names** tab.
 
     4. Add a principal from the realm.
 
         ![Map security identity](media/hadoop-connection-manager/map-security-identity.png)
 
-**On the gateway machine:**
+**On the gateway computer:**
 
 * Run the following **Ksetup** commands to add a realm entry.
 

@@ -32,10 +32,6 @@ ms.workload: "Inactive"
 
   Returns properties that apply to the entire data collector, as opposed to a collection set instance. Each row in this view describes a specific data collector property, such as the name of the management data warehouse, and the instance name where the management data warehouse is located.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|The name of the property. Is not nullable.|  

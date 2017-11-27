@@ -34,10 +34,6 @@ ms.workload: "Inactive"
 
   Generates scripts to create wrapper functions for the change data capture query functions that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The API that is supported in the generated wrappers enables the query interval to be specified as a datetime interval. This makes the function good for use in many warehousing applications, including those that are developed by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package designers who are using change data capture technology to determine incremental load.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

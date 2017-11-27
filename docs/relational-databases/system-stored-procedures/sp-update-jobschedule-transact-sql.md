@@ -36,10 +36,6 @@ ms.workload: "Inactive"
 > [!IMPORTANT]  
 >  For more information about syntax used in earlier versions of Microsoft SQL Server, see the Transact-SQL Referencefor Microsoft SQL Server 2000*.*  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 ## Remarks  
  Job schedules can now be managed independently of jobs. To update a schedule, use **sp_update_schedule**.  
   

@@ -33,10 +33,6 @@ ms.workload: "Inactive"
 
   Returns a row for each server audit indicating the current state of the audit. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID of the audit. Maps to the **audit_id** field in the **sys.audits** catalog view.|  

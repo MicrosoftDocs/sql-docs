@@ -35,10 +35,6 @@ ms.workload: "Inactive"
   
  The **sys.dm_clr_properties** view contains the **name** and **value** columns. Each row in this view provides details about a property of the hosted CLR. Use this view to gather information about the hosted CLR, such as the CLR install directory, the CLR version, and the current state of the hosted CLR. This view can help you determine if the CLR integration code is not working because of problems with the CLR installation on the server computer.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|The name of the property.|  

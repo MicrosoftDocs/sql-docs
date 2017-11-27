@@ -34,10 +34,6 @@ ms.workload: "Inactive"
   
  This enumeration function is created at the time that a source table is enabled for change data capture. The function name is derived and uses the format **cdc.fn_cdc_get_all_changes_***capture_instance* where *capture_instance* is the value specified for the capture instance when the source table is enabled for change data capture.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

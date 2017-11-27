@@ -37,10 +37,6 @@ ms.workload: "Inactive"
   
  For more information, see [Application Domains](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299659)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|Address of the **AppDomain**. All managed database objects owned by a user are always loaded in the same **AppDomain**. You can use this column to look up all the assemblies currently loaded in this **AppDomain** in **sys.dm_clr_loaded_assemblies**.|  

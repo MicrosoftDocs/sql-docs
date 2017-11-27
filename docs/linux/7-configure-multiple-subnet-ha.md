@@ -22,7 +22,7 @@ ms.workload: "On Demand"
 
 When an Always On Availability Group (AG) or failover cluster instance (FCI) spans more than one site, each site usually has its own networking. This often means that each site has its own IP addressing. For example, Site A’s addresses start with 192.168.1.*x* and Site B’s addresses start with 192.168.2.*x*, where *x* is the part of the IP address that is unique to the server. Without some sort of routing in place at the networking layer, these servers will not be able to communicate with each other. There are two ways to handle this scenario: set up a network that bridges the two different subnets, known as a VLAN, or configure routing between the subnets.
 
-## Prerequisites
+## Prerequisite
 
 For a VLAN-based solution, each server participating in an AG or FCI needs two network cards (NICs) for proper availability (a dual port NIC would be a single point of failure on a physical server), so that it can be assigned IP addresses on its native subnet as well as one on the VLAN. This is in addition to any other network needs, such as iSCSI, which also needs its own network.
 
@@ -40,24 +40,23 @@ In the Windows Server world, a Windows Server Failover Cluster (WSFC) natively s
 
     **Red Hat Enterprise Linux (RHEL)/Ubuntu**
 
-    `sudo pcs cluster cib *filename*`
+    `sudo pcs cluster cib` *`filename`*
 
-    **SUSE** **Linux Enterprise Server (SLES)**
+    **SUSE Linux Enterprise Server (SLES)**
 
-    `sudo cibadmin -Q > *filename*`
+    `sudo cibadmin -Q >` *`filename`*
 
     Where *`filename`* is the name you want to call the CIB.
 
 2.  Edit the file that was generated. Look for the `<resources>` section. You will see the various resources that were created for the AG or FCI. Find the one associated with the IP address. Add a `<instance attributes>` section with the information for the second IP address either above or below the existing one, but before `<operations>`. It will look something like the syntax below
 
     ```xml
-    <instance attributes id="*NameForAttribute*" score="*Score*">
-        <rule id="*RuleName*" score="INFINITY">
-            <expression id="*ExpressionName*" attribute="\#uname" operation="eq" value="*NodeNameInSubnet2*" />
+    <instance attributes id="NameForAttribute" score="Score">
+        <rule id="RuleName" score="INFINITY">
+            <expression id="ExpressionName" attribute="\#uname" operation="eq" value="NodeNameInSubnet2" />
         </rule>
-    
-        <nvpair id="*NameForSecondIP*" name="ip" value="*IPAddress*"/>
-        <nvpair id="*NameForSecondIPNetmask*" name="cidr\_netmask" value="*Netmask*"/>
+        <nvpair id="NameForSecondIP" name="ip" value="IPAddress"/>
+        <nvpair id="NameForSecondIPNetmask" name="cidr\_netmask" value="Netmask"/>
     </instance attributes>
     ```
     

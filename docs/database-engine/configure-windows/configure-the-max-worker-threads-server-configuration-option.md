@@ -1,7 +1,7 @@
 ---
 title: "Configure the max worker threads Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
+ms.date: "11/23/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -53,7 +53,7 @@ ms.workload: "On Demand"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician.  
+-   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician. If you suspect that there is a performance problem, it is probably not the availability of worker threads. The cause is more likely something like I/O that is causing the worker threads to wait. It is best to find the root cause of a performance issue before you change the max worker threads setting.  
   
 -   Thread pooling helps optimize performance when large numbers of clients are connected to the server. Usually, a separate operating system thread is created for each query request. However, with hundreds of connections to the server, using one thread per query request can consume large amounts of system resources. The **max worker threads** option enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to create a pool of worker threads to service a larger number of query requests, which improves performance.  
   
@@ -67,49 +67,46 @@ ms.workload: "On Demand"
     |32 processors|480|960|  
     |64 processors|736|1472|  
     |128 processors|4224|4480|  
-    |256 processors|8320|8576|  
+    |256 processors|8320|8576| 
+    
+    Using the following formula:
+    
+    |Number of CPUs|32-bit computer|64-bit computer|  
+    |--------------------|----------------------|----------------------|
+    |\<= 4 processors|256|512|
+    |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU’s - 4) * 8)| 
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier.   We recommend 1024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier.   We recommend 1024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.  
   
     > [!NOTE]  
-    >  For recommendations on using more than 64 CPUs, refer to [Best Practices for Running SQL Server on Computers That Have More Than 64 CPUs](http://technet.microsoft.com/library/ee210547\(SQL.105\).aspx).  
+    >  For recommendations on using more than 64 CPUs, refer to [Best Practices for Running SQL Server on Computers That Have More Than 64 CPUs](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   When all worker threads are active with long running queries, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might appear unresponsive until a worker thread completes and becomes available. Although this is not a defect, it can sometimes be undesirable. If a process appears to be unresponsive and no new queries can be processed, then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the dedicated administrator connection (DAC), and kill the process. To prevent this, increase the number of max worker threads.  
   
- The**max worker threads** server configuration option does not take into account threads that are required for all the system tasks such as Availibility Groups, Service Broker, Lock Manager, and others.  If the number of threads configured are being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
+ The **max worker threads** server configuration option does not take into account threads that are required for all the system tasks such as Availibility Groups, Service Broker, Lock Manager, and others. If the number of threads configured are being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
   
-```  
-SELECT  
-s.session_id,  
-r.command,  
-r.status,  
-r.wait_type,  
-r.scheduler_id,  
-w.worker_address,  
-w.is_preemptive,  
-w.state,  
-t.task_state,  
-t.session_id,  
-t.exec_context_id,  
-t.request_id  
-FROM sys.dm_exec_sessions AS s  
-INNER JOIN sys.dm_exec_requests AS r  
+ ```t-sql  
+ SELECT  s.session_id, r.command, r.status,  
+    r.wait_type, r.scheduler_id, w.worker_address,  
+    w.is_preemptive, w.state, t.task_state,  
+    t.session_id, t.exec_context_id, t.request_id  
+ FROM sys.dm_exec_sessions AS s  
+ INNER JOIN sys.dm_exec_requests AS r  
     ON s.session_id = r.session_id  
-INNER JOIN sys.dm_os_tasks AS t  
+ INNER JOIN sys.dm_os_tasks AS t  
     ON r.task_address = t.task_address  
-INNER JOIN sys.dm_os_workers AS w  
+ INNER JOIN sys.dm_os_workers AS w  
     ON t.worker_address = w.worker_address  
-WHERE s.is_user_process = 0;  
-  
-```  
+ WHERE s.is_user_process = 0;  
+ ```  
   
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
  Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### To configure the max worker threads option  
   
@@ -142,7 +139,6 @@ EXEC sp_configure 'max worker threads', 900 ;
 GO  
 RECONFIGURE;  
 GO  
-  
 ```  
   
  For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  

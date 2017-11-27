@@ -35,10 +35,6 @@ ms.workload: "Inactive"
   
  The sys.hash_indexes view contains the same columns as the sys.indexes view and an additional column named **bucket_count**. For more information about the other columns in the sys.hash_indexes view, see [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**\<inherited columns>**||Inherits columns from [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  

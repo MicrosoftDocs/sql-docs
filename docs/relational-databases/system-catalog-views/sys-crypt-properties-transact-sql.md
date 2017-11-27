@@ -33,10 +33,6 @@ ms.workload: "Inactive"
 
   Returns one row for each cryptographic property associated with a securable.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifies class of thing on which property exists.<br /><br /> 1 = Object or column|  

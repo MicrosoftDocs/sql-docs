@@ -1,7 +1,7 @@
 ---
 title: "View or Change the Compatibility Level of a Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "11/24/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -62,7 +62,7 @@ ms.workload: "Active"
   
      The current compatibility level is displayed in the **Compatibility level** list box.  
   
-5.  To change the compatibility level, select a different option from the list. The choices are **SQL Server 2008 (100)**, **SQL Server 2012 (110)**, or **SQL Server 2014 (120)**.  
+5.  To change the compatibility level, select a different option from the list. The choices are **SQL Server 2008 (100)**, **SQL Server 2012 (110)**, **SQL Server 2014 (120)**, **SQL Server 2016 (130)**, and **SQL Server 2017 (140)**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -80,7 +80,6 @@ GO
 SELECT compatibility_level  
 FROM sys.databases WHERE name = 'AdventureWorks2012';  
 GO  
-  
 ```  
   
 #### To change the compatibility level of a database  
@@ -97,4 +96,5 @@ SET COMPATIBILITY_LEVEL = 120;
 GO  
 ```  
   
-  
+## See Also
+ [ALTER DATABASE &#40;Transact-SQL&#41; Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

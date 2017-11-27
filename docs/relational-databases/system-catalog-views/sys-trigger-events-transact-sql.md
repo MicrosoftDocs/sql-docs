@@ -36,10 +36,6 @@ ms.workload: "Inactive"
 > [!NOTE]  
 >  **sys.trigger_events** does not apply to event notifications.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Columns inherited from sys.events>**|Not applicable|Inherits the **object_id**, **type**, **type_desc** columns from [sys.events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  

@@ -33,10 +33,6 @@ ms.workload: "Inactive"
 
   This catalog view contains a row per (service, contract) pair.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**service_id**|**int**|Identifier of the service using the contract. Not NULLABLE.|  

@@ -34,10 +34,6 @@ ms.workload: "Inactive"
 
   Returns one row with the current configuration for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster diagnostic log. These property settings determine whether the diagnostic logging is on or off, and the location, number, and size of the log files.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
 |is_enabled|**bit**|Indicates if the logging is turned on or off.<br /><br /> 1 = Diagnostics logging is turned on<br /><br /> 0 = Diagnostics logging is turned off|  

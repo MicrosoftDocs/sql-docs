@@ -67,7 +67,7 @@ The following third-party sources and destinations are not supported:
 
 Validation raises a warning if a command points to a local file with an absolute path, or to a file with a UNC path. These paths may cause execution on Azure to fail.
 
-### Script task and Script component
+### Script Task and Script Component
 
 Validation raises a warning if a package contains a script task or a script component, which may reference or call unsupported assemblies. These references or calls may cause execution to fail.
 
@@ -76,3 +76,4 @@ Validation raises a warning if a package contains a script task or a script comp
 The Orc format is not supported in the HDFS Destination and the Azure Data Lake Store Destination.
 
 ## Next steps
+To learn how to schedule package execution on Azure, see [Schedule the execution of an SSIS package on Azure](ssis-azure-schedule-packages.md).

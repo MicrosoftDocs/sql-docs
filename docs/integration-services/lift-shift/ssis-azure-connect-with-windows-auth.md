@@ -32,6 +32,7 @@ To provide domain credentials that let packages use Windows Authentication to co
     ```sql
     catalog.set_execution_credential @user='<your user name>', @domain='<your domain name>', @password='<your password>'
     ```
+
 4.  Run your SSIS packages. The packages use the credentials that you provided to connect to on-premises data sources with Windows Authentication.
 
 ### View domain credentials

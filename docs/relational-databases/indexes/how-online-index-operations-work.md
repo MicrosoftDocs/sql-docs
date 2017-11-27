@@ -2,9 +2,8 @@
 title: How Online Index Operations Work | Microsoft Docs
 ms.custom: ""
 ms.date: 02/17/2017
-ms.prod: "sql-non-specified"
+ms.prod: sql-non-specified
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
 ms.topic: article
@@ -20,11 +19,11 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.suite: SQL
-ms.prod_service: "database-engine, sql-database"
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
 ms.service: ""
-ms.component: "indexes"
-ms.workload: "Inactive"
+ms.component: indexes
+ms.workload: Inactive
 ---
 # How Online Index Operations Work
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

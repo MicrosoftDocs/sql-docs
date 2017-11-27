@@ -38,10 +38,6 @@ ms.workload: "Inactive"
   
  Contains one row for each user and password mapping for the specified linked server. **sysoledbusers** is stored in the **master** database.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|Security identification number (SID) of the server.|  

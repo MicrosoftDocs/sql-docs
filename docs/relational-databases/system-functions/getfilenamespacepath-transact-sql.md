@@ -31,10 +31,6 @@ ms.workload: "Inactive"
 
   Returns the UNC path for a file or directory in a FileTable.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)).|  
-  
 ## Syntax  
   
 ```  

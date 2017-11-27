@@ -24,6 +24,7 @@
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+## [7_Configure multiple subnet AGs and FCIs](7-configure-multiple-subnet-ha.md)
 
 # Concepts
 ## Install

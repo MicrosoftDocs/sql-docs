@@ -78,11 +78,11 @@ In the Windows Server world, a Windows Server Failover Cluster (WSFC) natively s
 
     **RHEL/Ubuntu**
 
-    `sudo pcs cluster cib-push *filename*`
+    `sudo pcs cluster cib-push` *`filename`*
 
     **SLES**
 
-    `sudo cibadmin -R -x *filename*`
+    `sudo cibadmin -R -x` *`filename`*
 
     where *filename* is the name of the CIB file with the modified IP address information.
 

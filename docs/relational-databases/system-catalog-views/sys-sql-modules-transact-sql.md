@@ -25,7 +25,7 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.sql_modules (Transact-SQL)

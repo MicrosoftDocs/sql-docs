@@ -26,7 +26,7 @@ ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 caps.latest.revision: 52
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.internal_tables (Transact-SQL)

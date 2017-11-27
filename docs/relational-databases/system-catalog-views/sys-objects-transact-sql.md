@@ -28,7 +28,7 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 caps.latest.revision: 62
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sys.objects (Transact-SQL)

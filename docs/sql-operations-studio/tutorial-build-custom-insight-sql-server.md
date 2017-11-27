@@ -61,7 +61,7 @@ In this step, run a sql script to query the current active sessions.
 
 4. Type *dashboard* in *Search Settings*.
 
-1. Click **Edit** for *dashboard.server.widgets*.
+1. Click **Edit** for *dashboard.database.widgets*.
 
    ![dashboard settings](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
 

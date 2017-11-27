@@ -18,7 +18,7 @@ ms.assetid: ee501d13-0bd9-4627-896c-ed5b1bdb88b3
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_945

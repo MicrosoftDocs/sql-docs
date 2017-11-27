@@ -25,7 +25,7 @@ ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.master_key_passwords (Transact-SQL)
@@ -34,10 +34,6 @@ ms.workload: "Inactive"
   Returns a row for each database master key password added by using the **sp_control_dbmasterkey_password** stored procedure. The passwords that are used to protect the master keys are stored in the credential store. The credential name follows this format: ##DBMKEY_<database_family_guid>_<random_password_guid>##. The password is stored as the credential secret. For each password added by using **sp_control_dbmasterkey_password**, there is a row in **sys.credentials**.  
   
  Each row in this view shows a **credential_id** and the **family_guid** of a database the master key of which is protected by the password associated with that credential. A join with **sys.credentials** on the **credential_id** will return useful fields, such as the **create_date** and credential name.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

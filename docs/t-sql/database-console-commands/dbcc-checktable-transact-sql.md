@@ -2,8 +2,12 @@
 title: "DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs"
 ms.date: "11/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -32,8 +36,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # DBCC CHECKTABLE (Transact-SQL)
-
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Checks the integrity of all the pages and structures that make up the table or indexed view.
 

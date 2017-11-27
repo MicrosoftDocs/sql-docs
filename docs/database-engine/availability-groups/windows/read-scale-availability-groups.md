@@ -2,11 +2,12 @@
 title: "Read-scale availability groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -19,7 +20,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Read-scale availability groups
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 An availability group is a comprehensive solution that brings high-availability capabilities to SQL Server and offers integrated scaling solutions as well. In a typical database application, multiple clients run various types of workloads. Sometimes bottlenecks can develop due to resource constraints. You can free up resources and achieve higher throughput for the OLTP workload. You also can deliver higher performance and scale on read-only workloads. Take advantage of the fastest replication technology for SQL Server and create a group of replicated databases to offload reporting and analytics workloads to read-only replicas. 
 

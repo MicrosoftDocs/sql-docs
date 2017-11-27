@@ -26,7 +26,7 @@ ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.types (Transact-SQL)

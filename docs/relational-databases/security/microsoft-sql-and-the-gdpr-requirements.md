@@ -14,7 +14,7 @@ ms.topic: "article"
 caps.latest.revision: 2
 author: "barbkess"
 ms.author: "ronitr"
-manager: "cguyer"
+manager: "craigg"
 ---
 # Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

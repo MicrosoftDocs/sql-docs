@@ -1,6 +1,6 @@
 ---
 title: "Known issues in Machine Learning Services | Microsoft Docs"
-ms.date: "11/15/2017"
+ms.date: "11/16/2017"
 ms.prod: 
  - "sql-server-2016"
  - "sql-server-2017"
@@ -38,14 +38,6 @@ The information here applies to all of the following, unless otherwise indicated
 
 For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
 
-### Unable to install Python components in offline installations of SQL Server 2017 CTP 2.0 or later
-
-If you install a pre-release version of SQL Server 2017 on a computer without internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components. In such an instance, you can install the Machine Learning Services feature, but not the Python components.
-
-This issue is fixed in the release version. If you encounter this issue, as a workaround, you can temporarily enable internet access for the duration of the setup. This limitation does not apply to R.
-
-**Applies to:** SQL Server 2017 with Python
-
 ### Unable to install SQL Server machine learning features on a domain controller
 
 If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller, setup fails, with these errors:
@@ -74,7 +66,13 @@ To avoid problems with R packages, you can also upgrade the version of the R lib
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
-### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### Unable to install Python components in offline installations of SQL Server 2017 CTP 2.0 or later
+
+If you install a pre-release version of SQL Server 2017 on a computer without internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components. In such an instance, you can install the Machine Learning Services feature, but not the Python components.
+
+This issue is fixed in the release version. If you encounter this issue, as a workaround, you can temporarily enable internet access for the duration of the setup. This limitation does not apply to R.
+
+**Applies to:** SQL Server 2017 with Python### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 When you run R code in a SQL Server 2016 compute context, and either of the following two statements is true, you might see an error like the following:
 * You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].

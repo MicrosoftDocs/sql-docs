@@ -25,7 +25,7 @@ ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 caps.latest.revision: 36
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.server_event_notifications (Transact-SQL)

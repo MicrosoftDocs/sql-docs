@@ -25,7 +25,7 @@ ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.partition_schemes (Transact-SQL)

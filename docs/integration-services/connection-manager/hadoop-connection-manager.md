@@ -177,7 +177,7 @@ There are two options to set up the on-premises environment so as to use Kerbero
 
     3. Select the encryption algorithm you want to use when connect to KDC. Commonly, you can simply select all the options.
 
-        ![Config Encryption Types for Kerberos](media/data-factory-hdfs-connector/config-encryption-types-for-kerberos.png)
+        ![Configure encryption types for Kerberos](media/hadoop-connection-manager/config-encryption-types-for-kerberos.png)
 
     4. Use **Ksetup** command to specify the encryption algorithm to be used on the specific REALM.
 
@@ -193,7 +193,7 @@ There are two options to set up the on-premises environment so as to use Kerbero
 
     4. Add a principal from the realm.
 
-        ![Map Security Identity](media/data-factory-hdfs-connector/map-security-identity.png)
+        ![Map security identity](media/hadoop-connection-manager/map-security-identity.png)
 
 **On the gateway machine:**
 

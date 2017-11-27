@@ -26,11 +26,11 @@ ms.workload: "Inactive"
   
 ## Configure the Hadoop Connection Manager  
   
-1.  In the **Add SSIS Connection Manager** dialog box , select **Hadoop**, and click **Add**. The **Hadoop Connection Manager Editor** dialog box opens.  
+1.  In the **Add SSIS Connection Manager** dialog box, select **Hadoop**, and click **Add**. The **Hadoop Connection Manager Editor** dialog box opens.  
   
-2.  Choose the **WebHCat** or **WebHDFS** tab in the left pane to configure related Hadoop cluster information.  
+2.  To configure related Hadoop cluster information, choose the **WebHCat** or **WebHDFS** tab in the left pane.
   
-3.  If you enable the **WebHCat** option to invoke a Hive or Pig job on Hadoop, do the following.  
+3.  If you enable the **WebHCat** option to invoke a Hive or Pig job on Hadoop, do the following things: 
   
     1.  For **WebHCat Host**, enter  the server that hosts the WebHCat service.  
   
@@ -46,7 +46,7 @@ ms.workload: "Inactive"
   
     5.  If you select **Kerberos** authentication, enter the user's **Password** and **Domain**.  
   
-4.  If you enable the **WebHDFS** option to copy data from or to HDFS, do the following.  
+4.  If you enable the **WebHDFS** option to copy data from or to HDFS, do the following things: 
   
     1.  For **WebHDFS Host**, enter the server that hosts the WebHDFS service.  
   
@@ -79,16 +79,16 @@ There are two options to set up the on-premises environment so as to use Kerbero
 
 1.	Run the **Ksetup** utility to configure the Kerberos KDC server and realm.
 
-    The machine must be configured as a member of a workgroup since a Kerberos realm is different from a Windows domain. This can be achieved by setting the Kerberos realm and adding a KDC server as follows. Replace *REALM.COM* with your own respective realm as needed.
+    The machine must be configured as a member of a workgroup since a Kerberos realm is different from a Windows domain.  Set the Kerberos realm and add a KDC server as described in the following section. Replace *REALM.COM* with your own respective realm as needed.
 
     ```    
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
 
-	**Restart** the machine after executing these 2 commands.
+	**Restart** the machine after executing these two commands.
 
-2.	Verify the configuration with **Ksetup** command. The output should look like the following:
+2.	Verify the configuration with **Ksetup** command. The output should look like the following sample:
 
     ```
     C:> Ksetup
@@ -175,7 +175,7 @@ There are two options to set up the on-premises environment so as to use Kerbero
 
     2. In the **Group Policy Management Editor** popup window, go to Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options, and configure **Network security: Configure Encryption types allowed for Kerberos**.
 
-    3. Select the encryption algorithm you want to use when connect to KDC. Commonly, you can simply select all the options.
+    3. Select the encryption algorithm you want to use when connect to KDC. Typically you can select any of the options.
 
         ![Configure encryption types for Kerberos](media/hadoop-connection-manager/config-encryption-types-for-kerberos.png)
 
@@ -183,7 +183,7 @@ There are two options to set up the on-premises environment so as to use Kerbero
 
     `C:> ksetup /SetEncTypeAttr REALM.COM DES-CBC-CRC DES-CBC-MD5 RC4-HMAC-MD5 AES128-CTS-HMAC-SHA1-96 AES256-CTS-HMAC-SHA1-96`
 
-4.	Create the mapping between the domain account and Kerberos principal, in order to use Kerberos principal in Windows Domain.
+4.	To use the Kerberos principal in Windows Domain, create the mapping between the domain account and Kerberos principal.
 
     1. Start the Administrative tools > **Active Directory Users and Computers**.
 

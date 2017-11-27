@@ -37,10 +37,6 @@ ms.workload: "Inactive"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**ftcatid**|**smallint**|Identifier of the full-text catalog.|  

@@ -33,10 +33,6 @@ ms.workload: "Inactive"
 
   Contains information about all available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy subsystems. The **syssubsystems** table is stored in the **msdb** database.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|ID of the subsystem.|  

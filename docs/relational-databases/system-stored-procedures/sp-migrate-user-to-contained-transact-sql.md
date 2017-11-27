@@ -33,10 +33,6 @@ ms.workload: "Inactive"
   
  **Note** This procedure is only used in a contained database. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 ## Syntax  
   
 ```  

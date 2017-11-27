@@ -37,10 +37,6 @@ ms.workload: "Inactive"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**value**|**int**|User-modifiable value for the variable. This is used by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] only if RECONFIGURE has been executed.|  

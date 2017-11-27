@@ -28,10 +28,10 @@ ms.workload: "On Demand"
   
 |Topic|Overview|  
 |-----------|--------------|  
-|[Resolve database restore failures due to OOM](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_resolveRecoveryFailures)|What to do if you get the error message, “Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'.”|  
-|[Resolve impact of low memory or OOM conditions on the workload](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_recoverFromOOM)|What to do if you find low memory issues are negatively impacting performance.|  
-|[Resolve page allocation failures due to insufficient memory when sufficient memory is available](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_PageAllocFailure)|What to do if you get the error message, “Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. …” when available memory is sufficient for the operation.|
-|[Best Practices using In-Memory OLTP in a VM environment](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_VMs)|What to keep in mind when using In-Memory OLTP in a virtualized environment.|
+|[Resolve database restore failures due to OOM](#bkmk_resolveRecoveryFailures)|What to do if you get the error message, “Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'.”|  
+|[Resolve impact of low memory or OOM conditions on the workload](#bkmk_recoverFromOOM)|What to do if you find low memory issues are negatively impacting performance.|  
+|[Resolve page allocation failures due to insufficient memory when sufficient memory is available](#bkmk_PageAllocFailure)|What to do if you get the error message, “Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. …” when available memory is sufficient for the operation.|
+|[Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs)|What to keep in mind when using In-Memory OLTP in a virtualized environment.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolve database restore failures due to OOM  
  When you attempt to restore a database you may get the error message: “Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'.” This indicates that the server does not have enough available memory for restoring the database.
@@ -48,7 +48,7 @@ If the server does have enough physical memory, but you are still seeing this er
   
     > [!IMPORTANT]  
     > If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT to the same value as MAX_MEMORY_PERCENT.   
-    > See the topic [Best Practices using In-Memory OLTP in a VM environment](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_VMs) for more information.  
+    > See the topic [Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs) for more information.  
   
     ```tsql  
     -- disable resource governor  
@@ -75,9 +75,9 @@ If the server does have enough physical memory, but you are still seeing this er
 ##  <a name="bkmk_recoverFromOOM"></a> Resolve impact of low memory or OOM conditions on the workload  
  Obviously, it is best to not get into a low memory or OOM (Out of Memory) situation. Good planning and monitoring can help avoid OOM situations. Still, the best planning does not always foresee what actually happens and you might end up with low memory or OOM. There are two steps to recovering from OOM:  
   
-1.  [Open a DAC (Dedicated Administrator Connection)](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_openDAC)  
+1.  [Open a DAC (Dedicated Administrator Connection)](#bkmk_openDAC)  
   
-2.  [Take corrective action](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_takeCorrectiveAction)  
+2.  [Take corrective action](#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> Open a DAC (Dedicated Administrator Connection)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a dedicated administrator connection (DAC). The DAC allows an administrator to access a running instance of SQL Server Database Engine to troubleshoot problems on the server—even when the server is unresponsive to other client connections. The DAC is available through the `sqlcmd` utility and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -111,7 +111,7 @@ This code snippet changes MAX_MEMORY_PERCENT for the resource pool PoolHk to 70%
   
 > [!IMPORTANT]  
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
-> See the topic [Best Practices using In-Memory OLTP in a VM environment](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_VMs) for more information.  
+> See the topic [Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs) for more information.  
   
 ```tsql  
 -- disable resource governor  
@@ -135,7 +135,7 @@ GO
   
 > [!IMPORTANT]  
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
-> See the topic [Best Practices using In-Memory OLTP in a VM environment](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_VMs) for more information.  
+> See the topic [Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs) for more information.  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Resolve page allocation failures due to insufficient memory when sufficient memory is available  
  If you get the error message, `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.` in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  

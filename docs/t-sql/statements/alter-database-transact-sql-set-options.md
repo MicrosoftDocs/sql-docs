@@ -810,7 +810,7 @@ OPERATION_MODE
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824.  
   
- For more information about checksum, torn page, read-retry, error messages 823, 824 and 825, see [How to troubleshoot a Msg 823 error in SQL Server](http://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server](http://support.microsoft.com/help/2015756) and [How to troubleshoot Msg 825 &#40;read retry&#41;) in SQL Server](http://support.microsoft.com/help/2015757).
+ For more information about error messages 823, 824 and 825, see [How to troubleshoot a Msg 823 error in SQL Server](http://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server](http://support.microsoft.com/help/2015756) and [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](http://support.microsoft.com/help/2015757).
   
  The current setting of this option can be determined by examining the *page_verify_option* column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the *IsTornPageDetectionEnabled* property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   

@@ -4,7 +4,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/25/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -46,14 +46,11 @@ The following table lists the release history for SQL Server 2017.
 
 | Release | Version | Release date |
 |-----|-----|-----|
+| [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <A id="CU1"></a> Cumulative Update 1 (October 2017)
-
-This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3006.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
-
-### Installation
+## How to install cumulative updates
 
 If you have configured the Cumulative Update repository, then you will get the latest cumulative update of SQL Server packages when you perform new installations. The Cumulative Update repository is the default for all package installation articles for SQL Server on Linux. For more information about repository configuration, see [Source repositories](sql-server-linux-setup.md#repositories).
 
@@ -63,6 +60,24 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+
+## <A id="CU2"></a> Cumulative Update 2 (November 2017)
+
+This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3008.27. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.3008.27-1 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm)</br>[SSIS package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM package | 14.0.3008.27-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.3008.27-1 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[SSIS package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <A id="CU1"></a> Cumulative Update 1 (October 2017)
+
+This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3006.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
 
 ### Package details
 

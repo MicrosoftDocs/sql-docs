@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "11/27/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -53,7 +53,7 @@ ms.workload: "Active"
 Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
+> Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -385,7 +385,7 @@ SET
 
  **\<change_tracking_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controls change tracking options. You can enable change tracking, set options, change options, and disable change tracking. For examples, see the Examples section later in this topic.  
   
@@ -423,7 +423,7 @@ SET
  The database is a contained database. Setting database containment to partial will fail if the database has replication, change data capture, or change tracking enabled. Error checking stops after one failure. For more information about contained databases, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 > [!NOTE]  
->  Containment cannot be configured in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Containment is not explicitly designated, but [!INCLUDE[ssSDS](../../includes/sssds-md.md)] can use contained features such as contained database users.  
+> Containment cannot be configured in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Containment is not explicitly designated, but [!INCLUDE[ssSDS](../../includes/sssds-md.md)] can use contained features such as contained database users.  
   
  **\<cursor_option> ::=**  
   
@@ -441,7 +441,7 @@ SET
  The status of this option can be determined by examining the is_cursor_close_on_commit_on column in the sys.databases catalog view or the IsCloseCursorsOnCommitEnabled property of the DATABASEPROPERTYEX function.  
   
  CURSOR_DEFAULT { LOCAL | GLOBAL }  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controls whether cursor scope uses LOCAL or GLOBAL.  
   
@@ -457,13 +457,13 @@ SET
   
  **\<database_mirroring>**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  For the argument descriptions, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **\<date_correlation_optimization_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controls the date_correlation_optimization option.  
   
@@ -491,7 +491,7 @@ SET
   
  **\<db_state_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controls the state of the database.  
   
@@ -505,7 +505,7 @@ SET
  The database is marked READ_ONLY, logging is disabled, and access is limited to members of the sysadmin fixed server role. EMERGENCY is primarily used for troubleshooting purposes. For example, a database marked as suspect due to a corrupted log file can be set to the EMERGENCY state. This could enable the system administrator read-only access to the database. Only members of the sysadmin fixed server role can set a database to the EMERGENCY state.  
   
 > [!NOTE]  
->  **Permissions:** ALTER DATABASE permission for the subject database is required to change a database to the offline or emergency state. The server level ALTER ANY DATABASE permission is required to move a database from offline to online.  
+> **Permissions:** ALTER DATABASE permission for the subject database is required to change a database to the offline or emergency state. The server level ALTER ANY DATABASE permission is required to move a database from offline to online.  
   
  The status of this option can be determined by examining the state and state_desc columns in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the Status property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function. For more information, see [Database States](../../relational-databases/databases/database-states.md).  
   
@@ -527,14 +527,14 @@ SET
  To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.  
   
 > [!NOTE]  
->  On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.  
+> On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.  
   
  **\<db_user_access_option> ::=**  
   
  Controls user access to the database.  
   
  SINGLE_USER  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Specifies that only one user at a time can access the database. If SINGLE_USER is specified and there are other users connected to the database the ALTER DATABASE statement will be blocked until all users disconnect from the specified database. To override this behavior, see the WITH \<termination> clause.  
   
@@ -573,7 +573,7 @@ MULTI_USER
   
  **\<external_access_option> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Controls whether the database can be accessed by external resources, such as objects from another database.  
   
@@ -585,7 +585,7 @@ MULTI_USER
  Database cannot participate in cross-database ownership chaining.  
   
 > [!IMPORTANT]  
->  The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will recognize this setting when the cross db ownership chaining server option is 0 (OFF). When cross db ownership chaining is 1 (ON), all user databases can participate in cross-database ownership chains, regardless of the value of this option. This option is set by using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+> The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will recognize this setting when the cross db ownership chaining server option is 0 (OFF). When cross db ownership chaining is 1 (ON), all user databases can participate in cross-database ownership chains, regardless of the value of this option. This option is set by using [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  To set this option, requires CONTROL SERVER permission on the database.  
   
@@ -657,7 +657,7 @@ MULTI_USER
   
  **\<HADR_options> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  See [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
@@ -690,7 +690,7 @@ MULTI_USER
   
  **\<query_store_options> ::=**  
   
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Controls if the query store is enabled in this database, and also controls removing the contents of the query store.  
@@ -763,7 +763,7 @@ OPERATION_MODE
  A simple backup strategy that uses minimal log space is provided. Log space can be automatically reused when it is no longer required for server failure recovery. For more information, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
 > [!IMPORTANT]  
->  The simple recovery model is easier to manage than the other two models but at the expense of greater data loss exposure if a data file is damaged. All changes since the most recent database or differential database backup are lost and must be manually reentered.  
+> The simple recovery model is easier to manage than the other two models but at the expense of greater data loss exposure if a data file is damaged. All changes since the most recent database or differential database backup are lost and must be manually reentered.  
   
  The default recovery model is determined by the recovery model of the **model** database. For more information about selecting the appropriate recovery model, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -777,9 +777,9 @@ OPERATION_MODE
  Incomplete pages cannot be detected by the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!IMPORTANT]  
->  The syntax structure TORN_PAGE_DETECTION ON | OFF will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this syntax structure in new development work, and plan to modify applications that currently use the syntax structure. Use the PAGE_VERIFY option instead.  
+> The syntax structure TORN_PAGE_DETECTION ON | OFF will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this syntax structure in new development work, and plan to modify applications that currently use the syntax structure. Use the PAGE_VERIFY option instead.  
   
- PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
+<a name="page_verify"></a> PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
  Discovers damaged database pages caused by disk I/O path errors. Disk I/O path errors can be the cause of database corruption problems and are generally caused by power failures or disk hardware failures that occur at the time the page is being written to disk.  
   
  CHECKSUM  
@@ -798,7 +798,7 @@ OPERATION_MODE
 -   When a user or system database is upgraded to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version, the PAGE_VERIFY value (NONE or TORN_PAGE_DETECTION) is retained. We recommend that you use CHECKSUM.  
   
     > [!NOTE]  
-    >  In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the tempdb database and cannot be modified. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, the default value for the tempdb database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the tempdb database.  
+    > In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the tempdb database and cannot be modified. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, the default value for the tempdb database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the tempdb database.  
   
 -   TORN_PAGE_DETECTION may use fewer resources but provides a minimal subset of the CHECKSUM protection.  
   
@@ -810,9 +810,9 @@ OPERATION_MODE
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824.  
   
- For more information about checksum, torn page, read-retry, error messages 823 and 824, and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I/O auditing features, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkId=47160).  
+ For more information about error messages 823, 824 and 825, see [How to troubleshoot a Msg 823 error in SQL Server](http://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server](http://support.microsoft.com/help/2015756) and [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](http://support.microsoft.com/help/2015757).
   
- The current setting of this option can be determined by examining the page_verify_option column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the IsTornPageDetectionEnabled property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
+ The current setting of this option can be determined by examining the *page_verify_option* column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the *IsTornPageDetectionEnabled* property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
 **\<remote_data_archive_option> ::=**  
   
@@ -1252,7 +1252,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### E. Enabling the query store  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  The following example enables the query store and configures query store parameters.  
   
@@ -1260,11 +1260,11 @@ SET CHANGE_TRACKING = OFF;
 ALTER DATABASE AdventureWorks2012  
 SET QUERY_STORE = ON   
     (  
-      OPERATION_MODE = READ_ONLY   
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 5 )  
-    , DATA_FLUSH_INTERVAL_SECONDS = 2000   
-    , MAX_STORAGE_SIZE_MB = 10   
-    , INTERVAL_LENGTH_MINUTES = 10   
+      OPERATION_MODE = READ_WRITE   
+    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )  
+    , DATA_FLUSH_INTERVAL_SECONDS = 900   
+    , MAX_STORAGE_SIZE_MB = 1024   
+    , INTERVAL_LENGTH_MINUTES = 60   
     );  
 ```  
   
@@ -1280,6 +1280,6 @@ SET QUERY_STORE = ON
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   

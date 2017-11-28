@@ -221,7 +221,7 @@ The buffer manager supports the following features:
 * The buffer manager supports **Hot Add Memory**, which allows users to add physical memory without restarting the server. 
 * The buffer manager supports **large pages** on 64-bit platforms. The page size is specific to the version of Windows.
   > [!NOTE]
-  > Prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], enabling large pages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires [trace flag 834](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+  > Prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], enabling large pages in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requires [trace flag 834](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 * The buffer manager provides additional diagnostics that are exposed through dynamic management views. You can use these views to monitor a variety of operating system resources that are specific to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For example, you can use the [sys.dm_os_buffer_descriptors](../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md) view to monitor the pages in the buffer cache.   
 
 ### Disk I/O

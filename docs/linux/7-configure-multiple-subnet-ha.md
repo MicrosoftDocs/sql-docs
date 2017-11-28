@@ -26,13 +26,13 @@ When an Always On Availability Group (AG) or failover cluster instance (FCI) spa
 
 **Prerequisite**: For a VLAN-based solution, each server participating in an AG or FCI needs two network cards (NICs) for proper availability (a dual port NIC would be a single point of failure on a physical server), so that it can be assigned IP addresses on its native subnet as well as one on the VLAN. This is in addition to any other network needs, such as iSCSI, which also needs its own network.
 
-The IP address creation for the AG or FCI is done on the VLAN. In the example shown below, the VLAN has a subnet of 192.168.3.*x*, so the IP address that is created is 192.168.3.104. Nothing additional needs to be configured, since there is a single IP address assigned to the AG or FCI.
+The IP address creation for the AG or FCI is done on the VLAN. In the following example, the VLAN has a subnet of 192.168.3.*x*, so the IP address created for the AG or FCI is 192.168.3.104. Nothing additional needs to be configured, since there is a single IP address assigned to the AG or FCI.
 
 ![](./media/7-configure-multiple-subnet-ha/image1.png)
 
 ## Configuration with Pacemaker
 
-In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports multiple subnets and handles multiple IP addresses via an OR dependency on the IP address. On Linux, there is no OR dependency, but there is a way to achieve a proper multi-subnet natively with Pacemaker, as shown below. You cannot do this by simply using the normal Pacemaker command line to modify a resource. You need to modify the cluster information base (CIB). The CIB is an XML file with the Pacemaker configuration.
+In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports multiple subnets and handles multiple IP addresses via an OR dependency on the IP address. On Linux, there is no OR dependency, but there is a way to achieve a proper multi-subnet natively with Pacemaker, as shown by the following. You cannot do this by simply using the normal Pacemaker command line to modify a resource. You need to modify the cluster information base (CIB). The CIB is an XML file with the Pacemaker configuration.
 
 ![](./media/7-configure-multiple-subnet-ha/image2.png)
 
@@ -40,7 +40,7 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 
 1.  Export the CIB.
 
-    **Red Hat Enterprise Linux (RHEL)/Ubuntu**
+    **Red Hat Enterprise Linux (RHEL) and Ubuntu**
 
     `sudo pcs cluster cib <filename>`
 
@@ -78,9 +78,11 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 
 3.  Import the modified CIB and reconfigure Pacemaker.
 
-    **RHEL/Ubuntu**<br/><br/>    `sudo pcs cluster cib-push <filename>`
+    **RHEL/Ubuntu**
+    `sudo pcs cluster cib-push <filename>`
 
-    **SLES**<br/><br/>    `sudo cibadmin -R -x <filename>`
+    **SLES**
+    `sudo cibadmin -R -x <filename>`
 
     where *filename* is the name of the CIB file with the modified IP address information.
 

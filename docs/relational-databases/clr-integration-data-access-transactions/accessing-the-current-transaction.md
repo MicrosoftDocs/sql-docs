@@ -2,9 +2,12 @@
 title: "Accessing the Current Transaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Accessing the Current Transaction
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   If a transaction is active at the point at which common language runtime (CLR) code running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is entered, the transaction is exposed through the **System.Transactions.Transaction** class. The **Transaction.Current** property is used to access the current transaction. In most cases it is not necessary to access the transaction explicitly. For database connections, ADO.NET checks **Transaction.Current** automatically when the **Connection.Open** method is called, and transparently enlists the connection in that transaction (unless the **Enlist** keyword is set to false in the connection string).  
   
  You might want to use the **Transaction** object directly in the following scenarios:  

@@ -2,9 +2,12 @@
 title: "Configure an Oracle Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 60
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure an Oracle Publisher
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Publications from Oracle Publishers are created in the same way typical snapshot and transactional publications are created, but prior to creating a publication from an Oracle Publisher, you must complete the following steps (steps one, three, and four are described in detail in this topic.):  
   
 1.  Create a replication administrative user within the Oracle database using the supplied script.  

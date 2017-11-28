@@ -2,9 +2,12 @@
 title: "Use Power Pivot Gallery | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "power-pivot-sharepoint"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -15,7 +18,8 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Use Power Pivot Gallery
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery is a special SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.  

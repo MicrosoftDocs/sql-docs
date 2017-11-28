@@ -15,6 +15,7 @@ caps.latest.revision: 23
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Exporting to Microsoft Word (Report Builder and SSRS)

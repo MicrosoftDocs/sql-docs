@@ -2,9 +2,12 @@
 title: "SqlDataRecord Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SqlDataRecord Object
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **SqlDataRecord** object represents a single row of data, along with its related metadata.  
   
  Managed stored procedures may send to the client result sets that are not from a **SqlDataReader**. The **SqlDataRecord** class, along with **SendResultsStart**, **SendResultsRow**, and **SendResultsEnd** methods of the **SqlPipe** object, allows stored procedures to send custom result sets to the client.  

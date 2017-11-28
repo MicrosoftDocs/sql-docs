@@ -2,9 +2,12 @@
 title: "Overview (SMO) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "smo"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 69
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Overview (SMO)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) are objects designed for programmatic management of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use SMO to build customized [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management applications. Although [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is a powerful and extensive application for managing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there might be times when you would be better served by an SMO application.  
   
  For example, the user applications that control the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tasks might have to be simplified to meet the needs of new users and to reduce training costs. You might have to create customized [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, or create an application for creating and monitoring the efficiency of indexes. An SMO application might also be used to include third-party hardware or software seamlessly into the database management application.  

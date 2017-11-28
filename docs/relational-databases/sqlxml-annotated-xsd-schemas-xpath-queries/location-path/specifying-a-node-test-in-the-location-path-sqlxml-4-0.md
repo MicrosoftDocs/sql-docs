@@ -2,9 +2,12 @@
 title: "Specifying a Node Test in the Location Path (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specifying a Node Test in the Location Path (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A node test specifies the node type selected by the location step. Every axis (**child**, **parent**, **attribute**, or **self**) has a principal node type. For the **attribute** axis, the principal node type is **\<attribute>**. For the **parent**, **child**, and **self** axes, the principal node type is **\<element>**.  
   
 > [!NOTE]  

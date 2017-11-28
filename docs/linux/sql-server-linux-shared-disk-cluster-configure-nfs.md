@@ -6,8 +6,14 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
+ms.workload: "Inactive"
 ---
 # Configure failover cluster instance - NFS - SQL Server on Linux
 

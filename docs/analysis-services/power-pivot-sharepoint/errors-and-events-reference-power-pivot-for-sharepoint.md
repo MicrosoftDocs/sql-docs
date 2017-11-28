@@ -2,9 +2,12 @@
 title: "Errors and Events Reference (Power Pivot for SharePoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "power-pivot-sharepoint"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Errors and Events Reference (Power Pivot for SharePoint)
   This section provides information about errors and events for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Errors in this section are identified by the error message text that appears in a log or error window.  

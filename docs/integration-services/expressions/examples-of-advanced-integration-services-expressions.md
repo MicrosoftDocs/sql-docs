@@ -2,9 +2,12 @@
 title: "Examples of Advanced Integration Services Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Examples of Advanced Integration Services Expressions
   This section provides examples of advanced expressions that combine multiple operators and functions. If an expression is used in a precedence constraint or the Conditional Split transformation, it must evaluate to a Boolean. That restriction, however, does not apply to expressions used in property expressions, variables, the Derived Column transformation, or the For Loop container.  

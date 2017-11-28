@@ -2,9 +2,12 @@
 title: "Configure Usage Data Collection for (Power Pivot for SharePoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "power-pivot-sharepoint"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -15,7 +18,8 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Configure Usage Data Collection for (Power Pivot for SharePoint
   Usage data collection is a farm-level SharePoint feature. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint uses and extends this system to provide reports in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard that show how [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data and services are used. Depending on how you install SharePoint, usage data collection might be turned off for the farm. A farm administrator must enable usage logging to create the usage data that appears in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard.  

@@ -2,9 +2,12 @@
 title: "Requirements for CLR User-Defined Aggregates | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -24,8 +27,10 @@ caps.latest.revision: 56
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CLR User-Defined Aggregates - Requirements
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A type in a common language runtime (CLR) assembly can be registered as a user-defined aggregate function, as long as it implements the required aggregation contract. This contract consists of the **SqlUserDefinedAggregate** attribute and the aggregation contract methods. The aggregation contract includes the mechanism to save the intermediate state of the aggregation, and the mechanism to accumulate new values, which consists of four methods: **Init**, **Accumulate**, **Merge**, and **Terminate**. When you have met these requirements, you will be able to take full advantage of user-defined aggregates in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The following sections of this topic provide additional details about how to create and work with user-defined aggregates. For an example, see [Invoking CLR User-Defined Aggregate Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
   
 ## SqlUserDefinedAggregate  

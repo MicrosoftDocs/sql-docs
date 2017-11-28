@@ -2,9 +2,12 @@
 title: "Database Mirroring Monitor Overview | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-mirroring"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 40
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Mirroring Monitor Overview
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   If you have the correct permissions, you can use Database Mirroring Monitor to monitor any subset of the mirrored databases on a server instance. Monitoring enables you to verify whether and how well data is flowing in the database mirroring session. Database Mirroring Monitor is also useful for troubleshooting the cause of reduced data flow.  
   
  You can register any of your mirrored databases for monitoring on each of the failover partners individually. When you register a database, Database Mirroring Monitor caches the following information about the database:  

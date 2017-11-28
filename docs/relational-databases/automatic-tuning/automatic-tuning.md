@@ -3,9 +3,12 @@ title: "Automatic tuning | Microsoft Docs"
 description: Learn about automatic tuning in SQL Server and Azure SQL Database
 ms.custom: ""
 ms.date: "08/16/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "automatic-tuning"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,10 @@ caps.latest.revision:
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Automatic tuning
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems.
 
@@ -29,8 +33,8 @@ Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enabl
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] monitors the queries that are executed on the database and automatically improves performance of the workload. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] has a built-in intelligence mechanism that can automatically tune and improve performance of your queries by dynamically adapting the database to your workload. There are two automatic tuning features that are available:
 
- -	**Automatic plan correction** (available in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) that identifies problematic plans and fixes SQL plan performance problems.
- -	**Automatic index management** (available in  [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]) that identifies indexes that should be added in your database, and indexes that should be removed.
+ -	**Automatic plan correction** (available in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]) that identifies problematic query execution plans and fixes SQL plan performance problems.
+ -	**Automatic index management** (available only in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]) that identifies indexes that should be added in your database, and indexes that should be removed.
 
 ## Why automatic tuning?
 

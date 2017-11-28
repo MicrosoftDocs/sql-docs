@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # SharePoint List Connection Type (SSRS)
 

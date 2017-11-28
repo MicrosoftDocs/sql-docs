@@ -2,9 +2,12 @@
 title: "DISCOVER_LOCATIONS Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "schema-rowsets"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -16,7 +19,8 @@ ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_LOCATIONS Rowset
   Returns information about the contents of a backup file. You must have permission to access the backup file location.  

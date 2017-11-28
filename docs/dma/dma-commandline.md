@@ -1,10 +1,13 @@
 ---
 title: "Run from command line (SQL Server Data Migration Assistant) | Microsoft Docs"
-ms.custom: 
+ms.custom: ""
 ms.date: "09/01/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "dma"
+ms.service: ""
+ms.component: "dma"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-dma"
 ms.tgt_pltfrm: ""
@@ -17,10 +20,11 @@ caps.latest.revision: ""
 author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 
 # Run Data Migration Assistant from the command line
-With version 2.1 and above, when you install Data Migration Assistant, it will also install dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\. Use dmacmd.exe to assess your databases in an unattended mode, and output the result to JSON or CSV file. This is especially useful when assessing several databases or huge databases. 
+With version 2.1 and above, when you install Data Migration Assistant, it will also install dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Use dmacmd.exe to assess your databases in an unattended mode, and output the result to JSON or CSV file. This is especially useful when assessing several databases or huge databases. 
 
 > [!NOTE]
 > Dmacmd.exe supports running assessments only. Migrations are not supported at this time.

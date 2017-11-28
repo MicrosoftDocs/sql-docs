@@ -2,11 +2,12 @@
 title: "Upgrade Data Quality Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod:
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -18,6 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrade Data Quality Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic provides information on how to upgrade your existing installation of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). As part of upgrading your [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, you must also upgrade the DQS databases schema.  
   
 > [!IMPORTANT]  

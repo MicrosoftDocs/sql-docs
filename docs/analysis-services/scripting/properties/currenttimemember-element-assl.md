@@ -2,9 +2,12 @@
 title: "CurrentTimeMember Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 2e73009c-9f2b-441c-bdf0-ca19b160da4f
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CurrentTimeMember Element (ASSL)
   Defines the current member of a time dimension associated with a [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

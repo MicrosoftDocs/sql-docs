@@ -2,9 +2,12 @@
 title: "Configure Topology (Peer-to-Peer Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure Topology (Peer-to-Peer Replication)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **Configure topology** page to perform common configuration tasks, such as adding new nodes, deleting nodes, and adding new connections between existing nodes. The node you selected on the **Publication** page of this wizard is displayed on the design surface. To specify configuration options, right-click a node, a connection, or the design surface.  
   
 > [!NOTE]  

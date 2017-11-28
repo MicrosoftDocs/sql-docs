@@ -2,9 +2,12 @@
 title: "PowerShell Cmdlet for Migration Evaluation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PowerShell Cmdlet for Migration Evaluation
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Save-SqlMigrationReport cmdlet is a tool that evaluates the migration fitness of multiple objects in a SQL Server database. Currently, it is limited to evaluating the migration fitness for In-Memory OLTP. The cmdlet can run in both an elevated Windows PowerShell environment and sqlps.  
   
 ## Syntax  

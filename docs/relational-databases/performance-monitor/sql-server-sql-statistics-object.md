@@ -2,9 +2,12 @@
 title: "SQL Server, SQL Statistics Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server, SQL Statistics Object
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **SQLServer:SQL Statistics** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor compilation and the type of requests sent to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Monitoring the number of query compilations and recompilations and the number of batches received by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gives you an indication of how quickly [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is processing user queries and how effectively the query optimizer is processing the queries.  
   
  Compilation is a significant part of a query's turnaround time. In order to save the compilation cost, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] saves the compiled query plan in a query cache. The objective of the cache is to reduce compilation by storing compiled queries for later reuse, therefore ending the requirement to recompile queries when later executed. However, each unique query must be compiled at least one time. Query recompilations can be caused by the following factors:  

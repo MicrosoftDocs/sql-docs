@@ -2,9 +2,12 @@
 title: "Selecting Input Columns Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "building-packages-programmatically"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -27,6 +30,7 @@ caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Selecting Input Columns Programmatically
   After you have programmatically connected components, select the columns from upstream components that you will transform or pass through to downstream components. If you do not select input columns for your component, the component does not receive any rows from the data flow task.  

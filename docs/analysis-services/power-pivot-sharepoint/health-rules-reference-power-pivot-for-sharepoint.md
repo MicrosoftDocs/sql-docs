@@ -2,9 +2,12 @@
 title: "Health Rules Reference (Power Pivot for SharePoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "power-pivot-sharepoint"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -15,7 +18,8 @@ ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Health Rules Reference (Power Pivot for SharePoint)
   This reference topic describes the SharePoint health rules that are added by a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint installation. These rules are used to report problems with server health, availability, or configuration of a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] service application or its associated [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  

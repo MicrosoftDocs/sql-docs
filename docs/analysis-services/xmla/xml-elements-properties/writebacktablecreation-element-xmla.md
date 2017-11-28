@@ -2,9 +2,12 @@
 title: "WritebackTableCreation Element (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "xmla"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,9 +28,10 @@ helpviewer_keywords:
   - "WritebackTableCreation element"
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # WritebackTableCreation Element (XMLA)
   Determines whether a writeback table is created during the [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) operation.  

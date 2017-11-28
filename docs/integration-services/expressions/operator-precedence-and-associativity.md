@@ -2,9 +2,12 @@
 title: "Operator Precedence and Associativity | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Operator Precedence and Associativity
   Each operator in the set of operators that the expression evaluator supports has a designated precedence in the precedence hierarchy and includes a direction in which it is evaluated. The direction of evaluation for an operator is operator associativity. Operators with higher precedence are evaluated before operators with lower precedence. If a complex expression has multiple operators, operator precedence determines the order in which the operations are performed. The order of execution can significantly affect the resulting value. Some operators have equal precedence. If an expression contains multiple operators of equal precedence, the operators are evaluated directionally, from left to right or right to left.  

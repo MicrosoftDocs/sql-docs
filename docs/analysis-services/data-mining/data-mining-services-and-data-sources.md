@@ -2,9 +2,12 @@
 title: "Data Mining Services and Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -14,7 +17,8 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Data Mining Services and Data Sources
   Data mining requires a connection to an instance of SQL Server Analysis Services. Data from a cube is not required for data mining and the use of relational sources is recommended; however, data mining uses components provided by the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] engine.  

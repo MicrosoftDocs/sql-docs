@@ -1,10 +1,13 @@
 ---
 title: "Report on your consolidated assessments by using Power BI (SQL Server Data Migration Assistant) | Microsoft Docs"
-ms.custom: 
+ms.custom: ""
 ms.date: "09/07/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "dma"
+ms.service: ""
+ms.component: "dma"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-dma"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
 
+ms.workload: "Inactive"
 ---
 
 # Report on your consolidated assessments by using Power BI (Data Migration Assistant)

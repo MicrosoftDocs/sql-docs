@@ -1,13 +1,13 @@
 ---
 title: "sys.database_event_session_fields (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: 
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
+ms.service: ""
+ms.component: "system-catalog-views"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,9 +19,10 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.database_event_session_fields (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Returns a row for each customizable column that was explicitly set on events and targets.  
   

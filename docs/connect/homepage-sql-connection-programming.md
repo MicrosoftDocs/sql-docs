@@ -4,11 +4,17 @@ description: "Hub page with annotated links to downloads and documentation for n
 author: "MightyPen"
 ms.date: "09/13/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "connect"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "drivers"
 ms.topic: "article"
 ms.reviewer: "meetb"
 ms.author: "genemi"
+ms.workload: "Inactive"
 ---
 # Homepage for client programming to Microsoft SQL Server
 

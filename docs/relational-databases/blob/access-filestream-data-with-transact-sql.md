@@ -2,9 +2,12 @@
 title: "Access FILESTREAM Data with Transact-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "blob"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Access FILESTREAM Data with Transact-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE, and DELETE statements to manage FILESTREAM data.  
   
 > [!NOTE]  
@@ -41,9 +46,9 @@ manager: "jhubbard"
   
  [!code-sql[FILESTREAM#FS_InsertData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_3.sql)]  
   
- When you select all data from the `Archive`.`dbo.Records` table, the results are similar to the results that are shown in the following table. However, the `Id` column will contain different GUIDs.  
+ When you select all data from the `Archive.dbo.Records` table, the results are similar to the results that are shown in the following table. However, the `Id` column will contain different GUIDs.  
   
-|Id|SerialNumber|Resume|  
+|Id|SerialNumber|Chart|  
 |--------|------------------|------------|  
 |`C871B90F-D25E-47B3-A560-7CC0CA405DAC`|`1`|`NULL`|  
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
@@ -65,7 +70,7 @@ manager: "jhubbard"
   
  [!code-sql[FILESTREAM#FS_DeleteData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_5.sql)]  
   
- When you select all data from the `dbo.Archive` table, the row is gone. You can no longer use the associated file.  
+ When you select all data from the `Archive.dbo.Records` table, the row is gone and you can no longer use the associated file.  
   
 > [!NOTE]  
 >  The underlying files are removed by the FILESTREAM garbage collector.  

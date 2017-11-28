@@ -3,8 +3,11 @@ title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/11/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -45,7 +48,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this clause to:  
   
@@ -478,7 +481,25 @@ GO
   
 ```  
   
-### Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+###  <a name="Union"></a> Using ORDER BY with UNION, EXCEPT, and INTERSECT  
+ When a query uses the UNION, EXCEPT, or INTERSECT operators, the ORDER BY clause must be specified at the end of the statement and the results of the combined queries are sorted. The following example returns all products that are red or yellow and sorts this combined list by the column `ListPrice`.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Red'  
+-- ORDER BY cannot be specified here.  
+UNION ALL  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Yellow'  
+ORDER BY ListPrice ASC;  
+  
+```  
+  
+## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example demonstrates ordering of a result set by the numerical `EmployeeKey` column in ascending order.  
   
 ```  
@@ -517,24 +538,6 @@ ORDER BY LastName;
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
 WHERE LastName LIKE 'A%'  
 ORDER BY LastName, FirstName;  
-```  
-  
-###  <a name="Union"></a> Using ORDER BY with UNION, EXCEPT, and INTERSECT  
- When a query uses the UNION, EXCEPT, or INTERSECT operators, the ORDER BY clause must be specified at the end of the statement and the results of the combined queries are sorted. The following example returns all products that are red or yellow and sorts this combined list by the column `ListPrice`.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Red'  
--- ORDER BY cannot be specified here.  
-UNION ALL  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Yellow'  
-ORDER BY ListPrice ASC;  
-  
 ```  
   
 ## See Also  

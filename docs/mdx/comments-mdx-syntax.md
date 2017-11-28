@@ -2,9 +2,12 @@
 title: "Comments (MDX Syntax) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -23,9 +26,10 @@ caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Comments (MDX Syntax)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Comments are non-executing text strings in program code. (Comments are also known as remarks). You can use comments to document code, or temporarily disable parts of Multidimensional Expressions (MDX) statements and scripts being diagnosed. By using comments to document code, you can make future program code maintenance easier. You frequently use comments to record the program name, the author name, and the dates of major code changes. You can also use comments to describe complex calculations or explain a programming method.  
   

@@ -2,9 +2,12 @@
 title: "Estimate Service Interruption for Role Switching (Database Mirroring) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-mirroring"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -21,8 +24,10 @@ caps.latest.revision: 41
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Estimate the Interruption of Service During Role Switching (Database Mirroring)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   During a role switch, the amount of time that database mirroring will be out of service depends on the type of role switching and the cause of the role switch.  
   
 -   For automatic failover, two factors contribute to the time service is interrupted: the time required for the mirror server to recognize that the principal server instance has failed, that is error detection, plus the time required to fail over the database, that is failover time.  

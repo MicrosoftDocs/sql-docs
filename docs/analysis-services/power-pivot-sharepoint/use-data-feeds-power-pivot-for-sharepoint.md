@@ -2,9 +2,12 @@
 title: "Use Data Feeds (Power Pivot for SharePoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "power-pivot-sharepoint"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -15,7 +18,8 @@ ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Use Data Feeds (Power Pivot for SharePoint)
   Data feeds are one or more data streams that are generated from an online data source and streamed to a destination document or application. If you are using [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, data feeds can help you get existing corporate or business data from arbitrary data sources into the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] window in your Excel 2010 workbook. After you import a data feed to a workbook, you can reference it later in any data refresh operations that you schedule on a SharePoint server.  

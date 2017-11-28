@@ -2,9 +2,12 @@
 title: "SQL Server Integration Services Support for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Integration Services Support for In-Memory OLTP
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can use a memory-optimized table, a view referencing memory-optimized tables, or a natively compiled stored procedure as the source or destination for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) package. You can use [ADO NET Source](../../integration-services/data-flow/ado-net-source.md), [OLE DB Source](../../integration-services/data-flow/ole-db-source.md), or [ODBC Source](../../integration-services/data-flow/odbc-source.md) in the data flow of an SSIS package and configure the source component to retrieve data from a memory-optimized table or a view, or specify a SQL statement to execute a natively compiled stored procedure. Similarly, you can use [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md), [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md), or [ODBC Destination](../../integration-services/data-flow/odbc-destination.md) to load data into a memory-optimized table or a view, or specify a SQL statement to execute a natively compiled stored procedure.  
   
  You can configure the above mentioned source and destination components in an SSIS package to read from/write to memory-optimized tables and views in the same way as with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables and views. However, you need to be aware of the important points in the following section when using natively compiled stored procedures.  

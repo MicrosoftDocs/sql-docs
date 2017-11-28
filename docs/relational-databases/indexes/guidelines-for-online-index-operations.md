@@ -2,7 +2,7 @@
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
 ms.date: 07/10/2017
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
@@ -19,12 +19,14 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
-ms.component: indexes
+ms.suite: "sql"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "indexes"
+ms.workload: "On Demand"
 ---
 # Guidelines for Online Index Operations
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   When you perform online index operations, the following guidelines apply:  
   
@@ -33,7 +35,7 @@ ms.component: indexes
 -   Nonunique nonclustered indexes can be created online when the table contains LOB data types but none of these columns are used in the index definition as either key or nonkey (included) columns.  
   
 -   Indexes on local temp tables cannot be created, rebuilt, or dropped online. This restriction does not apply to indexes on global temp tables.
-- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). This feature is in public preview for SQL Server 2017 and Azure SQL Database.
+- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -88,7 +90,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 ## Resumable Index Rebuild Considerations
 
 > [!NOTE]
-> See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). This feature is in public preview for SQL Server 2017 and Azure SQL Database.
+> See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 >
 
 When you perform resumable online index rebuild the following guidelines apply:

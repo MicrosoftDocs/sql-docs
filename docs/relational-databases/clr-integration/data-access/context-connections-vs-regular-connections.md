@@ -2,9 +2,12 @@
 title: "Regular vs. Context Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Context Connections vs. Regular Connections
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   If you are connecting to a remote server, always use regular connections rather than context connections. If you need to connect to the same server on which the stored procedure or function is running, use the context connection in most cases. This has benefits such as running in the same transaction space and not having to reauthenticate.  
   
  Additionally, using the context connection typically results in better performance and less resource usage. The context connection is an in-process–only connection, so it can contact the server "directly" by bypassing the network protocol and transport layers to send Transact-SQL statements and receive results. The authentication process is bypassed, as well. The following figure shows the primary components of the **SqlClient** managed provider, as well as how the different components interact with each other when using a regular connection, and when using the context connection.  

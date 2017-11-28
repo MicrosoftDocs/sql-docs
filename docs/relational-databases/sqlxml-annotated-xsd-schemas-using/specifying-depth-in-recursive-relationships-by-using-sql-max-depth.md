@@ -2,9 +2,12 @@
 title: "Specifying Depth in Recursive Relationships by Using sql:max-depth | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -25,8 +28,10 @@ caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specifying Depth in Recursive Relationships by Using sql:max-depth
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In relational databases, when a table is involved in a relationship with itself, it is called a recursive relationship. For example, in a supervisor-supervisee relationship, a table storing employee records is involved in a relationship with itself. In this case, the employees table plays a role of supervisor on one side of the relationship, and the same table plays a role of supervisee on the other side.  
   
  Mapping schemas can include recursive relationships where an element and its ancestor are of the same type.  

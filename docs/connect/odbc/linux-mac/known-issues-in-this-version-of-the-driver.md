@@ -3,8 +3,11 @@ title: "Known Issues in this Version of the Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology:
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,12 @@ caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Known Issues in this Version of the Driver
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
 This topic contains a list of known issues with the Microsoft ODBC Driver 13 for SQL Server on Linux and macOS.
 
 Additional issues will be posted on the [Microsoft ODBC driver team blog](http://blogs.msdn.com/b/sqlnativeclient/).  

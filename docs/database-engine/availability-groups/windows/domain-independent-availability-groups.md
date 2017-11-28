@@ -2,9 +2,12 @@
 title: "Domain Independent Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
 - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,10 @@ caps.latest.revision:
 author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
-
 # Domain Independent Availability Groups
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Always On Availability Groups (AGs) require an underlying Windows Server failover cluster (WSFC). Deploying a WSFC through Windows Server 2012 R2 has always required that the servers participating in a WSFC, also known as nodes, are joined to the same domain. For more information on Active Directory Domain Services (AD DS), see [here](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 

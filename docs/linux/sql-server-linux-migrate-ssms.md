@@ -6,10 +6,15 @@ ms.author: sanagama
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.custom: H1Hack27Feb2017
+ms.custom: ""
+ms.workload: "On Demand"
 ---
 # Export and import a database on Linux with SSMS or SqlPackage.exe on Windows
 

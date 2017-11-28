@@ -2,12 +2,18 @@
 title: "Schedule SSIS package execution on Azure | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "lift-shift"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Schedule the execution of an SSIS package on Azure
 You can schedule the execution of packages stored in the SSISDB Catalog database on an Azure SQL Database server by choosing one of the following scheduling options:
@@ -69,12 +75,12 @@ Create the job by using a Transact-SQL script similar to the script shown in the
 ```sql
 -- Create Elastic Jobs target group 
 EXEC jobs.sp_add_target_group 'TargetGroup' 
-? 
+
 -- Add Elastic Jobs target group member 
 EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
 	@target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
 	@database_name='SSISDB' 
-? 
+
 -- Add a job to schedule SSIS package execution
 EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
 	@schedule_interval_type='Minutes', @schedule_interval_count=60
@@ -112,6 +118,8 @@ To schedule a package with the Azure Data Factory SQL Server Stored Procedure ac
 4.  Create a Data Factory pipeline that uses the SQL Server Stored Procedure activity to run the SSIS package.
 
 This section provides an overview of these steps. A complete Data Factory tutorial is beyond the scope of this article. For more info, see [SQL Server Stored Procedure Activity](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
+
+If a scheduled execution fails, and the ADF Stored Procedure Activity provides an execution ID for the failed execution, check the execution report for that ID in SSMS in the SSIS Catalog.
 
 ### Created a linked service for the SQL Database that hosts SSISDB
 The linked service lets Data Factory connect to SSISDB.

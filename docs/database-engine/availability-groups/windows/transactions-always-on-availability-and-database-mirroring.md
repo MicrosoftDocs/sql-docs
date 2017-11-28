@@ -1,10 +1,13 @@
 ---
 title: "Transactions - Always On availability groups and database mirroring | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -20,9 +23,10 @@ caps.latest.revision: 33
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Transactions - availability groups and database mirroring
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This topic describes cross-database and distributed transactions support for Always On availability groups and database mirroring.  
 
@@ -58,7 +62,7 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
   
 -   Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
   
--   Availability groups must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC_SUPPORT = PER_DB** clause. You cannot currently alter an existing availability group.  
+-   Availability groups must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC\_SUPPORT = PER_DB** clause. You cannot currently alter an existing availability group.  
 
 - All instances of SQL Server  that will participate in the availability group must be SQL Server 2016 or later.
  
@@ -86,7 +90,7 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
 > [!NOTE]  
 >  Using Database Mirroring with DTC or using availability groups with DTC in ways not approved in this topic is not supported.  This does not imply that aspects of the product unrelated to DTC are unsupported; however, any issues arising from the improper use of distributed transactions will not be supported.  
   
-## See Also  
+## Next steps  
  [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

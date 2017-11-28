@@ -2,9 +2,12 @@
 title: "SQL Server Data Types in the .NET Framework | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -23,8 +26,10 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Data Types in the .NET Framework
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **SqlTypes** library is part of the base class library of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. It is designed to provide data types with the same semantics and precision as those found in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This topic describes the new semantics to .NET Framework programmers, and introduces the types implemented in the **System.Data.SqlTypes** namespace that is included in the **System.Data** library.  
   
  This following table lists the topics in this section.  

@@ -6,11 +6,17 @@ ms.date: 10/02/2017
 ms.author: meetb;rickbyh 
 manager: jhubbard
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords: 
   - "Linux, encrypted connections"
+ms.workload: "Inactive"
 ---
 # Encrypting Connections to SQL Server on Linux
 

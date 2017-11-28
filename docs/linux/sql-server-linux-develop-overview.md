@@ -6,10 +6,15 @@ ms.author: sanagama
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.custom: H1Hack27Feb2017
+ms.custom: ""
+ms.workload: "On Demand"
 ---
 # How to get started developing applications for SQL Server on Linux
 

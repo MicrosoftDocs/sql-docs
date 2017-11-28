@@ -1,7 +1,7 @@
 ---
 title: "Performance for R Services - results and resources| Microsoft Docs"
 ms.custom: ""
-ms.date: "07/15/2017"
+ms.date: "11/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,8 @@ ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
 caps.latest.revision: 8
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
+ms.workload: "Inactive"
 ---
 # Performance for R Services: results and resources
 
@@ -24,7 +25,7 @@ The two case studies had different goals:
 + The first case study, by the R Services development team, sought to measure the impact of specific optimization techniques
 + The second case study, by a data scientist team, experimented with multiple methods to determine the best optimizations for a specific high-volume scoring scenario.
 
-This topic lists the detailed results of the first case study. For the second case study, a summary describes the overall findings. At the end of this topic, you will find links to all scripts and sample data, and resources used by the original authors.
+This topic lists the detailed results of the first case study. For the second case study, a summary describes the overall findings. At the end of this topic are links to all scripts and sample data, and resources used by the original authors.
 
 ## Performance case study: Airline dataset
 
@@ -273,13 +274,13 @@ The test results show the time to save the model, and the time taken to load the
 
 Loading a trained model from a table is clearly a faster way to do prediction. We recommend that you avoid creating the model and performing scoring all in the same script.
 
-## Case study: optimization for resume matching task
+## Case study: Optimization for the resume-matching task
 
-The resume-matching model was developed by Microsoft data scientist Ke Huang to test the performance of R code in SQL Server and enable data scientists to support scalable, enterprise-level solutions.
+The resume-matching model was developed by Microsoft data scientist Ke Huang to test the performance of R code in SQL Server, and by doing so help data scientists create scalable, enterprise-level solutions.
 
 ### Methods
 
-Both the RevoScaleR and MicrosoftML packages were used to train a predictive model in a complex R solution involving large datasets. SQL queries and R code were identical. All tests were conducted on a single Azure VM with SQL Server installed. The author then compared scoring times with and without these optimizations provided by SQL Server:
+Both the RevoScaleR and MicrosoftML packages were used to train a predictive model in a complex R solution involving large datasets. SQL queries and R code were identical in all tests. Tests were conducted on a single Azure VM with SQL Server installed. The author then compared scoring times with and without the following optimizations provided by SQL Server:
 
 - In-memory tables
 - Soft-NUMA
@@ -322,12 +323,9 @@ The configuration that had the best performance in the resume-matching study was
 
 -   Maximum memory for use by R sessions = 70%
 
-For the resume-matching model, external script use was heavy and there were no other database engine services running. Therefore, the resources allocated to external scripts was increased to 70%, which was the best configuration for script performance.
+For the resume-matching model, external script use was heavy and there were no other database engine services running. Therefore, the resources allocated to external scripts were increased to 70%, which proved the best configuration for script performance.
 
-This configuration was arrived at by experimenting with different values. If you use different hardware or a different solution, the optimum configuration might be different.
-
-> [!IMPORTANT]
-> Experiment to find the best configuration for your case!
+This configuration was arrived at by experimenting with different values. If you use different hardware or a different solution, the optimum configuration might be different. Always experiment to find the best configuration for your case!
 
 In the optimized solution, 1.1 million rows of data (with 100 features) were scored in under 8.5 seconds on a 20-core computer. Optimizations significantly improved the performance in terms of scoring time.
 
@@ -336,6 +334,16 @@ The results also suggested that the **number of features** had a significant imp
 We recommend that you read this blog article and the accompanying tutorial for a detailed discussion.
 
 -   [Optimization tips and tricks for machine learning in SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+Many users have noted that there is a small pause as the R (or Python) runtime is loaded for the first time. For this reason, as described in these tests, the time for the first run is often measured but later discarded. Subsequent caching might result in notable performance differences between the first and second runs. There is also some overhead when data is moved between SQL Server and the external runtime, particularly if data is passed over the network rather than being loaded directly from SQL Server.
+
+For all these reasons, there is no single solution for mitigating this initial loading time, as the performance impact varies significantly depending on the task. For example, caching is performed for single-row scoring in batches; hence, successive scoring operations are much faster and neither the model nor the R runtime is reloaded. You can also use [native scoring](../sql-native-scoring.md) to avoid loading the R runtime entirely.
+
+For training large models, or scoring in large batches, the overhead might be minimal in comparison to the gains from avoiding data movement or from streaming and parallel processing. See these recent blogs and samples for additional performance guidance:
+
++ [Loan classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [Early customer experiences with R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [Using R to detect fraud at 1 million transactions per second](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## Resources
 

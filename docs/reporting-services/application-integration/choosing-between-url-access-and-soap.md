@@ -13,6 +13,7 @@ ms.topic: "reference"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Choosing between URL access and SOAP in Reporting Services
 

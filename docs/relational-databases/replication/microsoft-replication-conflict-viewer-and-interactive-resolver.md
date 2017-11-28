@@ -2,9 +2,12 @@
 title: "Microsoft Replication Conflict Viewer and Interactive Resolver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Microsoft Replication Conflict Viewer and Interactive Resolver
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This section includes information on the Replication Conflict Viewer for merge replication and transactional replication, and the Interactive Resolver for merge replication:  
   
 -   [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  

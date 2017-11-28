@@ -1,13 +1,13 @@
 ---
 title: "Performance Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "04/08/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.service:
-ms.suite: ""
+ms.service: ""
+ms.component: "performance"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,8 +27,10 @@ caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This page provides links to help you locate the information that you need about performance in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Legend**  

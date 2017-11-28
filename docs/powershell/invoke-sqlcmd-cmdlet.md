@@ -2,9 +2,12 @@
 title: "Invoke-Sqlcmd cmdlet | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "powershell"
+ms.service: ""
+ms.component: "powershell"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd** is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet that runs scripts that CONTAIN statements from the languages ([!INCLUDE[tsql](../includes/tsql-md.md)] and XQuery) and commands supported by the **sqlcmd** utility.  
@@ -109,14 +113,14 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication login ID.|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication password.|-P|-Password|  
 |Variable definition.|-v|-Variable|  
-|Query timeout interval.|-t|-QueryTimeout|  
+|Query timeout interval (seconds).|-t|-QueryTimeout|  
 |Stop running on an error|-b|-AbortOnError|  
 |Dedicated Administrator Connection.|-A|-DedicatedAdministratorConnection|  
 |Disable interactive commands, startup script, and environment variables.|-X|-DisableCommands|  
 |Disable variable substitution.|-x|-DisableVariables|  
 |Minimum severity level to report.|-V|-SeverityLevel|  
 |Minimum error level to report.|-m|-ErrorLevel|  
-|Login timeout interval.|-l|-ConnectionTimeout|  
+|Login timeout interval (seconds).|-l|-ConnectionTimeout|  
 |Hostname.|-H|-HostName|  
 |Change password and exit.|-Z|-NewPassword|  
 |Input file containing a query|-i|-InputFile|  

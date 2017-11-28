@@ -6,9 +6,15 @@ ms.author: meetb
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid: tbd
+ms.workload: "Inactive"
 ---
 # DB Mail and Email Alerts with SQL Agent on Linux
 

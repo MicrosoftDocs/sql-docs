@@ -2,9 +2,12 @@
 title: "Server Network Configuration | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "configure-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,8 +25,10 @@ caps.latest.revision: 50
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Server Network Configuration
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Server network configuration tasks include enabling protocols, modifying the port or pipe used by a protocol, configuring encryption, configuring the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service, exposing or hiding the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] on the network, and registering the Server Principal Name. Most of the time, you do not have to change the server network configuration. Only reconfigure the server network protocols if special network requirements.  
   
  Network configuration for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is done using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. For earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the Server Network Utility that ships with those products.  

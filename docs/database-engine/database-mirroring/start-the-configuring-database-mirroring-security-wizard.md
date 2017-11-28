@@ -2,9 +2,12 @@
 title: "Start the Configuring Database Mirroring Security Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-mirroring"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 29
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Start the Configuring Database Mirroring Security Wizard
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The Configure Database Mirroring Security Wizard can be used to initially configure security settings at all or some server instances involved in mirroring. This wizard works in conjunction with the **Mirroring** page of the **Database Properties** dialog box.  
   
 ### To launch the Configure Database Mirroring Security Wizard  

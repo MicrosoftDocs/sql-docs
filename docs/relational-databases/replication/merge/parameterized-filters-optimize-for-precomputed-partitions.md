@@ -2,9 +2,12 @@
 title: "Optimize Parameterized Filter Performance with Precomputed Partitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 45
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Parameterized Filters - Optimize for Precomputed Partitions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Precomputed partitions is a performance optimization that can be used with filtered merge publications. Precomputed partitions is also a requirement for using logical records on filtered publications. For more information about logical records, see [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  When a Subscriber synchronizes with a Publisher, the Publisher must evaluate the Subscriber's filters to determine which rows belong to that Subscriber's partition, or data set. This process of determining partition membership of changes at the Publisher for each Subscriber receiving a filtered dataset is referred to as *partition evaluation*. Without precomputed partitions, partition evaluation must be performed for each change made to a filtered column at the Publisher since the last time the Merge Agent ran for a specific Subscriber, and this process has to be repeated for every Subscriber that synchronizes with the Publisher.  

@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Partition Column List Dialog Box (Visual Database Tools)
 If a table has an associated partition scheme, you can use this dialog box to choose which column(s) the partition function is applied to. For the function to work, the data type of the column you switch to must be the same as the data type of the column defined in the partition function.  

@@ -2,9 +2,12 @@
 title: "SQL:FullTextQuery Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL:FullTextQuery Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The SQL:FullTextQuery event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes a full text query. Include this event class in traces that are monitoring problems associated with full text catalogs.  
   
  When the SQL:FullTextQuery event class is included, the amount of overhead will be high. If such events occur frequently, the trace may significantly impede performance. To minimize this, limit the use of this event class to traces that monitor specific problems for brief periods of time.  

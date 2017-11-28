@@ -2,12 +2,18 @@
 title: "Run an SSIS package with Transact-SQL (VS Code) | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "integration-services"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Run an SSIS package from Visual Studio Code with Transact-SQL
 This quick start demonstrates how to use Visual Studio Code to connect to the SSIS Catalog database, and then use Transact-SQL statements to run an SSIS package stored in the SSIS Catalog.
@@ -45,7 +51,7 @@ Use Visual Studio Code to establish a connection to the SSIS Catalog.
 
 4. Follow the prompts to specify the connection properties for the new connection profile. After specifying each value, press **ENTER** to continue. 
 
-   | Setting       | Suggested value | More info |
+   | Setting       | Suggested value | More info |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server name** | The fully qualified server name | If you're connecting to an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`. |
    | **Database name** | **SSISDB** | The name of the database to which to connect. |

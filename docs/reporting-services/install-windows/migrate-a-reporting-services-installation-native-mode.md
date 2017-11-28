@@ -23,6 +23,7 @@ caps.latest.revision: 54
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)

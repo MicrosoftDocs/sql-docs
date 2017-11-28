@@ -1,10 +1,13 @@
 ---
 title: "Read-scale Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/11/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/24/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -13,10 +16,11 @@ ms.assetid:
 caps.latest.revision: 9
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Read-scale availability groups
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In addition to bringing together the best in class HA capabilities for SQL Server, an availability group is a comprehensive solution offering integrated scaling solutions as well. In a typical database application, there are multiple clients running various types of workloads and sometimes that can lead to bottlenecks due to resource constraints. You can free up resources and achieve higher throughput for the OLTP workload or deliver higher performance and scale on read-only workloads. This can be achieved by leveraging the fastest replication technology for SQL Server - create a group of replicated databases to offload reporting and analytics workloads to the read-only replicas. 
 
@@ -28,10 +32,12 @@ The client applications running analytics or reporting workloads can directly co
 
 In [!INCLUDE[sssql15-md](..\..\..\includes\sssql15-md.md)] and before, all availability groups required a cluster. The cluster provided business continuity - high availability and disaster recovery (HADR). In addition, secondary replicas could be configured for read operations. Configuring and operating a cluster implied a lot of operational overhead, if HA was not the goal. SQL Server 2017 introduces read-scale availability groups without a cluster. 
 
-If the business requirement is to conserve resources for mission-critical workloads running on the primary, users can now use read-only routing or directly connect to readable secondary replicas, without depending on integration with any clustering technology. These new capabilities are available for SQL Server 2017 running on both Windows and Linux platforms.
+If the business requirement is to conserve resources for mission-critical workloads running on the primary replica, users can now use read-only routing or directly connect to readable secondary replicas, without depending on integration with any clustering technology. These new capabilities are available for SQL Server 2017 running on both Windows and Linux platforms.
 
 >[!IMPORTANT]
->This is not a high-availability setup. There is no infrastructure to monitor and coordinate failure detection and automatic failover. For users who need HADR capabilities, use a cluster manager (WSFC on Windows or Pacemaker on Linux). 
+>This is not a high-availability setup. There is no infrastructure to monitor and coordinate failure detection and automatic failover. Without a cluster, SQL Server cannot provide the low recovery time objective (RTO) that an automated HA solution provides. For users who need HA capabilities, use a cluster manager (WSFC on Windows or Pacemaker on Linux). 
+>
+>The read-scale availability group can provide disaster recovery capability. When the read-only replicas are in synchronous-commit mode they provide a zero recovery point objective (RPO). To failover a read-scale availability group, see [Fail over primary replica on read-scale  availability group](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly)
 
 ## Use distributed availability groups for geographic read-scale
 

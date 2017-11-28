@@ -2,9 +2,12 @@
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "ssdt"
+ms.prod_service: "sql-non-specified"
+ms.service: "ssdt"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssdt"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,10 @@ caps.latest.revision: 113
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "Active"
 ---
 # Download SQL Server Data Tools (SSDT)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. 
 
 SSDT for Visual Studio 2017 (15.4.0 preview) is now available. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.4 or later.
@@ -29,9 +33,9 @@ SSDT for Visual Studio 2017 (15.4.0 preview) is now available. This release intr
 |||
 
 > [!IMPORTANT]
-> Before installing SSDT for Visual Studio 2017 (15.4.0 preview), close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017. 
+> Before installing SSDT for Visual Studio 2017 (15.4.0 preview), close all VS instances, and uninstall the "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed on VS 2017. 
 > 
-> SSDT for Visual Studio 2017 (15.3.0 preview) doesn't support upgrading so you must uninstall it before installing SSDT for Visual Studio 2017 (15.4.0 preview). 
+> "SSDT for Visual Studio 2017 (15.3.0 preview)" doesn't support upgrading, so you must uninstall it before installing "SSDT for Visual Studio 2017 (15.4.0 preview)". 
 
 
 SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.3: [Download Data-Tier Application Framework (DacFx) 17.3](https://www.microsoft.com/download/details.aspx?id=56048)

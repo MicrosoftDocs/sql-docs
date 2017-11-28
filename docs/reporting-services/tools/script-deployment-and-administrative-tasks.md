@@ -27,6 +27,7 @@ caps.latest.revision: 62
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # Script Deployment and Administrative Tasks

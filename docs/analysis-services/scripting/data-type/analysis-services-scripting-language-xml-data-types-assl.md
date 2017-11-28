@@ -2,9 +2,12 @@
 title: "Analysis Services Scripting Language XML Data Types (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Data Types (ASSL)
   This reference section contains syntax and usage information for each element that acts as a type in the Analysis Services Scripting Language (ASSL) schema.  

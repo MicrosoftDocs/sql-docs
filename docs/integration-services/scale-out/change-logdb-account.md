@@ -2,9 +2,12 @@
 title: "Change the account for SSIS Scale Out logging | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "scale-out"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,6 +16,7 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Change the account for Scale Out logging
 When executing packages in Scale Out, the event messages are logged into SSISDB with an auto-created user **##MS_SSISLogDBWorkerAgentLogin##**. 

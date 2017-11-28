@@ -2,9 +2,12 @@
 title: "SQLDescribeCol | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client-odbc-api"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLDescribeCol
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   For executed statements, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not need to query the server to describe columns in a result set. In this case, **SQLDescribeCol** does not cause a server roundtrip. Like [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)and[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), calling **SQLDescribeCol** on prepared but not executed statements generates a server roundtrip.  

@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/tools/overview-sql-tools
+redirect_url: /sql/tools/overview-sql-tools 
 ---

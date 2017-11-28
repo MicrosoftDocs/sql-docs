@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # rsModelGenerationError - Reporting Services Error
     

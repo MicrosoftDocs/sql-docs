@@ -2,9 +2,12 @@
 title: "Create a Custom Workflow (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "develop"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 8
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create a Custom Workflow (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] uses business rules to create basic workflow solutions, such as to automatically update and validate data and have e-mail notifications sent, based on conditions you specify. When you require processing that is more complex than what the built-in workflow actions provide, use a custom workflow. A custom workflow is a .NET assembly that you create. When your workflow assembly is called, your code can take whatever action your situation requires. For example, if your workflow requires complex event processing, such as multi-tiered approvals or complicated decision trees, you can configure [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] to start a custom workflow that analyzes the data and determines where to send it for approval.  

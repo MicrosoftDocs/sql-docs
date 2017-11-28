@@ -2,9 +2,12 @@
 title: "EnumString Data Type (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "xmla"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -27,7 +30,8 @@ ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # EnumString Data Type (XMLA)
   Defines a derived data type that represents a set of named constants for a given enumerator.  

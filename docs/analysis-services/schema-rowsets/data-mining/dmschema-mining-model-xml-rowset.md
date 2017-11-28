@@ -2,9 +2,12 @@
 title: "DMSCHEMA_MINING_MODEL_XML Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "schema-rowsets"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -21,7 +24,8 @@ ms.assetid: f58b00e9-3f72-4cff-b448-21a9fb529772
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_MODEL_XML Rowset
   Returns the XML structure of the mining model. The format of the XML string follows the Predictive Model Markup Language (PMML 2.1) standard.  

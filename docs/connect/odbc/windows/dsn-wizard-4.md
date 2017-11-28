@@ -3,8 +3,11 @@ title: "Data Source Wizard Screen 4 (ODBC Driver for SQL Server) | Microsoft Doc
 ms.custom: ""
 ms.date: "09/27/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Source Wizard Screen 4
 

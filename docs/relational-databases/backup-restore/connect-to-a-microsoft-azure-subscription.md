@@ -2,9 +2,12 @@
 title: "Connect to a Microsoft Azure Subscription | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Connect to a Microsoft Azure Subscription
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Use **Connect to a Microsoft Subscription** to register an existing Azure blob container with your instance of SQL Server.  The dialog box will create a shared access signature and stored access policy on an Azure blob container and then create a SQL Server Credential.  This dialog box appears when using the Back Up or Restore task from SQL Server Management Studio and the operation involves a URL device.
 
 ## Limitation

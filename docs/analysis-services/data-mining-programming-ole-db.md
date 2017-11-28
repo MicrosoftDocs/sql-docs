@@ -2,9 +2,12 @@
 title: "OLE DB for Data Mining | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -18,9 +21,10 @@ helpviewer_keywords:
   - "OLE DB for Data Mining"
 ms.assetid: 69f306df-8038-463f-91c3-5413503246c2
 caps.latest.revision: 30
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Data Mining Programming - OLE DB
   The data mining features in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] comply with the [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB for Data Mining 1.0 specification released in June 2000.  

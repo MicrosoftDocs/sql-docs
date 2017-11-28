@@ -2,9 +2,12 @@
 title: "Data Type Mapping in ITableDefinition | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client-ole-db-data-types"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -22,8 +25,10 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Type Mapping in ITableDefinition
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   When creating tables by using the **ITableDefinition::CreateTable** function, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumer can specify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types in the *pwszTypeName* member of the DBCOLUMNDESC array that is passed. If the consumer specifies the data type of a column by name, OLE DB data type mapping, represented by the *wType* member of the DBCOLUMNDESC structure, is ignored.  

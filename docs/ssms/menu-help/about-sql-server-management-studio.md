@@ -18,6 +18,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # About SQL Server Management Studio
 Use this dialog box to view or copy information about your installation of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Evaluation editions list the number of days remaining until the product expires.  

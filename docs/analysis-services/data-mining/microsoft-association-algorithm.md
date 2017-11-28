@@ -2,9 +2,12 @@
 title: "Microsoft Association Algorithm | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -34,7 +37,8 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 caps.latest.revision: 55
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Microsoft Association Algorithm
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm is an algorithm that is often used for recommendation engines. A recommendation engine recommends items to customers based on items they have already bought, or in which they have indicated an interest. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm is also useful for market basket analysis.   

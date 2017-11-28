@@ -1,10 +1,13 @@
 ---
 title: "PDOStatement::bindParam | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "10/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,11 +28,11 @@ Binds a parameter to a named or question mark placeholder in the SQL statement.
   
 ```  
   
-bool PDOStatement::bindParam( $parameter, &$variable [,$data_type[, $length[, $driver_options]]] );  
+bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $driver_options]]]);  
 ```  
   
 #### Parameters  
-$*parameter*: A (mixed) parameter identifier. For a statement using named placeholders, a parameter name (:name). For a prepared statement using the question mark syntax, this will be the 1-based index of the parameter.  
+$*parameter*: A (mixed) parameter identifier. For a statement using named placeholders, use a parameter name (:name). For a prepared statement using the question mark syntax, it is the 1-based index of the parameter.  
   
 &$*variable*: The (mixed) name of the PHP variable to bind to the SQL statement parameter.  
   
@@ -42,10 +46,10 @@ $*driver_options*: The optional (mixed) driver-specific options. For example, yo
 TRUE on success, otherwise FALSE.  
   
 ## Remarks  
-When binding null data to server columns of type varbinary, binary, or varbinary(max) you should specify binary encoding (PDO::SQLSRV_ENCODING_BINARY) using the $*driver_options*. See [Constants](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) for more information about encoding constants.  
+When binding null data to server columns of type varbinary, binary, or varbinary(max) you should specify binary encoding (PDO::SQLSRV_ENCODING_BINARY) using the $*driver_options*. For more information about encoding constants, see [Constants](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-  
+
 ## Example  
 This code sample shows that after $contact is bound to the parameter, changing the value does change the value passed in the query.  
   
@@ -53,7 +57,7 @@ This code sample shows that after $contact is bound to the parameter, changing t
 <?php  
 $database = "AdventureWorks";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $contact = "Sales Agent";  
 $stmt = $conn->prepare("select * from Person.ContactType where name = ?");  
@@ -61,7 +65,7 @@ $stmt->bindParam(1, $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
   
@@ -72,7 +76,7 @@ $stmt->bindParam(':contact', $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
 ?>  
@@ -85,12 +89,12 @@ This code sample shows how to access an output parameter.
 <?php  
 $database = "Test";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $input1 = 'bb';  
   
-$stmt = $conn->prepare("select ? = count(* ) from Sys.tables");  
-$stmt->bindParam( 1, $input1, PDO::PARAM_STR, 10 );  
+$stmt = $conn->prepare("select ? = count(*) from Sys.tables");  
+$stmt->bindParam(1, $input1, PDO::PARAM_STR, 10);  
 $stmt->execute();  
 echo $input1;  
 ?>  
@@ -103,7 +107,7 @@ This code sample shows how to use an input/output parameter.
 <?php  
    $database = "AdventureWorks";  
    $server = "(local)";  
-   $dbh = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+   $dbh = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
    $dbh->query("IF OBJECT_ID('dbo.sp_ReverseString', 'P') IS NOT NULL DROP PROCEDURE dbo.sp_ReverseString");  
    $dbh->query("CREATE PROCEDURE dbo.sp_ReverseString @String as VARCHAR(2048) OUTPUT as SELECT @String = REVERSE(@String)");  
@@ -114,7 +118,29 @@ This code sample shows how to use an input/output parameter.
    print $string;   // Expect 987654321  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+
+## Example  
+This code sample shows how to bind a decimal value as an input parameter.  
+
+```
+<?php  
+$database = "Test";  
+$server = "(local)";  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
+
+// Assume TestTable exists with a decimal field 
+$input = 9223372036854.80000;
+$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
+// by default it is PDO::PARAM_STR, rounding of a large input value may
+// occur if PDO::PARAM_INT is specified
+$stmt->bindParam(1, $input, PDO::PARAM_STR);
+$stmt->execute();
+```
+
+
 ## See Also  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  

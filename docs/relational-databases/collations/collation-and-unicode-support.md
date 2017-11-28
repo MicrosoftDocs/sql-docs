@@ -1,10 +1,13 @@
 ---
 title: "Collation and Unicode Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/04/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/24/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "collations"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -31,8 +34,10 @@ caps.latest.revision: 46
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Collation and Unicode Support
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Collations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide sorting rules, case, and accent sensitivity properties for your data. Collations that are used with character data types such as **char** and **varchar** dictate the code page and corresponding characters that can be represented for that data type. Whether you are installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restoring a database backup, or connecting server to client databases, it is important that you understand the locale requirements, sorting order, and case and accent sensitivity of the data that you are working with. To list the collations available on your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
     
  When you select a collation for your server, database, column, or expression, you are assigning certain characteristics to your data that affects the results of many operations in the database. For example, when you construct a query by using ORDER BY, the sort order of your result set might depend on the collation that is applied to the database or dictated in a COLLATE clause at the expression level of the query.    
@@ -126,7 +131,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  You can also try to use a different collation for the data on the server. Choose a collation that maps to a code page on the client.    
     
- To use the UTF-16 collations available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can select one of the supplementary characters `_SC` collations (Windows collations only) to improve searching and sorting of some Unicode characters.    
+ To use the UTF-16 collations available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to improve searching and sorting of some Unicode characters (Windows collations only), you can select either one of the supplementary characters (_SC) collations or one of the version 140 collations.    
     
  To evaluate issues that are related to using Unicode or non-Unicode data types, test your scenario to measure performance differences in your environment. It is a good practice to standardize the collation that is used on systems across your organization, and deploy Unicode servers and clients wherever possible.    
     
@@ -148,35 +153,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> Supplementary Characters    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides data types such as **nchar** and **nvarchar** to store Unicode data. These data types encode text in a format called *UTF-16*. The Unicode Consortium allocates each character a unique codepoint, which is a value in the range 0x0000 to 0x10FFFF. The most frequently used characters have codepoint values that fit into a 16-bit word in memory and on disk, but characters with codepoint values larger than 0xFFFF require two consecutive 16-bit words. These characters are called *supplementary characters*, and the two consecutive 16-bit words are called *surrogate pairs*.    
     
+ Introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a new family of supplementary character (_SC) collations can be used with the data types **nchar**, **nvarchar**, and **sql_variant**. For example: `Latin1_General_100_CI_AS_SC`, or if using a Japanese collation, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
+
+ Starting in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], all new collations automatically support supplementary characters.
+
  If you use supplementary characters:    
     
 -   Supplementary characters can be used in ordering and comparison operations in collation versions 90 or greater.    
     
--   All _100 level collations support linguistic sorting with supplementary characters.    
+-   All version 100 collations support linguistic sorting with supplementary characters.    
     
 -   Supplementary characters are not supported for use in metadata, such as in names of database objects.    
     
--   Introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a new family of supplementary character (SC) collations can be used with the data types **nchar**, **nvarchar**, and **sql_variant**. For example: `Latin1_General_100_CI_AS_SC`, or if using a Japanese collation, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
-  > [!NOTE]    
-  >  Databases that use collations with supplementary characters (\_SC), cannot be enabled for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication. This is because some of the system tables and stored procedures that are created for replication, use the legacy **ntext** data type,  which does not support supplementary characters.  
+-   Databases that use collations with supplementary characters (\_SC), cannot be enabled for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication. This is because some of the system tables and stored procedures that are created for replication, use the legacy **ntext** data type,  which does not support supplementary characters.  
     
-     The SC flag can be applied to:    
+-   The SC flag can be applied to:    
     
-    -   Version 90 Windows collations    
+    -   Version 90 collations    
     
-    -   Version 100 Windows collations    
+    -   Version 100 collations    
     
-     The SC flag cannot be applied to:    
+-   The SC flag cannot be applied to:    
     
     -   Version 80 non-versioned Windows collations    
     
     -   The BIN or BIN2 binary collations    
     
-    -   The SQL* collations    
+    -   The SQL\* collations    
     
- The following table compares the behavior of some string functions and string operators when they use supplementary characters with and without a SC collation.    
+    -   Version 140 collations (these don't need the SC flag as they already support supplementary characters)    
     
-|String Function or Operator|With an SC Collation|Without an SC Collation|    
+ The following table compares the behavior of some string functions and string operators when they use supplementary characters with and without a supplementary character-aware (SCA) collation:    
+    
+|String Function or Operator|With a Supplementary Character-Aware (SCA) Collation|Without an SCA Collation|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|The UTF-16 surrogate pair is counted as a single codepoint.|The UTF-16 surrogate pair is counted as two codepoints.|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|These functions treat each surrogate pair as a single codepoint and work as expected.|These functions may split any surrogate pairs and lead to unexpected results.|    
@@ -198,13 +207,15 @@ Database applications that interact with [!INCLUDE[ssNoVersion](../../includes/s
 
 ##  <a name="Japanese_Collations"></a> Japanese Collations added in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-Starting in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], two new Japanese collation families are supported, with the permutations of various options (_CS, _AS, _KS, _WS, _VSS, etc.). 
+Starting in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], two new Japanese collation families are supported, with the permutations of various options (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
-To list these collations, you may query the SQL Server Database Engine:
+To list these collations, you can query the SQL Server Database Engine:
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
+
+All of the new collations have built-in support for supplementary characters, so none of the new collations have (or need) the SC flag.
 
 These collations are supported in Database Engine indexes, memory-optimized tables, columnstore indexes, and natively compiled modules.
     

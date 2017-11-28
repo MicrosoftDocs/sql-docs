@@ -2,9 +2,12 @@
 title: "AggregationDimension Data Type (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 697e0e09-3210-4a56-882f-80726abc4c68
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AggregationDimension Data Type (ASSL)
   Defines a primitive data type that represents the relationship between a dimension and an [Aggregation](../../../analysis-services/scripting/objects/aggregation-element-assl.md) element.  

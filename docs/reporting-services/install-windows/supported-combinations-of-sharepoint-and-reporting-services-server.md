@@ -19,6 +19,7 @@ caps.latest.revision: 39
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Supported combinations of SharePoint and Reporting Services server

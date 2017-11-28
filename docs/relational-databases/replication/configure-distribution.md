@@ -2,9 +2,12 @@
 title: "Configure Distribution | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -24,8 +27,10 @@ caps.latest.revision: 44
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Configure Distribution
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The Distributor is a server that contains the distribution database, which stores metadata and history data for all types of replication and transactions for transactional replication. To set up replication, you must configure a Distributor. Each Publisher can be assigned to only a single Distributor instance, but multiple publishers can share a Distributor. The Distributor uses these additional resources on the server where it is located:  
   
 -   Additional disk space if the snapshot files for the publication are stored on the Distributor (which they typically are).  

@@ -2,9 +2,12 @@
 title: "Lesson 5: Defining Relationships Between Dimensions and Measure Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Lesson 5: Defining Relationships Between Dimensions and Measure Groups
 In the previous lessons in this tutorial, you learned that database dimensions added to a cube can be used as the basis for one or more cube dimensions. In this lesson, you learn to define different types of relationships between cube dimensions and measure groups, and to specify the properties of these relationships.  

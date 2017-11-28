@@ -1,13 +1,13 @@
 ---
 title: "sys.index_resumable_operations (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "07/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.service: 
-ms.suite: ""
+ms.service: ""
+ms.component: "system-catalog-views"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,11 +26,12 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
 
+ms.workload: "Inactive"
 ---
 # index_resumable_operations (Transact-SQL)
-
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 **sys.index_resumable_operations** is a system view that monitors and checks the current execution status for resumable Index rebuild.  
-**Applies to**: SQL Server 2017 and Azure SQL Database (feature is in public preview)
+**Applies to**: SQL Server 2017 and Azure SQL Database 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

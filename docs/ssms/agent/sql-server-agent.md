@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SQL Server Agent
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)].  

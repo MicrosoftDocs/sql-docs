@@ -2,9 +2,12 @@
 title: "MDSCHEMA_MEASUREGROUP_DIMENSIONS Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "schema-rowsets"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -21,7 +24,8 @@ ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_MEASUREGROUP_DIMENSIONS Rowset
   Enumerates the dimensions of measure groups.  

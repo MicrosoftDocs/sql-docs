@@ -3,9 +3,12 @@ title: "SQL Server Management Objects Support for In-Memory OLTP | Microsoft Doc
 description: "Describes items in SQL Server Management Objects (SMO) that support In-Memory OLTP."
 ms.custom: ""
 ms.date: "08/18/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,10 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Management Objects Support for In-Memory OLTP
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 This topic describes items in SQL Server Management Objects (SMO) that support In-Memory OLTP.  
 
 ## SMO types and members

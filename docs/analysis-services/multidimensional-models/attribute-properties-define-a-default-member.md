@@ -2,9 +2,12 @@
 title: "Define a Default Member | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -20,7 +23,8 @@ ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Attribute Properties - Define a Default Member
   The default member of an attribute hierarchy is used to evaluate expressions when an attribute hierarchy is not included in a query. The default member is ignored whenever a query includes an attribute hierarchy or user hierarchy that contains the attribute that sources the attribute hierarchy. This is because the member specified in the query is used.  

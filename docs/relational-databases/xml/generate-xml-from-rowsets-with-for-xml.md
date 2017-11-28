@@ -2,9 +2,12 @@
 title: "Generate XML from Rowsets with FOR XML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "xml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Generate XML from Rowsets with FOR XML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   You can generate an **xml** data type instance from a rowset by using FOR XML with the new **TYPE** directive.  
   
  The result can be assigned to an **xml** data type column, variable, or parameter. Also, FOR XML can be nested to generate any hierarchical structure. This makes nested FOR XML much more convenient to write than FOR XML EXPLICIT, but it may not perform as well for deep hierarchies. FOR XML also introduces a new PATH mode. This new mode specifies the path in the XML tree where a column's value appears.  

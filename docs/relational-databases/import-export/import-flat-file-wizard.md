@@ -3,8 +3,11 @@ title: "Import Flat File to SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "import-export"
 ms.reviewer: "douglasl"
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ f1_keywords:
 author: "yualan"
 ms.author: "alayu"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Import Flat File to SQL Wizard
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > For content related to the Import and Export Wizard, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a destination. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.

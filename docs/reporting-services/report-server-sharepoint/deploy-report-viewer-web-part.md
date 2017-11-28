@@ -13,6 +13,7 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site
@@ -71,7 +72,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 ## Activate feature
 
-1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings*.
+1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
 
     ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
 
@@ -111,7 +112,7 @@ Although SharePoint Central Administration provides solution retraction, you do 
 
 Retracting the solution does not remove the Report Viewer web part from the list of web parts within your SharePoint site. To remove the Report Viewer web part, do the following.
 
-1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings*.
+1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
 
     ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
 

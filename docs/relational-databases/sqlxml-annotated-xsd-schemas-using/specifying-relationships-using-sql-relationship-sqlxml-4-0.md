@@ -2,9 +2,12 @@
 title: "Specifying Relationships Using sql:relationship (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -32,8 +35,10 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specifying Relationships Using sql:relationship (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The elements in an XML document can be related. The elements can be nested hierarchically, and ID, IDREF, or IDREFS relationships can be specified between the elements.  
   
  For example, in an XSD schema, a **\<Customer>** element contains **\<Order>** child elements. When the schema is mapped to the AdventureWorks database, the **\<Customer>** element maps to the Sales.Customer table and the **\<Order>** element maps to the Sales.SalesOrderHeader table. These underlying tables, Sales.Customer and Sales.SalesOrderHeader, are related because customers place orders. The CustomerID in the Sales.SalesOrderHeader table is a foreign key referring to the CustomerID primary key in the Sales.Customer table. You can establish these relationships among mapping schema elements by using the **sql:relationship** annotation.  

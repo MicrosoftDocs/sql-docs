@@ -18,6 +18,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add Related Tables to Diagrams (Visual Database Tools)
 You can quickly add to a database diagram all of the tables that are involved in a relationship with a selected table.  

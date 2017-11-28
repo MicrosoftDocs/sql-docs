@@ -1,11 +1,13 @@
 ---
 title: "Prepare for upgrade by running Data Migration Assistant | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -15,8 +17,10 @@ caps.latest.revision: 7
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Prepare for upgrade by running Data Migration Assistant
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Prepare to upgrade your OLTP databases and to adopt new features in [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] by downloading and running Microsoft Data Migration Assistant.  
   
 ## Download and install Data Migration Assistant  

@@ -2,12 +2,18 @@
 title: "Deploy an SSIS project with SSMS | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "integration-services"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Deploy an SSIS project with SQL Server Management Studio (SSMS)
 This quick start demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then run the Integration Services Deployment Wizard to deploy an SSIS project to the SSIS Catalog. 
@@ -29,7 +35,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
 
 2. In the **Connect to Server** dialog box, enter the following information:
 
-   | Setting       | Suggested value | More info | 
+   | Setting       | Suggested value | More info | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database engine | This value is required. |
    | **Server name** | The fully qualified server name | If you're connecting to an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`. |

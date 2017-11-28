@@ -2,9 +2,12 @@
 title: "CLR Integration Programming Model Restrictions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CLR Integration Programming Model Restrictions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When you are building a managed stored procedure or other managed database object, there are certain code checks performed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that need to be considered. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] performs checks on the managed code assembly when it is first registered in the database, using the **CREATE ASSEMBLY** statement, and also at runtime. The managed code is also checked at runtime because in an assembly there may be code paths that may never actually be reached at runtime.  This provides flexibility for registering third party assemblies, especially, so that an assembly wouldn't be blocked where there is 'unsafe' code designed to run in a client environment but would never be executed in the hosted CLR. The requirements that the managed code must meet depend on whether the assembly is registered as **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**, **SAFE** being the strictest, and are listed below.  
   
  In addition to restrictions being placed on the managed code assemblies, there are also code security permissions that are granted. The common language runtime (CLR) supports a security model called code access security (CAS) for managed code. In this model, permissions are granted to assemblies based on the identity of the code. **SAFE**, **EXTERNAL_ACCESS**, and **UNSAFE** assemblies have different CAS permissions. For more information, see [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  

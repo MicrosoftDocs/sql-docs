@@ -2,9 +2,12 @@
 title: "Create an Analysis Services Project (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,7 +25,8 @@ ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Create an Analysis Services Project (SSDT)
   You can define an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] either by using the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Project template or by using the Import [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Database Wizard to read the contents of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. If no solution is currently loaded in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], creating a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project automatically creates a new solution. Otherwise, the new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project will be added to the existing solution. Best practices for solution development call for creating separate projects for different types of application data, using a single solution if the projects are related. For example, you might have a single solution that contains separate projects for Integration Services packages, Analysis Services databases, and Reporting Services reports that are all used by the same business application.  

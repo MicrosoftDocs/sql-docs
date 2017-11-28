@@ -3,8 +3,11 @@ title: "Step 1: Configure pyodbc Python development environment | Microsoft Docs
 ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "python"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Step 1: Configure development environment for pyodbc Python development
 
@@ -21,7 +25,7 @@ manager: "jhubbard"
 Connect to SQL Database by using Python - pyodbc on Windows:
   
 1. **Download Python installer**  
-  If your machine does not have Python please install it. Go the [Python download page](https://www.python.org/downloads/windows/) and download the appropriate installer. For example if you are on a 64 bit machine, download the Python 2.7 or 3.5 (x64) installer.  
+  If your machine does not have Python please install it. Go the [Python download page](https://www.python.org/downloads/windows/) and download the appropriate installer. For example if you are on a 64 bit machine, download the Python 2.7 or 3.5 (x64) installer.  
   
 2. **Install Python**  Once the installer is downloaded, do the following:
 a. Double-click the file to start the installer. 
@@ -49,14 +53,14 @@ Connect to SQL Database by using Python - pyodbc on Ubuntu and RedHat:
   For Ubuntu 15.04 + 
 ``` 
 > sudo su  
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-Ubuntu-b87369f0/file/154097/2/installodbc.sh  
+> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-Ubuntu-b87369f0/file/154097/2/installodbc.sh  
 > sh installodbc.sh  
 ```   
 
   For RedHat 6,7 
 ``` 
 > sudo su 
-> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 
+> wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL-8d067754/file/153653/4/install.sh 
 > sh install.sh 
 ```  
   

@@ -2,9 +2,12 @@
 title: "Using DRILLTHROUGH to Retrieve Source Data (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -20,7 +23,8 @@ ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - Retrieve Source Data Using DRILLTHROUGH
   Multidimensional Expressions (MDX) uses the [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)statement to retrieve a rowset from the source data for a cube cell.  

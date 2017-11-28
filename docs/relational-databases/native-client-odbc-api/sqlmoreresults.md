@@ -2,9 +2,12 @@
 title: "SQLMoreResults | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client-odbc-api"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLMoreResults
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   **SQLMoreResults** allows the application to retrieve multiple sets of result rows. A [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement containing a COMPUTE clause, or a submitted batch of ODBC or [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, causes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver to generate multiple result sets. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow creating a server cursor to process the results in either case. Therefore, the developer must ensure that the ODBC statement is blocking. The developer must exhaust the returned data or cancel the ODBC statement before processing data from other active statements on the connection.  

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 1: Download the sample data
 

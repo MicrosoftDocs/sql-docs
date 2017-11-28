@@ -2,9 +2,12 @@
 title: "TableID Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TableID Element (ASSL)
   Contains the identifier (ID) of the table (from the [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) element) associated with the parent element.  

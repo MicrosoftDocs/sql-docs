@@ -27,7 +27,7 @@ ms.workload: "On Demand"
 
 # Perform a planned manual failover of an availability group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] failover, transitions a secondary replica to primary role. Concurrently, the failover transitions the former primary replica to the secondary role.  
+This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any AlwaysOn availability group failover, transitions a secondary replica to primary role. Concurrently, the failover transitions the former primary replica to the secondary role.  
   
 A planned manual failover is supported only when the primary replica and the target secondary replica are running in synchronous-commit mode and are currently synchronized. A planned manual failver preserves all the data in the secondary databases that are joined to the availability group on the target secondary replica. After the former primary replica transitions to the secondary role, its databases become secondary databases. Then they begin to synchronize with the new primary databases. After they all transition into the SYNCHRONIZED state, the new secondary replica becomes eligible to serve as the target of a future planned manual failover.  
   
@@ -59,7 +59,7 @@ A planned manual failover is supported only when the primary replica and the tar
 ###  <a name="Security"></a> Security 
   
 ####  <a name="Permissions"></a> Permissions 
- The ALTER AVAILABILITY GROUP permission is required on the availability group. The CONTROL AVAILABILITY GROUP permission, the ALTER ANY AVAILABILITY GROUP permission, or the CONTROL SERVER permission also are required. 
+ The ALTER AVAILABILITY GROUP permission is required on the availability group. The CONTROL AVAILABILITY GROUP permission, the ALTER ANY AVAILABILITY GROUP permission, or the CONTROL SERVER permission also is required. 
   
 ##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio 
  To manually fail over an availability group: 
@@ -81,7 +81,7 @@ A planned manual failover is supported only when the primary replica and the tar
   
      ALTER AVAILABILITY GROUP *group_name* FAILOVER 
   
-     where *group_name* is the name of the availability group. 
+     In the statement, *group_name* is the name of the availability group. 
   
      The following example manually fails over the *MyAg* availability group to the connected secondary replica: 
   
@@ -111,7 +111,7 @@ A planned manual failover is supported only when the primary replica and the tar
     -   [Get help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
 ##  <a name="FollowUp"></a> Follow up: After you manually fail over an availability group 
- If you failed over outside of the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the Windows Server failover clustering nodes to reflect your new availability group configuration. For more information, see [Windows Server failover clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
+ If you failed over outside the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the Windows Server failover clustering nodes to reflect your new availability group configuration. For more information, see [Windows Server failover clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
 <a name = "ReadScaleOutOnly"><a/>
 

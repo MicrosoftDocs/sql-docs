@@ -177,7 +177,7 @@ public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTAR
     // Extract number of days as positive integer.  
     fileAgeLimit = Math.Abs(fileAgeLimit);  
   
-    ArrayList listForEnumerator = new ArrayList();  
+    listForEnumerator = new ArrayList();  
   
     GetFilesInFolder(FILE_ROOT);  
   

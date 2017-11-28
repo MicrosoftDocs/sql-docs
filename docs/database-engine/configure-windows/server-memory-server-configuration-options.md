@@ -91,7 +91,7 @@ Setting this option does not affect [!INCLUDE[ssNoVersion](../../includes/ssnove
 > Setting this option should only be used when necessary, namely if there are signs that sqlservr process is being paged out.
 > In this case, error 17890 will be reported in the Errorlog, resembling the below example:
 > `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
-> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [trace flag 815](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is not needed for Standard Edition to use Locked Pages. 
+> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [trace flag 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is not needed for Standard Edition to use Locked Pages. 
   
 ### To enable Lock Pages in Memory  
 To enable the lock pages in memory option:  

@@ -181,7 +181,7 @@ There are two options to set up the on-premises environment so you can use Kerbe
 
     4. Use the **Ksetup** command to specify the encryption algorithm to be used on the specific REALM.
 
-    `C:> ksetup /SetEncTypeAttr REALM.COM DES-CBC-CRC DES-CBC-MD5 RC4-HMAC-MD5 AES128-CTS-HMAC-SHA1-96 AES256-CTS-HMAC-SHA1-96`
+        `C:> ksetup /SetEncTypeAttr REALM.COM DES-CBC-CRC DES-CBC-MD5 RC4-HMAC-MD5 AES128-CTS-HMAC-SHA1-96 AES256-CTS-HMAC-SHA1-96`
 
 4.	To use the Kerberos principal in the Windows Domain, create the mapping between the domain account and Kerberos principal.
 

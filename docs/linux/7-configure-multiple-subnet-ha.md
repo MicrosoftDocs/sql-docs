@@ -1,5 +1,5 @@
 ---
-title: Configure multiple-subnet Always On Availability Groups and failover cluster instances | Microsoft Docs
+title: Configure multiple-subnet Always On Availability Groups and failover cluster instances on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

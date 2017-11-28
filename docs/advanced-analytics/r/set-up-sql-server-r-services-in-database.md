@@ -1,7 +1,7 @@
 ---
 title: "Set up SQL Server Machine Learning Services (In-Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/31/2017"
+ms.date: "11/15/2017"
 ms.prod: 
   - "sql-server-2016"
   - "sql-server-2017"
@@ -14,6 +14,8 @@ ms.topic: "article"
 keywords: 
   - "installing SQL Server R Services"
   - "installing SQL Server Machine Learning Services"
+  - "Set up R Services"
+  - "install SQL machine learning"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
 caps.latest.revision: 36
 author: "jeannt"
@@ -33,7 +35,7 @@ This topic describes how to install and configure the following machine learning
 
     [Set up machine learning in SQL Server 2017](#bkmk_2017top)
 
-+ Machine learning server with **no** SQL Server
++ A machine learning server with **no** SQL Server
 
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup also includes the option to install a "standalone" version of the machine learning components that does not require the database engine, and does not run in SQL Server.  We generally recommend that you install this option on a different computer than the computer that hosts SQL Server.
     
@@ -62,7 +64,9 @@ This article describes the process of setup that uses the [!INCLUDE[ssNoVersion]
 
 + If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Side-by-side installation is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
-+ Currently, you cannot install the machine learning features on a failover cluster. The reason is that the security mechanism that's used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can do either of the following:
++ You cannot install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller. The R Services or Machine Learning Services portion of setup will fail.
+
++ You cannot install the machine learning features on a failover cluster. The security mechanism that's used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can do either of the following:
     * Use replication to copy necessary tables to a SQL Server instance with machine learning enabled.
     * Install machine learning on a standalone computer that uses AlwaysOn and is part of an availability group.
 

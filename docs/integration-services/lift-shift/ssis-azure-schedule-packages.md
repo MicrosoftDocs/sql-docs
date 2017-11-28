@@ -2,7 +2,12 @@
 title: "Schedule SSIS package execution on Azure | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "lift-shift"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "integration-services"
 author: "douglaslMS"
@@ -113,6 +118,8 @@ To schedule a package with the Azure Data Factory SQL Server Stored Procedure ac
 4.  Create a Data Factory pipeline that uses the SQL Server Stored Procedure activity to run the SSIS package.
 
 This section provides an overview of these steps. A complete Data Factory tutorial is beyond the scope of this article. For more info, see [SQL Server Stored Procedure Activity](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
+
+If a scheduled execution fails, and the ADF Stored Procedure Activity provides an execution ID for the failed execution, check the execution report for that ID in SSMS in the SSIS Catalog.
 
 ### Created a linked service for the SQL Database that hosts SSISDB
 The linked service lets Data Factory connect to SSISDB.

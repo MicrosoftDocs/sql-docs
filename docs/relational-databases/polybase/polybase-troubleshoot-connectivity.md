@@ -9,16 +9,21 @@ editor:
 tags: 
 
 ms.assetid: 
-ms.service: 
-ms.custom: 
+ms.service: ""
+ms.component: "polybase"
+ms.suite: "sql"
+ms.custom: ""
 ms.workload: 
 ms.tgt_pltfrm: na
 ms.devlang: 
 ms.topic: article
 ms.date: 07/19/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.author: alazad
 ---
 # Troubleshoot PolyBase Kerberos connectivity
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 You can use an interactive diagnostics tool that has been built into PolyBase to help troubleshoot authentication problems when using PolyBase against a Kerberos-secured Hadoop cluster. 
 
 This article serves as a guide to walk through the debugging process of such issues by leveraging this tool.

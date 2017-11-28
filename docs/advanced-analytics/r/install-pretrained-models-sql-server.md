@@ -1,6 +1,6 @@
 ---
 title: "Install pretrained machine learning models on SQL Server | Microsoft Docs"
-ms.date: "11/03/2017"
+ms.date: "11/16/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -67,11 +67,11 @@ For more information about deep learning networks and their implementation using
     
     `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-4. Specify the component to install, the version, and the folder containing the model source files, by using the arguments to RSetup.exe, as shown in these examples:
+4. Run RSetup.exe and indicate the component to install, the version, and the folder containing the model source files, using the command-line arguments shown in these examples:
 
-  + To use models with **R_SERVICES**, use the following syntax and paths:
+    + To use models with **R_SERVICES**:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     For example, to enable use of the latest version of the pretrained models for R, in a default instance of SQL Server 2017, you would run this statement:
 
@@ -81,19 +81,35 @@ For more information about deep learning networks and their implementation using
 
     `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + To use models with **PYTHON_SERVICES**, use the following syntax and paths:
+    + To use pretrained models with R Server (Standalone) or Machine Learning Server (Standalone):
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
+
+    For example, to enable use of the latest version of the pretrained models for R, in a default installation of R Server with SQL Server 2016, you would run this statement:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir ‘C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
+    
+    + To use pretrained models with **PYTHON_SERVICES**:
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     For example, to enable use of the latest version of the pretrained models for Python, in a default instance of SQL Server 2017, you would run this statement:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     On a named instance, the command would be something like this:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-5. For the version parameter, the following values are supported:
+    + To use Python pretrained models with Machine Learning Server (Standalone):
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<sql_folder>\PYTHON_SERVER\site-packages\microsoftml\mxLibs"`
+
+    For example, assuming a default installation of Machine Learning Server (Standalone) using SQL Server 2017 setup, run this statement:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER\Lib\site-packages\microsoftml\mxLibs"`
+
+5. The following values are supported for the version parameter:
 
     + Release candidate 0: **9.1.0.0**
     + Release candidate 1: **9.2.0.22**

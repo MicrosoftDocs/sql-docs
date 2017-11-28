@@ -73,7 +73,7 @@ ms.technology:
                                                 </ul>
                                                 <h4>Tools</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
+                                                    <li><a class="barLink" href="/sql/sql-operations-studio/download">SQL Operations Studio <sup>PREVIEW</sup></a></li>   <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
                                                     <li><a class="barLink" href="/sql/tools/overview-sql-tools">See all SQL tools</a></li>
                                                 </ul>
@@ -88,7 +88,7 @@ ms.technology:
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Code samples</a></li>
                                                     <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works">AdventureWorks</a></li>
+                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">AdventureWorks</a></li>
                                                 </ul>
                                             </div>
                                         </div>

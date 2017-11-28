@@ -1,10 +1,13 @@
 ---
 title: "Trace Flags (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "11/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,7 +30,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # DBCC TRACEON - Trace Flags (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Trace flags are used to temporarily set specific server characteristics or to switch off a particular behavior. For example, if trace flag 3205 is set when an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts, hardware compression for tape drivers is disabled. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems.
   
@@ -72,7 +75,7 @@ The following table lists and describes the trace flags that are available in [!
 |**2312**|Enables you to set the query optimizer cardinality estimation model to the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versions, dependent of the compatibility level of the database. For more information, see [Microsoft Support article](http://support.microsoft.com/kb/2801413).<br /><br />Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, to accomplish this at the query level, add the USE HINT 'FORCE_DEFAULT_CARDINALITY_ESTIMATION' [query hint](../../t-sql/queries/hints-transact-sql-query.md)  instead of using this trace flag.<br /><br />**Scope**: global or session or query| 
 |**2335**|Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to assume a fixed amount of memory is available during query optimization. It does not limit the memory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grants to execute the query. The memory configured for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will still be used by data cache, query execution and other consumers. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2413549).<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Scope**: global or session or query|
 |**2340**|Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to use a sort operation (batch sort) for optimized nested loop joins when generating a plan. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2009160).<br /><br />Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, to accomplish this at the query level, add the USE HINT 'DISABLE_OPTIMIZED_NESTED_LOOP' [query hint](../../t-sql/queries/hints-transact-sql-query.md)  instead of using this trace flag.<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Scope**: global or session or query|
-|**2371**|Changes the fixed auto update statistics threshold to dynamic auto update statistics threshold. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2754171).<br /><br />**Note:** Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] this behavior is controlled by the engine and trace flag 2371 has no effect.<br /><br />**Scope**: global only|
+|**2371**|Changes the fixed auto update statistics threshold to dynamic auto update statistics threshold. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2754171).<br /><br />**Note:** Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, this behavior is controlled by the engine and trace flag 2371 has no effect.<br /><br />**Scope**: global only|
 |**2389**|Enable automatically generated quick statistics for ascending keys (histogram amendment). If trace flag 2389 is set, and a leading statistics column is marked as ascending, then the histogram used to estimate cardinality will be adjusted at query compile time. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2801413).<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Note:** This trace flag does not apply to CE version 120 or above. Use trace flag 4139 instead.<br /><br />**Scope**: global or session or query|
 |**2390**|Enable automatically generated quick statistics for ascending or unknown keys (histogram amendment). If trace flag 2390 is set, and a leading statistics column is marked as ascending or unknown, then the histogram used to estimate cardinality will be adjusted at query compile time. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2801413).<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Note:** This trace flag does not apply to CE version 120 or above. Use trace flag 4139 instead.<br /><br />**Scope**: global or session or query|
 |**2453**|Allows a table variable to trigger recompile when enough number of rows are changed. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2952444).<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Scope**: global or session or query|

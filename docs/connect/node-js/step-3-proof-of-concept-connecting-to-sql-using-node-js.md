@@ -3,8 +3,11 @@ title: "Step 3: Proof of concept connecting to SQL using Node.js | Microsoft Doc
 ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "node-js"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""

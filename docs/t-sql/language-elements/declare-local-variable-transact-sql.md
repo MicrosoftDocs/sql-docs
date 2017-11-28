@@ -3,8 +3,11 @@ title: "DECLARE @local_variable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,7 +30,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # DECLARE @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Variables are declared in the body of a batch or procedure with the DECLARE statement and are assigned values by using either a SET or SELECT statement. Cursor variables can be declared with this statement and used with other cursor-related statements. After declaration, all variables are initialized as NULL, unless a value is provided as part of the declaration.  
   
@@ -40,13 +43,13 @@ ms.workload: "Active"
   
 DECLARE   
 {   
-    { @local_variable [AS] data_type  | [ = value ] }  
+    { @local_variable [AS] data_type  [ = value ] }  
   | { @cursor_variable_name CURSOR }  
 } [,...n]   
 | { @table_variable_name [AS] <table_type_definition> }   
   
 <table_type_definition> ::=   
-     TABLE ( { <column_definition> | <table_constraint> } [ ,... ] )   
+     TABLE ( { <column_definition> | <table_constraint> } [ ,...n] )   
   
 <column_definition> ::=   
      column_name { scalar_data_type | AS computed_column_expression }  
@@ -63,7 +66,7 @@ DECLARE
      }   
   
 <table_constraint> ::=   
-     { { PRIMARY KEY | UNIQUE } ( column_name [ ,... ] )   
+     { { PRIMARY KEY | UNIQUE } ( column_name [ ,...n] )   
      | CHECK ( search_condition )   
      }   
   

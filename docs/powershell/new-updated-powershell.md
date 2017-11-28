@@ -6,15 +6,19 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: stevestein
-ms.service: na
+ms.service: ""
+ms.component: "powershell"
+ms.suite: "sql"
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: ""
 ms.workload: powershell
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 09/27/2017
+ms.prod: "sql-non-specified"
+ms.prod_service: "powershell"
 ms.author: genemi
 ---
 # New and Recently Updated: PowerShell docs

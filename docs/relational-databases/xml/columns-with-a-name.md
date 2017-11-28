@@ -2,9 +2,12 @@
 title: "Columns with a Name | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "xml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Columns with a Name
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:  
   
 -   The column name starts with an at sign (@).  
@@ -127,7 +131,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- The column names are used as a path in constructing XML in the PATH mode. The column name that contains employee ID values, starts with '@'.Therefore, an attribute, **EmpID**, is added to the `row` element. All other columns include a slash mark ('/') in the column name that indicates hierarchy. The resulting XML will have the `EmpName` child under the `row` element, and the `EmpName` child will have `First`, `Middle` and `Last` element children.  
+ The column names are used as a path in constructing XML in the PATH mode. The column name that contains employee ID values, starts with '\@'.Therefore, an attribute, **EmpID**, is added to the `row` element. All other columns include a slash mark ('/') in the column name that indicates hierarchy. The resulting XML will have the `EmpName` child under the `row` element, and the `EmpName` child will have `First`, `Middle` and `Last` element children.  
   
 ```  
 <row EmpID="1">  

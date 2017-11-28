@@ -2,7 +2,12 @@
 title: "Deploy an SSIS project with Transact-SQL (SSMS) | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "integration-services"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "integration-services"
 author: "douglaslMS"
@@ -34,7 +39,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
 
 2. In the **Connect to Server** dialog box, enter the following information:
 
-   | Setting       | Suggested value | More info | 
+   | Setting       | Suggested value | More info | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database engine | This value is required. |
    | **Server name** | The fully qualified server name |  |

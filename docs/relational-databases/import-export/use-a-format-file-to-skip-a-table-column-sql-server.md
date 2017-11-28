@@ -2,9 +2,12 @@
 title: "Use a Format File to Skip a Table Column (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-bulk-import-export"
 ms.tgt_pltfrm: ""
@@ -20,6 +23,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Use a Format File to Skip a Table Column (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   This topic describes format files. You can use a format file to skip importing a table column when the field does not exist in the data file. A data file can contain fewer fields than the number of columns in the table only if the skipped columns are nullable and/or have default value.  
   
 ## Sample Table and Data File  

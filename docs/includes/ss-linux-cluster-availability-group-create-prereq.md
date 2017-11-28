@@ -59,7 +59,7 @@ Install SQL Server. The following links point to SQL Server installation instruc
 - [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 - [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
-## Enable AlwaysOn availability groups and restart sqlserver
+## Enable AlwaysOn availability groups and restart mssql-server
 
 Enable AlwaysOn availability groups on each node that hosts a SQL Server instance. Then restart `mssql-server`. Run the following script:
 

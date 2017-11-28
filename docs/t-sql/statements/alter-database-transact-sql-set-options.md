@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "11/27/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -53,7 +53,7 @@ ms.workload: "Active"
 Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
+> Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -810,9 +810,9 @@ OPERATION_MODE
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will retry any read that fails with a checksum, torn page, or other I/O error four times. If the read is successful in any one of the retry attempts, a message will be written to the error log and the command that triggered the read will continue. If the retry attempts fail, the command will fail with error message 824.  
   
- For more information about checksum, torn page, read-retry, error messages 823 and 824, and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I/O auditing features, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkId=47160).  
+ For more information about checksum, torn page, read-retry, error messages 823, 824 and 825, see [How to troubleshoot a Msg 823 error in SQL Server](http://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server](http://support.microsoft.com/help/2015756) and [How to troubleshoot Msg 825 &#40;read retry&#41;) in SQL Server](http://support.microsoft.com/help/2015757).
   
- The current setting of this option can be determined by examining the page_verify_option column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the IsTornPageDetectionEnabled property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
+ The current setting of this option can be determined by examining the *page_verify_option* column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the *IsTornPageDetectionEnabled* property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
 **\<remote_data_archive_option> ::=**  
   

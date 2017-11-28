@@ -1,5 +1,5 @@
 ---
-title: Configure multiple-subnet Always On Availability Groups and failover cluster instances with Pacemaker | Microsoft Docs
+title: Configure multiple-subnet Always On Availability Groups and failover cluster instances | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -16,7 +16,7 @@ ms.technology: database-engine
 ms.workload: "On Demand"
 ---
 
-# Configure multiple-subnet Always On Availability Groups and failover cluster instances with Pacemaker
+# Configure multiple-subnet Always On Availability Groups and failover cluster instances
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -79,9 +79,11 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 3.  Import the modified CIB and reconfigure Pacemaker.
 
     **RHEL/Ubuntu**
+    
     `sudo pcs cluster cib-push <filename>`
 
     **SLES**
+    
     `sudo cibadmin -R -x <filename>`
 
     where *filename* is the name of the CIB file with the modified IP address information.
@@ -92,6 +94,3 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 2.  Fail the AG or FCI to the other subnet.
 3.  After the AG or FCI is fully online, ping the DNS name associated with the IP address. It should reflect the IP address in the second subnet.
 4.  If desired, fail the AG or FCI back to the original subnet.
-
-## Next steps
-[links]

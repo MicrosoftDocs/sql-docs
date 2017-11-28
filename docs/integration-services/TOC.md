@@ -27,6 +27,7 @@
 ## [Tutorial - Deploy, run, and monitor a package on Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [Connect to the SSIS Catalog on Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Schedule package execution on Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Validate packages deployed to Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Connect to data sources with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Connect to files and file shares](lift-shift/ssis-azure-files-file-shares.md)
 

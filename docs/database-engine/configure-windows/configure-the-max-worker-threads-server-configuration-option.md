@@ -60,7 +60,7 @@ ms.workload: "On Demand"
 -   The following table shows the automatically configured number of max worker threads for various combinations of CPUs and versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     |Number of CPUs|32-bit computer|64-bit computer|  
-    |--------------------|----------------------|----------------------|  
+    |------------|------------|------------|  
     |\<= 4 processors|256|512|  
     |8 processors|288|576|  
     |16 processors|352|704|  
@@ -72,7 +72,7 @@ ms.workload: "On Demand"
     Using the following formula:
     
     |Number of CPUs|32-bit computer|64-bit computer|  
-    |--------------------|----------------------|----------------------|
+    |------------|------------|------------| 
     |\<= 4 processors|256|512|
     |\> 4 processors|256 + ((logical CPU's - 4) * 8)|512 + ((logical CPU’s - 4) * 8)| 
   
@@ -114,9 +114,12 @@ ms.workload: "On Demand"
   
 2.  Click the **Processors** node.  
   
-3.  In the **Max worker threads** box, type or select a value from 128 through 32767.  
+3.  In the **Max worker threads** box, type or select a value from 128 through 32,767.  
   
-     Use the **max worker threads** option to configure the number of worker threads available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processes. The default setting for **max worker threads** is best for most systems. However, depending on your system configuration, setting **max worker threads** to a smaller value sometimes improves performance.  
+> [!TIP]
+> Use the **max worker threads** option to configure the number of worker threads available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processes. The default setting for **max worker threads** is best for most systems. 
+> However, depending on your system configuration, setting **max worker threads** to a smaller value sometimes improves performance.
+> See [Recommendations](#Recommendations) in this page for more information.
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -141,12 +144,11 @@ RECONFIGURE;
 GO  
 ```  
   
- For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
-  
 ##  <a name="FollowUp"></a> Follow Up: After you configure the max worker threads option  
- The change will take effect immediately without requiring the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to restart.  
+ The change will take effect immediately after executing [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), without requiring the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to restart.  
   
 ## See Also  
+ [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

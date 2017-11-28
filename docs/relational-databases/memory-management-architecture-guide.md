@@ -65,7 +65,7 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 <sup>3</sup> WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] runs on a 64-bit operating system.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supports the operating system maximum.  
 <sup>5</sup> Note that the sp_configure awe enabled option was present on 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but it is ignored.    
-<sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory. For more information on LPIM, refer to [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
+<sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory. For more information on LPIM, refer to [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
 > Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes (GB) of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](http://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](http://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
@@ -221,7 +221,7 @@ The buffer manager supports the following features:
 * The buffer manager supports **Hot Add Memory**, which allows users to add physical memory without restarting the server. 
 * The buffer manager supports **large pages** on 64-bit platforms. The page size is specific to the version of Windows.
   > [!NOTE]
-  > Prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], enabling large pages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires [trace flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+  > Prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], enabling large pages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires [trace flag 834](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 * The buffer manager provides additional diagnostics that are exposed through dynamic management views. You can use these views to monitor a variety of operating system resources that are specific to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For example, you can use the [sys.dm_os_buffer_descriptors](../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md) view to monitor the pages in the buffer cache.   
 
 ### Disk I/O

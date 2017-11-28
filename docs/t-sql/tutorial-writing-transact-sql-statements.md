@@ -20,7 +20,7 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Tutorial: Writing Transact-SQL Statements

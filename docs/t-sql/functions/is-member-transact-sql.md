@@ -32,7 +32,7 @@ ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # IS_MEMBER (Transact-SQL)

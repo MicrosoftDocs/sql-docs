@@ -23,7 +23,7 @@ ms.assetid: 5b885376-87aa-41f1-9e18-04987aead250
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DATEFROMPARTS (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IHindextypes (Transact-SQL)

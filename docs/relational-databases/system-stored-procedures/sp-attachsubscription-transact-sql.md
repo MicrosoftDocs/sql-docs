@@ -23,7 +23,7 @@ ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 caps.latest.revision: 33
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_attachsubscription (Transact-SQL)

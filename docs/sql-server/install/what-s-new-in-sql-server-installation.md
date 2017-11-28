@@ -2,9 +2,12 @@
 title: "What&#39;s New in SQL Server Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "install"
+ms.prod_service: "sql-non-specified"
+ms.service: "database-engine"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # What&#39;s New in SQL Server Installation
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  Installation is supported on x64 processors only. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   
  Installation of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] will prompt you to specify the directory to save the extracted package. If no location is entered, the server will default to the computer's system drive. The extracted files will remain after [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installation is complete.  

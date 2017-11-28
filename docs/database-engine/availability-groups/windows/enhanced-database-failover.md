@@ -2,9 +2,12 @@
 title: "Add Enhanced Database Failover to an Availability Group (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
 - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -20,8 +23,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-
 # Add enhanced database failover to an availability group (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2012 and 2014, if a database participating in an availability group on the primary replica loses the ability to write transactions, it will not trigger a failover even if the replicas are synchronized and configured for automatic failover.
 

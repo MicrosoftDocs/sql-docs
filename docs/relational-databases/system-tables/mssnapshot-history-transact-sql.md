@@ -25,7 +25,7 @@ ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSsnapshot_history (Transact-SQL)

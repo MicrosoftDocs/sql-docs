@@ -2,11 +2,12 @@
 title: "Configure availability group for distributed transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2017"
-ms.prod: 
-   - "sql-server-2016"
-   - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -24,7 +25,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure availability group for distributed transactions
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group. This article explains how to configure an availability group for distributed transactions  
 

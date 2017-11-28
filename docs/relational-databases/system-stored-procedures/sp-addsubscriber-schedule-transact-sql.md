@@ -23,7 +23,7 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addsubscriber_schedule (Transact-SQL)

@@ -18,7 +18,7 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Always Encrypted Cryptography

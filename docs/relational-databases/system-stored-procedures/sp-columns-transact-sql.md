@@ -23,7 +23,7 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 caps.latest.revision: 45
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_columns (Transact-SQL)

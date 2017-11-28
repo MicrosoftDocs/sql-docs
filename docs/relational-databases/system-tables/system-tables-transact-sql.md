@@ -28,7 +28,7 @@ ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # System Tables (Transact-SQL)

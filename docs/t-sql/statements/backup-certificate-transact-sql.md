@@ -33,7 +33,7 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 caps.latest.revision: 40
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)

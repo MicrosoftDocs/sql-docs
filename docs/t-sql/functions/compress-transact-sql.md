@@ -21,7 +21,7 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 caps.latest.revision: 9
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # COMPRESS (Transact-SQL)

@@ -27,7 +27,7 @@ ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # GRANT Server Principal Permissions (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_subscriptions (Transact-SQL)

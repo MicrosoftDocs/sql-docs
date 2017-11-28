@@ -23,7 +23,7 @@ ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # TRY_CONVERT (Transact-SQL)

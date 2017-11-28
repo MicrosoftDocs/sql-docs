@@ -30,7 +30,7 @@ ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SET Statements (Transact-SQL)

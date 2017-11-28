@@ -23,7 +23,7 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 caps.latest.revision: 12
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)

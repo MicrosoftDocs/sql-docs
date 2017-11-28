@@ -18,7 +18,7 @@ ms.assetid: 46615017-c4f2-4586-91d9-4d66b5311ae9
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dropalias (Transact-SQL)

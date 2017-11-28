@@ -23,7 +23,7 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_migrate_user_to_contained (Transact-SQL)
@@ -32,10 +32,6 @@ ms.workload: "Inactive"
   Converts a database user that is mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, to a contained database user with password. In a contained database, use this procedure to remove dependencies on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the database is installed. **sp_migrate_user_to_contained** separates the user from the original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, so that settings such as password and default language can be administered separately for the contained database. **sp_migrate_user_to_contained** can be used before moving the contained database to a different instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to eliminate dependencies on the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance logins.  
   
  **Note** This procedure is only used in a contained database. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## Syntax  
   

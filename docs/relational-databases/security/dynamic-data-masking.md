@@ -16,7 +16,7 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Dynamic Data Masking

@@ -25,7 +25,7 @@ ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 caps.latest.revision: 44
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CHECKSUM (Transact-SQL)

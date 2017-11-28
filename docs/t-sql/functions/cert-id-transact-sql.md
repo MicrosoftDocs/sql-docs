@@ -26,7 +26,7 @@ ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CERT_ID (Transact-SQL)

@@ -27,7 +27,7 @@ ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP APPLICATION ROLE (Transact-SQL)

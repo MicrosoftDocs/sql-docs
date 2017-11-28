@@ -23,7 +23,7 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 caps.latest.revision: 35
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_adddistpublisher (Transact-SQL)

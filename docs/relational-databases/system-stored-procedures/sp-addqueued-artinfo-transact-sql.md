@@ -23,7 +23,7 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 caps.latest.revision: 20
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addqueued_artinfo (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IHcolumns (Transact-SQL)

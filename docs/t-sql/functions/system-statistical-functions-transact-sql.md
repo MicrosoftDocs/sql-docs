@@ -22,7 +22,7 @@ ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # System Statistical Functions (Transact-SQL)

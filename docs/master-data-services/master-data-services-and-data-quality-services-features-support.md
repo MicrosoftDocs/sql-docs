@@ -3,8 +3,11 @@ title: "Master Data Services and Data Quality Services Features Support | Micros
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "master-data-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""

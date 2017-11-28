@@ -26,7 +26,7 @@ ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 caps.latest.revision: 7
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_query_store_flush_db (Transact-SQL)

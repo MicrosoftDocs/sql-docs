@@ -25,7 +25,7 @@ ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sql_dependencies (Transact-SQL)

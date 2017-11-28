@@ -25,7 +25,7 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmergepublications (Transact-SQL)

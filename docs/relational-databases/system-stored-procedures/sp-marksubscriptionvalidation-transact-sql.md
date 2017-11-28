@@ -23,7 +23,7 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_marksubscriptionvalidation (Transact-SQL)

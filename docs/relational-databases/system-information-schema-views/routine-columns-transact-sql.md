@@ -24,7 +24,7 @@ ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ROUTINE_COLUMNS (Transact-SQL)

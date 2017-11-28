@@ -28,7 +28,7 @@ ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OPENDATASOURCE (Transact-SQL)

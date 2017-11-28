@@ -33,7 +33,7 @@ ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
 caps.latest.revision: 62
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE DATABASE (Azure SQL Database)

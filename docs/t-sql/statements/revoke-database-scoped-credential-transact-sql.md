@@ -24,7 +24,7 @@ ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 caps.latest.revision: 2
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REVOKE Database Scoped Credential (Transact-SQL)

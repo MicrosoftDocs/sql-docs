@@ -25,7 +25,7 @@ ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSpeer_conflictdetectionconfigresponse (Transact-SQL)

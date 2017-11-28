@@ -25,7 +25,7 @@ ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.system_views (Transact-SQL)

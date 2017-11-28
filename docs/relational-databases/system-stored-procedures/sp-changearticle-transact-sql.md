@@ -23,7 +23,7 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 caps.latest.revision: 77
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_changearticle (Transact-SQL)

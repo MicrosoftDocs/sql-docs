@@ -25,7 +25,7 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)

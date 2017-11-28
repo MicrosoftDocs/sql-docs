@@ -23,7 +23,7 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_describe_undeclared_parameters (Transact-SQL)
@@ -32,10 +32,6 @@ ms.workload: "Inactive"
   Returns a result set that contains metadata about undeclared parameters in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considers each parameter that is used in the **@tsql** batch, but not declared in **@params**. A result set is returned that contains one row for each such parameter, with the deduced type information for that parameter. The procedure returns an empty result set if the **@tsql** input batch has no parameters except those declared in **@params**.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   

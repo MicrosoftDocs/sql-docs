@@ -28,7 +28,7 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_db_vardecimal_storage_format (Transact-SQL)
@@ -38,10 +38,6 @@ ms.workload: "Inactive"
   
 > [!IMPORTANT]  
 >  Changing the vardecimal storage format state of a database can affect backup and recovery, database mirroring, sp_attach_db, log shipping, and replication.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## Syntax  
   

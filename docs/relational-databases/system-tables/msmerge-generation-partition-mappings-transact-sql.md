@@ -25,7 +25,7 @@ ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_generation_partition_mappings (Transact-SQL)

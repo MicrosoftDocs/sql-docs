@@ -23,7 +23,7 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_adddistributiondb (Transact-SQL)

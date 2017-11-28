@@ -25,7 +25,7 @@ ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysreplicationalerts (Transact-SQL)

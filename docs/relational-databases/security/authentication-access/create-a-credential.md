@@ -20,7 +20,7 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create a Credential

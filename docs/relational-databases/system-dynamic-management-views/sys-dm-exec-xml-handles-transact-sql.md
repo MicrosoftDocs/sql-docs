@@ -33,10 +33,6 @@ ms.workload: "Inactive"
 
   Returns information about active handles that have been opened by **sp_xml_preparedocument**.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
-  
 ## Syntax  
   
 ```  

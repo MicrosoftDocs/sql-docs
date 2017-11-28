@@ -103,10 +103,13 @@ SET @jsonInfo=N'{
 ## Examples  
   
 ### Example 1  
- The following example uses the values of the JSON properties `town` and `state` in query results. Since **JSON_VALUE** preserves the collation of the source, the sort order of the results depends on the collation of the `jsonInfo` column.  
+ The following example uses the values of the JSON properties `town` and `state` in query results. Since **JSON_VALUE** preserves the collation of the source, the sort order of the results depends on the collation of the `jsonInfo` column. 
+
+> [!NOTE]
+> (This example assumes that a table named `Person.Person` contains a `jsonInfo` column of JSON text, and that this column has the structure shown previously in the discussion of lax mode and strict mode. In the AdventureWorks sample database, the `Person` table does not in fact contain a `jsonInfo` column.)
   
 ```sql  
-SELECT FirstName,LastName,
+SELECT FirstName, LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'

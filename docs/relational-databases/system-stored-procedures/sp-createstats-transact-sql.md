@@ -23,7 +23,7 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 caps.latest.revision: 47
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_createstats (Transact-SQL)
@@ -34,10 +34,6 @@ ms.workload: "Inactive"
  sp_createstats is useful for applications such as benchmarking when query execution times are critical and cannot wait for the query optimizer to generate single-column statistics. In most cases, it is not necessary to use sp_createstats; the query optimizer generates single-column statistics as necessary to improve query plans when the **AUTO_CREATE_STATISTICS** option is on.  
   
  For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md). For more information about generating single-column statistics, see the **AUTO_CREATE_STATISTICS** option in [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,10 +60,6 @@ sp_createstats
   
  [ **@incremental=** ] **'incremental'**  
  Uses the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement with the **INCREMENTAL = ON** option. **Incremental** is **char(12)**.  The default is NO.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

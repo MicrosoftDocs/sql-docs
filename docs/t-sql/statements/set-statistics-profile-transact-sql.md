@@ -29,7 +29,7 @@ ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET STATISTICS PROFILE (Transact-SQL)

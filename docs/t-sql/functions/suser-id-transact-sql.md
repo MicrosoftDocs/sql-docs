@@ -28,7 +28,7 @@ ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SUSER_ID (Transact-SQL)

@@ -2,9 +2,12 @@
 title: "Work with Multiple Versions and Instances of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "install"
+ms.prod_service: "sql-non-specified"
+ms.service: "database-engine"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -27,6 +30,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Work with Multiple Versions and Instances of SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer. You can also upgrade earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer where earlier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions are already installed. For supported upgrade scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 ## Version Components and Numbering  

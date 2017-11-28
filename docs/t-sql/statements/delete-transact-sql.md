@@ -31,7 +31,7 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 caps.latest.revision: 78
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DELETE (Transact-SQL)

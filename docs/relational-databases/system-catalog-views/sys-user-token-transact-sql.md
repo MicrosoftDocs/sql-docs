@@ -29,7 +29,7 @@ ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.user_token (Transact-SQL)

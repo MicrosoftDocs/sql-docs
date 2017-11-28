@@ -2,9 +2,12 @@
 title: "Customer Experience Improvement Program for SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-server"
+ms.prod_service: "sql-non-specified"
+ms.service: "server-general"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssdt"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Customer Experience Improvement Program for SQL Server Data Tools
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Learn how the Customer Experience Improvement Program (CEIP) helps Microsoft identify ways to make our software better.  You can configure tools to opt in or out at any time.  
   
 > [!NOTE]  

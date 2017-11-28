@@ -23,7 +23,7 @@ ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)

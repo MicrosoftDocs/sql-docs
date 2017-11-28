@@ -27,7 +27,7 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Precision, scale, and Length (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 caps.latest.revision: 13
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSagentparameterlist (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Permissions Hierarchy (Database Engine)

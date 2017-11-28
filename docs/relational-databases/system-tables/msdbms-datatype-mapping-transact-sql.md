@@ -25,7 +25,7 @@ ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 caps.latest.revision: 27
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSdbms_datatype_mapping (Transact-SQL)

@@ -26,7 +26,7 @@ ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 caps.latest.revision: 50
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADD SIGNATURE (Transact-SQL)

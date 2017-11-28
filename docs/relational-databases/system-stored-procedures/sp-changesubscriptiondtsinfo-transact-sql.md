@@ -23,7 +23,7 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_changesubscriptiondtsinfo (Transact-SQL)

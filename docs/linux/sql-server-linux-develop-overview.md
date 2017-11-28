@@ -6,7 +6,11 @@ ms.author: sanagama
 manager: jhubbard
 ms.date: 11/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.workload: "On Demand"

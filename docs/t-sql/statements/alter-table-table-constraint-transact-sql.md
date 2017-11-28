@@ -22,7 +22,7 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 caps.latest.revision: 59
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER TABLE table_constraint (Transact-SQL)

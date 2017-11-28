@@ -27,7 +27,7 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 caps.latest.revision: 18
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ORIGINAL_LOGIN (Transact-SQL)

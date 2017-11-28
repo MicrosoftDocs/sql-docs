@@ -37,10 +37,6 @@ ms.workload: "Inactive"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Logical name of the backup file or database file.|  

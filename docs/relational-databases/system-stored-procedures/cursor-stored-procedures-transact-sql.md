@@ -22,7 +22,7 @@ ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Cursor Stored Procedures (Transact-SQL)

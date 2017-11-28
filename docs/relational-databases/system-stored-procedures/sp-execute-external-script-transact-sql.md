@@ -25,7 +25,7 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 caps.latest.revision: 34
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_execute_external_script (Transact-SQL)

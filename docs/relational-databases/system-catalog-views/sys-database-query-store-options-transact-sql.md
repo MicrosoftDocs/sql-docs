@@ -26,7 +26,7 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_query_store_options (Transact-SQL)

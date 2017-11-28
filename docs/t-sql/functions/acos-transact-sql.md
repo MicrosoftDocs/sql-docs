@@ -25,7 +25,7 @@ ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ACOS (Transact-SQL)

@@ -26,7 +26,7 @@ ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # COL_NAME (Transact-SQL)

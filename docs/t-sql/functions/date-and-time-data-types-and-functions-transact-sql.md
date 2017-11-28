@@ -26,7 +26,7 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 caps.latest.revision: 79
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Date and Time Data Types and Functions (Transact-SQL)

@@ -32,7 +32,7 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 caps.latest.revision: 101
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CREATE LOGIN (Transact-SQL)

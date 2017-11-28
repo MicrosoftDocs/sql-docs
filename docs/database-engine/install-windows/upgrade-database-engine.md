@@ -2,11 +2,12 @@
 title: "Upgrade Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -22,6 +23,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrade Database Engine
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The topics in this section will help you upgrade the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine from a prior release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 1.  [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Before beginning an upgrade, you need to understand the various upgrade methods. This topic discusses the upgrade methods and the steps involved with each upgrade method.  

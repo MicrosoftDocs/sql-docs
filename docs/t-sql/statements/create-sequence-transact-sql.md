@@ -28,7 +28,7 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 caps.latest.revision: 40
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CREATE SEQUENCE (Transact-SQL)

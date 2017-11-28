@@ -20,7 +20,7 @@ ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 2-1 - Creating a Login

@@ -23,7 +23,7 @@ ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_mergedummyupdate (Transact-SQL)

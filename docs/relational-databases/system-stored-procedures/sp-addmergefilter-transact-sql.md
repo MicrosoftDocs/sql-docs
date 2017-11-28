@@ -23,7 +23,7 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 caps.latest.revision: 49
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_addmergefilter (Transact-SQL)

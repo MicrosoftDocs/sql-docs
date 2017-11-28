@@ -28,7 +28,7 @@ ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)

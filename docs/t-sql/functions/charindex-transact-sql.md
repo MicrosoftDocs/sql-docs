@@ -26,7 +26,7 @@ ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
 caps.latest.revision: 52
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CHARINDEX (Transact-SQL)

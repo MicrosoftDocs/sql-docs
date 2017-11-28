@@ -38,7 +38,7 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # LOGINPROPERTY (Transact-SQL)

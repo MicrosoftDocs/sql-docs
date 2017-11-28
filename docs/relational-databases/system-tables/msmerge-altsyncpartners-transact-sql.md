@@ -25,7 +25,7 @@ ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSmerge_altsyncpartners (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.foreign_key_columns (Transact-SQL)

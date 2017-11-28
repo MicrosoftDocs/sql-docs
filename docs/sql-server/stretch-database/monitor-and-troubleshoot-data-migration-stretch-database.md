@@ -1,11 +1,13 @@
 ---
 title: "Monitor and troubleshoot data migration (Stretch Database) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "stretch-database"
+ms.prod_service: "sql-non-specified"
+ms.service: "database-engine"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
@@ -21,7 +23,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Monitor and troubleshoot data migration (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   To monitor data migration in Stretch Database Monitor, select **Tasks | Stretch | Monitor** for a database in SQL Server Management Studio .  
   

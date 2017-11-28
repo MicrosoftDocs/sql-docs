@@ -32,7 +32,7 @@ ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 caps.latest.revision: 49
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER MASTER KEY (Transact-SQL)

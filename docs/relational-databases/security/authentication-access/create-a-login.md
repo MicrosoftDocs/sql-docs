@@ -28,7 +28,7 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Create a Login

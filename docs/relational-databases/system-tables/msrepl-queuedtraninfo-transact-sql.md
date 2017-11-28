@@ -25,7 +25,7 @@ ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 caps.latest.revision: 25
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSrepl_queuedtraninfo (Transact-SQL)

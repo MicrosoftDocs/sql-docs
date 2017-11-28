@@ -23,17 +23,13 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 caps.latest.revision: 10
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Compiles the cursor statement or batch into an execution plan, but does not create the cursor. The compiled statement can later be used by sp_cursorexecute. This procedure, coupled with sp_cursorexecute, has the same function as sp_cursoropen, but is split into two phases. sp_cursorprepare is invoked by specifying ID = 3 in a tabular data stream (TDS) packet.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

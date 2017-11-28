@@ -26,7 +26,7 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 caps.latest.revision: 44
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ENCRYPTBYKEY (Transact-SQL)

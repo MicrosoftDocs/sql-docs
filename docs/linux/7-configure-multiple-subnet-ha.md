@@ -1,5 +1,5 @@
 ---
-title: Configure multiple subnet Always On Availability Groups and failover cluster instances with Pacemaker | Microsoft Docs
+title: Configure multiple-subnet Always On Availability Groups and failover cluster instances with Pacemaker | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -16,7 +16,7 @@ ms.technology: database-engine
 ms.workload: "On Demand"
 ---
 
-# Configure multiple subnet Always On Availability Groups and failover cluster instances with Pacemaker
+# Configure multiple-subnet Always On Availability Groups and failover cluster instances with Pacemaker
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -26,18 +26,19 @@ When an Always On Availability Group (AG) or failover cluster instance (FCI) spa
 
 **Prerequisite**: For a VLAN-based solution, each server participating in an AG or FCI needs two network cards (NICs) for proper availability (a dual port NIC would be a single point of failure on a physical server), so that it can be assigned IP addresses on its native subnet as well as one on the VLAN. This is in addition to any other network needs, such as iSCSI, which also needs its own network.
 
-The IP address creation for the AG or FCI is done on the VLAN. In the example shown below, the VLAN has a subnet of 192.168.3.*x*, so the IP address that is created is 192.168.3.104. In this case, nothing additional needs to be configured differently from the \[instructions already presented\], since there will be a single IP address assigned to the AG or FCI.
+The IP address creation for the AG or FCI is done on the VLAN. In the example shown below, the VLAN has a subnet of 192.168.3.*x*, so the IP address that is created is 192.168.3.104. Nothing additional needs to be configured, since there is a single IP address assigned to the AG or FCI.
 
 ![](./media/7-configure-multiple-subnet-ha/image1.png)
 
 ## Configuration with Pacemaker
-In the Windows Server world, a Windows Server Failover Cluster (WSFC) natively supports multiple subnets and handles multiple IP addresses via an OR dependency on the IP address. On Linux there is no OR dependency, but there is a way to achieve a proper multi-subnet natively with Pacemaker, as shown below. You cannot do this by simply using the normal Pacemaker command line to modify a resource. You need to modify the cluster information base (CIB). The CIB is an XML document with the Pacemaker configuration.
+
+In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports multiple subnets and handles multiple IP addresses via an OR dependency on the IP address. On Linux, there is no OR dependency, but there is a way to achieve a proper multi-subnet natively with Pacemaker, as shown below. You cannot do this by simply using the normal Pacemaker command line to modify a resource. You need to modify the cluster information base (CIB). The CIB is an XML file with the Pacemaker configuration.
 
 ![](./media/7-configure-multiple-subnet-ha/image2.png)
 
 ### Update the CIB
 
-1.  Export the CIB
+1.  Export the CIB.
 
     **Red Hat Enterprise Linux (RHEL)/Ubuntu**
 
@@ -47,9 +48,9 @@ In the Windows Server world, a Windows Server Failover Cluster (WSFC) natively s
 
     `sudo cibadmin -Q > <filename>`
 
-    Where *`filename`* is the name you want to call the CIB.
+    Where *filename* is the name you want to call the CIB.
 
-2.  Edit the file that was generated. Look for the `<resources>` section. You will see the various resources that were created for the AG or FCI. Find the one associated with the IP address. Add a `<instance attributes>` section with the information for the second IP address either above or below the existing one, but before `<operations>`. It will look something like the syntax below
+2.  Edit the file that was generated. Look for the `<resources>` section. You will see the various resources that were created for the AG or FCI. Find the one associated with the IP address. Add a `<instance attributes>` section with the information for the second IP address either above or below the existing one, but before `<operations>`. It will look something like the following syntax:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -61,9 +62,9 @@ In the Windows Server world, a Windows Server Failover Cluster (WSFC) natively s
     </instance attributes>
     ```
     
-    where *NameForAttribute* is the unique name for this attribute, *Score* is the numeric number assigned to the attribute which must be higher than the primary subnet’s, *RuleName* is the name of the rule, *ExpressionName* is the name of the expression, *NodeNameInSubnet2* is the name of the node in the different subnet, *NameForSecondIP* is the name associated with the second IP address, *IPAddress* is the IP address for the second subnet, *NameForSecondIPNetmask* is the name associated with the netmask, and *Netmask* is the netmask for the second subnet.
+    where *NameForAttribute* is the unique name for this attribute, *Score* is the number assigned to the attribute, which must be higher than the primary subnet’s, *RuleName* is the name of the rule, *ExpressionName* is the name of the expression, *NodeNameInSubnet2* is the name of the node in the other subnet, *NameForSecondIP* is the name associated with the second IP address, *IPAddress* is the IP address for the second subnet, *NameForSecondIPNetmask* is the name associated with the netmask, and *Netmask* is the netmask for the second subnet.
     
-    An example is shown below.
+    The following shows an example.
     
     ```xml
     <instance attributes id="Node3-2nd-IP" score="2">
@@ -77,21 +78,17 @@ In the Windows Server world, a Windows Server Failover Cluster (WSFC) natively s
 
 3.  Import the modified CIB and reconfigure Pacemaker.
 
-    **RHEL/Ubuntu**
+    **RHEL/Ubuntu**<br/><br/>    `sudo pcs cluster cib-push <filename>`
 
-    `sudo pcs cluster cib-push <filename>`
+    **SLES**<br/><br/>    `sudo cibadmin -R -x <filename>`
 
-    **SLES**
-
-    `sudo cibadmin -R -x <filename>`
-
-    where *`filename`* is the name of the CIB file with the modified IP address information.
+    where *filename* is the name of the CIB file with the modified IP address information.
 
 ### Check and verify failover
 
-1.  After the CIB is successfully applied with the updated configuration, ping the name in DNS associated with the IP address resource in Pacemaker. It should reflect the IP address associated with the subnet currently hosting the AG or FCI.
+1.  After the CIB is successfully applied with the updated configuration, ping the DNS name associated with the IP address resource in Pacemaker. It should reflect the IP address associated with the subnet currently hosting the AG or FCI.
 2.  Fail the AG or FCI to the other subnet.
-3.  After the AG or FCI is fully online, ping the name in DNS associated with the IP address. It should reflect the IP address in the other subnet.
+3.  After the AG or FCI is fully online, ping the DNS name associated with the IP address. It should reflect the IP address in the second subnet.
 4.  If desired, fail the AG or FCI back to the original subnet.
 
 ## Next steps

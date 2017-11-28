@@ -24,9 +24,7 @@ When an Always On Availability Group (AG) or failover cluster instance (FCI) spa
 
 ## VLAN-based solution
 
-**Prerequisite**
-
-For a VLAN-based solution, each server participating in an AG or FCI needs two network cards (NICs) for proper availability (a dual port NIC would be a single point of failure on a physical server), so that it can be assigned IP addresses on its native subnet as well as one on the VLAN. This is in addition to any other network needs, such as iSCSI, which also needs its own network.
+**Prerequisite**: For a VLAN-based solution, each server participating in an AG or FCI needs two network cards (NICs) for proper availability (a dual port NIC would be a single point of failure on a physical server), so that it can be assigned IP addresses on its native subnet as well as one on the VLAN. This is in addition to any other network needs, such as iSCSI, which also needs its own network.
 
 The IP address creation for the AG or FCI is done on the VLAN. In the example shown below, the VLAN has a subnet of 192.168.3.*x*, so the IP address that is created is 192.168.3.104. In this case, nothing additional needs to be configured differently from the \[instructions already presented\], since there will be a single IP address assigned to the AG or FCI.
 

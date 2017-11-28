@@ -65,10 +65,10 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 <sup>3</sup> WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] runs on a 64-bit operating system.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supports the operating system maximum.  
 <sup>5</sup> Note that the sp_configure awe enabled option was present on 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but it is ignored.    
-<sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory.
+<sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory. For more information on LPIM, refer to [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
-> Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](http://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](http://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
+> Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes (GB) of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](http://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](http://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
 
 ## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
@@ -111,7 +111,7 @@ In earlier versions of SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversio
 
 The virtual address space that is reserved for these allocations is determined by the ***memory_to_reserve*** configuration option. The default value that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses is 256 MB. To override the default value, use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* startup parameter. Refer to the documentation page on [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
 
-Because starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8-KB, the *memory_to_reserve* value does not include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
+Because starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8 KB, the *memory_to_reserve* value does not include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
 
 The following table indicates whether a specific type of memory allocation falls into the *memory_to_reserve* region of the virtual address space for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process:
 
@@ -201,7 +201,7 @@ The primary purpose of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 
 ### How buffer management works
 
-A buffer is an 8-KB page in memory, the same size as a data or index page. Thus, the buffer cache is divided into 8-KB pages. The buffer manager manages the functions for reading data or index pages from the database disk files into the buffer cache and writing modified pages back to disk. A page remains in the buffer cache until the buffer manager needs the buffer area to read in more data. Data is written back to disk only if it is modified. Data in the buffer cache can be modified multiple times before being written back to disk. For more information, see [Reading Pages](../relational-databases/reading-pages.md) and [Writing Pages](../relational-databases/writing-pages.md).
+A buffer is an 8 KB page in memory, the same size as a data or index page. Thus, the buffer cache is divided into 8 KB pages. The buffer manager manages the functions for reading data or index pages from the database disk files into the buffer cache and writing modified pages back to disk. A page remains in the buffer cache until the buffer manager needs the buffer area to read in more data. Data is written back to disk only if it is modified. Data in the buffer cache can be modified multiple times before being written back to disk. For more information, see [Reading Pages](../relational-databases/reading-pages.md) and [Writing Pages](../relational-databases/writing-pages.md).
 
 When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts, it computes the size of virtual address space for the buffer cache based on a number of parameters such as the amount of physical memory on the system, the configured number of maximum server threads, and various startup parameters. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserves this computed amount of its process virtual address space (called the memory target) for the buffer cache, but it acquires (commits) only the required amount of physical memory for the current load. You can query the **bpool_commit_target** and **bpool_committed columns** in the [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) catalog view to return the number of pages reserved as the memory target and the number of pages currently committed in the buffer cache, respectively.
 
@@ -219,7 +219,9 @@ The buffer manager supports the following features:
 
 * The buffer manager is **non-uniform memory access (NUMA)** aware. Buffer cache pages are distributed across hardware NUMA nodes, which allows a thread to access a buffer page that is allocated on the local NUMA node rather than from foreign memory. 
 * The buffer manager supports **Hot Add Memory**, which allows users to add physical memory without restarting the server. 
-* The buffer manager supports **large pages** on 64-bit platforms. The page size is specific to the version of Windows. 
+* The buffer manager supports **large pages** on 64-bit platforms. The page size is specific to the version of Windows.
+  > [!NOTE]
+  > Prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], enabling large pages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires [trace flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 * The buffer manager provides additional diagnostics that are exposed through dynamic management views. You can use these views to monitor a variety of operating system resources that are specific to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For example, you can use the [sys.dm_os_buffer_descriptors](../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md) view to monitor the pages in the buffer cache.   
 
 ### Disk I/O

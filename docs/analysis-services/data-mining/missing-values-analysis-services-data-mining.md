@@ -2,9 +2,12 @@
 title: "Missing Values (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -21,7 +24,7 @@ ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Missing Values (Analysis Services - Data Mining)

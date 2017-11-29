@@ -2,9 +2,12 @@
 title: "Deploy Power Pivot Solutions to SharePoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "power-pivot-sharepoint"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,7 @@ ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Deploy Power Pivot Solutions to SharePoint

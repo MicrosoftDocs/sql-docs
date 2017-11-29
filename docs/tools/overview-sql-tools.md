@@ -1,7 +1,7 @@
 ---
-title: "SQL Tools and Utilities for SQL Server, Azure SQL Database, and SQL Data Warehouse | Microsoft Docs"
+title: "SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/25/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,33 +16,35 @@ ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
-# Tools and utilities for Azure SQL Database, SQL Server, and SQL Data Warehouse
+# SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
 
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-![](../includes/media/sql-database-tools.png) This article provides a list of available tools for working with SQL Server, Azure SQL Database, SQL Data Warehouse, and SQL Server-based applications. 
 
-If you want to jump right in and start creating tables, running queries, basically design and manage your database, then [**SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) is most likely your go-to tool. SSMS is free, and runs on Windows.
+## Tools to run queries and manage databases  
 
-If you're running Linux or macOS, try [Visual Studio Code](https://code.visualstudio.com/) with the [**mssql for Visual Studio Code**](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension. These tools are for developing Microsoft SQL Server, Azure SQL Database and SQL Data Warehouse with a rich set of functionalities, and are also free. See [Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
-
-
-## SQL tools 
- 
 | Tool | Description |
 |:--|:--|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Use SQL Server Management Studio (SSMS) to query, design, and manage your SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. |
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Turn Visual Studio into a powerful development environment for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. |
-| [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio Code works on Linux, macOS, and Windows. After installing Visual Studio Code, install the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for developing Microsoft SQL Server, Azure SQL Database and SQL Data Warehouse. |
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free, light-weight tool, for managing databases wherever they're running. This preview release provides database management features, including an extended Transact-SQL editor and customizable insights into the operational state of your databases. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Use SQL Server Management Studio (SSMS) to query, design, and manage your SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. **SSMS runs on Windows**.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Turn Visual Studio into a powerful development environment for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. **SSDT runs on Windows**.|
+| [Visual Studio Code](https://code.visualstudio.com/)| After installing Visual Studio Code, install the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for developing Microsoft SQL Server, Azure SQL Database, and SQL Data Warehouse. **Visual Studio Code runs on Windows, macOS, and Linux**.|
+
+
+
+## Additional tools
+
+| Tool | Description |
+|:--|:--|
 | [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Use SQL Server Configuration Manager to configure SQL Server services and configure network connectivity.|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Use SQL Server Migration Assistant to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and Sybase.|
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Use the Distributed Replay feature to help you assess the impact of future SQL Server upgrades. Also use Distributed Replay to help assess the impact of hardware and operating system upgrades, and SQL Server tuning. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | The ssbdiagnose utility reports issues in Service Broker conversations or the configuration of Service Broker services. |
 
 
-## SQL Command Prompt utilities
+## Command line utilities
 
-  Command prompt utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Command line utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |**Utility**|**Description**|**Installed in**|  
 |-----------------|---------------------|----------------------|  

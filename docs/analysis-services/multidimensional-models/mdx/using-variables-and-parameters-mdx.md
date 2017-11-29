@@ -2,9 +2,12 @@
 title: "Using Variables and Parameters (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -20,7 +23,7 @@ ms.assetid: a4754d16-d9c4-49f6-9be0-392180b912e4
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Using Variables and Parameters (MDX)

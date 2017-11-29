@@ -2,11 +2,12 @@
 title: "Complete the Database Engine Upgrade | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
-ms.prod: 
-   - "sql-server-2016"
-   - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
@@ -18,7 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Complete the Database Engine Upgrade
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 After the upgrading SQL Server complete, there are a number of additional steps that you may need to take. These include the following:  
   
 After upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], complete the following tasks:  

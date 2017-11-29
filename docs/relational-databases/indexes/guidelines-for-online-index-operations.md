@@ -2,7 +2,7 @@
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
 ms.date: 07/10/2017
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
@@ -19,13 +19,14 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
-ms.component: indexes
+ms.suite: "sql"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "indexes"
 ms.workload: "On Demand"
 ---
 # Guidelines for Online Index Operations
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   When you perform online index operations, the following guidelines apply:  
   

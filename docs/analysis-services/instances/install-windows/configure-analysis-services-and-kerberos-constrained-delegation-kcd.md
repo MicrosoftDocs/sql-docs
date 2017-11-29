@@ -2,9 +2,12 @@
 title: "Configure Analysis Services and Kerberos Constrained Delegation (KCD) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "instances"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,7 @@ ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Configure Analysis Services and Kerberos Constrained Delegation (KCD)

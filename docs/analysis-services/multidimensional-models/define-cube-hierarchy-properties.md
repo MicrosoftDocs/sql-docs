@@ -2,9 +2,12 @@
 title: "Define Cube Hierarchy Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -18,7 +21,7 @@ ms.assetid: 819d0a4e-7815-4332-a605-b07ca2ade6ac
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define Cube Hierarchy Properties

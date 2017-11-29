@@ -1,12 +1,15 @@
 ---
 title: "WideWorldImporters database catalog | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: "world-wide-importers"
+ms.prod_service: "sql-non-specified"
+ms.service: "samples"
+ms.component: ""
 ms.technology:
   - "samples"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
@@ -18,6 +21,7 @@ robots: noindex,nofollow
 ms.workload: "On Demand"
 ---
 # WideWorldImporters database catalog
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 The WideWorldImporters database contains all the transaction information and daily data for sales and purchases, as well as sensor data for vehicles and cold rooms.
 
 ## Schemas
@@ -111,7 +115,7 @@ Details of stock items, their holdings and transactions.
 |Table|Description|
 |-----------------------------|---------------------|
 |StockItems|Main entity table for stock items|
-|StockItemHoldings|Non-temporal columns for stock items. These arefrequently updated columns.|
+|StockItemHoldings|Non-temporal columns for stock items. These are frequently updated columns.|
 |StockGroups|Groups for categorizing stock items (e.g., novelties, toys, edible novelties, etc.)|
 |StockItemStockGroups|Which stock items are in which stock groups (many to many)|
 |Colors|Stock items can (optionally) have colors|
@@ -131,7 +135,7 @@ WideWorldImporters uses a small number of schemas so that it is easy to understa
 
 Wherever possible, the database collocates tables that are commonly queried together into the same schema to minimize join complexity.
 
-The database schema has been code-generated based on a series of metadata tables in another database WWI_Preparation. This gives WideWorldImporters a very high degree of design consistency, naming consistency, and completeness. For details on how the schema has been generated see the source code: [wide-world-importers/wwi-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+The database schema has been code-generated based on a series of metadata tables in another database WWI_Preparation. This gives WideWorldImporters a very high degree of design consistency, naming consistency, and completeness. For details on how the schema has been generated see the source code: [wide-world-importers/wwi-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ### Table design
 

@@ -2,9 +2,12 @@
 title: "Creating Session-Scoped Named Sets (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -18,7 +21,7 @@ ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MDX Named Sets - Creating Session-Scoped Named Sets

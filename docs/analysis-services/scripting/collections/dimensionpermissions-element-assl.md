@@ -2,9 +2,12 @@
 title: "DimensionPermissions Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,7 @@ ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DimensionPermissions Element (ASSL)

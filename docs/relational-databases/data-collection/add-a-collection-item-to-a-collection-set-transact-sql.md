@@ -2,9 +2,12 @@
 title: "Add a Collection Item to a Collection Set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "data-collection"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,6 +23,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Add a Collection Item to a Collection Set (Transact-SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can add a collection item to an existing collection set using the stored procedures that are provided with the data collector.  
   
  Carry out the following steps using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

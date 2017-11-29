@@ -2,9 +2,12 @@
 title: "Populate Full-Text Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -31,6 +34,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Populate Full-Text Indexes
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Creating and maintaining a full-text index involves populating the index by using a process called a *population* (also known as a *crawl*).  
   
 ##  <a name="types"></a> Types of population  

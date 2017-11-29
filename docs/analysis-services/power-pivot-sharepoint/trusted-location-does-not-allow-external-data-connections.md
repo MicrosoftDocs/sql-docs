@@ -2,9 +2,12 @@
 title: "Trusted location does not allow external data connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "power-pivot-sharepoint"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,7 @@ ms.assetid: dc0cedfd-a7d0-40ef-bdd6-ea508130640a
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Trusted location does not allow external data connections

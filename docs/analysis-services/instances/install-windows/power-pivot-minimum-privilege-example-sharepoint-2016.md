@@ -2,9 +2,12 @@
 title: "Power Pivot Minimum-Privilege Example - SharePoint 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "instances"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,7 @@ ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot Minimum-Privilege Example - SharePoint 2016

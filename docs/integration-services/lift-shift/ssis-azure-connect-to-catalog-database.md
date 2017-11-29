@@ -2,7 +2,12 @@
 title: "Connect to the SSISDB Catalog database on Azure | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "lift-shift"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "integration-services"
 author: "douglaslMS"
@@ -34,7 +39,7 @@ Before you start, make sure you have version 17.2 or later of SQL Server Managem
 
 2. **Connect to the server**. In the **Connect to Server** dialog box, enter the following information:
 
-   | Setting       | Suggested value | Description | 
+   | Setting       | Suggested value | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database Engine | This value is required. |
    | **Server name** | The fully qualified server name | The name should be in this format: **mysqldbserver.database.windows.net**. |

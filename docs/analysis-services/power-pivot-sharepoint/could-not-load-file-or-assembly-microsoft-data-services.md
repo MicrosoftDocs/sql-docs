@@ -2,9 +2,12 @@
 title: "Could not load file or assembly Microsoft-Data-Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "power-pivot-sharepoint"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,7 @@ ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Could not load file or assembly Microsoft-Data-Services

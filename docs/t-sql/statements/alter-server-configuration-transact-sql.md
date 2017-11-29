@@ -3,8 +3,11 @@ title: "ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,11 +26,11 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 caps.latest.revision: 72
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER SERVER CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifies global configuration settings for the current server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

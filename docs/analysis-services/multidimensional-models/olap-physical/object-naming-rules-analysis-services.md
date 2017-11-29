@@ -2,9 +2,12 @@
 title: "Object Naming Rules (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -18,7 +21,7 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Object Naming Rules (Analysis Services)

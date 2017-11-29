@@ -2,9 +2,12 @@
 title: "Classified Columns (Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -24,7 +27,7 @@ ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Classified Columns (Data Mining)

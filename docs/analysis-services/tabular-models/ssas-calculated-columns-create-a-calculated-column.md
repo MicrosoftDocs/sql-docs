@@ -2,9 +2,12 @@
 title: "Create a Calculated Column| Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -17,7 +20,7 @@ ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create a Calculated Column

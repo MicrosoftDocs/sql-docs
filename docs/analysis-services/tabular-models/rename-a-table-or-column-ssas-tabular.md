@@ -2,9 +2,12 @@
 title: "Rename a Table or Column (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -17,7 +20,7 @@ ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Rename a Table or Column (SSAS Tabular)

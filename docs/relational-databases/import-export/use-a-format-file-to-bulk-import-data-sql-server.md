@@ -2,9 +2,12 @@
 title: "Use a Format File to Bulk Import Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-bulk-import-export"
 ms.tgt_pltfrm: ""
@@ -20,7 +23,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Use a Format File to Bulk Import Data (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 This topic illustrates the use of a format file in bulk-import operations.  A format file maps the fields of the data file to the columns of the table.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 

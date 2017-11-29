@@ -2,9 +2,12 @@
 title: "Create Tables, Partitions, and Columns in a Tabular model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -14,7 +17,7 @@ ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create Tables, Partitions, and Columns in a Tabular model

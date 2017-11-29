@@ -1,9 +1,15 @@
 ---
-title: "PDW Certificate Provisioning (Analytics Platform System)"
+title: "PDW Certificate Provisioning (Analytics Platform System)"
+
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
+ms.prod: "sql-non-specified"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component: "analytics-platform-system"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "The PDW Certificate Provisioning page of the Analytics Platform System Configuration Manager imports or removes the certificate used by PDW."
 ms.date: "01/05/2017"

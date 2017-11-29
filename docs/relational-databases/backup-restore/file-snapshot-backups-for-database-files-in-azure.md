@@ -1,12 +1,13 @@
 ---
 title: "File-Snapshot Backups for Database Files in Azure | Microsoft Docs"
-ms.custom: 
-  - "IAAS"
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -19,6 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # File-Snapshot Backups for Database Files in Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-snapshot backup uses Azure snapshots to provide nearly instantaneous backups and quicker restores for database files stored using the Azure Blob storage service. This capability enables you to simplify your backup and restore policies. For a live demo, see [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). For more information on storing database files using the Azure Blog storage service, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
  ![snapshot backup architectural diagram](../../relational-databases/backup-restore/media/snapshotbackups.PNG "snapshot backup architectural diagram")  

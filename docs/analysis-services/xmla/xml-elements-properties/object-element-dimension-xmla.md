@@ -2,9 +2,12 @@
 title: "Object Element (Dimension) (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "xmla"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,9 +28,9 @@ helpviewer_keywords:
   - "Object element"
 ms.assetid: db7feb39-7cc1-4b54-8979-77ce402ef71f
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Object Element (Dimension) (XMLA)

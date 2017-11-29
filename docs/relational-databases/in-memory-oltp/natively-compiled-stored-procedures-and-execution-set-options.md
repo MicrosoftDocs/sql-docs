@@ -2,9 +2,12 @@
 title: "Natively Compiled Stored Procedures and Execution Set Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/26/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Natively Compiled Stored Procedures and Execution Set Options
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Session options are fixed in atomic blocks, as described in [Atomic Blocks](atomic-blocks-in-native-procedures.md). A stored procedure's execution is not affected by a session's SET options, since atomic blocks are required. However, certain SET options, such as SET NOEXEC and SET SHOWPLAN_XML, cause stored procedures (including natively compiled stored procedures) to not execute.   
   

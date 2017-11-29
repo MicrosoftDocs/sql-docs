@@ -2,9 +2,12 @@
 title: "Deploy PowerPivot and Power View - Multi-Tier SharePoint 2016 Farm | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "instances"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,7 @@ ms.assetid: 0e36a632-0750-4247-92b6-1fe38c7a4ce2
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Deploy PowerPivot and Power View - Multi-Tier SharePoint 2016 Farm

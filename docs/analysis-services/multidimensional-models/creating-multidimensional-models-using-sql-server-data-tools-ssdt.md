@@ -2,9 +2,12 @@
 title: "Creating Multidimensional Models Using SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -21,7 +24,7 @@ ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
 caps.latest.revision: 63
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Creating Multidimensional Models Using SQL Server Data Tools (SSDT)

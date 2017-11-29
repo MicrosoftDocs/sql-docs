@@ -1,9 +1,13 @@
 ---
 title: "Analysis Services | Microsoft Docs"
 ms.date: "05/11/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,7 +24,7 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 caps.latest.revision: 60
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # What is Analysis Services?

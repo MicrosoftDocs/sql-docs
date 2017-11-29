@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2012 SP4 Release Notes | Microsoft Docs"
-ms.prod: "sql-server-2012"
+ms.prod: "sql-server"
+ms.prod_service: "sql-non-specified"
+ms.service: "server-general"
+ms.component: ""
 ms.technology: "server-general"
 ms.custom: ""
 ms.date: "10/05/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -16,6 +19,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SQL Server 2012 SP4 release notes
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 This topic summarizes the improvements included with SQL Server 2012 SP4. The topics also describes issues to review before you install or troubleshoot the installation of SP4. Release Notes are available online only, not on the installation media. This topic is updated periodically as issues are discovered. For a detailed list of fixes in SP4, see [SQL Server 2012 SP4 Release](https://go.microsoft.com/fwlink/?linkid=846937).  
 
 > Service pack 4 includes all of the SQL Server 2012 SP3 cumulative updates.

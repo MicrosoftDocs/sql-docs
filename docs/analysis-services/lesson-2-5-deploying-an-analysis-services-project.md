@@ -2,9 +2,12 @@
 title: "Deploying an Analysis Services Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,7 @@ ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 2-5 - Deploying an Analysis Services Project

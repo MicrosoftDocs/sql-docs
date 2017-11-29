@@ -1,11 +1,13 @@
 ---
 title: "Identify databases and tables for Stretch Database with Data Migration Assistant | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "10/30/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "stretch-database"
+ms.prod_service: "sql-non-specified"
+ms.service: "database-engine"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
@@ -23,7 +25,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Identify databases and tables for Stretch Database with Data Migration Assistant
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   To identify databases and tables that are candidates for Stretch Database, along with potential blocking issues, download and run Microsoft Data Migration Assistant.
   

@@ -2,9 +2,12 @@
 title: "Content Types (Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -30,7 +33,7 @@ ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Content Types (Data Mining)

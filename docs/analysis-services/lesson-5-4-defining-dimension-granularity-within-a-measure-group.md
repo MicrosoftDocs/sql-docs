@@ -2,9 +2,12 @@
 title: "Defining Dimension Granularity within a Measure Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,7 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 5-4 - Defining Dimension Granularity within a Measure Group

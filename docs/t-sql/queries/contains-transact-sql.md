@@ -3,8 +3,11 @@ title: "CONTAINS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -41,7 +44,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Searches for precise or fuzzy (less precise) matches to single words and phrases, words within a certain distance of one another, or weighted matches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS is a predicate used in the [WHERE clause](../../t-sql/queries/where-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types.  
   
@@ -172,7 +175,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Specifies the text to search for in *column_name* and the conditions for a match.  
   
-*\<contains_search_condition>* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `CONTAINS` predicate.
+*\<contains_search_condition>* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. Large string data types nvarchar(max) and varchar(max) cannot be used. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `CONTAINS` predicate.
   
 ```sql  
 USE AdventureWorks2012;  

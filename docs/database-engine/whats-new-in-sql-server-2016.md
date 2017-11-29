@@ -1,12 +1,13 @@
 ---
 title: "What's New in Database Engine - SQL Server 2016 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-  - "SQL2016_rc1"
+ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,7 +23,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # What's new in Database Engine - SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 This topic summarizes the enhancements introduced in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  The new features and enhancements increase the power and productivity of architects, developers, and administrators who design, develop, and maintain data storage systems.
 

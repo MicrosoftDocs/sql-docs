@@ -1,13 +1,13 @@
 ---
 title: "Install SQL Server Servicing Updates | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -19,6 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server Servicing Updates
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. This section provides information about the following:  
   
 - Installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] during a new installation  

@@ -2,9 +2,11 @@
 title: "Installing SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.prod_service: "database-engine"
+ms.component: "smo"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""

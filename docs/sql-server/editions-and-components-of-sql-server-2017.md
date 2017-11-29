@@ -1,12 +1,13 @@
 ---
 title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-  - "SQL2017_New_Updated"
-ms.date: "09/14/2017"
-ms.prod: "sql-server-2017"
+ms.custom: ""
+ms.date: "11/10/2017"
+ms.prod: "sql-server"
+ms.prod_service: "sql-non-specified"
+ms.service: "server-general"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
@@ -42,8 +43,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Editions and supported features of SQL Server 2017
-
-<!---[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]--->
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 
@@ -63,7 +63,7 @@ For the latest release notes and what's new information, see the following:
 
 ### Try SQL Server!    
     
-> [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 CTP from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+> [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
 <!---    
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   

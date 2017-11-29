@@ -2,9 +2,12 @@
 title: "Microsoft Logistic Regression Algorithm | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -19,7 +22,7 @@ ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Microsoft Logistic Regression Algorithm

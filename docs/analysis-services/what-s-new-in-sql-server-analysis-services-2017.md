@@ -1,16 +1,20 @@
 ---
 title: "What's new in SQL Server 2017 Analysis Services | Microsoft Docs"
 ms.date: "10/27/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "analysis-services"
 ms.topic: "article"
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # What's new in SQL Server 2017 Analysis Services

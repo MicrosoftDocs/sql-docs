@@ -2,10 +2,12 @@
 title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "pdw"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
-ms.suite: ""
+ms.component: "t-sql|statements"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Selects data from a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database and copies that data to a new table in a SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] uses the appliance, with all the benefits of MPP query processing, to select the data for the remote copy. Use this for scenarios that require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality.  
   

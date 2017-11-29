@@ -2,7 +2,12 @@
 title: "Deploy an SSIS project with Transact-SQL (VS Code) | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "integration-services"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "integration-services"
 author: "douglaslMS"
@@ -49,7 +54,7 @@ Use Visual Studio Code to establish a connection to the SSIS Catalog.
 
 4. Follow the prompts to specify the connection properties for the new connection profile. After specifying each value, press **ENTER** to continue. 
 
-   | Setting       | Suggested value | More info |
+   | Setting       | Suggested value | More info |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server name** | The fully qualified server name |  |
    | **Database name** | **SSISDB** | The name of the database to which to connect. |

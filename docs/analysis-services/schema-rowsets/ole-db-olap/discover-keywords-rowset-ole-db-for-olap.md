@@ -2,9 +2,12 @@
 title: "DISCOVER_KEYWORDS Rowset (OLE DB for OLAP) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "schema-rowsets"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -21,7 +24,7 @@ ms.assetid: 70cc680d-9530-469b-8a61-4e6779aec17a
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DISCOVER_KEYWORDS Rowset (OLE DB for OLAP)

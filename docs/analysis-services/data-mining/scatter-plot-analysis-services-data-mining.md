@@ -2,9 +2,12 @@
 title: "Scatter Plot (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -19,7 +22,7 @@ ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Scatter Plot (Analysis Services - Data Mining)

@@ -2,9 +2,12 @@
 title: "Contained Database Collations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "databases"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Contained Database Collations
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Various properties affect the sort order and equality semantics of textual data, including case sensitivity, accent sensitivity, and the base language being used. These qualities are expressed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through the choice of collation for the data. For a more in-depth discussion of collations themselves, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Collations apply not only to data stored in user tables, but to all text handled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], including metadata, temporary objects, variable names, etc. The handling of these differs in contained and non-contained databases. This change will not affect many users, but helps provide instance independence and uniformity. But this may also cause some confusion, as well as problems for sessions that access both contained and non-contained databases.  

@@ -2,9 +2,12 @@
 title: "DMSCHEMA_MINING_FUNCTIONS Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "schema-rowsets"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -21,7 +24,7 @@ ms.assetid: 9ace7493-a7b1-45ca-93de-3cb2f3597017
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_FUNCTIONS Rowset

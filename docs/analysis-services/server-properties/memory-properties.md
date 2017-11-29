@@ -2,9 +2,12 @@
 title: "Memory Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "server-properties"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -26,7 +29,7 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Memory Properties

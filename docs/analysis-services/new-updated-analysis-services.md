@@ -4,17 +4,21 @@ description: Display snippets of updated content for recently changed in documen
 services: na
 documentationcenter: ''
 author: MightyPen
-manager: jhubbard
+manager: kfile
 editor: ''
-ms.service: na
+ms.service: ""
+ms.component: "misc"
+ms.suite: "sql"
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: ""
 ms.workload: analysis-services
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 09/27/2017
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
 ms.author: genemi
 ---
 # New and Recently Updated: Analysis Services for SQL Server

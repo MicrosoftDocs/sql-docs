@@ -2,9 +2,12 @@
 title: "Cube Cells (Analysis Services - Multidimensional Data) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -32,7 +35,7 @@ ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Cube Cells (Analysis Services - Multidimensional Data)

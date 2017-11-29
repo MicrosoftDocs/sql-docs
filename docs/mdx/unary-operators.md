@@ -2,9 +2,12 @@
 title: "Unary Operators | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -21,7 +24,7 @@ manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Unary Operators
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   In Multidimensional Expressions (MDX), unary operators perform an operation on a single operand, such as returning the negative or positive value of a numeric expression.  
   

@@ -2,9 +2,12 @@
 title: "Select a Mining Model and a Data Mining Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -16,7 +19,7 @@ ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Select a Mining Model and a Data Mining Viewer

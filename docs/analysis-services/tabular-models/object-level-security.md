@@ -2,9 +2,12 @@
 title: "Tabular model object-level security | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/20/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -15,7 +18,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Object-level security

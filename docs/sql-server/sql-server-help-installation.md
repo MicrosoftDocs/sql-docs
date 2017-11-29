@@ -2,10 +2,13 @@
 title: "Help Viewer and Offline Content for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql-server"
+ms.prod_service: "sql-non-specified"
+ms.service: "server-general"
+ms.component: ""
 ms.technology: "server-general"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
@@ -20,6 +23,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Help Viewer and Offline Content for SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   
   
@@ -63,7 +67,7 @@ The following table lists the tools that install Help Viewer, based on the SQL S
   
    >[!IMPORTANT] 
    >In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, do the following. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).  
-   >>Open the %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings file in Notepad and change the date in the following code to some date in the future. This file is available on your local machine only when you have installed Visual Studio. 
+   >>Open the %LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settings file in Notepad and change the date in the following code to some date in the future. This file is available on your local machine only when you have installed Visual Studio. 
    >>>Cache LastRefreshed="12/31/2017 00:00:00"  
   
     The table of contents in the left pane automatically updates to include the documentation you've added.  
@@ -136,6 +140,5 @@ When you press F1, the corresponding topic appears online. The topic can not be 
 Also, the Help Viewer does not support proxy settings, and does not support the ISO format. 
 
 ## Additional information
-[Microsoft Help Viewer - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Microsoft Help Viewer - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

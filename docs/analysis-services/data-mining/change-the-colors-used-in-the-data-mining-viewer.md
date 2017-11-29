@@ -2,9 +2,12 @@
 title: "Change the Colors Used in the Data Mining Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "data-mining"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -16,7 +19,7 @@ ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Change the Colors Used in the Data Mining Viewer

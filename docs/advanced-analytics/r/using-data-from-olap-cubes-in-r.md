@@ -29,7 +29,7 @@ This article describes the API, along with an overview of OLAP and MDX for R use
 > [!IMPORTANT]
 > An instance of Analysis Services can support either conventional multidimensional cubes, or tabular models, but an instance cannot support both types of models. Therefore, before you create a query against an Analysis Services database, verify that it contains multidimensional models.
 > 
-> Although a tabular model can be queried using MDX, the **olapR** package does not support connections to tabular model instances. If you need to get data from a tabular mode, a better option is to enable [DirectQuery](https://docs.microsoft.com/sql/analysis-services/tabular-models/directquery-mode-ssas-tabular) on the model, and make the instance available as a linked server in SQL Server. By doing so, you can query the model's data using standard T-SQL rather than MDX, whch provides far better performance.
+> Although a tabular model can be queried using MDX, the **olapR** package does not support connections to tabular model instances. If you need to get data from a tabular mode, a better option is to enable [DirectQuery](https://docs.microsoft.com/sql/analysis-services/tabular-models/directquery-mode-ssas-tabular) on the model, and make the instance available as a linked server in SQL Server. 
 
 ## What is an OLAP cube?
 
@@ -39,7 +39,7 @@ Microsoft provides [Analysis Services](https://docs.microsoft.com/sql/analysis-s
 
 For performance reasons, an OLAP database often calculates summaries (or _aggregations_) in advance, and then stores them for faster retrieval. Summaries are based on  *measures*, which represent formulas that can be applied to numerical data. You use the dimensions to define a subset of data, and then compute the measure over that data. For example, you would use a measure to compute the total sales for a certain product line over multiple quarters minus taxes, to report the average shipping costs for a particular supplier, year-to-date cumulative wages paid, and so forth.
 
-MDX, short for multidimensional expressions, is the language used for querying cubes. An MDX query typically contains a data definition that includes one or more dimensions, and at least one measure, thogh MDX queries can get considerably more complex, and include rolling windows, cumulative averages or sums, percentiles. 
+MDX, short for multidimensional expressions, is the language used for querying cubes. An MDX query typically contains a data definition that includes one or more dimensions, and at least one measure, though MDX queries can get considerably more complex, and include rolling windows, cumulative averages, sums, ranks, or percentiles. 
 
 Here are some other terms that might be helpful when you start building MDX queries:
 
@@ -94,7 +94,7 @@ If you need to extract data from a tabular model for use in R, consider these op
 
 There are fundamental differences between tabular models and multidimensional models that affect the way data is stored and processed. For example, tabular models are stored in memory and leverage columnstore indexes to perform very fast calculations. In multidimensional models, data is stored on disk and aggregations are defined in advance and retrieved by using MDX queries.
 
-For this reason, a single Analysis Services instancec can contain only one type of model. See the following article for more tips about how to distinguish the two type of models:
+For this reason, a single Analysis Services instance can contain only one type of model. See the following article for more tips about how to distinguish the two types of models:
 
 + [Comparing multidimensional and tabular models](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 

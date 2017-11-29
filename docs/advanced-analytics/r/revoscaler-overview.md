@@ -46,7 +46,7 @@ The RevoScaleR package for R is installed for free in Microsoft R Client. If you
 If you are using Python, the [revoscalepy](../python/what-is-revoscalepy.md) package provides equivalent functionality.
 
 > [!IMPORTANT\
-> The RevoScaleR packagepackage cannot be downloaded or used independently of the products and services that provide it.
+> The RevoScaleR package cannot be downloaded or used independently of the products and services that provide it.
 
 ## Use RevoScaleR in SQL Server
 

@@ -75,12 +75,12 @@ The following operations are not supported:
 
 ## Examples
 
-The following examples are based on the AdventureWorks data mart and cube project, because that project is widely available and can easily be resotred from backup to any ersion of Analysis Services.
+The following examples are based on the AdventureWorks data mart and cube project, because that project is widely available, in multiple versions, including backup files that can easily be restored to Analysis Services. If you don't have an existing cube, get a sample cube using either of these options:
 
-You can create the cube that is used in these examples by following the Analysis Services tutorial up to Lesson 4:
-[Creating an OLAP Cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Create the cube that is used in these examples by following the Analysinotes Services tutorial up to Lesson 4:
+[Creating an OLAP cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-You can also download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, you can download a fully processed cube for [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334), in zipped format, and restore it to your SSAS instance. For more information, see [Backup and restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), or [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
++ Download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, this site provides a fully processed cube in zipped format: [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334). Extract the file, and then restore it to your SSAS instance. For more information, see [Backup and restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), or [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
 ### 1. Basic MDX with slicer
 
@@ -125,16 +125,16 @@ mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sal
 result2 <- execute2D(ocs, mdx)
 ```
 
-Note that if you define a query by using the MDX builder in SQL Server Management Studio and then save the MDX string, it will number the axes starting at 0, as shown here: 
+If you define a query by using the MDX builder in SQL Server Management Studio and then save the MDX string, it will number the axes starting at 0, as shown here: 
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amount]} ON AXIS(0), 
    {[Product].[Product Line].[Product Line].MEMBERS} ON AXIS(1) 
    FROM [Analysis Services Tutorial] 
-   WHERE [Sales Territory].[Sales Territory Country].[Australia]
+   WHERE [Sales Territory].[Sales Territory Countr,y].[Australia]
 ```
 
-You can still run this query as a predefined MDX string. However, to build the same query using R using the `axis()` function, you must number the axes starting at 1.
+You can still run this query as a predefined MDX string. However, to build the same query using R using the `axis()` function, you must renumber the axes starting at 1.
 
 ### 2. Explore cubes and their fields on an SSAS instance
 
@@ -181,7 +181,6 @@ explore(ocs, "Sales")
 #### To return all members of the specified dimension and hierarchy
 
 After defining the source and creating the handle, specify the cube, dimension, and hierarchy to return.
-Note that items in the return results that are prefixed with **->** represent children of the previous member.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -197,6 +196,9 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |_Components_|
 |-> Assembly Components|
 |-> Assembly Components|
+
+
+Items in the return results that are prefixed with **->** represent children of the previous member.
 
 ## See Also
 

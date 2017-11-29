@@ -1,7 +1,7 @@
 ---
 title: "Store and retrieve files on file shares on premises and in Azure | Microsoft Docs"
 description: "This article describes how to use the file system and file shares, both on premises and in Azure, with SSIS"
-ms.date: "11/10/2017"
+ms.date: "11/27/2017"
 ms.topic: "article"
 ms.prod: "sql-server-2017"
 ms.technology: 
@@ -18,7 +18,7 @@ This article describes how to update your SQL Server Integration Services (SSIS)
 > Currently, the SSIS Catalog database (SSISDB) only supports a single set of access credentials. Therefore the Azure-SSIS Integration Runtime (IR) can't use different credentials to connect to multiple on-premises file shares and Azure Files shares.
 
 ## Store temporary files
-If you need to store and process temporary files during a single package execution, packages can use the temporary folder `(.)/temp` or `%TEMP%` of your Azure-SSIS Integration Runtime nodes.
+If you need to store and process temporary files during a single package execution, packages can use the current working directory (`.`) or temporary folder (`%TEMP%`) of your Azure-SSIS Integration Runtime nodes.
 
 ## Store files across multiple package executions
 If you need to store and process permanent files and persist them across multiple package executions, you can use either on-premises file shares or Azure Files

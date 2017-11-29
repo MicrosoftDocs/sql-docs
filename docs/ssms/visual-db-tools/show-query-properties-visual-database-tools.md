@@ -19,6 +19,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Show Query Properties (Visual Database Tools)
 You can display properties for a query in the Properties window from Query and View Designer.  

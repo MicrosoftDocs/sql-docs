@@ -4,11 +4,17 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/24/2017
+ms.date: 10/26/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
+ms.workload: "Active"
 ---
 # Installation guidance for SQL Server on Linux
 
@@ -36,7 +42,7 @@ SQL Server 2017 has the following system requirements for Linux:
 
 |||
 |-----|-----|
-| **Memory** | 2 GB (4 GB or more recommended) |
+| **Memory** | 3.25 GB |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
 | **Disk space** | 6 GB |
 | **Processor speed** | 2 GHz |
@@ -88,9 +94,6 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
 > [!NOTE]
 > It is only supported to downgrade to a release within the same major version, such as SQL Server 2017.
 
-> [!IMPORTANT]
-> Downgrade is only supported between RTM, RC2, and RC1 at this time.
-
 ## <a id="versioncheck"></a> Check installed SQL Server version
 
 To verify your current version and edition of SQL Server on Linux, use the following procedure:
@@ -102,51 +105,6 @@ To verify your current version and edition of SQL Server on Linux, use the follo
    ```bash
    sqlcmd -S localhost -U SA -Q 'select @@VERSION'
    ```
-
-## <a id="repositories"></a> Change source repositories
-
-When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. It is important to note that there are two main types of repositories for each distribution:
-
-- **Cumulative Updates (CU)**: The Cumulative Update (CU) repository contains packages for the base SQL Server release and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as SQL Server 2017. They are released on a regular cadence.
-
-- **GDR**: The GDR repository contains packages for the base SQL Server release and only critical fixes and security updates since that release. These updates are also added to the next CU release.
-
-Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade](#rollback) to any release within your major version (ex: 2017).
-
-To change from one source repository (CU or GDR) to another, use the following steps:
-
-1. Remove the previously configured repository.
-
-   | Platform | Repository removal command |
-   |-----|-----|
-   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper rr <repo-name>` |
-   | Ubuntu | `sudo rm -rf /etc/apt/sources.list.d/<repo-name>.list` |
-
-1. Configure the new repository.
-
-   | Platform | Repository | Command |
-   |-----|-----|-----|
-   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES | CU  | `sudo zypper addrepo -fc https://repo.corp.microsoft.com/sles12/config/mssql-server-2017.repo` |
-   | SLES | GDR | `sudo zypper addrepo -fc https://repo.corp.microsoft.com/sles12/config/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
-
-1. Update your system.
-
-   | Platform | Update command |
-   |-----|-----|
-   | RHEL | `sudo yum update` |
-   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
-   | Ubuntu | `sudo apt-get update` |
-
-
-1. [Install](#platforms) or [update](#upgrade) SQL Server from the new repository.
-
-   > [!IMPORTANT]
-   > At this point, if you choose to perform a full installation using the [quickstart tutorials](#platforms), remember that you have just configured the target repository. Do not repeat those steps in the tutorials.
 
 ## <a id="uninstall"></a> Uninstall SQL Server
 

@@ -2,9 +2,12 @@
 title: "Attributes and Attribute Hierarchies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "multidimensional-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -28,7 +31,7 @@ ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 caps.latest.revision: 49
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Attributes and Attribute Hierarchies

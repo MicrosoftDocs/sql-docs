@@ -2,9 +2,12 @@
 title: "SQL Server Always On availability group deployment patterns | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2017"
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: database-engine
 ms.tgt_pltfrm: ""
 ms.topic: article
@@ -13,6 +16,7 @@ caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # High availability and data protection for availability group configurations
 
@@ -38,7 +42,7 @@ If supported by the configuration, the resource agent parameter `REQUIRED_SYNCHR
 
 The following sections explain the default behavior for the cluster resource. 
 
-Choose an availability group design to meet specific business requirements for high availability, data protection, and read scale-out.
+Choose an availability group design to meet specific business requirements for high availability, data protection, and read-scale.
 
 The following configurations describe the availability group design patterns and the capabilities of each pattern. These design patterns apply to availability groups with `CLUSTER_TYPE = EXTERNAL` for high availability solutions. 
 
@@ -50,13 +54,13 @@ The following configurations describe the availability group design patterns and
 
 ## Three synchronous replicas
 
-This configuration consists of three synchronous replicas. By default, it provides high availability and data protection. It can also provide read scale-out.
+This configuration consists of three synchronous replicas. By default, it provides high availability and data protection. It can also provide read-scale.
 
 ![Three replicas][3]
 
-An availability group with three synchronous replicas can provide read scale-out, high availability, and data protection. The following table describes availability behavior. 
+An availability group with three synchronous replicas can provide read-scale, high availability, and data protection. The following table describes availability behavior. 
 
-| |Read scale-out|High availability & </br> data protection | Data protection
+| |read-scale|High availability & </br> data protection | Data protection
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |Primary outage | Manual failover. Might have data loss. New primary is R/W. |Automatic failover. New primary is R/W. |Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. 
@@ -67,13 +71,13 @@ An availability group with three synchronous replicas can provide read scale-out
 
 ## Two synchronous replicas
 
-This configuration enables data protection. Like the other availability group configurations, it can enable read scale-out. The two synchronous replicas configuration does not provide automatic high availability. 
+This configuration enables data protection. Like the other availability group configurations, it can enable read-scale. The two synchronous replicas configuration does not provide automatic high availability. 
 
 ![Two synchronous replicas][1]
 
-An availability group with two synchronous replicas provides read scale-out and data protection. The following table describes availability behavior. 
+An availability group with two synchronous replicas provides read-scale and data protection. The following table describes availability behavior. 
 
-| |Read scale-out |Data protection
+| |read-scale |Data protection
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Primary outage | Manual failover. Might have data loss. New primary is R/W.| Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary.

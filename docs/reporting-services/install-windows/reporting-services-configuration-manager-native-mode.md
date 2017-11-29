@@ -17,6 +17,7 @@ helpviewer_keywords:
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Active"
 ---
 
 # Reporting Services Configuration Manager (Native Mode)

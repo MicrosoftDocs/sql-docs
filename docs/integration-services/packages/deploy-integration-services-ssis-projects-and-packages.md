@@ -2,9 +2,12 @@
 title: "Deploy Integration Services (SSIS) Projects and Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "packages"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -22,6 +25,7 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Deploy Integration Services (SSIS) Projects and Packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports two deployment models, the project deployment model and the legacy package deployment model. The project deployment model enables you to deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
@@ -29,7 +33,7 @@ manager: "jhubbard"
 For more information about the legacy package deployment model, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.  
+>  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.  
   
 ## Compare Project Deployment Model and legacy Package Deployment Model  
  The type of deployment model that you choose for a project determines which development and administrative options are available for that project. The following table shows the differences and similarities between using the project deployment model and using the package deployment model.  
@@ -48,7 +52,7 @@ For more information about the legacy package deployment model, see [Legacy Pack
 |Packages are run in a separate Windows process.|Packages are run in a separate Windows process.|  
 |SQL Server Agent is used to schedule package execution.|SQL Server Agent is used to schedule package execution.|  
   
- The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.   
+ The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.   
   
 ## Features of Project Deployment Model  
  The following table lists the features that are available to projects developed only for the project deployment model.  
@@ -97,7 +101,7 @@ For more info about the error described in this section and about the permission
   
 2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard** . For more information, see the instructions below: [To convert a project to the project deployment model](#convert)  
   
-    -   If you created the project in [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], by default the project uses the project deployment model.  
+    -   If you created the project in [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] or later, by default the project uses the project deployment model.  
   
     -   If you created the project in an earlier release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], after you open the project file in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convert the project to the project deployment model.  
   
@@ -151,7 +155,7 @@ For more info about the error described in this section and about the permission
 3.  Complete the wizard. 
 
 ## Deploy Packages to Integration Services Server
-  The Incremental Package Deployment feature introduced in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] lets you deploy one or more packages to an existing or new project without deploying the whole project.  
+  The Incremental Package Deployment feature introduced in  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] lets you deploy one or more packages to an existing or new project without deploying the whole project.  
   
 ###  <a name="DeployWizard"></a> Deploy packages by using the Integration Services Deployment Wizard  
   

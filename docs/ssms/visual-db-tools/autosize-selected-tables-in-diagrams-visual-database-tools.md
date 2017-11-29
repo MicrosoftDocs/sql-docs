@@ -19,6 +19,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Autosize Selected Tables in Diagrams (Visual Database Tools)
 You can quickly fit tables in your diagram to the smallest size that shows all fields.  

@@ -6,10 +6,16 @@ ms.date: 10/09/2017
 ms.author: meetb 
 manager: jhubbard
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 helpviewer_keywords: 
   - "Linux, AAD authentication"
+ms.workload: "On Demand"
 ---
 # Active Directory Authentication with SQL Server on Linux
 

@@ -17,6 +17,7 @@ f1_keywords:
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Power BI Report Server Integration (Configuration Manager)

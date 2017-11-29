@@ -3,8 +3,11 @@ title: "Date and Time Data Types and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,13 +24,13 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 caps.latest.revision: 79
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Date and Time Data Types and Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 The following sections in this topic provide an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.
 -   [Date and Time Data Types](#DateandTimeDataTypes)  

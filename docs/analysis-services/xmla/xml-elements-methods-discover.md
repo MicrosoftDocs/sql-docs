@@ -2,9 +2,12 @@
 title: "Discover Method (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/14/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "xmla"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -29,7 +32,7 @@ ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML Elements - Methods - Discover

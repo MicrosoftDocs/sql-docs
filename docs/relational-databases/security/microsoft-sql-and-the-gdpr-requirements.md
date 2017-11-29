@@ -2,19 +2,22 @@
 title: "Microsoft SQL and the GDPR requirements | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
-ms.prod: "sql"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: "sql-security"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 caps.latest.revision: 2
 author: "barbkess"
 ms.author: "ronitr"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## Summary
 On May 25, 2018, a European privacy law is due to take effect that sets a new global bar for privacy rights, security, and compliance. The General Data Protection Regulation, or GDPR, is fundamentally about protecting and enabling the privacy rights of individuals, and establishes strict global privacy requirements governing how personal data is managed and protected, while respecting individual choice. 

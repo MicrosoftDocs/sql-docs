@@ -2,12 +2,18 @@
 title: "Run an SSIS package with Transact-SQL (SSMS) | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "integration-services"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "integration-services"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Run an SSIS package from SSMS with Transact-SQL
 This quick start demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then use Transact-SQL statements to run an SSIS package stored in the SSIS Catalog.
@@ -29,7 +35,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog o
 
 2. In the **Connect to Server** dialog box, enter the following information:
 
-   | Setting       | Suggested value | More info | 
+   | Setting       | Suggested value | More info | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database engine | This value is required. |
    | **Server name** | The fully qualified server name | If you're connecting to an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`. |

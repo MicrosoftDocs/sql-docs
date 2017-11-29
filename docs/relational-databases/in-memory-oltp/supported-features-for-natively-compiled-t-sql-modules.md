@@ -1,10 +1,13 @@
 ---
 title: "Supported Features for Natively Compiled T-SQL Modules | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/12/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/23/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Supported Features for Natively Compiled T-SQL Modules
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   This topic contains a list of T-SQL surface area and supported features in the body of natively compiled T-SQL modules, such as stored procedures ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), scalar user-defined functions, inline table-valued functions, and triggers.  
@@ -189,8 +192,8 @@ The following DML statements are supported.
 -   Bitwise operators ~, &, |, and ^  
 
 -   APPLY operator
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the APPLY operator is supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the APPLY operator is supported in natively compiled modules.
 
 ##  <a name="bfncsp"></a> Built-in Functions in Natively Compiled Modules  
  The following functions are supported in constraints on memory-optimized tables and in natively compiled T-SQL modules.  
@@ -200,8 +203,8 @@ The following DML statements are supported.
 -   Date functions: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME, and YEAR.  
 
 -   String functions: LEN, LTRIM, RTRIM, and SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
 
 -   Identity functions: SCOPE_IDENTITY  
 
@@ -210,8 +213,8 @@ The following DML statements are supported.
 -   Uniqueidentifier functions: NEWID and NEWSEQUENTIALID  
 
 -   JSON functions  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the JSON functions are supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the JSON functions are supported in natively compiled modules.
 
 -   Error functions: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, and ERROR_STATE  
 

@@ -1,9 +1,13 @@
 ---
 title: "Analysis Services Tutorials (SSAS) | Microsoft Docs"
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -14,7 +18,7 @@ ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Analysis Services Tutorials (SSAS)

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add Derived Tables to Queries (Visual Database Tools)
 Derived tables are result sets used as table sources in a query. You can add a derived table to a query in the **Diagram Pane**.  

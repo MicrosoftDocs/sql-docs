@@ -2,9 +2,12 @@
 title: "Revoke Permissions on an XML Schema Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "xml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Revoke Permissions on an XML Schema Collection
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The permission to create an XML schema collection can be revoked by using one of the following:  
   
 -   Revoke the ALTER permission for the relational schema. Then, the principal cannot create an XML schema collection in the relational schema. However, the principal can still do so in other relational schemas in the same database.  

@@ -6,19 +6,23 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: barbkess
-ms.service: na
+ms.service: ""
+ms.component: "database-engine"
+ms.suite: "sql"
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: ""
 ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 09/27/2017
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
 ms.author: genemi
 ---
 # New and Recently Updated: Database Engine docs
-
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 
 Nearly every day Microsoft updates some of its existing articles on its [Docs.Microsoft.com](http://docs.microsoft.com/) documentation website. This article displays excerpts from recently updated articles. Links to new articles might also be listed.

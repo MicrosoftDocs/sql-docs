@@ -89,7 +89,7 @@
 
 #### [Download sample data](tutorials/sqldev-py1-download-the-sample-data.md)
 #### [Import data to SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
-#### [Explore and visualize Data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
+#### [Explore and visualize data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
 #### [Create data features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
@@ -122,6 +122,7 @@
 
 ### [Avoid errors with user package libraries for R](r/packages-installed-in-user-libraries.md)
 
+### [Add SQLRUserGroup as a database user](r/add-sqlrusergroup-to-database.md)
 
 ## Data exploration and modeling
 
@@ -153,12 +154,11 @@
 ### [Advanced configuration options for Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Security considerations for the R runtime in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modify the user account pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Configure and manage machine learning extensions](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [Deploy and consume models using web services](operationalization-with-mrsdeploy.md)
 ### [Managing and monitoring machine learning solutions](r/managing-and-monitoring-r-solutions.md)
 ### [Resource governance for Machine Learning Services](r/resource-governance-for-r-services.md)
-### [Create a resource pool for R](r/how-to-create-a-resource-pool-for-r.md)
+### [Create a resource pool for machine learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Extended events for Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
 
 ### [DMVs for Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +180,7 @@
 ### [Add R to an existing Azure virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Use sqlBindR.exe to upgrade an instance](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Install R Server from the command line](r/install-microsoft-r-server-from-the-command-line.md)
-### [Provision the Data Science Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Provision an enterprise data science virtual machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Set up data science tools](r/setup-or-configure-r-tools.md)
 ### [Set Up a data science client](r/set-up-a-data-science-client.md)
 

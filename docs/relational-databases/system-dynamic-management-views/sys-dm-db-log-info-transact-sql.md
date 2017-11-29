@@ -3,8 +3,11 @@ title: "sys.dm_db_log_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,9 +26,10 @@ caps.latest.revision: 4
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
+ms.workload: "Inactive"
 ---
 # sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Returns `VLF` information of the transaction log files. (All log files are combined in the table output). Each row in the output represents a `VLF` in the transaction log and provides information relevant to that VLF in the log.
 

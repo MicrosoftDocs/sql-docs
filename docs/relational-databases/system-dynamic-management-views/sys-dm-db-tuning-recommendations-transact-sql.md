@@ -4,8 +4,11 @@ description: Learn how to find potential performance issues and recommended fixe
 ms.custom: ""
 ms.date: "07/20/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -25,9 +28,10 @@ caps.latest.revision: 37
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Returns detailed information about tuning recommendations.  
   

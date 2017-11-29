@@ -2,9 +2,12 @@
 title: "SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "scale-out"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Integration Services (SSIS) Scale Out
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out provides high performance package execution by distributing executions to multiple machines. You can submit a request for multiple package executions in SQL Server Management Studio. These packages will be executed in parallel, in a scale out mode.  

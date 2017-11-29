@@ -22,6 +22,7 @@ caps.latest.revision: 17
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - IsInitialized
   Indicates whether the report server instance is initialized. Read-only.  

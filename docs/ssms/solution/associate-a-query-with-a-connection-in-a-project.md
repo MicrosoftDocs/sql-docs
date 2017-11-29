@@ -19,6 +19,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Associate a Query with a Connection in a Project
 If a query was created without a connection, or if a query is moved from one project to another it will not be associated with a connection in the current project.  

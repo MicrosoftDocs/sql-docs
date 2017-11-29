@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # XML Indexes Dialog Box (Visual Database Tools)
 Use the **XML Indexes** dialog box to create indexes for columns of the data type XML, which cannot be indexed using the **Index/Keys** dialog box. Each XML column can have more than one XML Index, but the first one created (primary) will be the basis of the others (secondary). If you delete the primary XML index, the secondary indexes will also be deleted.  

@@ -2,8 +2,10 @@
 title: "SQL Server Machine Learning Tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "08/29/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/31/2017"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,9 +23,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# SQL Server Machine Learning tutorials
+# SQL Server machine learning tutorials
 
-This article provides a comprehensive list of the tutorials, demos, and sample applications that use machine learning features in SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, use remote and local compute contexts, and optimize your R and Python code for a SQL production environment.
+This article provides a comprehensive list of the tutorials, demos, and sample applications that use machine learning features in SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, how to use remote and local compute contexts, and how to optimize your R and Python code for a SQL production environment.
 
 ## Start here
 
@@ -41,7 +43,7 @@ For more information about requirements and how to get set up, see [Prerequisite
 
 + [Solutions](#bkmk_solutions) 
 
-    Templates from the Microsoft Data Science team are customizable, to get you started fast with machine learning. Each solution is tailored to a specific task or industry problem; moreover, most solutions are designed to run either in SQL Server or in a cloud environment such as Azure Machine Learning. Other solution can run on Microsoft R Server or HDI Spark clusters.
+    Templates from the Microsoft Data Science team are customizable, to get you started fast with machine learning. Each solution is tailored to a specific task or industry problem; moreover, most solutions are designed to run either in SQL Server or in a cloud environment such as Azure Machine Learning. Other solutions can run on Linux or in Spark or Hadoop clusters, by using Microsoft R Server or Machine Learning Server.
 
 ### <a name ="bkmk_samples"></a>SQL Server product samples
 
@@ -61,13 +63,13 @@ These samples and demos provided by the SQL Server and R Server development team
 
 + [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
 
-  Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. This example uses the Microsoft R algorithms to build a logistic regression and decision trees model. 
+  Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. This example uses the Microsoft algorithms to build logistic regression and decision trees models. 
   
   Applies to: SQL Server 2016 or SQL Server 2017
 
 + [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 
-   Build the ski rental analysis application using Python, to help plan for future demand. This example uses the new Python library, **revoscalepy**, to create a linear regression model. 
+   Build the ski rental analysis application using Python, to help plan for future demand. This example uses the new Python library, **revoscalepy**, to create a linear regression model.
    
    Applies to: SQL Server 2017
 
@@ -88,11 +90,11 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 
     Want to know the real story behind R Services? Read this article from the development and PM team that explains the origin and goals of SQL Server R Services.
 
-+ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
++ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/machine-learning-server/r/tutorial-introduction)
 
     Learn about Microsoft R, and what the RevoScaleR package offers in this collection of quick tutorials. Learn how to write R code once and deploy anywhere, using RevoScaleR data sources and remote compute contexts.
 
-+ [Get started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Get started with MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package)
 
   Learn how to use the new algorithms in the MicrosoftML package for advanced modeling and scalable data transformations, optimized for multiple compute contexts.
 
@@ -100,8 +102,8 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 
 To run these tutorials, you must download and install the SQL Server machine learning components, as described here:
 
-+ [Set up SQL Server R Services](../r/set-up-sql-server-r-services-in-database.md)
-+ [Set up SQL Server Python Services](../python/setup-python-machine-learning-services.md)
++ [Set up SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services](../r/set-up-sql-server-r-services-in-database.md)
++ [Set up SQL Server 2017 Python Services](../python/setup-python-machine-learning-services.md)
 
 With SQL Server 2017, you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
 
@@ -109,7 +111,7 @@ After running SQL Server setup, don't forget these important steps:
 
 1. Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`. Follow the instructions to reconfigure and restart SQL Server.
 2. Ensure that the Launchpad service is running, and that the worker accounts it uses can connect to the SQL Server instance.
-3. Review the permissions associated with the SQL logins and Windows user accounts that will be running R or Python scripts. All need permission to run R or Python scripts, and to connect to the instance. Depending on the sample, they might also need permissions to read and write data, and to create database objects.
+3. Review the permissions associated with the users who must run R or Python scripts. Regardless of whether you use SQL logins or Windows user accounts, the user must have permission to run R or Python scripts, and must be able to connect to the instance. Depending on the tutorial, the user might also require permission to write data, create database objects, or do a bulk import of data.
 
 For details, see this article for some common setup and configuration issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
 

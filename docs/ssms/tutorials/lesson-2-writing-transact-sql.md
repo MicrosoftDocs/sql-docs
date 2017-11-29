@@ -14,6 +14,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 2: Writing Transact-SQL
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is an integrated development environment for writing [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, and XML queries, and SQLCMD commands. The tutorial illustrates using the Database Engine Query Editor to write a [!INCLUDE[tsql](../../includes/tsql-md.md)] script.  

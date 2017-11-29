@@ -22,6 +22,7 @@ caps.latest.revision: 43
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Use an External Data Source for Subscriber Data (Data-Driven Subscription)
   In a data-driven subscription, dynamic subscription data is provided by a query or command that retrieves data from an external data source. Subscription data can be retrieved from any supported data source that meets the requirements for data-driven subscription processing. The query or command syntax must be valid for a data processing extension installed with your report server.  

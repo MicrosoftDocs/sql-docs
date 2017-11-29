@@ -2,9 +2,12 @@
 title: "Install Analysis Services in Power Pivot Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "instances"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
   - "setup-install"
@@ -14,7 +17,7 @@ ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Install Analysis Services in Power Pivot Mode

@@ -6,9 +6,15 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 09/20/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
+ms.workload: "On Demand"
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 
@@ -287,7 +293,7 @@ The **language.lcid** setting changes the SQL Server locale to any supported lan
 
 The **memory.memorylimitmb** setting controls the amount physical memory (in MB) available to SQL Server. The default is 80% of the physical memory.
 
-1. Run the mssql-conf script as root with the **set** command for **memory.memorylimitmb**. The following example changes the memory available to SQL Server to 2 GB (3328 MB).
+1. Run the mssql-conf script as root with the **set** command for **memory.memorylimitmb**. The following example changes the memory available to SQL Server to 3.25 GB (3328 MB).
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 3328

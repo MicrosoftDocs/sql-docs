@@ -2,9 +2,12 @@
 title: "Explicit Mapping XSD Elements and Attributes to Tables and Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -32,8 +35,10 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Explicit Mapping XSD Elements and Attributes to Tables and Columns
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   When using an XSD schema to provide an XML view of the relational database , the elements and attributes of the schema must be mapped to tables and columns of the database. The rows in the database table/view will map to elements in the XML document. The column values in the database map to attributes or elements.  
   
  When XPath queries are specified against the annotated XSD schema, the data for the elements and attributes in the schema is retrieved from the tables and columns to which they map. To obtain a single value from the database, the mapping specified in the XSD schema must have both relation and field specification. If the name of an element/attribute is not the same name as the table/view or column name to which it maps, the **sql:relation** and **sql:field** annotations are used to specify the mapping between an element or attribute in an XML document and the table (view) or column in a database.  

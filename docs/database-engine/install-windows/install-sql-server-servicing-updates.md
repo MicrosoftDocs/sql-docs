@@ -1,13 +1,13 @@
 ---
 title: "Install SQL Server Servicing Updates | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -19,6 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server Servicing Updates
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. This section provides information about the following:  
   
 - Installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] during a new installation  
@@ -41,7 +42,12 @@ Install the latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upd
 After Setup finds the latest versions of the applicable updates, it downloads and integrates them with the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup process. Product Update can include a cumulative update, service pack, or service pack plus cumulative update.  
   
 ## Installing Updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] after it has already been installed  
-On an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], we recommend that you apply the latest security updates and critical updates including general distribution releases (GDRs), service packs (SPs), and cumulative updates (CUs). For additional information, see the [March, 2016 announcement to the SQL Server Incremental Servicing Model (ISM)](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/). 
+On an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], we recommend that you apply the latest security updates and critical updates including general distribution releases (GDRs), service packs (SPs), and cumulative updates (CUs). For additional information, see the [March, 2016 announcement on the SQL Server Incremental Servicing Model (ISM)](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/).
+
+> [!NOTE]
+> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] we are adopting a simplified, predictable mainstream servicing lifecycle and service packs (SPs) will no longer be available. 
+> Only cumulative updates (CUs), and general distribution releases (GDRs) when needed.
+> For additional information, see the [September, 2017 announcement on the Modern Servicing Model for SQL Server (MSM)](http://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/).
   
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates are available through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update (MU), Windows Server Update Services (WSUS) and the Microsoft Download Center. Security and Critical updates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are available through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, and to be able to see these updates you need to opt-into MU through the Windows Update applet in Control panel.  
   

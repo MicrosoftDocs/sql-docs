@@ -2,9 +2,12 @@
 title: "Annotated XSD Schemas in SQLXML 4.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -21,8 +24,10 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Annotated XSD Schemas in SQLXML 4.0
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This section provides information about using annotated XSD schemas in SQLXML 4.0. In previous versions of SQLXML, similar functionality was provided with XML-Data Reduced (XDR) schemas. This section also provides XDR information for legacy applications.  
   
 ## In This Section  

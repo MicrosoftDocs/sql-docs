@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Alerts Node (SQL Server Agent F1 Help)
 This section contains the F1 Help for the **Alerts** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

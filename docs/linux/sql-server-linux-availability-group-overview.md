@@ -35,7 +35,7 @@ From a high-level standpoint, availability groups under SQL Server on Linux are 
 
 An AG in Standard Edition can have two total replicas: one primary, and one secondary that can only be used for availability purposes. It cannot be used for anything else, such as readable queries. An AG in Enterprise Edition can have up to nine total replicas: one primary and up to eight secondaries, of which up to three (including the primary) can be synchronous. If using an underlying cluster, there can be a maximum of 16 nodes total when Corosync is involved. An availability group can span at most nine of the 16 nodes with Enterprise Edition, and two with Standard Edition.
 
-A two-replica configuration that requires the ability to automatically fail over to another replica requires the use of a configuration-only replica, as described in [Configuration-only replica and quorum](#configuration-only-replica-and-quorum). Configuration-only replicas were introduced in SQL Server 2017 CU1, so that should be the minimum version deployed for this configuration.
+A two-replica configuration that requires the ability to automatically fail over to another replica requires the use of a configuration-only replica, as described in [Configuration-only replica and quorum](#configuration-only-replica-and-quorum). Configuration-only replicas were introduced in SQL Server 2017 Cumulative Update 1 (CU1), so that should be the minimum version deployed for this configuration.
 
 If Pacemaker is used, it must be properly configured so it remains up and running. That means that quorum and STONITH must be implemented properly from a Pacemaker perspective, in addition to any SQL Server requirements such as a configuration-only replica.
 
@@ -104,13 +104,13 @@ A configuration-only replica can be hosted on any edition of SQL Server, includi
 
 When a configuration-only replica is used, it has the following behavior:
 
--   By default, `required_synchronized_secondaries_to_commit` is set to 0. This can be modified to be 1 if desired (see above).
--   If the primary fails and `required_synchronized_secondaries_to_commit` is 0, the secondary replica will become the new primary and is available for both reading and writing. If the value is 1, automatic failover will occur, but will not accept new transactions until the other replica is online.
--   If a secondary replica fails and `required_synchronized_secondaries_to_commit` is 0, the primary replica still accepts transactions, but if the primary fails at this point, there is no protection for the data nor failover possible (manual or automatic) since a secondary replica is not available.
+-   By default, `required_synchronized_secondaries_to_commit` is set to 0. This can be manually modified to 1 if desired.
+-   If the primary fails and `required_synchronized_secondaries_to_commit` is 0, the secondary replica will become the new primary and be available for both reading and writing. If the value is 1, automatic failover will occur, but will not accept new transactions until the other replica is online.
+-   If a secondary replica fails and `required_synchronized_secondaries_to_commit` is 0, the primary replica still accepts transactions, but if the primary fails at this point, there is no protection for the data nor failover possible (manual or automatic), since a secondary replica is not available.
 -   If the configuration-only replicas fails, the AG will function normally, but no automatic failover is possible.
--   If both a synchronous secondary replica and the configuration only replica fail, the primary cannot accept transactions, and there is nowhere for the primary to fail to.
+-   If both a synchronous secondary replica and the configuration-only replica fail, the primary cannot accept transactions, and there is nowhere for the primary to fail to.
 
-In CU1 there is a known bug in the logging in the corosync.log file that is generated via `mssql-server-ha` that will be resolved in a future CU. If a secondary replica is not able to become the primary due to the number of required replicas being available, the current message says "Expected to receive 1 sequence numbers but only received 2. Not enough replicas are online to safely promote the local replica." The numbers should be reversed, and it should say "Expected to receive 2 sequence numbers but only received 1. Not enough replicas are online to safely promote the local replica."
+In CU1 there is a known bug in the logging in the corosync.log file that is generated via `mssql-server-ha`, which will be resolved in a future CU. If a secondary replica is not able to become the primary due to the number of required replicas available, the current message says "Expected to receive 1 sequence numbers but only received 2. Not enough replicas are online to safely promote the local replica." The numbers should be reversed, and it should say "Expected to receive 2 sequence numbers but only received 1. Not enough replicas are online to safely promote the local replica."
 
 ## Multiple availability groups 
 
@@ -124,16 +124,16 @@ As on Windows-based AGs, the drive and folder structure for the user databases p
 
 The listener is optional functionality for an AG. It provides a single point of entry for all connections (read/write to the primary replica and/or read-only to secondary replicas) so that applications and end users do not need to know which server is hosting the data. In a WSFC, this is the combination of a network name resource and an IP resource, which is then registered in AD DS (if needed) as well as DNS. In combination with the AG resource itself, it provides that abstraction. For more information on a listener, see [Listeners, Client Connectivity, and Application Failover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).
 
-The listener under Linux is configured differently, but its functionality is the same. There is no concept of a network name resource in Pacemaker, nor is an object created in AD DS; there is just an IP address resource created in Pacemaker that can run on any of the nodes. An entry associated with the IP resource for the listener in DNS with the “friendly name” will need to be created. The IP resource for the listener will only be active on the server hosting the primary replica for that availability group.
+The listener under Linux is configured differently, but its functionality is the same. There is no concept of a network name resource in Pacemaker, nor is an object created in AD DS; there is just an IP address resource created in Pacemaker that can run on any of the nodes. An entry associated with the IP resource for the listener in DNS with a “friendly name” will need to be created. The IP resource for the listener will only be active on the server hosting the primary replica for that availability group.
 
 If Pacemaker is used and an IP address resource is created that is associated with the listener, there will be a brief outage as the IP address stops on the one server and starts on the other, whether it is automatic or manual failover. While this provides abstraction through the combination of a single name and IP address, it does not mask the outage. An application must be able to handle the disconnect by having some sort of functionality to detect this and reconnect.
 
 However, the combination of the DNS name and IP address is still not enough to provide all the functionality that a listener on a WSFC provides, such as read-only routing for secondary replicas. When configuring an AG, a “listener” still needs to be configured in SQL Server. This can be seen in the wizard as well as the Transact-SQL syntax. There are two ways that this can be configured to function the same as on Windows:
 
--   For an AG with a cluster type of External, the IP address associated with the “listener” created in SQL Server is the IP address of the resource created in Pacemaker.
+-   For an AG with a cluster type of External, the IP address associated with the “listener” created in SQL Server should be the IP address of the resource created in Pacemaker.
 -   For an AG created with a cluster type of None, use the IP address associated with the primary replica.
 
-The instance associated with the IP address provided then becomes the coordinator for things like the read-only routing requests from applications.
+The instance associated with the provided IP address then becomes the coordinator for things like the read-only routing requests from applications.
 
 ## Interoperability with Windows-based availability groups and replicas 
 

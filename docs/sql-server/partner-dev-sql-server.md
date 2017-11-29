@@ -35,7 +35,7 @@ To learn more about some of our other partners, see [High availability, and disa
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
-[2]: ./media/parter-hadr-sql-server/click2cloud_logo.png
+[2]: ./media/partner-hadr-sql-server/click2cloud_logo.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md

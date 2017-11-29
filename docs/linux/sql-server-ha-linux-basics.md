@@ -251,7 +251,7 @@ One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker 
 ### Quorum and STONITH
 Quorum configuration and requirements are related to AG or FCI-specific deployments of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-STONITH is required for a supported Pacemaker cluster. Use the documentation from the distribution to configure STONITH. An example is at [Storage-based Fencing](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) for SLES. There is also a STONITH agent for VMware vCenter for ESXI-based solutions. For more information, see [needs link].
+STONITH is required for a supported Pacemaker cluster. Use the documentation from the distribution to configure STONITH. An example is at [Storage-based Fencing](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) for SLES. There is also a STONITH agent for VMware vCenter for ESXI-based solutions. For more information, see [Stonith Plugin Agent for VMWare VM VCenter SOAP Fencing (Unofficial)](https://github.com/olafrv/fence_vmware_soap).
 
 > [!NOTE]
 > As of the writing of this article, Hyper-V does not have a solution for STONITH. This is true for on premises deployments and also impacts Azure-based Pacemaker deployments using certain distributions such as RHEL.
@@ -366,7 +366,7 @@ Configuring Ubuntu is similar to RHEL. However, there is one major difference: w
 
 The process for creating a Pacemaker cluster is completely different on SLES than it is on RHEL and Ubuntu. The steps below document how to create a cluster with SLES.
 1. Start the cluster configuration process by running `sudo ha-cluster-init` on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SLES’s built-in fencing that is storage-based. NTP and watchdog can be configured later.
-2. You will be prompted to configure Corosync. You will be asked for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you are using; for example, 192.191.190.0. You can accept the defaults and click **Enter** at every prompt, or change if necessary.
+2. You will be prompted to configure Corosync. You will be asked for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you are using; for example, 192.191.190.0. You can accept the defaults at every prompt, or change if necessary.
 3. Next, you will be asked if you want to configure SBD, which is the disk-based fencing. This can be done later if desired. If it is not configured, unlike on RHEL and Ubuntu, `stonith-enabled` will by default be set to false.
 4. Finally, you will be asked if you want to configure an IP address for administration. This IP address is optional, but functions similar to the IP address for a WSFC in the sense that it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This, too, is optional.
 5. Ensure that the cluster is up and running by issuing `sudo crm status`.

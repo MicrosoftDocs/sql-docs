@@ -59,7 +59,7 @@ To learn more about some of our other partners, see [High availability, and disa
 
 <!--YouTube links-->
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/rapid-sql-overview
-[click2cloud_youtube]:www.youtube.com/channel/UCjVgly_5QMuNZQh2I2FkHQQ
+[click2cloud_youtube]:https://www.youtube.com/channel/UCjVgly_5QMuNZQh2I2FkHQQ
 
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software

@@ -33,10 +33,6 @@ ms.workload: "Inactive"
 
   Returns information about transactions being replicated in a transactional publication.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |column_name|data_type|description|  
 |------------------|----------------|-----------------|  
 |**buckets**|**bigint**|Number of buckets in the hash table.|  

@@ -31,10 +31,6 @@ ms.workload: "Inactive"
 
   Closes and de-allocates the cursor, as well as releases all associated resources; that is, it drops the temporary table used in support of KEYSET or STATIC **cursor**. sp_cursorclose is invoked by specifying ID = 9 in a tabular data stream (TDS) packet.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

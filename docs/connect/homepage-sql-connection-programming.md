@@ -2,7 +2,7 @@
 title: "Homepage for SQL client programming | Microsoft Docs"
 description: "Hub page with annotated links to downloads and documentation for numerous combinations of languages and operating systems, for connecting to SQL Server or to Azure SQL Database."
 author: "MightyPen"
-ms.date: "09/13/2017"
+ms.date: "11/29/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -53,7 +53,7 @@ In the following table, each language image is a link to detail about using the 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![C# logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework, of .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java logo][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]] | &nbsp; [![PHP logo][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Node.js logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP logo][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Python logo][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 

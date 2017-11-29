@@ -65,21 +65,36 @@ The following features are not available in this release of the ODBC driver on m
 
 ## Character Set Support
 
-The client encoding can be one of the following:
+SQLCHAR data in one of the following character sets is supported by the driver:
+
   -  UTF-8
-  -  ISO-8859-1
-  -  ISO-8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO-8859-1 / CP1252
+  -  ISO-8859-2 / CP1250
   -  ISO-8859-3
   -  ISO-8859-4
   -  ISO-8859-5
   -  ISO-8859-6
   -  ISO-8859-7
-  -  ISO-8859-8
-  -  ISO-8859-9
+  -  ISO-8859-8 / CP1255
+  -  ISO-8859-9 / CP1254
   -  ISO-8859-13
   -  ISO-8859-15
-  
-SQLCHAR data must be one of the supported character sets. SQLWCHAR data must be UTF-16LE (Little Endian).  
+
+Upon connection, the driver detects the current locale of the process it is loaded in. If it is one of the supported encodings above, the driver will use that encoding for SQLCHAR (narrow-character) data; otherwise, it defaults to UTF-8. Since all processes start in the "C" locale by default (and thus cause the driver to default to UTF-8), if an application needs to use one of the encodings above, it should use the **setlocale** function to set the locale appropriately before connecting; either by specifying the desired locale explicitly, or using an empty string e.g. `setlocale(LC_ALL, "")`, to use the locale settings of the environment.
+
+SQLWCHAR data must be UTF-16LE (Little Endian).
 
 If SQLDescribeParameter does not specify a SQL type on the server, the driver uses the SQL type specified in the *ParameterType* parameter of SQLBindParameter. If a narrow character SQL type, such as SQL_VARCHAR, is specified in SQLBindParameter, the driver converts the supplied data from the client code page to the default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] code page. (The default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] code page is typically 1252.) If the client code page is not supported, it will be set to UTF-8. In this case, the driver then converts the UTF-8 data to the default code page. However, data loss is possible. If code page 1252 cannot represent a character, the driver converts the character to a question mark ('?'). To avoid this data loss, specify a Unicode SQL character type, such as SQL_NVARCHAR, in SQLBindParameter. In this case, the driver converts the supplied Unicode data in UTF-8 encoding to UTF-16 without loss of data.
 

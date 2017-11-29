@@ -1,5 +1,5 @@
 ---
-title: Always On Availability Groups for [!INCLUDE[sssql17](../includes/sssql17.md)] on Linux | Microsoft Docs
+title: Always On Availability Groups for SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -21,11 +21,11 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article describes the characteristics of Always On Availability Groups (AGs) under Linux-based [!INCLUDE[sssql17](../includes/sssql17.md)] installations. It also covers differences between Linux- and Windows Server failover cluster (WSFC)-based AGs. See the [Windows-based documentation](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) for the basics of AGs, as they work the same on Windows and Linux except for the WSFC.
+This article describes the characteristics of Always On Availability Groups (AGs) under Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installations. It also covers differences between Linux- and Windows Server failover cluster (WSFC)-based AGs. See the [Windows-based documentation](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) for the basics of AGs, as they work the same on Windows and Linux except for the WSFC.
 
-From a high-level standpoint, availability groups under [!INCLUDE[sssql17](../includes/sssql17.md)] on Linux are the same as they are on WSFC-based implementations. That means that all the limitations and features are the same, with some exceptions. The main differences include:
+From a high-level standpoint, availability groups under [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux are the same as they are on WSFC-based implementations. That means that all the limitations and features are the same, with some exceptions. The main differences include:
 
--   Microsoft Distributed Transaction Coordinator (DTC) is not supported under Linux in [!INCLUDE[sssql17](../includes/sssql17.md)]. If your applications require the use of distributed transactions and need an AG, deploy [!INCLUDE[sssql17](../includes/sssql17.md)] on Windows.
+-   Microsoft Distributed Transaction Coordinator (DTC) is not supported under Linux in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. If your applications require the use of distributed transactions and need an AG, deploy [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Windows.
 -   Linux-based deployments use Pacemaker instead of a WSFC.
 -   Unlike most configurations for AGs on Windows except for the Workgroup Cluster scenario, Pacemaker never requires Active Directory Domain Services (AD DS).
 -   How to fail an AG from one node to another is different between Linux and Windows.
@@ -35,25 +35,25 @@ From a high-level standpoint, availability groups under [!INCLUDE[sssql17](../in
 
 An AG in [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] can have two total replicas: one primary, and one secondary that can only be used for availability purposes. It cannot be used for anything else, such as readable queries. An AG in [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)] can have up to nine total replicas: one primary and up to eight secondaries, of which up to three (including the primary) can be synchronous. If using an underlying cluster, there can be a maximum of 16 nodes total when Corosync is involved. An availability group can span at most nine of the 16 nodes with [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)], and two with [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)].
 
-A two-replica configuration that requires the ability to automatically fail over to another replica requires the use of a configuration-only replica, as described in [Configuration-only replica and quorum](#configuration-only-replica-and-quorum). Configuration-only replicas were introduced in [!INCLUDE[sssql17](../includes/sssql17.md)] Cumulative Update 1 (CU1), so that should be the minimum version deployed for this configuration.
+A two-replica configuration that requires the ability to automatically fail over to another replica requires the use of a configuration-only replica, as described in [Configuration-only replica and quorum](#configuration-only-replica-and-quorum). Configuration-only replicas were introduced in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] Cumulative Update 1 (CU1), so that should be the minimum version deployed for this configuration.
 
-If Pacemaker is used, it must be properly configured so it remains up and running. That means that quorum and STONITH must be implemented properly from a Pacemaker perspective, in addition to any [!INCLUDE[sssql17](../includes/sssql17.md)] requirements such as a configuration-only replica.
+If Pacemaker is used, it must be properly configured so it remains up and running. That means that quorum and STONITH must be implemented properly from a Pacemaker perspective, in addition to any [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requirements such as a configuration-only replica.
 
 Readable secondary replicas are only supported with [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)].
 
 ## Cluster type and failover mode
 
-New to [!INCLUDE[sssql17](../includes/sssql17.md)] is the introduction of a cluster type for AGs. For Linux, there are two valid values: External and None. A cluster type of External means that Pacemaker will be used underneath the AG. Using External for cluster type requires that the failover mode be set to External as well (also new in [!INCLUDE[sssql17](../includes/sssql17.md)]). Automatic failover is supported, but unlike a WSFC, failover mode is set to External, not automatic, when Pacemaker is used. Unlike a WSFC, the Pacemaker portion of the AG is created after the AG is configured.
+New to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] is the introduction of a cluster type for AGs. For Linux, there are two valid values: External and None. A cluster type of External means that Pacemaker will be used underneath the AG. Using External for cluster type requires that the failover mode be set to External as well (also new in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]). Automatic failover is supported, but unlike a WSFC, failover mode is set to External, not automatic, when Pacemaker is used. Unlike a WSFC, the Pacemaker portion of the AG is created after the AG is configured.
 
 A cluster type of None means that there is no requirement for, nor will the AG use, Pacemaker. Even on servers that have Pacemaker configured, if an AG is configured with a cluster type of None, Pacemaker will not see or manage that AG. A cluster type of None only supports manual failover from a primary to a secondary replica. An AG created with None is primarily targeted for the read-scale out scenario as well as upgrades. While it can work in scenarios like disaster recovery or local availability where no automatic failover is necessary, it is not recommended. The listener story is also more complex without Pacemaker.
 
-Cluster type is stored in the [!INCLUDE[sssql17](../includes/sssql17.md)] dynamic management view (DMV) `sys.availability_groups`, in the columns `cluster_type` and `cluster_type_desc`.
+Cluster type is stored in the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] dynamic management view (DMV) `sys.availability_groups`, in the columns `cluster_type` and `cluster_type_desc`.
 
 ## required\_synchronized\_secondaries\_to\_commit
 
-New to [!INCLUDE[sssql17](../includes/sssql17.md)] is a setting that is used by AGs called `required_synchronized_secondaries_to_commit`. This tells the AG the number of secondary replicas that must be in lockstep with the primary. This enables things like automatic failover (only when integrated with Pacemaker with a cluster type of External), and controls the behavior of things like the availability of the primary if the right number of secondary replicas is either online or offline. To understand more about how this works, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The `required_synchronized_secondaries_to_commit` value is set by default and maintained by Pacemaker/[!INCLUDE[sssql17](../includes/sssql17.md)]. You can manually override this value.
+New to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] is a setting that is used by AGs called `required_synchronized_secondaries_to_commit`. This tells the AG the number of secondary replicas that must be in lockstep with the primary. This enables things like automatic failover (only when integrated with Pacemaker with a cluster type of External), and controls the behavior of things like the availability of the primary if the right number of secondary replicas is either online or offline. To understand more about how this works, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The `required_synchronized_secondaries_to_commit` value is set by default and maintained by Pacemaker/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. You can manually override this value.
 
-The combination of `required_synchronized_secondaries_to_commit` and the new sequence number (which is stored in `sys.availability_groups`) informs Pacemaker and [!INCLUDE[sssql17](../includes/sssql17.md)] that, for example, automatic failover can happen. In that case, a secondary replica would have the same sequence number as the primary, meaning it is up to date with all the latest configuration information.
+The combination of `required_synchronized_secondaries_to_commit` and the new sequence number (which is stored in `sys.availability_groups`) informs Pacemaker and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] that, for example, automatic failover can happen. In that case, a secondary replica would have the same sequence number as the primary, meaning it is up to date with all the latest configuration information.
 
 There are three values that can be set for `required_synchronized_secondaries_to_commit`: 0, 1, or 2. They control the behavior of what happens when a replica becomes unavailable. The numbers correspond to the number of secondary replicas that must be synchronized with the primary. The behavior is as follows under Linux:
 
@@ -89,7 +89,7 @@ If these conditions are met and the server hosting the primary replica fails, th
 
 ## Configuration-only replica and quorum
 
-Also new in [!INCLUDE[sssql17](../includes/sssql17.md)] as of CU1 is a configuration-only replica. Because Pacemaker is different than a WSFC, especially when it comes to quorum and requiring STONITH, having just a two-node configuration will not work when it comes to an AG. For an FCI, the quorum mechanisms provided by Pacemaker can be fine, because all FCI failover arbitration happens at the cluster layer. For an AG, arbitration under Linux happens in [!INCLUDE[sssql17](../includes/sssql17.md)], where all the metadata is stored. This is where the configuration-only replica comes into play.
+Also new in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] as of CU1 is a configuration-only replica. Because Pacemaker is different than a WSFC, especially when it comes to quorum and requiring STONITH, having just a two-node configuration will not work when it comes to an AG. For an FCI, the quorum mechanisms provided by Pacemaker can be fine, because all FCI failover arbitration happens at the cluster layer. For an AG, arbitration under Linux happens in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], where all the metadata is stored. This is where the configuration-only replica comes into play.
 
 Without anything else, a third node and at least one synchronized replica would be required. This would not work for [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)], since it can only have two replicas participating in an AG. The configuration-only replica stores the AG configuration in the master database, same as the other replicas in the AG configuration. The configuration-only replica does not have the user databases participating in the AG. The configuration data is sent synchronously from the primary. This configuration data is then used during failovers, whether they are automatic or manual.
 
@@ -100,7 +100,7 @@ For an AG to maintain quorum and enable automatic failovers with a cluster type 
 
 Manual failovers can happen whether using External or None cluster types for AG configurations. While a configuration only replica can be configured with an AG that has a cluster type of None, it is not recommended, since it complicates the deployment. For those configurations, manually modify `required_synchronized_secondaries_to_commit` to have a value of at least 1, so that there is at least one synchronized replica.
 
-A configuration-only replica can be hosted on any edition of [!INCLUDE[sssql17](../includes/sssql17.md)], including [!INCLUDE[ssenterprise-md](../includes/ssexpress-md.md)]. This will minimize licensing costs and ensures it works with AGs in [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]. This means that the third required server just needs to meet the minimum specification for [!INCLUDE[sssql17](../includes/sssql17.md)], since it is not receiving user transaction traffic for the AG.
+A configuration-only replica can be hosted on any edition of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], including [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)]. This will minimize licensing costs and ensures it works with AGs in [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]. This means that the third required server just needs to meet the minimum specification for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], since it is not receiving user transaction traffic for the AG.
 
 When a configuration-only replica is used, it has the following behavior:
 
@@ -128,9 +128,9 @@ The listener under Linux is configured differently, but its functionality is the
 
 If Pacemaker is used and an IP address resource is created that is associated with the listener, there will be a brief outage as the IP address stops on the one server and starts on the other, whether it is automatic or manual failover. While this provides abstraction through the combination of a single name and IP address, it does not mask the outage. An application must be able to handle the disconnect by having some sort of functionality to detect this and reconnect.
 
-However, the combination of the DNS name and IP address is still not enough to provide all the functionality that a listener on a WSFC provides, such as read-only routing for secondary replicas. When configuring an AG, a “listener” still needs to be configured in [!INCLUDE[sssql17](../includes/sssql17.md)]. This can be seen in the wizard as well as the Transact-SQL syntax. There are two ways that this can be configured to function the same as on Windows:
+However, the combination of the DNS name and IP address is still not enough to provide all the functionality that a listener on a WSFC provides, such as read-only routing for secondary replicas. When configuring an AG, a “listener” still needs to be configured in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. This can be seen in the wizard as well as the Transact-SQL syntax. There are two ways that this can be configured to function the same as on Windows:
 
--   For an AG with a cluster type of External, the IP address associated with the “listener” created in [!INCLUDE[sssql17](../includes/sssql17.md)] should be the IP address of the resource created in Pacemaker.
+-   For an AG with a cluster type of External, the IP address associated with the “listener” created in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be the IP address of the resource created in Pacemaker.
 -   For an AG created with a cluster type of None, use the IP address associated with the primary replica.
 
 The instance associated with the provided IP address then becomes the coordinator for things like the read-only routing requests from applications.
@@ -147,7 +147,7 @@ A distributed AG can also cross OS boundaries. The underlying AGs are bound by t
 
 ![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15](../includes/sssql15.md)] to [!INCLUDE[sssql17](../includes/sssql17.md)]. For more information on how to achieve this, see [the article “x”].
+Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 

@@ -1,15 +1,24 @@
 ---
-title: "SQL Server availability basics for Linux deployments"
-ms.date: "11/17/2017"
-ms.prod: "sql-server-2017"
-ms.technology: 
-ms.topic: "article"
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
+title: SQL Server availability basics for Linux deployments | Microsoft Docs
+description: 
+author: MikeRayMSFT 
+ms.author: mikeray 
+manager: jhubbard
+ms.date: 11/27/2017
+ms.topic: article
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "linux"
+ms.suite: "sql"
+ms.custom: ""
+ms.technology: database-engine
+ms.workload: "On Demand"
 ---
 
 # SQL Server availability basics for Linux deployments
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Starting with SQL Server 2017, SQL Server is supported on both Linux and Windows. Like Windows-based SQL Server deployments, SQL Server databases and instances need to be highly available under Linux. This article covers the technical aspects of planning and deploying highly available Linux-based SQL Server databases and instances, as well as some of the differences from Windows-based installations. Because SQL Server may be new for Linux professionals, and Linux may be new for SQL Server professionals, the article at times introduces concepts that may be familiar to some and unfamiliar to others.
 
@@ -19,13 +28,14 @@ Besides backup and restore, the same three availability features are available o
 -   Always On Failover Cluster Instances (FCIs)
 -   [Log Shipping](sql-server-linux-use-log-shipping.md)
 
-On Windows, FCIs always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in SQL Server 2017. A WSFC does not exist in Linux. Clustering implementation in Linux is discussed in [Pacemaker for Always On Availability Groups and failover cluster instances on Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
+On Windows, FCIs always require an underlying Windows Server failover cluster (WSFC). Depending on the deployment scenario, an AG usually requires an underlying WSFC, with the exception being the new None variant in SQL Server 2017. A WSFC does not exist in Linux. Clustering implementation in Linux is discussed below in [Pacemaker for Always On Availability Groups and failover cluster instances on Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
 ## A quick Linux primer
 While some Linux installations may be installed with an interface, most are not, meaning that nearly everything at the operating system layer is done via command line. The common term for this command line in the Linux world is a *bash shell*.
 
 In Linux, many commands need to be executed with elevated privileges, much like many things need to be done in Windows Server as an administrator. There are two main methods to execute with elevated privileges:
 1. Run in the context of the proper user. To change to a different user, use the command `su`. If `su` is executed on its own without a username, as long as you know the password, you will now be in a shell as *root*.
+   
 2. The more common and security conscious way to run things is to use `sudo` before executing anything. Many of the examples in this article use `sudo`.
 
 Some common commands, each of which have various switches and options that can be researched online:
@@ -98,7 +108,7 @@ Similar to Windows, Linux distributions have a built-in firewall. If your compan
 
 For additional ports that may be used by Samba, refer to [Samba Port Usage](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
-Conversely, the name of the service under Linux can also be added as an exception instead of the port; for example, `High-Availability` for Pacemaker. Refer to your distribution for the names if this is the direction you wish to pursue. For example, on RHEL the command to add in Pacemaker is
+Conversely, the name of the service under Linux can also be added as an exception instead of the port; for example, `high-availability` for Pacemaker. Refer to your distribution for the names if this is the direction you wish to pursue. For example, on RHEL the command to add in Pacemaker is
 
 `sudo firewall-cmd --permanent --add-service=high-availability`
 
@@ -107,16 +117,16 @@ Conversely, the name of the service under Linux can also be added as an exceptio
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### Install SQL Server packages for availability
-On a Windows-based SQL Server installation, some components are installed even in a basic engine install, while others are not. Under Linux, only the SQL Server engine is installed as part of the installation process. Everything else is optional. For highly available SQL Server instances under Linux, two packages should be installed at the same time as SQL Server: SQL Server Agent (mssql-server-agent) and the high availability (HA) package (mssql-server-ha). While SQL Server Agent is technically optional, it is SQL Server’s scheduler for jobs and is required by log shipping, so installation is recommended. On Windows-based installations, SQL Server Agent is not optional.
+On a Windows-based SQL Server installation, some components are installed even in a basic engine install, while others are not. Under Linux, only the SQL Server engine is installed as part of the installation process. Everything else is optional. For highly available SQL Server instances under Linux, two packages should be installed at the same time as SQL Server: SQL Server Agent (*mssql-server-agent*) and the high availability (HA) package (*mssql-server-ha*). While SQL Server Agent is technically optional, it is SQL Server’s scheduler for jobs and is required by log shipping, so installation is recommended. On Windows-based installations, SQL Server Agent is not optional.
 
 >[!NOTE]
 >For those new to SQL Server, SQL Server Agent is SQL Server’s built-in job scheduler. It is a common way for DBAs to schedule things like backups and other SQL Server maintenance. Unlike a Windows-based installation of SQL Server where SQL Server Agent is a completely different service, on Linux, SQL Server Agent runs in context of SQL Server itself.
 
-When AGs or FCIs are configured on a Windows-based configuration, they are cluster-aware. Cluster awareness means that SQL Server has specific resource DLLs that a WSFC knows about (sqagtres.dll and sqsrvres.dll for FCIs, hadrres.dll for AGs) and are used by the WSFC to ensure that the SQL Server clustered functionality is up, running, and functioning properly. Because clustering is external not only to SQL Server but Linux itself, Microsoft had to code the equivalent of a resource DLL for Linux-based AG and FCI deployments. This is the `mssql-server-ha` package, also known as the SQL Server resource agent for Pacemaker.
+When AGs or FCIs are configured on a Windows-based configuration, they are cluster-aware. Cluster awareness means that SQL Server has specific resource DLLs that a WSFC knows about (sqagtres.dll and sqsrvres.dll for FCIs, hadrres.dll for AGs) and are used by the WSFC to ensure that the SQL Server clustered functionality is up, running, and functioning properly. Because clustering is external not only to SQL Server but Linux itself, Microsoft had to code the equivalent of a resource DLL for Linux-based AG and FCI deployments. This is the *mssql-server-ha* package, also known as the SQL Server resource agent for Pacemaker.
 
 Use the commands below to install the HA package and SQL Server Agent if they are not installed already. Installing the HA package after installing SQL Server requires a restart of SQL Server for it to be used by SQL Server. These instructions assume that the repositories for the Microsoft packages have already been set up, since SQL Server should be installed at this point.
 > [!NOTE]
-> If you will not use SQL Server Agent for log shipping or any other use, it does not have to be installed, so package `mssql-server-agent` can be skipped.
+> If you will not use SQL Server Agent for log shipping or any other use, it does not have to be installed, so package *mssql-server-agent* can be skipped.
 
 **RHEL**
 
@@ -139,7 +149,7 @@ sudo apt-get install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-The other optional packages for SQL Server on Linux, SQL Server Full-Text Search (mssql-server-fts) and SQL Server Integration Services (mssql-server-is), are not required for high availability, either for an FCI or an AG.
+The other optional packages for SQL Server on Linux, SQL Server Full-Text Search (*mssql-server-fts*) and SQL Server Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.
 
 ## Pacemaker for Always On Availability Groups and failover cluster instances on Linux
 As noted above, the only clustering mechanism currently supported by Microsoft for AGs and FCIs is Pacemaker with Corosync. This section covers the basic information to understand the solution, as well as how to plan and deploy it for SQL Server configurations.
@@ -159,7 +169,7 @@ This solution is in some ways similar to, but in many ways different from deploy
 
 ![](./media/sql-server-ha-linux-basics/image1.png)
 
-On Linux, while each supported distribution has Pacemaker available, each distribution can customize and have slightly different implementations and versions. Some of the differences will be reflected in the instructions in this article. The clustering layer is open source, so even though it ships with the distributions, it is not tightly integrated in the same way a WSFC is under Windows. This is why Microsoft provides `mssql-server-ha`, so that SQL Server and the Pacemaker stack can provide close to, but not exactly the same, experience for AGs and FCIs as under Windows.
+On Linux, while each supported distribution has Pacemaker available, each distribution can customize and have slightly different implementations and versions. Some of the differences will be reflected in the instructions in this article. The clustering layer is open source, so even though it ships with the distributions, it is not tightly integrated in the same way a WSFC is under Windows. This is why Microsoft provides *mssql-server-ha*, so that SQL Server and the Pacemaker stack can provide close to, but not exactly the same, experience for AGs and FCIs as under Windows.
 
 For full documentation on Pacemaker, including a more in-depth explanation of what everything is with full reference information, for RHEL and SLES:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
@@ -209,7 +219,7 @@ Quorum and fencing ties into another concept called STONITH, or Shoot the Other 
 The `corosync.conf` file contains the configuration of the cluster. It is located in `/etc/corosync`. In the course of normal day-to-day operations, this file should never have to be edited if the cluster is set up properly.
 
 #### Cluster log location
-Logs for a Pacemaker cluster are different depending on the distribution.
+Log locations for Pacemaker clusters differ depending on the distribution.
 -   RHEL and SLES - `/var/log/cluster/corosync.log`
 -   Ubuntu – `/var/log/corosync/corosync.log`
 
@@ -235,7 +245,8 @@ Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedic
 
 Like a WSFC, Pacemaker would prefer redundant networking, meaning distinct network cards (NICs or pNICs for physical) having individual IP addresses. In terms of the cluster configuration, each IP address would have what is known as its own ring. However, as with WSFCs today, many implementations are virtualized or in the public cloud where there is really only a single virtualized NIC (vNIC) presented to the server. If all pNICs and vNICs are connected to the same physical or virtual switch, there is no true redundancy at the network layer, so configuring multiple NICs is a bit of an illusion to the virtual machine. Network redundancy is usually built into the hypervisor for virtualized deployments, and is definitely built into the public cloud.
 
-One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. For more information on multiple subnets and Linux clusters, see the article [Configuring multiple-subnet Always On Availability Groups and failover cluster instances].
+One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. 
+<!––  For more information on multiple subnets and Linux clusters, see the article [Configuring multiple-subnet Always On Availability Groups and failover cluster instances].––>
 
 ### Quorum and STONITH
 Quorum configuration and requirements are related to AG or FCI-specific deployments of SQL Server.
@@ -305,7 +316,7 @@ Pacemaker itself uses a user created on the distribution named *hacluster*. This
    sudo systemctl enable pcsd
    sudo systemctl start pcsd
    ```
-
+   
    Then execute
    
    ```bash
@@ -314,13 +325,15 @@ Pacemaker itself uses a user created on the distribution named *hacluster*. This
    
    to ensure that `pcsd` is started.
 3. Enable the Pacemaker service on each possible node of the Pacemaker cluster.
-
+   
    ```bash
    sudo systemctl start pacemaker
    ```
 
    On Ubuntu, you will see an error
+   
    *pacemaker Default-Start contains no runlevels, aborting.*
+   
    This is a known issue. Despite the error, enabling the Pacemaker service is successful, and this is a bug that will be fixed at some point in the future.
 4. Next, create and start the Pacemaker cluster. There is one difference between RHEL and Ubuntu at this step. While on both distributions, installing pcs will configure a default configuration file for the Pacemaker cluster, on RHEL, executing this command will destroy any existing configuration and create a new cluster.
 
@@ -332,12 +345,12 @@ This section documents how to create the cluster for each distribution of Linux.
 These instructions show how to configure a Pacemaker cluster on RHEL.
 1. Authorize the nodes.
    
-   `sudo pcs cluster auth *Node1 Node2 … NodeN* -u hacluster`
+   `sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster`
    
    where *NodeX* is the name of the node.
 2. Create the cluster
    
-   `sudo pcs cluster setup --name *NameforCluster Nodelist* --start --all --enable`
+   `sudo pcs cluster setup --name <PMClusterName Nodelist> --start --all --enable`
    
    where *PMClusterName* is the name assigned to the Pacemaker cluster and *Nodelist* is the list of names of the nodes separated by a space.
 
@@ -352,28 +365,19 @@ Configuring Ubuntu is similar to RHEL. However, there is one major difference: w
 #### SLES
 
 The process for creating a Pacemaker cluster is completely different on SLES than it is on RHEL and Ubuntu. The steps below document how to create a cluster with SLES.
-1. Start the cluster configuration process by running sudo `ha-cluster-init` on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SLES’s built-in fencing that is storage-based. NTP and watchdog can be configured later.
-2. You will be prompted to configure Corosync. You will be asked for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you are using. For example, 192.191.190.0. You can accept the defaults and click **Enter** at every prompt, or change if necessary.
+1. Start the cluster configuration process by running `sudo ha-cluster-init` on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SLES’s built-in fencing that is storage-based. NTP and watchdog can be configured later.
+2. You will be prompted to configure Corosync. You will be asked for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you are using; for example, 192.191.190.0. You can accept the defaults and click **Enter** at every prompt, or change if necessary.
 3. Next, you will be asked if you want to configure SBD, which is the disk-based fencing. This can be done later if desired. If it is not configured, unlike on RHEL and Ubuntu, `stonith-enabled` will by default be set to false.
 4. Finally, you will be asked if you want to configure an IP address for administration. This IP address is optional, but functions similar to the IP address for a WSFC in the sense that it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This, too, is optional.
 5. Ensure that the cluster is up and running by issuing `sudo crm status`.
-6. Change the hacluster password
-   
-   `sudo passwd hacluster`
-   
-8. If you configured an IP address for administration, you can test it in a browser, which also tests the password change for `hacluster`.
+6. Change the *hacluster* password with `sudo passwd hacluster`.
+7. If you configured an IP address for administration, you can test it in a browser, which also tests the password change for *hacluster*.
    ![](./media/sql-server-ha-linux-basics/image2.png)
-9. On another SLES server that will be a node of the cluster, run
-   
-   `sudo ha-cluster-join`
-   
-10. When prompted, enter the name or IP address of the server that was configured as the first node of the cluster in the previous steps. The server is added as a node to the existing cluster.
-11. Verify the node was added by issuing `sudo crm status`.
-12. Change the hacluster password
-   
-   `sudo passwd hacluster`
-   
-13. Repeat Steps 8-11 for all other servers to be added to the cluster.
+8. On another SLES server that will be a node of the cluster, run `sudo ha-cluster-join`
+9. When prompted, enter the name or IP address of the server that was configured as the first node of the cluster in the previous steps. The server is added as a node to the existing cluster.
+10. Verify the node was added by issuing `sudo crm status`.
+11. Change the *hacluster* password with `sudo passwd hacluster`
+12. Repeat Steps 8-11 for all other servers to be added to the cluster.
 
 ## Next steps
 [needs links]

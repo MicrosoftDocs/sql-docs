@@ -1,7 +1,7 @@
 ---
 title: "Converting Sybase ASE Database Objects (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/30/2017"
+ms.date: "12/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,7 +51,7 @@ To convert ASE database objects, first select the objects you want to convert, a
   
     -   To convert or omit individual objects, expand the category folder, and then select or clear the check box next to the object.  
   
-3.  To convert all selected objects, right-click **Databases**, and the select **Convert Schema**.  
+3.  To convert all selected objects, right-click **Databases**, and then select **Convert Schema**.  
   
     You can also convert individual objects or categories of objects by right-clicking the object or its containing folder, and then selecting **Convert Schema**.  
   
@@ -125,7 +125,7 @@ For each item that could not be converted, you have to determine what you want t
   
 -   You can exclude the object from migration. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL Metadata Explorer and Sybase Metadata Explorer, clear the check box next to the item before loading the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL and migrating data from SAP ASE.  
   
-## Next step  
+## Next steps  
 The next step in the migration process is [Loading Converted Database Objects into SQL Server/ SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/en-us/4c59256f-99a8-4351-9559-a455813dbd06).  
   
 ## See also  

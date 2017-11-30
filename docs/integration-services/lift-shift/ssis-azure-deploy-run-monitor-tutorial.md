@@ -22,7 +22,7 @@ This tutorial shows you how to deploy a SQL Server Integration Services project 
 
 Before you start, make sure you have version 17.2 or later of SQL Server Management Studio. To download the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Also make sure that you have set up the SSISDB database and provisioned the Azure-SSIS Integration Runtime. For info about how to provision SSIS on Azure, see [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Also make sure that you have set up the SSISDB database and provisioned the Azure-SSIS Integration Runtime. For info about how to provision SSIS on Azure, see [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## Connect to the SSISDB database
 
@@ -96,7 +96,7 @@ To view the status of currently running Integration Services operations on the I
 
 You can also select a package in Object Explorer, right-click and select **Reports**, then **Standard Reports**, then **All Executions**.
 
-For more info about how to monitor running packages in SSMS, see [Monitor Running Packages and Other Operations](https://docs.microsoft.com/en-us/sql/integration-services/performance/monitor-running-packages-and-other-operations).
+For more info about how to monitor running packages in SSMS, see [Monitor Running Packages and Other Operations](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
 ## Monitor the Azure-SSIS Integration Runtime
 

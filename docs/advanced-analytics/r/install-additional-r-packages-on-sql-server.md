@@ -156,7 +156,8 @@ If you have already enabled package management on the instance, you can install 
 
     ```R
     packageList <- c("e1071")
-
+    ```
+    
 3. Define a connection string to the instance and database where package management is enabled, and use the connection string to create a SQL Server compute context.
 
     ```R

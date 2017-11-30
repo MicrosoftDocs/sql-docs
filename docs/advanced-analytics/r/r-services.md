@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Machine Learning Services | Microsoft Docs"
 ms.date: "11/09/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology:

@@ -2,7 +2,7 @@
 title: "Create a Report Server Database  (SSRS Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

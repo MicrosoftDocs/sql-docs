@@ -2,7 +2,7 @@
 title: "Administration Tool Command-line Options (Distributed Replay Utility) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

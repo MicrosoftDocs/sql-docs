@@ -2,7 +2,7 @@
 title: "Run SQL Server Profiler | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/7/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

@@ -2,7 +2,7 @@
 title: "Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

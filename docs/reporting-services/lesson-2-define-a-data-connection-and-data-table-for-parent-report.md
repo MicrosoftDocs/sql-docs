@@ -2,7 +2,7 @@
 title: "Lesson 2: Define a Data Connection and Data Table for Parent Report | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

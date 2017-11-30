@@ -2,7 +2,7 @@
 title: "Schedule Properties (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/11/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

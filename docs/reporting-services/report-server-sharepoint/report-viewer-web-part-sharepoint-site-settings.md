@@ -2,7 +2,7 @@
 title: "SharePoint site settings for the Report Viewer web part | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

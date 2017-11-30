@@ -2,7 +2,7 @@
 title: "Sort Data in a Data Region (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

@@ -1,14 +1,11 @@
 ---
 title: "RevoScaleR | Microsoft Docs"
 ms.custom: ""
+ms.prod: sql-non-specified
 ms.date: "11/29/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "r-services"
+ms.technology: "r-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"

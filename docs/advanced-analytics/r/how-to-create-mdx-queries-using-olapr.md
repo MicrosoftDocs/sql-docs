@@ -1,8 +1,8 @@
 ---
 title: "How to Create MDX queries using olapR | Microsoft Docs"
 ms.custom: ""
+ms.prod: sql-non-specified
 ms.date: "11/29/2017"
-ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

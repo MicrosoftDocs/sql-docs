@@ -1,18 +1,15 @@
 ---
 title: "Using data from OLAP cubes in R | Microsoft Docs"
 ms.custom: ""
+ms.prod: sql-non-specified
 ms.date: "11/29/2017"
-ms.prod: 
- - "sql-server-2016" 
- - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "r-services"
+ms.technology: "r-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-dev_langs: 
-  - "R"
+dev_langs:
+ - "r-services"
 ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
 caps.latest.revision: 12
 author: "jeannt"

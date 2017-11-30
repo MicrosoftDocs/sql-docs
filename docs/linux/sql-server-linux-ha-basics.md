@@ -246,7 +246,7 @@ Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedic
 Like a WSFC, Pacemaker would prefer redundant networking, meaning distinct network cards (NICs or pNICs for physical) having individual IP addresses. In terms of the cluster configuration, each IP address would have what is known as its own ring. However, as with WSFCs today, many implementations are virtualized or in the public cloud where there is really only a single virtualized NIC (vNIC) presented to the server. If all pNICs and vNICs are connected to the same physical or virtual switch, there is no true redundancy at the network layer, so configuring multiple NICs is a bit of an illusion to the virtual machine. Network redundancy is usually built into the hypervisor for virtualized deployments, and is definitely built into the public cloud.
 
 One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. 
-<!––  For more information on multiple subnets and Linux clusters, see the article [Configuring multiple-subnet Always On Availability Groups and failover cluster instances].––>
+<!--  For more information on multiple subnets and Linux clusters, see the article [Configuring multiple-subnet Always On Availability Groups and failover cluster instances](7-configure-multiple-subnet-ha.md). -->
 
 ### Quorum and STONITH
 Quorum configuration and requirements are related to AG or FCI-specific deployments of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
@@ -379,5 +379,5 @@ The process for creating a Pacemaker cluster is completely different on SLES tha
 11. Change the *hacluster* password with `sudo passwd hacluster`
 12. Repeat Steps 8-11 for all other servers to be added to the cluster.
 
-## Next steps
-[needs links]
+<!-- ## Next steps
+[needs links] -->

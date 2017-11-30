@@ -463,7 +463,7 @@ ALTER TABLE DimLocation ADD PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo);
 ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLocationHistory));  
 ```  
   
- Note that Nno additional code is required to maintain SCD during the data warehouse loading process once you created it.  
+ Note that no additional code is required to maintain SCD during the data warehouse loading process once you created it.  
   
  The following illustration shows how you can use Temporal Tables in a simple scenario involving 2 SCDs (DimLocation and DimProduct) and one fact table.  
   

@@ -293,6 +293,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE and DROP TABLE  
   
 -   CREATE STATISTICS and DROP STATISTICS  
+Note: CREATE and DROP STATISTICS on external tables are not supported in Azure SQL Database. 
   
 -   CREATE VIEW and DROP VIEW  
   

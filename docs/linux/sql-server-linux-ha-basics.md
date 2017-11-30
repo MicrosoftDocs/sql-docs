@@ -167,7 +167,7 @@ All of the currently supported distributions ship a high availability add-on/ext
 
 This solution is in some ways similar to, but in many ways different from deploying clustered configurations using Windows. In Windows, the availability form of clustering, called a Windows Server failover cluster (WSFC), is built into the operating system, and the feature that enables the creation of a WSFC, failover clustering, is disabled by default. In Windows, AGs and FCIs are built on top of a WSFC, and share tight integration because of the specific resource DLL that is provided by [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. This tightly coupled solution is possible by and large because it is all from one vendor.
 
-![](./media/sql-server-ha-linux-basics/image1.png)
+![](./media/sql-server-linux-ha-basics/image1.png)
 
 On Linux, while each supported distribution has Pacemaker available, each distribution can customize and have slightly different implementations and versions. Some of the differences will be reflected in the instructions in this article. The clustering layer is open source, so even though it ships with the distributions, it is not tightly integrated in the same way a WSFC is under Windows. This is why Microsoft provides *mssql-server-ha*, so that [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] and the Pacemaker stack can provide close to, but not exactly the same, experience for AGs and FCIs as under Windows.
 
@@ -372,7 +372,7 @@ The process for creating a Pacemaker cluster is completely different on SLES tha
 5. Ensure that the cluster is up and running by issuing `sudo crm status`.
 6. Change the *hacluster* password with `sudo passwd hacluster`.
 7. If you configured an IP address for administration, you can test it in a browser, which also tests the password change for *hacluster*.
-   ![](./media/sql-server-ha-linux-basics/image2.png)
+   ![](./media/sql-server-linux-ha-basics/image2.png)
 8. On another SLES server that will be a node of the cluster, run `sudo ha-cluster-join`
 9. When prompted, enter the name or IP address of the server that was configured as the first node of the cluster in the previous steps. The server is added as a node to the existing cluster.
 10. Verify the node was added by issuing `sudo crm status`.

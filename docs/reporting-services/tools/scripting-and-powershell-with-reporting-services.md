@@ -2,7 +2,7 @@
 title: "Scripting and PowerShell with Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

@@ -2,7 +2,7 @@
 title: "Add drillthrough from a mobile report to other mobile reports or URLs | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

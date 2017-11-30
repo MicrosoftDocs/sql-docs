@@ -2,7 +2,7 @@
 title: "End-to-end data science walkthrough for R and SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

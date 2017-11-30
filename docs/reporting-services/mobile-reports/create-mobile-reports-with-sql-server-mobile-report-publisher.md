@@ -4,7 +4,7 @@ description: "Learn about Reporting Services mobile reports for mobile devices, 
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

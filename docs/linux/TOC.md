@@ -25,10 +25,6 @@
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
-# How-to guides
-## Business continuity
-### [Configure multiple subnets](configure-multiple-subnet.md)
-
 # Concepts
 ## Install
 ### [Install SQL Server](sql-server-linux-setup.md)
@@ -93,6 +89,10 @@
 ## Performance
 ### [Best practices](sql-server-linux-performance-best-practices.md)
 ### [Get started with performance features](sql-server-linux-performance-get-started.md)
+
+# How-to guides
+## Business continuity
+### [Configure multiple subnets](configure-multiple-subnet.md)
 
 # Samples
 ## Unattended install

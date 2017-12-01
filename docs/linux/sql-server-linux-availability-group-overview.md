@@ -154,8 +154,12 @@ If using automatic seeding with a distributed availability group that crosses OS
 
 ## Next steps
 [Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+
 [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
+
 [Add availability group Cluster Resource on RHEL](sql-server-linux-availability-group-cluster-rhel.md)
+
 [Add availability group Cluster Resource on SLES](sql-server-linux-availability-group-cluster-sles.md)
+
 [Add availability group Cluster Resource on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 

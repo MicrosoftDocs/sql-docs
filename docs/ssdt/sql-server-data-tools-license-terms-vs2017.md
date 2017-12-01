@@ -2,10 +2,10 @@
 title: "SQL Server Data Tools and Visual Studio 2017 - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2017"
-ms.prod: "ssdt"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: "ssdt"
-ms.component: ""
+ms.service: ""
+ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

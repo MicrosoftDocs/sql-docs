@@ -6,8 +6,8 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: "ssdt"
-ms.component: ""
+ms.service: ""
+ms.component: "ssdt"
 ms.suite: "sql"
 ms.topic: updart-autogen
 ms.technology: database-engine
@@ -16,7 +16,7 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 09/27/2017
-ms.prod: "ssdt"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.author: genemi
 ms.workload: ssdt-sql-server-data-tools

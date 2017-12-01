@@ -505,6 +505,9 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 ### Design Considerations  
  In order to design effective filtered indexes, it is important to understand what queries your application uses and how they relate to subsets of your data. Some examples of data that have well-defined subsets are columns with mostly NULL values, columns with heterogeneous categories of values and columns with distinct ranges of values. The following design considerations give a variety of scenarios for when a filtered index can provide advantages over full-table indexes.  
+ 
+> [!TIP] 
+> The nonclustered [columnstore index](#columnstore_index) definition supports using a filtered condition. To minimize the performance impact of adding a columnstore index on an OLTP table, use a filtered condition to create a nonclustered columnstore index on only the cold data of your operational workload. 
   
 #### Filtered Indexes for subsets of data  
 When a column only has a small number of relevant values for queries, you can create a filtered index on the subset of values. For example, when the values in a column are mostly NULL and the query selects only from the non-NULL values, you can create a filtered index for the non-NULL data rows. The resulting index will be smaller and cost less to maintain than a full-table nonclustered index defined on the same key columns.  
@@ -689,10 +692,16 @@ Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], you can have **one
  
 ### Performance considerations 
 
+-   The nonclustered columnstore index definition supports using a filtered condition. To minimize the performance impact of adding a columnstore index on an OLTP table, use a filtered condition to create a nonclustered columnstore index on only the cold data of your operational workload. 
+  
+-   An in-memory table can have one columnstore index. You can create it when the table is created or add it later with [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Before [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], only a disk-based table could have a columnstore index. 
+
 For more information, refer to [Columnstore indexes - Query performance](../relational-databases/indexes/columnstore-indexes-query-performance.md).
 
 ### Design Guidance 
 
+-   A rowstore table can have one updateable nonclustered columnstore index. Before [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], the nonclustered columnstore index was read-only.  
+ 
 For more information, refer to [Columnstore indexes - Design Guidance](../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
 ##  <a name="hash_index"></a> Hash Index for Memory-Optimized Tables Design Guidelines 

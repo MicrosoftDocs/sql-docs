@@ -142,4 +142,5 @@ ms.workload: "Active"
   
  For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-  
+ ## Related Content  
+ [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md) 

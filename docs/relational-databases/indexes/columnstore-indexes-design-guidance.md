@@ -1,7 +1,7 @@
 ---
-title: "Columnstore indexes - design guidance | Microsoft Docs"
+title: "Columnstore indexes - Design Guidance | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/27/2017"
+ms.date: "12/1/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -19,14 +19,14 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Columnstore indexes - design guidance
+# Columnstore indexes - Design Guidance
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 High-level recommendations for designing columnstore indexes. A small number of good design decisions helps you achieve the high data compression and query performance that columnstore indexes are designed to provide. 
 
 ## Prerequisites
 
-This article assumes you are familiar with columnstore architecture and terminology. For more information, see [Columnstore indexes - overview](../../relational-databases/indexes/columnstore-indexes-overview.md) and [Columnstore indexes - architecture](../../relational-databases/indexes/columnstore-indexes-architecture.md).
+This article assumes you are familiar with columnstore architecture and terminology. For more information, see [Columnstore indexes - overview](../../relational-databases/indexes/columnstore-indexes-overview.md) and [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).
 
 ### Know your data requirements
 Before designing a columnstore index, understand as much as possible about your data requirements. For example, think through the answers to these questions:
@@ -52,7 +52,6 @@ Here is a summary of the options and recommendations.
 | Nonclustered columnstore index on a disk-based heap or btree index | Use for: <br></br>1) An OLTP workload that has some analytics queries. You can drop btree indexes created for analytics and replace them with one nonclustered columnstore index.<br></br>2) Many traditional OLTP workloads that perform Extract Transform and Load (ETL) operations to move data to a separate data warehouse. You can eliminate ETL and a separate data warehouse by creating a nonclustered columnstore index on some of the OLTP tables. | NCCI is an additional index that requires 10% more storage on average.|
 | Columnstore index on an in-memory table | Same recommendations as nonclustered columnstore index on a disk-based table, except the base table is an in-memory table. | Columnstore index is an additional index.|
 
-
 ## Use a clustered columnstore index for large data warehouse tables
 The clustered columnstore index is more than an index, it is the primary table storage. It achieves high data compression and a significant improvement in query performance on large data warehousing fact and dimension tables. Clustered columnstore indexes are best suited for analytics queries rather than transactional queries, since analytics queries tend to perform operations on large ranges of values rather than looking up specific values. 
 
@@ -73,9 +72,9 @@ For more information, see [Columnstore indexes - data warehousing](../../relatio
 
 ## Add btree nonclustered indexes for efficient table seeks
 
-Beginning with SQL Server 2016, you can create nonclustered btree indexes as secondary indexes on a clustered columnstore index. The nonclustered btree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
+Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create nonclustered btree indexes as secondary indexes on a clustered columnstore index. The nonclustered btree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
 
-By using the secondary btree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the btree index. Since an non-unique value will fail to insert into the btree index, SQL Server cannot insert the value into the columnstore. 
+By using the secondary btree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the btree index. Since an non-unique value will fail to insert into the btree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
 
 Consider using a btree index on a columnstore index to:
 * Run queries that search for particular values or small ranges of values.
@@ -95,7 +94,7 @@ Since a columnstore index achieves 10x better data compression than a rowstore i
   
 *   Eliminate the need for a separate data warehouse. Traditionally, companies run transactions on a rowstore table and then load the data into a separate data warehouse to run analytics. For many workloads, you can eliminate the loading process and the separate data warehouse by creating a nonclustered columnstore index on transactional tables.
 
-  SQL Server 2016 offers several strategies to make this scenario performant. It's very easy to try it since you can enable a nonclustered columnstore index with no changes to your OLTP application. 
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] offers several strategies to make this scenario performant. It's very easy to try it since you can enable a nonclustered columnstore index with no changes to your OLTP application. 
 
 To add additional processing resources, you can run the analytics on a readable secondary. Using a readable secondary separates the processing of the transactional workload and the analytics workload. 
 
@@ -144,12 +143,12 @@ Archive compression is designed for maximum compression when query performance i
 
 ## Use optimizations when you convert a rowstore table to a columnstore index
 
-If your data is already in a rowstore table, you can use [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) to convert the table to a clustered columnstore index. There's a couple optimizations that will improve query performance after the table is converted.
+If your data is already in a rowstore table, you can use [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) to convert the table to a clustered columnstore index. There are a couple optimizations that will improve query performance after the table is converted, described next.
 
 ### Use MAXDOP to improve rowgroup quality
 You can configure the maximum number of processors for converting a heap or clustered btree index to a columnstore index. To configure the processors, use the maximum degree of parallelism option (MAXDOP). 
 
-If you have large amounts of data, MAXDOP 1 will likely be too slow.  Increasing MAXDOP to 4 works fine. If this results in a few rowgroups that do not have the optimal number of rows you can run [ALTER INDEX REORG](../../t-sql/statements/alter-index-transact-sql.md) to merge them together in the background.
+If you have large amounts of data, MAXDOP 1 will likely be too slow.  Increasing MAXDOP to 4 works fine. If this results in a few rowgroups that do not have the optimal number of rows you can run [ALTER INDEX REORGANIZE](../../t-sql/statements/alter-index-transact-sql.md) to merge them together in the background.
 
 ### Keep the sorted order of a btree index
 Since the btree index already stores rows in a sorted order, preserving that order when the rows get compressed into the columnstore index can improve query performance.
@@ -159,9 +158,9 @@ The columnstore index does not sort the data, but it does use metadata to track 
 To preserve the sorted order during conversion:
 * Use [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) with the DROP_EXISTING clause. This also preserves the name of the index. If you have scripts that already use the name of the rowstore index you won't need to update them. 
 
-    This example converts a clustered rowstore index on a table named ```MyFactTable``` to a clustered columnstore index. The index name, ```ClusteredIndex_d473567f7ea04d7aafcac5364c241e09```, stays the same.
+    This example converts a clustered rowstore index on a table named `MyFactTable` to a clustered columnstore index. The index name, `ClusteredIndex_d473567f7ea04d7aafcac5364c241e09`, stays the same.
 
-    ```sql
+    ```t-sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
     ON MyFactTable  
     WITH (DROP_EXISTING = ON);  
@@ -191,19 +190,8 @@ These are tasks for creating and maintaining columnstore indexes.
 ## Next steps
 To create an empty columnstore index for:
 
-* SQL Server, use [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
-* SQL Database, use [CREATE TABLE on Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)
-* SQL Data Warehouse, use [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)], refer to [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], refer to [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
-To convert an existing rowstore heap or btree index to a clustered columnstore index, or to create a nonclustered columnstore index, use:
-
-* [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
-
-
-
-
-
-
-
-  
+For more information on how convert an existing rowstore heap or B-tree index into a clustered columnstore index, or to create a nonclustered columnstore index, refer to [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 

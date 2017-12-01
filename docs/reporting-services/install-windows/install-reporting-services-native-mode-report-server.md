@@ -3,7 +3,7 @@ title: "Install Reporting Services native mode report server | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "08/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

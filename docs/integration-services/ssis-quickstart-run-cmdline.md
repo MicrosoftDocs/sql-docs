@@ -21,7 +21,7 @@ This quick start tutorial demonstrates how to run an SSIS package from the comma
 > [!NOTE]
 > The method described in this article has not been tested with packages deployed to an Azure SQL Database server.
 
-For more info about `DTExec.exe`, see [dtexec Utility](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility).
+For more info about `DTExec.exe`, see [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility).
 
 ## Run a package with dtexec
 

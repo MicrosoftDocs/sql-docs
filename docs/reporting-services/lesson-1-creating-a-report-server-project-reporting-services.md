@@ -2,7 +2,7 @@
 title: "Lesson 1: Creating a Report Server Project (Reporting Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

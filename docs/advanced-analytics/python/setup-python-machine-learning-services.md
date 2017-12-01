@@ -2,7 +2,7 @@
 title: "Setup and configuration for Python Machine Learning Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

@@ -1,7 +1,7 @@
 ---
 title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/27/2017"
+ms.date: "12/1/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -34,23 +34,23 @@ ms.workload: "On Demand"
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |Batch execution for multi-threaded queries|yes|yes|yes|yes|yes|yes| 
 |Batch execution for single-threaded queries|||yes|yes|yes|yes|  
-|Archival compression option.||yes|yes|yes|yes|yes|  
+|Archival compression option||yes|yes|yes|yes|yes|  
 |Snapshot isolation and read-committed snapshot isolation|||yes|yes|yes|yes| 
-|Specify columnstore index when creating a table.|||yes|yes|yes|yes|  
-|AlwaysOn supports columnstore indexes.|yes|yes|yes|yes|yes|yes| 
-|AlwaysOn readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|  
-|AlwaysOn readable secondary supports updateable columnstore indexes.|||yes|yes|||  
-|Read-only nonclustered columnstore index on heap or B-tree.|yes|yes|yes*|yes*|yes*|yes*|  
+|Specify columnstore index when creating a table|||yes|yes|yes|yes|  
+|Always On supports columnstore indexes|yes|yes|yes|yes|yes|yes| 
+|Always On readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|  
+|Always On readable secondary supports updateable columnstore indexes|||yes|yes|||  
+|Read-only nonclustered columnstore index on heap or B-tree|yes|yes|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|  
 |Updateable nonclustered columnstore index on heap or B-tree|||yes|yes|yes|yes|  
-|Additional B-tree indexes allowed on a heap or B-tree that has a nonclustered columnstore index.|yes|yes|yes|yes|yes|yes|  
-|Updateable clustered columnstore index.||yes|yes|yes|yes|yes|  
-|B-tree index on a clustered columnstore index.|||yes|yes|yes|yes|  
-|Columnstore index on a memory-optimized table.|||yes|yes|yes|yes|  
-|Nonclustered columnstore index definition supports using a filtered condition.|||yes|yes|yes|yes|  
-|Compression delay option for columnstore indexes in CREATE TABLE and ALTER TABLE.|||yes|yes|yes|yes|
-|Columnstore index can have a non-persisted computed column.||||yes|||   
+|Additional B-tree indexes allowed on a heap or B-tree that has a nonclustered columnstore index|yes|yes|yes|yes|yes|yes|  
+|Updateable clustered columnstore index||yes|yes|yes|yes|yes|  
+|B-tree index on a clustered columnstore index|||yes|yes|yes|yes|  
+|Columnstore index on a memory-optimized table|||yes|yes|yes|yes|  
+|Nonclustered columnstore index definition supports using a filtered condition|||yes|yes|yes|yes|  
+|Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|
+|Columnstore index can have a non-persisted computed column||||yes|||   
   
- *To create a readable nonclustered columnstore index, store the index on a read-only filegroup.  
+ <sup>1</sup> To create a readable nonclustered columnstore index, store the index on a read-only filegroup.  
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] adds these new features.
@@ -69,7 +69,7 @@ ms.workload: "On Demand"
   
 -   An in-memory table can have one columnstore index. You can create it when the table is created or add it later with [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md). Previously, only a disk-based table could have a columnstore index.  
   
--   A clustered columnstore index can have one or more nonclustered rowstore indexes. Previously, the columnstore index did not support nonclustered indexes. SQL Server automatically maintains the nonclustered indexes for DML operations.  
+-   A clustered columnstore index can have one or more nonclustered rowstore indexes. Previously, the columnstore index did not support nonclustered indexes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically maintains the nonclustered indexes for DML operations.  
   
 -   Support for primary keys and foreign keys by using a B-tree index to enforce these constraints on a clustered columnstore index.  
   
@@ -79,23 +79,23 @@ ms.workload: "On Demand"
   
 -   Columnstore indexes support read committed snapshot isolation level (RCSI) and snapshot isolation (SI). This enables transactional consistent analytics queries with no locks.  
   
--   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The ALTER INDEX … REORGANIZE statement removes deleted rows, based on an internally defined policy, from the columnstore as an online operation  
+-   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The `ALTER INDEX … REORGANIZE` statement removes deleted rows, based on an internally defined policy, from the columnstore as an online operation  
   
 -   Columnstore indexes can be access on an AlwaysOn readable secondary replica. You can improve performance for operational analytics by offloading analytics queries to an AlwaysOn secondary replica.  
   
--   To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computes the aggregate functions MIN, MAX, SUM, COUNT, AVG during table scans when the data type uses no more than 8 bytes, and is not of a string type. Aggregate pushdown is supported with or  without Group By clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
+-   To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computes the aggregate functions `MIN`, `MAX`, `SUM`, `COUNT`, and `AVG` during table scans when the data type uses no more than 8 bytes, and is not of a string type. Aggregate pushdown is supported with or  without Group By clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
   
--   Predicate pushdown speeds up queries that compare strings of type [v]char or n[v]char. This applies to the common comparison operators and includes operators such as LIKE that use bitmap filters. This works with all collations that SQL Server supports.  
+-   Predicate pushdown speeds up queries that compare strings of type [v]archar or n[v]archar. This applies to the common comparison operators and includes operators such as LIKE that use bitmap filters. This works with all collations that SQL Server supports.  
   
 ### Performance for database compatibility level 130  
   
 -   New batch mode execution support for queries using any of these operations:  
     -   SORT  
-    -   Aggregates with multiple distinct functions. Some examples: COUNT/COUNT, AVG/SUM, CHECKSUM_AGG, STDEV/STDEVP.  
-    -   Window aggregate functions: COUNT, COUNT_BIG, SUM, AVG, MIN, MAX, and CLR.  
-    -   Window user-defined aggregates: CHECKSUM_AGG, STDEV, STDEVP, VAR, VARP, and GROUPING.  
-    -   Window aggregate analytic functions:  LAG< LEAD, FIRST_VALUE, LAST_VALUE, PERCENTILE_CONT, PERCENTILE_DISC, CUME_DIST, and PERCENT_RANK.  
--   Single-threaded queries running under MAXDOP 1 or with a serial query plan execute in batch mode. Previously-only multi-threaded queries ran with batch execution.  
+    -   Aggregates with multiple distinct functions. Some examples: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`.  
+    -   Window aggregate functions: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX`, and `CLR`.  
+    -   Window user-defined aggregates: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP`, and `GROUPING`.  
+    -   Window aggregate analytic functions:  `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST`, and `PERCENT_RANK`.  
+-   Single-threaded queries running under `MAXDOP 1` or with a serial query plan execute in batch mode. Previously-only multi-threaded queries ran with batch execution.  
 -   Memory optimized table queries can have parallel plans in SQL InterOp mode both when accessing data in rowstore or in columnstore index  
   
 ### Supportability  

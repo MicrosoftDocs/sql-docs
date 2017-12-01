@@ -1,7 +1,7 @@
 ---
 title: "Enable a report server for Power BI Mobile access | Microsoft Docs"
 ms.date: "12/17/2015"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

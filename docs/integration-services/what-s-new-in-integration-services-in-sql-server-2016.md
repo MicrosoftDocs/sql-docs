@@ -3,7 +3,7 @@ title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Do
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "09/28/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

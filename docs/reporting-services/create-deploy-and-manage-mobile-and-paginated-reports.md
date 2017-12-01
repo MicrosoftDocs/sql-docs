@@ -3,7 +3,7 @@ title: "Reporting Services (SSRS) | Microsoft Docs"
 description: "Learn about tools and services for mobile and paginated Reporting Services reports and Power BI reports on premises."
 ms.custom: ""
 ms.date: "07/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

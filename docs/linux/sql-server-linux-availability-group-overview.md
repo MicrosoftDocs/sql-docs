@@ -150,6 +150,12 @@ A distributed AG can also cross OS boundaries. The underlying AGs are bound by t
 <!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
+-->
 
 ## Next steps
-[links] -->
+[Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+[Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
+[Add availability group Cluster Resource on RHEL](sql-server-linux-availability-group-cluster-rhel.md)
+[Add availability group Cluster Resource on SLES](sql-server-linux-availability-group-cluster-sles.md)
+[Add availability group Cluster Resource on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
+

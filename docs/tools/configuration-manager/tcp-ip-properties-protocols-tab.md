@@ -2,9 +2,12 @@
 title: "TCP/IP Properties (Protocols Tab) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "configuration-manager"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # TCP/IP Properties (Protocols Tab)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **TCP/IP Properties** dialog box to configure the options for the TCP/IP protocol. Click **TCP/IP** in the left pane, to show individual IP address configurations in the details pane.  
   
  Microsoft SQL Servermust be restarted before the changes take effect.  

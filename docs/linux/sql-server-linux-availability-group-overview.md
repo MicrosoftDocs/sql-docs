@@ -72,9 +72,9 @@ To change the value of `required_synchronized_secondaries_to_commit`, use the sy
 
 `sudo pcs resource update <AGResourceName>-master required_synchronized_secondaries_to_commit=<Value>`
 
-**SUSE Linux Enterprise Server (SLES)**
+<!-- **SUSE Linux Enterprise Server (SLES)**
 
-[need syntax]
+[need syntax] -->
 
 where *AGResourceName* is the name of the resource configured for the AG, and *Value* is 0, 1, or 2. To set it back to the default of Pacemaker managing the parameter, execute the same statement with no value.
 
@@ -110,7 +110,7 @@ When a configuration-only replica is used, it has the following behavior:
 -   If the configuration-only replicas fails, the AG will function normally, but no automatic failover is possible.
 -   If both a synchronous secondary replica and the configuration-only replica fail, the primary cannot accept transactions, and there is nowhere for the primary to fail to.
 
-In CU1 there is a known bug in the logging in the corosync.log file that is generated via `mssql-server-ha`, which will be resolved in a future CU. If a secondary replica is not able to become the primary due to the number of required replicas available, the current message says "Expected to receive 1 sequence numbers but only received 2. Not enough replicas are online to safely promote the local replica." The numbers should be reversed, and it should say "Expected to receive 2 sequence numbers but only received 1. Not enough replicas are online to safely promote the local replica."
+In CU1 there is a known bug in the logging in the corosync.log file that is generated via `mssql-server-ha`. If a secondary replica is not able to become the primary due to the number of required replicas available, the current message says "Expected to receive 1 sequence numbers but only received 2. Not enough replicas are online to safely promote the local replica." The numbers should be reversed, and it should say "Expected to receive 2 sequence numbers but only received 1. Not enough replicas are online to safely promote the local replica." This should be resolved in a future CU. 
 
 ## Multiple availability groups 
 
@@ -147,9 +147,9 @@ A distributed AG can also cross OS boundaries. The underlying AGs are bound by t
 
 ![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 
 ## Next steps
-[links]
+[links] -->

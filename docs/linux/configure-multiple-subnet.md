@@ -28,13 +28,13 @@ When an Always On Availability Group (AG) or failover cluster instance (FCI) spa
 
 The IP address creation for the AG or FCI is done on the VLAN. In the following example, the VLAN has a subnet of 192.168.3.*x*, so the IP address created for the AG or FCI is 192.168.3.104. Nothing additional needs to be configured, since there is a single IP address assigned to the AG or FCI.
 
-![](./media/7-configure-multiple-subnet-ha/image1.png)
+![](./media/configure-multiple-subnet/image1.png)
 
 ## Configuration with Pacemaker
 
 In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports multiple subnets and handles multiple IP addresses via an OR dependency on the IP address. On Linux, there is no OR dependency, but there is a way to achieve a proper multi-subnet natively with Pacemaker, as shown by the following. You cannot do this by simply using the normal Pacemaker command line to modify a resource. You need to modify the cluster information base (CIB). The CIB is an XML file with the Pacemaker configuration.
 
-![](./media/7-configure-multiple-subnet-ha/image2.png)
+![](./media/configure-multiple-subnet/image2.png)
 
 ### Update the CIB
 
@@ -42,11 +42,15 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 
     **Red Hat Enterprise Linux (RHEL) and Ubuntu**
 
-    `sudo pcs cluster cib <filename>`
+    ```bash
+    sudo pcs cluster cib <filename>
+    ```
 
     **SUSE Linux Enterprise Server (SLES)**
 
-    `sudo cibadmin -Q > <filename>`
+    ```bash
+    sudo cibadmin -Q > <filename>
+    ```
 
     Where *filename* is the name you want to call the CIB.
 
@@ -80,11 +84,15 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 
     **RHEL/Ubuntu**
     
-    `sudo pcs cluster cib-push <filename>`
+    ```bash
+    sudo pcs cluster cib-push <filename>
+    ```
 
     **SLES**
     
-    `sudo cibadmin -R -x <filename>`
+    ```bash
+    sudo cibadmin -R -x <filename>
+    ```
 
     where *filename* is the name of the CIB file with the modified IP address information.
 

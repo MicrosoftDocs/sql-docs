@@ -26,7 +26,7 @@ High-level recommendations for designing columnstore indexes. A small number of 
 
 ## Prerequisites
 
-This article assumes you are familiar with columnstore architecture and terminology. For more information, see [Columnstore indexes - overview](../../relational-databases/indexes/columnstore-indexes-overview.md) and [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).
+This article assumes you are familiar with columnstore architecture and terminology. For more information, see [Columnstore indexes - Overview](../../relational-databases/indexes/columnstore-indexes-overview.md) and [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).
 
 ### Know your data requirements
 Before designing a columnstore index, understand as much as possible about your data requirements. For example, think through the answers to these questions:
@@ -70,9 +70,9 @@ Don't use a clustered columnstore index when:
 
 For more information, see [Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
-## Add btree nonclustered indexes for efficient table seeks
+## Add B-tree nonclustered indexes for efficient table seeks
 
-Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create nonclustered btree indexes as secondary indexes on a clustered columnstore index. The nonclustered btree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
+Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create nonclustered B-tree indexes as secondary indexes on a clustered columnstore index. The nonclustered btree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
 
 By using the secondary btree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the btree index. Since an non-unique value will fail to insert into the btree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
 
@@ -146,12 +146,12 @@ Archive compression is designed for maximum compression when query performance i
 If your data is already in a rowstore table, you can use [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) to convert the table to a clustered columnstore index. There are a couple optimizations that will improve query performance after the table is converted, described next.
 
 ### Use MAXDOP to improve rowgroup quality
-You can configure the maximum number of processors for converting a heap or clustered btree index to a columnstore index. To configure the processors, use the maximum degree of parallelism option (MAXDOP). 
+You can configure the maximum number of processors for converting a heap or clustered B-tree index to a columnstore index. To configure the processors, use the maximum degree of parallelism option (MAXDOP). 
 
 If you have large amounts of data, MAXDOP 1 will likely be too slow.  Increasing MAXDOP to 4 works fine. If this results in a few rowgroups that do not have the optimal number of rows you can run [ALTER INDEX REORGANIZE](../../t-sql/statements/alter-index-transact-sql.md) to merge them together in the background.
 
-### Keep the sorted order of a btree index
-Since the btree index already stores rows in a sorted order, preserving that order when the rows get compressed into the columnstore index can improve query performance.
+### Keep the sorted order of a B-tree index
+Since the B-tree index already stores rows in a sorted order, preserving that order when the rows get compressed into the columnstore index can improve query performance.
 
 The columnstore index does not sort the data, but it does use metadata to track the minimum and maximum values of each column segment in each rowgroup.  When scanning for a range of values, it can quickly compute when to skip the rowgroup. When the data is ordered, more rowgroups can be skipped. 
 
@@ -176,10 +176,10 @@ These are tasks for creating and maintaining columnstore indexes.
 |Convert a rowstore table to a columnstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Convert an existing heap or binary tree to a columnstore. Examples show how to handle existing indexes and also the name of the index when performing this conversion.|  
 |Convert a columnstore table to a rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Usually this is not necessary, but there can be times when you need to perform this conversion. Examples show how to convert a columnstore to a heap or clustered index.|  
 |Create a columnstore index on a rowstore table.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|A rowstore table can have one columnstore index.  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the columnstore index can have a filtered condition. Examples show the basic syntax.|  
-|Create performant indexes for operational analytics.|[Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Describes how to create complementary columnstore and btree indexes so that OLTP queries use btree indexes and analytics queries use columnstore indexes.|  
-|Create performant columnstore indexes for data warehousing.|[Columnstore indexes - data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Describes how to use btree indexes on columnstore tables to create performant data warehousing queries.|  
-|Use a btree index to enforce a primary key constraint on a columnstore index.|[Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Shows how to combine btree and columnstore indexes to enforce primary key constraints on the columnstore index.|  
-|Drop a columnstore index|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Dropping a columnstore index uses the standard DROP INDEX syntax that btree indexes use. Dropping a clustered columnstore index will convert the columnstore table to a heap.|  
+|Create performant indexes for operational analytics.|[Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Describes how to create complementary columnstore and B-tree indexes so that OLTP queries use B-tree indexes and analytics queries use columnstore indexes.|  
+|Create performant columnstore indexes for data warehousing.|[Columnstore indexes - data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Describes how to use B-tree indexes on columnstore tables to create performant data warehousing queries.|  
+|Use a B-tree index to enforce a primary key constraint on a columnstore index.|[Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Shows how to combine B-tree and columnstore indexes to enforce primary key constraints on the columnstore index.|  
+|Drop a columnstore index|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Dropping a columnstore index uses the standard DROP INDEX syntax that B-tree indexes use. Dropping a clustered columnstore index will convert the columnstore table to a heap.|  
 |Delete a row from a columnstore index|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Use [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) to delete a row.<br /><br /> **columnstore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted but does not reclaim the physical storage for the row until the index is rebuilt.<br /><br /> **deltastore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logically and physically deletes the row.|  
 |Update a row in the columnstore index|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Use [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) to update a row.<br /><br /> **columnstore** row:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted, and then inserts the updated row into the deltastore.<br /><br /> **deltastore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates the row in the deltastore.|  
 |Force all rows in the deltastore to go into the columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Columnstore indexes - defragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX with the REBUILD option forces all rows to go into the columnstore.|  

@@ -62,21 +62,21 @@
 ### [Configure SSIS](sql-server-linux-configure-ssis.md)
 ### [Schedule SSIS packages](sql-server-linux-schedule-ssis-packages.md)
 
-## [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
-### [Availability Basics](sql-server-linux-ha-basics.md)
-### [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
+## [Configure business continuity](sql-server-linux-business-continuity-dr.md)
+### [Availability basics](sql-server-linux-ha-basics.md)
+### [Backup and restore](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
-### [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-concepts.md)
-#### [Red Hat Enterprise Linux]()
+### [Failover cluster instance](sql-server-linux-shared-disk-cluster-concepts.md)
+#### [Red Hat Enterprise Linux (RHEL)]()
 ##### [Configure (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [Operate (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-#### [SUSE Linux Enterprise Server]()
+#### [SUSE Linux Enterprise Server (SLES)]()
 ##### [Configure (HA add-on)](sql-server-linux-shared-disk-cluster-sles-configure.md)
-### [Availability Groups](sql-server-linux-availability-group-overview.md)
+### [Availability groups](sql-server-linux-availability-group-overview.md)
 #### [Create for high availability](sql-server-linux-availability-group-ha.md)
 ##### [Configure AG](sql-server-linux-availability-group-configure-ha.md)
 ##### [Configure on RHEL](sql-server-linux-availability-group-cluster-rhel.md)
-##### [Configure on SUSE](sql-server-linux-availability-group-cluster-sles.md)
+##### [Configure on SLES](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Configure on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Operate](sql-server-linux-availability-group-failover-ha.md)
 #### [Create for read-scale only]()
@@ -84,16 +84,20 @@
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)
-### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
+### [Encrypting connections](sql-server-linux-encrypted-connections.md)
 
 ## Performance
 ### [Best practices](sql-server-linux-performance-best-practices.md)
 ### [Get started with performance features](sql-server-linux-performance-get-started.md)
 
+# How-to guides
+## Business continuity
+### [Configure multiple subnets](configure-multiple-subnet.md)
+
 # Samples
-## Unattended Install
-### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
-### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+## Unattended install
+### [Red Hat Enterprise Linux (RHEL)](sample-unattended-install-redhat.md)
+### [SUSE Linux Enterprise Server (SLES)](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Resources

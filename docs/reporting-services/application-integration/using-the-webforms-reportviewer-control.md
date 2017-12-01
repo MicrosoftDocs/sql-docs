@@ -2,7 +2,7 @@
 title: "Using the WebForms ReportViewer Control | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

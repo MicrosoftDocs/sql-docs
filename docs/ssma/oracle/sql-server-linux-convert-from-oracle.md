@@ -6,7 +6,9 @@ ms.author: edmacauley
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: "database-engine"
+ms.component: "sql-linux"
 ms.technology: database-engine
 ms.workload: "Inactive"
 ---

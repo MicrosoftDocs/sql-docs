@@ -3,7 +3,7 @@ title: "Device Information Settings for Rendering Extensions (Reporting Services
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "09/15/2015"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

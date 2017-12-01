@@ -3,7 +3,7 @@ title: "Pin Reporting Services items to Power BI Dashboards | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

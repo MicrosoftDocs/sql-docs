@@ -2,7 +2,7 @@
 title: "Change log for SQL Server Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/07/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

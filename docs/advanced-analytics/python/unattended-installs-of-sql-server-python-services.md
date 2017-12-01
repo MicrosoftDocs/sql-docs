@@ -2,7 +2,7 @@
 title: "Unattended installation of Python Machine Learning Services (In-Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

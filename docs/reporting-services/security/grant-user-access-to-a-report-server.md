@@ -2,7 +2,7 @@
 title: "Grant user access to a report server | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

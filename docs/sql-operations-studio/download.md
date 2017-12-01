@@ -2,7 +2,7 @@
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "11/17/2017"
+ms.date: "11/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -45,11 +45,21 @@ ms.workload: "Inactive"
    ```
 
    > [!NOTE]
-   > On Ubuntu and Redhat, you may have a missing dependency for libXScrnSaver. Use the following commands to install this dependency:
-   >
-   >Ubuntu: **sudo apt-get install libxss1**
-   >
-   >Redhat: **yum install libXScrnSaver**
+   > On Ubuntu and Redhat, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
+   
+   **Ubuntu:** 
+   ```bash
+   sudo apt-get install libxss1
+
+   sudo apt-get install libgconf-2-4
+
+   sudo apt-get install libunwind8
+   ```
+
+   **Redhat:** 
+   ```bash
+   yum install libXScrnSaver
+   ```
 
 ## Uninstall [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

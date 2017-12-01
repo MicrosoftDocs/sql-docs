@@ -63,6 +63,7 @@
 ### [Schedule SSIS packages](sql-server-linux-schedule-ssis-packages.md)
 
 ## [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
+### [Availability Basics](sql-server-linux-ha-basics.md)
 ### [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
 ### [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-concepts.md)

@@ -7,8 +7,8 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: ''
 ms.assetid: 
-ms.service: "database-engine"
-ms.component: ""
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.devlang: NA
 ms.topic: article
@@ -16,8 +16,8 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: ""
 ms.date: 09/17/2017    
-ms.prod: "sql-server"
-ms.prod_service: "sql-non-specified"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
 ms.author: mikeray
 
 ---

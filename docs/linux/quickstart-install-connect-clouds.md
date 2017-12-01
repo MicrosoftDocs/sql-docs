@@ -22,7 +22,7 @@ In this quickstart tutorial, you will install SQL Server 2017 on Red Hat Enterpr
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
 
 ## Amazon Web Services
-1.	Create a Linux AMI with at least 3.25 GB of memory from the marketplace 
+1.	Create a Linux AMI with at least 2 GB of memory from the marketplace 
     * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
@@ -40,7 +40,7 @@ In this quickstart tutorial, you will install SQL Server 2017 on Red Hat Enterpr
     
 ## Digital Ocean
 1. Login to the [control panel](https://cloud.digitalocean.com/login) and click create a droplet
-1. Choose a Ubuntu 16.04 droplet with at least 3.25 GB of memory
+1. Choose a Ubuntu 16.04 droplet with at least 2 GB of memory
 1. Connect to the droplet with ssh
 1. Follow the [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
 1. Configure for remote connections:
@@ -48,7 +48,7 @@ In this quickstart tutorial, you will install SQL Server 2017 on Red Hat Enterpr
     * Add an inbound rule to allow traffic on the port on which SQL Server listens (default TCP port 1433)
     
 ## Google Cloud Platform
-1.	Create a Linux image with at least 3.25 GB of memory from the Cloud Launcher 
+1.	Create a Linux image with at least 2 GB of memory from the Cloud Launcher 
     * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)

@@ -27,7 +27,7 @@ In this quick start tutorial, you first install SQL Server 2017 on Ubuntu 16.04.
 
 ## Prerequisites
 
-You must have a Ubuntu 16.04 machine with **at least 3.25 GB** of memory.
+You must have a Ubuntu 16.04 machine with **at least 2 GB** of memory.
 
 To install Ubuntu on your own machine, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 

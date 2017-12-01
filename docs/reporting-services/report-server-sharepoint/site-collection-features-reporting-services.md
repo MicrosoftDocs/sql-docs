@@ -2,7 +2,7 @@
 title: "Reporting Services site collection features | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

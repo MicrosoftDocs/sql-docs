@@ -3,7 +3,7 @@ title: "Power BI Report Server Integration (Configuration Manager) | Microsoft D
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "10/05/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

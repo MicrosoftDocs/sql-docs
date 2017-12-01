@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "linux"
+ms.component: sql-linux
 ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f

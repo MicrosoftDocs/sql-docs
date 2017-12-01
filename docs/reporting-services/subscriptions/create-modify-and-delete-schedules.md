@@ -2,7 +2,7 @@
 title: "Create, Modify, and Delete Schedules | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

@@ -2,7 +2,7 @@
 title: "Troubleshoot Server and Database Connection Problems with Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

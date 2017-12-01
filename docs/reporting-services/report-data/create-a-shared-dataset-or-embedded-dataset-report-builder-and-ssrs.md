@@ -2,7 +2,7 @@
 title: "Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

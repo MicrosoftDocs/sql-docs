@@ -44,7 +44,7 @@ The Azure Data Lake Store connection manager is a component of the [SQL Server I
     1.  If you select the **Azure AD User Identity** authentication option, do the following things:
         1. Provide values for the **User Name** and **Password** fields. 
     
-        2. To test the connection, select **Test Connection**. If you or the tenant administrator didn't previously consent to allow SSIS to access your Azure Data Lake Store data, select **Accept** when prompted. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+        2. To test the connection, select **Test Connection**. If you or the tenant administrator didn't previously consent to allow SSIS to access your Azure Data Lake Store data, select **Accept** when prompted. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
         >   [!NOTE] 
         > When you select the **Azure AD User Identity** authentication option, multi-factor authentication and Microsoft account authentication are not supported.
@@ -52,7 +52,7 @@ The Azure Data Lake Store connection manager is a component of the [SQL Server I
     2. If you select the **Azure AD Service Identity** authentication option, do the following things:
         1. Create an Azure Active Directory (AAD) application and service principal to access the Azure Data Lake data.
     
-        2. Assign appropriate permissions to let this AAD application access your Azure Data Lake resources. For more information about this authentication option, see [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+        2. Assign appropriate permissions to let this AAD application access your Azure Data Lake resources. For more information about this authentication option, see [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
     
         3. Provide values for the **Client Id**, **Secret Key**, and **Tenant Name** fields.
     

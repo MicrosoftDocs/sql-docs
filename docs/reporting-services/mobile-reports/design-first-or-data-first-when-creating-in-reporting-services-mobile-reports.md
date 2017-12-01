@@ -3,7 +3,7 @@ title: "Design first or data first when creating in Reporting Services mobile re
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "02/08/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

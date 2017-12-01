@@ -39,11 +39,12 @@ ms.workload: "Inactive"
   
 -   If the number of empty buckets is high or the maximum chain length is high relative to the average chain length, it is likely that there are many rows with duplicate index key values or there is a skew in the key values. All rows with the same index key value hash to the same bucket, hence there is a long chain length in that bucket.  
   
- Long chain lengths can significantly impact the performance of all DML operations on individual rows, including SELECT and INSERT. Short chain lengths along with a high empty bucket count are in indication of a bucket_count that is too high. This decreases the performance of index scans.  
+Long chain lengths can significantly impact the performance of all DML operations on individual rows, including SELECT and INSERT. Short chain lengths along with a high empty bucket count are in indication of a bucket_count that is too high. This decreases the performance of index scans.  
   
- **sys.dm_db_xtp_hash_index_stats** scans the entire table. So, if there are large tables in your database, **sys.dm_db_xtp_hash_index_stats** may take a long time run.  
+> [!WARNING]
+> **sys.dm_db_xtp_hash_index_stats** scans the entire table. So, if there are large tables in your database, **sys.dm_db_xtp_hash_index_stats** may take a long time run.  
   
- For more information, see [Hash Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+For more information, see [Hash Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -65,7 +66,7 @@ ms.workload: "Inactive"
 
 The following query can be used to troubleshoot the hash index bucket count of an existing table. The query returns statistics about percentage of empty buckets and chain length for all hash indexes on user tables.
 
-```Transact-SQL
+```t-sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [table],   
     i.name                   as [index],   
@@ -87,13 +88,13 @@ The following query can be used to troubleshoot the hash index bucket count of a
   ORDER BY [table], [index];  
 ``` 
 
-For details on how to interpret the results of this query, see [Troubleshooting Hash Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+For details on how to interpret the results of this query, see [Troubleshooting Hash Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### B. Hash index statistics for internal tables
 
 Certain features use internal tables that leverage hash indexes, for example columnstore indexes on memory-optimized tables. The following query returns stats for hash indexes on internal tables that are linked to user tables.
 
-```Transact-SQL
+```t-sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [user_table],
 	ia.type_desc as [internal_table_type],
@@ -116,7 +117,7 @@ Note that the BUCKET_COUNT of index on internal tables cannot be changed, thus t
 
 This query is not expected to return any rows unless you are using a feature that leverages hash indexes on internal tables. The following memory-optimized table contains a columnstore index. After creating this table, you will see hash indexes on internal tables.
 
-```Transact-SQL
+```t-sql
   CREATE TABLE dbo.table_columnstore
   (
   	c1 INT NOT NULL PRIMARY KEY NONCLUSTERED,

@@ -22,7 +22,7 @@ ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
 caps.latest.revision: 54
 author: "guyinacube"
 ms.author: "asaxton"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 
@@ -40,6 +40,7 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 |-|-|
 |Upload report models through the web portal|This can still be done through the SOAP API.|
 |Manage report models through the web portal|This can still be done through the SOAP API.|
+|Customize style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
 
 ## Next steps
 

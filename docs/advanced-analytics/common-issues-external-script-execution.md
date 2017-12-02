@@ -3,7 +3,7 @@ title: "Common issues with external script execution in SQL Server| Microsoft Do
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "10/11/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

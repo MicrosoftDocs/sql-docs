@@ -2,7 +2,7 @@
 title: "Using R in Azure SQL Database  | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

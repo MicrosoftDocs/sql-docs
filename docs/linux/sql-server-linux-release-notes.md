@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "linux"
+ms.component: sql-linux
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
@@ -50,7 +50,7 @@ The following table lists the release history for SQL Server 2017.
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## How to install cumulative updates
+## <a id="cuinstall"></a> How to install cumulative updates
 
 If you have configured the Cumulative Update repository, then you will get the latest cumulative update of SQL Server packages when you perform new installations. The Cumulative Update repository is the default for all package installation articles for SQL Server on Linux. For more information about repository configuration, see [Source repositories](sql-server-linux-setup.md#repositories).
 

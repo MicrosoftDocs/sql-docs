@@ -7,7 +7,7 @@ author: MightyPen
 manager: jhubbard
 editor: rothja
 ms.service: ""
-ms.component: "linux"
+ms.component: sql-linux
 ms.suite: "sql"
 ms.topic: updart-autogen
 ms.technology: database-engine

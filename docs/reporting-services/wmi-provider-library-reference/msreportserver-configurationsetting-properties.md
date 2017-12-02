@@ -3,7 +3,7 @@ title: "MSReportServer_ConfigurationSetting Properties | Microsoft Docs"
 ms.custom: 
   - "force 2/17"
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

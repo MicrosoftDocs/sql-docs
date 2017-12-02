@@ -2,7 +2,7 @@
 title: "Components for Python integration with SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/03/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

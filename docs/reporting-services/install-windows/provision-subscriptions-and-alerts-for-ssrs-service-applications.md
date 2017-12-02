@@ -2,7 +2,7 @@
 title: "Provision Subscriptions and Alerts for SSRS Service Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

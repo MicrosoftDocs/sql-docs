@@ -60,7 +60,7 @@ ms.workload: "Inactive"
  For example, if the nested table contains the columns **Product**, **ProductQuantity**, and **ProductPrice**, you might choose **Product** as the nested table key, but add **ProductQuantity** to the mining structure to use as input.  
   
 ## Filtering Nested Table Data  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can create filters on the data that is used to train or test a data mining model. A filer can be used to affect the composition of the model, or to test the model on a subset of cases. Filters can also be applied to nested tables. However, there are limitations on the syntax that can be used with nested tables.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can create filters on the data that is used to train or test a data mining model. A filter can be used to affect the composition of the model, or to test the model on a subset of cases. Filters can also be applied to nested tables. However, there are limitations on the syntax that can be used with nested tables.  
   
  Often when you apply a filter to a nested table you are testing for the existence or nonexistence of an attribute. For example, you can apply a filter that restricts the cases used in the model to only those cases that have a specified value in the nested table. Or, you could restrict the cases used in the model to customers who have not purchased a particular item.  
   

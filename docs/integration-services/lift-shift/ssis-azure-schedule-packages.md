@@ -223,6 +223,8 @@ END
 GO
 ```
 
+You can use `\n` as the new line character in a multiline string value, since the pipeline definition uses JSON syntax.
+ 
 For more info about the code in this script, see [Deploy and Execute SSIS Packages using Stored Procedures](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
 
 ## Next steps

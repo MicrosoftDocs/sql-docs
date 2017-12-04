@@ -2,9 +2,12 @@
 title: "Report Design View (Report Builder) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql-non-specified
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-builder"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"

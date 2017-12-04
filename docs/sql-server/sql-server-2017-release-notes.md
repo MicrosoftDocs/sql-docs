@@ -2,10 +2,10 @@
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/30/2017"
-ms.prod: "sql-server"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: "server-general"
-ms.component: ""
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

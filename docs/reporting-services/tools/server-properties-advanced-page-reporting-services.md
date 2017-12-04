@@ -2,9 +2,12 @@
 title: "Server Properties (Advanced Page) - Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: sql-non-specified
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "tools"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"

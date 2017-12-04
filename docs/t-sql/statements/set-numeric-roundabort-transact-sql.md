@@ -1,7 +1,7 @@
 ---
 title: "SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "12/04/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -41,17 +41,10 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
+```
+
 SET NUMERIC_ROUNDABORT { ON | OFF }   
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET NUMERIC_ROUNDABORT ON;  
-```  
+```
   
 ## Remarks  
  When SET NUMERIC_ROUNDABORT is ON, an error is generated after a loss of precision occurs in an expression. When OFF, losses of precision do not generate error messages and the result is rounded to the precision of the column or variable storing the result.  

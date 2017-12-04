@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_NULLS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/04/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.service: ""
@@ -42,21 +42,21 @@ ms.workload: "Active"
 >  In a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS will always be ON and any applications that explicitly set the option to OFF will generate an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_NULLS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULLS ON;  
-```  
-  
+
+## Syntax
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_NULLS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULLS ON
+```
+
 ## Remarks  
  When SET ANSI_NULLS is ON, a SELECT statement that uses WHERE *column_name* = **NULL** returns zero rows even if there are null values in *column_name*. A SELECT statement that uses WHERE *column_name* <> **NULL** returns zero rows even if there are nonnull values in *column_name*.  
   

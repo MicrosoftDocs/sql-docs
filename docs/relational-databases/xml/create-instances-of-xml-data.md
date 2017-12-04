@@ -70,7 +70,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  By default, the XML parser discards insignificant white space when it converts string data to XML if either of the following is true:  
   
--   `The xml:space` attribute is not defined on an element or its ancestor elements.  
+-   The `xml:space` attribute is not defined on an element or its ancestor elements.  
   
 -   The `xml:space` attribute in effect on an element, or one of its ancestor elements, has the value of default.  
   

@@ -2,10 +2,10 @@
 title: "Customer Experience Improvement Program for SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
-ms.prod: "sql-server"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: "server-general"
-ms.component: ""
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

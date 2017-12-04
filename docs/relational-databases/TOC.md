@@ -1,5 +1,5 @@
 # [Overview](database-features.md)
-# [New and recently updated articles](new-updated-relational-databases.md)
+# [New and updated articles](new-updated-relational-databases.md)
 
 # [SQL Server Guides](sql-server-guides.md)
 ## Always On Availability Groups Troubleshooting and Monitoring Guide

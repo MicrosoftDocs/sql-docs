@@ -1,5 +1,5 @@
 # [Overview](language-reference.md)  
-# [New and recently updated articles](new-updated-t-sql.md)
+# [New and updated articles](new-updated-t-sql.md)
 
 # [Data types](../t-sql/data-types/data-types-transact-sql.md)
 # [Database Console Commands](../t-sql/database-console-commands/database-console-commands.md)

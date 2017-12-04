@@ -1,6 +1,6 @@
 ---
-title: Updated - SSMS for SQL Server docs | Microsoft Docs
-description: Display snippets of updated content for recently changed in documentation, for SQL Server Management Studio (SSMS) for Microsoft SQL Server.
+title: Updated - DMA for SQL Server docs | Microsoft Docs
+description: Display snippets of updated content for recently changed in documentation, for Data Migration Assistant (DMA) for Microsoft SQL Server.
 services: na
 documentationcenter: ''
 author: MightyPen
@@ -15,9 +15,9 @@ ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: ssms-sql-server-management-studio
+ms.workload: dma-data-migration-assistant
 ---
-# New and Recently Updated: SQL Server Management Studio (SSMS) for SQL Server
+# New and Recently Updated: Data Migration Assistant (DMA) for SQL Server
 
 
 
@@ -30,7 +30,7 @@ Recent updates are reported for the following date range and subject:
 
 
 - *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
-- *Subject area:* &nbsp; **SQL Server Management Studio (SSMS)**.
+- *Subject area:* &nbsp; **Data Migration Assistant (DMA) for SQL Server**.
 
 
 
@@ -68,51 +68,13 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [SQL Server Management Studio - Changelog (SSMS)](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [SQL Server Management Studio - Changelog (SSMS)](sql-server-management-studio-changelog-ssms.md)
-
-*Updated: 2017-10-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 23.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 f483a7e0ba53cff80d3f2d33c9196906d27a7a61 c125f43f0a45e70ce180e62edecc68bdcffd5086  (PR=3441  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=29122bdf543e82c1f429cf401b5fe1d8383515fc) -->
-
-
-
-**[SSMS 17.3--download-sql-server-management-studio-ssms.md)**
-
-Generally available | Build number: 14.0.17199.0
-
-**Enhancements**
-
-
-- New "Import Flat File" wizard added to streamline the import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge. For details, see [Import Flat File to SQL Wizard--../relational-databases/import-export/import-flat-file-wizard.md).
-- Added "XEvent Profiler" node to Object Explorer. For details, see [Use the SSMS XEvent Profiler--../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
-- Updated waits filtering and categorization in Performance Dashboard historical waits report.
-- Added the syntax check of the "Predict" function.
-- Added the syntax check of the External Library Management queries.
-- Added SMO support for External Library Management.
-- Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module).
-- Always On: added [read-only routing support--../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) for availability groups.
-- Added an option to send tracing details to the Output Window for "Active Directory - Universal with MFA support" logins (off by default; needs to be turned on in user settings under "Tools > Options > Azure Services > Azure Cloud > ADAL Output Window Trace Level").
-- Query Store:
-  - Query Store UI will be accessible even when QDS is OFF as long as QDS have recorded any data.
-  - Query Store UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
-- Made inclusion of the scripting parameters headers optional (off by default;  can be enabled in user settings under "Tools > Options > SQL Server Object Explorer > Scripting > Include scripting parameters header") - [Connect item 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
-
+***No articles in this area were updated recently, this time.***
 
 
 

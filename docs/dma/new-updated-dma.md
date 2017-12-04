@@ -1,27 +1,23 @@
 ---
-title: Updated - SQL Server docs | Microsoft Docs
-description: Display snippets of updated content for recently changed in documentation, for SQL Server.
+title: Updated - DMA for SQL Server docs | Microsoft Docs
+description: Display snippets of updated content for recently changed in documentation, for Data Migration Assistant (DMA) for Microsoft SQL Server.
 services: na
 documentationcenter: ''
 author: MightyPen
 manager: jhubbard
-editor: BYHAM
-ms.service: ""
-ms.component: "sql-non-specified"
-ms.suite: "sql"
+editor: ''
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
-ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 12/02/2017
-ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
 ms.author: genemi
+ms.workload: dma-data-migration-assistant
 ---
-# New and Recently Updated: SQL Server docs
+# New and Recently Updated: Data Migration Assistant (DMA) for SQL Server
 
 
 
@@ -34,7 +30,7 @@ Recent updates are reported for the following date range and subject:
 
 
 - *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
-- *Subject area:* &nbsp; **SQL Server**.
+- *Subject area:* &nbsp; **Data Migration Assistant (DMA) for SQL Server**.
 
 
 
@@ -46,11 +42,7 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [SQL Server development partners](partner-dev-sql-server.md)
-2. [SQL Server high availability and disaster recovery partners](partner-hadr-sql-server.md)
-3. [SQL Server managing partners](partner-management-sql-server.md)
-4. [SQL Server monitoring partners](partner-monitor-sql-server.md)
-5. [SQL Server 2012 SP4 release notes](sql-server-2012-sp4-release-notes.md)
+***There are no new articles to list, this time.***
 
 
 
@@ -76,58 +68,13 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [SQL Server 2017 Release Notes](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md)
-
-*Updated: 2017-11-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 37.  ms.author= "craigg".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 c9ac7e027e32b17bb9b54a4a878f70a70404f1cb 5b1aa8dc715fbb08d82b241f1e47f6e443b3e2fc  (PR=4032  ,  Filename=sql-server-2017-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
-
-
-
-- **Workaround:** First, reboot the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
-
-    1. In SQL Server Configuration Manager, right-click the SQL Server instance, and click **Properties**.
-    2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access**, then click **Apply**.
-    3. Check **Enable FILESTREAM for file I/O streaming access** again with the original share name and click **Apply**.
-
-**Master Data Services (MDS)**
-
-- **Issue and customer impact:**
-On the user permissions page, when granting permission to the root level in the entity tree view, you see the following error:
-`"The model permission cannot be saved. The object guid is not valid"`
-
-- **Workarounds:**
-  - Grant permission on the sub nodes in the tree view instead of the root level.
-  - or
-  - Run the script described in this MDS team blog [error applying permission on entity level](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
-
-**Analysis Services**
-
-- **Issue and customer impact:** Data connectors for the following sources are not yet avaialble for tabular models at the 1400 compatibility level.
-  - Amazon Redshift
-  - IBM Netezza
-  - Impala
-- **Workaround:** None.
-
-- **Issue and customer impact:** Direct Query models at the 1400 compatibility level with perspectives can fail on querying or discovering metadata.
-- **Workaround:** Remove perspectives and redeploy.
-
+***No articles in this area were updated recently, this time.***
 
 
 

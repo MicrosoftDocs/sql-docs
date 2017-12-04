@@ -1,5 +1,5 @@
 # [Overview](data-quality-services.md)  
-# [New and recently updated articles](new-updated-data-quality-services.md)
+# [New and updated articles](new-updated-data-quality-services.md)
 
 # Concept and Features
 ## [Introduction to Data Quality Services](introduction-to-data-quality-services.md)  

@@ -6,23 +6,19 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: BYHAM
-ms.service: "database-engine"
-ms.component: ""
-ms.suite: "sql"
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: ""
+ms.custom: UpdArt.exe
 ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 09/27/2017
-ms.prod: "sql-server"
-ms.prod_service: "sql-non-specified"
+ms.date: 12/02/2017
 ms.author: genemi
 ---
 # New and Recently Updated: SQL Server docs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 
 
 Nearly every day Microsoft updates some of its existing articles on its [Docs.Microsoft.com](http://docs.microsoft.com/) documentation website. This article displays excerpts from recently updated articles. Links to new articles might also be listed.
@@ -33,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-09-11** &nbsp; -to- &nbsp; **2017-09-27**
+- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
 - *Subject area:* &nbsp; **SQL Server**.
 
 
@@ -46,7 +42,11 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-***There are no new articles to list, this time.***
+1. [SQL Server development partners](partner-dev-sql-server.md)
+2. [SQL Server high availability and disaster recovery partners](partner-hadr-sql-server.md)
+3. [SQL Server managing partners](partner-management-sql-server.md)
+4. [SQL Server monitoring partners](partner-monitor-sql-server.md)
+5. [SQL Server 2012 SP4 release notes](sql-server-2012-sp4-release-notes.md)
 
 
 
@@ -72,13 +72,58 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [SQL Server 2017 Release Notes](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-***No articles in this area were updated recently, this time.***
+&nbsp;
+
+<a name="TitleNum_1"/>
+
+### 1. &nbsp; [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md)
+
+*Updated: 2017-11-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!-- Source markdown line 37.  ms.author= "craigg".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 c9ac7e027e32b17bb9b54a4a878f70a70404f1cb 5b1aa8dc715fbb08d82b241f1e47f6e443b3e2fc  (PR=4032  ,  Filename=sql-server-2017-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
+
+
+
+- **Workaround:** First, reboot the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
+
+    1. In SQL Server Configuration Manager, right-click the SQL Server instance, and click **Properties**.
+    2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access**, then click **Apply**.
+    3. Check **Enable FILESTREAM for file I/O streaming access** again with the original share name and click **Apply**.
+
+**Master Data Services (MDS)**
+
+- **Issue and customer impact:**
+On the user permissions page, when granting permission to the root level in the entity tree view, you see the following error:
+`"The model permission cannot be saved. The object guid is not valid"`
+
+- **Workarounds:**
+  - Grant permission on the sub nodes in the tree view instead of the root level.
+  - or
+  - Run the script described in this MDS team blog [error applying permission on entity level](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
+
+**Analysis Services**
+
+- **Issue and customer impact:** Data connectors for the following sources are not yet avaialble for tabular models at the 1400 compatibility level.
+  - Amazon Redshift
+  - IBM Netezza
+  - Impala
+- **Workaround:** None.
+
+- **Issue and customer impact:** Direct Query models at the 1400 compatibility level with perspectives can fail on querying or discovering metadata.
+- **Workaround:** Remove perspectives and redeploy.
+
 
 
 
@@ -90,36 +135,40 @@ This compact list provides links to all the updated articles that are listed in 
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
     Then run Run-533-*.BAT
+    2017-12-02  23:00pm
 -->
 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (0+1): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (0+1): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (4+1): **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (17+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (3+0): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+1): **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+1): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### Subject areas which have no new or recently updated articles
 
+- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Connect to SQL** docs](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

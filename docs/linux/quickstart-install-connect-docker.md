@@ -30,31 +30,9 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 ## <a id="requirements"></a> Prerequisites
 
 - Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
-- Minimum of 4 GB of disk space
-- Minimum of 4 GB of RAM
+- Minimum of 2 GB of disk space
+- Minimum of 2 GB of RAM
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you must change it to 4 GB. If you are running on Mac or Windows, use the following procedures to increase the memory.
-
-### Increase Docker memory to 4 GB (Mac)
-
-The following steps increase the memory for Docker for Mac to 4 GB.
-
-1. Click the Docker logo on the top status bar.
-1. Select **Preferences**.
-1. Move the memory indicator to 4 GB or more.
-1. Click the **restart** button at the button of the screen.
-
-### Increase Docker memory to 4 GB (Windows)
-
-The following steps increase the memory for Docker for Windows to 4 GB.
-
-1. Right-click on the Docker icon from the task bar.
-1. Click **Settings** under that menu.
-1. Click the **Advanced** Tab.
-1. Move the memory indicator to 4 GB or more.
-1. Click the **Apply** button.
 
 ## Pull and run the container image
 

@@ -1,23 +1,23 @@
 ---
-title: Updated - SSMS for SQL Server docs | Microsoft Docs
-description: Display snippets of updated content for recently changed in documentation, for SQL Server Management Studio (SSMS) for Microsoft SQL Server.
+title: Updated - SQL Operations Studio docs | Microsoft Docs
+description: Display snippets of updated content for recently changed in documentation, for SQL Operations Studio.
 services: na
 documentationcenter: ''
 author: MightyPen
 manager: jhubbard
-editor: ''
+editor: BYHAM
 ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
+ms.workload: sql-operations-studio
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: ssms-sql-server-management-studio
 ---
-# New and Recently Updated: SQL Server Management Studio (SSMS) for SQL Server
+# New and Recently Updated: SQL Operations Studio docs
 
 
 
@@ -30,7 +30,7 @@ Recent updates are reported for the following date range and subject:
 
 
 - *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
-- *Subject area:* &nbsp; **SQL Server Management Studio (SSMS)**.
+- *Subject area:* &nbsp; **SQL Operations Studio**.
 
 
 
@@ -42,7 +42,27 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-***There are no new articles to list, this time.***
+1. [Create and use code snippets to quickly create Transact-SQL (T-SQL) scripts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]](code-snippets.md)
+2. [Dashboards in [!INCLUDE[name-sos](../includes/name-sos-short.md)]](dashboards.md)
+3. [Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]](download.md)
+4. [Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos](enable-kerberos.md)
+5. [[!INCLUDE[name-sos](../includes/name-sos.md)] FAQ](faq.md)
+6. [Manage servers and databases with Insight widgets in [!INCLUDE[name-sos](../includes/name-sos-short.md)]](insight-widgets.md)
+7. [Integrated Terminal](integrated-terminal.md)
+8. [Keyboard shortcuts in [!INCLUDE[name-sos](../includes/name-sos.md)]](keyboard-shortcuts.md)
+9. [Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database](quickstart-sql-database.md)
+10. [Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query data in Azure SQL Data Warehouse](quickstart-sql-dw.md)
+11. [Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+12. [Server groups in [!INCLUDE[name-sos](../includes/name-sos-short.md)]](server-groups.md)
+13. [User and Workspace Settings](settings.md)
+14. [Using source control in [!INCLUDE[name-sos](../includes/name-sos-short.md)]](source-control.md)
+15. [Backup and Restore using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-backup-restore-sql-server.md)
+16. [Tutorial: Build a custom insight widget](tutorial-build-custom-insight-sql-server.md)
+17. [Tutorial: Add the *five slowest queries* sample widget to the database dashboard](tutorial-qds-sql-server.md)
+18. [Tutorial: Use the Transact-SQL editor to create database objects - [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-sql-editor.md)
+19. [Tutorial: Enable the table space usage sample insight widget using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-table-space-sql-server.md)
+20. [Enable or disable usage data collection for [!INCLUDE[name-sos](../includes/name-sos-short.md)]](usage-data-collection.md)
+21. [What is [!INCLUDE[name-sos](../includes/name-sos.md)]?](what-is.md)
 
 
 
@@ -68,51 +88,13 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [SQL Server Management Studio - Changelog (SSMS)](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [SQL Server Management Studio - Changelog (SSMS)](sql-server-management-studio-changelog-ssms.md)
-
-*Updated: 2017-10-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 23.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 f483a7e0ba53cff80d3f2d33c9196906d27a7a61 c125f43f0a45e70ce180e62edecc68bdcffd5086  (PR=3441  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=29122bdf543e82c1f429cf401b5fe1d8383515fc) -->
-
-
-
-**[SSMS 17.3--download-sql-server-management-studio-ssms.md)**
-
-Generally available | Build number: 14.0.17199.0
-
-**Enhancements**
-
-
-- New "Import Flat File" wizard added to streamline the import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge. For details, see [Import Flat File to SQL Wizard--../relational-databases/import-export/import-flat-file-wizard.md).
-- Added "XEvent Profiler" node to Object Explorer. For details, see [Use the SSMS XEvent Profiler--../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
-- Updated waits filtering and categorization in Performance Dashboard historical waits report.
-- Added the syntax check of the "Predict" function.
-- Added the syntax check of the External Library Management queries.
-- Added SMO support for External Library Management.
-- Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module).
-- Always On: added [read-only routing support--../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) for availability groups.
-- Added an option to send tracing details to the Output Window for "Active Directory - Universal with MFA support" logins (off by default; needs to be turned on in user settings under "Tools > Options > Azure Services > Azure Cloud > ADAL Output Window Trace Level").
-- Query Store:
-  - Query Store UI will be accessible even when QDS is OFF as long as QDS have recorded any data.
-  - Query Store UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
-- Made inclusion of the scripting parameters headers optional (off by default;  can be enabled in user settings under "Tools > Options > SQL Server Object Explorer > Scripting > Include scripting parameters header") - [Connect item 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
-
+***No articles in this area were updated recently, this time.***
 
 
 

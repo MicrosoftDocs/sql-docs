@@ -2,9 +2,12 @@
 title: "Reporting Services Concepts (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2016"
-ms.prod: sql-non-specified
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"

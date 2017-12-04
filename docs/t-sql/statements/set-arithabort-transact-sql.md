@@ -77,13 +77,13 @@ SET ARITHABORT ON
   
  If either SET ARITHABORT or SET ARITHIGNORE is OFF and SET ANSI_WARNINGS is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still returns an error message when encountering divide-by-zero or overflow errors.  
   
- If SET ARITHABORT is set to OFF and an abort error occurs during the evaluation of the Boolean condition of an IF statement, the FALSE branch will be executed.  
+ If SET ARITHABORT is set to OFF and an abort error occurs during the evaluation of the Boolean condition of an IF statement, the FALSE branch is executed.
   
- SET ARITHABORT must be ON when you are creating or changing indexes on computed columns or indexed views. If SET ARITHABORT is OFF, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail.  
+ SET ARITHABORT must be ON when you are creating or changing indexes on computed columns or indexed views. If SET ARITHABORT is OFF, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail.
   
  The setting of SET ARITHABORT is set at execute or run time and not at parse time.  
   
- To view the current setting for this setting, run the following query.  
+ To view the current setting for this setting, run the following query:
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  

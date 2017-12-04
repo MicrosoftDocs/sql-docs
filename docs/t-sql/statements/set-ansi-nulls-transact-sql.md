@@ -39,7 +39,7 @@ ms.workload: "Active"
   Specifies ISO compliant behavior of the Equals (=) and Not Equal To (<>) comparison operators when they are used with null values in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  In a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS will always be ON and any applications that explicitly set the option to OFF will generate an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
+>  In a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_NULLS will be ON and any applications that explicitly set the option to OFF will generate an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -70,7 +70,7 @@ SET ANSI_NULLS ON
   
  SET ANSI_NULLS should be set to ON for executing distributed queries.  
   
- SET ANSI_NULLS must also be ON when you are creating or changing indexes on computed columns or indexed views. If SET ANSI_NULLS is OFF, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error that lists all SET options that violate the required values. Also, when you execute a SELECT statement, if SET ANSI_NULLS is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will ignore the index values on computed columns or views and resolve the select operation as if there were no such indexes on the tables or views.  
+ SET ANSI_NULLS must also be ON when you are creating or changing indexes on computed columns or indexed views. If SET ANSI_NULLS is OFF, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error that lists all SET options that violate the required values. Also, when you execute a SELECT statement, if SET ANSI_NULLS is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignores the index values on computed columns or views and resolve the select operation as if there were no such indexes on the tables or views.  
   
 > [!NOTE]  
 >  ANSI_NULLS is one of seven SET options that must be set to required values when dealing with indexes on computed columns or indexed views. The options ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, QUOTED_IDENTIFIER, and CONCAT_NULL_YIELDS_NULL must also be set to ON, and NUMERIC_ROUNDABORT must be set to OFF.  
@@ -81,7 +81,7 @@ SET ANSI_NULLS ON
   
  The setting of SET ANSI_NULLS is set at execute or run time and not at parse time.  
   
- To view the current setting for this setting, run the following query.  
+ To view the current setting for this setting, run the following query:
   
 ```  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  

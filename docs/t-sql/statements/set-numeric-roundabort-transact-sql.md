@@ -38,12 +38,12 @@ ms.workload: "Inactive"
   Specifies the level of error reporting generated when rounding in an expression causes a loss of precision.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
+
+## Syntax
+
 ```
 
-SET NUMERIC_ROUNDABORT { ON | OFF }   
+SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
 ## Remarks  
@@ -53,16 +53,16 @@ SET NUMERIC_ROUNDABORT { ON | OFF }
   
  If SET NUMERIC_ROUNDABORT is ON, SET ARITHABORT determines the severity of the generated error. This table shows the effects of these two settings when a loss of precision occurs.  
   
-|Setting|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|  
-|-------------|--------------------------------|---------------------------------|  
+|Setting|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|
+|-------------|--------------------------------|---------------------------------|
 |SET ARITHABORT ON|Error is generated; no result set returned.|No errors or warnings; result is rounded.|  
 |SET ARITHABORT OFF|Warning is returned; expression returns NULL.|No errors or warnings; result is rounded.|  
+
+ The setting of SET NUMERIC_ROUNDABORT is set at execute or run time and not at parse time.
+
+ SET NUMERIC_ROUNDABORT must be OFF when you are creating or changing indexes on computed columns or indexed views. If SET NUMERIC_ROUNDABORT is ON, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).
   
- The setting of SET NUMERIC_ROUNDABORT is set at execute or run time and not at parse time.  
-  
- SET NUMERIC_ROUNDABORT must be OFF when you are creating or changing indexes on computed columns or indexed views. If SET NUMERIC_ROUNDABORT is ON, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
-  
- To view the current setting for this setting, run the following query.  
+ To view the current setting for this setting, run the following query:
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  

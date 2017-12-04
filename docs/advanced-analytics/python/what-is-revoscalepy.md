@@ -85,7 +85,7 @@ The following machine learning algorithms and summary functions from RevoScaleR 
 |`rx_predict` | Generate predictions from a trained model|`rx_predict_ex` in CTP 2.0|
 |`rx_summary` | Generate a summary of the model||
 
-New machine learning algorithms are also provided by the Python version of [MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+New machine learning algorithms are also provided by the Python version of [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | Function| Description|
 | ------ | ------ |

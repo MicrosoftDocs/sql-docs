@@ -66,7 +66,7 @@ The Windows operating system uses a paging file to manage crash dumps and for st
 
 The speed of the disk that the page file is stored on can also affect performance. Storing the page file on an SSD, or using multiple page files across multiple SSDs, can improve performance.
 
-For information on sizing the page file, see [How to determine the appropriate page file size for 64-bit versions of Windows](https://support.microsoft.com/en-us/kb/2860880).
+For information on sizing the page file, see [How to determine the appropriate page file size for 64-bit versions of Windows](https://support.microsoft.com/kb/2860880).
 
 ## Optimizations at instance or database level
 
@@ -164,7 +164,7 @@ For details, including sample code, see this tutorial: [SQL Optimization Tips an
 
 **Other resources:**
 
-+ [Soft-NUMA in SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     How to map soft-NUMA nodes to CPUs
 

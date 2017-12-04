@@ -1,11 +1,11 @@
 ---
-title: Updated - T-SQL docs | Microsoft Docs
-description: Display snippets of updated content for recently changed in documentation, for Transact-SQL.
+title: Updated - DMA for SQL Server docs | Microsoft Docs
+description: Display snippets of updated content for recently changed in documentation, for Data Migration Assistant (DMA) for Microsoft SQL Server.
 services: na
 documentationcenter: ''
 author: MightyPen
 manager: jhubbard
-editor: BYHAM
+editor: ''
 ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
@@ -15,9 +15,9 @@ ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: t-sql
+ms.workload: dma-data-migration-assistant
 ---
-# New and Recently Updated: Transact-SQL docs
+# New and Recently Updated: Data Migration Assistant (DMA) for SQL Server
 
 
 
@@ -30,7 +30,7 @@ Recent updates are reported for the following date range and subject:
 
 
 - *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
-- *Subject area:* &nbsp; **T-SQL**.
+- *Subject area:* &nbsp; **Data Migration Assistant (DMA) for SQL Server**.
 
 
 
@@ -68,96 +68,13 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Backslash (Line Continuation) (Transact-SQL)](#TitleNum_1)
-2. [SELECT - ORDER BY Clause (Transact-SQL)](#TitleNum_2)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [Backslash (Line Continuation) (Transact-SQL)](language-elements/sql-server-utilities-statements-backslash.md)
-
-*Updated: 2017-11-15* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
-
-<!-- Source markdown line 83.  ms.author= "rickbyh".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 9484441710ac9a083a554ffadb59a3b7e92484b3 19b9c37c65ba462a32067c80e81a920eeb339851  (PR=3966  ,  Filename=sql-server-utilities-statements-backslash.md  ,  Dirpath=docs\t-sql\language-elements\  ,  MergeCommitSha40=b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1) -->
-
-
-
-**B. Splitting a binary string**
-
-
-The following example uses a backslash and a carriage return to split a binary string into two lines.
-
-```
-SELECT 0xabc\
-def AS [ColumnResult];
-
-```
-
- ..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
-
-```
- ColumnResult
- ------------
- 0xABCDEF
-```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [SELECT - ORDER BY Clause (Transact-SQL)](queries/select-order-by-clause-transact-sql.md)
-
-*Updated: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
-
-<!-- Source markdown line 481.  ms.author= "rickbyh".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 b8d7bc7bab46e914eb2facf6c654a5944383077e de7e4f3f7826011e273120a2b6b08af4d263a510  (PR=3663  ,  Filename=select-order-by-clause-transact-sql.md  ,  Dirpath=docs\t-sql\queries\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
-
-
-
-**<a name="Union"></a> Using ORDER BY with UNION, EXCEPT, and INTERSECT**
-
- When a query uses the UNION, EXCEPT, or INTERSECT operators, the ORDER BY clause must be specified at the end of the statement and the results of the combined queries are sorted. The following example returns all products that are red or yellow and sorts this combined list by the column `ListPrice`.
-
-```sql
-USE AdventureWorks2012;
-GO
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Red'
--- ORDER BY cannot be specified here.
-UNION ALL
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Yellow'
-ORDER BY ListPrice ASC;
-
-```
-
-**Examples: ..!NCLUDE-NotShown--ssSDWfull--../../includes/sssdwfull-md.md)] and ..!NCLUDE-NotShown--ssPDW--../../includes/sspdw-md.md)]**
-
-
+***No articles in this area were updated recently, this time.***
 
 
 

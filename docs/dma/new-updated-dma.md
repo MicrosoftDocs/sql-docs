@@ -1,27 +1,23 @@
 ---
-title: Updated - Sample for SQL Server docs | Microsoft Docs
-description: Display snippets of updated content for recently changed in documentation, for Sample for Microsoft SQL Server.
+title: Updated - DMA for SQL Server docs | Microsoft Docs
+description: Display snippets of updated content for recently changed in documentation, for Data Migration Assistant (DMA) for Microsoft SQL Server.
 services: na
 documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: ""
-ms.component: "samples"
-ms.suite: "sql"
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 09/27/2017
-ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: sample
+ms.workload: dma-data-migration-assistant
 ---
-# New and Recently Updated: Sample for SQL Server
+# New and Recently Updated: Data Migration Assistant (DMA) for SQL Server
 
 
 
@@ -34,7 +30,7 @@ Recent updates are reported for the following date range and subject:
 
 
 - *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
-- *Subject area:* &nbsp; **Sample for SQL Server**.
+- *Subject area:* &nbsp; **Data Migration Assistant (DMA) for SQL Server**.
 
 
 
@@ -72,49 +68,13 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [WideWorldImporters database catalog](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [WideWorldImporters database catalog](world-wide-importers/database-catalog-oltp.md)
-
-*Updated: 2017-11-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 136.  ms.author= "barbkess".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 c055d0483699f06b8766ac2c999101934c14c55c 6975d5a3d1ade7b0ce34bd165bc0e9ef49299ba2  (PR=4032  ,  Filename=database-catalog-oltp.md  ,  Dirpath=docs\sample\world-wide-importers\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
-
-
-
-Wherever possible, the database collocates tables that are commonly queried together into the same schema to minimize join complexity.
-
-The database schema has been code-generated based on a series of metadata tables in another database WWI_Preparation. This gives WideWorldImporters a very high degree of design consistency, naming consistency, and completeness. For details on how the schema has been generated see the source code: [wide-world-importers/wwi-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
-
-**Table design**
-
-
-- All tables have single column primary keys for join simplicity.
-- All schemas, tables, columns, indexes, and check constraints have a Description extended property that can be used to identify the purpose of the object or column. Memory-optimized tables are an exception to this since they don't currently support extended properties.
-- All foreign keys are automatically indexed unless there is another non-clustered index that has the same left-hand component.
-- Auto-numbering in tables is based on sequences. These sequences are easier to work with across linked servers and similar environments than IDENTITY columns. Memory-optimized tables use IDENTITY columns since they don't support in SQL Server 2016.
-- A single sequence (TransactionID) is used for these tables: CustomerTransactions, SupplierTransactions, and StockItemTransactions. This demonstrates how a set of tables can have a single sequence.
-- Some columns have appropriate default values.
-
-**Security schemas**
-
-
-For security, WideWorldImporters does not allow external applications to access data schemas directly. To isolate access, WideWorldImporters uses security-access schemas that do not hold data, but contain views and stored procedures. External applications use the security schemas to retrieve the data that they are allowed to view.  This way, users can only run the views and stored procedures in the secure-access schemas
-
+***No articles in this area were updated recently, this time.***
 
 
 

@@ -2,9 +2,12 @@
 title: "Configure a URL  (SSRS Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/26/2016"
-ms.prod: sql-non-specified
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""

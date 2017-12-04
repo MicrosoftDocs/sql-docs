@@ -39,7 +39,7 @@ ms.workload: "On Demand"
   
  Reports are not upgraded when you upload a report definition file directly to the report server or SharePoint site. Upgrading a report definition in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is the only way to upgrade the .rdl file.  
   
- After a report is upgraded locally or on the report server, you might notice additional errors, warnings, and messages. This is the result of changes to the internal report object model and processing components, which cause messages to appear when underlying problems in the report are detected. For more information, see [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "Backward Compatibility | Reporting Services").  
+ After a report is upgraded locally or on the report server, you might notice additional errors, warnings, and messages. This is the result of changes to the internal report object model and processing components, which cause messages to appear when underlying problems in the report are detected. For more information, see [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md).  
   
  For more information about new features for [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 

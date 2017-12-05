@@ -71,6 +71,34 @@ sudo apt-get install pacemaker pcs fence-agents resource-agents
 
 Install the High Availability pattern in YaST or do it as part of the main installation of the server. The installation can be done with an ISO/DVD as a source or by getting it online.
 
+### Install the HA and SQL Server Agent packages
+Use the commands below to install the HA package and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent if they are not installed already. Installing the HA package after installing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used by [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
+> [!NOTE]
+> If you will not use [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it does not have to be installed, so package *mssql-server-agent* can be skipped.
+> The other optional packages for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.
+
+
+**RHEL**
+
+```bash
+sudo yum install mssql-server-ha mssql-server-agent
+sudo systemctl restart mssql-server
+```
+
+**SLES**
+
+```bash
+sudo zypper install mssql-server-ha mssql-server-agent
+sudo systemctl restart mssql-server
+```
+
+**Ubuntu**
+
+```bash
+sudo apt-get install mssql-server-ha mssql-server-agent
+sudo systemctl restart mssql-server
+```
+
 ### Prepare the nodes for Pacemaker (RHEL and Ubuntu only)
 Pacemaker itself uses a user created on the distribution named *hacluster*. The user gets created when the HA add-on is installed on RHEL and Ubuntu.
 1. On each server that will serve as a node of the Pacemaker cluster, create the password for a user to be used by the cluster. The name used in the examples is *hacluster*, but any name can be used. The name and password must be the same on all nodes participating in the Pacemaker cluster.

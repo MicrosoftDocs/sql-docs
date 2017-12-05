@@ -128,30 +128,6 @@ On a Windows-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ins
 
 When AGs or FCIs are configured on a Windows-based configuration, they are cluster-aware. Cluster awareness means that [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] has specific resource DLLs that a WSFC knows about (sqagtres.dll and sqsrvres.dll for FCIs, hadrres.dll for AGs) and are used by the WSFC to ensure that the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] clustered functionality is up, running, and functioning properly. Because clustering is external not only to [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] but Linux itself, Microsoft had to code the equivalent of a resource DLL for Linux-based AG and FCI deployments. This is the *mssql-server-ha* package, also known as the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] resource agent for Pacemaker.
 
-Use the commands below to install the HA package and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent if they are not installed already. Installing the HA package after installing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used by [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
-> [!NOTE]
-> If you will not use [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it does not have to be installed, so package *mssql-server-agent* can be skipped.
-
-**RHEL**
-
-```bash
-sudo yum install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
-
-**SLES**
-
-```bash
-sudo zypper install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
-
-**Ubuntu**
-
-```bash
-sudo apt-get install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
 
 The other optional packages for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.
 
@@ -270,5 +246,5 @@ Currently, there is no direct way for a WSFC and a Pacemaker cluster to work tog
 #### Other Linux distributions
 On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a RHEL node cannot be part of a Pacemaker cluster that has a SLES node. The main reason for this was stated above: the distributions may have different versions and functionality, so things could not work properly. Mixing distributions has the same story as mixing WSFCs and Linux: use None or distributed AGs.
 
-<!-- ## Next steps
-[needs links] -->
+## Next steps
+[Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)

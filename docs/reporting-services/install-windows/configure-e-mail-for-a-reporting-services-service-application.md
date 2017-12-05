@@ -2,9 +2,12 @@
 title: "Configure E-mail for a Reporting Services Service Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
-ms.prod: sql-non-specified
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
 ms.tgt_pltfrm: ""

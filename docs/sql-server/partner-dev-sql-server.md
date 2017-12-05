@@ -7,8 +7,8 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: ''
 ms.assetid: 
-ms.service: "database-engine"
-ms.component: ""
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.devlang: NA
 ms.topic: article
@@ -16,8 +16,8 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: ""
 ms.date: 17/09/2017    
-ms.prod: "sql-server"
-ms.prod_service: "sql-non-specified"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
 ms.author: mikeray
 
 ---
@@ -45,7 +45,7 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:https://www.click2cloud.net
+[click2cloud_website]:http://www.click2cloud.net
 <!--Get Started Links-->
 
 <!--Datasheet Links-->

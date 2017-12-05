@@ -2,9 +2,12 @@
 title: "Lesson 3: Design the Parent Report using the Report Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2016"
-ms.prod: sql-non-specified
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""

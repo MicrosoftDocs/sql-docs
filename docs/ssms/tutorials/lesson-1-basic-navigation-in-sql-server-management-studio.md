@@ -3,8 +3,11 @@ title: "Lesson 1: Basic Navigation in SQL Server Management Studio | Microsoft D
 ms.custom: ""
 ms.date: "08/30/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # Lesson 1: Basic Navigation in SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) is a powerful and flexible tool. This lesson shows you how the windows work together to present a design surface that makes your work easier. At the end of this lesson, you will know how to clear unwanted windows out of your way, how to quickly bring up windows with the information you need, and how to configure the default surface to support the work you do most often.  
   
 This lesson contains the following topics:  

@@ -2,10 +2,10 @@
 title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/28/2017"
-ms.prod: "ssdt"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: "ssdt"
-ms.component: ""
+ms.service: ""
+ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

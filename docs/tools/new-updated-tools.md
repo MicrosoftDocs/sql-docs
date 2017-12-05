@@ -6,19 +6,23 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: na
+ms.service: ""
+ms.component: "misc"
+ms.suite: "sql"
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: ""
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 12/02/2017
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
 ms.author: genemi
 ms.workload: tools
 ---
 # New and Recently Updated: Tools for SQL Server
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 
 Nearly every day Microsoft updates some of its existing articles on its [Docs.Microsoft.com](http://docs.microsoft.com/) documentation website. This article displays excerpts from recently updated articles. Links to new articles might also be listed.

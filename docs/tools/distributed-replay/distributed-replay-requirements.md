@@ -2,9 +2,12 @@
 title: "Distributed Replay Requirements | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/08/2017"
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "distributed-replay"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ manager: "jhubbard"
 ms.workload: "ondemand"
 ---
 # Distributed Replay Requirements
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Before using the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature, consider the product requirements that are outlined in this topic.  
   
 ## Input Trace Requirements  

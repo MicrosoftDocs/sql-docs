@@ -65,7 +65,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Compatibility levels|Database compatibility level 110 and 120.|Plan to upgrade the database and application for a future release.|Database compatibility level 110<br /><br /> Database compatibility level 120||  
 |XML|Inline XDR Schema Generation|The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode.|XMLDATA|181|  
 |Backup and restore|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
-|Backup and restore|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|Backup and restore|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |Backup and restore|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |Collations|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|None. These collations exist in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], but are not visible through fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |Collations|Hindi<br /><br /> Macedonian|These collations exist in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] and higher, but are not visible through fn_helpcollations. Use Macedonian_FYROM_90 and Indic_General_90 instead.|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  

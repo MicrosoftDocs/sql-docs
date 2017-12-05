@@ -3,8 +3,11 @@ title: "Create and Update Tables (SSMS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -24,7 +27,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create and update database tables
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The Table Designer is a visual tool where you design and visualize [database tables](../../relational-databases/tables/tables.md). Use the SQL Server Management Studio (SSMS) Table Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints.  
 
   

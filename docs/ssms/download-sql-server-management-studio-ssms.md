@@ -99,6 +99,13 @@ Command line:
 Import Flat File Wizard:
 - Added a way to pick a schema name other than the default ("dbo") when creating the table.
 
+Query Store:
+- Restored the "Regressed Queries" report when expanding the Query Store available reports list.
+
+**Integration Services (IS)**
+- Added package validation function in Deployment Wizard, which helps the user figure out components inside SSIS packages that are not supported in Azure-SSIS IR.
+
+
 For the full list of changes, see [SQL Server Management Studio - Changelog (SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md).
 
 For information about user data collection, see [SQL Server Privacy Statement](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).

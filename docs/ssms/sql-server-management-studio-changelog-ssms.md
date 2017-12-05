@@ -60,6 +60,11 @@ Command line:
 Import Flat File Wizard:
 - Added a way to pick a schema name other than the default ("dbo") when creating the table.
 
+Query Store:
+- Restored the "Regressed Queries" report when expanding the Query Store available reports list.
+
+**Integration Services (IS)**
+- Added package validation function in Deployment Wizard, which helps the user figure out components inside SSIS packages that are not supported in Azure-SSIS IR.
 
 ### Bug fixes
 
@@ -78,7 +83,7 @@ Import Flat File Wizard:
 	- Fixed an issue that was causing SSMS to crash when the user did not have *VIEW SERVER STATE* permissions.
 	- Fixed an issue where closing the XE Profiler Live Data window did not stop the underlying session.
 - Registered Servers:
-	- Fixed an issue where the "Move To…" command stopped working - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862).
+	- Fixed an issue where the "Move To…" command stopped working - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) and [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
 - SMO:
 	- Fixed an issue where the TransferData method on the Transfer object was not working.
 	- Fixed an issue where Server databases throws exception for paused SQL DW databases.

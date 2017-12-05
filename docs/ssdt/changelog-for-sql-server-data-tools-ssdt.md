@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/19/2017"
+ms.date: "12/08/2017"
 ms.prod: "ssdt"
 ms.prod_service: "sql-non-specified"
 ms.service: "ssdt"
@@ -24,6 +24,53 @@ ms.workload: "Active"
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+## SSDT 17.4 for Visual Studio 2015
+Build number: 12345
+
+### What's New?
+
+**Analysis Services (AS) projects**
+- Added three new options to tabular projects (under Options > Analysis Services Tabular > Data Import):
+  - Enable Legacy data sources - allows the user to create older "1200 compatibility mode" data sources in newer compatibility modes.
+  - Automatic type detection - when enabled the Query Editor for modern data sources will attempt to detect data types for unstructured queries when they are loaded. If the detection is successful, a new step may be added to the query.
+  - Run background analysis - when enabled the Query Editor for modern data sources will run queries against the data source as the queries are loaded in order to analyze the query's output schema.
+
+**Integration Services (IS)**
+- Added package validation function in Deployment Wizard, which helps the user figure out components inside SSIS packages that are not supported in Azure-SSIS IR.
+
+
+### Bug fixes
+
+**Analysis Services (AS) projects:**
+- Fixed an issue that could cause an unhandled exception when checking in model changes to TFS.
+- Fixed an issue that could cause an exception when adding table with complex M expression to a 1400 model.
+- Fixed an issue that could cause a crash in Visual Studio when searching metadata in the model diagram view.
+- Fixed an issue with 1400 models that could cause calculated columns to get removed from the table definition when saving changes to partition M queries.
+- Fixed an issue when using Rename Query on 1400 models in the Get Data\Table Editor UI that could freeze while validating compatibility with current data model.
+- Fixed an issue that caused a missing Newtonsoft assembly reference when deploying 1400 model to Azure Analysis Service.
+- Fixed an issue that caused an error importing data through PQ into a 1400 model in certain cases.
+- Fixed a scaling issue in the PowerQuery user interface dialogs that would appear when Windows scaling set.
+- Fixed an issue with renaming roles.
+- Fixed issues with the Project Configurations that may have caused changes to not save\sync properly in some cases.
+- Fixed an issue in the PowerQuery editor that was adding "Change Type" steps automatically.
+- Fixed an issue that caused an error opening the BIM file after switching to\from Integrated Workspace mode.
+- MaxConnections property is now visible for data sources in tabular models.
+- Increased the initial size of the PowerQuery editor window.
+- M Query keywords such as "Source" in the PowerQuery editor will now show as localized.
+- Cache credentials when working with 1400 models and structured data sources to prevent having to enter the same credentials for each table edited.
+
+**RS Projects:**
+- Fixed an issue that prevented deploying a single report in a multi report project
+- Fixed an issue with Shared Data Sources that may have caused an issue on deployment
+- Fixed an issue that could crash in the Undo manager when switching between code view, design view, and query editor window
+- Fixed an issue that may have caused the parameter pane to disappear after runtime error
+- Fixed an issue with Report Projects that may have caused them to lose source control mappings
+
+**Integration Services:**
+- Fixed an issue that may have occurred when switching a connection on an Analysis Services Process Task
+- Fixed an issue where some tasks/components are not localized well.
+- Fixed an issue where CDC components break after applying a SQL fix for CDC that adds \__$command\_id column.
 
 
 ## SSDT for Visual Studio 2017 (15.4.0 preview)

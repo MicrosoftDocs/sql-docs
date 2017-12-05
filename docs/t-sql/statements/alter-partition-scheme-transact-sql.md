@@ -31,9 +31,12 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Adds a filegroup to a partition scheme or alters the designation of the NEXT USED filegroup for the partition scheme.  
+  Adds a filegroup to a partition scheme or alters the designation of the NEXT USED filegroup for the partition scheme. 
+
+[!NOTE]
+In Azure SQL Database only primary filegroups are supported.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +65,7 @@ NEXT USED [ filegroup_name ] [ ; ]
  Any filegroup affected by ALTER PARTITION SCHEME must be online.  
   
 ## Permissions  
- Tthe following permissions can be used to execute ALTER PARTITION SCHEME:  
+ The following permissions can be used to execute ALTER PARTITION SCHEME:  
   
 -   ALTER ANY DATASPACE permission. This permission defaults to members of the **sysadmin** fixed server role and the **db_owner** and **db_ddladmin** fixed database roles.  
   

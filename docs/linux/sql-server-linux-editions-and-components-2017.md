@@ -5,7 +5,7 @@ ms.date: "09/14/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "linux"
+ms.component: sql-linux
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

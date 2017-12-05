@@ -2,10 +2,10 @@
 title: "SQL Server Data Tools - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "ssdt"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: "ssdt"
-ms.component: ""
+ms.service: ""
+ms.component: "ssdt"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

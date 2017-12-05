@@ -2,9 +2,12 @@
 title: "bcp Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "bcp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -34,7 +37,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # bcp Utility
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > For content related to previous versions of SQL Server, see [bcp Utility](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 

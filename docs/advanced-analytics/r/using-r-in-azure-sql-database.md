@@ -1,7 +1,7 @@
 ---
 title: "Using R in Azure SQL Database  | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2017"
+ms.date: "12/04/2017"
 ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
@@ -17,12 +17,12 @@ manager: "cgronlund"
 ---
 # Using R in Azure SQL Database
 
-In October 2017, the SQL Server development team announced plans to support execution of R code in-database using stored procedures, similar to R Services in SQL Server 2016.
+In October 2017, the SQL Server development team announced plans to support execution of R code in-database using stored procedures, similar to R Services in SQL Server 2016. This feature is still under development.
+
+To keep up to date on the public release schedule and upcoming events, see the [SQL Server blog](https://blogs.technet.microsoft.com/dataplatforminsider/) or the [Microsoft R Server blog](https://blogs.msdn.microsoft.com/rserver/).
 
 > [!IMPORTANT]
-> The initial preview release that was announced was intended for testing and exploration only. Currently, the feature is **disabled** in Azure SQL Database to support further development. 
-
-To keep up to date on the the public release schedule and upcoming events, see the [SQL Server blog](https://blogs.technet.microsoft.com/dataplatforminsider/) or the [Microsoft R Server blog](https://blogs.msdn.microsoft.com/rserver/).
+> The initial preview release that was announced was intended for testing and exploration only. Currently, the feature is available in Azure SQL Database in limited regions only, and features are limited in comparison with the features supported in SQL Server 2016 or 2017.
 
 **Azure resources**
 

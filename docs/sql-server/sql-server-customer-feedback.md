@@ -6,10 +6,10 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: "sql-server"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: "database-engine"
-ms.component: ""
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine

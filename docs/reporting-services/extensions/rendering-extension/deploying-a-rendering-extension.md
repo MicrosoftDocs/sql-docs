@@ -2,9 +2,12 @@
 title: "Deploying a Rendering Extension | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: sql-non-specified
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "extensions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"

@@ -2,10 +2,10 @@
 title: "Compute capacity limits by edition of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/06/2017"
-ms.prod: "sql-server"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: "ssdt"
-ms.component: ""
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

@@ -3,8 +3,11 @@ title: "Copy Items in a Solution | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Copy Items in a Solution
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can copy items using Solution Explorer or Windows Explorer.  
   
 ### To copy items within Solution Explorer  

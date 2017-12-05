@@ -2,9 +2,12 @@
 title: "Summary: Basic Navigation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Lesson 1-9 - Summary - Basic Navigation
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] design surface can be customized to your personal preference and work requirements.  
   
 The following are best practices for using the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] workspace efficiently:  

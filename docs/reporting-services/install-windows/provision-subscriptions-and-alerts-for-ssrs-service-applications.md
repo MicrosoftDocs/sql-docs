@@ -2,9 +2,12 @@
 title: "Provision Subscriptions and Alerts for SSRS Service Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2016"
-ms.prod: sql-non-specified
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
 ms.tgt_pltfrm: ""

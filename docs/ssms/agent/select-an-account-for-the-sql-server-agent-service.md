@@ -3,8 +3,11 @@ title: "Select an Account for the SQL Server Agent Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -28,6 +31,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Select an Account for the SQL Server Agent Service
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent runs as a specified user account. You select an account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager, where you can choose from the following options:  
   
 -   **Built-in account**. You can choose from a list of the following built-in Windows service accounts:  

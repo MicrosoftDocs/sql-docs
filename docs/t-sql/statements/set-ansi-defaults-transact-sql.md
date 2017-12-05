@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/04/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.service: ""
@@ -35,21 +35,21 @@ ms.workload: "On Demand"
   Controls a group of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] settings that collectively specify some ISO standard behavior.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_DEFAULTS { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_DEFAULTS ON;  
-```  
-  
+
+## Syntax
+
+```
+-- Syntax for SQL Server
+
+SET ANSI_DEFAULTS { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_DEFAULTS ON
+```
+
 ## Remarks  
  SET ANSI_DEFAULTS is a server-side setting that the client does not modify. The client manages its own settings. By default, these settings are the opposite of the server setting. Users should not modify the server setting. To change client the behavior, users should use the SQL_COPT_SS_PRESERVE_CURSORS. For more information, see [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   

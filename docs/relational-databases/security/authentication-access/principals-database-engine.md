@@ -62,7 +62,7 @@ ms.workload: "On Demand"
 
 ## dbo User and dbo Schema
 
-The `dbo` use is a special user principal in each database. All SQL Server administrators, members of the `sysadmin` fixed server role, `sa` login, and owners of the database, enter databases as the `dbo` user. The `dbo` user has all permissions in the database and cannot be limited or dropped. `dbo` stands for database owner, but the `dbo`user account is not the same as the `db_owner` fixed database role, and the `db_owner` fixed database role is not the same as the user account that is recorded as the owner of the database.     
+The `dbo` user is a special user principal in each database. All SQL Server administrators, members of the `sysadmin` fixed server role, `sa` login, and owners of the database, enter databases as the `dbo` user. The `dbo` user has all permissions in the database and cannot be limited or dropped. `dbo` stands for database owner, but the `dbo`user account is not the same as the `db_owner` fixed database role, and the `db_owner` fixed database role is not the same as the user account that is recorded as the owner of the database.     
 The `dbo` user owns the `dbo` schema. The `dbo` schema is the default schema for all users, unless some other schema is specified.  The `dbo` schema cannot be dropped.
   
 ## public Server Role and Database Role  

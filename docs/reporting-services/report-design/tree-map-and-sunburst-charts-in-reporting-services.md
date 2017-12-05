@@ -1,11 +1,13 @@
 ---
 title: "Treemap and sunburst charts in SQL Server Reporting Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
@@ -18,8 +20,7 @@ manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Treemap and sunburst charts in Reporting Services
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 The SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] treemap and sunburst visualizations are great for visually representing hierarchical data. This article is an overview of how to add a treemap or sunburst chart to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report. The article also includes an AdventureWorks sample query to help you get started.  
   
 ##  <a name="bkmk_treemap_chart"></a> Treemap chart  

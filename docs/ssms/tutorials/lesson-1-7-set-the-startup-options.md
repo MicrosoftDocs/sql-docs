@@ -2,9 +2,12 @@
 title: "Set the Startup Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Lesson 1-7 - Set the Startup Options
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can be configured to open the design surface to the configuration you prefer when [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] is started. Configuring [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to open in your preferred configuration can save you time.  
   
 ## Configuring Startup Options  

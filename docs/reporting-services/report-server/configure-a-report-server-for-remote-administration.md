@@ -1,9 +1,13 @@
 ---
 title: "Configure a Report Server for Remote Administration | Microsoft Docs"
 ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-server"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
+ms.custom: ""
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"

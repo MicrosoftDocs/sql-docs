@@ -3,7 +3,7 @@
 # Overview
 ## [What's New in Integration Services in SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [What's New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [New and recently updated articles](new-updated-integration-services.md)
+## [New and updated articles](new-updated-integration-services.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
 
@@ -177,7 +177,7 @@
 ## Follow the blog
 ### [SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
 ## Get help
-### [SSIS forum on MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [SSIS forum on MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [SSIS tag on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
 ## Give feedback
 ### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  

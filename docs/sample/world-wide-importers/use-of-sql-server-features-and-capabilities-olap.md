@@ -1,9 +1,9 @@
 ---
 title: "Use of SQL Server features and capabilities | Microsoft Docs"
-ms.prod: "world-wide-importers"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: "samples"
-ms.component: ""
+ms.service: ""
+ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""

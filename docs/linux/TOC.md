@@ -91,8 +91,8 @@
 ### [Get started with performance features](sql-server-linux-performance-get-started.md)
 
 # How-to guides
-## Business continuity
-### [Configure multiple subnets](configure-multiple-subnet.md)
+## Configure availability
+### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
 
 # Samples
 ## Unattended install

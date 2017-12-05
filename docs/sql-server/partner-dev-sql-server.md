@@ -45,7 +45,7 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:https://www.click2cloud.net
+[click2cloud_website]:http://www.click2cloud.net
 <!--Get Started Links-->
 
 <!--Datasheet Links-->

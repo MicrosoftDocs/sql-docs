@@ -2,9 +2,12 @@
 title: "NS$&lt;service name&gt; Properties (Advanced Tab) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "configuration-manager"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # NS$&lt;service name&gt; Properties (Advanced Tab)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNS](../../includes/ssns-md.md)] is implemented as a service named in the format **NS$***<user_configured name>*. If custom properties are defined, they appear on this tab, with their values. This tab may have no properties listed.  
   
   

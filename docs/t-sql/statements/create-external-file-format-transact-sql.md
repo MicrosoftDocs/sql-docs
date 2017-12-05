@@ -155,7 +155,7 @@ WITH (
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildas (e.g. ~~)
   
  DATE_FORMAT = *datetime_format*  
- Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datefime formats, this option is not necessary. Only one custom datetime format is allowed per file. You cannot specify multiple custom datetime formats per file. However, you can use multiple datetime formats if each one is the default format for its respective data type in the external table definition.
+ Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option is not necessary. Only one custom datetime format is allowed per file. You cannot specify multiple custom datetime formats per file. However, you can use multiple datetime formats if each one is the default format for its respective data type in the external table definition.
  
  
 PolyBase only uses the custom date format for importing the data. It does not use the custom format for writing data to an external file.

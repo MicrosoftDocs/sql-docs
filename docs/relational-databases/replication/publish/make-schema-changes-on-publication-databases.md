@@ -32,7 +32,9 @@ ms.workload: "On Demand"
   
 -   ALTER TABLE  
   
--   ALTER TABLE SET LOCK ESCALATION should not be used if schema change replication is enabled and a topology includes [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.ALTER VIEW  
+-   ALTER TABLE SET LOCK ESCALATION should not be used if schema change replication is enabled and a topology includes [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   

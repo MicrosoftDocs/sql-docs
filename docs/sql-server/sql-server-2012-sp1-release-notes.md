@@ -1,9 +1,9 @@
 ---
 title: "SQL Server 2012 SP1 Release Notes | Microsoft Docs"
-ms.prod: "sql-server"
+ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
-ms.service: "server-general"
-ms.component: ""
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.technology: "server-general"
 ms.custom: ""
 ms.date: "01/31/2017"

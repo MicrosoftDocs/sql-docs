@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/19/2017"
+ms.date: "12/08/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -29,7 +29,7 @@ SSDT for Visual Studio 2017 (15.4.0 preview) is now available. This release intr
 
 | SSDT for Visual Studio 2017 (preview) | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.4.0 preview) ](https://go.microsoft.com/fwlink/?LinkId=860015) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=858660)|
+|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.4.0 preview) ](https://go.microsoft.com/fwlink/?LinkId=860015) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=858660)|
 |||
 
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ SSDT for Visual Studio 2017 (15.4.0 preview) is now available. This release intr
 > "SSDT for Visual Studio 2017 (15.3.0 preview)" doesn't support upgrading, so you must uninstall it before installing "SSDT for Visual Studio 2017 (15.4.0 preview)". 
 
 
-SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.3: [Download Data-Tier Application Framework (DacFx) 17.3](https://www.microsoft.com/download/details.aspx?id=56048)
+SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4: [Download Data-Tier Application Framework (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56048)
 
 
 
@@ -62,9 +62,9 @@ SSDT for Visual Studio 2017 has the same system requirements as installing VS, s
 ## SSDT for Visual Studio 2015
 **Version Information**  
   
-The release number: 17.3
+The release number: 17.4
 
-The build number for this release: 14.0.61709.290
+The build number for this release: 12345
   
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

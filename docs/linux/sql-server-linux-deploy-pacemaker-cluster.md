@@ -20,7 +20,7 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article shows how to configure the underlying Pacemaker cluster used by a Linux Always On availability group (AG) or failover cluster instance (FCI). Unlike an AG or FCI on Windows, the cluster portion as well as the configuration of the AG on Linux can be done before or after the installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. There is no set order. This is different since it is not the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
+This article shows how to configure the underlying Pacemaker cluster used by a Linux Always On availability group (AG) or failover cluster instance (FCI). Unlike an AG or FCI on Windows, the cluster portion as well as the configuration of the AG on Linux can be done before or after the installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. There is no set order. This is different than on the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
 > [!IMPORTANT]
 > An AG with a cluster type of None does *not* require a Pacemaker cluster, nor can it be managed by Pacemaker. 
 
@@ -40,7 +40,7 @@ Use the syntax below to install the packages for each distribution of Linux that
 2.  List the available pools for registration.
     
     ```bash
-    sudo subscription-manager list --available`
+    sudo subscription-manager list --available
 3.  Run the following command to associate RHEL high availability with the subscription.
     
     ```bash

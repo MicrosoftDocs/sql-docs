@@ -94,10 +94,10 @@
 ## Configure availability
 ### [Deploy a Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
 ### [Enable availability groups](sql-server-linux-enable-availability-groups.md)
-### [Configure Pacemaker logins and permissions](sql-server-linux-create-logins-permissions-pacemaker.md)
+### [Configure Pacemaker logins and permissions](sql-server-linux-create-logins-permissions.md)
 ### [Create endpoints and certificates](sql-server-linux-create-ag-endpoints.md)
 ### [Create availability groups](sql-server-linux-create-availability-group.md)
-### [Create availability group resources](sql-server-linux-create-ag-resources-pacemaker.md)
+### [Create availability group resources](sql-server-linux-create-ag-resources.md)
 ### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
 
 # Samples

@@ -57,7 +57,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 9.  If you want to alter the backup preferences, click on the Backup Preferences tab. For more information on backup preferences with AGs, see [Configure backup on availability replicas](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
-10. If using readable secondaries or creating an AG with a cluster type of None for read-scale, you can create a listener by selecting the Listener tab. A listener can also be added later. To create a listener, select the option **Create an availability group listener** and enter a name, a TCP/IP port, and whether to use a static or automatically assigned DHCP IP address. Remember that for an AG with a cluster type of None, the IP should be static and set to the primary’s IP address.
+10. If using readable secondaries or creating an AG with a cluster type of None for read-scale, you can create a listener by selecting the Listener tab. A listener can also be added later. To create a listener, choose the option **Create an availability group listener** and enter a name, a TCP/IP port, and whether to use a static or automatically assigned DHCP IP address. Remember that for an AG with a cluster type of None, the IP should be static and set to the primary’s IP address.
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
@@ -84,11 +84,8 @@ This section shows how to create an AG with a cluster type of External using SSM
 This section will show examples of creating an AG using Transact-SQL. The listener and read-only routing can be configured after the AG is created. The AG itself can be modified with `ALTER AVAILABILITY GROUP`, but changing the cluster type cannot be done in SQL Server 2017. If you did not mean to create an AG with a cluster type of External, you must delete it and recreate it with a cluster type of None. More information and other options can be found at the following links:
 
 -   [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)
-
 -   [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)
-
--   Configure Read-Only Routing for an Availability Group (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
-
+-   [Configure Read-Only Routing for an Availability Group (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Create or Configure an Availability Group Listener (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
 ### Example One – Two replicas with a configuration-only replica (External cluster type)
@@ -97,24 +94,24 @@ This example shows how to create a two-replica AG that uses a configuration-only
 
 1.  Execute on the node that will be the primary replica containing the fully read/write copy of the database(s). This example uses automatic seeding.
 
-> ```t-sql
-> CREATE AVAILABILITY GROUP [<AGName>]
-> WITH (CLUSTER_TYPE = EXTERNAL)
-> FOR DATABASE <DBName> 
-> REPLICA ON N'LinAGN1' WITH (
->    ENDPOINT_URL = N' TCP://LinAGN1.FullyQualified.Name:5022',
->    FAILOVER_MODE = EXTERNAL,
->    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT),
-> N'LinAGN2' WITH (
->    ENDPOINT_URL = N'TCP://LinAGN2.FullyQualified.Name:5022',
->    FAILOVER_MODE = EXTERNAL,
->    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
->    SEEDING_MODE = AUTOMATIC),
-> N'LinAGN3' WITH (
->    ENDPOINT_URL = N'TCP://LinAGN3.FullyQualified.Name:5022',
->    AVAILABILITY_MODE = CONFIGURATION_ONLY);
->    
-> GO
+    ```t-sql
+    CREATE AVAILABILITY GROUP [<AGName>]
+    WITH (CLUSTER_TYPE = EXTERNAL)
+    FOR DATABASE <DBName>
+    REPLICA ON N'LinAGN1' WITH (
+       ENDPOINT_URL = N' TCP://LinAGN1.FullyQualified.Name:5022',
+       FAILOVER_MODE = EXTERNAL,
+       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT),
+    N'LinAGN2' WITH (
+       ENDPOINT_URL = N'TCP://LinAGN2.FullyQualified.Name:5022',
+       FAILOVER_MODE = EXTERNAL,
+       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+       SEEDING_MODE = AUTOMATIC),
+    N'LinAGN3' WITH (
+       ENDPOINT_URL = N'TCP://LinAGN3.FullyQualified.Name:5022',
+       AVAILABILITY_MODE = CONFIGURATION_ONLY);
+       
+    GO
 >```
 
 1.  In a query window connected to the other replica, execute the following to join the replica to the AG and initiate the seeding process from the primary to the secondary replica.
@@ -144,43 +141,42 @@ This example shows three full replicas and how read-only routing can be configur
 
 1.  Execute on the node that will be the primary replica containing the fully read/write copy of the database(s). This example uses automatic seeding.
 
->```t-sql
-> CREATE AVAILABILITY GROUP [<AGName>]
-> WITH (CLUSTER_TYPE = EXTERNAL)
-> FOR DATABASE <DBName>
->
-> REPLICA ON N'LinAGN1'
-> WITH (
->    ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name:5022',
->    FAILOVER_MODE = EXTERNAL,
->    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
->    PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN2.FullyQualified.Name', 'LinAGN3.FullyQualified.Name'))),
->    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN1.FullyQualified.Name:1433')),
-> N'LinAGN2' WITH (
->    ENDPOINT_URL = N'TCP://LinAGN2.FullyQualified.Name:5022',
->    FAILOVER_MODE = EXTERNAL,
->    SEEDING_MODE = AUTOMATIC,
->    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
->    PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name', 'LinAGN3.FullyQualified.Name'))),
->    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN2.FullyQualified.Name:1433')),
-> N'LinAGN3' WITH (
->    ENDPOINT_URL = N'TCP://LinAGN3.FullyQualified.Name:5022',
->    FAILOVER_MODE = EXTERNAL,
->    SEEDING_MODE = AUTOMATIC,
->    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
->    PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name', 'LinAGN2.FullyQualified.Name'))),
->    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN3.FullyQualified.Name:1433'))
-> LISTENER '<ListenerName>' (WITH IP = ('<IPAddress>', '<SubnetMask>'), Port = 1433);
-> GO
-> ```
-> 
-> A few things to note about this configuration:
-> 
-> - *AGName* is the name of the availability group.
-> - *DBName* is the name of the database that will be used with the availability group. It can also be a list of names separated by commas.
-> - *ListenerName* is a name that is different than any of the underlying servers/nodes. It will be registered in DNS along with *IPAddress*.
-> - *IPAddress* is an IP address that is associated with *ListenerName*. It is also unique and not the same as any of the servers/nodes. Applications and end users will use either *ListenerName* or *IPAddress* to connect to the AG.
-> - *SubnetMask* is the subnet mask of *IPAddress*; for example, 255.255.255.0.
+    ```t-sql
+    CREATE AVAILABILITY GROUP [<AGName>]
+    WITH (CLUSTER_TYPE = EXTERNAL)
+    FOR DATABASE <DBName>
+    REPLICA ON N'LinAGN1'
+    WITH (
+       ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name:5022',
+       FAILOVER_MODE = EXTERNAL,
+       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+       PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN2.FullyQualified.Name', 'LinAGN3.FullyQualified.Name'))),
+       SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN1.FullyQualified.Name:1433')),
+    N'LinAGN2' WITH (
+       ENDPOINT_URL = N'TCP://LinAGN2.FullyQualified.Name:5022',
+       FAILOVER_MODE = EXTERNAL,
+       SEEDING_MODE = AUTOMATIC,
+       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+       PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name', 'LinAGN3.FullyQualified.Name'))),
+       SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN2.FullyQualified.Name:1433')),
+    N'LinAGN3' WITH (
+       ENDPOINT_URL = N'TCP://LinAGN3.FullyQualified.Name:5022',
+       FAILOVER_MODE = EXTERNAL,
+       SEEDING_MODE = AUTOMATIC,
+       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+       PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name', 'LinAGN2.FullyQualified.Name'))),
+       SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN3.FullyQualified.Name:1433'))
+    LISTENER '<ListenerName>' (WITH IP = ('<IPAddress>', '<SubnetMask>'), Port = 1433);
+    GO
+    ```
+    
+    A few things to note about this configuration:
+    
+    - *AGName* is the name of the availability group.
+    - *DBName* is the name of the database that will be used with the availability group. It can also be a list of names separated by commas.
+    - *ListenerName* is a name that is different than any of the underlying servers/nodes. It will be registered in DNS along with *IPAddress*.
+    - *IPAddress* is an IP address that is associated with *ListenerName*. It is also unique and not the same as any of the servers/nodes. Applications and end users will use either *ListenerName* or *IPAddress* to connect to the AG.
+    - *SubnetMask* is the subnet mask of *IPAddress*; for example, 255.255.255.0.
 
 2.  In a query window connected to the other replica, execute the following to join the replica to the AG and initiate the seeding process from the primary to the secondary replica.
     
@@ -202,44 +198,38 @@ This example shows the creation of a two-replica configuration using a cluster t
 
 1.  Execute on the node that will be the primary replica containing the fully read/write copy of the database(s). This example uses automatic seeding.
 
-> ```t-sql
-> CREATE AVAILABILITY GROUP [<AGName>]
-> WITH (CLUSTER_TYPE = NONE)
-> FOR DATABASE <DBName>
-> REPLICA ON N'LinAGN1'
-> WITH (`
->    ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name: <PortOfEndpoint>',
->    FAILOVER_MODE = MANUAL,
->    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
->    PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name'.'LinAGN2.FullyQualified.Name'))),
->    SECONDARY_ROLE (
->        ALLOW_CONNECTIONS = ALL, 
->        READ_ONLY_ROUTING_URL = N'TCP://LinAGN1.FullyQualified.Name:<PortOfInstance>'));
->    N'LinAGN2' WITH (
->    
->    ENDPOINT_URL = N'TCP://LinAGN2.FullyQualified.Name:<PortOfEndpoint>',
->    FAILOVER_MODE = MANUAL,
->    SEEDING_MODE = AUTOMATIC,
->    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
->    PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name', 'LinAGN2.FullyQualified.Name'))),
->    SECONDARY_ROLE (
->        ALLOW_CONNECTIONS = ALL, 
->        READ_ONLY_ROUTING_URL =N'TCP://LinAGN2.FullyQualified.Name:<PortOfInstance>'));
->    
-> LISTENER '<ListenerName>' (WITH IP = ('<PrimaryReplicaIPAddress>', '<SubnetMask>'), Port = <PortOfListener>);
-> 
-> GO
-> ```
-> 
-> Where
-> -   *AGName* is the name of the availability group.
-> -   *DBName* is the name of the database that will be used with the availability group. It can also be a list of names separated by commas.
-> -   *PortOfEndpoint* is the port number used by the endpoint created.
-> -   *PortOfInstance* is the port number used by the instance of SQL Server.
-> -   *ListenerName* is a name that is different than any of the underlying replicas but will not actually be used.
-> -   *PrimaryReplicaIPAddress* is the IP address of the primary replica.
-> -   *SubnetMask* is the subnet mask of *IPAddress*. For example, 255.255.255.0.
-> 
+    ```t-sql
+    CREATE AVAILABILITY GROUP [<AGName>]
+    WITH (CLUSTER_TYPE = NONE)
+    FOR DATABASE <DBName>
+    REPLICA ON N'LinAGN1'
+    WITH (
+       ENDPOINT_URL = N'TCP://LinAGN1.FullyQualified.Name: <PortOfEndpoint>',
+       FAILOVER_MODE = MANUAL,
+       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
+       PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name'.'LinAGN2.FullyQualified.Name'))),
+       SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN1.FullyQualified.Name:<PortOfInstance>'));
+    N'LinAGN2' WITH (
+       ENDPOINT_URL = N'TCP://LinAGN2.FullyQualified.Name:<PortOfEndpoint>',
+       FAILOVER_MODE = MANUAL,
+       SEEDING_MODE = AUTOMATIC,
+       AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
+       PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name', 'LinAGN2.FullyQualified.Name'))),
+       SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL =N'TCP://LinAGN2.FullyQualified.Name:<PortOfInstance>'));
+    LISTENER '<ListenerName>' (WITH IP = ('<PrimaryReplicaIPAddress>', '<SubnetMask>'), Port = <PortOfListener>);
+    
+    GO
+    ```
+    
+    Where
+    - *AGName* is the name of the availability group.
+    - *DBName* is the name of the database that will be used with the availability group. It can also be a list of names separated by commas.
+    - *PortOfEndpoint* is the port number used by the endpoint created.
+    - *PortOfInstance* is the port number used by the instance of SQL Server.
+    - *ListenerName* is a name that is different than any of the underlying replicas but will not actually be used.
+    - *PrimaryReplicaIPAddress* is the IP address of the primary replica.
+    - *SubnetMask* is the subnet mask of *IPAddress*. For example, 255.255.255.0.
+    
 2.  Join the secondary replica to the AG and initiate automatic seeding.
     
     ```t-sql

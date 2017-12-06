@@ -126,32 +126,7 @@ On a Windows-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ins
 >[!NOTE]
 >For those new to [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent is [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]’s built-in job scheduler. It is a common way for DBAs to schedule things like backups and other [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] maintenance. Unlike a Windows-based installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] where [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent is a completely different service, on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent runs in context of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] itself.
 
-When AGs or FCIs are configured on a Windows-based configuration, they are cluster-aware. Cluster awareness means that [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] has specific resource DLLs that a WSFC knows about (sqagtres.dll and sqsrvres.dll for FCIs, hadrres.dll for AGs) and are used by the WSFC to ensure that the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] clustered functionality is up, running, and functioning properly. Because clustering is external not only to [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] but Linux itself, Microsoft had to code the equivalent of a resource DLL for Linux-based AG and FCI deployments. This is the *mssql-server-ha* package, also known as the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] resource agent for Pacemaker.
-
-Use the commands below to install the HA package and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent if they are not installed already. Installing the HA package after installing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used by [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
-> [!NOTE]
-> If you will not use [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it does not have to be installed, so package *mssql-server-agent* can be skipped.
-
-**RHEL**
-
-```bash
-sudo yum install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
-
-**SLES**
-
-```bash
-sudo zypper install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
-
-**Ubuntu**
-
-```bash
-sudo apt-get install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
+When AGs or FCIs are configured on a Windows-based configuration, they are cluster-aware. Cluster awareness means that [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] has specific resource DLLs that a WSFC knows about (sqagtres.dll and sqsrvres.dll for FCIs, hadrres.dll for AGs) and are used by the WSFC to ensure that the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] clustered functionality is up, running, and functioning properly. Because clustering is external not only to [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] but Linux itself, Microsoft had to code the equivalent of a resource DLL for Linux-based AG and FCI deployments. This is the *mssql-server-ha* package, also known as the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] resource agent for Pacemaker. To install the *mssql-server-ha* package, see [Install the HA and SQL Server Agent packages](sql-server-linux-deploy-pacemaker-cluster.md#install-the-ha-and-sql-server-agent-packages).
 
 The other optional packages for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.
 
@@ -245,12 +220,11 @@ For more specifics, consult:
 >RHEL with a Pacemaker cluster with STONITH is not yet supported by Hyper-V. Until that is supported, for more information and updates, consult [Support Policies for RHEL High Availability Clusters](https://access.redhat.com/articles/29440#3physical_host_mixing).
 
 ### Networking
-Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedicated IP address for the Pacemaker cluster itself. AGs and FCIs will require IP addresses (see the documentation for each for more information), but not names, since there is no network name resource. SLES does allow the configuration of an IP address for administration purposes, but it is not required, as can be seen below in [Create the Pacemaker Cluster](#create).
+Unlike a WSFC, Pacemaker does not require a dedicated name or at least one dedicated IP address for the Pacemaker cluster itself. AGs and FCIs will require IP addresses (see the documentation for each for more information), but not names, since there is no network name resource. SLES does allow the configuration of an IP address for administration purposes, but it is not required, as can be seen in [Create the Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md#create).
 
 Like a WSFC, Pacemaker would prefer redundant networking, meaning distinct network cards (NICs or pNICs for physical) having individual IP addresses. In terms of the cluster configuration, each IP address would have what is known as its own ring. However, as with WSFCs today, many implementations are virtualized or in the public cloud where there is really only a single virtualized NIC (vNIC) presented to the server. If all pNICs and vNICs are connected to the same physical or virtual switch, there is no true redundancy at the network layer, so configuring multiple NICs is a bit of an illusion to the virtual machine. Network redundancy is usually built into the hypervisor for virtualized deployments, and is definitely built into the public cloud.
 
-One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. 
-<!--  For more information on multiple subnets and Linux clusters, see the article [Configuring multiple-subnet Always On Availability Groups and failover cluster instances](7-configure-multiple-subnet-ha.md). -->
+One difference with multiple NICs and Pacemaker versus a WSFC is that Pacemaker allows multiple IP addresses on the same subnet, whereas a WSFC does not. For more information on multiple subnets and Linux clusters, see the article [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md).
 
 ### Quorum and STONITH
 Quorum configuration and requirements are related to AG or FCI-specific deployments of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
@@ -271,173 +245,5 @@ Currently, there is no direct way for a WSFC and a Pacemaker cluster to work tog
 #### Other Linux distributions
 On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a RHEL node cannot be part of a Pacemaker cluster that has a SLES node. The main reason for this was stated above: the distributions may have different versions and functionality, so things could not work properly. Mixing distributions has the same story as mixing WSFCs and Linux: use None or distributed AGs.
 
-## Deploy a Pacemaker cluster 
-This section shows how to configure the underlying Pacemaker cluster used by an AG or FCI. Unlike a traditional AG or FCI on Windows, the cluster portion on Linux can be done before or after the installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], as well as the configuration of the AG. There is no set order. This is different since it is not the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack. The integration and configuration of resources for Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
-> [!IMPORTANT]
-> An AG with a cluster type of None does *not* require a Pacemaker cluster, nor can it be managed by Pacemaker. 
-
-### Common tasks 
-This section documents the tasks that must be done to configure both [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] and Pacemaker to be able to deploy AGs or FCIs.
-
-#### Install the HA add-on
-Use the syntax below to install the packages for each distribution of Linux that make up the HA add-on. On SLES, the HA add-on gets initialized when the cluster is created.
-
-**RHEL**
-1.  Register the server using the following syntax. You will be prompted for a valid username and password.
-    
-    ```bash
-    sudo subscription-manager register
-    ```
-    
-2.  List the available pools for registration.
-    
-    ```bash
-    sudo subscription-manager list --available`
-3.  Run the following command to associate RHEL high availability with the subscription.
-    
-    ```bash
-    sudo subscription-manager attach --pool=<PoolID>
-    ```
-    
-    where *PoolId* is the pool ID for the high availability subscription from the previous step.
-    
-4.  Enable the repository to be able to use the high availability add-on.
-    
-    ```bash
-    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
-    ```
-    
-5.  Install Pacemaker.
-    
-    ```bash
-    sudo yum install pacemaker pcs fence-agents-all resource-agents
-    ```
-
-**Ubuntu**
-
-```bash
-sudo apt-get install pacemaker pcs fence-agents resource-agents
-```
-
-**SLES**
-
-Install the High Availability pattern in YaST or do it as part of the main installation of the server. This can be done with an ISO/DVD as a source or getting it from online.
-
-#### Prepare the nodes for Pacemaker (RHEL and Ubuntu only)
-Pacemaker itself uses a user created on the distribution named *hacluster*. This gets created when the HA add-on is installed on RHEL and Ubuntu.
-1. On each server that will serve as a node of the Pacemaker cluster, create the password for a user that will be used by the cluster. The name used in the examples will be *hacluster*, but any name can be used. The name and password must be the same on all nodes participating in the Pacemaker cluster.
-   
-    ```bash
-    sudo passwd hacluster
-    ```
-    
-2. On each node that will be part of the Pacemaker cluster, enable and start the `pcsd` service with the following commands (RHEL and Ubuntu):
-
-   ```bash
-   sudo systemctl enable pcsd
-   sudo systemctl start pcsd
-   ```
-   
-   Then execute
-   
-   ```bash
-   sudo systemctl status pcsd
-   ```
-   
-   to ensure that `pcsd` is started.
-3. Enable the Pacemaker service on each possible node of the Pacemaker cluster.
-   
-   ```bash
-   sudo systemctl start pacemaker
-   ```
-
-   On Ubuntu, you will see an error
-   
-   *pacemaker Default-Start contains no runlevels, aborting.*
-   
-   This is a known issue. Despite the error, enabling the Pacemaker service is successful, and this is a bug that will be fixed at some point in the future.
-   
-4. Next, create and start the Pacemaker cluster. There is one difference between RHEL and Ubuntu at this step. While on both distributions, installing pcs will configure a default configuration file for the Pacemaker cluster, on RHEL, executing this command will destroy any existing configuration and create a new cluster.
-
-<a id="create"></a>
-### Create the Pacemaker cluster 
-This section documents how to create the cluster for each distribution of Linux.
-
-#### RHEL
-These instructions show how to configure a Pacemaker cluster on RHEL.
-1. Authorize the nodes.
-   
-   ```bash
-   sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster
-   ```
-   
-   where *NodeX* is the name of the node.
-2. Create the cluster
-   
-   ```bash
-   sudo pcs cluster setup --name <PMClusterName Nodelist> --start --all --enable
-   ```
-   
-   where *PMClusterName* is the name assigned to the Pacemaker cluster and *Nodelist* is the list of names of the nodes separated by a space.
-
-#### Ubuntu
-Configuring Ubuntu is similar to RHEL. However, there is one major difference: when the Pacemaker packages are installed, it creates a base configuration for the cluster and enables and starts pcsd. If you try to configure the Pacemaker cluster by following the RHEL instructions exactly, you will get an error. To fix this problem, perform the following steps: 
-1. Remove the default Pacemaker configuration from each node.
-   
-   ```bash
-   sudo pcs cluster destroy
-   ```
-   
-2. Follow the steps in the RHEL section for creating the Pacemaker cluster.
-
-#### SLES
-
-The process for creating a Pacemaker cluster is completely different on SLES than it is on RHEL and Ubuntu. The steps below document how to create a cluster with SLES.
-1. Start the cluster configuration process by running 
-   ```bash
-   sudo ha-cluster-init
-   ``` 
-   
-   on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SLES’s built-in fencing that is storage-based. NTP and watchdog can be configured later.
-   
-2. You will be prompted to configure Corosync. You will be asked for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you are using; for example, 192.191.190.0. You can accept the defaults at every prompt, or change if necessary.
-   
-3. Next, you will be asked if you want to configure SBD, which is the disk-based fencing. This can be done later if desired. If it is not configured, unlike on RHEL and Ubuntu, `stonith-enabled` will by default be set to false.
-   
-4. Finally, you will be asked if you want to configure an IP address for administration. This IP address is optional, but functions similar to the IP address for a WSFC in the sense that it creates an IP address in the cluster to be used for connecting to it via HA Web Konsole (HAWK). This, too, is optional.
-   
-5. Ensure that the cluster is up and running by issuing 
-   ```bash
-   sudo crm status
-   ```
-   
-6. Change the *hacluster* password with 
-   ```bash
-   sudo passwd hacluster
-   ```
-   
-
-7. If you configured an IP address for administration, you can test it in a browser, which also tests the password change for *hacluster*.
-   ![](./media/sql-server-linux-ha-basics/image2.png)
-   
-8. On another SLES server that will be a node of the cluster, run 
-   ```bash
-   sudo ha-cluster-join
-   ```
-   
-9. When prompted, enter the name or IP address of the server that was configured as the first node of the cluster in the previous steps. The server is added as a node to the existing cluster.
-   
-10. Verify the node was added by issuing 
-   ```bash
-   sudo crm status
-   ```
-   
-11. Change the *hacluster* password with 
-   ```bash
-   sudo passwd hacluster
-   ```
-   
-12. Repeat Steps 8-11 for all other servers to be added to the cluster.
-
-<!-- ## Next steps
-[needs links] -->
+## Next steps
+[Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)

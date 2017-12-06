@@ -93,6 +93,7 @@
 # How-to guides
 ## Configure availability
 ### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
+### [Deploy a Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
 
 # Samples
 ## Unattended install

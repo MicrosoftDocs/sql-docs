@@ -79,7 +79,7 @@ To check whether you can connect to an on-premises SQL Server, do the following 
 ### Prerequisites
 To connect to an on-premises SQL Server from a package running on Azure, you have to enable the following prerequisites:
 
-1.  Enable remote access on the on-premises SQL Server.
+1.  Enable remote connections on the on-premises SQL Server.
 2.  Allow access through the Windows firewall. For mor info, see [Configure the Windows Firewall to Allow SQL Server Access](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
 
 ## Connect to an on-premises file share

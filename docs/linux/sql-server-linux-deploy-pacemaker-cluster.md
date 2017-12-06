@@ -20,15 +20,12 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article shows how to configure the underlying Pacemaker cluster used by a Linux Always On availability group (AG) or failover cluster instance (FCI). Unlike an AG or FCI on Windows, the cluster portion as well as the configuration of the AG on Linux can be done before or after the installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. There is no set order. This is different than on the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
+This article documents the tasks that must be done to configure both [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] and Pacemaker to be able to deploy a Linux Always On availability group (AG) or failover cluster instance (FCI). Unlike an AG or FCI on Windows, there is no set order, and the cluster portion as well as the configuration of the AG on Linux can be done before or after the installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. This is different than on the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
 > [!IMPORTANT]
 > An AG with a cluster type of None does *not* require a Pacemaker cluster, nor can it be managed by Pacemaker. 
 
-## Common tasks 
-This section documents the tasks that must be done to configure both [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] and Pacemaker to be able to deploy AGs or FCIs.
-
-### Install the HA add-on
-Use the syntax below to install the packages for each distribution of Linux that make up the high availability (HA) add-on. On SUSE Linux Enterprise Server (SLES), the HA add-on gets initialized when the cluster is created.
+## Install the HA add-on
+Use the syntax below to install the packages that make up the high availability (HA) add-on for each distribution of Linux. 
 
 **Red Hat Enterprise Linux (RHEL)**
 1.  Register the server using the following syntax. You are prompted for a valid username and password.
@@ -67,16 +64,17 @@ Use the syntax below to install the packages for each distribution of Linux that
 sudo apt-get install pacemaker pcs fence-agents resource-agents
 ```
 
-**SLES**
+**SUSE Linux Enterprise Server (SLES)**
 
 Install the High Availability pattern in YaST or do it as part of the main installation of the server. The installation can be done with an ISO/DVD as a source or by getting it online.
-
-### Install the HA and SQL Server Agent packages
-Use the commands below to install the HA package and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent if they are not installed already. Installing the HA package after installing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used by [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
 > [!NOTE]
-> If you will not use [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it does not have to be installed, so package *mssql-server-agent* can be skipped.
-> The other optional packages for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.
+> On SLES, the HA add-on gets initialized when the cluster is created.
 
+## Install the HA and SQL Server Agent packages
+Use the commands below to install the HA package and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, if they are not installed already. Installing the HA package after installing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used by [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
+> [!NOTE]
+> - If you will not use [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it does not have to be installed, so package *mssql-server-agent* can be skipped.
+> - The other optional packages for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.
 
 **RHEL**
 
@@ -99,7 +97,7 @@ sudo apt-get install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-### Prepare the nodes for Pacemaker (RHEL and Ubuntu only)
+## Prepare the nodes for Pacemaker (RHEL and Ubuntu only)
 Pacemaker itself uses a user created on the distribution named *hacluster*. The user gets created when the HA add-on is installed on RHEL and Ubuntu.
 1. On each server that will serve as a node of the Pacemaker cluster, create the password for a user to be used by the cluster. The name used in the examples is *hacluster*, but any name can be used. The name and password must be the same on all nodes participating in the Pacemaker cluster.
    
@@ -137,10 +135,10 @@ Pacemaker itself uses a user created on the distribution named *hacluster*. The 
 
 <a id="create"></a>
 ## Create the Pacemaker cluster 
-This section documents how to create the cluster for each distribution of Linux.
+This section documents how to create and configure the cluster for each distribution of Linux.
 
-### RHEL
-These instructions show how to configure a Pacemaker cluster on RHEL.
+**RHEL**
+
 1. Authorize the nodes.
    
    ```bash
@@ -156,8 +154,9 @@ These instructions show how to configure a Pacemaker cluster on RHEL.
    
    where *PMClusterName* is the name assigned to the Pacemaker cluster and *Nodelist* is the list of names of the nodes separated by a space.
 
-### Ubuntu
-Configuring Ubuntu is similar to RHEL. However, there is one major difference: when the Pacemaker packages are installed, it creates a base configuration for the cluster and enables and starts pcsd. If you try to configure the Pacemaker cluster by following the RHEL instructions exactly, you get an error. To fix this problem, perform the following steps: 
+**Ubuntu**
+
+Configuring Ubuntu is similar to RHEL. However, there is one major difference: installing the Pacemaker packages creates a base configuration for the cluster, and enables and starts `pcsd`. If you try to configure the Pacemaker cluster by following the RHEL instructions exactly, you get an error. To fix this problem, perform the following steps: 
 1. Remove the default Pacemaker configuration from each node.
    
    ```bash
@@ -166,7 +165,7 @@ Configuring Ubuntu is similar to RHEL. However, there is one major difference: w
    
 2. Follow the steps in the RHEL section for creating the Pacemaker cluster.
 
-### SLES
+**SLES**
 
 The process for creating a Pacemaker cluster is completely different on SLES than it is on RHEL and Ubuntu. The steps below document how to create a cluster with SLES.
 1. Start the cluster configuration process by running 

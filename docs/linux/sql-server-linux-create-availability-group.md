@@ -43,7 +43,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 6.  In the Connect to Server dialog, enter the name of the Linux instance of SQL Server that will be the secondary replica, and the credentials to connect. Click **Connect**.
 
-7.  Repeat steps 6 and 7 for the instance that will contain a configuration-only replica or another secondary replica.
+7.  Repeat the previous two steps for the instance that will contain a configuration-only replica or another secondary replica.
 
 8.  All three instances should now be listed on the Specify Replicas dialog. If using a cluster type of External, for the secondary replica that will be a true secondary, make sure the Availability Mode matches that of the primary replica and failover mode is set to External. For the configuration-only replica, select an availability mode of Configuration only.
 
@@ -81,7 +81,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 ## Use Transact-SQL
 
-This section will show examples of creating an AG using Transact-SQL. The listener and read-only routing can be configured after the AG is created. The AG itself can be modified with `ALTER AVAILABILITY GROUP`, but changing the cluster type cannot be done in SQL Server 2017. If you did not mean to create an AG with a cluster type of External, you must delete it and recreate it with a cluster type of None. More information and other options can be found at the following links:
+This section shows examples of creating an AG using Transact-SQL. The listener and read-only routing can be configured after the AG is created. The AG itself can be modified with `ALTER AVAILABILITY GROUP`, but changing the cluster type cannot be done in SQL Server 2017. If you did not mean to create an AG with a cluster type of External, you must delete it and recreate it with a cluster type of None. More information and other options can be found at the following links:
 
 -   [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)
 -   [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)
@@ -112,10 +112,10 @@ This example shows how to create a two-replica AG that uses a configuration-only
        AVAILABILITY_MODE = CONFIGURATION_ONLY);
        
     GO
->```
-
-1.  In a query window connected to the other replica, execute the following to join the replica to the AG and initiate the seeding process from the primary to the secondary replica.
-
+    ```
+    
+2.  In a query window connected to the other replica, execute the following to join the replica to the AG and initiate the seeding process from the primary to the secondary replica.
+    
     
     ```t-sql
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -123,15 +123,15 @@ This example shows how to create a two-replica AG that uses a configuration-only
     GO
     
     ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
-
+    
     GO
     ```
-
-2.  In a query window connected to the configuration only replica, join it to the AG.
-
+    
+3.  In a query window connected to the configuration only replica, join it to the AG.
+    
    ```t-sql
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
-
+    
     GO
     ```
 
@@ -167,6 +167,7 @@ This example shows three full replicas and how read-only routing can be configur
        PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE, READ_ONLY_ROUTING_LIST = (('LinAGN1.FullyQualified.Name', 'LinAGN2.FullyQualified.Name'))),
        SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL, READ_ONLY_ROUTING_URL = N'TCP://LinAGN3.FullyQualified.Name:1433'))
     LISTENER '<ListenerName>' (WITH IP = ('<IPAddress>', '<SubnetMask>'), Port = 1433);
+    
     GO
     ```
     

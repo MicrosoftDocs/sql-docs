@@ -20,12 +20,13 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Once an availability group (AG) is created in SQL Server, the corresponding resources must be created in Pacemaker, when a cluster type of External is specified. There are two resources associated with an AG: the AG itself and an IP address. Configuring the IP address resource is optional if you are not using the listener functionality, but is recommended.
+After an availability group (AG) is created in SQL Server, the corresponding resources must be created in Pacemaker, when a cluster type of External is specified. There are two resources associated with an AG: the AG itself and an IP address. Configuring the IP address resource is optional if you are not using the listener functionality, but is recommended.
 
 The AG resource that is created is a special kind of resource called a clone. The AG resource essentially has copies on each node, and there is one controlling resource called the master. The master is associated with the server hosting the primary replica. The secondary replicas (regular or configuration-only) are considered to be slaves and can be promoted to master in a failover.
 
-## Prerequisite
-Create the Pacemaker cluster as documented in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
+## Prerequisites
+- Create the availability group in SQL Server, as documented in [Create an availability group for SQL Server on Linux](sql-server-linux-create-availability-group.md)
+- Create the Pacemaker cluster, as documented in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
 
 ## Create the resources
 1.  Create the AG resource with the following syntax:
@@ -38,6 +39,7 @@ Create the Pacemaker cluster as documented in [Deploy a Pacemaker cluster for SQ
     
     **SUSE Linux Enterprise Server (SLES)**
     
+    ```bash
     primitive <NameForAGResource> \
     ocf:mssql:ag \
     params ag_name="<AGName>" \

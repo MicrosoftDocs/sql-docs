@@ -254,7 +254,7 @@ This example will create certificates for a three-node configuration. The instan
     
     ```t-sql
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
-    >
+    
     GO
     
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN2_Login;

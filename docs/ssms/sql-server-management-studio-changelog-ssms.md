@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/09/2017"
+ms.date: "12/08/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -24,7 +24,102 @@ ms.workload: "Active"
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
 
-## [SSMS 17.3](download-sql-server-management-studio-ssms.md)
+## [SSMS 17.4](download-sql-server-management-studio-ssms.md)
+
+### What's new
+
+**General SSMS**
+
+Vulnerability Assessment:
+- Added a new SQL Vulnerability Assessment service to scan your databases for potential vulnerabilities and deviations from best practices, such as misconfigurations, excessive permissions, and exposed sensitive data. 
+- Results of the assessment include actionable steps to resolve each issue and customized remediation scripts where applicable. The assessment report can be customized for each environment and tailored to specific requirements. Learn more at [Getting Started with Vulnerability Assessment](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment).
+
+SMO:
+- Fixed issue where *HasMemoryOptimizedObjects* was throwing exception on Azure.
+- Added support for new CATALOG_COLLATION feature.
+
+Always On Dashboard:
+- Improvements for latency analysis in Availability Groups.
+- Added two new reports: *AlwaysOn\_Latency\_Primary* and *AlwaysOn\_Latency\_Secondary*.
+
+Showplan:
+- Updated links to point to correct documentation.
+- Allow single plan analysis directly from actual plan produced.
+- New set of icons.
+- Added support for recognize "Apply logical operators" like GbApply, InnerApply.
+		
+XE Profiler:
+- Renamed to XEvent Profiler.
+- Stop/Start menu commands now stop/start the session by default.
+- Enabled keyboard shortcuts (for example, CTRL-F to search).
+- Added database\_name and client\_hostname actions to appropriate events in XEvent Profiler sessions. For the change to take effect, you may need to delete existing QuickSessionStandard or QuickSessionTSQL session instances on the servers - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+Command line:
+- Added a new command line option ("-G") that can be used to automatically have SSMS connect to a server/database using Active Directory Authentication (either 'Integrated' or 'Password'). For details, see [Ssms utility](ssms-utility.md).
+
+Import Flat File Wizard:
+- Added a way to pick a schema name other than the default ("dbo") when creating the table.
+
+Query Store:
+- Restored the "Regressed Queries" report when expanding the Query Store available reports list.
+
+**Integration Services (IS)**
+- Added package validation function in Deployment Wizard, which helps the user figure out components inside SSIS packages that are not supported in Azure-SSIS IR.
+
+### Bug fixes
+
+**General SSMS**
+
+- Object Explorer:
+	- Fixed an issue where Table-Valued Function node was not showing up for database snapshots - [Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161).
+	- Improved performance when expanding *Databases* node when the server has autoclose databases.
+- Query Editor:
+	- Fixed an issue where IntelliSense was failing for users that don't have access to the master database.
+	- Fixed an issue that was causing SSMS to crash in some cases when the connection to a remote machine was closed - [Connect 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557).
+- XEvent Viewer:
+	- Re-enabled functionality to export to XEL.
+	- Fixed issues where in some cases the user was not able to load an entire XEL file.
+- XEvent Profiler:
+	- Fixed an issue that was causing SSMS to crash when the user did not have *VIEW SERVER STATE* permissions.
+	- Fixed an issue where closing the XE Profiler Live Data window did not stop the underlying session.
+- Registered Servers:
+	- Fixed an issue where the "Move To…" command stopped working - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) and [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/).
+- SMO:
+	- Fixed an issue where the TransferData method on the Transfer object was not working.
+	- Fixed an issue where Server databases throws exception for paused SQL DW databases.
+	- Fixed an issue where scripting SQL database against SQL DW generated incorrect T-SQL parameter values.
+	- Fixed an issue where scripting of a stretched DB incorrectly emitting the *DATA\_COMPRESSION* option.
+- Job Activity Monitor:
+	- Fixed an issue where the user was getting an "Index was out of range. Must be non-negative and less than the size of the collection. 
+		Parameter name: index (System.Windows.Forms)" error when trying to filter by Category - [Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691).
+- Connection Dialog:
+	- Fixed an issue where domain users without access to a Read/Write domain controller could not log in to a SQL Server using SQL Authentication - [Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381).
+- Replication:
+	- Fixed an issue where an error similar to "Cannot apply value 'null' to property ServerInstance" was displayed when looking at properties of a pull subscription in SQL Server.
+- SSMS Setup:
+	- Fixed an issue where SSMS setup was incorrectly causing all the installed products on the machine to be reconfigured.
+- User Settings:
+   - With this fix, US Government sovereign cloud users will have uninterrupted access to their Azure SQL Database and ARM resources with SSMS via Universal authentication and Azure Active Directory login.  Users of prior versions of SSMS would need to open Tools|Options|Azure Services and under Resource Management change the configuration of the "Active Directory Authority" property to https://login.microsoftonline.us.
+
+**Analysis Services (AS)**
+
+- Profiler: fixed an issue when trying to connect using Window Authentication against Azure AS.
+- Fixed an issue that could cause a crash when canceling connection details on a 1400 model.
+- When setting an Azure blob key in the connection properties dialog when refreshing credentials, it will now be visually masked.
+- Fixed an issue in the Azure Analysis Services User selection dialog to show the Application ID guid instead of the Object ID when searching.
+- Fixed an issue in the Browse Database\MDX query designer toolbar that caused the icons to be incorrectly mapped for some buttons.
+- Fixed an issue that prevented connecting to SSAS using msmdpump IIS http/https addresses.
+- Several strings in the Azure Analysis Services User Picker dialog have now been translated for additional languages.
+- MaxConnections property is now visible for data sources in tabular models.
+- Deployment Wizard will now generate correct JSON definitions for Azure AS role members.
+- Fixed an issue in SQL Profiler where selecting Windows Authentication against Azure AS would still prompt for login.
+
+
+## Previous SSMS releases
+
+Download previous SSMS versions by clicking the title links in the following sections.
+
+## ![download](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Generally available | Build number: 14.0.17199.0
 
 ### Enhancements
@@ -118,10 +213,6 @@ Generally available | Build number: 14.0.17199.0
 
 - The [execution_path] in [catalog].[event_messagea] is not correct for package executions in Scale Out. The [execution_path] starts with “\Package” instead of the object name of the package executable. When viewing the overview report of package executions in SSMS, the link of “Execution Path” in Execution Overview cannot work. The workaround is to click “View Messages” on overview report to check all event messages.
 
-
-## Previous SSMS releases
-
-Download previous SSMS versions by clicking the title links in the following sections.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Generally available | Build number: 14.0.17177.0

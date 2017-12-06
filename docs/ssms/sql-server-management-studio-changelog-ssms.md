@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/08/2017"
+ms.date: "12/07/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -25,6 +25,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 
 ## [SSMS 17.4](download-sql-server-management-studio-ssms.md)
+Generally available | Build number: 14.0.17213.0
 
 ### What's new
 
@@ -32,7 +33,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 Vulnerability Assessment:
 - Added a new SQL Vulnerability Assessment service to scan your databases for potential vulnerabilities and deviations from best practices, such as misconfigurations, excessive permissions, and exposed sensitive data. 
-- Results of the assessment include actionable steps to resolve each issue and customized remediation scripts where applicable. The assessment report can be customized for each environment and tailored to specific requirements. Learn more at [Getting Started with Vulnerability Assessment](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment).
+- Results of the assessment include actionable steps to resolve each issue and customized remediation scripts where applicable. The assessment report can be customized for each environment and tailored to specific requirements. Learn more at [SQL Vulnerability Assessment](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
 
 SMO:
 - Fixed issue where *HasMemoryOptimizedObjects* was throwing exception on Azure.

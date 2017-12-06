@@ -1,6 +1,6 @@
 ---
 title: Deploy a Pacemaker cluster for SQL Server on Linux | Microsoft Docs
-description: 
+description: How to configure SQL Server and Pacemaker to deploy availability groups and failover cluster instances on Linux. 
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
@@ -38,7 +38,7 @@ Use the syntax below to install the packages that make up the high availability 
     
     ```bash
     sudo subscription-manager list --available
-3.  Run the following command to associate RHEL high availability with the subscription.
+3.  Run the following command to associate RHEL high availability with the subscription
     
     ```bash
     sudo subscription-manager attach --pool=<PoolID>
@@ -139,7 +139,7 @@ This section documents how to create and configure the cluster for each distribu
 
 **RHEL**
 
-1. Authorize the nodes.
+1. Authorize the nodes
    
    ```bash
    sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster

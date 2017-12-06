@@ -1,5 +1,6 @@
 # [SQL Operations Studio (preview)](what-is.md)
 # [Install](download.md)
+# [New and updated articles](new-updated-sql-operations-studio.md)
 # Quickstarts
 ## [Connect & query SQL Server](quickstart-sql-server.md)
 ## [Connect & query Azure SQL Database](quickstart-sql-database.md)

@@ -3,7 +3,7 @@
 # Overview
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md)
-## [New and recently updated articles](new-updated-linux.md)
+## [New and updated articles](new-updated-linux.md)
 ## [Editions and supported features](sql-server-linux-editions-and-components-2017.md)
 
 # Quickstarts
@@ -92,6 +92,12 @@
 
 # How-to guides
 ## Configure availability
+### [Deploy a Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
+### [Enable availability groups](sql-server-linux-enable-availability-groups.md)
+### [Configure Pacemaker logins and permissions](sql-server-linux-create-logins-permissions-pacemaker.md)
+### [Create endpoints and certificates](sql-server-linux-create-ag-endpoints.md)
+### [Create availability groups](sql-server-linux-create-availability-group.md)
+### [Create availability group resources](sql-server-linux-create-ag-resources-pacemaker.md)
 ### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
 
 # Samples

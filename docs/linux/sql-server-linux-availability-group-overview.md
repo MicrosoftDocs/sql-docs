@@ -70,7 +70,9 @@ To change the value of `required_synchronized_secondaries_to_commit`, use the sy
 
 **Red Hat Enterprise Linux (RHEL) and Ubuntu**
 
-`sudo pcs resource update <AGResourceName>-master required_synchronized_secondaries_to_commit=<Value>`
+```bash
+sudo pcs resource update <AGResourceName>-master required_synchronized_secondaries_to_commit=<Value>
+```
 
 <!-- **SUSE Linux Enterprise Server (SLES)**
 
@@ -137,7 +139,7 @@ The instance associated with the provided IP address then becomes the coordinato
 
 ## Interoperability with Windows-based availability groups and replicas 
 
-An AG that has a cluster type of External or one that is WSFC cannot have its replicas cross platforms. This is true whether the AG is Standard or [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. That means in a traditional AG configuration with an underlying cluster, one replica cannot be on a WSFC and the other on Linux with Pacemaker.
+An AG that has a cluster type of External or one that is WSFC cannot have its replicas cross platforms. This is true whether the AG is [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] or [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. That means in a traditional AG configuration with an underlying cluster, one replica cannot be on a WSFC and the other on Linux with Pacemaker.
 
 An AG with a cluster type of None can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown below where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
 

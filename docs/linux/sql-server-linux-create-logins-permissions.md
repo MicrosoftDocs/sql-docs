@@ -1,6 +1,6 @@
 ---
-title: Enable availability groups for SQL Server on Linux | Microsoft Docs
-description: How to use mssql-conf to enable availability groups for SQL Server on Linux.
+title: Create login and permissions in Pacemaker for SQL Server on Linux | Microsoft Docs
+description: How to use Pacemaker to create login and permissions for SQL Server on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard

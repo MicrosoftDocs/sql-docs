@@ -35,8 +35,8 @@ ms.workload: "On Demand"
 
   Adds a filegroup to a partition scheme or alters the designation of the NEXT USED filegroup for the partition scheme. 
 
-[!NOTE]
-In Azure SQL Database only primary filegroups are supported.  
+>[!NOTE]
+>In Azure SQL Database only primary filegroups are supported.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

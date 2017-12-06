@@ -83,17 +83,17 @@ sudo yum install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-**SLES**
-
-```bash
-sudo zypper install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
-
 **Ubuntu**
 
 ```bash
 sudo apt-get install mssql-server-ha mssql-server-agent
+sudo systemctl restart mssql-server
+```
+
+**SLES**
+
+```bash
+sudo zypper install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 

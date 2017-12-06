@@ -24,92 +24,94 @@ Once an availability group (AG) is created in SQL Server, the corresponding reso
 
 The AG resource that is created is a special kind of resource called a clone. The AG resource essentially has copies on each node, and there is one controlling resource called the master. The master is associated with the server hosting the primary replica. The secondary replicas (regular or configuration-only) are considered to be slaves and can be promoted to master in a failover.
 
-1.  Create the Pacemaker cluster as documented in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
+## Prerequisite
+Create the Pacemaker cluster as documented in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
 
-2.  Create the AG resource with the following syntax:
+## Create the resources
+1.  Create the AG resource with the following syntax:
 
-> **Red Hat Enterprise Linux (RHEL) and Ubuntu**
-> 
-> ```bash
-> sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
-> ```
-> 
-> **SUSE Linux Enterprise Server (SLES)**
-> 
-> primitive <NameForAGResource> \
-> ocf:mssql:ag \
-> params ag_name="<AGName>" \
-> op start timeout=60s \
-> op stop timeout=60s \
-> op promote timeout=60s \
-> op demote timeout=10s \
-> op monitor timeout=60s interval=10s \
-> op monitor timeout=60s interval=11s role="Master" \
-> op monitor timeout=60s interval=12s role="Slave" \
-> op notify timeout=60s
-> ms ms-ag_cluster <NameForAGResource> \
-> meta master-max="1" master-node-max="1" clone-max="3" \
-> clone-node-max="1" notify="true" \
-> commit
-> ```
-> 
-> where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
+    **Red Hat Enterprise Linux (RHEL) and Ubuntu**
+    
+    ```bash
+    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
+    ```
+    
+    **SUSE Linux Enterprise Server (SLES)**
+    
+    primitive <NameForAGResource> \
+    ocf:mssql:ag \
+    params ag_name="<AGName>" \
+    op start timeout=60s \
+    op stop timeout=60s \
+    op promote timeout=60s \
+    op demote timeout=10s \
+    op monitor timeout=60s interval=10s \
+    op monitor timeout=60s interval=11s role="Master" \
+    op monitor timeout=60s interval=12s role="Slave" \
+    op notify timeout=60s
+    ms ms-ag_cluster <NameForAGResource> \
+    meta master-max="1" master-node-max="1" clone-max="3" \
+    clone-node-max="1" notify="true" \
+    commit
+    ```
+    
+    where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
  
-3.  Create the IP address resource for the AG that will be associated with the listener functionality.
+2.  Create the IP address resource for the AG that will be associated with the listener functionality.
 
-> **RHEL and Ubuntu**
-> 
-> ```bash
-> sudo pcs resource create <NameForIPResource> ocf:heartbeat:IPaddr2 ip=<IPAddress> cidr_netmask=<Netmask>
-> ```
-> 
-> **SLES**
-> 
-> ```bash
-> crm configure \
-> primitive <NameForIPResource> \
->    ocf:heartbeat:IPaddr2 \
->    params ip=<IPAddress> \
->       cidr_netmask=<Netmask>
-> ```
-> 
-> where *NameForIPResource* is the unique name for the IP resource, and *IPAddress* is the static IP address assigned to the resource. On SLES, you also need to provide the netmask. For example, 255.255.255.0 would have a value of 24 for *Netmask.*
-> 
-4.  To ensure that the IP address and the AG resource are running on the same node, a colocation constraint must be configured.
+    **RHEL and Ubuntu**
+    
+    ```bash
+    sudo pcs resource create <NameForIPResource> ocf:heartbeat:IPaddr2 ip=<IPAddress> cidr_netmask=<Netmask>
+    ```
+    
+    **SLES**
+    
+    ```bash
+    crm configure \
+    primitive <NameForIPResource> \
+       ocf:heartbeat:IPaddr2 \
+       params ip=<IPAddress> \
+          cidr_netmask=<Netmask>
+    ```
+    
+    where *NameForIPResource* is the unique name for the IP resource, and *IPAddress* is the static IP address assigned to the resource. On SLES, you also need to provide the netmask. For example, 255.255.255.0 would have a value of 24 for *Netmask.*
+    
+3.  To ensure that the IP address and the AG resource are running on the same node, a colocation constraint must be configured.
 
-> **RHEL and Ubuntu**
-> 
-> ```bash
-> sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
->```
-> 
-> **SLES**
-> 
-> ```bash
-> crm configure <NameForConstraint> inf: \
-> <NameForIPResource> <NameForAGResource>:Master 
-> commit
-> ```
-> 
-> where *NameForIPResource* is the name for the IP resource, *NameForAGResource* is the name for the AG resource, and on SLES, *NameForConstraint* is the name for the constraint.
+    **RHEL and Ubuntu**
+    
+    ```bash
+    sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
+    ```
+    
+    **SLES**
+    
+    ```bash
+    crm configure <NameForConstraint> inf: \
+    <NameForIPResource> <NameForAGResource>:Master 
+    commit
+    ```
+    
+    where *NameForIPResource* is the name for the IP resource, *NameForAGResource* is the name for the AG resource, and on SLES, *NameForConstraint* is the name for the constraint.
 
-5.  Create an ordering constraint to ensure that the AG resource is up and running before the IP address. While the colocation constraint implies an ordering constraint, this enforces it.
+4.  Create an ordering constraint to ensure that the AG resource is up and running before the IP address. While the colocation constraint implies an ordering constraint, this enforces it.
 
-> **RHEL and Ubuntu**
-> 
-> ```bash
-> sudo pcs constraint order promote <NameForAGResource>-master then start <NameForIPResource>
-> ```
-> 
-> **SLES**
-> 
-> ```bash
-> crm configure \
-> order <NameForConstraint> inf: <NameForAGResource>:promote <NameForIPResource>:start
-> commit
-> ```
-> 
-> where *NameForIPResource* is the name for the IP resource, *NameForAGResource* is the name for the AG resource, and on SLES, *NameForConstraint* is the name for the constraint.
+    **RHEL and Ubuntu**
+    
+    ```bash
+    sudo pcs constraint order promote <NameForAGResource>-master then start <NameForIPResource>
+    ```
+    
+    **SLES**
+    
+    ```bash
+    crm configure \
+    order <NameForConstraint> inf: <NameForAGResource>:promote <NameForIPResource>:start
+    commit
+    ```
+    
+    where *NameForIPResource* is the name for the IP resource, *NameForAGResource* is the name for the AG resource, and on SLES, *NameForConstraint* is the name for the constraint.
 
 ## Next steps
 

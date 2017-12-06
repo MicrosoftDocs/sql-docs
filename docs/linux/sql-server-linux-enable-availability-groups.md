@@ -20,7 +20,7 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Under Linux, you cannot use PowerShell or SQL Server Configuration Manager to enable the availability groups (AG) feature. You must use `mssql-conf`. Unlike in SQL Server 2016 and earlier on Windows, you can enable AGs without creating the underlying cluster at the operating system layer first. You can also enable AGs with the underlying cluster created; integration with the cluster, if needed, is not done until later.
+Under Linux, you cannot use PowerShell or SQL Server Configuration Manager to enable the availability groups (AG) feature. You must use `mssql-conf`. Unlike in SQL Server 2016 and earlier on Windows, you can enable AGs with or without creating the underlying cluster at the operating system layer first. Integration with the cluster, if needed, is not done until later.
 
 > [!IMPORTANT]
 > The AG feature must be enabled for configuration-only replicas, even on SQL Server Express Edition.

@@ -66,7 +66,7 @@ ms.workload: "Active"
 > [!IMPORTANT] 
 > For more information about index design guidelines and internals, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
 
-## Related Content  
+## Related content  
  [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)     
  [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)  
  [Create Nonclustered Indexes](../../relational-databases/indexes/create-nonclustered-indexes.md)  

@@ -1,7 +1,8 @@
 ---
 title: "Install non-English language versions of SQL Server Management Studio (SSMS) | Microsoft Docs"
+description: "Install non-English language versions of SQL Server Management Studio (SSMS)"
 ms.custom: ""
-ms.date: "11/16/2017"
+ms.date: "12/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,26 +15,39 @@ ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
-# Install non-English language versions of SQL Server Management Studio (SSMS)
+# Install non-English language versions of SQL Server Management Studio (SSMS) 
 
 [SSMS is available in several languages](download-sql-server-management-studio-ssms.md#available-languages), but the SSMS installer blocks installation on computers when their system locale doesn't match the SSMS language. 
 
-## Install non-English SSMS on a computer that has its system locale set to English
+The following directions differ depending on your version of Windows. The following are for Windows 10.
 
-The following steps differ depending on your version of Windows. The following steps are for Windows 10:
+## Install non-English SSMS on a computer running an English operating system (OS)
 
 1. Install the Windows language pack for the language you want SSMS to use. 
    - **Settings** > **Time & language** > **Region & language** > **Add a language** 
+2. Now set the system locale to use the language pack installed in the previous step by clicking the language just installed, then select "Set as default". (After installing SSMS, you can set the system locale back to English.)
+3. Once your operating system is running in the desired language, [install the SSMS version of that same language](download-sql-server-management-studio-ssms.md#available-languages). The first time you install a new SSMS language, use the full package. You can use the upgrade package for subsequent installs.
+4. Run SSMS, and it should display as the language you installed in the previous step.
+5. Set your computer's system locale back to English.
 
-1. Set the system locale to use the language pack installed in the previous step. (After installing SSMS, you can set the system locale back to English.)
-   
-  1. **Settings** > **Time & language** > **Region & language** > **Additional date, time, & regional settings**.
-  2. Now select **Change location**, then click the **Administrative** tab, and select **Change system locale**.
-  3. Set **Current system locale** to use the language pack you installed in the previous steps.
+## Install SSMS in a language other than the language of the installed OS
 
-1. After your operating system is running in the desired language, [install SSMS version of the same language](download-sql-server-management-studio-ssms.md#available-languages).
-2. Run SSMS, and it should display as the language you installed in the previous step.
-3. Set your computer's sytem locale back to English.
+The first time you 
+
+1. Install the Windows language pack for the language you want SSMS to use. 
+   - **Settings** > **Time & language** > **Region & language** > **Add a language** 
+2. Now set the system locale to use the language pack installed in the previous step by clicking the language just installed, then select "Set as default". 
+3. Once your operating system is running in the desired language, [install the SSMS version of that same language](download-sql-server-management-studio-ssms.md#available-languages). The first time you install a new SSMS language, use the full package. You can use the upgrade package for subsequent installs.
+4. For each language that does not match the language of the first SSMS you installed, install the corresponding Visual Studio 2015 Isolated Shell Language Pack:
+   - Browse to [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (you may need to sign in and complete the *Connect Registration* process).
+   - Download the desired language pack and install it.
+5. Run SSMS and select the language you want to use (**Tools** | **Options** | **International Settings**).
+6. Close and restart SSMS.
+
+> [!IMPORTANT]
+> Be sure to use the previous steps to install the Visual Studio 2015 Isolated Shell Language Packs, do not use the **Get additional languages** link on **Tools** | **Options** | **International Settings**. 
 
 
+## Next steps
 
+- [Tutorial: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)

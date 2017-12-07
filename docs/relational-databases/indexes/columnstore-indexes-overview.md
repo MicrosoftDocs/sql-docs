@@ -132,7 +132,7 @@ ms.workload: "Active"
 ## Related Tasks  
  All relational tables, unless you specify them as a clustered columnstore index, use rowstore as the underlying data format. `CREATE TABLE` creates a rowstore table unless you specify the `WITH CLUSTERED COLUMNSTORE INDEX` option.  
   
- When you create a table with the `CREATE TABLE` statement you can create the table as a columnstore by specifying the `WITH CLUSTERED COLUMNSTORE INDEX` option. If you already have a rowstore table and want to convert it to a columnstore, you can use the `CREATE COLUMNSTORE INDEX` statement. For examples, see.  
+ When you create a table with the `CREATE TABLE` statement you can create the table as a columnstore by specifying the `WITH CLUSTERED COLUMNSTORE INDEX` option. If you already have a rowstore table and want to convert it to a columnstore, you can use the `CREATE COLUMNSTORE INDEX` statement.  
   
 |Task|Reference Topics|Notes|  
 |----------|----------------------|-----------|  

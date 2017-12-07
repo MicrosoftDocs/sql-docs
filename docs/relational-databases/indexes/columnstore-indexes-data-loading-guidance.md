@@ -1,5 +1,5 @@
 ---
-title: "Columnstore indexes - Data loading Guidance | Microsoft Docs"
+title: "Columnstore indexes - Data loading guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
 ms.prod: "sql-non-specified"
@@ -19,7 +19,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Columnstore indexes - Data loading Guidance
+# Columnstore indexes - Data loading guidance
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Options and recommendations for loading data into a columnstore index by using the standard SQL bulk loading and trickle insert methods. Loading data into a columnstore index is an essential part of any data warehousing process because it moves data into the index in preparation for analytics.

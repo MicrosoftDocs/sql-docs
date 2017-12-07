@@ -2,9 +2,12 @@
 title: "Native scoring| Microsoft Docs"
 ms.custom: ""
 ms.date: "09/19/2017"
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
+ms.prod_service: "r-services"
+ms.service: ""
+ms.component: "advanced-analytics"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

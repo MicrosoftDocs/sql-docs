@@ -22,8 +22,9 @@ ms.workload: "On Demand"
 
 This article covers how to use SQL Server Management Studio (SSMS) or Transact-SQL to create an availability group (AG) for SQL Server on Linux.
 
-## Prerequisite
-Ensure that the endpoints are already created on all replicas, using the certificate process described in [Create endpoints and certificates](sql-server-linux-create-ag-endpoints.md).
+## Prerequisites
+- The `mssql-server-ha` package must already be installed. See [Install the HA and SQL Server Agent packages](sql-server-linux-deploy-pacemaker-cluster.md#install-the-ha-and-sql-server-agent-packages).
+- The endpoints must already be created on all replicas, using the certificate process described in [Create endpoints and certificates](sql-server-linux-create-ag-endpoints.md).
 
 ## Use SQL Server Management Studio
 
@@ -115,7 +116,6 @@ This example shows how to create a two-replica AG that uses a configuration-only
     ```
     
 2.  In a query window connected to the other replica, execute the following to join the replica to the AG and initiate the seeding process from the primary to the secondary replica.
-    
     
     ```t-sql
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);

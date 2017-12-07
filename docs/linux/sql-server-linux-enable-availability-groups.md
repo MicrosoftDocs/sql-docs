@@ -28,7 +28,7 @@ Under Linux, you cannot use PowerShell or SQL Server Configuration Manager to en
 ## Prerequisite
 The `mssql-server-ha` package must already be installed. See [Install the HA and SQL Server Agent packages](sql-server-linux-deploy-pacemaker-cluster.md#install-the-ha-and-sql-server-agent-packages).
 
-## Enable the AG feature
+## Enable the availability groups feature
 There are two ways to enable the availability groups feature: use the `mssql-conf` utility, or edit the `mssql.conf` file manually.
 
 ### Use the mssql-conf utility

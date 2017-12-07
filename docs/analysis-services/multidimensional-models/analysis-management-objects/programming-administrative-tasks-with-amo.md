@@ -2,12 +2,12 @@
 title: "Programming Administrative Tasks with AMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Programming Administrative Tasks with AMO
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Analysis Management Objects (AMO) is a programming library used from client applications to manage [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. In this section, you will learn to how to program using the AMO objects.  
   
  The AMO library can be thought of as logically related groups of objects that are used to accomplish a specific task.  

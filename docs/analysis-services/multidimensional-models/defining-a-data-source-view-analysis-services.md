@@ -2,12 +2,12 @@
 title: "Defining a Data Source View (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -27,6 +27,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Defining a Data Source View (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A data source view contains the logical model of the schema used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database objects—namely cubes, dimensions, and mining structures. A data source view is the metadata definition, stored in an XML format, of these schema elements used by the Unified Dimensional Model (UDM) and by the mining structures. A data source view:  
   
 -   Contains the metadata that represents selected objects from one or more underlying data sources, or the metadata that will be used to generate an underlying relational data store if you are following the top-down approach to schema generation.  

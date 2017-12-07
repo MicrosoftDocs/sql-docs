@@ -2,12 +2,12 @@
 title: "Define partitions in DirectQuery models (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,9 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define partitions in DirectQuery models
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   This section explains how partitions are used in DirectQuery models. For more general information about partitions in tabular models, see [Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  

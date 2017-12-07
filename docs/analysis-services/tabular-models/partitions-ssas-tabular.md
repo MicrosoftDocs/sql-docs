@@ -2,12 +2,12 @@
 title: "Partitions (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Partitions
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions created by using the Partitions dialog box in SSDT during model authoring apply to the model workspace database. When the model is deployed, the partitions defined for the model workspace database are duplicated in the deployed model database. You can further create and manage partitions for a deployed model database by using the Partitions dialog box in SSMS.  Information provided in this topic describes partitions created during model authoring by using the Partition Manager dialog box in SSDT. For information about creating and managing partitions for a deployed model, see [Create and Manage Tabular Model Partitions](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ##  <a name="bkmk_benefits"></a> Benefits  

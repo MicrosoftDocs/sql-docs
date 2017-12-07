@@ -2,12 +2,12 @@
 title: "Microsoft Decision Trees Algorithm Technical Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -31,6 +31,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Microsoft Decision Trees Algorithm Technical Reference
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is a hybrid algorithm that incorporates different methods for creating a tree, and supports multiple analytic tasks, including regression, classification, and association. The Microsoft Decision Trees algorithm supports modeling of both discrete and continuous attributes.  
   
  This topic explains the implementation of the algorithm, describes how to customize the behavior of the algorithm for different tasks, and provides links to additional information about querying decision tree models.  

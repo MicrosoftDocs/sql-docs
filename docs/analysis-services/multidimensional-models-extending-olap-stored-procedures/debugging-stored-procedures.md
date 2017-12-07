@@ -2,12 +2,12 @@
 title: "Debugging Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -26,6 +26,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Debugging Stored Procedures
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stored procedures are actually CLR or COM libraries (normally DLLs) that are written in C# (or any other CLR or COM language). Therefore, debugging a stored procedure is much like debugging any other application in the Visual Studio debugging environment. You debug stored procedures in the Visual Studio development environment using the integrated debugging functions. These allow you to stop at procedure locations, inspect memory and register values, change variables, observe message traffic and get a close look at how your code works.  
   
 ### To debug a stored procedure  

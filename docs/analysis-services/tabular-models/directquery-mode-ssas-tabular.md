@@ -2,12 +2,12 @@
 title: "DirectQuery Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -22,9 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # DirectQuery Mode
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   This topic describes *DirectQuery mode* for Analysis Services tabular models at the 1200 and higher compatibility levels
   . DirectQuery mode can be turned on for models you're designing in SSDT, or for tabular models that have already been deployed, you can change to DirectQuery mode in SSMS. Before choosing DirectQuery mode, it's important to understand both the benefits and restrictions.
   

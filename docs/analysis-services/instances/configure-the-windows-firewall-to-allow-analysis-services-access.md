@@ -2,12 +2,12 @@
 title: "Configure the Windows Firewall to Allow Analysis Services Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -26,6 +26,7 @@ manager: "kfile"
 ms.workload: "Active"
 ---
 # Configure the Windows Firewall to Allow Analysis Services Access
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   An essential first step in making [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] available on the network is to determine whether you need to unblock ports in a firewall. Most installations will require that you create at least one in-bound firewall rule that allows connections to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Firewall configuration requirements vary depending on how you installed [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  

@@ -2,12 +2,12 @@
 title: "ServerProperty Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "scripting"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -32,6 +32,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ServerProperty Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a server property associated with a [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element.  
   
 ## Syntax  

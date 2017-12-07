@@ -2,12 +2,12 @@
 title: "XML for Analysis Schema Rowsets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "schema-rowsets"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -28,6 +28,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML for Analysis Schema Rowsets
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider includes schema rowsets that return metadata about server state, activity, and objects. Retrieving metadata is necessary if you are developing a client application that connects to an Analysis Services model whose structure and characteristics are variable.  
   
  Schema rowsets also provide insight into internal processes and operations that can help you monitor the server and troubleshoot problems. To better support ad hoc administrative tasks, you can run a Dynamic Management View (DMV) query against most schema rowsets. DMV queries return results in a readable, tabular format that you can view in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  

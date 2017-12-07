@@ -54,7 +54,7 @@ Here is a list of scenarios and application patterns where we have seen customer
 
 This is really the core scenario for which we built In-Memory OLTP: support large volumes of transactions, with consistent low latency for individual transactions.
 
-Common workload scenarios are: trading of financial instruments, sports betting, mobile gaming, and ad delivery. Another common pattern we’ve seen is a “catalog” that is frequently read and/or updated. One example is where you have large files, each distributed over a number of nodes in a cluster, and you catalog the location of each shard of each file in a memory-optimized table.
+Common workload scenarios are: trading of financial instruments, sports betting, mobile gaming, and ad delivery. Another common pattern we’ve seen is a “catalog” that is frequently read and/or updated. One example is where you have large files, each distributed over a number of cluster nodes, and you catalog the location of each shard of each file in a memory-optimized table.
 
 #### Implementation considerations
 

@@ -2,12 +2,12 @@
 title: "Create and Configure Power Pivot Service Application in CA | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create and Configure Power Pivot Service Application in CA
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application is a shared service instance of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service. Each service application has its own application identity, configuration settings, properties, and internal data storage.  
   
  This topic contains the following sections:  

@@ -2,12 +2,12 @@
 title: "PowerShell Reference for Power Pivot for SharePoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2015"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "powershell"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,9 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # PowerShell Reference for Power Pivot for SharePoint
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This section lists the PowerShell cmdlets used to configure or administer a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation. For more information about enabling the cmdlets and viewing built-in help, see [Power Pivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
 
 >[!NOTE] 

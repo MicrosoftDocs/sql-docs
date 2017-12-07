@@ -2,12 +2,12 @@
 title: "Configure Maximum File Upload Size (Power Pivot for SharePoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Configure Maximum File Upload Size (Power Pivot for SharePoint)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks often contain large amounts of data that result in files that exceed the maximum file size allowed for SharePoint uploads. When you try to upload a file that exceeds the upper limit, you will get the following error on SharePoint:  
   
 -   "The specified file is larger than the maximum supported file size."  

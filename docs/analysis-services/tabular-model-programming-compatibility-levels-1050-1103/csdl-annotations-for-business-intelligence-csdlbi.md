@@ -2,12 +2,12 @@
 title: "CSDL Annotations for Business Intelligence (CSDLBI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -23,9 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CSDL Annotations for Business Intelligence (CSDLBI)
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the presentation of the definition of a tabular model in an XML format called Conceptual Schema Definition Language with Business Intelligence annotations (CSDLBI). This topic provides an overview of CSDLBI and how it is used with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data models.  
   
 ## Understanding the Role of CSDL  

@@ -2,12 +2,12 @@
 title: "Comparing Tabular and Multidimensional Solutions (SSAS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "misc"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Active"
 ---
 # Comparing tabular and multidimensional solutions
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
   SQL Server Analysis Services provides several approaches for creating a business intelligence semantic model: Tabular, Multidimensional, and Power Pivot for SharePoint.
   
  Having more than one approach enables a modeling experience tailored to different business and user requirements. Multidimensional is a mature technology built on open standards, embraced by numerous vendors of BI software, but can be hard to master. Tabular offers a relational modeling approach that many developers find more intuitive. Power Pivot is even simpler, offering visual data modeling in Excel, with server support provided via SharePoint.  

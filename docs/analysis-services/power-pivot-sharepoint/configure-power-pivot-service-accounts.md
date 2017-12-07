@@ -2,12 +2,12 @@
 title: "Configure Power Pivot Service Accounts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Configure Power Pivot Service Accounts
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installation includes two services that support server operations. The **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** service is a Windows service that provides [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data processing and query support on an application server. The login account for this service is always specified during SQL Server Setup when you install Analysis Services in SharePoint integrated mode.  
   
  A second account must be specified for the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application, a shared web service that runs under an application pool identity in a SharePoint farm. This account is specified when you configure a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installation using either the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration tool or PowerShell.  

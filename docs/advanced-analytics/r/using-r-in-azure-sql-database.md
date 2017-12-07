@@ -168,5 +168,5 @@ The Azure Marketplace also provides multiple virtual machines that include SQL S
 Also check out these VMs, which come preconfigured with a variety of popular machine learning tools:
 
 + [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)
-+ [Deep Learning Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview), 
++ [Deep Learning Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview)
 

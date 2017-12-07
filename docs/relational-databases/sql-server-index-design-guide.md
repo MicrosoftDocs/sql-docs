@@ -13,10 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
-  - "index design guide"
+  - "index design guide" 
+  - "index design guidance"
   - "guide, index design"
+  - "guidance, index design"
   - "index internals"
   - "index architecture"
+  - "sql server index internals"
+  - "sql server index architecture"
+  - "sql server index design guide"
+  - "sql server index design guidance"
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 caps.latest.revision: 3
 author: "BYHAM"

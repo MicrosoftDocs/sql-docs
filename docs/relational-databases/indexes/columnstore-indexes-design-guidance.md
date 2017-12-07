@@ -1,5 +1,5 @@
 ---
-title: "Columnstore indexes - Design Guidance | Microsoft Docs"
+title: "Columnstore indexes - Design guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/1/2017"
 ms.prod: "sql-non-specified"
@@ -19,7 +19,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Columnstore indexes - Design Guidance
+# Columnstore indexes - Design guidance
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 High-level recommendations for designing columnstore indexes. A small number of good design decisions helps you achieve the high data compression and query performance that columnstore indexes are designed to provide. 
@@ -41,15 +41,15 @@ You might not need a columnstore index. Rowstore tables with heaps or clustered 
 
 ## Choose the best columnstore index for your needs
 
-A columnstore index is either clustered or nonclustered.  A clustered columnstore index can have one or more nonclustered btree indexes. Columnstore indexes are easy to try. If you create a table as a columnstore index, you can easily convert the table back to a rowstore table by dropping the columnstore index. 
+A columnstore index is either clustered or nonclustered.  A clustered columnstore index can have one or more nonclustered B-tree indexes. Columnstore indexes are easy to try. If you create a table as a columnstore index, you can easily convert the table back to a rowstore table by dropping the columnstore index. 
 
 Here is a summary of the options and recommendations. 
 
 | Columnstore option | Recommendations for when to use | Compression |
 | :----------------- | :------------------- | :---------- |
 | Clustered columnstore index | Use for:<br></br>1) Traditional data warehouse workload with a star or snowflake schema<br></br>2) Internet of Things (IOT) workloads that insert large volumes of data with minimal updates and deletes. | Average of 10x |
-| Nonclustered btree indexes on a clustered columnstore index | Use to:<br></br>    1) Enforce primary key and foreign key constraints on a clustered columnstore index.<br></br>    2) Speed up queries that search for specific values or small ranges of values.<br></br>    3) Speed up updates and deletes of specific rows.| 10x on average plus some additional storage for the NCIs.|
-| Nonclustered columnstore index on a disk-based heap or btree index | Use for: <br></br>1) An OLTP workload that has some analytics queries. You can drop btree indexes created for analytics and replace them with one nonclustered columnstore index.<br></br>2) Many traditional OLTP workloads that perform Extract Transform and Load (ETL) operations to move data to a separate data warehouse. You can eliminate ETL and a separate data warehouse by creating a nonclustered columnstore index on some of the OLTP tables. | NCCI is an additional index that requires 10% more storage on average.|
+| Nonclustered B-tree indexes on a clustered columnstore index | Use to:<br></br>    1. Enforce primary key and foreign key constraints on a clustered columnstore index.<br></br>    2. Speed up queries that search for specific values or small ranges of values.<br></br>    3. Speed up updates and deletes of specific rows.| 10x on average plus some additional storage for the NCIs.|
+| Nonclustered columnstore index on a disk-based heap or B-tree index | Use for: <br></br>1) An OLTP workload that has some analytics queries. You can drop B-tree indexes created for analytics and replace them with one nonclustered columnstore index.<br></br>2) Many traditional OLTP workloads that perform Extract Transform and Load (ETL) operations to move data to a separate data warehouse. You can eliminate ETL and a separate data warehouse by creating a nonclustered columnstore index on some of the OLTP tables. | NCCI is an additional index that requires 10% more storage on average.|
 | Columnstore index on an in-memory table | Same recommendations as nonclustered columnstore index on a disk-based table, except the base table is an in-memory table. | Columnstore index is an additional index.|
 
 ## Use a clustered columnstore index for large data warehouse tables
@@ -72,15 +72,15 @@ For more information, see [Columnstore indexes - data warehousing](../../relatio
 
 ## Add B-tree nonclustered indexes for efficient table seeks
 
-Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create nonclustered B-tree indexes as secondary indexes on a clustered columnstore index. The nonclustered btree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
+Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create nonclustered B-tree indexes as secondary indexes on a clustered columnstore index. The nonclustered B-tree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
 
-By using the secondary btree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the btree index. Since an non-unique value will fail to insert into the btree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
+By using the secondary B-tree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the B-tree index. Since an non-unique value will fail to insert into the B-tree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
 
-Consider using a btree index on a columnstore index to:
+Consider using a B-tree index on a columnstore index to:
 * Run queries that search for particular values or small ranges of values.
 * Enforce a constraint such as a primary key or foreign key constraint.
-* Efficiently perform update and delete operations. The btree index is able to quickly locate the specific rows for updates and deletes without scanning the full table or partition of a table.
-* You have additional storage available to store the btree index.
+* Efficiently perform update and delete operations. The B-tree index is able to quickly locate the specific rows for updates and deletes without scanning the full table or partition of a table.
+* You have additional storage available to store the B-tree index.
 
 ## Use a nonclustered columnstore index for real-time analytics
 
@@ -90,7 +90,7 @@ Since a columnstore index achieves 10x better data compression than a rowstore i
 
  Consider using a nonclustered columnstore index to:
 
-* Run analytics in real-time on a transactional rowstore table. You can replace existing btree indexes that are designed for analytics with a nonclustered columnstore index. 
+* Run analytics in real-time on a transactional rowstore table. You can replace existing B-tree indexes that are designed for analytics with a nonclustered columnstore index. 
   
 *   Eliminate the need for a separate data warehouse. Traditionally, companies run transactions on a rowstore table and then load the data into a separate data warehouse to run analytics. For many workloads, you can eliminate the loading process and the separate data warehouse by creating a nonclustered columnstore index on transactional tables.
 

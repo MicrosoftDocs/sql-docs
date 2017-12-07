@@ -2,12 +2,12 @@
 title: "Data providers used for Analysis Services connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -21,10 +21,8 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-
 # Client libraries (data providers) used for Analysis Services connections
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
 Analysis Services provides three client libraries, also known as **data providers**, for server and data access from tools and client applications. Tools like SSMS and SSDT, and applications like Power BI Desktop and Excel connect to Analysis Services by using these libraries. Two of the client libraries, ADOMD.NET and Analysis Services Management Objects (AMO), are managed client libraries. The Analysis Services OLE DB provider (MSOLAP DLL) is a native client library. 
   

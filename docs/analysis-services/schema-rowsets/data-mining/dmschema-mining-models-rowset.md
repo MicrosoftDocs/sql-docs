@@ -2,12 +2,12 @@
 title: "DMSCHEMA_MINING_MODELS Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "schema-rowsets"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -28,6 +28,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_MODELS Rowset
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Enumerates the data mining models in the current catalog. The **DMSCHEMA_MINING_MODELS** rowset includes information such as model names, processing date, and the mining algorithm associated with each mining model.  
   
  . The **DMSCHEMA_MINING_MODELS** schema rowset is very similar to the [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) schema rowset and can be used the same way.  

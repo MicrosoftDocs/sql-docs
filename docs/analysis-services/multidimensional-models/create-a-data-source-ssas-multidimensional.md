@@ -2,12 +2,12 @@
 title: "Create a Data Source (SSAS Multidimensional) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -30,6 +30,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Create a Data Source (SSAS Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional model, a data source object represents a connection to the data source from which you are processing (or importing) data. A multidimensional model must contain at least one data source object, but you can add more to combine data from several data warehouses. Use the instructions in this topic to create a data source object for your model. For more information about setting properties on this object, see [Set Data Source Properties &#40;SSAS Multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
   
  This topic includes the following sections:  

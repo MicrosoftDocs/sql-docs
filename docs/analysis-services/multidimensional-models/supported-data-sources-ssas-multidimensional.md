@@ -2,12 +2,12 @@
 title: "Supported Data Sources (SSAS - Multidimensional) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -28,6 +28,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Supported Data Sources (SSAS - Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This topic describes the types of data sources that you can use in a multidimensional model.  
   
 ##  <a name="bkmk_supported_ds"></a> Supported Data Sources  

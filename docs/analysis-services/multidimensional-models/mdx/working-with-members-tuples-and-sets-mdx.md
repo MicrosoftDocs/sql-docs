@@ -2,12 +2,12 @@
 title: "Working with Members, Tuples, and Sets (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -39,6 +39,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Working with Members, Tuples, and Sets (MDX)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   MDX provides numerous functions that return one or more members, tuples, or sets; or that act upon a member, tuple, or set.  
   
 ## Member Functions  

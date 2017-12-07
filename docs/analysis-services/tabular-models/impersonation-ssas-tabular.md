@@ -2,12 +2,12 @@
 title: "Impersonation in Analysis Services tabular models | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,9 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Impersonation 
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   This topic provides tabular model authors an understanding of how logon credentials are used by Analysis Services when connecting to a datasource to import and process (refresh) data.  
 
 ##  <a name="bkmk_conf_imp_info"></a> Configuring impersonation  

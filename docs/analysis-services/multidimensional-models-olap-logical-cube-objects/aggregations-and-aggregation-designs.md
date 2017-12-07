@@ -2,12 +2,12 @@
 title: "Aggregations and Aggregation Designs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -31,6 +31,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Aggregations and Aggregation Designs
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   An <xref:Microsoft.AnalysisServices.AggregationDesign> object defines a set of aggregation definitions that can be shared across multiple partitions.  
   
  An <xref:Microsoft.AnalysisServices.Aggregation> object represents the summarization of measure group data at certain granularity of the dimensions.  

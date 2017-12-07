@@ -2,12 +2,12 @@
 title: "Merge Partitions in Analysis Services (SSAS - Multidimensional) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Merge Partitions in Analysis Services (SSAS - Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can merge partitions in an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database to consolidate fact data from multiple partitions of the same measure group.  
   
  [Common scenarios](#bkmk_Scenario)  

@@ -2,12 +2,12 @@
 title: "Attributes Element (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "xmla"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -34,6 +34,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Attributes Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Contains a collection of [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elements used by the parent [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) or [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) command, or by the parent [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) element.  
   
 ## Syntax  

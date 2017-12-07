@@ -2,12 +2,12 @@
 title: "Power Pivot Configuration Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot Configuration Tools
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Configure, repair, or remove a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] with the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tools.  
   
  The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup Wizard does not install [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tools for SharePoint. The configuration tools will be available for download in a future release of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

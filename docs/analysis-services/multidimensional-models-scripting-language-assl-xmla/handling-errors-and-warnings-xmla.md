@@ -2,12 +2,12 @@
 title: "Handling Errors and Warnings (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -33,6 +33,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Handling Errors and Warnings (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Error handling is required when an XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) method call does not run, runs successfully but generates errors or warnings, or runs successfully but returns results that contain errors.  
   
 |Error|Reporting|  

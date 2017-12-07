@@ -2,12 +2,12 @@
 title: "Drillthrough on Mining Models | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -21,6 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Drillthrough on Mining Models
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *Drillthrough* means the ability to query either a mining model or a mining structure and get detailed data that is not exposed in the model.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides two different options for drilling through into case data. You can drill through to the cases that were used to build the data, or you can drill through to the cases in the mining structure.  

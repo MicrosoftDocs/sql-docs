@@ -2,12 +2,12 @@
 title: "Lock Events Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "trace-events"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,6 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lock Events Category
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The Locks Events event category has the event classes described in the following table.  
   
 |Event Class|Event Id|Description|  

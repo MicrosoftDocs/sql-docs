@@ -2,12 +2,12 @@
 title: "Analysis Services Personalization Extensions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Analysis Services Personalization Extensions
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalization extensions are the foundation of the idea of implementing a plug-in architecture. In a plug-in architecture, you can develop new cube objects and functionality dynamically and share them easily with other developers. As such, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalization extensions provide the functionality that makes it possible to achieve the following:  
   
 -   **Dynamic design and deployment** Immediately after you design and deploy [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalization extensions, users have access to the objects and functionality at the start of the next user session.  

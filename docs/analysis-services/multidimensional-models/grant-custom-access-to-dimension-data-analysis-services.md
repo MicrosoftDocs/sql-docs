@@ -2,12 +2,12 @@
 title: "Grant custom access to dimension data (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -35,6 +35,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Grant custom access to dimension data (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   After enabling read access to a cube, you can set additional permissions that explicitly allow or deny access to dimension members (including measures contained in the Measures Dimension containing all of the measures used in a cube). For example, given multiple categories of resellers, you might want to set permissions to exclude data for a specific business type. The following illustration is a before-and-after effect of denying access to the Warehouse business type in the Reseller dimension.  
   
  ![PivotTables with and without a dimension member](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "PivotTables with and without a dimension member")  

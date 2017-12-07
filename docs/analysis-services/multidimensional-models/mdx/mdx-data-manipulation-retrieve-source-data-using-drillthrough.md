@@ -2,12 +2,12 @@
 title: "Using DRILLTHROUGH to Retrieve Source Data (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -27,6 +27,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - Retrieve Source Data Using DRILLTHROUGH
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Multidimensional Expressions (MDX) uses the [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)statement to retrieve a rowset from the source data for a cube cell.  
   
  In order to run a **DRILLTHROUGH** statement on a cube, a drillthrough action must be defined for that cube. To define a drillthrough action, in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], in Cube Designer, on the **Actions** pane, on the toolbar, click **New Drillthrough Action**. In the new drillthrough action, specify the action name, target, condition, and the columns that are returned by a **DRILLTHROUGH** statement.  

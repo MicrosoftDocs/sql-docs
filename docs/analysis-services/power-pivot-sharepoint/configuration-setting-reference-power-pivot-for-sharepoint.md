@@ -2,12 +2,12 @@
 title: "Configuration Setting Reference (Power Pivot for SharePoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Configuration Setting Reference (Power Pivot for SharePoint)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This topic provides reference documentation for configuration settings used by [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service applications in a SharePoint farm. If you are using PowerShell script to configure a server, or if you want to look up information for a specific setting, the information in this topic provides detailed descriptions.  
   
  Configuration settings are set for each [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application. Within a farm, you can create multiple service applications as a way to configure independent logical instances of the same physical service instance. Configuration settings are stored in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] application database created for each service application that you configure.  

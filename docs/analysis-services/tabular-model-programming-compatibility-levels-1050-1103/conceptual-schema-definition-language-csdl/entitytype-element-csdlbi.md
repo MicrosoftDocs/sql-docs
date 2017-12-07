@@ -2,12 +2,12 @@
 title: "EntityType Element (CSDLBI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -23,6 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # EntityType Element (CSDLBI)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The **EntityType** element is a complex type that represents the structure of a high-level entity, such as a customer or order, in a data model. The **bi:EntityType** element extends the definition of [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) used in the [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
   
  An EntityType element must be specified for each of the entities that are included in the data model. The subelements of the EntityType describe the columns and measures in the table. Relationships among tables are included in the **EntityContainer**.  

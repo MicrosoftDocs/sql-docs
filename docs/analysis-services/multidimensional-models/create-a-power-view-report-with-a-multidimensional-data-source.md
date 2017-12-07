@@ -2,12 +2,12 @@
 title: "Create a Power View Report with a Multidimensional Data Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create a Power View Report with a Multidimensional Data Source
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Creating a Power View report based on a multidimensional model is no different than creating a report based on a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook or an Analysis Services Tabular model. Power View reports are created from a Report Data Source connection file (.rsds) in a SharePoint library. For more information about how to create an .rsds, see [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
   
  Before you begin, you need to know:  

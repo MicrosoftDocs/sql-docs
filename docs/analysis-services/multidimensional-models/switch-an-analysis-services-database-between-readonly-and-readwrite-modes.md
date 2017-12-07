@@ -2,12 +2,12 @@
 title: "Switch an Analysis Services database between ReadOnly and ReadWrite modes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -26,6 +26,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Switch an Analysis Services database between ReadOnly and ReadWrite modes
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrators can change the read/write mode of a Tabular or Multidimensional database as part of larger effort that distributes a query workload among multiple query-only servers.  
   
  A database mode can be switched in several ways. This document explains the following common scenarios:  

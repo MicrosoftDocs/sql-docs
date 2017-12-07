@@ -2,12 +2,12 @@
 title: "User Hierarchies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -38,6 +38,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # User Hierarchies
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   User-defined hierarchies are user-defined hierarchies of attributes that are used in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to organize the members of a dimension into hierarchical structures and provide navigation paths in a cube. For example, the following table defines a dimension table for a time dimension. The dimension table supports three attributes, named Year, Quarter, and Month.  
   
 |Year|Quarter|Month|  

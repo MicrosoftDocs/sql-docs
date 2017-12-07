@@ -6,7 +6,12 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 09/20/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: sql-linux
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: "On Demand"

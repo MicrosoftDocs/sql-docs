@@ -26,7 +26,7 @@ ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 caps.latest.revision: 15
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER COLUMN ENCRYPTION KEY (Transact-SQL)

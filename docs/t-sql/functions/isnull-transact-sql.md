@@ -27,7 +27,7 @@ ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # ISNULL (Transact-SQL)

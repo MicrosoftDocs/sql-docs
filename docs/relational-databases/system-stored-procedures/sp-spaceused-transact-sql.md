@@ -23,7 +23,7 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 caps.latest.revision: 62
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sp_spaceused (Transact-SQL)

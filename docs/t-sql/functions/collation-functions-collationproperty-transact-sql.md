@@ -24,7 +24,7 @@ ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 caps.latest.revision: 44
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Collation Functions - COLLATIONPROPERTY (Transact-SQL)

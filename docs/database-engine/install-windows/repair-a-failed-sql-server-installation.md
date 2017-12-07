@@ -2,11 +2,12 @@
 title: "Repair a Failed SQL Server Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
-ms.prod:
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -18,6 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Repair a Failed SQL Server Installation
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Repair operation can be used in the following scenarios:  
   
 - Repair an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is corrupted after it was successfully installed. 

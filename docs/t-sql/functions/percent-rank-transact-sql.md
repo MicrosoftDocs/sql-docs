@@ -24,7 +24,7 @@ ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # PERCENT_RANK (Transact-SQL)

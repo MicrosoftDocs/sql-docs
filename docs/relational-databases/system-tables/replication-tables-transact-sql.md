@@ -23,7 +23,7 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Replication Tables (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 caps.latest.revision: 50
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # &#x40;&#x40;ERROR (Transact-SQL)

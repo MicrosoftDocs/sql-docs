@@ -99,7 +99,7 @@ You can also use OPENROWSET(BULK) as described above to read JSON files from oth
         pages_i int, author nvarchar(100)) AS book
     ```
 
-For more info about Azure File Storage, see [File storage](https://azure.microsoft.com/en-us/services/storage/files/).
+For more info about Azure File Storage, see [File storage](https://azure.microsoft.com/services/storage/files/).
 
 ## Import JSON documents from Azure Blob Storage
 

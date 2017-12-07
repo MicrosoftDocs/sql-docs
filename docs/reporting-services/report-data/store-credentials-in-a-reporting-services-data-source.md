@@ -1,11 +1,13 @@
 ---
 title: "Store Credentials in a Reporting Services Data Source | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "09/23/2015"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"

@@ -6,7 +6,12 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 11/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: sql-linux
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: "On Demand"

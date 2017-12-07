@@ -2,9 +2,12 @@
 title: "Tutorials for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-query-tuning"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Tutorials for SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] provides tutorials to help you learn new technologies and features. Tutorials for earlier versions can usually be used with more recent versions. When tutorials address a newer feature, they will indicate the minimum version to complete the tutorial.  
      
 -   If a tutorial uses one of the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, you should download and use the most recent version from CodePlex. For more information, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    

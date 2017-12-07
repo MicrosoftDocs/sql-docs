@@ -25,7 +25,7 @@ ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 caps.latest.revision: 28
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSsnapshot_agents (Transact-SQL)

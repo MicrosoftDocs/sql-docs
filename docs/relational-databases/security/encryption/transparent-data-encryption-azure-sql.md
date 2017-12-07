@@ -5,7 +5,7 @@ keywords:
 services: "sql-database"
 documentationcenter: ""
 author: "becczhang"
-manager: "cguyer"
+manager: "craigg"
 editor: ""
 ms.assetid:
 ms.service: "sql-database"

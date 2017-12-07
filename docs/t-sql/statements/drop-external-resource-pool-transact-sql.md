@@ -23,7 +23,7 @@ ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 caps.latest.revision: 6
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP EXTERNAL RESOURCE POOL (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extended Properties Catalog Views - sys.extended_properties

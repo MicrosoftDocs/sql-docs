@@ -1,12 +1,13 @@
 ---
 title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-  - "SQL2017_New_Updated"
+ms.custom: ""
 ms.date: "11/10/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
@@ -42,8 +43,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Editions and supported features of SQL Server 2017
-
-<!---[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]--->
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 

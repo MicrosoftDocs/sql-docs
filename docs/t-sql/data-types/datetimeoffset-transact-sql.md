@@ -28,7 +28,7 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 caps.latest.revision: 41
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # datetimeoffset (Transact-SQL)

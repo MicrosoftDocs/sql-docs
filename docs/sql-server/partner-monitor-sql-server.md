@@ -7,17 +7,22 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: ''
 ms.assetid: 
-ms.service: sql-server
+ms.service: ""
+ms.component: "sql-non-specified"
+ms.suite: "sql"
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: partners
+ms.custom: ""
 ms.date: 11/02/2017 
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
 ms.author: mikeray
 
 ---
 # SQL Server monitoring partners
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 To monitor your SQL Server services, choose from a wide variety of industry-leading tools. This article highlights Microsoft partner companies with monitoring solutions supporting Microsoft SQL Server.
 
 <!--

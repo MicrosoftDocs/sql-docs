@@ -23,7 +23,7 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_replsetoriginator (Transact-SQL)

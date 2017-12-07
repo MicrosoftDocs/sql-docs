@@ -2,11 +2,12 @@
 title: "Install SQL Server PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -18,6 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server PowerShell
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup automatically configures PowerShell components.  
 
 You install the software that provides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for Windows PowerShell by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. When you select any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that require PowerShell support, Setup installs the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components:  

@@ -1,12 +1,15 @@
 ---
 title: "Database catalog | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""
 ms.date: "10/31/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
@@ -18,6 +21,7 @@ robots: noindex,nofollow
 ms.workload: "On Demand"
 ---
 # WideWorldImportersDW database catalog
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Explanations for the schemas, tables, and stored procedures in the WideWorldImportersDW database. 
 
 The WideWorldImportersDW database is used for data warehousing and analytical processing. The transactional data about sales and purchases is generated in the WideWorldImporters database, and loaded into the WideWorldImportersDW database using a **daily ETL process**.

@@ -1,11 +1,13 @@
 ---
 title: "What&#39;s New in Master Data Services (MDS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/08/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "master-data-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -18,7 +20,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # What&#39;s New in Master Data Services (MDS)
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   This topic summarizes the changes and updates in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   

@@ -25,7 +25,7 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 caps.latest.revision: 48
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.indexes (Transact-SQL)

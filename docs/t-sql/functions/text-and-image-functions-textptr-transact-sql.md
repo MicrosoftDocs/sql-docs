@@ -26,7 +26,7 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 caps.latest.revision: 36
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Text and Image Functions - TEXTPTR (Transact-SQL)

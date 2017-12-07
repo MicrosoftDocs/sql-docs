@@ -23,7 +23,7 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_MSchange_distribution_agent_properties (Transact-SQL)

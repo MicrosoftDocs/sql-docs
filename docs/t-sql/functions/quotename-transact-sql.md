@@ -27,7 +27,7 @@ ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
 caps.latest.revision: 35
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # QUOTENAME (Transact-SQL)

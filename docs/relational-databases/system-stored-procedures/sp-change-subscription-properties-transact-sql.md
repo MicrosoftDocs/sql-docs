@@ -23,7 +23,7 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_change_subscription_properties (Transact-SQL)

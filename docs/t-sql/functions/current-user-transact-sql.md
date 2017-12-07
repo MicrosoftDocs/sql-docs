@@ -27,7 +27,7 @@ ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
 caps.latest.revision: 43
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CURRENT_USER (Transact-SQL)

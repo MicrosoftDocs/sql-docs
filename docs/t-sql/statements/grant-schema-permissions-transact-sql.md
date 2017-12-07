@@ -23,7 +23,7 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # GRANT Schema Permissions (Transact-SQL)

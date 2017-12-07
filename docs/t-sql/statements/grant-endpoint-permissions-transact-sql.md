@@ -23,7 +23,7 @@ ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # GRANT Endpoint Permissions (Transact-SQL)

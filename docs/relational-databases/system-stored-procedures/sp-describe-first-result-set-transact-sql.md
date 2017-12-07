@@ -23,7 +23,7 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_describe_first_result_set (Transact-SQL)
@@ -32,10 +32,6 @@ ms.workload: "On Demand"
   Returns the metadata for the first possible result set of the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Returns an empty result set if the batch returns no results. Raises an error if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot determine the metadata for the first query that will be executed by performing a static analysis. The dynamic management view [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) returns the same information.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   

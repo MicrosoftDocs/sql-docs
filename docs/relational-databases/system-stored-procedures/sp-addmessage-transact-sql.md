@@ -31,10 +31,6 @@ ms.workload: "On Demand"
 
   Stores a new user-defined error message in an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Messages stored by using **sp_addmessage** can be viewed by using the **sys.messages** catalog view.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

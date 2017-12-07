@@ -1,11 +1,13 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "08/22/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -23,12 +25,12 @@ ms.workload: "On Demand"
 # Azure Feature Pack for Integration Services (SSIS)
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
 
-[![Download SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=54798) **Download**
+[![Download SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Download**
 
 - For SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - For SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
-- For SQL Server 2014 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47366)
-- For SQL Server 2012 - [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47367)
+- For SQL Server 2014 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)
+- For SQL Server 2012 - [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47367)
 
 ## Components in the Feature Pack
 -   Connection Managers
@@ -77,7 +79,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension th
  Download the SQL Server Integration Services (SSIS) Feature Pack for Azure.
  
 - [SSIS Feature Pack for Azure](http://go.microsoft.com/fwlink/?LinkID=626967) for SQL Server 2016
-- [SSIS Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798) for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+- [SSIS Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798) for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 ## Prerequisites
  You must install the following prerequisites before installing this feature pack.

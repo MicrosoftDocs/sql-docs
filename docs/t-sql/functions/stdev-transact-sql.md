@@ -25,7 +25,7 @@ ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
 caps.latest.revision: 40
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # STDEV (Transact-SQL)

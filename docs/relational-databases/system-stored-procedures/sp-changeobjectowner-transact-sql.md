@@ -23,7 +23,7 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_changeobjectowner (Transact-SQL)
@@ -36,10 +36,6 @@ ms.workload: "On Demand"
   
 > [!IMPORTANT]  
 >  A new permission requirement has been added to this stored procedure.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

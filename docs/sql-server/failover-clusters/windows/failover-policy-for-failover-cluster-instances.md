@@ -2,9 +2,12 @@
 title: "Failover Policy for Failover Cluster Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "failover-clusters"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Failover Policy for Failover Cluster Instances
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance (FCI), only one node can own the Windows Server Failover Cluster (WSFC) cluster resource group at a given time. The client requests are served through this node in the FCI. In the case of a failure and an unsuccessful restart, the group ownership is moved to another WSFC node in the FCI. This process is called failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] increases the reliability of failure detection and provides a flexible failover policy.  
   
  A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI depends on the underlying WSFC service for failover detection. Therefore, two mechanisms determine the failover behavior for FCI: the former is native WSFC functionality, and the latter is functionality added by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup.  

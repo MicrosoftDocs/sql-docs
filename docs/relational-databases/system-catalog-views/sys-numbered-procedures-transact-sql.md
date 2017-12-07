@@ -25,7 +25,7 @@ ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 caps.latest.revision: 18
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.numbered_procedures (Transact-SQL)

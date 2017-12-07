@@ -25,7 +25,7 @@ ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 caps.latest.revision: 18
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # &#x40;&#x40;PACK_RECEIVED (Transact-SQL)

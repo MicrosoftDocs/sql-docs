@@ -23,7 +23,7 @@ ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # cdc.change_tables (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 caps.latest.revision: 24
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_helprotect (Transact-SQL)
@@ -35,10 +35,6 @@ ms.workload: "On Demand"
 >  **sp_helprotect** does not return information about securables that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Use [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) and [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) instead.  
   
  Does not list permissions that are always assigned to the fixed server roles or fixed database roles. Does not include logins or users that receive permissions based on their membership in a role.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

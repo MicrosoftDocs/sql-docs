@@ -1,9 +1,13 @@
 ---
 title: "Export a Report Using URL Access | Microsoft Docs"
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
+ms.custom: ""
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"

@@ -139,6 +139,6 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 
 ## Next steps
-Now that you've successfully connected to SQL Server and ran a query, try out the [Code editor tutorial](tutorial-sql-editor.md).
+Now that you've successfully connected to SQL Server and run a query, try out the [Code editor tutorial](tutorial-sql-editor.md).
 
 

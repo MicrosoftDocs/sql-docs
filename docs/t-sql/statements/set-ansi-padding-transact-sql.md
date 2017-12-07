@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_PADDING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/04/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.service: ""
@@ -29,7 +29,7 @@ ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 caps.latest.revision: 47
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET ANSI_PADDING (Transact-SQL)
@@ -39,20 +39,20 @@ ms.workload: "On Demand"
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
-```  
--- Syntax for SQL Server  
-  
-SET ANSI_PADDING { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_PADDING ON;  
-```  
-  
+```
+-- Syntax for SQL Server
+
+SET ANSI_PADDING { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_PADDING ON
+```
+
 ## Remarks  
  Columns defined with **char**, **varchar**, **binary**, and **varbinary** data types have a defined size.  
   

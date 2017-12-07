@@ -6,7 +6,12 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/26/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: sql-linux
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: "Active"
@@ -37,7 +42,7 @@ SQL Server 2017 has the following system requirements for Linux:
 
 |||
 |-----|-----|
-| **Memory** | 3.25 GB |
+| **Memory** | 2 GB |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
 | **Disk space** | 6 GB |
 | **Processor speed** | 2 GHz |

@@ -26,7 +26,7 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 caps.latest.revision: 22
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FILEGROUPPROPERTY (Transact-SQL)

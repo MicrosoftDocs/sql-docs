@@ -2,11 +2,12 @@
 title: "Configure SQL Server on a Server Core Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod:
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -21,6 +22,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure SQL Server on a Server Core Installation
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Configure and Manage Server Core on Windows Server  
@@ -110,7 +112,7 @@ These steps are meant to be performed on a PC running the client edition of Wind
   
 7. Select the **AlwaysOn High Availability** tab.  
   
-8. Verify that Windows failover cluster name field contains the name of the local failover cluster node. If this field is blank, this server instance currently does not support AlwaysOn Availability Groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] that does not support AlwaysOn Availability Groups.  
+8. Verify that Windows failover cluster name field contains the name of the local failover cluster node. If this field is blank, this server instance currently does not support AlwaysOn Availability Groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] does not support AlwaysOn Availability Groups.  
   
 9. Select the Enable AlwaysOn Availability Groups check box, and click OK.  
   

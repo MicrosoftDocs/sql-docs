@@ -23,7 +23,7 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 caps.latest.revision: 23
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ToString (Database Engine)

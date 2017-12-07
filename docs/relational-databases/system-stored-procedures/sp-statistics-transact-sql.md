@@ -23,7 +23,7 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 caps.latest.revision: 32
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_statistics (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_generatefilters (Transact-SQL)

@@ -25,7 +25,7 @@ ms.workload: "Active"
 # JSON Data (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-JSON is a popular textual data format used for exchanging data in  modern web and mobile applications. JSON is  also used for storing unstructured data in log files or NoSQL databases like Microsoft Azure DocumentDB. Many REST web services return results formatted as JSON text or accept data formatted as JSON. For example, most Azure services such as Azure Search, Azure Storage, and Azure DocumentDb have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between web pages and web servers using AJAX calls.  
+JSON is a popular textual data format used for exchanging data in  modern web and mobile applications. JSON is  also used for storing unstructured data in log files or NoSQL databases like Microsoft Azure Cosmos DB. Many REST web services return results formatted as JSON text or accept data formatted as JSON. For example, most Azure services such as Azure Search, Azure Storage, and Azure Cosmos DB have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between web pages and web servers using AJAX calls.  
   
  Here's an example of JSON text:  
   
@@ -172,7 +172,7 @@ The **FOR JSON** clause formats SQL results as JSON text that can be provided to
  
 JSON text is typically stored in varchar or nvarchar columns and is indexed as plain text. Any SQL Server feature or component that supports text supports JSON, so there are almost no constraints on interaction between JSON and other SQL Server features. You can store JSON in In-memory or Temporal tables, you can apply Row-Level Security predicates on JSON text, and so on.
 
-If you have pure JSON workloads where you want to use a query language that's customized for the processing of JSON documents, consider Microsoft Azure [DocumentDB](https://azure.microsoft.com/services/documentdb/).  
+If you have pure JSON workloads where you want to use a query language that's customized for the processing of JSON documents, consider Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/).  
   
  Here are some use cases that show how you can use the built-in JSON support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -275,7 +275,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 -   If your line-delimited JSON files are stored in Azure Blob Storage or the Hadoop file system, you can use Polybase to load JSON text, parse it in Transact-SQL code, and load it into tables.  
   
 ## Test drive built-in JSON support  
- **Test drive built-in JSON support with the AdventureWorks sample database.** To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [here](https://www.microsoft.com/en-us/download/details.aspx?id=49502). After you restore the sample database to an instance of SQL Server 2016, unzip the samples file and open the "JSON Sample Queries procedures views and indexes.sql" file from the JSON folder. Run the scripts in this file to reformat some existing data as JSON data, run sample queries and reports over the JSON data, index the JSON data, and import and export JSON.  
+ **Test drive built-in JSON support with the AdventureWorks sample database.** To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [here](https://www.microsoft.com/download/details.aspx?id=49502). After you restore the sample database to an instance of SQL Server 2016, unzip the samples file and open the "JSON Sample Queries procedures views and indexes.sql" file from the JSON folder. Run the scripts in this file to reformat some existing data as JSON data, run sample queries and reports over the JSON data, index the JSON data, and import and export JSON.  
   
  Here's what you can do with the scripts included in the file.  
   

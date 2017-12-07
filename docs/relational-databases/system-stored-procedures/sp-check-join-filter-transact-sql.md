@@ -29,7 +29,7 @@ ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_check_join_filter (Transact-SQL)

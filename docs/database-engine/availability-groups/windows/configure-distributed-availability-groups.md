@@ -2,9 +2,12 @@
 title: "Configure distributed availability group (Always On Availability Group) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-
 # Configure distributed availability group  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 To create a distributed availability group, you must create an availability group and listener on each Windows Server Failover Cluster (WSFC). You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example does not cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements. 
 
@@ -202,6 +205,12 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
+## <a name="failover"></a> Join the database on the secondary of the second availability group
+After the database on the secondary of the second availability group has went into a restoring state you have to manually join it to the availability group.
+
+```sql  
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+```  
   
 ## <a name="failover"></a> Fail over to a secondary availability group  
 Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  

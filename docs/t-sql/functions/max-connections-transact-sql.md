@@ -27,7 +27,7 @@ ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
 caps.latest.revision: 29
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # &#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)

@@ -27,7 +27,7 @@ ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DROP CERTIFICATE (Transact-SQL)

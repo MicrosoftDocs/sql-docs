@@ -27,7 +27,7 @@ ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 caps.latest.revision: 30
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CLOSE MASTER KEY (Transact-SQL)

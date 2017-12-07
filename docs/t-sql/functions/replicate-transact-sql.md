@@ -25,7 +25,7 @@ ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # REPLICATE (Transact-SQL)

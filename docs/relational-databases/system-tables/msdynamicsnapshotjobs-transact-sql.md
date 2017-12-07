@@ -25,7 +25,7 @@ ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSdynamicsnapshotjobs (Transact-SQL)

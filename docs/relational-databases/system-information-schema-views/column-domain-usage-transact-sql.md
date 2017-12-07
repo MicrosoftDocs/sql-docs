@@ -24,7 +24,7 @@ ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 caps.latest.revision: 37
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # COLUMN_DOMAIN_USAGE (Transact-SQL)

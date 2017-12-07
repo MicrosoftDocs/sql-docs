@@ -6,7 +6,12 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: sql-linux
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.workload: "Inactive"
 ---
@@ -26,12 +31,9 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 ## Prerequisites
 
 * Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
-* Minimum of 4 GB of disk space
-* Minimum of 4 GB of RAM
+* Minimum of 2 GB of disk space
+* Minimum of 2 GB of RAM
 * [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you must change it to 4 GB. If you are running on Mac or Windows, increase your memory settings using the [instructions in the Docker quickstart](quickstart-install-connect-docker.md).
 
 ## Pull and run the container image
 

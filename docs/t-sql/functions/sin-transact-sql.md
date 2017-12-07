@@ -24,7 +24,7 @@ ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
 caps.latest.revision: 21
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SIN (Transact-SQL)

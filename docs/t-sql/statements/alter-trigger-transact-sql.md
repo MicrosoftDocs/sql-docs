@@ -27,7 +27,7 @@ ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 caps.latest.revision: 74
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER TRIGGER (Transact-SQL)

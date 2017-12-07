@@ -1,11 +1,14 @@
 ---
 title: "SQL Server 2012 SP1 Release Notes | Microsoft Docs"
-ms.prod: "sql-server-2012"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.technology: "server-general"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
@@ -16,6 +19,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SQL Server 2012 SP1 Release Notes
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 This Release Notes document describes known issues that you should read about before you install or troubleshoot [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
   
 ## <a name="bkmk_top"></a>Contents  

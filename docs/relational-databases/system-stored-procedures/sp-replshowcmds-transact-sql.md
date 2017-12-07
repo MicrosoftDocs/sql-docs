@@ -23,7 +23,7 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_replshowcmds (Transact-SQL)

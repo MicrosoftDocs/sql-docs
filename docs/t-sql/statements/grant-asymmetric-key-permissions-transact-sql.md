@@ -23,7 +23,7 @@ ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GRANT Asymmetric Key Permissions (Transact-SQL)

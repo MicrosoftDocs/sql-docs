@@ -21,7 +21,7 @@ ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 caps.latest.revision: 26
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DENY Object Permissions (Transact-SQL)

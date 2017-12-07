@@ -2,10 +2,13 @@
 title: "SQL Server 2014 Release Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
-ms.prod: "sql-server-2014"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.technology: "server-general"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
@@ -16,6 +19,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SQL Server 2014 Release Notes
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 This Release Notes document describes known issues that you should read about before you install or troubleshoot [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ## <a name="top"></a>Contents  

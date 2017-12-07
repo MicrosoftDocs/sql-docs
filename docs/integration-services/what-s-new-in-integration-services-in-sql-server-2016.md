@@ -3,7 +3,7 @@ title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Do
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "09/28/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +21,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # What&#39;s New in Integration Services in SQL Server 2016
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 This topic describes the features that have been added or updated in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. It also includes features added or updated in the [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) during the SQL Server 2016 time frame.  
 

@@ -24,7 +24,7 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 caps.latest.revision: 3
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_refresh_parameter_encryption (Transact-SQL)

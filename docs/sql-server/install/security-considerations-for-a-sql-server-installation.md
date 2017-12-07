@@ -2,11 +2,12 @@
 title: "Security Considerations for a SQL Server Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -34,6 +35,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Security Considerations for a SQL Server Installation
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  Security is important for every product and every business. By following simple best practices, you can avoid many security vulnerabilities. This topic discusses some security best practices that you should consider both before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Security guidance for specific features is included in the reference topics for those features.  
   
 ## Before Installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

@@ -1,11 +1,13 @@
 ---
 title: "Select rows to migrate by using a filter function (Stretch Database) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "stretch-database"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
@@ -23,7 +25,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Select rows to migrate by using a filter function (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   If you store cold data in a separate table, you can configure Stretch Database to migrate the entire table. If your table contains both hot and cold data, on the other hand, you can specify a filter predicate to select the rows to migrate. The filter predicate is an inline table-valued function. This topic describes how to write an inline table-valued function to select rows to migrate.  
   

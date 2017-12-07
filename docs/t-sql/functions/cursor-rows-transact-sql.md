@@ -26,7 +26,7 @@ ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 caps.latest.revision: 36
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # &#x40;&#x40;CURSOR_ROWS (Transact-SQL)

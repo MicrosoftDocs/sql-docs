@@ -3,8 +3,11 @@ title: "SQL Server Data Tools and Visual Studio 2017 - License Terms | Microsoft
 ms.custom: ""
 ms.date: "08/04/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssdt"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssdt"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Data Tools - License Terms
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## MICROSOFT SOFTWARE LICENSE TERMS  
   
 **MICROSOFT SQL SERVER DATA TOOLS**  

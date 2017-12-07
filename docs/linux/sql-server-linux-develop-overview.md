@@ -4,12 +4,15 @@ description:
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 11/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: sql-linux
+ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.custom: H1Hack27Feb2017
 ms.workload: "On Demand"
 ---
 # How to get started developing applications for SQL Server on Linux
@@ -17,6 +20,8 @@ ms.workload: "On Demand"
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 You can create applications that connect to and use SQL Server 2017 on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
+
+> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > These same development options also enable you to target SQL Server on other platforms. Applications can target SQL Server running on-premises or in the cloud, on Linux, Windows, or Docker on macOS. Or you can target Azure SQL Database and Azure SQL Data Warehouse.

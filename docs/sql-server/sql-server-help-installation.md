@@ -3,9 +3,12 @@ title: "Help Viewer and Offline Content for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.technology: "server-general"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
@@ -20,6 +23,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Help Viewer and Offline Content for SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   
   

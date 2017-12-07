@@ -23,7 +23,7 @@ ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 caps.latest.revision: 12
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_markpendingschemachange (Transact-SQL)

@@ -27,7 +27,7 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 caps.latest.revision: 81
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OBJECTPROPERTY (Transact-SQL)

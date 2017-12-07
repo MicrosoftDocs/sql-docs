@@ -1,9 +1,13 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
 ms.date: "10/30/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
@@ -19,6 +23,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SQL Server 2016 Release Notes
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   This article describes limitations and issues with SQL Server 2016 releases.    
     
  **Try it out:**    

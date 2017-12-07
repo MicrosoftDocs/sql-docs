@@ -1,12 +1,15 @@
 ---
 title: "WideWorldImporters database catalog | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
@@ -18,6 +21,7 @@ robots: noindex,nofollow
 ms.workload: "On Demand"
 ---
 # WideWorldImporters database catalog
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 The WideWorldImporters database contains all the transaction information and daily data for sales and purchases, as well as sensor data for vehicles and cold rooms.
 
 ## Schemas

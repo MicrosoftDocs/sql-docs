@@ -6,7 +6,12 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: sql-linux
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: "Active"
@@ -22,7 +27,7 @@ In this quick start tutorial, you first install SQL Server 2017 on Ubuntu 16.04.
 
 ## Prerequisites
 
-You must have a Ubuntu 16.04 machine with **at least 3.25 GB** of memory.
+You must have a Ubuntu 16.04 machine with **at least 2 GB** of memory.
 
 To install Ubuntu on your own machine, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 

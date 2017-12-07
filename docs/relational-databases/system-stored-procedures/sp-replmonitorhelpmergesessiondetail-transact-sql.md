@@ -23,7 +23,7 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 caps.latest.revision: 16
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_replmonitorhelpmergesessiondetail (Transact-SQL)

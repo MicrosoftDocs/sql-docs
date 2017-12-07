@@ -24,7 +24,7 @@ ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 caps.latest.revision: 51
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Querying the SQL Server System Catalog FAQ

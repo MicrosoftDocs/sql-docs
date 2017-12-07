@@ -22,7 +22,7 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 caps.latest.revision: 58
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Always Encrypted (Database Engine)

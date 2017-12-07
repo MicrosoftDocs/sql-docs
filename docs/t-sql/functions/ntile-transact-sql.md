@@ -26,7 +26,7 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 caps.latest.revision: 63
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # NTILE (Transact-SQL)

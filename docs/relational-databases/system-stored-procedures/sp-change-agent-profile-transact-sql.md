@@ -23,7 +23,7 @@ ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 caps.latest.revision: 17
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_change_agent_profile (Transact-SQL)

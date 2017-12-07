@@ -22,7 +22,7 @@ ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 caps.latest.revision: 42
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Engine Stored Procedures (Transact-SQL)

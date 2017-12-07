@@ -3,7 +3,7 @@ title: "SQL Server Python tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "09/19/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

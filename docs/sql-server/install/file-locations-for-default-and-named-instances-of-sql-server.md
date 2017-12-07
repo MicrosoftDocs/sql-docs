@@ -2,11 +2,12 @@
 title: "File Locations for Default and Named Instances of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -18,6 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # File Locations for Default and Named Instances of SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   An installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consists of one or more separate instances. An instance, whether default or named, has its own set of program and data files, as well as a set of common files shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer.  
   
  For an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that includes the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], each component has a full set of data and executable files, and common files shared by all components.  

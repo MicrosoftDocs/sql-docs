@@ -23,7 +23,7 @@ ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 caps.latest.revision: 108
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_addarticle (Transact-SQL)

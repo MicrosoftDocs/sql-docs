@@ -23,7 +23,7 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 caps.latest.revision: 38
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_autostats (Transact-SQL)
@@ -32,10 +32,6 @@ ms.workload: "On Demand"
   Displays or changes the automatic statistics update option, AUTO_UPDATE_STATISTICS, for an index, a statistics object, a table, or an indexed view.  
   
  For more information about the AUTO_UPDATE_STATISTICS option, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [Statistics](../../relational-databases/statistics/statistics.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

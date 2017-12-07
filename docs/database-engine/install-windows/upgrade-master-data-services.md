@@ -2,11 +2,12 @@
 title: "Upgrade Master Data Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -18,6 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrade Master Data Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The following are the scenarios for upgrading Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services.  
   
 -   [Upgrade without Database Engine Upgrade](../../database-engine/install-windows/upgrade-master-data-services.md#noengine)  

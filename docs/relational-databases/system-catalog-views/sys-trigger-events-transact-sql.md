@@ -25,7 +25,7 @@ ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 caps.latest.revision: 31
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.trigger_events (Transact-SQL)
@@ -35,10 +35,6 @@ ms.workload: "Inactive"
   
 > [!NOTE]  
 >  **sys.trigger_events** does not apply to event notifications.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -25,7 +25,7 @@ ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 caps.latest.revision: 14
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSreplication_options (Transact-SQL)

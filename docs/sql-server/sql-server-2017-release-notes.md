@@ -2,9 +2,12 @@
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/30/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SQL Server 2017 Release Notes
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 This article describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux release notes](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)

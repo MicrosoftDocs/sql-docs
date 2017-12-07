@@ -23,7 +23,7 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 caps.latest.revision: 11
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_vupgrade_mergeobjects (Transact-SQL)

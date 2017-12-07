@@ -2,9 +2,12 @@
 title: "Step 1: Creating a New Integration Services Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -26,7 +29,7 @@ The packages that you will create in this [!INCLUDE[ssISnoversion](../includes/s
 > [!NOTE]  
 > This tutorial requires Microsoft SQL Server Data Tools.  
 >   
-> For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](http://msdn.microsoft.com/en-us/data/hh297027).  
+> For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](http://msdn.microsoft.com/data/hh297027).  
   
 ### To create a new Integration Services project  
   

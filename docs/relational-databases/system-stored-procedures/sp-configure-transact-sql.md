@@ -23,7 +23,7 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 caps.latest.revision: 60
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sp_configure (Transact-SQL)

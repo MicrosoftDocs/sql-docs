@@ -28,7 +28,7 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 caps.latest.revision: 45
 author: "edmacauley"
 ms.author: "edmaca"
-manager: "cguyer"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # System Catalog Views (Transact-SQL)

@@ -3109,6 +3109,11 @@
             "source_path": "docs/analytics-platform-system/configure-wsus.md",
             "redirect_url": "/sql/analytics-platform-system/configure-windows-server-update-services-wsus",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/indexes/columnstore-indexes-architecture.md",
+            "redirect_url": "/relational-databases/sql-server-index-design-guide.md#columnstore_index",
+            "redirect_document_id": false
         }
 
     ]

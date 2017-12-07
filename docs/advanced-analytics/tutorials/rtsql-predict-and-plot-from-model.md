@@ -2,7 +2,7 @@
 title: "Predict and plot from model (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

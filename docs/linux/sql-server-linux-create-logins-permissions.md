@@ -16,7 +16,7 @@ ms.technology: database-engine
 ms.workload: "On Demand"
 ---
 
-# Create the SQL Server login and permissions in Pacemaker
+# Create the SQL Server login and permissions for Pacemaker
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 

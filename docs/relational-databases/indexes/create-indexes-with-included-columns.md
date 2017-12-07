@@ -112,7 +112,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
@@ -123,8 +123,7 @@ ms.workload: "Active"
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
     GO  
     ```  
-  
-For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
+
 ## Related content  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
 [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   

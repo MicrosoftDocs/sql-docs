@@ -49,7 +49,7 @@ The in-database R functionality can be used on the following database service ti
 
 ## Example
 
-In Azure SQL DB, all R commands are run from T-SQL, using the stored procedure [sp_execute_external_script](..\..\relational-databases\system-stored-procedures\sp-execute-external-script-transact-sql.md). 
+In Azure SQL DB, all R commands are run from T-SQL, using the stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). 
 
 The following example demonstrates how to try out the preview feature, using the iris data set included with base R.
 

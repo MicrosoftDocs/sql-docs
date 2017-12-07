@@ -70,7 +70,7 @@ ms.workload: "On Demand"
 -   For example, if a table has 50 columns and the query only uses 5 of those columns, the columnstore index only fetches the 5 columns from disk. It skips reading in the other 45 columns. This reduces I/O by another 90% assuming all columns are of similar size. If the same data are stored in a rowstore, the query processor needs to read the additional 45 columns.    
     
 ### Rowgroup elimination    
- For full table scans, a large percentage of the data usually does not match the query predicate criteria. By using metadata, the the columnstore index is able to skip reading in the rowgroups that do not contain data required for the query result, all without actual I/O. This ability, called rowgroup elimination, reduces I/O for full table scans and therefore improves query performance.    
+ For full table scans, a large percentage of the data usually does not match the query predicate criteria. By using metadata, the columnstore index is able to skip reading in the rowgroups that do not contain data required for the query result, all without actual I/O. This ability, called rowgroup elimination, reduces I/O for full table scans and therefore improves query performance.    
     
  **When does a columnstore index need to perform a full table scan?**    
     
@@ -78,7 +78,7 @@ ms.workload: "On Demand"
     
  **When does an analytics query benefit from rowgroup elimination for a full-table scan?**    
     
- For example, a retail business has modelled their sales data using a fact table with clustered columnstore index. Each new sale stores various attributes of the transaction including the  date is was sold. Interestingly, even though columnstore indexes do not guarantee a sorted order, the rows in this table will loaded in a date-sorted order. Over time this table will grow. Although the retail business might keep sales data for the last 10 years, an analytics query might only need to compute an aggregate for last quarter. Columnstore indexes can eliminate accessing the data for the previous 39 quarters by just looking at the metadata for the date column. This is an additional 97% reduction in the amount of data that is read into memory and processed.    
+ For example, a retail business has modelled their sales data using a fact table with clustered columnstore index. Each new sale stores various attributes of the transaction including the date a product was sold. Interestingly, even though columnstore indexes do not guarantee a sorted order, the rows in this table will be loaded in a date-sorted order. Over time this table will grow. Although the retail business might keep sales data for the last 10 years, an analytics query might only need to compute an aggregate for last quarter. Columnstore indexes can eliminate accessing the data for the previous 39 quarters by just looking at the metadata for the date column. This is an additional 97% reduction in the amount of data that is read into memory and processed.    
     
  **Which rowgroups are skipped in a full table scan?**    
     
@@ -113,7 +113,7 @@ ms.workload: "On Demand"
  ¹Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Premium Edition, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### Aggregate Pushdown    
- A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN node and aggregate the values in Batch Mode. While this delivers good performance, but with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the aggregate operation can be pushed to the SCAN node to improve the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met 
+ A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN node and aggregate the values in Batch Mode. While this delivers good performance, but with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the aggregate operation can be pushed to the SCAN node to improve the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met: 
  
 -	 The aggregates are `MIN`, `MAX`, `SUM`, `COUNT` and `COUNT(*)`. 
 -  Aggregate operator must be on top of SCAN node or SCAN node with `GROUP BY`.
@@ -129,7 +129,7 @@ ms.workload: "On Demand"
     
  ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
     
- For example, aggregate pushdown is done in both of the queries below    
+For example, aggregate pushdown is done in both of the queries below:    
     
 ```t-sql     
 SELECT  productkey, SUM(TotalProductCost)    
@@ -145,17 +145,17 @@ When designing a data warehouse schema, the recommended schema modeling is to us
     
 For example, a fact can be a record representing a sale of a particular product in a specific region while the dimension represents a set of regions, products and so on. The fact and dimension tables are connected through  the a primary/foreign key relationship. Most commonly used analytics queries join one or more dimension tables with the fact table.    
     
-Let us consider a dimension table products. a typical primary key will be productcode which is commonly represented as string data type. For performance of queries, it is a best practice to create surrogate key, typically an integer column, to refer to the row in the dimension table from the fact table.    
+Let us consider a dimension table `Products`. A typical primary key will be `ProductCode` which is commonly represented as string data type. For performance of queries, it is a best practice to create surrogate key, typically an integer column, to refer to the row in the dimension table from the fact table.    
     
 The columnstore index runs analytics queries with joins/predicates involving numeric or integer based keys very efficiently. However, in many customer workloads, we find the use to string based columns linking fact/dimension tables and with the result the query performance with columnstore index was not as performing. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] improves the performance of analytics queries with string based columns significantly by pushing down the predicates with string columns to the SCAN node.    
     
-String predicate pushdown leverages the  primary/secondary dictionary created for column(s) to improve the query performance. For example, let us consider string column segment within a rowgroup consisting of 100 distinct string values. This means each distinct string value is referenced 10,000 times on average assuming 1 million rows.    
+String predicate pushdown leverages the primary/secondary dictionary created for column(s) to improve the query performance. For example, let us consider string column segment within a rowgroup consisting of 100 distinct string values. This means each distinct string value is referenced 10,000 times on average assuming 1 million rows.    
     
-With string predicate pushdown, the query execution computes the predicate against the values in the dictionary and if it qualifies, all rows referring to the dictionary value are automatically qualified. This improves the performance in two ways. First, only the qualified row are returned reducing number of the rows that need to flow out of SCAN node. Second, the number of string comparisons are significantly reduced. In this example, only 100 string comparisons are required as against 1 million comparisons.  There are some limitations as described below:    
+With string predicate pushdown, the query execution computes the predicate against the values in the dictionary and if it qualifies, all rows referring to the dictionary value are automatically qualified. This improves the performance in two ways. First, only the qualified row are returned reducing number of the rows that need to flow out of SCAN node. Second, the number of string comparisons are significantly reduced. In this example, only 100 string comparisons are required as against 1 million comparisons. There are some limitations as described below:    
     
 -   No string predicate pushdown for delta rowgroups. There is no dictionary for columns in delta rowgroups.    
 -   No string predicate pushdown if dictionary exceeds 64 KB entries.    
--   Expression evaluating NULLs are not not supported.    
+-   Expression evaluating NULLs are not supported.    
     
 ## See Also    
  [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

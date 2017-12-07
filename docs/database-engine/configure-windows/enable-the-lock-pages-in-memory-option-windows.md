@@ -48,7 +48,7 @@ ms.workload: "Active"
   
 7.  In the **Select Users, Service Accounts, or Groups** dialog box, add an account with privileges to run sqlservr.exe.  
   
-8.  Log out and then log back in for this change to take effect.  
+8.  Restart the SQL Server Data Engine service for this setting to take effect.
   
 ## See Also  
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

@@ -148,7 +148,7 @@ END;
 GO
 ```
 
-This stored procedure uses the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function, but you could also use the native PREDICT function in T-SQL as demostrated [here](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-general-availability-of-native-scoring-using-predict-function-in-azure-sql-database/). Use of the PREDICT function requires that you use an [**rx** model](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler) and save the model using [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel).
+This stored procedure uses the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function, but you could also use the native PREDICT function in T-SQL as shown [here](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-general-availability-of-native-scoring-using-predict-function-in-azure-sql-database/). Use of the PREDICT function requires that you use an [**rx** model](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler) and save the model using [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel).
 
 ### Step 6. Use the stored procedure to generate predictions
 

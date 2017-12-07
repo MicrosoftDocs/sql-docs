@@ -143,7 +143,7 @@ The following features and services are not available on Linux at this time. The
 
 ### Known issues
 
-The following sections describe known issues with the Genera Availability (GA) release of SQL Server 2017 on Linux.
+The following sections describe known issues with the General Availability (GA) release of SQL Server 2017 on Linux.
 
 #### General
 

@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/24/2017"
+ms.date: "12/07/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -99,15 +99,7 @@ SELECT name, compatibility_level FROM sys.databases;
  If existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications are affected by behavioral differences in your version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], convert the application to work seamlessly with the new compatibility mode. Then use **ALTER DATABASE** to change the compatibility level to 130. The new compatibility setting for a database takes effect when a **USE Database** is issued or a new login is processed with that database as the default database.  
   
 ## Best Practices  
- Changing the compatibility level while users are connected to the database can produce incorrect result sets for active queries. For example, if the compatibility level changes while a query plan is being compiled, the compiled plan might be based on both the old and new compatibility levels, resulting in an incorrect plan and potentially inaccurate results. Furthermore, the problem may be compounded if the plan is placed in the plan cache and reused for subsequent queries. To avoid inaccurate query results, we recommend the following procedure to change the compatibility level of a database:  
-  
-1.  Set the database to single-user access mode by using ALTER DATABASE SET SINGLE_USER.  
-  
-2.  Change the compatibility level of the database.  
-  
-3.  Put the database in multiuser access mode by using ALTER DATABASE SET MULTI_USER.  
-  
-4.  For more information about setting the access mode of a database, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+For the recommended workflow for upgrading the compatibility level, see [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
   
 ## Compatibility Levels and Stored Procedures  
  When a stored procedure executes, it uses the current compatibility level of the database in which it is defined. When the compatibility setting of a database is changed, all of its stored procedures are automatically recompiled accordingly.  

@@ -420,17 +420,11 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
 -   Statistics created with indexes that are not partition-aligned with the base table.  
-  
 -   Statistics created on Always On readable secondary databases.  
-  
 -   Statistics created on read-only databases.  
-  
 -   Statistics created on filtered indexes.  
-  
 -   Statistics created on views.  
-  
 -   Statistics created on internal tables.  
-  
 -   Statistics created with spatial indexes or XML indexes.  
   
  DROP_EXISTING = { ON | **OFF** }  
@@ -471,15 +465,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  Indexes, including indexes on global temp tables, can be created online with the following exceptions:  
   
 -   XML index  
-  
 -   Index on a local temp table.  
-  
 -   Initial unique clustered index on a view.  
-  
 -   Disabled clustered indexes.  
-  
 -   Clustered index if the underlying table contains LOB data types: **image**, **ntext**, **text**, and spatial types.  
-  
 -   **varchar(max)** and **varbinary(max)** columns cannot be part of an index. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and in  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns, can be built or rebuilt using the **ONLINE** option. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] does not permit the **ONLINE** option when the base table contains **varchar(max)** or **varbinary(max)** columns.  
   
  For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -509,7 +498,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  MAXDOP = *max_degree_of_parallelism*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Overrides the [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
+ Overrides the **max degree of parallelism** configuration option for the duration of the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
  *max_degree_of_parallelism* can be:  
   

@@ -212,3 +212,4 @@ The process for creating a Pacemaker cluster is completely different on SLES tha
    ```
    
 12. Repeat Steps 8-11 for all other servers to be added to the cluster.
+

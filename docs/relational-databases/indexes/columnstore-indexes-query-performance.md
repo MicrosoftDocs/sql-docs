@@ -24,16 +24,16 @@ ms.workload: "On Demand"
 
   Recommendations for achieving the very fast query performance that columnstore indexes are designed to provide.    
     
- Columnstore indexes can achieve up to 100x better performance on analytics and data warehousing workloads and up to 10x better data compression than traditional rowstore indexes. These recommendations will help your queries achieve the very fast query performance that columnstore indexes are designed to provide. Further explanations about columnstore performance are at the end.    
+ Columnstore indexes can achieve up to 100x better performance on analytics and data warehousing workloads and up to 10x better data compression than traditional rowstore indexes. These recommendations help your queries achieve the very fast query performance that columnstore indexes are designed to provide. Further explanations about columnstore performance are at the end.    
     
 ## Recommendations for improving query performance    
- Here are some recommendations for achieving the high performance columnstore indexes are designed to provide.    
+ Here are some recommendations for achieving the high-performance columnstore indexes are designed to provide.    
     
 ### 1. Organize data to eliminate more rowgroups from a full table scan    
     
 -   **Leverage insert order.** In common case in traditional data warehouse, the data is indeed inserted in time order and analytics is done in time dimension. For example,  analyzing sales by quarter. For this kind of  workload, the rowgroup elimination happens automatically. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can find out number rowgroups skipped as part of query processing.    
     
--   **Leverage the rowstore clustered index.** If the common query predicate is on a column (e.g. C1) that is unrelated to insert order of the row, you can create a rowstore clustered index on columns C1 and then create clustered columstore index  by dropping the rowstore clustered index. if you create the clustered columnstore index explicitly using DOP (degree of parallelism) = 1, the resultant clustered columnstore index will be perfectly ordered on column C1. If you specify DOP=8, then  you will see overlap of values across 8 rowgroups. A common case of this strategy when you initially create columnstore index with large set of data. Note, for nonclustered columnstore index (NCCI), if the base rowstore table has a clustered index, the rows are already ordered. In this case, the resultant nonclustered columnstore index will automatically be ordered. One important point to note is that columnstore index does not inherently maintain the order of rows. As new rows are inserted or older rows are updated, you may need to repeat the process as the analytics query performance may deteriorate    
+-   **Leverage the rowstore clustered index.** If the common query predicate is on a column (e.g. C1) that is unrelated to insert order of the row, you can create a rowstore clustered index on columns C1 and then create clustered columnstore index by dropping the rowstore clustered index. if you create the clustered columnstore index explicitly using `MAXDOP = 1`, the resulting clustered columnstore index is perfectly ordered on column C1. If you specify `MAXDOP = 8`, then you will see overlap of values across 8 rowgroups. A common case of this strategy when you initially create columnstore index with large set of data. Note, for nonclustered columnstore index (NCCI), if the base rowstore table has a clustered index, the rows are already ordered. In this case, the resultant nonclustered columnstore index will automatically be ordered. One important point to note is that columnstore index does not inherently maintain the order of rows. As new rows are inserted or older rows are updated, you may need to repeat the process as the analytics query performance may deteriorate    
     
 -   **Leverage table partitioning.** You can partition the columnstore index and then use partition elimination to reduce number of rowgroups to scan. For example, a fact table stores purchases made by customers and a common query pattern is to find quarterly purchases done by a specific customer, you can combine the insert order with partitioning on customer column. Each  partition will contain rows in time order for specific customer.    
     
@@ -42,7 +42,7 @@ ms.workload: "On Demand"
     
  The memory required for creating a columnstore index depends on the number of columns, the number of string columns, the degree of parallelism (DOP), and the characteristics of the data. For example, if your table has fewer than one million rows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use only one thread to create the columnstore index.    
     
- If your table has more than one million rows, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot get a large enough memory grant to create the index using MAXDOP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will automatically decrease MAXDOP as needed to fit into the available memory grant.  In some cases, DOP must be decreased to one in order to build the index under constrained memory.    
+ If your table has more than one million rows, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot get a large enough memory grant to create the index using MAXDOP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will automatically decrease `MAXDOP` as needed to fit into the available memory grant.  In some cases, DOP must be decreased to one in order to build the index under constrained memory.    
     
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the query will always operate in batch mode. In previous releases, batch execution is only used when DOP is greater than one.    
     
@@ -78,7 +78,7 @@ ms.workload: "On Demand"
     
  **When does an analytics query benefit from rowgroup elimination for a full-table scan?**    
     
- For example, a retail business has modelled their sales data using a fact table with clustered columnstore index. Each new sale stores various attributes of the transaction including the date a product was sold. Interestingly, even though columnstore indexes do not guarantee a sorted order, the rows in this table will be loaded in a date-sorted order. Over time this table will grow. Although the retail business might keep sales data for the last 10 years, an analytics query might only need to compute an aggregate for last quarter. Columnstore indexes can eliminate accessing the data for the previous 39 quarters by just looking at the metadata for the date column. This is an additional 97% reduction in the amount of data that is read into memory and processed.    
+ For example, a retail business has modeled their sales data using a fact table with clustered columnstore index. Each new sale stores various attributes of the transaction including the date a product was sold. Interestingly, even though columnstore indexes do not guarantee a sorted order, the rows in this table will be loaded in a date-sorted order. Over time this table will grow. Although the retail business might keep sales data for the last 10 years, an analytics query might only need to compute an aggregate for last quarter. Columnstore indexes can eliminate accessing the data for the previous 39 quarters by just looking at the metadata for the date column. This is an additional 97% reduction in the amount of data that is read into memory and processed.    
     
  **Which rowgroups are skipped in a full table scan?**    
     
@@ -143,7 +143,7 @@ FROM FactResellerSalesXL_CCI
 ### String predicate pushdown    
 When designing a data warehouse schema, the recommended schema modeling is to use star-schema or snowflake schema consisting of one or more fact tables and many dimension tables. The [fact table](https://en.wikipedia.org/wiki/Fact_table) stores the business measurements or transactions and [dimension table](https://en.wikipedia.org/wiki/Dimension_table) store the dimensions across which facts need to be analyzed.    
     
-For example, a fact can be a record representing a sale of a particular product in a specific region while the dimension represents a set of regions, products and so on. The fact and dimension tables are connected through  the a primary/foreign key relationship. Most commonly used analytics queries join one or more dimension tables with the fact table.    
+For example, a fact can be a record representing a sale of a particular product in a specific region while the dimension represents a set of regions, products and so on. The fact and dimension tables are connected through a primary/foreign key relationship. Most commonly used analytics queries join one or more dimension tables with the fact table.    
     
 Let us consider a dimension table `Products`. A typical primary key will be `ProductCode` which is commonly represented as string data type. For performance of queries, it is a best practice to create surrogate key, typically an integer column, to refer to the row in the dimension table from the fact table.    
     
@@ -151,11 +151,12 @@ The columnstore index runs analytics queries with joins/predicates involving num
     
 String predicate pushdown leverages the primary/secondary dictionary created for column(s) to improve the query performance. For example, let us consider string column segment within a rowgroup consisting of 100 distinct string values. This means each distinct string value is referenced 10,000 times on average assuming 1 million rows.    
     
-With string predicate pushdown, the query execution computes the predicate against the values in the dictionary and if it qualifies, all rows referring to the dictionary value are automatically qualified. This improves the performance in two ways. First, only the qualified row are returned reducing number of the rows that need to flow out of SCAN node. Second, the number of string comparisons are significantly reduced. In this example, only 100 string comparisons are required as against 1 million comparisons. There are some limitations as described below:    
-    
--   No string predicate pushdown for delta rowgroups. There is no dictionary for columns in delta rowgroups.    
--   No string predicate pushdown if dictionary exceeds 64 KB entries.    
--   Expression evaluating NULLs are not supported.    
+With string predicate pushdown, the query execution computes the predicate against the values in the dictionary and if it qualifies, all rows referring to the dictionary value are automatically qualified. This improves the performance in two ways:
+1.  Only the qualified row is returned reducing number of the rows that need to flow out of SCAN node. 
+2.  The number of string comparisons are significantly reduced. In this example, only 100 string comparisons are required as against 1 million comparisons. There are some limitations as described below:    
+    -   No string predicate pushdown for delta rowgroups. There is no dictionary for columns in delta rowgroups.    
+    -   No string predicate pushdown if dictionary exceeds 64 KB entries.    
+    -   Expression evaluating NULLs are not supported.    
     
 ## See Also    
  [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
@@ -164,4 +165,6 @@ With string predicate pushdown, the query execution computes the predicate again
  [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Columnstore Indexes Defragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
  [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
+ [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     
   

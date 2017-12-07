@@ -25,6 +25,7 @@ This article covers how to use SQL Server Management Studio (SSMS) or Transact-S
 ## Prerequisites
 - The `mssql-server-ha` package must already be installed. See [Install the HA and SQL Server Agent packages](sql-server-linux-deploy-pacemaker-cluster.md#install-the-ha-and-sql-server-agent-packages).
 - The endpoints must already be created on all replicas, using the certificate process described in [Create endpoints and certificates](sql-server-linux-create-ag-endpoints.md).
+- The AG feature must be enabled, by the process described in [Enable availability groups for SQL Server on Linux](sql-server-linux-enable-availability-groups.md).
 
 ## Use SQL Server Management Studio
 

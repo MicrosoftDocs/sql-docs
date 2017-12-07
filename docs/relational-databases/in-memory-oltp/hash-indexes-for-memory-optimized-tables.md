@@ -234,6 +234,6 @@ OLTP workloads focus on individual rows. Full table scans are not usually in the
   - An increase in the time required for a full scan of the hash index.  
   
 
-##  <a name="Additional_Reading"></a> Additional Reading  
+##  <a name="Additional_Reading"></a> Additional reading  
  [Hash Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Nonclustered Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)  

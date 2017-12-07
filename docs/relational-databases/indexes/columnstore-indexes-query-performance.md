@@ -1,7 +1,7 @@
 ---
 title: "Columnstore indexes - Query performance | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/1/2017"
+ms.date: "12/01/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -47,9 +47,9 @@ ms.workload: "On Demand"
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the query will always operate in batch mode. In previous releases, batch execution is only used when DOP is greater than one.    
     
 ## Columnstore Performance Explained    
- Columnstore indexes achieve high query performance by combining high-speed in-memory batch mode processing with techniques that greatly reduce IO requirements.  Since analytics queries scan large numbers of rows, they are typically IO-bound, and therefore reducing IO during query execution is critical to the design of columnstore indexes.  Once data has been read into memory, it is critical to reduce the number of  in-memory operations.    
+ Columnstore indexes achieve high query performance by combining high-speed in-memory batch mode processing with techniques that greatly reduce I/O requirements.  Since analytics queries scan large numbers of rows, they are typically IO-bound, and therefore reducing I/O during query execution is critical to the design of columnstore indexes.  Once data has been read into memory, it is critical to reduce the number of  in-memory operations.    
     
- Columnstore indexes reduce IO and optimize in-memory operations through high data compression, columnstore elimination, rowgroup elimination, and batch processing.    
+ Columnstore indexes reduce I/O and optimize in-memory operations through high data compression, columnstore elimination, rowgroup elimination, and batch processing.    
     
 ### Data compression    
  Columnstore indexes achieve up to 10x greater data compression than rowstore indexes. This greatly reduces the I/O required to execute analytics queries and therefore improves query performance.    
@@ -65,9 +65,9 @@ ms.workload: "On Demand"
 ### Column elimination    
  Columnstore indexes skip reading in columns that are not required for the query result. This ability, called column elimination, further reduces I/O for query execution and therefore improves query performance.    
     
--   Column elimination is possible because the data is organized and compressed column by column. In contrast, when data is stored row-by-row, the column values in each row are physically stored together and cannot be easily separated. The query processor needs to read in an entire row to retrieve specific column values, which increases IO because extra data is unnecessarily read into memory.    
+-   Column elimination is possible because the data is organized and compressed column by column. In contrast, when data is stored row-by-row, the column values in each row are physically stored together and cannot be easily separated. The query processor needs to read in an entire row to retrieve specific column values, which increases I/O because extra data is unnecessarily read into memory.    
     
--   For example, if a table has 50 columns and the query only uses 5 of those columns, the columnstore index only fetches the 5 columns from disk. It skips reading in the other 45 columns. This reduces IO by another 90% assuming all columns are of similar size. If the same data are stored in a rowstore, the query processor needs to read the additional 45 columns.    
+-   For example, if a table has 50 columns and the query only uses 5 of those columns, the columnstore index only fetches the 5 columns from disk. It skips reading in the other 45 columns. This reduces I/O by another 90% assuming all columns are of similar size. If the same data are stored in a rowstore, the query processor needs to read the additional 45 columns.    
     
 ### Rowgroup elimination    
  For full table scans, a large percentage of the data usually does not match the query predicate criteria. By using metadata, the the columnstore index is able to skip reading in the rowgroups that do not contain data required for the query result, all without actual I/O. This ability, called rowgroup elimination, reduces I/O for full table scans and therefore improves query performance.    

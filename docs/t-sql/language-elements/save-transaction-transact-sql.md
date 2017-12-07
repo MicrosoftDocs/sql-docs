@@ -51,7 +51,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## Arguments  
  *savepoint_name*  
- Is the name assigned to the savepoint. Savepoint names must conform to the rules for identifiers, but are limited to 32 characters. *transaction_name* is always case sensitive, even when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not case sensitive.  
+ Is the name assigned to the savepoint. Savepoint names must conform to the rules for identifiers, but are limited to 32 characters. *savepoint_name* is always case sensitive, even when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not case sensitive.  
   
  @*savepoint_variable*  
  Is the name of a user-defined variable containing a valid savepoint name. The variable must be declared with a **char**, **varchar**, **nchar**, or **nvarchar** data type. More than 32 characters can be passed to the variable, but only the first 32 characters will be used.  

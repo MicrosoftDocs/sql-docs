@@ -39,7 +39,7 @@ To perform a bulk load, you can use [bcp Utility](../../tools/bcp-utility.md), [
 * If the batch size is >= 102400, the rows are directly into the compressed rowgroups. It is recommended that you choose a batch size >=102400 for efficient bulk import because you can avoid moving data rows to a delta rowgroups  before the rows are  eventually moved  to compressed rowgroups by a background thread, Tuple mover (TM).
 * If the batch size < 102,400 or if the remaining rows are < 102,400, the rows are loaded into delta rowgroups.
 
->![Note]
+> [!NOTE]
 > On a rowstore table with a nonclustered columnstore index data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] always inserts data into the base table. The data is never inserted directly into the columnstore index.  
 
 Bulk loading has these built-in performance optimizations:

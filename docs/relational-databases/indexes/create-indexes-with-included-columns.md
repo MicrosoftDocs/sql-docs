@@ -41,24 +41,8 @@ ms.workload: "Active"
  An index with nonkey columns can significantly improve query performance when all columns in the query are included in the index either as key or nonkey columns. Performance gains are achieved because the query optimizer can locate all the column values within the index; table or clustered index data is not accessed resulting in fewer disk I/O operations.  
   
 > [!NOTE]  
->  When an index contains all the columns referenced by a query it is typically referred to as *covering the query*.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Design Recommendations](#DesignRecs)  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To create an index with nonkey columns, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+> When an index contains all the columns referenced by a query it is typically referred to as *covering the query*.  
+   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="DesignRecs"></a> Design Recommendations  
@@ -140,7 +124,7 @@ ms.workload: "Active"
     GO  
     ```  
   
- For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- ## Related Content  
- [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md) 
+## Related content  
+[SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   

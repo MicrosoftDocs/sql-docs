@@ -2,12 +2,12 @@
 title: "List existing databases on a Tabular server (Analysis Services AMO-TOM) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -21,9 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # List existing databases on a Tabular server (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 When you have a **Server** object that is connected to an Analysis Services instance, you can iterate over **Server.Databases** collection to list all databases hosted by the Anlaysis Services instance. 
 
 The **Server.Databases** collection contains one **Database** object for every database hosted on the server, regardless of server mode (Multidimensional or Tabular) or database type (Multidimensional, Tabular pre-1200, or Tabular 1200 and higher). 

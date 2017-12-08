@@ -2,12 +2,12 @@
 title: "Browse data and metadata in Cube | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Browse data and metadata in Cube
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Use the **Browser** tab of Cube Designer to browse cube data. You can use this view to examine the structure of a cube and to check data, calculation, formatting, and security of database objects. You can quickly examine a cube as end users see it in reporting tools or other client applications. When you browse cube data, you can view different dimensions, drill down into members, and slice through dimensions.  
   
  Before you browse a cube, you must process it and the reconnect to it. After you process it, open the **Browser** tab of Cube Designer. Click the Reconnect button on the toolbar to refresh the connection.  

@@ -2,12 +2,12 @@
 title: "String Storage and Collation in Tabular Models | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # String Storage and Collation in Tabular Models
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Strings (text values) are stored in a highly compressed format in tabular models; because of this compression, you can get unexpected results when you retrieve entire or partial strings. Also, because string locale and collations are inherited hierarchically from the closest parent object, if the string language is not explicitly defined, the locale and collation of the parent can affect how each string is stored and whether the string is unique or conflated with similar strings as defined by the parent collation.  
   
  This topic describes the mechanism by which strings are compressed and stored, and provides examples of how collation and language affect the results of text formulas in tabular models.  

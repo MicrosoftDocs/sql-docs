@@ -2,12 +2,12 @@
 title: "Canceling Commands (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -35,6 +35,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Canceling Commands (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Depending on the administrative permissions of the user issuing the command, the [Cancel](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) command in XML for Analysis (XMLA) can cancel a command on a session, a session, a connection, a server process, or an associated session or connection.  
   
 ## Canceling Commands  

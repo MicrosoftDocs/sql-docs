@@ -2,12 +2,12 @@
 title: "Power Pivot Minimum-Privilege Example - SharePoint 2013 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -20,6 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot Minimum-Privilege Example - SharePoint 2013
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topic describes an example [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 configuration with minimum privileges. The configuration utilizes a different account for each of the three components and each account has the minimum level of privileges.  
   
 ||  

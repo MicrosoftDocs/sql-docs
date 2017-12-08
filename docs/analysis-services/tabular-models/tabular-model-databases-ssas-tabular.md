@@ -2,12 +2,12 @@
 title: "Tabular Model Databases (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Manage Deployed Tabular Model Databases
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   A tabular model database is an Analysis Services database that you create in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] using the Analysis Services Tabular model project template, where tables and relationships are the primary structures for representing data.  
   
 ## In This Section  

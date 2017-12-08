@@ -2,12 +2,12 @@
 title: "OLE DB for Data Mining | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -27,6 +27,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Data Mining Programming - OLE DB
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
   The data mining features in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] comply with the [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB for Data Mining 1.0 specification released in June 2000.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] has extended the specification by adding new schema rowsets, adding columns to existing schema rowsets, and adding syntax to the Data Mining Extensions (DMX) language for creating and managing mining structures.  

@@ -2,12 +2,12 @@
 title: "Schedule SSAS Administrative Tasks with SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Schedule SSAS Administrative Tasks with SQL Server Agent
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Using the SQL Server Agent service, you can schedule [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrative tasks to run in the order and times that you need. Scheduled tasks help you automate processes that run on regular or predictable cycles. You can schedule administrative tasks, such as cube processing, to run during times of slow business activity. You can also determine the order in which tasks run by creating job steps within a SQL Server Agent job. For example, you can process a cube and then perform a backup of the cube.  
   
  Job steps give you control over flow of execution. If one job fails, you can configure SQL Server Agent to continue to run the remaining tasks or to stop execution. You can also configure SQL Server Agent to send notifications about the success or failure of job execution.  

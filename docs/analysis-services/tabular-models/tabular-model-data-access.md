@@ -2,12 +2,12 @@
 title: "Tabular Model Data Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Tabular Model Data Access
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Tabular model databases in Analysis Services can be accessed by most of the same clients, interfaces, and languages that you use to retrieve data or metadata from a multidimensional model. For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
  This topic describes the clients, query languages, and programmatic interfaces that work with tabular models.  

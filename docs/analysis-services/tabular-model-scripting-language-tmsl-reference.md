@@ -2,12 +2,12 @@
 title: "Tabular Model Scripting Language (TMSL) Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "misc"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -21,9 +21,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Tabular Model Scripting Language (TMSL) Reference
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
   Tabular Model Scripting Language (TMSL) is the command and object model definition syntax for Analysis Services tabular model databases at compatibility level 1200 or higher. TMSL communicates to Analysis Services  through the XMLA protocol, where the [XMLA.Execute](../analysis-services/xmla/xml-elements-methods-execute.md) method accepts both JSON-based **statement** scripts in TMSL as well as the traditional XML-based scripts in [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  Key elements of TMSL include the following:  

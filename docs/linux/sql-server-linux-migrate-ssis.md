@@ -20,7 +20,7 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This topic describes how to run SQL Server Integration Services (SSIS) packages on Linux. SSIS solves complex data integration problems by extracting data from multiple sources and formats, transforming and cleansing the data, and loading the data into multiple destinations. 
+This article describes how to run SQL Server Integration Services (SSIS) packages on Linux. SSIS solves complex data integration problems by extracting data from multiple sources and formats, transforming and cleansing the data, and loading the data into multiple destinations. 
 
 SSIS packages running on Linux can connect to Microsoft SQL Server running on Windows on-premises or in the cloud, on Linux, or in Docker. They can also connect to Azure SQL Database, Azure SQL Data Warehouse, ODBC data sources, flat files, and other data sources including ADO.NET sources, XML files, and OData services.
 
@@ -42,17 +42,45 @@ To run an SSIS package on a Linux computer, do the following things:
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## Other common SSIS tasks
+## Run an encrypted package
+There are three ways to run an SSIS package that's encrypted with a password:
 
--   **Design packages**.
+1.  Set the value of the environment variable `SSIS_PACKAGE_DECRYPT`, as shown in the following example:
 
-    -   **Connect to ODBC data sources**. With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
 
-    -   **Paths**. Provide Windows-style paths in your SSIS packages. SSIS on Linux does not support Linux-style paths, but maps Windows-style paths to Linux-style paths at run time. Then, for example, SSIS on Linux maps the Windows-style path `C:\test` to the Linux-style path `/test`.
+2.  Specify the `/i` option to enter the password interactively, as shown in the following example:
 
--   **Deploy packages**. You can only store packages in the file system on Linux in this release. The SSIS Catalog database and the legacy SSIS service are not available on Linux for package deployment and storage.
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /i
+    
+    Decryption Password: <enter the password here>
+    ```
 
--   **Schedule packages**. You can use Linux system scheduling tools such as `cron` to schedule packages. You can't use SQL Agent on Linux to schedule package execution in this release. For more info, see [Schedule SSIS packages on Linux with cron](sql-server-linux-schedule-ssis-packages.md).
+3.  Specify the `/de` option to provide the password on the command line, as shown in the following example. This method is not recommended because it stores the decryption password with the command in the command history.
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] may store decryption password in command history.
+    
+    You can use /I[nteractive] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
+    ```
+
+## Design packages
+
+**Connect to ODBC data sources**. With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+
+**Paths**. Provide Windows-style paths in your SSIS packages. SSIS on Linux does not support Linux-style paths, but maps Windows-style paths to Linux-style paths at run time. Then, for example, SSIS on Linux maps the Windows-style path `C:\test` to the Linux-style path `/test`.
+
+## Deploy packages
+You can only store packages in the file system on Linux in this release. The SSIS Catalog database and the legacy SSIS service are not available on Linux for package deployment and storage.
+
+## Schedule packages
+You can use Linux system scheduling tools such as `cron` to schedule packages. You can't use SQL Agent on Linux to schedule package execution in this release. For more info, see [Schedule SSIS packages on Linux with cron](sql-server-linux-schedule-ssis-packages.md).
 
 ## Limitations and known issues
 

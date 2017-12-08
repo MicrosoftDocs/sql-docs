@@ -2,12 +2,12 @@
 title: "Apply a Filter to a Mining Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -26,6 +26,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Apply a Filter to a Mining Model
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   If your mining structure contains a nested table, you can apply a filter to the case table, the nested table, or both.  
   
  The following procedure demonstrates how to create both kinds of filters: case filters, and filters on the nested table rows.  

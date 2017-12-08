@@ -2,12 +2,12 @@
 title: "Set the Data Type of a Column (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Set the Data Type of a Column (SSAS Tabular)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   When you import data or paste data into a model, the model designer will automatically detect and apply data types. After you have added the data to the model, you can manually modify the data type of a column to change how data is stored. If you just want to change the format of how the data is displayed without changing the way it is stored, you can do that instead.  
   
 ### To change the data type or display format for a column  

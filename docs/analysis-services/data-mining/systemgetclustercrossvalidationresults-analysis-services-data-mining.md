@@ -2,12 +2,12 @@
 title: "SystemGetClusterCrossValidationResults (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -24,6 +24,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # SystemGetClusterCrossValidationResults (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Partitions the mining structure into the specified number of cross-sections, trains a model for each partition, and then returns accuracy metrics for each partition.  
   
  **Note** This stored procedure can be used only with a mining structure that contains at least one clustering model. To cross-validate non-clustering models, you must use [SystemGetCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  

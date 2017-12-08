@@ -39,8 +39,10 @@ The following directions differ depending on your version of Windows. The follow
 4. For each language that does not match the language of the first SSMS you installed, install the corresponding Visual Studio 2015 Isolated Shell Language Pack:
    - Browse to [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (you may need to sign in and complete the *Connect Registration* process).
    - Download the desired language pack and install it.
+
    > [!IMPORTANT]
-   > Be sure to use this method to install the Visual Studio 2015 Isolated Shell Language Packs, do not use the **Get additional languages** link on **Tools** | **Options** | **International Settings**. 
+   > Use the previous steps to install the Visual Studio 2015 Isolated Shell Language Pack, do not use the **Get additional languages** link on **Tools** | **Options** | **International Settings**. 
+
 5. Run SSMS and select the language you want to use:
    - **Tools** | **Options** | **International Settings**
 1. Close and restart SSMS.

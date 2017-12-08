@@ -42,34 +42,6 @@ To run an SSIS package on a Linux computer, do the following things:
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## Run an encrypted package
-There are three ways to run an SSIS package that's encrypted with a password:
-
-1.  Set the value of the environment variable `SSIS_PACKAGE_DECRYPT`, as shown in the following example:
-
-    ```
-    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
-    ```
-
-2.  Specify the `/i` option to enter the password interactively, as shown in the following example:
-
-    ```
-    /opt/ssis/bin/dtexec /f package.dtsx /i
-    
-    Decryption Password: <enter the password here>
-    ```
-
-3.  Specify the `/de` option to provide the password on the command line, as shown in the following example. This method is not recommended because it stores the decryption password with the command in the command history.
-
-    ```
-    opt/ssis/bin/dtexec /f package.dtsx /de test
-    
-    Warning: Using /De[crypt] may store decryption password in command history.
-    
-    You can use /I[nteractive] instead to enter interactive mode,
-    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
-    ```
-
 ## Design packages
 
 **Connect to ODBC data sources**. With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).

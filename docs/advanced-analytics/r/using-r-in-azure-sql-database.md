@@ -52,7 +52,7 @@ The following tasks are not supported in the preview release of R on Azure SQL D
 
 + You cannot enable R script execution on specific databases.
 + DMVs provided to monitor CPU and memory usage of R scripts are not available.
-+ No third party packages can be installed. The CREATE EXTERNAL LIBRARY statment is not supported.
++ No third-party packages can be installed. The CREATE EXTERNAL LIBRARY statement is not supported.
 
 ## Example
 

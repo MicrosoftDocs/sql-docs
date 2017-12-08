@@ -66,7 +66,7 @@ The **olapR** package supports two methods of creating MDX queries:
 
 + **Copy-paste well-formed MDX.** Manually create and then paste in any MDX query. This option is the best if you have existing MDX queries that you want to reuse, or if the query you want to build is too complex for **olapR** to handle.
 
-    After building your MDX using any client utility, such as SSMS or Excel, save the query string. Provide this MDX string as an argument to the *SSAS query handler* in the **olapR** package. The provider sends the query to the specified Analysis Services server, and passes back the results to R. To get results you must have permissions to query the cube.
+    After building your MDX using any client utility, such as SSMS or Excel, save the query string. Provide this MDX string as an argument to the *SSAS query handler* in the **olapR** package. The provider sends the query to the specified Analysis Services server, and passes back the results to R. 
 
 For examples of how to build an MDX query or run an existing MDX query, see [How to create MDX queries using R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md).
 
@@ -80,7 +80,7 @@ If you connect to an instance of Analysis Services that contains a tabular model
 
 Although DAX (Data analysis Expressions) is the language typically used with tabular models, you can design valid MDX queries against a tabular model, if you are already familiar with MDX. You cannot use the olapR constructors to build valid MDX queries against a tabular model.
 
-However, MDX queries are a very inefficient way to retrieve data from a tabular model. If you need to get data from a tabular model for use in R, consider these methods instead:
+However, MDX queries are an inefficient way to retrieve data from a tabular model. If you need to get data from a tabular model for use in R, consider these methods instead:
 
 + Enable DirectQuery on the model and add the server as a linked server in SQL Server. 
 + If the tabular model was built on a relational data mart, obtain the data directly from the source.

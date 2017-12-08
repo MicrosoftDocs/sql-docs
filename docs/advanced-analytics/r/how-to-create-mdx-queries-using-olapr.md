@@ -55,7 +55,7 @@ The following operations are not supported:
          
          If your query is relatively simple, you can use the functions `columns`, `rows`, etc. to build your query. However, you can also use the `axis()` function with a non-zero index value to build an MDX query with many qualifiers, or to add extra dimensions as qualifiers.
 
-5. Pass the handle and completed MDX query into the functions `executeMD` or `execute2D`, depending on the shape of the results.
+5. Pass the handle, and the completed MDX query, into one of the following functions, depending on the shape of the results: 
 
   + `executeMD` Returns a multi-dimensional array
   + `execute2D` Returns a two-dimensional (tabular) data frame
@@ -95,7 +95,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + On columns, you can specify multiple measures as elements of a comma-separated string.
 + The Row axis uses all possible values (all MEMBERS) of the "Product Line" dimension. 
-+ This query would return a table with three columns, containing a _roll up_ summary of Internet sales from all countries.
++ This query would return a table with three columns, containing a _rollup_ summary of Internet sales from all countries.
 + The WHERE clause specifies the _slicer axis_. In this example, the slicer uses a member of the **SalesTerritory** dimension to filter the query so that only the sales from Australia are used in calculations.
 
 #### To build this query using the functions provided in olapR

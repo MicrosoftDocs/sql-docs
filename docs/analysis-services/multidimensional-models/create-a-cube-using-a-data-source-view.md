@@ -2,12 +2,12 @@
 title: "Create a Cube using a Data Source View | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create a Cube using a Data Source View
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Use this method of building a new cube if you intend to use an existing data source view. With this method, you specify the data source view and select fact and dimension tables that you want to use in the data source view. You then choose the dimensions and measures that you want to include in the cube.  
   
  To create a cube with a data source, in Solution Explorer, right-click **Cubes** and select **New Cube**. The Cube Wizard opens.  

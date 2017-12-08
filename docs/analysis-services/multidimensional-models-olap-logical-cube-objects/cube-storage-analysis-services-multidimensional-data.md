@@ -2,12 +2,12 @@
 title: "Cube Storage (Analysis Services - Multidimensional Data) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -30,6 +30,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Cube Storage (Analysis Services - Multidimensional Data)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Storage may include only the cube metadata, or may include all of the source data from the fact table as well as the aggregations defined by dimensions related to the measure group. The amount of data stored depends upon the storage mode selected and the number of aggregations. The amount of data stored directly affects query performance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses several techniques for minimizing the space required for storage of cube data and aggregations:  
   
 -   Storage options enable you to select the storage modes and locations that are most appropriate for cube data.  

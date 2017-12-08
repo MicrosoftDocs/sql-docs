@@ -2,12 +2,12 @@
 title: "Connect from client applications (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -26,6 +26,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Connect from client applications (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   If you are new to Analysis Services, use the information in this topic to connect to an existing instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] using common tools and applications. This topic also explains how to connect under different user identities for testing purposes.  
   
 -   [Connect using SQL Server Management Studio (SSMS)](#bkmk_SSMS)  

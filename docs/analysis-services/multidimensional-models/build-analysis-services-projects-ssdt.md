@@ -2,12 +2,12 @@
 title: "Build Analysis Services Projects (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Build Analysis Services Projects (SSDT)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you build an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project much like you build any programming project in Visual Studio. When you build the project, a set of XML files are created in the output directory. These XML files use Analysis Services Scripting Language (ASSL), which is the XML dialect the client applications including [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] use to communicate with an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance to create or modify [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. These XML files are used to deploy [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object definitions in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project to a specified [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
 ## Building a Project  

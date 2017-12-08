@@ -2,12 +2,12 @@
 title: "Hierarchy Element (CSDLBI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -23,6 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Hierarchy Element (CSDLBI)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The Hierarchy element is a logical container for fields in a table that can be linked to each other to form a hierarchy. The Hierarchy element is derived from the CSDL Member element and has been extended to support the hierarchies created in business intelligence data models.  
   
 ## Elements and Attributes  

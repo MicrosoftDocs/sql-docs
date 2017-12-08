@@ -2,12 +2,12 @@
 title: "Ragged Hierarchies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -24,6 +24,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # User-Defined Hierarchies - Ragged Hierarchies
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A ragged hierarchy is a user-defined hierarchy that has an uneven number of levels. Common examples include an organizational chart where a high-level manager has both departmental managers and non-managers as direct reports, or geographic hierarchies composed of Country-Region-City, where some cities lack a parent State or Province, such as Washington D.C., Vatican City, or New Delhi.  
   
  For most hierarchies in a dimension, each level has the same number of members above it as any other member at the same level. A ragged hierarchy is different in that the logical parent of at least one member is not in the level immediately above the member. When this occurs, the hierarchy descends to different levels for different drilldown paths. In a client application, this can make drilldown paths unnecessarily complicated.  

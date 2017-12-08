@@ -1,6 +1,6 @@
 ---
 title: Install SQL Server Integration Services on Linux | Microsoft Docs
-description: This topic describes how to install SQL Server Integration Services (SSIS) on Linux.
+description: This article describes how to install SQL Server Integration Services (SSIS) on Linux.
 author: leolimsft 
 ms.author: lle 
 ms.reviewer: douglasl
@@ -115,18 +115,8 @@ To remove `mssql-server-is`, you can run following command:
 sudo yum remove msssql-server-is
 ```
 
-
-
-
-## Run a package
-Copy the SSIS package to the Linux computer. Then use the following command to run the package.
-
-```bash
-dtexec /F <package name> /DE <protection password>
-```
-
-
-
 ## Next steps
 
-For more information about how to use SSIS on Linux to extract, transform, and load data, see [Extract, transform, and load data for SQL Server on Linux with SSIS](sql-server-linux-migrate-ssis.md).
+To run SSIS packages on Linux, see [Extract, transform, and load data for SQL Server on Linux with SSIS](sql-server-linux-migrate-ssis.md).
+
+To configure additional SSIS settings on Linux, see [Configure SQL Server Integration Services on Linux with ssis-conf](sql-server-linux-configure-ssis.md).

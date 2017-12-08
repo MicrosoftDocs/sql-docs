@@ -2,12 +2,12 @@
 title: "Define a Referenced Relationship and Referenced Relationship Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define a Referenced Relationship and Referenced Relationship Properties
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A reference dimension relationship is defined on the **Dimension Usage** tab of Cube Designer. The reference dimension relationship is defined by specifying the following:  
   
 -   The intermediate dimension to which to join. This can be a regular dimension or another reference dimension.  

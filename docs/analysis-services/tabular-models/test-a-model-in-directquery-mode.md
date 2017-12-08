@@ -2,12 +2,12 @@
 title: "Test a model in DirectQuery mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,9 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Test a model in DirectQuery mode
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Review your options for testing a tabular model in DirectQuery mode at each stage of development, starting with design.  
   
 ## Test in Excel 

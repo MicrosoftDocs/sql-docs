@@ -2,12 +2,12 @@
 title: "Partitions (Analysis Services - Multidimensional Data) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -36,6 +36,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Partitions (Analysis Services - Multidimensional Data)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A partition is a container for a portion of the measure group data. Partitions are not seen from MDX queries; all queries reflect the whole content of the measure group, regardless of how many partitions are defined for the measure group. The data content of a partition is defined by the query bindings of the partition, and by the slicing expression.  
   
  A simple <xref:Microsoft.AnalysisServices.Partition> object is composed of: basic information, slicing definition, aggregation design, and others. Basic information includes the name of the partition, the storage mode, the processing mode, and others. The slicing definition is an MDX expression specifying a tuple or a set. The slicing definition has the same restrictions as the StrToSet MDX function. Together with the CONSTRAINED parameter, the slicing definition can use dimension, hierarchy, level and member names, keys, unique names, or other named objects in the cube, but cannot use MDX functions. The aggregation design is a collection of aggregation definitions that can be shared across multiple partitions. The default is taken from the parent cube's aggregation design.  

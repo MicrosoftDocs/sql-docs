@@ -2,12 +2,12 @@
 title: "View or Change Modeling Flags (Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -21,6 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # View or Change Modeling Flags (Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Modeling flags are properties that you set on a mining structure column or mining model columns to control how the algorithm processes the data during analysis.  
   
  In Data Mining Designer, you can view and modify the modeling flags associated with a mining structure or mining column by viewing the properties of the structure or model. You can also set modeling flags by using DMX, AMO, or XMLA.  

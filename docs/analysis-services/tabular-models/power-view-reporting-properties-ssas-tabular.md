@@ -2,12 +2,12 @@
 title: "Power View Reporting Properties (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power View - Reporting Properties (SSAS Tabular)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] provides intuitive ad-hoc reporting for business users such as data analysts, business decision makers, and information workers. They can easily create and interact with views of data from tabular models based on [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks published in a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery, or tabular models authored by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and then deployed to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services instances. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] is a browser-based Silverlight application launched from SharePoint Server 2010 or later.  
   
  When authoring tabular model projects in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], you can configure certain reporting properties unique to [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports. Topics in this section describe how to optimize a model to improve the reporting experience in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  

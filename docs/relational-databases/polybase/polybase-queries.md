@@ -30,10 +30,10 @@ ms.workload: "Inactive"
 # PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Here are example queries using the [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server 2016. Before using these examples, you must also understand the T-SQL statements required to setup PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)  
+  Here are example queries using the [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server 2016. Before using these examples, you must also understand the T-SQL statements required to set up PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)
   
 ## Queries  
- Run Transact-SQL statements against external tables or use BI tools to query external tables.  
+ Run Transact-SQL statements against external tables or use BI tools to query external tables.
   
 ## SELECT from external table  
  A simple query that returns data from a defined external table.  
@@ -101,9 +101,9 @@ SQL Server allows the following basic expressions and operators for predicate pu
 
 The operators BETWEEN, NOT, IN, and LIKE might be pushed-down. This depends on how the query optimizer rewrites them as a series of statements that use basic relational operators.
 
-This query has multiple predicates that can be pushed down to Hadoop. SQL Server can push map-reduce jobs to Hadoop to perform the predicate `customer.account_balance <= 200000`. The expression `BETWEEN 92656 and 92677` is comprised of binary and logical operations that can be pushed to Hadoop. The logical **AND** in `customer.account_balance and customer.zipcode` is a final expression.
+This query has multiple predicates that can be pushed down to Hadoop. SQL Server can push map-reduce jobs to Hadoop to perform the predicate `customer.account_balance <= 200000`. The expression `BETWEEN 92656 and 92677` is composed of binary and logical operations that can be pushed to Hadoop. The logical **AND** in `customer.account_balance and customer.zipcode` is a final expression.
 
-Putting this together, the map-reduce jobs can perform all of the WHERE clause. Only the data that meets the SELECT criteria will be copied back to SQL Server PDW.
+Putting this together, the map-reduce jobs can perform all of the WHERE clause. Only the data that meets the SELECT criteria is copied back to SQL Server PDW.
 
 ```
 SELECT * FROM customer WHERE customer.account_balance <= 200000 AND customer.zipcode BETWEEN 92656 AND 92677
@@ -153,7 +153,7 @@ Export data from SQL Server to Hadoop or Azure Storage.
 
 First, enable export functionality by setting the `sp_configure` value of 'allow polybase export' to 1. Next, create an external table that points to the destination directory. Then, use INSERT INTO to export data from a local SQL Server table to an external data source. 
 
-The INSERT INTO statement creates the destination directory if it does not exist, and the results of the SELECT statement are exported to the specified location in the specified file format. The external files are named *QueryID_date_time_ID.format*, where *ID* is an incremental identifier and *format* is the exported data format. For example, QID776_20160130_182739_0.orc.  
+The INSERT INTO statement creates the destination directory, if it does not exist, and the results of the SELECT statement are exported to the specified location in the specified file format. The external files are named *QueryID_date_time_ID.format*, where *ID* is an incremental identifier and *format* is the exported data format. For example, QID776_20160130_182739_0.orc.  
 
 > [!NOTE]
 > When exporting data to Hadoop or Azure Blob Storage via PolyBase, only the data is exported, not the column names (metadata) as defined in the CREATE EXTERNAL TABLE command

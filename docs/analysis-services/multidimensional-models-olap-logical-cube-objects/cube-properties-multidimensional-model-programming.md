@@ -2,12 +2,12 @@
 title: "Cube Properties - Multidimensional Model Programming | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -44,6 +44,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Cube Properties - Multidimensional Model Programming
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Cubes have a number of properties that you can set to affect cube-wide behavior. These properties are summarized in the following table.  
   
 > [!NOTE]  

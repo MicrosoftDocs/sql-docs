@@ -2,12 +2,12 @@
 title: "Multidimensional Model Programming | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -23,6 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Multidimensional Model Programming
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several APIs that you can use to program against an Analysis Services instance and the multidimensional databases that it makes available. This section describes the approaches available to developers who want to create custom applications using Analysis Services multidimensional solutions. You can use this information to choose the programming interface that best meets the requirements of a particular project. Analysis Services development projects can be based on managed or non-managed code that runs on a Windows platform, or other platforms that support HTTP access.  
   
 ## In This Section  

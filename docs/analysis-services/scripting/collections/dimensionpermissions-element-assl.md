@@ -2,12 +2,12 @@
 title: "DimensionPermissions Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "scripting"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -32,6 +32,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DimensionPermissions Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Contains the collection of permissions applicable to a [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) element or a [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md) element.  
   
 ## Syntax  

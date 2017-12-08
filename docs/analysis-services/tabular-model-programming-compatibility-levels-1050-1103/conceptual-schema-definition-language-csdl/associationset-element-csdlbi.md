@@ -2,12 +2,12 @@
 title: "AssociationSet Element (CSDLBI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -23,6 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AssociationSet Element (CSDLBI)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The **AssociationSet** element is a complex type that defines an association. In a CSDLBI data model, an association is a relationship between two tables.  
   
  An **AssociationSet** must be specified for each unique relationship in a model. The **AssociationSet** defines the endpoints by using the **Association** element. The **AssociationSet** element also defines metadata about the relationship and its usage in the data model.  

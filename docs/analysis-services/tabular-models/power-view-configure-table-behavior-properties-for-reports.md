@@ -2,12 +2,12 @@
 title: "Configure Table Behavior Properties for Power View Reports (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -24,6 +24,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power View - Configure Table Behavior Properties for Reports
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   If you are using a tabular model as a data model for [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], you can set table behavior properties that expose detail rows at a more granular level. Setting table behavior properties changes the grouping behavior of detail rows and produces a better default placement of identifying information (such as names, photo IDs, or logo images) in tile, card, and chart layouts.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] differs from other reporting applications in that it will group items automatically during report design, by evaluating which columns you placed in the report field list against the presentation format you are using. In most cases, the default grouping produces an optimum result. But for some tables, primarily those that contain detail data, the default grouping behavior will sometimes group rows that should not be grouped. For such tables, you can set properties that change how groups are evaluated.  

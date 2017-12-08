@@ -2,12 +2,12 @@
 title: "Linked Measure Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -28,6 +28,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Linked Measure Groups
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A linked measure group is based on another measure group in a different cube within the same database or a different Analysis Services database. You might use a linked measure group if you want to reuse a set of measures, and the corresponding data values, in multiple cubes.  
   
  Microsoft recommends that the original and linked measure groups reside in solutions that run on the same server. Linking to a measure group on a remote server is scheduled for deprecation in a future release (see [Deprecated Analysis Services Features in SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)).  

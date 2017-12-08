@@ -2,12 +2,12 @@
 title: "Add a Custom Aggregation to a Dimension | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -28,6 +28,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # BI Wizard - Add a Custom Aggregation to a Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Add a custom aggregation enhancement to a cube or dimension to replace the default aggregations that are associated with a dimension member with a different unary operator. This enhancement specifies a unary operator column in the dimension table that defines rollup for members in a parent-child hierarchy. The unary operator acts on the parent attribute in a parent-child hierarchy.  
   
 > [!NOTE]  

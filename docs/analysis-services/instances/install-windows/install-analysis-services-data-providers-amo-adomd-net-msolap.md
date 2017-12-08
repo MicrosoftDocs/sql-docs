@@ -2,12 +2,12 @@
 title: "Install Analysis Services data providers (AMO, ADOMD.NET, MSOLAP) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,6 +20,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Install Analysis Services data providers (AMO, ADOMD.NET, MSOLAP)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] is a version update of the Analysis Services data providers, consisting of ADOMD.Net, AMO, and MSOLAP.  
   
  For most query-based data access scenarios, you can use the existing older versions of the data providers already installed  on client systems to access tabular and multidimensional models on a SQL Server 2016 Analysis Services instance, including tabular models that use features exclusive to SQL Server 2016. As a general rule, client applications that generate queries, such as Excel, Reporting Services, or Tableau, shouldn't require the very latest data providers when accessing an Analysis Services model.  

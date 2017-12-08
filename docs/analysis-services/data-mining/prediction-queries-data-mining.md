@@ -2,12 +2,12 @@
 title: "Prediction Queries (Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -21,6 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Prediction Queries (Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The goal of a typical data mining project is to use the mining model to make predictions. For example, you might want to predict the amount of expected downtime for a certain cluster of servers, or generate a score that indicates whether segments of customers are likely to respond to an advertising campaign. To do all these things, you would create a prediction query.  
   
  Functionally, there are different types of prediction queries supported in SQL Server, depending on the type of inputs to the query:  

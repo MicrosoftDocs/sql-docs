@@ -2,12 +2,12 @@
 title: "Data Mining Designer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -27,6 +27,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Data Mining Designer
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Data Mining Designer is the primary environment in which you work with mining models in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. You can access the designer either by selecting an existing mining structure, or by using the Data Mining Wizard to create a new mining structure and mining model. You can use Data Mining Designer to perform the following tasks:  
   
 -   Modify the mining structure and the mining model that were initially created by the Data Mining Wizard.  

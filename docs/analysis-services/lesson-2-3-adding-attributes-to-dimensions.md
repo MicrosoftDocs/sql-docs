@@ -2,12 +2,12 @@
 title: "Adding Attributes to Dimensions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "tutorial"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 2-3 - Adding Attributes to Dimensions
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 Now that you have defined dimensions, you can populate them with attributes that represent each data element in the dimension. Attributes are commonly based on fields from a data source view. When adding attributes to a dimension, you can include fields from any table in the data source view.  
   
 In this task, you will use Dimension Designer to add attributes to the Customer and Product dimensions. The Customer dimension will include attributes based on fields from both the Customer and Geography tables.  

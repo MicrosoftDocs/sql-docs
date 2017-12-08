@@ -2,12 +2,12 @@
 title: "Translations in Multidimensional Models (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -24,6 +24,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Translations in Multidimensional Models (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can define translations in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by using the appropriate designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object to be translated. Defining a translation creates a **Translation** object associated with the appropriate [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object that has the specified explicit literal values, in the specified language, for the properties of the associated [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object.  
   
 ## Elements of a multi-lingual data model  

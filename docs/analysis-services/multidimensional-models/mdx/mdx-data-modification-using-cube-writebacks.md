@@ -2,12 +2,12 @@
 title: "Using Cube Writebacks (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -28,6 +28,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MDX Data Modification - Using Cube Writebacks
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   You update a cube by using the [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) statement. This statement lets you update a tuple with a specific value. To effectively use the UPDATE CUBE statement to update a cube, you have to understand the syntax for the statement, the error conditions that can occur, and the affect that updates can have on a cube.  
   
 ## UPDATE CUBE Statement Syntax  

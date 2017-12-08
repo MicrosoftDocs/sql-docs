@@ -2,12 +2,12 @@
 title: "Database object (TMSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -21,9 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Database object (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Defines a Tabular database at compatibility level 1200 or higher, based on a model of the same level. This topic documents the object definition of a database, providing the payload for requests that create, alter, delete, and perform database management tasks.  
   
 > [!NOTE]  

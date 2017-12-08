@@ -2,12 +2,12 @@
 title: "Configure Default Data Modeling and Deployment Properties (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -27,6 +27,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Configure Default Data Modeling and Deployment Properties (SSAS Tabular)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   This topic describes how to configure the default compatibility level, deployment and workspace database property settings, which can be pre-defined for each new tabular model project you create in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. After a new project is created, these properties can still be changed depending on your particular requirements.  
   
 #### To configure the default Compatibility Level property setting for new model projects  

@@ -2,12 +2,12 @@
 title: "Alter command (TMSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -21,9 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Alter command (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Alters an existing object, but not its children, on an Analysis Services instance in Tabular mode.  If the object does not exist, the command raises an error.  
   
  Use **Alter** command for targeted updates, like setting a property on a table without having to specify all of the columns as well. This command is similar to **CreateOrReplace**, but without the requirement of having to provide a full object definition.  

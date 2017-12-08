@@ -2,12 +2,12 @@
 title: "RelationshipEndTranslation Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "scripting"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -23,6 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # RelationshipEndTranslation Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a primitive data type that represents a localized translation for a [RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md) element.  
   
 ## Syntax  

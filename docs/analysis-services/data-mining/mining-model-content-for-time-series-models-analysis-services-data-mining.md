@@ -2,12 +2,12 @@
 title: "Mining Model Content for Time Series Models (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Mining Model Content for Time Series Models (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm.  
   
  For an explanation of general mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  

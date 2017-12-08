@@ -2,12 +2,12 @@
 title: "Hide or Freeze Columns (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -24,6 +24,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Hide or Freeze Columns (SSAS Tabular)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   In the model designer, if there are columns that you don't want to display in a table, you can temporarily hide them. Hiding a column gives you more room on the screen to add new columns or to work with only relevant columns of data. You can hide and unhide columns from the **Column** menu in the model designer, and from the right-click menu available from each column header. To keep an area of a model visible while you scroll to another area of the model, you can lock specific columns in one area by freezing them.  
   
 > [!IMPORTANT]  

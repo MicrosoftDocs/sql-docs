@@ -2,12 +2,12 @@
 title: "Configure Power Pivot and Deploy Solutions (SharePoint 2016) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,6 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Configure Power Pivot and Deploy Solutions (SharePoint 2016)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topics describes the deployment and configuration of middle-tier enhancements to the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] features in [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] including [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Gallery, Schedule data refresh, Management Dashboard, and data providers. Run **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 Configuration** tool to complete the following:  
   
 -   Deploy SharePoint solution files.  

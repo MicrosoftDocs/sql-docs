@@ -2,12 +2,12 @@
 title: "Power Pivot Server Administration and Configuration in Central Administration | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot Server Administration and Configuration in Central Administration
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] server administration and configuration is performed by SharePoint service application administrators, using SharePoint Central Administration.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint must be configured before it can be used. After you install [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint using SQL Server Setup, you can configure it using any of the following approaches:  

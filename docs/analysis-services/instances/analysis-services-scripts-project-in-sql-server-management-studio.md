@@ -2,12 +2,12 @@
 title: "Analysis Services Scripts Project in SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -29,6 +29,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Analysis Services Scripts Project in SQL Server Management Studio
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can create an Analysis Server Scripts project in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to group related scripts together for development, management, and source control purposes. If no solution is currently loaded in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], creating a new Analysis Server Scripts project automatically creates a new solution. Otherwise, the new Analysis Server Scripts project can be added to the existing solution or created in a new solution.  
   
  You use the following basic steps to create an Analysis Server Scripts project in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  

@@ -2,12 +2,12 @@
 title: "Connect Power Pivot Service App to SharePoint Web App in CA | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Connect Power Pivot Service App to SharePoint Web App in CA
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application can be used by any number of SharePoint Web applications in the farm. To make a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application available, you add it to a service association list.  
   
 > [!IMPORTANT]  

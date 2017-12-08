@@ -2,12 +2,12 @@
 title: "Automate Analysis Services Administrative Tasks with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Automate Analysis Services Administrative Tasks with SSIS
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enables you to automate execution of DDL scripts, cube and mining model processing tasks, and data mining query tasks. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can be thought of as a collection of control flow and maintenance tasks, which can be linked to form sequential and parallel data processing jobs.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is designed to perform data cleaning operations during data processing tasks, and to bring together data from different data sources. When working with cubes and mining models, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can transform non-numeric data to numeric data, and can ensure that data values fall within expected bounds, thus creating clean data from which to populate fact tables and dimensions.  

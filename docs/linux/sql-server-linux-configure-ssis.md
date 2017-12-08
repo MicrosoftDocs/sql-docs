@@ -18,7 +18,9 @@ ms.workload: "Inactive"
 ---
 # Configure SQL Server Integration Services on Linux with ssis-conf
 
-You run the `ssis-conf` configuration script when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. You can use this utility to configure the following properties:
+You run the `ssis-conf` configuration script when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. For more info about installing SSIS, see [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md).
+
+You can also use the `ssis-conf` utility to configure the following properties:
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|

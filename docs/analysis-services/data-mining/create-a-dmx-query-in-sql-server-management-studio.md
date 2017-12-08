@@ -2,12 +2,12 @@
 title: "Create a DMX Query in SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -29,6 +29,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create a DMX Query in SQL Server Management Studio
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a set of features to help you create prediction queries, content queries, and data definition queries against mining models and mining structures.  
   
 -   The graphical Prediction Query Builder is available in both [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], to simplify the process of writing prediction queries and mapping data sets to a model.  

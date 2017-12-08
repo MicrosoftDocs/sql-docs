@@ -2,12 +2,12 @@
 title: "Security Overview (Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -23,6 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Security Overview (Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The process of securing [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] occurs at multiple levels. You must secure each instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and its data sources to make sure that only authorized users have read or read/write permissions to selected dimensions, mining models, and data sources. You must also secure underlying data sources to prevent unauthorized users from maliciously compromising sensitive business information. The process of securing an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is described in the following topics.  
   
 ##  <a name="bkmk_Architecture"></a> Security Architecture  

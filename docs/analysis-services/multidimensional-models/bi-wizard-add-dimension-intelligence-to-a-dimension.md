@@ -2,12 +2,12 @@
 title: "Add Dimension Intelligence to a Dimension | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -27,6 +27,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # BI Wizard - Add Dimension Intelligence to a Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Add the dimension intelligence enhancement to a cube or a dimension to specify a standard business type for a dimension. This enhancement also specifies the corresponding types for dimension attributes. Client applications can use these type specifications when analyzing data.  
   
  To add dimension intelligence, you use the Business Intelligence Wizard, and select the **Define dimension intelligence** option on the **Choose Enhancement** page. This wizard then guides you through the steps of selecting a dimension to which you want to apply dimension intelligence and identifying the attributes for the selected dimension.  

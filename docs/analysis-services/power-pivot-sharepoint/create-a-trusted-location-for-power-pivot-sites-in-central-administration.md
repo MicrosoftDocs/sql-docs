@@ -2,12 +2,12 @@
 title: "Create a trusted location for Power Pivot sites in Central Administration | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create a trusted location for Power Pivot sites in Central Administration
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Excel Services lets you specify which locations are valid repositories for workbooks that you open on a SharePoint server. These locations are called 'trusted locations', and you can use different configuration settings for each trusted location you create. For a deployment of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, you might consider creating a trusted location for sites that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks so that you can apply the settings that work best for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access, while preserving default settings for the rest of the farm.  
   
   

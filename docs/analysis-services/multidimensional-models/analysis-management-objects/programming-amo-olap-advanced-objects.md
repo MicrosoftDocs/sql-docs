@@ -2,12 +2,12 @@
 title: "Programming AMO OLAP Advanced Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -28,6 +28,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Programming AMO OLAP Advanced Objects
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topic explains the Analysis Management Objects (AMO) programming details of OLAP advanced objects. This topic contains the following sections:  
   
 -   [Action Objects](#Action)  

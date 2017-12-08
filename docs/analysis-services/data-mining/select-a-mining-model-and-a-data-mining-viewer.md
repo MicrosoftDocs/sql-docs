@@ -2,12 +2,12 @@
 title: "Select a Mining Model and a Data Mining Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -23,6 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Select a Mining Model and a Data Mining Viewer
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can explore a mining model by using one of the viewers on the **Mining Model Viewer** tab of Data Mining Designer. You can easily switch between models, or change the viewer that is used.  
   
 -   The **Mining Model** drop-down list box on the **Mining Model Viewer** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contains a list of all the mining models that are in the current mining structure.  

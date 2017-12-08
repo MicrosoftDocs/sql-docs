@@ -25,8 +25,8 @@ After an availability group (AG) is created in SQL Server, the corresponding res
 The AG resource that is created is a special kind of resource called a clone. The AG resource essentially has copies on each node, and there is one controlling resource called the master. The master is associated with the server hosting the primary replica. The secondary replicas (regular or configuration-only) are considered to be slaves and can be promoted to master in a failover.
 
 ## Prerequisites
-- Create the availability group in SQL Server, as documented in [Create an availability group for SQL Server on Linux](sql-server-linux-create-availability-group.md)
-- Create the Pacemaker cluster, as documented in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
+- SQL Server AG created, as documented in [Create an availability group for SQL Server on Linux](sql-server-linux-create-availability-group.md)
+- Pacemaker high availability cluster deployed, as documented in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
 
 ## Create the resources
 1.  Create the AG resource with the following syntax:

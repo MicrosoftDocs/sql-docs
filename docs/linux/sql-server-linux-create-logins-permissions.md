@@ -20,7 +20,7 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-An underlying Pacemaker cluster needs access to the SQL Server instance as well as permissions on the availability group (AG) itself. These steps create the login and the associated permissions, along with a file that tells Pacemaker how to log into SQL Server.
+A Pacemaker high availability cluster underlying SQL Server on Linux needs access to the SQL Server instance, as well as permissions on the availability group (AG) itself. These steps create the login and the associated permissions, along with a file that tells Pacemaker how to log into SQL Server.
 
 1.  In a query window connected to the first replica, execute the following:
 

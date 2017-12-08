@@ -25,7 +25,7 @@ An availability group (AG) uses TCP endpoints for communication. Under Linux, en
 Creating endpoints and restoring certificates can only be done via Transact-SQL. You can use non-SQL Server-generated certificates as well. You will also need a process to manage and replace any certificates that expire.
 
 > [!IMPORTANT]
-> If you plan to use the SQL Server Management Studio wizard to create the AG, you still need to create and restore certificates using Transact-SQL on Linux.
+> If you plan to use the SQL Server Management Studio wizard to create the AG, you still need to create and restore the certificates by using Transact-SQL on Linux.
 
 For full syntax on the options available for the various commands (such as additional security), consult:
 

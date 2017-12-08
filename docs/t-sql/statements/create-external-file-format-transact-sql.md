@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/29/2017"
+ms.date: "12/08/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.service: ""
@@ -293,6 +293,8 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
  Because of the limitation on number of files in the external table, we recommend storing less than 30,000 files in the root and subfolders of the external file location. Also, we recommend keeping the number of subfolders under the root directory to a small number. When too many files are referenced a Java Virtual Machine out-of-memory exception might occur.  
   
+  When exporting data to Hadoop or Azure Blob Storage via PolyBase, only the data is exported, not the column names(metadata) as defined in the CREATE EXTERNAL TABLE command.
+
 ## Locking  
  Takes a shared lock on the EXTERNAL FILE FORMAT object.  
   

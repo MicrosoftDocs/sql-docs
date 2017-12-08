@@ -35,7 +35,7 @@ Save the sample script to a file and then to customize it,
 replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

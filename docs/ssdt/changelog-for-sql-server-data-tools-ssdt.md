@@ -25,6 +25,33 @@ This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-t
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
+## SSDT for Visual Studio 2017 (15.5.0 preview)
+Build number: 14.0.16145.0
+  
+### What's New?
+
+**Installer**
+1. Setup UI is localized
+1. Replace the icon with a higher quality version
+
+**Integration Services (IS)**
+1. Allow user to validate packages before deploying them to Azure-SSIS Integration Runtime.
+1. SSIS extension is localized
+
+### Bug fixes
+
+**Integration Services (IS)**
+1. Fixed an issue where some of the Analysis Services Processing Task log is missing.
+1. Fixed an issue where the layout of OLEDB and ADO.NET connection manager is corrupt.
+1. Fixed an issue where an assembly not found error is raised when attempting to edit a Dimension Processing Task.
+
+### Known issues
+
+**Integration Services (IS)**
+SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+
 ## SSDT 17.4 for Visual Studio 2015
 Build number: 12345
 

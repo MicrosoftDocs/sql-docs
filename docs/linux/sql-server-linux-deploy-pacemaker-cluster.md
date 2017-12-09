@@ -1,6 +1,6 @@
 ---
 title: Deploy a Pacemaker cluster for SQL Server on Linux | Microsoft Docs
-description: How to configure SQL Server and Pacemaker to deploy availability groups and failover cluster instances on Linux. 
+description: How to deploy a Pacemaker cluster for SQL Server on Linux. 
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
@@ -20,11 +20,11 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article documents the tasks that must be done to configure both [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] and Pacemaker to be able to deploy a Linux Always On availability group (AG) or failover cluster instance (FCI). Unlike an AG or FCI on Windows, there is no set order, and the cluster portion as well as the configuration of the AG on Linux can be done before or after the installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. This is different than on the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
+This article documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux can be done before or after installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
 > [!IMPORTANT]
 > An AG with a cluster type of None does *not* require a Pacemaker cluster, nor can it be managed by Pacemaker. 
 
-## Install the HA add-on
+## Install the high availability add-on
 Use the syntax below to install the packages that make up the high availability (HA) add-on for each distribution of Linux. 
 
 **Red Hat Enterprise Linux (RHEL)**
@@ -69,33 +69,6 @@ sudo apt-get install pacemaker pcs fence-agents resource-agents
 Install the High Availability pattern in YaST or do it as part of the main installation of the server. The installation can be done with an ISO/DVD as a source or by getting it online.
 > [!NOTE]
 > On SLES, the HA add-on gets initialized when the cluster is created.
-
-## Install the HA and SQL Server Agent packages
-Use the commands below to install the HA package and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, if they are not installed already. Installing the HA package after installing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used by [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
-> [!NOTE]
-> - If you will not use [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it does not have to be installed, so package *mssql-server-agent* can be skipped.
-> - The other optional packages for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.
-
-**RHEL**
-
-```bash
-sudo yum install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
-
-**Ubuntu**
-
-```bash
-sudo apt-get install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
-
-**SLES**
-
-```bash
-sudo zypper install mssql-server-ha mssql-server-agent
-sudo systemctl restart mssql-server
-```
 
 ## Prepare the nodes for Pacemaker (RHEL and Ubuntu only)
 Pacemaker itself uses a user created on the distribution named *hacluster*. The user gets created when the HA add-on is installed on RHEL and Ubuntu.
@@ -212,4 +185,31 @@ The process for creating a Pacemaker cluster is completely different on SLES tha
    ```
    
 12. Repeat Steps 8-11 for all other servers to be added to the cluster.
+
+## Install the SQL Server HA and SQL Server Agent packages
+Use the commands below to install the SQL Server HA package and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, if they are not installed already. Installing the HA package after installing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
+> [!NOTE]
+> - If you will not use [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it does not have to be installed, so package *mssql-server-agent* can be skipped.
+> - The other optional packages for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.
+
+**RHEL**
+
+```bash
+sudo yum install mssql-server-ha mssql-server-agent
+sudo systemctl restart mssql-server
+```
+
+**Ubuntu**
+
+```bash
+sudo apt-get install mssql-server-ha mssql-server-agent
+sudo systemctl restart mssql-server
+```
+
+**SLES**
+
+```bash
+sudo zypper install mssql-server-ha mssql-server-agent
+sudo systemctl restart mssql-server
+```
 

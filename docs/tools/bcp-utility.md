@@ -175,12 +175,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  If *format_file* begins with a hyphen (-) or a forward slash (/), do not include a space between **-f** and the *format_file* value.  
   
- **-F** ***first_row***<a name="F"></a>  
+**-F** ***first_row***<a name="F"></a>  
  Specifies the number of the first row to export from a table or import from a data file. This parameter requires a value greater than (>) 0 but less than (<) or equal to (=) the total number rows. In the absence of this parameter, the default is the first row of the file.  
   
  *first_row* can be a positive integer with a value up to 2^63-1. **-F** *first_row* is 1-based.  
 
- **-G**<a name="G"></a>  
+**-G**<a name="G"></a>  
  This switch is used by the client when connecting to Azure SQL Database or Azure SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. The -G switch requires [version 14 or later](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute bcp -v. For more information, see [Use Azure Active Directory Authentication for authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
 - **Azure Active Directory Username and Password:** 

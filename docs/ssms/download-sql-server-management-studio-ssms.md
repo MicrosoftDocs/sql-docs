@@ -162,8 +162,6 @@ The following are issues and limitations with this 17.4 release:
 
 There are no known issues at this time.
 
-
-
 ## Previous releases
 
 [Previous SQL Server Management Studio Releases](../ssms/sql-server-management-studio-changelog-ssms.md#previous-ssms-releases)
@@ -171,6 +169,9 @@ There are no known issues at this time.
 ## Feedback
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Log an issue or suggestion at Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+
+
+
 
 ## See Also
 

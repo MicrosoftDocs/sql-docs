@@ -1,7 +1,7 @@
 ---
 title: "bcp Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/26/2016"
+ms.date: "12/08/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -31,9 +31,9 @@ helpviewer_keywords:
   - "column exporting [SQL Server]"
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 caps.latest.revision: 222
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # bcp Utility
@@ -62,6 +62,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
     [<a href="#F">-F first_row</a>]
+    [<a href="#G">-G</a>]
     [<a href="#h">-h"hint [,...n]"</a>]
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
@@ -178,6 +179,25 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Specifies the number of the first row to export from a table or import from a data file. This parameter requires a value greater than (>) 0 but less than (<) or equal to (=) the total number rows. In the absence of this parameter, the default is the first row of the file.  
   
  *first_row* can be a positive integer with a value up to 2^63-1. **-F** *first_row* is 1-based.  
+
+ **-G**<a name="G"></a>  
+ This switch is used by the client when connecting to Azure SQL Database or Azure SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. The -G switch requires [version 14 or later](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute bcp -v. For more information, see [Use Azure Active Directory Authentication for authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+
+- **Azure Active Directory Username and Password:** 
+
+    When you want to use an Azure Active Directory user name and password, you can provide the **-G** option and also use the user name and password by providing the **-U** and **-P** options.
+    ``` 
+    EXAMPLE NEEDED
+    ``` 
+
+- **Azure Active Directory Integrated** 
+ 
+   For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password: 
+
+    ```
+    EXAMPLE NEEDED
+    ```  
+
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a>
 Specifies the hint or hints to be used during a bulk import of data into a table or view.  

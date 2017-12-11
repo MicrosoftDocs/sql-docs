@@ -57,6 +57,6 @@ ms.workload: "Inactive"
  Select this option to use the default parameter value stored in the package.  
   
  **Use environment variable**  
- Select this option to use a variable value stored in the environment, which is referenced by the project or package. To add an environment reference to a project or package, use the **Configure** dialog box. For more information, see [Configure Dialog Box](../../integration-services/service/configure-dialog-box.md).  
+ Select this option to use a variable value stored in the environment, which is referenced by the project or package. To add an environment reference to a project or package, use the **Configure** dialog box. For more information, see [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md).  
   
   

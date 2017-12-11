@@ -49,21 +49,21 @@ ms.workload: "Active"
   
 ## Features and capabilities  
   
--   [Catalog Object Identifiers](../../integration-services/service/ssis-catalog.md#CatalogObjectIdentifiers)  
+-   [Catalog Object Identifiers](../../integration-services/catalog/ssis-catalog.md#CatalogObjectIdentifiers)  
   
--   [Catalog Configuration](../../integration-services/service/ssis-catalog.md#Configuration)  
+-   [Catalog Configuration](../../integration-services/catalog/ssis-catalog.md#Configuration)  
   
--   [Permissions](../../integration-services/service/ssis-catalog.md#Permissions)  
+-   [Permissions](../../integration-services/catalog/ssis-catalog.md#Permissions)  
   
--   [Folders](../../integration-services/service/ssis-catalog.md#Folders)  
+-   [Folders](../../integration-services/catalog/ssis-catalog.md#Folders)  
   
--   [Projects and Packages](../../integration-services/service/ssis-catalog.md#ProjectsAndPackages)  
+-   [Projects and Packages](../../integration-services/catalog/ssis-catalog.md#ProjectsAndPackages)  
   
--   [Parameters](../../integration-services/service/ssis-catalog.md#Parameters)  
+-   [Parameters](../../integration-services/catalog/ssis-catalog.md#Parameters)  
   
--   [Server Environments, Server Variables, and Server Environment References](../../integration-services/service/ssis-catalog.md#ServerEnvironments)  
+-   [Server Environments, Server Variables, and Server Environment References](../../integration-services/catalog/ssis-catalog.md#ServerEnvironments)  
   
--   [Executions and Validations](../../integration-services/service/ssis-catalog.md#Executions)  
+-   [Executions and Validations](../../integration-services/catalog/ssis-catalog.md#Executions)  
 
 ##  <a name="CatalogObjectIdentifiers"></a> Catalog Object Identifiers  
  When you create a new object in the catalog, assign a name to the object. The object name is an identifier. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] defines rules for which characters can be used in an identifier. Names for the following objects must follow identifier rules.  
@@ -191,12 +191,10 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
  To manage permissions using the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] UI, use the following dialog boxes: 
   
--   For a folder, use the **Permissions** page of the [Folder Properties Dialog Box](../../integration-services/service/folder-properties-dialog-box.md).  
+-   For a folder, use the **Permissions** page of the [Folder Properties Dialog Box](../../integration-services/catalog/folder-properties-dialog-box.md).  
   
--   For a project, use the **Permissions** page in the [Project Properties Dialog Box](../../integration-services/service/project-properties-dialog-box.md).  
-  
--   For an environment, use the **Permissions** page in the [NIB: Environment Properties Dialog Box](http://msdn.microsoft.com/6a91a8d4-0006-4cfd-9759-3e4295ae452b).  
-  
+-   For a project, use the **Permissions** page in the [Project Properties Dialog Box](../../integration-services/catalog/project-properties-dialog-box.md).  
+
  To manage permissions using Transact-SQL, call [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md), [catalog.deny_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md), and [catalog.revoke_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md). To view effective permissions for the current principal for all objects, query [catalog.effective_object_permissions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md). This topic provides descriptions of the different types of permissions. To view permissions that have been explicitly assigned to the user, query [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md).  
   
 ##  <a name="Folders"></a> Folders  
@@ -211,7 +209,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 -   [catalog.set_folder_description &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
 ##  <a name="ProjectsAndPackages"></a> Projects and Packages  
- Each project can contain multiple packages. Both projects and packages can contain parameters and references to environments. You can access the parameters and environment references by using the [Configure Dialog Box](../../integration-services/service/configure-dialog-box.md).  
+ Each project can contain multiple packages. Both projects and packages can contain parameters and references to environments. You can access the parameters and environment references by using the [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md).  
   
  You can carry out other project tasks by calling the following stored procedures: 
   
@@ -394,7 +392,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] includes the SSISDB database. You query views in the SSISDB database to inspect objects, settings, and operational data that are stored in the **SSISDB** catalog. This topic provides instructions for backing up and restoring the database.  
   
- The **SSISDB** catalog stores the packages that you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ The **SSISDB** catalog stores the packages that you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ###  <a name="backup"></a> To Back up the SSIS Database  
   

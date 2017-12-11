@@ -235,11 +235,11 @@ This example shows the creation of a two-replica configuration using a cluster t
 2.  Join the secondary replica to the AG and initiate automatic seeding.
     
     ```SQL
-    ALTER AVAILABILITY GROUP` [<AGName>] JOIN WITH (CLUSTER_TYPE = NONE);
+    ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = NONE);
     
     GO
     
-    ALTER AVAILABILITY GROUP` [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```

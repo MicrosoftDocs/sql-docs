@@ -196,7 +196,7 @@ This example will create certificates for a three-node configuration. The instan
     
 10.  Restore LinAGN1_Cert and LinAGN3_Cert on LinAGN2. 
     
-    ```SQLl
+    ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
     AUTHORIZATION LinAGN1_User
     FROM FILE = '/var/opt/mssql/data/LinAGN1_Cert.cer';

@@ -92,8 +92,13 @@
 
 # How-to guides
 ## Configure availability
-### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
 ### [Deploy a Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
+### [Enable availability groups](sql-server-linux-enable-availability-groups.md)
+### [Create endpoints and certificates](sql-server-linux-create-ag-endpoints.md)
+### [Create availability groups](sql-server-linux-create-availability-group.md)
+### [Configure Pacemaker logins and permissions](sql-server-linux-create-logins-permissions.md)
+### [Create availability group resources](sql-server-linux-create-ag-resources.md)
+### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
 
 # Samples
 ## Unattended install

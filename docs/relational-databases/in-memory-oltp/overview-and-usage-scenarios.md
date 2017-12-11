@@ -22,7 +22,7 @@ ms.workload: "On Demand"
 # Overview and Usage Scenarios
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-In-Memory OLTP is the premier technology available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios. This topic includes an overview of the technology and outlines usage scenarios for In-Memory OLTP. Use this information to determine whether In-Memory OLTP is right for your application. The topic concludes with an example that shows In-Memory OLTP objects, reference to a perf demo, and references to resources you can use for next steps.
+In-Memory OLTP is the premier technology available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios. This article includes an overview of the technology and outlines usage scenarios for In-Memory OLTP. Use this information to determine whether In-Memory OLTP is right for your application. The article concludes with an example that shows In-Memory OLTP objects, reference to a perf demo, and references to resources you can use for next steps.
 
 This article covers the In-Memory OLTP technology in both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. The following blog post contains a deep dive into the performance and resource utilization benefits in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]: 
 - [In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
@@ -33,7 +33,7 @@ In-Memory OLTP can provide great performance gains, for the right workloads. One
 
 Now, where does this performance gain come from? In essence, In-Memory OLTP improves performance of transaction processing by making data access and transaction execution more efficient, and by removing lock and latch contention between concurrently executing transactions: it is not fast because it is in-memory; it is fast because it is optimized around the data being in-memory. Data storage, access, and processing algorithms were redesigned from the ground up to take advantage of the latest enhancements in in-memory and high concurrency computing.
 
-Now, just because data lives in-memory does not mean you lose it when there is a failure. By default, all transactions are fully durable, meaning that you have the same durability guarantees you get for any other table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: as part of transaction commit, all changes are written to the transaction log on disk. If there is a failure at any time after the transaction commits, your data is there when the database comes back online. In addition, In-Memory OLTP works with all high availability and disaster recovery capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], like Always On, backup/restore, etc.
+Now, just because data lives in-memory does not mean you lose it when there is a failure. By default, all transactions are fully durable, meaning that you have the same durability guarantees you get for any other table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: as part of transaction commit, all changes are written to the transaction logon disk. If there is a failure at any time after the transaction commits, your data is there when the database comes back online. In addition, In-Memory OLTP works with all high availability and disaster recovery capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], like Always On, backup/restore, etc.
 
 To leverage In-Memory OLTP in your database, you use one or more of the following types of objects:
 
@@ -42,17 +42,17 @@ To leverage In-Memory OLTP in your database, you use one or more of the followin
 - *Memory-optimized table types* are used for table-valued parameters (TVPs), as well as intermediate result sets in stored procedures. These can be used instead of traditional table types. Table variables and TVPs that are declared using a memory-optimized table type inherit the benefits of non-durable memory-optimized tables: efficient data access, and no IO.
 - *Natively compiled T-SQL modules* are used to further reduce the time taken for an individual transaction by reducing CPU cycles required to process the operations. You declare a Transact-SQL module to be natively compiled at create time. At this time, the following T-SQL modules can be natively compiled: stored procedures, triggers, and scalar user-defined functions.
 
-In-Memory OLTP is built into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. And because these objects behave very similar to their traditional counterparts, you can often gain performance benefits while making only minimal changes to the database and the application. Plus, you can have both memory-optimized and traditional disk-based tables in the same database, and run queries across the two. You will find a Transact-SQL script showing an example for each of these types of objects towards the bottom of this topic.
+In-Memory OLTP is built into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. And because these objects behave similar to their traditional counterparts, you can often gain performance benefits while making only minimal changes to the database and the application. Plus, you can have both memory-optimized and traditional disk-based tables in the same database, and run queries across the two. You find a Transact-SQL script showing an example for each of these types of objects towards the bottom of this article.
 
 ## Usage Scenarios for In-Memory OLTP
 
-In-Memory OLTP is not a magic go-fast button, and is not suitable for all workloads. For example, memory-optimized tables will not really bring down your CPU utilization if most of the queries are performing aggregation over large ranges of data – Columnstore indexes help with that scenario.
+In-Memory OLTP is not a magic go-fast button, and is not suitable for all workloads. For example, memory-optimized tables don't bring down your CPU utilization if most of the queries are performing aggregation over large ranges of data – Columnstore indexes help with that scenario.
 
 Here is a list of scenarios and application patterns where we have seen customers be successful with In-Memory OLTP.
 
 ### High-throughput and low-latency transaction processing
 
-This is really the core scenario for which we built In-Memory OLTP: support large volumes of transactions, with consistent low latency for individual transactions.
+This is the core scenario for which we built In-Memory OLTP: support large volumes of transactions, with consistent low latency for individual transactions.
 
 Common workload scenarios are: trading of financial instruments, sports betting, mobile gaming, and ad delivery. Another common pattern we’ve seen is a “catalog” that is frequently read and/or updated. One example is where you have large files, each distributed over a number of cluster nodes, and you catalog the location of each shard of each file in a memory-optimized table.
 
@@ -72,7 +72,7 @@ To get started in an existing application:
 
 ### Data ingestion, including IoT (Internet-of-Things)
 
-In-Memory OLTP is really good at ingesting large volumes of data from many different sources at the same time. And it is often beneficial to ingest data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database compared with other destinations, because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] makes running queries against the data really fast, and allows you to get real-time insights.
+In-Memory OLTP is good at ingesting large volumes of data from many different sources at the same time. And it is often beneficial to ingest data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database compared with other destinations, because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] makes running queries against the data fast, and allows you to get real-time insights.
 
 Common application patterns are: 
 -  Ingesting sensor readings and events, and allow notifications as well as historical analysis. 
@@ -222,7 +222,7 @@ GO
 
 ## Resources to learn more:
 
-[Quick Start 1: In-Memory OLTP Technologies for Faster T-SQL Performance](http://msdn.microsoft.com/library/mt694156.aspx)   
+[In-Memory OLTP Technologies for Faster T-SQL Performance](http://msdn.microsoft.com/library/mt694156.aspx)   
 Perf demo using In-Memory OLTP can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [17-minute video explaining In-Memory OLTP and showing the demo](https://www.youtube.com/watch?v=l5l5eophmK4) (demo is at 8:25)   
 [Script to enable In-Memory OLTP and set recommended options](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   

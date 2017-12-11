@@ -1,5 +1,5 @@
 ---
-title: Create availability group endpoints and certificates on Linux | Microsoft Docs
+title: Create availability group endpoints and certificates for SQL Server on Linux | Microsoft Docs
 description: How to use Transact-SQL to create endpoints and certificates for availability groups on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 

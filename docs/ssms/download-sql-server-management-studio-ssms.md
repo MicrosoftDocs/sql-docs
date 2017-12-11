@@ -57,6 +57,7 @@ If a computer contains side by side installations of SSMS, verify you start the 
 > [!NOTE]
 > Non-English localized releases of SSMS require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
 
+
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 17.4:<br>
@@ -74,6 +75,8 @@ SQL Server Management Studio 17.4 Upgrade Package (upgrades 17.x to 17.4):<br>
 The release number: 17.4
 
 The build number for this release: 14.0.17213.0
+
+The release date: December 7, 2017
 
 ## New in this Release
 
@@ -162,8 +165,6 @@ The following are issues and limitations with this 17.4 release:
 
 There are no known issues at this time.
 
-
-
 ## Previous releases
 
 [Previous SQL Server Management Studio Releases](../ssms/sql-server-management-studio-changelog-ssms.md#previous-ssms-releases)
@@ -171,6 +172,9 @@ There are no known issues at this time.
 ## Feedback
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Log an issue or suggestion at Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+
+
+
 
 ## See Also
 

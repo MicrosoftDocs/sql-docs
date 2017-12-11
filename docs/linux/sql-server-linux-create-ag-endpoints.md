@@ -40,7 +40,7 @@ This example will create certificates for a three-node configuration. The instan
 
 1.  Execute the following on LinAGN1 to create the master key, certificate, and endpoint, as well as back up the certificate. For this example, the typical TCP port of 5022 is used for the endpoint.
     
-    ```t-sql
+    ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
     
     GO
@@ -69,7 +69,7 @@ This example will create certificates for a three-node configuration. The instan
     
 2.  Do the same on LinAGN2:
     
-    ```t-sql
+    ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
     
     GO
@@ -98,7 +98,7 @@ This example will create certificates for a three-node configuration. The instan
     
 3.  Finally, perform the same sequence on LinAGN3:
     
-    ```t-sql
+    ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
     
     GO
@@ -141,7 +141,7 @@ This example will create certificates for a three-node configuration. The instan
     
 6.  Create the instance-level logins and users associated with LinAGN2 and LinAGN3 on LinAGN1.
     
-    ```t-sql
+    ```SQL
     CREATE LOGIN LinAGN2_Login WITH PASSWORD = '<StrongPassword>';
     CREATE USER LinAGN2_User FOR LOGIN LinAGN2_Login;
     
@@ -155,7 +155,7 @@ This example will create certificates for a three-node configuration. The instan
     
 7.  Restore LinAGN2_Cert and LinAGN3_Cert on LinAGN1. Having the other replicas’ certificates is an important aspect of AG communication and security.
     
-    ```t-sql
+    ```SQL
     CREATE CERTIFICATE LinAGN2_Cert
     AUTHORIZATION LinAGN2_User
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
@@ -170,7 +170,7 @@ This example will create certificates for a three-node configuration. The instan
     
 8.  Grant the logins associated with LinAG2 and LinAGN3 permission to connect to the endpoint on LinAGN1.
     
-    ```t-sql
+    ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN2_Login;
     
     GO
@@ -182,7 +182,7 @@ This example will create certificates for a three-node configuration. The instan
     
 9.  Create the instance-level logins and users associated with LinAGN1 and LinAGN3 on LinAGN2.
     
-    ```t-sql
+    ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
     CREATE USER LinAGN1_User FOR LOGIN LinAGN1_Login;
     
@@ -196,7 +196,7 @@ This example will create certificates for a three-node configuration. The instan
     
 10.  Restore LinAGN1_Cert and LinAGN3_Cert on LinAGN2. 
     
-    ```t-sql
+    ```SQLl
     CREATE CERTIFICATE LinAGN1_Cert
     AUTHORIZATION LinAGN1_User
     FROM FILE = '/var/opt/mssql/data/LinAGN1_Cert.cer';
@@ -211,7 +211,7 @@ This example will create certificates for a three-node configuration. The instan
     
 11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
     
-    ```t-sql
+    ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
     
     GO
@@ -223,7 +223,7 @@ This example will create certificates for a three-node configuration. The instan
     
 12.  Create the instance-level logins and users associated with LinAGN1 and LinAGN2 on LinAGN3.
     
-    ```t-sql
+    ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
     CREATE USER LinAGN1_User FOR LOGIN LinAGN1_Login;
     
@@ -237,7 +237,7 @@ This example will create certificates for a three-node configuration. The instan
     
 13.  Restore LinAGN1_Cert and LinAGN2_Cert on LinAGN3. 
     
-    ```t-sql
+    ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
     AUTHORIZATION LinAGN1_User
     FROM FILE = '/var/opt/mssql/data/LinAGN1_Cert.cer';
@@ -252,7 +252,7 @@ This example will create certificates for a three-node configuration. The instan
     
 14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
     
-    ```t-sql
+    ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
     
     GO

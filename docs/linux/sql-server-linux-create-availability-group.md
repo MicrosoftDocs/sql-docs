@@ -96,7 +96,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
 
 1.  Execute on the node that will be the primary replica containing the fully read/write copy of the database(s). This example uses automatic seeding.
 
-    ```t-sql
+    ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
     WITH (CLUSTER_TYPE = EXTERNAL)
     FOR DATABASE <DBName>
@@ -118,7 +118,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     
 2.  In a query window connected to the other replica, execute the following to join the replica to the AG and initiate the seeding process from the primary to the secondary replica.
     
-    ```t-sql
+    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
     
     GO
@@ -130,7 +130,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     
 3.  In a query window connected to the configuration only replica, join it to the AG.
     
-   ```t-sql
+   ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
     
     GO
@@ -142,7 +142,7 @@ This example shows three full replicas and how read-only routing can be configur
 
 1.  Execute on the node that will be the primary replica containing the fully read/write copy of the database(s). This example uses automatic seeding.
 
-    ```t-sql
+    ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
     WITH (CLUSTER_TYPE = EXTERNAL)
     FOR DATABASE <DBName>
@@ -182,7 +182,7 @@ This example shows three full replicas and how read-only routing can be configur
 
 2.  In a query window connected to the other replica, execute the following to join the replica to the AG and initiate the seeding process from the primary to the secondary replica.
     
-    ```t-sql
+    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
     
     GO
@@ -200,7 +200,7 @@ This example shows the creation of a two-replica configuration using a cluster t
 
 1.  Execute on the node that will be the primary replica containing the fully read/write copy of the database(s). This example uses automatic seeding.
 
-    ```t-sql
+    ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
     WITH (CLUSTER_TYPE = NONE)
     FOR DATABASE <DBName>
@@ -234,7 +234,7 @@ This example shows the creation of a two-replica configuration using a cluster t
     
 2.  Join the secondary replica to the AG and initiate automatic seeding.
     
-    ```t-sql
+    ```SQL
     ALTER AVAILABILITY GROUP` [<AGName>] JOIN WITH (CLUSTER_TYPE = NONE);
     
     GO

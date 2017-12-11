@@ -24,7 +24,7 @@ A Pacemaker high availability cluster underlying SQL Server on Linux needs acces
 
 1.  In a query window connected to the first replica, execute the following:
 
-    ```t-sql
+    ```SQL
     CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
     
     GO

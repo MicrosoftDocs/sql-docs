@@ -24,6 +24,8 @@
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+## [7_Deploy a Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
+## [8_Create and configure availability groups](sql-server-linux-create-availability-group.md)
 
 # Concepts
 ## Install
@@ -91,14 +93,7 @@
 ### [Get started with performance features](sql-server-linux-performance-get-started.md)
 
 # How-to guides
-## Configure availability
-### [Deploy a Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
-### [Enable availability groups](sql-server-linux-enable-availability-groups.md)
-### [Create endpoints and certificates](sql-server-linux-create-ag-endpoints.md)
-### [Create availability groups](sql-server-linux-create-availability-group.md)
-### [Configure Pacemaker logins and permissions](sql-server-linux-create-logins-permissions.md)
-### [Create availability group resources](sql-server-linux-create-ag-resources.md)
-### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
+## [Configure multiple-subnet availability](sql-server-linux-configure-multiple-subnet.md)
 
 # Samples
 ## Unattended install

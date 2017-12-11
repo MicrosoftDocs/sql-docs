@@ -1,10 +1,10 @@
 ---
-title: Create an availability group for SQL Server on Linux | Microsoft Docs
-description: How to use SQL Server Management Studio or Transact-SQL to create availability groups for SQL Server on Linux.
+title: Create and configure an availability group for SQL Server on Linux | Microsoft Docs
+description: This tutorial shows how to create and configure availability groups for SQL Server on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 12/4/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -16,18 +16,303 @@ ms.technology: database-engine
 ms.workload: "On Demand"
 ---
 
-# Create an availability group for SQL Server on Linux
+# Create and configure an availability group for SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article covers how to use SQL Server Management Studio (SSMS) or Transact-SQL to create an availability group (AG) for SQL Server on Linux.
+This tutorial covers how to create and configure an availability group (AG) for SQL Server on Linux. Unlike SQL Server 2016 and earlier on Windows, you can enable AGs with or without creating the underlying Pacemaker cluster first. Integration with the cluster, if needed, is not done until later.
 
-## Prerequisites
-- The `mssql-server-ha` package must already be installed. See [Install the HA and SQL Server Agent packages](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
-- The endpoints must be created on all replicas, using the certificate process described in [Create endpoints and certificates](sql-server-linux-create-ag-endpoints.md).
-- The AG feature must be enabled, as described in [Enable availability groups for SQL Server on Linux](sql-server-linux-enable-availability-groups.md).
+> [!div class="checklist"]
+> * Enable availability groups.
+> * Create availability group endpoints and certificates.
+> * Use SQL Server Management Studio (SSMS) or Transact-SQL to create an availability group.
+> * Create the SQL Server login and permissions for Pacemaker.
+> * Create availability group resources in a Pacemaker cluster (External type only).
 
-## Use SQL Server Management Studio
+## Prerequisite
+- The `mssql-server-ha` package must already be installed. See [Install the SQL Server HA and SQL Server Agent packages](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
+
+## Enable the availability groups feature
+
+Unlike on Windows, you cannot use PowerShell or SQL Server Configuration Manager to enable the availability groups (AG) feature. Under Linux, you must use `mssql-conf` to enable the feature. There are two ways to enable the availability groups feature: use the `mssql-conf` utility, or edit the `mssql.conf` file manually.
+
+> [!IMPORTANT]
+> The AG feature must be enabled for configuration-only replicas, even on SQL Server Express Edition.
+
+### Use the mssql-conf utility
+
+At a prompt, issue the following:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
+```
+
+### Edit the mssql.conf file
+
+You can also modify the `mssql.conf` file, located under the `/var/opt/mssql` folder, to add the following lines:
+
+```
+[hadr]
+
+hadr.hadrenabled = 1
+```
+
+### Restart SQL Server
+After enabling availability groups, as on Windows, you must restart SQL Server. That can be done by the following:
+
+```bash
+sudo systemctl restart mssql-server
+```
+
+## Create the availability group endpoints and certificates
+
+An availability group uses TCP endpoints for communication. Under Linux, endpoints for an AG are only supported if certificates are used for authentication. This means that the certificate from one instance must be restored on all other instances that will be replicas participating in the same AG. The certificate process is required even for a configuration-only replica. 
+
+Creating endpoints and restoring certificates can only be done via Transact-SQL. You can use non-SQL Server-generated certificates as well. You will also need a process to manage and replace any certificates that expire.
+
+> [!IMPORTANT]
+> If you plan to use the SQL Server Management Studio wizard to create the AG, you still need to create and restore the certificates by using Transact-SQL on Linux.
+
+For full syntax on the options available for the various commands (such as additional security), consult:
+
+-   [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
+-   [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)
+-   [CREATE ENDPOINT](../t-sql/statements/create-endpoint-transact-sql.md)
+
+> [!NOTE]
+> Although you will be creating an availability group, the type of endpoint uses *FOR DATABASE_MIRRORING*, because some underlying aspects were once shared with that now-deprecated feature.
+
+This example will create certificates for a three-node configuration. The instance names are LinAGN1, LinAGN2, and LinAGN3.
+
+1.  Execute the following on LinAGN1 to create the master key, certificate, and endpoint, as well as back up the certificate. For this example, the typical TCP port of 5022 is used for the endpoint.
+    
+    ```SQL
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
+    
+    GO
+    
+    CREATE CERTIFICATE LinAGN1_Cert
+    WITH SUBJECT = 'LinAGN1 AG Certificate';
+    
+    GO
+    
+    BACKUP CERTIFICATE LinAGN1_Cert
+    TO FILE = '/var/opt/mssql/data/LinAGN1_Cert.cer';
+    
+    GO
+    
+    CREATE ENDPOINT AGEP
+    STATE = STARTED
+    AS TCP (
+        LISTENER_PORT = 5022,
+        LISTENER_IP = ALL)
+    FOR DATABASE_MIRRORING (
+        AUTHENTICATION = CERTIFICATE LinAGN1_Cert,
+        ROLE = ALL);
+    
+    GO
+    ```
+    
+2.  Do the same on LinAGN2:
+    
+    ```SQL
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
+    
+    GO
+    
+    CREATE CERTIFICATE LinAGN2_Cert
+    WITH SUBJECT = 'LinAGN2 AG Certificate';
+    
+    GO
+    
+    BACKUP CERTIFICATE LinAGN2_Cert
+    TO FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
+    
+    GO
+    
+    CREATE ENDPOINT AGEP
+    STATE = STARTED
+    AS TCP (
+        LISTENER_PORT = 5022,
+        LISTENER_IP = ALL)
+    FOR DATABASE_MIRRORING (
+        AUTHENTICATION = CERTIFICATE LinAGN2_Cert,
+        ROLE = ALL);
+    
+    GO
+    ```
+    
+3.  Finally, perform the same sequence on LinAGN3:
+    
+    ```SQL
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
+    
+    GO
+    
+    CREATE CERTIFICATE LinAGN3_Cert
+    WITH SUBJECT = 'LinAGN3 AG Certificate';
+    
+    GO
+    
+    BACKUP CERTIFICATE LinAGN3_Cert
+    TO FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
+    
+    GO
+    
+    CREATE ENDPOINT AGEP
+    STATE = STARTED
+    AS TCP (
+        LISTENER_PORT = 5022,
+        LISTENER_IP = ALL)
+    FOR DATABASE_MIRRORING (
+        AUTHENTICATION = CERTIFICATE LinAGN3_Cert,
+        ROLE = ALL);
+    
+    GO
+    ```
+    
+4.  Using `scp` or another utility, copy the backups of the certificate to each node that will be part of the AG.
+    
+    For this example:
+    
+    - Copy LinAGN1_Cert.cer to LinAGN2 and LinAGN3
+    - Copy LinAGN2_Cert.cer to LinAGN1 and LinAGN3.
+    - Copy LinAGN3_Cert.cer to LinAGN1 and LinAGN2.
+    
+5.  Change ownership and the group associated with the copied certificate files to `mssql`.
+    
+    ```bash
+    sudo chown mssql:mssql <CertFileName>
+    ```
+    
+6.  Create the instance-level logins and users associated with LinAGN2 and LinAGN3 on LinAGN1.
+    
+    ```SQL
+    CREATE LOGIN LinAGN2_Login WITH PASSWORD = '<StrongPassword>';
+    CREATE USER LinAGN2_User FOR LOGIN LinAGN2_Login;
+    
+    GO
+    
+    CREATE LOGIN LinAGN3_Login WITH PASSWORD = '<StrongPassword>';
+    CREATE USER LinAGN3_User FOR LOGIN LinAGN3_Login;
+    
+    GO
+    ```
+    
+7.  Restore LinAGN2_Cert and LinAGN3_Cert on LinAGN1. Having the other replicas’ certificates is an important aspect of AG communication and security.
+    
+    ```SQL
+    CREATE CERTIFICATE LinAGN2_Cert
+    AUTHORIZATION LinAGN2_User
+    FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
+    
+    GO
+    
+    CREATE CERTIFICATE LinAGN3_Cert
+    AUTHORIZATION LinAGN3_User
+    FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
+    
+    GO
+    
+8.  Grant the logins associated with LinAG2 and LinAGN3 permission to connect to the endpoint on LinAGN1.
+    
+    ```SQL
+    GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN2_Login;
+    
+    GO
+    
+    GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN3_Login;
+    
+    GO
+    ```
+    
+9.  Create the instance-level logins and users associated with LinAGN1 and LinAGN3 on LinAGN2.
+    
+    ```SQL
+    CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
+    CREATE USER LinAGN1_User FOR LOGIN LinAGN1_Login;
+    
+    GO
+    
+    CREATE LOGIN LinAGN3_Login WITH PASSWORD = '<StrongPassword>';
+    CREATE USER LinAGN3_User FOR LOGIN LinAGN3_Login;
+    
+    GO
+    ```
+    
+10.  Restore LinAGN1_Cert and LinAGN3_Cert on LinAGN2. 
+    
+    ```SQL
+    CREATE CERTIFICATE LinAGN1_Cert
+    AUTHORIZATION LinAGN1_User
+    FROM FILE = '/var/opt/mssql/data/LinAGN1_Cert.cer';
+    
+    GO
+    
+    CREATE CERTIFICATE LinAGN3_Cert
+    AUTHORIZATION LinAGN3_User
+    FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
+    
+    GO
+    
+11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+    
+    ```SQL
+    GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
+    
+    GO
+    
+    GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN3_Login;
+    
+    GO
+    ```
+    
+12.  Create the instance-level logins and users associated with LinAGN1 and LinAGN2 on LinAGN3.
+    
+    ```SQL
+    CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
+    CREATE USER LinAGN1_User FOR LOGIN LinAGN1_Login;
+    
+    GO
+    
+    CREATE LOGIN LinAGN2_Login WITH PASSWORD = '<StrongPassword>';
+    CREATE USER LinAGN2_User FOR LOGIN LinAGN2_Login;
+    
+    GO
+    ```
+    
+13.  Restore LinAGN1_Cert and LinAGN2_Cert on LinAGN3. 
+    
+    ```SQL
+    CREATE CERTIFICATE LinAGN1_Cert
+    AUTHORIZATION LinAGN1_User
+    FROM FILE = '/var/opt/mssql/data/LinAGN1_Cert.cer';
+    
+    GO
+    
+    CREATE CERTIFICATE LinAGN2_Cert
+    AUTHORIZATION LinAGN2_User
+    FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
+    
+    GO
+    
+14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+    
+    ```SQL
+    GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
+    
+    GO
+    
+    GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN2_Login;
+    
+    GO
+    ```
+
+## Create the availability group
+
+This section covers how to use SQL Server Management Studio (SSMS) or Transact-SQL to create the availability group for SQL Server.
+
+### Use SQL Server Management Studio
 
 This section shows how to create an AG with a cluster type of External using SSMS with the New Availability Group Wizard.
 
@@ -81,7 +366,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 16. When the AG creation is complete, click **Close** on the Results. You can now see the AG on the replicas in the dynamic management views as well as under the Always On High Availability folder in SSMS.
 
-## Use Transact-SQL
+### Use Transact-SQL
 
 This section shows examples of creating an AG using Transact-SQL. The listener and read-only routing can be configured after the AG is created. The AG itself can be modified with `ALTER AVAILABILITY GROUP`, but changing the cluster type cannot be done in SQL Server 2017. If you did not mean to create an AG with a cluster type of External, you must delete it and recreate it with a cluster type of None. More information and other options can be found at the following links:
 
@@ -90,7 +375,7 @@ This section shows examples of creating an AG using Transact-SQL. The listener a
 -   [Configure Read-Only Routing for an Availability Group (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Create or Configure an Availability Group Listener (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-### Example One – Two replicas with a configuration-only replica (External cluster type)
+#### Example One – Two replicas with a configuration-only replica (External cluster type)
 
 This example shows how to create a two-replica AG that uses a configuration-only replica.
 
@@ -136,7 +421,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     GO
     ```
 
-### Example Two – Three replicas with read-only routing (External cluster type)
+#### Example Two – Three replicas with read-only routing (External cluster type)
 
 This example shows three full replicas and how read-only routing can be configured as part of the initial AG creation.
 
@@ -194,7 +479,7 @@ This example shows three full replicas and how read-only routing can be configur
     
 3.  Repeat Step 2 for the third replica.
 
-### Example Three – Two replicas with read-only routing (None cluster type)
+#### Example Three – Two replicas with read-only routing (None cluster type)
 
 This example shows the creation of a two-replica configuration using a cluster type of None. It is used for the read scale scenario where no failover is expected,. This creates the listener that is actually the primary replica, as well as the read-only routing, using the round robin functionality.
 
@@ -244,4 +529,159 @@ This example shows the creation of a two-replica configuration using a cluster t
     GO
     ```
 
+## Create the SQL Server login and permissions for Pacemaker
+
+A Pacemaker high availability cluster underlying SQL Server on Linux needs access to the SQL Server instance, as well as permissions on the availability group itself. These steps create the login and the associated permissions, along with a file that tells Pacemaker how to log into SQL Server.
+
+1.  In a query window connected to the first replica, execute the following:
+
+    ```SQL
+    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    
+    GO
+    
+    GRANT VIEW SERVER STATE TO PMLogin;
+    
+    GO
+    
+    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABLITY GROUP::<AGThatWasCreated> TO PMLogin;
+    
+    GO
+    ```
+    
+2.  On Node 1, enter the command 
+    ```bash
+    sudo emacs /var/opt/mssql/secrets/passwd
+    ```
+    
+    This will open the Emacs editor.
+    
+3.  Enter the following two lines into the editor:
+
+    ```
+    PMLogin
+    <StrongPassword>
+    ```
+    
+4.  Hold down the CTRL key and then press X, then C, to exit and save the file.
+
+5.  Execute 
+    ```bash
+    sudo chmod 400 /var/opt/mssql/secrets/passwd
+    ```
+    
+    to lock down the file.
+
+6.  Repeat Steps 1-5 on the other servers that will serve as replicas.
+
+## Create the availability group resources in the Pacemaker cluster (External only)
+
+After an availability group is created in SQL Server, the corresponding resources must be created in Pacemaker, when a cluster type of External is specified. There are two resources associated with an AG: the AG itself and an IP address. Configuring the IP address resource is optional if you are not using the listener functionality, but is recommended.
+
+The AG resource that is created is a special kind of resource called a clone. The AG resource essentially has copies on each node, and there is one controlling resource called the master. The master is associated with the server hosting the primary replica. The secondary replicas (regular or configuration-only) are considered to be slaves and can be promoted to master in a failover.
+
+### Prerequisite
+- A Pacemaker high availability cluster must be deployed, as documented in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
+
+### Create the resources
+1.  Create the AG resource with the following syntax:
+
+    **Red Hat Enterprise Linux (RHEL) and Ubuntu**
+    
+    ```bash
+    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
+    ```
+    
+    **SUSE Linux Enterprise Server (SLES)**
+    
+    ```bash
+    primitive <NameForAGResource> \
+    ocf:mssql:ag \
+    params ag_name="<AGName>" \
+    op start timeout=60s \
+    op stop timeout=60s \
+    op promote timeout=60s \
+    op demote timeout=10s \
+    op monitor timeout=60s interval=10s \
+    op monitor timeout=60s interval=11s role="Master" \
+    op monitor timeout=60s interval=12s role="Slave" \
+    op notify timeout=60s
+    ms ms-ag_cluster <NameForAGResource> \
+    meta master-max="1" master-node-max="1" clone-max="3" \
+    clone-node-max="1" notify="true" \
+    commit
+    ```
+    
+    where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
+ 
+2.  Create the IP address resource for the AG that will be associated with the listener functionality.
+
+    **RHEL and Ubuntu**
+    
+    ```bash
+    sudo pcs resource create <NameForIPResource> ocf:heartbeat:IPaddr2 ip=<IPAddress> cidr_netmask=<Netmask>
+    ```
+    
+    **SLES**
+    
+    ```bash
+    crm configure \
+    primitive <NameForIPResource> \
+       ocf:heartbeat:IPaddr2 \
+       params ip=<IPAddress> \
+          cidr_netmask=<Netmask>
+    ```
+    
+    where *NameForIPResource* is the unique name for the IP resource, and *IPAddress* is the static IP address assigned to the resource. On SLES, you also need to provide the netmask. For example, 255.255.255.0 would have a value of 24 for *Netmask.*
+    
+3.  To ensure that the IP address and the AG resource are running on the same node, a colocation constraint must be configured.
+
+    **RHEL and Ubuntu**
+    
+    ```bash
+    sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
+    ```
+    
+    **SLES**
+    
+    ```bash
+    crm configure <NameForConstraint> inf: \
+    <NameForIPResource> <NameForAGResource>:Master 
+    commit
+    ```
+    
+    where *NameForIPResource* is the name for the IP resource, *NameForAGResource* is the name for the AG resource, and on SLES, *NameForConstraint* is the name for the constraint.
+
+4.  Create an ordering constraint to ensure that the AG resource is up and running before the IP address. While the colocation constraint implies an ordering constraint, this enforces it.
+
+    **RHEL and Ubuntu**
+    
+    ```bash
+    sudo pcs constraint order promote <NameForAGResource>-master then start <NameForIPResource>
+    ```
+    
+    **SLES**
+    
+    ```bash
+    crm configure \
+    order <NameForConstraint> inf: <NameForAGResource>:promote <NameForIPResource>:start
+    commit
+    ```
+    
+    where *NameForIPResource* is the name for the IP resource, *NameForAGResource* is the name for the AG resource, and on SLES, *NameForConstraint* is the name for the constraint.
+
+## Next steps
+
+In this tutorial, you learned how to create and configure an availability group for SQL Server on Linux. You learned how to:
+> [!div class="checklist"]
+> * Enable availability groups.
+> * Create AG endpoints and certificates.
+> * Use SQL Server Management Studio (SSMS) or Transact-SQL to create an AG.
+> * Create the SQL Server login and permissions for Pacemaker.
+> * Create AG resources in a Pacemaker cluster.
+
+For most AG administration tasks, including upgrades and failing over, see:
+
+> [!div class="nextstepaction"]
+> [Operate HA availability group for SQL Server on Linux](sql-server-linux-availability-group-failover-ha.md).
 

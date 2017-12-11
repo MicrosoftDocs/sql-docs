@@ -26,7 +26,7 @@ Under Linux, you must use `mssql-conf` to enable the availability groups (AG) fe
 > The AG feature must be enabled for configuration-only replicas, even on SQL Server Express Edition.
 
 ## Prerequisite
-The `mssql-server-ha` package must already be installed. See [Install the HA and SQL Server Agent packages](sql-server-linux-deploy-pacemaker-cluster.md#install-the-ha-and-sql-server-agent-packages).
+The `mssql-server-ha` package must already be installed. See [Install the HA and SQL Server Agent packages](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
 
 ## Enable the availability groups feature
 There are two ways to enable the availability groups feature: use the `mssql-conf` utility, or edit the `mssql.conf` file manually.

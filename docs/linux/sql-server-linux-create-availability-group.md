@@ -533,6 +533,11 @@ This example shows the creation of a two-replica configuration using a cluster t
 
 A Pacemaker high availability cluster underlying SQL Server on Linux needs access to the SQL Server instance, as well as permissions on the availability group itself. These steps create the login and the associated permissions, along with a file that tells Pacemaker how to log into SQL Server.
 
+**Prerequisite:**
+
+- Deploy the Pacemaker high availability cluster as described in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
+
+
 1.  In a query window connected to the first replica, execute the following:
 
     ```SQL
@@ -580,10 +585,6 @@ After an availability group is created in SQL Server, the corresponding resource
 
 The AG resource that is created is a special kind of resource called a clone. The AG resource essentially has copies on each node, and there is one controlling resource called the master. The master is associated with the server hosting the primary replica. The secondary replicas (regular or configuration-only) are considered to be slaves and can be promoted to master in a failover.
 
-### Prerequisite
-- A Pacemaker high availability cluster must be deployed, as documented in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
-
-### Create the resources
 1.  Create the AG resource with the following syntax:
 
     **Red Hat Enterprise Linux (RHEL) and Ubuntu**

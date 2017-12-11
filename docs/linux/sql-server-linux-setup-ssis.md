@@ -112,7 +112,7 @@ sudo yum update mssql-server-is
 ### Remove SSIS
 To remove `mssql-server-is`, you can run following command:
 ```bash
-sudo yum remove msssql-server-is
+sudo yum remove mssql-server-is
 ```
 
 ## Next steps

@@ -77,7 +77,7 @@ sudo pcs resource update <AGResourceName>-master required_synchronized_secondari
 **SUSE Linux Enterprise Server (SLES)**
 
 ```bash
-sudo crm resource param <AGResourceName> set required_synchronized_secondaries_to_commit 0
+sudo crm resource param ms-<AGResourceName> set required_synchronized_secondaries_to_commit <value>
 ```
 
 where *AGResourceName* is the name of the resource configured for the AG, and *Value* is 0, 1, or 2. To set it back to the default of Pacemaker managing the parameter, execute the same statement with no value.

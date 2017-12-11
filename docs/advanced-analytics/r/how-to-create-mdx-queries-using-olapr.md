@@ -21,16 +21,16 @@ ms.workload: "Inactive"
 ---
 # How to create MDX queries using olapR
 
-The [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) package supports queries against multidimensional models hosted in SQL Server Analysis Services. You can build a query against an existing cube using MDX, explore dimensions and other cube objects, and paste in existing MDX queries to retrieve data.
+The [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) package supports MDX queries against cubes hosted in SQL Server Analysis Services. You can build a query against an existing cube, explore dimensions and other cube objects, and paste in existing MDX queries to retrieve data.
 
-This article describes the two main uses of the olapR package:
+This article describes the two main uses of the **olapR** package:
 
-+ [Build a query from R, using the constructors provided in the olapR package](#buildMDX)
++ [Build an MDX query from R, using the constructors provided in the olapR package](#buildMDX)
 + [Execute an existing, valid MDX query using olapR and an OLAP provider](#executeMDX)
 
 The following operations are not supported:
 
-+ Queries against a tabular model
++ DAX queries against a tabular model
 + Creation of new OLAP objects
 + Writeback to partitions, including measures or sums
 
@@ -44,7 +44,7 @@ The following operations are not supported:
 
 4. Use the following helper functions to provide more details about the dimensions and measures to include in the MDX query:
 
-     + `cube()` Specify the name of the SSAS database.
+     + `cube()` Specify the name of the SSAS database. If connecting to a named instance, provide the machine name and instance name. 
      + `columns()` Provide the names of the measures to use in the **ON COLUMNS** argument.
      + `rows()` Provide the names of the measures to use in the **ON ROWS** argument.
      + `slicers()` Specify a field or members to use as a slicer. A slicer is like a filter that is applied to all MDX query data.
@@ -55,7 +55,7 @@ The following operations are not supported:
          
          If your query is relatively simple, you can use the functions `columns`, `rows`, etc. to build your query. However, you can also use the `axis()` function with a non-zero index value to build an MDX query with many qualifiers, or to add extra dimensions as qualifiers.
 
-5. Pass the handle and completed MDX query into the functions `executeMD` or `execute2D`, depending on the shape of the results.
+5. Pass the handle, and the completed MDX query, into one of the following functions, depending on the shape of the results: 
 
   + `executeMD` Returns a multi-dimensional array
   + `execute2D` Returns a two-dimensional (tabular) data frame
@@ -77,7 +77,7 @@ The following operations are not supported:
 
 The following examples are based on the AdventureWorks data mart and cube project, because that project is widely available, in multiple versions, including backup files that can easily be restored to Analysis Services. If you don't have an existing cube, get a sample cube using either of these options:
 
-+ Create the cube that is used in these examples by following the Analysinotes Services tutorial up to Lesson 4:
++ Create the cube that is used in these examples by following the Analysis Services tutorial up to Lesson 4:
 [Creating an OLAP cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, this site provides a fully processed cube in zipped format: [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334). Extract the file, and then restore it to your SSAS instance. For more information, see [Backup and restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), or [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
@@ -95,7 +95,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + On columns, you can specify multiple measures as elements of a comma-separated string.
 + The Row axis uses all possible values (all MEMBERS) of the "Product Line" dimension. 
-+ This query would return a table with three columns, containing a _roll up_ summary of Internet sales from all countries.
++ This query would return a table with three columns, containing a _rollup_ summary of Internet sales from all countries.
 + The WHERE clause specifies the _slicer axis_. In this example, the slicer uses a member of the **SalesTerritory** dimension to filter the query so that only the sales from Australia are used in calculations.
 
 #### To build this query using the functions provided in olapR
@@ -112,6 +112,12 @@ slicers(qry) <- c("[Sales Territory].[Sales Territory Country].[Australia]")
 
 result1 <- executeMD(ocs, qry)
 
+```
+
+For a named instance, be sure to escape any characters that could be considered control characters in R.  For example, the following connection string references an instance OLAP01, on a server named ContosoHQ:
+
+```R
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
 ```
 
 #### To run this query as a predefined MDX string
@@ -153,7 +159,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
 
-| Results  |  
+| Results  |
 | ----|
 | _Analysis Services Tutorial_|
 |_Internet Sales_|
@@ -171,7 +177,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
 
-| Results  |  
+| Results  |
 | ----|
 | _Customer_|
 |_Date_|
@@ -180,7 +186,7 @@ explore(ocs, "Sales")
 
 #### To return all members of the specified dimension and hierarchy
 
-After defining the source and creating the handle, specify the cube, dimension, and hierarchy to return.
+After defining the source and creating the handle, specify the cube, dimension, and hierarchy to return. In the return results, items that are prefixed with **->** represent children of the previous member.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -188,7 +194,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 
-| Results  |  
+| Results  |
 | ----|
 | _Accessories_|
 |_Bikes_|
@@ -198,8 +204,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> Assembly Components|
 
 
-Items in the return results that are prefixed with **->** represent children of the previous member.
-
-## See Also
+## See also
 
 [Using data from OLAP cubes in R](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)

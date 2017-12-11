@@ -148,7 +148,7 @@ For essential information about the following formulas, see the notes that follo
   
  `F = 8*10*8=640`  
   
- The next calculation obtains the optimal value for **max server memory**—*M*. *T*he total physical memory available on this system in MB—*T*—is `8192`.  
+ The next calculation obtains the optimal value for **max server memory**—*M*. The total physical memory available on this system in MB—*T*—is `8192`.  
   
  `M = 8192-640-500=7052`  
   

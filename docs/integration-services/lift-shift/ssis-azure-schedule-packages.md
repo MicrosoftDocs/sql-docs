@@ -223,7 +223,7 @@ END
 GO
 ```
 
-The Azure Data Factory version 1 JSON editor does not support the `\n` new line control character to separate lines in a multiline string. As a result, you typically have to include the entire script shown above on a single line, as shown in the following example:
+To provide the SQL script shown above as the value of the `stmt` parameter, you typically have to include the entire script on a single line, as shown in the following example. (The [JSON standard](https://json.org/) does not support control characters, including the `\n` new line control character used in other languages to separate lines in a multiline string.)
 
 ```json
 {

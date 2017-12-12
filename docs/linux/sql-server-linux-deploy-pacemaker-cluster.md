@@ -1,10 +1,10 @@
 ---
 title: Deploy a Pacemaker cluster for SQL Server on Linux | Microsoft Docs
-description: How to deploy a Pacemaker cluster for SQL Server on Linux. 
+description: This tutorial shows how to deploy a Pacemaker cluster for SQL Server on Linux. 
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 11/27/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -20,9 +20,18 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux can be done before or after installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
+This tutorial documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux can be done before or after installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
 > [!IMPORTANT]
 > An AG with a cluster type of None does *not* require a Pacemaker cluster, nor can it be managed by Pacemaker. 
+
+> [!div class="checklist"]
+> * Install the high availability add-on and install Pacemaker.
+> * Prepare the nodes for Pacemaker (RHEL and Ubuntu only).
+> * Create the Pacemaker cluster.
+> * Install the SQL Server HA and SQL Server Agent packages.
+
+## Prerequisite
+[Install SQL Server 2017](sql-server-linux-setup.md)
 
 ## Install the high availability add-on
 Use the syntax below to install the packages that make up the high availability (HA) add-on for each distribution of Linux. 
@@ -212,4 +221,18 @@ sudo systemctl restart mssql-server
 sudo zypper install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
+
+## Next steps
+
+In this tutorial, you learned how to deploy a Pacemaker cluster for SQL Server on Linux. You learned how to:
+> [!div class="checklist"]
+> * Install the high availability add-on and install Pacemaker.
+> * Prepare the nodes for Pacemaker (RHEL and Ubuntu only).
+> * Create the Pacemaker cluster.
+> * Install the SQL Server HA and SQL Server Agent packages.
+
+To create and configure an availability group for SQL Server on Linux, see:
+
+> [!div class="nextstepaction"]
+> [Create and configure an availability group for SQL Server on Linux](sql-server-linux-create-availability-group.md).
 

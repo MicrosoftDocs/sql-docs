@@ -24,6 +24,8 @@
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+## [7_Deploy a Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
+## [8_Create and configure availability groups](sql-server-linux-create-availability-group.md)
 
 # Concepts
 ## Install
@@ -51,6 +53,7 @@
 ### [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
 ### [Use log shipping](sql-server-linux-use-log-shipping.md)
 ### [Use DB Mail and email alerts](sql-server-linux-db-mail-sql-agent.md)
+### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
 
 ## [Migrate](sql-server-linux-migrate-overview.md)
 ### [Export and import a BACPAC from Windows](sql-server-linux-migrate-ssms.md)
@@ -89,16 +92,6 @@
 ## Performance
 ### [Best practices](sql-server-linux-performance-best-practices.md)
 ### [Get started with performance features](sql-server-linux-performance-get-started.md)
-
-# How-to guides
-## Configure availability
-### [Deploy a Pacemaker cluster](sql-server-linux-deploy-pacemaker-cluster.md)
-### [Enable availability groups](sql-server-linux-enable-availability-groups.md)
-### [Create endpoints and certificates](sql-server-linux-create-ag-endpoints.md)
-### [Create availability groups](sql-server-linux-create-availability-group.md)
-### [Configure Pacemaker logins and permissions](sql-server-linux-create-logins-permissions.md)
-### [Create availability group resources](sql-server-linux-create-ag-resources.md)
-### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
 
 # Samples
 ## Unattended install

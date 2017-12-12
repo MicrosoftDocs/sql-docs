@@ -20,7 +20,7 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This tutorial covers how to create and configure an availability group (AG) for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Unlike SQL Server 2016 and earlier on Windows, you can enable AGs with or without creating the underlying Pacemaker cluster first. Integration with the cluster, if needed, is not done until later.
+This tutorial covers how to create and configure an availability group (AG) for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Unlike [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] and earlier on Windows, you can enable AGs with or without creating the underlying Pacemaker cluster first. Integration with the cluster, if needed, is not done until later.
 
 > [!div class="checklist"]
 > * Enable availability groups.
@@ -373,8 +373,8 @@ This section shows examples of creating an AG using Transact-SQL. The listener a
 
 -   [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)
 -   [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)
--   [Configure Read-Only Routing for an Availability Group ([!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)])](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
--   [Create or Configure an Availability Group Listener ([!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)])](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
+-   [Configure Read-Only Routing for an Availability Group (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
+-   [Create or Configure an Availability Group Listener (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
 #### Example One – Two replicas with a configuration-only replica (External cluster type)
 

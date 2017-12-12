@@ -31,7 +31,7 @@ This tutorial documents the tasks required to deploy a Linux Pacemaker cluster f
 > * Install the SQL Server HA and SQL Server Agent packages.
 
 ## Prerequisite
-[Install SQL Server 2017](sql-server-linux-setup.md)
+[Install SQL Server 2017](sql-server-linux-setup.md).
 
 ## Install the high availability add-on
 Use the syntax below to install the packages that make up the high availability (HA) add-on for each distribution of Linux. 

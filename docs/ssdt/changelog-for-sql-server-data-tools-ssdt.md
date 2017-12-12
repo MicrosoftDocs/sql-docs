@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/08/2017"
+ms.date: "12/12/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -25,25 +25,26 @@ This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-t
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
-## SSDT for Visual Studio 2017 (15.5.0 preview)
+## SSDT for Visual Studio 2017 (15.5.0)
 Build number: 14.0.16145.0
   
 ### What's New?
 
+SSDT for Visual Studio 2017 (15.5.0) moves from preview to general availability (GA).
+
 **Installer**
-1. Setup UI is localized
-1. Replace the icon with a higher quality version
+1. Setup UI is localized.
+1. Replace the icon with a higher quality version.
 
 **Integration Services (IS)**
-1. Allow user to validate packages before deploying them to Azure-SSIS Integration Runtime.
-1. SSIS extension is localized
+1. Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR.
+1. SSIS extension is localized.
 
 ### Bug fixes
 
 **Integration Services (IS)**
-1. Fixed an issue where some of the Analysis Services Processing Task log is missing.
 1. Fixed an issue where the layout of OLEDB and ADO.NET connection manager is corrupt.
-1. Fixed an issue where an assembly not found error is raised when attempting to edit a Dimension Processing Task.
+2. Fixed an issue where an assembly not found error is raised when attempting to edit a Dimension Processing Task.
 
 ### Known issues
 
@@ -64,7 +65,7 @@ Build number: 12345
   - Run background analysis - when enabled the Query Editor for modern data sources will run queries against the data source as the queries are loaded in order to analyze the query's output schema.
 
 **Integration Services (IS)**
-- Added package validation function in Deployment Wizard, which helps the user figure out components inside SSIS packages that are not supported in Azure-SSIS IR.
+- Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR.
 
 
 ### Bug fixes

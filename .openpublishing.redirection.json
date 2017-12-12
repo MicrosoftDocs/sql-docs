@@ -3109,7 +3109,66 @@
             "source_path": "docs/analytics-platform-system/configure-wsus.md",
             "redirect_url": "/sql/analytics-platform-system/configure-windows-server-update-services-wsus",
             "redirect_document_id": false
-        }
-
+        },
+        {
+            "source_path": "docs/integration-services/service/browse-all-principals-dialog-box.md",
+            "redirect_url": "/sql/integration-services/catalog/browse-all-principals-dialog-box",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/configure-dialog-box.md",
+            "redirect_url": "/sql/integration-services/catalog/configure-dialog-box",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/folder-properties-dialog-box.md",
+            "redirect_url": "/sql/integration-services/catalog/folder-properties-dialog-box",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/integration-services-ssis-catalog-transact-sql-reference.md",
+            "redirect_url": "/sql/integration-services/catalog/integration-services-ssis-catalog-transact-sql-reference",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/integration-services-ssis-server-and-catalog.md",
+            "redirect_url": "/sql/integration-services/catalog/integration-services-ssis-server-and-catalog",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/package-properties-dialog-box.md",
+            "redirect_url": "/sql/integration-services/catalog/package-properties-dialog-box",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/project-properties-dialog-box.md",
+            "redirect_url": "/sql/integration-services/catalog/project-properties-dialog-box",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/project-versions-dialog-box.md",
+            "redirect_url": "/sql/integration-services/catalog/project-versions-dialog-box",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/set-parameter-value-dialog-box.md",
+            "redirect_url": "/sql/integration-services/catalog/set-parameter-value-dialog-box",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/ssis-catalog.md",
+            "redirect_url": "/sql/integration-services/catalog/ssis-catalog",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/validate-dialog-box.md",
+            "redirect_url": "/sql/integration-services/catalog/validate-dialog-box",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/integration-services/service/view-the-list-of-packages-on-the-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/catalog/view-the-list-of-packages-on-the-integration-services-server",
+            "redirect_document_id": false
+          }
     ]
 }

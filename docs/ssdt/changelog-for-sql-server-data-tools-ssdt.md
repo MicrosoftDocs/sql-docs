@@ -37,7 +37,7 @@ SSDT for Visual Studio 2017 (15.5.0) moves from preview to general availability 
 1. Replace the icon with a higher quality version.
 
 **Integration Services (IS)**
-1. Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR.
+1. Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
 1. SSIS extension is localized.
 
 ### Bug fixes
@@ -65,7 +65,7 @@ Build number: 12345
   - Run background analysis - when enabled the Query Editor for modern data sources will run queries against the data source as the queries are loaded in order to analyze the query's output schema.
 
 **Integration Services (IS)**
-- Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR.
+- Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
 
 
 ### Bug fixes

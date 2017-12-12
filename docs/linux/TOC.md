@@ -53,6 +53,7 @@
 ### [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
 ### [Use log shipping](sql-server-linux-use-log-shipping.md)
 ### [Use DB Mail and email alerts](sql-server-linux-db-mail-sql-agent.md)
+### [Configure multiple subnets](sql-server-linux-configure-multiple-subnet.md)
 
 ## [Migrate](sql-server-linux-migrate-overview.md)
 ### [Export and import a BACPAC from Windows](sql-server-linux-migrate-ssms.md)
@@ -91,9 +92,6 @@
 ## Performance
 ### [Best practices](sql-server-linux-performance-best-practices.md)
 ### [Get started with performance features](sql-server-linux-performance-get-started.md)
-
-# How-to guides
-## [Configure multiple-subnet availability](sql-server-linux-configure-multiple-subnet.md)
 
 # Samples
 ## Unattended install

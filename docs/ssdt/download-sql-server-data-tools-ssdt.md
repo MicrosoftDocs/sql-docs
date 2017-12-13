@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/12/2017"
+ms.date: "12/13/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -29,7 +29,7 @@ SSDT for Visual Studio 2017 (15.5.0) moves out of preview and is the first gener
 
 | SSDT for Visual Studio 2017 | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.5.0) ](https://go.microsoft.com/fwlink/?LinkId=863927) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=858660)|
+|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.5.0) ](https://go.microsoft.com/fwlink/?LinkId=863927) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)|
 |||
 
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ SSDT for Visual Studio 2017 (15.5.0) moves out of preview and is the first gener
 > Non-English versions of SSDT for Visual Studio 2017 15.5.0 do not support upgrading from the English 15.4.0 Preview, you must uninstall the English 15.4.0 Preview before installing 15.5.0 in other languages. 
 
 
-SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4: [Download Data-Tier Application Framework (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56048)
+SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4: [Download Data-Tier Application Framework (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56356)
 
 
 
@@ -46,7 +46,7 @@ SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4
 **Version Information**  
   
 The release number: 15.5.0  
-The build number for this release: 14.0.16145.0
+The build number for this release: 14.0.16146.0
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -73,7 +73,7 @@ This release of **SSDT for VS 2017** can be installed in the following languages
   
 The release number: 17.4
 
-The build number for this release: 12345
+The build number for this release: 14.0.61712.050
   
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -81,17 +81,17 @@ For a complete list of changes, see the [changelog](changelog-for-sql-server-dat
   
 This release of **SSDT for VS 2015** can be installed in the following languages:  
 
-[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | 
-[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | 
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | 
-[French]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x407) | 
-[Italian]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x410) | 
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x411) | 
-[Korean]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x412) | 
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x416) | 
-[Russian]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x419) | 
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40a)  
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
+[French]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
+[Italian]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x410) | 
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x411) | 
+[Korean]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x412) | 
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x416) | 
+[Russian]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x419) | 
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40a)  
 
 ### ISO Images - SSDT for VS 2015
 

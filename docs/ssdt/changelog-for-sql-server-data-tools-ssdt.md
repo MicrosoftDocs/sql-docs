@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/12/2017"
+ms.date: "12/13/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -26,7 +26,7 @@ This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-t
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## SSDT for Visual Studio 2017 (15.5.0)
-Build number: 14.0.16145.0
+Build number: 14.0.16146.0
   
 ### What's New?
 
@@ -54,7 +54,7 @@ SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is 
 
 
 ## SSDT 17.4 for Visual Studio 2015
-Build number: 12345
+Build number: 14.0.61712.050
 
 ### What's New?
 

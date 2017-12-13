@@ -31,7 +31,7 @@ ms.workload: "On Demand"
   
  Before you can deploy the projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you need to create the **SSISDB** catalog.  
   
- For an overview of the SSISDB catalog functionality, see [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ For an overview of the SSISDB catalog functionality, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ## High Availability  
  Like other user databases, the **SSISDB** database does support database mirroring and replication. For more information about mirroring and replication, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
@@ -51,7 +51,7 @@ ms.workload: "On Demand"
   
 ## Related Tasks  
   
--   [View the List of Packages on the Integration Services Server](../../integration-services/service/view-the-list-of-packages-on-the-integration-services-server.md)  
+-   [View the List of Packages on the Integration Services Server](../../integration-services/catalog/view-the-list-of-packages-on-the-integration-services-server.md)  
   
 -   [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

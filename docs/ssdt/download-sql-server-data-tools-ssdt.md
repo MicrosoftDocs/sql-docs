@@ -73,7 +73,7 @@ This release of **SSDT for VS 2017** can be installed in the following languages
   
 The release number: 17.4
 
-The build number for this release: 12345
+The build number for this release: 14.0.61712.050
   
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

@@ -20,24 +20,25 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This tutorial covers how to create and configure an availability group (AG) for SQL Server on Linux. Unlike SQL Server 2016 and earlier on Windows, you can enable AGs with or without creating the underlying Pacemaker cluster first. Integration with the cluster, if needed, is not done until later.
+This tutorial covers how to create and configure an availability group (AG) for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Unlike [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] and earlier on Windows, you can enable AGs with or without creating the underlying Pacemaker cluster first. Integration with the cluster, if needed, is not done until later.
 
 > [!div class="checklist"]
 > * Enable availability groups.
 > * Create availability group endpoints and certificates.
-> * Use SQL Server Management Studio (SSMS) or Transact-SQL to create an availability group.
-> * Create the SQL Server login and permissions for Pacemaker.
+> * Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) or Transact-SQL to create an availability group.
+> * Create the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] login and permissions for Pacemaker.
 > * Create availability group resources in a Pacemaker cluster (External type only).
 
 ## Prerequisite
-- The `mssql-server-ha` package must already be installed. See [Install the SQL Server HA and SQL Server Agent packages](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
+- Deploy the Pacemaker high availability cluster as described in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
+
 
 ## Enable the availability groups feature
 
-Unlike on Windows, you cannot use PowerShell or SQL Server Configuration Manager to enable the availability groups (AG) feature. Under Linux, you must use `mssql-conf` to enable the feature. There are two ways to enable the availability groups feature: use the `mssql-conf` utility, or edit the `mssql.conf` file manually.
+Unlike on Windows, you cannot use PowerShell or [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Configuration Manager to enable the availability groups (AG) feature. Under Linux, you must use `mssql-conf` to enable the feature. There are two ways to enable the availability groups feature: use the `mssql-conf` utility, or edit the `mssql.conf` file manually.
 
 > [!IMPORTANT]
-> The AG feature must be enabled for configuration-only replicas, even on SQL Server Express Edition.
+> The AG feature must be enabled for configuration-only replicas, even on [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)].
 
 ### Use the mssql-conf utility
 
@@ -57,8 +58,8 @@ You can also modify the `mssql.conf` file, located under the `/var/opt/mssql` fo
 hadr.hadrenabled = 1
 ```
 
-### Restart SQL Server
-After enabling availability groups, as on Windows, you must restart SQL Server. That can be done by the following:
+### Restart [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+After enabling availability groups, as on Windows, you must restart [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. That can be done by the following:
 
 ```bash
 sudo systemctl restart mssql-server
@@ -68,10 +69,10 @@ sudo systemctl restart mssql-server
 
 An availability group uses TCP endpoints for communication. Under Linux, endpoints for an AG are only supported if certificates are used for authentication. This means that the certificate from one instance must be restored on all other instances that will be replicas participating in the same AG. The certificate process is required even for a configuration-only replica. 
 
-Creating endpoints and restoring certificates can only be done via Transact-SQL. You can use non-SQL Server-generated certificates as well. You will also need a process to manage and replace any certificates that expire.
+Creating endpoints and restoring certificates can only be done via Transact-SQL. You can use non-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-generated certificates as well. You will also need a process to manage and replace any certificates that expire.
 
 > [!IMPORTANT]
-> If you plan to use the SQL Server Management Studio wizard to create the AG, you still need to create and restore the certificates by using Transact-SQL on Linux.
+> If you plan to use the [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] wizard to create the AG, you still need to create and restore the certificates by using Transact-SQL on Linux.
 
 For full syntax on the options available for the various commands (such as additional security), consult:
 
@@ -310,9 +311,9 @@ This example will create certificates for a three-node configuration. The instan
 
 ## Create the availability group
 
-This section covers how to use SQL Server Management Studio (SSMS) or Transact-SQL to create the availability group for SQL Server.
+This section covers how to use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) or Transact-SQL to create the availability group for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### Use SQL Server Management Studio
+### Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 This section shows how to create an AG with a cluster type of External using SSMS with the New Availability Group Wizard.
 
@@ -328,7 +329,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 5.  In the Specify Replicas dialog, click **Add Replica**.
 
-6.  In the Connect to Server dialog, enter the name of the Linux instance of SQL Server that will be the secondary replica, and the credentials to connect. Click **Connect**.
+6.  In the Connect to Server dialog, enter the name of the Linux instance of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] that will be the secondary replica, and the credentials to connect. Click **Connect**.
 
 7.  Repeat the previous two steps for the instance that will contain a configuration-only replica or another secondary replica.
 
@@ -368,7 +369,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 ### Use Transact-SQL
 
-This section shows examples of creating an AG using Transact-SQL. The listener and read-only routing can be configured after the AG is created. The AG itself can be modified with `ALTER AVAILABILITY GROUP`, but changing the cluster type cannot be done in SQL Server 2017. If you did not mean to create an AG with a cluster type of External, you must delete it and recreate it with a cluster type of None. More information and other options can be found at the following links:
+This section shows examples of creating an AG using Transact-SQL. The listener and read-only routing can be configured after the AG is created. The AG itself can be modified with `ALTER AVAILABILITY GROUP`, but changing the cluster type cannot be done in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. If you did not mean to create an AG with a cluster type of External, you must delete it and recreate it with a cluster type of None. More information and other options can be found at the following links:
 
 -   [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)
 -   [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)
@@ -512,7 +513,7 @@ This example shows the creation of a two-replica configuration using a cluster t
     - *AGName* is the name of the availability group.
     - *DBName* is the name of the database that will be used with the availability group. It can also be a list of names separated by commas.
     - *PortOfEndpoint* is the port number used by the endpoint created.
-    - *PortOfInstance* is the port number used by the instance of SQL Server.
+    - *PortOfInstance* is the port number used by the instance of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
     - *ListenerName* is a name that is different than any of the underlying replicas but will not actually be used.
     - *PrimaryReplicaIPAddress* is the IP address of the primary replica.
     - *SubnetMask* is the subnet mask of *IPAddress*. For example, 255.255.255.0.
@@ -529,14 +530,9 @@ This example shows the creation of a two-replica configuration using a cluster t
     GO
     ```
 
-## Create the SQL Server login and permissions for Pacemaker
+## Create the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] login and permissions for Pacemaker
 
-A Pacemaker high availability cluster underlying SQL Server on Linux needs access to the SQL Server instance, as well as permissions on the availability group itself. These steps create the login and the associated permissions, along with a file that tells Pacemaker how to log into SQL Server.
-
-**Prerequisite:**
-
-- Deploy the Pacemaker high availability cluster as described in [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md).
-
+A Pacemaker high availability cluster underlying [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux needs access to the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instance, as well as permissions on the availability group itself. These steps create the login and the associated permissions, along with a file that tells Pacemaker how to log into [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
 1.  In a query window connected to the first replica, execute the following:
 
@@ -581,7 +577,7 @@ A Pacemaker high availability cluster underlying SQL Server on Linux needs acces
 
 ## Create the availability group resources in the Pacemaker cluster (External only)
 
-After an availability group is created in SQL Server, the corresponding resources must be created in Pacemaker, when a cluster type of External is specified. There are two resources associated with an AG: the AG itself and an IP address. Configuring the IP address resource is optional if you are not using the listener functionality, but is recommended.
+After an availability group is created in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], the corresponding resources must be created in Pacemaker, when a cluster type of External is specified. There are two resources associated with an AG: the AG itself and an IP address. Configuring the IP address resource is optional if you are not using the listener functionality, but is recommended.
 
 The AG resource that is created is a special kind of resource called a clone. The AG resource essentially has copies on each node, and there is one controlling resource called the master. The master is associated with the server hosting the primary replica. The secondary replicas (regular or configuration-only) are considered to be slaves and can be promoted to master in a failover.
 
@@ -673,12 +669,12 @@ The AG resource that is created is a special kind of resource called a clone. Th
 
 ## Next steps
 
-In this tutorial, you learned how to create and configure an availability group for SQL Server on Linux. You learned how to:
+In this tutorial, you learned how to create and configure an availability group for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. You learned how to:
 > [!div class="checklist"]
 > * Enable availability groups.
 > * Create AG endpoints and certificates.
-> * Use SQL Server Management Studio (SSMS) or Transact-SQL to create an AG.
-> * Create the SQL Server login and permissions for Pacemaker.
+> * Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) or Transact-SQL to create an AG.
+> * Create the [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] login and permissions for Pacemaker.
 > * Create AG resources in a Pacemaker cluster.
 
 For most AG administration tasks, including upgrades and failing over, see:

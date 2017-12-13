@@ -67,7 +67,7 @@ To install the Scale Out Master feature, use the [!INCLUDE[ssNoVersion_md](../..
 
 4.  Specify the SSL certificate used to protect the communication between Scale Out Master and Scale Out Worker by doing one of the following.
     * Let the setup process create a default, self-signed SSL certificate by clicking **Create a new SSL certificate**.  The default certificate is installed under Trusted Root Certification Authorities, Local Computer. You can specify the CNs in this certificate. The host name of master endpoint should be included in CNs. By default, the machine name and ip of Master Node are included.
-    * Select an existing SSL Certicate on the local computer by clicking **Use an existing SSL certificate** and then clicking **Browse** to select a certificate. The thumbprint of the certificate appears in the text box. Clicking **Browse** displays certificates that are stored in Trusted Root Certification Authorities, Local Computer. The certificate you select must be stored here.       
+    * Select an existing SSL Certificate on the local computer by clicking **Use an existing SSL certificate** and then clicking **Browse** to select a certificate. The thumbprint of the certificate appears in the text box. Clicking **Browse** displays certificates that are stored in Trusted Root Certification Authorities, Local Computer. The certificate you select must be stored here.       
 
     ![Master Config 2](media/master-config-2.PNG "Master Config 2")
   
@@ -145,7 +145,7 @@ Follow the instructions in [Install SQL Server from the Command Prompt](../../da
 
 During the installation of Scale Out Worker, a worker certificate is automatically created and installed on the computer. Also, a corresponding client certificate, SSISScaleOutWorker.cer, is installed under `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn`. For Scale Out Master to authenticate the Scale Out Worker, you have to add this client certificate to the Root store of the local computer with Scale Out Master.
   
-To add the client certificate to the Root store, double click the .cer file and then click **Install Certificate** in the Certificate dialog box. The **Certificate Import Wizard** opens.  
+To add the client certificate to the Root store, double-click the .cer file and then click **Install Certificate** in the Certificate dialog box. The **Certificate Import Wizard** opens.  
 
 ## <a name="Firewall"></a> Open firewall port
 
@@ -166,7 +166,7 @@ If you didn't set the startup type of the services to **Automatic** during insta
 
 When you create the SSISDB catalog in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)], select **Enable this server as SSIS scale out master** in the **Create Catalog** dialog box.
 
-After the catalog is created, you can enable Scale Out Master with [Scale Out Manager](integration-services-ssis-scale-out-manager.md) .
+After the catalog is created, you can enable Scale Out Master with [Scale Out Manager](integration-services-ssis-scale-out-manager.md).
 
 ## <a name="EnableAuth"></a> Enable SQL Server Authentication mode
 If you didn't enable [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] authentication during the Database Engine installation, enable SQL Server authentication mode on the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance that hosts the SSISDB catalog. 
@@ -179,7 +179,7 @@ You can enable Scale Out Worker with [Scale Out Manager](integration-services-ss
 
 To enable a Scale Out Worker with a stored procedure, execute the `[catalog].[enable_worker_agent]` stored procedure with **WorkerAgentId** as the parameter. 
 
-Get the **WorkerAgentId** value from the `[catalog].[worker_agents]` view in SSISDB, after Scale Out Worker registers with Scale Out Master. Registration takes several minutes after the the Scale Out Master and Worker services are started.
+Get the **WorkerAgentId** value from the `[catalog].[worker_agents]` view in SSISDB, after Scale Out Worker registers with Scale Out Master. Registration takes several minutes after the Scale Out Master and Worker services are started.
 
 #### Example
 The following example enables the Scale Out Worker on `computerA`.

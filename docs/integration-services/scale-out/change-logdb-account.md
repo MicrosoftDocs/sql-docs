@@ -30,7 +30,7 @@ If you want to change the account used for Scale Out logging, do the following t
 > If you use a Windows user account for logging, it must be the same account running the Scale Out Worker service. Otherwise, the login to SQL Server fails.
 
 ## 1. Create a user of SSISDB
-For instructions about how to createa a database user, see [Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md).
+For instructions about how to create a database user, see [Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md).
 
 ## 2. Add the user to the database role ssis_cluster_worker
 

@@ -30,9 +30,9 @@ In the SQL Server installation wizard, on the **Feature Selection** page, select
     -   Scale Out Master
     -   Scale Out Worker
 
-![Feature Select Onebox 1](media/feature-select-onebox1.PNG)
+![Feature Selection first half of list](media/feature-select-onebox1.PNG)
 
-![Feature Select Onebox 2](media/feature-select-onebox2.PNG)
+![Feature Selection second half of list](media/feature-select-onebox2.PNG)
 
 On the **Server Configuration** page, click **Next** to accept the default service accounts and startup types.
 
@@ -46,7 +46,7 @@ Finish the SQL Server installation Wizard.
 
 ## 2. Install SQL Server Management Studio
 
-Download and isntall [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+Download and install [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ## 3. Enable Scale Out
 Open SSMS and connect to the local Sql Server instance.

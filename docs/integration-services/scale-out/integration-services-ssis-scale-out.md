@@ -31,7 +31,7 @@ SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 
 
 You can configure Scale Out in the following ways:
 
--   On a single computer, where a Scale Out Master and a Scale Out Worker run side-by-side on the same computer.
+-   On a single computer, where a Scale Out Master and a Scale Out Worker run side by side on the same computer.
 
 -   On multiple computers, where each Scale Out Worker is on a different computer.
 

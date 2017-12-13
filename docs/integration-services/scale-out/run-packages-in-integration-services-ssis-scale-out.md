@@ -121,7 +121,7 @@ After you set this default execution mode, you no longer have to specify the **@
 
 ![Exe mode](media\exe-mode.PNG)
 
-To switch the default execution mode back to non-Scale Out mode, set  **Server-wide Default execution mode** to **Server**.
+To switch the default execution mode back so that packages no longer run by default in Scale Out mode, set  **Server-wide Default execution mode** to **Server**.
 
 ## <a name="sql_agent"></a> Run package in SQL Server Agent job
 In a SQL Server Agent job, you can run an SSIS package as one step of the job. To run the package in Scale Out, set the default execution mode to **Scale Out**. After you set the default execution mode to **Scale Out**, packages in SQL Server Agent jobs run in Scale Out mode.

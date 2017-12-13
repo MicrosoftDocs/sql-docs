@@ -19,7 +19,7 @@ ms.date: "11/15/2017"
 ms.author: "aliceku"
 --- 
 # Transparent Data Encryption with Bring Your Own Key support for Azure SQL Database and Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Bring Your Own Key (BYOK) support for [Transparent Data Encryption (TDE)](transparent-data-encryption.md) allows you to take control of your TDE encryption keys and restrict who can access them and when. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), Azure’s cloud-based external key management system is the first key management service with which TDE has integrated support for BYOK. With BYOK, the database encryption key is protected by an asymmetric key stored in Key Vault. The asymmetric key is set at the server level and inherited by all databases under that server. 
 

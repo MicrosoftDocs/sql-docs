@@ -64,7 +64,7 @@ ms.workload: "Active"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and SQL Database
+-- Syntax for SQL Server and Azure SQL Database
   
 ALTER INDEX { index_name | ALL } ON <object>  
 {  

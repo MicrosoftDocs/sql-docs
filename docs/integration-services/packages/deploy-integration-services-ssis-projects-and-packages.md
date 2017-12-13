@@ -97,7 +97,7 @@ For more info about the error described in this section and about the permission
   
  To deploy a project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, complete the following tasks:  
   
-1.  Create an SSISDB catalog, if you haven’t already. For more information, see [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+1.  Create an SSISDB catalog, if you haven’t already. For more information, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard** . For more information, see the instructions below: [To convert a project to the project deployment model](#convert)  
   
@@ -338,7 +338,7 @@ Launch the wizard by either:
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
   
- You can query views for a list of server environments, environment references, and environment variables. You can also call stored to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ You can query views for a list of server environments, environment references, and environment variables. You can also call stored to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### To create and use a server environment  
   
@@ -358,13 +358,13 @@ Launch the wizard by either:
   
     3.  Enter the **Value** for the environment variable.  
   
-         For information about the rules for environment variable names, see the **Environment Variable** section in [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         For information about the rules for environment variable names, see the **Environment Variable** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
     4.  Indicate whether the variable contains sensitive value, by selecting or clearing the **Sensitive** checkbox.  
   
          If you select **Sensitive**, the variable value does not display in the **Value** field.  
   
-         Sensitive values are encrypted in the SSISDB catalog. For more information about the encryption, see [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Sensitive values are encrypted in the SSISDB catalog. For more information about the encryption, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 6.  On the **Permissions** page, grant or deny permissions for selected users and roles by doing the following.  
   

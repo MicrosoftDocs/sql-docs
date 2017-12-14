@@ -36,7 +36,7 @@ ms.workload: "On Demand"
   
 -   Null values cannot be used as information that is required to distinguish one row in a table from another row in a table, such as primary keys, or for information used to distribute rows, such as distribution keys.  
   
- When null values are present in data, logical and comparison operators can potentially return a third result of UNKNOWN instead of just TRUE or FALSE. This need for three-valued logic is a source of many application errors. These tables outline the effect of introducing null comparisons.  
+ When null values are present in data, logical and comparison operators can potentially return a third result of UNKNOWN instead of just TRUE or FALSE. This need for three-valued logic is a source of many application errors. Logical operators in a boolean expression that includes UNKNOWNs will return UNKNOWN unless the result of the operator does not depend on the UNKNOWN expression. These tables provide examples of this behavior.  
   
  The following table shows the results of applying an AND operator to two Boolean expressions where one expression returns UNKNOWN.  
   

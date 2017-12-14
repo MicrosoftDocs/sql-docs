@@ -38,21 +38,21 @@ ms.workload: "On Demand"
   
  When null values are present in data, logical and comparison operators can potentially return a third result of UNKNOWN instead of just TRUE or FALSE. This need for three-valued logic is a source of many application errors. These tables outline the effect of introducing null comparisons.  
   
- The following table shows the results of applying an AND operator to two Boolean operands where one operand returns NULL.  
+ The following table shows the results of applying an AND operator to two Boolean expressions where one expression returns UNKNOWN.  
   
-|Operand 1|Operand 2|Result|  
+|Expression 1|Expression 2|Result|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- The following table shows the results of applying an OR operator to two Boolean operands where one operand returns NULL.  
+ The following table shows the results of applying an OR operator to two Boolean expressions where one expression returns UNKNOWN.  
   
-|Operand 1|Operand 2|Result|  
+|Expression 1|Expression 2|Result|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
 ## See Also  
  [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)   

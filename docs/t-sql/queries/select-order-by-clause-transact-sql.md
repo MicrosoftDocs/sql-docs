@@ -1,7 +1,7 @@
 ---
 title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/11/2017"
+ms.date: "12/13/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -58,6 +58,9 @@ ms.workload: "Active"
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
 ## Syntax  
   
 ```tsql  

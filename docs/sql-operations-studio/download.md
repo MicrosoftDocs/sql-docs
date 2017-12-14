@@ -2,7 +2,7 @@
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "11/29/2017"
+ms.date: "12/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -18,9 +18,9 @@ ms.workload: "Inactive"
 
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=862648).
-2. Browse to the downloaded file and extract it.
-3. Run *\sqlops-windows\sqlops.exe*
+This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides a standard Windows installer experience. Run the following to start the installer:
+
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=862648).
 
 
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS

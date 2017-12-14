@@ -1,7 +1,7 @@
 ---
 title: "ROUND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "12/14/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -37,15 +37,8 @@ ms.workload: "Active"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
   
 ROUND ( numeric_expression , length [ ,function ] )  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-ROUND (numeric_expression , length )  
 ```  
   
 ## Arguments  
@@ -140,22 +133,6 @@ GO
 150.00  
   
 (1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Using ROUND and estimates  
- The following example shows two expressions that demonstrate by using `ROUND` the last digit is always an estimate.  
-  
-```  
-SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
- ```
---------  ---------
-123.995000    123.995444
 ```
   
 ## See Also  
@@ -163,7 +140,4 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FLOOR &#40;Transact-SQL&#41;](../../t-sql/functions/floor-transact-sql.md)   
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
-
+ [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

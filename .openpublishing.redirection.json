@@ -3111,10 +3111,15 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-databases/indexes/columnstore-indexes-architecture.md",
+            "redirect_url": "/sql/relational-databases/sql-server-index-design-guide#columnstore_index",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/integration-services/service/browse-all-principals-dialog-box.md",
             "redirect_url": "/sql/integration-services/catalog/browse-all-principals-dialog-box",
             "redirect_document_id": false
-          },
+        },
           {
             "source_path": "docs/integration-services/service/configure-dialog-box.md",
             "redirect_url": "/sql/integration-services/catalog/configure-dialog-box",

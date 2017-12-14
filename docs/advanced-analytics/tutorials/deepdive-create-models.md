@@ -1,7 +1,7 @@
 ---
-title: "Create R Models| Microsoft Docs"
+title: "Deep Dive - Create R models| Microsoft Docs"
 ms.custom: ""
-ms.date: "05/18/2017"
+ms.date: "12/14/2017"
 ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
@@ -17,32 +17,34 @@ ms.assetid: a195d5e2-72e2-4dd6-bf43-947312e4a52a
 caps.latest.revision: 14
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
-# Create R Models
+# Deep Dive - Create R models
+
+This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 Now that you have enriched the training data, it's time to analyze the data using linear regression. Linear models are an important tool in the world of predictive analytics, and the **RevoScaleR** package in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes a high-performance, scalable algorithm.
 
-## Create a Linear Regression Model
+## Create a linear regression model
 
-You'll create a simple linear model that estimates the credit card balance for the customers, using as independent variables the values in the *gender* and *creditLine* columns.
+In this step, you create a simple linear model that estimates the credit card balance for the customers, using as independent variables the values in the *gender* and *creditLine* columns.
   
-To do this, you'll use the **rxLinMod** function, which supports remote compute contexts.
+To do this, use the [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) function, which supports remote compute contexts.
   
-1. Create an R variable to store the completed model, and call the *rxLinMod* function, passing an appropriate formula.
+1. Create an R variable to store the completed model, and call **rxLinMod**, passing an appropriate formula.
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. To view a summary of the results, you can call the standard R *summary* function on the model object.
+2. To view a summary of the results, call the standard R `summary` function on the model object.
   
      ```R
      summary(linModObj)
      ```
 
-You might think it peculiar that a plain R function like **summary** would work here, since in the previous step, you set the compute context to the server. However, even when the **rxLinMod** function uses the remote compute context to create the model, it also returns an object that contains the model to your local workstation, and stores it in the shared directory.
+You might think it peculiar that a plain R function like `summary` would work here, since in the previous step, you set the compute context to the server. However, even when the **rxLinMod** function uses the remote compute context to create the model, it also returns an object that contains the model to your local workstation, and stores it in the shared directory.
 
 Therefore, you can run standard R commands against the model just as if it had been created using the "local" context.
 
@@ -82,23 +84,23 @@ Therefore, you can run standard R commands against the model just as if it had b
 
 *Condition number: 1.0184*
 
-## Create a Logistic Regression Model
+## Create a logistic regression model
 
-Now, you'll create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the *rxLogit* function, included in the **RevoScaleR** package, which  supports fitting of logistic regression models in remote compute contexts.
+Next you create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
 
 1.  Keep the compute context as is. You’ll also continue to use the same data source as well.
 
 2.  Call the **rxLogit** function and pass the formula needed to define the model.
 
     ```R
-    logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance +      numTrans + numIntlTrans + creditLine, data = sqlFraudDS,      dropFirst = TRUE)
+    logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
     ```
   
     Because it is a large model, containing 60 independent variables, including three dummy variables that are dropped, you might have to wait some time for the compute context to return the object.
     
     The reason the model is so large is that, in R and in the **RevoScaleR** package, every level of a categorical factor variable is automatically treated as a separate dummy variable.
   
-3.  To view a summary of the returned model, call the R **summary** function.
+3.  To view a summary of the returned model, call the R `summary` function.
   
     ```R
     summary(logitObj)
@@ -106,7 +108,7 @@ Now, you'll create a logistic regression model that indicates whether a particul
   
 **Partial results**
 
-*Logistic Regression Results for: fraudRisk ~ state + gender +     cardholder + balance + numTrans + numIntlTrans + creditLine*
+*Logistic Regression Results for: fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine*
 
 *Data: sqlFraudDS (RxSqlServerData Data Source)*
 
@@ -154,12 +156,10 @@ Now, you'll create a logistic regression model that indicates whether a particul
 
 *Number of iterations: 15*
 
-## Next Step
+## Next step
 
-[Score New Data](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
+[Score new data](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
 
-## Previous Step
+## Previous step
 
-[Visualize SQL Server Data using R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
-
-
+[Visualize SQL Server data using R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)

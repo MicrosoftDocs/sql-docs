@@ -1,8 +1,6 @@
 ---
-title: "Create and Run R Scripts| Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/18/2017"
+title: "Deep dive - Create and run R scripts| Microsoft Docs"
+ms.date: "12/14/2017"
 ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
@@ -18,19 +16,21 @@ ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
 caps.latest.revision: 18
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
-# Create and Run R Scripts
+# Deep dive - Create and run R scripts
 
-Now that you’ve set up your data sources and established one or several compute contexts, you’re ready to run some high-powered R scripts using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  In this lesson, you'll use the server compute context to do some common machine learning tasks:
+This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+
+Now that you’ve set up your data sources and established one or several compute contexts, you’re ready to run some high-powered R scripts using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  In this lesson, you use the server compute context to do some common machine learning tasks:
 
 - Visualize data and generate some summary statistics
 - Create a linear regression model
 - Create a logistic regression model
 - Score new data and create a histogram of the scores
 
-## Change Compute Context to the Server
+## Change compute context to the server
 
 Before you run any R code, you need to specify the *current* or *active* compute context.
 
@@ -52,22 +52,22 @@ Before you run any R code, you need to specify the *current* or *active* compute
   
 3. After you've specified a compute context, it remains active until you change it. However, any R scripts that *cannot* be run in a remote server context will be run locally.
 
-## Compute Summary Statistics
+## Compute some summary statistics
 
-To see how the compute context works, try generating some summary statistics using the *sqlFraudDS* data source.  Remember, the data source object just defines the data you'll use; it doesn't change the compute context.
+To see how the compute context works, try generating some summary statistics using the `sqlFraudDS` data source.  Remember, the data source object just defines the data you use; it doesn't change the compute context.
 
-+ To perform the summary locally, use **rxSetComputeContext** and specify the "local" keyword.
++ To perform the summary locally, use **rxSetComputeContext** and specify the _local_ keyword.
 + To create the same calculations on the SQL Server computer, switch to the SQL compute context you defined earlier.
 
-1. Call the **rxSummary** function and pass required arguments, such as the formula and the data source, and assign the results to the variable *sumOut*.
+1. Call the [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) function and pass required arguments, such as the formula and the data source, and assign the results to the variable `sumOut`.
   
     ```R
-    sumOut \<- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
+    sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    The R language provides many summary functions, but rxSummary supports execution on various remote compute contexts, including  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  For more information about similar functions, see [Data Summaries](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries) in the [ScaleR reference](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
+    The R language provides many summary functions, but **rxSummary** supports execution on various remote compute contexts, including  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about similar functions, see [Data summaries using RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
-2. When processing is done, you can print the contents of the *sumOut* variable to the console.
+2. When processing is done, you can print the contents of the `sumOut` variable to the console.
   
     ```R
     sumOut
@@ -75,7 +75,6 @@ To see how the compute context works, try generating some summary statistics usi
   
     > [!NOTE]
     > Don't try to print the results before they have returned from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, or you might get an error.
-
 
 **Results**
 
@@ -111,9 +110,9 @@ To see how the compute context works, try generating some summary statistics usi
 
   *Female 3846*
 
-## Add Maximum and Minimum Values
+## Add maximum and minimum values
 
-Based on the computed summary statistics, you've discovered some useful information about the data that you want to put into the data source for use in further computations. For example, the minimum and maximum values can be used to compute histograms, so you decide to add the high and low values to the RxSqlServerData data source.
+Based on the computed summary statistics, you've discovered some useful information about the data that you want to put into the data source for use in further computations. For example, the minimum and maximum values can be used to compute histograms. For this reasons, let's add the high and low values to the **RxSqlServerData** data source.
 
 Fortunately [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes optimized functions that can very efficiently convert integer data to categorical factor data.
 
@@ -124,9 +123,9 @@ Fortunately [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 
     var <- sumDF$Name
     ```
   
-2. Use the variable *ccColInfo* that you created earlier to define the columns in the data source.
+2. Use the variable `ccColInfo` that you created earlier to define the columns in the data source.
   
-    You'll also add to some new computed columns (*numTrans*, *numIntlTrans*, and *creditLine*) to the column collection.
+    Also, add some new computed columns (`numTrans`, `numIntlTrans`, and `creditLine`) to the column collection.
   
     ```R 
     ccColInfo <- list(
@@ -148,28 +147,28 @@ Fortunately [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 
             )
     ```
   
-3. Having updated the column collection, you can apply the following statement to create an updated version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source that you defined earlier.
+3. Having updated the column collection, apply the following statement to create an updated version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source that you defined earlier.
   
     ```R
-    sqlFraudDS \<- RxSqlServerData(
+    sqlFraudDS <- RxSqlServerData(
         connectionString = sqlConnString,
         table = sqlFraudTable,
         colInfo = ccColInfo,
         rowsPerRead = sqlRowsPerRead)
     ```
   
-    The *sqlFraudDS* data source now includes the new columns added in *ccColInfo*.
+    The `sqlFraudDS` data source now includes the new columns added using `ccColInfo`.
   
-  These modifications affect only the data source object in R; no new data has been  written to the database table yet. However, you can use the data captured in the *sumOut* variable to create visualizations and summaries. In the next step you'll learn how to do this while switching compute contexts.
+
+At this point, the modifications affect only the data source object in R; no new data has been written to the database table yet. However, you can use the data captured in the `sumOut` variable to create visualizations and summaries. In the next step youl learn how to do this while switching compute contexts.
 
 > [!TIP]
-> If you forget which compute context you're using, run `rxGetComputeContext()`.  A return value of `RxLocalSeq Compute Context` indicates that you are running in the local compute context.
+> If you forget which compute context you're using, run `rxGetComputeContext()`.  A return value of "RxLocalSeq Compute Context" indicates that you are running in the local compute context.
 
-## Next Step
+## Next step
 
-[Visualize SQL Server Data using R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+[Visualize SQL Server data using R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
 
-## Previous Step
+## Previous step
 
-[Define and Use Compute Contexts](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
+[Define and use compute contexts](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

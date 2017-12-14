@@ -1,11 +1,7 @@
 ---
-title: "SQL Server Machine Learning Tutorials | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/31/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+title: "SQL Server Machine Learning Services Tutorials | Microsoft Docs"
+ms.date: "12/14/2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +10,18 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "Python"
+  - "R"
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
 caps.latest.revision: 32
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
-# SQL Server machine learning tutorials
+# Tutorials for SQL Server Machine Learning Services
 
 This article provides a comprehensive list of the tutorials, demos, and sample applications that use machine learning features in SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, how to use remote and local compute contexts, and how to optimize your R and Python code for a SQL production environment.
 
@@ -57,7 +55,7 @@ These samples and demos provided by the SQL Server and R Server development team
 
 + [NEW! Perform customer clustering using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
-    Learn how to use the Kmeans algorithm to perform unsupervised clustering of customers. This example uses the Python language in-database. 
+    Learn how to use the Kmeans algorithm to perform unsupervised clustering of customers. This example uses the Python language in-database.
     
     Applies to: SQL Server 2017
 
@@ -72,6 +70,10 @@ These samples and demos provided by the SQL Server and R Server development team
    Build the ski rental analysis application using Python, to help plan for future demand. This example uses the new Python library, **revoscalepy**, to create a linear regression model.
    
    Applies to: SQL Server 2017
+
++ [How to use Tableau with SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/)
+
+    Analyze social media and create Tableau graphs, using SQL Server and R.
 
 ### <a name="bkmk_solutions"></a>Solution templates
 

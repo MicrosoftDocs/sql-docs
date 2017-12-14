@@ -48,7 +48,7 @@ sp_replcounters
 |**Replication rate trans/sec**|**float**|Average number of transactions per second delivered to the distribution database.|  
 |**Replication latency**|**float**|Average time, in seconds, that transactions were in the log before being distributed.|  
 |**Replbeginlsn**|**binary(10)**|Log sequence number (LSN) of the current truncation point in the log.|  
-|**Replendlsn**|**binary(10)**|LSN of the next commit record awaiting delivery to the distribution database.|  
+|**Replnextlsn**|**binary(10)**|LSN of the next commit record awaiting delivery to the distribution database.|  
   
 ## Remarks  
  **sp_replcounters** is used in transactional replication.  

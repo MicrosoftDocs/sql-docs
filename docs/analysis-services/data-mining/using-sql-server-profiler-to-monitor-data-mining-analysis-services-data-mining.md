@@ -2,12 +2,12 @@
 title: "Using SQL Server Profiler to Monitor Data Mining  | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -23,6 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Using SQL Server Profiler to Monitor Data Mining (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   If you have the necessary permissions, you can use SQL Server Profiler to monitor data mining activities that are issued as requests sent to an instance of SQL Server Analysis Services. Data mining activity can include the processing of models or structures, prediction queries or content queries, or the creation of new models or structures.  
   
  SQL Server Profiler uses a **trace** to monitor requests sent from multiple clients, including [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, Web services, or the Data Mining Add-ins for Excel, so long as the activities all use the same instance of SQL Server Analysis Services. You must create a separate trace for each instance of SQL Server Analysis Services that you want to monitor. For general information about traces, and how to use SQL Server Profiler, see [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  

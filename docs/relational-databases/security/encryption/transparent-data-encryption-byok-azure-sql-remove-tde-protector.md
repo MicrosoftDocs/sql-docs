@@ -19,7 +19,7 @@ ms.author: "rebeccaz"
 ms.workload: "Inactive"
 ---
 # Remove a Transparent Data Encryption (TDE) protector using PowerShell
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 ## Prerequisites
 - You must have an Azure subscription and be an administrator on that subscription

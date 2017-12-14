@@ -1,12 +1,12 @@
 ---
 title: "Table Properties (SSAS Tabular) | Microsoft Docs"
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.custom: ""
 ms.technology: 
   - "analysis-services"
@@ -24,6 +24,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Table Properties (SSAS Tabular)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   This topic describes tabular model table properties. The properties described here are different from those in the Edit Table Properties dialog box, which define which columns from the source are imported.  
   
  Sections in this topic:  

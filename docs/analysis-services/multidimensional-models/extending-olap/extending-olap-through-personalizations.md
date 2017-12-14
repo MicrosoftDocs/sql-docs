@@ -2,12 +2,12 @@
 title: "Extending OLAP through personalizations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Extending OLAP through personalizations
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services provides many intrinsic functions for use with the Multidimensional Expressions (MDX) and Data Mining Extensions (DMX) languages. These functions are designed to accomplish everything from standard statistical calculations to traversing members in a hierarchy. However, as with any other complex and robust product, there is always the need to extend the functionality of such a product further.  
   
  Therefore, Analysis Services provides you with the ability to add assemblies and personalized extensions to an instance of the service, in order to complete your business needs whenever the standard functionality is not enough.  

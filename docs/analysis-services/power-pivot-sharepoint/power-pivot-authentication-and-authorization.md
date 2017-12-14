@@ -2,12 +2,12 @@
 title: "Power Pivot Authentication and Authorization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot Authentication and Authorization
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint deployment that runs within a SharePoint 2010 farm uses the authentication subsystem and authorization model provided by SharePoint servers. SharePoint security infrastructure extends to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] content and operations because all [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-related content is stored in SharePoint content databases and all [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-related operations are performed by [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] shared services in the farm. Users who request a workbook that contains [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data are authenticated using a SharePoint user identity that is based on their Windows user identity. View permissions on the workbook determine whether the request is granted or denied.  
   
  Because integration with Excel Services is required for self-service data analytics, securing a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server requires that you also understand Excel Services security. When a user queries a PivotTable that has a data connection to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data, Excel Services forwards a data connection request to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server in the farm to load the data. This interaction between the servers requires that you understand how to configure security settings for both servers.  

@@ -2,12 +2,12 @@
 title: "Profit Chart (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -27,6 +27,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Profit Chart (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A profit chart displays the estimated profitability associated with using a mining model. For example, let’s assume your model predicts which customers a company should contact in a business scenario. In that case, you would add to the profit chart information about the cost of conducting the targeted mailing campaign. Then, in the completed chart, you can see the estimated profit if customers are correctly targeted, as compared to randomly contacting customers.  
   
 ## Build a Profit Chart  

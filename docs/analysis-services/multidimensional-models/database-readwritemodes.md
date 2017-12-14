@@ -2,12 +2,12 @@
 title: "Database ReadWriteModes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Database ReadWriteModes
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   There are often situations when an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants to change a read/write database to a read-only database, or vice versa. These situations are often driven by business needs, such as sharing the same database folder among several servers for scaling out a solution and improving performance. For these situations, the **ReadWriteMode** database property enables the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba to easily change the database operating mode.  
   
 ## ReadWriteMode database property  

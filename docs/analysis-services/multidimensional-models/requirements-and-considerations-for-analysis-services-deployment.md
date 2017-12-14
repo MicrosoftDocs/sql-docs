@@ -2,12 +2,12 @@
 title: "Requirements and Considerations for Analysis Services Deployment | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -33,6 +33,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Requirements and Considerations for Analysis Services Deployment
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The performance and availability of a solution depends on many factors, including the capabilities of the underlying hardware, the topology of your server deployment, the characteristics of your solution (for example, having partitions distributed across multiple servers or using ROLAP storage that requires direct access to the relational engine), service level agreements, and the complexity of your data model.  
   
 ## Memory and Processor Requirements  

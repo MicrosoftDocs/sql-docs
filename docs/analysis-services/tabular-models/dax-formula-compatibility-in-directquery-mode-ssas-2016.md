@@ -2,12 +2,12 @@
 title: "DAX Formula Compatibility in DirectQuery Mode (SSAS 2016) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -21,8 +21,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # DAX Formula Compatibility in DirectQuery Mode 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 For tabular 1200 and higher models in DirectQuery mode, many functional limitations in earlier versions no longer apply. For DAX formulas in-particular:
 
 - DirectQuery now generates simpler queries, providing improved performance.

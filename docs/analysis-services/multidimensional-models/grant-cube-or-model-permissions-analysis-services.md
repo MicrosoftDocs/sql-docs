@@ -2,12 +2,12 @@
 title: "Grant cube or model permissions (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -29,6 +29,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Grant cube or model permissions (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A cube or tabular model is the primary query object in an Analysis Services data model. When connecting to multidimensional or tabular data from Excel for ad hoc data exploration, users typically start by selecting a specific cube or tabular model as the data structure behind the Pivot report object. This topic explains how to grant the necessary permissions for cube or tabular data access.  
   
  By default, no one except a Server Administrator or Database Administrator has permission to query cubes in a database. Cube access by a non-administrator requires membership in a role created for the database containing the cube. Membership is supported for Windows user or group accounts, defined in either Active Directory or on the local computer. Before you start, identify which accounts will be assigned membership in the roles you are about to create.  

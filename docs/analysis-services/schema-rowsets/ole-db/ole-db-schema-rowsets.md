@@ -2,12 +2,12 @@
 title: "OLE DB Schema Rowsets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "schema-rowsets"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -28,6 +28,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # OLE DB Schema Rowsets
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The following OLE DB schema rowsets are supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider. Use the **DISCOVER_ENUMERATORS** rowset with the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method to check whether a particular data source provider supports a rowset.  
   
  You can also find detailed information about these rowsets by searching for the topic "Schema Rowsets" in the OLE DB Programmer's Reference portion of the MSDN® Library at the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Web site.  

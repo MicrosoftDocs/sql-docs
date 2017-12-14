@@ -2,12 +2,12 @@
 title: "Activate Power Pivot Integration for Site Collections in CA | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Activate Power Pivot Integration for Site Collections in CA
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Activating [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] feature integration for specific site collections is required if you used the Existing Farm installation option to install SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. If you installed [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint using the New Server option, you can skip this task because SQL Server Setup already activated [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] feature integration for the root site collection when it configured your deployment.  
   
  Feature activation at the site collection level is necessary to make application pages and templates available to your sites, including configuration pages for scheduled data refresh and application pages for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery and Data Feed libraries.  

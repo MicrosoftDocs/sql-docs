@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "linux"
+ms.component: sql-linux
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
@@ -51,7 +51,6 @@ The following recommendations are optional configuration settings that you may e
 Consider using the following Linux Operating System configuration settings to experience the best performance for a SQL Server Installation.
 
 ### Kernel settings for high performance
-
 These are the recommended Linux Operating System settings related to high performance and throughput for a SQL Server installation. See your Linux Operating System documentation for the process to configure these settings.
 
 
@@ -88,7 +87,7 @@ sysctl -w kernel.numa_balancing=0
 The default setting of **vm.max_map_count** (which is 65536) may not be high enough for a SQL Server installation. Change this value (which is an upper limit) to 256K.
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### Disable last accessed date/time on file systems for SQL Server data and log files

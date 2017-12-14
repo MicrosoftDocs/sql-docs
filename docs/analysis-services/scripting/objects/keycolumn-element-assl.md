@@ -2,12 +2,12 @@
 title: "KeyColumn Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "scripting"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -32,6 +32,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # KeyColumn Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Contains the definition of a column that is, or is part of, the key for an attribute.  
   
 ## Syntax  

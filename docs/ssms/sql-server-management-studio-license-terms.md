@@ -3,8 +3,11 @@ title: "SQL Server Management Studio - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # SQL Server Management Studio - License Terms
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### Available Languages:  
 [Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [German](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  

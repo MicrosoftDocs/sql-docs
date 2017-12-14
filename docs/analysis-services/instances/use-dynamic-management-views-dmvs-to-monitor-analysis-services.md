@@ -2,12 +2,12 @@
 title: "Use Dynamic Management Views (DMVs) to Monitor Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Use Dynamic Management Views (DMVs) to Monitor Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Analysis Services Dynamic Management Views (DMV) are query structures that expose information about local server operations and server health. The query structure is an interface to schema rowsets that return metadata and monitoring information about an Analysis Services instance.  
   
  For most DMV queries, you use a **SELECT** statement and the **$System** schema with an XML/A schema rowset.  

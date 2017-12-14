@@ -2,7 +2,7 @@
 title: "Change log for SQL Server Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/07/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,6 +29,7 @@ This article describes changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnover
 
   - *Version 14.0.600.451, Released: September 30, 2017* 
     - Initial release
+
 ## Next steps
 
 [What's New in Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   

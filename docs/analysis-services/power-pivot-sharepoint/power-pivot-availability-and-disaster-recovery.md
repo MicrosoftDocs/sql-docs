@@ -2,12 +2,12 @@
 title: "Power Pivot Availability and Disaster Recovery | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot Availability and Disaster Recovery
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Availability and disaster recovery plans for [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] depend primarily on the design of your SharePoint farm, the amount of downtime acceptable for different components, and the tools and best practices you implement for SharePoint availability. This topic summarizes technologies and includes example topology diagrams to consider when planning availability and disaster recovery for a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment.  
   
 ||  

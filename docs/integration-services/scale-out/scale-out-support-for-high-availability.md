@@ -21,7 +21,7 @@ ms.workload: "Inactive"
 # Scale Out support for high availability
 
 In SSIS Scale Out, worker-side high availability is provided through executing packages with multiple Scale Out Workers.
-Master-side high availability is achieved with [Always On for SSIS Catalog](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows failover cluster. Multiple instances of Scale Out Master are hosted in a Windows failover cluster. When the Scale Out Master service or SSISDB is down on primary node, the service or SSISDB on secondary node will continue to accept user requests and communicate with Scale Out Workers. 
+Master-side high availability is achieved with [Always On for SSIS Catalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows failover cluster. Multiple instances of Scale Out Master are hosted in a Windows failover cluster. When the Scale Out Master service or SSISDB is down on primary node, the service or SSISDB on secondary node will continue to accept user requests and communicate with Scale Out Workers. 
 
 To set up the master-side high availability, follow the steps below.
 
@@ -55,7 +55,7 @@ You should use the same Scale Out Master certificate with primary node. Export t
 
 ## 4. Set up SSISDB always on
 
-The instructions to set up always on for SSISDB can be seen at [Always On for SSIS Catalog (SSISDB)](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+The instructions to set up always on for SSISDB can be seen at [Always On for SSIS Catalog (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
 In addition, you need to create an availability gourp listener for the availability group SSISDB added to. See [Create or Configure an Availability Group Listener](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 

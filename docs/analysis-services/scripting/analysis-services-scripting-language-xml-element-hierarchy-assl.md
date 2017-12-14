@@ -2,12 +2,12 @@
 title: "Analysis Services Scripting Language XML Element Hierarchy (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "scripting"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -34,6 +34,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Element Hierarchy (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The following table displays the hierarchy of objects in the Analysis Services Scripting Language (ASSL).  
   
 ## Syntax  

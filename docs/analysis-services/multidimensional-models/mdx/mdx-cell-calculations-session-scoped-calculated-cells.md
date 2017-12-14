@@ -2,12 +2,12 @@
 title: "Creating Session-Scoped Calculated Cells | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -24,6 +24,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MDX Cell Calculations - Session-Scoped Calculated Cells
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
 >  This syntax has been deprecated. You should use MDX assignments should instead. For more information on assignments, see [The Basic MDX Script &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md).  

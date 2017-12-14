@@ -2,12 +2,12 @@
 title: "Verify a Power Pivot for SharePoint Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,6 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Verify a Power Pivot for SharePoint Installation
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint instance that you install in a SharePoint farm is administered through SharePoint Central Administration. At a minimum, you can check pages in Central Administration and on SharePoint sites to verify that [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server components and features are available. However, to fully verify an installation, you must have a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbook that you can publish to SharePoint and access from a library. For testing purposes, you can publish a sample workbook that already contains [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data and use it to confirm that SharePoint integration is correctly configured.  
   
 ||  

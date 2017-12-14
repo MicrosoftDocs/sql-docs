@@ -2,12 +2,12 @@
 title: "Model Filter Syntax and Examples (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -26,6 +26,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Model Filter Syntax and Examples (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This section provides detailed information about the syntax for model filters, together with sample expressions.  
   
  [Filter syntax](#bkmk_Syntax)  

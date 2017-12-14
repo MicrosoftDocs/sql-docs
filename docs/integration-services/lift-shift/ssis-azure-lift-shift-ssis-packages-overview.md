@@ -51,7 +51,7 @@ You only have to provision the SSIS IR one time. After that, you can use familia
 Data Factory also supports other types of Integration Runtimes. To learn more about the SSIS IR and the other types of Integration Runtimes, see [Integration runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
 ## Prerequisites
-The capabilities described in this topic do not require SQL Server 2017 or SQL Server 2016.
+The capabilities described in this article do not require SQL Server 2017 or SQL Server 2016.
 
 These capabilities require the following versions of SQL Server Data Tools (SSDT):
 -   For Visual Studio 2017, version 15.3 (preview) or later.

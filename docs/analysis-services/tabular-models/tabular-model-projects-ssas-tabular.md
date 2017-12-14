@@ -2,12 +2,12 @@
 title: "Tabular Model Projects (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Tabular Model Projects (SSAS Tabular)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   To create a new tabular model, you must first create a new tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. When you install [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], three new Business Intelligence project templates are provided for creating tabular model projects. Each project template provides a framework on which you can begin authoring your model. Topics in this section describe how to create a new tabular model project by using the project templates.  
   
 ## Related Tasks  

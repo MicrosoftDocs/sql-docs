@@ -71,7 +71,7 @@ ms.workload: "On Demand"
  In the following examples, a two-part naming convention is used for specifying the XML schema collection name. The first part is the schema name, and the second part is the XML schema collection name.  
   
 ### Example: Associating a Schema Collection with an xml Type Variable  
- The following example creates an**xml** type variable and associates a schema collection with it. The schema collection specified in the example is already imported in the **AdventureWorks** database.  
+ The following example creates an **xml** type variable and associates a schema collection with it. The schema collection specified in the example is already imported in the **AdventureWorks** database.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

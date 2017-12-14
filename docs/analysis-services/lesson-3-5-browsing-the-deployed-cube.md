@@ -2,12 +2,12 @@
 title: "Browsing the Deployed Cube | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "tutorial"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lesson 3-5 - Browsing the Deployed Cube
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 In the following task, you browse the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube. Because our analysis compares measure across multiple dimensions, you will use an Excel PivotTable to browse your data. Using a PivotTable lets you place customer, date, and product information on different axes so that you can see how Internet Sales change when viewed across specific time periods, customer demographics, and product lines.  
   
 ### To browse the deployed cube  

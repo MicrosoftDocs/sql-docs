@@ -2,12 +2,12 @@
 title: "Backup and Restore of Analysis Services Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -33,6 +33,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Backup and Restore of Analysis Services Databases
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes backup and restore so that you can recover a database and its objects from a particular point in time. Backup and restore is also a valid technique for migrating databases to upgraded servers, moving databases between servers, or deploying a database to a production server. For the purposes of data recovery, if you do not already have a backup plan and your data is valuable, you should design and implement a plan as soon as possible.  
   
  The backup and restore commands are performed on a deployed Analysis Services database. For your projects and solutions in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you should use source control to ensure you can recover specific versions of your source files, and then create a data recovery plan for the repository of the source control system you are using.  

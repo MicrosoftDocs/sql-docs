@@ -2,12 +2,12 @@
 title: "Microsoft Clustering Algorithm | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -31,6 +31,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Microsoft Clustering Algorithm
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm is a *segmentation* or *clustering* algorithm that iterates over cases in a dataset to group them into clusters that contain similar characteristics. These groupings are useful for exploring data, identifying anomalies in the data, and creating predictions.  
   
  Clustering models identify relationships in a dataset that you might not logically derive through casual observation. For example, you might easily guess that people who commute to their jobs by bicycle do not typically live a long distance from where they work. The algorithm, however, can find other characteristics about bicycle commuters that are not as obvious. In the following diagram, cluster A represents data about people who tend to drive to work, while cluster B represents data about people who tend to ride bicycles to work.  

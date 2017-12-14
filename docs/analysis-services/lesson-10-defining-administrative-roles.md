@@ -2,12 +2,12 @@
 title: "Lesson 10: Defining Administrative Roles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "tutorial"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lesson 10: Defining Administrative Roles
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 In this lesson, you learn to define security roles for administrative tasks.  
   
 > [!NOTE]  

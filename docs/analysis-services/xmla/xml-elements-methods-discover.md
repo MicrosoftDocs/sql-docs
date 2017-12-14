@@ -2,12 +2,12 @@
 title: "Discover Method (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/14/2016"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "xmla"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -36,6 +36,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML Elements - Methods - Discover
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Retrieves information, such as the list of available databases or details about a specific object, from an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The data retrieved with the **Discover** method depends on the values of the parameters passed to it.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  

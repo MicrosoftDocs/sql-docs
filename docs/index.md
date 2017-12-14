@@ -68,7 +68,7 @@ ms.technology:
                                                 <h3 class="bgdAccent1" style="padding:20px;">Develop</h3>
                                                 <h4>Design</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/connect/sql-connection-libraries">Connect with client applications</a></li>
+                                                    <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">Connect with client applications</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/database-features">Relational database concepts</a></li>
                                                 </ul>
                                                 <h4>Tools</h4>

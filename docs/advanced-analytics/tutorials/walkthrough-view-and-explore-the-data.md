@@ -2,7 +2,7 @@
 title: "View and explore the data using SQL (walkthrough)| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

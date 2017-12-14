@@ -1,9 +1,12 @@
 ---
 title: "What&#39;s new in Machine Learning Services | Microsoft Docs"
 ms.date: "11/16/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "r-services"
+ms.service: ""
+ms.component: "advanced-analytics"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

@@ -58,13 +58,13 @@ To schedule a package with SQL Server Agent on premises, create a job with a job
 
 ## <a name="elastic"></a> Schedule a package with SQL Database Elastic Jobs
 
-For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### Prerequisites
 
 Before you can use elastic jobs to schedule SSIS packages stored in the SSISDB Catalog database on an Azure SQL Database server, you have to do the following things:
 
-1.  Install and configure the Elastic Database jobs components. For more info, see [Installing Elastic Database jobs overview](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Install and configure the Elastic Database jobs components. For more info, see [Installing Elastic Database jobs overview](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Create database-scoped credentials that jobs can use to send commands to the SSIS Catalog database. For more info, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -104,128 +104,13 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
 
 ## <a name="sproc"></a> Schedule a package with the Azure Data Factory SQL Server Stored Procedure activity
 
-> [!IMPORTANT]
-> Use the JSON scripts in the following example with the Azure Data Factory version 1 Stored Procedure Activity.
+For info about how to schedule an SSIS package by using the Azure Data Factory Stored Procedure activity, see the following articles:
 
-To schedule a package with the Azure Data Factory SQL Server Stored Procedure activity, do the following things:
+-   For Data Factory version 2: [Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
 
-1.  Create a Data Factory.
-
-2.  Created a linked service for the SQL Database that hosts SSISDB.
-
-3.  Create an output dataset that drives the scheduling.
-
-4.  Create a Data Factory pipeline that uses the SQL Server Stored Procedure activity to run the SSIS package.
-
-This section provides an overview of these steps. A complete Data Factory tutorial is beyond the scope of this article. For more info, see [SQL Server Stored Procedure Activity](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
-
-If a scheduled execution fails, and the ADF Stored Procedure Activity provides an execution ID for the failed execution, check the execution report for that ID in SSMS in the SSIS Catalog.
-
-### Created a linked service for the SQL Database that hosts SSISDB
-The linked service lets Data Factory connect to SSISDB.
-
-```json
-{
-	"name": "AzureSqlLinkedService",
-	"properties": {
-		"description": "",
-		"type": "AzureSqlDatabase",
-		"typeProperties": {
-			"connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
-		}
-	}
-}
-```
-
-### Create an output dataset
-The output dataset contains the scheduling info.
-
-```json
-{
-	"name": "sprocsampleout",
-	"properties": {
-		"type": "AzureSqlTable",
-		"linkedServiceName": "AzureSqlLinkedService",
-		"typeProperties": {
-			"tableName": "sampletable"
-		},
-		"availability": {
-			"frequency": "Hour",
-			"interval": 1
-		}
-	}
-}
-```
-### Create a Data Factory pipeline
-The pipeline uses the SQL Server Stored Procedure activity to run the SSIS package.
-
-```json
-{
-	"name": "SprocActivitySamplePipeline",
-	"properties": {
-		"activities": [{
-			"name": "SprocActivitySample",
-			"type": "SqlServerStoredProcedure",
-			"typeProperties": {
-				"storedProcedureName": "sp_executesql",
-				"storedProcedureParameters": {
-					"stmt": "Transact-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures"
-				}
-			},
-			"outputs": [{
-				"name": "sprocsampleout"
-			}],
-			"scheduler": {
-				"frequency": "Hour",
-				"interval": 1
-			}
-		}],
-		"start": "2017-10-01T00:00:00Z",
-		"end": "2017-10-01T05:00:00Z",
-		"isPaused": false
-	}
-}
-```
-
-You don't have to create a new stored procedure to encapsulate the Transact-SQL commands required to create and start SSIS package execution. You can provide the entire script as the value of the `stmt` parameter in the preceding JSON sample. Here is a sample script:
-
-```sql
--- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
-DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
-
--- Create the exectuion
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-
--- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
-EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
-
--- Start the execution                                                         
-EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
-                                          
--- Raise an error for unsuccessful package execution
--- Execution status values include the following:
--- created (1)
--- running (2)
--- canceled (3)
--- failed (4)
--- pending (5)
--- ended unexpectedly (6)
--- succeeded (7)
--- stopping (8)
--- completed (9) 
-IF(SELECT [status]
-   FROM [SSISDB].[catalog].[executions]
-   WHERE execution_id=@exe_id)<>7
-BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
-    RAISERROR(@err_msg,15,1)
-END
-GO
-```
-
-For more info about the code in this script, see [Deploy and Execute SSIS Packages using Stored Procedures](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
+-   For Data Factory version 1: [Invoke an SSIS package using stored procedure activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## Next steps
 For more info about SQL Server Agent, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).
 
-For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).

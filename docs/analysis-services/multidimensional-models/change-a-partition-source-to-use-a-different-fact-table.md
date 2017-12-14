@@ -2,12 +2,12 @@
 title: "Change a partition source to use a different fact table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -25,6 +25,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Change a partition source to use a different fact table
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   When you create a partition for a cube, you can choose to use a different fact table. Different tables may be from a single data source view, from different data source views, or from different data sources. A data source view may also contain different tables from more than one data source.  
   
  All fact tables and dimensions for a cube's partitions must have the same structure as the fact table and dimensions of the cube. For example, different fact tables can have the same structure but contain data for different years or different product lines.  

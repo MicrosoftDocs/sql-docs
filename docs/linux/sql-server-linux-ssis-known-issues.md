@@ -10,7 +10,7 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "linux"
+ms.component: sql-linux
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
@@ -18,7 +18,7 @@ ms.workload: "Inactive"
 ---
 # Limitations and known issues for SSIS on Linux
 
-This topic describes current limitations and known issues for SQL Server Integration Services (SSIS) on Linux.
+This article describes current limitations and known issues for SQL Server Integration Services (SSIS) on Linux.
 
 ## General limitations and known issues
 

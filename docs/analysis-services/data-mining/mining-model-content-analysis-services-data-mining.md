@@ -2,12 +2,12 @@
 title: "Mining Model Content (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -31,6 +31,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Mining Model Content (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   After you have designed and processed a mining model using data from the underlying mining structure, the mining model is complete and contains *mining model content*. You can use this content to make predictions or analyze your data.  
   
  Mining model content includes metadata about the model, statistics about the data, and patterns discovered by the mining algorithm. Depending on the algorithm that was used, the model content may include regression formulas, the definitions of rules and itemsets, or weights and other statistics.  

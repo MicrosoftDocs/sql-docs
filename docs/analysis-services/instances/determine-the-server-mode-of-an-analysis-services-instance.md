@@ -2,12 +2,12 @@
 title: "Determine the Server Mode of an Analysis Services Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Determine the Server Mode of an Analysis Services Instance
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services can be installed in one of three server modes: Multidimensional and Data Mining (default), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, and Tabular. The server mode of an Analysis Services instance is determined during setup when you choose options for installing the server.  
   
  The server mode determines the type of solution that you create and deploy. If you did not install the server software and you want to know in which mode the server was installed, you can use the information in this topic to determine the mode. For more information about feature availability in a specific mode, see [Comparing Tabular and Multidimensional Solutions &#40;SSAS&#41;](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  

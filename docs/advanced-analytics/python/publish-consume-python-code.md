@@ -2,7 +2,7 @@
 title: "Publish and consume Python code| Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

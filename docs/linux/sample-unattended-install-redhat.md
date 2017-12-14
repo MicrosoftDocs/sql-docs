@@ -2,14 +2,14 @@
 title: Unattended install for SQL Server on Red Hat Enterprise Linux | Microsoft Docs
 description: SQL Server Script Sample - Unattended Install on Red Hat Enterprise Linux
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "linux"
+ms.component: sql-linux
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
@@ -26,7 +26,7 @@ This sample Bash script installs SQL Server 2017  on Red Hat Enterprise Linux (R
 
 ## Prerequisites
 
-- You need at least 3.25 GB of memory to run SQL Server on Linux.
+- You need at least 2 GB of memory to run SQL Server on Linux.
 - The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -35,7 +35,7 @@ Save the sample script to a file and then to customize it,
 replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

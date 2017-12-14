@@ -2,7 +2,7 @@
 title: "Lesson 5: Train and save a model using T-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

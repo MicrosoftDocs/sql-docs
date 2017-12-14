@@ -1,11 +1,13 @@
 ---
 title: "Device Information Settings for Rendering Extensions (Reporting Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "09/15/2015"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"

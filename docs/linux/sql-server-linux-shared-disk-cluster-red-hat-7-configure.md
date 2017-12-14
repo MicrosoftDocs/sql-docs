@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "linux"
+ms.component: sql-linux
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
@@ -129,13 +129,13 @@ On the NFS Server do the following:
 1. Enable and start `rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
 1. Enable and start `nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
 1.	Edit `/etc/exports` to export the directory you want to share. You will need 1 line for each share you want. For example: 

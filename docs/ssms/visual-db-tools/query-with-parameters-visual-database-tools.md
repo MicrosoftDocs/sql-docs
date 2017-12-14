@@ -3,8 +3,11 @@ title: "Query with Parameters (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Query with Parameters (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 In many instances, it is useful to create a query that you can reuse many times in your applications with different input each time. In this section you will find information about how to create parameter queries for these general purposes.  
   
 ## In This Section  

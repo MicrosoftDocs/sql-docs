@@ -2,12 +2,12 @@
 title: "Use a BI Semantic Model Connection in Excel or Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Use a BI Semantic Model Connection in Excel or Reporting Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This topic explains how to use the BI semantic model connections you created using instructions in other topics. If you have not yet created a BI semantic model, see [Create a BI Semantic Model Connection to a Power Pivot Workbook](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) and [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Connect from Excel  

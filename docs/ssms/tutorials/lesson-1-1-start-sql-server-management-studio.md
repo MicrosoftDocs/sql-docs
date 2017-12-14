@@ -2,9 +2,12 @@
 title: "Start SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/11/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Lesson 1-1 - Start SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 To begin this tutorial, let's take a look at [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## Opening SQL Server Management Studio  

@@ -2,12 +2,12 @@
 title: "Start the Business Intelligence Wizard in Dimension Designer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -24,6 +24,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Database Dimensions - BI Wizard in Dimension Designer
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you create custom rollup operators and custom member formulas and configure dimensions for writeback by using the Business Intelligence Wizard or Dimension Designer. You can start the Business Intelligence Wizard from Solution Explorer or from Cube Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dimension Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### To start the Business Intelligence Wizard  

@@ -2,12 +2,12 @@
 title: "Microsoft Decision Trees Algorithm | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -32,6 +32,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Microsoft Decision Trees Algorithm
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is a classification and regression algorithm for use in predictive modeling of both discrete and continuous attributes.  
   
  For discrete attributes, the algorithm makes predictions based on the relationships between input columns in a dataset. It uses the values, known as states, of those columns to predict the states of a column that you designate as predictable. Specifically, the algorithm identifies the input columns that are correlated with the predictable column. For example, in a scenario to predict which customers are likely to purchase a bicycle, if nine out of ten younger customers buy a bicycle, but only two out of ten older customers do so, the algorithm infers that age is a good predictor of bicycle purchase. The decision tree makes predictions based on this tendency toward a particular outcome.  

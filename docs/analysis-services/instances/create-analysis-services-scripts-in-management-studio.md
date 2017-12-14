@@ -2,12 +2,12 @@
 title: "Create Analysis Services Scripts in Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -26,6 +26,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create Analysis Services Scripts in Management Studio
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] includes script generation features, templates, and editors that you can use to script Analysis Services objects and tasks.  
   
 ## Script Analysis Services Tasks in Management Studio  

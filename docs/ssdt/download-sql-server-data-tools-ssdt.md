@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/13/2017"
+ms.date: "12/14/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -96,6 +96,11 @@ This release of **SSDT for VS 2015** can be installed in the following languages
 ### ISO Images - SSDT for VS 2015
 
 An ISO image of SSDT can be used as an alternative way to install SSDT or to set up an Administrative Installation point. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive or burned to a DVD.
+
+> [!IMPORTANT]
+> The following ISO links install SSDT for VS 2015 17.3
+>
+> ISO links for 17.4 will be available soon.
 
 [Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x804) |
 [Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x404) |

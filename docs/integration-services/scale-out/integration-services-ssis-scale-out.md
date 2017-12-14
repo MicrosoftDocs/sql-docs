@@ -21,7 +21,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Integration Services (SSIS) Scale Out
-SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out provides high-performance execution of SSIS packages by distributing package executions across multiple computers. After you set up Scale Out, you can run multiple package executions in parallel, in scale out mode, from SQL Server Management Studio (SSMS).
+SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out provides high-performance execution of SSIS packages by distributing package executions across multiple computers. After you set up Scale Out, you can run multiple package executions in parallel, in scale-out mode, from SQL Server Management Studio (SSMS).
 
 ## Components
 [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out consists of an [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Master and one or more [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out Workers.

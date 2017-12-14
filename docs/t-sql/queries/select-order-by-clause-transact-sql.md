@@ -161,6 +161,8 @@ ORDER BY order_by_expression
  In a query that uses UNION, EXCEPT, or INTERSECT operators, ORDER BY is allowed only at the end of the statement. This restriction applies only to when you specify UNION, EXCEPT and INTERSECT in a top-level query and not in a subquery. See the Examples section that follows.  
   
  The ORDER BY clause is not valid in views, inline functions, derived tables, and subqueries, unless either the TOP or OFFSET and FETCH clauses are also specified. When ORDER BY is used in these objects, the clause is used only to determine the rows returned by the TOP clause or OFFSET and FETCH clauses. The ORDER BY clause does not guarantee ordered results when these constructs are queried, unless ORDER BY is also specified in the query itself.  
+ 
+ **For Azure SQL Data Warehouse and Parallel Data Warehouse** the ORDER BY clause is invalid in views, CREATE TABLE AS SELECT, INSERT SELECT, inline functions, derived tables, subqueries, and common table expressions, unless TOP is also specified.
   
  OFFSET and FETCH are not supported in indexed views or in a view that is defined by using the CHECK OPTION clause.  
   

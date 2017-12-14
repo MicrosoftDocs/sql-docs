@@ -1,7 +1,7 @@
 ---
 title: "bcp Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/08/2017"
+ms.date: "12/14/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -183,20 +183,40 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 **-G**<a name="G"></a>  
  This switch is used by the client when connecting to Azure SQL Database or Azure SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. The -G switch requires [version 14 or later](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute bcp -v. For more information, see [Use Azure Active Directory Authentication for authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
+> [!TIP]
+>  To check if your version of bcp includes support for Azure Active Directory Authentication (AAD) type **bcp --** (bcp\<space>\<dash>\<dash>) and verify that you see -G in the list of available arguments.
+
 - **Azure Active Directory Username and Password:** 
 
-    When you want to use an Azure Active Directory user name and password, you can provide the **-G** option and also use the user name and password by providing the **-U** and **-P** options.
+    When you want to use an Azure Active Directory user name and password, you can provide the **-G** option and also use the user name and password by providing the **-U** and **-P** options. 
+
+    The following example exports data using Azure AD Username and Password where U/P is an AAD credential (AAD user & password). The example exports table bcptesttab from database testdb from Azure server apptestserver.database.windows.net and places the file on c:\mydir\data.dat
     ``` 
-    EXAMPLE NEEDED
+    bcp testdb..bcptesttab out "c:\mydir\data.dat" -c -t -S apptestserver.database.windows.net -G -U alice@apptest.onmicrosoft.com -P AlicePassword#
     ``` 
+
+    The following example imports data using Azure AD  Username and Password where U/P is an AAD credential (AAD user & password). The example imports data from file on c:\mydir\data.dat into table bcptesttab for database test on Azure server  apptestserver.database.windows.net using Azure AD User/Password 
+    ```
+    bcp testdb..bcptesttab in "c:\last\data.dat" -c -t -S aadapptestserver.database.windows.net -G -U alice@apptest.onmicrosoft.com -P AlicePassword#
+    ```
+
+
 
 - **Azure Active Directory Integrated** 
  
-   For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password: 
+    For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password: 
+
+    The following example exports data using Azure AD Integrated. The example exports table bcptesttab from database testdb  using Azure AD Integrated from Azure server apptestserver.database.windows.net and places the file on c:\mydir\data.dat
 
     ```
-    EXAMPLE NEEDED
-    ```  
+    bcp testdb..bcptesttab out "c:\last\data.dat" -c -t -S apptestserver.database.windows.net -G
+    ```
+
+    The following example imports data using Azure AD Integrated auth. The example imports data from file on c:\mydir\data.dat into table bcptesttab for database testdb  on Azure server  apptestserver.database.windows.net using Azure AD Integrated auth
+
+    ```
+    bcp testdb..bcptesttab in "c:\last\data.dat" -c -t -S apptestserver.database.windows.net -G
+    ```
 
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a>

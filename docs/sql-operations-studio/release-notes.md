@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "12/14/2017"
+ms.date: "12/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -45,7 +45,7 @@ ms.workload: "Inactive"
 
 ## November 2017
 
-- [!INCLUDE[name-sos](../includes/name-sos-short.md)] public preview initial release!
+- Initial release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
 
 ## Next Steps
 

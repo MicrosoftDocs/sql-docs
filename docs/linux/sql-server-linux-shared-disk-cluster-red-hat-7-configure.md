@@ -237,7 +237,7 @@ For additional information about using NFS, see the following resources:
    ``` 
    $ chown mssql /var/opt/mssql/data
    $ chgrp mssql /var/opt/mssql/data
-   $ su mssql
+   $ sudo su mssql
    $ cp /var/opt/mssql/tmp/* /var/opt/mssql/data/
    $ rm /var/opt/mssql/tmp/*
    $ exit

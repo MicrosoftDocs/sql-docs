@@ -97,53 +97,36 @@ Next, you create a logistic regression model that indicates whether a particular
   
 **Partial results**
 
-*Logistic Regression Results for: fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine*
+```
+Logistic Regression Results for: fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine
+Data: sqlFraudDS (RxSqlServerData Data Source)
+Dependent variable(s): fraudRisk
+Total independent variables: 60 (Including number dropped: 3)
+Number of valid observations: 10000 -2
 
-*Data: sqlFraudDS (RxSqlServerData Data Source)*
+LogLikelihood: 2032.8699 (Residual deviance on 9943 degrees of freedom)
 
-*Dependent variable(s): fraudRisk*
+Coefficients:
+Estimate Std. Error z value Pr(>|z|)     (Intercept)
+-8.627e+00  1.319e+00  -6.538 6.22e-11
+state=AK                Dropped    Dropped Dropped  Dropped
+state=AL             -1.043e+00  1.383e+00  -0.754   0.4511
 
-*Total independent variables: 60 (Including number dropped: 3)*
+(other states omitted)
 
-*Number of valid observations: 10000 -2*
+gender=Male             Dropped    Dropped Dropped  Dropped
+gender=Female         7.226e-01  1.217e-01   5.936 2.92e-09
+cardholder=Principal    Dropped    Dropped Dropped  Dropped
+cardholder=Secondary  5.635e-01  3.403e-01   1.656   0.0977
+balance               3.962e-04  1.564e-05  25.335 2.22e-16
+numTrans              4.950e-02  2.202e-03  22.477 2.22e-16
+numIntlTrans          3.414e-02  5.318e-03   6.420 1.36e-10
+creditLine            1.042e-01  4.705e-03  22.153 2.22e-16
 
-*LogLikelihood: 2032.8699 (Residual deviance on 9943 degrees of freedom)*
-
-*Coefficients:*
-
-*Estimate Std. Error z value Pr(>|z|)     (Intercept)*
-
-*-8.627e+00  1.319e+00  -6.538 6.22e-11*
-
-*state=AK                Dropped    Dropped Dropped  Dropped*
-
-*state=AL             -1.043e+00  1.383e+00  -0.754   0.4511*
-
-*(other states omitted)*
-
-*gender=Male             Dropped    Dropped Dropped  Dropped*
-
-*gender=Female         7.226e-01  1.217e-01   5.936 2.92e-09*
-
-*cardholder=Principal    Dropped    Dropped Dropped  Dropped*
-
-*cardholder=Secondary  5.635e-01  3.403e-01   1.656   0.0977*
-
-*balance               3.962e-04  1.564e-05  25.335 2.22e-16*
-
-*numTrans              4.950e-02  2.202e-03  22.477 2.22e-16*
-
-*numIntlTrans          3.414e-02  5.318e-03   6.420 1.36e-10*
-
-*creditLine            1.042e-01  4.705e-03  22.153 2.22e-16*
-
-*---*
-
-*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
-
-*Condition number of final variance-covariance matrix: 3997.308*
-
-*Number of iterations: 15*
+Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Condition number of final variance-covariance matrix: 3997.308
+Number of iterations: 15
+```
 
 ## Next step
 

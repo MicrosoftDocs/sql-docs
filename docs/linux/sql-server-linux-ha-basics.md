@@ -15,7 +15,7 @@ ms.custom: ""
 ms.technology: database-engine
 ms.workload: "On Demand"
 ---
-
+ 
 # SQL Server availability basics for Linux deployments
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]

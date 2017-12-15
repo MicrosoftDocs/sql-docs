@@ -1,5 +1,5 @@
 ---
-title: "Deep Dive - Create R models| Microsoft Docs"
+title: "Create R models (SQL and R deep dive)| Microsoft Docs"
 ms.custom: ""
 ms.date: "12/14/2017"
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---
-# Deep Dive - Create R models
+# Create R models (SQL and R deep dive)
 
 This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 

@@ -1,5 +1,5 @@
 ---
-title: "Deep Dive - Query and modify the SQL Server data| Microsoft Docs"
+title: "Query and modify the SQL Server data (SQL and R deep dive)| Microsoft Docs"
 ms.custom: ""
 ms.date: "12/14/2017"
 ms.prod: sql-non-specified
@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "R"
 ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
@@ -20,7 +21,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---
-# Deep Dive - Query and modify the SQL Server data
+# Query and modify the SQL Server data (SQL and R deep dive)
 
 This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 

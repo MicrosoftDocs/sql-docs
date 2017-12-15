@@ -1,5 +1,5 @@
 ---
-title: "Deep Dive - Move data between SQL Server and XDF file| Microsoft Docs"
+title: "Move data between SQL Server and XDF file (SQL and R deep dive)| Microsoft Docs"
 ms.custom: ""
 ms.date: "12/14/2017"
 ms.prod: sql-non-specified
@@ -21,7 +21,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---
-# Deep Dive - Move data between SQL Server and XDF file
+# Move data between SQL Server and XDF file (SQL and R deep dive)
 
 This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 

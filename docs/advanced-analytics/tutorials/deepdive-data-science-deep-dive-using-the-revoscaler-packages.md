@@ -1,5 +1,5 @@
 ---
-title: "Data Science Deep Dive: Using the RevoScaleR packages with SQL Server | Microsoft Docs"
+title: "Data science deep dive: Using the RevoScaleR packages with SQL Server| Microsoft Docs"
 ms.date: "12/14/2017"
 ms.prod: sql-non-specified
 ms.reviewer: ""
@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ms.workload: "On Demand"
 ---
-# Data Science Deep Dive: Using the RevoScaleR packages with SQL Server
+# Data science deep dive: Using the RevoScaleR packages with SQL Server
 
 This tutorial demonstrates how to use the enhanced R packages provided in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] to work with SQL Server data and create scalable R solutions, by using the server as a compute context for high-performance big data analytics.
 

@@ -1,5 +1,5 @@
 ---
-title: "Deep Dive - Transform data using R | Microsoft Docs"
+title: "Transform data using R  (SQL and R deep dive)| Microsoft Docs"
 ms.date: "12/24/2017"
 ms.prod: sql-non-specified
 ms.reviewer: ""
@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---
-# Deep Dive - Transform data using R
+# Transform data using R (SQL and R deep dive)
 
 This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 

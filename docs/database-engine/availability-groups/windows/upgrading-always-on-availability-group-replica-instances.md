@@ -37,7 +37,10 @@ ms.workload: "On Demand"
 -   [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the pre-upgrade checklist, and develop and test the upgrade plan.  
   
 -   [Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
-  
+
+> [!NOTE]  
+>  Mixing versions of SQL Server in the same AG is not supported. To migrate to a new version using availablity groups, the only supported method is a distributed availability group which is in SQL Server 2016 Enterprise Edition or later.
+
 ## Rolling Upgrade Best Practices for Always On Availability Groups  
  The following best practices should be observed when performing server upgrades or updates in order to minimize downtime and data loss for your availability groups:  
   

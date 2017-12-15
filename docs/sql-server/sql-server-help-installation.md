@@ -1,7 +1,7 @@
 ---
-title: "Help content and Help Viewer for SQL Server | Microsoft Docs"
+title: SQL Server help content and Help Viewer | Microsoft Docs
 ms.custom: ""
-ms.date: "06/27/2017"
+ms.date: "12/15/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -25,22 +25,22 @@ ms.workload: "Inactive"
 # Help content and Help Viewer for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
-You can view SQL Server help content when you are online (connected to the internet) or offline. Online help always shows the most up-to-date content. Offline help is static content downloaded and installed on your machine from the online content, the Microsoft Download Center, or disk. 
+You can view SQL Server help content when you are online (connected to the internet) or offline. Online help always shows the most up-to-date content. Offline help is static content that you previously downloaded from the online content or the Microsoft Download Center, or installed from disk. 
 
-In SQL Server Management Studio (SSMS) and Visual Studio (VS), you can choose to view help content in a browser or in the Help Viewer. This article shows you how to install the Help Viewer, how to install offline help content, and how to view online or offline help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016, and SQL Server 2017. 
+In SQL Server Management Studio (SSMS) and Visual Studio (VS), you can choose to view online or offline help content in a browser or in a Help Viewer. This article explains how to install the Help Viewer, how to install offline help content, and how to view online or offline help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016, and SQL Server 2017. 
 
 > [!NOTE]
 > - F1 Help (context-sensitive help when you press F1 or click Help in a dialog box) is only available online. There are no downloadable offline help sources for F1 Help.
 > - The Help Viewer does not support proxy settings, and does not support the ISO format. 
 
 ## Install the Help Viewer
-The Help Viewer has two versions: version 1.x supports SQL Server 2014 documentation, and version 2.x supports SQL Server 2016 and SQL Server 2017 documentation. You can also use Help Viewer 2.x to view offline Help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] if you install the content from disk. The tools in the following table install Help Viewer. 
+The Help Viewer has two versions: v1.x supports SQL Server 2014 help, and v2.x supports SQL Server 2016 and SQL Server 2017 help. You can also use Help Viewer 2.x to view [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] help, if you install the content from disk. The tools in the following table install Help Viewer. 
 
 |**Tool that installs Help Viewer**|**Help Viewer version installed**|
 |---------|---------|
 |[SQL Server Management Studio (latest version)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)| v2.x|
 |[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| v2.x|
-|Visual Studio 2017 | v2.x (supports SQL Server 2016 Help only)*|
+|Visual Studio 2017 | v2.x (does not support SQL Server 2017 help)*|
 |SQL Server 2014 Management Studio| v1.x|
 |Visual Studio prior to 2012| v1.x|
 
@@ -50,17 +50,17 @@ The Help Viewer has two versions: version 1.x supports SQL Server 2014 documenta
 > - Installing SQL Server 2016 only installs Help Viewer 1.1, which does not support SQL Server 2016 or SQL Server 2017 help. 
 > - Installing SQL Server 2017 does not install any Help Viewer.
 
-## View online help
+## Use online help
 
 Online help always shows the most up-to-date content. 
 
-### Use SQL Server Management Studio
+### View online help in SQL Server Management Studio
 
 To view online help content in the latest version of SSMS, click **View Help** on the **Help** menu. Documentation displays in a browser.
 
 ![HelpViewer2_SSMS_ChooseOnlineORLocalHelp](../sql-server/media/helpviewer2-ssms-chooseonlineorlocalhelp.png)
 
-### Use Visual Studio
+### View online help in Visual Studio
 
 To view online help content in the latest version of Visual Studio, do the following:
 
@@ -69,7 +69,7 @@ To view online help content in the latest version of Visual Studio, do the follo
 
    ![HelpViewer2_VisualStudio_ChooseOnlineORLocalHelp](../sql-server/media/helpviewer2-visualstudio-chooseonlineorlocalhelp.png)   
 
-### Use Help Viewer v1.x
+### View online help with Help Viewer v1.x
 
 To view online help content with Help Viewer 1.x, do the following:
 
@@ -81,10 +81,16 @@ To view online help content with Help Viewer 1.x, do the following:
 3. Click **I want to use online help**, click **OK**, and then click **Exit**.  
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
+   
+4. Open the Help Viewer to see the content by clicking **View Help** on the **Help** menu. 
 
-## Use SQL Server 2016 or SQL Server 2017 offline help 
+## Use offline help 
 
-### Install help content 
+This process downloads the latest help content for SQL Server 2016/SQL Server 2017, or help content from the Microsoft Download Center for SQL Server 2014, and installs it on your local machine. The installed help content is then available in the Help Viewer when you are offline. 
+
+### Use SQL Server 2016/SQL Server 2017 offline help with Help Viewer v2.x
+
+### Install the SQL Server 2016/SQL Server 2017 help content
 
 This process installs the most up-to-date online help content at the time of the download.
 
@@ -114,14 +120,14 @@ This process installs the most up-to-date online help content at the time of the
    >[!IMPORTANT]
    > If a message appears indicating that the move operation has failed, close the message box, then close and reopen Help Viewer. The new location for the content should now appear in the Local store path.   
  
-### View offline help
+### View the offline help with Help Viewer v2.x
 
 1. In SSMS or VS, point to **Set Help Preference** under the Help menu, and choose **Launch in Help Viewer**.
 2. When you are offline and click **View Help** on the **Help** menu, you can access the help content you installed by using the table of contents in the left pane of the Help Viewer.
 
-## Use [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] offline help 
+## Use [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] offline help with Help Viewer v1.x
 
-### Install help content
+### Install the SQL Server 2014 help content
 
 1. Navigate to the [Product Documentation for Microsoft SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=42557) download site and click **Download**.  
 2. Click **Save** in the message box to save the *SQLServer2014Documentation\_\*.exe* file to your computer.  
@@ -147,7 +153,7 @@ This process installs the most up-to-date online help content at the time of the
    
 10. Click **Finish**, and then click **Exit**.
 
-### View offline help
+### View the offline help with Help Viewer v1.x
 
 1. Open **Help Library Manager**, click **Choose online or local help**, and then click **I want to use local help**.
 2. Open the Help Viewer to see the content by clicking **View Help** on the **Help** menu. The content you installed is listed in the left pane.  

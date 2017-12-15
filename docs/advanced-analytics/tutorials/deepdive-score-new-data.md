@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "R"
 ms.assetid: 87056467-f67f-4d72-a83c-ac052736d85d
@@ -66,7 +67,7 @@ In this step, you use the logistic regression model that you created earlier, to
   
     -  The function **rxSqlServerTableExists** queries the ODBC driver and returns TRUE if the table exists, FALSE otherwise.
     -  The function **rxSqlServerDropTable** executes the DDL and returns TRUE if the table is successfully dropped, FALSE otherwise.
-    - Reference for both functiosns can be found here: [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)
+    - Reference for both functions can be found here: [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)
   
 5. Now you are ready to use the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function to create the scores, and save them in the new table defined in data source `sqlScoreDS`.
   
@@ -86,7 +87,7 @@ In this step, you use the logistic regression model that you created earlier, to
   
     - The parameter *predVarNames* specifies the variable where results will be stored. Here you are passing a new variable, `ccFraudLogitScore`.
   
-    - The *type* parameter for **rxPredict** defines how you want the predictions calculated. Specify the keyword **response** to generate scores based on the scale of the response variable. Or, use the keyword **link** to generate scores based on the underlying link function, in which case predictions will be on a logistic scale.
+    - The *type* parameter for **rxPredict** defines how you want the predictions calculated. Specify the keyword **response** to generate scores based on the scale of the response variable. Or, use the keyword **link** to generate scores based on the underlying link function, in which case predictions are created using a logistic scale.
 
 6. After a while, you can refresh the list of tables in Management Studio to see the new table and its data.
 

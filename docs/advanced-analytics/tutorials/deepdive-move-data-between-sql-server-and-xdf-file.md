@@ -31,7 +31,7 @@ When you're done, you use the data in the file to create a new [!INCLUDE[ssNoVer
   
 ## Create a SQL Server table from an XDF file
 
-For this exercise, you use the credit card fraud data again. In this scenario, you've been asked to do some extra analysis on users in the states of California, Oregon, and Washington. To be more efficient, you've decided to store data for just these states on your local computer and work with the variables gender, cardholder, state, and balance.
+For this exercise, you use the credit card fraud data again. In this scenario, you've been asked to do some extra analysis on users in the states of California, Oregon, and Washington. To be more efficient, you've decided to store data for only these states on your local computer, and work with only the variables gender, cardholder, state, and balance.
 
 1. Re-use the `stateAbb` variable you created earlier to identify the levels to include, and write them to a new variable, `statesToKeep`.
   
@@ -53,7 +53,7 @@ For this exercise, you use the credit card fraud data again. In this scenario, y
   
     Make sure there are no hidden characters such as line feeds or tabs in the query.
   
-3. Next, define the columns to use when working with the data in R. For example, in the smaller data set, you need only three factor levels, because the query will return data for only three states.  Apply the `statesToKeep` variable to identify the correct levels to include.
+3. Next, define the columns to use when working with the data in R. For example, in the smaller data set, you need only three factor levels, because the query returns data for only three states.  Apply the `statesToKeep` variable to identify the correct levels to include.
   
     ```R
     importColInfo <- list(
@@ -71,7 +71,7 @@ For this exercise, you use the credit card fraud data again. In this scenario, y
     
     The [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) function can import data from any supported data source to a local XDF file. Using a local copy of the data is convenient when you want to do many different analyses on the data, but want to avoid running the same query over and over.
 
-5. Create the data source object by passing all the variables that you just defined as arguments to **RxSqlServerData**.
+5. Create the data source object by passing the variables previously defined as arguments to **RxSqlServerData**.
   
     ```R
     sqlServerImportDS <- RxSqlServerData(
@@ -114,7 +114,7 @@ For this exercise, you use the credit card fraud data again. In this scenario, y
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-Now that you've mastered the use of compute contexts and working with various data sources, it's time to try something fun. In the next and final lesson, you create a simple simulation that runs a custom R function, and execute it on the remote server.
+Now that you've mastered the use of compute contexts and working with various data sources, it's time to try something fun. In the next and final lesson, you create a simple simulation that runs a custom R function on the remote server.
 
 ## Next step
 

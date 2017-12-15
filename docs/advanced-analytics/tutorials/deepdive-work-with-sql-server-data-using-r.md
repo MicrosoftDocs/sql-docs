@@ -1,7 +1,5 @@
 ---
 title: "Deep Dive - Work with SQL Server data using R | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
 ms.date: "12/14/2017"
 ms.prod: sql-non-specified
 ms.reviewer: ""
@@ -12,6 +10,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "R"
 ms.assetid: 0a3d7ba0-4113-4cde-9645-debba45cae8f
@@ -43,12 +42,12 @@ In this lesson, you set up the environment and add the data you need for trainin
   
 ## Create the database and user
 
-For this walkthrough, create a new database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and add a SQL login with permissions to write and read data, as well as to run R scripts.
+For this walkthrough, create a new database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and add a SQL login with permissions to write and read data, and to run R scripts.
 
 > [!NOTE]
-> If you are only reading data, the account that runs the R scripts requires only SELECT permissions (**db_datareader** role) on the specified database. However, in this tutorial, you must have DDL admin privileges to prepare the database, and to create tables for saving the scoring results.
+> If you are only reading data, the account that runs the R scripts requires SELECT permissions (**db_datareader** role) on the specified database. However, in this tutorial, you must have DDL admin privileges to prepare the database, and to create tables for saving the scoring results.
 > 
-> Additionally, if you are not the database owner, you will need the permission, EXECUTE ANY EXTERNAL SCRIPT, in order to execute R scripts.
+> Additionally, if you are not the database owner, you need the permission, EXECUTE ANY EXTERNAL SCRIPT, in order to execute R scripts.
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], select the instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is enabled, right-click **Databases**, and select **New database**.
   
@@ -101,7 +100,7 @@ This section lists some common issues that you might run across in the course of
   
     If you don't want to install additional database management tools, you can create a test connection to the SQL Server instance by using the [ODBC Data Source Administrator](https://msdn.microsoft.com/library/ms714024.aspx) in Control Panel. If the database is configured correctly and you enter the correct user name and password, you should be able to see the database you just created and select it as your default database.
   
-    If you cannot connect to the database,  verify that remote connections are enabled for the server, and that the Named Pipes protocol has been enabled. Additional troubleshooting tips are are provided in [this article](http://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx).
+    If you cannot connect to the database,  verify that remote connections are enabled for the server, and that the Named Pipes protocol has been enabled. Additional troubleshooting tips are provided in this article: [Troubleshoot Connecting to the SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **My table name has datareader prefixed to it - why?**
   
@@ -117,7 +116,7 @@ This section lists some common issues that you might run across in the course of
   
 - **I don't have DDL privileges. Can I still run the tutorial?**?
   
-    Yes; however, you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and skip past the sections that call for creating new tables. The functions that require DDL privileges are generally called out in the tutorial.
+    Yes; however, you should ask someone to pre-load the data into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and skip past the sections that call for creating new tables. The functions that require DDL privileges are called out in the tutorial wherever possible.
 
     Also, ask your administrator to grant you the permission, EXECUTE ANY EXTERNAL SCRIPT. It is needed for R script execution, whether remote or by using `sp_execute_external_script`.
 

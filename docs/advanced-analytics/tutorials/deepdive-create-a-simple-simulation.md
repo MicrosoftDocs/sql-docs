@@ -1,7 +1,7 @@
 ---
 title: "Deep Dive - Create a simple simulation | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/18/2017"
+ms.date: "12/14/2017"
 ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
@@ -11,13 +11,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "R"
 ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
 caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Deep Dive - Create a simple simulation
@@ -26,7 +27,7 @@ This article is the final step in the Data Science Deep Dive tutorial, on how to
 
 Until now you've been using R functions that are designed specifically for moving data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a local compute context. However, suppose you write a custom R function of your own, and want to run it in the server context?
 
-You can call an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, by using the [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) function. You can also use **rxExec** to explicitly distribute work across cores in a single server node.
+You can call an arbitrary function in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, by using the [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) function. You can also use **rxExec** to explicitly distribute work across cores in a single server.
 
 In this lesson, you use the remote server to create a simple simulation. The simulation doesn't require any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data; the example only demonstrates how to design a custom function and then call it using the **rxExec** function.
 

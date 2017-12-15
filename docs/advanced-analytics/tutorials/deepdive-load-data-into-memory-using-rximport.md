@@ -25,7 +25,7 @@ ms.workload: "Inactive"
 
 This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-The [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) function can be used to move data from a data source into a data frame in R session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
+The [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) function can be used to move data from a data source into a data frame in session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
 
 In this step, you learn how to get data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then use the **rxImport** function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.
 
@@ -56,7 +56,7 @@ You've decided that you want to examine only the high risk individuals in more d
 
     If the operation was successful, you should see a status message like this one: "Rows Read: 35, Total Rows Processed: 35, Total Chunk Time: 0.036 seconds"
 
-4. Now that you have the high-risk observations in a data frame in memory, you can use various R functions to manipulate the data frame. For example, you can order customers by their risk score, and print a list of the customers who pose the highest risk.
+4. Now that the high-risk observations are in an in-memory data frame, you can use various R functions to manipulate the data frame. For example, you can order customers by their risk score, and print a list of the customers who pose the highest risk.
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]

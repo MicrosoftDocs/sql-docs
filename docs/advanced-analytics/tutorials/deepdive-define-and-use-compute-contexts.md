@@ -10,7 +10,8 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
-  - "sql-non-specified"
+  - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "R"
 ms.assetid: b13058d0-9c6a-44e1-849b-72189d9050ba
@@ -37,7 +38,7 @@ The function that creates the SQL Server compute context uses the following info
 
 ## Create and set a compute context
 
-1. Specify the connection string for the instance where computations will take place.  You can re-use the connection string that you created earlier, or create a different one if you want to move the computations to a different server, or use a different identity.
+1. Specify the connection string for the instance where computations are performed.  You can re-use the connection string that you created earlier. You can create a different connection string if you want to move the computations to a different server, or use a different login to perform some tasks.
 
     **Using a SQL login**
 
@@ -59,9 +60,9 @@ The function that creates the SQL Server compute context uses the following info
   
     The *wait* argument to **RxInSqlServer** supports these options:
   
-    -   **TRUE**. The job will be blocking and will not return until it has completed or has failed.  For more information, see [Distributed and parallel computing in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
+    -   **TRUE**. The job is configured as blocking and does not return until it has completed or has failed.  For more information, see [Distributed and parallel computing in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
   
-    -   **FALSE**. Jobs will be non-blocking and return immediately, allowing you to continue running other R code. However, even in non-blocking mode, the client connection with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be maintained while the job is running.
+    -   **FALSE**. Jobs are configured as non-blocking and return immediately, allowing you to continue running other R code. However, even in non-blocking mode, the client connection with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be maintained while the job is running.
 
 3. Optionally, you can specify the location of a local directory for shared use by the local R session and by the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer and its accounts.
 
@@ -120,11 +121,11 @@ Sometimes operations work on your local context, but have issues when running in
 
     > [!NOTE]
     > 
-    > For this tutorial, we'll use the compute context that does not have tracing enabled. That is because performance for the tracing-enabled option has not been tested for all operations.
+    > For this tutorial, use the compute context that does not have tracing enabled. 
     > 
-    > However, if you decide to use tracing, be aware that your experience may be affected by network connectivity.
+    > However, if you decide to use tracing, be aware that your experience may be affected by network connectivity. Also be aware that because performance for the tracing-enabled option has not been tested for all operations.
 
-Now that you have created a remote compute context, you'll learn how to change compute contexts, to run R code on the server or locally.
+In the next step you learn how to use compute contexts, to run R code on the server or locally.
 
 ## Next step
 

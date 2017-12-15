@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "R"
 ms.assetid: a195d5e2-72e2-4dd6-bf43-947312e4a52a
@@ -50,43 +51,31 @@ Therefore, you can run standard R commands against the model just as if it had b
 
 **Results**
 
-*Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)*
+```
+Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)
+Dependent variable(s): balance
+Total independent variables: 4 (Including number dropped: 1)
+Number of valid observations: 10000
+Number of missing observations: 0
+Coefficients: (1 not defined because of singularities)
 
-*Dependent variable(s): balance*
+Estimate Std. Error t value Pr(>|t|) (Intercept)
+3253.575 71.194 45.700 2.22e-16
+gender=Male -88.813 78.360 -1.133 0.257
+gender=Female Dropped Dropped Dropped Dropped
+creditLine 95.379 3.862 24.694 2.22e-16
+Signif. codes: 0  0.001  0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-*Total independent variables: 4 (Including number dropped: 1)*
-
-*Number of valid observations: 10000*
-
-*Number of missing observations: 0*
-
-*Coefficients: (1 not defined because of singularities)*
-
-*Estimate Std. Error t value Pr(>|t|) (Intercept)*
-
-*3253.575 71.194 45.700 2.22e-16*
-
-*gender=Male -88.813 78.360 -1.133 0.257*
-
-*gender=Female Dropped Dropped Dropped Dropped*
-
-*creditLine 95.379 3.862 24.694 2.22e-16*
-
-*Signif. codes: 0  0.001  0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
-
-*Residual standard error: 3812 on 9997 degrees of freedom*
-
-*Multiple R-squared: 0.05765*
-
-*Adjusted R-squared: 0.05746*
-
-*F-statistic: 305.8 on 2 and 9997 DF, p-value: < 2.2e-16*
-
-*Condition number: 1.0184*
+Residual standard error: 3812 on 9997 degrees of freedom
+Multiple R-squared: 0.05765
+Adjusted R-squared: 0.05746
+F-statistic: 305.8 on 2 and 9997 DF, p-value: < 2.2e-16
+Condition number: 1.0184
+```
 
 ## Create a logistic regression model
 
-Next you create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
+Next, you create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
 
 1.  Keep the compute context as is. You’ll also continue to use the same data source as well.
 

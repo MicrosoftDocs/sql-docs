@@ -1,5 +1,5 @@
 ---
-title: "Create New SQL Server Table using rxDataStep| Microsoft Docs"
+title: "Deep Dive - Create new SQL Server table using rxDataStep| Microsoft Docs"
 ms.custom: ""
 ms.date: "12/14/2017"
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ In this lesson, you learn how to move data between in-memory data frames, the [!
 
 ## Create SQL Server table from local data
 
-In the first haf of this tutorial, you used the **RxTextData** function to import data into R from a text file, and then used the **RxDataStep** function to move the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+In the first half of this tutorial, you used the **RxTextData** function to import data into R from a text file, and then used the **RxDataStep** function to move the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 This lesson takes a different approach, and uses data from a file saved in the [XDF format](https://en.wikipedia.org/wiki/Extensible_Data_Format). After doing some lightweight transformations on the data using the XDF file, you save the transformed data into a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
 
@@ -49,7 +49,7 @@ The XDF format is an XML standard developed for high-dimensional data and is the
   
 2. Define a new data source object using the **RxXdfData** function. To define an XDF data source, specify the path to the data file.  
 
-    You could specify the path to the file using a text variable, but in this case, there's a handy shortcut, because the sample data file (AirlineDemoSmall.xdf) is in the directory returned by the **rxGetOption** function.
+    You could specify the path to the file using a text variable. However, in this case, there's a handy shortcut, which is to use the **rxGetOption** function and get the file  (AirlineDemoSmall.xdf) from the sample data directory.
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
@@ -71,7 +71,7 @@ The XDF format is an XML standard developed for high-dimensional data and is the
 
 > [!NOTE]
 > 
-> Did you notice that you did not need to call any other functions to load the data into the XDF file, and could call **rxGetVarInfo** on the data immediately? That's because XDF is the default interim storage method for RevoScaleR. Use with XDF files was the orginal purpose for the rxGetVarInfo function, which has since been renamed, with support added for other source types.
+> Did you notice that you did not need to call any other functions to load the data into the XDF file, and could call **rxGetVarInfo** on the data immediately? That's because XDF is the default interim storage method for RevoScaleR. In addition to XDF files, the **rxGetVarInfo** function now supports multiple source types.
   
 4. Put this data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, storing _DayOfWeek_ as an integer with values from 1 to 7.
   
@@ -96,7 +96,7 @@ The XDF format is an XML standard developed for high-dimensional data and is the
             overwrite = TRUE )
     ```
   
-    This is a fairly large table, so wait will you see the final status message, which reads something like this: *Rows Read: 200000, Total Rows Processed: 600000*.
+    This is a fairly large table, so wait until you see a final status message like this one: *Rows Read: 200000, Total Rows Processed: 600000*.
      
 7. Set the compute context back to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
 
@@ -104,7 +104,7 @@ The XDF format is an XML standard developed for high-dimensional data and is the
     rxSetComputeContext(sqlCompute)
     ```
   
-8. Create a new SQL Server data source, using a simple SQL query on the new table. This definition adds factor levels for the *DayOfWeek* column, using the *colInfo* argumrnt to **RxSqlServerData**.
+8. Create a new SQL Server data source, using a simple SQL query on the new table. This definition adds factor levels for the *DayOfWeek* column, using the *colInfo* argument to **RxSqlServerData**.
   
     ```R
     SqlServerAirDemo <- RxSqlServerData(

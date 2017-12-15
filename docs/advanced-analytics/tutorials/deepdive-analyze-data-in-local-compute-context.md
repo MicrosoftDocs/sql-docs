@@ -26,7 +26,7 @@ This article is part of the Data Science Deep Dive tutorial, on how to use [Revo
 
 In this section, you learn how to switch back to a local compute context, and move data between contexts to optimize performance.
 
-Although ir might be faster to run complex R code using the server context, sometimes it is just more convenient to get your data out of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and analyze it on your private workstation.
+Although i might be faster to run complex R code using the server context, sometimes it is more convenient to get your data out of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and analyze it on a local workstation.
 
 ## Create a local summary
 

@@ -41,7 +41,7 @@ For more information about requirements and how to get set up, see [Prerequisite
 
 + [Solutions](#bkmk_solutions) 
 
-    Templates from the Microsoft Data Science team are customizable, to get you started fast with machine learning. Each solution is tailored to a specific task or industry problem; moreover, most solutions are designed to run either in SQL Server or in a cloud environment such as Azure Machine Learning. Other solutions can run on Linux or in Spark or Hadoop clusters, by using Microsoft R Server or Machine Learning Server.
+    Templates from the Microsoft Data Science team are customizable, to get you started fast with machine learning. Each solution is tailored to a specific task or industry problem. Most of the solutions are designed to run either in SQL Server, or in a cloud environment such as Azure Machine Learning. Other solutions can run on Linux or in Spark or Hadoop clusters, by using Microsoft R Server or Machine Learning Server.
 
 ### <a name ="bkmk_samples"></a>SQL Server product samples
 
@@ -112,7 +112,7 @@ With SQL Server 2017, you can install either R or Python, or both. Otherwise the
 After running SQL Server setup, don't forget these important steps:
 
 1. Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`. Follow the instructions to reconfigure and restart SQL Server.
-2. Ensure that the Launchpad service is running, and that the worker accounts it uses can connect to the SQL Server instance.
+2. Ensure that the Launchpad service is running, and that the Launchpad worker accounts can connect to the SQL Server instance.
 3. Review the permissions associated with the users who must run R or Python scripts. Regardless of whether you use SQL logins or Windows user accounts, the user must have permission to run R or Python scripts, and must be able to connect to the instance. Depending on the tutorial, the user might also require permission to write data, create database objects, or do a bulk import of data.
 
 For details, see this article for some common setup and configuration issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)

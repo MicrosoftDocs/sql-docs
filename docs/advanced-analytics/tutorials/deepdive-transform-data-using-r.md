@@ -10,6 +10,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "R"
 ms.assetid: 0327e788-94cc-4a47-933b-7c5c027b9208
@@ -39,7 +40,7 @@ The **rxDataStep** function processes data one chunk at a time, reading from one
 
 To make this example interesting, let's use a function from another R package to transform the data.  The **boot** package is one of the "recommended" packages, meaning that **boot** is included with every distribution of R, but is not loaded automatically on start-up. Therefore, the package should already be available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you've been using with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
-From the **boot** package, you'll use the  function `inv.logit`, which computes the inverse of a logit. That is, the `inv.logit` function converts a logit back to a probability on the [0,1] scale.
+From the **boot** package, use the  function `inv.logit`, which computes the inverse of a logit. That is, the `inv.logit` function converts a logit back to a probability on the [0,1] scale.
 
 > [!TIP] 
 > Another way to  get predictions in this scale would be to set the *type* parameter to **response** in the original call to rxPredict.
@@ -56,7 +57,7 @@ From the **boot** package, you'll use the  function `inv.logit`, which computes 
     sqlOutScoreDS2 <- RxSqlServerData( table =  "ccScoreOutput2",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-    In the new table, you will get all the variables from the previous `ccScoreOutput` table, plus the newly created variable.
+    In the new table, store all the variables from the previous `ccScoreOutput` table, plus the newly created variable.
   
 3. Set the compute context to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
   

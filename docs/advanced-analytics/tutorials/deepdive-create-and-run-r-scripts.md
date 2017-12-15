@@ -10,6 +10,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "R"
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
@@ -40,7 +41,7 @@ Before you run any R code, you need to specify the *current* or *active* compute
     rxSetComputeContext(sqlCompute)
     ```
   
-    As soon as you run this statement, all subsequent computations will take place on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer specified in the *sqlCompute* parameter.
+    As soon as you run this statement, all subsequent computations take place on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer specified in the *sqlCompute* parameter.
   
 2. If you decide that you'd rather run the R code on your workstation, you can switch the compute context back to the local computer by using the  **local** keyword.
   
@@ -112,9 +113,9 @@ To see how the compute context works, try generating some summary statistics usi
 
 ## Add maximum and minimum values
 
-Based on the computed summary statistics, you've discovered some useful information about the data that you want to put into the data source for use in further computations. For example, the minimum and maximum values can be used to compute histograms. For this reasons, let's add the high and low values to the **RxSqlServerData** data source.
+Based on the computed summary statistics, you've discovered some useful information about the data that you want to put into the data source for use in further computations. For example, the minimum and maximum values can be used to compute histograms. For this reason, let's add the high and low values to the **RxSqlServerData** data source.
 
-Fortunately [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes optimized functions that can very efficiently convert integer data to categorical factor data.
+Fortunately [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes optimized functions that can efficiently convert integer data to categorical factor data.
 
 1. Start by setting up some temporary variables.
   
@@ -160,7 +161,7 @@ Fortunately [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 
     The `sqlFraudDS` data source now includes the new columns added using `ccColInfo`.
   
 
-At this point, the modifications affect only the data source object in R; no new data has been written to the database table yet. However, you can use the data captured in the `sumOut` variable to create visualizations and summaries. In the next step youl learn how to do this while switching compute contexts.
+At this point, the modifications affect only the data source object in R; no new data has been written to the database table yet. However, you can use the data captured in the `sumOut` variable to create visualizations and summaries. In the next step you learn how to do this while switching compute contexts.
 
 > [!TIP]
 > If you forget which compute context you're using, run `rxGetComputeContext()`.  A return value of "RxLocalSeq Compute Context" indicates that you are running in the local compute context.

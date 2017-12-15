@@ -10,6 +10,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
+  - "SQL Server 2017"
 dev_langs: 
   - "R"
 ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
@@ -23,7 +24,7 @@ ms.workload: "On Demand"
 
 This tutorial demonstrates how to use the enhanced R packages provided in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] to work with SQL Server data and create scalable R solutions, by using the server as a compute context for high-performance big data analytics.
 
-You will learn how to create a remote compute context, move data between local and remote compute contexts, and execute R code on a remote SQL Server. You will also learn how to analyze and plot data both locally and on the remote server, and how to create and deploy models.
+You learn how to create a remote compute context, move data between local and remote compute contexts, and execute R code on a remote SQL Server. You also learn how to analyze and plot data both locally and on the remote server, and how to create and deploy models.
 
 > [!NOTE]
 > 
@@ -34,7 +35,7 @@ You will learn how to create a remote compute context, move data between local a
 
 ## Overview
 
-To experience the flexibility and processing power of the RevoScaleR package, in this tutorial you'll move data and swap compute contexts frequently. To illustrate, here are some of the tasks in this tutorial:
+To experience the flexibility and processing power of the RevoScaleR package, in this tutorial you move data and swap compute contexts frequently. To illustrate, here are some of the tasks in this tutorial:
 
 + Data is initially obtained from CSV files or XDF files. You import the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the functions in the RevoScaleR package.
 + Model training and scoring is performed using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compute context. 
@@ -67,7 +68,7 @@ This tutorial takes about 75 minutes to complete, not including setup.
 
 ### Target audience
 
-This tutorial is intended for data scientists or for people who are already somewhat familiar with R and data science tasks including exploration, statistical analysis, and model tuning.  However, all the code is provided, so even if you are new to R, you can run the code and follow along, assuming you have the required server and client environments.
+This tutorial is intended for data scientists or for people who are already somewhat familiar with R, and with data science tasks such as summaries and model creation.  However, all the code is provided, so even if you are new to R, you can run the code and follow along, assuming you have the required server and client environments.
 
 You should also be comfortable with [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax and know how to access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using tools such as these:
 
@@ -90,18 +91,20 @@ You should also be comfortable with [!INCLUDE[tsql](../../includes/tsql-md.md)] 
 
 -   **Data science development computer**
   
-    You must also install the RevoScaleR packages and related providers on the computer used as the R development environment. The easiest way to do this is to install Microsoft R Client or Microsoft R Server (Standalone). 
+    You must install the RevoScaleR packages and related providers on the computer used as the R development environment. The easiest way to do this is to install Microsoft R Client,  Microsoft R Server (Standalone), or Machine Learning Server (Standalone). 
       
     > [!NOTE] 
     > Other versions of Revolution R Enterprise or Revolution R Open are not supported.
     > 
-    > An open source distribution of R, such as R 3.2.2, will not work in this tutorial, because only the RevoScaleR functions can use remote compute contexts.
+    > An open source distribution of R cannot be used in this tutorial, because only the RevoScaleR functions can use remote compute contexts.
   
 -   **Additional R Packages**
   
     In this tutorial, you install the following packages: **dplyr**, **ggplot2**, **ggthemes**, **reshape2**, and **e1071**. Instructions are provided as part of the tutorial.
   
-    All packages must be installed in two places: on the computer you use for R solution development, and on the SQL Server computer where R scripts are exeucted. If you do not have permission to install packages on the server computer, ask an administrator. **Do not install the packages to a user library.** It is important that the packages be installed in the R package library that is used by the SQL Server instance.
+    All packages must be installed in two places: on the computer you use for R solution development, and on the SQL Server computer where R scripts are executed. If you do not have permission to install packages on the server computer, ask an administrator. 
+    
+    **Do not install the packages to a user library.** The packages must be installed in the R package library that is used by the SQL Server instance.
 
 For more information, see [Prerequisites for Data Science Walkthroughs](../../advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md).
 

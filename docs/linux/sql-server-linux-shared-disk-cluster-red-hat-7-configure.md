@@ -209,7 +209,7 @@ For additional information about using NFS, see the following resources:
 1.  **On the primary node only**, save the database files to a temporary location.The following script, creates a new temporary directory, copies the database files to the new directory, and removes the old database files. As SQL Server runs as local user mssql, you need to make sure that after data transfer to the mounted share, local user has read-write access to the share. 
 
    ``` 
-   $ su mssql
+   $ sudo su mssql
    $ mkdir /var/opt/mssql/tmp
    $ cp /var/opt/mssql/data/* /var/opt/mssql/tmp
    $ rm /var/opt/mssql/data/*

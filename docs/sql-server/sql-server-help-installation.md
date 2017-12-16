@@ -26,37 +26,39 @@ ms.workload: "Inactive"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-You can view SQL Server online help in a browser window in SQL Server Management Studio (SSMS) by clicking **View Help** in the Help menu, or you can view help content that you downloaded from online sources or installed from disk in the SSMS Help Viewer. You can choose to view context-sensitive help (when you press F1 or click Help in a dialog box) in a browser or in the Help Viewer. 
+You can view SQL Server online help in a browser window in SQL Server Management Studio (SSMS) 17.x by clicking **View Help** in the Help menu. 
+
+You can also use the Help Viewer in SSMS or Visual Studio to view SQL Server help content that you download from online sources or install from disk. You can choose to view F1 or dialog box help in a browser or in the Help Viewer. 
 
 This article describes tools that install the Help Viewer, how to install offline help content, and how to view help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] and SQL Server 2016 / SQL Server 2017. 
 
-<[!NOTE]
-<SQL Server 2016 and SQL Server 2017 content are now combined, although individual topics note what version they apply to. Most apply to both versions. 
+## Installing the Help Viewer
 
-## Help Viewer
+The Help Viewer allows you to download, install, and view SQL Server help content from online sources or disk. Help Viewer has two versions: v2.x supports SQL Server 2016/SQL Server 2017 help, and v1.x supports [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] help. The Help Viewer does not support proxy settings, and does not support the ISO format. 
 
-The SSMS Help Viewer allows you to download, install, and view SQL Server help content from online sources or disk. Help Viewer has two versions: v2.x supports SQL Server 2016/SQL Server 2017 help, and v1.x supports [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] help. The Help Viewer does not support proxy settings, and does not support the ISO format. 
-
->[!NOTE]
->Help Viewer v2.x can also support [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] help if you install the content from disk.
-
-The following tools install Help Viewer. 
+The following tools install the Help Viewer: 
 
 |**Tool that installs Help Viewer**|**Help Viewer version installed**|
 |---------|---------|
-|[SQL Server Management Studio (latest version)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)| v2.x|
-|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| v2.x|
-|Visual Studio 2017 | v2.x (supports SQL Server 2016 help only)|
+|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)| v2.2|
+|Visual Studio 2017 | v2.3|
+|Visual Studio 2015 | v2.2|
+|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| v2.2|
 |SQL Server 2014 Management Studio| v1.x|
-|Visual Studio prior to 2012| v1.x|
+|Visual Studio prior to 2015| v1.x|
 
-> [!NOTE]
-> - Installing SQL Server 2016 installs Help Viewer 1.1, which does not support SQL Server 2016/2017 help. 
-> - Installing SQL Server 2017 does not install Help Viewer.
+>[!NOTE]
+> - SQL Server 2016 installs Help Viewer 1.1, which does not support SQL Server 2016/2017 help. 
+> - Installing SQL Server 2017 does not install any Help Viewer.
+> - Help Viewer v2.x can also support [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] help, if you install the content from disk.
 
 ## View online help
 
-Online help always shows the most up-to-date help content in a browser. To view online help in the latest version of SSMS, click **View Help** on the **Help** menu. 
+Online help always shows the most up-to-date content. 
+
+### View online help in SSMS 17.x
+
+To view SQL Server online help in SSMS 17.x, click **View Help** on the **Help** menu. SQL Server 2016/2017 help content from docs.microsoft.com displays in a browser. 
 
 ![HelpViewer2_SSMS_ChooseOnlineORLocalHelp](../sql-server/media/helpviewer2-ssms-chooseonlineorlocalhelp.png)
 
@@ -77,17 +79,17 @@ To view online help content with Help Viewer 1.x, do the following:
 
 ## Use offline help 
 
-You can use the Help Viewer to download the latest available online help content for SQL Server 2016/2017, or help content from the Microsoft Download Center for SQL Server 2014, and install it on your computer. You can then access the content offline or online in the Help Viewer. 
+You can use the Help Viewer to download the latest available online help content for SQL Server 2016/2017, or help content from the Microsoft Download Center for SQL Server 2014, and install it on your computer. You can then access the content in the Help Viewer whether you are online or offline. 
 
 >[!NOTE]
 >- SQL Server 2016 and SQL Server 2017 help are combined, although some topics note individual versions. Most topics apply to both.
 >- You can use Help Viewer 2.x to view [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] help if you install the content from disk. 
 
-### Help Viewer v2.x
+### Use Help Viewer v2.x
 
 This process installs the most up-to-date online help content available at the time of the download, and displays it in the Help Viewer. 
 
-1. In SSMS, click **Add and Remove Help Content** on the Help menu. The Help Viewer opens to the Manage Content tab.  
+1. In SSMS or VS, click **Add and Remove Help Content** on the Help menu. The Help Viewer opens to the Manage Content tab.  
 2. To install from the latest online source, choose **Online** under Installation source:.
    
    ![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/helpviewer2-managecontent-onlinesource.png)  
@@ -95,22 +97,22 @@ This process installs the most up-to-date online help content available at the t
    > To install from disk (SQL Server 2014 help), choose **Disk** under Installation source and specify the disk location.
    
    >[!NOTE]
-   >- To change the install location, click **Move** next to Local store path, browse and enter a new folder path, and then click **OK**. 
-   >- If the Update operation fails after changing the Local store path, close and reopen the Help Viewer, then try the update again.
+   >- To change the install location, click **Move** next to Local store path, browse and enter a new folder path, and then click **OK**. If the Update operation fails after changing the Local store path, close and reopen the Help Viewer, then try the update again.
  
 4. Click **Add** next to each content package that you want to install.
    There are 13 packages for SQL Server. Add each one to install all SQL Server help content. The package names map to the help node names as follows:
-   Click **Cancel** to remove any packages added in error, or **Remove** to remove packages previously installed. 
-6. Click **Update** at lower right.  
+5. Click **Update** at lower right. The help table of contents on the left automatically updates with the added packages. If the contents pane is not visible, click Contents on the left border. Click the pushpin icon to keep the contents pane open.  
    
    ![HelpViewer2_ManageContent_AddContent](../sql-server/media/helpviewer2-managecontent-addcontent.png)     
    
    ![HelpViewer2_withContentInstalled](../sql-server/media/helpviewer2-withcontentinstalled.png)
    
-6. To view the installed help in SSMS, press **CTRL + ALT + F1**, or choose **Add or Remove Content** from the Help menu, to launch the Help Viewer. 
+6. To view the installed help in SSMS, press CTRL + ALT + F1, or choose **Add or Remove Content** from the Help menu, to launch the Help Viewer. 
    If the help table of contents is not visible, click **Contents** on the left. Click the pushpin on the Contents pane to keep the pane open. 
    
-## Use [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] offline help with Help Viewer v1.x
+## Use Help Viewer v1.x
+
+This process downloads SQL Server 2014 help from the Microsoft Download Center and installs it on your computer, where it is available in Help Viewer 1.x.
 
 1. Navigate to the [Product Documentation for Microsoft SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=42557) download site and click **Download**.  
 2. Click **Save** in the message box to save the *SQLServer2014Documentation\_\*.exe* file to your computer.  

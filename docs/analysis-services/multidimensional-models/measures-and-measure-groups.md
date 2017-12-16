@@ -2,12 +2,12 @@
 title: "Measures and Measure Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -32,6 +32,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Measures and Measure Groups
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A cube includes *measures* in *measure groups*, business logic, plus a collection of dimensions that give context for evaluating the numerical data that a measure provides. Both measures and measure groups are an essential component of a cube. A cube cannot exist without at least one of each.  
   
  This topic describes [Measures](#bkmk_measure) and [Measure Groups](#bkmk_mg). It also contains the following table, with links to procedural steps for creating and configuring measures and measure groups.  

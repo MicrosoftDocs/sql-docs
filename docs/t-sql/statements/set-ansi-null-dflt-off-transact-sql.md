@@ -1,7 +1,7 @@
 ---
 title: "SET ANSI_NULL_DFLT_OFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/04/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -38,21 +38,21 @@ ms.workload: "Inactive"
   Alters the behavior of the session to override default nullability of new columns when the ANSI null default option for the database is **true**. For more information about setting the value for ANSI null default, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## Syntax
+
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-## Syntax  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET ANSI_NULL_DFLT_OFF { ON | OFF }  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ANSI_NULL_DFLT_OFF OFF  
-```  
-  
+SET ANSI_NULL_DFLT_OFF { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ANSI_NULL_DFLT_OFF OFF
+```
+
 ## Remarks  
  This setting only affects the nullability of new columns when the nullability of the column is not specified in the CREATE TABLE and ALTER TABLE statements. By default, when SET ANSI_NULL_DFLT_OFF is ON, new columns that are created by using the ALTER TABLE and CREATE TABLE statements are NOT NULL if the nullability status of the column is not explicitly specified. SET ANSI_NULL_DFLT_OFF does not affect columns that are created by using an explicit NULL or NOT NULL.  
   

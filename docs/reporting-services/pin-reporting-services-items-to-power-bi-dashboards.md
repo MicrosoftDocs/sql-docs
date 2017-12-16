@@ -1,11 +1,13 @@
 ---
 title: "Pin Reporting Services items to Power BI Dashboards | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "09/16/2016"
-ms.prod: sql-non-specified
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""

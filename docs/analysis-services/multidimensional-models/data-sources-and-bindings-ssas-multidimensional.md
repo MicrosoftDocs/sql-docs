@@ -2,12 +2,12 @@
 title: "Data Sources and Bindings (SSAS Multidimensional) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -45,6 +45,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Data Sources and Bindings (SSAS Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Cubes, dimensions, and other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects can be bound to a data source. A data source can be one of the following objects:  
   
 -   A relational data source.  

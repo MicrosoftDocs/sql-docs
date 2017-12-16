@@ -2,12 +2,12 @@
 title: "Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "instances"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -20,6 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topic explains the user experience of workbooks created in previous [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] environments and how to upgrade [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks so that you can take advantage of new features introduced in this release. To learn more about new features, see [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  

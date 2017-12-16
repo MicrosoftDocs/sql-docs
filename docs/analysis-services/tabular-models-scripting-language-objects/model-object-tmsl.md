@@ -2,12 +2,12 @@
 title: "Model object (TMSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -21,9 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Model object (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Defines a Tabular model. There is one model per database, and only one database that can be specified in any given command. A Database object is the parent object.  
   
  Model definitions are too large to reproduce the entire syntax in one topic. For this reason, a  partial syntax highlighting the main parts can be found below, with links to child objects.  

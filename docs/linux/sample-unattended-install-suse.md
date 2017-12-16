@@ -2,8 +2,8 @@
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
 description: SQL Server Script Sample - Unattended Install on SUSE Linux Enterprise Server
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
@@ -36,7 +36,7 @@ This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server
 ## Sample script
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

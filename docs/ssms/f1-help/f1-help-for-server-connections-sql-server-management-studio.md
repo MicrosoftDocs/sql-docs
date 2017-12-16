@@ -3,8 +3,11 @@ title: "F1 Help for Server Connections (SQL Server Management Studio) | Microsof
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-f1"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -23,6 +26,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # F1 Help for Server Connections (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 [Browse for Servers &#40;Local Servers&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  

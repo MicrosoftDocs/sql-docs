@@ -24,5 +24,6 @@
 ## [Transact-SQL Reference](../t-sql/language-reference.md)
 ## [SQL Operations Studio (preview) GitHub repo](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [SQL Server Blog](https://blogs.technet.microsoft.com/dataplatforminsider/)
+## [New and updated articles](new-updated-sql-operations-studio.md)
 # [FAQ](faq.md)
 # [Report issues & make suggestions](https://github.com/microsoft/sqlopsstudio/issues)

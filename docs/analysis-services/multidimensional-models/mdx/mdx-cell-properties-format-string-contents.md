@@ -2,12 +2,12 @@
 title: "FORMAT_STRING Contents (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -28,6 +28,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # MDX Cell Properties - FORMAT_STRING Contents
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The **FORMAT_STRING** cell property formats the **VALUE** cell property, creating the value for the **FORMATTED_VALUE** cell property. The **FORMAT_STRING** cell property handles both string and numeric raw values, applying a format expression against the value to return a formatted value for the **FORMATTED_VALUE** cell property. The following tables detail the syntax and formatting characters used to handle string and numeric values.  
   
 ## String Values  

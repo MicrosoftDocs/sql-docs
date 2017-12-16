@@ -2,12 +2,12 @@
 title: "Apply Prediction Functions to a Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -23,6 +23,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Apply Prediction Functions to a Model
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   To create a prediction query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, you must first select the mining model on which the query will be based. You can select any mining model that exists in the current project.  
   
  After you have selected a model, add a *prediction function* to the query. A prediction function can be used to get a prediction, but you can also add prediction functions that return related statistics, such as a the probability of the predicted value, or information that was used in generating the prediction.  

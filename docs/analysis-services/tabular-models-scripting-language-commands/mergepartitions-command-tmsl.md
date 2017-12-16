@@ -2,12 +2,12 @@
 title: "MergePartitions command (TMSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -21,9 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MergePartitions command (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Merges the data of one or more source partitions into a target partition, and then deletes the source partition. The SQL Query of the target partition will not be updated as part of the merge. To ensure that subsequent processing of the partition retrieves all of the data, you should revise the query so that it selects all of the data in the merged partition.  
   
 ## Request  

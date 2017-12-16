@@ -2,12 +2,12 @@
 title: "Create and Run an MDX Script in SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -26,6 +26,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create and Run an MDX Script in SQL Server Data Tools
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   To create and run an MDX Script in  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you need to be in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] with a cube already created and ready for editing.  
   
 ### To create a Multidimensional Expressions (MDX) script  

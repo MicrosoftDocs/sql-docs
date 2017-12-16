@@ -2,12 +2,12 @@
 title: "Translations in Tabular models (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,6 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Translations in Tabular models (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] adds translation string support for Tabular models. A single object in the model can have multiple translations of a name or description, making it possible to support multi-language versions within the model definition.  
   
  Translated strings are for object metadata only (names and descriptions of tables and columns) that appear in a client tool like an Excel PivotTable list.  To use translated strings, the client connection specifies the culture. In the **Analysis in Excel** feature, you can choose the language from a drop-down list. For other tools, you might need to specify the culture in the connection string.  

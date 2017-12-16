@@ -16,11 +16,8 @@ ms.workload: "Inactive"
 
 # What is [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free tool that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.<br>
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free tool that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse; wherever they're running.
 
-> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T255/player]
-
-<br>
 **[Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
 

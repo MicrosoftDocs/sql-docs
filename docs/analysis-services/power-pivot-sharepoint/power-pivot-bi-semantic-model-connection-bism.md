@@ -2,12 +2,12 @@
 title: "Power Pivot BI Semantic Model Connection (.bism) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot BI Semantic Model Connection (.bism)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A BI semantic model connection (.bism) is a portable connection that connects Excel or Power View reports to an Analysis Services tabular model database or an Analysis Services instance in multidimensional mode. If you are familiar with office data connection (.odc) files, you will notice a similarity in how a .bism connection file is defined and used.  
   
  A BI semantic model connection is created and accessed via SharePoint. Creating BI semantic model connections enables quick launch commands on a BI semantic model connection in a library. Quick launch commands open a new Excel workbook or options for editing the connection file. If Reporting Services is installed, you will also see a command to create a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] report.  

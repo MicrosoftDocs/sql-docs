@@ -43,7 +43,7 @@ Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Expres
 ## Install LocalDB  
  Install **LocalDB** through the installation wizard or by using the SqlLocalDB.msi program. **LocalDB** is an option when installing [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
  
-Select **LocalDB** on the **Feature Selection/Shared Features** page during installation. There can be only one installation of the **LocalDB** binary files for each major [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] version. Multiple [!INCLUDE[ssDE](../../includes/ssde-md.md)] processes can be started and will all use the same binaries. An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] started as the **LocalDB** has the same limitations as [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+Select **LocalDB** on the **Feature Selection/Shared Features** page during installation. There can be only one installation of the **LocalDB** binary files for each major [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] version. Multiple [!INCLUDE[ssDE](../../includes/ssde-md.md)] processes can be started and will all use the same binaries. An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] started as the **LocalDB** has the same limitations as [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
 
  An instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** is managed by using the **SqlLocalDB.exe** utility. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** should be used in place of the [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] user instance feature which is deprecated. 
   

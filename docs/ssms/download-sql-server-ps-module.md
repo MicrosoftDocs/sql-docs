@@ -3,8 +3,11 @@ title: "Download SQL Server PowerShell Module | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Download SQL Server PowerShell Module
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 As part of the 17.0 release of SQL Server Management Studio, the SQL Server PowerShell module now ships via the PowerShell Gallery.  The module is no longer included in the SSMS install package. To use PowerShell with SSMS 17.0 and newer, the SQL Server Module must be installed on the machine as an additional step.
 
 Full documentation about installing the latest version of the Windows Management Framework and how to install PowerShell modules in general can be found on the [PowerShell Gallery](https://www.powershellgallery.com/) site.

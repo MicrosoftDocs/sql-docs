@@ -3,8 +3,11 @@ title: "About SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # About SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use this dialog box to view or copy information about your installation of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Evaluation editions list the number of days remaining until the product expires.  
   
 ## Options  

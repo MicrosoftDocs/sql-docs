@@ -2,9 +2,12 @@
 title: "SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/15/2017"
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
-
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 
 ## Tools to run queries and manage databases  
@@ -30,7 +32,12 @@ ms.workload: "On Demand"
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Turn Visual Studio into a powerful development environment for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. **SSDT runs on Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| After installing Visual Studio Code, install the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for developing Microsoft SQL Server, Azure SQL Database, and SQL Data Warehouse. **Visual Studio Code runs on Windows, macOS, and Linux**.|
 
+## Which tool should I choose?
 
+- Do you want to manage a SQL Server instance or database, in a light-weight editor on Windows, Linux or Mac? Choose [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
+- Do you want to manage a SQL Server instance or database on Windows with full GUI support? Choose [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- Do you want to create or maintain database code, including compile time validation, refactoring and designer support on Windows? Choose [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- Do you want to write T-SQL scripts in a light-weight editor on Windows, Linux or Mac? Choose [Visual Studio Code](https://code.visualstudio.com/) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## Additional tools
 

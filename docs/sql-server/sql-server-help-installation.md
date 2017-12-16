@@ -22,7 +22,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# SQL Server help content and SQL Server Management Studio Help Viewer
+# SQL Server help content and Help Viewer
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

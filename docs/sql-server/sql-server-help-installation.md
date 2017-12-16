@@ -26,11 +26,11 @@ ms.workload: "Inactive"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-You can view up-to-date SQL Server help online in a browser window in SQL Server Management Studio (SSMS) by clicking **View Help** in the Help menu. You can use the SSMS Help Viewer to view help content that you downloaded from online sources or installed from disk. You can choose to view context-sensitive help (when you press F1 or click Help in a dialog box) in a browser or in the Help Viewer. 
+You can view up-to-date SQL Server help online in a browser window in SQL Server Management Studio (SSMS) by clicking **View Help** in the Help menu. You can view help content that you downloaded from online sources or installed from disk by using the SSMS Help Viewer. You can view context-sensitive help (when you press F1 or click Help in a dialog box) in a browser or in the Help Viewer. 
 
 This article describes tools that install the Help Viewer, how to install offline help content, and how to view help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] and SQL Server 2016 / SQL Server 2017. 
 
-<[!NOTE>
+<[!NOTE]
 <SQL Server 2016 and SQL Server 2017 content are now combined, although individual topics note what version they apply to. Most apply to both versions. 
 
 ## Help Viewer

@@ -26,7 +26,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-You can use the Help Viewer in SQL Server Management Studio (SSMS) or Visual Studio (VS) to download and install SQL Server help books from online sources or disk and view them offline. This article describes tools that install the Help Viewer, how to install offline help content, and how to view help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] and SQL Server 2016 / SQL Server 2017.
+You can use the Help Viewer in SQL Server Management Studio (SSMS) or Visual Studio (VS) to download and install SQL Server help packages from online sources or disk and view them offline. This article describes tools that install the Help Viewer, how to install offline help content, and how to view help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016, and SQL Server 2017.
 
 > [!NOTE]
 > SQL Server 2016 and SQL Server 2017 help are combined, although some topics apply to individual versions where noted. Most topics apply to both.
@@ -47,7 +47,7 @@ The following tools install the Help Viewer:
 |Earlier versions of Visual Studio | v1.x|
 |SQL Server 2016 | v1.x|
 
-\* To install the Help Viewer with Visual Studio 2017, on the Individual Components tab in the Visual Studio Installer, select **Help Viewer** in the Code Tools category, and then click **Install**. 
+\* To install the Help Viewer with Visual Studio 2017, on the Individual Components tab in the Visual Studio Installer, select **Help Viewer** under Code Tools, and then click **Install**. 
 
 >[!NOTE]
 > - SQL Server 2016 installs Help Viewer 1.1, which does not support SQL Server 2016 help. 
@@ -174,7 +174,9 @@ This process uses Help Viewer 1.x to download SQL Server 2014 help from the Micr
 
 Online help always shows the most up-to-date content. 
 
-- To view SQL Server online help in SSMS 17.x, click **View Help** on the **Help** menu. The latest SQL Server 2016/2017 documentation from docs.microsoft.com displays in a browser. 
+**To view SQL Server online help in SSMS 17.x**
+
+- Click **View Help** on the **Help** menu. The latest SQL Server 2016/2017 documentation from docs.microsoft.com displays in a browser. 
 
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -198,11 +200,11 @@ Online help always shows the most up-to-date content.
 
 ## View F1 help
 
-When you press F1 or click **Help** or the **?** icon in a dialog box in SSMS or VS, a context-sensitive online help topic appears. 
+When you press F1 or click **Help** or the **?** icon in a dialog box in SSMS or VS, a context-sensitive online help topic appears in the browser or Help Viewer. 
 
 **To view F1 help**
 
-1. Point to **Set Help Preference** on the Help menu and choose either **Launch in Browser** or **Launch in Help Viewer**. 
+1. Point to **Set Help Preference** on the Help menu, and choose either **Launch in Browser** or **Launch in Help Viewer**. 
 2. Press F1, or click **Help** or **?** in dialog boxes where they are available, to see context-sensitive online topics in the chosen environment.
 
 >  [!NOTE]

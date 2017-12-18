@@ -155,7 +155,7 @@ A distributed AG can also cross OS boundaries. The underlying AGs are bound by t
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->
-
+ 
 ## Next steps
 [Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
 

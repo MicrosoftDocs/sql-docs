@@ -18,34 +18,30 @@ ms.workload: "Inactive"
 
 ## December 2017
 
-### Whats new
-- Azure Integration with Create Firewall Rule support
-- Improved acquisition experience with Windows Setup EXE, RPM and DEB packages
-- Enable sideloading VSIX for sharing Insights extensions
-- VS Code Platform refresh to 1.18.1
-- Dashboard Visual Editing mode to resize and delete widgets
-- Scripting performance improvements and Script As Alter and Script As Execute support
-- Query Editor usability improvements (such as saving cursor state when switching tabs, keyboard shortcut to hide results pane, fixes for rendering issues)
-- Enable HotExit mode for scratchpad editing
-- Clear Connection Dialog Recent Connections
-- Support “GO N” batch separator looping
-- Improved Edit Data default value and nullable column support
-- Improved Charting options for x & y axis labels and min\max axis limits
-- Object Explorer expand node performance improvements
-- Improved keyboard navigation (specifically when tabbing through UI)
+release date: 12/19/2017  
+version: 0.24.1
 
-### Notable bug fixes
+The December 2017 release is a refresh release that picks up several bugs fixes across all feature areas, as well as the following highlighted enhancements:
 
-- Anything?
+- Create Firewall Rule Dialog is now available to assist connecting to Azure SQL Database and Azure SQL Data Warehouse.
+- Windows Setup and Ubuntu DEB installation packages (RPM coming in Jan.)
+- Manage Dashboard visual layout editor.
+- *Script As Alter* and *Script As Execute* commands.
+- Integrate VS Code 1.18.1 editor platform
+- Enable Sideloading of VSIX Extension files
+- Enable HotExit feature
+- Support "GO N" batch iteration syntax
+- "Run Current Query with Actual Plan" command
 
-### Known issues
-
-- Anything?
 
 
 ## November 2017
 
-- Initial release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
+release date: 11/15/2017  
+version: 0.23.6
+
+- Initial release of [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+
 
 ## Next Steps
 

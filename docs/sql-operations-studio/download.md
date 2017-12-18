@@ -15,13 +15,13 @@ ms.workload: "Inactive"
 ---
 # Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
 
-We're pleased to announce a new release of [!INCLUDE[name-sos](../includes/name-sos.md)] is available. For details about this release, see the [release notes](release-notes.md).
+The latest version was released on December 19, 2017. For details about this release, see the [release notes](release-notes.md).
 
-|Platform|Download|
-|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|
-|macOS|[Package](https://go.microsoft.com/fwlink/?linkid=865306)|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|
+|Platform|Download| |
+|:---|:---| |
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)| |
+|macOS|[Package](https://go.microsoft.com/fwlink/?linkid=865306)| |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)| |
 
 
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
@@ -30,7 +30,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 - [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=865305).
 
-or 
+   or 
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=865304).
 2. Browse to the downloaded file and extract it.

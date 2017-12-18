@@ -66,7 +66,7 @@ SSMS 17.x and VS 2015 and 2017 use Help Viewer 2.x, which supports SQL Server 20
 
    The Help Viewer opens to the Manage Content tab.  
    
-2. To install the latest help content package, choose **Online** under Installation source:.
+2. To install the latest help content package, choose **Online** under Installation source.
    
    ![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-onlinesource.png)  
    
@@ -76,16 +76,16 @@ SSMS 17.x and VS 2015 and 2017 use Help Viewer 2.x, which supports SQL Server 20
    The Local store path on the Manage Content tab shows where the content will be installed on the local computer. If you want to change the location, click **Move**, enter a different folder path in the **To** field, and then click **OK**.
    If the help installation fails after changing the Local store path, close and reopen the Help Viewer, ensure the new location appears in the Local store path, and then try the installation again.
 
-3. Click **Add** next to each content package that you want to install. 
-   Add all 13 packages under SQL Server to install all SQL Server help content. 
+3. Click **Add** next to each content package (book) that you want to install. 
+   To install all SQL Server help content, add all 13 books under SQL Server. 
    
 4. Click **Update** at lower right. 
-   The help table of contents on the left automatically updates with the added packages. 
+   The help table of contents on the left automatically updates with the added books. 
    
    ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)     
    
 > [!NOTE]
-> Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the downloadable book names as follows:
+> Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the book names as follows:
 
 | Contents pane | SQL Server book |
 |-----|-----|
@@ -98,7 +98,7 @@ SSMS 17.x and VS 2015 and 2017 use Help Viewer 2.x, which supports SQL Server 20
 |Power Query M Reference | Power Query M Reference|
 |SQL Server Drivers | SQL Server Connection Drivers|
 |SQL Server on Linux | SQL Server on Linux|
-|SQL Server Technical Documentation | SQL Server Technival Documentation (SSIS, SSRS, DB engine, setup)|
+|SQL Server Technical Documentation | SQL Server Technical Documentation (SSIS, SSRS, DB engine, setup)|
 |Tools and utilities for Azure SQL Database | SQL Server tools|
 |Transact-SQL Reference (Database Engine) | Transact-SQL Reference|
 |XQuery Language Reference (SQL Server) | XQuery Language Reference (SQL Server)|
@@ -114,7 +114,7 @@ To view the installed help in SSMS, press CTRL + ALT + F1, or choose **Add or Re
 
 The Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. Click topics in the table of contents to display them in the right pane. 
 > [!TIP]
-> If the contents pane is not visible, click Contents on the left. Click the pushpin icon to keep the contents pane open.  
+> If the contents pane is not visible, click Contents on the left margin. Click the pushpin icon to keep the contents pane open.  
 
    ![Help Viewer v2.x with content](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
 
@@ -182,8 +182,6 @@ Online help always shows the most up-to-date content.
 
 1. Point to **Set Help Preference** on the Help menu and choose either **Launch in Browser** or **Launch in Help Viewer**. 
 2. Click **View Help** in the Help menu to display online Visual Studio help in the chosen environment. 
-   
-   ![HelpViewer2_SSMS_ChooseOnlineORLocalHelp](../sql-server/media/sql-server-help-installation/helpviewer2-ssms-chooseonlineorlocalhelp.png)
 
 **To view online help with Help Viewer v1.x**
 
@@ -200,7 +198,7 @@ Online help always shows the most up-to-date content.
 
 ## View F1 help
 
-When you press F1 or click Help or the ? icon in a dialog box in SSMS or VS, a context-sensitive online help topic appears. 
+When you press F1 or click **Help** or the **?** icon in a dialog box in SSMS or VS, a context-sensitive online help topic appears. 
 
 **To view F1 help**
 

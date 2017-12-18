@@ -29,7 +29,8 @@ For details about the latest release, see the [release notes](release-notes.md).
 
 This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience. 
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=865305).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=865305).
+1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
    or 
 
@@ -78,7 +79,9 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 ## Uninstall SQL Operations Studio (preview)
 
-To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete the files.
+If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] using the Windows installer, then uninstall the same way you remove any Windows application.
+
+If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with a .zip or other archive, then simply delete the files.
 
 ## Supported Operating Systems
 

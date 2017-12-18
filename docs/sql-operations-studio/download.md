@@ -29,10 +29,13 @@ For details about the latest release, see the [release notes](release-notes.md).
 
 This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience. 
 
+**Installer**
+
 1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=865305).
 1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
-   or 
+
+**.zip file**
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=865304).
 2. Browse to the downloaded file and extract it.

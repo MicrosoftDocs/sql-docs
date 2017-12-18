@@ -2,12 +2,12 @@
 title: "Create a Singleton Query in the Data Mining Designer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -24,6 +24,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create a Singleton Query in the Data Mining Designer
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A singleton query is useful if you want to create a prediction for a single case. For more information about singleton queries, see [Data Mining Queries](../../analysis-services/data-mining/data-mining-queries.md).  
   
  In the **Mining Model Prediction** tab of Data Mining Designer, you can create many different types of queries. You can create a query by using the designer, or by typing Data Mining Extensions (DMX) statements. You can also start with the designer and modify the query that it creates by changing the DMX statements, or by adding a WHERE or ORDER BY clause.  

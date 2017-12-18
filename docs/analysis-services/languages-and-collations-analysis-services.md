@@ -2,12 +2,12 @@
 title: "Languages and Collations (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/20/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "misc"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -30,6 +30,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Languages and Collations (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the languages and collations provided by [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating systems. **Language** and **Collation** properties are initially set at the instance level during installation, but can be changed afterwards at different levels of the object hierarchy.  
   
  In a multidimensional model (only), you can set these properties on a database or cube – you can also set them on translations that you create for objects within a cube. In a tabular model, language and collation are inherited from the host operating system.  

@@ -2,8 +2,8 @@
 title: Unattended install for SQL Server on Red Hat Enterprise Linux | Microsoft Docs
 description: SQL Server Script Sample - Unattended Install on Red Hat Enterprise Linux
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
@@ -35,7 +35,7 @@ Save the sample script to a file and then to customize it,
 replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

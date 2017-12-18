@@ -2,12 +2,12 @@
 title: "Define the Ordering for a Dimension | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -29,6 +29,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # BI Wizard - Define the Ordering for a Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Add the attribute ordering enhancement to a cube or dimension to specify how the members of an attribute are ordered. Members can be ordered by the name or the key of the attribute, or by the name or the key of another attribute (based on an attribute relationship). By default, members are ordered by the name. This enhancement changes the **OrderBy** and **OrderByAttributeID** property settings for attributes in a dimension.  
   
  To add attribute ordering, you use the Business Intelligence Wizard, and select the **Specify attribute ordering** option on the **Choose Enhancement** page. This wizard then guides you through the steps of selecting a dimension to which you want to apply attribute ordering and specifying how to order the attributes for the selected dimension.  

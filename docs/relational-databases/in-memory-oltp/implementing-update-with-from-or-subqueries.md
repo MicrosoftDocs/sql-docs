@@ -32,13 +32,13 @@ Here is the original T-SQL UPDATE statement :
   
   
   
-  
+   ```
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
-  
+   ```
   
   
 
@@ -50,7 +50,7 @@ The sample T-SQL code in this section demonstrates a workaround that provides go
   
   
   
-
+ ```
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
@@ -159,4 +159,4 @@ The sample T-SQL code in this section demonstrates a workaround that provides go
     ****/  
   
   
-  
+ ```

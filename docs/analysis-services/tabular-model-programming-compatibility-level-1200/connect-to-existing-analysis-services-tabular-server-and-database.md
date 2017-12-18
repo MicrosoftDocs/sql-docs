@@ -2,12 +2,12 @@
 title: "Connect to existing Analysis Services Tabular server and database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -21,9 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Connect to existing Analysis Services Tabular server and database
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 In SQL Server 2016, Analysis Services Management Objects (AMO) includes several namespaces that could be used to set up a server connection. This article explains how to establish a server connection using the Microsoft.AnalysisServices.Tabular namespace for models and databases created at 1200 or higher compatibility level . 
 
 To connect to an Analysis Services server, your code must instantiate a Server object and then call the Connect method on it. Once connected, properties of the Server object will reflect the settings of the current  Analysis Services instance. 

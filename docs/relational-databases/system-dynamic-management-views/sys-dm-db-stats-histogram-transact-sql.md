@@ -76,7 +76,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")  
+ ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
   
  For each histogram step:  
   
@@ -97,7 +97,7 @@ Requires that the user has select permissions on statistics columns or the user 
 ### A. Simple example    
 The following example creates and populates a simple table. Then creates statistics on the `Country_Name` column.
 
-```tsql
+```t-sql
 CREATE TABLE Country
 (Country_ID int IDENTITY PRIMARY KEY,
 Country_Name varchar(120) NOT NULL);
@@ -111,9 +111,8 @@ The primary key occupies `stat_id` number 1, so call `sys.dm_db_stats_histogram`
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-
 ### B. Useful query:   
-```tsql  
+```t-sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
 FROM sys.stats AS s
@@ -124,14 +123,14 @@ WHERE s.[name] = N'<statistic_name>';
 ### C. Useful query:
 The following example selects from table `Country` with a predicate on column `Country_Name`.
 
-```tsql  
+```t-sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
 The following example looks at the previously created statistic on table `Country` and column `Country_Name` for the histogram step matching the predicate in the query above.
 
-```tsql  
+```t-sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
     shr.modification_counter, shr.last_updated, sh.range_rows, sh.equal_rows
 FROM sys.stats ss
@@ -147,7 +146,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## See Also  
-
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Object Related Dynamic Management Views and Functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

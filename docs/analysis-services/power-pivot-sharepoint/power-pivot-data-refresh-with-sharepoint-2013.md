@@ -2,12 +2,12 @@
 title: "Power Pivot Data Refresh with SharePoint 2013 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Power Pivot Data Refresh with SharePoint 2013
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The design for refresh of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data models in SharePoint 2013 utilizes Excel Services as the primary component to load and refresh data models on an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] running in SharePoint mode. The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server runs external to the SharePoint farm. The architecture in SharePoint 2013 Excel Services supports both **interactive data refresh** and **scheduled data refresh**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  

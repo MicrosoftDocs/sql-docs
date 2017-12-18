@@ -2,9 +2,12 @@
 title: "Using the MicrosoftML Package with SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
+ms.prod_service: "r-services"
+ms.service: ""
+ms.component: "advanced-analytics"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

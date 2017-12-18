@@ -2,12 +2,12 @@
 title: "Relationships (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "analysis-services"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
-ms.component: "tabular-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -21,6 +21,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Relationships (SSAS Tabular)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   In tabular models, a relationship is a connection between two tables of data. The relationship establishes how the data in the two tables should be correlated. For example, a Customers table and an Orders table can be related in order to show the customer name that is associated with each order.  
   
  When using the Table Import Wizard to import from the same data source, relationships that already exist in tables (at the data source) that you choose to import will be re-created in the model. You can view relationships that were detected and re-created automatically by using the model designer in Diagram View or by using the Manage Relationships dialog box. You can also create new relationships between tables manually by using the model designer in Diagram View or by using the Create Relationship or Manage Relationships dialog box.  

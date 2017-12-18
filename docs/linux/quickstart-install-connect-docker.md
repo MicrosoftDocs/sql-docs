@@ -253,6 +253,12 @@ docker rm sql1
 > [!WARNING]
 > Stopping and removing a container permanently deletes any SQL Server data in the container. If you need to preserve your data, [create and copy a backup file out of the container](tutorial-restore-backup-in-sql-server-container.md) or use a [container data persistence technique](sql-server-linux-configure-docker.md#persist).
 
+## Docker demo
+
+After you have tried using the SQL Server container image for Docker, you might want to know how Docker is used to improve development and testing. The following video shows how Docker can be used in a continuous integration and deployment scenario.
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
+
 ## Next steps
 
 For a tutorial on how to restore database backup files into a container, see [Restore a SQL Server database in a Linux Docker container](tutorial-restore-backup-in-sql-server-container.md). To explore other scenarios, such as running multiple containers, data persistence, and troubleshooting, see [Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md).

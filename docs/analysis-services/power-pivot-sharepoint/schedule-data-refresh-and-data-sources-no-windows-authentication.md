@@ -2,12 +2,12 @@
 title: "Schedule Data Refresh and Data Sources - No Windows Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -22,6 +22,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Schedule Data Refresh and Data Sources - No Windows Authentication
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This topic describes a workflow of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint schedule data fresh that can use data sources that do **NOT** support Windows Authentication. For example Oracle or IDM DB2 data sources. The illustrations and steps in this topic reference Oracle data sources but the same workflow applies to other data sources.  
   
 ||  

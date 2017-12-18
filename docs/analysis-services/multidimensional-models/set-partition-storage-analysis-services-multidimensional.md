@@ -2,12 +2,12 @@
 title: "Set Partition Storage (Analysis Services - Multidimensional) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "multidimensional-models"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -37,6 +37,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Set Partition Storage (Analysis Services - Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several standard storage configurations for storage modes and caching options. These provide commonly used configurations for update notification, latency, and rebuilding data.  
   
  You can specify partition storage in the Partitions tab of the cube in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], or on the partition property page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

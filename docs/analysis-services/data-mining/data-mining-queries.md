@@ -2,12 +2,12 @@
 title: "Data Mining Queries | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "data-mining"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/data-mining"
@@ -27,6 +27,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Data Mining Queries
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Data mining queries are useful for many purposes. You can:  
   
 -   Apply the model to new data, to make single or multiple predictions. You can provide input values as parameters, or in a batch.  

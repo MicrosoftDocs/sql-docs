@@ -2,12 +2,12 @@
 title: "Analysis Services Features and Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "misc"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -20,6 +20,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Analysis Services Features and Tasks
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
   Analysis Services foundational documentation is organized by model type and server mode so that you can focus on just the tools, tasks, and features that are available in the mode you installed. Server administration tasks that span multiple modes can be found in Instance Management.  
   
 ## In This Section  

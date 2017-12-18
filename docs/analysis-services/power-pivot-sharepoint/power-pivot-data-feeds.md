@@ -2,12 +2,12 @@
 title: "Power Pivot Data Feeds | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "analysis-services"
 ms.prod_service: "analysis-services"
 ms.service: ""
-ms.component: "power-pivot-sharepoint"
+ms.component: ""
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -26,6 +26,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot Data Feeds
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A data feed provides a stream of data on demand from an online data source to a client application. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use data feeds to add data from an Atom-aware Web service or application to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source in an Excel workbook.  
   
  This section provides information to help you make best use of data feeds to get existing corporate or workgroup data into [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks. It also provides information on how share data feeds with others in your organization, and how data feeds are constructed and used in case you need to troubleshoot any problems that arise.  

@@ -15,25 +15,38 @@ ms.workload: "Inactive"
 ---
 # Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
 
-We're pleased to announce a new release of [!INCLUDE[name-sos](../includes/name-sos.md)] is available. Install the latest version by selecting your platform from the following steps. For details about this release, see the [release notes](release-notes.md).
+We're pleased to announce a new release of [!INCLUDE[name-sos](../includes/name-sos.md)] is available. For details about this release, see the [release notes](release-notes.md).
+
+|Platform|Download|
+|:---|:---|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|
+|macOS|[Package](https://go.microsoft.com/fwlink/?linkid=865306)|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|
+
 
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
 
-This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides a standard Windows installer experience. Run the following to start the installer:
+This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience. 
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=862648).
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=865305).
+
+or 
+
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=865304).
+2. Browse to the downloaded file and extract it.
+3. Run *\sqlops-windows\sqlops.exe*
 
 
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=862647).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=865306).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
 
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=862646).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=865307).
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    ```bash

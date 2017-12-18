@@ -15,6 +15,7 @@ ms.workload: "Inactive"
 ---
 # Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
 
+We're pleased to announce a new release of [!INCLUDE[name-sos](../includes/name-sos.md)] is available. Install the latest version by selecting your platform from the following steps. For details about this release, see the [release notes](release-notes.md).
 
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
 

@@ -18,6 +18,9 @@ ms.workload: "Inactive"
 
 ## December 2017
 
+release date: 12/19/2017
+version: 
+
 ### Whats new
 - Azure Integration with Create Firewall Rule support
 - Improved acquisition experience with Windows Setup EXE, RPM and DEB packages
@@ -44,6 +47,9 @@ ms.workload: "Inactive"
 
 
 ## November 2017
+
+release date: 11/15/2017
+version: 0.23.6
 
 - Initial release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
 

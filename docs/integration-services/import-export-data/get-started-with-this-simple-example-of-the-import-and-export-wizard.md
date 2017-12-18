@@ -87,7 +87,7 @@ For more info about this page of the wizard, see [Specify Table Copy or Query](.
 On the next page, **Select Source Tables and Views**, you pick the table or tables that you want to copy from the data source. Then you map each selected source table to a new or existing destination table.
 
 In this example, by default the wizard has mapped the **WizardWalkthrough$** worksheet in the **Source** column to a new table with the same name at the SQL Server destination. (The Excel workbook only contains a single worksheet.)
--   The dollar sign ($) on the name of the source table indicates an Excel worksheet. (A named ranged in Excel is represented by its name alone.)
+-   The dollar sign ($) on the name of the source table indicates an Excel worksheet. (A named range in Excel is represented by its name alone.)
 -   The starburst on the destination table icon indicates that the wizard is going to create a new destination table.
 
 ![Select the table (before renaming)](../../integration-services/import-export-data/media/select-the-table-before-renaming.jpg)

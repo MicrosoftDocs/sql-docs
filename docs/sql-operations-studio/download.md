@@ -15,14 +15,15 @@ ms.workload: "Inactive"
 ---
 # Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
 
-The latest version was released on December 19, 2017. For details about this release, see the [release notes](release-notes.md).
+[!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
-|Platform|Download| |
-|:---|:---| |
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)| |
-|macOS|[Package](https://go.microsoft.com/fwlink/?linkid=865306)| |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)| |
+|Platform|Download|Release date|
+|:---|:---|:---|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|December 19, 2017 |
+|macOS|[Package](https://go.microsoft.com/fwlink/?linkid=865306)|December 19, 2017 |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|December 19, 2017|
 
+For details about the latest release, see the [release notes](release-notes.md).
 
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
 

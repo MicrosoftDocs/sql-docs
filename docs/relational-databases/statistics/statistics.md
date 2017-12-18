@@ -86,7 +86,7 @@ For example, if a statistics object has the key columns `CustomerId`, `ItemId` a
 
 ### Filtered Statistics  
  Filtered statistics can improve query performance for queries that select from well-defined subsets of data. Filtered statistics use a filter predicate to select the subset of data that is included in the statistics. Well-designed filtered statistics can improve the query execution plan compared with full-table statistics. For more information about the filter predicate, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). For more information about when to create filtered statistics, see the [When to Create Statistics](#CreateStatistics) section in this topic.  
-  
+ 
 ### Statistics Options  
  There are three options that you can set that affect when and how statistics are created and updated. These options are set at the database level only.  
   
@@ -115,8 +115,8 @@ ORDER BY s.name;
 
 * Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table. This is calculated as the square root of 1,000 multiplied by the current table cardinality. With this change, statistics on large tables will be updated more often. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] threshold applies.  
 
-  > [!IMPORTANT]
-  > Starting with [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) lower than 130, use [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table.
+> [!IMPORTANT]
+> Starting with [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) lower than 130, use [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table.
   
 The Query Optimizer checks for out-of-date statistics before compiling a query and before executing a cached query plan. Before compiling a query, the Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.  
   
@@ -140,25 +140,19 @@ For more information about controlling AUTO_UPDATE_STATISTICS, see [Controlling 
   
 * Your application has experienced client request time outs caused by one or more queries waiting for updated statistics. In some cases, waiting for synchronous statistics could cause applications with aggressive time outs to fail.  
   
-#### INCREMENTAL STATS  
- When ON, the statistics created are per partition statistics. When OFF, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is OFF. This setting overrides the database level INCREMENTAL property.  
+#### INCREMENTAL  
+ When INCREMENTAL option of CREATE STATISTICS is ON, the statistics created are per partition statistics. When OFF, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is OFF. This setting overrides the database level INCREMENTAL property. For more information about creating incremental statistics, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). For more information about creating per partition statistics automatically, see [Database Properties &#40;Options Page&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) and [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
   
  When new partitions are added to a large table, statistics should be updated to include the new partitions. However the time required to scan the entire table (FULLSCAN or SAMPLE option) might be quite long. Also, scanning the entire table isn't necessary because only the statistics on the new partitions might be needed. The incremental option creates and stores statistics on a per partition basis, and when updated, only refreshes statistics on those partitions that need new statistics  
   
  If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
 * Statistics created with indexes that are not partition-aligned with the base table.  
-  
 * Statistics created on Always On readable secondary databases.  
-  
 * Statistics created on read-only databases.  
-  
 * Statistics created on filtered indexes.  
-  
 * Statistics created on views.  
-  
 * Statistics created on internal tables.  
-  
 * Statistics created with spatial indexes or XML indexes.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
@@ -176,12 +170,9 @@ When creating statistics with the CREATE STATISTICS statement, we recommend keep
   
 Consider creating statistics with the CREATE STATISTICS statement when any of the following applies:  
 
-* The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor suggests creating statistics.  
-
+* The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor suggests creating statistics. 
 * The query predicate contains multiple correlated columns that are not already in the same index.  
-
 * The query selects from a subset of data.  
-
 * The query has missing statistics.  
   
 ### Query Predicate contains multiple correlated columns  
@@ -238,9 +229,7 @@ Missing statistics are indicated as warnings (table name in red text) when the e
  If statistics are missing, perform the following steps:  
   
 * Verify that [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) and [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) are on.  
-  
 * Verify that the database is not read-only. If the database is read-only, a new statistics object cannot be saved.  
-  
 * Create the missing statistics by using the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement.  
   
 When statistics on a read-only database or read-only snapshot are missing or stale, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and maintains temporary statistics in **tempdb**. When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates temporary statistics, the statistics name is appended with the suffix *_readonly_database_statistic* to differentiate the temporary statistics from the permanent statistics. The suffix *_readonly_database_statistic* is reserved for statistics generated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scripts for the temporary statistics can be created and reproduced on a read-write database. When scripted, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] changes the suffix of the statistics name from *_readonly_database_statistic* to *_readonly_database_statistic_scripted*.  
@@ -248,7 +237,6 @@ When statistics on a read-only database or read-only snapshot are missing or sta
 Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create and update temporary statistics. However, you can delete temporary statistics and monitor statistics properties using the same tools that you use for permanent statistics:  
   
 * Delete temporary statistics using the [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) statement.  
-  
 * Monitor statistics using the **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** and **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** catalog views. **sys_stats** includes the **is_temporary** column, to indicate which statistics are permanent and which are temporary.  
   
  Because temporary statistics are stored in **tempdb**, a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service causes all temporary statistics to disappear.  
@@ -265,11 +253,9 @@ Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create and up
  Consider updating statistics for the following conditions:  
   
 * Query execution times are slow.  
-  
 * Insert operations occur on ascending or descending key columns.  
-  
 * After maintenance operations.  
-  
+
 ### Query execution times are slow  
  If query response times are slow or unpredictable, ensure that queries have up-to-date statistics before performing additional troubleshooting steps.  
   

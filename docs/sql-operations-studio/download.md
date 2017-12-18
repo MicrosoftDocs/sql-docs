@@ -20,7 +20,7 @@ ms.workload: "Inactive"
 |Platform|Download|Release date|
 |:---|:---|:---|
 |Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|December 19, 2017 |
-|macOS|[Package](https://go.microsoft.com/fwlink/?linkid=865306)|December 19, 2017 |
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=865306)|December 19, 2017 |
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|December 19, 2017|
 
 For details about the latest release, see the [release notes](release-notes.md).
@@ -35,7 +35,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=865304).
 2. Browse to the downloaded file and extract it.
-3. Run *\sqlops-windows\sqlops.exe*
+3. Run `\sqlops-windows\sqlops.exe`
 
 
 ## Get SQL Operations Studio (preview) for macOS

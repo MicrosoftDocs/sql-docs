@@ -15,23 +15,25 @@ ms.workload: "Inactive"
 ---
 # SQL Operations Studio (preview) release notes
 
+**[Download SQL Operations Studio (preview)](download.md)**
 
 ## December 2017
 
 release date: 12/19/2017  
 version: 0.24.1
 
-The December 2017 release is a refresh release that picks up several bugs fixes across all feature areas, as well as the following highlighted enhancements:
+The December 2017 release includes several bugs fixes across all feature areas, as well as the following enhancements:
 
 - Create Firewall Rule Dialog is now available to assist connecting to Azure SQL Database and Azure SQL Data Warehouse.
-- Windows Setup and Ubuntu DEB installation packages (RPM coming in Jan.)
+- Added Windows Setup, and Linux DEB and RPM installation packages.
 - Manage Dashboard visual layout editor.
 - *Script As Alter* and *Script As Execute* commands.
-- Integrate VS Code 1.18.1 editor platform
-- Enable Sideloading of VSIX Extension files
-- Enable HotExit feature
-- Support "GO N" batch iteration syntax
-- "Run Current Query with Actual Plan" command
+- *Run Current Query with Actual Plan* command.
+- Integrate VS Code 1.18.1 editor platform.
+- Enable Sideloading of VSIX Extension files.
+- Enable HotExit feature.
+- Support "GO N" batch iteration syntax.
+
 
 
 

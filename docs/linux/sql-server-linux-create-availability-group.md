@@ -21,7 +21,7 @@ ms.workload: "On Demand"
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 This tutorial covers how to create and configure an availability group (AG) for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Unlike [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] and earlier on Windows, you can enable AGs with or without creating the underlying Pacemaker cluster first. Integration with the cluster, if needed, is not done until later.
-
+ 
 > [!div class="checklist"]
 > * Enable availability groups.
 > * Create availability group endpoints and certificates.
@@ -588,7 +588,13 @@ The AG resource that is created is a special kind of resource called a clone. Th
     ```bash
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
     ```
-    
+
+>[NOTE]
+>On RHEL 7.4, you may encounter a warning with the use of --master. To avoid this, use the following syntax:
+    ```bash
+    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
+    ```
+
     **SUSE Linux Enterprise Server (SLES)**
     
     ```bash
@@ -618,7 +624,7 @@ The AG resource that is created is a special kind of resource called a clone. Th
     ```bash
     sudo pcs resource create <NameForIPResource> ocf:heartbeat:IPaddr2 ip=<IPAddress> cidr_netmask=<Netmask>
     ```
-    
+
     **SLES**
     
     ```bash
@@ -638,6 +644,7 @@ The AG resource that is created is a special kind of resource called a clone. Th
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
+   
     
     **SLES**
     

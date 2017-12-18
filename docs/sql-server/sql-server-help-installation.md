@@ -176,14 +176,14 @@ Online help always shows the most up-to-date content.
 
 **To view SQL Server online help in SSMS 17.x**
 
-- Click **View Help** on the **Help** menu. The latest SQL Server 2016/2017 documentation from docs.microsoft.com displays in a browser. 
+- Click **View Help** in the **Help** menu. The latest SQL Server 2016/2017 documentation from [https://docs.microsoft.com/sql](https://docs.microsoft.com/sql) displays in a browser. 
 
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
 **To view Visual Studio online help in Visual Studio**
 
 1. Point to **Set Help Preference** on the Help menu and choose either **Launch in Browser** or **Launch in Help Viewer**. 
-2. Click **View Help** in the Help menu to display online Visual Studio help in the chosen environment. 
+2. Click **View Help** in the Help menu. The latest Visual Studio help displays in the chosen environment. 
 
 **To view online help with Help Viewer v1.x**
 

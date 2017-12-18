@@ -13,7 +13,7 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
+# Download and install SQL Operations Studio (preview)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
@@ -25,7 +25,7 @@ ms.workload: "Inactive"
 
 For details about the latest release, see the [release notes](release-notes.md).
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
+## Get SQL Operations Studio (preview) for Windows
 
 This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience. 
 
@@ -38,14 +38,14 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 3. Run *\sqlops-windows\sqlops.exe*
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS
+## Get SQL Operations Studio (preview) for macOS
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=865306).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux
+## Get SQL Operations Studio (preview) for Linux
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=865307).
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
@@ -76,7 +76,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    yum install libXScrnSaver
    ```
 
-## Uninstall [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## Uninstall SQL Operations Studio (preview)
 
 To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete the files.
 

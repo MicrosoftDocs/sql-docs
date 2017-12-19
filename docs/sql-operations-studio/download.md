@@ -17,6 +17,8 @@ ms.workload: "Inactive"
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
+Download and install the latest release, the *December Public Preview*:
+
 |Platform|Download|Release date|
 |:---|:---|:---|
 |Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|December 19, 2017 |
@@ -27,7 +29,7 @@ For details about the latest release, see the [release notes](release-notes.md).
 
 ## Get SQL Operations Studio (preview) for Windows
 
-This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience. 
+This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip: 
 
 **Installer**
 

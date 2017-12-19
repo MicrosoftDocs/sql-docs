@@ -21,7 +21,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # SQL Server Data Mining Add-Ins for Office
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Data Mining Add-ins for Office is a lightweight set of tools for predictive analytics that lets you use data in Excel to build analytical models for prediction, recommendation, or exploration.  
   
 > [!IMPORTANT]

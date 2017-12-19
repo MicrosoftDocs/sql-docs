@@ -206,7 +206,8 @@ FROM [SSISDB].[internal].[tasks] tasks, [SSISDB].[internal].[executions] executi
 WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions.job_id
 ```
 
-> [!WARNING] This query is for troubleshooting purpose only. The internal views referenced in the query are to change in the future. 
+> [!WARNING]
+> This query is for troubleshooting purpose only. The internal views referenced in the query are to change in the future. 
 
 ## Next steps
 For more info, see the following articles about setting up and configuring SSIS Scale Out:

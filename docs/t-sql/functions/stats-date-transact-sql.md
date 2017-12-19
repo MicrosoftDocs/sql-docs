@@ -53,12 +53,12 @@ STATS_DATE ( object_id , stats_id )
  ID of the statistics object.  
   
 ## Return Types  
- Returns **datetime** on success. Returns **NULL** on error.  
+ Returns **datetime** on success. Returns **NULL** if a statistics blob was not created.  
   
 ## Remarks  
  System functions can be used in the select list, in the WHERE clause, and anywhere an expression can be used.  
  
- Statistics update date is stored in the statistics blob object together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, and the date is not available. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
+ Statistics update date is stored in the [statistics blob object](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, and the date is not available. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
  
  If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view.
   

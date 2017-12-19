@@ -74,7 +74,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  This behavior allows for the safe usage of `sys.dm_db_incremental_stats_properties` when cross applied to rows in views such as `sys.objects` and `sys.stats`. This method can return properties for the statistics that correspond to each partition. To see the properties for the merged statistics combined across all partitions, use the sys.dm_db_stats_properties instead. 
 
-  Statistics update date is stored in the statistics blob object together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, the date is not available, and the *last_updated* column is NULL. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
+Statistics update date is stored in the [statistics blob object](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, the date is not available, and the *last_updated* column is NULL. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
 
 ## Permissions  
  Requires that the user has select permissions on statistics columns or the user owns the table or the user is a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.  
@@ -89,7 +89,6 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 ``` 
 
 For additional usage suggestions, see  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md).
-  
   
 ## See Also  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

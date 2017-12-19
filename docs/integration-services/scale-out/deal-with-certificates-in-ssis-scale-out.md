@@ -32,13 +32,13 @@ In the **Integration Services Scale Out Configuration - Master Node** page of th
 
 **New certificate**. If you don't have special requirements for certificates, you can choose to create a new self-signed SSL certificate. You can further specify the CNs in the certificate. Make sure the host name of the master endpoint to be used later by Scale Out Workers is included in the CNs. By default, the computer name and IP address of the master node are included. 
 
-**Existing certificate**. If you choose to use an existing certificate, click **Browse** to select a SSL certificate from the **Root** certificate store of the local computer.
+**Existing certificate**. If you choose to use an existing certificate, click **Browse** to select an SSL certificate from the **Root** certificate store of the local computer.
 
 ### Change the Scale Out Master certificate
 
 You may want to change your Scale Out Master certificate due to certificate expiration or for other reasons. To change the Scale Out Master certificate, do the following things:
 
-#### 1. Create a SSL certificate.
+#### 1. Create an SSL certificate.
 Create and install a new SSL certificate on the Master node with the following command:
 
 ```dos
@@ -83,7 +83,7 @@ Update the Scale Out Master service configuration file, `\<drive\>:\Program File
 #### 4. Restart the Scale Out Master service
 
 #### 5. Reconnect Scale Out Workers to Scale Out Master
-For each Scale Out Worker, either delete the Worker and re-add it with [Scale Out Manager](integration-services-ssis-scale-out-manager.md), or do the following things:
+For each Scale Out Worker, either delete the Worker and then add it back with [Scale Out Manager](integration-services-ssis-scale-out-manager.md), or do the following things:
 
 1.  Install the client SSL certificate to the Root store of the local computer on the Worker node.
 

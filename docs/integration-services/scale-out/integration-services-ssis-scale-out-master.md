@@ -51,10 +51,10 @@ Configuration  |Description  |Default Value
 ---------|---------|---------
 PortNumber|The network port number used to communicate with a Scale Out Worker.|8391         
 SSLCertThumbprint|The thumbprint of the SSL certificate used to protect  the communication with a Scale Out Worker.|The thumbprint of the SSL certificate specified during the Scale Out Master installation         
-SqlServerName|The name of the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] that contains the SSISDB catalog. E.g. ServerName\\\\InstanceName.|The name of the SQL Server that is installed with the Scale Out Master.         
+SqlServerName|The name of the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] that contains the SSISDB catalog. For example, ServerName\\\\InstanceName.|The name of the SQL Server that is installed with the Scale Out Master.         
 CleanupCompletedJobsIntervalInMs|The interval for cleaning up completed execution jobs, in milliseconds.|43200000         
 DealWithExpiredTasksIntervalInMs|The interval for dealing with expired execution jobs, in milliseconds.|300000
-MasterHeartbeatIntervalInMs|The interval for the Scale Out Master heartbeat, in milliseconds. This specifies the interval that Scale Out Master updates it's online status in the SSISDB catalog.|30000
+MasterHeartbeatIntervalInMs|The interval for the Scale Out Master heartbeat, in milliseconds. This property specifies the interval at which Scale Out Master updates its online status in the SSISDB catalog.|30000
 SqlConnectionTimeoutInSecs|The SQL connection timeout in seconds when connecting to SSISDB.|15    
 ||||    
 

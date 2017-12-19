@@ -198,7 +198,7 @@ The error messages in the package execution report are not sufficient for troubl
 ### Solution
 More execution logs can be found under the `TasksRootFolder` configured in `WorkerSettings.config`. By default, this folder is `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. The *[account]* is the account running the Scale Out Worker service, with default value `SSISScaleOutWorker140`.
 
-To locate the log for the package execution with *[execution id]*, execute the following Transact-SQL command to get the *[task id]*. Then, find the subfolder name that contains *[task id]* under `TasksRootFolder`.
+To locate the log for the package execution with *[execution ID]*, execute the following Transact-SQL command to get the *[task ID]*. Then, find the subfolder name that contains *[task ID]* under `TasksRootFolder`.
 
 ```sql
 SELECT [TaskId]

@@ -36,7 +36,7 @@ Install SQL Server Database Engine Services, Integration Services, and Scale Out
 During the installation, do the following things:
 
 ### 2.1 Set the account running Scale Out Master service to a domain account
-This account must be able to access SSISDB on the secondary node in the Windows failover cluster in the future. As the Scale Out Master service and SSISDB can failover separately, they may not be on the same node after failover.
+This account must be able to access SSISDB on the secondary node in the Windows failover cluster in the future. As the Scale Out Master service and SSISDB can fail over separately, they may not be on the same node after failover.
 
 ![HA server configuration](media/ha-server-config.PNG)
 
@@ -80,11 +80,11 @@ Call the stored procedure `[catalog].[update_logdb_info]` with the following par
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## 7. Congifure the Scale Out Master service role of the Windows failover cluster
+## 7. Configure the Scale Out Master service role of the Windows failover cluster
 
 1.  In Failover Cluster Manager, connect to the cluster for Scale Out. Select the cluster. Select **Action** in the menu and then select **Configure Role**.
 
-2.  In the **High Availability Wizard** dialog box, select **Generic Service** on the **Select Role** page. Selecty SQL Server Integration Services Scale Out Master 14.0 on the **Select Service** page.
+2.  In the **High Availability Wizard** dialog box, select **Generic Service** on the **Select Role** page. Select SQL Server Integration Services Scale Out Master 14.0 on the **Select Service** page.
 
 3.  On the **Client Access Point** page, enter the DNS host name of the Scale Out Master service.
 

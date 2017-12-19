@@ -21,7 +21,7 @@ ms.workload: "Inactive"
 ---
 # Integration Services Scale Out Manager
 
-Scale Out Manager is a management tool which lets you manage your entire SSIS Scale Out topology from a single app. It removes the burden of doing management tasks and running Transact-SQL commands on multiple computers.
+Scale Out Manager is a management tool that lets you manage your entire SSIS Scale Out topology from a single app. It removes the burden of doing management tasks and running Transact-SQL commands on multiple computers.
 
 ## Open Scale Out Manager
 
@@ -37,16 +37,16 @@ In Object Explorer, right-click **SSISDB**, and select **Manage Scale Out**.
 > [!NOTE]
 > We recommend running SSMS as an administrator, since some Scale Out management operations, such as adding a Scale Out Worker, require administrative privilege.
 
-### 2. Open Scale Out Manager by runing ISManager.exe
+### 2. Open Scale Out Manager by running ISManager.exe
 
-Locate `ISManager.exe` under `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management`. Right click **ISManager.exe** and select **Run as administrator**. 
+Locate `ISManager.exe` under `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management`. Right-click **ISManager.exe** and select **Run as administrator**. 
 
-After Scale Out Manager opens, entervthe SQL Server instance name of Scale Out Master and connect to it to manage your Scale Out environment.
+After Scale Out Manager opens, enter the SQL Server instance name of Scale Out Master and connect to it to manage your Scale Out environment.
 
 ![Portal Connect](media/portal-connect.PNG)
 
 ## Tasks available in Scale Out Manager
-In Scale Out Manager, you can do the following things. 
+In Scale Out Manager, you can do the following things:
 
 ### Enable Scale Out
 After connecting to SQL Server, if Scale Out is not enabled, you can select **Enable** to enable it.
@@ -80,7 +80,7 @@ If validation succeeds, Scale Out Manager tries to read the  worker server confi
 
     ![Worker Certificate 2](media/portal-cert2.PNG)
 
-After gathering information, Scale Out Manager describes the actions to be performed. Tyically, these actions include installing the certificate, updating the worker service configuration file, and restarting the worker service.
+After gathering information, Scale Out Manager describes the actions to be performed. Typically, these actions include installing the certificate, updating the worker service configuration file, and restarting the worker service.
 
 ![Portal Add Confirm 1](media/portal-add-confirm1.PNG)
 
@@ -94,7 +94,7 @@ Select the **Confirm** checkbox and then select **OK** to start adding a Scale O
 To delete a Scale Out Worker, select the Scale Out Worker and then select **-** at the bottom of the Scale Out Worker list.
 
 ### Enable or disable a Scale Out Worker
-To enable or disable a Scale Out Worker, select the Scale Out Worker and then select **Enable Worker** or **Disable Worker.** The status of the worker displayed in Scale Out Manager changes accordingly if the worker is not offline.
+To enable or disable a Scale Out Worker, select the Scale Out Worker and then select **Enable Worker** or **Disable Worker.** If the worker is not offline, the status of the worker displayed in Scale Out Manager changes accordingly.
 
 ## Edit a Scale Out Worker description
 To edit the description of a Scale Out Worker, select the Scale Out Worker and then select **Edit**. 

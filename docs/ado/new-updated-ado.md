@@ -1,13 +1,16 @@
 ---
 title: Updated - ADO for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for ActiveX Data Objects (ADO) for Microsoft SQL Server.
-services: na
 documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: na
-ms.topic: updart-autogen
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: ado
+ms.service: 
+ms.topic: "article"
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
@@ -15,11 +18,9 @@ ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: ado-activex-data-objects
+ms.workload: "On Demand"
 ---
 # New and Recently Updated: ActiveX Data Objects (ADO) for SQL Server
-
-
 
 Nearly every day Microsoft updates some of its existing articles on its [Docs.Microsoft.com](http://docs.microsoft.com/) documentation website. This article displays excerpts from recently updated articles. Links to new articles might also be listed.
 

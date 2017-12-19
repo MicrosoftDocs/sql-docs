@@ -70,7 +70,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
  This behavior allows for the safe usage of **sys.dm_db_stats_properties** when cross applied to rows in views such as **sys.objects** and **sys.stats**.  
  
-Statistics update date is stored in the statistics blob object together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, the date is not available, and the *last_updated* column is NULL. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
+Statistics update date is stored in the [statistics blob object](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) together with the [histogram](../../relational-databases/statistics/statistics.md#histogram) and [density vector](../../relational-databases/statistics/statistics.md#density), not in the metadata. When no data is read to generate statistics data, the statistics blob is not created, the date is not available, and the *last_updated* column is NULL. This is the case for filtered statistics for which the predicate does not return any rows, or for new empty tables.
   
 ## Permissions  
  Requires that the user has select permissions on statistics columns or the user owns the table or the user is a member of the `sysadmin` fixed server role, the `db_owner` fixed database role, or the `db_ddladmin` fixed database role.  

@@ -1,13 +1,15 @@
 ---
 title: "Create graphs and plots using SQL and R (walkthrough) | Microsoft Docs"
 ms.date: "11/10/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
 dev_langs: 

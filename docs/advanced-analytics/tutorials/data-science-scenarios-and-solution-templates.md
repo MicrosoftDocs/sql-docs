@@ -2,13 +2,15 @@
 title: "Data science scenarios and solution templates | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece

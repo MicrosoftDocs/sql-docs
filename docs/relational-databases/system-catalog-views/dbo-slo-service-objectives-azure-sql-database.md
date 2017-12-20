@@ -1,13 +1,12 @@
 ---
 title: "dbo.slo_service_objectives (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
 ms.date: "03/04/2017"
 ms.prod: 
 ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: "sql-database"
-ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -32,8 +31,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # dbo.slo_service_objectives (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-
+[!INCLUDE[tsql-appliesto-xxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxx-asdb-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  This feature is in a preview state, and has been deprecated in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12. Do not take a dependency on the specific implementation of this feature because the feature might be changed or removed in a future release.  

@@ -1,13 +1,12 @@
 ---
 title: "dbo.slo_assignment_history (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
 ms.date: "06/10/2016"
 ms.prod: 
 ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: "sql-database"
-ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""

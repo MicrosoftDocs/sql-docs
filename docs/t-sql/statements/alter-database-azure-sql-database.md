@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: "12/20/2017"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -77,6 +77,7 @@ ALTER DATABASE { database_name }
 <optionspec> ::=   
 {  
     <auto_option>   
+  | <change_tracking_option> 
   | <compatibility_level_option>  
   | <cursor_option>   
   | <db_encryption_option>  
@@ -99,7 +100,23 @@ ALTER DATABASE { database_name }
   | AUTO_UPDATE_STATISTICS { ON | OFF }   
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
-  
+
+<change_tracking_option> ::=  
+{  
+  CHANGE_TRACKING   
+   {   
+       = OFF  
+     | = ON [ ( <change_tracking_option_list > [,...n] ) ]   
+     | ( <change_tracking_option_list> [,...n] )  
+   }  
+}  
+
+   <change_tracking_option_list> ::=  
+   {  
+       AUTO_CLEANUP = { ON | OFF }   
+     | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
+   }  
+
 <compatibility_level_option>::=  
 COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
   

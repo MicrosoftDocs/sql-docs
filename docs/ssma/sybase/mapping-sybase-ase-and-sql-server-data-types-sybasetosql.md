@@ -3,7 +3,7 @@ title: "Mapping Sybase ASE and SQL Server Data Types (SybaseToSQL) | Microsoft D
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-sybase"
 ms.reviewer: ""

@@ -85,13 +85,13 @@ Update the Scale Out Master service configuration file, `\<drive\>:\Program File
 #### 5. Reconnect Scale Out Workers to Scale Out Master
 For each Scale Out Worker, either delete the Worker and then add it back with [Scale Out Manager](integration-services-ssis-scale-out-manager.md), or do the following things:
 
-1.  Install the client SSL certificate to the Root store of the local computer on the Worker node.
+a.  Install the client SSL certificate to the Root store of the local computer on the Worker node.
 
-2.  Update the Scale Out Worker service configuration file.
+b.  Update the Scale Out Worker service configuration file.
 
     Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **MasterHttpsCertThumbprint** to the thumbprint of the new SSL certificate.
 
-3.  Restart the Scale Out Worker service.
+c.  Restart the Scale Out Worker service.
 
 ## Scale Out Worker certificate
 

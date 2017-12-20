@@ -3,10 +3,10 @@ title: "Instant File Initialization Configuration (Analytics Platform System)"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.technology: "mpp-data-warehouse"
 ms.custom: ""
 ms.date: 01/05/2017

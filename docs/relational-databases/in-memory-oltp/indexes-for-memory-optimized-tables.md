@@ -48,6 +48,7 @@ To be declared with the default DURABILITY = SCHEMA\_AND_DATA, the memory-optimi
 - Provides an index to meet the minimum requirement of one index in the CREATE TABLE statement.  
 - Provides the primary key that is required for the SCHEMA\_AND_DATA clause.  
 
+    ```sql
     CREATE TABLE SupportEvent  
     (  
         SupportEventId   int NOT NULL  
@@ -57,7 +58,7 @@ To be declared with the default DURABILITY = SCHEMA\_AND_DATA, the memory-optimi
         WITH (  
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA\_AND_DATA);  
-
+    ```
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] have a limit of 8 indexes per memory-optimized table or table type. 
 > Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], there is no longer a limit on the number of indexes specific to memory-optimized tables and table types.

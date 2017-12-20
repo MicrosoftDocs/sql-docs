@@ -6,13 +6,14 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: na
-ms.topic: updart-autogen
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.topic: article
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: updart-autogen
 ms.date: 12/02/2017
 ms.author: genemi
 ms.workload: connect-to-sql

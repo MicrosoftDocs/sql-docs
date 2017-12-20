@@ -1,13 +1,12 @@
 ---
 title: "Set AD Nodes Admin Logon Password in Directory Services Restore Mode (APS)"
-
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.technology: "mpp-data-warehouse"
 ms.custom: ""
 ms.date: 01/05/2017

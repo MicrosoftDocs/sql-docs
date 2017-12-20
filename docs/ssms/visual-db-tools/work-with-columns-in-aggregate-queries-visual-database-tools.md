@@ -3,7 +3,7 @@ title: "Work with Columns in Aggregate Queries (Visual Database Tools) | Microso
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""

@@ -3,7 +3,7 @@ title: "Lesson 1: Basic Navigation in SQL Server Management Studio | Microsoft D
 ms.custom: ""
 ms.date: "08/30/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-tutorial"
 ms.reviewer: ""

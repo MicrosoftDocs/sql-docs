@@ -3,7 +3,7 @@ title: "Combine Conditions When OR Has Precedence (Visual Database Tools) | Micr
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-visual-db"
 ms.reviewer: ""

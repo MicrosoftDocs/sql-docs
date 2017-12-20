@@ -3,7 +3,7 @@ title: "Analysis Server &lt;server&gt; (SQL Server Configuration Manager) | Micr
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "configuration-manager"
 ms.reviewer: ""

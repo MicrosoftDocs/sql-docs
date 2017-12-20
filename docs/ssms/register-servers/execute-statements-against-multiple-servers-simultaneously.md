@@ -3,7 +3,7 @@ title: "Execute Statements Against Multiple Servers Simultaneously | Microsoft D
 ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-registration"
 ms.reviewer: ""

@@ -3,7 +3,7 @@ title: "Parameterized Commands with Intervening COMPUTE Commands | Microsoft Doc
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
-ms.component: "guide"
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""

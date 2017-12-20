@@ -3,7 +3,7 @@ title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsof
 ms.custom: ""
 ms.date: "12/14/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssdt"
 ms.reviewer: ""

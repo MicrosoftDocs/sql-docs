@@ -1,7 +1,7 @@
 ---
 title: "Project Settings (Type Mapping) (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-oracle"
 ms.custom: ""

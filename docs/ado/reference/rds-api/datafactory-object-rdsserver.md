@@ -3,7 +3,7 @@ title: "DataFactory Object (RDSServer) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
-ms.component: "reference"
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""

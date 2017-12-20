@@ -78,7 +78,6 @@ ALTER DATABASE { database_name }
 {  
     <auto_option>   
   | <change_tracking_option> 
-  | <compatibility_level_option>  
   | <cursor_option>   
   | <db_encryption_option>  
   | <db_update_option>   
@@ -117,9 +116,6 @@ ALTER DATABASE { database_name }
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
    }  
 
-<compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
-  
 <cursor_option> ::=   
 {  
     CURSOR_CLOSE_ON_COMMIT { ON | OFF }   
@@ -175,7 +171,7 @@ COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   

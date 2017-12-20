@@ -2,7 +2,7 @@
 title: "Troubleshoot data collection for machine learning - SQL Server"
 ms.custom: ""
 ms.date: "06/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
 ms.component: ""

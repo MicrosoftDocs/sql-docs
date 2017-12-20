@@ -2,7 +2,7 @@
 title: "Using the MicrosoftML Package with SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
 ms.component: ""

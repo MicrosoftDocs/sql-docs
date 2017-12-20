@@ -7,13 +7,12 @@ author: MightyPen
 manager: jhubbard
 editor: ''
 ms.service: ""
-ms.prod: "sql-non-specified"
+ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.topic: updart-autogen
 ms.technology: r-services
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na

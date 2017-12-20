@@ -2,7 +2,7 @@
 title: "Getting started with machine learning in SQL Server| Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
 ms.component: ""

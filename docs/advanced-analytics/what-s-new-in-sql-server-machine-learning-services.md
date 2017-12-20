@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s new in Machine Learning Services | Microsoft Docs"
 ms.date: "11/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
 ms.component: ""

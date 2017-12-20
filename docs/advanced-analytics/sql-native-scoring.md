@@ -2,7 +2,7 @@
 title: "Native scoring| Microsoft Docs"
 ms.custom: ""
 ms.date: "09/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
 ms.component: ""

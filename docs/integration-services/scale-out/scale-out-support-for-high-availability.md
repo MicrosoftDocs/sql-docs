@@ -98,7 +98,7 @@ On the primary SQL Server, run the stored procedure `[catalog].[update_master_ad
 
 ## 9. Add the Scale Out Workers
 
-Now, you can add Scale Out Workers with the help of [Scale Out Manager](integration-services-ssis-scale-out-manager.md.). Enter `[SQL Server Availability Group Listener DNS name],[Port]` on the connection page.
+Now, you can add Scale Out Workers with the help of [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md). Enter `[SQL Server Availability Group Listener DNS name],[Port]` on the connection page.
 
 ## Next steps
 For more info, see the following articles:

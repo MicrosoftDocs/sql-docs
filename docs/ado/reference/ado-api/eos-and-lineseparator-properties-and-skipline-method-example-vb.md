@@ -3,7 +3,7 @@ title: "EOS and LineSeparator Properties and SkipLine Method Example (VB) | Micr
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
-ms.component: "reference"
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""

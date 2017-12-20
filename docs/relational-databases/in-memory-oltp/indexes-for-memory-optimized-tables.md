@@ -48,7 +48,7 @@ To be declared with the default DURABILITY = SCHEMA\_AND_DATA, the memory-optimi
 - Provides an index to meet the minimum requirement of one index in the CREATE TABLE statement.  
 - Provides the primary key that is required for the SCHEMA\_AND_DATA clause.  
 
-    ```
+    ```sql
     CREATE TABLE SupportEvent  
     (  
         SupportEventId   int NOT NULL  

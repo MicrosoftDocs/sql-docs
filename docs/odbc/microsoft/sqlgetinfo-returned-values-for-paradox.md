@@ -5,7 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
-ms.component: "microsoft"
+ms.component: "odbc"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

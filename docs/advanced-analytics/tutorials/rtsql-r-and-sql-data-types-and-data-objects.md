@@ -2,13 +2,15 @@
 title: "R and SQL data types and data objects (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 dev_langs: 
   - "R"
   - "SQL"

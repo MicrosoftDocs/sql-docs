@@ -25,7 +25,7 @@ manager: "jhubbard"
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx.md)]
 
 Modifies the content of an existing external package library.
 

@@ -1,20 +1,18 @@
 ---
 title: "How to create a script task that uses the SSIS PDW destination adapter"
-
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow."
 ms.date: "01/05/2017"
 ms.topic: "article"
-
 ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
 caps.latest.revision: 8
 

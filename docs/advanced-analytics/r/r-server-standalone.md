@@ -3,10 +3,12 @@ title: "R Server (Standalone) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "06/22/2017"
-ms.prod: "r-server"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+vms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"

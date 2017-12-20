@@ -1,10 +1,10 @@
 ---
 title: "Known issues in Machine Learning Services | Microsoft Docs"
 ms.date: "11/16/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "r-services"
+ms.prod: "machine-learning-services"
+ms.prod_service: "machine-learning-services"
 ms.service: ""
-ms.component: "advanced-analytics"
+ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

@@ -1,12 +1,14 @@
 ---
 title: "ADO - WFC Syntax Index | Microsoft Docs"
-ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
-ms.custom: ""
+ms.custom: 
 ms.date: "02/15/2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"

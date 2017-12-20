@@ -2,9 +2,12 @@
 title: "catalog.update_master_address (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: sql-non-specified
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,7 +19,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # catalog.update_master_address (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss2017-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Update the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master endpoint.
 

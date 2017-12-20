@@ -3,7 +3,7 @@ title: "Considerations for Replaying Traces (SQL Server Profiler) | Microsoft Do
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "sql-server-profiler"
 ms.reviewer: ""

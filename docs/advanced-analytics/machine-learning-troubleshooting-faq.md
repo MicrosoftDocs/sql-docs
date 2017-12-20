@@ -3,9 +3,9 @@ title: "Troubleshooting and FAQ for machine learning in SQL Server | Microsoft D
 ms.custom: ""
 ms.date: "06/16/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "r-services"
+ms.prod_service: "machine-learning-services"
 ms.service: ""
-ms.component: "advanced-analytics"
+ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

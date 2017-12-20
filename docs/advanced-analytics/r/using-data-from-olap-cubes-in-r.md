@@ -1,10 +1,12 @@
 ---
 title: "Using data from OLAP cubes in R | Microsoft Docs"
 ms.custom: ""
-ms.prod: sql-non-specified
 ms.date: "12/08/2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: "r-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"

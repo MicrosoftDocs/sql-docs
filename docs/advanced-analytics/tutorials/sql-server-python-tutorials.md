@@ -3,14 +3,7 @@ title: "SQL Server Python tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "09/19/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
+vapplies_to: 
   - "SQL Server 2017"
 dev_langs: 
   - "Python"

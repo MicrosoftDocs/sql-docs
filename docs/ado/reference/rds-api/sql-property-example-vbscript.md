@@ -8,7 +8,8 @@ ms.reviewer:
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.component: referencems.tgt_pltfrm: ""
+ms.component: reference
+ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "VB"

@@ -29,7 +29,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # dbo.slo_assignment_history (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  

@@ -38,8 +38,7 @@ SQL Server 2017 is supported on the following Linux platforms:
 
 Microsoft supports deploying and managing SQL Server containers by using OpenShift and Kubernetes.
 
-> [!TIP]
-> For the latest support policy for SQL Server 2017, see [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+For the latest support policy for SQL Server 2017, see [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a id="system"></a> System requirements
 

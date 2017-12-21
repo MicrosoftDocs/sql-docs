@@ -5,7 +5,7 @@ ms.topic: "article"
 ms.prod: "sql-non-specified"
 ms.prod_service: "integration-services"
 ms.service: ""
-ms.component: "integration-services"
+ms.component: "quick-start"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: 

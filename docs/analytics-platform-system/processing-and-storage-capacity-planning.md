@@ -1,21 +1,18 @@
 ---
-
 title: "Analytics Platform processing and storage capacity"
-
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "Your business requirements determine the number of Data Scale Units, and the size of the Compute node disks that you need in your Analytics Platform System (APS) appliance."
 ms.date: "10/20/2016"
 ms.topic: "article"
-
 ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
 caps.latest.revision: 7
 

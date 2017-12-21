@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/07/2017"
+ms.date: "12/20/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -90,7 +90,8 @@ SELECT name, compatibility_level FROM sys.databases;
 ```  
   
 ## Remarks  
- For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is set to the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Databases are set to this level unless the **model** database has a lower compatibility level. When a database is upgraded  from any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database retains its existing compatibility level if it is at least minimum allowed for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Upgrading a database with a compatibility level lower than the allowed level, sets the database to the lowest compatibility level allowed. This applies to both system and user databases. Use **ALTER DATABASE** to change the compatibility level of the database. To view the current compatibility level of a database, query the **compatibility_level** column in the **sys.databases** catalog view.  
+
+For all installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default compatibility level is set to the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Databases are set to this level unless the **model** database has a lower compatibility level. When a database is upgraded  from any earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the database retains its existing compatibility level if it is at least minimum allowed for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Upgrading a database with a compatibility level lower than the allowed level, sets the database to the lowest compatibility level allowed. This applies to both system and user databases. Use **ALTER DATABASE** to change the compatibility level of the database. To view the current compatibility level of a database, query the **compatibility_level** column in the **sys.databases** catalog view.  
 
   
 ## Using Compatibility Level for Backward Compatibility  
@@ -133,7 +134,8 @@ This section describes new behaviors introduced with compatibility level 130.
 | Trace 2371 is OFF by default in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. | [Trace 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) is ON by default in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Trace flag 2371 tells the auto statistics updater to sample a smaller yet wiser subset of rows, in a table that has a great many rows. <br/> <br/> One improvement is to include in the sample more rows that were inserted recently. <br/> <br/> Another improvement is to let queries run while the update statistics process is running, rather than blocking the query. |  
 | For level 120, statistics are sampled by a *single*-threaded process. | For level 130, statistics are sampled by a *multi*-threaded process. |  
 | 253 incoming foreign keys is the limit. | A given table can be referenced by up to 10,000 incoming foreign keys or similar references. For restrictions, see [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md). |  
-|The deprecated MD2, MD4, MD5, SHA, and SHA1 hash algorithms are permitted.|Only SHA2_256 and SHA2_512 hash algorithms are permitted.|  
+|The deprecated MD2, MD4, MD5, SHA, and SHA1 hash algorithms are permitted.|Only SHA2_256 and SHA2_512 hash algorithms are permitted.|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] includes improvements in some data types conversions and some (mostly uncommon) operations. For details see [SQL Server 2016 improvements in handling some data types and uncommon operations](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon).|
   
   
 Fixes that were under  trace flag 4199 in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] are now enabled by default. With compatibility mode 130. Trace flag 4199 will still be applicable for new query optimizer fixes that are released after [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. To use the older query optimizer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] you must select compatibility level 110. For information about Trace Flag 4199, see [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  

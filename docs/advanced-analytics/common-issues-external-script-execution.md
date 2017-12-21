@@ -3,10 +3,10 @@ title: "Common issues with external script execution in SQL Server| Microsoft Do
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "10/11/2017"
-ms.prod: "sql-non-specified"
-ms.prod_service: "r-services"
+ms.prod: "machine-learning-services"
+ms.prod_service: "machine-learning-services"
 ms.service: ""
-ms.component: "advanced-analytics"
+ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

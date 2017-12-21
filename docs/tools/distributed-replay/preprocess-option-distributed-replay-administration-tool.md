@@ -3,7 +3,7 @@ title: "Preprocess Option (Distributed Replay Administration Tool) | Microsoft D
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "distributed-replay"
 ms.reviewer: ""

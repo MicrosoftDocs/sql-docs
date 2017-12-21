@@ -36,7 +36,7 @@ This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server
 ## Sample script
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -65,23 +65,23 @@ then
 fi
 
 echo Adding Microsoft repositories...
-sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
-sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
-sudo zypper --gpg-auto-import-keys refresh
+zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
+zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
+zypper --gpg-auto-import-keys refresh
 
 #Add the SLES v12 SP2 SDK to obtain libsss_nss_idmap0
-sudo SUSEConnect -p sle-sdk/12.2/x86_64
+SUSEConnect -p sle-sdk/12.2/x86_64
 
 echo Installing SQL Server...
-sudo zypper install -y mssql-server
+zypper install -y mssql-server
 
 echo Running mssql-conf setup...
-sudo MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
+MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
      MSSQL_PID=$MSSQL_PID \
      /opt/mssql/bin/mssql-conf -n setup accept-eula
 
 echo Installing mssql-tools and unixODBC developer...
-sudo ACCEPT_EULA=Y zypper install -y mssql-tools unixODBC-devel
+ACCEPT_EULA=Y zypper install -y mssql-tools unixODBC-devel
 
 # Add SQL Server tools to the path by default:
 echo Adding SQL Server tools to your path...
@@ -92,30 +92,30 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 if [ ! -z $SQL_INSTALL_AGENT ]
 then
   echo Installing SQL Server Agent...
-  sudo zypper install -y mssql-server-agent
+  zypper install -y mssql-server-agent
 fi
 
 # Optional SQL Server Full Text Search installation:
 if [ ! -z $SQL_INSTALL_FULLTEXT ]
 then
     echo Installing SQL Server Full-Text Search...
-    sudo zypper install -y mssql-server-fts
+    zypper install -y mssql-server-fts
 fi
 
 # Configure firewall to allow TCP port 1433:
 echo Configuring SuSEfirewall2 to allow traffic on port 1433...
-sudo SuSEfirewall2 open INT TCP 1433
-sudo SuSEfirewall2 stop
-sudo SuSEfirewall2 start
+SuSEfirewall2 open INT TCP 1433
+SuSEfirewall2 stop
+SuSEfirewall2 start
 
 # Example of setting post-installation configuration options
 # Set trace flags 1204 and 1222 for deadlock tracing:
 # echo Setting trace flags...
-# sudo /opt/mssql/bin/mssql-conf traceflag 1204 1222 on
+# /opt/mssql/bin/mssql-conf traceflag 1204 1222 on
 
 # Restart SQL Server after making configuration changes:
 echo Restarting SQL Server...
-sudo systemctl restart mssql-server
+systemctl restart mssql-server
 
 # Connect to server and get the version:
 counter=1
@@ -168,10 +168,10 @@ To run the script
    chmod +x install_sql.sh
    ```
 
-1. Run the script
+1. Run the script with SUDO
 
    ```bash
-   ./install_sql.sh
+   sudo ./install_sql.sh
    ```
 
 ### Understanding the script

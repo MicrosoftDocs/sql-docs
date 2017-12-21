@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "linux"
+ms.component: "sql-linux"
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: database-engine
@@ -29,7 +29,7 @@ This tutorial documents the tasks required to deploy a Linux Pacemaker cluster f
 > * Prepare the nodes for Pacemaker (RHEL and Ubuntu only).
 > * Create the Pacemaker cluster.
 > * Install the SQL Server HA and SQL Server Agent packages.
-
+ 
 ## Prerequisite
 [Install SQL Server 2017](sql-server-linux-setup.md).
 

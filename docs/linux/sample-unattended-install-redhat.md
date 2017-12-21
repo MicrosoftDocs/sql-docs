@@ -35,7 +35,7 @@ Save the sample script to a file and then to customize it,
 replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -64,19 +64,19 @@ then
 fi
 
 echo Adding Microsoft repositories...
-sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
-sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
 
 echo Installing SQL Server...
-sudo yum install -y mssql-server
+yum install -y mssql-server
 
 echo Running mssql-conf setup...
-sudo MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
+MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
      MSSQL_PID=$MSSQL_PID \
      /opt/mssql/bin/mssql-conf -n setup accept-eula
 
 echo Installing mssql-tools and unixODBC developer...
-sudo ACCEPT_EULA=Y yum install -y mssql-tools unixODBC-devel
+ACCEPT_EULA=Y yum install -y mssql-tools unixODBC-devel
 
 # Add SQL Server tools to the path by default:
 echo Adding SQL Server tools to your path...
@@ -87,29 +87,29 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 if [ ! -z $SQL_INSTALL_AGENT ]
 then
   echo Installing SQL Server Agent...
-  sudo yum install -y mssql-server-agent
+  yum install -y mssql-server-agent
 fi
 
 # Optional SQL Server Full Text Search installation:
 if [ ! -z $SQL_INSTALL_FULLTEXT ]
 then
     echo Installing SQL Server Full-Text Search...
-    sudo yum install -y mssql-server-fts
+    yum install -y mssql-server-fts
 fi
 
 # Configure firewall to allow TCP port 1433:
 echo Configuring firewall to allow traffic on port 1433...
-sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-sudo firewall-cmd --reload
+firewall-cmd --zone=public --add-port=1433/tcp --permanent
+firewall-cmd --reload
 
 # Example of setting post-installation configuration options
 # Set trace flags 1204 and 1222 for deadlock tracing:
 #echo Setting trace flags...
-#sudo /opt/mssql/bin/mssql-conf traceflag 1204 1222 on
+#/opt/mssql/bin/mssql-conf traceflag 1204 1222 on
 
 # Restart SQL Server after making configuration changes:
 echo Restarting SQL Server...
-sudo systemctl restart mssql-server
+systemctl restart mssql-server
 
 # Connect to server and get the version:
 counter=1
@@ -162,10 +162,10 @@ To run the script
    chmod +x install_sql.sh
    ```
 
-1. Run the script
+1. Run the script with SUDO
 
    ```bash
-   ./install_sql.sh
+   sudo ./install_sql.sh
    ```
 
 ## Understanding the script

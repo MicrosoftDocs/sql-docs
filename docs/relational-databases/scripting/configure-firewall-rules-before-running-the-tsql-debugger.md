@@ -3,9 +3,9 @@ title: "Configure firewall rules before running the TSQL Debugger | Microsoft Do
 ms.custom: ""
 ms.date: "10/20/2016"
 ms.prod: "sql-non-specified"
-ms.prod_service: "ssms"
+ms.prod_service: "sql-tools"
 ms.service: ""
-ms.component: "scripting"
+ms.component: "ssms-scripting"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

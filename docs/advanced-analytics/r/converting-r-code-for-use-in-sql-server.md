@@ -1,5 +1,5 @@
 ---
-title: "Converting R Code for Use in R Services | Microsoft Docs""
+title: "Converting R Code for Use in R Services | Microsoft Docs"
 ms.date: "12/13/2017"
 ms.reviewer: 
 ms.suite: sql

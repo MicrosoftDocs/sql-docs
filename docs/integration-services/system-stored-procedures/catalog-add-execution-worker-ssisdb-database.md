@@ -20,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # catalog.add_execution_worker (SSISDB Database)
-[!INCLUDE[appliesto-ss2017-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Adds a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker to an instance of execution in Scale Out.
 

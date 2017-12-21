@@ -23,7 +23,7 @@ ms.workload: "Inactive"
 
 This article provides high-level guidance on how to modify R code to work in SQL Server. 
 
-When you move R code from R Studio or another environment to SQL Server, most often the code works without further modification. This is particularly true if the code is simple, such as a function that takes some inputs and returns a value. It is also easier to port solutions that use the **RevoScaleR** or **MicrosoftML** packages, which support execution in different execution contexts with minimal changes.
+When you move R code from R Studio or another environment to SQL Server, most often the code works without further modification: for example, if the code is simple, such as a function that takes some inputs and returns a value. It is also easier to port solutions that use the **RevoScaleR** or **MicrosoftML** packages, which support execution in different execution contexts with minimal changes.
 
 However, your code might require substantial changes if any of the following apply:
 
@@ -53,7 +53,7 @@ However, your code might require substantial changes if any of the following app
 
     Stored procedure calls preceded by EXECUTE cannot be used as an input to [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). You can use queries, views, or any other valid SELECT statement.
 
-+ Determine the outputs you need. If you run R code using sp_execute_external_script, the stored procedure can output just one data frame as a result. However, you can also output multiple scalar outputs, including plots and models in binary format, as well as as other scalar values derived from R code or SQL parameters.
++ Determine the outputs you need. If you run R code using sp_execute_external_script, the stored procedure can output just one data frame as a result. However, you can also output multiple scalar outputs, including plots and models in binary format, as well as other scalar values derived from R code or SQL parameters.
 
 **Data types**
 
@@ -131,18 +131,20 @@ How much you change your code depends on whether you intend to submit the R code
 
     In a development environment, it might be okay to install packages as part of your code, but this is a bad practice in a production environment. 
 
-    User libraries are not supported, regardless of whether you are using a stored procedure or running R code in theSQL Server compte context.
+    User libraries are not supported, regardless of whether you are using a stored procedure or running R code in the SQL Server compute context.
 
 **Package your R code in a stored procedure**
 
 + If your code is relatively simple, you can embed it in a T-SQL user-defined function without modification, as described in these samples:
 
-    + [Create an R functiton that runs in rxExec](..\tutorials\deepdive-create-a-simple-simulation.md)
+    + [Create an R function that runs in rxExec](..\tutorials\deepdive-create-a-simple-simulation.md)
     + [Feature engineering using T-SQL and R](..\tutorials\sqldev-create-data-features-using-t-sql.md)
 
-+ If the code is more complex, use the R package **sqlrutils** to convert your code. This package is designed to help experienced R users write good stored procedure code. It requires that your R code first be reduced to a single function with clearly defined inputs and outputs. 
++ If the code is more complex, use the R package **sqlrutils** to convert your code. This package is designed to help experienced R users write good stored procedure code. 
 
-    After you have created a tidy version of the code, you use the package to generate the input and outputs in the correct format, and write the code of the complete T-SQL stored procedure. The **sqlrutils** package can also register the stored procedure in the database. 
+    The first step is to rewrite your R code as a single function with clearly defined inputs and outputs.
+
+    Then, use the **sqlrutils** package to generate the input and outputs in the correct format. The **sqlrutils** package generates the complete stored procedure code for you, and can also register the stored procedure in the database. 
 
     For more information and examples, see [SqlRUtils](../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md).
 

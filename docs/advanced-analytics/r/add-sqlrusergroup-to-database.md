@@ -33,7 +33,7 @@ You can view these accounts in the Windows user group **SQLRUserGroup**. By defa
 
 When a user sends a machine learning script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account, maps it to the identity of the calling user, and runs the script on behalf of the user. This new service of the database engine supports the secure execution of external scripts, called *implied authentication*.
 
-However, if you need to run R or Python scripts from a remote data science client, and you are using Windows authentication, you must grant these worker accounts permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
+However, if you need to run R or Python scripts from a remote data science client, and you are using Windows authentication, you must give these worker accounts permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
 
 ## Add SQLRUserGroup as a SQL Server login
 

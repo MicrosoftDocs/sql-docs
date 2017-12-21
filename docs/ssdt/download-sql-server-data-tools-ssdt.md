@@ -39,7 +39,7 @@ SSDT for Visual Studio 2017 (15.5.1) moves out of preview and is the first gener
 > Non-English versions of SSDT for Visual Studio 2017 15.5.1 do not support upgrading from the English 15.4.0 Preview, you must uninstall the English 15.4.0 Preview before installing 15.5.1 in other languages. 
 
 
-SSD T for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4: [Download Data-Tier Application Framework (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56356)
+SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4: [Download Data-Tier Application Framework (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56356)
 
 
 

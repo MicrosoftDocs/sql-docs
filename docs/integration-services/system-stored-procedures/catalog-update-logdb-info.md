@@ -19,7 +19,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # catalog.update_logdb_info (SSISDB Database)
-[!INCLUDE[appliesto-ss2017-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Update the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Logging information.
 

@@ -69,7 +69,7 @@ ms.workload: "Active"
   
   
 > [!NOTE]  
->  Azure SQL Data Warehouse and Parallel Data Warehouse currently do not support Unique constraints. Any examples referencing Unique Constraints are only applicable to SQL Server and Azure SQL Database    
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] currently do not support Unique constraints. Any examples referencing Unique Constraints are only applicable to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].    
   
  **Simple examples:**  
   
@@ -97,7 +97,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
  **Need to create a different type of index?**  
   
 -   [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)  
--   [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
+-   [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md) 
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -201,7 +201,6 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
         ( { column [ ASC | DESC ] } [ ,...n ] )  
     WITH ( DROP_EXISTING = { ON | OFF } )  
 [;]  
-  
 ```  
   
 ## Arguments  
@@ -220,7 +219,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  If CLUSTERED is not specified, a nonclustered index is created.  
   
 > [!NOTE]  
->  Because the leaf level of a clustered index and the data pages are the same by definition, creating a clustered index and using the ON *partition_scheme_name* or ON *filegroup_name* clause effectively moves a table from the filegroup on which the table was created to the new partition scheme or filegroup. Before creating tables or indexes on specific filegroups, verify which filegroups are available and that they have enough empty space for the index.  
+> Because the leaf level of a clustered index and the data pages are the same by definition, creating a clustered index and using the ON *partition_scheme_name* or ON *filegroup_name* clause effectively moves a table from the filegroup on which the table was created to the new partition scheme or filegroup. Before creating tables or indexes on specific filegroups, verify which filegroups are available and that they have enough empty space for the index.  
   
  In some cases creating a clustered index can enable previously disabled indexes. For more information, see [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md) and [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
@@ -408,12 +407,12 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  To restore automatic statistics updating, set the STATISTICS_NORECOMPUTE to OFF, or execute UPDATE STATISTICS without the NORECOMPUTE clause.  
   
 > [!IMPORTANT]  
->  Disabling automatic recomputation of distribution statistics may prevent the query optimizer from picking optimal execution plans for queries involving the table.  
+> Disabling automatic recomputation of distribution statistics may prevent the query optimizer from picking optimal execution plans for queries involving the table.  
   
  In backward compatible syntax, WITH STATISTICS_NORECOMPUTE is equivalent to WITH STATISTICS_NORECOMPUTE = ON.  
   
- STATISTICS_INCREMENTAL = { ON | **OFF** }  
- When **ON**, the statistics created are per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is **OFF**.  
+STATISTICS_INCREMENTAL = { ON | **OFF** }  
+When **ON**, the statistics created are per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is **OFF**.  
   
  If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
@@ -425,8 +424,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 -   Statistics created on internal tables.  
 -   Statistics created with spatial indexes or XML indexes.  
   
- DROP_EXISTING = { ON | **OFF** }  
- Is an option to drop and rebuild the existing clustered or nonclustered index with modified column specifications, and keep the same name for the index. The default is OFF.  
+DROP_EXISTING = { ON | **OFF** }  
+Is an option to drop and rebuild the existing clustered or nonclustered index with modified column specifications, and keep the same name for the index. The default is OFF.  
   
  ON  
  Specifies to drop and rebuild the existing index, which must have the same name as the parameter *index_name*.  
@@ -434,20 +433,19 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  Specifies not to drop and rebuild the existing index. SQL Server displays an error if the specified index name already exists.  
   
- With DROP_EXISTING, you can change:  
+With DROP_EXISTING, you can change:  
   
 -   A nonclustered rowstore index to a clustered rowstore index.  
   
- With DROP_EXISTING, you cannot change:  
+With DROP_EXISTING, you cannot change:  
   
 -   A clustered rowstore index to a nonclustered rowstore index.  
-  
 -   A clustered columnstore index to any type of rowstore index.  
   
- In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXISTING = ON.  
+In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXISTING = ON.  
   
- ONLINE = { ON | **OFF** }  
- Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.  
+ONLINE = { ON | **OFF** }  
+Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.  
   
 > [!NOTE]  
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -469,10 +467,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 -   Clustered index if the underlying table contains LOB data types: **image**, **ntext**, **text**, and spatial types.  
 -   **varchar(max)** and **varbinary(max)** columns cannot be part of an index. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and in  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns, can be built or rebuilt using the **ONLINE** option. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] does not permit the **ONLINE** option when the base table contains **varchar(max)** or **varbinary(max)** columns.  
   
- For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
+For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
- ALLOW_ROW_LOCKS = { **ON** | OFF }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ALLOW_ROW_LOCKS = { **ON** | OFF }  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies whether row locks are allowed. The default is ON.  
   
@@ -482,8 +480,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  Row locks are not used.  
   
- ALLOW_PAGE_LOCKS = { **ON** | OFF }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ALLOW_PAGE_LOCKS = { **ON** | OFF }  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies whether page locks are allowed. The default is ON.  
   
@@ -493,8 +491,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  OFF  
  Page locks are not used.  
   
- MAXDOP = *max_degree_of_parallelism*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+MAXDOP = *max_degree_of_parallelism*  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Overrides the **max degree of parallelism** configuration option for the duration of the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
@@ -512,7 +510,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  DATA_COMPRESSION  
  Specifies the data compression option for the specified index, partition number, or range of partitions. The options are as follows:  
@@ -528,8 +526,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**      
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**      
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifies the partitions to which the DATA_COMPRESSION setting applies. If the index is not partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION option applies to all partitions of a partitioned index.  
   

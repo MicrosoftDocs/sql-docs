@@ -34,6 +34,7 @@ SSDT for Visual Studio 2017 (15.5.1) moves out of preview and is the first gener
 
 > [!IMPORTANT]
 > Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for a couple bug fixes to the installer. Because these are basically the same releases, do not try to upgrade from 15.5.0 to 15.5.1. If you already have Visual Studio 2017 (15.5.0) installed, then there is no reason to move to 15.5.1 because you already got past the installer issues. 
+> 
 > Before installing SSDT for Visual Studio 2017 (15.5.1), uninstall the "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed on VS 2017, andclose all VS instances. 
 > 
 > Non-English versions of SSDT for Visual Studio 2017 15.5.1 do not support upgrading from the English 15.4.0 Preview, you must uninstall the English 15.4.0 Preview before installing 15.5.1 in other languages. 

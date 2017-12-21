@@ -880,5 +880,6 @@ The performance of a nonclustered index is better than nonclustered hash indexes
 [Troubleshooting Hash Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
 [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [Index Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
+[Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)     
 [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
 [ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)  

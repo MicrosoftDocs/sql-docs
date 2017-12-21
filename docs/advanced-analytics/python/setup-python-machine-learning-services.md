@@ -18,7 +18,7 @@ ms.workload: "On Demand"
 ---
 # Set up Python Machine Learning Services (In-Database)
 
-  You install the components required for Python by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the interactive prompts as described in this topic.
+  This article describes how to install the components required for Python by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the interactive prompts.
 
 ## Machine learning options in SQL Server setup
 
@@ -43,7 +43,7 @@ After the installation is complete, reconfigure the instance to allow execution 
     - Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
   
 > [!IMPORTANT]
-> After setup is complete, be sure to complete the additional post-configuration steps described in this topic. These include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run Python jobs on your behalf.
+> After setup is complete, be sure to complete the additional post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run Python jobs on your behalf.
 
 ### Unattended installation
 

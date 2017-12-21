@@ -31,7 +31,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # dbo.slo_service_objectives (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  This feature is in a preview state, and has been deprecated in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12. Do not take a dependency on the specific implementation of this feature because the feature might be changed or removed in a future release.  

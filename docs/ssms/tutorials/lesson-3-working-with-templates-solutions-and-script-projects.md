@@ -3,7 +3,7 @@ title: "Lesson 3: Working with Templates, Solutions, and Script Projects | Micro
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-tutorial"
 ms.reviewer: ""

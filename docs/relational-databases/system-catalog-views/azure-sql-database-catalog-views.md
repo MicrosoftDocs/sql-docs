@@ -1,13 +1,12 @@
 ---
 title: "Azure SQL Database Catalog Views | Microsoft Docs"
 ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
 ms.date: "08/20/2015"
 ms.prod: 
 ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: "sql-database"
-ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""

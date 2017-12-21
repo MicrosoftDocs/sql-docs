@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: "12/20/2017"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -74,10 +74,10 @@ ALTER DATABASE { database_name }
 -- Full descriptions of the set options are available in the topic   
 -- ALTER DATABASE SET Options. The supported syntax is listed here.  
 
-<optionspec> ::=   
+<option_spec> ::=   
 {  
     <auto_option>   
-  | <compatibility_level_option>  
+  | <change_tracking_option> 
   | <cursor_option>   
   | <db_encryption_option>  
   | <db_update_option>   
@@ -99,10 +99,23 @@ ALTER DATABASE { database_name }
   | AUTO_UPDATE_STATISTICS { ON | OFF }   
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
-  
-<compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
-  
+
+<change_tracking_option> ::=  
+{  
+  CHANGE_TRACKING   
+   {   
+       = OFF  
+     | = ON [ ( <change_tracking_option_list > [,...n] ) ]   
+     | ( <change_tracking_option_list> [,...n] )  
+   }  
+}  
+
+   <change_tracking_option_list> ::=  
+   {  
+       AUTO_CLEANUP = { ON | OFF }   
+     | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
+   }  
+
 <cursor_option> ::=   
 {  
     CURSOR_CLOSE_ON_COMMIT { ON | OFF }   
@@ -158,7 +171,7 @@ COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   

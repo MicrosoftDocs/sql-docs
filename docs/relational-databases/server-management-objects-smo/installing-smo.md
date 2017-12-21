@@ -26,6 +26,8 @@ ms.workload: "On Demand"
 
 #Installing SMO
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 This page provides information on how to install SMO for use by applications and the system requirements to use SMO.
 
 ## SMO NuGet Package

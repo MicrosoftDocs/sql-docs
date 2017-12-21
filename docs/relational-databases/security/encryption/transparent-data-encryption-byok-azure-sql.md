@@ -6,12 +6,14 @@ services: "sql-database"
 documentationcenter: ""
 author: "aliceku"
 manager: "craigg"
-editor: ""
-ms.assetid: ""
+ms.prod: 
+ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.custom: 
-  - "security"
-ms.workload: "Inactive"
+ms.component: "security"
+ms.workload: "On Demand"
 ms.tgt_pltfrm: ""
 ms.devlang: "na"
 ms.topic: "article"

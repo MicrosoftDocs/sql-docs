@@ -3,7 +3,7 @@ title: "Microsoft Data Shaping Service for OLE DB (ADO Service Provider) | Micro
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
-ms.component: "guide"
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""

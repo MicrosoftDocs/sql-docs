@@ -6,6 +6,8 @@ ms.date: "11/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
+ms.prod_service: sql-tools
+ms.component: sos
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "meet-bhagdev"

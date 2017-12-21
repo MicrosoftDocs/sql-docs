@@ -3,7 +3,7 @@ title: "Set the SQL Server Connection for the SQL Server Agent Service | Microso
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-agent"
 ms.reviewer: ""

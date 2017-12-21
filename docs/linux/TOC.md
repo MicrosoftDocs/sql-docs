@@ -101,6 +101,7 @@
 
 # Resources
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
+## [FAQ](sql-server-linux-faq.md)
 ## [SQL Server Documentation](../sql-server/sql-server-technical-documentation.md)
 ## Partners
 ### [Monitoring](../sql-server/partner-monitor-sql-server.md)

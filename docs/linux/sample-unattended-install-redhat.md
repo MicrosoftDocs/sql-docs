@@ -64,19 +64,19 @@ then
 fi
 
 echo Adding Microsoft repositories...
-curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
-curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
 
 echo Installing SQL Server...
-yum install -y mssql-server
+sudo yum install -y mssql-server
 
 echo Running mssql-conf setup...
-MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
+sudo MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
      MSSQL_PID=$MSSQL_PID \
      /opt/mssql/bin/mssql-conf -n setup accept-eula
 
 echo Installing mssql-tools and unixODBC developer...
-ACCEPT_EULA=Y yum install -y mssql-tools unixODBC-devel
+sudo ACCEPT_EULA=Y yum install -y mssql-tools unixODBC-devel
 
 # Add SQL Server tools to the path by default:
 echo Adding SQL Server tools to your path...
@@ -87,29 +87,29 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 if [ ! -z $SQL_INSTALL_AGENT ]
 then
   echo Installing SQL Server Agent...
-  yum install -y mssql-server-agent
+  sudo yum install -y mssql-server-agent
 fi
 
 # Optional SQL Server Full Text Search installation:
 if [ ! -z $SQL_INSTALL_FULLTEXT ]
 then
     echo Installing SQL Server Full-Text Search...
-    yum install -y mssql-server-fts
+    sudo yum install -y mssql-server-fts
 fi
 
 # Configure firewall to allow TCP port 1433:
 echo Configuring firewall to allow traffic on port 1433...
-firewall-cmd --zone=public --add-port=1433/tcp --permanent
-firewall-cmd --reload
+sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
+sudo firewall-cmd --reload
 
 # Example of setting post-installation configuration options
 # Set trace flags 1204 and 1222 for deadlock tracing:
 #echo Setting trace flags...
-#/opt/mssql/bin/mssql-conf traceflag 1204 1222 on
+#sudo /opt/mssql/bin/mssql-conf traceflag 1204 1222 on
 
 # Restart SQL Server after making configuration changes:
 echo Restarting SQL Server...
-systemctl restart mssql-server
+sudo systemctl restart mssql-server
 
 # Connect to server and get the version:
 counter=1
@@ -162,10 +162,10 @@ To run the script
    chmod +x install_sql.sh
    ```
 
-1. Run the script with SUDO
+1. Run the script
 
    ```bash
-   sudo ./install_sql.sh
+   ./install_sql.sh
    ```
 
 ## Understanding the script

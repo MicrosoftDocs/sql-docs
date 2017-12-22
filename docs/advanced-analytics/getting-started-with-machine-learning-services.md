@@ -1,7 +1,7 @@
 ---
 title: "Getting started with machine learning in SQL Server| Microsoft Docs"
 ms.custom: ""
-ms.date: "11/09/2017"
+ms.date: "12/20/2017"
 ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
@@ -79,7 +79,7 @@ You can also install [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md
 
 + [Machine learning tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  Start here to find a list of all resources for learning about machine learning solutions using [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] or [!INCLUDE[sssql15-md](../includes/sssql15-md.md)].
+  Start here to find a list of all resources for learning about machine learning solutions using SQL Server 2016 and SQL Server 2017.
 
 ### R tutorials
 
@@ -91,7 +91,7 @@ You can also install [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md
 
 + [Explore R and ScaleR in 25 short functions](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   New to R? Wondering how Microsoft R (or RevoScaleR) compares to standard R? See these quick-starts for R Server.
+   New to R? Wondering how Microsoft R (or RevoScaleR) compares to standard R? See these quick-starts for R Server and Machine Learning Server.
 
 ### Python tutorials
 

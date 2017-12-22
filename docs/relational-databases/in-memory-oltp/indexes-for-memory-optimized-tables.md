@@ -32,8 +32,8 @@ All indexes on memory-optimized tables are created based on the index definition
 
 The index must be one of the following:  
   
-- Hash index.  
-- Nonclustered index (meaning the default internal structure of a B-tree). 
+- Hash index  
+- Memory-optimized Nonclustered index (meaning the default internal structure of a B-tree) 
   
 *Hash* indexes are discussed in more detail in [Hash Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#hash_index).
 *Nonclustered* indexes are discussed in more detail in [Nonclustered Index for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index).  
@@ -94,12 +94,12 @@ This subsection contains a Transact-SQL code block that demonstrates the syntax 
         --------------------  
         
     ALTER TABLE SupportEvent  
-        ADD CONSTRAINT constraintUnique\_SDT_CN  
+        ADD CONSTRAINT constraintUnique_SDT_CN  
         UNIQUE NONCLUSTERED (StartDateTime DESC, CustomerName);  
     go  
 
     ALTER TABLE SupportEvent  
-        ADD INDEX idx\_hash_SupportEngineerName  
+        ADD INDEX idx_hash_SupportEngineerName  
         HASH (SupportEngineerName) WITH (BUCKET_COUNT = 64);  -- Nonunique.  
     go  
         
@@ -208,7 +208,7 @@ The following table lists all operations that are supported by the different ind
 | Retrieve rows in a sort order that matches the index definition. | No | Yes | Yes |  
 | Retrieve rows in a sort-order that matches the reverse of the index definition. | No | No | Yes |  
 
-<sup>1</sup> For a Nonclustered memory-optimized index, the full key is not required to perform an index seek.  
+<sup>1</sup> For a memory-optimized Nonclustered index, the full key is not required to perform an index seek.  
 
 ## Automatic index and statistics management
 

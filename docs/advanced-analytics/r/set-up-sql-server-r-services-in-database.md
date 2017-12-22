@@ -2,11 +2,11 @@
 title: "Set up SQL Server Machine Learning Services (In-Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/15/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

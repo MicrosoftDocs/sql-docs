@@ -4,7 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql-non-specified
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.prod_service: "database-engine, sql-database"
+ms.component: search
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -26,6 +28,9 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Choose a Language When Creating a Full-Text Index
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   When creating a full-text index, you need to specify a column-level language for the indexed column. The [word breaker and stemmers](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) of the specified language will be used by full-text queries on the column. There are a couple of things to consider when choosing the column language when creating a full-text index. These considerations relate to how your text is tokenized and then indexed by Full-Text Engine.  
   
 > [!NOTE]  

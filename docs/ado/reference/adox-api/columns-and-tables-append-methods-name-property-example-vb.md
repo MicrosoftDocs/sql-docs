@@ -3,7 +3,7 @@ title: "Columns and Tables Append Methods, Name Property Example (VB) | Microsof
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
-ms.component: "reference"
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""

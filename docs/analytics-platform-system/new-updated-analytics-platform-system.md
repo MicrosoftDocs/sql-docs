@@ -6,13 +6,16 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: na
-ms.topic: updart-autogen
+ms.suite: sql
+ms.prod: "analytics-platform-system"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component:
+ms.topic: article
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: updart-autogen
 ms.date: 12/02/2017
 ms.author: genemi
 ms.workload: sql-analytics-platform-system

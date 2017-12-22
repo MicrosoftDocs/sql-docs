@@ -1,7 +1,7 @@
 ---
 title: "Installing SSMA for MySQL (MySqlToSql) | Microsoft Docs"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""

@@ -3,17 +3,16 @@ title: "Create the staging Database for Parallel Data Warehouse"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "SQL Server Parallel Data Warehouse (PDW) uses a staging database to store data temporarily during the load process."
 ms.date: "10/20/2016"
 ms.topic: "article"
-
 ms.assetid: 6d0b2726-4772-4858-b700-885cc12219b2
 caps.latest.revision: 20
 

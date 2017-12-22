@@ -1,9 +1,9 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2017"
+ms.date: "12/22/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssdt"
 ms.reviewer: ""
@@ -24,6 +24,18 @@ ms.workload: "Active"
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+## SSDT for Visual Studio 2017 (15.5.1)
+Build number: 14.0.16148.0
+  
+### What's New?
+
+Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for the following bug fixes to the installer:
+
+1.	Fix an issue where the installer hangs on SQL Server Integration Services post install.
+2.	Fix an issue where setup fails with the following error message: "The requested metafile operation is not support (0x800707D3)".
+
+In addition to these two bug fixes, the following details for 15.5.0 still apply to 15.5.1
 
 ## SSDT for Visual Studio 2017 (15.5.0)
 Build number: 14.0.16146.0

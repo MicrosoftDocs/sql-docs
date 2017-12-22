@@ -30,7 +30,7 @@ ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
-# COUNT_BIG (Transact-SQL)
+# COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Returns the number of items in a group. COUNT_BIG works like the COUNT function. The only difference between the two functions is their return values. COUNT_BIG always returns a **bigint** data type value. COUNT always returns an **int** data type value.

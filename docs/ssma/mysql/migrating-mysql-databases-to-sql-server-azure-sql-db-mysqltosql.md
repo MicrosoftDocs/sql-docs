@@ -1,7 +1,7 @@
 ---
 title: "Migrate MySQL Databases to SQL Server - Azure SQL DB | Microsoft Docs"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""

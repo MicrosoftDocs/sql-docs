@@ -1,6 +1,6 @@
 ---
 title: Get started with SQL Server 2017 on Docker | Microsoft Docs
-description: This quick start tutorial shows how to use Docker to run the SQL Server 2017 container image. You then create and query a database with sqlcmd.
+description: This quickstart shows how to use Docker to run the SQL Server 2017 container image. You then create and query a database with sqlcmd.
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -20,7 +20,7 @@ ms.workload: "Active"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In this quick start tutorial, you use Docker to pull and run the SQL Server 2017 container image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you use Docker to pull and run the SQL Server 2017 container image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
 
 This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
 

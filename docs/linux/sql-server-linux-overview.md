@@ -22,7 +22,7 @@ SQL Server 2017 now runs on Linux. It’s the same SQL Server database engine, w
 
 ## Install
 
-To get started, install SQL Server on Linux using one of the following quick start tutorials:
+To get started, install SQL Server on Linux using one of the following quickstarts:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -35,7 +35,7 @@ To get started, install SQL Server on Linux using one of the following quick sta
 
 ## Connect
 
-After installation, connect to the SQL Server instance on your Linux machine. You can connect locally or remotely and with a variety of tools and drivers. The quick start tutorials demonstrate how to use the [sqlcmd](sql-server-linux-setup-tools.md) command-line tool. Other tools include the following:
+After installation, connect to the SQL Server instance on your Linux machine. You can connect locally or remotely and with a variety of tools and drivers. The quickstarts demonstrate how to use the [sqlcmd](sql-server-linux-setup-tools.md) command-line tool. Other tools include the following:
 
 | Tool | Tutorial |
 |-----|-----|

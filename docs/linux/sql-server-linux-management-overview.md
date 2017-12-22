@@ -29,7 +29,7 @@ The **mssql-conf** tool configures SQL Server on Linux. For more information, se
 
 Almost everything you can do in a client tool can also be accomplished with Transact-SQL statements. SQL Server provides [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) that query the status and configuration of SQL Server. There are also [Transact-SQL commands](https://msdn.microsoft.com/library/bb510741.aspx) for database management tasks. You can run these commands in any client tool that supports connecting to SQL Server and running Transact-SQL queries, for example [sqlcmd](sql-server-linux-setup-tools.md) or [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
-## SQL Server Operations Studio (Preview)
+## SQL Server Operations Studio (preview)
 
 The new Microsoft SQL Operations Studio (preview) is a cross-platform tool for managing SQL Server. For more information, see [What is Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
 
@@ -37,7 +37,7 @@ The new Microsoft SQL Operations Studio (preview) is a cross-platform tool for m
 
 SQL Server Management Studio (SSMS) is a Windows application that provides a graphical user interface for managing SQL Server. Although it currently runs only on Windows, you can use it to remotely connect to your Linux SQL Server instances. For more information on using SSMS to manage SQL Server, see [Use SSMS to Manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
-## mssql-cli (Preview)
+## mssql-cli (preview)
 
 Microsoft has released a new cross-platform scripting tool for SQL Server, [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/). This tool is currently in preview.
 

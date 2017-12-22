@@ -19,7 +19,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This sample Bash script installs SQL Server 2017 on Ubuntu 16.04 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
+This sample Bash script installs SQL Server 2017 on Ubuntu without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
 > If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for Ubuntu](quickstart-install-connect-ubuntu.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -63,24 +63,20 @@ fi
 
 echo Adding Microsoft repositories...
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
-add-apt-repository "${repoargs}"
-repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
-add-apt-repository "${repoargs}"
+sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -sr)/prod.list)"
 
 echo Running apt-get update -y...
-apt-get update -y
+sudo apt-get update -y
 
 echo Installing SQL Server...
-apt-get install -y mssql-server
+sudo apt-get install -y mssql-server
 
 echo Running mssql-conf setup...
-MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
-     MSSQL_PID=$MSSQL_PID \
-     /opt/mssql/bin/mssql-conf -n setup accept-eula
+sudo -E -u mssql /opt/mssql/bin/mssql-conf -n setup accept-eula
 
 echo Installing mssql-tools and unixODBC developer...
-ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev
 
 # Add SQL Server tools to the path by default:
 echo Adding SQL Server tools to your path...
@@ -91,20 +87,20 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 if [ ! -z $SQL_INSTALL_AGENT ]
 then
   echo Installing SQL Server Agent...
-  apt-get install -y mssql-server-agent
+  sudo apt-get install -y mssql-server-agent
 fi
 
 # Optional SQL Server Full Text Search installation:
 if [ ! -z $SQL_INSTALL_FULLTEXT ]
 then
     echo Installing SQL Server Full-Text Search...
-    apt-get install -y mssql-server-fts
+    sudo apt-get install -y mssql-server-fts
 fi
 
 # Configure firewall to allow TCP port 1433:
 echo Configuring UFW to allow traffic on port 1433...
-ufw allow 1433/tcp
-ufw reload
+sudo ufw allow 1433/tcp
+sudo ufw reload
 
 # Optional example of post-installation configuration.
 # Trace flags 1204 and 1222 are for deadlock tracing.
@@ -113,7 +109,7 @@ ufw reload
 
 # Restart SQL Server after installing:
 echo Restarting SQL Server...
-systemctl restart mssql-server
+sudo systemctl restart mssql-server
 
 # Connect to server and get the version:
 counter=1
@@ -163,13 +159,13 @@ To run the script
 1. Mark the script as executable
 
    ```bash
-   chmod +x install_sql.sh
+   sh install_sql.sh
    ```
 
-1. Run the script with SUDO
+1. Run the script
 
    ```bash
-   sudo ./install_sql.sh
+   ./install_sql.sh
    ```
 
 ### Understanding the script

@@ -20,14 +20,14 @@ ms.workload: "Active"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In this quick start tutorial, you first install SQL Server 2017 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
+In this quick start tutorial, you first install SQL Server 2017 on Ubuntu. Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
-You must have a Ubuntu 16.04 machine with **at least 2 GB** of memory.
+You must have a Ubuntu machine with **at least 2 GB** of memory.
 
 To install Ubuntu on your own machine, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
@@ -43,6 +43,12 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 > [!IMPORTANT]
 > If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md).
 
+1. Ensure you have `curl`
+
+   ```bash
+	 sudo apt-get install curl
+   ```
+
 1. Import the public repository GPG keys:
 
    ```bash
@@ -53,6 +59,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   sudo add-apt-repository -u "$(curl -sS https://packages.microsoft.com/config/ubuntu/$(lsb_release -sr)/prod.list)"
    ```
 
    > [!NOTE]
@@ -61,7 +68,6 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 1. Run the following commands to install SQL Server:
 
    ```bash
-   sudo apt-get update
    sudo apt-get install -y mssql-server
    ```
 
@@ -100,13 +106,13 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 1. Register the Microsoft Ubuntu repository:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   sudo add-apt-repository -u "$(curl -sS https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   sudo add-apt-repository -u "$(curl -sS https://packages.microsoft.com/config/ubuntu/$(lsb_release -sr)/prod.list)"
    ```
 
 1. Update the sources list and run the installation command with the unixODBC developer package:
 
    ```bash
-   sudo apt-get update
    sudo apt-get install -y mssql-tools unixodbc-dev
    ```
 

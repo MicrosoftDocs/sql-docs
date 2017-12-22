@@ -20,9 +20,6 @@ ms.workload: "Active"
 
 The following sections provide common questions and answers for SQL Server running on Linux.
 
-> [!TIP]
-> All SQL Server content is maintained in Github. If you have questions and answers you would like to propose, click the **Edit** button on this article to submit your changes. Thank you!
-
 ## General Questions
 
 1. **What Linux platforms are supported?**
@@ -36,6 +33,10 @@ The following sections provide common questions and answers for SQL Server runni
 1. **What is the support policy for SQL Server?**
 
    To understand the support policy, review the [Technical Support Policy for SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+
+1. **I am coming from a Windows SQL Server background. Are there resources to help learn how to use SQL Server on Linux?**
+
+   The [quickstarts](sql-server-linux-setup.md#platforms) provide step-by-step instructions on how to install SQL Server on Linux and run Transact-SQL queries. Other tutorials provide additional instructions on using SQL Server on Linux. For a third-party list of tips, see the [MSSQLTIPS list of SQL Server on Linux Tips](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/).
 
 ## Installation
 
@@ -53,11 +54,11 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Can I download the installation packages to install SQL Server offline?**
 
-   Yes. For more information, see the package download links are in the [Release notes](sql-server-linux-release-notes.md). Also, review the [instructions for offline installations](sql-server-linux-setup.md#offline).
+   Yes. For more information, see the package download links in the [Release notes](sql-server-linux-release-notes.md). Also, review the [instructions for offline installations](sql-server-linux-setup.md#offline).
 
 1. **Can I perform an unattended installation of SQL Server on Linux?**
 
-   Yes. For a discussion of unattended installation, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#unattended). You can also find sample scripts for [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), and [Ubuntu](sample-unattended-install-ubuntu.md). You can also review [this sample script](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) created by the SQL Server Customer Advisory Team.
+   Yes. For a discussion of unattended installation, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#unattended). See the sample scripts for [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), and [Ubuntu](sample-unattended-install-ubuntu.md). You can also review [this sample script](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) created by the SQL Server Customer Advisory Team.
 
 ## Tools
 

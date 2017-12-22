@@ -156,16 +156,10 @@ To run the script
 
 1. Customize `MSSQL_SA_PASSWORD`, `MSSQL_PID`, and any of the other variables you'd like to change.
 
-1. Mark the script as executable
-
-   ```bash
-   sh install_sql.sh
-   ```
-
 1. Run the script
 
    ```bash
-   ./install_sql.sh
+   sh ./install_sql.sh
    ```
 
 ### Understanding the script

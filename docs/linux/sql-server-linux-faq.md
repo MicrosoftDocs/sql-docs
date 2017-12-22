@@ -89,7 +89,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Does SQL Server on Linux support multiple instances on the same host?**
 
-   We recommend running multiple containers on a host to have multiple distinct instances running on a host. Each container will need to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker#run-multiple-sql-server-containers.md).
+   We recommend running multiple containers on a host to have multiple distinct instances running on a host. Each container will need to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers.md).
 
 1. **Is Active Directory Authentication supported on Linux?**
 
@@ -109,7 +109,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Can I migrate my data from Oracle and other database engines to SQL Server on Linux?**
 
-   Yes. SSMA supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server 2017 on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle?toc=%2fsql%2flinux%2ftoc.json).
+   Yes. SSMA supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server 2017 on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
 
 1. **What permissions are required for SQL Server files?**
 

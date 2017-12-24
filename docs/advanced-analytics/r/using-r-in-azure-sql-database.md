@@ -103,8 +103,8 @@ The following stored procedure does the work of actually creating and training t
 
 ```sql
 CREATE PROCEDURE generate_iris_model
-  @trained_model VARBINARY(MAX) OUTPUT, 
-  @native_trained_model VARBINARY(MAX) OUTPUT
+    @trained_model VARBINARY(MAX) OUTPUT, 
+    @native_trained_model VARBINARY(MAX) OUTPUT
 AS
 BEGIN
   EXEC sp_execute_external_script @language = N'R'
@@ -117,6 +117,7 @@ BEGIN
   , @input_data_1_name = N'iris_rx_data'
   , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT'
   , @trained_model = @trained_model OUTPUT
+  , @native_trained_model = @native_trained_model OUTPUT
 END
 ```
 

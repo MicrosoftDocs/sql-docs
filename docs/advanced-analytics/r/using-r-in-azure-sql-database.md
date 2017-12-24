@@ -102,7 +102,7 @@ GO
 The following stored procedure does the work of actually creating and training the model, which can be saved in either of two binary formats.
 
 ```sql
-CREATE PROCEDURE generate_iris_model (@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
+CREATE PROCEDURE generate_iris_model @trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
 AS
 BEGIN
   EXEC sp_execute_external_script @language = N'R'
@@ -115,6 +115,7 @@ BEGIN
   , @input_data_1_name = N'iris_rx_data'
   , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT'
 	, @trained_model = @trained_model OUTPUT
+End
 ```
 
 + The **OUTPUT** keyword on the input parameters indicates that the values should be passed through and used for output as well.

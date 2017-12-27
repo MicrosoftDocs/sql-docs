@@ -115,10 +115,10 @@ BEGIN
     '
   , @input_data_1 = N'SELECT "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species" FROM iris_data'
   , @input_data_1_name = N'iris_rx_data'
-  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT'
-  , @trained_model = @trained_model OUTPUT
-  , @native_trained_model = @native_trained_model OUTPUT
-END
+  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
+	, @trained_model = @trained_model OUTPUT
+	, @native_trained_model = @native_trained_model OUTPUT;
+End
 ```
 
 + The **OUTPUT** keyword on the input parameters indicates that the values should be passed through and used for output as well.

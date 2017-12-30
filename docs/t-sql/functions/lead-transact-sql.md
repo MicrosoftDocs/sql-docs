@@ -64,7 +64,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 ### A. Compare values between years  
  The query uses the LEAD function to return the difference in sales quotas for a specific employee over subsequent years. Notice that because there is no lead value available for the last row, the default of zero (0) is returned.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -89,7 +89,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 ### B. Compare values within partitions  
  The following example uses the LEAD function to compare year-to-date sales between employees. The PARTITION BY clause is specified to partition the rows in the result set by sales territory. The LEAD function is applied to each partition separately and computation restarts for each partition. The ORDER BY clause specified in the OVER clause orders the rows in each partition before the function is applied. The ORDER BY clause in the SELECT statement orders the rows in the whole result set. Notice that because there is no lead value available for the last row of each partition, the default of zero (0) is returned.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -115,7 +115,7 @@ Northwest                280              1352577.1325          0.00
 ### C. Specifying arbitrary expressions  
  The following example demonstrates specifying a variety of arbitrary expressions in the LEAD function syntax.  
   
-```t-sql  
+```sql  
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -143,7 +143,7 @@ b           c           i
 ### D: Compare values between quarters  
  The following example demonstrates the LEAD function. The query obtains the difference in sales quota values for a specified employee over subsequent calendar quarters. Notice that because there is no lead value available after the last row, the default of zero (0) is used.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

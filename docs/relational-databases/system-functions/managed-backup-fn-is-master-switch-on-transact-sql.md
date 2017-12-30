@@ -41,7 +41,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 managed_backup.fn_is_master_switch_on ()  
 ```  
   

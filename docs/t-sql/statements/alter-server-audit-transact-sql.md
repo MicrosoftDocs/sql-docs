@@ -188,7 +188,7 @@ GO
 ### C. Changing a server audit WHERE clause  
  The following example modifies the where clause created in example C of [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md). The new WHERE clause filters for the user-defined event if of 27.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -201,7 +201,7 @@ GO
 ### D. Removing a WHERE clause  
  The following example removes a WHERE clause predicate expression.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -214,7 +214,7 @@ GO
 ### E. Renaming a server audit  
  The following example changes the server audit name from `FilterForSensitiveData` to `AuditDataAccess`.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  

@@ -51,7 +51,7 @@ ms.workload: "Active"
   
  All dynamic management views and functions exist in the sys schema and follow this naming convention dm_*. When you use a dynamic management view or function, you must prefix the name of the view or function by using the sys schema. For example, to query the dm_os_wait_stats dynamic management view, run the following query:  
   
- ```tsql
+ ```sql
 SELECT wait_type, wait_time_ms  
 FROM sys.dm_os_wait_stats;  
 ```  

@@ -123,7 +123,7 @@ Everyone can see their own session information.
 ### A. Finding users that are connected to the server  
  The following example finds the users that are connected to the server and returns the number of sessions for each user.  
   
-```tsql  
+```sql  
 SELECT login_name ,COUNT(session_id) AS session_count   
 FROM sys.dm_exec_sessions   
 GROUP BY login_name;  
@@ -132,7 +132,7 @@ GROUP BY login_name;
 ### B. Finding long-running cursors  
  The following example finds the cursors that have been open for more than a specific period of time, who created the cursors, and what session the cursors are on.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT creation_time ,cursor_id   
@@ -146,7 +146,7 @@ WHERE DATEDIFF(mi, c.creation_time, GETDATE()) > 5;
 ### C. Finding idle sessions that have open transactions  
  The following example finds sessions that have open transactions and are idle. An idle session is one that has no request currently running.  
   
-```tsql  
+```sql  
 SELECT s.*   
 FROM sys.dm_exec_sessions AS s  
 WHERE EXISTS   
@@ -166,7 +166,7 @@ WHERE EXISTS
 ### D. Finding information about a queries own connection  
  Typical query to gather information about a queries own connection.  
   
-```tsql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

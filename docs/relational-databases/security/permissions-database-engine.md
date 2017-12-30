@@ -37,7 +37,7 @@ The total number of permissions for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv
 [![Database Engine Permissions](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 Once you understand the permissions, apply server level permissions to logins and database level permissions users with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:   
-```tsql
+```sql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
@@ -420,7 +420,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
 ## Secial considerations for column level permissions
 
 Column level permissions are granted with the syntax *<table_name>(\<column _name>)*. For example:
-```tsql
+```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 A DENY on the table is overridden by a GRANT on a column. However, a subsequent DENY on the table will remove the column GRANT. 
@@ -431,7 +431,7 @@ A DENY on the table is overridden by a GRANT on a column. However, a subsequent 
 ### A. Returning the complete list of grantable permissions  
  The following statement returns all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permission by using the `fn_builtin_permissions` function. For more information, see [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions(default);  
 GO  
 ```  
@@ -439,7 +439,7 @@ GO
 ### B. Returning the permissions on a particular class of objects  
  The following example uses `fn_builtin_permissions` to view all the permissions that are available for a category of securable. The example returns permissions on assemblies.  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions('assembly');  
 GO    
 ```  
@@ -447,7 +447,7 @@ GO
 ### C. Returning the permissions granted to the executing principal on an object  
  The following example uses `fn_my_permissions` to return a list of the effective permissions that are held by the calling principal on a specified securable. The example returns permissions on an object named `Orders55`. For more information, see [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
 GO  
 ```  
@@ -455,7 +455,7 @@ GO
 ### D. Returning the permissions applicable to a specified object  
  The following example returns permissions applicable to an object called `Yttrium`. Notice that the built-in function `OBJECT_ID` is used to retrieve the ID of object `Yttrium`.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_permissions   
     WHERE major_id = OBJECT_ID('Yttrium');  
 GO  

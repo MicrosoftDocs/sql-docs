@@ -107,7 +107,7 @@ The form of file that is used by a database snapshot to store its copy-on-write 
 ### File and Filegroup Example
  The following example creates a database on an instance of SQL Server. The database has a primary data file, a user-defined filegroup, and a log file. The primary data file is in the primary filegroup and the user-defined filegroup has two secondary data files. An ALTER DATABASE statement makes the user-defined filegroup the default. A table is then created specifying the user-defined filegroup. (This example uses a generic path `c:\Program Files\Microsoft SQL Server\MSSQL.1` to avoid specifying a version of SQL Server.)
 
-```t-sql
+```sql
 USE master;
 GO
 -- Create the database with the default data

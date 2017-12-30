@@ -65,7 +65,7 @@ GO
 ###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  The following example retrieves the 5 key phrases that have the highest similarity score between the specified candidates in **HumanResources.JobCandidate** table of the AdventureWorks2012 sample database.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROM SEMANTICSIMILARITYDETAILSTABLE  
     (  

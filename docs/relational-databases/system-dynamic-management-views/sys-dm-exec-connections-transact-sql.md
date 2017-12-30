@@ -80,7 +80,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 ## Examples  
  Typical query to gather information about a queries own connection.  
   
-```t-sql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

@@ -108,7 +108,7 @@ ms.workload: "On Demand"
   
 2.  Execute the following code to create a custom collector for change data capture.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  

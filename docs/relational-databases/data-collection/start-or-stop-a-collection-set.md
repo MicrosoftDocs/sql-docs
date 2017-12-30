@@ -93,7 +93,7 @@ ms.workload: "Inactive"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) to start the collection set that has the ID of `1`.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
@@ -107,7 +107,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) to stop the collection set that has the ID of `1`.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  

@@ -28,7 +28,7 @@ For more details about memory-optimization of temp table and table variable scen
   
   The following example shows how the use of a temp table with three columns (id, ProductID, Quantity) can be replaced using a table variable **@OrderQuantityByProduct** of type **dbo.OrderQuantityByProduct**:  
   
-```tsql  
+```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   
   AS TABLE   
    (id INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT=100000),   

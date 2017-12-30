@@ -222,14 +222,14 @@ For a quick start tutorial showing you how to connect to an Azure SQL database u
 ### Simple Example  
  A simple example for creating a database.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### Simple Example with Edition  
  A simple example for creating a standard database.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -237,7 +237,7 @@ CREATE DATABASE TestDB2
 ### Example with Additional Options  
  An example using multiple options.  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -246,7 +246,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### Creating a Copy  
  An example creating a copy of a database.  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -254,21 +254,21 @@ AS COPY OF school;
 ### Creating a Database in an Elastic Pool  
  Creates new database in pool named S3M100:  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### Creating a Copy of a Database on Another Server  
  The following example creates a copy of the db_original database, named db_copy in the P2 performance level for a single database.  This is true regardless of whether db_original is in an elastic pool or a performance level for a single database.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  The following example creates a copy of the db_original database, named db_copy in an elastic pool named ep1.  This is true regardless of whether db_original is in an elastic pool or a performance level for a single database.  If db_original is in an elastic pool with a different name, then db_copy is still created in ep1.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -278,7 +278,7 @@ CREATE DATABASE db_copy
 
 The following example sets the catalog collation to DATABASE_DEFAULT during database creation, which sets the catalog collation to be the same as the database collation.
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```

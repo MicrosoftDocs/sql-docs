@@ -49,7 +49,7 @@ ms.workload: "Inactive"
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following query returns information about segments of a columnstore index.  
   
-```tsql  
+```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
     COUNT(*) AS number_of_segments  
 FROM sys.column_store_segments AS s   

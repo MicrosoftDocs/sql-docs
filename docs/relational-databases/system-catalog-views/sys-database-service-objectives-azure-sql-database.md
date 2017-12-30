@@ -49,7 +49,7 @@ Returns the edition (service tier), service objective (pricing tier) and elastic
 ## Examples  
  This example can  be run on the master database or on user databases. The query returns the name, service, and performance tier information of the database(s).  
   
-```tsql  
+```sql  
 SELECT  d.name,   
      slo.*    
 FROM sys.databases d   

@@ -55,7 +55,7 @@ ms.workload: "Active"
   
 ## Syntax  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  

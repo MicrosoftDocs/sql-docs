@@ -311,7 +311,7 @@ GO
 ### G. Creating a SQL Server authentication login with a password  
  The following example creates the login `Mary7` with password `A2c3456`.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   

@@ -32,7 +32,7 @@ ms.workload: "Inactive"
   
  To remove lightweight pooling, execute the following statement, and then restart the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-```tsql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 sp_configure 'lightweight pooling', 0;  

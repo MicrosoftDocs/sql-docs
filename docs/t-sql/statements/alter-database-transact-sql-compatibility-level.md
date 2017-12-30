@@ -76,7 +76,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 
  Execute the following query to determine the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that you are connected to.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
@@ -85,7 +85,7 @@ SELECT SERVERPROPERTY('ProductVersion');
 
  To determine the current compatibility level, query the **compatibility_level** column of [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level FROM sys.databases;  
 ```  
   
@@ -221,7 +221,7 @@ Fixes that were under  trace flag 4199 in earlier versions of [!INCLUDE[ssNoVers
 ### A. Changing the compatibility level  
  The following example changes the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `110,`[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 110;  
 GO  
@@ -229,7 +229,7 @@ GO
   
  The following example returns the compatibility level of the current database.  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level   
 FROM sys.databases   
 WHERE name = db_name();  
@@ -238,7 +238,7 @@ WHERE name = db_name();
 ### B. Ignoring  the SET LANGUAGE statement except under compatibility level 120  
  The following query ignores the SET LANGUAGE statement except under compatibility level 120.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;   
 DECLARE @t2 date = '12/5/2011' ;  
 SET LANGUAGE dutch;   
@@ -254,7 +254,7 @@ SELECT CONVERT(varchar(11), @t2, 106);
 ### C.  
  For compatibility-level setting of 110 or lower, recursive references on the right-hand side of an EXCEPT clause create an infinite loop.  
   
-```tsql  
+```sql  
 WITH   
 cte AS (SELECT * FROM (VALUES (1),(2),(3)) v (a)),  
 r   
@@ -269,7 +269,7 @@ FROM r;
 ### D.  
  This example shows the difference between styles 0 and 121. For more information about date and time styles, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE TABLE t1 (c1 time(7), c2 datetime2);   
   
 INSERT t1 (c1,c2) VALUES (GETDATE(), GETDATE());  
@@ -292,7 +292,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ### E.  
  Variable assignment is allowed in a statement containing a top-level UNION operator, but returns unexpected results. For example, in the following statements, local variable `@v` is assigned the value of the column `BusinessEntityID` from the union of two tables. By definition, when the SELECT statement returns more than one value, the variable is assigned the last value that is returned. In this case, the variable is correctly assigned the last value, however, the result set of the SELECT UNION statement is also returned.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET compatibility_level = 90;  
 GO  
@@ -308,7 +308,7 @@ SELECT @v;
 ### F.  
  Variable assignment is not allowed in a statement containing a top-level UNION operator. Error 10734 is returned. To resolve the error, rewrite the query as shown in the following example.  
   
-```tsql  
+```sql  
 DECLARE @v int;  
 SELECT @v = BusinessEntityID FROM   
     (SELECT BusinessEntityID FROM HumanResources.Employee  

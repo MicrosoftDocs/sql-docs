@@ -62,7 +62,7 @@ sp_databases
 ## Examples  
  The following example shows executing `sp_databases`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_databases;  

@@ -200,7 +200,7 @@ You can configure the thesaurus for a given language by editing its thesaurus fi
   
 5.  Use [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) to load the content of the thesaurus file into tempdb, specifying the local identifier (LCID) that corresponds to the language of the thesaurus file. For example, for the English thesaurus file, tsenu.xml, the corresponding LCID is 1033.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
     GO

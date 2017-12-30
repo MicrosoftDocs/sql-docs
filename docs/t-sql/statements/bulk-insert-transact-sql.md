@@ -412,7 +412,7 @@ WITH (FORMAT = 'CSV');
 ### F. Importing data from a file in Azure blob storage   
 The following example shows how to load data from a csv file in an Azure blob storage location, which has been configured as an external data source. This requires a database scoped credential using a shared access signature.    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',

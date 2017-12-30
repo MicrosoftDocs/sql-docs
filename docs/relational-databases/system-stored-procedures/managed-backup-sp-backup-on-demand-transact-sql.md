@@ -44,7 +44,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 EXEC managed_backup.sp_backup_on_demand   
 [@database_name  =]  'database name',[@type = ] { 'Database' | 'Log' }  
   

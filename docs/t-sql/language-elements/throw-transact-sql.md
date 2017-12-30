@@ -75,7 +75,7 @@ THROW [ { error_number | @local_variable },
 ### A. Using THROW to raise an exception  
  The following example shows how to use the `THROW` statement to raise an exception.  
   
-```tsql  
+```sql  
 THROW 51000, 'The record does not exist.', 1;  
 ```  
   
@@ -90,7 +90,7 @@ THROW 51000, 'The record does not exist.', 1;
 ### B. Using THROW to raise an exception again  
  The following example shows how use the `THROW` statement to raise the last thrown exception again.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE dbo.TestRethrow  
@@ -121,7 +121,7 @@ END CATCH;
 ### C. Using FORMATMESSAGE with THROW  
  The following example shows how to use the `FORMATMESSAGE` function with `THROW` to throw a customized error message. The example first creates a user-defined error message by using `sp_addmessage`. Because the THROW statement does not allow for substitution parameters in the *message* parameter in the way that RAISERROR does, the FORMATMESSAGE function is used to pass the three parameter values expected by error message 60000.  
   
-```tsql  
+```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
 ,@severity = 16  

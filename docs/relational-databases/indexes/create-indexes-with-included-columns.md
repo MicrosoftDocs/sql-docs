@@ -112,7 +112,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   

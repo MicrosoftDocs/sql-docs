@@ -259,28 +259,28 @@ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to authent
 ### A. Enabling a disabled login  
  The following example enables the login `Mary5`.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
 ### B. Changing the password of a login  
  The following example changes the password of login `Mary5` to a strong password.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
 ### C. Changing the name of a login  
  The following example changes the name of login `Mary5` to `John2`.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
 ### D. Mapping a login to a credential  
  The following example maps the login `John2` to the credential `Custodian04`.  
   
-```tsql  
+```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
@@ -290,7 +290,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5  
 ADD CREDENTIAL EKMProvider1;  
 GO  
@@ -300,7 +300,7 @@ GO
  To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, execute the following statement, replacing **** with the desired account password.  
   
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;  
 
 GO  
@@ -308,7 +308,7 @@ GO
   
  To unlock a login without changing the password, turn the check policy off and then on again.  
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;  
 GO  
@@ -319,7 +319,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 ALTER LOGIN TestUser WITH   
 PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;  
 GO  

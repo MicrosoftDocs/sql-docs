@@ -72,7 +72,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a primary key on the column `TransactionID`.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER TABLE Production.TransactionHistoryArchive   
@@ -88,7 +88,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table and defines a primary key on the column `TransactionID`.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive1  
@@ -107,7 +107,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table and defines a primary key on the column `CustomerID` and a clustered index on `TransactionID`.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive1  

@@ -3,7 +3,7 @@ title: "Connect to Server (Connection Properties Page) Database Engine | Microso
 ms.custom: ""
 ms.date: "08/14/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-f1"
 ms.reviewer: ""

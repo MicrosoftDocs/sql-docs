@@ -2,9 +2,11 @@
 title: "Resource Governance for Python | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

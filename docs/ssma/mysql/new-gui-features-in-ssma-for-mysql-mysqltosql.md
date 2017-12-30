@@ -1,7 +1,7 @@
 ---
 title: "New GUI Features in SSMA for MySQL (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""

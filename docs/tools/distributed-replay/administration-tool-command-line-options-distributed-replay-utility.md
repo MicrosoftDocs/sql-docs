@@ -3,7 +3,7 @@ title: "Administration Tool Command-line Options (Distributed Replay Utility) | 
 ms.custom: ""
 ms.date: "08/12/2016"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "distributed-replay"
 ms.reviewer: ""

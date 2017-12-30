@@ -71,7 +71,9 @@ ms.workload: "On Demand"
     |ALTER INDEX REBUILD.|The action fails.|The action succeeds.|  
     |DROP INDEX.|The action succeeds.|The action succeeds.|  
     |CREATE INDEX WITH DROP_EXISTING.|The action fails.|The action succeeds.|  
-  
+
+-   When rebuilding disabled compressed nonclustered indexes, data_compression will default to 'none', meaning that indexes will be uncompressed. This is due to compression settings metadata is lost when nonclustered indexes are disabled. To work around this you must specifiy explicit data compression in rebuild statement.
+
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  

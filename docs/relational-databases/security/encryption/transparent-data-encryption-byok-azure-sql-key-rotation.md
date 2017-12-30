@@ -7,14 +7,17 @@ documentationcenter: ''
 author: becczhang
 manager: jhubbard
 editor: ''
-
-ms.assetid: 
-ms.service: sql-database
-ms.custom: quick start create, mvc
-ms.workload: data-management
-ms.tgt_pltfrm: portal
+ms.prod: 
+ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
+ms.service: "sql-database"
+ms.custom: 
+ms.component: "security"
+ms.workload: "On Demand"
+ms.tgt_pltfrm:
 ms.devlang: na
-ms.topic: hero-article
+ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
 

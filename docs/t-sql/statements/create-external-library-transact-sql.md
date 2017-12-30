@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: ""
+ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "t-sql|statements"
 ms.reviewer: ""
@@ -27,7 +27,7 @@ manager: "jhubbard"
 ---
 # CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 Uploads R packages to a database from the specified byte stream or file path.
 

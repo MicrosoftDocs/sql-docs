@@ -2,9 +2,11 @@
 title: "Configuration and Management | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/31/2016"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

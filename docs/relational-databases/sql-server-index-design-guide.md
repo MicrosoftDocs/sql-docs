@@ -36,6 +36,22 @@ ms.workload: "On Demand"
 Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] index design guide contains information and best practices to help you design effective indexes to meet the needs of your application.  
     
 This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](../relational-databases/indexes/indexes.md).  
+
+This guide covers the following types of indexes:
+
+-   Clustered
+-   Nonclustered
+-   Unique
+-   Filtered
+-   Columnstore
+-   Hash
+-   Memory-Optimized Nonclustered
+
+For information about XML indexes, see [XML Indexes Overview](../relational-databases/xml/xml-indexes-sql-server.md).
+
+For information about Spatial indexes, see [Spatial Indexes Overview](../relational-databases/spatial/spatial-indexes-overview.md).
+
+For information about Full-text indexes, see [Populate Full-Text Indexes](../relational-databases/search/populate-full-text-indexes.md).
   
 ##  <a name="Basics"></a> Index Design Basics  
  An index is an on-disk or in-memory structure associated with a table or view that speeds retrieval of rows from the table or view. An index contains keys built from one or more columns in the table or view. For on-disk indexes, these keys are stored in a structure (B-tree) that enables SQL Server to find the row or rows associated with the key values quickly and efficiently.  
@@ -64,7 +80,6 @@ This guide assumes the reader has a general understanding of the index types ava
 4.  Determine which index options might enhance performance when the index is created or maintained. For example, creating a clustered index on an existing large table would benefit from the `ONLINE` index option. The ONLINE option allows for concurrent activity on the underlying data to continue while the index is being created or rebuilt. For more information, see [Set Index Options](../relational-databases/indexes/set-index-options.md).  
   
 5.  Determine the optimal storage location for the index. A nonclustered index can be stored in the same filegroup as the underlying table, or on a different filegroup. The storage location of indexes can improve query performance by increasing disk I/O performance. For example, storing a nonclustered index on a filegroup that is on a different disk than the table filegroup can improve performance because multiple disks can be read at the same time.  
-  
      Alternatively, clustered and nonclustered indexes can use a partition scheme across multiple filegroups. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. For more information, see [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). When you consider partitioning, determine whether the index should be aligned, that is, partitioned in essentially the same manner as the table, or partitioned independently.   
 
 ##  <a name="General_Design"></a> General Index Design Guidelines  
@@ -121,17 +136,11 @@ This guide assumes the reader has a general understanding of the index types ava
  After you have determined that an index is appropriate for a query, you can select the type of index that best fits your situation. Index characteristics include the following:  
   
 -   Clustered versus nonclustered  
-  
 -   Unique versus nonunique  
-  
 -   Single column versus multicolumn  
-  
 -   Ascending or descending order on the columns in the index  
-  
 -   Full-table versus filtered for nonclustered indexes  
-
 -   Columnstore versus rowstore
-
 -   Hash versus nonclustered for Memory-Optimized tables
   
  You can also customize the initial storage characteristics of the index to optimize its performance or maintenance by setting an option such as FILLFACTOR. Also, you can determine the index storage location by using filegroups or partition schemes to optimize performance.  
@@ -142,9 +151,7 @@ This guide assumes the reader has a general understanding of the index types ava
  By default, indexes are stored in the same filegroup as the base table on which the index is created. A nonpartitioned clustered index and the base table always reside in the same filegroup. However, you can do the following:  
   
 -   Create nonclustered indexes on a filegroup other than the filegroup of the base table or clustered index.  
-  
 -   Partition clustered and nonclustered indexes to span multiple filegroups.  
-  
 -   Move a table from one filegroup to another by dropping the clustered index and specifying a new filegroup or partition scheme in the MOVE TO clause of the DROP INDEX statement or by using the CREATE INDEX statement with the DROP_EXISTING clause.  
   
  By creating the nonclustered index on a different filegroup, you can achieve performance gains if the filegroups are using different physical drives with their own controllers. Data and index information can then be read in parallel by the multiple disk heads. For example, if `Table_A` on filegroup `f1` and `Index_A` on filegroup `f2` are both being used by the same query, performance gains can be achieved because both filegroups are being fully used without contention. However, if `Table_A` is scanned by the query but `Index_A` is not referenced, only filegroup `f1` is used. This creates no performance gain.  
@@ -708,7 +715,7 @@ For more information, refer to [Columnstore indexes - Query performance](../rela
  
 For more information, refer to [Columnstore indexes - Design Guidance](../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
-##  <a name="hash_index"></a> Hash Index for Memory-Optimized Tables Design Guidelines 
+##  <a name="hash_index"></a> Hash Index Design Guidelines 
 
 All memory-optimized tables must have at least one index, because it is the indexes that connect the rows together. On a memory-optimized table, every index is also memory-optimized. Hash indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
@@ -801,7 +808,7 @@ The hash index might also have different versions of its entries to accommodate 
   
 Later when the older versions are no longer needed, a garbage collection (GC) thread traverses the buckets and their link lists to clean away old entries. The GC thread performs better if the link list chain lengths are short. For more information, refer to [In-Memory OLTP Garbage Collection](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md). 
 
-##  <a name="inmem_nonclustered_index"></a> Nonclustered Index for Memory-Optimized Tables Design Guidelines 
+##  <a name="inmem_nonclustered_index"></a> Memory-Optimized Nonclustered Index Design Guidelines 
 
 Nonclustered indexes are one of the possible index types in a memory-optimized table. For more information, see [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
@@ -880,5 +887,9 @@ The performance of a nonclustered index is better than nonclustered hash indexes
 [Troubleshooting Hash Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
 [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [Index Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
+[Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md)   
+[Indexes and ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
 [CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
-[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)  
+[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)  

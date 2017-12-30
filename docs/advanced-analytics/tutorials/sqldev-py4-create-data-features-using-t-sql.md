@@ -2,13 +2,15 @@
 title: "Step 4: Create Data Features using T-SQL  | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2017"
 dev_langs: 

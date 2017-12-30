@@ -2,10 +2,12 @@
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "11/29/2017"
+ms.date: "12/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
+ms.prod_service: sql-tools
+ms.component: sos
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "stevestein"
@@ -13,26 +15,47 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
+# Download and install SQL Operations Studio (preview)
+
+[!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
+
+Download and install the latest release, the *December Public Preview*:
+
+|Platform|Download|Release date|
+|:---|:---|:---|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|December 19, 2017 |
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=865306)|December 19, 2017 |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|December 19, 2017|
+
+For details about the latest release, see the [release notes](release-notes.md).
+
+## Get SQL Operations Studio (preview) for Windows
+
+This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip: 
+
+**Installer**
+
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=865305).
+1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
+**.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=862648).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=865304).
 2. Browse to the downloaded file and extract it.
-3. Run *\sqlops-windows\sqlops.exe*
+3. Run `\sqlops-windows\sqlops.exe`
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS
+## Get SQL Operations Studio (preview) for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=862647).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=865306).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux
+## Get SQL Operations Studio (preview) for Linux
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=862646).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=865307).
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    ```bash
@@ -61,9 +84,11 @@ ms.workload: "Inactive"
    yum install libXScrnSaver
    ```
 
-## Uninstall [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## Uninstall SQL Operations Studio (preview)
 
-To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete the files.
+If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] using the Windows installer, then uninstall the same way you remove any Windows application.
+
+If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with a .zip or other archive, then simply delete the files.
 
 ## Supported Operating Systems
 

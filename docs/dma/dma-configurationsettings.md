@@ -5,7 +5,7 @@ ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "dma"
 ms.service: ""
-ms.component: "dma"
+ms.component:
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

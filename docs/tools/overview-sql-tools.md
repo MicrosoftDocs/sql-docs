@@ -3,7 +3,7 @@ title: "SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQ
 ms.custom: ""
 ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "misc"
 ms.reviewer: ""

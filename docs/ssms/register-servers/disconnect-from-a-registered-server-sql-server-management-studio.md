@@ -3,7 +3,7 @@ title: "Disconnect from a Registered Server (SQL Server Management Studio) | Mic
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-registration"
 ms.reviewer: ""

@@ -22,7 +22,7 @@ ms.workload: "Inactive"
 This sample Bash script installs SQL Server 2017  on Red Hat Enterprise Linux (RHEL) without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
-> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for Red Hat](quickstart-install-connect-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for Red Hat](quickstart-install-connect-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ Save the sample script to a file and then to customize it,
 replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

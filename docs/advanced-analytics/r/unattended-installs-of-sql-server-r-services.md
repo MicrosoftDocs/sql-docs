@@ -2,11 +2,11 @@
 title: "Unattended installation of Machine Learning Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

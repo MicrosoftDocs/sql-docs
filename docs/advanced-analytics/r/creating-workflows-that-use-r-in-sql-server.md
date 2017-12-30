@@ -3,9 +3,11 @@ title: "Creating BI Workflows with R | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "04/18/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

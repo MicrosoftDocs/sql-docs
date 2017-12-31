@@ -47,7 +47,7 @@ ms.workload: "Active"
   
 1.  Use the **ALTER DATABASE** statement to enable the query store. For example:  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
@@ -86,7 +86,7 @@ The query store contains three stores:
   
  The following query returns information about queries and plans in the query store.  
   
-```tsql  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -197,7 +197,7 @@ The following options are available to configure query store parameters.
   
  Query [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) to determine if Query Store is currently active, and whether it is currently collects runtime stats or not.  
   
-```tsql  
+```sql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
@@ -210,7 +210,7 @@ When Query Store size exceeds the quota, the feature will switch to readon_only 
   
  To find out detailed information about Query Store status, execute following in a user database.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -218,7 +218,7 @@ SELECT * FROM sys.database_query_store_options;
   
  You can override interval for aggregating query runtime statistics (default is 60 minutes).  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
@@ -232,14 +232,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  To check current the Query Store size and limit execute the following statement in the user database.  
   
-```tsql  
+```sql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  If the Query Store storage is full use the following statement to extend the storage.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -248,7 +248,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  You can set multiple Query Store options at once with a single ALTER DATABASE statement.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
@@ -267,7 +267,7 @@ SET QUERY_STORE (
   
  Query Store internal tables are created in the PRIMARY filegroup during database creation and that configuration cannot be changed later. If you are running out of space you might want to clear older Query Store data by using the following statement.  
   
-```tsql  
+```sql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -275,7 +275,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  **Delete ad-hoc queries** This deletes the queries that were only executed only once and that are more than 24 hours old.  
   
-```tsql  
+```sql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -318,7 +318,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  **Last *n* queries executed on the database?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -333,7 +333,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **Number of executions for each query?**  
   
-```tsql  
+```sql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -349,7 +349,7 @@ ORDER BY total_execution_count DESC;
   
  **The number of queries with the longest average execution time within last hour?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -366,7 +366,7 @@ ORDER BY rs.avg_duration DESC;
   
  **The number of queries that had the biggest average physical IO reads in last 24 hours, with corresponding average row count and execution count?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -385,7 +385,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **Queries with multiple plans?** These queries are especially interesting because they are candidates for regressions due to plan choice change. The following query identifies these queries along with all plans:  
   
-```tsql  
+```sql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -414,7 +414,7 @@ ORDER BY query_id, plan_id;
   
  **Queries that recently regressed in performance (comparing different point in time)?** The following query example returns all queries for which execution time doubled in last 48 hours due to a plan choice change. Query compares all runtime stat intervals side by side.  
   
-```tsql  
+```sql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -454,7 +454,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  **Queries that are waiting the most?**
  This query will return top 10 queries that wait the most. 
  
- ```tsql 
+ ```sql 
   SELECT TOP 10
 	qt.query_text_id,
 	q.query_id,
@@ -470,7 +470,7 @@ ORDER BY sum_total_wait_ms DESC
  
  **Queries that recently regressed in performance (comparing recent vs. history execution)?** The next query compares query execution based periods of execution. In this particular example the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metrics is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:  
   
-```tsql  
+```sql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -559,7 +559,7 @@ OPTION (MERGE JOIN);
   
  **Force or a plan for a query (apply forcing policy).** When a plan is forced for a certain query, every time a query comes to execution it will be executed with the plan that is forced.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -567,7 +567,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **Remove plan forcing for a query.** To rely again on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer to calculate the optimal query plan, use **sp_query_store_unforce_plan** to unforce the plan that was selected for the query.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   

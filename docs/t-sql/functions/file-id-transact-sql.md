@@ -63,7 +63,7 @@ FILE_ID ( file_name )
 ## Examples  
  The following example returns the file ID for the `AdventureWorks_Data` file.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_ID('AdventureWorks2012_Data')AS 'File ID';  

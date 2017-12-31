@@ -94,7 +94,7 @@ AS constant_expression [ ; ]
 ### A. Creating a simple character default  
  The following example creates a character default called `unknown`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -105,7 +105,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  Because a default named `phonedflt` does not exist, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement fails. This example is for illustration only.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  

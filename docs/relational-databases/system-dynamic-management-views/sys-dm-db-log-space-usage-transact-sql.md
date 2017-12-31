@@ -53,7 +53,7 @@ ms.workload: "Inactive"
 ### A. Determine the Amount of Free Log Space in tempdb   
 The following query returns the total free log space in megabytes (MB) available in tempdb.
 
-```tsql
+```sql
 USE tempdb;  
 GO  
 

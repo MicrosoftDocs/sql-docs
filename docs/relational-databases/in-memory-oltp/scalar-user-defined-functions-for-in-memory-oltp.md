@@ -47,7 +47,7 @@ ms.workload: "Inactive"
   
  The following sample shows a scalar UDF from the [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) sample database.  
   
-```tsql  
+```sql  
 CREATE FUNCTION [dbo].[ufnLeadingZeros_native](@Value int)   
 RETURNS varchar(8)   
 WITH NATIVE_COMPILATION, SCHEMABINDING  

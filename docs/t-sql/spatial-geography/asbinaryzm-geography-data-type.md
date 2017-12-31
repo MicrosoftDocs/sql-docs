@@ -48,7 +48,7 @@ ms.workload: "Inactive"
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @g1 GEOGRAPHY = 'Point(1 1 2 3)';  
   
 SELECT @g1.STAsBinary();  

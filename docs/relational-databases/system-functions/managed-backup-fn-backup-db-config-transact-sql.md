@@ -40,7 +40,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
 ```  
   

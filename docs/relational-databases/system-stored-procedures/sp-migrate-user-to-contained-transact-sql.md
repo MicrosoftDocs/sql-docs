@@ -83,7 +83,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ### A. Migrating a single user  
  The following example migrates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login named `Barry`, to a contained database user with password. The example retains the does not change the user name, and retains the login as enabled.  
   
-```tsql  
+```sql  
 sp_migrate_user_to_contained   
 @username = N'Barry',  
 @rename = N'keep_name',  
@@ -94,7 +94,7 @@ sp_migrate_user_to_contained
 ### B. Migrating all database users with logins to contained database users without logins  
  The following example migrates all users that are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins to contained database users with passwords. The example excludes logins that are not enabled. The example must be executed in the contained database.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

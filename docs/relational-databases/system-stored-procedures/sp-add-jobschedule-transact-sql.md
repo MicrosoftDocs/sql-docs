@@ -166,7 +166,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  
  ## Example
  The following example assigns a job schedule to `SaturdayReports` which will execute every Saturday at 2:00 AM.
-```tsql  
+```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
 		@job_name = N'SaturdayReports', -- Job name
 		@name = N'Weekly_Sat_2AM',  -- Schedule name

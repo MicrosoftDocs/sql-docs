@@ -97,7 +97,7 @@ Requires that the user has select permissions on statistics columns or the user 
 ### A. Simple example    
 The following example creates and populates a simple table. Then creates statistics on the `Country_Name` column.
 
-```t-sql
+```sql
 CREATE TABLE Country
 (Country_ID int IDENTITY PRIMARY KEY,
 Country_Name varchar(120) NOT NULL);
@@ -107,12 +107,12 @@ CREATE STATISTICS Country_Stats
     ON Country (Country_Name) ;  
 ```   
 The primary key occupies `stat_id` number 1, so call `sys.dm_db_stats_histogram` for `stat_id` number 2, to return the statistics histogram for the `Country` table.    
-```tsql     
+```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
 ### B. Useful query:   
-```t-sql  
+```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
 FROM sys.stats AS s
@@ -123,14 +123,14 @@ WHERE s.[name] = N'<statistic_name>';
 ### C. Useful query:
 The following example selects from table `Country` with a predicate on column `Country_Name`.
 
-```t-sql  
+```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
 The following example looks at the previously created statistic on table `Country` and column `Country_Name` for the histogram step matching the predicate in the query above.
 
-```t-sql  
+```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
     shr.modification_counter, shr.last_updated, sh.range_rows, sh.equal_rows
 FROM sys.stats ss

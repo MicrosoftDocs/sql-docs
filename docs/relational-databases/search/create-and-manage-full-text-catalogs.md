@@ -33,7 +33,7 @@ A full-text catalog is a virtual object that does not belong to any filegroup.
 ### Create a full-text catalog with Transact-SQL
 Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). For example:
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  

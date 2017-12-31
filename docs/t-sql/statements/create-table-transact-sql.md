@@ -1083,7 +1083,7 @@ For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space
 
 - Session A creates a global temp table ##test in Azure SQL Database testdb1 and adds 1 row
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1101,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - Session B connects to Azure SQL Database testdb1 and can access table ##test created by session A
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1109,7 @@ SELECT * FROM ##test
 
 - Session C connects to another database in Azure SQL Database testdb2 and wants to access ##test created in testdb1. This select fails due to the database scope for the global temp tables 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1118,7 @@ Invalid object name '##test'
 
 - Addressing system object in Azure SQL Database tempdb from current user database testdb1
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files

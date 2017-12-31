@@ -49,7 +49,7 @@ ms.workload: "On Demand"
 
 3.  Copy and paste the following example into the query window and click **Execute**. 
   
-```tsql 
+```sql 
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  

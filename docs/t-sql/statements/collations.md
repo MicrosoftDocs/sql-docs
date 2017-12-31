@@ -110,7 +110,7 @@ FROM fn_helpcollations();
 ### A. Specifying collation during a select  
  The following example creates a simple table and inserts 4 rows. Then the example applies two collations when selecting data from the table, demonstrating how `Chiapas` is sorted differently.  
   
-```tsql  
+```sql  
 CREATE TABLE Locations  
 (Place varchar(15) NOT NULL);  
 GO  

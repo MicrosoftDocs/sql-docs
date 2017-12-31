@@ -35,7 +35,7 @@ ms.workload: "On Demand"
   
 ## Syntax  
   
-```tsql  
+```sql  
   
 sp_recompile [ @objname = ] 'object'  
 ```  

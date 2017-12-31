@@ -44,7 +44,7 @@ ms.workload: "On Demand"
 ### Example: Improve efficiency of table seeks with a nonclustered index  
  To improve efficiency of table seeks in a data warehouse, you can create a nonclustered index designed to run queries that perform best with table seeks. For example, queries that look for matching values or return a small range of values will perform better against a B-tree index rather than a columnstore index. They don’t require a full table scan through the columnstore index and will return the correct result faster by doing a binary search through a B-tree index.  
   
-```t-sql  
+```sql  
 --BASIC EXAMPLE: Create a nonclustered index on a columnstore table.  
   
 --Create the table  
@@ -71,7 +71,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
   
  The result is a columnstore index with a nonclustered index that enforces a primary key constraint on both indexes.  
   
-```t-sql 
+```sql 
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  
@@ -103,7 +103,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ### Improve performance by enabling row-level and row-group-level locking  
  To complement the nonclustered index on a columnstore index feature, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] offers granular locking capability for select, update, and delete operations. Queries can run with row-level locking on index seeks against a nonclustered index and rowgroup-level locking on full table scans against the columnstore index. Use this to achieve higher read/write concurrency by using row-level and rowgroup-level locking appropriately.  
   
-```t-sql  
+```sql  
 --Granular locking example  
 --Store table t_account as a columnstore table.  
 CREATE CLUSTERED COLUMNSTORE INDEX taccount_cci ON t_account  

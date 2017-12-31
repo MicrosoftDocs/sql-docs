@@ -44,7 +44,7 @@ ms.workload: "Inactive"
 ## Examples  
  The following example returns the securable classes supported by this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 SELECT * FROM sys.securable_classes ORDER BY class;  
 ```  
   

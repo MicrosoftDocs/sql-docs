@@ -88,7 +88,7 @@ For modules that are defined with the `EXECUTE AS` clause, `IMPERSONATE` permiss
 The following example creates a table and a procedure referencing the table, configures Always Encrypted, and then demonstrates altering the table and running the `sp_refresh_parameter_encryption` procedure.  
 
 First create the initial table and a stored procedure referencing the table.
-```tsql
+```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
 	[SSN] [char](11), 
 	[FirstName] [nvarchar](50) NULL,
@@ -117,7 +117,7 @@ GO
 ```
 
 Then set up Always Encrypted keys.
-```tsql
+```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
 (
@@ -139,7 +139,7 @@ GO
 
 
 Finally we replace the SSN column with the encrypted column, and then runs the `sp_refresh_parameter_encryption` procedure to update the Always Encrypted components.
-```tsql
+```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
 

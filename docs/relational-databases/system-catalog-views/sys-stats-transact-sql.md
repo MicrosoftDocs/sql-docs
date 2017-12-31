@@ -54,7 +54,7 @@ ms.workload: "On Demand"
 ## Examples  
  The following examples returns all the statistics and statistics columns for the `HumanResources.Employee` table.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT s.name AS statistics_name  

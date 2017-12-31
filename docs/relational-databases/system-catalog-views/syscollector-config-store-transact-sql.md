@@ -54,7 +54,7 @@ ms.workload: "Inactive"
 ## Examples  
  The following example queries the syscollector_config_store view.  
   
-```tsql  
+```sql  
 SELECT parameter_name, parameter_value  
 FROM msdb.dbo.syscollector_config_store;  
 ```  

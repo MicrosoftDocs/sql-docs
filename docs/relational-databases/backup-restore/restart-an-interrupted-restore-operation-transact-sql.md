@@ -41,7 +41,7 @@ ms.workload: "Inactive"
 ## Example  
  This example restarts an interrupted restore operation.  
   
-```tsql  
+```sql  
 -- Restore a full database backup of the AdventureWorks database.  
 RESTORE DATABASE AdventureWorks  
    FROM DISK = 'C:\AdventureWorks.bck'  

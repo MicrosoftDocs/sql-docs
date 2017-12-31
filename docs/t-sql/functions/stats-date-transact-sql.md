@@ -70,7 +70,7 @@ STATS_DATE ( object_id , stats_id )
 ### A. Return the dates of the most recent statistics for a table  
  The following example returns the date of the most recent update for each statistics object on the `Person.Address` table.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name AS stats_name,   
@@ -82,7 +82,7 @@ GO
   
  If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view, and the following query returns the same results as the preceding query. If statistics do not correspond to an index, they are in the sys.stats results but not in the sys.indexes results.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name AS index_name,   
@@ -97,7 +97,7 @@ GO
 ### B. Learn when a named statistics was last updated  
  The following example creates statistics on the LastName column of the DimCustomer table. It then runs a query to show the date of the statistics. Then it udpates the statistics and runs the query again to show the updated date.  
   
-```t-sql
+```sql
 --First, create a statistics object  
 USE AdventureWorksPDW2012;  
 GO  
@@ -132,7 +132,7 @@ GO
 ### C. View the date of the last update for all statistics on a table  
  This example returns the date for when each statistics object on the DimCustomer table was last updated.  
   
-```t-sql  
+```sql  
 --Return the dates all statistics on the table were last updated.  
 SELECT stats_id, name AS stats_name,   
     STATS_DATE(object_id, stats_id) AS statistics_date  
@@ -143,7 +143,7 @@ GO
   
  If statistics correspond to an index, the *stats_id* value in the [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) catalog view is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view, and the following query returns the same results as the preceding query. If statistics do not correspond to an index, they are in the sys.stats results but not in the sys.indexes results.  
   
-```t-sql  
+```sql  
 USE AdventureWorksPDW2012;  
 GO  
 SELECT name AS index_name,   

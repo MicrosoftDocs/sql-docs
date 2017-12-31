@@ -64,7 +64,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## Examples  
  The following example disables the data collector, configures the cache window to retain data for up to three failed uploads, and then enables to data collector.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  

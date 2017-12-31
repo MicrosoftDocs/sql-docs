@@ -50,7 +50,7 @@ If the server does have enough physical memory, but you are still seeing this er
     > If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT to the same value as MAX_MEMORY_PERCENT.   
     > See the topic [Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs) for more information.  
   
-    ```tsql  
+    ```sql  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -113,7 +113,7 @@ This code snippet changes MAX_MEMORY_PERCENT for the resource pool PoolHk to 70%
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
 > See the topic [Best Practices using In-Memory OLTP in a VM environment](#bkmk_VMs) for more information.  
   
-```tsql  
+```sql  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   

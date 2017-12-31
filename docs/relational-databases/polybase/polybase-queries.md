@@ -38,7 +38,7 @@ ms.workload: "Inactive"
 ## SELECT from external table  
  A simple query that returns data from a defined external table.  
   
-```tsql  
+```sql  
 SELECT TOP 10 * FROM [dbo].[SensorData];   
 ```
   

@@ -49,7 +49,7 @@ ms.workload: "On Demand"
 
 ## Example
 This example will return the run-time status for all SQL Server Agent jobs.  Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
-```tsql
+```sql
 SELECT sj.Name, 
 	CASE
 		WHEN sja.start_execution_date IS NULL THEN 'Not running'

@@ -75,9 +75,9 @@ rsconfig {-?}
   
 -   To configure a special account that the report server uses to log on to a remote database server when other credentials are not available.  
   
- You can run the**rsconfig** utility on a local or remote instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. You cannot use the **rsconfig** utility to decrypt and view values that are already set.  
+You can run the **rsconfig** utility on a local or remote instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. You cannot use the **rsconfig** utility to decrypt and view values that are already set.  
   
- Before you can run this utility, Windows Management Instrumentation (WMI) must be installed on the computer that you are configuring.  
+Before you can run this utility, Windows Management Instrumentation (WMI) must be installed on the computer that you are configuring.  
   
 ## Examples  
  The following examples illustrate ways of using **rsconfig**.  

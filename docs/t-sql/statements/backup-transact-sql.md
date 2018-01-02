@@ -98,7 +98,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -226,7 +226,7 @@ TO \<backup_device> [ **,**...*n* ]
  { *logical_device_name* | **@***logical_device_name_var* }  
  Is the logical name of the backup device to which the database is backed up. The logical name must follow the rules for identifiers. If supplied as a variable (@*logical_device_name_var*), the backup device name can be specified either as a string constant (@*logical_device_name_var***=** logical backup device name) or as a variable of any character string data type except for the **ntext** or **text** data types.  
   
- { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* }  
+ { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | NUL }  
  Specifies a disk file or tape device, or a Windows Azure Blob storage service. The URL format is used for creating backups to the Windows Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
 > [!IMPORTANT]  
@@ -235,6 +235,8 @@ TO \<backup_device> [ **,**...*n* ]
 **URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  A disk device does not have to exist before it is specified in a BACKUP statement. If the physical device exists and the INIT option is not specified in the BACKUP statement, the backup is appended to the device.  
+ 
+ The NUL device will discard all input sent to this file, however the backup will still mark all pages as backed up.
   
  For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   

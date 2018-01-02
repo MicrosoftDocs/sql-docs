@@ -80,7 +80,7 @@ SELECT TOP ( number )
 ## Example  
  The following code example shows a Nearest Neighbor query that can use a spatial index. The example uses the `Person.Address` table in `AdventureWorks2012` database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -95,7 +95,7 @@ ORDER BY SpatialLocation.STDistance(@g);
 ## Example  
  The following code example shows a Nearest Neighbor query that cannot use a spatial index.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  

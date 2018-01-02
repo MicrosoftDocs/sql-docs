@@ -74,7 +74,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ### A. Returning all filegroups in a database  
  The following example returns information about the filegroups in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup;  
@@ -84,7 +84,7 @@ GO
 ### B. Returning all files in a filegroup  
  The following example returns information for all files in the `PRIMARY` filegroup in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup 'PRIMARY';  

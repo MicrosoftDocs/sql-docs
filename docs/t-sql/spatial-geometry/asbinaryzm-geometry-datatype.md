@@ -44,7 +44,7 @@ Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representat
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @g1 GEOMETRY = 'Point(1 1 2 3)';  
   
 SELECT @g1.STAsBinary();  

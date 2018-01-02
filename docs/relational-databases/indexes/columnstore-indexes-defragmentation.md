@@ -43,7 +43,7 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
   
 1.  Run this Transact-SQL to create a staging table that contains 300,000 rows. We will use this to bulk load rows into a columnstore index.  
   
-    ```t-sql  
+    ```sql  
     USE master;  
     GO  
   
@@ -99,7 +99,7 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
   
 2.  Create a table stored as a columnstore index.  
   
-    ```t-sql  
+    ```sql  
     IF EXISTS (SELECT name FROM sys.tables  
         WHERE name = N'cci_target'  
         AND object_id = OBJECT_ID (N'cci_target'))  
@@ -120,7 +120,7 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
   
 3.  Bulk insert the staging table rows into the columnstore table. `INSERT INTO ... SELECT` performs a bulk insert. The `TABLOCK` allows the `INSERT` to execute with parallelism.  
   
-    ```t-sql  
+    ```sql  
     -- Insert rows in parallel  
     INSERT INTO cci_target WITH (TABLOCK)  
     SELECT TOP (300000) * FROM staging;  
@@ -129,7 +129,7 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
   
 4.  View the rowgroups by using the *sys.dm_db_column_store_row_group_physical_stats* dynamic management view (DMV).  
   
-    ```t-sql  
+    ```sql  
     -- Run this dynamic management view (DMV) to see the OPEN rowgroups.   
     -- The number of rowgroups depends on the degree of parallelism.   
     -- You will see multiple OPEN rowgroups depending on the degree of parallelism.   
@@ -147,7 +147,7 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
   
 5.  Use `ALTER INDEX REORGANIZE` with the `COMPRESS_ALL_ROW_GROUPS` option to force all rowgroups to be compressed into the columnstore.  
   
-    ```t-sql  
+    ```sql  
     -- This command will force all CLOSED and OPEN rowgroups into the columnstore.  
     ALTER INDEX idx_cci_target ON cci_target   
     REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
@@ -164,7 +164,7 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
   
 6.  For query performance, its much better to combine small rowgroups together. `ALTER INDEX REORGANIZE` will combine `COMPRESSED` rowgroups together. Now that the delta rowgroups are compressed into the columnstore, run ALTER INDEX REORGANIZE again to combine the small COMPRESSED rowgroups. This time you don't need the `COMPRESS_ALL_ROW_GROUPS` option.  
   
-    ```t-sql  
+    ```sql  
     -- Run this again and you will see that smaller rowgroups   
     -- combined into one compressed rowgroup with 300,000 rows  
     ALTER INDEX idx_cci_target ON cci_target REORGANIZE;  

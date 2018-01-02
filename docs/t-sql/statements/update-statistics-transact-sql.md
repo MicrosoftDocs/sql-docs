@@ -180,7 +180,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
 ## Updating All Statistics with sp_updatestats  
  For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). For example, the following command calls sp_updatestats to update all statistics for the database.  
   
-```t-sql  
+```sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -190,23 +190,23 @@ EXEC sp_updatestats;
 ## PDW / SQL Data Warehouse  
  The following syntax is not supported by PDW / SQL Data Warehouse  
   
-```t-sql  
+```sql  
 update statistics t1 (a,b);   
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with sample 10 rows;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with NORECOMPUTE;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with INCREMENTAL=ON;  
 ```  
   
-```t-sql  
+```sql  
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
@@ -218,7 +218,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ### A. Update all statistics on a table  
  The following example updates the statistics for all indexes on the `SalesOrderDetail` table.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -228,7 +228,7 @@ GO
 ### B. Update the statistics for an index  
  The following example updates the statistics for the `AK_SalesOrderDetail_rowguid` index of the `SalesOrderDetail` table.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -238,7 +238,7 @@ GO
 ### C. Update statistics by using 50 percent sampling  
  The following example creates and then updates the statistics for the `Name` and `ProductNumber` columns in the `Product` table.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -252,7 +252,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### D. Update statistics by using FULLSCAN and NORECOMPUTE  
  The following example updates the `Products` statistics in the `Product` table, forces a full scan of all rows in the `Product` table, and turns off automatic statistics for the `Products` statistics.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -265,21 +265,21 @@ GO
 ### E. Update statistics on a table  
  The following example updates the `CustomerStats1` statistics on the `Customer` table.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### F. Update statistics by using a full scan  
  The following example updates the `CustomerStats1` statistics, based on scanning all of the rows in the `Customer` table.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### G. Update all statistics on a table  
  The following example updates all statistics on the `Customer` table.  
   
-```t-sql  
+```sql  
 UPDATE STATISTICS Customer;  
 ```  
   

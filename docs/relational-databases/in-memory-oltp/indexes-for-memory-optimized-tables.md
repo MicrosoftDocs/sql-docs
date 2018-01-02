@@ -71,7 +71,7 @@ This subsection contains a Transact-SQL code block that demonstrates the syntax 
 2. Use ALTER TABLE statements to add two indexes.  
 3. INSERT a few rows of data.  
    
-    ```t-sql
+    ```sql
     DROP TABLE IF EXISTS SupportEvent;  
     go  
 
@@ -125,7 +125,7 @@ For example, consider a `Customers` table with a primary key on `CustomerId` and
 
 The following query shows the average number of duplicate index key values for the index on `CustomerCategoryID` in table `Sales.Customers`, in the sample database [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
 
-```t-sql
+```sql
 SELECT AVG(row_count) FROM
     (SELECT COUNT(*) AS row_count 
 	    FROM Sales.Customers
@@ -152,7 +152,7 @@ A nonclustered index is preferable over a hash index when:
   
 In all the following SELECTs, a nonclustered index is preferable over a hash index:  
 
-```t-sql
+```sql
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
@@ -176,7 +176,7 @@ WHERE StartDateTime = '2016-02-26';
 
 A hash index is preferable over a nonclustered index when queries use equality predicates, and the `WHERE` clause maps to all index key columns, as in the following example:  
   
-```t-sql
+```sql
 SELECT CustomerName 
 FROM SupportEvent  
 WHERE SupportEngineerName = 'Liz';
@@ -186,7 +186,7 @@ WHERE SupportEngineerName = 'Liz';
   
 A multi-column index could be a nonclustered index or a hash index. Suppose the index columns are col1 and col2. Given the following `SELECT` statement, only the nonclustered index would be useful to the query optimizer:  
   
-```t-sql
+```sql
 SELECT col1, col3  
 FROM MyTable_memop  
 WHERE col1 = 'dn';  

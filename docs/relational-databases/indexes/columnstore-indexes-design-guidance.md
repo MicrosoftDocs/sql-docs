@@ -160,7 +160,7 @@ To preserve the sorted order during conversion:
 
     This example converts a clustered rowstore index on a table named `MyFactTable` to a clustered columnstore index. The index name, `ClusteredIndex_d473567f7ea04d7aafcac5364c241e09`, stays the same.
 
-    ```t-sql
+    ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
     ON MyFactTable  
     WITH (DROP_EXISTING = ON);  

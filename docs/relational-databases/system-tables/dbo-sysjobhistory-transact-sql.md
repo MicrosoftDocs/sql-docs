@@ -57,7 +57,7 @@ ms.workload: "On Demand"
   ## Example
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] query will convert the **run_time** and **run_duration** columns into a more user friendly format.  Execute the script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
- ```tsql
+ ```sql
  SET NOCOUNT ON;
  
  SELECT sj.name,

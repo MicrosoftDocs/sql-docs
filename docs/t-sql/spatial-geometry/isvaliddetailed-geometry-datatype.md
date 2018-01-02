@@ -66,7 +66,7 @@ Returns a message that can help to identify problems with a spatial object that 
 ## Examples  
  The following example of an invalid spatial object illustrates how the **IsValidDetailed()** methods behaves.  
   
-```tsql  
+```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
 SELECT @p.IsValidDetailed()  
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  

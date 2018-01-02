@@ -41,7 +41,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
   
 sys.sp_flush_log  
   
@@ -58,7 +58,7 @@ sys.sp_flush_log
   
 ## Sample code  
   
-```tsql  
+```sql  
 .  
 EXECUTE sys.sp_flush_log  
   

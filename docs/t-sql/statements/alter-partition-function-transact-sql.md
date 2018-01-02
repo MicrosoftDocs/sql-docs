@@ -114,7 +114,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 ### A. Splitting a partition of a partitioned table or index into two partitions  
  The following example creates a partition function to partition a table or index into four partitions. `ALTER PARTITION FUNCTION` splits one of the partitions into two to create a total of five partitions.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  
@@ -132,7 +132,7 @@ SPLIT RANGE (500);
 ### B. Merging two partitions of a partitioned table into one partition  
  The following example creates the same partition function as above, and then merges two of the partitions into one partition, for a total of three partitions.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  

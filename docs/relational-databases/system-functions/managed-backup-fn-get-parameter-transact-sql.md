@@ -42,7 +42,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   

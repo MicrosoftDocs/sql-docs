@@ -5,7 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
- ms.component: "system-stored-procedures"
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -15,9 +15,10 @@ ms.topic: "language-reference"
 applies_to: 
   - "SQL Server"
 f1_keywords: 
-   - "sp_addpullsubscription_agent"
+  - "sp_addpullsubscription_agent"
   - "sp_addpullsubscription_agent_TSQL"
-helpviewer_keywords:   - "sp_addpullsubscription_agent"
+helpviewer_keywords:
+  - "sp_addpullsubscription_agent"
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 caps.latest.revision: 44
 author: "edmacauley"

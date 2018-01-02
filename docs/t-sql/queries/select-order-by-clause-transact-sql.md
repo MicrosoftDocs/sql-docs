@@ -63,7 +63,7 @@ ms.workload: "Active"
 
 ## Syntax  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  

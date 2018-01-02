@@ -53,7 +53,7 @@ This topic describes how to determine who has permissions to various objects in 
 Fixed Server Roles and Fixed Database Roles have preconfigured permissions that cannot be changed. To determine who is a member of a fixed server role, execute the following query.    
 >  [!NOTE] 
 >  Does not apply to SQL Database or SQL Data Warehouse where server level permission are not available. The `is_fixed_role` column of `sys.server_principals` was added in SQL Server 2012. It is not needed for older versions of SQL Server.  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -69,7 +69,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
 To determine who is a member of a fixed database role, execute the following query in each database.
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -109,7 +109,7 @@ Remember that a Windows user might be a member of more than one Windows group (e
 The following query returns a list of the permissions that have been granted or denied at the server level. This query should be executed in the master database.   
 >  [!NOTE] 
 >  Server-level permissions cannot be granted or queried on SQL Database or SQL Data Warehouse.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -123,7 +123,7 @@ SELECT pr.type_desc, pr.name,
 ### Database Permissions
 
 The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -135,7 +135,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 Each class of permission the permission table can be joined to other system views that provide related information about that class of securable. For example, the following query provides the name of the database object that is affected by the permission.    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -148,7 +148,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
 Use the `HAS_PERMS_BY_NAME` function to determine if a particular user (in this case `TestUser`) has a permission. For example:   
-```tsql
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

@@ -66,7 +66,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ## Examples  
  The following example returns information about the files in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfile;  

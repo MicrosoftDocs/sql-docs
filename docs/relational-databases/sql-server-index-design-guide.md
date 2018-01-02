@@ -174,7 +174,7 @@ For information about Full-text indexes, see [Populate Full-Text Indexes](../rel
   
  Specifying the order in which key values are stored in an index is useful when queries referencing the table have ORDER BY clauses that specify different directions for the key column or columns in that index. In these cases, the index can remove the need for a SORT operator in the query plan; therefore, this makes the query more efficient. For example, the buyers in the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] purchasing department have to evaluate the quality of products they purchase from vendors. The buyers are most interested in finding products sent by these vendors with a high rejection rate. As shown in the following query, retrieving the data to meet this criteria requires the `RejectedQty` column in the `Purchasing.PurchaseOrderDetail` table to be sorted in descending order (large to small) and the `ProductID` column to be sorted in ascending order (small to large).  
   
-```t-sql  
+```sql  
 SELECT RejectedQty, ((RejectedQty/OrderQty)*100) AS RejectionRate,  
     ProductID, DueDate  
 FROM Purchasing.PurchaseOrderDetail  
@@ -187,7 +187,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  If an index is created with key columns that match those in the ORDER BY clause in the query, the SORT operator can be eliminated in the query plan and the query plan is more efficient.  
   
-```t-sql  
+```sql  
 CREATE NONCLUSTERED INDEX IX_PurchaseOrderDetail_RejectedQty  
 ON Purchasing.PurchaseOrderDetail  
     (RejectedQty DESC, ProductID ASC, DueDate, OrderQty);  
@@ -380,7 +380,7 @@ Use these metadata views to see attributes of indexes. More architectural inform
   
  Because the **nchar** and **nvarchar** data types require 2 bytes for each character, an index that contains these three columns would exceed the 900 byte size limitation by 10 bytes (455 * 2). By using the `INCLUDE` clause of the `CREATE INDEX` statement, the index key could be defined as (`Title, Revision`) and `FileName` defined as a nonkey column. In this way, the index key size would be 110 bytes (55 \* 2), and the index would still contain all the required columns. The following statement creates such an index.  
   
-```t-sql  
+```sql  
 CREATE INDEX IX_Document_Title   
 ON Production.Document (Title, Revision)   
 INCLUDE (FileName);   
@@ -430,7 +430,7 @@ INCLUDE (FileName);
   
  For example, assume that you want to design an index to cover the following query.  
   
-```t-sql  
+```sql  
 SELECT AddressLine1, AddressLine2, City, StateProvinceID, PostalCode  
 FROM Person.Address  
 WHERE PostalCode BETWEEN N'98000' and N'99999';  
@@ -440,7 +440,7 @@ WHERE PostalCode BETWEEN N'98000' and N'99999';
   
  The following statement creates an index with included columns to cover the query.  
   
-```t-sql  
+```sql  
 CREATE INDEX IX_Address_PostalCode  
 ON Person.Address (PostalCode)  
 INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
@@ -525,7 +525,7 @@ When a column only has a small number of relevant values for queries, you can cr
   
 For example, the `AdventureWorks2012` database has a `Production.BillOfMaterials` table with 2679 rows. The `EndDate` column has only 199 rows that contain a non-NULL value and the other 2480 rows contain NULL. The following filtered index would cover queries that return the columns defined in the index and that select only rows with a non-NULL value for `EndDate`.  
   
-```t-sql  
+```sql  
 CREATE NONCLUSTERED INDEX FIBillOfMaterialsWithEndDate  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL ;  
@@ -534,7 +534,7 @@ GO
   
 The filtered index `FIBillOfMaterialsWithEndDate` is valid for the following query. You can display the query execution plan to determine if the query optimizer used the filtered index.  
   
-```t-sql  
+```sql  
 SELECT ProductAssemblyID, ComponentID, StartDate   
 FROM Production.BillOfMaterials  
 WHERE EndDate IS NOT NULL   
@@ -549,7 +549,7 @@ For more information about how to create filtered indexes and how to define the 
   
  For example, the products listed in the `Production.Product` table are each assigned to a `ProductSubcategoryID`, which are in turn associated with the product categories Bikes, Components, Clothing, or Accessories. These categories are heterogeneous because their column values in the `Production.Product` table are not closely correlated. For example, the columns `Color`, `ReorderPoint`, `ListPrice`, `Weight`, `Class`, and `Style` have unique characteristics for each product category. Suppose that there are frequent queries for accessories which have subcategories between 27 and 36 inclusive. You can improve the performance of queries for accessories by creating a filtered index on the accessories subcategories as shown in the following example.  
   
-```t-sql  
+```sql  
 CREATE NONCLUSTERED INDEX FIProductAccessories  
     ON Production.Product (ProductSubcategoryID, ListPrice)   
         Include (Name)  
@@ -560,7 +560,7 @@ WHERE ProductSubcategoryID >= 27 AND ProductSubcategoryID <= 36;
   
  results are contained in the index and the query plan does not include a base table lookup. For example, the query predicate expression `ProductSubcategoryID = 33` is a subset of the filtered index predicate `ProductSubcategoryID >= 27` and `ProductSubcategoryID <= 36`, the `ProductSubcategoryID` and `ListPrice` columns in the query predicate are both key columns in the index, and name is stored in the leaf level of the index as an included column.  
   
-```t-sql  
+```sql  
 SELECT Name, ProductSubcategoryID, ListPrice  
 FROM Production.Product  
 WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;  
@@ -573,21 +573,21 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  A column in the filtered index expression does not need to be a key or included column in the filtered index definition if the filtered index expression is equivalent to the query predicate and the query does not return the column in the filtered index expression with the query results. For example, `FIBillOfMaterialsWithEndDate` covers the following query because the query predicate is equivalent to the filter expression, and `EndDate` is not returned with the query results. `FIBillOfMaterialsWithEndDate` does not need `EndDate` as a key or included column in the filtered index definition.  
   
-```t-sql  
+```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
 WHERE EndDate IS NOT NULL;   
 ```  
   
  A column in the filtered index expression should be a key or included column in the filtered index definition if the query predicate uses the column in a comparison that is not equivalent to the filtered index expression. For example, `FIBillOfMaterialsWithEndDate` is valid for the following query because it selects a subset of rows from the filtered index. However, it does not cover the following query because `EndDate` is used in the comparison `EndDate > '20040101'`, which is not equivalent to the filtered index expression. The query processor cannot execute this query without looking up the values of `EndDate`. Therefore, `EndDate` should be a key or included column in the filtered index definition.  
   
-```t-sql  
+```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
 WHERE EndDate > '20040101';   
 ```  
   
  A column in the filtered index expression should be a key or included column in the filtered index definition if the column is in the query result set. For example, `FIBillOfMaterialsWithEndDate` does not cover the following query because it returns the `EndDate` column in the query results. Therefore, `EndDate` should be a key or included column in the filtered index definition.  
   
-```t-sql  
+```sql  
 SELECT ComponentID, StartDate, EndDate FROM Production.BillOfMaterials  
 WHERE EndDate IS NOT NULL;  
 ```  
@@ -599,7 +599,7 @@ WHERE EndDate IS NOT NULL;
   
  The following example creates a table with a variety of data types.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.TestTable (a int, b varbinary(4));  
@@ -607,14 +607,14 @@ CREATE TABLE dbo.TestTable (a int, b varbinary(4));
   
  In the following filtered index definition, column `b` is implicitly converted to an integer data type for the purpose of comparing it to the constant 1. This generates error message 10611 because the conversion occurs on the left hand side of the operator in the filtered predicate.  
   
-```t-sql  
+```sql  
 CREATE NONCLUSTERED INDEX TestTabIndex ON dbo.TestTable(a,b)  
 WHERE b = 1;  
 ```  
   
  The solution is to convert the constant on the right hand side to be of the same type as column `b`, as seen in the following example:  
   
-```t-sql  
+```sql  
 CREATE INDEX TestTabIndex ON dbo.TestTable(a,b)  
 WHERE b = CONVERT(Varbinary(4), 1);  
 ```  
@@ -795,7 +795,7 @@ A hash index can be declared as:
   
 The following is an example of the syntax to create a hash index, outside of the CREATE TABLE statement:  
   
-    ```t-sql
+    ```sql
     ALTER TABLE MyTable_memop  
     ADD INDEX ix_hash_Column2 UNIQUE  
     HASH (Column2) WITH (BUCKET_COUNT = 64);

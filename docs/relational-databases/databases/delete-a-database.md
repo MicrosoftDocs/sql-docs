@@ -93,7 +93,7 @@ ms.workload: "On Demand"
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example removes the `Sales` and `NewSales` databases.  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 DROP DATABASE Sales, NewSales ;  

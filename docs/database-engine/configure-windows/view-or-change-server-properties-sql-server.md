@@ -85,7 +85,7 @@ ms.workload: "On Demand"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md) built-in function in a `SELECT` statement to return information about the current server. This scenario is useful when there are multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on a Windows-based server, and the client must open another connection to the same instance that is used by the current connection.  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
@@ -98,7 +98,7 @@ ms.workload: "On Demand"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md) catalog view to return the name (`name`) and ID (`server_id`) of the current server, and the name of the OLE DB provider (`provider`) for connecting to a linked server.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
@@ -132,7 +132,7 @@ ms.workload: "On Demand"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to change a server property. The example changes the value of the `fill factor` option to `100`. The server must be restarted before the change can take effect.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  

@@ -50,7 +50,7 @@ If the hash indexed values have a high rate of duplicates, the hash buckets suff
   
 Assume you have the same SupportEvent table from the earlier T-SQL syntax code block. The following T-SQL code demonstrates how you can find and display the ratio of *all* values to *unique* values:  
   
-```t-sql
+```sql
 -- Calculate ratio of:  Rows / Unique_Values.  
 DECLARE @allValues float(8) = 0.0, @uniqueVals float(8) = 0.0;  
   
@@ -75,7 +75,7 @@ This section discusses how to troubleshoot the bucket count for your hash index.
   
 You can monitor the statistical health of your hash indexes by running the following T-SQL SELECT. The SELECT uses the data management view (DMV) named **sys.dm_db_xtp_hash_index_stats**.  
   
-```t-sql
+```sql
 SELECT  
   QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [table],   
   i.name                   as [index],   
@@ -119,7 +119,7 @@ The following T-SQL code block gives you an easy way to test a `SELECT * FROM sy
     b. The loop inserts 262,144 rows in approximately 1 minute.  
 3. PRINTs a message asking you to run the earlier SELECT from **sys.dm_db_xtp_hash_index_stats**.  
   
-```t-sql
+```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  
 go  
   

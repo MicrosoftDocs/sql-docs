@@ -59,7 +59,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## Examples  
  The following example disables the data collector, sets the cache directory for the data collector to `D:\tempdata`,and then enables the data collector.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  

@@ -269,7 +269,7 @@ SQL Server Version  |Redistributable Install Link
   
      Execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script to configure the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] to use an EKM provider.  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -290,7 +290,7 @@ SQL Server Version  |Redistributable Install Link
      -- Create a cryptographic provider, using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector which is an EKM provider for the Azure Key Vault.    
     This example uses the name `AzureKeyVault_EKM_Prov`.  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -322,7 +322,7 @@ SQL Server Version  |Redistributable Install Link
   
     -   Complete the second part of the `SECRET` argument with **Client Secret** from Part I.  In this example the **Client Secret** from Part 1 is `Replace-With-AAD-Client-Secret`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, with *no hyphens*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -347,7 +347,7 @@ SQL Server Version  |Redistributable Install Link
   
     -   Replace `ContosoRSAKey0` with the name of your key in Azure Key Vault.  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  

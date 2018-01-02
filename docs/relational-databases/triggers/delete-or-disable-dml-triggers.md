@@ -93,7 +93,7 @@ ms.workload: "On Demand"
   
 3.  Copy and paste the following examples into the query window. Execute the [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) statement to create the `Sales.bonus_reminder` trigger. To delete the trigger, execute the [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) statement.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -109,7 +109,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -127,7 +127,7 @@ GO
   
 3.  Copy and paste the following examples into the query window. Execute the [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) statement to create the `Sales.bonus_reminder` trigger. To disable and enable the trigger, execute the [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) and [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) statements, respectively.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -143,7 +143,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -152,7 +152,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  

@@ -44,7 +44,7 @@ ms.workload: "Inactive"
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @p GEOMETRY = 'Point(1 1 1 1)'  
 SELECT @p.HasZ   
 --Returns: 1 (true)  

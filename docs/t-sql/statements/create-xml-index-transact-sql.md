@@ -253,7 +253,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 ### A. Creating a primary XML index  
  The following example creates a primary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT * FROM sys.indexes  
@@ -269,7 +269,7 @@ GO
 ### B. Creating a secondary XML index  
  The following example creates a secondary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.indexes  

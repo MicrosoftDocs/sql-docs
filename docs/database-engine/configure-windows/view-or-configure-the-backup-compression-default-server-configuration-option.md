@@ -90,7 +90,7 @@ ms.workload: "On Demand"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) catalog view to determine the value for `backup compression default`. A value of 0 means that backup compression is off, and a value of 1 means that backup compression is enabled.  
   
-```tsql  
+```sql  
 SELECT value   
 FROM sys.configurations   
 WHERE name = 'backup compression default' ;  
@@ -105,7 +105,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the server instance to create compressed backups by default.  
   
-```tsql  
+```sql  
 EXEC sp_configure 'backup compression default', 1 ;  
 RECONFIGURE WITH OVERRIDE ;  
 GO 

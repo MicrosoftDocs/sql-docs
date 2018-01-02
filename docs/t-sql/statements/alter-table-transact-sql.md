@@ -776,7 +776,7 @@ TABLE
   
 -   To disable Stretch for a table and copy the remote data for the table from Azure back to SQL Server, run the following command. This command can't be canceled.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -787,7 +787,7 @@ ALTER TABLE \<table name>
   
 -   To disable Stretch for a table and abandon the remote data, run the following command.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  

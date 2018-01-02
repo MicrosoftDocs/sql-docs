@@ -172,7 +172,7 @@ GO
   
 Note that the Full-Text Engine can leverage existing filters that are installed in the operating system. Before you can use operating-system filters, word breakers, and stemmers, you must load them in the server instance, as follows:  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_service @action='load_os_resources', @value=1  
 ```  
   

@@ -149,7 +149,7 @@ You can use the script at the following location to create the filegroup in the 
 
 The following script illustrates In-Memory OLTP objects you can create in your database:
 
-```t-sql
+```sql
 -- configure recommended DB option
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 GO

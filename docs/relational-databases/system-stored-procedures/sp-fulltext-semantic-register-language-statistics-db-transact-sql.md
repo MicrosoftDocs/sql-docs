@@ -37,7 +37,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db  
     [ @dbname = ] ‘database_name’;  
 GO  
@@ -85,7 +85,7 @@ GO
 ## Examples  
  The following example shows how to register the Semantic Language Statistics database by calling **sp_fulltext_semantic_register_language_statistics_db**.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = 'semanticsDb';  
 GO  
 ```  

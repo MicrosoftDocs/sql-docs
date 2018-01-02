@@ -39,7 +39,7 @@ ms.workload: "On Demand"
   
  The following code sample requires a directory called c:\Data.  
   
-```tsql  
+```sql  
 CREATE DATABASE imoltp   
 GO  
   

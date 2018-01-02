@@ -345,20 +345,20 @@ The following graphic shows the permissions and their relationships to each othe
   
 ### A. Listing all built in permissions   
 Use `DEFAULT` or an empty string to return all permissions.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### B. Listing permissions that can be set on a symmetric key   
 Specify a class to return all possible permissions for that class.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### C. Listing classes on which there is a SELECT permission   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  

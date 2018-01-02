@@ -94,7 +94,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 ### A. Creating a RANGE LEFT partition function on an int column  
  The following partition function will partition a table or index into four partitions.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
@@ -108,7 +108,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 ### B. Creating a RANGE RIGHT partition function on an int column  
  The following partition function uses the same values for *boundary_value* [ **,***...n* ] as the previous example, except it specifies RANGE RIGHT.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
@@ -122,7 +122,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
 ### C. Creating a RANGE RIGHT partition function on a datetime column  
  The following partition function partitions a table or index into 12 partitions, one for each month of a year's worth of values in a **datetime** column.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
 AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',  
                '20030501', '20030601', '20030701', '20030801',   
@@ -138,7 +138,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
 ### D. Creating a partition function on a char column  
  The following partition function partitions a table or index into four partitions.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF3 (char(20))  
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
@@ -152,7 +152,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
 ### E. Creating 15,000 partitions  
  The following partition function partitions a table or index into 15,000 partitions.  
   
-```tsql  
+```sql  
 --Create integer partition function for 15,000 partitions.  
 DECLARE @IntegerPartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
@@ -171,7 +171,7 @@ GO
 ### F. Creating partitions for multiple years  
  The following partition function partitions a table or index into 50 partitions on a **datetime2** column. There is one partitions for each month between January 2007 and January 2011.  
   
-```tsql  
+```sql  
 --Create date partition function with increment by month.  
 DECLARE @DatePartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 

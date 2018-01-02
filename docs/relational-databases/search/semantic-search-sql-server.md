@@ -38,7 +38,7 @@ Statistical Semantic Search provides deep insight into unstructured documents st
  
  This query calls the [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) function.  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -76,7 +76,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
  
  This query calls the [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) function.  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   

@@ -190,7 +190,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
  To return the explicit permissions granted or denied in a database ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
-```tsql  
+```sql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
@@ -205,7 +205,7 @@ JOIN sys.objects AS obj
   
  To return the members of the server roles ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] only), execute the following statement.  
   
-```tsql  
+```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -217,7 +217,7 @@ JOIN sys.server_principals AS sRole
  
  To return the members of the database roles ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), execute the following statement in the database.  
   
-```tsql  
+```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  

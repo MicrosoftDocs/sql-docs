@@ -204,7 +204,7 @@ ms.workload: "Active"
   
 1.  In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command to link to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -216,7 +216,7 @@ ms.workload: "Active"
   
 2.  Execute the following code to configure the linked server to use the domain credentials of the login that is using the linked server.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -231,7 +231,7 @@ ms.workload: "Active"
   
 -   Execute the following code to test the connection to the linked server. This example the returns the names of the databases on the linked server.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -241,7 +241,7 @@ ms.workload: "Active"
   
 -   Use four-part names to refer to an object on a linked server. Execute the following code to return a list of all logins on the local server and their matching logins on the linked server.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

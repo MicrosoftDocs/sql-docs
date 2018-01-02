@@ -63,7 +63,7 @@ FILE_IDEX ( file_name )
 ### A. Retrieving the file id of a specified file  
 The following example returns the file ID for the `AdventureWorks_Data` file.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
@@ -82,7 +82,7 @@ File ID
 ### B. Retrieving the file id when the file name is not known  
 The following example returns the file ID of the `AdventureWorks` log file by selecting the logical file name from the `sys.database_files` catalog view where the file type is equal to `1` (log).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
@@ -100,7 +100,7 @@ File ID
 ### C. Retrieving the file id of a full-text catalog file  
 The following example returns the file ID of a full-text file by selecting the logical file name from the `sys.database_files` catalog view where the file type is equal to `4` (full-text). This example will return NULL if a full-text catalog does not exist.  
   
-```tsql  
+```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
 AS 'File_ID';  
 ```  

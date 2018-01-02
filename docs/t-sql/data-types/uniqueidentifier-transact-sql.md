@@ -54,21 +54,21 @@ These tools and features do not support the `uniqueidentifier` data type:
 ## Examples  
 The following example converts a `uniqueidentifier` value to a `char` data type.
   
-```t-sql
+```sql
 DECLARE @myid uniqueidentifier = NEWID();  
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
 The following example demonstrates the truncation of data when the value is too long for the data type being converted to. Because the **uniqueidentifier** type is limited to 36 characters, the characters that exceed that length are truncated.
   
-```t-sql
+```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
 SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```t-sql
+```sql
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  

@@ -28,7 +28,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_database_encryption_regenerate_system_keys  ;  
@@ -48,7 +48,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ## Example  
  The following example regenerates the database encryption keys.  
   
-```tsql  
+```sql  
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  
 ```  
   

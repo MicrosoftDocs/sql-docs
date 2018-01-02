@@ -669,7 +669,7 @@ RETURNS return_data_type
   
  Here is the function call. Notice that `DATEFIRST` is set to `1`.  
   
-```tsql
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -704,7 +704,7 @@ ISO Week
 ### B. Creating an inline table-valued function  
  The following example returns an inline table-valued function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It returns three columns `ProductID`, `Name` and the aggregate of year-to-date totals by store as `YTD Total` for each product sold to the store.  
   
-```tsql  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -723,14 +723,14 @@ GO
 
  To invoke the function, run this query.    
 
-```tsql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### C. Creating a multi-statement table-valued function  
  The following example creates the table-valued function `fn_FindReports(InEmpID)` in the AdventureWorks2012 database. When supplied with a valid employee ID, the function returns a table that corresponds to all the employees that report to the employee either directly or indirectly. The function uses a recursive common table expression (CTE) to produce the hierarchical list of employees. For more information about recursive CTEs, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -780,7 +780,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -804,7 +804,7 @@ GO
   
 ### E. Displaying the definition of [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions  
   
-```tsql  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   

@@ -42,7 +42,7 @@ ms.workload: "Active"
   
 ## Syntax  
   
-```tsql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -56,7 +56,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```tsql  
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
@@ -139,7 +139,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ### A. Truncate a Table  
  The following example removes all data from the `JobCandidate` table. `SELECT` statements are included before and after the `TRUNCATE TABLE` statement to compare results.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT COUNT(*) AS BeforeTruncateCount   
@@ -158,7 +158,7 @@ GO
   
  The following example truncates specified partitions of a partitioned table. The `WITH (PARTITIONS (2, 4, 6 TO 8))` syntax causes partition numbers 2, 4, 6, 7, and 8 to be truncated.  
   
-```  
+```sql  
 TRUNCATE TABLE PartitionTable1   
 WITH (PARTITIONS (2, 4, 6 TO 8));  
 GO  

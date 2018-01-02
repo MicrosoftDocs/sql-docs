@@ -131,7 +131,7 @@ ms.workload: "On Demand"
     
 For example, aggregate pushdown is done in both of the queries below:    
     
-```t-sql     
+```sql     
 SELECT  productkey, SUM(TotalProductCost)    
 FROM FactResellerSalesXL_CCI    
 GROUP BY productkey    

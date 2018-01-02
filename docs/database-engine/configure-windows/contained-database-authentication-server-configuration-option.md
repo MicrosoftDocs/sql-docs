@@ -46,7 +46,7 @@ ms.workload: "On Demand"
 ## Examples  
  The following example enables contained databases on the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE;  

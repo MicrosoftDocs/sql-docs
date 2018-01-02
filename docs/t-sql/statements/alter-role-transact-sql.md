@@ -123,7 +123,7 @@ Additionally, to change the membership in a fixed database role you need:
   
  The following example changes the name of role `buyers` to `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
@@ -132,7 +132,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
   
  This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 CREATE ROLE Sales;  
 ALTER ROLE Sales ADD MEMBER Barry;  
 ALTER ROLE Sales DROP MEMBER Barry;  

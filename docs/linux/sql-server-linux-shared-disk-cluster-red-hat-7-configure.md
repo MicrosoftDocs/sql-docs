@@ -175,7 +175,7 @@ On the NFS Server do the following:
 
 Do the following steps on all cluster nodes.
 
-1.	From the NFS server, install `nfs-utils`
+1.	Install `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils

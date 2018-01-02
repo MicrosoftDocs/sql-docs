@@ -76,13 +76,11 @@ ms.workload: "On Demand"
 ```csharp  
 		public void Main()
 		{
-            //SqlConnection myADONETConnection = new SqlConnection();
             SqlConnection myADONETConnection = 
                 Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)
                 as SqlConnection;
             MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");
 
-            //string myFlatFileConnection;
             string myFlatFileConnection = 
                 Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) 
                 as string;

@@ -600,7 +600,7 @@ ALTER AVAILABILITY GROUP group_name
 ## Security  
   
 ### Permissions  
- Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
+ Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  Also requires ALTER ANY DATABASE permission.   
   
 ## Examples  
   

@@ -129,7 +129,15 @@ ms.workload: "Active"
  When the system resets the **IncludeInDebugDump** option to **false**, this might override the value selected by the user.  
   
 **Value**    
-The value of a user-defined variable can be a literal or an expression. The value of a variable can't be null. 
+The value of a user-defined variable can be a literal or an expression. The value of a variable can't be null. Variables have the following default values:
+
+| Data type | Default value |
+|---|---|
+| Boolean | False |
+| Numeric and binary data types | 0 (zero) |
+| Char and string data types | (empty string) |
+| Object | System.Object |
+| | |
 
 A variable has options for setting the variable value and the data type of the value. The two properties must be compatible: for example, the use of a string value together with an integer data type is not valid.  
   

@@ -131,7 +131,7 @@ Memory can be configured up to the process virtual address space limit in all [!
 ### Example A  
  The following example sets the `max server memory` option to 4 GB:  
   
-```t-sql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -145,7 +145,7 @@ GO
 ### Example B. Determining Current Memory Allocation  
  The following query returns information about currently allocated memory.  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
 	large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 

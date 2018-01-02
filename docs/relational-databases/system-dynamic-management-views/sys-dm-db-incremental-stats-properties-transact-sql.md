@@ -84,7 +84,7 @@ Statistics update date is stored in the [statistics blob object](../../relationa
 ### A. Simple example
 The following example returns the statistics for the `PartitionTable` table described in the topic [Create Partitioned Tables and Indexes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md).
 
-```t-sql
+```sql
 SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'), 1);
 ``` 
 

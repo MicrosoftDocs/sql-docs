@@ -22,7 +22,7 @@ ms.workload: "Inactive"
 This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
-> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
@@ -65,23 +65,23 @@ then
 fi
 
 echo Adding Microsoft repositories...
-zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
-zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
-zypper --gpg-auto-import-keys refresh
+sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
+sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
+sudo zypper --gpg-auto-import-keys refresh
 
 #Add the SLES v12 SP2 SDK to obtain libsss_nss_idmap0
-SUSEConnect -p sle-sdk/12.2/x86_64
+sudo SUSEConnect -p sle-sdk/12.2/x86_64
 
 echo Installing SQL Server...
-zypper install -y mssql-server
+sudo zypper install -y mssql-server
 
 echo Running mssql-conf setup...
-MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
+sudo MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
      MSSQL_PID=$MSSQL_PID \
      /opt/mssql/bin/mssql-conf -n setup accept-eula
 
 echo Installing mssql-tools and unixODBC developer...
-ACCEPT_EULA=Y zypper install -y mssql-tools unixODBC-devel
+sudo ACCEPT_EULA=Y zypper install -y mssql-tools unixODBC-devel
 
 # Add SQL Server tools to the path by default:
 echo Adding SQL Server tools to your path...
@@ -92,30 +92,30 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 if [ ! -z $SQL_INSTALL_AGENT ]
 then
   echo Installing SQL Server Agent...
-  zypper install -y mssql-server-agent
+  sudo zypper install -y mssql-server-agent
 fi
 
 # Optional SQL Server Full Text Search installation:
 if [ ! -z $SQL_INSTALL_FULLTEXT ]
 then
     echo Installing SQL Server Full-Text Search...
-    zypper install -y mssql-server-fts
+    sudo zypper install -y mssql-server-fts
 fi
 
 # Configure firewall to allow TCP port 1433:
 echo Configuring SuSEfirewall2 to allow traffic on port 1433...
-SuSEfirewall2 open INT TCP 1433
-SuSEfirewall2 stop
-SuSEfirewall2 start
+sudo SuSEfirewall2 open INT TCP 1433
+sudo SuSEfirewall2 stop
+sudo SuSEfirewall2 start
 
 # Example of setting post-installation configuration options
 # Set trace flags 1204 and 1222 for deadlock tracing:
 # echo Setting trace flags...
-# /opt/mssql/bin/mssql-conf traceflag 1204 1222 on
+# sudo /opt/mssql/bin/mssql-conf traceflag 1204 1222 on
 
 # Restart SQL Server after making configuration changes:
 echo Restarting SQL Server...
-systemctl restart mssql-server
+sudo systemctl restart mssql-server
 
 # Connect to server and get the version:
 counter=1
@@ -168,10 +168,10 @@ To run the script
    chmod +x install_sql.sh
    ```
 
-1. Run the script with SUDO
+1. Run the script
 
    ```bash
-   sudo ./install_sql.sh
+   ./install_sql.sh
    ```
 
 ### Understanding the script

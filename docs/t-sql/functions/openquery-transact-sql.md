@@ -56,7 +56,7 @@ OPENQUERY ( linked_server ,'query' )
   
  OPENQUERY cannot be used to execute extended stored procedures on a linked server. However, an extended stored procedure can be executed on a linked server by using a four-part name. For example:  
   
-```t-sql  
+```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
@@ -70,7 +70,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### A. Executing an UPDATE pass-through query  
  The following example uses a pass-through `UPDATE` query against the linked server created in example A.  
   
-```t-sql  
+```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -78,7 +78,7 @@ SET name = 'ADifferentName';
 ### B. Executing an INSERT pass-through query  
  The following example uses a pass-through `INSERT` query against the linked server created in example A.  
   
-```t-sql  
+```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -86,14 +86,14 @@ VALUES ('NewTitle');
 ### C. Executing a DELETE pass-through query  
  The following example uses a pass-through `DELETE` query to delete the row inserted in example C.  
   
-```t-sql  
+```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### D. Executing a SELECT pass-through query  
  The following example uses a pass-through `SELECT` query to select the row inserted in example C.  
   
-```t-sql  
+```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     

@@ -159,7 +159,7 @@ Operations within **tempdb** are minimally logged so that transactions can be ro
  Set the file growth increment to a reasonable size to avoid the tempdb database files from growing by too small a value. If the file growth is too small, compared to the amount of data that is being written to tempdb, tempdb may have to constantly expand and affect performance.
  
  To check current tempdb size and growth parameters, use the following query:
- ```t-sql
+ ```sql
  SELECT name AS FileName, 
     size*1.0/128 AS FileSizeinMB,
     CASE max_size 

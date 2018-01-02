@@ -35,7 +35,7 @@ ms.workload: "On Demand"
   
 1.  Run sp_configure ‘hadoop connectivity’ and set an appropriate value.  To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
   
-    ```tsql  
+    ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   

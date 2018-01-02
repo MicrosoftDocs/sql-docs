@@ -62,7 +62,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## Example  
  To reconcile the the columns in the remote Azure table, run the following statement.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  
 ```  
   

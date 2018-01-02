@@ -65,7 +65,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## Example  
  The following example restores the authenticated connection between a local database enabled for Stretch and the remote database. It makes a copy of the remote data (recommended) and connects to the new copy.  
   
-```tsql  
+```sql  
 DECLARE @credentialName nvarchar(128);   
 SET @credentialName = N'<existing_database_scoped_credential_name>';   
 EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;  

@@ -72,7 +72,7 @@ You can also use new command-line tools that are native for Linux. These tools i
 
 ## Next steps
 
-To get started, install SQL Server on Linux using one of the following quick start tutorials:
+To get started, install SQL Server on Linux using one of the following quickstarts:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

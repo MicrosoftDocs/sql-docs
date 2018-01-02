@@ -256,7 +256,7 @@ To manually install these packages, use the following steps:
 
 ## Next steps
 
-For an example of how to use **sqlcmd** to connect to SQL Server and create a database, see one of the following quick start tutorials:
+For an example of how to use **sqlcmd** to connect to SQL Server and create a database, see one of the following quickstarts:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

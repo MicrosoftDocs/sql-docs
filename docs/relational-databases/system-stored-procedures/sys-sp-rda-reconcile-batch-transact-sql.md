@@ -68,7 +68,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## Example  
  To reconcile the batch IDs, run the following statement.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_batch @objname = N'StretchEnabledTableName';  
 ```  
   

@@ -146,7 +146,7 @@ From the above table, **attribute** can have the following values:
 ### A. Returning the attributes for a specific plan  
  The following example returns all plan attributes for a specified plan. The `sys.dm_exec_cached_plans` dynamic management view is queried first to obtain the plan handle for the specified plan. In the second query, replace `<plan_handle>` with a plan handle value from the first query.  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -158,7 +158,7 @@ GO
 ### B. Returning the SET options for compiled plans and the SQL handle for cached plans  
  The following example returns a value representing the options that each plan was compiled with. In addition, the SQL handle for all the cached plans is returned.  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

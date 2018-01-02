@@ -57,7 +57,7 @@ LTRIM ( character_expression )
 
  The following example uses LTRIM to remove leading spaces from a character expression.  
   
-```tsql  
+```sql  
 SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.databases;  
 ```  
   

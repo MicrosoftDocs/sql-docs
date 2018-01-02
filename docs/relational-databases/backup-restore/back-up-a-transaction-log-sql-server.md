@@ -148,7 +148,7 @@ The BACKUP DATABASE and BACKUP LOG permissions needed are granted by default to 
   
  This example creates a transaction log backup for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to the previously created named backup device, `MyAdvWorks_FullRM_log1`.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  

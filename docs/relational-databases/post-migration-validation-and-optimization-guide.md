@@ -132,7 +132,7 @@ Table Valued Functions return a table data type that can be an alternative to vi
 ### Steps to resolve
 1.	If the Multi-Statement TVF is single statement only, convert to Inline TVF.
 
-    ```tsql
+    ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress(@ID int)
     RETURNS @tblAddress TABLE
     ([Address] VARCHAR(60) NOT NULL)
@@ -148,7 +148,7 @@ Table Valued Functions return a table data type that can be an alternative to vi
     ```
     To 
 
-    ```tsql
+    ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
     RETURNS TABLE
     AS

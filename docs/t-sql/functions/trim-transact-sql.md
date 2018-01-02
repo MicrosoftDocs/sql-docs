@@ -55,7 +55,7 @@ By default `TRIM` function removes the space character `char(32)` from both side
 ## Examples
 ### A.  Removes the space character from both sides of string   
 The following example removes spaces from before and after the word `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -66,7 +66,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### B.  Removes specified characters from both sides of string   
 The following example removes a trailing period and trailing spaces.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 

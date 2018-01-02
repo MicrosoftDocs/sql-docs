@@ -137,7 +137,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ### A. Creating an event notification that is server scoped  
  The following example creates the required objects to set up a target service using [!INCLUDE[ssSB](../../includes/sssb-md.md)]. The target service references the message type and contract of the initiating service specifically for event notifications. Then an event notification is created on that target service that sends a notification whenever an `Object_Created` trace event happens on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
@@ -164,7 +164,7 @@ TO SERVICE 'NotifyService',
 ### B. Creating an event notification that is database scoped  
  The following example creates an event notification on the same target service as the previous example. The event notification fires after an `ALTER_TABLE` event occurs on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.  
   
-```tsql  
+```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
 ON DATABASE  
 FOR ALTER_TABLE  
@@ -183,7 +183,7 @@ WHERE name = 'log_ddl1';
 ### D. Getting information about an event notification that is database scoped  
  The following example queries the `sys.event_notifications` catalog view for metadata about event notification `Notify_ALTER_T1` that was created with database scope.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.event_notifications  
 WHERE name = 'Notify_ALTER_T1';  
 ```  

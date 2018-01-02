@@ -284,7 +284,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 ### Next steps
 
-To get started, see the following quick start tutorials:
+To get started, see the following quickstarts:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

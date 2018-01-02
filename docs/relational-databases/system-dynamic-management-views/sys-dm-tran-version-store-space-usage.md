@@ -49,7 +49,7 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW 
 ## Examples  
  The following query can be used to determine space consumed in tempdb by version store of each database in a SQL Server instance. 
   
-```tsql  
+```sql  
 SELECT 
   DB_NAME(database_id) as 'Database Name',
   reserved_page_count,

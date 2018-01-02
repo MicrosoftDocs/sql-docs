@@ -60,7 +60,7 @@ You will need to create a credential and a login, and create a database encrypti
   
     -   Complete the second part of the `SECRET` argument with **Client Secret** from Part I.  In this example the **Client Secret** from Part 1 is `Replace-With-AAD-Client-Secret`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, with *no hyphens*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -75,7 +75,7 @@ You will need to create a credential and a login, and create a database encrypti
   
      Create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login and add the credential from Step 1 to it. This [!INCLUDE[tsql](../../../includes/tsql-md.md)] example uses the same key that was imported earlier.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -95,7 +95,7 @@ You will need to create a credential and a login, and create a database encrypti
   
      The DEK will encrypt your data and log files in the database instance, and in turn be encrypted by the Azure Key Vault asymmetric key. The DEK can be created using any [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supported algorithm or key length.  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -107,7 +107,7 @@ You will need to create a credential and a login, and create a database encrypti
   
 4.  **Turn On TDE**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -124,7 +124,7 @@ You will need to create a credential and a login, and create a database encrypti
   
      Alternatively, you can execute the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] script. An encryption state of 3 indicates an encrypted database.  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -157,7 +157,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
   
     -   Complete the second part of the `SECRET` argument with **Client Secret** from Part I.  In this example the **Client Secret** from Part I is `Replace-With-AAD-Client-Secret`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, with *no hyphens*.   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -178,7 +178,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
   
      This example uses the `CONTOSO_KEY_BACKUP` asymmetric key stored in the key vault, which can be imported or created earlier for the master database, as Part IV, Step 5 earlier.  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -200,7 +200,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
      
      In the below example, note that if the database was already encrypted with TDE, and the asymmetric key `CONTOSO_KEY_BACKUP` is different from the TDE asymmetric key, the backup will be encrypted by both the TDE asymmetric key and `CONTOSO_KEY_BACKUP`. The target [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance will need both keys in order to decrypt the backup.
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -223,7 +223,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
     
      Sample restore code:  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -240,7 +240,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
   
  This example uses the `CONTOSO_KEY_COLUMNS` asymmetric key stored in the key vault, which can be imported or created earlier, as described in Step 3, section 3 of [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md). To use this asymmetric key in the `ContosoDatabase` database, you must execute the `CREATE ASYMMETRIC KEY` statement again, to provide the `ContosoDatabase` database with a reference to the key.  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   

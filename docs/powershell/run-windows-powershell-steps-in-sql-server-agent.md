@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Run Windows PowerShell Steps in SQL Server Agent

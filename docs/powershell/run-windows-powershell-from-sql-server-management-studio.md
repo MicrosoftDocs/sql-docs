@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Run Windows PowerShell from SQL Server Management Studio

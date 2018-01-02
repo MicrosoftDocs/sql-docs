@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "Cmdlets [SQL Server], Decode-Sqlname"
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Identifiers in PowerShell
@@ -33,7 +33,7 @@ ms.workload: "Inactive"
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider for Windows PowerShell uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers in Windows PowerShell paths. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers can contain characters that Windows PowerShell does not support in paths. You must escape these characters or use special encoding for them when using the identifiers in Windows PowerShell paths.  
   
 ## SQL Server Identifiers in Windows PowerShell Paths  
- Windows PowerShell providers expose data hierarchies using a path structure similar to that used for the Windows file system. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider implements paths to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects. For the [!INCLUDE[ssDE](../../includes/ssde-md.md)], the drive is set to SQLSERVER:, the first folder is set to \SQL, and the database objects are referenced as containers and items. This is the path to the Vendor table in the Purchasing schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database in a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
+ Windows PowerShell providers expose data hierarchies using a path structure similar to the Windows file system. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider implements paths to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects. For the [!INCLUDE[ssDE](../../includes/ssde-md.md)], the drive is set to SQLSERVER:, the first folder is set to \SQL, and the database objects are referenced as containers and items. This is the path to the Vendor table in the Purchasing schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database in a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
 ```  
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  

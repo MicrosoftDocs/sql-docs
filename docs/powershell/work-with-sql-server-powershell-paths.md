@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Work With SQL Server PowerShell Paths

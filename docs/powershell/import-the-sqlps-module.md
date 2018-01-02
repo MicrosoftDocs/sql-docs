@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Import the SQLPS Module

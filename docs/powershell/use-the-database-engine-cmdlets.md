@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "Cmdlets [SQL Server], Decode-Sqlname"
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use the Database Engine cmdlets
@@ -54,7 +54,7 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
   
 ## Database Engine cmdlet Tasks  
   
-|Task Description|Topic|  
+|Task Description|Article|  
 |----------------------|-----------|  
 |Describes using **Invoke-Sqlcmd** to run **sqlcmd** scripts or commands that contain [!INCLUDE[tsql](../../includes/tsql-md.md)] or XQuery statements. It can accept the **sqlcmd** input as either a character string input parameter, or as the name of a script file to open.|[Invoke-Sqlcmd cmdlet](../../powershell/invoke-sqlcmd-cmdlet.md)|  
 |Describes using **Invoke-PolicyEvaluation** to report whether a target set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects comply with the conditions that are defined in policy-based management policies. Optionally, the cmdlet can be used to reconfigure any settable options in the target objects that do not comply with the policy conditions.|[Invoke-PolicyEvaluation cmdlet](../../powershell/invoke-policyevaluation-cmdlet.md)|  

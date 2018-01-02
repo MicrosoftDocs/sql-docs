@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "URN"
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Query Expressions and Uniform Resource Names

@@ -16,7 +16,7 @@ ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server PowerShell License Terms

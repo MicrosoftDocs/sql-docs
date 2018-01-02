@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "PowerShell [SQL Server], Invoke-PolicyEvaluation"
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Invoke-PolicyEvaluation cmdlet

@@ -14,14 +14,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Load the SMO Assemblies in Windows PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  This topic describes how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that do not use the SQL Server PowerShell provider.  
+  This article describes how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that do not use the SQL Server PowerShell provider.  
   
 ## Before You Begin  
  The preferred mechanism for loading the SMO assemblies is to load the **sqlps** module. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider included in the module automatically loads the SMO assemblies, and also implements features that extend the usefulness of the SMO objects in PowerShell scripts.  For more information, see [Import the SQLPS Module](../../relational-databases/scripting/import-the-sqlps-module.md).

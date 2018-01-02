@@ -14,14 +14,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Encode and Decode SQL Server Identifiers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  SQL Server delimited identifiers sometimes contain characters not supported in Windows PowerShell paths. These characters can be specified by encoding their hexadecimal values.  
+  SQL Server-delimited identifiers sometimes contain characters not supported in Windows PowerShell paths. These characters can be specified by encoding their hexadecimal values.  
   
 1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
@@ -33,7 +33,7 @@ ms.workload: "Inactive"
  The **Encode-SqlName** cmdlet takes as input a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier. It outputs a string with all the characters that are not supported by the Windows PowerShell language encoded with "%xx". The **Decode-SqlName** cmdlet takes as input an encoded [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and returns the original identifier.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
- The **Encode-Sqlname** and **Decode-Sqlname** cmdlets only encode or decode the characters that are allowed in SQL Server delimited identifiers, but are not supported in PowerShell paths. These are the characters encoded by **Encode-SqlName** and decoded by **Decode-SqlName**:  
+ The **Encode-Sqlname** and **Decode-Sqlname** cmdlets only encode or decode the characters that are allowed in SQL Server-delimited identifiers, but are not supported in PowerShell paths. The following are the characters encoded by **Encode-SqlName** and decoded by **Decode-SqlName**:  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  

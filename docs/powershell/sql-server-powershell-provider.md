@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SQL Server Management Objects, PowerShell"
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 caps.latest.revision: 61
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server PowerShell Provider
@@ -36,7 +36,7 @@ ms.workload: "On Demand"
 ## The SQL Server PowerShell Hierarchy  
  Products whose data or object models can be represented in a hierarchy use Windows PowerShell providers to expose the hierarchies. The hierarchy is exposed by using a drive and path structure similar to what the Windows file system uses.  
   
- Each Windows PowerShell provider implements one or more drives. Each drive is the root node of a hierarchy of related objects. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider implements a SQLSERVER: drive. The provider also defines a set of primary folders for the SQLSERVER: drive. Each folder and its subfolders represent the set of objects that can be accessed by using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management object model. When you are focused on a subfolder in a path that starts with one of these primary folders, you can use the methods from the associated object model to perform actions on the object that is represented by the node. The Windows PowerShell folders implemented by the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provider are listed in the following table.  
+ Each Windows PowerShell provider implements one or more drives. Each drive is the root node of a hierarchy of related objects. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider implements a SQLSERVER: drive. The provider also defines a set of primary folders for the SQLSERVER: drive. Each folder and its subfolders represent the set of objects that can be accessed by using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management object model. When you are focused on a subfolder in a path that starts with one of these primary folders, you can use the methods from the associated object model to perform actions on the object that is represented by the node. The Windows PowerShell folders implemented by the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provider are listed in the following table:  
   
 |Folder|SQL Server object model namespace|Objects|  
 |------------|---------------------------------------|-------------|  
@@ -51,7 +51,7 @@ ms.workload: "On Demand"
   
  For example, you can use the SQLSERVER:\SQL folder to start paths that can represent any object that is supported by the SMO object model. The leading part of a SQLSERVER:\SQL path is SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*. The nodes after the instance name alternate between object collections (such as *Databases* or *Views*) and object names (such as AdventureWorks2012). Schemas are not represented as object classes. When you specify the node for a top-level object in a schema, such as a table or view, you must specify the object name in the format *SchemaName.ObjectName*.  
   
- This is the path of the Vendor table in the Purchasing schema of the AdventureWorks2012 database in a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the local computer:  
+ The following example shows the path of the Vendor table in the Purchasing schema of the AdventureWorks2012 database in a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the local computer:  
   
 ```  
 SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
@@ -59,7 +59,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  For more information about the SMO object model hierarchy, see [SMO Object Model Diagram](../../relational-databases/server-management-objects-smo/smo-object-model-diagram.md).  
   
- Collection nodes in a path are associated with a collection class in the associated object model. Object name nodes are associated with an object class in the associated object model, as in the following table.  
+ Collection nodes in a path are associated with a collection class in the associated object model. Object name nodes are associated with an object class in the associated object model, as in the following table:  
   
 |Path|SMO class|  
 |----------|---------------|  
@@ -68,7 +68,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
 ## SQL Server Provider Tasks  
   
-|Task Description|Topic|  
+|Task Description|Article|  
 |----------------------|-----------|  
 |Describes how to use Windows PowerShell cmdlets to navigate through the nodes in a path, and at each node get a list of the objects at that node.|[Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)|  
 |Describes how to use the SMO methods and properties to report on and perform work on the object represented by a node in a path. Also describes how to get a list of the SMO methods and properties for that node.|[Work With SQL Server PowerShell Paths](../../relational-databases/scripting/work-with-sql-server-powershell-paths.md)|  

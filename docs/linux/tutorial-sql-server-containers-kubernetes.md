@@ -19,7 +19,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In this article, you will configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. 
+Follow this article to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. 
 
 This tutorial demonstrates how to configure a highly available SQL Server instance in containers using AKS. 
 
@@ -41,17 +41,17 @@ Kubernetes 1.6+ has support for Storage Classes, Persistent Volume Claims, and t
 
 * An Azure Container Service (AKS) cluster. 
 
-   This tutorial creates a SQL Server container deployment in a Kubernetes cluster configured like the cluster in [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/azure/aks/kubernetes-walkthrough)
+   This tutorial creates a SQL Server container deployment in a Kubernetes cluster configured like the cluster in [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/azure/aks/kubernetes-walkthrough). 
 
-* A connection to the Kubernetes cluster. this tutorial uses [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), the Kubernetes command-line interfiace. 
+* A connection to the Kubernetes cluster. this tutorial uses [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), the Kubernetes command-line interface. 
 
 ## Configure storage
 
-Configure a persistent volume, and persistent volume claim in the Kubernetes cluster. For background on Kuberntes storage, see [Persistent Volumes](http://kubernetes.io/docs/concepts/storage/persistent-volumes/).  Complete the following steps: 
+Configure a persistent volume, and persistent volume claim in the Kubernetes cluster. For background on Kubernetes storage, see [Persistent Volumes](http://kubernetes.io/docs/concepts/storage/persistent-volumes/).  Complete the following steps: 
 
-1. Create a manifest to define the storage class and the persistent volume claim.  The manifest specifies the storage provisionioner, paramaters and the reclaim policy. The Kubernetes cluster will use this manifest to create the persistent storage. 
+1. Create a manifest to define the storage class and the persistent volume claim.  The manifest specifies the storage provisioner, parameters, and the reclaim policy. The Kubernetes cluster uses this manifest to create the persistent storage. 
 
-   The following yaml example defines a storage class and persistent volume claim. The storage class is named `azure-disk` and the persistent volume claim is named `mssql-data`. The persistent volume claim metadata includes an annotation connecting it back to the the storage class. 
+   The following yaml example defines a storage class and persistent volume claim. The storage class is named `azure-disk` and the persistent volume claim is named `mssql-data`. The persistent volume claim metadata includes an annotation connecting it back to the storage class. 
 
    ```yaml
    kind: StorageClass
@@ -99,7 +99,7 @@ Configure a persistent volume, and persistent volume claim in the Kubernetes clu
    * `<PersistentVolumeClaim>`
       * The name of the persistent volume claim.
 
-    In the preceding step, the persistent volume claim is named `mssql-data`. To see the metadata about the persistent volume claim, run the following command.
+    In the preceding step, the persistent volume claim is named `mssql-data`. To see the metadata about the persistent volume claim, run the following command:
 
     ```azurecli
     kubectl describe pvc mssql-data
@@ -109,7 +109,7 @@ Configure a persistent volume, and persistent volume claim in the Kubernetes clu
 
     ![Describe volume](media/tutorial-sql-server-containers-kubernetes/describe-volume.png)
 
-    Note the value for volume in the command prompt image above, matches part of the name of the blob in the Azure portal image below. 
+    Note the value for volume in the command prompt image above, matches part of the name of the blob in the following image from Azure portal: 
 
     ![Describe volume portal](media/tutorial-sql-server-containers-kubernetes/describe-volume-portal.png)
 
@@ -123,9 +123,9 @@ Configure a persistent volume, and persistent volume claim in the Kubernetes clu
 
 ## Configure SA password as Kubernetes secret
 
-Create a secret in the Kubernetes cluster to store the SA password for SQL Server. 
+To store the SA password for SQL Server, create a secret in the Kubernetes cluster. 
 
-1. Create a yaml file for for the secret that includes the SA password.  
+1. Create a yaml file for the secret that includes the SA password.  
 
    ```yaml
    apiVersion: v1
@@ -138,7 +138,7 @@ Create a secret in the Kubernetes cluster to store the SA password for SQL Serve
    ```
 
    * `<ComplexPassword>`
-      * The password you will use for the SA account. 
+      * The password for the SA account. 
 
    Save the file as `secret.yaml`.
 
@@ -148,7 +148,7 @@ Create a secret in the Kubernetes cluster to store the SA password for SQL Serve
    kubectl apply -f <Path to secret.yaml file>
    ```
    
-For additional information about secrets in Kubernetes, see [Secrets](http://kubernetes.io/docs/concepts/configuration/secret/).
+For more information about secret management in Kubernetes, see [Secrets](http://kubernetes.io/docs/concepts/configuration/secret/).
 
 ## Create the SQL Server container
 
@@ -207,7 +207,7 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    Copy the preceding code into a new file, named `sqldeployment.yaml`. Update the following values. 
 
    * `value: "Developer"`
-     * Sets the container to run SQL Server Developer edition. Developer edition is not licesnsed for production data. If the deployment is for production use, set the appropriate edition. Can be one of `Enterprise`, `Standard`, or `Express`. 
+     * Sets the container to run SQL Server Developer edition. Developer edition is not licensed for production data. If the deployment is for production use, set the appropriate edition. Can be one of `Enterprise`, `Standard`, or `Express`. 
 
      >[!NOTE]
      >For more information, see [How to license SQL Server](http://www.microsoft.com/sql-server/sql-server-2017-pricing).
@@ -258,12 +258,12 @@ To verify failure and recovery you can delete the pod. Do the following steps:
 1. Delete the pod.
 
    ```azurecli
-   kubectl delete pod mssql-statefulset-0
+   kubectl delete pod mssql-deployment-0
    ```
 
-   Note that `mssql-statefulset-0` is the value returned from the previous step for pod name. 
+   `mssql-deployment-0` is the value returned from the previous step for pod name. 
 
-Kubernetes will automatically recreate the pod to recover a SQL Server container and connect to the persistent storage.
+Kubernetes automatically recreates the pod to recover a SQL Server container and connect to the persistent storage.
 
 ## Next steps
 

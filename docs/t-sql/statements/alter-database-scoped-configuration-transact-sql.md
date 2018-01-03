@@ -47,7 +47,7 @@ ms.workload: "On Demand"
 
 - Enable or disable the identity cache at the database level.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -240,8 +240,7 @@ This example sets PARAMETER_SNIFFING to OFF for a primary database in a geo-repl
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
-This example sets PARAMETER_SNIFFING for secondary database as it is on primary database   
-in a geo-replication scenario.  
+This example sets PARAMETER_SNIFFING for secondary database as it is on primary database in a geo-replication scenario.  
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
@@ -249,8 +248,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
   
 ### E. Set QUERY_OPTIMIZER_HOTFIXES  
 
-Set QUERY_OPTIMIZER_HOTFIXES to ON for a primary database   
-in a geo-replication scenario.  
+Set QUERY_OPTIMIZER_HOTFIXES to ON for a primary database in a geo-replication scenario.  
 
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  

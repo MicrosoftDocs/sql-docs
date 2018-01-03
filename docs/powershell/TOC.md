@@ -21,14 +21,14 @@
 # [Manage Tab Completion (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)  
 # [Get Help SQL Server PowerShell](get-help-sql-server-powershell.md)  
 # [SQL Server PowerShell License Terms](sql-server-powershell-license-terms.md)  
-## Overview
-## Quickstarts
-## Tutorials
-## Samples
-## Concepts
-## How-to guides
-## Reference
-### [sqlserver module reference](https://docs.microsoft.com/powershell/module/sqlserver/?view=sqlserver-ps)
-### [sqlps module reference](https://docs.microsoft.com/powershell/module/sqlps/?view=sqlserver-ps)
-## Resources
-### [New and updated articles](new-updated-powershell.md)
+# Overview
+# Quickstarts
+# Tutorials
+# Samples
+# Concepts
+# How-to guides
+# Reference
+## [sqlserver module reference](https://docs.microsoft.com/powershell/module/sqlserver/?view=sqlserver-ps?toc=/sql/powershell/toc.json)
+## [sqlps module reference](https://docs.microsoft.com/powershell/module/sqlps/?view=sqlserver-ps)
+# Resources
+## [New and updated articles](new-updated-powershell.md)

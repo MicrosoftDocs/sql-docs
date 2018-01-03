@@ -61,7 +61,7 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] *useanyworker*  
 Indicate whether any Scale Out Worker is allowed to do the execution.
 
--   Use the value of 1 to execute the package with any Scale Out Worker. When you set `@useanyworker` to false, any worker whose maximum task count (as specified in the worker configuration file) is not yet reached is available to run the package.
+-   Use the value of 1 to execute the package with any Scale Out Worker. When you set `@useanyworker` to true, any worker whose maximum task count (as specified in the worker configuration file) is not yet reached is available to run the package.
 
 -   Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. When you set `@useanyworker` to false, you have to specify the workers that are allowed to run the package by using Scale Out Manager or by calling the stored procedure `[catalog].[add_execution_worker]`.
 

@@ -1,5 +1,6 @@
 # [SQL Server PowerShell](sql-server-powershell.md)  
-# [Import the SQLPS Module](import-the-sqlps-module.md)  
+# [Import the SQLPS module](import-the-sqlps-module.md)  
+# [Download SqlServer module](download-sql-server-ps-module.md)
 # [Database engine powershell reference](database-engine-powershell-reference.md)
 # [New and updated articles](new-updated-powershell.md)
 # [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)  

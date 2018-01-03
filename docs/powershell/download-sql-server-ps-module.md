@@ -18,7 +18,7 @@ ms.assetid:
 caps.latest.revision: 113
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Download SQL Server PowerShell Module

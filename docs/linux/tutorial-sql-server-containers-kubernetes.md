@@ -25,15 +25,15 @@ This tutorial demonstrates how to configure a highly available SQL Server instan
 
 > [!div class="checklist"]
 > * Install kubectl
-> * Set up the cluster
+> * Set up the kubernetes cluster
 > * Configure storage
-> * Create a stateful set
+> * Create a deployment
 > * Connect to the container with SQL Server Management Studios (SSMS)
 > * Verify failure and recovery
 
 ### HA solution using Kubernetes running in Azure Container Service
 
-Kubernetes 1.6+ has support for Storage Classes, Persistent Volume Claims, and the Azure disk volume driver. You can create and manage your SQL Server instances natively in Kubernetes. For additional high availability, you can use a StatefulSet. This article includes Kubernetes specs on how to deploy SQL Server on Kubernetes cluster running on Azure Container Service and how to use a StatefulSet to achieve a high availability configuration similar to shared disk failover cluster instance. In this configuration, Kubernetes plays the role of the cluster orchestrator. Upon a failure of SQL Server instance running in a container, the orchestrator bootstraps another instance of the container that attaches to the same persistent storage, which maps to Azure disk.
+Kubernetes 1.6+ has support for Storage Classes, Persistent Volume Claims, and the Azure disk volume driver. You can create and manage your SQL Server instances natively in Kubernetes. This article includes Kubernetes specs on how to deploy SQL Server on Kubernetes cluster running on Azure Container Service and how to use a StatefulSet to achieve a high availability configuration similar to shared disk failover cluster instance. In this configuration, Kubernetes plays the role of the cluster orchestrator. Upon a failure of SQL Server instance running in a container, the orchestrator bootstraps another instance of the container that attaches to the same persistent storage, which maps to Azure disk.
 
 ![Kubernetes SQL Server Cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
@@ -41,131 +41,9 @@ Kubernetes 1.6+ has support for Storage Classes, Persistent Volume Claims, and t
 
 * An Azure Container Service (AKS) cluster. 
 
-   If you are not familiar with AKS clusters, you can follow the instructions on [Deploy an Azure Container Service (AKS) cluster](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) to create an AKS cluster. 
+   This tutorial creates a SQL Server container deployment in a Kubernetes cluster configured like the cluster in [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/azure/aks/kubernetes-walkthrough)
 
-<!--
-### Configuration for Azure CLI
-
-If you use Azure CLI on your local machine, verify the Azure CLI version and install `kubectl`. This section links to instructions for these tasks. 
-
-#### Verify Azure CLI version
-
-Install the Azure CLI version for your environment. See the environment specific instructions under [Install Azure CLI 2.0](http://docs.microsoft.com/cli/azure/install-azure-cli).
-
-Verify that you are running Azure CLI version 2.0.21 or later. Run `az --version` to check your version. 
-
-Configure the security context 
-
-```azurecli
-az login
-```
-
-Azure CLI returns instructions to sign in on your current device. Follow those instructions. 
-
-Set the Azure account for the cluster.
-	
-```azurecli
-az account set -s "<AzureAccount>"
-```
-
-* `<AzureAccount>` 
-    * Your Azure account.
-
-For example, to set Azure CLI to use an account named *MyAccount*, run the following command:
-
-```azurecli
-az account set -s "MyAccount"
-```
-
-#### Install kubectl
-
-Install kubectl for your environment. See the environment specific instructions under [Install and Set Up kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/).
-
-## Create the resource group
-
-Create the resource group.
-
-```azurecli
-az group create -n <ResourceGroup> -l <Location>
-```
-
-* `<ResourceGroup>` 
-   * The name of the new resource group.
-    
-* `<Location>` 
-   * The name of the Azure region.
-
-For example, to create a resource group named *MyRG* in Central US, run the following command:
-
-```azurecli
-az group create -n MyRG -l centralus
-```
-
-## Deploy an Azure Container Service Cluster (AKS)
-
-Follow the instructions on [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) to deploy an AKS cluster. 
-
-Note that Azure has a SQL Server container image. 
-
-In Azure, the Kubernetes cluster is also called the container service. You can create a container service with Azure CLI.
-
-```azurecli
-az aks create --name=<ClusterName> --resource-group=<ResourceGroup> --generate-ssh-key 
-```
-
-* `<ClusterName>` 
-   * The name of your cluster.
-
-* `<ResourceGroup>` 
-   * The name of your resource group.
-
-* `<Location>` 
-   * The name of the Azure region.
-
-For parameter information, see [az aks create](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az_aks_create).
-
-For example, the following command creates a new Azure managed Kubernetes cluster with the following parameters:
-* Name - `MyManagedCluster` 
-* Region - same as the resource group 
-* Node count - 3
-* SSH keys - automatically generated public and private key files.
-
-Run the following command:
-
-```azurecli
-az aks create --name=MyManagedCluster --resource-group=MyRG --generate-ssh-key
-```
-
-Azure creates the Kubernetes cluster and the Azure CLI returns the status. 
-
-## Authenticate into the cluster.
-
-```azurecli
-az aks get-credentials -n <ClusterName> -g <ResourceGroup> 
-```
-
-* `<ClusterName>`
-   * The name of your cluster.
-
-* `<ResourceGroup>`
-   * The name of your resource group.
-
-For example, to authenticate into the cluster you created in the previous step, run:
-
-```azurecli
-az aks get-credentials -n MyManagedCluster -g MyRG 
-```
-
-After you connect to the cluster, use `kubectl` to interact with the cluster. For example, to verify your connection to the cluster run:
-
-```cmd
-kubectl get nodes 
-```
-    
-`kubectl` returns the names, of the nodes and some status information of the kubernetes cluster you created in Azure. When three agent nodes and one master has the status "Ready" 
-
-You now have a Kubernetes cluster installed in Azure. For a detailed introduction of how to set up a Kubernetes cluster, see [Introduction to Azure Container Service (AKS)](http://docs.microsoft.com/azure/aks/intro-kubernetes). 
--->
+* A connection to the Kubernetes cluster. this tutorial uses [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), the Kubernetes command-line interfiace. 
 
 ## Configure storage
 
@@ -199,15 +77,15 @@ Configure a persistent volume, and persistent volume claim in the Kubernetes clu
          storage: 8Gi
    ```
 
-   Save the file, for example **pvc.yml**.
+   Save the file, for example **pvc.yaml**.
 
 1. Create the persistent volume claim in Kubernetes.
 
    ```azurecli
-   kubectl apply -f <Path to PVC.yaml file>
+   kubectl apply -f <Path to pvc.yaml file>
    ```
 
-   * `<Path to PVC.yaml file>`
+   * `<Path to pvc.yaml file>`
       * The location where you saved the file.
 
    The persistent volume is automatically created as an Azure storage account, and bound to the persistent volume claim. 
@@ -276,38 +154,34 @@ For additional information about secrets in Kubernetes, see [Secrets](http://kub
 
 In this example, the SQL Server container is described as a [Kubernetes deployment object](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). In this step, create a manifest to describe the container based on the Microsoft SQL Server mssql-server-linux image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret which you already applied to the Kubernetes cluster. 
 
-1. Create a yaml file describing the deployment. The following example describes a stateful set including a container based on the SQL Server container image.
+1. Create a manifest - a yaml file - to describe the deployment. The following example describes a deployment including a container based on the SQL Server container image.
 
    ```yaml
-   ---
    apiVersion: apps/v1beta1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
-#     serviceName: mssql-statefulset
      replicas: 1
      template:
        metadata:
          labels:
            app: mssql
        spec:
-#         terminationGracePeriodSeconds: 10
+         terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
            image: microsoft/mssql-server-linux
-#           ports:
-#           - containerPort: 1433
-        env:
-        - name: ACCEPT_EULA
-          value: "Y"
-        - name: MSSQL_PID
-          value: "Developer"
-        - name: SA_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mssql
-              key: SA_PASSWORD 
+           ports:
+           - containerPort: 1433
+           env:
+           - name: ACCEPT_EULA
+             value: "Y"
+           - name: SA_PASSWORD
+             valueFrom:
+               secretKeyRef:
+                 name: mssql
+                 key: SA_PASSWORD 
            volumeMounts:
            - name: mssqldb
              mountPath: /var/opt/mssql
@@ -319,7 +193,7 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    apiVersion: v1
    kind: Service
    metadata:
-     name: mssql-loadbalancer
+     name: mssql-deployment
    spec:
      selector:
        app: mssql
@@ -333,7 +207,7 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    Copy the preceding code into a new file, named `sqldeployment.yaml`. Update the following values. 
 
    * `value: "Developer"`
-     * Sets the container to run SQL Server developer edition. If it is not for production data, you can use `Developer`. If it is for production use, select the appropriate edition. Can be one of `Enterprise`, `Standard`, or `Express`. 
+     * Sets the container to run SQL Server Developer edition. Developer edition is not licesnsed for production data. If the deployment is for production use, set the appropriate edition. Can be one of `Enterprise`, `Standard`, or `Express`. 
 
      >[!NOTE]
      >For more information, see [How to license SQL Server](http://www.microsoft.com/sql-server/sql-server-2017-pricing).

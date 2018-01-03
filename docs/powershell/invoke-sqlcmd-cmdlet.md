@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sqlcmd utility, PowerShell"
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Invoke-Sqlcmd cmdlet
@@ -30,26 +30,26 @@ ms.workload: "Active"
 ## Using Invoke-Sqlcmd  
  The **Invoke-Sqlcmd** cmdlet lets you run your **sqlcmd** script files in a Windows PowerShell environment. Much of what you can do with **sqlcmd** can also be done using **Invoke-Sqlcmd**.  
   
- This is an example of calling Invoke-Sqlcmd to execute a simple query, similar to specifying **sqlcmd** with the **-Q** and **-S** options:  
+ This example calls Invoke-Sqlcmd to execute a query, similar to specifying **sqlcmd** with the **-Q** and **-S** options:  
   
 ```  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
- This is an example of calling **Invoke-Sqlcmd**, specifying an input file and piping the output to a file This is similar to specifying **sqlcmd** with the **-i** and **-o** options:  
+ This example calls **Invoke-Sqlcmd**, specifying an input file and piping the output to a file. This example is similar to specifying **sqlcmd** with the **-i** and **-o** options:  
   
 ```  
 Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -filePath "C:\MyFolder\TestSQLCmd.rpt"  
 ```  
   
- This is an example of using a Windows PowerShell array to pass multiple **sqlcmd** scripting variables to **Invoke-Sqlcmd**. The "$" characters identifying the **sqlcmd** scripting variables in the SELECT statement have been escaped by using the PowerShell back-tick "`" escape character:  
+ This example uses a Windows PowerShell array to pass multiple **sqlcmd** scripting variables to **Invoke-Sqlcmd**. The "$" characters identifying the **sqlcmd** scripting variables in the SELECT statement have been escaped by using the PowerShell back-tick "`" escape character:  
   
 ```  
 $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"  
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
- This is an example of using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell to navigate to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)], and then using the Windows PowerShell **Get-Item** cmdlet to retrieve the SMO Server object for the instance and passing it to **Invoke-Sqlcmd**:  
+ This example uses the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell to navigate to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. The example then uses the Windows PowerShell **Get-Item** cmdlet to retrieve the SMO Server object for the instance and passing it to **Invoke-Sqlcmd**:  
   
 ```  
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
@@ -91,7 +91,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
  Invoke-Sqlcmd provides a warning when it uses the path database context. You can use the -SuppressProviderContextWarning parameter to turn off the warning message. You can use the -IgnoreProviderContext parameter to tell Invoke-Sqlcmd to always use the default database for the login.  
   
 ## Comparing Invoke-Sqlcmd and the sqlcmd Utility  
- **Invoke-Sqlcmd** can be used to run many of the scripts that can be run using the **sqlcmd** utility. However, **Invoke-Sqlcmd** runs in a Windows PowerShell environment which is different than the command prompt environment that **sqlcmd** is run in. The behavior of **Invoke-Sqlcmd** has been modified to work in a Windows PowerShell environment.  
+ **Invoke-Sqlcmd** can be used to run many of the scripts that can be run using the **sqlcmd** utility. However, **Invoke-Sqlcmd** runs in a Windows PowerShell environment, which is different than the command prompt environment that **sqlcmd** is run in. The behavior of **Invoke-Sqlcmd** has been modified to work in a Windows PowerShell environment.  
   
  Not all of the **sqlcmd** commands are implemented in **Invoke-Sqlcmd**. Commands that are not implemented include the following: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**, and **:serverlist**.  
   
@@ -103,7 +103,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
- Not all of the **sqlcmd** parameters are needed in a PowerShell environment. For example, Windows PowerShell formats all output from cmdlets, so the **sqlcmd** parameters specifying formatting options are not implemented in **Invoke-Sqlcmd**. The follwoing table shows the relationship between the **Invoke-Sqlcmd** parameters and **sqlcmd** options:  
+ Not all of the **sqlcmd** parameters are needed in a PowerShell environment. For example, Windows PowerShell formats all output from cmdlets, so the **sqlcmd** parameters specifying formatting options are not implemented in **Invoke-Sqlcmd**. The following table shows the relationship between the **Invoke-Sqlcmd** parameters and **sqlcmd** options:  
   
 |Description|sqlcmd option|Invoke-Sqlcmd parameter|  
 |-----------------|-------------------|------------------------------|  
@@ -137,7 +137,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Column separator|-s|No parameter|  
 |Control output headers|-h|No parameter|  
 |Specify control characters|-k|No parameter|  
-|Fixed length display width|-Y|No parameter|  
+|Fixed-length display width|-Y|No parameter|  
 |Variable length display width|-y|No parameter|  
 |Echo input|-e|No parameter|  
 |Enable quoted identifiers|-I|No parameter|  
@@ -149,8 +149,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Connect using Windows Authentication|-E|No parameter|  
   
 ## See also  
- [Use the Database Engine cmdlets](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
- [sqlcmd Utility](../tools/sqlcmd-utility.md)   
- [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ [Use the Database Engine cmdlets](use-the-database-engine-cmdlets.md)   
+ [sqlcmd Utility](../tools/sqlcmd-utility.md)
   
   

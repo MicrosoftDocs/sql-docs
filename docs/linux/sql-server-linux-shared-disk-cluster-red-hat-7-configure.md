@@ -348,7 +348,6 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
    sudo pcs -f cfg constraint colocation add <fileShareResourceName> <sqlResourceName> 
    sudo pcs cluster cib-push cfg
-   sudo pcs op defaults timeout=<timeout_in_seconds>
    ```
 
    For example, the following script creates a SQL Server clustered resource named `mssqlha`, and a floating IP resources with IP address `10.0.0.99`. It also creates a Filesystem resource and adds constraints so all resources are colocated on same node as SQL resource. 
@@ -361,7 +360,6 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo pcs -f cfg constraint colocation add virtualip mssqlha
    sudo pcs -f cfg constraint colocation add fs mssqlha
    sudo pcs cluster cib-push cfg
-   sudo pcs resource op defaults timeout=60s
    ```
 
    After the configuration is pushed, SQL Server will start on one node. 

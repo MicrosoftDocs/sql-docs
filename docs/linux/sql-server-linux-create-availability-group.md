@@ -595,7 +595,7 @@ The AG resource that is created is a special kind of resource called a clone. Th
     >On RHEL 7.4, you may encounter a warning with the use of --master. To avoid this, use the following syntax:
         ```bash
         sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-        ```
+        
 
     **SUSE Linux Enterprise Server (SLES)**
     

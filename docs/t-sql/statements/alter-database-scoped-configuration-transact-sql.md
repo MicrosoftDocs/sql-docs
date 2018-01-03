@@ -193,7 +193,7 @@ These examples demonstrate the use of ALTER DATABASE SCOPED CONFIGURATION
 This example grant permission required to execute ALTER DATABASE SCOPED CONFIGURATION     
 to user [Joe].  
   
-```tsql  
+```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
@@ -201,14 +201,14 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 This example sets MAXDOP = 1 for a primary database and MAXDOP = 4 for a secondary database in a geo-replication scenario.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
 This example sets MAXDOP for a secondary database to be the same as it is set for its primary database in a geo-replication scenario.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
@@ -216,13 +216,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 
 This example sets LEGACY_CARDINALITY_ESTIMATION to ON for a secondary database in a geo-replication scenario.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 This example sets LEGACY_CARDINALITY_ESTIMATION for a secondary database as it is for its primary database in a geo-replication scenario.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
@@ -230,20 +230,20 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 
 This example sets PARAMETER_SNIFFING to OFF for a primary database in a geo-replication scenario.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;  
 ```  
   
 This example sets PARAMETER_SNIFFING to OFF for a primary database in a geo-replication scenario.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 This example sets PARAMETER_SNIFFING for secondary database as it is on primary database   
 in a geo-replication scenario.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
@@ -252,7 +252,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 Set QUERY_OPTIMIZER_HOTFIXES to ON for a primary database   
 in a geo-replication scenario.  
 
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
 ```  
   
@@ -260,7 +260,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 
 This example clears the procedure cache (possible only for a primary database).  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
 
@@ -270,7 +270,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 This example disables the identity cache.
 
-```tsql 
+```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
 ```
 

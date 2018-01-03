@@ -37,14 +37,14 @@ ms.workload: "Inactive"
   
 2.  Turn [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) on with the following statement:  
   
-    ```t-sql  
+    ```sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
      To turn [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) on, use the following statement:  
   
-    ```t-sql  
+    ```sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
@@ -55,7 +55,7 @@ ms.workload: "Inactive"
   
 3.  Execute a query. Example:  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  

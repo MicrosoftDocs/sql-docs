@@ -38,7 +38,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   

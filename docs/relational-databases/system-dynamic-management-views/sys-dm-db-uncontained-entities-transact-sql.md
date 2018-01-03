@@ -73,7 +73,7 @@ ms.workload: "Inactive"
 ## Examples  
  The following example creates a procedure named P1, and then queries `sys.dm_db_uncontained_entities`. The query reports that P1 uses **sys.endpoints** which is outside of the database.  
   
-```tsql  
+```sql  
 CREATE DATABASE Test;  
 GO  
   

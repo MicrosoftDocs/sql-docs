@@ -92,7 +92,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ### A. Setting an option on a specific index  
  The following example disallows page locks on the `IX_Customer_TerritoryID` index on the `Customer` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',  
@@ -102,7 +102,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
 ### B. Setting an option on all indexes on a table  
  The following example disallows row locks on all indexes associated with the `Product` table. The `sys.indexes` catalog view is queried before and after executing the `sp_indexoption` procedure to show the results of the statement.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options for all indexes on the table.  
@@ -124,7 +124,7 @@ GO
 ### C. Setting an option on a table with no clustered index  
  The following example disallows page locks on a table with no clustered index (a heap). The `sys.indexes` catalog view is queried before and after the `sp_indexoption` procedure is executed to show the results of the statement.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options of the table.   

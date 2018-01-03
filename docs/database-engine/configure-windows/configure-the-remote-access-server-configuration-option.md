@@ -102,7 +102,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `remote access` option to `0`.  
   
-```tsql  
+```sql  
 EXEC sp_configure 'remote access', 0 ;  
 GO  
 RECONFIGURE ;  

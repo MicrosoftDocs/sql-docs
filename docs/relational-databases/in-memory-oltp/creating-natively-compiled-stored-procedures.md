@@ -40,7 +40,7 @@ ms.workload: "On Demand"
   
  Natively compiled stored procedures are created using [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). The following example shows a memory-optimized table and a natively compiled stored procedure used for inserting rows into the table.  
   
-```tsql  
+```sql  
 create table dbo.Ord  
 (OrdNo integer not null primary key nonclustered,   
  OrdDate datetime not null,   

@@ -66,7 +66,7 @@ ms.workload: "Inactive"
   
  DAC operations, such as delete, do not remove rows from **sysdac_history_internal**. You can use the following query to manually delete the rows for DACs no longer deployed on an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  

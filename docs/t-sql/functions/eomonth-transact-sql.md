@@ -94,7 +94,7 @@ Result
   
 ### C. EOMONTH with and without the month_to_add parameter  
   
-```tsql  
+```sql  
 DECLARE @date DATETIME = GETDATE();  
 SELECT EOMONTH ( @date ) AS 'This Month';  
 SELECT EOMONTH ( @date, 1 ) AS 'Next Month';  

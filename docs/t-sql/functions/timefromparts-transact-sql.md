@@ -92,7 +92,7 @@ Result
   
 3.  When *fractions* has a value of 500 and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
   
-```tsql  
+```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 50, 2 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 500, 3 );  

@@ -88,7 +88,7 @@ ms.workload: "Inactive"
   
 5.  In the **Command** box, type the following statement to create a table named after the previous month, containing rows older than the start of the current month:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -114,7 +114,7 @@ ms.workload: "Inactive"
   
 5.  In the **Command** box, type the following statement to create an attachments table named after the previous month, containing the attachments that correspond to the messages transferred in the previous step:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -141,7 +141,7 @@ ms.workload: "Inactive"
   
 5.  In the **Command** box, type the following statement to create a log table named after the previous month, containing the log entries that correspond to the messages transferred in the earlier step:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -168,7 +168,7 @@ ms.workload: "Inactive"
   
 5.  In the **Command** box, type the following statement to remove rows older than the current month from the Database Mail tables:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @CopyDate ;  
@@ -188,7 +188,7 @@ ms.workload: "Inactive"
   
 4.  In the **Command** box, type the following statement to remove rows older than the current month from the Database Mail event log:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @CopyDate ;  

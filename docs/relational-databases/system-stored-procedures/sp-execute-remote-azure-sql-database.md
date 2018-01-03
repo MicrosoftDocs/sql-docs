@@ -88,7 +88,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ### Simple example  
  The following example creates and executes a simple SELECT statement on a remote database.  
   
-```tsql  
+```sql  
 EXEC sp_execute_remote  
     N'MyExtSrc',  
     N'SELECT COUNT(w_id) AS Count_id FROM warehouse'   

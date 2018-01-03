@@ -160,7 +160,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find the average fragmentation percentage of all indexes  
@@ -254,7 +254,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
@@ -274,7 +274,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize all indexes on the HumanResources.Employee table.  

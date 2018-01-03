@@ -54,7 +54,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
 ## Examples  
  The following example removes the database scoped credential called `SalesAccess`.  
   
-```tsql  
+```sql  
 DROP DATABASE SCOPED CREDENTIAL AppCred;  
 GO  
 ```  

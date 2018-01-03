@@ -64,7 +64,7 @@ Starting with SQL Server 2016, memory-optimized tables [support off-row columns]
 - A max_length of -1 indicates a large object (LOB) column.
 
 
-```tsql
+```sql
 SELECT
         OBJECT_NAME(m.object_id) as [table],
         c.name                   as [column],

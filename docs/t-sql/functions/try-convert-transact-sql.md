@@ -69,7 +69,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ### A. TRY_CONVERT returns null  
  The following example demonstrates that TRY_CONVERT returns null when the cast fails.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CONVERT(float, 'test') IS NULL   
     THEN 'Cast failed'  
@@ -90,7 +90,7 @@ Cast failed
   
  The following example demonstrates that the expression must be in the expected format.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
 GO  
@@ -109,7 +109,7 @@ NULL
 ### B. TRY_CONVERT fails with an error  
  The following example demonstrates that TRY_CONVERT returns an error when the cast is explicitly not permitted.  
   
-```tsql  
+```sql  
 SELECT TRY_CONVERT(xml, 4) AS Result;  
 GO  
 ```  

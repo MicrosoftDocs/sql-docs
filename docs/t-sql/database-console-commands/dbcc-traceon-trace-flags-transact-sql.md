@@ -163,13 +163,13 @@ Use the `DBCC TRACESTATUS` command to determine which trace flags are currently 
 ## Examples  
  The following example sets trace flag 3205 on for all sessions at the server level by using DBCC TRACEON.  
   
-```t-sql  
+```sql  
 DBCC TRACEON (3205,-1);  
 ```
 
 You can enable all plan-affecting hotfixes controlled by trace flags 4199 and 4137 for a particular query.
   
-```t-sql
+```sql
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  

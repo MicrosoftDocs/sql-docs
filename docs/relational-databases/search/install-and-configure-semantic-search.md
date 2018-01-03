@@ -33,7 +33,7 @@ ms.workload: "Inactive"
   
  A return value of 1 indicates that Full-Text Search and Semantic Search are installed; a return value of 0 indicates that they are not installed.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -51,7 +51,7 @@ GO
   
  If the semantic language statistics database is installed and registered for the instance, then the query results contain a single row of information about the database.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  
 GO  
 ```  
@@ -84,7 +84,7 @@ GO
   
  By default, the name of the database is **semanticsdb**. You can optionally give the database a different name when you attach it. You have to provide this name when you register the database in the subsequent step.  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -98,7 +98,7 @@ GO
   
  Call the stored procedure [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md) and provide the name that you gave to the database when you attached it.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -123,7 +123,7 @@ GO
    
  Call the stored procedure [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md). You do not have to provide the name of the database since an instance can have only one semantic language statistics database.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -132,7 +132,7 @@ GO
  
  Call the stored procedure [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) and provide the name of the database.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

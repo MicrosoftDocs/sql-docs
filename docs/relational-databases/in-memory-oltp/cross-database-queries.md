@@ -31,7 +31,7 @@ This example illustrates a method to transfer data from one database into a memo
 
 1. Create Test Objects.  Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -83,7 +83,7 @@ This example illustrates a method to transfer data from one database into a memo
 
 2.  Attempt cross-database query. Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -94,7 +94,7 @@ This example illustrates a method to transfer data from one database into a memo
 
 3.  Create a memory-optimized table type.  Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -110,7 +110,7 @@ This example illustrates a method to transfer data from one database into a memo
     ```
 
 4.  Re-attempt the cross-database query.  This time the source data will first be transferred to a memory-optimized table variable.  Then the data from the tale variable will be transferred to the memory-optimized table.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     

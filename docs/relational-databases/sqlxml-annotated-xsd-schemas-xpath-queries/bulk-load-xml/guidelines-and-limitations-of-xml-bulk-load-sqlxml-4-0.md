@@ -168,7 +168,7 @@ ms.workload: "Inactive"
   
 -   SchemaGen only provides basic functionality for generating the relational schema from annotated XSD. The user should modify the generated tables manually, if needed.  
   
--   Where more than relationship exists between tables,SchemaGen tries to create a single relationship that includes all the keys involved between the two tables. This limitation might be the cause of a [!INCLUDE[tsql](../../../includes/tsql-md.md)] error.  
+-   Where more than one relationship exists between tables, SchemaGen tries to create a single relationship that includes all the keys involved between the two tables. This limitation might be the cause of a [!INCLUDE[tsql](../../../includes/tsql-md.md)] error.  
   
 -   When you are bulk loading XML data into a database, there must be at least one attribute or child element in the mapping schema that is mapped to a database column.  
   

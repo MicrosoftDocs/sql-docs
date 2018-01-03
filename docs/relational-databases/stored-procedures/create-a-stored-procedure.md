@@ -74,7 +74,7 @@ ms.workload: "Active"
   
 7.  In the **Query Editor**, replace the SELECT statement with the following statement:  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  

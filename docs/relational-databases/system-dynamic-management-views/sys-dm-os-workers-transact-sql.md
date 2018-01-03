@@ -89,7 +89,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 ## Examples  
  You can use the following query to find out how long a worker has been running in a SUSPENDED or RUNNABLE state.  
   
-```tsql
+```sql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  

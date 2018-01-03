@@ -33,7 +33,7 @@ ms.workload: "On Demand"
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This statement enables several database configuration settings at the **individual database** level. This statement is available in both [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Those settings are:  
+  This statement enables several database configuration settings at the **individual database** level. This statement is available in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and in SQL Server beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Those settings are:  
   
 - Clear procedure cache.  
   

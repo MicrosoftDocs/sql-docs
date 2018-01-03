@@ -592,10 +592,8 @@ The AG resource that is created is a special kind of resource called a clone. Th
     ```
 
     >[!NOTE]
-    >On RHEL 7.4, you may encounter a warning with the use of --master. To avoid this, use the following syntax:
-        ```bash
-        sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-        ```
+    >On RHEL 7.4, you may encounter a warning with the use of --master. To avoid this, use
+    >`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     
@@ -688,5 +686,5 @@ In this tutorial, you learned how to create and configure an availability group 
 For most AG administration tasks, including upgrades and failing over, see:
 
 > [!div class="nextstepaction"]
-> [Operate HA availability group for SQL Server on Linux](sql-server-linux-availability-group-failover-ha.md).
+> [Operate HA availability group for SQL Server on Linux](sql-server-linux-availability-group-failover-ha.md)
 

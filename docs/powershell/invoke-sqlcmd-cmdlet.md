@@ -150,7 +150,6 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
 ## See also  
  [Use the Database Engine cmdlets](use-the-database-engine-cmdlets.md)   
- [sqlcmd Utility](../tools/sqlcmd-utility.md)   
- [Use the sqlcmd Utility](../tools/sqlcmd-use-the-utility.md)  
+ [sqlcmd Utility](../tools/sqlcmd-utility.md)
   
   

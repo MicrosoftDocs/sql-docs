@@ -47,7 +47,7 @@ ms.workload: "Inactive"
   
 -   **sqlcmd** variables and commands. For information about these variables and commands, see the Remarks section of [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. For more information about the [!INCLUDE[tsql](../includes/tsql-md.md)] language, see [Transact-SQL Reference &#40;Database Engine&#41;](../t-sql/transact-sql-reference-database-engine.md).  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] statements. For more information about the [!INCLUDE[tsql](../includes/tsql-md.md)] language, see [Transact-SQL Reference &#40;Database Engine&#41;](../t-sql/transact-sql-reference-database-engine.md).  
   
 -   XQuery statements. For more information about the XQuery language supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md).  
   

@@ -22,7 +22,7 @@ ms.workload: "Inactive"
 # Restore and recovery of memory-optimized tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-The basic mechanism to recover or restore a database with memory-optimized tables is similar to the mechanism for databases with only disk-based tables. But unlike disk-based tables, memory-optimized tables must be loaded into memory before the database is available for user access. This adds a new step in the database recovery.  
+The basic mechanism to recover or restore a database that uses memory-optimized tables is similar to the mechanism for a database that uses only disk-based tables. But unlike disk-based tables, memory-optimized tables must be loaded into memory before the database is available for user access. This requirement adds a new step in the database recovery.  
   
 If the server does not have enough available memory, database recovery fails and the database is marked as suspect. To resolve this problem, see [Resolve out-of-memory issues](resolve-out-of-memory-issues.md). 
   
@@ -62,7 +62,7 @@ Loading memory-optimized tables into memory can affect performance of the recove
     ![Data streaming to memory-optimized tables](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Data streaming to memory-optimized tables")  
   
 ## Specific cases of slow load times
-Memory-optimized tables can generally be loaded into memory at the speed of I/O, but loading data rows into memory will sometimes be slower. Specific cases are:  
+Memory-optimized tables can generally be loaded into memory at the speed of I/O, but loading data rows into memory is sometimes slower. Specific cases are:  
   
 -   Low bucket count for a hash index can lead to excessive collision, which causes data row inserts to be slower. This generally results in high CPU utilization throughout, and especially toward the end of recovery. If you configured the hash index correctly, it should not affect the recovery time.  
   

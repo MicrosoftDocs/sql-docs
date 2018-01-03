@@ -20,7 +20,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Encode and Decode SQL Server Identifiers
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   SQL Server-delimited identifiers sometimes contain characters not supported in Windows PowerShell paths. These characters can be specified by encoding their hexadecimal values.  
   
 1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
@@ -30,7 +30,7 @@ ms.workload: "Inactive"
 ## Before You Begin  
  Characters that are not supported in Windows PowerShell path names can be represented, or encoded, as the "%" character followed by the hexadecimal value for the bit pattern that represents the character, as in "**%**xx". Encoding can always be used to handle characters that are not supported in Windows PowerShell paths.  
   
- The **Encode-SqlName** cmdlet takes as input a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier. It outputs a string with all the characters that are not supported by the Windows PowerShell language encoded with "%xx". The **Decode-SqlName** cmdlet takes as input an encoded [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and returns the original identifier.  
+ The **Encode-SqlName** cmdlet takes as input a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifier. It outputs a string with all the characters that are not supported by the Windows PowerShell language encoded with "%xx". The **Decode-SqlName** cmdlet takes as input an encoded [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifier and returns the original identifier.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  The **Encode-Sqlname** and **Decode-Sqlname** cmdlets only encode or decode the characters that are allowed in SQL Server-delimited identifiers, but are not supported in PowerShell paths. The following are the characters encoded by **Encode-SqlName** and decoded by **Decode-SqlName**:  
@@ -75,8 +75,8 @@ Decode-SqlName "Table%3ATest"
 ```  
   
 ## See Also  
- [SQL Server Identifiers in PowerShell](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
+ [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)   
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell](sql-server-powershell.md)  
   
   

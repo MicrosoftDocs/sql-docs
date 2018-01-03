@@ -20,7 +20,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server PowerShell License Terms
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **MICROSOFT SOFTWARE LICENSE TERMS**
 
 **MICROSOFT WINDOWS POWERSHELL EXTENSIONS FOR MICROSOFT SQL SERVER**

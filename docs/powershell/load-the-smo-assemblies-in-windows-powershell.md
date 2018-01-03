@@ -20,15 +20,15 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Load the SMO Assemblies in Windows PowerShell
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   This article describes how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that do not use the SQL Server PowerShell provider.  
   
 ## Before You Begin  
- The preferred mechanism for loading the SMO assemblies is to load the **sqlps** module. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider included in the module automatically loads the SMO assemblies, and also implements features that extend the usefulness of the SMO objects in PowerShell scripts.  For more information, see [Import the SQLPS Module](../../relational-databases/scripting/import-the-sqlps-module.md).
+ The preferred mechanism for loading the SMO assemblies is to load the **sqlps** module. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider included in the module automatically loads the SMO assemblies, and also implements features that extend the usefulness of the SMO objects in PowerShell scripts.  For more information, see [Import the SQLPS Module](import-the-sqlps-module.md).
   
  There are two cases where you may need to load the SMO assemblies directly:  
   
--   If your script references a SMO object before the first command that references the provider or cmdlets from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-ins.  
+-   If your script references a SMO object before the first command that references the provider or cmdlets from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-ins.  
   
 -   You want to port SMO code from another language, such as C# or Visual Basic, which does not use the provider or cmdlets.  
   
@@ -89,6 +89,6 @@ Pop-Location
 ```  
   
 ## See Also  
- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
+ [SQL Server PowerShell](sql-server-powershell.md)  
   
   

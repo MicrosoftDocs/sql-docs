@@ -20,8 +20,8 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Convert URNs to SQL Server Provider Paths
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object model (SMO) builds Uniform Resource Names (URN) for its objects. Each URN uniquely identifies a SMO object, and can be converted to a SQL Server PowerShell provider path by using the **Convert-UrnToPath** cmdlet.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object model (SMO) builds Uniform Resource Names (URN) for its objects. Each URN uniquely identifies a SMO object, and can be converted to a SQL Server PowerShell provider path by using the **Convert-UrnToPath** cmdlet.  
   
 ## Converting URNs to Paths  
  Each URN has the same information as a path to the object, but in a different form. For example, this example shows the path to a table:  
@@ -43,8 +43,8 @@ Get-Help Convert-UrnToPath -Examples
 ```  
   
 ## See Also  
- [Query Expressions and Uniform Resource Names](../../powershell/query-expressions-and-uniform-resource-names.md)   
- [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
+ [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md)   
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell](sql-server-powershell.md)  
   
   

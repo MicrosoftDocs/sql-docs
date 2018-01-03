@@ -149,8 +149,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Connect using Windows Authentication|-E|No parameter|  
   
 ## See also  
- [Use the Database Engine cmdlets](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
+ [Use the Database Engine cmdlets](use-the-database-engine-cmdlets.md)   
  [sqlcmd Utility](../tools/sqlcmd-utility.md)   
- [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ [Use the sqlcmd Utility](../tools/sqlcmd-use-the-utility.md)  
   
   

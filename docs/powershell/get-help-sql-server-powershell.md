@@ -24,13 +24,13 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Get Help SQL Server PowerShell
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  There are several sources of information about using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider for Windows PowerShell and cmdlets. This includes the help that is available in the Windows PowerShell environment.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  There are several sources of information about using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell and cmdlets. This includes the help that is available in the Windows PowerShell environment.  
   
 ## Before You Begin  
  To learn about Windows PowerShell, see [Windows PowerShell Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=217083).  
   
- For an overview of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlets and provider, see [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
+ For an overview of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlets and provider, see [SQL Server PowerShell](sql-server-powershell.md).  
   
 ### Help in the Windows PowerShell Environment  
  Use the **Get-Help** cmdlet to get help in the Windows PowerShell environment. **Get-Help** provides basic help for the Windows PowerShell language and the various cmdlets and providers available in Windows PowerShell.  
@@ -38,18 +38,18 @@ ms.workload: "Inactive"
  For more information on the ways you can use **Get-Help**, see [Get-Help: Getting Help](http://go.microsoft.com/fwlink/?LinkId=102136).  
   
 ### SQL Server PowerShell Provider Help  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider implements several folders on a SQLSERVER virtual drive, such as the SQLSERVER:\SQL and SQLSERVER:\DAC folders. Each folder is associated with one of the SQL Server manageability object models. While you can list the methods and properties associated with each node in a SQL Server path, you cannot get help for them in the PowerShell environment. For a table of the folders with links to the associated programming reference, see [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md).  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider implements several folders on a SQLSERVER virtual drive, such as the SQLSERVER:\SQL and SQLSERVER:\DAC folders. Each folder is associated with one of the SQL Server manageability object models. While you can list the methods and properties associated with each node in a SQL Server path, you cannot get help for them in the PowerShell environment. For a table of the folders with links to the associated programming reference, see [SQL Server PowerShell Provider](sql-server-powershell-provider.md).  
   
 ### Invoke-Sqlcmd Help  
  The **Invoke-Sqlcmd** cmdlet takes as input any query or script file that can be run by the **sqlcmd** utility. You can use **Get-Help** to get information about **Invoke-Sqlcmd** and its parameters, but there is no **Get-Help** coverage for the **sqlcmd** queries.  
   
  The *-Query* or *-QueryFromFile* input can contain:  
   
--   **sqlcmd** variables and commands. For information about these variables and commands, see the Remarks section of [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
+-   **sqlcmd** variables and commands. For information about these variables and commands, see the Remarks section of [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. For more information about the [!INCLUDE[tsql](../../includes/tsql-md.md)] language, see [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. For more information about the [!INCLUDE[tsql](../includes/tsql-md.md)] language, see [Transact-SQL Reference &#40;Database Engine&#41;](../t-sql/transact-sql-reference-database-engine.md).  
   
--   XQuery statements. For more information about the XQuery language supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [XQuery Language Reference &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
+-   XQuery statements. For more information about the XQuery language supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [XQuery Language Reference &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md).  
   
 ## Get Help for a SQL Server cmdlet  
  **To get help for a cmdlet**  
@@ -96,7 +96,7 @@ Get-Help -Category provider
 1.  Run Get-Help specifying the name SQLServer  
   
 ### Example: Get SQL Server Provider Help  
- This example returns basic information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider:  
+ This example returns basic information about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider:  
   
 ```  
 Get-Help SQLServer  
@@ -125,7 +125,7 @@ $MyVar | Get-Member -Type Properties
 ```  
   
 ## See Also  
- [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [Use the Database Engine cmdlets](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [Use the Database Engine cmdlets](use-the-database-engine-cmdlets.md)  
   
   

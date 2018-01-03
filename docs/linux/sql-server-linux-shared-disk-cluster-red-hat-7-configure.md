@@ -355,7 +355,7 @@ At this point both instances of SQL Server are configured to run with the databa
    ```bash
    sudo pcs cluster cib cfg
    sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
-   sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
+   sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha
    sudo pcs -f cfg constraint colocation add fs mssqlha

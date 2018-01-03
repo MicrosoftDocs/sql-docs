@@ -29,6 +29,6 @@
 # How-to guides
 # Reference
 ## [sqlserver module reference](https://docs.microsoft.com/powershell/module/sqlserver/?toc=/sql/powershell/toc.json)
-## [sqlps module reference](https://docs.microsoft.com/powershell/module/sqlps/?view=sqlserver-ps)
+## [sqlps module reference](https://docs.microsoft.com/powershell/module/sqlps/?toc=/sql/powershell/toc.json)
 # Resources
 ## [New and updated articles](new-updated-powershell.md)

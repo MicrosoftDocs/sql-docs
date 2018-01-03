@@ -15,10 +15,11 @@ ms.topic: "article"
 helpviewer_keywords: 
   - "stored procedures [SQL Server], returning data"
   - "returning data from stored procedure"
-ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
+ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
+
 manager: "jhubbard"
 ms.workload: "Active"
 ---
@@ -26,11 +27,39 @@ ms.workload: "Active"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > For content related to previous versions of SQL Server, see [Return Data from a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
-  There are two ways of returning result sets or data from a procedure to a calling program: output parameters and return codes. This topic provides information on both approaches.  
+  There are three ways of returning data from a procedure to a calling program: result sets, output parameters, and return codes. This topic provides information on the three approaches.  
+  
+## Returning Data Using Result Sets
+ If you include a SELECT statement in the body of a stored procedure (but not a SELECT ... INTO or INSERT ... SELECT), the rows specified by the SELECT statement will be sent directly to the client.  The stored procedure execution will not continue to the next statement until the result set has been completely sent to the client.  If multiple such SELECT statements are run during the exeuction of the stored proceudre, multiple result sets will be sent to the client.  This behavior also applies to nested TSQL batches, nested stored procedures and top-level TSQL batches.
+ 
+ 
+ ### Examples of Returning Data Using a Result Set 
+  The following example shows a stored procedure that returns the LastName and SalesYTD values for all SalesPerson rows that also appear in the vEmployee view.
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
   
 ## Returning Data Using an Output Parameter  
  If you specify the OUTPUT keyword for a parameter in the procedure definition, the procedure can return the current value of the parameter to the calling program when the procedure exits. To save the value of the parameter in a variable that can be used in the calling program, the calling program must use the OUTPUT keyword when executing the procedure. For more information about what data types can be used as output parameters, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
-  
+
+
+
 ### Examples of Output Parameter  
  The following example shows a procedure with an input and an output parameter. The `@SalesPerson` parameter would receive an input value specified by the calling program. The SELECT statement uses the value passed into the input parameter to obtain the correct `SalesYTD` value. The SELECT statement also assigns the value to the `@SalesYTD` output parameter, which returns the value to the calling program when the procedure exits.  
   
@@ -97,8 +126,7 @@ GO
 -   For a forward-only cursor, if the cursor is positioned before the first row when the procedure exits, the entire result set is returned to the calling batch, procedure, or trigger. When returned, the cursor position is set before the first row.  
   
 -   For a forward-only cursor, if the cursor is positioned beyond the end of the last row when the procedure exits, an empty result set is returned to the calling batch, procedure, or trigger.  
-  
-    > [!NOTE]  
+      > [!NOTE]  
     >  An empty result set is not the same as a null value.  
   
 -   For a scrollable cursor, all the rows in the result set are returned to the calling batch, procedure, or trigger when the procedure exits. When returned, the cursor position is left at the position of the last fetch executed in the procedure.  
@@ -108,7 +136,7 @@ GO
     > [!NOTE]  
     >  The closed state matters only at return time. For example, it is valid to close a cursor part of the way through the procedure, to open it again later in the procedure, and return that cursor's result set to the calling batch, procedure, or trigger.  
   
-### Examples of Cursor Output Parameters  
+### Examples of Cursor Output Parameters   
  In the following example, a procedure is created that specified an output parameter, `@currency_cursor` using the **cursor** data type. The procedure is then called in a batch.  
   
  First, create the procedure that declares and then opens a cursor on the Currency table.  
@@ -158,6 +186,8 @@ EXECUTE @result = my_proc;
 ```  
   
  Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the @@ERROR function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement.  
+ Before the introduction of TRY/CATCH/THROW error handling in TSQL return codes were sometimes required to determine the success or failure of stored procedures.  Stored Procedures should always indicate failure with an error (generated with THROW/RAISERROR if neccessary), and not rely on a return code to indicate the failure.  Also you should avoid using the return code to return application data.
+ 
   
 ### Examples of Return Codes  
  The following example shows the `usp_GetSalesYTD` procedure with error handling that sets special return code values for various errors. The following table shows the integer value that is assigned by the procedure to each possible error, and the corresponding meaning for each value.  

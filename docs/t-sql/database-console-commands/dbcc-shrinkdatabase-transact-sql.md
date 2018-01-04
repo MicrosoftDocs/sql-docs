@@ -107,7 +107,7 @@ The database being shrunk does not have to be in single user mode; other users c
 You cannot shrink a database while the database is being backed up. Conversely, you cannot backup a database while a shrink operation on the database is in process.
 
 >[!NOTE]
-> Currently Azure SQL Data Warehouse does not support DBCC SHRINKDATABASE with TDE enabled.
+> Currently, Azure SQL Data Warehouse does not support DBCC SHRINKDATABASE with TDE enabled.
   
 ## How DBCC SHRINKDATABASE Works  
 DBCC SHRINKDATABASE shrinks data files on a per-file basis, but shrinks log files as if all the log files existed in one contiguous log pool. Files are always shrunk from the end.

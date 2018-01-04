@@ -33,7 +33,7 @@ This tutorial demonstrates how to configure a highly available SQL Server instan
 
 ### HA solution using Kubernetes running in Azure Container Service
 
-Kubernetes 1.6+ has support for Storage Classes, Persistent Volume Claims, and the Azure disk volume driver. You can create and manage your SQL Server instances natively in Kubernetes. This article includes Kubernetes specs on how to deploy SQL Server on Kubernetes cluster running on Azure Container Service and how to use a StatefulSet to achieve a high availability configuration similar to shared disk failover cluster instance. In this configuration, Kubernetes plays the role of the cluster orchestrator. Upon a failure of SQL Server instance running in a container, the orchestrator bootstraps another instance of the container that attaches to the same persistent storage, which maps to Azure disk.
+Kubernetes 1.6+ has support for Storage Classes, Persistent Volume Claims, and the Azure disk volume driver. You can create and manage your SQL Server instances natively in Kubernetes. This article includes Kubernetes specs on how to deploy SQL Server on Kubernetes cluster running on Azure Container Service and how to use a deployment to achieve a high availability configuration similar to shared disk failover cluster instance. In this configuration, Kubernetes plays the role of the cluster orchestrator. Upon a failure of SQL Server instance running in a container, the orchestrator bootstraps another instance of the container that attaches to the same persistent storage, which maps to Azure disk.
 
 ![Kubernetes SQL Server Cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
@@ -109,7 +109,7 @@ Configure a persistent volume, and persistent volume claim in the Kubernetes clu
 
     ![Describe volume](media/tutorial-sql-server-containers-kubernetes/describe-volume.png)
 
-    Note the value for volume in the command prompt image above, matches part of the name of the blob in the following image from Azure portal: 
+    The value for volume, matches part of the name of the blob in the following image from Azure portal: 
 
     ![Describe volume portal](media/tutorial-sql-server-containers-kubernetes/describe-volume-portal.png)
 
@@ -226,7 +226,7 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
 
     Save the file, for example **sqldeployment.yaml**.
 
-1. Create the stateful set.
+1. Create the deployment.
 
    ```azurecli
    kubectl apply -f <Path to sqldeployment.yaml file>
@@ -235,7 +235,9 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    * `<Path to sqldeployment.yaml file>`
       * `The location where you saved the file.
 
-   The stateful set is created, with SQL Server running as a pod in the kubernetes cluster with connection to persistent storage. 
+   The deployment is created, with SQL Server running as a pod in the kubernetes cluster with connection to persistent storage. 
+
+   Learn more about [Kubernetes Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
 1. Verify the services are running. Run the following command:
 
@@ -278,7 +280,7 @@ In this tutorial, you learned how to
 > * Install kubectl
 > * Set up the cluster
 > * Configure storage
-> * Create a stateful set
+> * Create deployment
 > * Connect to the container with SSMS
 > * Verify failure and recovery
 

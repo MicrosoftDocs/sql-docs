@@ -99,6 +99,8 @@ Configure a persistent volume, and persistent volume claim in the Kubernetes clu
    * `<PersistentVolumeClaim>`
       * The name of the persistent volume claim.
 
+    ![Persistent volume claim command](media/tutorial-sql-server-containers-kubernetes/02_pvc_cmd.png)
+
     In the preceding step, the persistent volume claim is named `mssql-data`. To see the metadata about the persistent volume claim, run the following command:
 
     ```azurecli
@@ -138,7 +140,7 @@ To store the SA password for SQL Server, create a secret in the Kubernetes clust
    ```
 
    * `<base64 encoded Password>`
-      * In the manifest, the password for the SA account is encoded as base64. For example, if your complex password is `MyC0m9l&xP@ssw0rd`, pass that string through a base64 encoder, like a bash shell.  The following script shows how to encode the password as base64 in bash. Use the `-n` parameter to prevent a newline character. 
+      * In the manifest, the password for the SA account is encoded as base64. To set your password in the manifest, convert the password to base64. You can use a base64 encoder in a bash shell. For example, if your complex password is `MyC0m9l&xP@ssw0rd`, pass that string through a base64 encoder. The following script shows how to encode the password as base64 in bash. Use the `-n` parameter to prevent a newline character. 
       
       ```bash
       echo -n "MyC0m9l&xP@ssw0rd" | base64
@@ -153,7 +155,9 @@ To store the SA password for SQL Server, create a secret in the Kubernetes clust
    ```azurecli
    kubectl apply -f <Path to secret.yaml file>
    ```
-   
+
+   ![Secret command](media/tutorial-sql-server-containers-kubernetes/03_secret_cmd.png)
+
 For more information about secret management in Kubernetes, see [Secrets](http://kubernetes.io/docs/concepts/configuration/secret/).
 
 ## Create the SQL Server container
@@ -235,7 +239,14 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    * `<Path to sqldeployment.yaml file>`
       * `The location where you saved the file.
 
-   The deployment is created, with SQL Server running as a pod in the kubernetes cluster with connection to persistent storage. 
+   ![Deployment command](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
+
+   The deployment is created, with SQL Server running as a pod in the kubernetes cluster with connection to persistent storage.
+
+   To view the status of the pod, type `kubectl get pod`.
+
+   ![Get pod command](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
+ 
 
    Learn more about [Kubernetes Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
@@ -245,11 +256,17 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    kubectl get services 
    ```
 
-   Note the IP address for the SQL Server container. 
+   Note the IP address for the SQL Server container. Use this IP address to connect to SQL Server. 
+
+   For additional information about the status of the objects in the Kubernetes cluster, run:
+
+   `az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>` 
 
 ## Connect to the container with SSMS
 
-If you configured the container as described, you can connect with SSMS from outside of the Azure virtual network. To access via SSMS, use the external IP Address. If needed, supply the port of the instance. For example, `1433`.
+If you configured the container as described, you can connect with SSMS from outside of the Azure virtual network. To access via SSMS, use the external IP Address. If needed, supply the port of the instance. For example, `1433`. 
+
+Use the password that you configured above. Do not use the base64 encoded value. 
 
 ## Verify failure and recovery
 

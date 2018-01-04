@@ -13,7 +13,6 @@ ms.technology:
   - "dbe-json"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords: ""
 ms.assetid: 
 caps.latest.revision: 
 author: "douglaslMS"

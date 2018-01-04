@@ -226,12 +226,14 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
 
    * `name: SA_PASSWORD`
       * Configures the container image to set SA password as defined in this section.
+
       ```
                  valueFrom:
                   secretKeyRef:
                     name: mssql
                     key: SA_PASSWORD 
       ```
+
        When Kubernetes deploys the container, it will refer to the secret named `mssql` to get the value for the password. 
 
    >[!NOTE]

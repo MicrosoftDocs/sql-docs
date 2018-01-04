@@ -300,16 +300,16 @@ To verify failure and recovery you can delete the pod. Do the following steps:
 
 Kubernetes automatically recreates the pod to recover a SQL Server container and connect to the persistent storage.
 
-## Next steps
 
 In this tutorial, you learned how to 
 > [!div class="checklist"]
-> * Install kubectl
-> * Set up the cluster
-> * Configure storage
+> * Create storage
+> * Create SA password
 > * Create deployment
-> * Connect to the container with SSMS
+> * Connect with SQL Server Management Studios (SSMS)
 > * Verify failure and recovery
+
+## Next steps
 
 > [!div class="nextstepaction"]
 >[Intro - Kubernetes](http://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)

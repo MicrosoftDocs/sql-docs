@@ -3264,6 +3264,11 @@
             "source_path": "docs/relational-databases/scripting/sql-server-powershell-license-terms.md",
             "redirect_url": "/sql/powershell/sql-server-powershell-license-terms",
             "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/ssms/download-sql-server-ps-module.md",
+            "redirect_url": "/sql/powershell/download-sql-server-ps-module",
+            "redirect_document_id": false
           }
     ]
 }

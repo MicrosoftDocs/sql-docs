@@ -248,7 +248,7 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    ```
 
    * `<Path to sqldeployment.yaml file>`
-      * `The location where you saved the file.
+      * The location where you saved the file.
 
    ![Deployment command](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 

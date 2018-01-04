@@ -266,7 +266,7 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
 
 If you configured the container as described, you can connect with SSMS from outside of the Azure virtual network. To access via SSMS, use the external IP Address. If needed, supply the port of the instance. For example, `1433`. 
 
-Use the password that you configured above. Do not use the base64 encoded value. 
+Use the password that you configured as a Kubernetes secret. Do not use the base64 encoded value. 
 
 ## Verify failure and recovery
 

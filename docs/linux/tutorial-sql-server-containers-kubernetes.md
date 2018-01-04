@@ -144,7 +144,7 @@ To store the SA password for SQL Server, create a secret in the Kubernetes clust
       echo -n "MyC0m9l&xP@ssw0rd" | base64
       ```
 
-      The result of the preceeding script is the base64 encoded value for the string. Paste this value in the manifest as `SA_PASSWORD: TXlDMG05bCZ4UEBzc3cwcmQ=`. 
+      The result of the preceding script is the base64 encoded value for the string. Paste this value in the manifest as `SA_PASSWORD: TXlDMG05bCZ4UEBzc3cwcmQ=`. 
 
    Save the file as `secret.yaml`.
 
@@ -210,7 +210,7 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
      type: LoadBalancer
    ```
 
-   Copy the preceding code into a new file, named `sqldeployment.yaml`. Update the following values. 
+   Copy the preceding code into a new file, named `sqldeployment.yaml`. Update the following values: 
 
    * `value: "Developer"`
      * Sets the container to run SQL Server Developer edition. Developer edition is not licensed for production data. If the deployment is for production use, set the appropriate edition. Can be one of `Enterprise`, `Standard`, or `Express`. 

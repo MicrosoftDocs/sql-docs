@@ -125,7 +125,7 @@ Configure a persistent volume, and persistent volume claim in the Kubernetes clu
 
 To store the SA password for SQL Server, create a secret in the Kubernetes cluster. 
 
-1. Create a yaml file for the secret that includes the SA password.  
+1. Create manifest for the secret. The following yaml file for the secret that includes the SA password.  
 
    ```yaml
    apiVersion: v1
@@ -134,11 +134,17 @@ To store the SA password for SQL Server, create a secret in the Kubernetes clust
      name: mssql
    type: Opaque
    data:
-     SA_PASSWORD: UEBzc3dvcmQxMg==
+     SA_PASSWORD: <base64 encoded Password> 
    ```
 
-   * `<ComplexPassword>`
-      * The password for the SA account. 
+   * `<base64 encoded Password>`
+      * In the manifest, the password for the SA account is encoded as base64. For example, if your complex password is `MyC0m9l&xP@ssw0rd`, pass that string through a base64 encoder, like a bash shell.  The following script shows how to encode the password as base64 in bash. Use the `-n` parameter to prevent a newline character. 
+      
+      ```bash
+      echo -n "MyC0m9l&xP@ssw0rd" | base64
+      ```
+
+      The result of the preceeding script is the base64 encoded value for the string. Paste this value in the manifest as `SA_PASSWORD: TXlDMG05bCZ4UEBzc3cwcmQ=`. 
 
    Save the file as `secret.yaml`.
 

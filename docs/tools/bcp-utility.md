@@ -64,7 +64,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
     [<a href="#F">-F first_row</a>]
-    [<a href="#G">-G</a>]
+    [<a href="#G">-G Azure Active Directory Authentication</a>]
     [<a href="#h">-h"hint [,...n]"</a>]
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
@@ -206,9 +206,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory Integrated** 
  
-    For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password: 
+    For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password. This configuration assumes that the current Windows user account (the account the bcp command is running under) is federated with Azure AD: 
 
-    The following example exports data using Azure AD Integrated. The example exports table `bcptest` from database `testdb` using Azure AD Integrated from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`:
+    The following example exports data using Azure AD Integrated account. The example exports table `bcptest` from database `testdb` using Azure AD Integrated from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t

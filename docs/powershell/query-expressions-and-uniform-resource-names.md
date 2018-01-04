@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "URN"
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Query Expressions and Uniform Resource Names
@@ -163,7 +163,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## See Also  
- [Invoke-PolicyEvaluation cmdlet](../powershell/invoke-policyevaluation-cmdlet.md)   
+ [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

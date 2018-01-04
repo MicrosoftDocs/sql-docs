@@ -24,11 +24,10 @@ Follow this article to configure a SQL Server instance on Kubernetes in Azure Co
 This tutorial demonstrates how to configure a highly available SQL Server instance in containers using AKS. 
 
 > [!div class="checklist"]
-> * Install kubectl
-> * Set up the kubernetes cluster
-> * Configure storage
-> * Create a deployment
-> * Connect to the container with SQL Server Management Studios (SSMS)
+> * Create storage
+> * Create SA password
+> * Create deployment
+> * Connect with SQL Server Management Studios (SSMS)
 > * Verify failure and recovery
 
 ### HA solution using Kubernetes running in Azure Container Service
@@ -45,7 +44,7 @@ Kubernetes 1.6+ has support for Storage Classes, Persistent Volume Claims, and t
 
 * A connection to the Kubernetes cluster. this tutorial uses [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), the Kubernetes command-line interface. 
 
-## Configure storage
+## Create storage
 
 Configure a persistent volume, and persistent volume claim in the Kubernetes cluster. For background on Kubernetes storage, see [Persistent Volumes](http://kubernetes.io/docs/concepts/storage/persistent-volumes/).  Complete the following steps: 
 
@@ -123,9 +122,9 @@ Configure a persistent volume, and persistent volume claim in the Kubernetes clu
 
    `kubectl` returns metadata about the persistent volume that was automatically created and bound to the persistent volume claim. 
 
-## Configure SA password as Kubernetes secret
+## Create SA password
 
-To store the SA password for SQL Server, create a secret in the Kubernetes cluster. 
+Kubernetes can manage sensitive configuration information like passwords as secrets. Create a secret to store the SA password for SQL Server. 
 
 1. Create manifest for the secret. The following yaml file for the secret that includes the SA password.  
 
@@ -136,17 +135,17 @@ To store the SA password for SQL Server, create a secret in the Kubernetes clust
      name: mssql
    type: Opaque
    data:
-     SA_PASSWORD: <base64 encoded Password> 
+     SA_PASSWORD: TXlDMG05bCZ4UEBzc3cwcmQ= 
    ```
 
-   * `<base64 encoded Password>`
+   * `TXlDMG05bCZ4UEBzc3cwcmQ=`
       * In the manifest, the password for the SA account is encoded as base64. To set your password in the manifest, convert the password to base64. You can use a base64 encoder in a bash shell. For example, if your complex password is `MyC0m9l&xP@ssw0rd`, pass that string through a base64 encoder. The following script shows how to encode the password as base64 in bash. Use the `-n` parameter to prevent a newline character. 
       
       ```bash
       echo -n "MyC0m9l&xP@ssw0rd" | base64
       ```
 
-      The result of the preceding script is the base64 encoded value for the string. Paste this value in the manifest as `SA_PASSWORD: TXlDMG05bCZ4UEBzc3cwcmQ=`. 
+      The result of the preceding script is the base64 encoded value for the string. Use this value in the manifest. 
 
    Save the file as `secret.yaml`.
 
@@ -160,7 +159,7 @@ To store the SA password for SQL Server, create a secret in the Kubernetes clust
 
 For more information about secret management in Kubernetes, see [Secrets](http://kubernetes.io/docs/concepts/configuration/secret/).
 
-## Create the SQL Server container
+## Create the SQL Server container deployment
 
 In this example, the SQL Server container is described as a [Kubernetes deployment object](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). In this step, create a manifest to describe the container based on the Microsoft SQL Server mssql-server-linux image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret which you already applied to the Kubernetes cluster. 
 
@@ -225,6 +224,16 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    * `persistentVolumeClaim`
      * This value requires an entry for `claimName:` that maps to the name used for the persistent volume claim. This article uses `mssql-data`. 
 
+   * `name: SA_PASSWORD`
+      * Configures the container image to set SA password as defined in this section.
+      ```
+                 valueFrom:
+                  secretKeyRef:
+                    name: mssql
+                    key: SA_PASSWORD 
+      ```
+       When Kubernetes deploys the container, it will refer to the secret named `mssql` to get the value for the password. 
+
    >[!NOTE]
    >By using the `LoadBalancer` service type, the SQL Server container is accessible remotely (via the internet) at port 1433.
 
@@ -262,7 +271,7 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
 
    `az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>` 
 
-## Connect to the container with SSMS
+## Connect with SSMS
 
 If you configured the container as described, you can connect with SSMS from outside of the Azure virtual network. To access via SSMS, use the external IP Address. If needed, supply the port of the instance. For example, `1433`. 
 
@@ -285,7 +294,6 @@ To verify failure and recovery you can delete the pod. Do the following steps:
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
-
    `mssql-deployment-0` is the value returned from the previous step for pod name. 
 
 Kubernetes automatically recreates the pod to recover a SQL Server container and connect to the persistent storage.
@@ -300,7 +308,6 @@ In this tutorial, you learned how to
 > * Create deployment
 > * Connect to the container with SSMS
 > * Verify failure and recovery
-
 
 > [!div class="nextstepaction"]
 >[Intro - Kubernetes](http://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)

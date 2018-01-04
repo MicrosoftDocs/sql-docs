@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2017"
+ms.date: "01/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -46,6 +46,8 @@ ms.workload: "On Demand"
 - Enable or disable query optimization hotfixes at the database level.
 
 - Enable or disable the identity cache at the database level.
+
+- Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time. 
   
  ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,6 +69,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 }  
 ```  
   
@@ -140,6 +143,12 @@ Enables or disables identity cache at the database level. The default is **ON**.
 
 > [!NOTE] 
 > This option can only be set for the PRIMARY. For more information, see [identity columns](create-table-transact-sql-identity-property.md).  
+
+OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+Enables or disables a compiled plan stub to be stored in cache when a batch is compiled for the first time. The default is OFF. Once the database scoped configuration OPTIMIZE_FOR_AD_HOC_WORKLOADS is enabled for a database, a compiled plan stub will be stored in cache when a batch is compiled for the first time. Plan stubs have a smaller memory footprint compared to the size of the full compiled plan.  If a batch is compiled or executed again, the compiled plan stub will be removed and replaced with a full compiled plan.
 
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER ANY DATABASE SCOPE CONFIGURATION   
@@ -270,6 +279,16 @@ This example disables the identity cache.
 
 ```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
+```
+
+### H. Set OPTIMIZE_FOR_AD_HOC_WORKLOADS
+
+**Applies to**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+This example enables a compiled plan stub to be stored in cache when a batch is compiled for the first time.
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ## Additional Resources

@@ -129,13 +129,13 @@ On the NFS Server do the following:
 1. Enable and start `rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
 1. Enable and start `nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
 1.	Edit `/etc/exports` to export the directory you want to share. You will need 1 line for each share you want. For example: 
@@ -175,7 +175,7 @@ On the NFS Server do the following:
 
 Do the following steps on all cluster nodes.
 
-1.	From the NFS server, install `nfs-utils`
+1.	Install `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils

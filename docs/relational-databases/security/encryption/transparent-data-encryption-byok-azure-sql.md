@@ -6,22 +6,24 @@ services: "sql-database"
 documentationcenter: ""
 author: "aliceku"
 manager: "craigg"
-editor: ""
-ms.assetid: ""
+ms.prod: 
+ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
 ms.custom: 
-  - "security"
-ms.workload: "Inactive"
+ms.component: "security"
+ms.workload: "On Demand"
 ms.tgt_pltfrm: ""
 ms.devlang: "na"
 ms.topic: "article"
 ms.date: "11/15/2017"
 ms.author: "aliceku"
 --- 
-# Transparent Data Encryption with Bring Your Own Key support for Azure SQL Database and Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# Transparent Data Encryption with Bring Your Own Key (PREVIEW) support for Azure SQL Database and Data Warehouse
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Bring Your Own Key (BYOK) support for [Transparent Data Encryption (TDE)](transparent-data-encryption.md) allows you to take control of your TDE encryption keys and restrict who can access them and when. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), Azure’s cloud-based external key management system is the first key management service with which TDE has integrated support for BYOK. With BYOK, the database encryption key is protected by an asymmetric key stored in Key Vault. The asymmetric key is set at the server level and inherited by all databases under that server. 
+Bring Your Own Key (BYOK) support for [Transparent Data Encryption (TDE)](transparent-data-encryption.md) allows you to take control of your TDE encryption keys and restrict who can access them and when. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), Azure’s cloud-based external key management system is the first key management service with which TDE has integrated support for BYOK. With BYOK, the database encryption key is protected by an asymmetric key stored in Key Vault. The asymmetric key is set at the server level and inherited by all databases under that server. This feature is currently in preview and we do not recommend using it for production workloads until we declare General Availability.
 
 With BYOK support, users can now control key management tasks including key rotations, key vault permissions, deleting keys, and enable auditing/reporting on all encryption keys. Key Vault provides central key management, leverages tightly monitored hardware security modules (HSMs), and enables separation of duties between management of keys and data to help meet regulatory compliance. 
 
@@ -53,6 +55,7 @@ Using TDE with BYOK brings both additional key management tasks to you and relat
 Taking over encryption key management of an application’s resources is an important responsibility. By using TDE with BYOK through Key Vault, the following are the key management tasks that you are assuming:
 - **Key rotations:** The TDE protectors should be rotated according to internal policies or compliance requirements. Key rotations can be done through the TDE protector’s key vault.  
 - **Key vault permissions**: Permissions within Key Vault are provisioned across a key vault and server level. The server's permissions to a key vault can be revoked at any time using the key vault's access policy.
+- **Key vault redundancy**: Because the key material never leaves Azure Key Vault and the server has no access to any cached copies outside of the key vault, you must configure Azure Key Vault geo-replication in order to maintain access to the key material in case one Azure Key Vault region is experiencing an outage.  Geo-replicated databases will lose access to their key material if they rely on a single Azure Key Vault.
 - **Deleting keys**: Keys may be dropped from Key Vault and the SQL server for additional safety or to meet compliance requirements.
 - **Auditing/reporting on all encryption keys**: Key Vault provides logs that are easy to inject into other security information and event management (SIEM) tools. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) is one example of a service that is already integrated.
 
@@ -87,12 +90,11 @@ Unique TDE Protectors for a database or data warehouse are not supported. The TD
 
 ### High availability and disaster recovery
   
-There are two ways to configure geo-replication for servers using Key Vault: 
+Geo-replication must be configured for the key vault to maintain high availability of key material in the Azure Key Vault:
 
-- **Separate key vault**: Each server has access to a separate key vault (ideally each within their own Azure region). This is the recommended configuration, since each server has its own copy of the TDE protector for the encrypted geo-replicated databases. If one of the server’s Azure regions goes offline, the other servers can continue to access the geo-replicated databases.   
+- **Redundant key vault**: Each geo-replicated server has access to a separate key vault, ideally co-located in the same Azure region. This is the recommended configuration , since each server has its own copy of the TDE protector for the encrypted geo-replicated databases. If one of the server’s Azure regions goes offline, the other servers can continue to access the geo-replicated databases.  This needs to be carefully configured to ensure that if one key vault becomes unavailable, the server can access the backup of the TDE protector in the other key vault.     
 
-- **Shared key vault**: All servers share the same key vault. This configuration is easier to set up, but if the Azure region where the key vault is located goes offline, all servers are unable to read the encrypted geo-replicated databases or their own encrypted databases. 
- 
+
 To get started, use the [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet to add each server’s Key Vault key to the other servers in the geo-replication link.  
 (Example of a KeyId from Key Vault: *https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
 

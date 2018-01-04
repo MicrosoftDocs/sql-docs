@@ -1,21 +1,18 @@
 ---
-
 title: "Backup and loading hardware overview for APS PDW"
-
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "To deploy your end-to-end data warehousing solution on Analytics Platform System (APS) with SQL Server Parallel Data Warehouse (PDW), you need to create a plan for backing up the data warehouse and loading data."
 ms.date: "10/20/2016"
 ms.topic: "article"
-
 ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
 caps.latest.revision: 9
 

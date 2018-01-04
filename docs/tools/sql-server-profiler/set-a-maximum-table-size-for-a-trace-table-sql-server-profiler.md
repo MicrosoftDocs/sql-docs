@@ -3,7 +3,7 @@ title: "Set a Maximum Table Size for a Trace Table (SQL Server Profiler) | Micro
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "sql-server-profiler"
 ms.reviewer: ""

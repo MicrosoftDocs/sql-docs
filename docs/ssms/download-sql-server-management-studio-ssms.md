@@ -1,9 +1,9 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/07/2017"
+ms.date: "12/14/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms"
 ms.reviewer: ""
@@ -33,7 +33,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # Download SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 SSMS is an integrated environment for managing any SQL infrastructure, from SQL Server to SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL. Use SSMS to deploy, monitor, and upgrade the data-tier components used by your applications, as well as build queries and scripts.
 
 Use SQL Server Management Studio (SSMS) to query, design, and manage your databases and data warehouses, wherever they are - on your local computer, or in the cloud.
@@ -57,6 +57,7 @@ If a computer contains side by side installations of SSMS, verify you start the 
 > [!NOTE]
 > Non-English localized releases of SSMS require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
 
+
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 17.4:<br>
@@ -74,6 +75,8 @@ SQL Server Management Studio 17.4 Upgrade Package (upgrades 17.x to 17.4):<br>
 The release number: 17.4
 
 The build number for this release: 14.0.17213.0
+
+The release date: December 7, 2017
 
 ## New in this Release
 

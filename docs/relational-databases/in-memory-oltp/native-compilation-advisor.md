@@ -48,7 +48,7 @@ ms.workload: "Inactive"
 > [!NOTE]  
 >  As usual, the **FILEGROUP** element, and the **USE** mydatabase statement, apply to Microsoft SQL Server, but do not apply to Azure SQL Database.  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  

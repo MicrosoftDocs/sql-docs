@@ -3,13 +3,15 @@ title: "Use Python with revoscalepy to Create a Model| Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "09/19/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+mms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 caps.latest.revision: 4
 author: "jeannt"
 ms.author: "jeannt"

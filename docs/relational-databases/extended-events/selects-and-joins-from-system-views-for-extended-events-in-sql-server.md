@@ -160,7 +160,7 @@ To reverse engineer an event session, in the **Object Explorer** you can right-c
 The following T-SQL script was created by reverse engineering with SSMS. Then the script was manually prettified by strategic manipulation of white space only.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
 	ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -214,7 +214,7 @@ This completes the T-SQL perspective.
 Do not be afraid! The following T-SQL SELECT statement is long only because it UNIONs several small SELECTs together. Any of the small SELECTs can be run on its own. The small SELECTs show how the various system cataloging views should be JOINed together.
 
 
-```tsql
+```sql
 SELECT
 		s.name        AS [Session-Name],
 		'1_EVENT'     AS [Clause-Type],
@@ -409,7 +409,7 @@ Here is list of the SELECTs in this DMV section C:
 All the objects you can use in area of extended events come from packages which are loaded into the system. This section lists all the packages and their descriptions.
 
 
-```tsql
+```sql
 SELECT  --C.1
 		p.name         AS [Package],
 		p.description  AS [Package-Description]
@@ -465,7 +465,7 @@ XtpRuntime     Extended events for the XTP Runtime
 This section tells us about the type of objects that event packages contain. A complete list is displayed of all object types that are in *sys.dm\_xe\_objects*, along with the count for each type.
 
 
-```tsql
+```sql
 SELECT  --C.2
 		Count(*)  AS [Count-of-Type],
 		o.object_type
@@ -509,7 +509,7 @@ The following SELECT returns about 1915 rows, one for each object.
 
 
 
-```tsql
+```sql
 SELECT  --C.3
 		o.object_type  AS [Type-of-Item],
 		p.name         AS [Package],
@@ -578,7 +578,7 @@ The following SELECT returns all the data fields that are particular to your eve
 - Also, you would need to edit the WHERE clause value for *o.name =*.
 
 
-```tsql
+```sql
 SELECT  -- C.4
 		p.name         AS [Package],
 		c.object_name  AS [Event],
@@ -656,7 +656,7 @@ The purpose of the SELECT display the numerous fields that you can choose from f
 - To filter which event occurrences will be sent to versus kept from your target.
 
 
-```tsql
+```sql
 SELECT  --C.5
 		dp.name         AS [Package],
 		do.name         AS [Object],
@@ -731,7 +731,7 @@ The following SELECT returns every parameter for your target. Each parameter is 
 - Also, you would need to edit the WHERE clause value for *o.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.6
 		p.name        AS [Package],
 		o.name        AS [Target],
@@ -796,7 +796,7 @@ This DMV SELECT returns data rows from the target of your active event session. 
 - You would need to edit the WHERE clause value for *s.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.7
 		s.name,
 		t.target_name,
@@ -864,7 +864,7 @@ Suppose your event session gathered some data and later was stopped. If your ses
     - Pay no attention to the extra digits that SQL system embeds into your actual .XEL file names each time you restart your session. Just give the normal root name and extension.
 
 
-```tsql
+```sql
 SELECT  --C.8
 		f.module_guid,
 		f.package_guid,

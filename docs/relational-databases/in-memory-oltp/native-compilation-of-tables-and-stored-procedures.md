@@ -36,7 +36,7 @@ In-Memory OLTP compiles memory-optimized tables when they are created, and nativ
 
 The following query shows all table and stored procedure DLLs currently loaded in memory on the server:
 
-```tsql
+```sql
 SELECT
 		mod1.name,
 		mod1.description
@@ -60,7 +60,7 @@ Creating a memory-optimized table using the **CREATE TABLE** statement results i
 
 Consider the following sample script, which creates a database and a memory-optimized table:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -153,7 +153,7 @@ For more information about natively compiled stored procedures, see [Natively Co
 
 Consider the following sample stored procedure, which inserts rows in the table t1 from the previous example:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
 	with native_compilation,
 	     schemabinding,

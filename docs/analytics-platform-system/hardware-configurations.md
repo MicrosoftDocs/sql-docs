@@ -1,21 +1,18 @@
 ---
-
 title: "Hardware Configurations (Analytics Platform System)"
-
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "The Analytics Platform System (APS) hardware is architected with scalable units so that you buy the right amount of processing and storage according to your business requirements."
 ms.date: "01/05/2017"
 ms.topic: "article"
-
 ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
 caps.latest.revision: 9
 

@@ -4,7 +4,7 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/26/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -23,7 +23,7 @@ ms.workload: "Active"
 This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
 
 > [!TIP]
-> To get started quickly, jump to one of the quick start tutorials for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), or [Docker](quickstart-install-connect-docker.md).
+> To get started quickly, jump to one of the quickstarts for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), or [Docker](quickstart-install-connect-docker.md).
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
@@ -35,6 +35,10 @@ SQL Server 2017 is supported on the following Linux platforms:
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
+
+Microsoft supports deploying and managing SQL Server containers by using OpenShift and Kubernetes.
+
+For the latest support policy for SQL Server 2017, see [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a id="system"></a> System requirements
 
@@ -57,7 +61,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 ## <a id="platforms"></a> Install SQL Server
 
-You can install SQL Server on Linux from the command line. For instructions, see one of the following quick start tutorials:
+You can install SQL Server on Linux from the command line. For instructions, see one of the following quickstarts:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -157,7 +161,7 @@ The end of the repository URL confirms the repository type:
 To configure the CU or GDR repositories, use the following steps:
 
 > [!NOTE]
-> The [quick start tutorials](#platforms) configure the CU repository. If you follow those tutorials, you do not need to use the steps below to continue using the CU repository. These steps are only necessary for changing your configured repository.
+> The [quickstarts](#platforms) configure the CU repository. If you follow those tutorials, you do not need to use the steps below to continue using the CU repository. These steps are only necessary for changing your configured repository.
 
 1. If necessary, remove the previously configured repository.
 
@@ -197,7 +201,7 @@ To configure the CU or GDR repositories, use the following steps:
 
 You can perform an unattended installation in the following way:
 
-- Follow the initial steps in the [quick start tutorials](#platforms) to register the repositories and install SQL Server.
+- Follow the initial steps in the [quickstarts](#platforms) to register the repositories and install SQL Server.
 - When you run `mssql-conf setup`, set [environment variables](sql-server-linux-configure-environment-variables.md) and use the `-n` (no prompt) option.
 
 The following example configures the Developer edition of SQL Server with the **MSSQL_PID** environment variable. It also accepts the EULA (**ACCEPT_EULA**) and sets the SA user password (**MSSQL_SA_PASSWORD**). The `-n` parameter performs an unprompted installation where the configuration values are pulled from the environment variables.
@@ -261,7 +265,7 @@ After installation, you can also install other optional SQL Server packages.
 - [SQL Server Full Text Search](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-Connect to your SQL Server instance to begin creating and managing databases. To get started, see the quick start tutorials:
+Connect to your SQL Server instance to begin creating and managing databases. To get started, see the quickstarts:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

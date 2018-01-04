@@ -94,7 +94,7 @@ Plan handle is a hash value derived from the compiled plan of the entire batch.
 The following is a basic example to illustrate passing a **sql_handle** either directly or with **CROSS APPLY**.
   1.  Create activity.  
 Execute the following T-SQL in a new query window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -106,7 +106,7 @@ Execute the following T-SQL in a new query window in [!INCLUDE[ssManStudioFull](
     2.  Using **CROSS APPLY**.  
     The sql_handle from **sys.dm_exec_requests** will be passed to **sys.dm_exec_sql_text** using **CROSS APPLY**. Open a new query window and pass the spid identified in step 1. In this example the spid happens to be `59`.
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -116,7 +116,7 @@ Execute the following T-SQL in a new query window in [!INCLUDE[ssManStudioFull](
     2.  Passing **sql_handle** directly.  
 Acquire the **sql_handle** from **sys.dm_exec_requests**. Then, pass the **sql_handle** directly to **sys.dm_exec_sql_text**. Open a new query window and pass the spid identified in step 1 to **sys.dm_exec_requests**. In this example the spid happens to be `59`. Then pass the returned **sql_handle** as an argument to **sys.dm_exec_sql_text**.
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -128,7 +128,7 @@ Acquire the **sql_handle** from **sys.dm_exec_requests**. Then, pass the **sql_h
 ### B. Obtain information about the top five queries by average CPU time  
  The following example returns the text of the SQL statement and average CPU time for the top five queries.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -143,7 +143,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### C. Provide batch-execution statistics  
  The following example returns the text of SQL queries that are being executed in batches and provides statistical information about them.  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   

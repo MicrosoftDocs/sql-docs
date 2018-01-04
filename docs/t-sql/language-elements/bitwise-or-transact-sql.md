@@ -62,7 +62,7 @@ expression | expression
 ## Examples  
  The following example creates a table with **int** data types to show the original values and puts the table into one row.  
   
-```tsql  
+```sql  
 CREATE TABLE bitwise  
 (   
  a_int_value int NOT NULL,  

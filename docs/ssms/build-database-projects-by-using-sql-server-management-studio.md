@@ -3,7 +3,7 @@ title: "Build Database Projects by Using SQL Server Management Studio | Microsof
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms"
 ms.reviewer: ""

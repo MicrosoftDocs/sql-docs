@@ -3,7 +3,7 @@ title: "Step 4: Server Returns the Recordset (RDS Tutorial) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
-ms.component: "guide"
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""

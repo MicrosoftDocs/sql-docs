@@ -57,9 +57,9 @@ ms.workload: "Inactive"
   
  If an application establishes a connection with SQL_DRIVER_COMPLETE_REQUIRED and later tries to execute a statement over a broken connection, the ODBC driver will not display the dialog box again. Also, during recovery in progress,  
   
--   During recovery, any call to **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, must return **SQL_CD_TRUE**.  
+-   During recovery, any call to **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, must return **SQL_CD_FALSE**.  
   
--   If recovery fails, any call to **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, must return **SQL_CD_FALSE**.  
+-   If recovery fails, any call to **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, must return **SQL_CD_TRUE**.  
   
  The following state codes are returned by any function that executes a command on the server:  
   

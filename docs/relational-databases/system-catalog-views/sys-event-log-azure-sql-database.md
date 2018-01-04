@@ -171,7 +171,7 @@ WHERE event_type = 'throttling'
 ### DB-Scoped Extended Event  
  Use the following sample code to set up the db-scoped Extended Event (XEvent) session:  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -203,7 +203,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 Use the following query to check if there is a deadlock.  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  

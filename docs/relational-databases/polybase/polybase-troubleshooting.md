@@ -66,7 +66,7 @@ ms.workload: "Inactive"
   
      Record the execution ID of the longest running query.  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -85,7 +85,7 @@ ms.workload: "Inactive"
   
     -   DMS: implies a PolyBase Data Movement Service operation. Proceed with Step 3b.  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -101,7 +101,7 @@ ms.workload: "Inactive"
   
          Use the execution ID and step index recorded in the previous steps. Use the execution ID and step index recorded in the previous steps.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -114,7 +114,7 @@ ms.workload: "Inactive"
   
          Use the execution ID and step index recorded in the previous steps.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -128,7 +128,7 @@ ms.workload: "Inactive"
   
      Use the execution ID and step index recorded in the previous steps.  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   

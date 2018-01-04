@@ -72,7 +72,7 @@ ms.workload: "Inactive"
 
  To determine whether a database uses any features that are restricted to specific editions, execute the following statement in the database:  
   
-```t-sql  
+```sql  
 SELECT feature_name FROM sys.dm_db_persisted_sku_features;  
 GO  
 ```  

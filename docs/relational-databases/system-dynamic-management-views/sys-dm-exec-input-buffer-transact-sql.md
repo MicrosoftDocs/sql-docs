@@ -73,7 +73,7 @@ The request_id from [sys.dm_exec_requests](../../relational-databases/system-dyn
 ### A. Simple example  
  The following example demonstrates passing a session id (SPID) and a request id to the function.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
@@ -81,7 +81,7 @@ GO
 ### B. Using cross apply to additional information  
  The following example lists the input buffer for sessions with session id greater than 50.  
   
-```tsql  
+```sql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  

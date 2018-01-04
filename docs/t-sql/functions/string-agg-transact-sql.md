@@ -87,7 +87,7 @@ Null values are ignored and the corresponding separator is not added. To return 
 
 ### A. Generate list of names separated in new lines 
 The following example produces a list of names in a single result cell, separated with carriage returns.
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -104,7 +104,7 @@ FROM Person.Person;
 
 ### B. Generate list of names separated with comma without NULL values   
 The following example replaces null values with 'N/A' and returns the names separated by commas in a single result cell.  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -119,7 +119,7 @@ FROM Person.Person;
 
 ### C. Generate comma-separated values 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -138,7 +138,7 @@ FROM Person.Person;
 ### D. Return news articles with related tags 
 
 Article and their tags are separated into different tables. Developer wants to return one row per each article with all associated tags. Using following query: 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -157,7 +157,7 @@ GROUP BY a.articleId, title;
 ### E. Generate list of emails per towns
 
 The following query finds the email addresses of employees and groups them by towns: 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -175,7 +175,7 @@ Emails returned in the emails column can be directly used to send emails to grou
 ### F. Generate a sorted list of emails per towns   
    
 Similar to previous example, the following query finds the email addresses of employees, groups them by town, and sorts the emails alphabetically:   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 

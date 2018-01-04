@@ -272,13 +272,13 @@ ms.workload: "Active"
   
 -   To wait for currently running [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and stored procedures to finish, and then stop the [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute the following statement.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   To stop the [!INCLUDE[ssDE](../../includes/ssde-md.md)] immediately, execute the following statement.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

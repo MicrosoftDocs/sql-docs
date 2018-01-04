@@ -1,10 +1,12 @@
 ---
 title: "Using R in Azure SQL Database  | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/07/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.date: "12/08/2017"
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
@@ -22,23 +24,9 @@ In October 2017, the SQL Server development team announced plans to support exec
 To keep up to date on the public release schedule and upcoming events, see the [SQL Server blog](https://blogs.technet.microsoft.com/dataplatforminsider/) or the [Microsoft R Server blog](https://blogs.msdn.microsoft.com/rserver/).
 
 > [!IMPORTANT]
-> Currently, the preview of R support is available in Azure SQL Database in West Central US only, and features are limited in comparison with the features supported in SQL Server 2016 or 2017.
+> Currently, the preview of R support is available in Azure SQL Database in West Central US only, and features are limited in comparison with the features for R and Python code execution in SQL Server 2016 or 2017.
 
 ## What's included
-
-The preview version includes these features and packages:
-
-+	Microsoft R Open with R version 3.3.3
-+	Base R packages and functions are pre-installed
-+	Microsoft R Server 9.2, including the RevoScaleR package
-
-With these features, you can perform the following tasks:
-
-+ Training of models using any data that fits in memory
-+	Scoring of models using any data that fits in memory
-+	Trivial parallelism for R Script execution (using the @parallel parameter in sp_execute_external_script)
-+	Streaming execution for R Script execution (using @r_RowsPerRead parameter in sp_execute_external_script)
-+	Execute a single R script at one time
 
 The in-database R functionality can be used on the following database service tiers and performance levels:
  
@@ -46,6 +34,27 @@ The in-database R functionality can be used on the following database service ti
 - Premium RS Service Tier – PRS1, PRS2, PRS4, PRS6
 - Premium Elastic Pool – 125 eDTUs or greater
 - Premium RS Elastic Pool – 125 eDTUs or greater
+
+The preview version includes these packages:
+
++	Microsoft R Open with R version 3.3.3
++	Base R packages and functions are pre-installed
++	Microsoft R Server 9.2, including the RevoScaleR package
+
+In the current preview release, you can perform the following tasks:
+
++ Training of models using any data that fits in memory
++	Scoring of models using any data that fits in memory
++	Trivial parallelism for R Script execution (using the @parallel parameter in sp_execute_external_script)
++	Streaming execution for R Script execution (using @r_RowsPerRead parameter in sp_execute_external_script)
++	Execute a single R script at one time
+
+
+The following tasks are not supported in the preview release of R on Azure SQL Database:
+
++ You cannot enable R script execution on specific databases.
++ DMVs provided to monitor CPU and memory usage of R scripts are not available.
++ No third-party packages can be installed. The CREATE EXTERNAL LIBRARY statement is not supported.
 
 ## Example
 
@@ -73,6 +82,7 @@ CREATE TABLE iris_models (
 );
 GO
 ```
+
 ### Step 2. Populate table with data from the iris dataset
 
 After the tables have been created, run the following code to insert training data into the table. The stored procedure sp_execute_external_script calls R and returns the iris dataset as a data frame, using the schema specified in the INSERT INTO statement.
@@ -92,19 +102,23 @@ GO
 The following stored procedure does the work of actually creating and training the model, which can be saved in either of two binary formats.
 
 ```sql
-CREATE PROCEDURE generate_iris_model (@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
+CREATE PROCEDURE generate_iris_model
+    @trained_model VARBINARY(MAX) OUTPUT, 
+    @native_trained_model VARBINARY(MAX) OUTPUT
 AS
 BEGIN
   EXEC sp_execute_external_script @language = N'R'
-	, @script = N'
+  , @script = N'
     iris_model <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris_rx_data);
     trained_model <- as.raw(serialize(iris_model, connection=NULL));
     native_trained_model <- rxSerializeModel(iris_model, realtimeScoringOnly = TRUE)
     '
   , @input_data_1 = N'SELECT "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species" FROM iris_data'
   , @input_data_1_name = N'iris_rx_data'
-  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT'
+  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
 	, @trained_model = @trained_model OUTPUT
+	, @native_trained_model = @native_trained_model OUTPUT;
+End
 ```
 
 + The **OUTPUT** keyword on the input parameters indicates that the values should be passed through and used for output as well.

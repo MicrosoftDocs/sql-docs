@@ -2,9 +2,11 @@
 title: "How to use RevoScaleR functions to find or install R packages on SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/29/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

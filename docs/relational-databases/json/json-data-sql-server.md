@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/31/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "json"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -23,7 +22,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # JSON Data (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON is a popular textual data format used for exchanging data in  modern web and mobile applications. JSON is  also used for storing unstructured data in log files or NoSQL databases like Microsoft Azure Cosmos DB. Many REST web services return results formatted as JSON text or accept data formatted as JSON. For example, most Azure services such as Azure Search, Azure Storage, and Azure Cosmos DB have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between web pages and web servers using AJAX calls.  
   

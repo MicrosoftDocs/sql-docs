@@ -58,7 +58,7 @@ ms.workload: "Inactive"
   
 3.  **Create a Backup Certificate or Asymmetric Key:** You can use either a certificate or an asymmetric key for use with the encryption. The following example creates a backup certificate to use for the encryption.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  

@@ -43,7 +43,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'  
 ```  
   
@@ -111,7 +111,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
 ## Examples  
 A.  The following code example binds the database Hekaton_DB to the resource pool Pool_Hekaton.  
   
-```tsql  
+```sql  
 sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'  
 ```  
  
@@ -119,7 +119,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  B. Expanded example of above example which includes some basic checks.  Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
-```tsql
+```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
 DECLARE @database sysname = N'Hekaton_DB';
 

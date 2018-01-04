@@ -2,9 +2,11 @@
 title: "Security for SQL Server machine learning and R | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/03/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""

@@ -192,12 +192,12 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     When you want to use an Azure Active Directory user name and password, you can provide the **-G** option and also use the user name and password by providing the **-U** and **-P** options. 
 
-    The following example exports data using Azure AD Username and Password where user and password is an AAD credential. The example exports table bcptest from database testdb from Azure server aadserver.database.windows.net and stores the data in file c:\last\data1.dat
+    The following example exports data using Azure AD Username and Password where user and password is an AAD credential. The example exports table `bcptest` from database `testdb` from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data1.dat`:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    The following example imports data using Azure AD Username and Password where user and password is an AAD credential. The example imports data from file c:\last\data1.dat into table bcptest for database testdb on Azure server  aadserver.database.windows.net using Azure AD User/Password 
+    The following example imports data using Azure AD Username and Password where user and password is an AAD credential. The example imports data from file `c:\last\data1.dat` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Azure AD User/Password:
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -208,13 +208,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  
     For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password: 
 
-    The following example exports data using Azure AD Integrated. The example exports table bcptest from database testdb  using Azure AD Integrated from Azure server aadserver.database.windows.net and stores the data in file c:\last\data2.dat
+    The following example exports data using Azure AD Integrated. The example exports table `bcptest` from database `testdb` using Azure AD Integrated from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    The following example imports data using Azure AD Integrated auth. The example imports data from file c:\last\data2.txt into table bcptest for database testdb  on Azure server  aadserver.database.windows.net using Azure AD Integrated auth
+    The following example imports data using Azure AD Integrated auth. The example imports data from file `c:\last\data2.txt` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Azure AD Integrated auth:
 
     ```
     bcp bcptest in "c:\last\data2.txt" -S aadserver.database.windows.net -d testdb -G -c -t

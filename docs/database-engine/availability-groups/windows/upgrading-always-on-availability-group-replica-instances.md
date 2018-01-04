@@ -39,7 +39,7 @@ ms.workload: "On Demand"
 -   [Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
 
 > [!NOTE]  
->  Mixing versions of SQL Server in the same AG is not supported. To migrate to a new version using availablity groups, the only supported method is a distributed availability group which is in SQL Server 2016 Enterprise Edition or later.
+>  Mixing versions of SQL Server in the same AG is not supported outside of a rolling upgrade which upgrades the replicas in place. This means a higher version of SQL Server cannot be added as a new replica to an existing AG. For example, a SQL Server 2017 replica cannot be added to an existing SQL Server 2016 AG. To migrate to a new version of SQL Server using availablity groups, the only supported method is a distributed availability group which is in SQL Server 2016 Enterprise Edition or later.
 
 ## Rolling Upgrade Best Practices for Always On Availability Groups  
  The following best practices should be observed when performing server upgrades or updates in order to minimize downtime and data loss for your availability groups:  

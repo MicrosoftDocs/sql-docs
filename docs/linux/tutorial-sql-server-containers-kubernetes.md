@@ -227,7 +227,7 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    * `name: SA_PASSWORD`
       * Configures the container image to set SA password as defined in this section.
 
-      ```
+      ```yaml
                  valueFrom:
                   secretKeyRef:
                     name: mssql

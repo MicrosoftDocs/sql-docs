@@ -30,17 +30,17 @@ This article provides directions for installing the **SqlServer** PowerShell mod
 > There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features. 
 > Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
 
-Start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session and use the following commands to install the **SqlServer** module. If you run into problems installing, see the [Install-Module documentation](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) and [Install-Module reference](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
+To install the **SqlServer** module from the PowerShell Gallery, start a [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) session and use the following commands. If you run into problems installing, see the [Install-Module documentation](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) and [Install-Module reference](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
 To install the **SqlServer** module:
 
 ```Install-Module -Name SqlServer```
 
-If there are previous versions of SQL Server PowerShell modules on the machine, it may be necessary to provide the `-AllowClobber` parameter:  
+If there are previous versions of the SqlServer module on the computer, you may be able to use `Update-Module` (later in this article), or provide the `-AllowClobber` parameter:  
 
 ```Install-Module -Name SqlServer -AllowClobber```
 
-If you are not able to run the PowerShell session as administrator, try installing for the current user:
+If you are not able to run the PowerShell session as administrator, you can install for the current user:
 
 ```Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber```
 

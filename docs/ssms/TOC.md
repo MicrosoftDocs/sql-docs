@@ -4,7 +4,7 @@
 ## [Release Notes](download-sql-server-management-studio-ssms.md#release-notes)
 ## [Install non-English SSMS](install-other-languages.md)
 ## [New and updated articles](new-updated-ssms.md)
-# [Install SQL Server PowerShell Module](../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json)
+# [Install SQL Server PowerShell Module](../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json&bc=/sql/breadcrumb/toc.json)
 
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
 # [F1 Help +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)

@@ -19,7 +19,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Follow this article to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. 
+Follow this article to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. The solution provides resiliency for SQL Server because SQL Server is deployed as a container in a pod, which Kubernetes will automatically recreate if it failures. AKS provides resiliance in case of Kubernetes node failure. 
 
 This tutorial demonstrates how to configure a highly available SQL Server instance in containers using AKS. 
 
@@ -44,11 +44,11 @@ You can follow the instructions at [Deploy an Azure Container Service (AKS) clus
 
 ## Create storage
 
-Configure a [persistent volume]((http://kubernetes.io/docs/concepts/storage/persistent-volumes/), and [persistent volume claim](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) in the Kubernetes cluster. Complete the following steps: 
+Configure a [persistent volume](http://kubernetes.io/docs/concepts/storage/persistent-volumes/), and [persistent volume claim](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) in the Kubernetes cluster. Complete the following steps: 
 
 1. Create a manifest to define the storage class and the persistent volume claim.  The manifest specifies the storage provisioner, parameters, and the [reclaim policy](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming). The Kubernetes cluster uses this manifest to create the persistent storage. 
 
-   The following yaml example defines a storage class and persistent volume claim. The storage class is named `azure-disk` and the persistent volume claim is named `mssql-data`. The persistent volume claim metadata includes an annotation connecting it back to the storage class. 
+   The following yaml example defines a storage class and persistent volume claim. The storage class provisioner is `azure-disk` because this Kubernetes cluster is in Azure. The storage account type is `Standard_LRS`. The persistent volume claim is named `mssql-data`. The persistent volume claim metadata includes an annotation connecting it back to the storage class. 
 
    ```yaml
    kind: StorageClass
@@ -122,7 +122,7 @@ Configure a [persistent volume]((http://kubernetes.io/docs/concepts/storage/pers
 
 ## Create SA password
 
-Kubernetes can manage sensitive configuration information like passwords as [secrets]((http://kubernetes.io/docs/concepts/configuration/secret/). Create a secret to store the SA password for SQL Server. 
+Kubernetes can manage sensitive configuration information like passwords as [secrets](http://kubernetes.io/docs/concepts/configuration/secret/). Create a secret to store the SA password for SQL Server. 
 
 The following command creates a password for the SA account:
 
@@ -132,7 +132,7 @@ The following command creates a password for the SA account:
 
    The preceding command creates a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `SA_PASSWORD`.
 
-   Replace `MyC0m9l&xP@ssw0rd` with a complex password
+   Replace `MyC0m9l&xP@ssw0rd` with a complex password.
 
 ## Create the SQL Server container deployment
 
@@ -294,7 +294,7 @@ To verify failure and recovery you can delete the pod. Do the following steps:
    ```
    `mssql-deployment-0` is the value returned from the previous step for pod name. 
 
-Kubernetes automatically recreates the pod to recover a SQL Server container and connect to the persistent storage.
+Kubernetes automatically recreates the pod to recover a SQL Server container and connect to the persistent storage. Use `kubectl get pods` to verify that a new pod is deployed. Use `kubectl get services` to verify that the IP address for the new container is the same. 
 
 In this tutorial, you learned how to 
 > [!div class="checklist"]

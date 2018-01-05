@@ -7,7 +7,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b

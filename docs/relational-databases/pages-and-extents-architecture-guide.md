@@ -35,7 +35,7 @@ Extents are a collection of eight physically contiguous pages and are used to ef
 
 ### Pages
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the page size is 8 KB. This means [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases have 128 pages per megabyte. Each page begins with a 96-byte header that is used to store system information about the page. This information includes the page number, page type, the amount of free space on the page, and the allocation unit ID of the object that owns the page.
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the page size is 8 KB. This means [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases have 128 pages per megabyte. Each page begins with a 96-byte header that is used to store system information about the page. This information includes the page number, page type, the amount of free space on the page, and the allocation unit ID of the object that owns the page.
 
 The following table shows the page types used in the data files of a SQL Server database.
 

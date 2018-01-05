@@ -136,7 +136,7 @@ The following command creates a password for the SA account:
 
 ## Create the SQL Server container deployment
 
-In this example, the SQL Server container is described as a Kubernetes deployment object. The deployment creates a [replica set](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/). The replica set creates the [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). In this step, create a manifest to describe the container based on the Microsoft SQL Server mssql-server-linux image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret which you already applied to the Kubernetes cluster. The manifest also describes a [service](http://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server container is recovered. 
+In this example, the SQL Server container is described as a Kubernetes deployment object. The deployment creates a [replica set](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/). The replica set creates the [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). In this step, create a manifest to describe the container based on the Microsoft SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret which you already applied to the Kubernetes cluster. The manifest also describes a [service](http://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server container is recovered. 
 
 1. Create a manifest - a yaml file - to describe the deployment. The following example describes a deployment including a container based on the SQL Server container image.
 
@@ -235,8 +235,6 @@ In this example, the SQL Server container is described as a Kubernetes deploymen
 
    >[!NOTE]
    >After the deployment is created, it may take a few minutes before the pod is visible. The delay is because the cluster needs to pull the [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image from the Docker hub. After it is pulled the first time, subsequent deployments may be faster - if the deployment is to a node that already has the image cached on it. 
-
-   Learn more about [Kubernetes Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
 1. Verify the services are running. Run the following command:
 

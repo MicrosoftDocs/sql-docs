@@ -257,7 +257,6 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    To view the status of the pod, type `kubectl get pod`.
 
    ![Get pod command](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
- 
 
    Learn more about [Kubernetes Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
@@ -266,6 +265,8 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    ```azurecli
    kubectl get services 
    ```
+
+   ![Get service command](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
 
    Note the IP address for the SQL Server container. Use this IP address to connect to SQL Server. 
 
@@ -299,7 +300,6 @@ To verify failure and recovery you can delete the pod. Do the following steps:
    `mssql-deployment-0` is the value returned from the previous step for pod name. 
 
 Kubernetes automatically recreates the pod to recover a SQL Server container and connect to the persistent storage.
-
 
 In this tutorial, you learned how to 
 > [!div class="checklist"]

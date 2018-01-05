@@ -1,7 +1,7 @@
 ---
 title: "R package synchronization for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/02/2017"
+ms.date: "01/04/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -49,7 +49,10 @@ Before you can use package synchronization, you must have the appropriate versio
 
 This feature is available in SQL Server 2017 CTP 2 or later.
 
-Because this feature uses R functions in Microsoft R version 9.1.0, you can add this feature to an instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to Upgrade SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Because this feature uses R functions, you can add this feature to an instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to upgrade SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+> [!NOTE]
+> This feature is included in Microsoft R version 9.1.0 or later. 
 
 ### Enable the package management feature
 
@@ -63,11 +66,11 @@ When this is done, information about users and the packages that they have insta
 Whenever you add a new package using the package management functions, both the records in SQL Server and the file system are updated.
 
 > [!NOTE]
-> You cannot use package synchronization if you have been installing R packages the traditional way, using R tools to install packages directly into the file system.
+> You cannot use package synchronization if you have been installing R packages the traditional way, using R tools to install packages directly into the file system. 
+
 ### Permissions
 
-+ The person who executes the package synchronization function must be a security principal on the SQL
-    Server instance and database that has the packages.
++ The person who executes the package synchronization function must be a security principal on the SQL Server instance and database that has the packages.
 
 + The caller of the function must be a member of one of these package management roles: **rpkgs-shared** or **rpkgs-private**.
 
@@ -80,7 +83,7 @@ Whenever you add a new package using the package management functions, both the 
 ## How package synchronization works
 
 To use package synchronization, call [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), which is a new function in
-[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler). You can call this function from SQL Server using sp_execute_external_script, or you can run it from a remote R client and specify the SQL Server compute context. 
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). 
 
 Because packages are managed at the database level, for each call to `rxSyncPackages`, you must specify a SQL Server instance and database, and then list packages, or specify package scope.
 

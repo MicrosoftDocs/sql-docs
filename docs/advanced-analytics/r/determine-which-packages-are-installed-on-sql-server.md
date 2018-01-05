@@ -1,7 +1,7 @@
 ---
 title: "Determine which R packages are installed on SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/09/2016"
+ms.date: "01/04/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -20,7 +20,7 @@ ms.workload: "Inactive"
 ---
 # Determine which R packages are installed on SQL Server
 
-When you install machine learning in SQL Server with the R language option, setup creates an R package library associated with the instance. Each instance has a separate package library. Package libraries are **not** shared across instances, so it is possible for different packages to be installed on different instances.
+When you install machine learning in SQL Server with the R language option, an R package library is created and associated with the instance. Each instance has its own package library. Package libraries cannot be shared across instances.
 
 This article describes how you can determine which R packages are installed for a specific instance.
 
@@ -30,21 +30,21 @@ The following example uses the R function `installed.packages()` in a [!INCLUDE[
 
 ```SQL
 EXECUTE sp_execute_external_script
-@language=N'R'  
-,@script = N'str(OutputDataSet);  
-packagematrix <- installed.packages();  
-NameOnly <- packagematrix[,1];  
-OutputDataSet <- as.data.frame(NameOnly);'  
-,@input_data_1 = N'SELECT 1 as col'  
-WITH RESULT SETS ((PackageName nvarchar(250) ))  
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+NameOnly <- packagematrix[,1];
+OutputDataSet <- as.data.frame(NameOnly);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250) ))
 ```
 
-For more information about the optional and default fields for the R package DESCRIPTION file, see
+For more information about the optional and default fields for the R package DESCRIPTION field, see
 [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
 
 ## Verify whether a package is installed with an instance
 
-If you have installed a package and want to make sure that it is available to a particular SQL Server instance, you can execute the following stored procedure call to load the package and return only messages.
+If you have installed a package and want to make sure that it is available to a particular SQL Server instance, you can execute the following stored procedure call to load the package and return only messages. This example looks for and loads the RevoScaleR library, if available.
 
 ```SQL
 EXEC sp_execute_external_script  @language =N'R',
@@ -52,15 +52,13 @@ EXEC sp_execute_external_script  @language =N'R',
 GO
 ```
 
-This example looks for and loads the RevoScaleR library.
++ If the package is found, a message is returned: "Commands completed successfully."
 
-+ If the package is found, the message returned should be something like "Commands completed successfully."
-
-+ If the package cannot be located or loaded, you get an error like this: "An external script error occurred: Error in library("RevoScaleR"): there is no package called RevoScaleR"
++ If the package cannot be located or loaded, you get an error containing the text: "there is no package called 'MissingPackageName'"
 
 ## Get a list of installed packages using R
 
-There are multiple ways to get a list of installed or loaded packages using R tools and R functions. Many R development tools provide an object browser or a list of packages that are installed or that are loaded in the current R workspace.
+There are multiple ways to get a list of installed or loaded packages using R tools and R functions. Many R development tools provide an object browser or a list of packages that are installed or that are loaded in the current R workspace. This section provides some short commands that you can use from any R command line or in sp\_execute\_external\_script.
 
 + From a local R utility, use a base R function, such as `installed.packages()`, which is included in the `utils` package. To get a list that is accurate for an instance, you must either specify the library path explicitly, or use the R tools associated with the instance library.
 
@@ -77,6 +75,16 @@ sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=m
 sqlPackages <- rxInstalledPackages(computeContext = sqlServerCompute)
 sqlPackages
 ```
+
+## Get library location and version
+
+The following example gets the library location of RevoScaleR in the local compute context, and the package version.
+
+```r
+rxFindPackage(RevoScaleR, "local")
+packageVersion("RevoScaleR")
+```
+
 ## See also
 
 [Install additional R packages on SQL Server](install-additional-r-packages-on-sql-server.md)

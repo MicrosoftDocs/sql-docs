@@ -36,7 +36,7 @@ To install the **SqlServer** module:
 
 ```Install-Module -Name SqlServer```
 
-If there are previous versions of the SqlServer module on the computer, you may be able to use `Update-Module` (later in this article), or provide the `-AllowClobber` parameter:  
+If there are previous versions of the **SqlServer** module on the computer, you may be able to use `Update-Module` (later in this article), or provide the `-AllowClobber` parameter:  
 
 ```Install-Module -Name SqlServer -AllowClobber```
 
@@ -57,7 +57,7 @@ To use a specific version of the module you can import it with a specific versio
 ```Import-Module SqlServer -Version 21.0.17178```
 
 
-The versions of the SqlServer module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater. 
+The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater. 
 
 * [SqlServer module in the PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver) 
 * [SqlServer module reference](https://docs.microsoft.com/powershell/module/sqlserver)

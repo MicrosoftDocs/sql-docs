@@ -22,8 +22,8 @@ helpviewer_keywords:
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 caps.latest.revision: 35
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Implementing a Command Class for a Data Processing Extension

@@ -19,8 +19,8 @@ f1_keywords:
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 caps.latest.revision: 13
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)

@@ -16,8 +16,8 @@ ms.topic: "article"
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # XML Connection Type (SSRS)

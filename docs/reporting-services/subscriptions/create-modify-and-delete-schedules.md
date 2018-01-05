@@ -28,8 +28,8 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: 50
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create, Modify, and Delete Schedules

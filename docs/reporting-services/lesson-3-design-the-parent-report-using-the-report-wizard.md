@@ -17,8 +17,8 @@ applies_to:
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 caps.latest.revision: 9
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lesson 3: Design the Parent Report using the Report Wizard

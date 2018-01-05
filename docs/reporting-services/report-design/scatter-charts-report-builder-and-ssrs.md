@@ -17,7 +17,7 @@ ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Scatter Charts (Report Builder and SSRS)

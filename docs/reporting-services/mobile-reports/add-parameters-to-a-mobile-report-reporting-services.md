@@ -16,7 +16,7 @@ ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add parameters to a mobile report | Reporting Services

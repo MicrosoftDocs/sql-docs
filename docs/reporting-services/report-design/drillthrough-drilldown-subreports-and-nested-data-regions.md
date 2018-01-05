@@ -17,7 +17,7 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Drillthrough, Drilldown, Subreports, and Nested Data Regions

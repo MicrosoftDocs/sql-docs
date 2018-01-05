@@ -18,8 +18,8 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 caps.latest.revision: 17
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Server Properties (Logging Page)

@@ -17,7 +17,7 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Expression Scope for Totals, Aggregates, and Built-in Collections

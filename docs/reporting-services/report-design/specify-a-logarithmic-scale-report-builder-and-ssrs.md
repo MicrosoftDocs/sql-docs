@@ -17,7 +17,7 @@ ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Specify a Logarithmic Scale (Report Builder and SSRS)

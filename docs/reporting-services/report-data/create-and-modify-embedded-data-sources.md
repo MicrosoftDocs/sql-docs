@@ -16,8 +16,8 @@ ms.topic: "article"
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 caps.latest.revision: 10
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create and Modify Embedded Data Sources

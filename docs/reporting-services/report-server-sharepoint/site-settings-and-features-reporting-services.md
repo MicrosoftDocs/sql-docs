@@ -14,8 +14,8 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Reporting Services site settings and site features (SharePoint mode)

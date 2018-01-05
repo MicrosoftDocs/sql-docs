@@ -22,7 +22,7 @@ ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Formatting Series Colors on a Chart (Report Builder and SSRS)

@@ -17,7 +17,7 @@ ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Change an Item Within a Cell (Report Builder and SSRS)

@@ -21,8 +21,8 @@ helpviewer_keywords:
 ms.assetid: adbce647-18f3-470c-8114-42f8bcc95dc2
 caps.latest.revision: 34
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Using the IDeliveryReportServerInformation Interface for a Delivery Extension

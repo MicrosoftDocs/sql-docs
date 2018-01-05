@@ -17,7 +17,7 @@ ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 caps.latest.revision: 10
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 

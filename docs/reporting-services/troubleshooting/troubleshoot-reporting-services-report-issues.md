@@ -16,8 +16,8 @@ ms.topic: "article"
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 caps.latest.revision: 9
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Troubleshoot  Reporting Services Report Issues

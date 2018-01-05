@@ -16,8 +16,8 @@ ms.topic: "article"
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 caps.latest.revision: 10
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Teradata Connection Type (SSRS)

@@ -17,7 +17,7 @@ ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Insert or Delete a Column (Report Builder and SSRS)

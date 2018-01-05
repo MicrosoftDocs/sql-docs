@@ -17,7 +17,7 @@ ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add a Bookmark to a Report (Report Builder and SSRS)

@@ -17,7 +17,7 @@ ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add Empty Points to a Chart (Report Builder and SSRS)

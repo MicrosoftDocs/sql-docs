@@ -17,7 +17,7 @@ ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Display Percentage Values on a Pie Chart (Report Builder and SSRS)

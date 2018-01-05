@@ -16,7 +16,7 @@ ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
 caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Custom maps in Reporting Services mobile reports

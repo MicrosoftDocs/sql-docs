@@ -13,7 +13,7 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 author: "guyinacube"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Active"
 ---

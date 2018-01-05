@@ -16,8 +16,8 @@ ms.topic: "reference"
 applies_to: 
   - "SQL Server 2016 Preview"
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Integrating Reporting Services into Applications

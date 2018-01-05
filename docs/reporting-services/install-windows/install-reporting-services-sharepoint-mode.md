@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 caps.latest.revision: 35
 author: "guyinacube"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"
 ---

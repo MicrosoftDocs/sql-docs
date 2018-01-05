@@ -17,7 +17,7 @@ ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add and Modify a Line (Report Builder and SSRS)

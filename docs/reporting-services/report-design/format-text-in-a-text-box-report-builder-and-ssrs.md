@@ -17,7 +17,7 @@ ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Format Text in a Text Box (Report Builder and SSRS)

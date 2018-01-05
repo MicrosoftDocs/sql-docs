@@ -18,8 +18,8 @@ applies_to:
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 caps.latest.revision: 7
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Accessing the WMI Provider Programmatically

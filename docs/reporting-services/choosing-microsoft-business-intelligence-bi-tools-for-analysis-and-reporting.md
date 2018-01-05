@@ -16,8 +16,8 @@ ms.topic: "get-started-article"
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 caps.latest.revision: 16
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting

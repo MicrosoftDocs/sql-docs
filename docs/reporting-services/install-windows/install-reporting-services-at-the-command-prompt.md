@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 caps.latest.revision: 11
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Install Reporting Services at the Command Prompt

@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
 caps.latest.revision: 9
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Properties - EditionID

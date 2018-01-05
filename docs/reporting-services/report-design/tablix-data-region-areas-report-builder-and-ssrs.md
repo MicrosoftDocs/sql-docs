@@ -17,7 +17,7 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Tablix Data Region Areas (Report Builder and SSRS)

@@ -20,7 +20,7 @@ ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Add a Rectangle or Container (Report Builder and SSRS)

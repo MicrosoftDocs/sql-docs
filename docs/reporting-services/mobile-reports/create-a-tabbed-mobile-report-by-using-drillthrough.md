@@ -16,7 +16,7 @@ ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create a tabbed mobile report by using drillthrough

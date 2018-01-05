@@ -17,7 +17,7 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Built-in Collections - Dataset Fields Collection References (Report Builder)

@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 caps.latest.revision: 11
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ListReservedURLs

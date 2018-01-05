@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
 caps.latest.revision: 9
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - VirtualDirectoryReportManager

@@ -17,7 +17,7 @@ ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 caps.latest.revision: 6
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Multiple Series on a Chart (Report Builder and SSRS)

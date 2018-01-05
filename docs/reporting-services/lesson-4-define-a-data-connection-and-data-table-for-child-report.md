@@ -17,7 +17,7 @@ applies_to:
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 caps.latest.revision: 7
 author: "guyinacube"
-ms.author: "asaxton"
+ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"
 ---

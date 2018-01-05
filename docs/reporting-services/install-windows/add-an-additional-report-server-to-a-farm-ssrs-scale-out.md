@@ -15,8 +15,8 @@ ms.topic: "article"
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 caps.latest.revision: 12
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 

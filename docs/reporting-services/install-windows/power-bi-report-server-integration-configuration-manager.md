@@ -17,8 +17,8 @@ f1_keywords:
   - "power bi"
   - "power bi integration"
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 

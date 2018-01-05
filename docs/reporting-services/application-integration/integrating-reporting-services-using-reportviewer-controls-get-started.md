@@ -17,8 +17,8 @@ ms.topic: "article"
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 caps.latest.revision: 12
 author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Get Started

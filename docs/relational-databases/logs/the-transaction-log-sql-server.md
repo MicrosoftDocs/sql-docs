@@ -29,7 +29,7 @@ Every SQL Server database has a transaction log that records all transactions an
   
 The transaction log is a critical component of the database. If there is a system failure, you will need that log to bring your database back to a consistent state. 
 
-For information about the transaction log architecture and internals, see the [SQL Server Transaction Log Architecture and Management Guide](..//relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
+For information about the transaction log architecture and internals, see the [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
 > [!WARNING] 
 > Never delete or move this log unless you fully understand the ramifications of doing so. 
@@ -77,7 +77,7 @@ Characteristics of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.
 -  The transaction log can be implemented in several files. The files can be defined to expand automatically by setting the FILEGROWTH value for the log. This reduces the potential of running out of space in the transaction log, while at the same time reducing administrative overhead. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).
 -  The mechanism to reuse the space within the log files is quick and has minimal effect on transaction throughput.
 
-For information about the transaction log architecture and internals, see the [SQL Server Transaction Log Architecture and Management Guide](..//relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
+For information about the transaction log architecture and internals, see the [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
 ##  <a name="Truncation"></a> Transaction log truncation  
  Log truncation frees space in the log file for reuse by the transaction log. You must regularly truncate your transaction log to keep it from filling the alotted space (And it will!!)! Several factors can delay log truncation, so monitoring log size matters. Some operations can be minimally logged to reduce their impact on transaction log size.  
@@ -183,7 +183,7 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
 [View or Change the Properties of a Database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
 [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
-[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
   
   

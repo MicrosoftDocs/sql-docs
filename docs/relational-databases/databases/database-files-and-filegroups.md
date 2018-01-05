@@ -1,7 +1,7 @@
 ---
 title: "Database Files and Filegroups | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2017"
+ms.date: "01/05/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -65,21 +65,23 @@ SQL Server files have two names:
 
 **os_file_name:** The os_file_name is the name of the physical file including the directory path. It must follow the rules for the operating system file names.
 
-SQL Server data and log files can be put on either FAT or NTFS file systems. We recommend using the NTFS file system because the security aspects of NTFS. Read/write data filegroups and log files cannot be placed on an NTFS compressed file system. Only read-only databases and read-only secondary filegroups can be put on an NTFS compressed file system.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and log files can be put on either FAT or NTFS file systems. We recommend using the NTFS file system because the security aspects of NTFS. Read/write data filegroups and log files cannot be placed on an NTFS compressed file system. Only read-only databases and read-only secondary filegroups can be put on an NTFS compressed file system.
 
-When multiple instances of SQL Server are run on a single computer, each instance receives a different default directory to hold the files for the databases created in the instance. For more information, see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
+When multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are run on a single computer, each instance receives a different default directory to hold the files for the databases created in the instance. For more information, see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
 ### Data File Pages
-Pages in a SQL Server data file are numbered sequentially, starting with zero (0) for the first page in the file. Each file in a database has a unique file ID number. To uniquely identify a page in a database, both the file ID and the page number are required. The following example shows the page numbers in a database that has a 4-MB primary data file and a 1-MB secondary data file.
+Pages in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data file are numbered sequentially, starting with zero (0) for the first page in the file. Each file in a database has a unique file ID number. To uniquely identify a page in a database, both the file ID and the page number are required. The following example shows the page numbers in a database that has a 4-MB primary data file and a 1-MB secondary data file.
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
 
-The first page in each file is a file header page that contains information about the attributes of the file. Several of the other pages at the start of the file also contain system information, such as allocation maps. One of the system pages stored in both the primary data file and the first log file is a database boot page that contains information about the attributes of the database. For more information about pages and page types, see Understanding Pages and Extents.
+The first page in each file is a file header page that contains information about the attributes of the file. Several of the other pages at the start of the file also contain system information, such as allocation maps. One of the system pages stored in both the primary data file and the first log file is a database boot page that contains information about the attributes of the database. For more information about pages and page types, see [Pages and Extents Architecture Guide](../..//relational-databases/pages-and-extents-architecture-guide.md).
 
 ### File Size
-SQL Server files can grow automatically from their originally specified size. When you define a file, you can specify a specific growth increment. Every time the file is filled, it increases its size by the growth increment. If there are multiple files in a filegroup, they will not autogrow until all the files are full. Growth then occurs in a round-robin fashion.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] files can grow automatically from their originally specified size. When you define a file, you can specify a specific growth increment. Every time the file is filled, it increases its size by the growth increment. If there are multiple files in a filegroup, they will not autogrow until all the files are full. Growth then occurs in a round-robin fashion using [proportional fill](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill).
 
 Each file can also have a maximum size specified. If a maximum size is not specified, the file can continue to grow until it has used all available space on the disk. This feature is especially useful when SQL Server is used as a database embedded in an application where the user does not have convenient access to a system administrator. The user can let the files autogrow as required to reduce the administrative burden of monitoring free space in the database and manually allocating additional space. 
+
+For more information on transaction log file management, see [Manage the size of the transaction log file](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 
 ## Database Snapshot Files
 The form of file that is used by a database snapshot to store its copy-on-write data depends on whether the snapshot is created by a user or used internally:
@@ -165,27 +167,28 @@ Filegroups use a proportional fill strategy across all the files within each fil
 
 As soon as all the files in a filegroup are full, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] automatically expands one file at a time in a round-robin manner to allow for more data, provided that the database is set to grow automatically. For example, a filegroup is made up of three files, all set to automatically grow. When space in all the files in the filegroup is exhausted, only the first file is expanded. When the first file is full and no more data can be written to the filegroup, the second file is expanded. When the second file is full and no more data can be written to the filegroup, the third file is expanded. If the third file becomes full and no more data can be written to the filegroup, the first file is expanded again, and so on.
 
-## Rules for Designing Files and Filegroups
+## Rules for designing Files and Filegroups
 The following rules pertain to files and filegroups:
 - A file or filegroup cannot be used by more than one database. For example, file sales.mdf and sales.ndf, which contain data and objects from the sales database, cannot be used by any other database.
 - A file can be a member of only one filegroup.
 - Transaction log files are never part of any filegroups.
 
-## Recommendations
+## <a name="Recommendations"></a> Recommendations
 Following are some general recommendations when you are working with files and filegroups: 
 - Most databases will work well with a single data file and a single transaction log file.
-- If you use multiple files, create a second filegroup for the additional file and make that filegroup the default filegroup. In this way, the primary file will contain only system tables and objects.
+- If you use multiple data files, create a second filegroup for the additional file and make that filegroup the default filegroup. In this way, the primary file will contain only system tables and objects.
 - To maximize performance, create files or filegroups on different available disks as possible. Put objects that compete heavily for space in different filegroups.
 - Use filegroups to enable placement of objects on specific physical disks.
 - Put different tables used in the same join queries in different filegroups. This will improve performance, because of parallel disk I/O searching for joined data.
 - Put heavily accessed tables and the nonclustered indexes that belong to those tables on different filegroups. This will improve performance, because of parallel I/O if the files are located on different physical disks.
 - Do not put the transaction log file(s) on the same physical disk that has the other files and filegroups.
 
+For more information on transaction log file management recommendations, see [Manage the size of the transaction log file](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
+
 ## Related Content  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
- [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-  
- [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 
+ [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
+ [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md)    
+ [Manage the size of the transaction log file](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     

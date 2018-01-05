@@ -138,7 +138,6 @@ sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"
 Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -OutputXML > C:\MyReports\DatabaseStatusReport.xml  
 ```  
   
-## See Also  
- [Use the Database Engine cmdlets](use-the-database-engine-cmdlets.md)   
+
   
   

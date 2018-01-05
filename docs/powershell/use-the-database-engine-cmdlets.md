@@ -41,7 +41,7 @@ ms.workload: "On Demand"
  Most Windows PowerShell scripts work with the [!INCLUDE[ssDE](../includes/ssde-md.md)] by using the SQL Server PowerShell provider and the SQL Server manageability object models. For more information, see [SQL Server PowerShell](sql-server-powershell.md).  
   
 ### Get Cmdlet Help  
- In the Windows PowerShell environment, the **Get-Help** cmdlet provides help information for each cmdlet. **Get-Help** returns information such as the syntax, parameter definitions, input and output types, and a description of the action performed by the cmdlet. For more information, see [Get Help SQL Server PowerShell](get-help-sql-server-powershell.md).  
+ In the Windows PowerShell environment, the **Get-Help** cmdlet provides help information for each cmdlet. **Get-Help** returns information such as the syntax, parameter definitions, input and output types, and a description of the action performed by the cmdlet. For more information, see [Get-Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-help).  
   
 ### Partial Parameter Names  
  You do not have to specify the entire name of a cmdlet parameter. You only have to specify enough of the name to uniquely separate it from the other parameters that are supported by the cmdlet. For example, these examples show three ways of specifying the **Invoke-Sqlcmd -QueryTimeout** parameter:  

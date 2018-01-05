@@ -25,8 +25,7 @@ ms.workload: "Inactive"
 ## Database Engine Cmdlets  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] includes relatively few cmdlets for the [!INCLUDE[ssDE](../includes/ssde-md.md)]. Most PowerShell scripts working with the [!INCLUDE[ssDE](../includes/ssde-md.md)] use the SQL Server PowerShell provider and the manageability object models. For more information, see [SQL Server PowerShell Provider](sql-server-powershell-provider.md).  
   
- To learn how to get help about the SQL Server cmdlets in a Windows PowerShell environment, see [Get Help SQL Server PowerShell](get-help-sql-server-powershell.md).  
-  
+ 
 ### In This Section  
  This section contains information about these cmdlets.  
   

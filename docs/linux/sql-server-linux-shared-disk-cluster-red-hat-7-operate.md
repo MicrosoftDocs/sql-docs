@@ -179,7 +179,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    The following example ads a node named **vm3** to the cluster.
+    The following example adds a node named **vm3** to the cluster.
 
     ```bash
     sudo pcs    cluster auth  

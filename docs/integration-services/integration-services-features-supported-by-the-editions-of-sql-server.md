@@ -59,7 +59,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Built-in data source connectors|Yes|Yes|||| 
 |Built in tasks and transformations|Yes|Yes||||  
-|ODBC source and destination by Attunity|Yes|Yes|||| 
+|ODBC source and destination |Yes|Yes|||| 
 |Azure data source connectors and tasks|Yes|Yes||||  
 |Hadoop/HDFS connectors and tasks|Yes|Yes||||  
 |Basic data profiling tools|Yes|Yes|||| 

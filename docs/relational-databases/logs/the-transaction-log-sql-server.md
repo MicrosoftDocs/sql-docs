@@ -1,7 +1,7 @@
 ---
 title: "The Transaction Log (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/03/2017"
+ms.date: "01/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -28,6 +28,8 @@ ms.workload: "Active"
   Every SQL Server database has a transaction log that records all transactions and the database modifications made by each transaction.
   
 The transaction log is a critical component of the database. If there is a system failure, you will need that log to bring your database back to a consistent state. 
+
+For information about the transaction log architecture and internals, see the [SQL Server Transaction Log Architecture and Management Guide](..//relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
 > [!IMPORTANT] 
 > Never delete or move this log unless you fully understand the ramifications of doing so. 
@@ -175,12 +177,12 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
 -   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
 ## More information!  
-  [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
- [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md)   
- [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
- [View or Change the Properties of a Database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
- [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
+[SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
+[Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md)   
+[Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+[Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+[Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
+[View or Change the Properties of a Database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
+[Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   

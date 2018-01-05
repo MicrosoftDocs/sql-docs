@@ -2,14 +2,14 @@
 title: "Migrate Power Pivot to SharePoint 2013 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0

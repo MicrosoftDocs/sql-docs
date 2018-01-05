@@ -2,15 +2,15 @@
 title: "Add a Total to a Group or Tablix Data Region (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "report-design"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4

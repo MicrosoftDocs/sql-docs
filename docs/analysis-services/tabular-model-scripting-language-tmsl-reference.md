@@ -2,15 +2,15 @@
 title: "Tabular Model Scripting Language (TMSL) Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2

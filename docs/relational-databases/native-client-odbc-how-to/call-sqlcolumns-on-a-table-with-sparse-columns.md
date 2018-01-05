@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c

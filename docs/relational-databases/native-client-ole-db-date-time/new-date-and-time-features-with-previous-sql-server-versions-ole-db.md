@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5

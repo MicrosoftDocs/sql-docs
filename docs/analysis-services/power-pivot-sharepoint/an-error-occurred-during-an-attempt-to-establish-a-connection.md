@@ -2,14 +2,14 @@
 title: "An error occurred during an attempt to establish a connection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c

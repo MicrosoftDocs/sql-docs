@@ -2,14 +2,14 @@
 title: "Files-Only Installation (Reporting Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 

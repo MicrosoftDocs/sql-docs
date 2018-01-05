@@ -2,15 +2,15 @@
 title: "Change the Colors Used in the Data Mining Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 

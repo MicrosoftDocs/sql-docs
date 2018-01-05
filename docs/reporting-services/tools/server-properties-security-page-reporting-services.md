@@ -2,15 +2,15 @@
 title: "Server Properties (Security Page) - Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "tools"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 

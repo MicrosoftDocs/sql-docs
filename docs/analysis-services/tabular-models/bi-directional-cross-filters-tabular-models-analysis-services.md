@@ -2,15 +2,15 @@
 title: "Bi-directional cross filters - tabular models - Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
+  
+ms.component: multidimensional-tabular
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac

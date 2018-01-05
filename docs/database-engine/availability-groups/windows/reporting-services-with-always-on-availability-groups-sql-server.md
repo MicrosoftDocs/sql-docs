@@ -10,8 +10,8 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 

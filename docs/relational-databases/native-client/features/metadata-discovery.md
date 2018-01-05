@@ -9,7 +9,7 @@ ms.component: "native-client|features"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5

@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2

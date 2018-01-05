@@ -2,15 +2,15 @@
 title: "Rendering Behaviors (Report Builder  and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "report-design"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58

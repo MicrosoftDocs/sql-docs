@@ -2,15 +2,15 @@
 title: "Manage Subscription Owners and Run Subscription - PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/24/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "subscriptions"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0

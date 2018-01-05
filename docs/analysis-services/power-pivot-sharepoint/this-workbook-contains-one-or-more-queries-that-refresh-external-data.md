@@ -2,14 +2,14 @@
 title: "This workbook contains one or more queries that refresh external data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c

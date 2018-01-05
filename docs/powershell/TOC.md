@@ -1,10 +1,9 @@
 # [Install Sql PowerShell module](download-sql-server-ps-module.md)
-# [Overview](database-engine-powershell-reference.md) 
+# Overview
+## [SQL Server PowerShell](sql-server-powershell.md) 
 ## [SQL PowerShell Modules](https://docs.microsoft.com/powershell/sql-server/overview?toc=/sql/powershell/toc.json)
-# [SQL Server PowerShell](sql-server-powershell.md) 
+## [Database engine powershell reference](database-engine-powershell-reference.md)
 # [Import the SQLPS module](import-the-sqlps-module.md)  
-# [Database engine powershell reference](database-engine-powershell-reference.md)
-# [New and updated articles](new-updated-powershell.md)
 # [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)  
 # [Invoke-Sqlcmd cmdlet](invoke-sqlcmd-cmdlet.md)  
 # [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md)  
@@ -22,7 +21,6 @@
 # [Escape SQL Server Identifiers](escape-sql-server-identifiers.md)  
 # [Manage Authentication in Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)  
 # [Manage Tab Completion (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)  
-# [Get Help SQL Server PowerShell](get-help-sql-server-powershell.md)  
 # Quickstarts
 # Tutorials
 # Samples
@@ -32,7 +30,5 @@
 ## [Sqlserver module reference](https://docs.microsoft.com/powershell/module/sqlserver/?toc=/sql/powershell/toc.json)
 ## [Sqlps module reference](https://docs.microsoft.com/powershell/module/sqlps/?toc=/sql/powershell/toc.json)
 # Resources
-## [Get the SqlServer module](https://www.powershellgallery.com/packages/SqlServer)
-## [PowerShell Gallery](https://www.powershellgallery.com)
 ## [New and updated articles](new-updated-powershell.md)
 ## [SQL Server PowerShell License Terms](sql-server-powershell-license-terms.md)  

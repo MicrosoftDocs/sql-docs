@@ -3257,7 +3257,7 @@
           },
           {
             "source_path": "docs/relational-databases/scripting/get-help-sql-server-powershell.md",
-            "redirect_url": "/sql/powershell/get-help-sql-server-powershell",
+            "redirect_url": "/sql/powershell/sql-server-powershell",
             "redirect_document_id": false
           },
           {

@@ -17,7 +17,7 @@ ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
 caps.latest.revision: 7
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # R package management for SQL Server
@@ -130,13 +130,13 @@ For more information about how to enable and use this feature, see [R package sy
 
 ### Package management using T-SQL
 
-SQL Server 2017 added new T-SQL statements to give the DBA more control over R packages at the database level. The goal is that the DBA need not learn to use R or Python, but can give users the ability to install the packages they need and share them with others.
+SQL Server 2017 added new T-SQL statements to give the DBA more control over R packages at the database level. The DBA should not have to learn to use R or Python tools, but instead should be able to give R or Python users the ability to install the packages they need and share them with others.
 
 This feature is intended to make collaboration and version management easier in multiuser environments: for example:
 
-+ You need to share packages you have developed with other people on your team
-+ Multiple analysts are working in the same database but need to use dfferent versions of the same package
-+ You want to move packages and their permissions when you move a database, or when you perform backup and restore operations
++ You want to share packages that you have developed with other people on your team.
++ Multiple analysts are working in the same database, and need to use different versions of the same package.
++ You want to move packages and their permissions at the same time that you move a database, or when you perform backup and restore operations.
 
 Package management in SQL Server 2017 relies on these new database objects and features:
 
@@ -152,7 +152,7 @@ Use of these features requires some additional preparation at the instance and d
 + Package libraries can be installed using the new T-SQL statement, CREATE EXTERNAL LIBRARY. However, all package dependencies must be prepared in advance and installed as part of a single zipped file.
 
 > [!NOTE]
-> Although the features just described are fully functional at this time, future releases contain additional improvements to make it easier to prepare package libraries and to manage dependencies, such as required packages. If you are familiar with R package installation, we recommend that you continue to use that method.
+> Although the features described here are fully functional at this time, future releases contain additional improvements to make it easier to prepare package libraries and to manage dependencies. If you are familiar with R package installation, we recommend that you continue to use the R tools for now.
 
 #### <a name="bkmk_createExternalLibrary"></a> CREATE EXTERNAL LIBRARY 
 
@@ -185,7 +185,7 @@ To ensure that all package dependencies are provided, we recommend using [miniCR
 
 #### <a name="bkmk_roles"></a> Database roles for package management 
 
-The new roles provided in SQL Server for package management are not included by default, even in istanes where machine learning has been installed and enabled. You must add the roles by running a script as described here: [Enable or disable package management](r-package-how-to-enable-or-disable.md).
+The new roles provided in SQL Server for package management are not included by default, even in instances where machine learning has been installed and enabled. You must add the roles by running a script as described here: [Enable or disable package management](r-package-how-to-enable-or-disable.md).
 
 After you have run this script, you should see the following new database roles:
 

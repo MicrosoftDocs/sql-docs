@@ -50,7 +50,7 @@ This article describes how to install new R packages to an instance of SQL Serve
 
     If you are an experienced R user, you might be accustomed to installing packages from the command line without special permissions, or without downloading them in advance. However, in many cases SQL Server computers do not have an internet connection. Moreover, access to server files or external storage might be restricted.
 
-    If you don't have administrative acceess to the SQL Server computer, find a database administrator to help with package installation.
+    If you don't have administrative access to the SQL Server computer, find a database administrator to help with package installation.
 
 + Never install to a user library.
 
@@ -78,7 +78,7 @@ You can use standard R tools to install new packages on an instance of SQL Serve
     > [!IMPORTANT] 
     > Be sure to install packages to the default library that is associated with the current instance. Never install packages to a user directory. For instructions on how to locate the default library, see [R packages installed with SQL Server](installing-and-managing-r-packages.md).
 
-    If you do not have the required permissions, contact the dataase administrator and provde alist of the packages you need.
+    If you do not have the required permissions, contact the database administrator and provide a list of the packages you need.
 
 2.  Open an R command prompt as administrator.
 
@@ -135,7 +135,7 @@ If the package that you intend to install has dependencies, prepare **all** requ
 
 3. Open an R command prompt as administrator.
 
-4.  Run the R command `install.packages` and specify the package or respository name, and the location of the zipped files.
+4.  Run the R command `install.packages` and specify the package or repository name, and the location of the zipped files.
 
     ```R
     install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)
@@ -199,7 +199,7 @@ However, CREATE EXTERNAL LIBRARY is supported under these conditions:
 
 3. As an administrator, run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package collection to the database.
 
-    For example, the following statement references a miniCRAN repository containing the randomForest package and its dependencies. The external library name must use the samename that youe expect to use when loading or calling the package.
+    For example, the following statement references a miniCRAN repository containing the randomForest package and its dependencies. The external library name must use the same name that you expect to use when loading or calling the package.
 
     ```R
     CREATE EXTERNAL LIBRARY randomForest
@@ -248,7 +248,7 @@ For example, the following procedure describes now to get the correct version of
 4. You can then install the package, or copy the zipped package to a server that does not have internet access.
 
 > [!TIP]
-> If by mistake you install the package instead of downloading the binaries, a copy of the downloaded zipped file is also saved to your computer. Watch the status messages as the package is installed to determe the file location. You can copy that zipped file to the server that does not have internet access.
+> If by mistake you install the package instead of downloading the binaries, a copy of the downloaded zipped file is also saved to your computer. Watch the status messages as the package is installed to determine the file location. You can copy that zipped file to the server that does not have internet access.
 > However, this method will not include the package dependencies. 
 
 For more information about the contents of the zip file format, and how to create an R package, we recommend this tutorial, which you can download in PDF format from the R project site: [Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf).

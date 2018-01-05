@@ -20,9 +20,9 @@ ms.workload: "Inactive"
 ---
 # Determine which R packages are installed on SQL Server
 
-When you install machine learning in SQL Server with the R language option, an R package library is created and associated with the instance. Each instance has its own package library. Package libraries cannot be shared across instances.
+When you install machine learning in SQL Server with the R language option, an R package library is created specifically for use by the instance. Each instance on the server has its own package library. Package libraries cannot be shared across instances.
 
-This article describes how you can determine which R packages are installed for a specific instance.
+This article describes how you can determine which R packages are installed for a specific SQL Server instance.
 
 ## Generate R package list using a stored procedure
 

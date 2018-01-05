@@ -13,7 +13,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 
@@ -26,8 +26,8 @@ associated with SQL Server databases. Using this feature, an administrator can
 restore not just the database, but any R packages that were used by data
 scientists working in that database.
 
-This topic describes the package synchronization feature, and how to use the
-[rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages) function to perform the following tasks:
+This article describes the package synchronization feature, and how to use the
+[rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) function to perform the following tasks:
 
 + Synchronize a list of packages for an entire SQL Server database
 
@@ -64,9 +64,6 @@ To use package synchronization requires that the new package management features
 When this is done, information about users and the packages that they have installed is stored in the SQL Server instance. This information can then be applied to update the R packages in the file system.
 
 Whenever you add a new package using the package management functions, both the records in SQL Server and the file system are updated.
-
-> [!NOTE]
-> You cannot use package synchronization if you have been installing R packages the traditional way, using R tools to install packages directly into the file system. 
 
 ### Permissions
 

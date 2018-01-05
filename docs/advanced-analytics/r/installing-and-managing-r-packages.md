@@ -1,7 +1,7 @@
 ---
 title: "R packages installed with SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2017"
+ms.date: "01/04/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -17,7 +17,7 @@ ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # R packages installed with SQL Server
@@ -65,10 +65,10 @@ Installation of R in SQL Server 2016 or SQL Server 2017 always includes the **Re
 
 In SQL Server 2016, an administrator had to install new R packages on an instance-wide basis. 
 
-SQL Server 2017 introduced new features for package installation and managament:
+SQL Server 2017 introduced new features for package installation and management:
 
-+ You can use R commands from a remote client to install packages usinig either private or shared scope. This feature requires either [Microsoft R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install) or  [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), as well as dbo privileges on the instance.
-+ New database features have been added to support package management by database administrators without using T-SQL. In future, these features will also give DBAs the ability to delegate most facets of package management to privileged users.
++ You can use R commands from a remote client to install packages using either private or shared scope. This feature requires either [Microsoft R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install) or  [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), as well as dbo privileges on the instance.
++ New database features have been added to support package management by database administrators without using T-SQL. In future, these features provide DBAs with the ability to delegate most facets of package management to privileged users.
 
 This section describes the permissions required to install and manage packages per version.
 
@@ -82,7 +82,7 @@ This section describes the permissions required to install and manage packages p
 
     If you are an administrator on the SQL Server instance, you can install new packages at will. Just be sure to use the default library that is associated with the instance. Packages installed to other locations cannot run when called from a stored procedure. Any R code that runs using the SQL Server as a compute context also requires that packages be available in the instance library.
 
-    This release also includes some new features intended to support easier package management by DBAs in a later release. For now, we recommened that you continue to install Rpackages on an instance-wide basis..
+    This release also includes some new features intended to support easier package management by DBAs in a later release. For now, we recommend that you continue to install R packages on an instance-wide basis.
 
 + R Server (Standalone)
 

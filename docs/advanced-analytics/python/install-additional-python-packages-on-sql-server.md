@@ -25,30 +25,30 @@ It also describes how to list packages that are installed in the current environ
 
 ## Prerequisites
 
-The process for installing new packages is simple, with some additional requirements if the server does not have an internet connection.
+The process for installing new packages is simple. Some additional steps are required if the server does not have an internet connection.
 
 + You must have installed Machine Learning Services (In-Database) with the Python language option. For instructions, see [Set up Python Machine Learning Services](setup-python-machine-learning-services.md).
 
 + For each server instance, you must install a separate copy of the package. Packages cannot be shared across instances.
 
-+ Determine whether the package you intend to use will work with Python 3.5 and in the Windows environment. In general, there are very few limitations on the packages that you can import and use in the SQL Server environment. Possible problems include packages that use networking functionality that is blocked on the server or by the firewall, or packages with dependencies that cannot be installed on a Windows computer.
++ Determine whether the package you intend to use will work with Python 3.5 and in the Windows environment. In general, there are few limitations on the packages that you can import and use in the SQL Server environment. Possible problems include packages that use networking functionality that is blocked on the server or by the firewall, or packages with dependencies that cannot be installed on a Windows computer.
 
 ## Add a new Python package (online install)
 
-For this example, we'll assume that you want to install a new package on a computer connected to the internet.
+For this example, we assume that you want to install a new package directly on the SQL Server computer, which is connected to the internet.
 
 The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/CNTK-FAQ), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
 
 > [!TIP]
-> See this blog for additional information about using Python in Jupyter notebooks, or configuring Python Tools for Visual Studio or PyCharm: [Getting Started with Python Web Services using Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
+> For additional information, see this blog, which describes how to use Jupyter notebooks, and how to use **revoscalepy** with Python Tools for Visual Studio or PyCharm: [Getting Started with Python Web Services using Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
 
 ### Step 1. Download the Windows version of the Python package
 
-+ If you are installing Python packages on a server with no internet access, you must download the .WHL file to a different computer and then copy it to a local folder.
++ If you are installing Python packages on a server with no internet access, you must download the WHL file to a different computer and then copy it to a local folder.
 
 + SQL Server 2017 uses Python 3.5. Be sure to get the Windows version of the package, and a version that is compatible with Python 3.5.
 
-For this example, we located the download link on this page, which provides download links for multiple platforms and for multiple Python versions: [Installing CNTK for Python on Windows](https://docs.microsoft.com/cognitive-toolkit/setup-windows-python?tabs=cntkpy21)
+This example used a download link from this page, which supports downloads for multiple platforms and for multiple Python versions: [Installing CNTK for Python on Windows](https://docs.microsoft.com/cognitive-toolkit/setup-windows-python?tabs=cntkpy21)
 
 ### Step 2. Open a Python command prompt
 
@@ -74,7 +74,7 @@ The full path of the **Scripts** folder in a default installation is as follows:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
 
-As installation progresses, you can expect status messages such as the following in the command prompt window:
+As installation progresses, you can see status messages in the command prompt window:
 
 ```python
 pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl

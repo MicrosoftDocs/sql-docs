@@ -79,7 +79,7 @@ You begin by creating a miniCRAN repository to use as a source. You should creat
 
     Be sure to create the folder in advance. An error is raised if the `local_repo` folder does not exist when you run the R code later.
 
-    The folder should have a desriptive name; that is, not "miniCRAN", but something like "GeneticsPackages" or "TeamRPackages1.0.2".
+    The folder should have a descriptive name. For example, avoid using "miniCRAN", and instead type something like "GeneticsPackages" or "TeamRPackages1.0.2".
 
     ```R
     local_repo <- "~/miniCRAN"
@@ -134,11 +134,11 @@ Depending on the version of SQL Server, there are two options for adding new pac
 
 - Install to the instance library using the miniCRAN repository and R tools.
 
-- Upload packages to a SQL Server database and install using the CREATE EXTERNAL LIBRARY statement. This ption requires SQL Server 2017. See [Install additional R packages on SQL Server](install-additional-r-packages-on-sql-server.md).
+- Upload packages to a SQL Server database and install using the CREATE EXTERNAL LIBRARY statement. This option requires SQL Server 2017. See [Install additional R packages on SQL Server](install-additional-r-packages-on-sql-server.md).
 
 The following procedure describes how to install the packages using R tools.
 
-1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you will install the packages.
+1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages.
 
 2. Open an R command prompt using the R tool associated with the instance.
 

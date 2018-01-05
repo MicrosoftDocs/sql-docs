@@ -19,7 +19,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Follow this article to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. The solution provides resiliency for SQL Server because SQL Server is deployed as a container in a pod, which Kubernetes will automatically recreate if it failures. AKS provides resiliance in case of Kubernetes node failure. 
+Follow this article to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. The solution provides resiliency for SQL Server because SQL Server is deployed as a container in a pod, which Kubernetes automatically recreates if it fails. AKS provides resilience in case of Kubernetes node failure. 
 
 This tutorial demonstrates how to configure a highly available SQL Server instance in containers using AKS. 
 
@@ -38,9 +38,9 @@ Kubernetes 1.6+ has support for [Storage Classes](http://kubernetes.io/docs/conc
 
 ## Prerequisites
 
-The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), to connect to and manage the cluster. 
+The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), to manage the cluster. 
 
-You can follow the instructions at [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster) to create the cluster and connect to a Kubernetes cluster in AKS with `kubectl`. 
+You can follow the instructions at [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster) to create connect to a Kubernetes cluster in AKS with `kubectl`. 
 
 ## Create storage
 
@@ -203,13 +203,13 @@ In this example, the SQL Server container is described as a Kubernetes deploymen
       * Configures the container image to set SA password as defined in this section.
 
       ```yaml
-                 valueFrom:
-                  secretKeyRef:
-                    name: mssql
-                    key: SA_PASSWORD 
+      valueFrom:
+        secretKeyRef:
+          name: mssql
+          key: SA_PASSWORD 
       ```
 
-       When Kubernetes deploys the container, it will refer to the secret named `mssql` to get the value for the password. 
+       When Kubernetes deploys the container, it refers to the secret named `mssql` to get the value for the password. 
 
    >[!NOTE]
    >By using the `LoadBalancer` service type, the SQL Server container is accessible remotely (via the internet) at port 1433.
@@ -234,7 +234,7 @@ In this example, the SQL Server container is described as a Kubernetes deploymen
    ![Get pod command](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
    >[!NOTE]
-   >After the deployment is created it may take a few minutes before the pod is visible. The delay is because the cluster needs to pull the [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image from the Docker hub. After it is pulled the first time, subsequent deployments may be faster - if the deployment is to a node that already has the image cached on it. 
+   >After the deployment is created, it may take a few minutes before the pod is visible. The delay is because the cluster needs to pull the [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image from the Docker hub. After it is pulled the first time, subsequent deployments may be faster - if the deployment is to a node that already has the image cached on it. 
 
    Learn more about [Kubernetes Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 

@@ -126,9 +126,14 @@ Configure a persistent volume, and persistent volume claim in the Kubernetes clu
 
 Kubernetes can manage sensitive configuration information like passwords as secrets. Create a secret to store the SA password for SQL Server. 
 
-1. Create manifest for the secret. The following yaml file for the secret that includes the SA password.  
+The following command creates a password for the SA account:
 
-   ```yaml
+   ```azurecli
+   kubectl create secret generic mssql SA_PASSWORD=MyC0m9l&xP@ssw0rd
+   ```  
+
+   The preceding command creates a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `SA_PASSWORD`.
+<!--   ```yaml
    apiVersion: v1
    kind: Secret
    metadata:
@@ -156,7 +161,7 @@ Kubernetes can manage sensitive configuration information like passwords as secr
    ```
 
    ![Secret command](media/tutorial-sql-server-containers-kubernetes/03_secret_cmd.png)
-
+-->
 For more information about secret management in Kubernetes, see [Secrets](http://kubernetes.io/docs/concepts/configuration/secret/).
 
 ## Create the SQL Server container deployment

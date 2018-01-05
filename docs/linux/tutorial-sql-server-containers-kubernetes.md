@@ -218,8 +218,8 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
    * `value: "Developer"`
      * Sets the container to run SQL Server Developer edition. Developer edition is not licensed for production data. If the deployment is for production use, set the appropriate edition. Can be one of `Enterprise`, `Standard`, or `Express`. 
 
-     >[!NOTE]
-     >For more information, see [How to license SQL Server](http://www.microsoft.com/sql-server/sql-server-2017-pricing).
+      >[!NOTE]
+      >For more information, see [How to license SQL Server](http://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
    * `persistentVolumeClaim`
      * This value requires an entry for `claimName:` that maps to the name used for the persistent volume claim. This article uses `mssql-data`. 

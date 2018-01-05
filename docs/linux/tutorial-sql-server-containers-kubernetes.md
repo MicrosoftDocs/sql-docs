@@ -272,7 +272,9 @@ In this example, the SQL Server container is described as a [Kubernetes deployme
 
    For additional information about the status of the objects in the Kubernetes cluster, run:
 
-   `az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>` 
+   ```azurecli
+   az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
+   ```  
 
 ## Connect with SSMS
 

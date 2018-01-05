@@ -1,4 +1,4 @@
-# [Install Sql PowerShell](download-sql-server-ps-module.md)
+# [Install Sql PowerShell module](download-sql-server-ps-module.md)
 # [Overview](database-engine-powershell-reference.md) 
 ## [SQL PowerShell Modules](https://docs.microsoft.com/powershell/sql-server/overview?toc=/sql/powershell/toc.json)
 # [SQL Server PowerShell](sql-server-powershell.md) 

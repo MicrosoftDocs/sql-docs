@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server PowerShell Module | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/10/2017"
+ms.date: "01/05/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -21,42 +21,42 @@ ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
 ---
-# Download SQL Server PowerShell Module
+# Install SQL Server PowerShell module
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-As part of the 17.0 release of SQL Server Management Studio, the SQL Server PowerShell module now ships via the PowerShell Gallery.  The module is no longer included in the SSMS install package. To use PowerShell with SSMS 17.0 and newer, the SQL Server Module must be installed on the machine as an additional step.
 
-Full documentation about installing the latest version of the Windows Management Framework and how to install PowerShell modules in general can be found on the [PowerShell Gallery](https://www.powershellgallery.com/) site.
+The latest **SqlServer** PowerShell module is available in the PowerShell Gallery.
 
-The PowerShell command to install the SQL Server module is:
+> [!NOTE]
+> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the same **SQLPS** cmdlets, and also includes new cmdlets to support the latest SQL features. 
+> The **SqlServer** module *was* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** Module must be installed from the PowerShell Gallery.
 
-> Install-Module -Name SqlServer
+The following PowerShell commands install the SqlServer module. If you run into problems installing, see the [Install-Module documentation](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) and [Install-Module reference](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
-This command will install the module for all users of the computer. You will need to be running the PowerShell process as admin.
+To install the **SqlServer** module:
 
-> Install-Module -Name SqlServer -Scope CurrentUser
+```Install-Module -Name SqlServer```
 
-This command will install the module for the user running the current process of PowerShell. You do not need to be running the PowerShell process with Administrator rights.
+If there are previous versions of SQL Server PowerShell modules on the machine, it may be necessary to provide the `-AllowClobber` parameter.  
 
-If there are previous versions of SQL Server PowerShell modules on the machine, it may be necessary to provide the "-AllowClobber" parameter.  
+```Install-Module -Name SqlServer -AllowClobber```
 
-If running as administrator and to install the module for all users of the computer
+If you are not able to run the PowerShell session as administrator, try installing for the current user:
 
-> Install-Module -Name SqlServer -AllowClobber
+```Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber```
 
-If not able to run as administrator or to install only for the current user
+When updated versions of the **SqlServer** module are available, you can update the version using `Update-Module`:
 
-> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
+```Update-Module -Name SqlServer```
 
-When updated versions of the SqlServer module are available, you will be able to update the version using the Update-Module command
+To view the versions of the module installed:
 
-> Update-Module -Name SqlServer
+```Get-Module SqlServer -ListAvailable```
 
-To view the versions of the module installed on the machine you can use
+To use a specific version of the module you can import it with a specific version number similar to the following:
 
-> Get-Module SqlServer -ListAvailable
+```Import-Module SqlServer -Version 21.0.17178```
 
-To use a specific version of the module in your scripts you can import it with
 
-> Import-Module SqlServer -Version 21.0.17178
+The versions of the SqlServer module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater. 
 
-The versions of the SQL Server PowerShell module shipped to the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater. You can find the SqlServer module on the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver/) 
+* [SqlServer module in the PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver) 

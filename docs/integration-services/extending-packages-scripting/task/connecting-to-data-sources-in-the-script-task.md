@@ -58,14 +58,14 @@ ms.workload: "On Demand"
     Public Sub Main()
 
         Dim myADONETConnection As SqlClient.SqlConnection =
-        DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction),
-            SqlClient.SqlConnection)
+            DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction),
+                SqlClient.SqlConnection)
         MsgBox(myADONETConnection.ConnectionString,
             MsgBoxStyle.Information, "ADO.NET Connection")
 
         Dim myFlatFileConnection As String =
-        DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction),
-            String)
+            DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction),
+                String)
         MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")
 
         Dts.TaskResult = ScriptResults.Success

@@ -13,8 +13,6 @@
 # [SQL Server PowerShell Provider](sql-server-powershell-provider.md)  
 # [Navigate SQL Server PowerShell Paths](navigate-sql-server-powershell-paths.md)  
 # [Work With SQL Server PowerShell Paths](work-with-sql-server-powershell-paths.md)  
-# [Convert URNs to SQL Server Provider Paths](convert-urns-to-sql-server-provider-paths.md)  
-# [Use the Database Engine cmdlets](use-the-database-engine-cmdlets.md)  
 # [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)  
 # [Specify Instances in the SQL Server PowerShell Provider](specify-instances-in-the-sql-server-powershell-provider.md)  
 # [Encode and Decode SQL Server Identifiers](encode-and-decode-sql-server-identifiers.md)  

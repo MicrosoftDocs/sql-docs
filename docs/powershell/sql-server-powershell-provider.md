@@ -72,7 +72,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |----------------------|-----------|  
 |Describes how to use Windows PowerShell cmdlets to navigate through the nodes in a path, and at each node get a list of the objects at that node.|[Navigate SQL Server PowerShell Paths](navigate-sql-server-powershell-paths.md)|  
 |Describes how to use the SMO methods and properties to report on and perform work on the object represented by a node in a path. Also describes how to get a list of the SMO methods and properties for that node.|[Work With SQL Server PowerShell Paths](work-with-sql-server-powershell-paths.md)|  
-|Describes how to convert a SMO Uniform Resource Name (URN) to a SQL Server provider path.|[Convert URNs to SQL Server Provider Paths](convert-urns-to-sql-server-provider-paths.md)|  
+|Describes how to convert a SMO Uniform Resource Name (URN) to a SQL Server provider path.|[Convert URNs to SQL Server Provider Paths](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
 |Describes how to open SQL Server Authentication connections by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider. By default, the provider uses Windows Authentication connections made using the credentials of the Windows account running the Windows PowerShell session.|[Manage Authentication in Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## See Also  

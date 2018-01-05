@@ -3217,12 +3217,12 @@
           },
           {
             "source_path": "docs/relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md",
-            "redirect_url": "/sql/powershell/convert-urns-to-sql-server-provider-paths",
+            "redirect_url": "/powershell/module/sqlserver/Convert-UrnToPath",
             "redirect_document_id": false
           },
           {
             "source_path": "docs/relational-databases/scripting/use-the-database-engine-cmdlets.md",
-            "redirect_url": "/sql/powershell/use-the-database-engine-cmdlets",
+            "redirect_url": "/sql/powershell/sql-server-powershell",
             "redirect_document_id": false
           },
           {
@@ -3257,7 +3257,7 @@
           },
           {
             "source_path": "docs/relational-databases/scripting/get-help-sql-server-powershell.md",
-            "redirect_url": "/sql/powershell/get-help-sql-server-powershell",
+            "redirect_url": "/sql/powershell/sql-server-powershell",
             "redirect_document_id": false
           },
           {

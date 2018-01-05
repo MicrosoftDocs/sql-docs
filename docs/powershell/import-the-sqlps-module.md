@@ -71,9 +71,6 @@ Get-Module -ListAvailable -Name Sqlps;
   
 ## See Also  
  [SQL Server PowerShell](sql-server-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
- [Use the Database Engine cmdlets](use-the-database-engine-cmdlets.md)  
- [Installing a PowerShell Module](https://msdn.microsoft.com/library/dd878350(v=vs.85).aspx)  
- [Import-Module](https://technet.microsoft.com/library/hh849725.aspx)
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)
   
   

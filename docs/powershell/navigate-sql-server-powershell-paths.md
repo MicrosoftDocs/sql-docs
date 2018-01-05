@@ -135,7 +135,6 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ## See Also  
  [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [Work With SQL Server PowerShell Paths](work-with-sql-server-powershell-paths.md)   
- [Convert URNs to SQL Server Provider Paths](convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

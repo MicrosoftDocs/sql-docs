@@ -25,8 +25,7 @@ ms.workload: "Inactive"
 ## Database Engine Cmdlets  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] includes relatively few cmdlets for the [!INCLUDE[ssDE](../includes/ssde-md.md)]. Most PowerShell scripts working with the [!INCLUDE[ssDE](../includes/ssde-md.md)] use the SQL Server PowerShell provider and the manageability object models. For more information, see [SQL Server PowerShell Provider](sql-server-powershell-provider.md).  
   
- To learn how to get help about the SQL Server cmdlets in a Windows PowerShell environment, see [Get Help SQL Server PowerShell](get-help-sql-server-powershell.md).  
-  
+ 
 ### In This Section  
  This section contains information about these cmdlets.  
   
@@ -38,7 +37,7 @@ ms.workload: "Inactive"
 ### Information About Other Cmdlets  
  The **Encode-Sqlname** and **Decode-Sqlname** cmdlets help you specify SQL Server identifiers that contain characters not supported in PowerShell paths. For more information, see [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
   
- Use the **Convert-UrnToPath** cmdlet to convert a Unique Resource Name for a [!INCLUDE[ssDE](../includes/ssde-md.md)] object to a path for the SQL Server PowerShell provider. For more information, see [Convert URNs to SQL Server Provider Paths](convert-urns-to-sql-server-provider-paths.md).  
+ Use the **Convert-UrnToPath** cmdlet to convert a Unique Resource Name for a [!INCLUDE[ssDE](../includes/ssde-md.md)] object to a path for the SQL Server PowerShell provider. For more information, see [Convert URNs to SQL Server Provider Paths](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath).  
   
 ## Query Expressions and Unique Resource Names  
  Query expressions are strings that use syntax similar to XPath to specify a set of criteria that enumerate one or more objects in an object model hierarchy. A Unique Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object. For more information, see [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md).  

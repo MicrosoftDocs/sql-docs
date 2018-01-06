@@ -100,7 +100,7 @@ This release of **SSDT for VS 2015** can be installed in the following languages
 An ISO image of SSDT can be used as an alternative way to install SSDT or to set up an Administrative Installation point. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive or burned to a DVD.
 
 > [!NOTE]
-> The SSDT for VS 2015 17.4 ISO download is now available.
+> The SSDT for VS 2015 17.4 ISO images are now available.
 
 [Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
 [Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |

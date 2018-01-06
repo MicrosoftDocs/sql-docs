@@ -58,7 +58,7 @@ For information about the current log file size, its maximum size, and the autog
   
  **Monitor log space**  
   
--   [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql)  
+-   [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)  
   
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (See the **size**, **max_size**, and **growth** columns for the log file or files.)  
   

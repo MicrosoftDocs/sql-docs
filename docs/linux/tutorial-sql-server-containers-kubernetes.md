@@ -260,7 +260,7 @@ You can use the following applications to connect to SQL Server.
 
 * [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssms)
 
-* [SSDT](http://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-use-ssdt). 
+* [SSDT](http://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
    To connect with `sqlcmd`, run the following command:

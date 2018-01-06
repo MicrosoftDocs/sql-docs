@@ -233,12 +233,12 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  A value of 0 indicates that automatic growth is set to off and no additional space is allowed.  
   
- If FILEGROWTH is not specified, the default values  are:  
+ If FILEGROWTH is not specified, the default values are:  
   
 |Version|Default values|  
 |-------------|--------------------|  
-|Beginning [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|  
-|Beginning [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|  
+|Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|  
+|Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|  
 |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|  
   
  OFFLINE  
@@ -248,7 +248,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 >  Use this option only when the file is corrupted and can be restored. A file set to OFFLINE can only be set online by restoring the file from backup. For more information about restoring a single file, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 > [!NOTE]  
->  \<filespec> options are not available in a Contained Database.  
+> \<filespec> options are not available in a Contained Database.  
   
  **\<add_or_modify_filegroups>::=**  
   
@@ -313,9 +313,7 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
  Because a read-only database does not allow data modifications:  
   
 -   Automatic recovery is skipped at system startup.  
-  
 -   Shrinking the database is not possible.  
-  
 -   No locking occurs in read-only databases. This can cause faster query performance.  
   
 > [!NOTE]  
@@ -325,37 +323,39 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
  Specifies the group is READ_WRITE. Updates are enabled for the objects in the filegroup. To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.  
   
 > [!NOTE]  
->  The keyword READWRITE will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using READWRITE in new development work, and plan to modify applications that currently use READWRITE. Use READ_WRITE instead.  
+>  The keyword `READWRITE` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READWRITE` in new development work, and plan to modify applications that currently use `READWRITE` to use `READ_WRITE` instead.  
   
- The status of these options can be determined by examining the **is_read_only** column in the **sys.databases** catalog view or the **Updateability** property of the DATABASEPROPERTYEX function.  
+ The status of these options can be determined by examining the **is_read_only** column in the **sys.databases** catalog view or the **Updateability** property of the `DATABASEPROPERTYEX` function.  
   
 ## Remarks  
  To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
- You cannot add or remove a file while a BACKUP statement is running.  
+You cannot add or remove a file while a `BACKUP` statement is running.  
   
- A maximum of 32,767 files and 32,767 filegroups can be specified for each database.  
+A maximum of 32,767 files and 32,767 filegroups can be specified for each database.  
   
- Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. If a filegroup is offline, any try to access the filegroup by an SQL statement will fail with an error. When you build query plans for SELECT statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the SELECT statements fail. Additionally, any INSERT, UPDATE, or DELETE statement that modifies a table with any index in an offline filegroup will fail.  
+Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). 
+-  The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. 
+-  If a filegroup is offline, any try to access the filegroup by an SQL statement will fail with an error. When you build query plans for `SELECT` statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the `SELECT` statements fail. Additionally, any `INSERT`, `UPDATE`, or `DELETE` statement that modifies a table with any index in an offline filegroup will fail.  
   
 ## Moving Files  
- You can move system or user-defined data and log files by specifying the new location in FILENAME. This may be useful in the following scenarios:  
+You can move system or user-defined data and log files by specifying the new location in FILENAME. This may be useful in the following scenarios:  
   
--   Failure recovery. For example, the database is in suspect mode or shutdown caused by hardware failure  
--   Planned relocation  
--   Relocation for scheduled disk maintenance  
+-   Failure recovery. For example, the database is in suspect mode or shutdown caused by hardware failure.  
+-   Planned relocation.  
+-   Relocation for scheduled disk maintenance.  
   
- For more information, see [Move Database Files](../../relational-databases/databases/move-database-files.md).  
+For more information, see [Move Database Files](../../relational-databases/databases/move-database-files.md).  
   
 ## Initializing Files  
- By default, data and log files are initialized by filling the files with zeros when you perform one of the following operations:  
+By default, data and log files are initialized by filling the files with zeros when you perform one of the following operations:  
   
--   Create a database  
--   Add files to an existing database  
--   Increase the size of an existing file  
--   Restore a database or filegroup  
+-   Create a database.   
+-   Add files to an existing database.   
+-   Increase the size of an existing file.   
+-   Restore a database or filegroup.   
   
- Data files can be initialized instantaneously. This enables for fast execution of these file operations. For more information, see [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md). 
+Data files can be initialized instantaneously. This enables for fast execution of these file operations. For more information, see [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md). 
   
 ## Removing a FILESTREAM Container  
  Even though FILESTREAM container may have been emptied using the “DBCC SHRINKFILE” operation, the database may still need to maintain references to the deleted files for various system maintenance reasons. [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) will run the FILESTREAM Garbage Collector to remove these files when it is safe to do so. Unless the FILESTREAM Garbage Collector has removed all the files from a FILESTREAM container, the ALTER DATABASEREMOVE FILE operation will fail to remove a FILESTREAM container and will return an error. The following process is recommended to remove a FILESTREAM container.  

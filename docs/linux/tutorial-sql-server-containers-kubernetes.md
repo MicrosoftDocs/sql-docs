@@ -87,6 +87,8 @@ Configure a [persistent volume](http://kubernetes.io/docs/concepts/storage/persi
 
    The persistent volume is automatically created as an Azure storage account, and bound to the persistent volume claim. 
 
+    ![Persistent volume claim command](media/tutorial-sql-server-containers-kubernetes/02_pvc_cmd.png)
+
 1. Verify the persistent volume claim.
 
    ```azurecli
@@ -95,8 +97,6 @@ Configure a [persistent volume](http://kubernetes.io/docs/concepts/storage/persi
 
    * `<PersistentVolumeClaim>`
       * The name of the persistent volume claim.
-
-    ![Persistent volume claim command](media/tutorial-sql-server-containers-kubernetes/02_pvc_cmd.png)
 
     In the preceding step, the persistent volume claim is named `mssql-data`. To see the metadata about the persistent volume claim, run the following command:
 
@@ -127,7 +127,7 @@ Kubernetes can manage sensitive configuration information like passwords as [sec
 The following command creates a password for the SA account:
 
    ```azurecli
-   kubectl create secret generic mssql SA_PASSWORD=MyC0m9l&xP@ssw0rd
+   kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
    The preceding command creates a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `SA_PASSWORD`.

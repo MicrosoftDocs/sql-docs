@@ -330,7 +330,6 @@ At this point both instances of SQL Server are configured to run with the databa
 2. Configure the cluster resources for SQL Server, File System and virtual IP resources and push the configuration to the cluster. You will need the following information:
 
    - **SQL Server Resource Name**: A name for the clustered SQL Server resource. 
-   - **Timeout Value**: The timeout value is the amount of time that the cluster waits while a a resource is brought online. For SQL Server, this is the time that you expect SQL Server to take to bring the `master` database online.  
    - **Floating IP Resource Name**: A name for the virtual IP address resource.
    - **IP Address**: THe IP address that clients will use to connect to the clustered instance of SQL Server. 
    - **File System Resource Name**: A name for the File System resource.
@@ -342,7 +341,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg resource create <fileShareResourceName> Filesystem device=<networkPath> directory=<localPath>         fstype=<fileShareType>
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
@@ -354,7 +353,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha

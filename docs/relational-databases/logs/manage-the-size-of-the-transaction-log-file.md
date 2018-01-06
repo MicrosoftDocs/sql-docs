@@ -28,7 +28,7 @@ ms.workload: "Active"
 This topic covers how to monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log size, shrink the transaction log, add to or enlarge a transaction log file, optimize the **tempdb** transaction log growth rate, and control the growth of a transaction log file.  
 
   ##  <a name="MonitorSpaceUse"></a> Monitor log space use  
-Monitor log space use by using [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql). This DMV returns information about the amount of log space currently used, and indicates when the transaction log needs truncation. 
+Monitor log space use by using [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). This DMV returns information about the amount of log space currently used, and indicates when the transaction log needs truncation. 
 
 For information about the current log file size, its maximum size, and the autogrow option for the file, you can also use the **size**, **max_size**, and **growth** columns for that log file in [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   

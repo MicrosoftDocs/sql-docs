@@ -39,12 +39,12 @@ For information about the current log file size, its maximum size, and the autog
  To reduce the physical size of a physical log file, you must shrink the log file. This is useful when you know that a transaction log file contains unused space. You can shrink a log file only while the database is online, and at least one virtual log file is free. In some cases, shrinking the log may not be possible until after the next log truncation.  
   
 > [!NOTE]
-> Factors such as a long-running transaction, that keep virtual log files active for an extended period, can restrict log shrinkage or even prevent the log from shrinking at all. For information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md.md#FactorsThatDelayTruncation).  
+> Factors such as a long-running transaction, that keep virtual log files active for an extended period, can restrict log shrinkage or even prevent the log from shrinking at all. For information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
   
  Shrinking a log file removes one or more [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) that hold no part of the logical log (that is, *inactive virtual log files*). When a transaction log file is shrunk, inactive virtual log files are removed from the end of the log file to reduce the log to approximately the target size. 
 
 > [!IMPORTANT]
-> Before shrinking the transaction log, keep in mind [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md.md#FactorsThatDelayTruncation). If the storage space is required again after a log shrink, the transaction log will grow again and by doing that, introduce performance overhead during log grow operations. For more information, see the [Recommendations](#Recommendations) in this topic.
+> Before shrinking the transaction log, keep in mind [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation). If the storage space is required again after a log shrink, the transaction log will grow again and by doing that, introduce performance overhead during log grow operations. For more information, see the [Recommendations](#Recommendations) in this topic.
   
  **Shrink a log file (without shrinking database files)**  
   
@@ -94,7 +94,13 @@ Following are some general recommendations when you are working with transaction
 
 -   When setting **autogrow** for data and log files using the `FILEGROWTH` option, it might be preferred to set it in **size** instead of **percentage**, to allow better control on the growth ratio, as percentage is an ever-growing amount.
     -  Keep in mind that transaction logs cannot leverage [Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md), so extended log growth times are especially critical. 
-    -  As a best practice, do not set any **autogrow** value above 1,024 MB for transaction logs.
+    -  As a best practice, do not set the `FILEGROWTH` option value above 1,024 MB for transaction logs. The default values for `FILEGROWTH` option are:  
+  
+      |Version|Default values|  
+      |-------------|--------------------|  
+      |Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|  
+      |Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|  
+      |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|  
 
 -   A small growth increment can generate too many small [virtual log files](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. 
 

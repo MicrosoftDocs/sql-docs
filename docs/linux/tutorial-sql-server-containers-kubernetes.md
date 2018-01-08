@@ -50,7 +50,7 @@ You can follow the instructions at [Deploy an Azure Container Service (AKS) clus
 
 ## Create SA password
 
-First, create and store an SA password in the Kubernetes cluster. Kubernetes can manage sensitive configuration information like passwords as [secrets](http://kubernetes.io/docs/concepts/configuration/secret/).
+Create an SA password in the Kubernetes cluster. Kubernetes can manage sensitive configuration information like passwords as [secrets](http://kubernetes.io/docs/concepts/configuration/secret/).
 
 The following command creates a password for the SA account:
 

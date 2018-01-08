@@ -15,9 +15,10 @@ ms.topic: "article"
 helpviewer_keywords: 
   - "initializing files [SQL Server]"
   - "instant file initialization [SQL Server]"
-  - "fast file initialization (SQL Server)"
+  - "fast file initialization [SQL Server]"
   - "file initialization [SQL Server]"
   - "IFI [SQL Server]"
+  - "database instant file initialization [SQL Server]"
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 caps.latest.revision: 33
 author: "BYHAM"

@@ -19,7 +19,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Follow this article to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. The solution provides resiliency for SQL Server because SQL Server is deployed as a container in a pod, which Kubernetes automatically recreates if it fails. AKS provides resilience in case of Kubernetes node failure. 
+Follow this article to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. The solution provides resiliency. If the SQL Server instance failse, Kubernetes automatically recreates it in a new pod. AKS provides resiliency against a Kubernetes node failure. 
 
 This tutorial demonstrates how to configure a highly available SQL Server instance in containers using AKS. 
 
@@ -36,7 +36,7 @@ Kubernetes 1.6+ has support for [Storage Classes](http://kubernetes.io/docs/conc
 
 ![Kubernetes SQL Server Cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-In the preceding diagram, `mssql-server` is a container in a [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/). A [replica set](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) ensures that the pod is automatically recovered after a failure. Applications connect to the service. In this case the service represents a load balancer that hosts an IP address that will stay the same after failure of the `mssql-server`.
+In the preceding diagram, `mssql-server` is a container in a [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/). A [replica set](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) ensures that the pod is automatically recovered after a failure. Applications connect to the service. In this case, the service represents a load balancer that hosts an IP address that will stay the same after failure of the `mssql-server`.
 
 In the following diagram, the `mssql-server` container has failed. The replica set recreates the pod, and `mssql-server` reconnects to the same persistent storage. The service connects to the recreated `mssql-server`.
 

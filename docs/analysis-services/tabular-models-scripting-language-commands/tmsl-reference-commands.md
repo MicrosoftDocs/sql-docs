@@ -1,7 +1,7 @@
 ---
 title: "Commands in Tabular Model Scripting Language (TMSL) | Microsoft Docs"
 ms.date: "05/30/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.custom: ""
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 4eb07192-6f53-4426-830a-d63a945dbcab

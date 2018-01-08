@@ -8,7 +8,7 @@ ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c

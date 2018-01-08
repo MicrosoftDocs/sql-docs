@@ -2,14 +2,14 @@
 title: "Configure the web portal | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "report-server"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 

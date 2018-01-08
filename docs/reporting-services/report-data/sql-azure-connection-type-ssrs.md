@@ -2,15 +2,15 @@
 title: "SQL Azure Connection Type (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/24/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79

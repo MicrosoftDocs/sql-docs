@@ -9,7 +9,7 @@ ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "analysis-services"
+  
   - "dbe-security"
 ms.tgt_pltfrm: ""
 ms.topic: "article"

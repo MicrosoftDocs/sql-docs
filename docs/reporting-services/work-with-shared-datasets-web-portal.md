@@ -2,14 +2,14 @@
 title: "Working with shared datasets (web portal) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/02/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163

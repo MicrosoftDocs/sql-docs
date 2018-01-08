@@ -9,7 +9,7 @@ ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc

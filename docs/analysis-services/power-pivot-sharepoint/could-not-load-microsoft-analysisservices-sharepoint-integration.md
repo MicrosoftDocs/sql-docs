@@ -3,14 +3,14 @@
 title: "Could not load 'Microsoft.AnalysisServices.SharePoint.Integration' | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7

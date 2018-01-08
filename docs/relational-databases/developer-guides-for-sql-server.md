@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 

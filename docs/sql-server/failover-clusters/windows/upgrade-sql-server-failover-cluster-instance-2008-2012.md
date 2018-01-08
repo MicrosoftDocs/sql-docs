@@ -1,7 +1,10 @@
 ---
 title: "Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters | Microsoft Docs"
 ms.date: "11/10/2017"
-ms.prod: "sql-server-2017"
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: "failover-clustuers"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -124,7 +127,7 @@ If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup th
 
 If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup that uses no standalone [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] instances, only SQL FCIs, which are contained in at least one Availability Group, you can migrate this to a new cluster using methods similar to the “no Availability Group, no standalone instance” scenario. Prior to copying system tables to the target FCI shared disks, you must drop all Availability Groups in the original environment. After all databases have been migrated to the target machines, you will recreate the Availability Groups with the same schema and listener names. By doing this, the Windows Server failover cluster resources will be correctly formed and managed on the target cluster. **Always On must be enabled in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager on each machine in the target environment prior to migration.**
 
-###  To perform the upgrade
+### To perform the upgrade
 
 1.  Stop traffic towards [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
 

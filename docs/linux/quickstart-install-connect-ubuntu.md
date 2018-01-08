@@ -7,10 +7,10 @@ manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
+ms.prod_service: database-engine
 ms.service: ""
 ms.component: sql-linux
-ms.suite: "sql"
+ms.suite: sql
 ms.custom: ""
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85

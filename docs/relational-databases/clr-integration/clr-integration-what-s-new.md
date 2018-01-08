@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab

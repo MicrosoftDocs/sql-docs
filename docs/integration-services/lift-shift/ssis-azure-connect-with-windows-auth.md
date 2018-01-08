@@ -1,5 +1,5 @@
 ---
-title: "Connect to on-premises data sources and Azure file shares with Windows Authentication | Microsoft Docs"
+title: "Connect to data sources and file shares with Windows Authentication | Microsoft Docs"
 ms.date: "11/27/2017"
 ms.topic: "article"
 ms.prod: "sql-non-specified"

@@ -2,14 +2,14 @@
 title: "Change log for SQL Server Reporting Services (2017 and later) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/07/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "casualoak"

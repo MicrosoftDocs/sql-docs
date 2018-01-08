@@ -6,6 +6,10 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "en-us",
+      "monikers": [],           
+      "moniker_ranges": [
+         ">= ssms-16"         
+        ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",

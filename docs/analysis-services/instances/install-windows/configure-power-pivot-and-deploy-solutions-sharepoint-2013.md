@@ -2,7 +2,7 @@
 title: "Configure Power Pivot and Deploy Solutions (SharePoint 2013) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""

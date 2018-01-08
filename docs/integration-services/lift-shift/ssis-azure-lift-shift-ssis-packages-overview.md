@@ -64,7 +64,7 @@ For more info about prerequisites in Azure, see [Lift and shift SQL Server Integ
 
 ## SSIS features on Azure
 
-When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to **Excel and Access** files and to various **Azure** data sources, in addition to the data sources supported by the built-in components. You can't install **third-party components** for SSIS (including third-party components from Microsoft, such as the Attunity and SAP BI components) at this time.
+When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to **Excel and Access** files and to various **Azure** data sources, in addition to the data sources supported by the built-in components. You can't install **third-party components** for SSIS at this time (including third-party components from Microsoft, such as the Oracle and Teradata components by Attunity and the SAP BI components).
 
 The **name of the SQL Database** that hosts SSISDB becomes the first part of the four-part name to use when you deploy and manage packages from SSDT and SSMS - `<sql_database_name>.database.windows.net`.
 

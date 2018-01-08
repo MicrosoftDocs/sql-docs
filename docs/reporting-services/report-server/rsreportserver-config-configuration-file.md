@@ -2,15 +2,15 @@
 title: "RsReportServer.config Configuration File | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "report-server"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc

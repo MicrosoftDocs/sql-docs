@@ -2,14 +2,14 @@
 title: "Analysis Services Features and Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b

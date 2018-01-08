@@ -2,15 +2,15 @@
 title: "SQL Server Data Mining Add-Ins for Office | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c

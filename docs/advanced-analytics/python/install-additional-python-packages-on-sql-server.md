@@ -49,6 +49,7 @@ The package installed in this example is [CNTK](https://docs.microsoft.com/cogni
 > [Getting Started with Python Web Services using Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
 > 
 > [David Crook: Microsoft Cognitive Toolkit + VS Code](http://dacrook.com/cntk-vs-code-awesome/)
+
 ### Step 1. Download the Windows version of the Python package
 
 + If you are installing Python packages on a server with no internet access, you must download the WHL file to a different computer and then copy it to the server.
@@ -84,12 +85,12 @@ Open the Python command prompt associated with the instance.
 
 + If you are using Visual Studio 2017, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`; it is filled in for you automatically. 
 
-    You might be prompted to elevate permissions to complete the install.
-
-    - If the computer has Internet access, provide the name of the package, or the URL of a speciic package and version. For example, to install the version of CNTK that is supported for Windows and Python 3.5, you coudl specify the download URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+    - If the computer has Internet access, provide the name of the package, or the URL of a specific package and version. For example, to install the version of CNTK that is supported for Windows and Python 3.5, you coudl specify the download URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
     - If the computer does not have internet access, you should have downloaded the WHL file in advance. Then, specify the local file path and name. For example, paste the following path and file to install the WHL file downloaded from the site: 
     `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+
+You might be prompted to elevate permissions to complete the install.
 
 As installation progresses, you can see status messages in the command prompt window:
 
@@ -103,13 +104,15 @@ Installing collected packages: cntk
 Successfully installed cntk-2.1
 ```
 
+
+
+### Step 4. Load the package or its functions as part of your script
+
 When installation is complete, you can immediately begin using the package as described in the next step.
 
 For examples of deep learning using CNTK, see these tutorials: [Python API for CNTK](https://cntk.ai/pythondocs/tutorials.html)
 
-### Step 4. Load the package or its functions as part of your script
-
-After the package has been installed, use functions from the package in your script by using the standard `import <package_name>` syntax in the first lines of the script:
+To use functions from the package in your script, insert the standard `import <package_name>` statement in the initial lines of the script:
 
 ```python
 import numpy as np
@@ -117,12 +120,11 @@ import cntk as cntk
 cntk._version_
 ```
 
-> [!NOTE] 
-> When running Python from a stored procedure, load any packages you need in the first lines of the script.
-
 ##  How to view installed packages using conda
 
-There are different ways that you can get a list of installed packages. The easiest is to use the **conda** package manager, which is included with the Anaconda Python environment added by SQL Server setup.
+There are different ways that you can get a list of installed packages. For example, you can view the installed packages in the **Python Environments** windows of Visual Studio.
+
+If you are using the Python command line, you can use the **conda** package manager, which is included with the Anaconda Python environment added by SQL Server setup.
 
 To view Python packages that have been installed in the current environment, run this command from the command prompt windows:
 
@@ -131,4 +133,3 @@ conda list
 ```
 
 For more information about **conda** and how you can use it to create and manage multiple Python environments, see [Managing environments with conda](https://conda.io/docs/user-guide/tasks/manage-environments.html).
-

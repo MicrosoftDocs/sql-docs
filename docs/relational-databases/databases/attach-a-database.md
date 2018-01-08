@@ -42,7 +42,7 @@ ms.workload: "Active"
 ###  <a name="Recommendations"></a> Is Attach the best choice?  
  We recommend that you move databases by using the ALTER DATABASE planned relocation procedure instead of using detach and attach, when moving database files within the same instance. For more information, see [Move User Databases](../../relational-databases/databases/move-user-databases.md). 
  
-We don't recommend using detach and attach for Backup and Recovery. There are no transaction log backups, and it possible to accidently delete files.
+We don't recommend using detach and attach for Backup and Recovery. There are no transaction log backups, and it's possible to accidently delete files.
   
 ###  <a name="Security"></a> Security  
  File access permissions are set during a number of database operations, including detaching or attaching a database. For information about file permissions that are set whenever a database is detached and attached, see [Securing Data and Log Files](http://technet.microsoft.com/library/ms189128.aspx) from [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online (Still a valid read!) 

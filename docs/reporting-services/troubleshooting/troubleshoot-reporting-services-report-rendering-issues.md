@@ -2,15 +2,15 @@
 title: "Troubleshoot Reporting Services Report Rendering Issues | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "troubleshooting"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0

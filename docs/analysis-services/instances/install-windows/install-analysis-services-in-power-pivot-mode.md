@@ -2,7 +2,7 @@
 title: "Install Analysis Services in Power Pivot Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""

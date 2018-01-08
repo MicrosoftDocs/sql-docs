@@ -1,7 +1,10 @@
 ---
 title: "Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters | Microsoft Docs"
 ms.date: "11/10/2017"
-ms.prod: "sql-server-2017"
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: "failover-clustuers"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""

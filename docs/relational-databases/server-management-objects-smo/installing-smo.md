@@ -8,7 +8,7 @@ ms.suite: "sql"
 ms.prod_service: "database-engine"
 ms.component: "smo"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 

@@ -2,16 +2,16 @@
 title: "Data sources supported in SQL Server Analysis Services tabular models | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24

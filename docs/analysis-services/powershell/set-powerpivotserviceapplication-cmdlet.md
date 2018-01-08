@@ -2,14 +2,14 @@
 title: "Set-PowerPivotServiceApplication cmdlet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95

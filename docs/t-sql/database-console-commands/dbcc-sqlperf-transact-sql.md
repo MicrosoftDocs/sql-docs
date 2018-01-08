@@ -54,10 +54,10 @@ DBCC SQLPERF
   
 ## Arguments  
 LOGSPACE  
-Returns the current size of the transaction log and the percentage of log space used for each database. You can use this information to monitor the amount of space used in a transaction log.
+Returns the current size of the transaction log and the percentage of log space used for each database. Use this information to monitor the amount of space used in a transaction log.
 
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], use [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) instead of LOGSPACE, to return space usage information for the transaction log per database.
+> For more information about space usage information for the transaction log starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], refer to the [Remarks](#Remarks) section in this topic.
   
 **"sys.dm_os_latch_stats"**, CLEAR  
 Resets the latch statistics. For more information, see [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). This option is not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -78,7 +78,9 @@ Suppresses all informational messages that have severity levels from 0 through 1
 |**Log Space Used (%)**|Percentage of the log file currently in use to store transaction log information.|  
 |**Status**|Status of the log file. Always 0.|  
   
-## Remarks  
+## <a name="Remarks"></a> Remarks  
+Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], use the [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV instead of `DBCC SQLPERF(LOGSPACE)`, to return space usage information for the transaction log per database.    
+ 
 The transaction log records each transaction made in a database. For more information see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) and [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
 ## Permissions  

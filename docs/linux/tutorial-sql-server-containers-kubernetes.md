@@ -272,7 +272,7 @@ You can use the following applications to connect to the SQL Server instance.
    To connect with `sqlcmd`, run the following command:
 
    ```cmd
-   sqlcmd -S <External IP Address> -U sa -P MyC0m9l&xP@ssw0rd
+   sqlcmd -S <External IP Address> -U sa -P "MyC0m9l&xP@ssw0rd"
    ```
 
    Replace the following values:

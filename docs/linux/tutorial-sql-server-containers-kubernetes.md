@@ -19,7 +19,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Follow this article to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. The solution provides resiliency. If the SQL Server instance failse, Kubernetes automatically recreates it in a new pod. AKS provides resiliency against a Kubernetes node failure. 
+Follow this article to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS) with persistent storage for high availability. The solution provides resiliency. If the SQL Server instance fails, Kubernetes automatically recreates it in a new pod. AKS provides resiliency against a Kubernetes node failure. 
 
 This tutorial demonstrates how to configure a highly available SQL Server instance in containers using AKS. 
 

@@ -121,10 +121,10 @@ To run an unattended installation when you run `ssis-conf setup`, do the followi
 2.  Provide required values by setting environment variables.
 
 The following example does the following things:
-1.  Installs SSIS.
-2.  Specifies the Developer edition by providing a value for the `SSIS_PID` environment variable.
-3.  Accepts the EULA by providing a value for the `ACCEPT_EULA` environment variable.
-4.  Runs an unattended installation by specifying the `-n` (no prompt) option.
+-   Installs SSIS.
+-   Specifies the Developer edition by providing a value for the `SSIS_PID` environment variable.
+-   Accepts the EULA by providing a value for the `ACCEPT_EULA` environment variable.
+-   Runs an unattended installation by specifying the `-n` (no prompt) option.
 
 ```
 sudo SSIS_PID= Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 

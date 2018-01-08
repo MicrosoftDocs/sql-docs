@@ -1,7 +1,7 @@
 ---
 title: "Installing machine learning components without internet access | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/30/2017"
+ms.date: "01/08/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -127,6 +127,11 @@ Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlin
 Microsoft Python Open     |use previous |
 Microsoft Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 CU2** |
+Microsoft R Open     |use previous|
+Microsoft R Server      |use previous|
+Microsoft Python Open     |use previous |
+Microsoft Python Server    |use previous|
+**SQL Server 2017 CU3** |
 Microsoft R Open     |use previous|
 Microsoft R Server      |use previous|
 Microsoft Python Open     |use previous |

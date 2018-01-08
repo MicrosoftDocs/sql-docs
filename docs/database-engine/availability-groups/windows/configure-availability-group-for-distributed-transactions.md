@@ -82,7 +82,7 @@ You can alter an availability group for distributed transactions on [!INCLUDE[SQ
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```

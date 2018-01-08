@@ -76,7 +76,7 @@ To disable this behavior, issue the following ALTER AVAILABILITY GROUP command:
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### Dynamic management view
-To see whether an availability group has enhanced database failover enabled, query the dynamic management view `sys.availablity_groups`. The column `db_failover` will have a zero if disabled or 1 if enabled. 
+To see whether an availability group has enhanced database failover enabled, query the dynamic management view `sys.availability_groups`. The column `db_failover` will have a zero if disabled or 1 if enabled. 
 
 ## Next steps 
 

@@ -411,7 +411,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER availability GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -475,7 +475,7 @@ This example shows three full replicas and how read-only routing can be configur
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER availability GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -547,7 +547,7 @@ A Pacemaker high availability cluster underlying [!INCLUDE[ssnoversion-md](../in
     
     GO
     
-    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABLITY GROUP::<AGThatWasCreated> TO PMLogin;
+    GRANT ALTER, CONTROL, VIEW DEFINITION ON availability GROUP::<AGThatWasCreated> TO PMLogin;
     
     GO
     ```

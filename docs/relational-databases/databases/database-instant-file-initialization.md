@@ -30,20 +30,17 @@ ms.workload: "Active"
 Data and log files are initialized to overwrite any existing data left on the disk from previously deleted files. Data and log files are first initialized by zeroing the files (filling with zeros) when you perform one of the following operations:  
   
 - Create a database.  
-  
 - Add data or log files, to an existing database.  
-  
 - Increase the size of an existing file (including autogrow operations).  
-  
 - Restore a database or filegroup.  
   
 File initialization causes these operations to take longer. However, when data is written to the files for the first time, the operating system does not have to fill the files with zeros.  
   
-# Instant File Initialization (IFI)  
+## Instant File Initialization (IFI)  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data files can be initialized instantaneously to avoid zeroing operations. Instant file initialization allows for fast execution of the previously mentioned file operations. Instant file initialization reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.  
   
 > [!NOTE]  
->  Instant file initialization is available only on [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] or [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] or later versions.  
+> Instant file initialization is available only on [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] or [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] or later versions.  
 
 > [!IMPORTANT]
 > Instant file initialization is available only for data files. Log files will always be zeroed when being created, or growing in size.
@@ -63,7 +60,13 @@ To grant an account the `Perform volume maintenance tasks` permission:
 4.  Click **Add User or Group** and add any user accounts that are used for backups.  
   
 5.  Click **Apply**, and then close all **Local Security Policy** dialog boxes.  
-  
+
+> [!NOTE]
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this option can be set up at install time.
+
+> [!NOTE]
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, the column *instant_file_initialization_enabled* in the [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV can be used to identify if instant file initialization is enabled.
+
 ### Security Considerations  
  Because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file. While the database file is attached to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the local administrator. However, when the file is detached, it may be accessed by a user or service that does not have *SE_MANAGE_VOLUME_NAME*. A similar consideration exists when the database is backed up: if the backup file is not protected with an appropriate DACL, the deleted content can become available to an unauthorized user or service.  
  
@@ -73,7 +76,10 @@ To grant an account the `Perform volume maintenance tasks` permission:
   
 - Always make sure that any detached data files and backup files have restrictive DACLs.  
   
-- Disable instant file initialization for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by revoking *SE_MANAGE_VOLUME_NAME* from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account.  
+- Disable instant file initialization for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by revoking *SE_MANAGE_VOLUME_NAME* from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account. 
+
+> [!IMPORTANT]
+> Disabling instant file initialization will increase allocation times for data files.  
   
 > [!NOTE]  
 > Disabling instant file initialization only affects files that are created or increased in size after the user right is revoked.  

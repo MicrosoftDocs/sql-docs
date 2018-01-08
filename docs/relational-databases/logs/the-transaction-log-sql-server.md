@@ -82,7 +82,7 @@ For information about the transaction log architecture and internals, see the [S
 ##  <a name="Truncation"></a> Transaction log truncation  
  Log truncation frees space in the log file for reuse by the transaction log. You must regularly truncate your transaction log to keep it from filling the alotted space (And it will!!)! Several factors can delay log truncation, so monitoring log size matters. Some operations can be minimally logged to reduce their impact on transaction log size.  
  
-  Log truncation deletes inactive virtual log files from the logical transaction log of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space allocated to physical log files.  
+  Log truncation deletes inactive [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) from the logical transaction log of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space allocated to physical log files.  
   
  To avoid running out of space, unless log truncation is delayed for some reason, truncation occurs automatically after the following events:  
   
@@ -105,8 +105,8 @@ For information about the transaction log architecture and internals, see the [S
   
 |log_reuse_wait value|log_reuse_wait_desc value|Description|  
 |----------------------------|----------------------------------|-----------------|  
-|0|NOTHING|Currently there are one or more reusable virtual log files.|  
-|1|CHECKPOINT|No checkpoint has occurred since the last log truncation, or the head of the log has not yet moved beyond a virtual log file. (All recovery models)<br /><br /> This is a routine reason for delaying log truncation. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
+|0|NOTHING|Currently there are one or more reusable [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|  
+|1|CHECKPOINT|No checkpoint has occurred since the last log truncation, or the head of the log has not yet moved beyond a [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (All recovery models)<br /><br /> This is a routine reason for delaying log truncation. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|A log backup is required before the transaction log can be truncated. (Full or bulk-logged recovery models only)<br /><br /> When the next log backup is completed, some log space might become reusable.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|A data backup or a restore is in progress (all recovery models).<br /><br /> If a data backup is preventing log truncation, canceling the backup operation might help the immediate problem.|  
 |4|ACTIVE_TRANSACTION|A transaction is active (all recovery models):<br /><br /> A long-running transaction might exist at the start of the log backup. In this case, freeing the space might require another log backup. Note that long-running transactions prevent log truncation under all recovery models, including the simple recovery model, under which the transaction log is generally truncated on each automatic checkpoint.<br /><br /> A transaction is deferred. A *deferred transaction* is effectively an active transaction whose rollback is blocked because of some unavailable resource. For information about the causes of deferred transactions and how to move them out of the deferred state, see [Deferred Transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).<br /> <br /> Long-running transactions might also fill up tempdb's transaction log. Tempdb is used implicitly by user transactions for internal objects such as work tables for sorting, work files for hashing, cursor work tables, and row versioning. Even if the user transaction includes only reading data (`SELECT` queries), internal objects may be created and used under user transactions. Then the tempdb transaction log can be filled.|  
@@ -118,7 +118,7 @@ For information about the transaction log architecture and internals, see the [S
 |10|—|For internal use only|  
 |11|—|For internal use only|  
 |12|—|For internal use only|  
-|13|OLDEST_PAGE|If a database is configured to use indirect checkpoints, the oldest page on the database might be older than the checkpoint LSN. In this case, the oldest page can delay log truncation. (All recovery models)<br /><br /> For information about indirect checkpoints, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
+|13|OLDEST_PAGE|If a database is configured to use indirect checkpoints, the oldest page on the database might be older than the checkpoint [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch). In this case, the oldest page can delay log truncation. (All recovery models)<br /><br /> For information about indirect checkpoints, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|This value is currently not used.|  
   
 ##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
@@ -137,11 +137,11 @@ For information about the transaction log architecture and internals, see the [S
   
 When transactional replication is enabled, BULK INSERT operations are fully logged even under the Bulk Logged recovery model.  
   
--   SELECT [INTO](../../t-sql/queries/select-into-clause-transact-sql.md) operations.  
+-   [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md) operations.  
   
 When transactional replication is enabled, SELECT INTO operations are fully logged even under the Bulk Logged recovery model.  
   
--   Partial updates to large value data types, using the .WRITE clause in the [UPDATE](../../t-sql/queries/update-transact-sql.md) statement when inserting or appending new data. Note that minimal logging is not used when existing values are updated. For more information about large value data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+-   Partial updates to large value data types, using the `.WRITE` clause in the [UPDATE](../../t-sql/queries/update-transact-sql.md) statement when inserting or appending new data. Note that minimal logging is not used when existing values are updated. For more information about large value data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 -   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) and [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) statements when inserting or appending new data into the **text**, **ntext**, and **image** data type columns. Note that minimal logging is not used when existing values are updated.  
   
@@ -155,9 +155,9 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD or DBCC DBREINDEX operations.  
   
         > [!WARNING]
-        > The **DBCC DBREINDEX statement** is **deprecated**; Do not use it in new applications.  
+        > The `DBCC DBREINDEX` statement is **deprecated**; Do not use it in new applications.  
   
-    -   DROP INDEX new heap rebuild (if applicable). Index page deallocation during a [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) operation is **always** fully logged.
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) new heap rebuild (if applicable). Index page deallocation during a DROP INDEX operation is **always** fully logged.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Managing the transaction log**  

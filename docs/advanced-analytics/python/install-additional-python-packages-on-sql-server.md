@@ -25,30 +25,39 @@ It also describes how to list packages that are installed in the current environ
 
 ## Prerequisites
 
-The process for installing new packages is simple. Some additional steps are required if the server does not have an internet connection.
+The process for installing new packages is much like that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
 + You must have installed Machine Learning Services (In-Database) with the Python language option. For instructions, see [Set up Python Machine Learning Services](setup-python-machine-learning-services.md).
 
 + For each server instance, you must install a separate copy of the package. Packages cannot be shared across instances.
 
-+ Determine whether the package you intend to use will work with Python 3.5 and in the Windows environment. In general, there are few limitations on the packages that you can import and use in the SQL Server environment. Possible problems include packages that use networking functionality that is blocked on the server or by the firewall, or packages with dependencies that cannot be installed on a Windows computer.
++ Determine whether the package you intend to use will work with Python 3.5 and in the Windows environment. 
 
-## Add a new Python package (online install)
+    In general, there are few limitations on the packages that you can import and use in the SQL Server environment. Possible problems include packages that use networking functionality that is blocked on the server or by the firewall, or packages with dependencies that cannot be installed on a Windows computer.
 
-For this example, we assume that you want to install a new package directly on the SQL Server computer, which is connected to the internet.
++ Administrative access to the server is required to install packages.
 
-The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/CNTK-FAQ), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
+## Add a new Python package
+
+For this example, we assume that you want to install a new package directly on the SQL Server computer.
+
+The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
 
 > [!TIP]
-> For additional information, see this blog, which describes how to use Jupyter notebooks, and how to use **revoscalepy** with Python Tools for Visual Studio or PyCharm: [Getting Started with Python Web Services using Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-
+> Need help configuring your Python tools? See these blogs:
+> 
+> [Getting Started with Python Web Services using Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
+> 
+> [David Crook: Microsoft Cognitive Toolkit + VS Code](http://dacrook.com/cntk-vs-code-awesome/)
 ### Step 1. Download the Windows version of the Python package
 
-+ If you are installing Python packages on a server with no internet access, you must download the WHL file to a different computer and then copy it to a local folder.
++ If you are installing Python packages on a server with no internet access, you must download the WHL file to a different computer and then copy it to the server.
+
+    For example, on a separate computer, you can download the WHL file from this site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), and then copy the file `cntk-2.1-cp35-cp35m-win_amd64.whl` to a local folder on the SQL Server computer.
 
 + SQL Server 2017 uses Python 3.5. Be sure to get the Windows version of the package, and a version that is compatible with Python 3.5.
 
-This example used a download link from this page, which supports downloads for multiple platforms and for multiple Python versions: [Installing CNTK for Python on Windows](https://docs.microsoft.com/cognitive-toolkit/setup-windows-python?tabs=cntkpy21)
+This page contains downloads for multiple platforms and for multiple Python versions: [Set up CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### Step 2. Open a Python command prompt
 
@@ -60,19 +69,27 @@ For example, if Machine Learning Services has been installed using defaults, and
 
 Open the Python command prompt associated with the instance.
 
+> [!TIP]
+> We recommend that you set up a Python environment specific to Machine Learning Server or SQL Server.
+
 ### Step 3. Install the package using pip
 
-From the command line, you can use PIP.exe to install new packages. You can find the **pip** installer in the `Scripts` subfolder.
++ If you are accustomed to using the Python command line, use PIP.exe to install new packages. You can find the **pip** installer in the `Scripts` subfolder. 
 
-For example, the following command installs the version of CNTK that is supported for Windows and Python 3.5.
+    If you get an error that **pip** is not recognized as an internal or external command, you can add the path of the Python executable and the Python scripts folder to the PATH variable in Windows.
 
-    `pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
-
-If you get an error that **pip** is not recognized as an internal or external command, you can add the path of the Python executable and the Python scripts folder to the PATH variable in Windows.
-
-The full path of the **Scripts** folder in a default installation is as follows:
+    The full path of the **Scripts** folder in a default installation is as follows:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+
++ If you are using Visual Studio 2017, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`; it is filled in for you automatically. 
+
+    You might be prompted to elevate permissions to complete the install.
+
+    - If the computer has Internet access, provide the name of the package, or the URL of a speciic package and version. For example, to install the version of CNTK that is supported for Windows and Python 3.5, you coudl specify the download URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+
+    - If the computer does not have internet access, you should have downloaded the WHL file in advance. Then, specify the local file path and name. For example, paste the following path and file to install the WHL file downloaded from the site: 
+    `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
 As installation progresses, you can see status messages in the command prompt window:
 
@@ -92,7 +109,7 @@ For examples of deep learning using CNTK, see these tutorials: [Python API for C
 
 ### Step 4. Load the package or its functions as part of your script
 
-After the package has been installed, you can load the package in your script by using the standard `import <package_name>` syntax in the first lines of the script:
+After the package has been installed, use functions from the package in your script by using the standard `import <package_name>` syntax in the first lines of the script:
 
 ```python
 import numpy as np
@@ -100,19 +117,8 @@ import cntk as cntk
 cntk._version_
 ```
 
-If you are running Python from a stored procedure, the same requirement applies: first load any packages you need in the first lines of the script.
-
-For example, the following stored procedure call loads TensorFlow (which should already be installed), and uses a few simple functions to return messages:
-
-```sql
-EXECUTE sp_execute_external script @language = N'Python',
-, @script = N'
-import os
-import tensorflow as tf
-hello = tf.constant("hello")
-sess = tf.Session()
-print(sess.run(hello))'
-```
+> [!NOTE] 
+> When running Python from a stored procedure, load any packages you need in the first lines of the script.
 
 ##  How to view installed packages using conda
 

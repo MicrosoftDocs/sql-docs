@@ -233,7 +233,7 @@ In this example, the container hosts the SQL Server instance is described as a K
 
    ![Deployment command](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
-   The deployment and service are created, with a SQL Server instance in container running as a pod in the kubernetes cluster. The instance is connected to persistent storage.
+   The deployment and service are created. The SQL Server instance is in a container - connected to persistent storage.
 
    To view the status of the pod, type `kubectl get pod`.
 

@@ -37,7 +37,7 @@ ms.workload: "On Demand"
   
  Log records for data modifications record either the logical operation performed or they record the before and after images of the modified data. The before image is a copy of the data before the operation is performed; the after image is a copy of the data after the operation has been performed.  
   
- The steps to recover an operation depend on the type of log record:  
+The steps to recover an operation depend on the type of log record:  
   
 -   Logical operation logged  
   
@@ -51,7 +51,7 @@ ms.workload: "On Demand"
   
     -   To roll the operation back, the before image is applied.  
   
- Many types of operations are recorded in the transaction log. These operations include:  
+Many types of operations are recorded in the transaction log. These operations include:  
   
 -   The start and end of each transaction.  
   
@@ -63,30 +63,30 @@ ms.workload: "On Demand"
   
  Rollback operations are also logged. Each transaction reserves space on the transaction log to make sure that enough log space exists to support a rollback that is caused by either an explicit rollback statement or if an error is encountered. The amount of space reserved depends on the operations performed in the transaction, but generally it is equal to the amount of space used to log each operation. This reserved space is freed when the transaction is completed.  
   
- The section of the log file from the first log record that must be present for a successful database-wide rollback to the last-written log record is called the active part of the log, or the *active log*. This is the section of the log required to a full recovery of the database. No part of the active log can ever be truncated. The log sequence number (LSN) of this first log record is known as the minimum recovery LSN (*MinLSN*).  
+<a name="minlsn"></a> The section of the log file from the first log record that must be present for a successful database-wide rollback to the last-written log record is called the active part of the log, or the *active log*. This is the section of the log required to a full recovery of the database. No part of the active log can ever be truncated. The [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of this first log record is known as the **minimum recovery LSN (*MinLSN*)**.  
   
 ##  <a name="physical_arch"></a> Transaction Log Physical Architecture  
- The transaction log in a database maps over one or more physical files. Conceptually, the log file is a string of log records. Physically, the sequence of log records is stored efficiently in the set of physical files that implement the transaction log. There must be at least one log file for each database.  
+The transaction log in a database maps over one or more physical files. Conceptually, the log file is a string of log records. Physically, the sequence of log records is stored efficiently in the set of physical files that implement the transaction log. There must be at least one log file for each database.  
   
- The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divides each physical log file internally into a number of virtual log files (VLFs). Virtual log files have no fixed size, and there is no fixed number of virtual log files for a physical log file. The [!INCLUDE[ssDE](../includes/ssde-md.md)] chooses the size of the virtual log files dynamically while it is creating or extending log files. The [!INCLUDE[ssDE](../includes/ssde-md.md)] tries to maintain a small number of virtual files. The size of the virtual files after a log file has been extended is the sum of the size of the existing log and the size of the new file increment. The size or number of virtual log files cannot be configured or set by administrators.  
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divides each physical log file internally into a number of virtual log files (VLFs). Virtual log files have no fixed size, and there is no fixed number of virtual log files for a physical log file. The [!INCLUDE[ssDE](../includes/ssde-md.md)] chooses the size of the virtual log files dynamically while it is creating or extending log files. The [!INCLUDE[ssDE](../includes/ssde-md.md)] tries to maintain a small number of virtual files. The size of the virtual files after a log file has been extended is the sum of the size of the existing log and the size of the new file increment. The size or number of virtual log files cannot be configured or set by administrators.  
 
 > [!NOTE]
-> VLF creation follows this method:
+> Virtual log file (VLF) creation follows this method:
 > -	If the next growth is less than 1/8 of current log physical size, then create 1 VLF that covers the growth size (Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
 > -	If growth is less than 64MB, create 4 VLFs that cover the growth size (e.g. for 1 MB growth, create four 256KB VLFs)
 > -	If growth is from 64MB up to 1GB, create 8 VLFs that cover the growth size (e.g. for 512MB growth, create eight 64MB VLFs)
 > -	If growth is larger than 1GB, create 16 VLFs that cover the growth size (e.g. for 8 GB growth, create sixteen 512MB VLFs)
 
-The only time virtual log files affect system performance is if the physical log files are defined by small *size* and *growth_increment* values. 
- - The *size* value is the initial size for the log file.
- - The *growth_increment* value is the amount of space added to the file every time new space is required. 
-
-If the log files grow to a large size because of many small increments, they will have many virtual log files. **This can slow down database startup and also log backup and restore operations.** We recommend that you assign log files a *size* value close to the final size required, and also have a relatively large *growth_increment* value. For more information about these parameters, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+If the log files grow to a large size because of many small increments, they will have many virtual log files. **This can slow down database startup and also log backup and restore operations.** We recommend that you assign log files a *size* value close to the final size required, and also have a relatively large *growth_increment* value. See the tip below to determine the optimal VLF distribution for the current transaction log size.
+ - The *size* value, as set by the `SIZE` argument of `ALTER DATABASE` is the initial size for the log file.
+ - The *growth_increment* value, as set by the `FILEGROWTH` argument of `ALTER DATABASE`, is the amount of space added to the file every time new space is required. 
+ 
+For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> To get an overview of the current VLF status in all databases of a given instance, and if the number of VLFs are above a pre-determined threshold, also get recommendations on how many, and how large, the VLFs should be for that particular database, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
- The transaction log is a wrap-around file. For example, consider a database with one physical log file divided into four virtual log files. When the database is created, the logical log file begins at the start of the physical log file. New log records are added at the end of the logical log and expand toward the end of the physical log. Log truncation frees any virtual logs whose records all appear in front of the minimum recovery log sequence number (MinLSN). The *MinLSN* is the log sequence number of the oldest log record that is required for a successful database-wide rollback. The transaction log in the example database would look similar to the one in the following illustration.  
+ The transaction log is a wrap-around file. For example, consider a database with one physical log file divided into four VLFs. When the database is created, the logical log file begins at the start of the physical log file. New log records are added at the end of the logical log and expand toward the end of the physical log. Log truncation frees any virtual logs whose records all appear in front of the minimum recovery log sequence number (MinLSN). The *MinLSN* is the log sequence number of the oldest log record that is required for a successful database-wide rollback. The transaction log in the example database would look similar to the one in the following illustration.  
   
  ![tranlog3](../relational-databases/media/tranlog3.gif)  
   
@@ -96,9 +96,9 @@ If the log files grow to a large size because of many small increments, they wil
   
  This cycle repeats endlessly, as long as the end of the logical log never reaches the beginning of the logical log. If the old log records are truncated frequently enough to always leave sufficient room for all the new log records created through the next checkpoint, the log never fills. However, if the end of the logical log does reach the start of the logical log, one of two things occurs:  
   
--   If the FILEGROWTH setting is enabled for the log and space is available on the disk, the file is extended by the amount specified in the *growth_increment* parameter and the new log records are added to the extension. For more information about the FILEGROWTH setting, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+-   If the `FILEGROWTH` setting is enabled for the log and space is available on the disk, the file is extended by the amount specified in the *growth_increment* parameter and the new log records are added to the extension. For more information about the `FILEGROWTH` setting, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
--   If the FILEGROWTH setting is not enabled, or the disk that is holding the log file has less free space than the amount specified in *growth_increment*, an 9002 error is generated. Refer to [Troubleshoot a Full Transaction Log](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) for more information.  
+-   If the `FILEGROWTH` setting is not enabled, or the disk that is holding the log file has less free space than the amount specified in *growth_increment*, an 9002 error is generated. Refer to [Troubleshoot a Full Transaction Log](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) for more information.  
   
  If the log contains multiple physical log files, the logical log will move through all the physical log files before it wraps back to the start of the first physical log file. 
  

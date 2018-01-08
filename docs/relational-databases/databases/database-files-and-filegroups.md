@@ -59,15 +59,19 @@ ms.workload: "Active"
  By default, the data and transaction logs are put on the same drive and path. This is done to handle single-disk systems. However, this may not be optimal for production environments. We recommend that you put data and log files on separate disks.  
 
 ### Logical and Physical File Names
-SQL Server files have two names: 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] files have two names: 
 
 **logical_file_name:**  The logical_file_name is the name used to refer to the physical file in all Transact-SQL statements. The logical file name must comply with the rules for SQL Server identifiers and must be unique among logical file names in the database.
 
 **os_file_name:** The os_file_name is the name of the physical file including the directory path. It must follow the rules for the operating system file names.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and log files can be put on either FAT or NTFS file systems. We recommend using the NTFS file system because the security aspects of NTFS. Read/write data filegroups and log files cannot be placed on an NTFS compressed file system. Only read-only databases and read-only secondary filegroups can be put on an NTFS compressed file system.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and log files can be put on either FAT or NTFS file systems. ON windows systems, we recommend using the NTFS file system because the security aspects of NTFS. 
 
-When multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are run on a single computer, each instance receives a different default directory to hold the files for the databases created in the instance. For more information, see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
+> [!IMPORTANT]
+> Read/write data filegroups and log files cannot be placed on an NTFS compressed file system. Only read-only databases and read-only secondary filegroups can be put on an NTFS compressed file system.
+> For space savings, it is highly recommended to use [data compression](../../relational-databases/data-compression/data-compression.md) instead of file system compression.
+
+When multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are running on a single computer, each instance receives a different default directory to hold the files for the databases created in the instance. For more information, see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
 ### Data File Pages
 Pages in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data file are numbered sequentially, starting with zero (0) for the first page in the file. Each file in a database has a unique file ID number. To uniquely identify a page in a database, both the file ID and the page number are required. The following example shows the page numbers in a database that has a 4-MB primary data file and a 1-MB secondary data file.
@@ -79,7 +83,9 @@ The first page in each file is a file header page that contains information abou
 ### File Size
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] files can grow automatically from their originally specified size. When you define a file, you can specify a specific growth increment. Every time the file is filled, it increases its size by the growth increment. If there are multiple files in a filegroup, they will not autogrow until all the files are full. Growth then occurs in a round-robin fashion using [proportional fill](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill).
 
-Each file can also have a maximum size specified. If a maximum size is not specified, the file can continue to grow until it has used all available space on the disk. This feature is especially useful when SQL Server is used as a database embedded in an application where the user does not have convenient access to a system administrator. The user can let the files autogrow as required to reduce the administrative burden of monitoring free space in the database and manually allocating additional space. 
+Each file can also have a maximum size specified. If a maximum size is not specified, the file can continue to grow until it has used all available space on the disk. This feature is especially useful when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is used as a database embedded in an application where the user does not have convenient access to a system administrator. The user can let the files autogrow as required to reduce the administrative burden of monitoring free space in the database and manually allocating additional space.  
+
+If [Instant File Initialization (IFI)](../../relational-databases/databases/database-instant-file-initialization.md) is enabled for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there is minimal overhead when allocating new space for data files.
 
 For more information on transaction log file management, see [Manage the size of the transaction log file](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 

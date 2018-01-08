@@ -280,7 +280,7 @@ This section describes the different level of permissions required for installin
 
     If you are a database owner, you can install R packages from a remote client, if you define a connection and connect to the instance using RxInSqlServer.
     
-    This release includes new features to support administration of R or Python packages by database administrators in upcoming releases. To use out this feature, a DBA must first enable package management features on a per instance basis. After this feature is enabled, individual users can install packages to a specific database, depending on their database role. For more information, see [Enable or disable R package management for SQL Server](r-package-how-to-enable-disable.md).
+    This release includes new features to support administration of R or Python packages by database administrators in upcoming releases. To use out this feature, a DBA must first enable package management features on a per instance basis. After this feature is enabled, individual users can install packages to a specific database, depending on their database role. For more information, see [Enable or disable R package management for SQL Server](../r/r-package-how-to-enable-or-disable.md).
 
 > [!IMPORTANT]
 > 

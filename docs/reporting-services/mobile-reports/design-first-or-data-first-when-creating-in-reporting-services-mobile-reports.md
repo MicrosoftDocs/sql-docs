@@ -2,14 +2,14 @@
 title: "Design first or data first when creating in Reporting Services mobile reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/08/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a7b355fa-312b-4074-bc9b-776269d4fb51

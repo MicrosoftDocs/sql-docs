@@ -2,14 +2,14 @@
 title: "Power BI Report Server Integration (Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 

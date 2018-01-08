@@ -10,7 +10,7 @@ ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 caps.latest.revision: 1

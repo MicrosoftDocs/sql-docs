@@ -2,14 +2,14 @@
 title: "Add a custom map to a Reporting Services mobile report | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2

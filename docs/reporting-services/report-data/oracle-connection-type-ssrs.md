@@ -2,15 +2,15 @@
 title: "Oracle Connection Type (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d

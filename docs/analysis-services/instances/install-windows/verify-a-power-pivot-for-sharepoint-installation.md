@@ -2,14 +2,14 @@
 title: "Verify a Power Pivot for SharePoint Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2

@@ -2,15 +2,15 @@
 title: "RSWindowsExtendedProtectionScenario Property | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "wmi-provider-library-reference"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5

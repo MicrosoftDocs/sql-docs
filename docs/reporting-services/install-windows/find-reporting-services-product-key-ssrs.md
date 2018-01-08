@@ -1,7 +1,7 @@
 ---
 title: "Find the product key for SQL Server 2017 Reporting Services (SSRS) | Microsoft Docs"
 ms.date: "12/20/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.custom: ""
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 author: "maggiesMSFT"

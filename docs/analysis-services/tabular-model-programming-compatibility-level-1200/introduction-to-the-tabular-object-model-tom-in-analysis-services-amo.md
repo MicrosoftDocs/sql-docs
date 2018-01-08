@@ -2,15 +2,15 @@
 title: "Introduction to the Tabular Object Model (TOM) in Analysis Services AMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751

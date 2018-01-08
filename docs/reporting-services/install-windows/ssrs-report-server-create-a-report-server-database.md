@@ -2,14 +2,14 @@
 title: "Create a Report Server Database  (SSRS Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "guyinacube"

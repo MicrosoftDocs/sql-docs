@@ -2,14 +2,14 @@
 title: "Define partitions in DirectQuery models (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719

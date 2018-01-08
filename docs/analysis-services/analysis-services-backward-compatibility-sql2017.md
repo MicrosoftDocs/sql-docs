@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 Analysis Services backward compatibility  | Microsoft Docs"
 ms.date: "07/11/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.custom: ""
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 

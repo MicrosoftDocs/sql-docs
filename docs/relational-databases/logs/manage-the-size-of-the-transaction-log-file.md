@@ -27,24 +27,24 @@ ms.workload: "Active"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic covers how to monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log size, shrink the transaction log, add to or enlarge a transaction log file, optimize the **tempdb** transaction log growth rate, and control the growth of a transaction log file.  
 
-  ##  <a name="MonitorSpaceUse"></a> Monitor log space use  
+##  <a name="MonitorSpaceUse"></a>Monitor log space use  
 Monitor log space use by using [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md). This DMV returns information about the amount of log space currently used, and indicates when the transaction log needs truncation. 
 
 For information about the current log file size, its maximum size, and the autogrow option for the file, you can also use the **size**, **max_size**, and **growth** columns for that log file in [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 > [!IMPORTANT]
-> Avoid overloading the log disk. Ensure the log storage can withstand the IOPS and low latency requirements for your tarnsactional load. 
+> Avoid overloading the log disk. Ensure the log storage can withstand the [IOPS](http://wikipedia.org/wiki/IOPS) and low latency requirements for your transactional load. 
   
 ##  <a name="ShrinkSize"></a> Shrink log file size  
- To reduce the physical size of a physical log file, you must shrink the log file. This is useful when you know that a transaction log file contains unused space. You can shrink a log file only while the database is online, and at least one virtual log file is free. In some cases, shrinking the log may not be possible until after the next log truncation.  
+ To reduce the physical size of a physical log file, you must shrink the log file. This is useful when you know that a transaction log file contains unused space. You can shrink a log file only while the database is online, and at least one [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) is free. In some cases, shrinking the log may not be possible until after the next log truncation.  
   
 > [!NOTE]
-> Factors such as a long-running transaction, that keep virtual log files active for an extended period, can restrict log shrinkage or even prevent the log from shrinking at all. For information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
+> Factors such as a long-running transaction, that keep [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) active for an extended period, can restrict log shrinkage or even prevent the log from shrinking at all. For information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
   
- Shrinking a log file removes one or more [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) that hold no part of the logical log (that is, *inactive virtual log files*). When a transaction log file is shrunk, inactive virtual log files are removed from the end of the log file to reduce the log to approximately the target size. 
+Shrinking a log file removes one or more [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) that hold no part of the logical log (that is, *inactive VLFs*). When a transaction log file is shrunk, inactive VLFs are removed from the end of the log file to reduce the log to approximately the target size. 
 
 > [!IMPORTANT]
-> Before shrinking the transaction log, keep in mind [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation). If the storage space is required again after a log shrink, the transaction log will grow again and by doing that, introduce performance overhead during log grow operations. For more information, see the [Recommendations](#Recommendations) in this topic.
+> Before shrinking the transaction log, keep in mind [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation). If the storage space is required again after a log shrink, the transaction log will grow again and by doing that, introduce performance overhead during log growth operations. For more information, see the [Recommendations](#Recommendations) in this topic.
   
  **Shrink a log file (without shrinking database files)**  
   
@@ -63,7 +63,7 @@ For information about the current log file size, its maximum size, and the autog
 -   [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (See the **size**, **max_size**, and **growth** columns for the log file or files.)  
   
 ##  <a name="AddOrEnlarge"></a> Add or enlarge a log file  
- You can gain space by enlarging the existing log file (if disk space permits) or by adding a log file to the database, typically on a different disk. One transaction log file is sufficient unless log space is running out, and disk space is also running out on the volume that holds the log file.   
+You can gain space by enlarging the existing log file (if disk space permits) or by adding a log file to the database, typically on a different disk. One transaction log file is sufficient unless log space is running out, and disk space is also running out on the volume that holds the log file.   
   
 -   To add a log file to the database, use the `ADD LOG FILE` clause of the `ALTER DATABASE` statement. Adding a log file allows the log to grow.  
 -   To enlarge the log file, use the `MODIFY FILE` clause of the `ALTER DATABASE` statement, specifying the `SIZE` and `MAXSIZE` syntax. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
@@ -102,9 +102,9 @@ Following are some general recommendations when you are working with transaction
       |Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|  
       |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|  
 
--   A small growth increment can generate too many small [virtual log files](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. 
+-   A small growth increment can generate too many small [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. 
 
--   A large growth increment can generate too few and large [virtual log files](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. 
+-   A large growth increment can generate too few and large [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. 
 
 -   Even with autogrow enabled, you can receive a message that the transaction log is full, if it cannot grow fast enough to satisfy the needs of your query. For more information on changing the growth increment, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 
@@ -115,8 +115,8 @@ Following are some general recommendations when you are working with transaction
     -   For information about changing the setting of the **auto_shrink** property, see [View or Change the Properties of a Database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) and [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
   
 ## See also  
- [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)    
- [Transaction Log Backups in the SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Backups)    
- [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
- [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
+[Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)    
+[Transaction Log Backups in the SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Backups)    
+[Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
+[ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)

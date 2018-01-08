@@ -24,8 +24,8 @@ Follow this article to configure a SQL Server instance on Kubernetes in Azure Co
 This tutorial demonstrates how to configure a highly available SQL Server instance in containers using AKS. 
 
 > [!div class="checklist"]
-> * Create storage
 > * Create SA password
+> * Create storage
 > * Create deployment
 > * Connect with SQL Server Management Studios (SSMS)
 > * Verify failure and recovery
@@ -36,11 +36,31 @@ Kubernetes 1.6+ has support for [Storage Classes](http://kubernetes.io/docs/conc
 
 ![Kubernetes SQL Server Cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
+In the preceding diagram, `mssql-server` is a container in a pod. A [replica set](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) ensures that the pod is automatically recovered after a failure. Applications connect to the service. In this case the service represents a load balancer that hosts an IP address that will stay the same after failure of the `mssql-server`.
+
+In the following diagram, the `mssql-server` container has failed. The replica set recreates the pod, and `mssql-server` reconnects to the same persistent storage. The service connects to the recreated `mssql-server`.
+
+![Kubernetes SQL Server Cluster After](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after.png)
+
 ## Prerequisites
 
 The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), to manage the cluster. 
 
 You can follow the instructions at [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster) to create connect to a Kubernetes cluster in AKS with `kubectl`. 
+
+## Create SA password
+
+First, create and store an SA password in the Kubernetes cluster. Kubernetes can manage sensitive configuration information like passwords as [secrets](http://kubernetes.io/docs/concepts/configuration/secret/).
+
+The following command creates a password for the SA account:
+
+   ```azurecli
+   kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
+   ```  
+
+   The preceding command creates a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `SA_PASSWORD`.
+
+   Replace `MyC0m9l&xP@ssw0rd` with a complex password.
 
 ## Create storage
 
@@ -119,20 +139,6 @@ Configure a [persistent volume](http://kubernetes.io/docs/concepts/storage/persi
    ```
 
    `kubectl` returns metadata about the persistent volume that was automatically created and bound to the persistent volume claim. 
-
-## Create SA password
-
-Kubernetes can manage sensitive configuration information like passwords as [secrets](http://kubernetes.io/docs/concepts/configuration/secret/). Create a secret to store the SA password for SQL Server. 
-
-The following command creates a password for the SA account:
-
-   ```azurecli
-   kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
-   ```  
-
-   The preceding command creates a secret in Kubernetes named `mssql` that holds the value `MyC0m9l&xP@ssw0rd` for the `SA_PASSWORD`.
-
-   Replace `MyC0m9l&xP@ssw0rd` with a complex password.
 
 ## Create the SQL Server container deployment
 

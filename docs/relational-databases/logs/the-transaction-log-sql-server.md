@@ -84,7 +84,7 @@ Log truncation frees space in the log file for reuse by the transaction log. You
  
 Log truncation deletes inactive [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) from the logical transaction log of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space allocated to physical log files.  
   
- o avoid running out of space, unless log truncation is delayed for some reason, truncation occurs automatically after the following events:  
+To avoid running out of space, unless log truncation is delayed for some reason, truncation occurs automatically after the following events:  
   
 - Under the simple recovery model, after a checkpoint.  
 - Under the full recovery model or bulk-logged recovery model, if a checkpoint has occurred since the previous backup, truncation occurs after a log backup (unless it is a copy-only log backup).  

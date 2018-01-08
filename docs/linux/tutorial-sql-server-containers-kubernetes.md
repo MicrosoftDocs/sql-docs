@@ -140,9 +140,9 @@ Configure a [persistent volume](http://kubernetes.io/docs/concepts/storage/persi
 
    `kubectl` returns metadata about the persistent volume that was automatically created and bound to the persistent volume claim. 
 
-## Create the SQL Server container deployment
+## Create the deployment
 
-In this example, the SQL Server container is described as a Kubernetes deployment object. The deployment creates a replica set. The replica set creates the pod. In this step, create a manifest to describe the container based on the Microsoft SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret which you already applied to the Kubernetes cluster. The manifest also describes a [service](http://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server container is recovered. 
+In this example, the container hosts the SQL Server instance is described as a Kubernetes deployment object. The deployment creates a replica set. The replica set creates the pod. In this step, create a manifest to describe the container based on the Microsoft SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret which you already applied to the Kubernetes cluster. The manifest also describes a [service](http://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered. 
 
 1. Create a manifest - a yaml file - to describe the deployment. The following example describes a deployment including a container based on the SQL Server container image.
 
@@ -218,7 +218,7 @@ In this example, the SQL Server container is described as a Kubernetes deploymen
        When Kubernetes deploys the container, it refers to the secret named `mssql` to get the value for the password. 
 
    >[!NOTE]
-   >By using the `LoadBalancer` service type, the SQL Server container is accessible remotely (via the internet) at port 1433.
+   >By using the `LoadBalancer` service type, the SQL Server instance is accessible remotely (via the internet) at port 1433.
 
     Save the file, for example **sqldeployment.yaml**.
 
@@ -233,7 +233,7 @@ In this example, the SQL Server container is described as a Kubernetes deploymen
 
    ![Deployment command](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
-   The deployment and service are created, with SQL Server running as a pod in the kubernetes cluster with connection to persistent storage.
+   The deployment and service are created, with a SQL Server instance in container running as a pod in the kubernetes cluster. The instance is connected to persistent storage.
 
    To view the status of the pod, type `kubectl get pod`.
 
@@ -258,11 +258,11 @@ In this example, the SQL Server container is described as a Kubernetes deploymen
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
    ```  
 
-## Connect to SQL Server
+## Connect to the SQL Server instance
 
 If you configured the container as described, you can connect with an application from outside of the Azure virtual network. Use the `sa` account and the external IP address for the service. Use the password that you configured as the Kubernetes secret. 
 
-You can use the following applications to connect to SQL Server. 
+You can use the following applications to connect to the SQL Server instance. 
 
 * [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssms)
 
@@ -298,7 +298,7 @@ To verify failure and recovery you can delete the pod. Do the following steps:
    ```
    `mssql-deployment-0` is the value returned from the previous step for pod name. 
 
-Kubernetes automatically recreates the pod to recover a SQL Server container and connect to the persistent storage. Use `kubectl get pods` to verify that a new pod is deployed. Use `kubectl get services` to verify that the IP address for the new container is the same. 
+Kubernetes automatically recreates the pod to recover a SQL Server instance and connect to the persistent storage. Use `kubectl get pods` to verify that a new pod is deployed. Use `kubectl get services` to verify that the IP address for the new container is the same. 
 
 In this tutorial, you learned how to 
 > [!div class="checklist"]

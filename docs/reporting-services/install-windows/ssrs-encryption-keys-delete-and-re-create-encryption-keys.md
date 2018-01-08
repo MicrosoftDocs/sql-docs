@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "resetting encryption keys"
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 caps.latest.revision: 9
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

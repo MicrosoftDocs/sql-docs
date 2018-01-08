@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "rendering extensions [Reporting Services], deploying"
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 44
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

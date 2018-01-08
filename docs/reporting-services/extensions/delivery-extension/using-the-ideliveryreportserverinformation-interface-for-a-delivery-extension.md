@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services], retrieving report server information"
 ms.assetid: adbce647-18f3-470c-8114-42f8bcc95dc2
 caps.latest.revision: 34
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

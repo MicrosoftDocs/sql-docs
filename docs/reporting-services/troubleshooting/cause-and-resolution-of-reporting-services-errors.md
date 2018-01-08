@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], errors"
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 caps.latest.revision: 17
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

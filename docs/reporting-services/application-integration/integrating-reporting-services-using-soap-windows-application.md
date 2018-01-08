@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SOAP [Reporting Services], Windows applications"
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 caps.latest.revision: 35
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

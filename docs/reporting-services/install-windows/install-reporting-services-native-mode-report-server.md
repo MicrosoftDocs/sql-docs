@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "installation options [Reporting Services]"
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: 68
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Active"

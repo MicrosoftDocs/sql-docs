@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
   - "components [Reporting Services], Reporting Services Configuration tool"
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Active"

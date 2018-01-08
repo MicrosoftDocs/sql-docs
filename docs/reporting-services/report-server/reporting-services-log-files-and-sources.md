@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "files [Reporting Services], logs"
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 caps.latest.revision: 49
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

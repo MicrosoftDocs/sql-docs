@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Secure Sockets Layer (SSL)"
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ---

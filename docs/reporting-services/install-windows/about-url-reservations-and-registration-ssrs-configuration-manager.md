@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Report Server service, URL reservations"
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 caps.latest.revision: 15
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

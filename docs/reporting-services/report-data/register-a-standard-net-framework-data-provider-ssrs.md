@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: 18
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

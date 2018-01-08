@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "file share delivery [Reporting Services]"
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 54
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

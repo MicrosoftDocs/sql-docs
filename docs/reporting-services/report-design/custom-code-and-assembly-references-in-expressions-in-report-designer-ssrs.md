@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, expressions"
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 77
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

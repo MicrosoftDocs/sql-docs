@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SetDatabaseConnection method"
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 caps.latest.revision: 19
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

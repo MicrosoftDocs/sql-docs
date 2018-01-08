@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "security [Reporting Services], data sources"
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 caps.latest.revision: 35
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

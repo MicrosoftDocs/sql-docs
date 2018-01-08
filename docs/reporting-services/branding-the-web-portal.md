@@ -12,7 +12,7 @@ ms.technology:
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

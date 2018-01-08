@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "snapshots [Reporting Services], rendering report history"
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 caps.latest.revision: 32
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

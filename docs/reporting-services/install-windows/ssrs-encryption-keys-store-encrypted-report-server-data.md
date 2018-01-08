@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "databases [Reporting Services], encryption"
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: 9
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

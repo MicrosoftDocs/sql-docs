@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "IsWindowsServiceEnabled property"
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 caps.latest.revision: 18
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

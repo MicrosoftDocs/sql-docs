@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "URL access [Reporting Services], device information settings"
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
 caps.latest.revision: 32
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

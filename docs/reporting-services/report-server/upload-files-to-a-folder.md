@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "folders [Reporting Services], uploading files to"
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 42
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

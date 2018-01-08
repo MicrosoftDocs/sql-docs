@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "report snapshots [Reporting Services], adding"
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 caps.latest.revision: 35
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "global considerations [Reporting Services]"
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 caps.latest.revision: 29
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

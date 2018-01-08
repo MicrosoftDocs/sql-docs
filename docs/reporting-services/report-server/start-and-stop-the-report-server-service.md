@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "starting Report Server service"
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 caps.latest.revision: 55
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

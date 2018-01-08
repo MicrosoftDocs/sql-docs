@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "MSReportServer_Instance class"
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 caps.latest.revision: 14
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

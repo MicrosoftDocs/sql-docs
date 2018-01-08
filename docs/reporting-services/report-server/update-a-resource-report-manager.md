@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "resources [Reporting Services], updating"
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 caps.latest.revision: 17
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

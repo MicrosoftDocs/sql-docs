@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "GenerateDatabaseRightsScript method"
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: 26
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

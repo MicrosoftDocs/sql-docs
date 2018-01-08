@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "WMI provider [Reporting Services], library"
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
 caps.latest.revision: 42
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

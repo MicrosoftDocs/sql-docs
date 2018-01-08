@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "versions [Reporting Services]"
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 caps.latest.revision: 52
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

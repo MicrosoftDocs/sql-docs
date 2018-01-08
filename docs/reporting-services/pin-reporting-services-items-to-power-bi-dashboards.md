@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "power bi integration"
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 caps.latest.revision: 23
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

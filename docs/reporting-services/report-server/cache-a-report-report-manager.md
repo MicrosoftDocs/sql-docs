@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "expiration [Reporting Services]"
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 caps.latest.revision: 42
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

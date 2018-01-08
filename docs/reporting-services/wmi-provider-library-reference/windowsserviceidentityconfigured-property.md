@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "WindowsServiceIdentityConfigured property"
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
 caps.latest.revision: 17
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

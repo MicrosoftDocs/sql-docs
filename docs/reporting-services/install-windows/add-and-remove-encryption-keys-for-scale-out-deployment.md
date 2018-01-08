@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "scale-out deployments [Reporting Services]"
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 caps.latest.revision: 10
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

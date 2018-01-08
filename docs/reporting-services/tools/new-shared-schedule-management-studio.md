@@ -17,7 +17,7 @@ f1_keywords:
   - "sql13.swb.reportserver.newschedule.f1"
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 caps.latest.revision: 32
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

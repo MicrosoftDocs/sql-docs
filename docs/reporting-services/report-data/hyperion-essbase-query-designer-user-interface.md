@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "Hyperion Essbase [Reporting Services], query designer"
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 caps.latest.revision: 23
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

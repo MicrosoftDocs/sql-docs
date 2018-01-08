@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "mail [Reporting Services]"
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: 45
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

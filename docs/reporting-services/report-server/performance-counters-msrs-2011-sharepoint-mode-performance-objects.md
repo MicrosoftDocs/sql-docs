@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "performance [Reporting Services]"
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 caps.latest.revision: 52
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

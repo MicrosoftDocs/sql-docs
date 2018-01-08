@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], SharePoint library delivery"
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

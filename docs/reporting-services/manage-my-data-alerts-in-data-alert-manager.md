@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "managing, data alerts"
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 caps.latest.revision: 13
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

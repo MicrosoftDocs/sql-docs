@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], standard"
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 52
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

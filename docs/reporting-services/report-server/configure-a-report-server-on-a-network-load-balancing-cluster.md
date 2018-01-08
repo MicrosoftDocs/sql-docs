@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "report servers [Reporting Services], network load balancing"
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 caps.latest.revision: 10
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

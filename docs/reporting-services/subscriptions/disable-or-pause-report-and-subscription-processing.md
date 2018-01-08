@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "shared schedules [Reporting Services], pausing"
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 caps.latest.revision: 47
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

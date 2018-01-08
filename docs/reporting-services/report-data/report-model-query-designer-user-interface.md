@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "query designers [Reporting Services]"
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 caps.latest.revision: 31
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

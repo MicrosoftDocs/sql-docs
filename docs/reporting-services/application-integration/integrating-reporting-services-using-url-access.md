@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "integrating reports [Reporting Services]"
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 caps.latest.revision: 32
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

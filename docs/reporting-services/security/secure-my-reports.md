@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "My Reports folder [Reporting Services]"
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 caps.latest.revision: 34
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

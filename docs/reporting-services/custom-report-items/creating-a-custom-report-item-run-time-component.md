@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "custom report items, creating"
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 caps.latest.revision: 33
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

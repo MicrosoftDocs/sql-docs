@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SetDatabaseLogonTimeout method"
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
 caps.latest.revision: 19
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "try/catch blocks [Reporting Services]"
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 caps.latest.revision: 29
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

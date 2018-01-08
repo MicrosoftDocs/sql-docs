@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "queries [Reporting Services], data mining prediction"
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 caps.latest.revision: 19
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

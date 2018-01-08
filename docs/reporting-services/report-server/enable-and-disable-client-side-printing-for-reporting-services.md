@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "toolbar"
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 caps.latest.revision: 14
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

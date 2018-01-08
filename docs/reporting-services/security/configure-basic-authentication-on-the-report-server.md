@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Basic authentication"
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: 28
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ---

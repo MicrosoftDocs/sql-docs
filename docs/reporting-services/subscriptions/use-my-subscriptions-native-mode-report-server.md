@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "My Subscriptions page [Reporting Services]"
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 caps.latest.revision: 40
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

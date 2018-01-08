@@ -17,7 +17,7 @@ f1_keywords:
   - "sql13.swb.reportserver.jobproperties.f1"
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 caps.latest.revision: 13
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

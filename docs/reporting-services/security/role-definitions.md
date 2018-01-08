@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "role-based security [Reporting Services], role definitions"
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 caps.latest.revision: 44
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

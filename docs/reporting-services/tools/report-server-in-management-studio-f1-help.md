@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Object Explorer, help"
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 caps.latest.revision: 41
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

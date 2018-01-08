@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "custom report items, architecture"
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 caps.latest.revision: 16
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

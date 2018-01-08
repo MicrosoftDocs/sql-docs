@@ -18,7 +18,7 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.runtimecredentials.f1"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 caps.latest.revision: 13
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

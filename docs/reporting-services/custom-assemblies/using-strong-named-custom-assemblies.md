@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "custom assemblies [Reporting Services], strong-named"
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 caps.latest.revision: 35
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

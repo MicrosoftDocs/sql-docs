@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], permissions"
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 caps.latest.revision: 14
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

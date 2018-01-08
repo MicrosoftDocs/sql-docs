@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SecureConnectionLevel property"
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 caps.latest.revision: 19
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

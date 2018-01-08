@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Version property"
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 caps.latest.revision: 9
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

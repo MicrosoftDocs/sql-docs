@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "Reporting Services, security"
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 caps.latest.revision: 21
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

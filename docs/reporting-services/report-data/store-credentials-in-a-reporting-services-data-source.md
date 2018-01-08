@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "data sources [Reporting Services], stored credentials"
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 caps.latest.revision: 42
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

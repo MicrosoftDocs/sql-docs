@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SetEmailConfiguration method"
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 caps.latest.revision: 19
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

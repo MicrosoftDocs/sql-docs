@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "symmetric keys [Reporting Services]"
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 caps.latest.revision: 14
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "PathName property"
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
 caps.latest.revision: 34
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "Connect to Server dialog box, Reporting Services"
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: 53
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

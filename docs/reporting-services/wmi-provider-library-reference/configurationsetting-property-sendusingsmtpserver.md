@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SendUsingSMTPServer property"
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 caps.latest.revision: 18
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

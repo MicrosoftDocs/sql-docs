@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SessionHeader SOAP header"
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 caps.latest.revision: 46
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

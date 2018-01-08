@@ -17,7 +17,7 @@ f1_keywords:
   - "sql13.swb.reportserver.scheduleproperties.general.f1"
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 caps.latest.revision: 36
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

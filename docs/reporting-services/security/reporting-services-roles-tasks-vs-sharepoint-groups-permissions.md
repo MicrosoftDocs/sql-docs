@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 19
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

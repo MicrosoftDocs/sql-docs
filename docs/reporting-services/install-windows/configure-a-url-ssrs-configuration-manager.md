@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "URL access [Reporting Services], syntax"
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 caps.latest.revision: 13
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Active"

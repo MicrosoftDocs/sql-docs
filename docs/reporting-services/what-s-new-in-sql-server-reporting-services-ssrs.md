@@ -13,7 +13,7 @@ ms.technology:
   - "reporting-services-sharepoint"
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Active"

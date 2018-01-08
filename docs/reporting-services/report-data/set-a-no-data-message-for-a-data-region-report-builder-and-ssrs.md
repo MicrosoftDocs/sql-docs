@@ -15,7 +15,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 caps.latest.revision: 7
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

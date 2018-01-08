@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "rskeymgmt utility"
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 caps.latest.revision: 48
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

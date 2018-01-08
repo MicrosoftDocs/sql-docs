@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "Report Server Web service, endpoints"
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 caps.latest.revision: 56
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

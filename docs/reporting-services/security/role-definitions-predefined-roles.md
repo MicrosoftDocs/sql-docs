@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "role-based security [Reporting Services], defaults"
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: 42
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

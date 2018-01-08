@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "WindowsServiceIdentityActual property"
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 caps.latest.revision: 16
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "folders [Reporting Services], modifying"
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 49
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "report servers [Reporting Services], how-to topics"
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 caps.latest.revision: 57
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

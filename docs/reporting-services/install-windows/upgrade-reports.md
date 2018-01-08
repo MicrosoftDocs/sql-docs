@@ -24,7 +24,7 @@ helpviewer_keywords:
   - ".rdl files"
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 caps.latest.revision: 70
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "security [Reporting Services], role-based"
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 caps.latest.revision: 60
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

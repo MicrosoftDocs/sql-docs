@@ -16,7 +16,7 @@ f1_keywords:
   - "pbi"
   - "power bi"
   - "power bi integration"
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

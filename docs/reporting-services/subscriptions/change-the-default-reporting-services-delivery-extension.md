@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Report Manager [Reporting Services], default delivery extension"
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 caps.latest.revision: 19
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

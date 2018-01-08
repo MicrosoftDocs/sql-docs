@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "Report Server Web service"
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 caps.latest.revision: 47
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], CSV rendering"
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 caps.latest.revision: 43
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

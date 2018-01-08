@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "report history [Reporting Services], SharePoint"
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 caps.latest.revision: 12
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

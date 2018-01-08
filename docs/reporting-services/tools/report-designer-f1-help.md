@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Report Designer [Reporting Services], dialog boxes"
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 caps.latest.revision: 63
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

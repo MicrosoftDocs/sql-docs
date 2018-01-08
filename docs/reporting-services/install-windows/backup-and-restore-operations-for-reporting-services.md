@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "files [Reporting Services], backing up"
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 caps.latest.revision: 43
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

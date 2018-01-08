@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "user interface reference [Reporting Services]"
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 caps.latest.revision: 23
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

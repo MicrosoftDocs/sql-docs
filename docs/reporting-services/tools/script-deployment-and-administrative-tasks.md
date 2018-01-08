@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "reports [Reporting Services], migrating"
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 caps.latest.revision: 62
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

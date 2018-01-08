@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "InstanceName property"
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 caps.latest.revision: 18
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

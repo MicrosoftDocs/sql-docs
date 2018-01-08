@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services], data streams"
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
 caps.latest.revision: 34
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SenderEmailAddress property"
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
 caps.latest.revision: 17
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

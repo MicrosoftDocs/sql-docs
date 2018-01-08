@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "external DataSet objects [Reporting Services]"
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 caps.latest.revision: 49
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

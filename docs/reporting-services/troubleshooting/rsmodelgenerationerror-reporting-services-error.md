@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "rsModelGenerationError"
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 caps.latest.revision: 17
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

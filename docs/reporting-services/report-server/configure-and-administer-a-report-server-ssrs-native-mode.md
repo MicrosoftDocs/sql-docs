@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "configuring servers [Reporting Services]"
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 caps.latest.revision: 51
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

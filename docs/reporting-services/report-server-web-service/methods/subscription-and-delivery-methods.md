@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], about subscriptions"
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 caps.latest.revision: 42
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

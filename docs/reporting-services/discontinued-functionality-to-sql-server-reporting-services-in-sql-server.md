@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "unsupported features [Reporting Services]"
 ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
 caps.latest.revision: 54
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "Report Data pane"
 ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
 caps.latest.revision: 28
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

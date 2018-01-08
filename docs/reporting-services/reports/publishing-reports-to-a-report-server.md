@@ -28,7 +28,7 @@ helpviewer_keywords:
   - "Report Designer [Reporting Services], publishing reports"
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 caps.latest.revision: 47
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

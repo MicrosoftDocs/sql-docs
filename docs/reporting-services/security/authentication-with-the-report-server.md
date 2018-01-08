@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "Forms authentication"
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: 34
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ---

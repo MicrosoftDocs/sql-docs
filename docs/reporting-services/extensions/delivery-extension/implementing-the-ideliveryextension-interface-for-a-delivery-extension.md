@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "IDeliveryExtension interface"
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 caps.latest.revision: 37
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], delivery extensions"
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 caps.latest.revision: 35
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

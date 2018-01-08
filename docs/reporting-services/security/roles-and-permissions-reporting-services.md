@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "identity [Reporting Services]"
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 caps.latest.revision: 18
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

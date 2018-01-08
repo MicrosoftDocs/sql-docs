@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "public keys [Reporting Services]"
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 caps.latest.revision: 8
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

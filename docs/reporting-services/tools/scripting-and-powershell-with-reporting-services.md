@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "scripting [Reporting Services]"
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 caps.latest.revision: 18
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

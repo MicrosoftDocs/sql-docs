@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "publishing reports [Reporting Services], to a SharePoint library"
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 caps.latest.revision: 14
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

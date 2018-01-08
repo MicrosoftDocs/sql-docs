@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "ListIPAddresses method"
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 caps.latest.revision: 12
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

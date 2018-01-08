@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "Report Server Web service, authentication"
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 caps.latest.revision: 33
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

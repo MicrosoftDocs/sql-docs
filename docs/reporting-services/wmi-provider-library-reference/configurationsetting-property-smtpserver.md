@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SMTPServer property"
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 caps.latest.revision: 18
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "item-level tasks [Reporting Services]"
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 caps.latest.revision: 37
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

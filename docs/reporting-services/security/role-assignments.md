@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "security [Reporting Services], role assignments"
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 caps.latest.revision: 37
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "parameters [Reporting Services], queries"
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 caps.latest.revision: 49
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "SoapException class"
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 caps.latest.revision: 33
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

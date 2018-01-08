@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SetSecureConnectionLevel method"
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 caps.latest.revision: 21
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

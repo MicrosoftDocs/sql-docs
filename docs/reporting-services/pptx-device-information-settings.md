@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "export"
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 caps.latest.revision: 6
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

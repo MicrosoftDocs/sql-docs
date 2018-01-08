@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "IsWebServiceEnabled property"
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 caps.latest.revision: 18
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

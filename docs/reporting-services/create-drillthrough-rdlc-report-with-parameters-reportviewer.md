@@ -16,7 +16,7 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 caps.latest.revision: 8
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

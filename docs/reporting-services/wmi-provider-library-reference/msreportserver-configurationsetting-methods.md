@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "MSReportServer_ConfigurationSetting class"
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 caps.latest.revision: 45
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

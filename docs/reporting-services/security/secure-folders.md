@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "security [Reporting Services], folders"
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 caps.latest.revision: 34
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

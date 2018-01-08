@@ -28,7 +28,7 @@ helpviewer_keywords:
   - "named permission sets [Reporting Services]"
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 caps.latest.revision: 32
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

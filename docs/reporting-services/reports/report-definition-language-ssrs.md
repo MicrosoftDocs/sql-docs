@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "reports [Reporting Services], definitions"
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: 52
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

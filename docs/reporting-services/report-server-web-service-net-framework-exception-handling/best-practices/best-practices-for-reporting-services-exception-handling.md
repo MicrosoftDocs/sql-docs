@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "exceptions [Reporting Services], best practices"
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 caps.latest.revision: 34
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

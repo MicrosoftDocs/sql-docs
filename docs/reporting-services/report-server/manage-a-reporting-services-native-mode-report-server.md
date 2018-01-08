@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "report servers [Reporting Services], configuring"
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 caps.latest.revision: 10
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "custom authentication [Reporting Services]"
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 caps.latest.revision: 20
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ---

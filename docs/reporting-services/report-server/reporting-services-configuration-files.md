@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "configuration files [Reporting Services]"
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 caps.latest.revision: 52
-author: "guyinacube"
+author: "markingmyname"
 ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"

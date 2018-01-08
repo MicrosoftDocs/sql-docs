@@ -1,7 +1,7 @@
 ---
 title: "Database Files and Filegroups | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/05/2018"
+ms.date: "01/07/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""

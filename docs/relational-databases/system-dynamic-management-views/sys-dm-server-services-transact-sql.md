@@ -36,7 +36,7 @@ ms.workload: "On Demand"
  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|servicename|**nvarchar(256)**|Name of the SQL Server, Full-text, or SQL Server Agent service. Cannot be null.|  
+|servicename|**nvarchar(256)**|Name of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Full-text, or SQL Server Agent service. Cannot be null.|  
 |startup_type|**int**|Indicates the start mode of the service. The following are the possible values and their corresponding descriptions.<br /><br /> 0: Other<br />1: Other<br />2: Automatic<br />3: Manual<br />4: Disabled<br /><br /> Is nullable.|  
 |startup_desc|**nvarchar(256)**|Describes the start mode of the service. The following are the possible values and their corresponding descriptions.<br /><br /> Other: Other (boot start)<br />Other: Other (system start)<br />Automatic: Auto start<br />Manual: Demand start<br />Disabled: Disabled<br /><br /> Cannot be null.|  
 |status|**int**|Indicates the current status of the service. The following are the possible values and their corresponding descriptions.<br /><br /> 1: Stopped<br />2: Other (start pending)<br />3: Other (stop pending)<br />4: Running<br />5: Other (continue pending)<br />6: Other (pause pending)<br />7: Paused<br /><br /> Is nullable.|  
@@ -47,7 +47,7 @@ ms.workload: "On Demand"
 |filename|**nvarchar(256)**|The path and filename of the service executable. Cannot be null.|  
 |is_clustered|**nvarchar(1)**|Indicates whether the service is installed as a resource of a clustered server. Cannot be null.|  
 |cluster_nodename|**nvarchar(256)**|The name of the cluster node on which the service is installed. Is nullable.|
-|instant_file_initialization_enabled|**nvarchar(1)**|Specifies whether instant file initialization is enabled for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.<br /><br />Y = instant file initialization is enabled for the service.<br /><br />N = instant file initialization is disabled for the service.<br /><br /> Is nullable.<br /><br /> **Note:** Does not apply to other services such as the SQL Server Agent.<br /><br /> **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.|  
+|instant_file_initialization_enabled|**nvarchar(1)**|Specifies whether instant file initialization is enabled for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.<br /><br />Y = instant file initialization is enabled for the service.<br /><br />N = instant file initialization is disabled for the service.<br /><br /> Is nullable.<br /><br /> **Note:** Does not apply to other services such as the SQL Server Agent.<br /><br /> **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 
 ## Security  
   

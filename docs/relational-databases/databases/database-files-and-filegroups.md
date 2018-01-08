@@ -59,15 +59,16 @@ ms.workload: "Active"
  By default, the data and transaction logs are put on the same drive and path. This is done to handle single-disk systems. However, this may not be optimal for production environments. We recommend that you put data and log files on separate disks.  
 
 ### Logical and Physical File Names
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] files have two names: 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] files have two file name types: 
 
-**logical_file_name:**  The logical_file_name is the name used to refer to the physical file in all Transact-SQL statements. The logical file name must comply with the rules for SQL Server identifiers and must be unique among logical file names in the database.
+**logical_file_name:**  The logical_file_name is the name used to refer to the physical file in all Transact-SQL statements. The logical file name must comply with the rules for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers and must be unique among logical file names in the database. This is set by the `NAME` argument in `ALTER DATABASE`. For more information, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-**os_file_name:** The os_file_name is the name of the physical file including the directory path. It must follow the rules for the operating system file names.
-
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and log files can be put on either FAT or NTFS file systems. ON windows systems, we recommend using the NTFS file system because the security aspects of NTFS. 
+**os_file_name:** The os_file_name is the name of the physical file including the directory path. It must follow the rules for the operating system file names. This is set by the `FILENAME` argument in `ALTER DATABASE`. For more information, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and log files can be put on either FAT or NTFS file systems. On Windows systems, we recommend using the NTFS file system because the security aspects of NTFS. 
+
+> [!WARNING]
 > Read/write data filegroups and log files cannot be placed on an NTFS compressed file system. Only read-only databases and read-only secondary filegroups can be put on an NTFS compressed file system.
 > For space savings, it is highly recommended to use [data compression](../../relational-databases/data-compression/data-compression.md) instead of file system compression.
 

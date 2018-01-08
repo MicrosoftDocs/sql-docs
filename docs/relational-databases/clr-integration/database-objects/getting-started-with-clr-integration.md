@@ -9,7 +9,7 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 

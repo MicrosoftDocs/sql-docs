@@ -8,8 +8,8 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "analysis-services"
-  - "r-services"
+  
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 

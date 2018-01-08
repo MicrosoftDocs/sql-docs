@@ -2,15 +2,15 @@
 title: "Drillthrough on Mining Structures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac

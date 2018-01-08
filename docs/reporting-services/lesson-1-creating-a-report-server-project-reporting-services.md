@@ -2,14 +2,14 @@
 title: "Lesson 1: Creating a Report Server Project (Reporting Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/30/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f

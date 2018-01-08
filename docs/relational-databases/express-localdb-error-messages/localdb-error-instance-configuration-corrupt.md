@@ -9,7 +9,7 @@ ms.component: "localdb"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350

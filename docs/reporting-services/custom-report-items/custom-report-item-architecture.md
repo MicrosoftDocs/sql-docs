@@ -2,15 +2,15 @@
 title: "Custom Report Item Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "custom-report-items"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 

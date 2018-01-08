@@ -2,15 +2,15 @@
 title: "Extended Protection for Authentication with Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b

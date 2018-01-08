@@ -1,7 +1,7 @@
 ---
 title: "ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/13/2017"
+ms.date: "01/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -28,9 +28,9 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure blob storage (WASB).  
+  Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure blob storage (WASB).
   
 ## Syntax  
   

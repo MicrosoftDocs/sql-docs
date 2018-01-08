@@ -20,10 +20,12 @@ ms.workload: "Inactive"
 ---
 # Enable or disable R package management for SQL Server
 
-This article describes a new package management feature in SQL Server 2017, designed to allow the database administrator to control package installation on the instance using T-SQL rather than R. The feature relies on new database roles to grant users the ability to install the R packages they need, or share packages with other users.
+This article describes a new package management feature in SQL Server 2017, designed to allow the database administrator to control package installation on the instance using T-SQL rather than R.
+
+Ater the package management frature is enabled, you can also use R commands to install packages on a databae frm a remote client.
 
 > [!NOTE]
-> By default, the external package management feature for SQL Server is disabled, even if machine learning features have been installed. Additional features for package management using T-SQL are planned for an upcoming release. 
+> By default, the external package management feature for SQL Server is disabled, even if machine learning features have been installed. 
 
 ## Enable package management
 
@@ -52,17 +54,19 @@ To enable or disable package management, use the command-line utility **Register
 
     This command creates instance-level objects on the SQL Server computer that are required for package management. It also restarts the Launchpad for the instance.
 
-    If you do not specify an instance, the default instance is used.
+    If you do not specify an instance, the default instance is used. If you do not specify a user, the current security context is used. For example, the following command enables package management on the instance in the path of RegisterRExt.exe, using the credentials of the user who opened the command prompt:
 
-    If you do not specify a user, the current security context is used.
+    `REgisterRExt.exe /installpkgmgmt`
 
-2.  To add package management at the database level, run the following command from an elevated command prompt:
+2.  To add package management to a specific database, run the following command from an elevated command prompt:
 
     `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
    
     This command creates some database artifacts, including the following database roles that are used for controlling user permissions: `rpkgs-users`, `rpkgs-private`, and `rpkgs-shared`.
 
-    If you do not specify a user, the current security context is used.
+    For example, the following command enables package management on the database, on the instance where RegisterRExt is run. If you do not specify a user, the current security context is used. 
+
+    `RegisterRExt.exe /installpkgmgmt /database:TestDB`
 
 3. Repeat the command for each database where packages must be installed.
 
@@ -83,7 +87,7 @@ To enable or disable package management, use the command-line utility **Register
         ON o.schema_id = s.schema_id;
     ```
 
-4.  After the feature has been enabled, any user with the appropriate permissions can use the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement in T-SQL to add packages. For an example of how this works, see [Install additional packages on SQL Server](install-additional-r-packages-on-sql-server.md).
+4.  After the feature has been enabled, you can connect to the server and install or synchronize packages remotely, using R commands. For an example of how this works, see [Install additional packages on SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ## <a name="bkmk_disable"></a> Disable package management
 
@@ -99,7 +103,7 @@ To enable or disable package management, use the command-line utility **Register
 
     `RegisterRExt.exe /uninstallpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    This command removes the package management feature from the instance.
+    This command removes the package management feature from the instance. You might need to manually restart the Launchpad service once more to see changes.
 
 ## See also
 

@@ -46,7 +46,7 @@ For more information about the optional and default fields for the R package DES
 
 If you have installed a package and want to make sure that it is available to a particular SQL Server instance, you can execute the following stored procedure call to load the package and return only messages. This example looks for and loads the RevoScaleR library, if available.
 
-```SQL
+```sql
 EXEC sp_execute_external_script  @language =N'R',
 @script=N'library("RevoScaleR")'
 GO
@@ -85,6 +85,27 @@ rxFindPackage(RevoScaleR, "local")
 packageVersion("RevoScaleR")
 ```
 
+## Determine path of library used by SQL Server
+
+If you have upgraded the machine learning components using binding, the path to the R library might change. When this happens, previous shortcuts to R tools might reference an earlier version. To be sure of the path and package version used by SQL Server, you can run a command such as the following:
+
+```sql
+EXEC sp_execute_external_script
+    @language =N'R',
+    @script=N'
+    sql_r_path <- rxSqlLibPaths("local")
+	  print(sql_r_path)
+    version_info <-packageVersion("RevoScaleR")
+	  print(version_info)'
+```
+
+**Results**
+
+```text
+STDOUT message(s) from external script: 
+[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
+[1] '9.2.1'
+```
 ## See also
 
 [Install additional R packages on SQL Server](install-additional-r-packages-on-sql-server.md)

@@ -51,6 +51,19 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
+Alternatiely, you can use the new [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function, if executing sp\_execute\_external\_script directly on the target computer. The function cannot return library paths for remote connections.
+
+```sql
+EXEC sp_execute_external_script
+  @language =N'R',
+  @script=N'
+  sql_r_path <- rxSqlLibPaths("local")
+  print(sql_r_path)
+```
+
+> [!NOTE]
+> If you use binding to upgrade the R components in an instance, the path to the instance library can change. Be sure to verify which library is being used by SQL Server.
+
 ## R packages installed with SQL Server
 
 By default the R **base** packages are installed. Base packages include core functionality provided by packages such as `stats` and `utils`.

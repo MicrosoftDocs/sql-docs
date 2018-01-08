@@ -300,10 +300,9 @@ To verify failure and recovery you can delete the pod. Do the following steps:
 
 Kubernetes automatically recreates the pod to recover a SQL Server instance and connect to the persistent storage. Use `kubectl get pods` to verify that a new pod is deployed. Use `kubectl get services` to verify that the IP address for the new container is the same. 
 
-In this tutorial, you learned how to 
 > [!div class="checklist"]
-> * Create storage
 > * Create SA password
+> * Create storage
 > * Create deployment
 > * Connect with SQL Server Management Studios (SSMS)
 > * Verify failure and recovery

@@ -63,7 +63,7 @@ Many types of operations are recorded in the transaction log. These operations i
   
  Rollback operations are also logged. Each transaction reserves space on the transaction log to make sure that enough log space exists to support a rollback that is caused by either an explicit rollback statement or if an error is encountered. The amount of space reserved depends on the operations performed in the transaction, but generally it is equal to the amount of space used to log each operation. This reserved space is freed when the transaction is completed.  
   
-<a name="minlsn"></a> The section of the log file from the first log record that must be present for a successful database-wide rollback to the last-written log record is called the active part of the log, or the *active log*. This is the section of the log required to a full recovery of the database. No part of the active log can ever be truncated. The [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of this first log record is known as the **minimum recovery LSN (*MinLSN*)**.  
+<a name="minlsn"></a> The section of the log file from the first log record that must be present for a successful database-wide rollback to the last-written log record is called the active part of the log, or the *active log*. This is the section of the log required to a full recovery of the database. No part of the active log can ever be truncated. The [log sequence number (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of this first log record is known as the **minimum recovery LSN (*MinLSN*)**.  
   
 ##  <a name="physical_arch"></a> Transaction Log Physical Architecture  
 The transaction log in a database maps over one or more physical files. Conceptually, the log file is a string of log records. Physically, the sequence of log records is stored efficiently in the set of physical files that implement the transaction log. There must be at least one log file for each database.  
@@ -81,7 +81,7 @@ If the log files grow to a large size because of many small increments, they wil
  - The *size* value, as set by the `SIZE` argument of `ALTER DATABASE` is the initial size for the log file.
  - The *growth_increment* value, as set by the `FILEGROWTH` argument of `ALTER DATABASE`, is the amount of space added to the file every time new space is required. 
  
-For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup Options](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
 > To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).

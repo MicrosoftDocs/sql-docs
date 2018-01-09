@@ -1,7 +1,7 @@
 ---
-title: "Install Reporting Services at the Command Prompt | Microsoft Docs"
+title: "Install Reporting Services 2016 at the Command Prompt | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "01/09/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""

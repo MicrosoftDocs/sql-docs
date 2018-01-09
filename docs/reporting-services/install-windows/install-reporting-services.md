@@ -34,7 +34,7 @@ Before you install Reporting Services, review the [Hardware and software require
 
 ## Install your report server
 
-Installing a report server is straight forward. There are only a few steps to install the files.
+Installing a report server is straightforward. There are only a few steps to install the files.
 
 > [!NOTE]
 > You do not need a SQL Server Database Engine server available at the time of install. You will need one to configure Reporting Services after install.

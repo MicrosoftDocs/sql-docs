@@ -1,7 +1,7 @@
 ---
 title: "Transactions - Always On availability groups and database mirroring | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/01/2017"
+ms.date: "01/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -35,7 +35,9 @@ This topic describes cross-database and distributed transactions support for Alw
 SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes databases on the same instance of SQL Server or databases on different instances of SQL Server. Distributed transactions are not supported for databases configured for database mirroring.
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)]SQL Server 2016 included limited support for distributed transactions in for databases in an availability group. Distributed transactions using databases in an availability group were supported as long as no other databases in the transaction were in the same instance of SQL Server. For more information, see [SQL Server 2016 DTC Support In Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-gr)
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] SP2 and later provides full support for distributed transactions in availability groups. 
+>
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] (RTM and SP1) also support distributed transactions, however this support is to cross server distributed queries. A distributed transaction with a database in an availability group is NOT supported if it includes more than one database on the same server. For more information, see [SQL Server 2016 DTC Support In Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-gr).
 
 To configure an availability group for distributed transactions, see [Configure Availability Group for Distributed Transactions](configure-availability-group-for-distributed-transactions.md).
 

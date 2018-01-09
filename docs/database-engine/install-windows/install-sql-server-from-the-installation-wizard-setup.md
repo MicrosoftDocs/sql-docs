@@ -121,7 +121,7 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
     
     > [!NOTE]
-    > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] serice account to use [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).
+    > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).
   
      Use the Server Configuration — Collation page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   

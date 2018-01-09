@@ -62,11 +62,11 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
   
  The following requirements must be met:  
   
--   Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+-   Availability groups must be running on Windows Server 2012 R2 or later. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
   
 -   Availability groups must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC\_SUPPORT = PER_DB** clause. You cannot currently alter an existing availability group.  
 
-- All instances of SQL Server  that participate in the availability group must be SQL Server 2016 or later.
+- All instances of SQL Server that participate in the availability group must be SQL Server 2016 or later.
  
  ## Non-support for distributed transactions
  Specific cases where distributed transactions are not supported include:

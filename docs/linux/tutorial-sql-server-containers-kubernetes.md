@@ -50,7 +50,7 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 
 The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), to manage the cluster. 
 
-You can follow the instructions at [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster) to create connect to a single node Kubernetes cluster in AKS with `kubectl`. 
+You can follow the instructions at [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster) to create, and connect to a single node Kubernetes cluster in AKS with `kubectl`. 
 
 >[!NOTE]
 >To protect against node failure, a Kubernetes cluster requires more than one node.

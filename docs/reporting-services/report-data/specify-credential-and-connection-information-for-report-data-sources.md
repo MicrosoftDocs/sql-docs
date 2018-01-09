@@ -33,9 +33,9 @@ helpviewer_keywords:
   - "Windows integrated security [Reporting Services]"
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 61
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Specify Credential and Connection Information for Report Data Sources

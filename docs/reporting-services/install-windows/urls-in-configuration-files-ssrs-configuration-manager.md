@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "URL configuration [Reporting Services]"
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # URLs in Configuration Files  (SSRS Configuration Manager)

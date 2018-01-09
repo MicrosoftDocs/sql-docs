@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "schedules [Reporting Services], pausing"
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Pause and Resume Shared Schedules

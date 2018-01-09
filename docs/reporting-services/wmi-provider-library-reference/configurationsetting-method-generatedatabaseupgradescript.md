@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "GenerateDatabaseUpgradeScript method"
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
 caps.latest.revision: 22
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - GenerateDatabaseUpgradeScript

@@ -17,7 +17,7 @@ ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Page Layout and Rendering (Report Builder and SSRS)

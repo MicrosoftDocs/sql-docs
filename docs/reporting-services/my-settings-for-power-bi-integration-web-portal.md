@@ -18,9 +18,9 @@ f1_keywords:
   - "power bi integration"
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 

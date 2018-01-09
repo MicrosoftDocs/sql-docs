@@ -21,7 +21,7 @@ ms.workload: "Active"
 ---
 # Install Reporting Services 2017 and Power BI Report Server at the Command Prompt
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 SQL Server Reporting Services and Power BI Report Server support a command-line installation from the Reporting Services and Power BI Report Server setup programs. Installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. 
 

@@ -13,9 +13,9 @@ ms.technology:
 
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)

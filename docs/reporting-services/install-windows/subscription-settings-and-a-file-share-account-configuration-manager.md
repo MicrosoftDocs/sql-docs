@@ -16,9 +16,9 @@ f1_keywords:
   - "SQL13.rsconfigtool.subscriptionsettings.F1"
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Subscription Settings and a File Share Account (Configuration Manager)

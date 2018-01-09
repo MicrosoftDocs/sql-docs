@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "test servers [Reporting Services]"
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Previewing Reports

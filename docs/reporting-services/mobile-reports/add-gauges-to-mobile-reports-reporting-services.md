@@ -16,7 +16,7 @@ ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 caps.latest.revision: 5
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add gauges to mobile reports | Reporting Services

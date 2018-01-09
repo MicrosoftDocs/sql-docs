@@ -17,9 +17,9 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.reportservicelogin.f1"
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 caps.latest.revision: 31
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Reporting Services Login Dialog Box (SSRS)

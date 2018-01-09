@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "library [Reporting Services]"
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 caps.latest.revision: 33
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Reporting Services Extension Library

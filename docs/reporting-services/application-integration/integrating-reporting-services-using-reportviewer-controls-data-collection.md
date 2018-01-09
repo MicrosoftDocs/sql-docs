@@ -15,9 +15,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 caps.latest.revision: 2
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Data Collection

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "migrating Reporting Services"
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 caps.latest.revision: 54
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 

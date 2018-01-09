@@ -20,7 +20,7 @@ ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Report Authoring Concepts (Report Builder and SSRS)

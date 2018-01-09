@@ -17,7 +17,7 @@ ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Report Builder Functions - Sum Function

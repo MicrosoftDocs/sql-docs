@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "multiple Web service methods"
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Batching Methods

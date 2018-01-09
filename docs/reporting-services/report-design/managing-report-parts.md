@@ -17,7 +17,7 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Managing Report Parts

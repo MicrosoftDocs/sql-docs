@@ -17,7 +17,7 @@ ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 caps.latest.revision: 6
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add a Border Frame to a Chart (Report Builder and SSRS)

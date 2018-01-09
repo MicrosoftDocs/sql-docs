@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "publishing reports [Reporting Services], to a SharePoint library"
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Publish a Report to a SharePoint Library

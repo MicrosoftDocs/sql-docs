@@ -17,7 +17,7 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 caps.latest.revision: 13
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Report Builder authoring environment (SSRS)

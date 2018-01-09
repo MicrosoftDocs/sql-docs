@@ -16,7 +16,7 @@ ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 caps.latest.revision: 5
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Open a mobile report with specific query string parameters | Reporting Services

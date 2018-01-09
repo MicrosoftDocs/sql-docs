@@ -15,9 +15,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Show Hidden Datasets for Parameter Values - Multidimensional Data

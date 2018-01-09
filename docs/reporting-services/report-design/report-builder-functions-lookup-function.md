@@ -17,7 +17,7 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Report Builder Functions - Lookup Function

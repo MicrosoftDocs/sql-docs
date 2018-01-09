@@ -58,7 +58,7 @@ ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Formatting a Chart (Report Builder and SSRS)

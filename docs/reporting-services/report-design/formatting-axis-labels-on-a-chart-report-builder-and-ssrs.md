@@ -34,7 +34,7 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Formatting Axis Labels on a Chart (Report Builder and SSRS)

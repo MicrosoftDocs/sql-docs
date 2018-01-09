@@ -25,7 +25,7 @@ ms.workload: "Active"
 ---
 # The Transaction Log (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Every SQL Server database has a transaction log that records all transactions and the database modifications made by each transaction.
+Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database has a transaction log that records all transactions and the database modifications made by each transaction.
   
 The transaction log is a critical component of the database. If there is a system failure, you will need that log to bring your database back to a consistent state. 
 
@@ -47,10 +47,10 @@ For information about the transaction log architecture and internals, see the [S
 -   Supporting high availability and disaster recovery solutions: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], database mirroring, and log shipping.
 
 ### Individual transaction recovery
-If an application issues a ROLLBACK statement, or if the Database Engine detects an error such as the loss of communication with a client, the log records are used to roll back the modifications made by an incomplete transaction. 
+If an application issues a `ROLLBACK` statement, or if the Database Engine detects an error such as the loss of communication with a client, the log records are used to roll back the modifications made by an incomplete transaction. 
 
 ### Recovery of all incomplete transactions when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started
-If a server fails, the databases may be left in a state where some modifications were never written from the buffer cache to the data files, and there may be some modifications from incomplete transactions in the data files. When an instance of SQL Server is started, it runs a recovery of each database. Every modification recorded in the log which may not have been written to the data files is rolled forward. Every incomplete transaction found in the transaction log is then rolled back to make sure the integrity of the database is preserved. 
+If a server fails, the databases may be left in a state where some modifications were never written from the buffer cache to the data files, and there may be some modifications from incomplete transactions in the data files. When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started, it runs a recovery of each database. Every modification recorded in the log which may not have been written to the data files is rolled forward. Every incomplete transaction found in the transaction log is then rolled back to make sure the integrity of the database is preserved. 
 
 ### Rolling a restored database, file, filegroup, or page forward to the point of failure
 After a hardware loss or disk failure affecting the database files, you can restore the database to the point of failure. You first restore the last full database backup and the last differential database backup, and then restore the subsequent sequence of the transaction log backups to the point of failure. 
@@ -61,30 +61,30 @@ As you restore each log backup, the Database Engine reapplies all the modificati
 The Log Reader Agent monitors the transaction log of each database configured for transactional replication and copies the transactions marked for replication from the transaction log into the distribution database. For more information, see [How Transactional Replication Works](http://msdn.microsoft.com/library/ms151706.aspx).
 
 ### Supporting high availability and disaster recovery solutions
-The standby-server solutions, Always On Availability Groups, database mirroring, and log shipping, rely heavily on the transaction log. 
+The standby-server solutions, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], database mirroring, and log shipping, rely heavily on the transaction log. 
 
-In an Always On Availability Group scenario, every update to a database, the primary replica, is immediately reproduced in separate, full copies of the database, the secondary replicas. The primary replica sends each log record immediately to the secondary replicas which applies the incoming log records to availability group databases, continually rolling it forward. For more information, see [Always On Failover Cluster Instances](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+In an **[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] scenario**, every update to a database, the primary replica, is immediately reproduced in separate, full copies of the database, the secondary replicas. The primary replica sends each log record immediately to the secondary replicas which applies the incoming log records to availability group databases, continually rolling it forward. For more information, see [Always On Failover Cluster Instances](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
-In a log shipping scenario, the primary server sends the active transaction log of the primary database to one or more destinations. Each secondary server restores the log to its local secondary database. For more information, see [About Log Shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
+In a **log shipping scenario**, the primary server sends the active transaction log of the primary database to one or more destinations. Each secondary server restores the log to its local secondary database. For more information, see [About Log Shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
 
-In a database mirroring scenario, every update to a database, the principal database, is immediately reproduced in a separate, full copy of the database, the mirror database. The principal server instance sends each log record immediately to the mirror server instance which applies the incoming log records to the mirror database, continually rolling it forward. For more information, see [Database Mirroring](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
+In a **database mirroring scenario**, every update to a database, the principal database, is immediately reproduced in a separate, full copy of the database, the mirror database. The principal server instance sends each log record immediately to the mirror server instance which applies the incoming log records to the mirror database, continually rolling it forward. For more information, see [Database Mirroring](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
 Characteristics of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] transaction log: 
 -  The transaction log is implemented as a separate file or set of files in the database. The log cache is managed separately from the buffer cache for data pages, which results in simple, fast, and robust code within the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. For more information, see [Transaction Log Physical Architecture](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 -  The format of log records and pages is not constrained to follow the format of data pages.
--  The transaction log can be implemented in several files. The files can be defined to expand automatically by setting the FILEGROWTH value for the log. This reduces the potential of running out of space in the transaction log, while at the same time reducing administrative overhead. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).
+-  The transaction log can be implemented in several files. The files can be defined to expand automatically by setting the `FILEGROWTH` value for the log. This reduces the potential of running out of space in the transaction log, while at the same time reducing administrative overhead. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup Options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 -  The mechanism to reuse the space within the log files is quick and has minimal effect on transaction throughput.
 
 For information about the transaction log architecture and internals, see the [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
 ##  <a name="Truncation"></a> Transaction log truncation  
- Log truncation frees space in the log file for reuse by the transaction log. You must regularly truncate your transaction log to keep it from filling the alotted space (And it will!!)! Several factors can delay log truncation, so monitoring log size matters. Some operations can be minimally logged to reduce their impact on transaction log size.  
+Log truncation frees space in the log file for reuse by the transaction log. You must regularly truncate your transaction log to keep it from filling the alotted space. Several factors can delay log truncation, so monitoring log size matters. Some operations can be minimally logged to reduce their impact on transaction log size.  
  
-  Log truncation deletes inactive [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) from the logical transaction log of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space allocated to physical log files.  
+Log truncation deletes inactive [virtual log files (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) from the logical transaction log of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, freeing space in the logical log for reuse by the Physical transaction log. If a transaction log is never truncated, it will eventually fill all the disk space allocated to physical log files.  
   
- To avoid running out of space, unless log truncation is delayed for some reason, truncation occurs automatically after the following events:  
+To avoid running out of space, unless log truncation is delayed for some reason, truncation occurs automatically after the following events:  
   
 - Under the simple recovery model, after a checkpoint.  
 - Under the full recovery model or bulk-logged recovery model, if a checkpoint has occurred since the previous backup, truncation occurs after a log backup (unless it is a copy-only log backup).  
@@ -122,7 +122,7 @@ For information about the transaction log architecture and internals, see the [S
 |14|OTHER_TRANSIENT|This value is currently not used.|  
   
 ##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
- *Minimal logging* involves logging only the information that is required to recover the transaction without supporting point-in-time recovery. This topic identifies the operations that are minimally logged under the bulk-logged [recovery model](../backup-restore/recovery-models-sql-server.md) (as well as under the simple recovery model, except when a backup is running).  
+*Minimal logging* involves logging only the information that is required to recover the transaction without supporting point-in-time recovery. This topic identifies the operations that are minimally logged under the bulk-logged [recovery model](../backup-restore/recovery-models-sql-server.md) (as well as under the simple recovery model, except when a backup is running).  
   
 > [!NOTE]
 > Minimal logging is not supported for memory-optimized tables.  
@@ -135,7 +135,7 @@ For information about the transaction log architecture and internals, see the [S
   
 -   Bulk import operations ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), and [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). For more information about when bulk import into a table is minimally logged, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
-When transactional replication is enabled, BULK INSERT operations are fully logged even under the Bulk Logged recovery model.  
+When transactional replication is enabled, `BULK INSERT` operations are fully logged even under the Bulk Logged recovery model.  
   
 -   [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md) operations.  
   
@@ -146,7 +146,7 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
 -   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) and [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) statements when inserting or appending new data into the **text**, **ntext**, and **image** data type columns. Note that minimal logging is not used when existing values are updated.  
   
     > [!WARNING]
-    > The WRITETEXT and UPDATETEXT statements are **deprecated**; avoid using them in new applications.  
+    > The `WRITETEXT` and `UPDATETEXT` statements are **deprecated**; avoid using them in new applications.  
   
 -   If the database is set to the simple or bulk-logged recovery model, some index DDL operations are minimally logged whether the operation is executed offline or online. The minimally logged index operations are as follows:  
   
@@ -157,7 +157,7 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
         > [!WARNING]
         > The `DBCC DBREINDEX` statement is **deprecated**; Do not use it in new applications.  
   
-    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) new heap rebuild (if applicable). Index page deallocation during a DROP INDEX operation is **always** fully logged.
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) new heap rebuild (if applicable). Index page deallocation during a `DROP INDEX` operation is **always** fully logged.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Managing the transaction log**  

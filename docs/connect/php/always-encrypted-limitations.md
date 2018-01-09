@@ -1,6 +1,6 @@
 ---
 title: "Always Encrypted: Limitations | Microsoft Docs"
-ms.date: "01/31/2018"
+ms.date: "01/08/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""

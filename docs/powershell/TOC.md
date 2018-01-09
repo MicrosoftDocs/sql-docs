@@ -2,7 +2,6 @@
 # Overview
 ## [SQL Server PowerShell](sql-server-powershell.md) 
 ## [SQL PowerShell Modules](https://docs.microsoft.com/powershell/sql-server/overview?toc=/sql/powershell/toc.json)
-## [Database engine powershell reference](database-engine-powershell-reference.md)
 # [Import the SQLPS module](import-the-sqlps-module.md)  
 # [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)  
 # [Invoke-Sqlcmd cmdlet](invoke-sqlcmd-cmdlet.md)  

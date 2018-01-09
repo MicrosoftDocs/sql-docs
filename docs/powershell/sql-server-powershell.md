@@ -21,20 +21,42 @@ ms.workload: "Active"
 ---
 # SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports Windows PowerShell, which is a powerful scripting shell that lets administrators and developers automate server administration and application deployment. The Windows PowerShell language supports more complex logic than [!INCLUDE[tsql](../includes/tsql-md.md)] scripts, giving [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] administrators the ability to build robust administration scripts. Windows PowerShell scripts can also be used to administer other [!INCLUDE[msCoName](../includes/msconame-md.md)] server products. This gives administrators a common scripting language across servers.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports Windows PowerShell.
+
+> [!NOTE]
+> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
+> To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
+
+**Why did the module change from SQLPS to SqlServer?**
+To ship SQL PowerShell updates, we had to change the identity of the SQL PowerShell module, as well as the wrapper known as `SQLPS.exe`. Because of this change, there are now two SQL PowerShell modules, the **SQLPS** module, and the **SqlServer** module.  
+
+**Update your PowerShell scripts if they import the SQLPS module.**
+If you have any PowerShell scripts that run `Import-Module -Name SQLPS`, and you want to take advantage of the new provider functionality and new cmdlets, you must change them to `Import-Module -Name SqlServer`. The new module is installed to `%Program Files\WindowsPowerShell\Modules\SqlServer`. Therefore, you do not have to update the $env:PSModulePath variable. If you have scripts that use a third-party or community version of a module named **SqlServer**, use of the Prefix parameter to avoid name collisions. There is no change to the module used by SQL Server Agent. 
+
   
 ## SQL Server PowerShell Components  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a Windows PowerShell module named **sqlps** that is used to import the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components into a Windows PowerShell environment or script. The **sqlps** module loads two Windows PowerShell snap-ins that implement:  
+The **SqlServer** module loads two Windows PowerShell snap-ins:  
   
 -   A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider, which enables a simple navigation mechanism similar to file system paths. You can build paths similar to file system paths, where the drive is associated with a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] management object model, and the nodes are based on the object model classes. You can then use familiar commands such as **cd** and **dir** to navigate the paths similar to the way you navigate folders in a command prompt window. You can use other commands, such as **ren** or **del**, to perform actions on the nodes in the path.  
   
--   A set of cmdlets, which are commands used in Windows PowerShell scripts to specify a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] action. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlets support actions such as running a **sqlcmd** script containing [!INCLUDE[tsql](../includes/tsql-md.md)] or XQuery statements.  
+-   A set of cmdlets that support actions such as running a **sqlcmd** script containing [!INCLUDE[tsql](../includes/tsql-md.md)] or XQuery statements.  
   
- To learn about Windows PowerShell, see [Getting Started with Windows PowerShell](https://msdn.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell).  
   
 ## SQL Server Versions  
  The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell components can be used to manage instances of [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] or later. Instances of [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] must be running SP2 or later. Instances of [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] must be running SP4 or later. When the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell components are used with earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], they are limited to the functionality available in those versions.  
-     
+
+## SQL Server identifiers that contain characters not supported in PowerShell paths  
+ 
+The **Encode-Sqlname** and **Decode-Sqlname** cmdlets help you specify SQL Server identifiers that contain characters not supported in PowerShell paths. For more information, see [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
+  
+Use the **Convert-UrnToPath** cmdlet to convert a Unique Resource Name for a [!INCLUDE[ssDE](../includes/ssde-md.md)] object to a path for the SQL Server PowerShell provider. For more information, see [Convert URNs to SQL Server Provider Paths](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath).  
+  
+## Query Expressions and Unique Resource Names  
+
+Query expressions are strings that use syntax similar to XPath to specify a set of criteria that enumerate one or more objects in an object model hierarchy. A Unique Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object. For more information, see [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md).       
+
+
+
 ## SQL Server PowerShell Tasks  
   
 |Task Description|Topic|  

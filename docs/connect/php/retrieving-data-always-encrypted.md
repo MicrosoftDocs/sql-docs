@@ -1,0 +1,85 @@
+---
+title: "Retrieving Data with Always Encrypted | Microsoft Docs"
+ms.date: "01/31/2018"
+ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
+ms.suite: "sql"
+ms.custom: ""
+ms.technology: 
+  - "drivers"
+ms.topic: "article"
+author: "yuki"
+ms.author: "v-kaywon"
+manager: "mbarwin"
+ms.workload: "Inactive"
+---
+# Retrieving Data with Always Encrypted
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
+
+Notable items when retrieving sensitive data from an encrypted column:
+ -   If the column targeted by a WHERE clause is encrypted, the value must be passed to the database using bind parameter, so the driver can encrypt it before sending it to the database.
+ -   If `ColumnEncryption` is enabled in the connection option, the driver transparently decrypts the data before sending it back to the user.
+ -   If `ColumnEncryption` is disabled in the connection option, the return value is still encrypted and is returned as byte arrays.
+ -   If `ColumnEncryption` is disabled and the user wants to use a WHERE filter on an encrypted column, the user cannot do so since the value passed to the database is not encrypted.
+ 
+The following is the table schema used for the examples after:
+```
+\\\ table schema
+CREATE TABLE [dbo].[Patients](
+ [PatientId] [int] IDENTITY(1,1),
+ [SSN] [char](11) COLLATE Latin1_General_BIN2
+ ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC,
+ ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256',
+ COLUMN_ENCRYPTION_KEY = CEK1) NOT NULL,
+ [FirstName] [nvarchar](50) NULL,
+ [LastName] [nvarchar](50) NULL,
+ [BirthDate] [date]
+ ENCRYPTED WITH (ENCRYPTION_TYPE = RANDOMIZED,
+ ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256',
+ COLUMN_ENCRYPTION_KEY = CEK1) NOT NULL
+ PRIMARY KEY CLUSTERED ([PatientId] ASC) ON [PRIMARY] )";
+```
+
+The following is an example of retrieving data from the Patients table using the SQLSRV driver:
+```
+// since SSN is an encrypted column, need to pass the value in the WHERE clause through bind parameter
+$query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [SSN] = ?";
+$ssn = "795-73-9838";
+$stmt = sqlsrv_prepare($conn, $query, array(&$ssn));
+// during sqlsrv_execute, the driver encrypts the ssn value and passes it to the database
+sqlsrv_execute($stmt);
+
+// fetch like usual
+$row = sqlsrv_fetch_array($stmt);
+```
+Note that if `ColumnEncryption` is disabled, they query would fail since the ssn value cannot be encrypted, however, the user can use a non-encrypted column in the WHERE clause:
+```
+// $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = ?";
+// in fact, bind parameter isn't necessary
+$query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = 'Abel'";
+```
+
+The following is an example of retrieving data from the Patients table using the PDO_SQLSRV driver:
+```
+// since SSN is an encrypted column, need to pass the value in the WHERE clause through bind parameter
+$query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [SSN] = ?";
+$ssn = "795-73-9838";
+$stmt = $conn->prepare($query);
+$stmt->bindParam(1, $ssn);
+// during sqlsrv_execute, the driver encrypts the ssn value and passes it to the database
+$stmt->execute();
+
+// fetch like usual
+$row = $stmt->fetch();
+```
+  
+## See Also  
+[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)
+[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)
+[pdo::prepare](../../connect/php/pdo-prepare.md)
+[PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md)
+[PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)
+[Constants (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

@@ -1,6 +1,6 @@
 ---
 title: Configure SQL Server container in Kubernetes for high availability | Microsoft Docs
-description: This tutorial shows how to deploy a SQL Server high availability soluion with Kubernetes on Azure Container Service.
+description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Container Service.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
@@ -36,11 +36,18 @@ Kubernetes 1.6+ has support for [Storage Classes](http://kubernetes.io/docs/conc
 
 ![Kubernetes SQL Server Cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-In the preceding diagram, `mssql-server` is a container in a [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/). A [replica set](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) ensures that the pod is automatically recovered after a failure. Applications connect to the service. In this case, the service represents a load balancer that hosts an IP address that will stay the same after failure of the `mssql-server`.
+In the preceding diagram, `mssql-server` is a container in a [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/). A [replica set](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) ensures that the pod is automatically recovered after a node failure. Applications connect to the service. In this case, the service represents a load balancer that hosts an IP address that will stay the same after failure of the `mssql-server`.
 
-In the following diagram, the `mssql-server` container has failed. The replica set recreates the pod, and `mssql-server` reconnects to the same persistent storage. The service connects to the recreated `mssql-server`.
+In the following diagram, the `mssql-server` container has failed. The replica set recreates the pod on a different node, and `mssql-server` reconnects to the same persistent storage. The service connects to the recreated `mssql-server`.
 
-![Kubernetes SQL Server Cluster After](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after.png)
+![Kubernetes SQL Server Cluster After](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+
+In the following diagram, the node hosting the `mssql-server` container has failed. The replica set recreates the pod on a different node, and `mssql-server` reconnects to the same persistent storage. The service connects to the recreated `mssql-server`.
+
+![Kubernetes SQL Server Cluster After](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+
+>[!NOTE]
+>To protect against node failure, a Kubernetes cluster requires more than one node.
 
 ## Prerequisites
 
@@ -297,6 +304,8 @@ To verify failure and recovery you can delete the pod. Do the following steps:
    kubectl delete pod mssql-deployment-0
    ```
    `mssql-deployment-0` is the value returned from the previous step for pod name. 
+
+## Summary
 
 Kubernetes automatically recreates the pod to recover a SQL Server instance and connect to the persistent storage. Use `kubectl get pods` to verify that a new pod is deployed. Use `kubectl get services` to verify that the IP address for the new container is the same. 
 

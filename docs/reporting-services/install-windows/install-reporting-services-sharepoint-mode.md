@@ -1,15 +1,15 @@
 ---
-title: "Install Reporting Services SharePoint mode | Microsoft Docs"
+title: "Install Reporting Services 2016 in SharePoint mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/01/2016"
-ms.prod: "reporting-services"
+ms.date: "12/20/2017"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 helpviewer_keywords: 
@@ -20,10 +20,10 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 caps.latest.revision: 35
 author: "guyinacube"
 ms.author: "asaxton"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Install Reporting Services SharePoint mode
+# Install Reporting Services 2016 in SharePoint mode
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 

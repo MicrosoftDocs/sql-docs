@@ -7,19 +7,20 @@ author: MightyPen
 manager: jhubbard
 editor: ''
 ms.service: ""
-ms.component: "advanced-analytics"
+ms.prod: "machine-learning-services"
+ms.prod_service: "machine-learning-services"
+ms.service: ""
+ms.component: ""
+ms.reviewer: ""
 ms.suite: "sql"
-ms.topic: updart-autogen
-ms.technology: database-engine
+ms.technology: r-services
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: updart-autogen
+ms.topic: article
 ms.date: 12/02/2017
-ms.prod: "sql-non-specified"
-ms.prod_service: "r-services"
 ms.author: genemi
-ms.workload: advanced-analytics
+ms.workload: 
 ---
 # New and Recently Updated: Advanced Analytics for SQL Server
 

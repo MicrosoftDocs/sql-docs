@@ -40,7 +40,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 smart_admin.fn_get_current_xevent_settings ()   
 ```  
   

@@ -38,7 +38,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
   
       sys.sp_db_selective_xml_index[[ @db_name = ] 'db_name'],   
 [[ @action = ] 'action']  

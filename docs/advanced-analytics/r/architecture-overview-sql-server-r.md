@@ -2,11 +2,13 @@
 title: "Architecture Overview (SQL Server R Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/11/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0

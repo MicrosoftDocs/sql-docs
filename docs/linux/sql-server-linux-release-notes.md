@@ -4,7 +4,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -30,7 +30,7 @@ The following release notes apply to SQL Server 2017 running on Linux. The topic
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> Review the [system requirements](sql-server-linux-setup.md#system) for SQL Server on Linux.
+> For more details, review the [system requirements](sql-server-linux-setup.md#system) for SQL Server on Linux. For the latest support policy for SQL Server 2017, see the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## Supported client tools
 
@@ -284,7 +284,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 ### Next steps
 
-To get started, see the following quick start tutorials:
+To get started, see the following quickstarts:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

@@ -1,7 +1,7 @@
 ---
 title: "Appendix - 1 (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""

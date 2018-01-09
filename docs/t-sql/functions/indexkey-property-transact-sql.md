@@ -76,7 +76,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 ## Examples  
  In the following example, both properties are returned for index ID `1`, key column `1` in the `Production.Location` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   

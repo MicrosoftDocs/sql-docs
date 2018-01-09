@@ -1,11 +1,13 @@
 ---
 title: "Security considerations for machine learning in SQL Server | Microsoft Docs"
 ms.date: "11/16/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b

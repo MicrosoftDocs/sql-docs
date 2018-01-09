@@ -2,13 +2,13 @@
 title: "Resource governance for machine learning in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2017"
-ms.prod:
- -  "sql-server-2016"
- -  "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9

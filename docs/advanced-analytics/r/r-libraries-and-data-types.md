@@ -3,11 +3,13 @@ title: "Working with R Data Types | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "01/31/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94

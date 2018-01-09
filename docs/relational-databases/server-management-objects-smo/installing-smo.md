@@ -8,7 +8,7 @@ ms.suite: "sql"
 ms.prod_service: "database-engine"
 ms.component: "smo"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -25,6 +25,8 @@ ms.workload: "On Demand"
 ---
 
 #Installing SMO
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This page provides information on how to install SMO for use by applications and the system requirements to use SMO.
 

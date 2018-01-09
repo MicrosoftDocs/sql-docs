@@ -3,9 +3,11 @@ title: Create code snippets in SQL Operations Studio (preview) | Microsoft Docs
 description: Learn how to create and use SQL code snippets in SQL Operations Studio (preview)
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
-ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
+ms.prod: "sql-non-specified"
 ms.suite: "sql"
+ms.prod_service: sql-tools
+ms.component: sos
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "stevestein"

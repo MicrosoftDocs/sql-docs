@@ -85,14 +85,14 @@ This system function works under both **standard** and **lightweight** query exe
 ### A. Looking at live query plan and execution statistics for a running batch  
  The following example queries **sys.dm_exec_requests** to find the interesting query and copy its `session_id` from the output.  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  Then, to obtain the live query plan and execution statistics, use the copied `session_id` with system function **sys.dm_exec_query_statistics_xml**.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -100,7 +100,7 @@ GO
 
  Or combined for all running requests.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  

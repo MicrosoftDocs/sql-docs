@@ -50,7 +50,7 @@ ms.workload: "On Demand"
 |Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|
 |Columnstore index can have a non-persisted computed column||||yes|||   
   
- <sup>1</sup> To create a readable nonclustered columnstore index, store the index on a read-only filegroup.  
+ <sup>1</sup> To create a read-only nonclustered columnstore index, store the index on a read-only filegroup.  
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] adds these new features.

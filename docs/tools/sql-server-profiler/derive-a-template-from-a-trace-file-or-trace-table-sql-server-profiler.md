@@ -3,7 +3,7 @@ title: "Derive a Template from a Trace File or Trace Table (SQL Server Profiler)
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "sql-server-profiler"
 ms.reviewer: ""

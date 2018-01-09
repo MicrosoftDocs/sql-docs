@@ -84,7 +84,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ### A. Reading the path for a FILESTREAM BLOB  
  The following example assigns the `PathName` to an `nvarchar(max)` variable.  
   
-```tsql  
+```sql  
 DECLARE @PathName nvarchar(max);  
 SET @PathName = (  
     SELECT TOP 1 photo.PathName()  
@@ -96,7 +96,7 @@ SET @PathName = (
 ### B. Displaying the paths for FILESTREAM BLOBs in a table  
  The following example creates and displays the paths for three FILESTREAM BLOBs.  
   
-```tsql  
+```sql  
 -- Create a FILESTREAM-enabled database.  
 -- The c:\data directory must exist.  
 CREATE DATABASE PathNameDB  

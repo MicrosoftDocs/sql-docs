@@ -1,14 +1,14 @@
 ---
 title: "Add SQLRUserGroup as a database user | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/13/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.date: "12/21/2017"
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 keywords: 
@@ -23,11 +23,17 @@ ms.workload: "Active"
 ---
 # Add SQLRUserGroup as a database user
 
-During setup of [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] or [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], new Windows user accounts are created for running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends a machine learning script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account, maps it to the identity of the calling user, and runs the script on behalf of the user. This new service of the database engine supports the secure execution of external scripts, called *implied authentication*.
+This article explains how to give the group of worker accounts used by machine learning services in SQL Server the permissions required to connect to the database and run R or Python jobs on behalf of the user.
 
-You can view these accounts in the Windows user group **SQLRUserGroup**. By default, 20 worker accounts are created, which is usually more than enough for running R jobs.
+## What is SQLRUserGroup?
 
-However, if you need to run R scripts from a remote data science client and are using Windows authentication, you must grant these worker accounts permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
+During setup of [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] or [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], new Windows user accounts are created to support execution of R or Python script tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service.
+
+You can view these accounts in the Windows user group **SQLRUserGroup**. By default, 20 worker accounts are created, which is usually more than enough for running machine learning jobs.
+
+When a user sends a machine learning script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account, maps it to the identity of the calling user, and runs the script on behalf of the user. This new service of the database engine supports the secure execution of external scripts, called *implied authentication*.
+
+However, if you need to run R or Python scripts from a remote data science client, and you are using Windows authentication, you must give these worker accounts permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
 
 ## Add SQLRUserGroup as a SQL Server login
 
@@ -51,8 +57,8 @@ However, if you need to run R scripts from a remote data science client and are 
 
 5. Scroll through the list of group accounts on the server until you find one beginning with `SQLRUserGroup`.
     
-    + The name of the group that's associated with the Launchpad service for the _default instance_ is always just **SQLRUserGroup**. Select this account only for the default instance.
-    + If you are using a _named instance_, the instance name is appended to the default name `SQLRUserGroup`. Hence, if your instance is named "MLTEST", the default user group name for this instance would be **SQLRUserGroupMLTest**.
+    + The name of the group that's associated with the Launchpad service for the _default instance_ is always **SQLRUserGroup**, regardless of whether you installed R or Python or both. Select this account for the default instance only.
+    + If you are using a _named instance_, the instance name is appended to the name of the default worker group name, `SQLRUserGroup`. Hence, if your instance is named "MLTEST", the default user group name for this instance would be **SQLRUserGroupMLTest**.
  
      ![Example of groups on server](media/implied-auth-login5.png "Example of groups on server")
    

@@ -3,11 +3,13 @@ title: "Operationalize R code (Machine Learning Services) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "07/26/2016"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f15696b1-2479-4e5f-ac5e-4beaf958a043

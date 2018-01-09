@@ -2,11 +2,13 @@
 title: "Using R Code Profiling Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2016"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af

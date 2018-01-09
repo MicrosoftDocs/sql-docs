@@ -1,28 +1,27 @@
 ---
-title: "Install SQL Server Reporting Services | Microsoft Docs"
-ms.date: "10/10/2017"
-ms.prod: "reporting-services"
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+title: "Install SQL Server Reporting Services (2017 and later) | Microsoft Docs"
+ms.date: "12/20/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.custom: ""
 ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "get-started-article"
 author: "guyinacube"
 ms.author: "asaxton"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
-# Install SQL Server Reporting Services
+# Install SQL Server Reporting Services (2017 and later)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.  Learn how to install Power BI Report Server.
+SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services. 
 
 To download SQL Server 2017 Reporting Services, go to the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252).
 
@@ -50,11 +49,11 @@ Installing a report server is straight forward. There are only a few steps to in
 
     ![Choose edition](media/install-reporting-services/report-server-install-edition.png)
 
-    You can choose either Evaluation or Developer edition from the drop down.
+    For a free edition, choose either Evaluation or Developer from the drop down.
 
     ![Evaluation or developer editions](media/install-reporting-services/report-server-install-edition-select.png)
 
-    Otherwise, you can enter a product key.
+    Otherwise, enter a product key. [Find the product key for SQL Server 2017 Reporting Services](find-reporting-services-product-key-ssrs.md).
 
 4. Read and agree to the license terms and conditions and then select **Next**.
 

@@ -2,7 +2,7 @@
 title: "CheckList: Use PowerShell to Verify Power Pivot for SharePoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""

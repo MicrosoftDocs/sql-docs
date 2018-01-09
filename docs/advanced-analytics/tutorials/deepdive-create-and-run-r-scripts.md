@@ -1,13 +1,15 @@
 ---
 title: "Create and run R scripts (SQL and R deep dive)| Microsoft Docs"
 ms.date: "12/14/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
   - "SQL Server 2017"

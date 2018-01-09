@@ -108,6 +108,8 @@
 
 ### [Install new R packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
 
+### [Install new Python packages on SQL Server](python/install-additional-python-packages-on-sql-server.md)
+
 ### [Enable R package management for a SQL Server instance](r/r-package-how-to-enable-or-disable.md)
 
 ### [Determine which packages are installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
@@ -121,8 +123,6 @@
 ### [Use miniCRAN to create a local package repository](r/create-a-local-package-repository-using-minicran.md)
 
 ### [Avoid errors with user package libraries for R](r/packages-installed-in-user-libraries.md)
-
-### [Add SQLRUserGroup as a database user](r/add-sqlrusergroup-to-database.md)
 
 ## Data exploration and modeling
 
@@ -155,7 +155,10 @@
 ### [Security considerations for the R runtime in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modify the user account pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [Add SQLRUserGroup as a database user](r/add-sqlrusergroup-to-database.md)
+
 ### [Deploy and consume models using web services](operationalization-with-mrsdeploy.md)
+
 ### [Managing and monitoring machine learning solutions](r/managing-and-monitoring-r-solutions.md)
 ### [Resource governance for Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Create a resource pool for machine learning](r/how-to-create-a-resource-pool-for-r.md)

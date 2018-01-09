@@ -3,11 +3,13 @@ title: "Managing and monitoring machine learning solutions | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "07/26/2016"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2

@@ -2,11 +2,13 @@
 title: "Performance for R Services - results and resources| Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9

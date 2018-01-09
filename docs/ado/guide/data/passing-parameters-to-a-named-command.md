@@ -3,7 +3,7 @@ title: "Passing Parameters to a Named Command | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
-ms.component: "guide"
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""

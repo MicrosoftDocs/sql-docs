@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Migration Assistant for DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-db2"
 ms.custom: ""

@@ -1,11 +1,13 @@
 ---
 title: "SQL Server Machine Learning Services| Microsoft Docs"
 ms.date: "12/04/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934

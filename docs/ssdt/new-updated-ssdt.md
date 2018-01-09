@@ -17,7 +17,7 @@ ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 12/02/2017
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.author: genemi
 ms.workload: ssdt-sql-server-data-tools
 ---

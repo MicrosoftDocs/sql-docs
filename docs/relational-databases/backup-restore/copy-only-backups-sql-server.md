@@ -62,7 +62,7 @@ In this example, a copy-only backup of the `Sales` database will be backed up to
 ###  <a name="TsqlProcedure"></a>B.  Using Transact-SQL  
 This example creates a copy-only backup for the `Sales` database utilizing the COPY_ONLY parameter.  A copy-only backup of the transaction log is taken as well.
 
-```tsql
+```sql
 BACKUP DATABASE Sales
 TO DISK = 'E:\BAK\Sales_Copy.bak'
 WITH COPY_ONLY;

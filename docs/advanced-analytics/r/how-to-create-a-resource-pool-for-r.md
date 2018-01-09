@@ -2,13 +2,13 @@
 title: "Create a resource pool for machine learning | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/13/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475

@@ -3,10 +3,10 @@ title: T-SQL language elements - Analytics Platform System Parallel Data Warehou
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "mpp-data-warehouse"
@@ -14,7 +14,6 @@ description: Transact-SQL (T-SQL) language elements for Analytic Platform System
 services: sql-data-warehouse
 documentationcenter: NA
 editor: ''
-
 ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
 ms.devlang: NA
 ms.topic: article

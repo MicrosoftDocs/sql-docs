@@ -2,16 +2,16 @@
 title: "Getting started with the ReportViewer 2016 control | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "application-integration"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1

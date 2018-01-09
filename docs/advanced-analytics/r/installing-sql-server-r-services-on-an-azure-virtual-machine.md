@@ -2,11 +2,13 @@
 title: "Installing SQL Server machine learning features on an Azure virtual machine | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af

@@ -2,11 +2,13 @@
 title: "Unattended installation of Python Machine Learning Services (In-Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: r-services
+ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247

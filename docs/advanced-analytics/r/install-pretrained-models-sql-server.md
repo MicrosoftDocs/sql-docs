@@ -1,11 +1,13 @@
 ---
 title: "Install pretrained machine learning models on SQL Server | Microsoft Docs"
 ms.date: "11/16/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7

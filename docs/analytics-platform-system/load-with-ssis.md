@@ -1,21 +1,18 @@
 ---
 title: "Load Data With Integration Services"
-
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages."
-
 ms.date: "10/20/2016"
 ms.topic: "article"
-
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
 caps.latest.revision: 69
 

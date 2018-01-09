@@ -3,11 +3,13 @@ title: "Getting Started with SQL Server Machine Learning | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "12/07/2016"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943

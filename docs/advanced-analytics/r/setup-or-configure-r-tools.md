@@ -2,13 +2,13 @@
 title: "R tools included with SQL Server setup | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d

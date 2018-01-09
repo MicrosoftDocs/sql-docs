@@ -135,7 +135,7 @@ When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is using memory dyna
 
 The following query returns information about currently allocated memory:  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
 	large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 

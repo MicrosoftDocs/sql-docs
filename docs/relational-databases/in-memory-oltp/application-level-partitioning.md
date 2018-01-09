@@ -29,7 +29,7 @@ ms.workload: "Inactive"
   
 ## Code Listing  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  

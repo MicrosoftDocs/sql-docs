@@ -2,14 +2,16 @@
 title: "TDE for Azure SQL Database and Data Warehouse | Microsoft Docs"
 description: "An overview of Transparent Data Encryption for SQL Database and Data Warehouse. The document covers its benefits, and the options for configuration, including Service-managed TDE and Bring Your Own Key."
 keywords:
-services: "sql-database"
-documentationcenter: ""
 author: "becczhang"
 manager: "craigg"
 editor: ""
-ms.assetid:
+ms.prod: 
+ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
-ms.custom: "security"
+ms.component: "security"
+ms.custom: 
 ms.workload:
 ms.tgt_pltfrm:
 ms.devlang: "na"
@@ -39,9 +41,9 @@ Microsoft also seamlessly moves and manages the keys as needed for Geo-replicati
 > All newly created SQL databases are encrypted by default using service-managed TDE. Existing databases before May 2017 and databases created through restore, geo-replication, and database copy are not encrypted by default.
 >
 
-## Bring Your Own Key
+## Bring Your Own Key (Preview)
 
-Bring Your Own Key (BYOK) support allows the user to take control over their TDE encryption keys and control who can access them and when. Azure Key Vault (AKV), which is Azure’s cloud-based external key management system, is the first key management service that TDE has integrated with for BYOK support. With BYOK, the database encryption key is protected by an asymmetric key stored in AKV. The asymmetric key never leaves Key Vault; once the server has permissions to a key vault, the server sends basic key operation requests to it through the Key Vault service. The asymmetric key is set at the server level and inherited by all databases under that server. 
+Bring Your Own Key (BYOK) (in preview) support allows the user to take control over their TDE encryption keys and control who can access them and when. Azure Key Vault (AKV), which is Azure’s cloud-based external key management system, is the first key management service that TDE has integrated with for BYOK support. With BYOK, the database encryption key is protected by an asymmetric key stored in AKV. The asymmetric key never leaves Key Vault; once the server has permissions to a key vault, the server sends basic key operation requests to it through the Key Vault service. The asymmetric key is set at the server level and inherited by all databases under that server. 
 With BYOK support, users can now control key management tasks including key rotations, key vault permissions, deleting keys, and enable auditing/reporting on all encryption keys. Key Vault provides central key management, leverages tightly monitored hardware security modules (HSMs), and promotes separation of management of keys and data to help meet regulatory compliances. To learn more about Key Vault, visit the [Key Vault documentation page](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 
 To learn more about TDE with BYOK support for Azure SQL Database and Data Warehouse, see [Transparent Data Encryption with Bring Your Own Key support](transparent-data-encryption-byok-azure-sql.md).

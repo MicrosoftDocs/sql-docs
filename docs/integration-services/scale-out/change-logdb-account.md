@@ -21,15 +21,14 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change the account for Scale Out logging
-When you run SSIS packages in Scale Out, the event messages are logged in the SSISDB database with an auto-created user account named **##MS_SSISLogDBWorkerAgentLogin##**. 
-The login for this user uses SQL Server authentication.
+When you run SSIS packages in Scale Out, the event messages are logged in the SSISDB database with an auto-created user account named **##MS_SSISLogDBWorkerAgentLogin##**. The login for this user uses SQL Server authentication.
 
 If you want to change the account used for Scale Out logging, do the following things:
 
 > [!NOTE]
-> If you use a Windows user account for logging, it must be the same account running the Scale Out Worker service. Otherwise, the login to SQL Server fails.
+> If you use a Windows user account for logging, use the same account as the account that runs the Scale Out Worker service. Otherwise, the login to SQL Server fails.
 
-## 1. Create a user of SSISDB
+## 1. Create a user for SSISDB
 For instructions about how to create a database user, see [Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md).
 
 ## 2. Add the user to the database role ssis_cluster_worker

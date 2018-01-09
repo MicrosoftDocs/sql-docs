@@ -47,7 +47,7 @@ ms.workload: "Inactive"
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @p GEOGRAPHY = 'Point(1 1 1 1)'  
 SELECT @p.HasM   
 --Returns: 1 (true)  

@@ -3,7 +3,7 @@ title: "Change the Name of Registered Server or Registered Server Group | Micros
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssms-registration"
 ms.reviewer: ""

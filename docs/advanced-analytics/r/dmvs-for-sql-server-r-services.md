@@ -2,11 +2,13 @@
 title: "DMVs for SQL Server Machine Learning Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24

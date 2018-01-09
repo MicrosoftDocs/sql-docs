@@ -1,7 +1,7 @@
 ---
 title: "Removing the SSMA for MySQL Components (MySQLToSql) | Microsoft Docs"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql-tools"
 ms.service: ""
 ms.component: "ssma-mysql"
 ms.custom: ""

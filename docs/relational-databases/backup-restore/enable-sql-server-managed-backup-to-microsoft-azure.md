@@ -75,7 +75,7 @@ ms.workload: "On Demand"
   
 1.  **Create a SQL Credential for the SAS URL:** Use the SAS token to create a SQL Credential for the blob container URL. In SQL Server Management Studio, use the following Transact-SQL query to create the credential for your blob container URL based on the following example:  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
     WITH IDENTITY = 'Shared Access Signature',  
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
@@ -90,7 +90,7 @@ ms.workload: "On Demand"
     > [!IMPORTANT]  
     >  To enable managed backup at the instance level, specify `NULL` for the `database_name` parameter.  
   
-    ```tsql  
+    ```sql  
     Use msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   

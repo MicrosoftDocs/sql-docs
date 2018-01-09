@@ -2,11 +2,13 @@
 title: "Getting Started with Microsoft R Server (Standalone) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2017"
-ms.prod: "r-server"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 52347d0d-ce60-4bb8-98d2-6163e87716b0

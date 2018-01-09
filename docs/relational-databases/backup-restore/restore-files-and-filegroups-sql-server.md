@@ -185,7 +185,7 @@ ms.workload: "On Demand"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example restores the files and filegroups for the `MyDatabase` database. To restore the database to the current time, two transaction logs are applied.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyDatabase.  

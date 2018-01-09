@@ -3,13 +3,13 @@ title: "Advanced Configuration Options for Machine Learning Services | Microsoft
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "10/31/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6

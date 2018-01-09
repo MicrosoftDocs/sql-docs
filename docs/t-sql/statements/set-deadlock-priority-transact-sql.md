@@ -72,7 +72,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  Which session is chosen as the deadlock victim depends on each session's deadlock priority:  
   
--   If both sessions have the same deadlock priority, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chooses the session that is less expensive to roll back as the deadlock victim. For example, if both sessions have set their deadlock priority to HIGH, the instance will choose as a victim the session it estimates is less costly to roll back.  
+-   If both sessions have the same deadlock priority, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chooses the session that is less expensive to roll back as the deadlock victim. For example, if both sessions have set their deadlock priority to HIGH, the instance will choose as a victim the session it estimates is less costly to roll back. The cost is determined by comparing the number of log bytes written to that point in each transaction. (You can see this value as "Log Used" in a deadlock graph).
   
 -   If the sessions have different deadlock priorities, the session with the lowest deadlock priority is chosen as the deadlock victim.  
   

@@ -80,14 +80,14 @@ Statistics update date is stored in the [statistics blob object](../../relationa
 ### A. Simple example
 The following example returns the statistics for the `Person.Person` table in the AdventureWorks database.
 
-```t-sql
+```sql
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
 ``` 
   
 ### B. Returning all statistics properties for a table  
  The following example returns properties of all statistics that exist for the table TEST.  
   
-```t-sql  
+```sql  
 SELECT sp.stats_id, name, filter_definition, last_updated, rows, rows_sampled, steps, unfiltered_rows, modification_counter   
 FROM sys.stats AS stat   
 CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp  
@@ -97,7 +97,7 @@ WHERE stat.object_id = object_id('TEST');
 ### C. Returning statistics properties for frequently modified objects  
  The following example returns all tables, indexed views, and statistics in the current database for which the leading column was modified more than 1000 times since the last statistics update.  
   
-```t-sql  
+```sql  
 SELECT obj.name, obj.object_id, stat.name, stat.stats_id, last_updated, modification_counter  
 FROM sys.objects AS obj   
 INNER JOIN sys.stats AS stat ON stat.object_id = obj.object_id  

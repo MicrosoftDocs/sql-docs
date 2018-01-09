@@ -1,20 +1,18 @@
 ---
-
 title: "Acquire and Configure a Backup Server for APS PDW"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "Configure a non-appliance Windows system as a backup server for use with the backup and restore features in Analytics Platform System (APS) and SQL Server Parallel Data Warehouse (PDW)."
 ms.date: "10/20/2016"
 ms.topic: "article"
-
 caps.latest.revision: 20
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
 

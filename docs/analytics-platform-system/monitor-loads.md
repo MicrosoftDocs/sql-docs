@@ -1,20 +1,18 @@
 ---
-
 title: "Monitor Loads for Parallel Data Warehouse"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "sql-non-specified"
+ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""
-ms.component: "analytics-platform-system"
+ms.component:
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "You can monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) System Views."
 ms.date: "10/20/2016"
 ms.topic: "article"
-
 ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
 caps.latest.revision: 6
 

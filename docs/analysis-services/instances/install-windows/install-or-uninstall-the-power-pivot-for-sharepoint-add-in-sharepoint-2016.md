@@ -2,14 +2,14 @@
 title: "Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8

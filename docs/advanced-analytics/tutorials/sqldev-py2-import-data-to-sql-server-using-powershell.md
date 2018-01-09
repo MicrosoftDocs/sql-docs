@@ -2,13 +2,15 @@
 title: "Step 2: Import data to SQL Server using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2017"
-ms.prod: "sql-server-vnext-ctp2"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2017"
 dev_langs: 

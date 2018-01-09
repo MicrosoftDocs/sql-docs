@@ -2,11 +2,13 @@
 title: "Differences in machine learning features between editions of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2017"
-ms.prod: sql-non-specified
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b

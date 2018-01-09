@@ -3,7 +3,7 @@ title: "Read, ReadText, Write, and WriteText Methods Example (VB) | Microsoft Do
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
-ms.component: "reference"
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""

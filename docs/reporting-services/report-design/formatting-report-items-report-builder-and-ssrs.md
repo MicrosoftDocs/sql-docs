@@ -19,7 +19,7 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Formatting Report Items (Report Builder and SSRS)

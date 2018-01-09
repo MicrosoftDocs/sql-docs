@@ -19,9 +19,9 @@ f1_keywords:
   - "10025"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: 38
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Dataset Properties Dialog Box, Filters

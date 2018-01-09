@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "hyperlinks [Reporting Services]"
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 caps.latest.revision: 33
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Integrating Reporting Services Using URL Access - Web Application

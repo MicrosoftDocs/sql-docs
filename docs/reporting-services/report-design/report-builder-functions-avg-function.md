@@ -17,7 +17,7 @@ ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Report Builder Functions - Avg Function

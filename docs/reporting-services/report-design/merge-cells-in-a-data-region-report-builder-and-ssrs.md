@@ -17,7 +17,7 @@ ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Merge Cells in a Data Region (Report Builder and SSRS)

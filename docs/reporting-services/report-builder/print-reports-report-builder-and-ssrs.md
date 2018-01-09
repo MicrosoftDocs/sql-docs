@@ -17,7 +17,7 @@ ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Print Reports (Report Builder and SSRS)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "security [Reporting Services], strategies"
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Turn Reporting Services Features On or Off

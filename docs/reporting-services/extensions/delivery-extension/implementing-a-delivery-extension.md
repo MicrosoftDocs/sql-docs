@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services]"
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Implementing a Delivery Extension

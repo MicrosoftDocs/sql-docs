@@ -17,9 +17,9 @@ f1_keywords:
   - "sql13.swb.reportserver.serverproperties.history.f1"
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Server Properties (History Page)

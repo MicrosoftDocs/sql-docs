@@ -15,9 +15,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
 caps.latest.revision: 5
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # RGDI Device Information Settings

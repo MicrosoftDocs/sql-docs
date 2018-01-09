@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "data sources [Reporting Services], shared"
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Convert Data Sources (Report Builder and SSRS)

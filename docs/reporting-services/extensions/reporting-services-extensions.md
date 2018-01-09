@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "extensions [Reporting Services]"
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Reporting Services Extensions

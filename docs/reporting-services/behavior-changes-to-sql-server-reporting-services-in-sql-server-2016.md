@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "behavior changes [Reporting Services]"
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 caps.latest.revision: 69
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 

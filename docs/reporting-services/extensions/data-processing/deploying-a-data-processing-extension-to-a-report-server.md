@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], data processing extension deployments"
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Deploying a Data Processing Extension to a Report Server

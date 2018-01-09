@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "SoapException object"
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 caps.latest.revision: 31
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Handling Exceptions in Reporting Services

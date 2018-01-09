@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "authorization [Reporting Services]"
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Authorization in Reporting Services

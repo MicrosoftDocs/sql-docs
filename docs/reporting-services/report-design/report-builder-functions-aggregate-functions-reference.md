@@ -17,7 +17,7 @@ ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Report Builder Functions - Aggregate Functions Reference

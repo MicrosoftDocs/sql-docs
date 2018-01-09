@@ -23,7 +23,7 @@ ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 caps.latest.revision: 41
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Add Code to a Report (SSRS)

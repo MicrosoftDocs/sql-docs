@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "client-side printing"
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 31
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Using the RSClientPrint Control in Custom Applications

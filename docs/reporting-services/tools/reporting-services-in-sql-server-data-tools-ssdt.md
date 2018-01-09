@@ -19,7 +19,7 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 76
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 

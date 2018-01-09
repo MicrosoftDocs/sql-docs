@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "updating, alerts"
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Edit a Data Alert in Alert Designer

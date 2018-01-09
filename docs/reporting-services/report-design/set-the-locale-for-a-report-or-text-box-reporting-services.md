@@ -19,7 +19,7 @@ ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 caps.latest.revision: 43
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Set the Locale for a Report or Text Box (Reporting Services)

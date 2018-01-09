@@ -17,7 +17,7 @@ ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Change Indicator Icons and Indicator Sets (Report Builder and SSRS)

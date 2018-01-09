@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], connections"
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Specify Connections for Custom Data Processing Extensions

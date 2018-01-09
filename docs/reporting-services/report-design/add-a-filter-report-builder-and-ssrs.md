@@ -17,7 +17,7 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Add a Filter (Report Builder and SSRS)

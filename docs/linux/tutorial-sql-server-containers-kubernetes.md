@@ -38,7 +38,7 @@ Kubernetes 1.6+ has support for [Storage Classes](http://kubernetes.io/docs/conc
 
 In the preceding diagram, `mssql-server` is a container in a [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/). A [replica set](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) ensures that the pod is automatically recovered after a node failure. Applications connect to the service. In this case, the service represents a load balancer that hosts an IP address that will stay the same after failure of the `mssql-server`.
 
-In the following diagram, the `mssql-server` container has failed. The replica set recreates the pod on a different node, and `mssql-server` reconnects to the same persistent storage. The service connects to the recreated `mssql-server`.
+In the following diagram, the `mssql-server` container has failed. The replica set recreates the pod on the same node, and `mssql-server` reconnects to the same persistent storage. The service connects to the recreated `mssql-server`.
 
 ![Kubernetes SQL Server Cluster After](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Excel [Reporting Services], rendering"
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 caps.latest.revision: 40
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Excel Device Information Settings

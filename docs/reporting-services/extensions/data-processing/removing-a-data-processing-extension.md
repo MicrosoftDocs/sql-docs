@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "removing data processing extensions"
 ms.assetid: 1d89e32b-0631-44f6-8178-a57fb791d26d
 caps.latest.revision: 34
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Removing a Data Processing Extension

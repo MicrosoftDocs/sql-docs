@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "content management [Reporting Services]"
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Report Server Content Management (SSRS Native Mode)

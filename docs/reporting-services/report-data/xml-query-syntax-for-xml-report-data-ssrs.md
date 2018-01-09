@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "XML [Reporting Services], data retrieval"
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # XML Query Syntax for XML Report Data (SSRS)

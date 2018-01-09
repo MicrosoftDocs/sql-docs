@@ -15,9 +15,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 caps.latest.revision: 4
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Troubleshoot Reporting Services Report Rendering Issues

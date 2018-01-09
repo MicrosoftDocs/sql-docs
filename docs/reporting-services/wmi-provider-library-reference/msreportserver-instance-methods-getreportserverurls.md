@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "GetReportServerUrls method"
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Methods - GetReportServerUrls

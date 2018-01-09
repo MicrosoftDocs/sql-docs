@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "UnattendedExecutionAccount property"
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - UnattendedExecutionAccount

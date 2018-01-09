@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "reports [Reporting Services], processing"
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Configure the Unattended Execution Account (SSRS Configuration Manager)

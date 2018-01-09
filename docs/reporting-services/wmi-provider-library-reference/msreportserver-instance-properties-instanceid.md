@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "InstanceID property"
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Properties - InstanceID

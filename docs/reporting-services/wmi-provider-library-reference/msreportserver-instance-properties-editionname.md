@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "EditionName property"
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Properties - EditionName

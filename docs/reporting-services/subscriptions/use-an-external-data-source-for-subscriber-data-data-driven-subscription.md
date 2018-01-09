@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "data sources [Reporting Services], subscriptions"
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Use an External Data Source for Subscriber Data (Data-Driven Subscription)

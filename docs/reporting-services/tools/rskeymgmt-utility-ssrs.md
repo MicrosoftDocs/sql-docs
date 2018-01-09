@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "scale-out deployments [Reporting Services]"
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # rskeymgmt Utility (SSRS)

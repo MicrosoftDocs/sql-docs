@@ -15,9 +15,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # RSWindowsExtendedProtectionScenario Property

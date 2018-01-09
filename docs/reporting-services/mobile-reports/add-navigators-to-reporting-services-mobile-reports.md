@@ -16,7 +16,7 @@ ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add navigators to Reporting Services mobile reports

@@ -216,7 +216,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];
 Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  
 
 
-1. Set the availability mode to synchronous commit for the both availability groups. 
+1. Set the availability mode to synchronous commit for both availability groups. 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 

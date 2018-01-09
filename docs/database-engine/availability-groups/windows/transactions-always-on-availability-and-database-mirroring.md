@@ -28,7 +28,7 @@ ms.workload: "On Demand"
 # Transactions - availability groups and database mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This topic describes cross-database and distributed transactions support for Always On availability groups and database mirroring.  
+This article describes cross-database and distributed transactions support for Always On availability groups and database mirroring.  
 
 ## Support for distributed transactions
 
@@ -37,7 +37,7 @@ SQL Server 2017 supports distributed transactions for databases in availability 
 >[!NOTE]
 >[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] SP2 and later provides full support for distributed transactions in availability groups. 
 >
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] (RTM and SP1) also support distributed transactions, however this support is to cross server distributed queries. A distributed transaction with a database in an availability group is NOT supported if it includes more than one database on the same server. For more information, see [SQL Server 2016 DTC Support In Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-gr).
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] (RTM and SP1) also support distributed transactions, however this support is to cross server distributed queries. If a distributed transaction includes more than one database on the same server, it is not supported. For more information, see [SQL Server 2016 DTC Support In Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-gr).
 
 To configure an availability group for distributed transactions, see [Configure Availability Group for Distributed Transactions](configure-availability-group-for-distributed-transactions.md).
 
@@ -47,16 +47,16 @@ See more information at:
 - [DTC Developers Guide](http://msdn.microsoft.com/library/ms679938.aspx)
 - [DTC Programmers Reference](http://msdn.microsoft.com/library/ms686108.aspx)
 
-## SQL Server 2016 and before: Support for cross-database transactions within the same SQL Server instance  
+## SQL Server 2016 SP1 and before: Support for cross-database transactions within the same SQL Server instance  
 
-In SQL Server 2016 and before, cross-database transactions within the same SQL Server instance are not supported for availability groups. This means that no two databases in a cross-database transaction may be hosted by the same SQL Server instance. This is true even if those databases are part of the same availability group.  
+In SQL Server 2016 SP1 and before, cross-database transactions within the same SQL Server instance are not supported for availability groups. No two databases in a cross-database transaction may be hosted by the same SQL Server instance if either or both databases are in an availability group. This limitation also applies when those databases are part of the same availability group.  
   
 Cross-database transactions are also not supported for database mirroring.  
   
-##  <a name="dtcsupport"></a> SQL Server 2016: Support for distributed transactions  
-Distributed transactions are supported with availability groups. This applies to distributed transactions between databases hosted by two different SQL Server instances. It also applies to distributed transactions between SQL Server and another DTC-compliant server.  
+##  <a name="dtcsupport"></a> SQL Server 2016 SP1 and before: Support for distributed transactions  
+Distributed transactions are supported with availability groups when databases are hosted by different SQL Server instances. It also applies to distributed transactions between SQL Server instances and other DTC-compliant server.  
  
-Microsoft Distributed Transaction Coordinator (MSDTC or DTC) is a Windows service that provides transaction infrastructure for distributed systems. MSDTC permits client applications to include multiple data sources in one transaction which then is committed across all servers included in the transaction. For example, you can use MSDTC to coordinate transactions that span multiple databases on different servers.
+Microsoft Distributed Transaction Coordinator (MSDTC or DTC) is a Windows service that provides transaction infrastructure for distributed systems. MSDTC permits client applications to include multiple data sources in one transaction, which then is committed across all servers included in the transaction. For example, you can use MSDTC to coordinate transactions that span multiple databases on different servers.
 
 SQL Server 2016 introduces the capability to use distributed transactions where one or more of the databases in the transaction are in an availability group. Prior to SQL Server 2016 distributed transactions were not supported for databases in availability groups. SQL Server 2016 can register a resource manager per database. This new capability is why distributed transactions can include databases in availability groups.
   
@@ -66,14 +66,14 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
   
 -   Availability groups must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC\_SUPPORT = PER_DB** clause. You cannot currently alter an existing availability group.  
 
-- All instances of SQL Server  that will participate in the availability group must be SQL Server 2016 or later.
+- All instances of SQL Server  that participate in the availability group must be SQL Server 2016 or later.
  
  ## Non-support for distributed transactions
  Specific cases where distributed transactions are not supported include:
  
- - In SQL Server 2016 and prior, where more than one database involved in the transaction is in the same availability group.
+ - In SQL Server 2016 SP1 and prior, where more than one database involved in the transaction is in the same availability group.
  
- - In SQL Server 2016 and prior, where at least one database is in an availability group and another database is on the same instance of SQL Server. 
+ - In SQL Server 2016 SP1 and prior, where at least one database is in an availability group and another database is on the same instance of SQL Server. 
  
  - Where the availability group was not created with enable distributed transaction.
  
@@ -85,12 +85,12 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
 ## Example scenario with database mirroring  
  The following database mirroring example illustrates how a logical inconsistency could occur. In this example, an application uses a cross-database transaction to insert two rows of data: one row is inserted into a table in a mirrored database, A, and the other row is inserted into a table in another database, B. Database A is being mirrored in high-safety mode with automatic failover. While the transaction is being committed, database A becomes unavailable, and the mirroring session automatically fails over to the mirror of database A.  
   
- After the failover, the cross-database transaction might be successfully committed on database B but not on the failed-over database. This would occur if the original principal server for database A had not sent the log for the cross-database transaction to the mirror server before the failure. After the failover, that transaction would not exist on the new principal server. Databases A and B would become inconsistent, because the data inserted in database B remains intact, but the data inserted in database A has been lost.  
+ After the failover, the cross-database transaction might be successfully committed on database B but not on the failed-over database. For example, if the original principal server for database A had not sent the log for the cross-database transaction to the mirror server before the failure. After the failover, that transaction would not exist on the new principal server. Databases A and B would become inconsistent, because the data inserted in database B remains intact, but the data inserted in database A has been lost.  
   
- A similar scenario can occur while using a MS DTC transaction. For example, after failover, the new principal contacts MS DTC. But MS DTC has no knowledge of the new principal server, and it terminates any transactions that are "preparing to commit," which are considered committed in other databases.  
+ A similar scenario can occur while using an MS DTC transaction. For example, after failover, the new principal contacts MS DTC. But MS DTC has no knowledge of the new principal server, and it terminates any transactions that are "preparing to commit," which are considered committed in other databases.  
   
 > [!NOTE]  
->  Using Database Mirroring with DTC or using availability groups with DTC in ways not approved in this topic is not supported.  This does not imply that aspects of the product unrelated to DTC are unsupported; however, any issues arising from the improper use of distributed transactions will not be supported.  
+>  Using Database Mirroring with DTC or using availability groups with DTC in ways not approved in this article is not supported.  This does not imply that aspects of the product unrelated to DTC are unsupported; however, any issues arising from the improper use of distributed transactions are not supported.  
   
 ## Next steps  
  [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  

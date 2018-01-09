@@ -18,13 +18,13 @@ ms.workload: "Inactive"
 # Enabling Always Encrypted in a PHP Application
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-For encryption and decryption to work in a PHP application, the PHP driver needs the CEK (Column Encryption Key) specified in the definition of the encrypted column. The CEKs are stored in an encrypted form in the database metadata. To decrypt the CEKs, each corresponding CMK (Column Master Key) is needed. The keystore name and information of the CMK is stored in the database metadata. The CMK itself is stored on the client side. Thus in order to decrypt the CEK, the driver needs to get the metadata about the CEK and its corresponding CMK first, then uses this information to call the keystore provider, accesses the CMK, and finally decrypts the CEK.
+For encryption and decryption to work in a PHP application, the PHP driver needs the CEK (Column Encryption Key) specified in the definition of the encrypted column. The CEKs are stored in an encrypted form in the database metadata. To decrypt the CEKs, each corresponding CMK (Column Master Key) is needed. The keystore name and information of the CMK is stored in the database metadata. The CMK itself is stored on the client side. Thus in order to decrypt the CEK, the driver needs to get the metadata about the CEK and its corresponding CMK first. The drivers then uses this information to call the keystore provider, accesses the CMK, and finally decrypts the CEK.
 
 To use the Always Encrypted features in the PHP driver, the user must first set up the Keystore Provider and the CMK. The PHP Drivers support two types of Keystore Providers:
  -   Windows Certificate Store
  -   Custom Keystore Providers
  
-With Windows Certificate Store as the Keystore Provider, a certificate in the Certificate Store can be used as the CMK. One of the simplest option is to create a self-signed certificate and use it as the CMK (see [Creating Column Master Keys in Windows Certificate Store](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted#creating-column-master-keys-in-windows-certificate-store)).
+With Windows Certificate Store as the Keystore Provider, a certificate in the Certificate Store can be used as the CMK. One of the simplest options is to create a self-signed certificate and use it as the CMK (see [Creating Column Master Keys in Windows Certificate Store](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted#creating-column-master-keys-in-windows-certificate-store)).
 
 With Custom Keystore Providers, a Keystore Provider needs to be implemented first and then create a CMK (see [Custom Keystore Providers](https://docs.microsoft.com/en-us/sql/connect/odbc/custom-keystore-providers)).
 
@@ -56,7 +56,7 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; CEKeyst
 $conn = new PDO( "sqlsrv:server = $server ; $connectionInfo", $uid, $pwd );
 ```
 
-Note that once Column Encryption is enabled in the connection, the performance overhead on the client side is heavier due to:
+Once Column Encryption is enabled in the connection, the performance overhead on the client side is heavier due to:
  -   Cost of encryption and decryption
  -   More round trips to the database needed to get the metadata for the parameter
  -   Result set with max types may need to be retrieved several times due to the limitation with fetching streams

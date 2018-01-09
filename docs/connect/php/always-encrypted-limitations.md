@@ -44,7 +44,7 @@ The following lists are limitations in SQL Server and the SQLSRV and PDO_SQLSRV 
  
 ## SQL Commands
  -   arithmetic operations
- -   pattern matching operations (e.g., LIKE operator)
+ -   pattern matching operations (for example, LIKE operator)
  -   greater/less than
  -   ORDER BY
  -   CLUSTERED INDEX on randomized encrypted columns

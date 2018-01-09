@@ -28,18 +28,18 @@ This article assumes the ASCII (non-UTF-8) locales have been generated or instal
 
 To send or retrieve ASCII character sets to the server:  
 
-1.  If the desired locale is not the default in your system environment, make sure you invoke something like `setlocale(LC_ALL, $locale)` before making the first connection. Note that the PHP setlocale() function changes the locale only for the current script.
+1.  If the desired locale is not the default in your system environment, make sure you invoke something like `setlocale(LC_ALL, $locale)` before making the first connection. The PHP setlocale() function changes the locale only for the current script.
  
-2.  When using the SQLSRV driver, you may want to specify the PHP type as `SQLSRV_PHPTYPE_STRING(SQLSRV_ENC_CHAR)` in the parameters array. This is optional because it is the default encoding.
+2.  When using the SQLSRV driver, you may want to specify the PHP type as `SQLSRV_PHPTYPE_STRING(SQLSRV_ENC_CHAR)` in the parameters array. It is optional because it is the default encoding.
 
 3.  When using the PDO_SQLSRV driver, after successfully connected, add this line `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
     When you specify the encoding of the connection resource object, the driver assumes that the other connection option strings use that same encoding. The server name and query strings are also assumed to use the same character set.  
   
-Note that the default encoding for PDO_SQLSRV driver is UTF-8 (PDO::SQLSRV_ENCODING_UTF8), unlike the SQLSRV driver. For more information about these constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
+The default encoding for PDO_SQLSRV driver is UTF-8 (PDO::SQLSRV_ENCODING_UTF8), unlike the SQLSRV driver. For more information about these constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
 ## Example  
-The following examples demonstrate how to send and retrieve ASCII data using the PHP Drivers for SQL Server by specifying a particular locale before making the connection. Note that the locales in various Linux platforms may be named differently from those in macOS. For example, the US ISO-8859-1 (Latin 1) locale is `en_US.ISO-8859-1` in Linux while in macOS the name is `en_US.ISO8859-1`.
+The following examples demonstrate how to send and retrieve ASCII data using the PHP Drivers for SQL Server by specifying a particular locale before making the connection. The locales in various Linux platforms may be named differently from the same locales in macOS. For example, the US ISO-8859-1 (Latin 1) locale is `en_US.ISO-8859-1` in Linux while in macOS the name is `en_US.ISO8859-1`.
   
 The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is installed on a server. All output is written to the browser when the examples are run from the browser.  
   

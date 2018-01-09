@@ -71,7 +71,7 @@ sudo apt-get install mssql-server-is
 ### Remove SSIS
 To remove `mssql-server-is`, you can run following command:
 ```bash
-sudo apt-get remove msssql-server-is
+sudo apt-get remove mssql-server-is
 ```
 
 ## <a name="RHEL"></a> Install SSIS on RHEL

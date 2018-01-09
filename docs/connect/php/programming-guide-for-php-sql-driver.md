@@ -36,7 +36,7 @@ This section contains topics that help you develop applications with the [!INCLU
 |[Converting Data Types](../../connect/php/converting-data-types.md)|Addresses how to specify data types and provide details on default data types.|  
 |[Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)|Addresses how to handle errors and warnings.|  
 |[Logging Activity](../../connect/php/logging-activity.md)|Provides information about logging errors and warnings.|  
-|[Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Provides information about using Always Encrypted with the PHP Drivers.|  
+|[Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Provides information about using Always Encrypted feature with the PHP drivers.|  
 |[Security Considerations for PHP SQL Driver](../../connect/php/security-considerations-for-php-sql-driver.md)|Describes security considerations for developing, deploying, and running applications.|  
   
 ## See Also  

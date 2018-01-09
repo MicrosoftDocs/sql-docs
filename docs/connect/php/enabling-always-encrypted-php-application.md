@@ -10,7 +10,7 @@ ms.custom: ""
 ms.technology: 
   - "drivers"
 ms.topic: "article"
-author: "yuki"
+author: "v-kaywon"
 ms.author: "v-kaywon"
 manager: "mbarwin"
 ms.workload: "Inactive"
@@ -18,9 +18,9 @@ ms.workload: "Inactive"
 # Enabling Always Encrypted in a PHP Application
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-For encryption and decryption to work in a PHP application, the PHP driver needs the CEK (Column Encryption Key) specified in the definition of the encrypted column. The CEKs are stored in an encrypted form in the database metadata. To decrypt the CEKs, each corresponding CMK (Column Master Key) is needed. The keystore name and information of the CMK is stored in the database metadata. The CMK itself is stored on the client side. Thus in order to decrypt the CEK, the driver needs to get the metadata about the CEK and its corresponding CMK first. The drivers then uses this information to call the keystore provider, accesses the CMK, and finally decrypts the CEK.
+For encryption and decryption to work in a PHP application, the PHP drivers need the CEK (Column Encryption Key) whose name is specified in the definition of the encrypted column. The CEKs are stored in an encrypted form in the database metadata. To decrypt the CEKs, each corresponding CMK (Column Master Key) is needed. The keystore name and information of the CMK is stored in the database metadata. The CMK itself is stored on the client side. Thus in order to decrypt the CEK, the drivers need to get the metadata about the CEK and its corresponding CMK first. The drivers then uses this information to call the keystore provider, accesses the CMK, and finally decrypts the CEK.
 
-To use the Always Encrypted features in the PHP driver, the user must first set up the Keystore Provider and the CMK. The PHP Drivers support two types of Keystore Providers:
+To use the Always Encrypted feature in the PHP drivers, the user must have access to a Keystore Provider and the CMK. The PHP drivers currently support two types of Keystore Providers:
  -   Windows Certificate Store
  -   Custom Keystore Providers
  
@@ -28,32 +28,32 @@ With Windows Certificate Store as the Keystore Provider, a certificate in the Ce
 
 With Custom Keystore Providers, a Keystore Provider needs to be implemented first and then create a CMK (see [Custom Keystore Providers](https://docs.microsoft.com/en-us/sql/connect/odbc/custom-keystore-providers)).
 
-To enable encryption of data passing into and decryption of data retrieved from the database, set the `ColumnEncryption` connection option to `Enabled`. The following are examples of connecting with Always Encrypted enabled using the SQLSRV and PDO_SQLSRV Drivers:
+The following examples demonstrate how to use the `ColumnEncryption` connection option to enable the Always Encrypted feature in the SQLSRV and PDO_SQLSRV Drivers.
 
 SQLSRV:
 ```
-$connectionInfo = array( "Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>'Enabled' );
-$conn = sqlsrv_connect( $server, $connectionInfo );
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled");
+$conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
 PDO_SQLSRV:
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled;";
-$conn = new PDO( "sqlsrv:server = $server ; $connectionInfo", $uid, $pwd );
+$conn = new PDO("sqlsrv:server = $server ; $connectionInfo", $uid, $pwd);
 ```
 
-If you are using Custom Keystore Provider, provide the connection options `CEKeystoreProvider`, `CEKeystoreName`, and `CEKeystoreEncryptKey`. The following are examples of connecting with Always Encrypted using Custom KeyStore Provider:
+If you are using Custom Keystore Provider, provide the connection options `CEKeystoreProvider`, `CEKeystoreName`, and `CEKeystoreEncryptKey`. The following are examples of connecting with Always Encrypted using Custom Keystore Provider:
 
 SQLSRV:
 ```
-$connectionInfo = array( "Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>'Enabled', "CEKeystoreProvider"=>$ksp_path, "CEKeystoreName"=>$ksp_name, "CEKeystoreEncryptKey"=>$encrypt_key );
-$conn = sqlsrv_connect( $server, $connectionInfo );
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>'Enabled', "CEKeystoreProvider"=>$ksp_path, "CEKeystoreName"=>$ksp_name, "CEKeystoreEncryptKey"=>$encrypt_key);
+$conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
 PDO_SQLSRV:
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; CEKeystoreProvider = $ksp_path; CEKeystoreName = $ksp_name; CEKeystoreEncryptKey = $encrypt_key;";
-$conn = new PDO( "sqlsrv:server = $server ; $connectionInfo", $uid, $pwd );
+$conn = new PDO("sqlsrv:server = $server ; $connectionInfo", $uid, $pwd);
 ```
 
 Once Column Encryption is enabled in the connection, the performance overhead on the client side is heavier due to:

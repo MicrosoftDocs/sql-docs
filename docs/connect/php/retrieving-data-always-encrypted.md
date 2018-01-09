@@ -10,7 +10,7 @@ ms.custom: ""
 ms.technology: 
   - "drivers"
 ms.topic: "article"
-author: "yuki"
+author: "v-kaywon"
 ms.author: "v-kaywon"
 manager: "mbarwin"
 ms.workload: "Inactive"
@@ -20,13 +20,13 @@ ms.workload: "Inactive"
 
 Notable items when retrieving sensitive data from an encrypted column:
  -   If the column targeted by a WHERE clause is encrypted, the value must be passed to the database using bind parameter. This allows the driver to encrypt the value before sending it to the database.
- -   If `ColumnEncryption` is enabled in the connection option, the driver transparently decrypts the data before sending it back to the user.
- -   If `ColumnEncryption` is disabled in the connection option, the return value is still encrypted and is returned as byte arrays.
- -   If `ColumnEncryption` is disabled and a WHERE filter on an encrypted column, the query would fail since the value passed to the database is not encrypted.
+ -   If connction option `ColumnEncryption` is enabled, the driver transparently decrypts the data before sending it back to the user.
+ -   If connction option `ColumnEncryption` is disabled, the return value is still encrypted and is returned as byte arrays.
+ -   If connction option `ColumnEncryption` is disabled and a WHERE filter on an encrypted column, the query would fail since the value passed to the database is not encrypted.
  
-The following table schema used for the examples after:
+The following table schema used for the examples below:
 ```
-\\\ table schema
+// table schema
 CREATE TABLE [dbo].[Patients](
  [PatientId] [int] IDENTITY(1,1),
  [SSN] [char](11) COLLATE Latin1_General_BIN2
@@ -58,7 +58,7 @@ If `ColumnEncryption` is disabled, the query would fail since the `$ssn` value c
 ```
 // $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = ?";
 // in fact, bind parameter isn't necessary
-$query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = 'Abel'";
+$query = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE [LastName] = 'Abel'";
 ```
 
 The following example retrieves data from the Patients table using the PDO_SQLSRV driver:
@@ -68,7 +68,7 @@ $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients
 $ssn = "795-73-9838";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(1, $ssn);
-// during sqlsrv_execute, the driver encrypts the ssn value and passes it to the database
+// during PDOStatement::execute, the driver encrypts the ssn value and passes it to the database
 $stmt->execute();
 
 // fetch like usual

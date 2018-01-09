@@ -10,7 +10,7 @@ ms.custom: ""
 ms.technology: 
   - "drivers"
 ms.topic: "article"
-author: "yuki"
+author: "v-kaywon"
 ms.author: "v-kaywon"
 manager: "mbarwin"
 ms.workload: "Inactive"
@@ -18,7 +18,7 @@ ms.workload: "Inactive"
 # Always Encrypted: Limitations
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-The following lists are limitations in SQL Server and the SQLSRV and PDO_SQLSRV drivers regarding Always Encrypted.
+The following lists are limitations in SQL Server and the SQLSRV and PDO_SQLSRV drivers regarding Always Encrypted. Many of the limitations in Data Types and SQL Commands are inherited from SQL Server (see [here](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine)).
 
 ## SQLSRV and PDO_SQLSRV
  -   Scrollable cursor

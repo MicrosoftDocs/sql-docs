@@ -309,7 +309,7 @@ Kubernetes automatically recreates the pod to recover a SQL Server instance and 
 
 ## Summary
 
-In this tutorial you learned how to deploy SQL Server containers to a Kubernetes cluster for high availability. 
+In this tutorial, you learned how to deploy SQL Server containers to a Kubernetes cluster for high availability. 
 
 > [!div class="checklist"]
 > * Create SA password

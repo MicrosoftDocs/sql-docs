@@ -1,0 +1,198 @@
+---
+title: "How to: Send and Retrieve ASCII Data in Linux and macOS | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/31/2018"
+ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
+ms.suite: "sql"
+ms.technology: 
+  - "drivers"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "retrieving data, ASCII data"
+  - "sending data"
+  - "linux"
+  - "macOS"
+author: "yitam"
+ms.author: "v-yitam"
+manager: "mbarwin"
+ms.workload: "On Demand"
+---
+# How to: Send and Retrieve ASCII Data in Linux and macOS 
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
+
+This article assumes the ASCII (non-UTF-8) locales have been generated or installed in your Linux or macOS systems. 
+
+To send or retrieve ASCII character sets to the server:  
+
+1.  If the desired locale is not the default in your system environment, make sure you invoke something like `setlocale(LC_ALL, $locale)` before making the first connection. Note that the PHP setlocale() function changes the locale only for the current script.
+ 
+2.  When using the SQLSRV driver, you may want to specify the PHP type as `SQLSRV_PHPTYPE_STRING(SQLSRV_ENC_CHAR)` in the parameters array. This is optional because it is the default encoding.
+
+3.  When using the PDO_SQLSRV driver, after successfully connected, add this line `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+  
+    When you specify the encoding of the connection resource object, the driver assumes that the other connection option strings use that same encoding. The server name and query strings are also assumed to use the same character set.  
+  
+Note that the default encoding for PDO_SQLSRV driver is UTF-8 (PDO::SQLSRV_ENCODING_UTF8), unlike the SQLSRV driver. For more information about these constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
+  
+## Example  
+The following examples demonstrate how to send and retrieve ASCII data using the PHP Drivers for SQL Server by specifying a particular locale before making the connection. Note that the locales in various Linux platforms may be named differently from those in macOS. For example, the US ISO-8859-1 (Latin 1) locale is `en_US.ISO-8859-1` in Linux while in macOS the name is `en_US.ISO8859-1`.
+  
+The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is installed on a server. All output is written to the browser when the examples are run from the browser.  
+  
+```  
+<?php  
+  
+// SQLSRV Example: Connect to the server using SQL Server Authentication and 
+// specify the Test database as the database in use. 
+//
+
+// Setting locale for the script is only necessary if Latin 1 is not the default 
+// in the environment
+$locale = strtoupper(PHP_OS) === 'LINUX' ? "en_US.ISO-8859-1" : "en_US.ISO8859-1";
+setlocale(LC_ALL, $locale);
+        
+$serverName = "MyServer";
+$database = "Test";
+$connectionInfo = array('Database'=>'Test', 'UID'=>$uid, 'PWD'=>$pwd);
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+  
+if ($conn === false) {
+    echo "Could not connect.<br>";  
+    die(print_r(sqlsrv_errors(), true));
+}  
+  
+// Set up the Transact-SQL query to create a test table
+//   
+$tsql = "CREATE TABLE [Table1] ([c1_int] int, [c2_varchar] varchar(512))";  
+  
+// Execute the query
+//
+$stmt = sqlsrv_query($conn, $tsql);
+
+// Insert data using a parameter array 
+//
+$tsql = "INSERT INTO [Table1] (c1_int, c2_varchar) VALUES (?, ?)";
+  
+// Execute the query, $value being some ASCII string
+//   
+$stmt = sqlsrv_query($conn, $tsql, array(1, array($value, SQLSRV_PARAM_IN, SQLSRV_PHPTYPE_STRING(SQLSRV_ENC_CHAR))));
+  
+if ($stmt === false) {
+    echo "Error in statement execution.<br>";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+else {  
+    echo "The insertion was successfully executed.<br>";  
+}  
+  
+// Retrieve the newly inserted data
+//   
+$tsql = "SELECT * FROM Table1";  
+  
+// Execute the query
+//   
+$stmt = sqlsrv_query($conn, $tsql);
+$outValue = null;  
+if ($stmt === false) {  
+    echo "Error in statement execution.<br>";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+  
+// Retrieve and display the data
+//   
+if (sqlsrv_fetch($stmt)) {  
+    $outValue = sqlsrv_get_field($stmt, 1, SQLSRV_PHPTYPE_STRING(SQLSRV_ENC_CHAR));
+    echo "Value: " . $outValue . "<br>";
+    if ($value !== $outValue) {
+        echo "Data retrieved, \'$outValue\', is unexpected!<br>";
+    }
+}  
+else {  
+    echo "Error in fetching data.<br>";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+sqlsrv_query($conn, "DROP TABLE [Table1]");
+
+// Free statement and connection resources
+//   
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+?>  
+```  
+  
+```
+<?php  
+  
+// PDO_SQLSRV Example: Connect to the server using SQL Server Authentication and 
+// specify the Test database as the database in use. 
+//   
+
+// Setting locale for the script is only necessary if Latin 1 is not the default 
+// in the environment
+$locale = strtoupper(PHP_OS) === 'LINUX' ? "en_US.ISO-8859-1" : "en_US.ISO8859-1";
+setlocale(LC_ALL, $locale);
+        
+$serverName = "MyServer";
+$database = "Test";
+
+try {
+    $conn = new PDO("sqlsrv:Server=$serverName;Database=$database;", $uid, $pwd);
+    $conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);
+    
+    // Set up the Transact-SQL query to create a test table
+    //   
+    $tsql = "CREATE TABLE [Table1] ([c1_int] int, [c2_varchar] varchar(512))";  
+      
+    // Execute the query
+    //
+    $stmt = $conn->query($tsql);
+    unset($stmt);
+    
+    // Insert data using parameters, $value being some ASCII string
+    //
+    $stmt = $conn->prepare("INSERT INTO [Table1] (c1_int, c2_varchar) VALUES (:var1, :var2)");
+    $stmt->bindValue(1, 1);
+    $stmt->bindParam(2, $value);
+    $stmt->execute();
+    unset($stmt);
+    
+    // Retrieve and display the data
+    //
+    $stmt = $conn->query("SELECT * FROM [Table1]");
+    $outValue = null;
+    if ($row = $stmt->fetch()) {
+        $outValue = $row[1];
+
+        echo "Value: " . $outValue . "<br>";
+        if ($value !== $outValue) {
+            echo "Data retrieved, \'$outValue\', is unexpected!<br>";
+        }
+    }
+    
+    $stmt = $conn->query("DROP TABLE [Table1]");
+    
+} catch (PDOException $e) {
+    echo $e->getMessage() . "<br>";
+} finally {
+    // Free statement and connection resources
+    //
+    unset($stmt);
+    unset($conn);
+}
+
+?>  
+```  
+
+## See Also  
+[Retrieving Data](../../connect/php/retrieving-data.md)  
+[Working with UTF-8 Data](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+[Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+  

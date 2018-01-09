@@ -1,7 +1,7 @@
 ---
 title: "How to use RevoScaleR functions to find or install R packages on SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2017"
+ms.date: "01/08/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -35,7 +35,7 @@ This article describes these functions and provides examples of function usage.
 
 + If you do not specify a user name and password when you create the compute context, the identity of the user running the R code is used.
 
-+ When using these functions from a remote R client, you must create a compute context object first, using the RxInSQLServer function. Thereafter, for each package management function that you use, pass the compute context as an argument.
++ When using these functions from a remote R client, you must create a compute context object first, using the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function. Thereafter, for each package management function that you use, pass the compute context as an argument.
 
 + It is possible to run package management functions using `sp_execute_external_script`. When you do so, the function is executed using the security context of the stored procedure caller.
 
@@ -43,22 +43,23 @@ This article describes these functions and provides examples of function usage.
 
 The following package management functions are provided in RevoScaleR, for installation and removal of packages in a specified compute context:
 
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): Find information about packages installed in the specified compute context.
++ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages): Find information about packages installed in the specified compute context.
 
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): Install packages into a compute context, either from a specified repository, or by reading locally saved zipped packages.
++ [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages): Install packages into a compute context, either from a specified repository, or by reading locally saved zipped packages.
 
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): Remove installed packages from a compute context.
++ [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages): Remove installed packages from a compute context.
 
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): Get the path for one or more packages in the specified compute context.
++ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage): Get the path for one or more packages in the specified compute context.
 
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): Copies a package library between the file system and databases in the specified compute contexts.
++ [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages): Copies a package library between the file system and databases in the specified compute contexts.
 
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): Get the search path for the library trees for packages while executing inside the SQL Server.
++ [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): Get the search path for the library trees for packages while executing inside the SQL Server.
 
-These packages are included by default in SQL Server 2017. For information about these functions, see the RevoScaleR function reference pages: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+These packages are included by default in SQL Server 2017. For information about these functions, see the RevoScaleR function reference pages: (https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
 > R functions for package management are available beginning with Microsoft R Server 9.0.1. If you cannot find the functions in RevoScaleR, you probably need to upgrade to the latest version. 
+
 ## Examples
 
 This section contains examples of how to use the package management functions with a SQL Server instance or database. 

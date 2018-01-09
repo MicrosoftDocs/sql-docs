@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "GenerateDatabaseCreationScript method"
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 caps.latest.revision: 25
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - GenerateDatabaseCreationScript

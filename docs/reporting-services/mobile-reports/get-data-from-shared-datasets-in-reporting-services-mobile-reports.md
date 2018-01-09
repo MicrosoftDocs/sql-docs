@@ -16,7 +16,7 @@ ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 caps.latest.revision: 18
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Get data from shared datasets in Reporting Services mobile reports

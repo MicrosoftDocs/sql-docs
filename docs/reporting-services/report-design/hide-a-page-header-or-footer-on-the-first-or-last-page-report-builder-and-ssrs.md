@@ -17,7 +17,7 @@ ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 caps.latest.revision: 6
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Hide a Page Header or Footer on the First or Last Page (Report Builder and SSRS)

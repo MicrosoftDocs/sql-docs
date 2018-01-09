@@ -28,7 +28,7 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: 23
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Report Design View (Report Builder)

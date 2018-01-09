@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "rsInternalError"
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # rsInternalError - Reporting Services Error

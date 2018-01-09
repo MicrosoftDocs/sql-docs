@@ -17,7 +17,7 @@ ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Report Builder Functions - Var Function

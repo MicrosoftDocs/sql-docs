@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "breaking changes [Reporting Services]"
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 caps.latest.revision: 121
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 

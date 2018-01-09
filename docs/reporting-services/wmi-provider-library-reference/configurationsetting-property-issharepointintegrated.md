@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "IsSharePointIntegrated property"
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - IsSharePointIntegrated

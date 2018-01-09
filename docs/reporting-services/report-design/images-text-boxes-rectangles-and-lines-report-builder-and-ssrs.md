@@ -17,7 +17,7 @@ ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Images, Text Boxes, Rectangles, and Lines (Report Builder and SSRS)

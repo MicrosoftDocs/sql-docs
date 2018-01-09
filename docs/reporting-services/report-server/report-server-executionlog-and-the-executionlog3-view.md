@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "execution logs [Reporting Services]"
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Report Server ExecutionLog and the ExecutionLog3 View

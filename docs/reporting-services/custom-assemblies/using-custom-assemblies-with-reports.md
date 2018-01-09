@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "custom assemblies [Reporting Services], about custom assemblies"
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Using Custom Assemblies with Reports

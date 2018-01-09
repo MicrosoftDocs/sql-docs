@@ -17,7 +17,7 @@ ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 caps.latest.revision: 6
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Add or Remove a Page Header or Footer (Report Builder and SSRS)

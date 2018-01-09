@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Web portal (SSRS Native Mode)

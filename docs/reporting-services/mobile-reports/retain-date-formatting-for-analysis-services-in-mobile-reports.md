@@ -16,7 +16,7 @@ ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 caps.latest.revision: 3
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Retain date formatting for Analysis Services in mobile reports

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "items [Reporting Services], moving"
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Move or Delete an Item (Report Manager)

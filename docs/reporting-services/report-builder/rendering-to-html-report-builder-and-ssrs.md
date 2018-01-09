@@ -17,7 +17,7 @@ ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 caps.latest.revision: 10
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Rendering to HTML (Report Builder and SSRS)

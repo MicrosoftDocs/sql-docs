@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DatabaseServerName property"
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 caps.latest.revision: 34
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - DatabaseServerName

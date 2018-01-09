@@ -19,7 +19,7 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Set default options for Report Builder

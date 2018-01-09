@@ -40,7 +40,7 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Change Map Legends, Color Scale, and Associated Rules (Report Builder and SSRS)

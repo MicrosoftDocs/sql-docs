@@ -81,7 +81,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  sp_rename can be used to rename primary and secondary XML indexes.  
   
- Renaming a stored procedure, function, view, or trigger will not change the name of the corresponding object name either in the definition column of the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view or obtained using the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function. Therefore, we recommend that sp_rename not be used to rename these object types. Instead, drop and re-create the object with its new name.  
+ Renaming a stored procedure, function, view, or trigger will not change the name of the corresponding object either in the definition column of the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view or obtained using the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function. Therefore, we recommend that sp_rename not be used to rename these object types. Instead, drop and re-create the object with its new name.  
   
  Renaming an object such as a table or column will not automatically rename references to that object. You must modify any objects that reference the renamed object manually. For example, if you rename a table column and that column is referenced in a trigger, you must modify the trigger to reflect the new column name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before renaming it.  
   

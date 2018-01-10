@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
@@ -102,19 +102,23 @@ GO
 The following stored procedure does the work of actually creating and training the model, which can be saved in either of two binary formats.
 
 ```sql
-CREATE PROCEDURE generate_iris_model (@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
+CREATE PROCEDURE generate_iris_model
+    @trained_model VARBINARY(MAX) OUTPUT, 
+    @native_trained_model VARBINARY(MAX) OUTPUT
 AS
 BEGIN
   EXEC sp_execute_external_script @language = N'R'
-	, @script = N'
+  , @script = N'
     iris_model <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris_rx_data);
     trained_model <- as.raw(serialize(iris_model, connection=NULL));
     native_trained_model <- rxSerializeModel(iris_model, realtimeScoringOnly = TRUE)
     '
   , @input_data_1 = N'SELECT "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species" FROM iris_data'
   , @input_data_1_name = N'iris_rx_data'
-  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT'
+  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
 	, @trained_model = @trained_model OUTPUT
+	, @native_trained_model = @native_trained_model OUTPUT;
+End
 ```
 
 + The **OUTPUT** keyword on the input parameters indicates that the values should be passed through and used for output as well.

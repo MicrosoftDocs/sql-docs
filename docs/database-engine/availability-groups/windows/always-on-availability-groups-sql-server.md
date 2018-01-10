@@ -33,7 +33,7 @@ ms.workload: "Active"
  An availability group fails over at the level of an availability replica. Failovers are not caused by database issues such as a database becoming suspect due to a loss of a data file, deletion of a database, or corruption of a transaction log.  
  
  >[NOTE]
- >Always On availability groups is the full, formal name for this availablity feature. The abbreviation is AG, not AOAG or AAG. 
+ >Always On availability groups is the full, formal name for this availability feature. The abbreviation is AG, not AOAG or AAG. 
   
 ##  <a name="Benefits"></a> Benefits  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] provides a rich set of options that improve database availability and that enable improved resource use. The key components are as follows:  

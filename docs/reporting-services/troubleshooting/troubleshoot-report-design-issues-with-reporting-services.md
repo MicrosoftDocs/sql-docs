@@ -2,22 +2,22 @@
 title: "Troubleshoot Report Design Issues with Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "troubleshooting"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 caps.latest.revision: 5
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Troubleshoot Report Design Issues with Reporting Services

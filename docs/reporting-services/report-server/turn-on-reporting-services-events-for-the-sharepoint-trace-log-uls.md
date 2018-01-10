@@ -2,21 +2,21 @@
 title: "Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "report-server"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"
 ---

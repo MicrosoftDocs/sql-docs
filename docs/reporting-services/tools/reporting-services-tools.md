@@ -2,15 +2,15 @@
 title: "Reporting Services Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/31/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "tools"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "architecture [Reporting Services]"
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 caps.latest.revision: 80
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Reporting Services Tools

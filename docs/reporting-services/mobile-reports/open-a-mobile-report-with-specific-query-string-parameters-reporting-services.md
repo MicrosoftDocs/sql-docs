@@ -2,21 +2,21 @@
 title: "Open a mobile report with specific query string parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 caps.latest.revision: 5
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Open a mobile report with specific query string parameters | Reporting Services

@@ -2,14 +2,14 @@
 title: "E-Mail Settings - Reporting Services Native mode (Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "SQL11.rsconfigtool.emailsettings.F1"
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # E-Mail Settings - Reporting Services Native mode (Configuration Manager)

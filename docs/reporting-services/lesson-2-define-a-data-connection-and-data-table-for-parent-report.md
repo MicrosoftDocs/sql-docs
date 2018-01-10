@@ -2,22 +2,22 @@
 title: "Lesson 2: Define a Data Connection and Data Table for Parent Report | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"
 ---

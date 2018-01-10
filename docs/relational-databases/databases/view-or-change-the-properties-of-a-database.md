@@ -1,7 +1,7 @@
 ---
 title: "View or Change the Properties of a Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/25/2016"
+ms.date: "01/05/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -131,8 +131,8 @@ ms.workload: "On Demand"
   
 3.  Copy and paste the following example into the query window. The following example sets MAXDOP for a secondary database to the value for the primary database.  
   
-    ```  
-    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
+    ```sql  
+    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY   
     ```  
   
 ## See Also  

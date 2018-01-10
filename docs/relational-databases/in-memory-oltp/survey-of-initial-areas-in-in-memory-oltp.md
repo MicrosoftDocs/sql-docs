@@ -5,9 +5,9 @@ ms.date: 09/05/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
-ms.component: "in-memory-oltp"
+ms.component: in-memory-oltp
 ms.reviewer: ""
-ms.suite: "sql"
+ms.suite: sql
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""

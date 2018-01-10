@@ -2,14 +2,14 @@
 title: "Change log for SQL Server Reporting Services (2017 and later) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/07/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "casualoak"
@@ -25,6 +25,9 @@ ms.workload: "Active"
 This article describes changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
 
 ## SQL Server 2017 Reporting Services 
+  - *Version 14.0.600.594, Released: January 9, 2018*
+    - Security Updates
+
   - *Version 14.0.600.490, Released: November 1, 2017* 
     - Bug Fixes:
         - Resolved issues with SKU upgrade

@@ -7,10 +7,10 @@ manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
+ms.prod_service: database-engine
 ms.service: ""
 ms.component: sql-linux
-ms.suite: "sql"
+ms.suite: sql
 ms.custom: ""
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
@@ -46,13 +46,13 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 1. Import the public repository GPG keys:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Register the Microsoft SQL Server Ubuntu repository:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
    > [!NOTE]
@@ -94,13 +94,13 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 1. Import the public repository GPG keys:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Register the Microsoft Ubuntu repository:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
    ```
 
 1. Update the sources list and run the installation command with the unixODBC developer package:

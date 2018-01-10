@@ -38,7 +38,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SELECT - INTO Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT…INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -227,7 +227,7 @@ ORDER BY YearlyIncome
   
 ```  
 ### F. Creating a new table as a copy of another table and loading it a specified filegroup
-The following example demostrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
+The following example demonstrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
 
  **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 

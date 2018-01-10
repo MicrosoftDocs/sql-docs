@@ -25,6 +25,9 @@ ms.workload: "Active"
 This article describes changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
 
 ## SQL Server 2017 Reporting Services 
+  - *Version 14.0.600.594, Released: January 9, 2018*
+    - Security Updates
+
   - *Version 14.0.600.490, Released: November 1, 2017* 
     - Bug Fixes:
         - Resolved issues with SKU upgrade

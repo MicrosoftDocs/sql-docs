@@ -4,7 +4,7 @@ description: This tutorial shows how to deploy a SQL Server high availability so
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.date: 01/02/2018
+ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -48,12 +48,16 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 
 ## Prerequisites
 
-The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), to manage the cluster. 
+* **Kubernetes cluster**
+   - The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/), to manage the cluster. 
 
-You can follow the instructions at [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster) to create, and connect to a single node Kubernetes cluster in AKS with `kubectl`. 
+   - You can follow the instructions at [Deploy an Azure Container Service (AKS) cluster](http://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster) to create, and connect to a single node Kubernetes cluster in AKS with `kubectl`. 
 
->[!NOTE]
->To protect against node failure, a Kubernetes cluster requires more than one node.
+   >[!NOTE]
+   >To protect against node failure, a Kubernetes cluster requires more than one node.
+
+* **Azure CLI 2.0.23**
+   - The instructions in this tutorial have been validated against Azure CLI 2.0.23.
 
 ## Create SA password
 

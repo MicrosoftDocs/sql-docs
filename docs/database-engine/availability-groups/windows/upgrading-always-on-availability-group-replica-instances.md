@@ -22,35 +22,38 @@ ms.workload: "On Demand"
 # Upgrading Always On Availability Group Replica Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  When upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On Availability Group to a new [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]service pack or cumulative update, or when installing to a new Windows service pack or cumulative update, you can reduce downtime for the primary replica to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). During the upgrade process, a secondary replica will not be available for failover or for read-only operations, and, after the upgrade, it may take some time for the secondary replica to catch up with the primary replica node depending upon the volume of activity on the primary replica node (so expect high network traffic).  
+When upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that hosts an Always On Availability Group to a new [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update, you can reduce downtime for the primary replica to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). During the upgrade process, a secondary replica will not be available for failover or for read-only operations, and after the upgrade, it may take some time for the secondary replica to catch up with the primary replica node depending upon the volume of activity on the primary replica node (so expect high network traffic).  
   
-> [!NOTE]  
->  This topic limits the discussion to the upgrade of SQL Server itself. It does not cover upgrading the operating system containing the Windows Server Failover Clusting (WSFC) cluster. Upgrading the Windows operating system hosting the failover cluster is not supported for operating systems before Windows Server 2012 R2. To upgrade a cluster node running on Windows Server 2012 R2, see [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)  
+>[!NOTE]  
+>This topic limits the discussion to the upgrade of SQL Server itself. It does not cover upgrading the operating system containing the Windows Server Failover Clusting (WSFC) cluster. Upgrading the Windows operating system hosting the failover cluster is not supported for operating systems before Windows Server 2012 R2. To upgrade a cluster node running on Windows Server 2012 R2, see [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)  
   
 ## Prerequisites  
- Before you begin, review the following important information:  
+Before you begin, review the following important information:  
   
--   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to SQL Server 2016 from your version of the Windows operating system and version of SQL Server. For example, you cannot upgrade directly from a SQL Server 2005 instance to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+- [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to SQL Server 2016 from your version of the Windows operating system and version of SQL Server. For example, you cannot upgrade directly from a SQL Server 2005 instance to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Select the appropriate upgrade method and steps based on your review of supported version and edition upgrades and also based on other components installed in your environment to upgrade components in the correct order.  
+- [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Select the appropriate upgrade method and steps based on your review of supported version and edition upgrades and also based on other components installed in your environment to upgrade components in the correct order.  
   
--   [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the pre-upgrade checklist, and develop and test the upgrade plan.  
+- [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the pre-upgrade checklist, and develop and test the upgrade plan.  
   
--   [Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
+- [Hardware and Software Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
 
-> [!NOTE]  
->  Mixing versions of SQL Server in the same AG is not supported outside of a rolling upgrade which upgrades the replicas in place. This means a higher version of SQL Server cannot be added as a new replica to an existing AG. For example, a SQL Server 2017 replica cannot be added to an existing SQL Server 2016 AG. To migrate to a new version of SQL Server using availability groups, the only supported method is a distributed availability group which is in SQL Server 2016 Enterprise Edition or later.
+- [Check if Change Data Capture is used for any availability group databases](#ChangeDataCapture)
+If any databases in the availability group are enabled for change data capture (CDC), complete the instructions on this page.  
+
+>[!NOTE]  
+>Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade which upgrades the replicas in place. This means a higher version of a SQL Server instance cannot be added as a new replica to an existing AG. For example, a SQL Server 2017 replica cannot be added to an existing SQL Server 2016 AG. To migrate to a new version of the SQL Server instance using availability groups, the only supported method is a distributed availability group which is in SQL Server 2016 Enterprise Edition or later.
 
 ## Rolling Upgrade Best Practices for Always On Availability Groups  
  The following best practices should be observed when performing server upgrades or updates in order to minimize downtime and data loss for your availability groups:  
   
--   Before starting the rolling upgrade,  
+- Before starting the rolling upgrade,  
   
-    -   Perform a practice manual failover on at least one of your synchronous-commit replica instances  
+    - Perform a practice manual failover on at least one of your synchronous-commit replica instances  
   
-    -   Protect your data by performing a full database backup on every availability database  
+    - Protect your data by performing a full database backup on every availability database  
   
-    -   Run DBCC CHECKDB on every availability database  
+    - Run DBCC CHECKDB on every availability database  
   
 -   Always upgrade the remote secondary replica instances first, then local secondary replica instances next, and the primary replica instance last.  
   
@@ -167,7 +170,33 @@ ms.workload: "On Demand"
  Based on your specific implementation, your upgrade path may vary, and the downtime that client applications experience may vary as well.  
   
 > [!NOTE]  
->  In many cases, after the rolling upgrade is completed, you will failback to the original primary replica.  
+>  In many cases, after the rolling upgrade is completed, you will failback to the original primary replica. 
+
+## <a name=#ChangeDataCapture></a>Special steps for Change Data Capture
+<a name=#ChangeDataCapture></a>
+If any database in the availability group are enabled for change data capture, incorporate the following steps to the rolling upgrade.
+
+1. Upgrade each secondary replica.
+
+1. After all secondary replicas have been upgraded, fail over the availability group to an upgraded instance. 
+
+1. If automatic failover is enabled, disable it.
+
+1. Run the following Transact-SQL on the instance that hosts the primary replica:
+
+   ```sql
+   EXECUTE [master].[sys].[sp_vupgrade_replication];
+   ```
+
+   >[!NOTE]
+   >This command may take several minutes to run. 
+
+1. Upgrade the instance that was originally the primary replica.
+
+1. Configure automatic failover, if required. 
+
+For background information, see [CDC functionality may break after upgrading to the latest CU](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+
   
 ## See Also  
  [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   

@@ -18,7 +18,7 @@ ms.workload: "Inactive"
 # Enabling Always Encrypted in a PHP Application
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-For encryption and decryption to work in a PHP application, the PHP drivers need the CEK (Column Encryption Key) whose name is specified in the definition of the encrypted column. The CEKs are stored in an encrypted form in the database metadata. To decrypt the CEKs, each corresponding CMK (Column Master Key) is needed. The keystore name and information of the CMK is stored in the database metadata. The CMK itself is stored on the client side. Thus in order to decrypt the CEK, the drivers need to get the metadata about the CEK and its corresponding CMK first. The drivers then uses this information to call the keystore provider, accesses the CMK, and finally decrypts the CEK.
+For encryption and decryption to work in a PHP application, the PHP drivers need the CEK (Column Encryption Key) whose name is specified in the definition of the encrypted column. The CEKs are stored in an encrypted form in the database metadata. To decrypt the CEKs, each corresponding CMK (Column Master Key) is needed. The keystore name and information about the CMK is stored in the database metadata. The CMK itself is stored on the client side. Thus in order to decrypt the CEK, the drivers need to get the metadata about the CEK and its corresponding CMK first. The drivers then use this information to call the keystore provider, accesse the CMK, and finally decrypt the CEK. For more information of how Always Encrypted works, please see [here](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine).
 
 To use the Always Encrypted feature in the PHP drivers, the user must have access to a Keystore Provider and the CMK. The PHP drivers currently support two types of Keystore Providers:
  -   Windows Certificate Store
@@ -39,10 +39,10 @@ $conn = sqlsrv_connect($server, $connectionInfo);
 PDO_SQLSRV:
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled;";
-$conn = new PDO("sqlsrv:server = $server ; $connectionInfo", $uid, $pwd);
+$conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
-If you are using Custom Keystore Provider, provide the connection options `CEKeystoreProvider`, `CEKeystoreName`, and `CEKeystoreEncryptKey`. The following are examples of connecting with Always Encrypted using Custom Keystore Provider:
+If you are using a Custom Keystore Provider, provide the connection options `CEKeystoreProvider`, `CEKeystoreName`, and `CEKeystoreEncryptKey`. The following are examples of connecting with Always Encrypted using a Custom Keystore Provider:
 
 SQLSRV:
 ```
@@ -53,15 +53,15 @@ $conn = sqlsrv_connect($server, $connectionInfo);
 PDO_SQLSRV:
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; CEKeystoreProvider = $ksp_path; CEKeystoreName = $ksp_name; CEKeystoreEncryptKey = $encrypt_key;";
-$conn = new PDO("sqlsrv:server = $server ; $connectionInfo", $uid, $pwd);
+$conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
 Once Column Encryption is enabled in the connection, the performance overhead on the client side is heavier due to:
  -   Cost of encryption and decryption
  -   More round trips to the database needed to get the metadata for the parameter
- -   Result set with max types may need to be retrieved several times due to the limitation with fetching streams
- -   Assess of CEK and CMK metadata from the database
- -   Assess of the CMK from the column master key store
+ -   A result set with max types may need to be retrieved several times due to the limitation with fetching streams
+ -   Assessment of CEK and CMK metadata from the database
+ -   Assessment of CMK from the column master key store
   
 ## See Also  
 [Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)

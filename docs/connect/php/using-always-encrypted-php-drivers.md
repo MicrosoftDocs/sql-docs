@@ -20,9 +20,9 @@ ms.workload: "Inactive"
 
 The topics in this section discuss how to develop PHP applications using [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) and the PHP drivers for SQL Server (5.2 or later versions).
 
-Always Encrypted allows client application to encrypt data and never reveal the encryption keys or data to the SQL Server. The PHP drivers for SQL Server fulfill this feature by transparently encrypting and decrypting sensitive data in the client application. Two notable differences between writing a usual PHP application and using Always Encrypted are:
- -   User must include new Always Encrypted released connection options in the connection string.
- -   User must use parameterized query when passing in sensitive data to the database.
+Always Encrypted allows the client application to encrypt data and never reveal the encryption keys or data to the SQL Server. The PHP drivers for SQL Server fulfill this feature by transparently encrypting and decrypting sensitive data in the client application. Two notable differences between writing a regular PHP application and writing one using Always Encrypted are:
+ -   The user must add the new Always Encrypted connection options in the connection string.
+ -   The user must bind parameters when passing in sensitive data to the database.
 
 ## In This Section
 

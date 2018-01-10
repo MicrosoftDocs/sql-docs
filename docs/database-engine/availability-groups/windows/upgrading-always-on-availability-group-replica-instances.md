@@ -1,7 +1,7 @@
 ---
 title: "Upgrading Always On Availability Group Replica Instances | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
+ms.date: "01/10/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""

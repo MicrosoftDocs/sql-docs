@@ -23,7 +23,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Manage and Monitor Semantic Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes the process of semantic indexing and the tasks related to managing and monitoring the indexes.  
   
 ##  <a name="HowToMonitorStatus"></a> Check the status of semantic indexing  

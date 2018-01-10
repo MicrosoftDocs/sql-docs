@@ -38,7 +38,7 @@ Before you begin, review the following important information:
   
 - [Hardware and Software Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
 
-- [Check if Change Data Capture is used for any availability group databases](#ChangeDataCapture): If any databases in the availability group are enabled for change data capture (CDC), complete these [instructions](#ChangeDataCapture).  
+- [Check if Change Data Capture is used for any availability group databases](#special-steps-for-change-data-capture): If any databases in the availability group are enabled for change data capture (CDC), complete these [instructions](#special-steps-for-change-data-capture).  
 
 >[!NOTE]  
 >Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade, which upgrades the replicas in place. A higher version of a SQL Server instance cannot be added as a new replica to an existing AG. For example, a SQL Server 2017 replica cannot be added to an existing SQL Server 2016 AG. To migrate to a new version of the SQL Server instance using availability groups, the only supported method is a distributed availability group, which is in SQL Server 2016 Enterprise Edition or later.
@@ -171,8 +171,8 @@ Observe the following guidelines when performing server upgrades or updates in o
 > [!NOTE]  
 >  In many cases, after the rolling upgrade is completed, you will fail back to the original primary replica. 
 
-## <a name=#ChangeDataCapture></a>Special steps for Change Data Capture
-<a name=#ChangeDataCapture></a>
+## Special steps for Change Data Capture
+
 If any databases in the availability group are enabled for change data capture, incorporate the following steps to the rolling upgrade.
 
 1. Upgrade each secondary replica.

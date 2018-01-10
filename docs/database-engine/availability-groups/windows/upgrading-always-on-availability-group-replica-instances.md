@@ -71,7 +71,7 @@ Observe the following guidelines when performing server upgrades or updates in o
 -   Before failing over an availability group, verify that the synchronization state of the failover target is SYNCHRONIZED.  
   
 ## Rolling Upgrade Process  
- In practice, the exact process will depend on factors such as the deployment topology of your availability groups and the commit mode of each replica. But in the simplest scenario, a rolling upgrade is a multi-stage process that in its simplest form involves the following steps:  
+ In practice, the exact process depends on factors such as the deployment topology of your availability groups and the commit mode of each replica. But in the simplest scenario, a rolling upgrade is a multi-stage process that in its simplest form involves the following steps:  
   
  ![Availability Group Upgrade in HADR Scenario](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Availability Group Upgrade in HADR Scenario")  
   
@@ -117,7 +117,7 @@ Observe the following guidelines when performing server upgrades or updates in o
 -   While upgrading or updating [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] on the primary site, change the availability mode back to asynchronous commit, then revert to synchronous commit when you are ready to fail over to the primary site again  
   
 ## Availability Group with Failover Cluster Instance Nodes  
- If an availability group contains failover cluster instance (FCI) nodes, you should upgrade the inactive nodes before you upgrade the active nodes. The figure below illustrates a common availability group scenario with FCIs for local high availability and asynchronous commit between the FCIs for remote disaster recovery, and the upgrade sequence.  
+ If an availability group contains failover cluster instance (FCI) nodes, you should upgrade the inactive nodes before you upgrade the active nodes. The following figure illustrates a common availability group scenario with FCIs for local high availability and asynchronous commit between the FCIs for remote disaster recovery, and the upgrade sequence.  
   
  ![Availability Group Upgrade with FCIs](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Availability Group Upgrade with FCIs")  
   
@@ -134,7 +134,7 @@ Observe the following guidelines when performing server upgrades or updates in o
 6.  Upgrade or update PRIMARY1  
   
 ## Upgrade Update SQL Server Instances with Multiple Availability Groups  
- If you are running multiple availability groups with primary replicas on separate server nodes (an Active/Active configuration), the upgrade path involves more failover steps to preserve high availability in the process. Suppose you are running three availability groups on three server nodes as shown in the following table, and all secondary replicas are running in synchronous-commit mode.  
+ If you are running multiple availability groups with primary replicas on separate server nodes (an Active/Active configuration), the upgrade path involves more failover steps to preserve high availability in the process. Suppose you are running three availability groups on three server nodes with all replicas in synchronous commit mode as shown in the following table:  
   
 |Availability Group|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  

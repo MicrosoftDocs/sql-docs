@@ -2,8 +2,6 @@
 # Overview
 ## [SQL Server PowerShell](sql-server-powershell.md) 
 # [Import the SQLPS module](import-the-sqlps-module.md)  
-# [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)  
-# [Invoke-Sqlcmd cmdlet](invoke-sqlcmd-cmdlet.md)  
 # [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md)  
 # [Load the SMO Assemblies in Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)  
 # [Run Windows PowerShell from SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)  

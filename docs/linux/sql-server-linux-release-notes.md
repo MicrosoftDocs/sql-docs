@@ -62,7 +62,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
-## <A id="CU2"></a> Cumulative Update 3 (January 2017)
+## <A id="CU2"></a> Cumulative Update 3 (January 2018)
 
 This is the Cumulative Update 3 (CU3) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3015.40. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987).
 

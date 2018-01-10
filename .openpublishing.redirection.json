@@ -3181,11 +3181,6 @@
             "redirect_document_id": false
           },
           {
-            "source_path": "docs/relational-databases/scripting/import-the-sqlps-module.md",
-            "redirect_url": "/sql/powershell/import-the-sqlps-module",
-            "redirect_document_id": false
-          },
-          {
             "source_path": "docs/relational-databases/scripting/load-the-smo-assemblies-in-windows-powershell.md",
             "redirect_url": "/sql/powershell/load-the-smo-assemblies-in-windows-powershell",
             "redirect_document_id": false
@@ -3273,6 +3268,21 @@
           {
             "source_path": "docs/powershell/database-engine-powershell-reference.md",
             "redirect_url": "/sql/powershell/sql-server-powershell",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/powershell/invoke-policyevaluation-cmdlet.md",
+            "redirect_url": "/powershell/module/sqlserver/Invoke-PolicyEvaluation",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/powershell/invoke-sqlcmd-cmdlet.md",
+            "redirect_url": "/powershell/module/sqlserver/invoke-sqlcmd",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/import-the-sqlps-module.md",
+            "redirect_url": "/sql/powershell/download-sql-server-ps-module",
             "redirect_document_id": false
           }
     ]

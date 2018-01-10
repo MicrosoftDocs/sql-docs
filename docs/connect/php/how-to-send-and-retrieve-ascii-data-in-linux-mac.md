@@ -28,13 +28,13 @@ This article assumes the ASCII (non-UTF-8) locales have been generated or instal
 
 To send or retrieve ASCII character sets to the server:  
 
-1.  If the desired locale is not the default in your system environment, make sure you invoke something like `setlocale(LC_ALL, $locale)` before making the first connection. The PHP setlocale() function changes the locale only for the current script.
+1.  If the desired locale is not the default in your system environment, make sure you invoke `setlocale(LC_ALL, $locale)` before making the first connection. The PHP setlocale() function changes the locale only for the current script, and if invoked after making the connection, it will be ignored.
  
-2.  When using the SQLSRV driver, you may want to specify the PHP type as `SQLSRV_PHPTYPE_STRING(SQLSRV_ENC_CHAR)` in the parameters array. It is optional because it is the default encoding.
+2.  When using the SQLSRV driver, you may specify `'CharacterSet' => SQLSRV_ENC_CHAR` as a connection option, but this step is optional because it is the default encoding.
 
 3.  When using the PDO_SQLSRV driver, after successfully connected, add this line `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-    When you specify the encoding of the connection resource object, the driver assumes that the other connection option strings use that same encoding. The server name and query strings are also assumed to use the same character set.  
+When you specify the encoding of the connection resource object, the driver assumes that the other connection option strings use that same encoding. The server name and query strings are also assumed to use the same character set.  
   
 The default encoding for PDO_SQLSRV driver is UTF-8 (PDO::SQLSRV_ENCODING_UTF8), unlike the SQLSRV driver. For more information about these constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
@@ -52,11 +52,11 @@ The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md
 
 // Setting locale for the script is only necessary if Latin 1 is not the default 
 // in the environment
-$locale = strtoupper(PHP_OS) === 'LINUX' ? "en_US.ISO-8859-1" : "en_US.ISO8859-1";
+$locale = strtoupper(PHP_OS) === 'LINUX' ? 'en_US.ISO-8859-1' : 'en_US.ISO8859-1';
 setlocale(LC_ALL, $locale);
         
-$serverName = "MyServer";
-$database = "Test";
+$serverName = 'MyServer';
+$database = 'Test';
 $connectionInfo = array('Database'=>'Test', 'UID'=>$uid, 'PWD'=>$pwd);
 $conn = sqlsrv_connect($serverName, $connectionInfo);
   
@@ -67,11 +67,7 @@ if ($conn === false) {
   
 // Set up the Transact-SQL query to create a test table
 //   
-$tsql = "CREATE TABLE [Table1] ([c1_int] int, [c2_varchar] varchar(512))";  
-  
-// Execute the query
-//
-$stmt = sqlsrv_query($conn, $tsql);
+$stmt = sqlsrv_query($conn, "CREATE TABLE [Table1] ([c1_int] int, [c2_varchar] varchar(512))");
 
 // Insert data using a parameter array 
 //
@@ -91,11 +87,7 @@ else {
   
 // Retrieve the newly inserted data
 //   
-$tsql = "SELECT * FROM Table1";  
-  
-// Execute the query
-//   
-$stmt = sqlsrv_query($conn, $tsql);
+$stmt = sqlsrv_query($conn, "SELECT * FROM Table1");
 $outValue = null;  
 if ($stmt === false) {  
     echo "Error in statement execution.<br>";  
@@ -116,8 +108,6 @@ else {
     die(print_r(sqlsrv_errors(), true));  
 }  
 
-sqlsrv_query($conn, "DROP TABLE [Table1]");
-
 // Free statement and connection resources
 //   
 sqlsrv_free_stmt($stmt);  
@@ -134,11 +124,11 @@ sqlsrv_close($conn);
 
 // Setting locale for the script is only necessary if Latin 1 is not the default 
 // in the environment
-$locale = strtoupper(PHP_OS) === 'LINUX' ? "en_US.ISO-8859-1" : "en_US.ISO8859-1";
+$locale = strtoupper(PHP_OS) === 'LINUX' ? 'en_US.ISO-8859-1' : 'en_US.ISO8859-1';
 setlocale(LC_ALL, $locale);
         
-$serverName = "MyServer";
-$database = "Test";
+$serverName = 'MyServer';
+$database = 'Test';
 
 try {
     $conn = new PDO("sqlsrv:Server=$serverName;Database=$database;", $uid, $pwd);
@@ -146,12 +136,7 @@ try {
     
     // Set up the Transact-SQL query to create a test table
     //   
-    $tsql = "CREATE TABLE [Table1] ([c1_int] int, [c2_varchar] varchar(512))";  
-      
-    // Execute the query
-    //
-    $stmt = $conn->query($tsql);
-    unset($stmt);
+    $stmt = $conn->query("CREATE TABLE [Table1] ([c1_int] int, [c2_varchar] varchar(512))");
     
     // Insert data using parameters, $value being some ASCII string
     //
@@ -159,7 +144,6 @@ try {
     $stmt->bindValue(1, 1);
     $stmt->bindParam(2, $value);
     $stmt->execute();
-    unset($stmt);
     
     // Retrieve and display the data
     //
@@ -167,15 +151,11 @@ try {
     $outValue = null;
     if ($row = $stmt->fetch()) {
         $outValue = $row[1];
-
         echo "Value: " . $outValue . "<br>";
         if ($value !== $outValue) {
             echo "Data retrieved, \'$outValue\', is unexpected!<br>";
         }
     }
-    
-    $stmt = $conn->query("DROP TABLE [Table1]");
-    
 } catch (PDOException $e) {
     echo $e->getMessage() . "<br>";
 } finally {

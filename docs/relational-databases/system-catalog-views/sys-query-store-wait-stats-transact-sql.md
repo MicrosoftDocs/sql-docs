@@ -43,7 +43,7 @@ ms.workload: "Inactive"
 |**wait_category_desc**|**nvarchar(128)**|For textual description of the wait category field please review the table below.|
 |**execution_type**|**tinyint**|Determines type of query execution:<br /><br /> 0 – Regular execution (successfully finished)<br /><br /> 3 – Client initiated aborted execution<br /><br /> 4 -  Exception aborted execution|  
 |**execution_type_desc**|**nvarchar(128)**|Textual description of the execution type field:<br /><br /> 0 –  Regular<br /><br /> 3 –  Aborted<br /><br /> 4 -  Exception|  
-|**total_query_wait_time_ms**|**bigint**|Total CPU wait time for the query plan within the aggregation interval and wait category (reported in microseconds).|
+|**total_query_wait_time_ms**|**bigint**|Total CPU wait time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**avg_query_wait_time_ms**|**float**|Average wait duration for the query plan per execution within the aggregation interval and wait category (reported in milliseconds).|
 |**last_query_wait_time_ms**|**bigint**|Last wait duration for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**min_query_wait_time_ms**|**bigint**|Minimum CPU wait time for the query plan within the aggregation interval and wait category (reported in milliseconds).|

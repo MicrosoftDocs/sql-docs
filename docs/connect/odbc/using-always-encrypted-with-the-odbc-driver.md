@@ -523,7 +523,7 @@ While the ODBC driver will allow the use of [asynchronous operations](../../rela
 
 ## Bulk Copy of Encrypted Columns
 
-Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the ***bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_*) APIs and the ***bcp*** utility.
+Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the **bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_*) APIs and the **bcp** utility.
 
 - To retrieve ciphertext in varbinary(max) form (e.g. for bulk loading into a different database), connect without the `ColumnEncryption` option (or set it to `Disabled`) and perform a BCP OUT operation.
 
@@ -531,7 +531,7 @@ Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-od
 
 - To insert ciphertext in varbinary(max) form (e.g. as retrieved above), set the `BCPMODIFYENCRYPTED` option to TRUE and perform a BCP IN operation. In order for the resulting data to be decryptable, ensure that the destination column's CEK is the same as that from which the ciphertext was originally obtained.
 
-When using the ***bcp*** utility: To control the `ColumnEncryption` setting, use the -D option and specify a DSN containing the desired value. To insert ciphertext, ensure the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` setting of the user is enabled.
+When using the **bcp** utility: To control the `ColumnEncryption` setting, use the -D option and specify a DSN containing the desired value. To insert ciphertext, ensure the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` setting of the user is enabled.
 
 The following table provides a summary of the actions when operating on an encrypted column:
 

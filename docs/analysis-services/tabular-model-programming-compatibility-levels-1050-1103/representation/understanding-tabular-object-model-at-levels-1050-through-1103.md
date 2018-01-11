@@ -38,12 +38,12 @@ ms.workload: "Inactive"
  See [Connection Representation &#40;Tabular&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md) for a detailed explanation on how to create and manipulate the data source representation.  
   
 ## Table Representation  
- Tables are database objects that contain the data in the database. In terms of AMO objects, a table has a one-to-many mapping relationship. A table is represented by the usage of the following AMO objects: <xref:Microsoft.AnalysisServices.DataSourceView>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroup> and <xref:Microsoft.AnalysisServices.Partition> are the main required objects; however, it is important to note that this doesn't mean that all contained objects in the previously mentioned AMO objects can be used when modeling.  
+ Tables are database objects that contain the data in the database. In terms of AMO objects, a table has a one-to-many mapping relationship. A table is represented by the usage of the following AMO objects: <xref:Microsoft.AnalysisServices.DataSourceView>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroup> and <xref:Microsoft.AnalysisServices.Partition> are the main required objects. However, it is important to note that this doesn't mean that all contained objects in the previously mentioned AMO objects can be used when modeling.  
   
  See [Tables Representation &#40;Tabular&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md) for a detailed explanation on how to create and manipulate the table representation.  
   
 ### Calculated Column Representation  
- Calculated columns are evaluated expressions that generate a column in a table, where a new value is calculated and stored for each row in the table. In terms of AMO objects a calculated column has a one-to-many mapping relationship. A calculated column is represented by the usage of the following AMO objects: <xref:Microsoft.AnalysisServices.Dimension> and <xref:Microsoft.AnalysisServices.MeasureGroup> are the main required objects. It is important to note that this doesn't mean that all contained objects in the previously mentioned AMO objects can be used when modeling.  
+ Calculated columns are evaluated expressions that generate a column in a table, where a new value is calculated and stored for each row in the table. In terms of AMO objects, a calculated column has a one-to-many mapping relationship. A calculated column is represented by the usage of the following AMO objects: <xref:Microsoft.AnalysisServices.Dimension> and <xref:Microsoft.AnalysisServices.MeasureGroup> are the main required objects. It is important to note that this doesn't mean that all contained objects in the previously mentioned AMO objects can be used when modeling.  
   
  See [Calculated Column Representation &#40;Tabular&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-column-representation.md) for a detailed explanation on how to create and manipulate the calculated column representation.  
   
@@ -69,7 +69,7 @@ ms.workload: "Inactive"
  See [Key Performance Indicator Representation &#40;Tabular&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-key-performance-indicator-representation.md) for a detailed explanation on how to create and manipulate the KPI representation.  
   
 ### Partition Representation  
- For operational purposes, a table can be divided in different subsets of rows that when combined together form the table. Each of those subsets is a partition of the table. In terms of AMO objects, a partition representation has a one-to-one mapping relationship with <xref:Microsoft.AnalysisServices.Partition> and no other main AMO objects are required. It is important to note that this doesn't mean that all contained objects in the AMO database object can be used when modeling.  
+ For operational purposes, a table can be divided in different subsets of rows that, when combined together, form the table. Each of those subsets is a partition of the table. In terms of AMO objects, a partition representation has a one-to-one mapping relationship with <xref:Microsoft.AnalysisServices.Partition> and no other main AMO objects are required. It is important to note that this doesn't mean that all contained objects in the AMO database object can be used when modeling.  
   
  See [Partition Representation &#40;Tabular&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-partition-representation.md) for a detailed explanation on how to create and manipulate the partition representation.  
   
@@ -83,7 +83,7 @@ ms.workload: "Inactive"
  See [Relationship Representation &#40;Tabular&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) for a detailed explanation on how to create and manipulate the relationship representation.  
   
 ## Perspective Representation  
- A perspective is a mechanism to simplify or focus the mode. In terms of AMO objects, a relationship representation has a one-to-one mapping relationship with <xref:Microsoft.AnalysisServices.Perspective> and no other main AMO objects are required. It is important to note that this doesn't mean that all contained objects in the AMO perspective ob0ject can be used when doing tabular modeling.  
+ A perspective is a mechanism to simplify or focus the mode. In terms of AMO objects, a relationship representation has a one-to-one mapping relationship with <xref:Microsoft.AnalysisServices.Perspective> and no other main AMO objects are required. It is important to note that this doesn't mean that all contained objects in the AMO perspective object can be used when doing tabular modeling.  
   
  See [Perspective Representation &#40;Tabular&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) for a detailed explanation on how to create and manipulate the perspective representation.  
   

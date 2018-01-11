@@ -43,7 +43,7 @@ ms.workload: "Inactive"
   
 2.  When you run the supplemental logging scripts, the Oracle Credentials for Running Script dialog box opens where you provide a valid Oracle user name and password. For information on how to provide the proper Oracle credentials, see [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- You can also run the scripts manually using SQL * Plus, if necessary.  
+ You can also run the scripts manually using SQL\*Plus, if necessary.  
   
 ### To run the scripts manually  
   

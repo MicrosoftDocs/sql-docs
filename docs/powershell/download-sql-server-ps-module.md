@@ -42,7 +42,7 @@ If there are previous versions of the **SqlServer** module on the computer, you 
 
 If you are not able to run the PowerShell session as administrator, you can install for the current user:
 
-```Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber```
+```Install-Module -Name SqlServer -Scope CurrentUser```
 
 When updated versions of the **SqlServer** module are available, you can update the version using `Update-Module`:
 

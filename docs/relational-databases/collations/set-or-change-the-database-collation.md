@@ -3,7 +3,7 @@ title: "Set or Change the Database Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
+ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "collations"
 ms.reviewer: ""
@@ -23,7 +23,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Set or Change the Database Collation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
   
  **In This Topic**  

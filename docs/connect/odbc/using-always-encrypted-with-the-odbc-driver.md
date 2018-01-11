@@ -521,9 +521,9 @@ For an example of implementing your own keystore provider, see [Custom Keystore 
 ### Asynchronous Operations
 While the ODBC driver will allow the use of [asynchronous operations](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) with Always Encrypted, there is a performance impact on the operations when Always Encrypted is enabled. The call to `sys.sp_describe_parameter_encryption` to determine encryption metadata for the statement is blocking and will cause the driver to wait for the server to return the metadata before returning `SQL_STILL_EXECUTING`.
 
-## Bulk Copy Function Usage
+## Bulk Copy of Encrypted Columns
 
-Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_*) APIs.
+Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the ***bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_*) APIs and the ***bcp*** utility.
 
 - To retrieve ciphertext in varbinary(max) form (e.g. for bulk loading into a different database), connect without the `ColumnEncryption` option (or set it to `Disabled`) and perform a BCP OUT operation.
 
@@ -531,7 +531,9 @@ Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-od
 
 - To insert ciphertext in varbinary(max) form (e.g. as retrieved above), set the `BCPMODIFYENCRYPTED` option to TRUE and perform a BCP IN operation. In order for the resulting data to be decryptable, ensure that the destination column's CEK is the same as that from which the ciphertext was originally obtained.
 
- The following table provides a summary of the BCP API actions when operating on an encrypted column:
+When using the ***bcp*** utility: To control the `ColumnEncryption` setting, use the -D option and specify a DSN containing the desired value. To insert ciphertext, ensure the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` setting of the user is enabled.
+
+The following table provides a summary of the actions when operating on an encrypted column:
 
 |`ColumnEncryption`|BCP Direction|Description|
 |----------------|-------------|-----------|
@@ -542,9 +544,9 @@ Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-od
 
 ### The BCPMODIFYENCRYPTED option
 
-To prevent data corruption, the server normally does not allow inserting ciphertext directly into an encrypted column, and thus attempts to do so will fail; however, for bulk loading of encrypted data, setting the `BCPMODIFYENCRYPTED` [bcp_control](../../sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) option to TRUE will allow ciphertext to be inserted directly, and reduces the risk of corrupting encrypted data over setting the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option on the user account. Nonetheless, the keys must match the data and it is a good idea to perform some read-only checks of the inserted data after the bulk insertion and before further use.
+To prevent data corruption, the server normally does not allow inserting ciphertext directly into an encrypted column, and thus attempts to do so will fail; however, for bulk loading of encrypted data using the BCP API, setting the `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) option to TRUE will allow ciphertext to be inserted directly, and reduces the risk of corrupting encrypted data over setting the `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` option on the user account. Nonetheless, the keys must match the data and it is a good idea to perform some read-only checks of the inserted data after the bulk insertion and before further use.
 
-See [Migrate Sensitive Data Protected by Always Encrypted](../../sql/relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md) for more information.
+See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md) for more information.
 
 ## Always Encrypted API Summary
 

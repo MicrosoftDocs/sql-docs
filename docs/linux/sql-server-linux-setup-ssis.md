@@ -127,7 +127,7 @@ The following example does the following things:
 -   Runs an unattended installation by specifying the `-n` (no prompt) option.
 
 ```
-sudo SSIS_PID= Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
+sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
 ```
 
 ### Environment variables for unattended installation

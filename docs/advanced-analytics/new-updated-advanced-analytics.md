@@ -13,7 +13,7 @@ ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: r-services
+ms.technology: 
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na

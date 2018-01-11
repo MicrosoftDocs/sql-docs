@@ -121,11 +121,11 @@ FROM OPENJSON(@json)
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
   
- **OPENJSON** transforms the array of JSON objects into a table in which each object is represented as one row, and key/value pairs are returned as cells. The output observes the following rules.
+ **OPENJSON** transforms the array of JSON objects into a table in which each object is represented as one row, and key/value pairs are returned as cells. The output observes the following rules:
 -   **OPENJSON** converts JSON values to the types specified in the **WITH** clause.
 -   **OPENJSON** can handle both flat key/value pairs and nested, hierarchically organized objects.
 -   You don't have to return all the fields contained in the JSON text.
--   **OPENJSON** returns NULL values if JSON values don't exist.
+-   If JSON values don't exist, **OPENJSON** returns NULL values.
 -   You can optionally specify a path after the type specification to reference a nested property or to reference a property by a different name.
 -   The optional **strict** prefix in the path specifies that values for the specified properties must exist in the JSON text.
 
@@ -232,7 +232,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   AS SalesOrderJsonData;  
 ```  
   
- The content of the JSON variable can be provided by an external REST service, sent as a parameter from a client-side JavaScript framework, or loaded from external files. You can easily insert, update or merge results from JSON text into a SQL Server table. For more info about this scenario, see the following blog posts.
+ The content of the JSON variable can be provided by an external REST service, sent as a parameter from a client-side JavaScript framework, or loaded from external files. You can easily insert, update, or merge results from JSON text into a SQL Server table. For more info about this scenario, see the following blog posts:
 -   [Importing JSON data in SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/09/22/openjson-the-easiest-way-to-import-json-text-into-table/)
 -   [Upsert JSON documents in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/03/upsert-json-documents-in-sql-server-2016)
 -   [Loading GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/).  
@@ -261,13 +261,13 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 ## Return data from a SQL Server table formatted as JSON  
  If you have a web service that takes data from the database layer and returns it in JSON format, or JavaScript frameworks or libraries that accept data formatted as JSON, you can format JSON output directly in a SQL query. Instead of writing code or including a library to convert tabular query results and then serialize objects to JSON format, you can use FOR JSON to delegate the JSON formatting to SQL Server.  
   
- For example, you might want to generate JSON output that's compliant with the OData specification. The web service expects a request and response in the following format.  
+ For example, you might want to generate JSON output that's compliant with the OData specification. The web service expects a request and response in the following format: 
   
 -   Request: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
 -   Response: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
- This OData URL represents a request for the ProductID and ProductName columns for the product with id 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
+ This OData URL represents a request for the ProductID and ProductName columns for the product with `id` 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
   
 ```sql  
 SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
@@ -281,7 +281,7 @@ FOR JSON AUTO
 The output of this query is JSON text that's fully compliant with OData spec. Formatting and escaping are handled by SQL Server. SQL Server can also format query results in any format such as OData JSON or GeoJSON - for more info, see [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1).  
   
 ## Test drive built-in JSON support  
- **Test drive built-in JSON support with the AdventureWorks sample database.** To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [here](https://www.microsoft.com/download/details.aspx?id=49502). After you restore the sample database to an instance of SQL Server 2016, unzip the samples file and open the "JSON Sample Queries procedures views and indexes.sql" file from the JSON folder. Run the scripts in this file to reformat some existing data as JSON data, run sample queries and reports over the JSON data, index the JSON data, and import and export JSON.  
+ **Test drive built-in JSON support with the AdventureWorks sample database.** To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [here](https://www.microsoft.com/download/details.aspx?id=49502). After you restore the sample database to an instance of SQL Server 2016, unzip the samples file and open the "JSON Sample Queries procedures views and indexes.sql" file from the JSON folder. Run the scripts in this file to reformat some existing data as JSON data, test sample queries and reports over the JSON data, index the JSON data, and import and export JSON.  
   
  Here's what you can do with the scripts included in the file.  
   
@@ -302,25 +302,6 @@ The output of this query is JSON text that's fully compliant with OData spec. Fo
 6.  Clean up scripts – don't run this part if you want to keep the stored procedures and views created in steps 2 and 4.  
   
 ## Learn more about built-in JSON support  
-  
-### Topics in this section  
- [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
- Use the FOR JSON clause to delegate the formatting of JSON output from your client applications to SQL Server.  
-  
- [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)  
- Use OPENJSON to import JSON data into SQL Server, or to convert JSON data into relational format for an app or service that can't currently consume JSON directly, such as SQL Server Integration Services.  
-  
- [Validate, Query, and Change JSON Data with Built-in Functions &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)  
- Use these built-in functions to validate JSON text and to extract a scalar value, an object, or an array.  
-  
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)  
- Use a path expression to specify the JSON text that you want to use.  
-  
- [Index JSON data](../../relational-databases/json/index-json-data.md)  
- Use computed columns to create collation-aware indexes over properties in JSON documents.  
-  
-[Solve common issues with JSON in SQL Server](../../relational-databases/json/solve-common-issues-with-json-in-sql-server.md)  
- Find answers to some common questions about the built-in JSON support in SQL Server.  
   
 ### Microsoft blog posts  
   

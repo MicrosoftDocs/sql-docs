@@ -22,7 +22,7 @@ ms.workload: "Inactive"
 # PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Returns the identifier for the row most recently inserted into a table in the database. The table must have an IDENTITY NOT NULL column. If a sequence name is provided, returns the most recently inserted sequence for the provided sequence name.
+Returns the identifier for the row most recently inserted into a table in the database. The table must have an IDENTITY NOT NULL column. If a sequence name is provided, `lastInsertId` returns the most recently inserted sequence for the provided sequence name.
   
 ## Syntax  
   
@@ -37,7 +37,7 @@ $*name*: An optional string that lets you specify a sequence name.
 ## Return Value  
 If no sequence name is provided, a string of the identifier for the row most recently added.
 If a sequence name is provided, a string of the identifier for the sequence most recently added.
-Returns an empty string if the method call fails.
+If the method call fails, empty string is returned.
   
 ## Remarks  
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  

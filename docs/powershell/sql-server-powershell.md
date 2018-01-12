@@ -21,7 +21,8 @@ ms.workload: "Active"
 ---
 # SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports Windows PowerShell.
+
+**[Install SQL Server PowerShell](download-sql-server-ps-module.md)**
 
 > [!NOTE]
 > There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
@@ -30,7 +31,7 @@ ms.workload: "Active"
 
 **Why did the module change from SQLPS to SqlServer?**
 
-To ship SQL PowerShell updates, we had to change the identity of the SQL PowerShell module, as well as the wrapper known as `SQLPS.exe`. Because of this change, there are now two SQL PowerShell modules, the **SQLPS** module, and the **SqlServer** module.  
+To ship SQL PowerShell updates, we had to change the identity of the SQL PowerShell module, as well as the wrapper known as *SQLPS.exe*. Because of this change, there are now two SQL PowerShell modules, the **SqlServer** module, and the **SQLPS** module.  
 
 **Update your PowerShell scripts if they import the SQLPS module.**
 
@@ -46,7 +47,8 @@ The **SqlServer** module loads two Windows PowerShell snap-ins:
   
   
 ## SQL Server Versions  
- The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell components can be used to manage instances of [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] or later. Instances of [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] must be running SP2 or later. Instances of [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] must be running SP4 or later. When the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerShell components are used with earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], they are limited to the functionality available in those versions.  
+SQL PowerShell cmdlets can be used to manage instances of Azure SQL Database, Azure SQL Data Warehouse, and all [supported SQL Server products](https://support.microsoft.com/lifecycle/search/1044).  
+
 
 ## SQL Server identifiers that contain characters not supported in PowerShell paths  
  
@@ -62,4 +64,3 @@ Query expressions are strings that use syntax similar to XPath to specify a set 
 ## Cmdlet reference
 * [SqlServer cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
 * [SQLPS cmdlets](https://docs.microsoft.com/powershell/module/sqlps)
-

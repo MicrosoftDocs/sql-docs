@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "named permission sets [Reporting Services]"
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: 33
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Using Reporting Services Security Policy Files

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "backward compatibility [Reporting Services]"
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 #  Reporting Services Backward Compatibility

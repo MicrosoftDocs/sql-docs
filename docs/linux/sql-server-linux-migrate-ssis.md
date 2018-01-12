@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle 
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -40,6 +40,34 @@ To run an SSIS package on a Linux computer, do the following things:
 2.  Run the following command:
     ```
     $ dtexec /F \<package name \> /DE <protection password>
+    ```
+
+## Run an encrypted (password-protected) package
+There are three ways to run an SSIS package that's encrypted with a password:
+
+1.  Set the value of the environment variable `SSIS_PACKAGE_DECRYPT`, as shown in the following example:
+
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
+
+2.  Specify the `/de[crypt]` option to enter the password interactively, as shown in the following example:
+
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
+    
+    Enter decryption password:
+    ```
+
+3.  Specify the `/de` option to provide the password on the command line, as shown in the following example. This method is not recommended because it stores the decryption password with the command in the command history.
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
+    
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
     ```
 
 ## Design packages

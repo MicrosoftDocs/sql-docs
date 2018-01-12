@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "roles [Reporting Services], methods"
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Authorization Methods

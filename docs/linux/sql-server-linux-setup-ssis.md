@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle 
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -71,7 +71,7 @@ sudo apt-get install mssql-server-is
 ### Remove SSIS
 To remove `mssql-server-is`, you can run following command:
 ```bash
-sudo apt-get remove msssql-server-is
+sudo apt-get remove mssql-server-is
 ```
 
 ## <a name="RHEL"></a> Install SSIS on RHEL
@@ -114,6 +114,29 @@ To remove `mssql-server-is`, you can run following command:
 ```bash
 sudo yum remove mssql-server-is
 ```
+
+## Unattended installation
+To run an unattended installation when you run `ssis-conf setup`, do the following things:
+1.  Specify the `-n` (no prompt) option.
+2.  Provide required values by setting environment variables.
+
+The following example does the following things:
+-   Installs SSIS.
+-   Specifies the Developer edition by providing a value for the `SSIS_PID` environment variable.
+-   Accepts the EULA by providing a value for the `ACCEPT_EULA` environment variable.
+-   Runs an unattended installation by specifying the `-n` (no prompt) option.
+
+```
+sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
+```
+
+### Environment variables for unattended installation
+
+| Environment variable | Description |
+|---|---|
+| **ACCEPT_EULA** | Accepts the SQL Server license agreement when set to any value (for example, `Y`).|
+| **SSIS_PID** | Sets the SQL Server edition or product key. Here are the possible values:<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>A product key<br/><br/>If you specify a product key, the product key must be in the form `#####-#####-#####-#####-#####`, where `#` is a letter or a number.  |
+| | |
 
 ## Next steps
 

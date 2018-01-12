@@ -108,6 +108,8 @@
 
 ### [Install new R packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
 
+### [Install new Python packages on SQL Server](python/install-additional-python-packages-on-sql-server.md)
+
 ### [Enable R package management for a SQL Server instance](r/r-package-how-to-enable-or-disable.md)
 
 ### [Determine which packages are installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)

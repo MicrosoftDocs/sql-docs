@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "report items [Reporting Services], deleting"
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Delete an Item (Management Studio)

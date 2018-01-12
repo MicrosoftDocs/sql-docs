@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "model item security [Reporting Services]"
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Set Permissions for Report Server Operations in a SharePoint Web Application

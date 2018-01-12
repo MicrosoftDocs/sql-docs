@@ -190,6 +190,7 @@ In this tutorial, you learned how to back up a database on Windows and move it t
 > * Relocate the backup file to prepare for restore
 > * Use **sqlcmd** to run Transact-SQL commands
 > * Restore the database backup with the **RESTORE DATABASE** command 
+> * Run the query to verify the migration
 
 Next, explore other migration scenarios for SQL Server on Linux. 
 

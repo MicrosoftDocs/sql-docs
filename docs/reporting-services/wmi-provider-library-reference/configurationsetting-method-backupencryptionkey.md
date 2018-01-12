@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "BackupEncryptionKey method"
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 caps.latest.revision: 21
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - BackupEncryptionKey

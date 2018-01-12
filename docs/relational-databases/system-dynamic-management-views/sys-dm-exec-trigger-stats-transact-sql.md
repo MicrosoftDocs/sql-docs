@@ -83,8 +83,6 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
  The following example returns information about the top five triggers identified by average elapsed time.  
   
 ```sql  
-PRINT '--top 5 CPU consuming triggers '  
-  
 SELECT TOP 5 d.object_id, d.database_id, DB_NAME(database_id) AS 'database_name',   
     OBJECT_NAME(object_id, database_id) AS 'trigger_name', d.cached_time,  
     d.last_execution_time, d.total_elapsed_time,   

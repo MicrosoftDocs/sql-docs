@@ -59,19 +59,7 @@ Use the **Convert-UrnToPath** cmdlet to convert a Unique Resource Name for a [!I
 Query expressions are strings that use syntax similar to XPath to specify a set of criteria that enumerate one or more objects in an object model hierarchy. A Unique Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object. For more information, see [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md).       
 
 
+## Cmdlet reference
+* [SqlServer cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
+* [SQLPS cmdlets](https://docs.microsoft.com/powershell/module/sqlps)
 
-## SQL Server PowerShell Tasks  
-  
-|Task Description|Article|  
-|----------------------|-----------| 
-|Installing Microsoft® Windows PowerShell Extensions for Microsoft [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  The PowerShell modules are installed by default when installing [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  You can manually install the PowerShell Extensions for SQL Server 2016 by installing the following components from the Microsoft® SQL Server® 2016 Feature Pack:<br/>     Microsoft® System CLR Types for Microsoft SQL Server® 2016 (SQLSysClrTypes.msi)<br/>Microsoft® SQL Server® 2016 Shared Management Objects (SharedManagementObjects.msi)<br/> Microsoft® Windows PowerShell Extensions for Microsoft SQL Server® 2016 (PowerShellTools.msi)|[Microsoft® SQL Server® 2016 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=52676).   | 
-|Describes the preferred mechanism for running the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components; to open a PowerShell session and load the **sqlps** module. The **sqlps** module loads in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider and cmdlets, and the SQL Server Management Object (SMO) assemblies used by the provider and cmdlets.|Import the SQLPS Module](https://docs.microsoft.com/en-us/sql/powershell/import-the-sqlps-module)|  
-|Describes how to load only the SMO assemblies without the provider or cmdlets.|[Load the SMO Assemblies in Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
-|Describes how to run a Windows PowerShell session by right-clicking a node in **Object Explorer**. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] launches a Windows PowerShell session, loads the **sqlps** module, and sets the SQL Server provider path to the object selected.|[Run Windows PowerShell from SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
-|Describes how to create SQL Server Agent job steps that run a Windows PowerShell script. The jobs can then be scheduled to run at specific times or in response to events.|[Run Windows PowerShell Steps in SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md)|  
-|Describes how to use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider to navigate a hierarchy of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.|[SQL Server PowerShell Provider](sql-server-powershell-provider.md)|  
-|Describes how to specify [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] delimited identifiers that contain characters not supported by Windows PowerShell.|[SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)|  
-|Describes how to make SQL Server Authentication connections. By default, the SQL Server PowerShell components use Windows Authentication connections using the Windows credentials of the process running Windows PowerShell.|[Manage Authentication in Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)|  
-|Describes how to use variables implemented by the SQL Server PowerShell provider to control how many objects are listed when using Windows PowerShell tab completion. This is particularly useful when working on databases that contain large numbers of objects.|[Manage Tab Completion &#40;SQL Server PowerShell&#41;](manage-tab-completion-sql-server-powershell.md)|
-  
-  

@@ -1,5 +1,5 @@
 ---
-title: "Upgrading Always On Availability Group Replica Instances | Microsoft Docs"
+title: "Upgrading Always On Availability Group replica instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2018"
 ms.prod: "sql-non-specified"
@@ -22,7 +22,7 @@ ms.workload: "On Demand"
 # Upgrading Always On Availability Group Replica Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-When upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that hosts an Always On Availability Group to a new [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update, you can reduce downtime for the primary replica to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). During the upgrade process, a secondary replica will not be available for failover or for read-only operations, and after the upgrade, it may take some time for the secondary replica to catch up with the primary replica node depending upon the volume of activity on the primary replica node (so expect high network traffic).  
+When upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that hosts an Always On Availability Group (AG) to a new [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update, you can reduce downtime for the primary replica to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). During the upgrade process, a secondary replica will not be available for failover or for read-only operations, and after the upgrade, it may take some time for the secondary replica to catch up with the primary replica node depending upon the volume of activity on the primary replica node (so expect high network traffic).  
   
 >[!NOTE]  
 >This article limits the discussion to the upgrade of SQL Server itself. It does not cover upgrading the operating system containing the Windows Server Failover Cluster (WSFC). Upgrading the Windows operating system hosting the failover cluster is not supported for operating systems before Windows Server 2012 R2. To upgrade a cluster node running on Windows Server 2012 R2, see [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)  
@@ -30,21 +30,21 @@ When upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in
 ## Prerequisites  
 Before you begin, review the following important information:  
   
-- [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to SQL Server 2016 from your version of the Windows operating system and version of SQL Server. For example, you cannot upgrade directly from a SQL Server 2005 instance to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+- [Supported version and edition upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Verify that you can upgrade to SQL Server 2016 from your version of the Windows operating system and version of SQL Server. For example, you cannot upgrade directly from a SQL Server 2005 instance to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-- [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): To upgrade in the correct order, select the appropriate upgrade method and steps based on your review of supported version and edition upgrades and also based on other components installed in your environment.  
+- [Choose a database engine upgrade method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): To upgrade in the correct order, select the appropriate upgrade method and steps based on your review of supported version and edition upgrades and also based on other components installed in your environment.  
   
-- [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the pre-upgrade checklist, and develop and test the upgrade plan.  
+- [Plan and test the database engine upgrade plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Review the release notes and known upgrade issues, the pre-upgrade checklist, and develop and test the upgrade plan.  
   
-- [Hardware and Software Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
+- [Hardware and software requirements for installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
 
-- [Check if Change Data Capture is used for any availability group databases](#special-steps-for-change-data-capture): If any databases in the availability group are enabled for change data capture (CDC), complete these [instructions](#special-steps-for-change-data-capture).  
+- [Check if change data capture  or replication is used for any AG databases](#special-steps-for-change-data-capture-or-replication): If any databases in the AG are enabled for change data capture (CDC), complete these [instructions](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
->Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade, which upgrades the replicas in place. A higher version of a SQL Server instance cannot be added as a new replica to an existing AG. For example, a SQL Server 2017 replica cannot be added to an existing SQL Server 2016 AG. To migrate to a new version of the SQL Server instance using availability groups, the only supported method is a distributed availability group, which is in SQL Server 2016 Enterprise Edition or later.
+>Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade, which upgrades the replicas in place. A higher version of a SQL Server instance cannot be added as a new replica to an existing AG. For example, a SQL Server 2017 replica cannot be added to an existing SQL Server 2016 AG. To migrate to a new version of the SQL Server instance using AGs, the only supported method is a distributed AG, which is in SQL Server 2016 Enterprise Edition or later.
 
-## Rolling Upgrade Basics for Always On Availability Groups  
-Observe the following guidelines when performing server upgrades or updates in order to minimize downtime and data loss for your availability groups:  
+## Rolling Upgrade Basics for Always On AGs  
+Observe the following guidelines when performing server upgrades or updates in order to minimize downtime and data loss for your AGs:  
   
 - Before starting the rolling upgrade,  
   
@@ -60,20 +60,20 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 -   During a version upgrade, readable secondaries cannot be read after an upgrade of the readable secondary and before either the primary replica is failed over to an upgraded secondary or the primary replica is upgraded.  
   
--   To prevent the availability group from unintended failovers during the upgrade process, remove availability failover from all synchronous-commit replicas before you begin.  
+-   To prevent the AG from unintended failovers during the upgrade process, remove availability failover from all synchronous-commit replicas before you begin.  
   
--   Do not upgrade the primary replica instance before failing over the availability group to an upgraded instance with a secondary replica first. Otherwise, client applications may suffer extended downtime during the upgrade on the primary replica instance.  
+-   Do not upgrade the primary replica instance before failing over the AG to an upgraded instance with a secondary replica first. Otherwise, client applications may suffer extended downtime during the upgrade on the primary replica instance.  
   
--   Always fail over the availability group to a synchronous-commit secondary replica instance. If you fail over to an asynchronous-commit secondary replica instance, the databases is vulnerable to data loss, and data movement is automatically suspended until you manually resume data movement.  
+-   Always fail over the AG to a synchronous-commit secondary replica instance. If you fail over to an asynchronous-commit secondary replica instance, the databases is vulnerable to data loss, and data movement is automatically suspended until you manually resume data movement.  
   
 -   Do not upgrade the primary replica instance before upgrading or updating any other secondary replica instance. An upgraded primary replica can no longer ship logs to any secondary replica whose [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instance that has not yet been upgraded to the same version. When data movement to a secondary replica is suspended, no automatic failover can occur for that replica, and your availability databases are vulnerable to data loss.  
   
--   Before failing over an availability group, verify that the synchronization state of the failover target is SYNCHRONIZED.  
+-   Before failing over an AG, verify that the synchronization state of the failover target is SYNCHRONIZED.  
   
 ## Rolling Upgrade Process  
- In practice, the exact process depends on factors such as the deployment topology of your availability groups and the commit mode of each replica. But in the simplest scenario, a rolling upgrade is a multi-stage process that in its simplest form involves the following steps:  
+ In practice, the exact process depends on factors such as the deployment topology of your AGs and the commit mode of each replica. But in the simplest scenario, a rolling upgrade is a multi-stage process that in its simplest form involves the following steps:  
   
- ![Availability Group Upgrade in HADR Scenario](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Availability Group Upgrade in HADR Scenario")  
+ ![AG Upgrade in HADR Scenario](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "AG Upgrade in HADR Scenario")  
   
 1.  Remove automatic failover on all synchronous-commit replicas  
   
@@ -81,20 +81,20 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 3.  Upgrade the all local replica secondary instances that are not currently running the primary replica  
   
-4.  Manually fail over the availability group to a local synchronous-commit secondary replica  
+4.  Manually fail over the AG to a local synchronous-commit secondary replica  
   
 5.  Upgrade or update the local replica instance that formerly hosted the primary replica  
   
 6.  Configure automatic failover partners as desired  
   
- If necessary, you can perform an extra manual failover to return the availability group to its original configuration.  
+ If necessary, you can perform an extra manual failover to return the AG to its original configuration.  
   
-## Availability Group with One Remote Secondary Replica  
- If you have deployed an availability group only for disaster recovery, you may need to fail over the availability group to an asynchronous-commit secondary replica. Such configuration is illustrated by the following figure:  
+## AG with One Remote Secondary Replica  
+ If you have deployed an AG only for disaster recovery, you may need to fail over the AG to an asynchronous-commit secondary replica. Such configuration is illustrated by the following figure:  
   
- ![Availability Group Upgrade in DR Scenario](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Availability Group Upgrade in DR Scenario")  
+ ![AG Upgrade in DR Scenario](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "AG Upgrade in DR Scenario")  
   
- In this situation, you must fail over the availability group to the asynchronous-commit secondary replica during the rolling upgrade. To prevent data loss, change the commit mode to synchronous commit and wait for the secondary replica to be synchronized before you fail over the availability group. Therefore, the rolling upgrade process may look as follows:  
+ In this situation, you must fail over the AG to the asynchronous-commit secondary replica during the rolling upgrade. To prevent data loss, change the commit mode to synchronous commit and wait for the secondary replica to be synchronized before you fail over the AG. Therefore, the rolling upgrade process may look as follows:  
   
 1.  Upgrade the secondary replica instance on the remote site  
   
@@ -102,11 +102,11 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 3.  Wait until synchronization state is SYNCHRONIZED  
   
-4.  Fail over the availability group to the secondary replica on the remote site  
+4.  Fail over the AG to the secondary replica on the remote site  
   
 5.  Upgrade or update the local (primary site) replica instance  
   
-6.  Fail over the availability group back to the primary site  
+6.  Fail over the AG back to the primary site  
   
 7.  Change the commit mode to asynchronous commit  
   
@@ -116,10 +116,10 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 -   While upgrading or updating [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] on the primary site, change the availability mode back to asynchronous commit, then revert to synchronous commit when you are ready to fail over to the primary site again  
   
-## Availability Group with Failover Cluster Instance Nodes  
- If an availability group contains failover cluster instance (FCI) nodes, you should upgrade the inactive nodes before you upgrade the active nodes. The following figure illustrates a common availability group scenario with FCIs for local high availability and asynchronous commit between the FCIs for remote disaster recovery, and the upgrade sequence.  
+## AG with Failover Cluster Instance Nodes  
+ If an AG contains failover cluster instance (FCI) nodes, you should upgrade the inactive nodes before you upgrade the active nodes. The following figure illustrates a common AG scenario with FCIs for local high availability and asynchronous commit between the FCIs for remote disaster recovery, and the upgrade sequence.  
   
- ![Availability Group Upgrade with FCIs](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Availability Group Upgrade with FCIs")  
+ ![AG Upgrade with FCIs](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "AG Upgrade with FCIs")  
   
 1.  Upgrade or update REMOTE2  
   
@@ -133,10 +133,10 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 6.  Upgrade or update PRIMARY1  
   
-## Upgrade Update SQL Server Instances with Multiple Availability Groups  
- If you are running multiple availability groups with primary replicas on separate server nodes (an Active/Active configuration), the upgrade path involves more failover steps to preserve high availability in the process. Suppose you are running three availability groups on three server nodes with all replicas in synchronous commit mode as shown in the following table:  
+## Upgrade Update SQL Server Instances with Multiple AGs  
+ If you are running multiple AGs with primary replicas on separate server nodes (an Active/Active configuration), the upgrade path involves more failover steps to preserve high availability in the process. Suppose you are running three AGs on three server nodes with all replicas in synchronous commit mode as shown in the following table:  
   
-|Availability Group|Node1|Node2|Node3|  
+|AG|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
 |AG1|Primary|||  
 |AG2||Primary||  
@@ -158,9 +158,9 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 7.  Fail over AG3 to Node3  
   
- This upgrade sequence has an average downtime of fewer than two failovers per availability group. The resulting configuration is shown in the following table.  
+ This upgrade sequence has an average downtime of fewer than two failovers per AG. The resulting configuration is shown in the following table.  
   
-|Availability Group|Node1|Node2|Node3|  
+|AG|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
 |AG1||Primary||  
 |AG2|Primary|||  
@@ -173,11 +173,11 @@ Observe the following guidelines when performing server upgrades or updates in o
 
 ## Special steps for change data capture or replication
 
-Depending on the update being applied, additional steps may be required for availability group replica databases that are enabled for change data capture or replication. Refer to the release notes for the update to determine if the following steps are required:
+Depending on the update being applied, additional steps may be required for AG replica databases that are enabled for change data capture or replication. Refer to the release notes for the update to determine if the following steps are required:
 
 1. Upgrade each secondary replica.
 
-1. After all secondary replicas have been upgraded, fail over the availability group to an upgraded instance. 
+1. After all secondary replicas have been upgraded, fail over the AG to an upgraded instance. 
 
 1. Run the following Transact-SQL on the instance that hosts the primary replica:
 

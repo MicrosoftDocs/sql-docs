@@ -90,7 +90,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 ## Resumable Index Rebuild Considerations
 
 > [!NOTE]
-> This feature applies to SQL Server 2017 and Azure SQL Database. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+> The resumable index option applies to SQL Server (Starting with SQL Server 2017) and SQL Database. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 When you perform resumable online index rebuild the following guidelines apply:
 -	Managing, planning and extending of index maintenance windows. You can pause and restart an index rebuild operation multiple times to fit your maintenance windows.

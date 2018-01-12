@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "12/19/2017"
+ms.date: "01/17/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -19,6 +19,25 @@ ms.workload: "Inactive"
 
 **[Download SQL Operations Studio (preview)](download.md)**
 
+## January 2018 (January Preview Insiders Build)
+
+release date: 1/17/2018
+version: 0.25.3
+
+The *January Preview Insiders Build* includes some top feature suggestions and high-priority bug fixes. The following are some of the enhancements in this release:
+
+- Tab-coloring based on Server Group.
+- Saved Server connections are available in the Connection Dialog.
+- Enable HotExit.
+- Change *Server name* to *Server* in the Connection Dialog
+- Fix broken *Run Current Query* command
+- Fix drag-and-drop breaking scripting bug.
+- Fix incorrect pinned Start Menu icon.
+- Fix missing Azure Account branding icon.
+
+For more information see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+
+
 ## December 2017 (December Public Preview)
 
 release date: 12/19/2017  
@@ -34,8 +53,6 @@ The *December Public Preview* includes several bugs fixes across all feature are
 - Integrate VS Code 1.18.1 editor platform.
 - Enable Sideloading of VSIX Extension files.
 - Support "GO N" batch iteration syntax.
-
-For more information see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 
 ## November 2017

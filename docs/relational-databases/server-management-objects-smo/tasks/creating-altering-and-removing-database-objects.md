@@ -23,7 +23,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating, Altering, and Removing Database Objects
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   The stages of SMO object creation are as follows:  
   

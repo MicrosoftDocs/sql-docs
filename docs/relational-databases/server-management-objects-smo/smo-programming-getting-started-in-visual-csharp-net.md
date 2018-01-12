@@ -22,7 +22,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SMO Programming - Getting Started in Visual C# .NET
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET is one of the managed programming languages that are supported by the common language runtime (CLR) in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Many For more information about the C# language, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET documentation. You can use [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] and [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] to develop SMO applications.  
   

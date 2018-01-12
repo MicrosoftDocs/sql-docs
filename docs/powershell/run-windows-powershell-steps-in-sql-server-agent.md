@@ -3,9 +3,9 @@ title: "Run Windows PowerShell Steps in SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
+ms.prod_service: "powershell"
 ms.service: ""
-ms.component: "ssms-scripting"
+ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -21,14 +21,18 @@ ms.workload: "On Demand"
 ---
 # Run Windows PowerShell Steps in SQL Server Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Use SQL Server Agent to run SQL Server PowerShell scripts at schedule times.  
+
+Use SQL Server Agent to run SQL Server PowerShell scripts at schedule times.  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+**To run PowerShell from SQL Server Agent, using:**  [PowerShell Job Step](#PShellJob), [Command Prompt Job Step](#CmdExecJob)  
   
-2.  **To run PowerShell from SQL Server Agent, using:**  [PowerShell Job Step](#PShellJob), [Command Prompt Job Step](#CmdExecJob)  
-  
-## Before You Begin  
- There are several types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job steps. Each type is associated with a subsystem that implements a specific environment, such as a replication agent or command prompt environment. You can code Windows PowerShell scripts, and then use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to include the scripts in jobs that run at scheduled times or in response to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] events. Windows PowerShell scripts can be run using either a command prompt job step or a PowerShell job step.  
+> [!NOTE]
+> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
+> Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
+> To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
+
+
+There are several types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job steps. Each type is associated with a subsystem that implements a specific environment, such as a replication agent or command prompt environment. You can code Windows PowerShell scripts, and then use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to include the scripts in jobs that run at scheduled times or in response to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] events. Windows PowerShell scripts can be run using either a command prompt job step or a PowerShell job step.  
   
 1.  Use a PowerShell job step to have the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent subsystem run the **sqlps** utility, which launches PowerShell and imports the **sqlps** module.  
   

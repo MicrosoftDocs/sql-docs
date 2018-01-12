@@ -3,9 +3,9 @@ title: "Specify Instances in the SQL Server PowerShell Provider | Microsoft Docs
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
+ms.prod_service: "powershell"
 ms.service: ""
-ms.component: "ssms-scripting"
+ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -21,11 +21,14 @@ ms.workload: "Inactive"
 ---
 # Specify Instances in the SQL Server PowerShell Provider
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  The paths specified for the SQL Server PowerShell provider must identify the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] and the computer it is running on. The syntax for specifying the computer and the instance must comply with both the rules for SQL Server identifiers and Windows PowerShell paths.  
+
+The paths specified for the SQL Server PowerShell provider must identify the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] and the computer it is running on. The syntax for specifying the computer and the instance must comply with both the rules for SQL Server identifiers and Windows PowerShell paths.  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+> [!NOTE]
+> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
+> Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
+> To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
   
-2.  **To specify an instance:**  [Examples](#Examples)  
   
 ## Before You Begin  
  The first node following the SQLSERVER:\SQL in a SQL Server provider path is the name of the computer that is running the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]; for example:  

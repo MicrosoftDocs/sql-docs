@@ -3,9 +3,9 @@ title: "SQL Server PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2016"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
+ms.prod_service: "powershell"
 ms.service: ""
-ms.component: "ssms-scripting"
+ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -25,6 +25,7 @@ ms.workload: "Active"
 
 > [!NOTE]
 > There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
+> Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
 > To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
 
 **Why did the module change from SQLPS to SqlServer?**

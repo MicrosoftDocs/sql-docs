@@ -3,9 +3,9 @@ title: "Escape SQL Server Identifiers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "sql-tools"
+ms.prod_service: "powershell"
 ms.service: ""
-ms.component: "ssms-scripting"
+ms.component: "powershell"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -21,10 +21,14 @@ ms.workload: "Inactive"
 ---
 # Escape SQL Server Identifiers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  You can often use the Windows PowerShell back-tick escape character (`) to escape characters that are allowed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] delimited identifiers but not Windows PowerShell path names. Some characters, however, cannot be escaped. For example, you cannot escape the colon character (:) in Windows PowerShell. Identifiers with that character must be encoded. Encoding is more reliable than escaping because encoding works for all characters.  
-  
-## Before You Begin  
- The back-tick character (`) is usually on the key in the upper left of the keyboard, under the ESC key.  
+
+You can often use the back-tick escape character (`) to escape characters that are allowed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] delimited identifiers but not Windows PowerShell path names. Some characters, however, cannot be escaped. For example, you cannot escape the colon character (:) in Windows PowerShell. Identifiers with that character must be encoded. Encoding is more reliable than escaping because encoding works for all characters.  
+
+> [!NOTE]
+> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
+> To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
+
+The back-tick character (`) is usually on the key in the upper left of the keyboard, under the ESC key.  
   
 ## Examples  
  This is an example of escaping a # character:  

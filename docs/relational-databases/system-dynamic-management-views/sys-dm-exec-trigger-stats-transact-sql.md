@@ -64,13 +64,13 @@ ms.workload: "Inactive"
 |**last_elapsed_time**|**bigint**|Elapsed time, in microseconds, for the most recently completed execution of this trigger.|  
 |**min_elapsed_time**|**bigint**|The minimum elapsed time, in microseconds, for any completed execution of this trigger.|  
 |**max_elapsed_time**|**bigint**|The maximum elapsed time, in microseconds, for any completed execution of this trigger.| 
-|**total_spills**|**bigint**|The total number of pages spilled by execution of this trigger since it was compiled.|  
-|**last_spills**|**bigint**|The number of pages spilled the last time the trigger was executed.|  
-|**min_spills**|**bigint**|The minimum number of pages that this trigger has ever spilled during a single execution.|  
-|**max_spills**|**bigint**|The maximum number of pages that this trigger has ever spilled during a single execution.|  
+|**total_spills**|**bigint**|The total number of pages spilled by execution of this trigger since it was compiled.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|The number of pages spilled the last time the trigger was executed.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|The minimum number of pages that this trigger has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|The maximum number of pages that this trigger has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
 ## Remarks  
- In Windows Azure SQL Database, dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn’t belong to the connected tenant is filtered out.  
+ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn’t belong to the connected tenant is filtered out.  
 
 Statistics in the view are updated when a query is completed.  
   

@@ -61,7 +61,7 @@ ms.workload: "Active"
 |**min_physical_reads**|**bigint**|The minimum number of physical reads that this stored procedure has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**max_physical_reads**|**bigint**|The maximum number of physical reads that this stored procedure has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**total_logical_writes**|**bigint**|The total number of logical writes performed by executions of this stored procedure since it was compiled.<br /><br /> Will always be 0 querying a memory-optimized table.|  
-|**last_logical_writes**|**bigint**|The number of the number of buffer pool pages dirtied the last time the plan was executed. If a page is already dirty (modified) no writes are counted.<br /><br /> Will always be 0 querying a memory-optimized table.|  
+|**last_logical_writes**|**bigint**|The number of buffer pool pages dirtied the last time the plan was executed. If a page is already dirty (modified) no writes are counted.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**min_logical_writes**|**bigint**|The minimum number of logical writes that this stored procedure has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**max_logical_writes**|**bigint**|The maximum number of logical writes that this stored procedure has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**total_logical_reads**|**bigint**|The total number of logical reads performed by executions of this stored procedure since it was compiled.<br /><br /> Will always be 0 querying a memory-optimized table.|  
@@ -69,7 +69,7 @@ ms.workload: "Active"
 |**min_logical_reads**|**bigint**|The minimum number of logical reads that this stored procedure has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**max_logical_reads**|**bigint**|The maximum number of logical reads that this stored procedure has ever performed during a single execution.<br /><br /> Will always be 0 querying a memory-optimized table.|  
 |**total_elapsed_time**|**bigint**|The total elapsed time, in microseconds, for completed executions of this stored procedure.|  
-|**last_elapsed_time**|**bigint**|Elapsed time, in microseconds, for the most recently completed execution of this stored procedure.|  
+|**last_elapsed_time**|**bigint**|The elapsed time, in microseconds, for the most recently completed execution of this stored procedure.|  
 |**min_elapsed_time**|**bigint**|The minimum elapsed time, in microseconds, for any completed execution of this stored procedure.|  
 |**max_elapsed_time**|**bigint**|The maximum elapsed time, in microseconds, for any completed execution of this stored procedure.|  
 |**total_spills**|**bigint**|The total number of pages spilled by execution of this stored procedure since it was compiled.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  

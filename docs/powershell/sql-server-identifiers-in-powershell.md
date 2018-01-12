@@ -34,7 +34,7 @@ ms.workload: "Inactive"
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers in Windows PowerShell paths. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] identifiers can contain characters that Windows PowerShell does not support in paths. You must escape these characters or use special encoding for them when using the identifiers in Windows PowerShell paths.  
   
 > [!NOTE]
-> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
+> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
 > Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
 > To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
 
@@ -57,7 +57,7 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
   
 ## SQL Server Identifier Tasks  
   
-|Task Description|Topic|  
+|Task Description|Article|  
 |----------------------|-----------|  
 |Describes how to specify an instance name, including the name of the computer the instance is running on.|[Specify Instances in the SQL Server PowerShell Provider](specify-instances-in-the-sql-server-powershell-provider.md)|  
 |Describes how to specify the hexadecimal encoding for characters in delimited identifiers that are not supported in Windows PowerShell paths. Also describes how to decode the hexadecimal characters.|[Encode and Decode SQL Server Identifiers](encode-and-decode-sql-server-identifiers.md)|  

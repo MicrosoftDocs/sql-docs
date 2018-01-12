@@ -27,7 +27,7 @@ Use SQL Server Agent to run SQL Server PowerShell scripts at schedule times.
 **To run PowerShell from SQL Server Agent, using:**  [PowerShell Job Step](#PShellJob), [Command Prompt Job Step](#CmdExecJob)  
   
 > [!NOTE]
-> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
+> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
 > Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
 > To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
 
@@ -41,7 +41,7 @@ There are several types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
   
 > [!CAUTION]  
->  Each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step that runs PowerShell with the **sqlps** module launches a process which consumes approximately 20 MB of memory. Running large numbers of concurrent Windows PowerShell job steps can adversely impact performance.  
+>  Each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step that runs PowerShell with the **sqlps** module launches a process, which consumes approximately 20 MB of memory. Running large numbers of concurrent Windows PowerShell job steps can adversely impact performance.  
   
 ##  <a name="PShellJob"></a> Create a PowerShell Job Step  
  **To create a PowerShell job step**  

@@ -24,7 +24,7 @@ ms.workload: "Active"
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports Windows PowerShell.
 
 > [!NOTE]
-> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatability), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
+> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
 > Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
 > To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
 
@@ -62,7 +62,7 @@ Query expressions are strings that use syntax similar to XPath to specify a set 
 
 ## SQL Server PowerShell Tasks  
   
-|Task Description|Topic|  
+|Task Description|Article|  
 |----------------------|-----------| 
 |Installing Microsoft® Windows PowerShell Extensions for Microsoft [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  The PowerShell modules are installed by default when installing [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  You can manually install the PowerShell Extensions for SQL Server 2016 by installing the following components from the Microsoft® SQL Server® 2016 Feature Pack:<br/>     Microsoft® System CLR Types for Microsoft SQL Server® 2016 (SQLSysClrTypes.msi)<br/>Microsoft® SQL Server® 2016 Shared Management Objects (SharedManagementObjects.msi)<br/> Microsoft® Windows PowerShell Extensions for Microsoft SQL Server® 2016 (PowerShellTools.msi)|[Microsoft® SQL Server® 2016 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=52676).   | 
 |Describes the preferred mechanism for running the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components; to open a PowerShell session and load the **sqlps** module. The **sqlps** module loads in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider and cmdlets, and the SQL Server Management Object (SMO) assemblies used by the provider and cmdlets.|Import the SQLPS Module](https://docs.microsoft.com/en-us/sql/powershell/import-the-sqlps-module)|  

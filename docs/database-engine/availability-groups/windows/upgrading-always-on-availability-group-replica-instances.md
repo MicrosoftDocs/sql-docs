@@ -179,8 +179,6 @@ Depending on the update being applied, additional steps may be required for avai
 
 1. After all secondary replicas have been upgraded, fail over the availability group to an upgraded instance. 
 
-1. If automatic failover is enabled, disable it.
-
 1. Run the following Transact-SQL on the instance that hosts the primary replica:
 
    ```sql
@@ -191,8 +189,6 @@ Depending on the update being applied, additional steps may be required for avai
    >This command may take several minutes to run. 
 
 1. Upgrade the instance that was originally the primary replica.
-
-1. Configure automatic failover, if necessary. 
 
 For background information, see [CDC functionality may break after upgrading to the latest CU](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 

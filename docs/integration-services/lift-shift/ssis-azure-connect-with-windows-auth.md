@@ -1,6 +1,6 @@
 ---
 title: "Connect to data sources and file shares with Windows Authentication | Microsoft Docs"
-ms.date: "11/27/2017"
+ms.date: "01/12/2018"
 ms.topic: "article"
 ms.prod: "sql-non-specified"
 ms.prod_service: "integration-services"
@@ -18,7 +18,10 @@ ms.workload: "Inactive"
 # Connect to on-premises data sources and Azure file shares with Windows Authentication
 This article describes how to configure the SSIS Catalog on Azure SQL Database to run packages that use Windows Authentication to connect to on-premises data sources and Azure file shares. You can use Windows authentication to connect to data sources in the same virtual network as the Azure SSIS Integration Runtime, both on premises and on Azure virtual machines and in Azure Files.
 
-The domain credentials that you provide when you follow the steps in this article apply to all package executions on the SQL Database instance until you change or remove the credentials.
+> [!WARNING]
+> If you don't provide valid domain credentials for Windows Authentication by running `catalog`.`set_execution_credential` as described in this article, packages that depend on Windows Authentication can't connect to data sources and fail at run time.
+
+The domain credentials that you provide when you follow the steps in this article apply to all package executions - interactive or scheduled - on the SQL Database instance until you change or remove the credentials.
 
 ## Provide domain credentials for Windows Authentication
 To provide domain credentials that let packages use Windows Authentication to connect to on-premises data sources, do the following things:

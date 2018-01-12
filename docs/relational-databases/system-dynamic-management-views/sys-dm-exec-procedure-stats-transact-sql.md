@@ -70,10 +70,10 @@ ms.workload: "Active"
 |**last_elapsed_time**|**bigint**|Elapsed time, in microseconds, for the most recently completed execution of this stored procedure.|  
 |**min_elapsed_time**|**bigint**|The minimum elapsed time, in microseconds, for any completed execution of this stored procedure.|  
 |**max_elapsed_time**|**bigint**|The maximum elapsed time, in microseconds, for any completed execution of this stored procedure.|  
-|**total_spills**|**bigint**|The total number of pages spilled by execution of this trigger since it was compiled.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|The number of pages spilled the last time the trigger was executed.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|The minimum number of pages that this trigger has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|The maximum number of pages that this trigger has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_spills**|**bigint**|The total number of pages spilled by execution of this stored procedure since it was compiled.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|The number of pages spilled the last time the stored procedure was executed.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|The minimum number of pages that this stored procedure has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|The maximum number of pages that this stored procedure has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
  <sup>1</sup> For natively compiled stored procedures when statistics collection is enabled, worker time is collected in milliseconds. If the query executes in less than a millisecond, the value will be 0.  

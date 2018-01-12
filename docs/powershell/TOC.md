@@ -1,24 +1,23 @@
 # [Install SQL PowerShell module](download-sql-server-ps-module.md)
 # Overview
 ## [SQL Server PowerShell](sql-server-powershell.md) 
-# [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md)  
-# [Load the SMO Assemblies in Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)  
-# [Run Windows PowerShell from SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)  
-# [Run Windows PowerShell Steps in SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md)  
-# [SQL Server PowerShell Provider](sql-server-powershell-provider.md)  
-# [Navigate SQL Server PowerShell Paths](navigate-sql-server-powershell-paths.md)  
-# [Work With SQL Server PowerShell Paths](work-with-sql-server-powershell-paths.md)  
-# [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)  
-# [Specify Instances in the SQL Server PowerShell Provider](specify-instances-in-the-sql-server-powershell-provider.md)  
-# [Encode and Decode SQL Server Identifiers](encode-and-decode-sql-server-identifiers.md)  
-# [Escape SQL Server Identifiers](escape-sql-server-identifiers.md)  
-# [Manage Authentication in Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)  
-# [Manage Tab Completion (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)  
+# Concepts
+## [SQL Server PowerShell Provider](sql-server-powershell-provider.md)  
+## [Query Expressions and Uniform Resource Names](query-expressions-and-uniform-resource-names.md)  
 # Quickstarts
 # Tutorials
-# Samples
-# Concepts
 # How-to guides
+## [Access SQL Server Objects](navigate-sql-server-powershell-paths.md)  
+## [Load the SMO Assemblies in Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)  
+## [Run PowerShell in SSMS](run-windows-powershell-from-sql-server-management-studio.md)  
+## [Run PowerShell with SQL Server Agent](run-windows-powershell-steps-in-sql-server-agent.md)  
+## [Work With SQL Server PowerShell Paths](work-with-sql-server-powershell-paths.md)  
+## [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)  
+### [Specify Instances in the SQL Server PowerShell Provider](specify-instances-in-the-sql-server-powershell-provider.md)  
+### [Encode and Decode SQL Server Identifiers](encode-and-decode-sql-server-identifiers.md)  
+### [Escape SQL Server Identifiers](escape-sql-server-identifiers.md)  
+## [Manage Authentication in Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)  
+## [Manage Tab Completion (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)  
 # Reference
 ## [Sqlserver module reference](https://docs.microsoft.com/powershell/module/sqlserver/?toc=/sql/powershell/toc.json)
 ## [Sqlps module reference](https://docs.microsoft.com/powershell/module/sqlps/?toc=/sql/powershell/toc.json)

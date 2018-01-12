@@ -13,10 +13,8 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
-  - "SYS.QUERY_STORE_WAIT_STATS_TSQL"
-  - "QUERY_STORE_WAIT_STATS_TSQL"
-  - "SYS.QUERY_STORE_WAIT_STATS"
-  - "QUERY_STORE_WAIT_STATS"
+  - "sys.query_store_wait_stats"
+  - "query_store_wait_stats"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

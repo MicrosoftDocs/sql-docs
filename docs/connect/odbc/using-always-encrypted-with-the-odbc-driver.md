@@ -521,6 +521,15 @@ For an example of implementing your own keystore provider, see [Custom Keystore 
 ### Asynchronous Operations
 While the ODBC driver will allow the use of [asynchronous operations](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) with Always Encrypted, there is a performance impact on the operations when Always Encrypted is enabled. The call to `sys.sp_describe_parameter_encryption` to determine encryption metadata for the statement is blocking and will cause the driver to wait for the server to return the metadata before returning `SQL_STILL_EXECUTING`.
 
+### Retrieve data in parts with SQLGetData
+Before ODBC Driver 17 for SQL Server, encrypted character and binary columns cannot be retrieved in parts with SQLGetData. Only one call to SQLGetData can be made, with a buffer of sufficient length to contain the entire column's data.
+
+### Send data in parts with SQLPutData
+Data for insertion or comparison cannot be sent in parts with SQLPutData. Only one call to SQLPutData can be made, with a buffer containing the entire data. For inserting long data into encrypted columns, use the Bulk Copy API, described in the next section, with an input data file.
+
+### Encrypted money and smallmoney
+Encrypted **money** or **smallmoney** columns cannot be targeted by parameters, since there is no specific ODBC data type which maps to those types, resulting in Operand Type Clash errors.
+
 ## Bulk Copy of Encrypted Columns
 
 Use of the [SQL Bulk Copy functions](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) and the **bcp** utility is supported with Always Encrypted since ODBC Driver 17 for SQL Server. Both plaintext (encrypted on insertion and decrypted on retrieval) and ciphertext (transferred verbatim) can be inserted and retrieved using the Bulk Copy (bcp_*) APIs and the **bcp** utility.

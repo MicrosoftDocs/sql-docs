@@ -17,14 +17,15 @@ ms.workload: "Inactive"
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download SQL Operations Studio (preview)](download.md)**
+**[Download the January Preview Insiders Build](download.md)**
 
 ## January 2018 (January Preview Insiders Build)
 
-release date: 1/17/2018
+release date: January 17, 2018
+
 version: 0.25.3
 
-The *January Preview Insiders Build* includes some top feature suggestions and high-priority bug fixes. The following are some of the enhancements in this release:
+The *January Preview Insiders Build* includes some top feature suggestions and high-priority bug fixes. This release includes the following enhancements:
 
 - Tab-coloring based on Server Group.
 - Saved Server connections are available in the Connection Dialog.
@@ -35,12 +36,13 @@ The *January Preview Insiders Build* includes some top feature suggestions and h
 - Fix incorrect pinned Start Menu icon.
 - Fix missing Azure Account branding icon.
 
-For more information see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 
 ## December 2017 (December Public Preview)
 
-release date: 12/19/2017  
+release date: December 19, 2017
+
 version: 0.24.1
 
 The *December Public Preview* includes several bugs fixes across all feature areas, as well as the following enhancements:
@@ -57,7 +59,7 @@ The *December Public Preview* includes several bugs fixes across all feature are
 
 ## November 2017
 
-release date: 11/15/2017  
+release date: November 15, 2017  
 version: 0.23.6
 
 - Initial release of [!INCLUDE[name-sos](../includes/name-sos-short.md)].

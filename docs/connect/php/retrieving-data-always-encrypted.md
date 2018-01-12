@@ -19,9 +19,9 @@ ms.workload: "Inactive"
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Notable items when retrieving sensitive data from an encrypted column:
- -   If the column targeted by a WHERE clause is encrypted, the value must be passed to the database by binding parameter. This allows the driver to encrypt the value before sending it to the database.
+ -   If the column targeted by a WHERE clause is encrypted, the value must be passed to the database using parameter binding. This allows the driver to encrypt the value before sending it to the database.
  -   If the connection option `ColumnEncryption` is enabled, the driver transparently decrypts the data before sending it back to the user.
- -   If the connection option `ColumnEncryption` is disabled, the return value is still encrypted and is returned as byte array.
+ -   If the connection option `ColumnEncryption` is disabled, the return value is still encrypted and is returned as a byte array.
  -   If the connection option `ColumnEncryption` is disabled and a WHERE filter is applied on an encrypted column, the query would fail since the value passed to the database is not encrypted.
  
 The following table schema is used for the examples below:

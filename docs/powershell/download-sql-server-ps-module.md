@@ -60,5 +60,5 @@ To use a specific version of the module, you can import it with a specific versi
 The versions of the **SqlServer** module in the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater. 
 
 * [SqlServer module in the PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver) 
-* [SqlServer module reference](https://docs.microsoft.com/powershell/module/sqlserver)
-* [SQLPS module reference](https://docs.microsoft.com/powershell/module/sqlps)
+* [SqlServer cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
+* [SQLPS cmdlets](https://docs.microsoft.com/powershell/module/sqlps)

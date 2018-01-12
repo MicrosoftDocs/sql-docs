@@ -22,7 +22,7 @@ ms.workload: "On Demand"
 # Run Windows PowerShell from SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-You can start Windows PowerShell sessions from **Object Explorer** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] launches Windows PowerShell, loads the **sqlps** module, and sets the path context to the associated node in the **Object Explorer** tree.  
+You can start Windows PowerShell sessions from **Object Explorer** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] launches Windows PowerShell, loads the **SqlServer** module, and sets the path context to the associated node in the **Object Explorer** tree.  
   
 
 > [!NOTE]

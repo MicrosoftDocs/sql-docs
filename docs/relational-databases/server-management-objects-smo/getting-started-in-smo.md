@@ -23,7 +23,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Getting Started in SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 This page provides links to topics designed to help you get started using SQL Server Management Objects (SMO). The topics listed cover the SMO object hierarchy, writing programs in SMO, SMO and different programming languages, and specific programming tasks.  
  

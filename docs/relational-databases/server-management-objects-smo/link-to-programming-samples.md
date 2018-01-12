@@ -24,7 +24,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Available Programming Samples
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   The following table lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) programming samples available in the [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO directory. These samples are available in both [!INCLUDE[csprcs](../../includes/csprcs-md.md)] and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   

@@ -24,7 +24,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Management Objects (SMO) Programming Guide
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) is a collection of objects that are designed for programming all aspects of managing [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects (RMO) is a collection of objects that encapsulates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication management.  
   

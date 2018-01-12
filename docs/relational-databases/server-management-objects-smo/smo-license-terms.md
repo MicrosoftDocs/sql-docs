@@ -20,7 +20,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Shared Management Objects (SMO) License Terms
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## MICROSOFT SOFTWARE LICENSE TERMS
 **MICROSOFT SQL SERVER 2017 SHARED MANAGEMENT OBJECTS**

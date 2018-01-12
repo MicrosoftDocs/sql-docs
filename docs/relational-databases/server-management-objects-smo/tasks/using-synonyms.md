@@ -22,7 +22,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using Synonyms
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   A synonym is an alternative name for a schema-scoped object. In SMO, synonyms are represented by the <xref:Microsoft.SqlServer.Management.Smo.Synonym> object. The <xref:Microsoft.SqlServer.Management.Smo.Synonym> object is a child of the <xref:Microsoft.SqlServer.Management.Smo.Database> object. This means that synonyms are valid only within the scope of the database in which they are defined. However, the synonym can refer to objects on another database, or on a remote instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

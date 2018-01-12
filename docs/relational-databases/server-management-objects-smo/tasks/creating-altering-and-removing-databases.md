@@ -25,7 +25,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Creating, Altering, and Removing Databases
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In SMO, a database is represented by the <xref:Microsoft.SqlServer.Management.Smo.Database> object.  
   

@@ -142,15 +142,18 @@ manager: "jhubbard"
   
  **Examples:**  
   
--   `/INSTANCEDIR=c:\Path` is supported.  
+-   /INSTANCEDIR=c:\Path is supported.  
   
--   `/INSTANCEDIR=”c:\Path”` is supported  
+-   /INSTANCEDIR="c:\Path" is supported  
+  
+> [!IMPORTANT]  
+> When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if you specify the same directory path for INSTANCEDIR and SQLUSERDBDIR, SQL Server Agent and Full Text Search do not start due to missing permissions.  
   
 > [!NOTE]  
->  -   When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  if you specify the same directory path for INSTANCEDIR and SQLUSERDBDIR, SQL Server Agent and Full Text Search do not start due to missing permissions.  
->   
->      The relational server values support the additional terminating backslash formats (backslash or two backslash characters) for the path.  
-> -   /PID, the value for this parameter should be enclosed in double quotation marks.  
+> The relational server values support the additional terminating backslash formats (backslash or two backslash characters) for the path.  
+
+> [!IMPORTANT]  
+> The value for the /PID parameter should be enclosed in double quotation marks.  
   
 ## SQL Server Parameters  
  The following sections provide parameters to develop command line installation scripts for install, update, and repair scenarios.  

@@ -21,8 +21,7 @@ ms.workload: "Inactive"
 
 ## January 2018 (January Preview Insiders Build)
 
-release date: January 17, 2018
-
+release date: January 17, 2018  
 version: 0.25.3
 
 The *January Preview Insiders Build* includes some top feature suggestions and high-priority bug fixes. This release includes the following enhancements:
@@ -41,8 +40,7 @@ For more information, see the [Change Log](https://github.com/Microsoft/sqlopsst
 
 ## December 2017 (December Public Preview)
 
-release date: December 19, 2017
-
+release date: December 19, 2017  
 version: 0.24.1
 
 The *December Public Preview* includes several bugs fixes across all feature areas, as well as the following enhancements:

@@ -171,9 +171,9 @@ Observe the following guidelines when performing server upgrades or updates in o
 > [!NOTE]  
 >  In many cases, after the rolling upgrade is completed, you will fail back to the original primary replica. 
 
-## Special steps for Change Data Capture
+## Special steps for change data capture or replication
 
-If any databases in the availability group are enabled for change data capture, incorporate the following steps to the rolling upgrade.
+Depending on the update being applied, additional steps may be required for availability group replica databases that are enabled for change data capture or replication. Refer to the release notes for the update to determine if the following steps are required:
 
 1. Upgrade each secondary replica.
 

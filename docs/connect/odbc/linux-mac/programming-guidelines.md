@@ -1,7 +1,7 @@
 ---
 title: "Programming Guidelines | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/01/2018"
+ms.date: "01/11/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""

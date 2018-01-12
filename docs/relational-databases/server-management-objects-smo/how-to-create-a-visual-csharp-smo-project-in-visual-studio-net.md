@@ -22,7 +22,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # How to Create a Visual C# SMO Project in Visual Studio .NET
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   This section describes how to build a simple SMO console application.  
   

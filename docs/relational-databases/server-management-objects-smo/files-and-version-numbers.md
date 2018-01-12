@@ -26,7 +26,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Files and Version Numbers
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   All required SQL Server Management Object (SMO) components are included in the Microsoft.SqlServer.SqlManagementObjects NuGet package. SMO is implemented in several managed assemblies. You can develop SMO applications on either a client or a server.  
 

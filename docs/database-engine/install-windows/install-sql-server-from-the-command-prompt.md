@@ -901,19 +901,19 @@ To control the failover behavior of cluster nodes during the upgrade process, ru
 ##  <a name="InstanceID"></a> Instance ID or InstanceID Configuration  
  The Instance ID or /InstanceID parameter is used for specifying where you can install the instance components and the registry path of the instance. The value of INSTANCEID is a string and should be unique. 
   
--   SQL Instance ID:MSSQL13.\<INSTANCEID>  
+-   SQL Instance ID: `MSSQL13.\<INSTANCEID>`  
   
--   AS Instance ID:MSAS13.\<INSTANCEID>  
+-   AS Instance ID: `MSAS13.\<INSTANCEID>`  
   
--   RS Instance ID:MSRS13.\<INSTANCEID>  
+-   RS Instance ID: `MSRS13.\<INSTANCEID>`  
   
 The instance-aware components are installed to the following locations:  
   
-`%Program Files%\Microsoft SQL Server\<SQLInstanceID\>`  
+`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`  
   
-`%Program Files%\Microsoft SQL Server\<ASInstanceID\>`  
+`%Program Files%\Microsoft SQL Server\<ASInstanceID>`  
   
-`%Program Files%\Microsoft SQL Server\<RSInstanceID\>`  
+`%Program Files%\Microsoft SQL Server\<RSInstanceID>`  
   
 > [!NOTE]
 > If INSTANCEID is not specified on the command line, then by default Setup substitute \<INSTANCEID> with the \<INSTANCENAME>. 

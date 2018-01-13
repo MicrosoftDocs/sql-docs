@@ -229,7 +229,7 @@ Use the following guidelines to develop installation commands that have correct 
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service. Supported values:<br /><br /> **Automatic**<br /><br /> **Disabled**<br /><br /> **Manual**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **Required**|Specifies the administrator credentials for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] temporary files. Default values:<br /><br /> For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server \\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`<br /><br /> For all other installations: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **Optional**|Specifies the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] temporary files. Default values:<br /><br /> For WOW mode on 64-bit: `%Program Files(x86)%\Microsoft SQL Server \<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`<br /><br /> For all other installations: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Temp`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **Optional**|Specifies whether the MSOLAP provider can run in-process.<br /><br /> Default value: 1=enabled|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMACCOUNT<br /><br /> **Required for SPI_AS_NewFarm**|Specifies a domain user account for running SharePoint Central Administration services and other essential services in a farm.<br /><br /> This parameter is used only for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that are installed through /ROLE = SPI_AS_NEWFARM.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **Required for SPI_AS_NewFarm**|Specifies a password for the farm account.|  
@@ -901,11 +901,11 @@ To control the failover behavior of cluster nodes during the upgrade process, ru
 ##  <a name="InstanceID"></a> Instance ID or InstanceID Configuration  
  The Instance ID or /InstanceID parameter is used for specifying where you can install the instance components and the registry path of the instance. The value of INSTANCEID is a string and should be unique. 
   
--   SQL Instance ID: `MSSQL13.\<INSTANCEID>`  
+-   SQL Instance ID: `MSSQLxx.<INSTANCEID>`  
   
--   AS Instance ID: `MSAS13.\<INSTANCEID>`  
+-   AS Instance ID: `MSASxx.<INSTANCEID>`  
   
--   RS Instance ID: `MSRS13.\<INSTANCEID>`  
+-   RS Instance ID: `MSRSxx.<INSTANCEID>`  
   
 The instance-aware components are installed to the following locations:  
   

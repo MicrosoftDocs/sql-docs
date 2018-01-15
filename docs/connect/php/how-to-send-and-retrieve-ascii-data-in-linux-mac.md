@@ -1,7 +1,7 @@
 ---
 title: "How to: Send and Retrieve ASCII Data in Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/31/2018"
+ms.date: "01/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -28,13 +28,13 @@ This article assumes the ASCII (non-UTF-8) locales have been generated or instal
 
 To send or retrieve ASCII character sets to the server:  
 
-1.  If the desired locale is not the default in your system environment, make sure you invoke `setlocale(LC_ALL, $locale)` before making the first connection. The PHP setlocale() function changes the locale only for the current script, and if invoked after making the connection, it will be ignored.
+1.  If the desired locale is not the default in your system environment, make sure you invoke `setlocale(LC_ALL, $locale)` before making the first connection. The PHP setlocale() function changes the locale only for the current script, and if invoked after making the first connection, it may be ignored.
  
 2.  When using the SQLSRV driver, you may specify `'CharacterSet' => SQLSRV_ENC_CHAR` as a connection option, but this step is optional because it is the default encoding.
 
-3.  When using the PDO_SQLSRV driver, after successfully connected, add this line `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  When using the PDO_SQLSRV driver, there are two ways. First, when making the connection, set `PDO::SQLSRV_ATTR_ENCODING` to `PDO::SQLSRV_ENCODING_SYSTEM` (for an example of setting a connection option, see [PDO::__construct](../../connect/php/pdo-construct)). Alternatively, after successfully connected, add this line `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-When you specify the encoding of the connection resource object, the driver assumes that the other connection option strings use that same encoding. The server name and query strings are also assumed to use the same character set.  
+When you specify the encoding of a connection resource (in SQLSRV) or connection object (PDO_SQLSRV), the driver assumes that the other connection option strings use that same encoding. The server name and query strings are also assumed to use the same character set.  
   
 The default encoding for PDO_SQLSRV driver is UTF-8 (PDO::SQLSRV_ENCODING_UTF8), unlike the SQLSRV driver. For more information about these constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
@@ -46,10 +46,8 @@ The examples assume that [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md
 ```  
 <?php  
   
-// SQLSRV Example: Connect to the server using SQL Server Authentication and 
-// specify the Test database as the database in use. 
+// SQLSRV Example
 //
-
 // Setting locale for the script is only necessary if Latin 1 is not the default 
 // in the environment
 $locale = strtoupper(PHP_OS) === 'LINUX' ? 'en_US.ISO-8859-1' : 'en_US.ISO8859-1';
@@ -118,10 +116,8 @@ sqlsrv_close($conn);
 ```
 <?php  
   
-// PDO_SQLSRV Example: Connect to the server using SQL Server Authentication and 
-// specify the Test database as the database in use. 
-//   
-
+// PDO_SQLSRV Example:
+//
 // Setting locale for the script is only necessary if Latin 1 is not the default 
 // in the environment
 $locale = strtoupper(PHP_OS) === 'LINUX' ? 'en_US.ISO-8859-1' : 'en_US.ISO8859-1';

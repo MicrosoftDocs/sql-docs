@@ -88,7 +88,7 @@ To configure transparent data encryption through PowerShell, you must be connect
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Gets the transparent data encryption state for a database |
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption-Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |Checks the encryption progress for a database |
 | [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |Adds a Key Vault key to a SQL Server instance |
-| [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |Gets a SQL server's Key Vault keys |
+| [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |Gets the Key Vault keys for a SQL server instance  |
 | [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |Sets the transparent data encryption protector for a SQL Server instance |
 | [Get-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/get-azurermsqlservertransparentdataencryptionprotector) |Gets the transparent data encryption protector |
 | [Remove-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/remove-azurermsqlserverkeyvaultkey) |Removes a Key Vault key from a SQL Server instance |
@@ -117,10 +117,10 @@ To configure transparent data encryption through the REST API, you must be conne
 |[Create Or Update Server Key](/rest/api/sql/serverkeys/createorupdate)|Adds a Key Vault key to a SQL Server instance|
 |[Delete Server Key](/rest/api/sql/serverkeys/delete)|Removes a Key Vault key from a SQL Server instance|
 |[Get Server Keys](/rest/api/sql/serverkeys/get)|Gets a specific Key Vault key from a SQL Server instance|
-|[List Server Keys By Server](/rest/api/sql/serverkeys/listbyserver)|Gets a SQL server's Key Vault keys|
+|[List Server Keys By Server](/rest/api/sql/serverkeys/listbyserver)|Gets the Key Vault keys for a SQL Server instance |
 |[Create Or Update Encryption Protector](/rest/api/sql/encryptionprotectors/createorupdate)|Sets the transparent data encryption protector for a SQL Server instance|
-|[Get Encryption Protector](/rest/api/sql/encryptionprotectors/get)|Gets the transparent data encryption Protector for a SQL Server instance|
-|[List Encryption Protectors By Server](/rest/api/sql/encryptionprotectors/listbyserver)|Gets a SQL Server instance's transparent data encryption protectors|
+|[Get Encryption Protector](/rest/api/sql/encryptionprotectors/get)|Gets the transparent data encryption protector for a SQL Server instance|
+|[List Encryption Protectors By Server](/rest/api/sql/encryptionprotectors/listbyserver)|Gets the transparent data encryption protectors for a SQL Server instance |
 |[Create Or Update Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/createorupdate)|Enables or disables transparent data encryption for a database|
 |[Get Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/get)|Gets the transparent data encryption configuration for a database|
 |[List Transparent Data Encryption Configuration Results](/rest/api/sql/transparentdataencryptionactivities/ListByConfiguration)|Gets the encryption result for a database|

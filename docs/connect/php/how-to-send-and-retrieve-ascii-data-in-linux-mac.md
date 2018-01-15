@@ -32,7 +32,7 @@ To send or retrieve ASCII character sets to the server:
  
 2.  When using the SQLSRV driver, you may specify `'CharacterSet' => SQLSRV_ENC_CHAR` as a connection option, but this step is optional because it is the default encoding.
 
-3.  When using the PDO_SQLSRV driver, there are two ways. First, when making the connection, set `PDO::SQLSRV_ATTR_ENCODING` to `PDO::SQLSRV_ENCODING_SYSTEM` (for an example of setting a connection option, see [PDO::__construct](../../connect/php/pdo-construct)). Alternatively, after successfully connected, add this line `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  When using the PDO_SQLSRV driver, there are two ways. First, when making the connection, set `PDO::SQLSRV_ATTR_ENCODING` to `PDO::SQLSRV_ENCODING_SYSTEM` (for an example of setting a connection option, see [PDO::__construct](../../connect/php/pdo-construct.md)). Alternatively, after successfully connected, add this line `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
 When you specify the encoding of a connection resource (in SQLSRV) or connection object (PDO_SQLSRV), the driver assumes that the other connection option strings use that same encoding. The server name and query strings are also assumed to use the same character set.  
   

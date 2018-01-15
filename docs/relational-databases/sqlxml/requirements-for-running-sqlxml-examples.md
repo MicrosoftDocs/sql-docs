@@ -2,9 +2,12 @@
 title: "Requirements for Running SQLXML Examples | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Requirements for Running SQLXML Examples
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The [SQLXML 4.0 Programming](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) section provides numerous examples. This topic lists requirements for creating working samples from these examples.  
   
  To create working samples using the SQLXML 4.0 examples, you need to have the following installed.  

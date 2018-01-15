@@ -2,9 +2,12 @@
 title: "Create a User-Defined Data Type Alias | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "databases"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a User-Defined Data Type Alias
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create a new user-defined data type alias in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
@@ -61,7 +66,7 @@ manager: "jhubbard"
      Select the base data type from the list box. The list box displays all data types except for the **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** , and **xml** data types. The data type of an existing user-defined data type is not editable.  
   
      **Default**  
-     Optionally select a rule or a default to bind to the user-defined data type alias.  
+     Optionally select a default to bind to the user-defined data type alias.  
   
      **Length/Precision**  
      Displays the length or precision of the data type as applicable. **Length** applies to character-based user-defined data types; **Precision** applies only to numeric-based user-defined data types. The label changes depending on the data type selected earlier. This box is not editable if the length or precision of the selected data type is fixed.  
@@ -116,7 +121,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates a data type alias based on the system-supplied `varchar` data type. The `ssn` data type alias is used for columns holding 11-digit social security numbers (999-99-9999). The column cannot be NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

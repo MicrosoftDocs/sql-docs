@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 07/17/2017
+ms.date: 12/02/2017
 ms.author: genemi
 ms.workload: t-sql
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
+- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
 - *Subject area:* &nbsp; **T-SQL**.
 
 
@@ -39,10 +39,23 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [MATCH (Transact-SQL)](queries/match-sql-graph.md)
+***There are no new articles to list, this time.***
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -51,70 +64,146 @@ The following links jump to new articles which have been added recently.
 
 <a name="compactupdatedlist"/>
 
-## Compact List of Articles Updated Recently
+### Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Backslash (Line Continuation) (Transact-SQL)](#TitleNum_1)
+2. [SELECT - ORDER BY Clause (Transact-SQL)](#TitleNum_2)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
 &nbsp;
 
-***No articles in this area were updated recently, this time.***
+&nbsp;
 
+<a name="TitleNum_1"/>
 
+### 1. &nbsp; [Backslash (Line Continuation) (Transact-SQL)](language-elements/sql-server-utilities-statements-backslash.md)
 
-<a name="similars2"/>
+*Updated: 2017-11-15* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+
+<!-- Source markdown line 83.  ms.author= "rickbyh".  -->
 
 &nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 9484441710ac9a083a554ffadb59a3b7e92484b3 19b9c37c65ba462a32067c80e81a920eeb339851  (PR=3966  ,  Filename=sql-server-utilities-statements-backslash.md  ,  Dirpath=docs\t-sql\language-elements\  ,  MergeCommitSha40=b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1) -->
+
+
+
+**B. Splitting a binary string**
+
+
+The following example uses a backslash and a carriage return to split a binary string into two lines.
+
+```
+SELECT 0xabc\
+def AS [ColumnResult];
+
+```
+
+ ..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
+
+```
+ ColumnResult
+ ------------
+ 0xABCDEF
+```
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### 2. &nbsp; [SELECT - ORDER BY Clause (Transact-SQL)](queries/select-order-by-clause-transact-sql.md)
+
+*Updated: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
+
+<!-- Source markdown line 481.  ms.author= "rickbyh".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 b8d7bc7bab46e914eb2facf6c654a5944383077e de7e4f3f7826011e273120a2b6b08af4d263a510  (PR=3663  ,  Filename=select-order-by-clause-transact-sql.md  ,  Dirpath=docs\t-sql\queries\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
+
+
+
+**<a name="Union"></a> Using ORDER BY with UNION, EXCEPT, and INTERSECT**
+
+ When a query uses the UNION, EXCEPT, or INTERSECT operators, the ORDER BY clause must be specified at the end of the statement and the results of the combined queries are sorted. The following example returns all products that are red or yellow and sorts this combined list by the column `ListPrice`.
+
+```sql
+USE AdventureWorks2012;
+GO
+SELECT Name, Color, ListPrice
+FROM Production.Product
+WHERE Color = 'Red'
+-- ORDER BY cannot be specified here.
+UNION ALL
+SELECT Name, Color, ListPrice
+FROM Production.Product
+WHERE Color = 'Yellow'
+ORDER BY ListPrice ASC;
+
+```
+
+**Examples: ..!NCLUDE-NotShown--ssSDWfull--../../includes/sssdwfull-md.md)] and ..!NCLUDE-NotShown--ssPDW--../../includes/sspdw-md.md)]**
+
+
+
+
+
+
+
 
 ## Similar Articles
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+    2017-12-02  23:00pm
+-->
 
-<!--  20170717-1101  -->
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### Subject areas which have no new or recently updated articles
 
+- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

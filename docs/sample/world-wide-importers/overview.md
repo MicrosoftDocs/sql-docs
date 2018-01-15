@@ -1,12 +1,15 @@
 ---
 title: "Overview | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""
 ms.date: "01/30/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
@@ -15,8 +18,10 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "On Demand"
 ---
 # Wide World Importers Overview
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 This is an overview of the fictitious company Wide World Importers and the workflows that are addressed in the WideWorldImporters sample databases for SQL Server and Azure SQL Database.  
 
 Wide World Importers (WWI) is a wholesale novelty goods importer and distributor operating from the San Francisco bay area.

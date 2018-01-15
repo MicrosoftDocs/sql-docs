@@ -2,13 +2,16 @@
 title: "Configure Service Accounts (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,9 +23,11 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 caps.latest.revision: 54
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Configure Service Accounts (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Product-wide account provisioning is documented in [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), a topic that provides comprehensive service account information for all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, including [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Refer to it to learn about valid account types, Windows privileges assigned by setup, file system permissions, registry permissions, and more.  
   
  This topic provides supplemental information for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], including additional permissions necessary for tabular and clustered installations. It also covers permissions needed to support server operations. For example, you can configure processing and query operations to execute under the service account ─ in which case you will need to grant additional permissions to get this to work.  

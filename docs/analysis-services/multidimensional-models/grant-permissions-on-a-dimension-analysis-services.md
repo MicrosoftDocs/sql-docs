@@ -2,13 +2,16 @@
 title: "Grant permissions on a dimension (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -22,9 +25,11 @@ ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Grant permissions on a dimension (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Dimension security is used to set permissions on a dimension object, not its data. Typically, allowing or denying access to processing operations is the main objective when setting permissions on a dimension.  
   
  But perhaps your objective is not to control processing operations, but rather data access to a dimension, or the attributes and hierarchies it contains. For example, a company with regional sales divisions might want to make sales performance information off limits to those outside the division. To allow or deny access to portions of dimension data for different constituents, you can set permissions on dimension attributes and dimension members. Notice that you cannot deny access to an individual dimension object itself, only to its data. If your immediate goal is to allow or deny access to members in a dimension, including access rights to individual attribute hierarchies, see [Grant custom access to dimension data &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) for more information.  

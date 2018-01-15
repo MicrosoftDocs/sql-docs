@@ -3,8 +3,11 @@ title: "Description Property Dialog Box (Visual Database Tools) | Microsoft Docs
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Description Property Dialog Box (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The **Description Property** dialog box provides an editable area where you can write a detailed description of database objects such as tables, columns, and foreign key constraints. You can access this dialog box from the Properties window for objects such as tables and views when they are selected in a designer, from dialog boxes for objects such as indexes and check constraints, and from the **Column Properties** tab in Table Designer for table columns. The description is stored as an extended property for the object.  
   
 ## See Also  

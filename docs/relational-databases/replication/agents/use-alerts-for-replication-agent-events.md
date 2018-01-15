@@ -2,9 +2,12 @@
 title: "Use Alerts for Replication Agent Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -25,8 +28,10 @@ caps.latest.revision: 39
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Use Alerts for Replication Agent Events
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent provide a way to monitor events, such as replication agent events, using alerts. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitors the Windows application log for events that are associated with alerts. If such an event occurs, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responds automatically, by executing a task that you have defined and/or sending e-mail or a pager message to a specified operator. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes a set of predefined alerts for replication agents that you can configure to execute a task and/or notify an operator. For more information about defining a task to execute, see the section "Automating a Response to an Alert" in this topic.  
   
  The following alerts are installed when a computer is configured as a Distributor:  

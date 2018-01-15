@@ -3,8 +3,11 @@ title: "Upgrading a 3.5 Driver to a 3.8 Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Upgrading a 3.5 Driver to a 3.8 Driver
 This topic provides guidelines and considerations for upgrading an ODBC 3.5 driver to an ODBC 3.8 driver.  

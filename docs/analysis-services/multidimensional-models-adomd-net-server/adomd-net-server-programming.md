@@ -2,12 +2,15 @@
 title: "ADOMD.NET Server Programming | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -19,9 +22,11 @@ ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ADOMD.NET Server Programming
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The ADOMD.NET server components of ADOMD.NET reside within the **Microsoft.AnalysisServices.AdomdServer** namespace (in msmgdsrv.dll). You use these server components to create custom Multidimensional Expressions (MDX) functions and stored procedures that are run on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server objects provide the capabilities for querying cubes and mining models, and for evaluating expressions in a given context. The benefits for creating custom functions and stored procedures include fast execution, centralized deployment, and improved maintainability.  
   
  The topics in the following table will help you develop ADOMD.NET server applications.  

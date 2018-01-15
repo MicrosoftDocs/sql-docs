@@ -2,9 +2,12 @@
 title: "Non-XML Format Files (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-bulk-import-export"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 63
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Non-XML Format Files (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], two types of format files are supported for bulk exporting and importing: *non-XML format files* and *XML format files*.  
   
  **In this Topic:**  
@@ -40,7 +45,7 @@ manager: "jhubbard"
   
 -   You can create a format file for a particular data type such as character data or native data.  
   
-     You can create a non-XML format file that contains interactively specified attributes for each data field. For more information, see [Specify Data Formats for Compatibility when Using bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+-   You can create a non-XML format file that contains interactively specified attributes for each data field. For more information, see [Specify Data Formats for Compatibility when Using bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
 >  XML format files offer several advantages over non-XML format files. For more information, see [XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
@@ -50,7 +55,7 @@ manager: "jhubbard"
   
  The following illustration illustrates the format-file fields for a sample non-XML format file.  
   
- ![Identifies the fields of a non-XML format file](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "Identifies the fields of a non-XML format file")  
+ ![Identifies the fields of a non-XML format file](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif)
   
  The **Version** and **Number of columns** fields occur one time only. Their meanings are describes in the following table.  
   

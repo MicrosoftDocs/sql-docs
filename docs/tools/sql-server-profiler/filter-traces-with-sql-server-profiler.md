@@ -2,9 +2,12 @@
 title: "Filter Traces with SQL Server Profiler | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,8 +24,10 @@ caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Filter Traces with SQL Server Profiler
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can define filters on data columns for [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace events so that information is captured only for those events that you are interested in. Trace filters reduce the impact of tracing on system performance because fewer events are captured in the trace. Filtering also makes trace output easier to read because there are fewer events to search through.  
   
  **To filter traces with SQL Server Profiler**  

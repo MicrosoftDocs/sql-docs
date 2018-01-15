@@ -2,9 +2,12 @@
 title: "Restoring From Backups Stored in Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Restoring From Backups Stored in Microsoft Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic outlines the considerations when restoring a database using a backup stored in the Windows Azure Blob storage service. This applies to backups created either by using SQL Server Backup to URL backup or by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  We recommend reviewing this topic if you have backups stored in the Windows Azure Blob storage service that you plan to restore, and then review the topics that describe the steps on how to restore a database which is the same for both on-premises and azure backups.  

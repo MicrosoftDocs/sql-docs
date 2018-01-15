@@ -1,12 +1,15 @@
 ---
 title: "Filter and RecordCount Properties Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -19,6 +22,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Filter and RecordCount Properties Example (VC++)
 This example uses the [Filter](../../../ado/reference/ado-api/filter-property.md) property to open a new [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) based on a specified condition applied to an existing **Recordset**. It uses the [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) property to show the number of records in the two **Recordsets**. The FilterField function is required for this procedure to run.  

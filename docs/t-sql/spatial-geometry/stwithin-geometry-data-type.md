@@ -3,8 +3,11 @@ title: "STWithin (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,11 +24,12 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # STWithin (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Returns 1 if a **geometry** instance is completely within another **geometry** instance; otherwise, returns 0.
+Returns 1 if a **geometry** instance is completely within another **geometry** instance; otherwise, returns 0. The `STWithin` command is case-sensitive.
   
 ## Syntax  
   
@@ -44,7 +48,7 @@ Returns 1 if a **geometry** instance is completely within another **geometry** i
  CLR return type: **SqlBoolean**  
   
 ## Remarks  
- This method always returns null if the spatial reference IDs (SRIDs) of the **geometry** instances do not match.  
+ This method always returns null if the spatial reference IDs (SRIDs) of the **geometry** instances do not match.
   
 ## Examples  
  The following example uses `STWithin()` to test two `geometry` instances to see if the first instance is completely within the second instance.  

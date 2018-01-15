@@ -3,8 +3,11 @@ title: "System Requirements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 31
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # System Requirements
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -33,7 +37,9 @@ The Linux and macOS drivers are available only for the 64-bit versions of the fo
 - Debian Linux 8
 - RedHat Enterprise Linux 6
 - RedHat Enterprise Linux 7
+- SuSE Linux Enterprise Server 11
 - SuSE Linux Enterprise Server 12
+- Ubuntu Linux 14.04
 - Ubuntu Linux 15.10
 - Ubuntu Linux 16.04
 - Ubuntu Linux 16.10
@@ -74,4 +80,3 @@ The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  
 
 [Release Notes](../../../connect/odbc/linux-mac/release-notes.md)  
-

@@ -1,12 +1,15 @@
 ---
 title: "GetObjectOwner and SetObjectOwner Methods Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -19,6 +22,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # GetObjectOwner and SetObjectOwner Methods Example (VB)
 This example demonstrates the [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) and [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) methods. This code assumes the existence of the group Accounting (see the [Groups and Users Append, ChangePassword Methods Example (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) to see how to add this group to the system). The owner of the Categories table is set to Accounting.  

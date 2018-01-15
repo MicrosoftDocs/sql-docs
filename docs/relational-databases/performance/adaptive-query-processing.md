@@ -1,11 +1,14 @@
 ---
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
-ms.custom: 
-ms.date: "08/02/2017"
-ms.prod: "sql-server-2017"
+ms.custom: ""
+ms.date: "11/13/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "performance"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,11 +17,10 @@ ms.assetid:
 author: "joesackmsft"
 ms.author: "josack;monicar"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
-
 # Adaptive query processing in SQL databases
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article introduces these adaptive query processing features that you can use to improve query performance in SQL Server and Azure SQL Database:
 - Batch mode memory grant feedback.
@@ -64,7 +66,7 @@ With memory grant feedback enabled, for the second execution, duration is *1 se
 Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as “parameter-sensitive.” For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements.  The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* XEvent.
 
 ### Memory grant feedback caching
-Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the query Ssore.
+Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the Query Store.
 Feedback is not persisted if the plan is evicted from cache. Feedback will also be lost if there is a failover. A statement using OPTION(RECOMPILE) creates a new plan and does not cache it. Since it is not cached, no memory grant feedback is produced and it is not stored for that compilation and execution.  However, if an equivalent statement (that is, with the same query hash) that did *not* use OPTION(RECOMPILE) was cached and then re-executed, the consecutive statement can benefit from memory grant feedback.
 
 ### Tracking memory grant feedback activity
@@ -176,7 +178,7 @@ Contrast the prior plan with the actual plan generated with interleaved executio
 1. Also notice that we no longer have spill-warnings, as we’re granting more memory based on the true row count flowing from the MSTVF table scan.
 
 ### Interleaved execution eligible statements
-MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, the MSTVFs are not be eligible for interleaved execution if they are used on the inside of a CROSS APPLY.
+MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, MSTVFs are not eligible for interleaved execution if they do not use runtime constants.
 
 ### Interleaved execution benefits
 In general, the higher the skew between the estimated vs. actual number of rows, coupled with the number of downstream plan operations, the greater the performance impact.
@@ -219,8 +221,9 @@ Plans using interleaved execution can be forced. The plan is the version that ha
 
 ## See Also
 
-[Performance Center for SQL Server Database Engine and Azure SQL Database](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+[Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

@@ -2,9 +2,12 @@
 title: "Registered Servers F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-registration"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Registered Servers F1 Help
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   This section contains the F1 Help for the Registered Servers component in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. It describes the various options.
   
  To learn about Registered Servers and get links to what to do with them, go to the [Register Servers](../../tools/sql-server-management-studio/register-servers.md) topic. 

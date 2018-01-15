@@ -3,8 +3,11 @@ title: "Print Query Results (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Print Query Results (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 To print the results of your query, you can copy the contents of the [Results pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) to another Windows program, such as a word processing program, then format and print it there.  
   
 The Query and View Designer puts query results onto the Clipboard using tabs as delimiters between columns and carriage return and linefeed characters as delimiters between rows.  

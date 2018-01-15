@@ -2,9 +2,12 @@
 title: "High Availability Support for In-Memory OLTP databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # High Availability Support for In-Memory OLTP databases
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Databases containing memory-optimized tables, with or without native compiled stored procedures, are fully supported with Always On Availability Groups.  There is no difference in the configuration and support for databases which contain [!INCLUDE[hek_2](../../includes/hek-2-md.md)] objects as compared to those without.  
   
  When an in-memory OLTP database is deployed in an Always On Availability Group configuration, changes to memory-optimized tables on the primary replica are applied in memory to the tables on the secondary replicas, when REDO is applied. This means that failover to a secondary replica can be very quick, since the data is already in memory. In addition,  the tables are available for queries on secondary replicas that have been configured for read access.  

@@ -1,11 +1,13 @@
 ---
 title: "Walkthrough: Publish an SSIS Package as a SQL View | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,6 +19,7 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
   This walkthrough provides detailed steps to publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -26,7 +29,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or later with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-2.  [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
+2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ## Step 1: Build and Deploy SSIS Project to the SSIS Catalog  
  In this step, you create an SSIS package that extracts data from an SSIS supported data source - in this example, we use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database - and outputs the data using a Data Streaming Destination component. Then you build and deploy the SSIS project to the SSIS catalog.  
@@ -189,7 +192,7 @@ manager: "jhubbard"
 ### Create a Linked Server using the OLE DB Provider for SSIS  
  Create a linked server using the OLE DB Provider for SSIS (SSISOLEDB) by running the following query in SQL Server Management Studio.  
   
-```  
+```sql 
   
 USE [master]  
 GO  
@@ -210,7 +213,7 @@ GO
   
 1.  Before creating the view, type and run the following query in the new query window. OPENQUERY is a rowset function supported by SQL Server. It executes the specified pass-through query on the specified linked server using the OLE DB Provider associated with the linked server. OPENQUERY can be referenced in the FROM clause of a query as if it were a table name. See [OPENQUERY documentation on MSDN Library](http://msdn.microsoft.com/library/ms188427.aspx) for more information.  
   
-    ```  
+    ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
     GO  
     ```  
@@ -220,7 +223,7 @@ GO
   
 2.  Create a view in the database **TestDB** for the purpose of this walkthrough) by running the following query.  
   
-    ```  
+    ```sql
   
     USE [TestDB]   
     GO   
@@ -233,14 +236,14 @@ GO
   
 3.  Test the view by running the following query.  
   
-    ```  
+    ```sql
     SELECT * FROM SSISPackageView  
     ```  
   
 ### OPENQUERY Function  
  The syntax for OPENQUERY function is:  
   
-```  
+```sql 
 SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
 ```  
   

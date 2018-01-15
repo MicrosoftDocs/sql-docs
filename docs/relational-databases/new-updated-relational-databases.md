@@ -14,7 +14,7 @@ ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 07/17/2017
+ms.date: 12/02/2017
 ms.author: genemi
 ---
 # New and Recently Updated: Relational Databases docs
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
+- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
 - *Subject area:* &nbsp; **Relational Databases**.
 
 
@@ -39,17 +39,24 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [SQL Server In-Memory OLTP Internals for SQL Server 2016](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
-2. [Adaptive query processing in SQL databases](performance/adaptive-query-processing.md)
-3. [Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.pdw_replicated_table_cache_state (Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
-5. [sys.trusted_assemblies (Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
-6. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
-7. [sys.sp_add_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
-8. [sys.sp_drop_trusted_assembly (Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
+1. [Use the SSMS XEvent Profiler](extended-events/use-the-ssms-xe-profiler.md)
+2. [Import Flat File to SQL Wizard](import-export/import-flat-file-wizard.md)
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -58,21 +65,15 @@ The following links jump to new articles which have been added recently.
 
 <a name="compactupdatedlist"/>
 
-## Compact List of Articles Updated Recently
+### Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [tempdb Database](#TitleNum_1)
+2. [Memory Management Architecture Guide](#TitleNum_2)
+3. [Statistics](#TitleNum_3)
+4. [sp_server_diagnostics (Transact-SQL)](#TitleNum_4)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -82,40 +83,39 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Altering Memory-Optimized Tables](in-memory-oltp/altering-memory-optimized-tables.md)
+### 1. &nbsp; [tempdb Database](databases/tempdb-database.md)
 
-*Updated: 2017-06-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2017-11-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 82.  ms.author= "genemi".  -->
+<!-- Source markdown line 121.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 8359700b5db24838f1bb273526794c2865bbbe11 41d77cf0bbcf53a1b64d6524a24e5736c5a073da  (PR=2171  ,  Filename=altering-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7) -->
+<!-- git diff --ignore-all-space --unified=0 5c8bb5f9c40625aaf955295e5b5d03e4257e6c6b 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d  (PR=4039  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=ef1fa818beea435f58986af3379853dc28f5efd8) -->
 
 
 
-**Logging of ALTER TABLE on memory-optimized tables**
+**Optimizing tempdb performance**
 
-On a memory-optimized table, most ALTER TABLE scenarios now run in parallel and result in an optimization of writes to the transaction log. The optimization is achieved by only logging the metadata changes to the transaction log. However, the following ALTER TABLE operations run single-threaded and are not log-optimized.
+ The size and physical placement of the tempdb database can affect the performance of a system. For example, if the size that is defined for tempdb is too small, part of the system-processing load may be taken up with autogrowing tempdb to the size required to support the workload every time you restart the instance of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)].
 
-The single-threaded operation in this case would log the entire content of the altered table to the transaction log. A list of single-threaded operations follows:
+ If possible, use [database instant file initialization--../../relational-databases/databases/database-instant-file-initialization.md) to improve the performance of data file grow operations.
 
-- Alter or add a column to use a large object (LOB) type: nvarchar(max), varchar(max), or varbinary(max).
+ Preallocate space for all tempdb files by setting the file size to a value large enough to accommodate the typical workload in the environment. This prevents tempdb from expanding too frequently, which can affect performance. The tempdb database should be set to autogrow, but this should be used to increase disk space for unplanned exceptions.
 
-- Add or drop a COLUMNSTORE index.
+ Data files should be of equal size within each [filegroup--../../relational-databases/databases/database-files-and-filegroups.md#filegroups), as ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] uses a proportional-fill algorithm that favors allocations in files with more free space. Dividing tempdb into multiple data files of equal size provides a high degree of parallel efficiency in operations that use tempdb.
 
-- Almost anything that affects an [off-row column--../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).
+ Set the file growth increment to a reasonable size to avoid the tempdb database files from growing by too small a value. If the file growth is too small, compared to the amount of data that is being written to tempdb, tempdb may have to constantly expand. This will affect performance.
 
-    - Cause an on-row column to move off-row.
-
-    - Cause an off-row column to move on-row.
-
-    - Create a new off-row column.
-
-    - *Exception:* Lengthening an already off-row column is logged in the optimized way. 
-  
-
+ To check current tempdb size and growth parameters, use the following query:
+```sql
+ SELECT name AS FileName,
+    size*1.0/128 AS FileSizeinMB,
+    CASE max_size
+        WHEN 0 THEN 'Autogrowth is off.'
+        WHEN -1 THEN 'Autogrowth is on.'
+```
 
 
 
@@ -127,38 +127,27 @@ The single-threaded operation in this case would log the entire content of the a
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp; [Table and Row Size in Memory-Optimized Tables](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
+### 2. &nbsp; [Memory Management Architecture Guide](memory-management-architecture-guide.md)
 
-*Updated: 2017-06-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
+*Updated: 2017-11-28* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
 
-<!-- Source markdown line 114.  ms.author= "genemi".  -->
+<!-- Source markdown line 75.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 27ce0fa2e7bb464f9c3d6e32dd195de3b79abfcd 0a3cacd86024e2b734704ffd37e55ca0b17a0c94  (PR=2163  ,  Filename=table-and-row-size-in-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=fe6de2b16b9792a5399b1c014af72a2a5ee52377) -->
+<!-- git diff --ignore-all-space --unified=0 dd47431ca47eab16af40e41adaeeaf3fc5fb7461 445f013af3bdad65dd3eaf837db7f744b43e8f97  (PR=4113  ,  Filename=memory-management-architecture-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=28cccac53767db70763e5e705b8cc59a83c77317) -->
 
 
 
- 
-  
- The calculation of [row body size] is discussed in the following table.  
-  
- There are two different computations for row body size: computed size and the actual size:  
-  
--   The computed size, denoted with [computed row body size], is used to determine if the row size limitation of 8,060 bytes is exceeded.  
-  
--   The actual size, denoted with [actual row body size], is the actual storage size of the row body in memory and in the checkpoint files.  
-  
- Both [computed row body size] and [actual row body size] are calculated similarly. The only difference is the calculation of the size of (n)varchar(i) and varbinary(i) columns, as reflected at the bottom of the following table. The computed row body size uses the declared size *i* as the size of the column, while the actual row body size uses the actual size of the data.  
-  
- The following table describes the calculation of the row body size, given as [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns].  
-  
-|Section|Size|Comments|  
-|-------------|----------|--------------|  
-|Shallow type columns|SUM([size of shallow types]). Size in bytes of the individual types is as follows:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (precision <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(precision>18): 16<br /><br /> **Uniqueidentifier**: 16||  
-|Shallow column padding|Possible values are:<br /><br /> 1 if there are deep type columns and the total data size of the shallow columns is as odd number.<br /><br /> 0 otherwise|Deep types are the types (var)binary and (n)(var)char.|  
+In earlier versions of SQL Server (..!NCLUDE-NotShown--ssVersion2005--../includes/ssversion2005-md.md)], ..!NCLUDE-NotShown--ssKatmai--../includes/ssKatmai-md.md)] and ..!NCLUDE-NotShown--ssKilimanjaro--../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
+-  **Single-page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the ..!NCLUDE-NotShown--ssNoVersion--../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. THe buffer pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
+-  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8-KB.
+-  **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
+-  Memory allocations for **[thread stacks--../relational-databases/memory-management-architecture-guide.md#stacksizes)** in the ..!NCLUDE-NotShown--ssNoVersion--../includes/ssnoversion-md.md)] process.
+-  **Direct Windows allocations (DWA)**, for memory allocation requests made directly to Windows. These include Windows heap usage and direct virtual allocations made by modules that are loaded into the ..!NCLUDE-NotShown--ssNoVersion--../includes/ssnoversion-md.md)] process. Examples of such memory allocation requests include allocations from extended stored procedure DLLs, objects that are created by using Automation procedures (sp_OA calls), and allocations from linked server providers.
 
+Starting with ..!NCLUDE-NotShown--ssSQL11--../includes/sssql11-md.md)],  Single-lage allocations, Multi-Page allocations and CLR allocations are all consolidated into a **"Any size" Page Allocator**, and it's included in memory limits that are controlled by *max server memory (MB)* and *min server memory (MB)* configuration options. This change provided a more accurate sizing ability for all memory requirements that go through the ..!NCLUDE-NotShown--ssNoVersion--../includes/ssnoversion-md.md)] memory manager.
 
 
 
@@ -170,32 +159,28 @@ The single-threaded operation in this case would log the entire content of the a
 
 <a name="TitleNum_3"/>
 
-### 3. &nbsp; [Post-migration Validation and Optimization Guide](post-migration-validation-and-optimization-guide.md)
+### 3. &nbsp; [Statistics](statistics/statistics.md)
 
-*Updated: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
+*Updated: 2017-11-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
 
-<!-- Source markdown line 27.  ms.author= "harinid".  -->
+<!-- Source markdown line 48.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 faa2e3dd8be3aeb475bf8c7f71617ebf17969892 f2760dfecda10baeb121929b72a4d8164e81185b  (PR=2126  ,  Filename=post-migration-validation-and-optimization-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=dcbeda6b8372b358b6497f78d6139cad91c8097c) -->
+<!-- git diff --ignore-all-space --unified=0 1dbe3bd6fdfcd27cf4a597cac5a4a09821b51ba7 971cfccf75fbc8842a0ef020a2bc93992c5f4ad9  (PR=4087  ,  Filename=statistics.md  ,  Dirpath=docs\relational-databases\statistics\  ,  MergeCommitSha40=9fbe5403e902eb996bab0b1285cdade281c1cb16) -->
 
 
 
-Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] Platform and how to resolve them. These include scenarios that are specific to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] migration (older versions to newer versions), as well as foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] migration.
+> [!NOTE]
+> Histograms in ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] are only built for a single columnΓÇöthe first column in the set of key columns of the statistics object.
 
-**<a name="CEUpgrade"></a> Query regressions due to change in CE version**
+To create the histogram, the query optimizer sorts the column values, computes the number of values that match each distinct column value and then aggregates the column values into a maximum of 200 contiguous histogram steps. Each histogram step includes a range of column values followed by an upper bound column value. The range includes all possible column values between boundary values, excluding the boundary values themselves. The lowest of the sorted column values is the upper boundary value for the first histogram step.
 
+In more detail, ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] creates the **histogram** from the sorted set of column values in three steps:
 
-**Applies to:** [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] migration.
-
-When migrating from an older versions of [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14--../includes/sssql14-md.md)] or newer, and upgrading the [database compatibility level--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest one, a workload may be exposed to the risk of performance regression.
-
-This is because starting with [!INCLUDE[ssSQL14--../includes/sssql14-md.md)], all Query Optimizer changes are tied to the latest [database compatibility level--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. 
-
-For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], see [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx).
-
+- **Histogram initialization**: In the first step, a sequence of values starting at the beginning of the sorted set is processed, and up to 200 values of *range_high_key*, *equal_rows*, *range_rows*, and *distinct_range_rows* are collected (*range_rows* and *distinct_range_rows* are always zero during this step). The first step ends either when all input has been exhausted, or when 200 values have been found.
+- **Scan with bucket merge**: Each additional value from the leading column of the statistics key is processed in the second step, in sorted order; each successive value is either added to the last range or a new range at the end is created (this is possible because the input values are sorted). If a new range is created, then one pair of existing, neighboring ranges is collapsed into a single range. This pair of ranges is selected in order to minimize information loss. This method uses a *maximum difference* algorithm to minimize the number of steps in the histogram while maximizing the difference between the boundary values. The number of steps after collapsing ranges stays at 200 throughout this step.
 
 
 
@@ -207,86 +192,102 @@ For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14]
 
 <a name="TitleNum_4"/>
 
-### 4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
+### 4. &nbsp; [sp_server_diagnostics (Transact-SQL)](system-stored-procedures/sp-server-diagnostics-transact-sql.md)
 
-*Updated: 2017-06-05* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
+*Updated: 2017-11-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
 
-<!-- Source markdown line 58.  ms.author= "rickbyh".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 1b77e34309ba7033578b3c82ed83c8c2fbc93e24 ce4ade9ab906c35cb87068a1fb91c4e1d7549aac  (PR=1940  ,  Filename=sys-query-store-plan-transact-sql.md  ,  Dirpath=docs\relational-databases\system-catalog-views\  ,  MergeCommitSha40=1d363db8e8bd0e1460cdea3c3a7add68e48714c9) -->
-
-
-
-**Plan forcing limitations**
-
-Query Store has a mechanism to enforce Query Optimizer to use certain execution plan. 
-However, there are some limitations that can prevent a plan to be enforced. 
-
-First, if the plan contains following constructions:
-* Insert bulk statement.
-* Insert bulk statement.
-* Reference to an external table
-* Distributed query or full-text operations
-* Use of Global queries 
-* Cursors
-* Invalid star join specification 
-
-Second, when objects that plan relies on, are no longer available:
-* Database (if Database, where plan originated, does not exist anymore)
-* Index (no longer there or disabled)
-
-Finally, problems with the plan itself:
-* Not legal for query
-* Query Optimizer exceeded number of allowed operations
-* Incorrectly formed plan XML
-
-
-
-
-
-<a name="similars2"/>
+<!-- Source markdown line 157.  ms.author= "edmaca".  -->
 
 &nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d0d97efbb0b16638d0120af9ac5e66ec3bcfa391 b98735ec26a091f8c8c58ca1790243be7942e038  (PR=4052  ,  Filename=sp-server-diagnostics-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=45e4efb7aa828578fe9eb7743a1a3526da719555) -->
+
+
+
+The example query below reads the summary output from the table:
+```sql
+SELECT create_time,
+       component_name,
+       state_desc
+FROM SpServerDiagnosticsResult;
+```
+
+The example query below reads some of the detailed output from the each component in the table:
+```sql
+-- system
+select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
+   data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',
+   data.value('(/system/@nonYieldingTasksReported)[1]','bigint') as 'NonYielding_Tasks',
+   data.value('(/system/@pageFaults)[1]','bigint') as 'Page_Faults',
+   data.value('(/system/@latchWarnings)[1]','bigint') as 'Latch_Warnings',
+   data.value('(/system/@BadPagesDetected)[1]','bigint') as 'BadPages_Detected',
+   data.value('(/system/@BadPagesFixed)[1]','bigint') as 'BadPages_Fixed'
+from SpServerDiagnosticsResult
+where component_name like 'system'
+go
+
+-- Resource Monitor
+select data.value('(./Record/ResourceMonitor/Notification)[1]', 'VARCHAR(max)') AS [Notification],
+	data.value('(/resource/memoryReport/entry[@description=''Working Set'']/@value)[1]', 'bigint')/1024 AS [SQL_Mem_in_use_MB],
+	data.value('(/resource/memoryReport/entry[@description=''Available Paging File'']/@value)[1]', 'bigint')/1024 AS [Avail_Pagefile_MB],
+	data.value('(/resource/memoryReport/entry[@description=''Available Physical Memory'']/@value)[1]', 'bigint')/1024 AS [Avail_Physical_Mem_MB],
+	data.value('(/resource/memoryReport/entry[@description=''Available Virtual Memory'']/@value)[1]', 'bigint')/1024 AS [Avail_VAS_MB],
+	data.value('(/resource/@lastNotification)[1]','varchar(100)') as 'LastNotification',
+	data.value('(/resource/@outOfMemoryExceptions)[1]','bigint') as 'OOM_Exceptions'
+from SpServerDiagnosticsResult
+where component_name like 'resource'
+go
+
+-- Nonpreemptive waits
+```
+
+
+
+
+
+
 
 ## Similar Articles
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+    2017-12-02  23:00pm
+-->
 
-<!--  20170717-1101  -->
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### Subject areas which have no new or recently updated articles
 
+- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

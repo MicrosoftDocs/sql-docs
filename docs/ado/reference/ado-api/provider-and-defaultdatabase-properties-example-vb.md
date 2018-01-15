@@ -1,12 +1,15 @@
 ---
 title: "Provider and DefaultDatabase Properties Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -19,6 +22,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Provider and DefaultDatabase Properties Example (VB)
 This example demonstrates the [Provider](../../../ado/reference/ado-api/provider-property-ado.md) property by opening three [Connection](../../../ado/reference/ado-api/connection-object-ado.md) objects using different providers. It also uses the [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) property to set the default database for the Microsoft ODBC Provider.  

@@ -1,10 +1,13 @@
 ---
 title: "nchar and nvarchar (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/22/2017"
+ms.date: "7/22/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,12 +19,13 @@ helpviewer_keywords:
   - "nchar data type"
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # nchar and nvarchar (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Character data types that are either fixed-length, **nchar**, or variable-length, **nvarchar**, Unicode data and use the UNICODE UCS-2 character set.
   
@@ -30,7 +34,7 @@ Character data types that are either fixed-length, **nchar**, or variable-length
 Fixed-length Unicode string data. *n* defines the string length and must be a value from 1 through 4,000. The storage size is two times *n* bytes. When the collation code page uses double-byte characters, the storage size is still *n* bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonyms for **nchar** are **national char** and **national character**..
   
 **nvarchar** [ ( n | **max** ) ]  
-Variable-length Unicode string data. *n* defines the string length and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^31-1 bytes (2 GB). The storage size, in bytes, is two times the actual length of data entered + 2 bytes. The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
+Variable-length Unicode string data. *n* defines the string length and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^31-1 characters (2 GB). The storage size, in bytes, is two times the actual length of data entered + 2 bytes. The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
   
 ## Remarks  
 When *n* is not specified in a data definition or variable declaration statement, the default length is 1. When *n* is not specified with the CAST function, the default length is 30.

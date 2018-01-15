@@ -1,12 +1,15 @@
 ---
 title: "Procedures Refresh Method Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,6 +21,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Procedures Refresh Method Example (VB)
 The following code shows how to refresh the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection of a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md). This is required before [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) objects from the **Catalog** can be accessed.  

@@ -2,9 +2,12 @@
 title: "Create a Push Subscription | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -20,8 +23,10 @@ caps.latest.revision: 41
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create a Push Subscription
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create a push subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). For information about creating a push subscription for a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber, see [Create a Subscription for a Non-SQL Server Subscriber](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
  
@@ -89,7 +94,7 @@ manager: "jhubbard"
   
     -   If the value of **allow_push** is **0**, execute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_push** for **@property** and **true** for **@value**.  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx). Specify **@publication**, **@subscriber** and **@destination_db**. Specify a value of **push** for **@subscription_type**. For information about how to update subscriptions, see [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **@publication**, **@subscriber** and **@destination_db**. Specify a value of **push** for **@subscription_type**. For information about how to update subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
   

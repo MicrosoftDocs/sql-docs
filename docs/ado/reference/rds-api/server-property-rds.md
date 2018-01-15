@@ -1,12 +1,14 @@
 ---
 title: "Server Property (RDS) | Microsoft Docs"
-ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,6 +21,7 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Server Property (RDS)
 Indicates the Internet Information Services (IIS) name and communication protocol.  

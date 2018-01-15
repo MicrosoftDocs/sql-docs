@@ -1,11 +1,13 @@
 ---
 title: "Troubleshooting Tools for Package Execution | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -21,6 +23,7 @@ caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Troubleshooting Tools for Package Execution
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  
@@ -66,9 +69,9 @@ manager: "jhubbard"
 ## Troubleshoot Package Execution by Using Logging  
  You can track much of what occurs in your running packages by enabling logging. Log providers capture information about the specified events for later analysis, and save that information in a database table, a flat file, an XML file, or another supported output format.  
   
--   **Enable logging**. You can refine the logging output by selecting only the events and only the items of information that you want to capture. For more information, see [Integration Services (SSIS) Logging](https://msdn.microsoft.com/library/ms140246.aspx).  
+-   **Enable logging**. You can refine the logging output by selecting only the events and only the items of information that you want to capture. For more information, see [Integration Services (SSIS) Logging](../performance/integration-services-ssis-logging.md).  
   
--   **Select the package's Diagnostic event to troubleshoot provider issues.** There are logging messages that help you troubleshoot a package's interaction with external data sources. For more information, see [Troubleshooting Tools Package Connectivity](https://msdn.microsoft.com/library/cc879309.aspx).  
+-   **Select the package's Diagnostic event to troubleshoot provider issues.** There are logging messages that help you troubleshoot a package's interaction with external data sources. For more information, see [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md).  
   
 -   **Enhance the default logging output**. Logging typically appends rows to the logging destination each time that a package is run. Although each row of logging output identifies the package by its name and unique identifier, and also identifies the execution of the package by a unique ExecutionID, the large quantity of logging output in a single list can become difficult to analyze.  
   

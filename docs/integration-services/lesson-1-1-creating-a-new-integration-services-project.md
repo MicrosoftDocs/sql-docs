@@ -2,9 +2,12 @@
 title: "Step 1: Creating a New Integration Services Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Lesson 1-1 - Creating a New Integration Services Project
 The first step in creating a package in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is to create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. This project includes the templates for the objects — data sources, data source views, and packages — that you use in a data transformation solution.  
@@ -25,7 +29,7 @@ The packages that you will create in this [!INCLUDE[ssISnoversion](../includes/s
 > [!NOTE]  
 > This tutorial requires Microsoft SQL Server Data Tools.  
 >   
-> For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](http://msdn.microsoft.com/en-us/data/hh297027).  
+> For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](http://msdn.microsoft.com/data/hh297027).  
   
 ### To create a new Integration Services project  
   

@@ -3,8 +3,11 @@ title: "dbo.sysjobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,9 +26,10 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # dbo.sysjobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contains information about the execution of scheduled jobs by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This table is stored in the **msdb** database.  
   
@@ -53,7 +57,7 @@ manager: "jhubbard"
   ## Example
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] query will convert the **run_time** and **run_duration** columns into a more user friendly format.  Execute the script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
- ```tsql
+ ```sql
  SET NOCOUNT ON;
  
  SELECT sj.name,

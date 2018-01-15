@@ -3,8 +3,11 @@ title: "CREATE DATABASE (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ caps.latest.revision: 13
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CREATE DATABASE (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Creates a new database on a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. Use this statement to create all files associated with an appliance database and to set maximum size and auto-growth options for the database tables and transaction log.  
   
@@ -25,8 +29,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for Parallel Data Warehouse  
-  
 CREATE DATABASE database_name   
 WITH (   
     [ AUTOGROW = ON | OFF , ]   

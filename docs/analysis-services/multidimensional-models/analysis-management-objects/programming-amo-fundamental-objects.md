@@ -2,12 +2,15 @@
 title: "Programming AMO Fundamental Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -24,9 +27,11 @@ ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Programming AMO Fundamental Objects
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Fundamental objects are generally simple and straightforward objects. These objects are usually created and instantiated, then when they are no longer needed, the user disconnects from them. Fundamental classes include the following objects: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, and <xref:Microsoft.AnalysisServices.DataSourceView>. The only complex object in AMO fundamental objects is <xref:Microsoft.AnalysisServices.DataSourceView>, which requires detail to build the abstract model that represents the data source view.  
   
  <xref:Microsoft.AnalysisServices.Server> and <xref:Microsoft.AnalysisServices.Database> objects are usually required to use the contained objects as OLAP objects or data mining objects.  

@@ -2,9 +2,12 @@
 title: "Strategies for Backing Up and Restoring Snapshot and Transactional Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -24,8 +27,10 @@ caps.latest.revision: 59
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When you design a backup and restore strategy for snapshot and transactional replication, there are three areas to consider:  
   
 -   Which databases to back up.  

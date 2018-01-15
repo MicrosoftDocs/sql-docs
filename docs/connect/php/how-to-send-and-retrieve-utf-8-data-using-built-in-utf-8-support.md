@@ -3,8 +3,11 @@ title: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support | Micr
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 33
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

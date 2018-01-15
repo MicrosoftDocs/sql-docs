@@ -1,17 +1,21 @@
 ---
-title: "Getting Started | Microsoft Docs"
+title: "Getting started with machine learning in SQL Server| Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2017"
-ms.prod: "sql-server-2016"
+ms.date: "12/20/2017"
+ms.prod: "machine-learning-services"
+ms.prod_service: "machine-learning-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
+ms.workload: "On Demand"
 ---
 # Getting started with machine learning in SQL Server
 
@@ -26,9 +30,9 @@ This article provides links to resources for each product in the Microsoft Machi
 
 + SQL Server 2017
 
-  Beginning with SQL Server 2017 CTP 2.0, support for Python has been added, and the name was changed to Machine Learning Services (In-Database) to reflect support for a wider range of machine learning solutions. Now you can automate machine learning tasks by using SQL tools to run either R or Python code. Or, use the SQL Server computer as the _compute context_ for jobs launched from a remote development environment.
+  Beginning with SQL Server 2017, you can now use Python code in SQL Server. To reflect the broader support for solutions in multiple languages (with more to come!), and the name was changed to [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]. Now you can automate machine learning tasks by using SQL tools to run either R or Python code. Or, use the SQL Server computer as the _compute context_ for jobs launched from a remote development environment.
 
-    + [Architecture Overview for Python in SQL Server](python/architecture-overview-sql-server-python.md)
+    + [Architecture Overview for Python in SQL Server](/python/architecture-overview-sql-server-python.md)
     + [Set up SQL Server R Services or Machine Learning Services](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
@@ -42,32 +46,32 @@ This article provides links to resources for each product in the Microsoft Machi
 
 ## Microsoft Machine Learning Server (Microsoft R Server)
 
-The option to install Microsoft Machine Learning Server is provided in SQL Server 2017 to support enterprise customers who want to run distributed, scalable machine learning jobs, but who don't need the integration with the SQL Server database engine, such as the use of SQL compute contexts.
+The option to install [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] is provided in SQL Server 2017 to support enterprise customers who want to run distributed, scalable machine learning jobs, but who don't need the integration with the SQL Server database engine, such as the use of SQL compute contexts.
 
-In SQL Server 2016, use the option to install Microsoft R Server.
+In SQL Server 2016, use the option to install [!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)].
   
-  + [Introducing Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
+  + [Welcome to Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
   
-You can also install R Server through platform-specific installers available from MSDN:
+You can also install [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)] or [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] through platform-specific installers:
 
-  + [R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
-  + [R Server for Linux](https://msdn.microsoft.com/microsoft-r/rserver-install-linux-server)
-  + [R Server for Hadoop](https://msdn.microsoft.com/microsoft-r/rserver-install-hadoop)
+  + [Install on Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+  + [Install on Linux](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-linux-install)
+  + [Install on Hadoop](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-hadoop-install)
 
 > [!IMPORTANT]
-> If you want to run Python using R Server, be sure to install the latest version, **Machine Learning Server**, which is available only through SQL Server 2017 setup:
+> If you want to run Python using R Server, be sure to install the latest version, [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)], which is available only through [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] setup:
 > 
 >    + [Set up Microsoft R Server or Machine Learning Server](../advanced-analytics/r/create-a-standalone-r-server.md)
 
 ## Related products
 
-+ [Set Up a Data Science Client](../advanced-analytics/r/set-up-a-data-science-client.md)
++ [Set up a data science client](../advanced-analytics/r/set-up-a-data-science-client.md)
 
   If you already installed one of the machine learning server products, this article provides information about how to set up a separate computer for development and testing of solutions, including tools and required libraries.
 
 + [Data Science Virtual Machine](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
-  Jump-start your entry into machine learning by getting this complete machine learning solution from the Azure Marketplace. The data science virtual machine (frequently shortened to "DSVM") includes SQL Server, Microsoft Machine Learnign Server, and all development tools.
+  Jump-start your entry into machine learning by getting this complete machine learning solution from the Azure Marketplace. The data science virtual machine (frequently shortened to "DSVM") includes SQL Server, Microsoft Machine Learning Server, and all development tools.
   
   The latest version of the Data Science Virtual Machine (DSVM) runs on Windows 2016 Preview Edition, to provide the clean customizable look of Windows 10. It comes pre-configured with NVIDIA drivers, CUDA Toolkit 8.0, and the NVIDIA cuDNN library for GPU workloads.
 
@@ -75,11 +79,11 @@ You can also install R Server through platform-specific installers available fro
 
 + [Machine learning tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  Start here to find a list of all resources for learning about machine learning solutions using SQL Server 2017 and SQL Server 2017.
+  Start here to find a list of all resources for learning about machine learning solutions using SQL Server 2016 and SQL Server 2017.
 
 ### R tutorials
 
-+ [Use R in SQL Server](/tutorials/sql-server-r-tutorials.md)
++ [SQL Server R tutorials](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
    Learn how to run R in SQL Server, create and use remote compute contexts, or perform simulations in R using SQL Server.
    
@@ -87,13 +91,13 @@ You can also install R Server through platform-specific installers available fro
 
 + [Explore R and ScaleR in 25 short functions](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   New to R? Wondering how Microsoft R (or RevoScaleR) compares to standard R? See these quick-starts for R Server.
+   New to R? Wondering how Microsoft R (or RevoScaleR) compares to standard R? See these quick-starts for R Server and Machine Learning Server.
 
 ### Python tutorials
 
-+ [Use Python in SQL Server](/tutorials/sql-server-r-tutorials.md)
++ [SQL Server Python tutorials](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
-  Learn how to run Python in SQL Server. Build a model using Python and use it to score SQL Server data.
+  Learn how to run Python in [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]. Build a model using Python and use it to score SQL Server data.
 
    An end-to-end solution for SQL developers provides all the code you need to run Python from SQL Server Management Studio.
 

@@ -2,9 +2,12 @@
 title: "New Subscription Wizard (UI Reference) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # New Subscription Wizard (UI Reference)
-  This section provides information on the following pages of the New Subscription Wizard:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+This section provides information on the following pages of the New Subscription Wizard:  
   
 -   [&#60;AgentName&#62; Agent Location](../../relational-databases/replication/agentname-agent-location.md)  
   

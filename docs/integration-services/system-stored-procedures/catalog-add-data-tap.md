@@ -2,9 +2,12 @@
 title: "catalog.add_data_tap | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -14,22 +17,22 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.add_data_tap
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Adds a data tap on the output of a component in a package data flow, for an instance of the execution.  
   
 ## Syntax  
   
-```tsql  
-add_data_tap [ @execution_id = ] execution_id  
-[ @task_package_path = ] task_package_path  
-[ @dataflow_path_id_string = ] dataflow_path_id_string  
-[ @data_filename = ] data_filename  
-[ @max_rows = ] max_rows  
-[ @data_tap_id = ] data_tap_id  
-OUTPUT  
+```sql  
+catalog.add_data_tap [ @execution_id = ] execution_id  
+, [ @task_package_path = ] task_package_path  
+, [ @dataflow_path_id_string = ] dataflow_path_id_string  
+, [ @data_filename = ] data_filename  
+, [ @max_rows = ] max_rows  
+, [ @data_tap_id = ] data_tap_id OUTPUT  
 ```  
   
 ## Arguments  
@@ -64,7 +67,7 @@ OUTPUT
 ## Example  
  In the following example, a data tap is created on the data flow path, `'Paths[OLE DB Source.OLE DB Source Output]`, in the data flow task, `\Package\Data Flow Task`. The tapped data is stored in the `output0.txt` file in the DataDumps folder (\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
   
-```  
+```sql
 Declare @execution_id bigint  
 Exec SSISDB.Catalog.create_execution @folder_name='Packages',@project_name='SSISPackages', @package_name='Package.dtsx',@reference_id=Null, @use32bitruntime=False, @execution_id=@execution_id OUTPUT  
   
@@ -73,7 +76,6 @@ Exec SSISDB.Catalog.set_execution_parameter_value @execution_id,50, 'LOGGING_LEV
 Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[OLE DB Source.OLE DB Source Output]', @data_filename = 'output0.txt'  
   
 Exec SSISDB.Catalog.start_execution @execution_id  
-  
 ```  
   
 ## Remarks  

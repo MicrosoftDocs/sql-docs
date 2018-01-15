@@ -1,12 +1,15 @@
 ---
 title: "SortOrder Property Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,6 +21,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SortOrder Property Example (VB)
 This example demonstrates the [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md) that has been appended to the [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) collection of an [Index](../../../ado/reference/adox-api/index-object-adox.md). The code appends an ascending index to the Country column in the **Employees** table, then displays the records. Then the code appends a descending index to the Country column in the **Employees** table and displays the records again. The difference between ascending and descending indexes is shown.  

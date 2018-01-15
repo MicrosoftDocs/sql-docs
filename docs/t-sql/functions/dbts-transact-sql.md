@@ -1,10 +1,13 @@
 ---
 title: "@@DBTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,12 +22,13 @@ helpviewer_keywords:
   - "timestamp data type"
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
-# @@DBTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# &#x40;&#x40;DBTS (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Returns the value of the current **timestamp** data type for the current database. This timestamp is guaranteed to be unique in the database.
   
@@ -32,7 +36,7 @@ Returns the value of the current **timestamp** data type for the current databas
   
 ## Syntax  
   
-```sql
+```
 @@DBTS  
 ```  
   

@@ -2,9 +2,12 @@
 title: "CurvePolygon | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CurvePolygon
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A **CurvePolygon** is a topologically closed surface defined by an exterior bounding ring and zero or more interior rings  
   
 > [!IMPORTANT]  
@@ -124,7 +129,7 @@ SELECT @g.STIsValid();
 ### A. Instantiating a Geometry Instance with an Empty CurvePolygon  
  This example shows how to create an empty **CurvePolygon** instance:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
@@ -132,21 +137,21 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ### B. Declaring and Instantiating a Geometry Instance with a CurvePolygon in the Same Statement  
  This code snippet shows how to declare and initialize a geometry instance with a **CurvePolygon** in the same statement:  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### C. Instantiating a Geography Instance with a CurvePolygon  
  This code snippet shows how to declare and initialize a **geography** instance with a **CurvePolygon**:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### D. Storing a CurvePolygon with Only an Exterior Bounding Ring  
  This example shows how to store a simple circle in a **CurvePolygon** instance (only an exterior bounding ring is used to define the circle):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -155,7 +160,7 @@ SELECT @g.STArea() AS Area;
 ### E. Storing a CurvePolygon Containing Interior Rings  
  This example creates a donut in a **CurvePolygon** instance (both an exterior bounding ring and an interior ring is used to define the donut):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -163,7 +168,7 @@ SELECT @g.STArea() AS Area;
   
  This example shows both a valid **CurvePolygon** instance and an invalid instance when using interior rings:  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 5, 5 0, 0 -5, -5 0, 0 5), (-2 2, 2 2, 2 -2, -2 -2, -2 2))');  
 IF @g1.STIsValid() = 1  

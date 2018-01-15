@@ -3,8 +3,11 @@ title: "Release Notes for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 206
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Release Notes for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,6 +47,10 @@ The JDBC Driver now has support for:
 The JDBC Driver now supports the following configurable timeouts you can change based on your application’s needs: 
 * Query Timeout to control the number of seconds to wait before a timeout occurs when running a query. 
 * Socket Timeout to specify the number of milliseconds to wait before a timeout occurs on a socket read or accept. 
+
+## Updates in Microsoft JDBC Driver 6.1 for SQL Server
+
+The Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. This is the initial open source release of the JDBC Driver and contains the mssql-jdbc-6.1.0.jre8.jar mssql-jdbc-6.1.0.jre7.jar files, which correspond to the Java version compatibility. 
 
 ## Updates in Microsoft JDBC Driver 6.0 for SQL Server
 

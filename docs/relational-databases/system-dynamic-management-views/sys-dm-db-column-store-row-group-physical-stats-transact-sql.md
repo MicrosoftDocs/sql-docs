@@ -1,10 +1,13 @@
 ---
 title: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "5/04/2017"
+ms.date: "05/04/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,14 +22,14 @@ dev_langs:
 helpviewer_keywords: 
   - "dm_db_column_store_row_group_physical_stats"
   - "sys.dm_db_column_store_row_group_physical_stats dynamic management view"
-ms.assetid: f4c81104-7fe4-408f-9779-8808172dfdd2
 caps.latest.revision: 15
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Provides current rowgroup-level information about all of the columnstore indexes in the current database.  
   
@@ -70,7 +73,7 @@ manager: "jhubbard"
   
  This example joins **sys.dm_db_column_store_row_group_physical_stats** with other system tables and then calculates the `Fragmentation` column as an estimate of the efficiency of each row group in the current database.     To find information on a single table remove the comment hyphens in front of the **WHERE** clause and provide a table name.  
   
-```tsql  
+```sql  
 SELECT i.object_id,   
     object_name(i.object_id) AS TableName,   
     i.name AS IndexName,   

@@ -3,8 +3,11 @@ title: "Create a New Solution | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a New Solution
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 When you create a project, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] creates a solution to contain it. You can only open one solution at a time. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] does not allow you to create folders within projects. To organize your work, create multiple projects.  
   
 To access Solution Explorer, click **Solution Explorer** on the **View** menu.  

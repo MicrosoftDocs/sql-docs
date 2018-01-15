@@ -2,13 +2,16 @@
 title: "FORMAT_STRING Contents (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -21,9 +24,11 @@ ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # MDX Cell Properties - FORMAT_STRING Contents
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The **FORMAT_STRING** cell property formats the **VALUE** cell property, creating the value for the **FORMATTED_VALUE** cell property. The **FORMAT_STRING** cell property handles both string and numeric raw values, applying a format expression against the value to return a formatted value for the **FORMATTED_VALUE** cell property. The following tables detail the syntax and formatting characters used to handle string and numeric values.  
   
 ## String Values  
@@ -149,7 +154,7 @@ manager: "erikre"
 |`Short Time`|Displays a time using the 24-hour format, for example, 17:45.|  
   
 ## See Also  
- [LANGUAGE and FORMAT_STRING on FORMATED_VALUE](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
+ [LANGUAGE and FORMAT_STRING on FORMATTED_VALUE](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [Using Cell Properties &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Creating and Using Property Values &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
  [MDX Query Fundamentals &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  

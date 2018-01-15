@@ -2,12 +2,15 @@
 title: "Properties (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -20,9 +23,11 @@ ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Properties (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This reference section contains syntax and usage information for each element that acts as an object property in the Analysis Services Scripting Language (ASSL) schema.  
   
  Although the ASSL schema contains only XML elements, from a developer's point of view, the elements described in this section correspond to properties that describe objects.  

@@ -3,8 +3,11 @@ title: "sys.tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "sys.tables catalog view"
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # sys.tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns a row for each user table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -33,7 +37,7 @@ manager: "jhubbard"
 |-----------------|---------------|-----------------|  
 |\<inherited columns>||For a list of columns that this view inherits, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|A nonzero value is the ID of the data space (filegroup or partition scheme) that holds the large object binary (LOB) data for this table. Examples of LOB data types include **varbinary(max)**, **varchar(max)**, **geography**, or **xml**.<br /><br /> 0 = The table does not LOB data.|  
-|filestream_data_space_id|**int**|Is the data space ID for a FILESTREAM filegroup or a partition scheme that consists of FILESTREAM filegroups.<br /><br /> To report the name of a FILESTREAM filegroup, execute the query `SELECT FILEGROUP`_`NAME (filestream`\_`data`\_`space`\_`id) FROM sys.tables`.<br /><br /> sys.tables can be joined to the following views on filestream_data_space_id = data_space_id.<br /><br /> - sys.filegroups<br /><br /> - sys.partition_schemes<br /><br /> - sys.indexes<br /><br /> - sys.allocation_units<br /><br /> - sys.fulltext_catalogs<br /><br /> - sys.data_spaces<br /><br /> - sys.destination_data_spaces<br /><br /> - sys.master_files<br /><br /> - sys.database_files<br /><br /> - backupfilegroup (join on filegroup_id)|  
+|filestream_data_space_id|**int**|Is the data space ID for a FILESTREAM filegroup or a partition scheme that consists of FILESTREAM filegroups.<br /><br /> To report the name of a FILESTREAM filegroup, execute the query `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`.<br /><br /> sys.tables can be joined to the following views on filestream_data_space_id = data_space_id.<br /><br /> - sys.filegroups<br /><br /> - sys.partition_schemes<br /><br /> - sys.indexes<br /><br /> - sys.allocation_units<br /><br /> - sys.fulltext_catalogs<br /><br /> - sys.data_spaces<br /><br /> - sys.destination_data_spaces<br /><br /> - sys.master_files<br /><br /> - sys.database_files<br /><br /> - backupfilegroup (join on filegroup_id)|  
 |max_column_id_used|**int**|Maximum column ID ever used by this table.|  
 |lock_on_bulk_load|**bit**|Table is locked on bulk load. For more information, see [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |uses_ansi_nulls|**bit**|Table was created with the SET ANSI_NULLS database option ON.|  

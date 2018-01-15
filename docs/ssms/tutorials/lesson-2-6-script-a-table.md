@@ -2,9 +2,12 @@
 title: "Script a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 2-6 - Script a Table
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can create scripts to select, insert, update, and delete tables, and to create, alter, drop, or execute stored procedures.  
   
 Sometimes you want a script with multiple options, such as drop a procedure and then create a procedure, or create a table then alter a table. To create combined scripts, save the first script to a Query Editor window and the second to the clipboard so you can paste it into the window after the first script.  

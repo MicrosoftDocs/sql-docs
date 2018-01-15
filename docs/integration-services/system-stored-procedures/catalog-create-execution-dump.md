@@ -2,9 +2,12 @@
 title: "catalog.create_execution_dump | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -14,16 +17,17 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.create_execution_dump
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Causes a running package to pause and create a dump file. The file is stored in the *\<drive>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps folder.  
   
 ## Syntax  
   
-```tsql  
-create_execution_dump [ @execution_id = ] execution_id  
+```sql  
+catalog.create_execution_dump [ @execution_id = ] execution_id  
   
 ```  
   
@@ -34,10 +38,8 @@ create_execution_dump [ @execution_id = ] execution_id
 ## Example  
  In the following example, the running package with an execution ID of 88 is prompted to create a dump file.  
   
-```  
-  
+```sql
 EXEC create_execution_dump @execution_id = 88  
-  
 ```  
   
 ## Return Codes  

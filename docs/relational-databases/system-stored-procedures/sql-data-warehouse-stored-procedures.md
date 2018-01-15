@@ -2,9 +2,12 @@
 title: "SQL Data Warehouse Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse"
+ms.service: "sql-data-warehouse"
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,10 @@ caps.latest.revision: 4
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Data Warehouse Stored Procedures
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] provides built-in procedures that you can use to perform operations related to database roles. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] includes the following system procedures:  
   

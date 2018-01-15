@@ -2,9 +2,12 @@
 title: "Compressed Snapshots | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Compressed Snapshots
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Compressing snapshot files is appropriate when you are transferring snapshots over a slow network or you are saving them to removable media and an uncompressed snapshot is too large to fit on the media. Compressing snapshot files is useful in these situations, but compression increases the time to generate and apply the snapshot.  
   
  Compressed snapshot files are written in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB file format, which can compress files of 2 GB or less (if the snapshot files are larger than 2GB, they cannot be compressed). To compress files, they must be written to an alternate snapshot folder (files written to the default snapshot folder cannot be compressed). For more information on alternate snapshot folders, see [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  

@@ -1,10 +1,13 @@
 ---
 title: "sqlsrv_prepare | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "10/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ caps.latest.revision: 52
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +35,7 @@ Creates a statement resource associated with the specified connection. This func
   
 ```  
   
-sqlsrv_prepare( resource $conn, string $tsql [, array $params [, array $options]])  
+sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
   
 #### Parameters  
@@ -39,7 +43,7 @@ sqlsrv_prepare( resource $conn, string $tsql [, array $params [, array $options]
   
 *$tsql*: The Transact-SQL expression that corresponds to the created statement.  
   
-*$params* [OPTIONAL]: An **array** of values that correspond to parameters in a parameterized query. Each element of the array can be one of the following:  
+*$params* [OPTIONAL]: An **array** of values that correspond to parameters in a parameterized query. Each element of the array can be one of the following:
   
 -   A literal value.  
   
@@ -52,7 +56,7 @@ sqlsrv_prepare( resource $conn, string $tsql [, array $params [, array $options]
     ```  
   
     > [!NOTE]  
-    > Variables passed as query parameters should be passed by reference instead of by value. For example, pass `&$myVariable` instead of `$myVariable`. A PHP warning will be raised when a query with by-value parameters is executed.  
+    > Variables passed as query parameters should be passed by reference instead of by value. For example, pass `&$myVariable` instead of `$myVariable`. A PHP warning is raised when a query with by-value parameters is executed.  
   
     The following table describes these array elements:  
   
@@ -63,11 +67,11 @@ sqlsrv_prepare( resource $conn, string $tsql [, array $params [, array $options]
     |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\*** constant that specifies PHP data type of the returned value.|  
     |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\*** constant that specifies the SQL Server data type of the input value.|  
   
-*$options* [OPTIONAL]: An associative array that sets query properties. The table below lists the supported keys and corresponding values:  
+*$options* [OPTIONAL]: An associative array that sets query properties. The following table lists the supported keys and corresponding values:  
   
 |Key|Supported values|Description|  
 |-------|--------------------|---------------|  
-|QueryTimeout|A positive integer value.|Sets the query timeout in seconds. By default, the driver will wait indefinitely for results.|  
+|QueryTimeout|A positive integer value.|Sets the query timeout in seconds. By default, the driver waits indefinitely for results.|  
 |SendStreamParamsAtExec|**true** or **false**<br /><br />The default value is **true**.|Configures the driver to send all stream data at execution (**true**), or to send stream data in chunks (**false**). By default, the value is set to **true**. For more information, see [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
 |Scrollable|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|For more information about these values, see [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
   
@@ -91,12 +95,11 @@ The following example prepares and executes a statement. The statement, when exe
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
 $serverName = "(local)";  
-$connectionInfo = array( "Database"=>"AdventureWorks");  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
-     echo "Could not connect.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+$connectionInfo = array("Database"=>"AdventureWorks");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Set up Transact-SQL query. */  
@@ -107,33 +110,27 @@ $tsql = "UPDATE Sales.SalesOrderDetail
 /* Assign parameter values. */  
 $param1 = 5;  
 $param2 = 10;  
-$params = array( &$param1, &$param2);  
+$params = array(&$param1, &$param2);  
   
 /* Prepare the statement. */  
-if( $stmt = sqlsrv_prepare( $conn, $tsql, $params))  
-{  
-      echo "Statement prepared.\n";  
-}   
-else  
-{  
-      echo "Statement could not be prepared.\n";  
-      die( print_r( sqlsrv_errors(), true));  
+if ($stmt = sqlsrv_prepare($conn, $tsql, $params)) {
+    echo "Statement prepared.\n";  
+} else {  
+    echo "Statement could not be prepared.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Execute the statement. */  
-if( sqlsrv_execute( $stmt))  
-{  
-      echo "Statement executed.\n";  
-}  
-else  
-{  
-      echo "Statement could not be executed.\n";  
-      die( print_r( sqlsrv_errors(), true));  
+if (sqlsrv_execute($stmt)) {  
+    echo "Statement executed.\n";  
+} else {  
+    echo "Statement could not be executed.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Free the statement and connection resources. */  
-sqlsrv_free_stmt( $stmt);  
-sqlsrv_close( $conn);  
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
 ?>  
 ```  
   
@@ -145,12 +142,11 @@ The following example demonstrates how to prepare a statement and then re-execut
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
 $serverName = "(local)";  
-$connectionInfo = array( "Database"=>"AdventureWorks");  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
+$connectionInfo = array("Database"=>"AdventureWorks");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
      echo "Could not connect.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+     die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Define the parameterized query. */  
@@ -161,36 +157,31 @@ $tsql = "UPDATE Sales.SalesOrderDetail
 /* Initialize parameters and prepare the statement. Variables $qty  
 and $id are bound to the statement, $stmt1. */  
 $qty = 0; $id = 0;  
-$stmt1 = sqlsrv_prepare( $conn, $tsql, array( &$qty, &$id));  
-if( $stmt1 )  
-{  
-     echo "Statement 1 prepared.\n";  
-}   
-else   
-{  
-     echo "Error in statement preparation.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+$stmt1 = sqlsrv_prepare($conn, $tsql, array(&$qty, &$id));  
+if ($stmt1) {  
+    echo "Statement 1 prepared.\n";  
+} else {  
+    echo "Error in statement preparation.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Set up the SalesOrderDetailID and OrderQty information. This array  
 maps the order ID to order quantity in key=>value pairs. */  
-$orders = array( 1=>10, 2=>20, 3=>30);  
+$orders = array(1=>10, 2=>20, 3=>30);  
   
 /* Execute the statement for each order. */  
-foreach( $orders as $id => $qty)  
-{  
-     // Because $id and $qty are bound to $stmt1, their updated  
-     // values are used with each execution of the statement.   
-     if( sqlsrv_execute( $stmt1) === false )  
-     {  
-          echo "Error in statement execution.\n";  
-          die( print_r( sqlsrv_errors(), true));  
-     }  
+foreach ($orders as $id => $qty) {  
+    // Because $id and $qty are bound to $stmt1, their updated  
+    // values are used with each execution of the statement.   
+    if (sqlsrv_execute($stmt1) === false) {  
+        echo "Error in statement execution.\n";  
+        die(print_r(sqlsrv_errors(), true));  
+    }  
 }  
 echo "Orders updated.\n";  
   
 /* Free $stmt1 resources.  This allows $id and $qty to be bound to a different statement.*/  
-sqlsrv_free_stmt( $stmt1);  
+sqlsrv_free_stmt($stmt1);  
   
 /* Now verify that the results were successfully written by selecting   
 the newly inserted rows. */  
@@ -199,41 +190,63 @@ $tsql = "SELECT OrderQty
          WHERE SalesOrderDetailID = ?";  
   
 /* Prepare the statement. Variable $id is bound to $stmt2. */  
-$stmt2 = sqlsrv_prepare( $conn, $tsql, array( &$id));  
-if( $stmt2 )  
-{  
-     echo "Statement 2 prepared.\n";  
-}   
-else   
-{  
-     echo "Error in statement preparation.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+$stmt2 = sqlsrv_prepare($conn, $tsql, array(&$id));  
+if ($stmt2) {  
+    echo "Statement 2 prepared.\n";  
+} else {  
+    echo "Error in statement preparation.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Execute the statement for each order. */  
-foreach( array_keys($orders) as $id)  
+foreach (array_keys($orders) as $id)  
 {  
-     /* Because $id is bound to $stmt2, its updated value   
-        is used with each execution of the statement. */  
-     if( sqlsrv_execute( $stmt2))  
-     {  
-          sqlsrv_fetch( $stmt2);  
-          $quantity = sqlsrv_get_field( $stmt2, 0);  
-          echo "Order $id is for $quantity units.\n";  
-     }  
-     else  
-     {  
-          echo "Error in statement execution.\n";  
-          die( print_r( sqlsrv_errors(), true));  
-     }  
+    /* Because $id is bound to $stmt2, its updated value   
+    is used with each execution of the statement. */  
+    if (sqlsrv_execute($stmt2)) {  
+        sqlsrv_fetch($stmt2);  
+        $quantity = sqlsrv_get_field($stmt2, 0);  
+        echo "Order $id is for $quantity units.\n";  
+    } else {  
+        echo "Error in statement execution.\n";  
+        die(print_r(sqlsrv_errors(), true));  
+    }  
 }  
   
 /* Free $stmt2 and connection resources. */  
-sqlsrv_free_stmt( $stmt2);  
-sqlsrv_close( $conn);  
+sqlsrv_free_stmt($stmt2);  
+sqlsrv_close($conn);  
 ?>  
 ```  
   
+> [!NOTE]
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+
+## Example  
+This code sample shows how to bind a decimal value as an input parameter.  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"YourTestDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume TestTable exists with a decimal field 
+$input = "9223372036854.80000";
+$params = array($input);
+$stmt = sqlsrv_prepare($conn, "INSERT INTO TestTable (DecimalCol) VALUES (?)", $params);
+sqlsrv_execute($stmt);
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)  

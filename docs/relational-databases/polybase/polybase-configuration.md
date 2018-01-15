@@ -1,10 +1,13 @@
 ---
 title: "PolyBase configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/13/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "polybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ caps.latest.revision: 17
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # PolyBase configuration
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use the procedures below to configure PolyBase.  
   
@@ -24,14 +28,14 @@ manager: "jhubbard"
  You must ensure connectivity to the external data source from SQL Server. The type of connectivity strongly influences query performance. For example, a 10Gbit Ethernet link will result in a faster query response time for PolyBase queries than a 1Gbit Ethernet link.  
   
  You must configure SQL Server to connect to  either your Hadoop version or Azure Blob storage using **sp_configure**. PolyBase supports two Hadoop distributions: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  For a complete list of supported external data sources, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
- 
+1 
  Please note: PolyBase does not support Cloudera Encrypted Zones. 
   
 ### Run sp_configure  
   
 1.  Run sp_configure ‘hadoop connectivity’ and set an appropriate value.  To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
   
-    ```tsql  
+    ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -61,6 +65,20 @@ manager: "jhubbard"
 3.  On the SQL Server machine, in the **yarn.site.xml file,** find the **yarn.application.classpath** property. Paste the value from the Hadoop machine into the value element.  
 
 4. For all CDH 5.X versions, you will need to add the **mapreduce.application.classpath** configuration parameters either to the end of your **yarn.site.xml file** or into the **mapred-site.xml file**. HortonWorks includes these configurations within the **yarn.application.classpath** configurations.
+
+## Connecting to Hadoop Cluster with Hadoop.RPC.Protection setting
+A common way to secure communication in a hadoop cluster is by changing the hadoop.rpc.protection configuration to 'Privacy' or 'Integrity'. By Default, PolyBase assumes the configuration is set to 'Authenticate'. To override this default you need to add the following property to your core-site.xml file. Changing this configuration will enable secure data transfer among the hadoop nodes as well as SSL connection to SQL Server.
+
+```
+<!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
+  <property>
+    <name>hadoop.rpc.protection</name>
+    <value></value>
+  </property> 
+```
+
+
+
 
 ## Example yarn-site.xml and mapred-site.xml files for CDH 5.X cluster.
 

@@ -3,8 +3,11 @@ title: "System Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # System Functions
 The following table lists system functions that are included in the ODBC scalar function set. By calling **SQLGetInfo** with an *information type* of SQL_SYSTEM_FUNCTIONS, an application can determine which system functions are supported by a driver.  

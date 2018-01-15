@@ -2,9 +2,12 @@
 title: "Manage Metadata When Making a Database Available on Another Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "databases"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -38,8 +41,10 @@ caps.latest.revision: 84
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Manage Metadata When Making a Database Available on Another Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic is relevant in the following situations:  
   
 -   Configuring the availability replicas of an [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability group.  

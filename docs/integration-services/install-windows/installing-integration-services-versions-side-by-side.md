@@ -2,9 +2,12 @@
 title: "Installing Integration Services Versions Side by Side | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,13 +20,14 @@ caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Installing Integration Services Versions Side by Side
   You can install   
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) side-by-side with earlier versions of SSIS. This topic describes some limitations of side-by-side installations.  
   
 ## Designing and maintaining packages  
- To design and maintain packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012, use SQL Server Data Tools (SSDT) for Visual Studio 2015. To get SSDT, see [Download Latest SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
+ To design and maintain packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012, use SQL Server Data Tools (SSDT) for Visual Studio 2015. To get SSDT, see [Download Latest SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
  In the property pages for an Integration Services project, on the **General** tab of **Configuration Properties**, select the **TargetServerVersion** property and choose SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
   

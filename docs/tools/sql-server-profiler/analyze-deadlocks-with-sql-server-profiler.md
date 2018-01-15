@@ -2,9 +2,12 @@
 title: "Analyze Deadlocks with SQL Server Profiler | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,8 +26,10 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Analyze Deadlocks with SQL Server Profiler
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to identify the cause of a deadlock. A deadlock occurs when there is a cyclic dependency between two or more threads, or processes, for some set of resources within SQL Server. Using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can create a trace that records, replays, and displays deadlock events for analysis.  
   
  To trace deadlock events, add the **Deadlock graph** event class to a trace. This event class populates the **TextData** data column in the trace with XML data about the process and objects that are involved in the deadlock. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can extract the XML document to a deadlock XML (.xdl) file which you can view later in SQL Server Management Studio. You can configure [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to extract **Deadlock graph** events to a single file that contains all **Deadlock graph** events, or to separate files. This extraction can be done in any of the following ways:  

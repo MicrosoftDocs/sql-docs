@@ -3,8 +3,11 @@ title: "sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/13/2015"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,17 +24,16 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.sp_xtp_control_query_exec_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Enables per query statistics collection for all natively compiled stored procedures for the instance, or specific natively compiled stored procedures.  
   
  Performance decreases when you enable statistics collection. If you only need to troubleshoot one, or a few natively compiled stored procedures, you can enabling statistics collection for just those few natively compiled stored procedures.  
   
  To enable statistics collection at the procedure level for all natively compiled stored procedures, see [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
-  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## Syntax  
   
@@ -65,7 +67,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## Code Sample  
  The following code sample shows how to enable statistics collection for all natively compiled stored procedures for the instance and then for a specific natively compiled stored procedure.  
   
-```tsql   
+```sql   
 DECLARE @c bit  
   
 EXEC [sys].[sp_xtp_control_query_exec_stats] @new_collection_value = 1;  

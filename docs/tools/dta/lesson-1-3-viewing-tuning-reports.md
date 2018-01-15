@@ -2,9 +2,12 @@
 title: "Viewing Tuning Reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "dta"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-query-tuning"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 1-3 - Viewing Tuning Reports
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In the previous practice of this lesson, you viewed the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that create or drop database objects in the Database Engine Tuning Advisor recommendations that were generated as a result of the MySession tuning session. The MySession tuning session was created in [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
 Although it is very useful to view the scripts that can be used to implement the tuning results, Database Engine Tuning Advisor also provides many useful reports that you can view. These reports provide information about the existing physical design structures in the database you are tuning, and about the recommended structures. The tuning reports can be viewed by clicking the **Reports** tab as described in the following practice. This practice uses the MySession and the EvaluateMySession tuning sessions that you created in [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md) and in [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md).  

@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Configure SQL Server to send feedback to Microsoft | Microsoft Docs
 description: 
 author: annashres 
@@ -8,23 +6,18 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: sql-server-2016
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "sql-non-specified"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid:
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
+ms.workload: "Inactive"
 ---
-
 # Configure SQL Server to send feedback to Microsoft
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## Summary
 By default, Microsoft SQL Server collects information about how its customers are using the application. Specifically, SQL Server collects information about the installation experience, usage, and performance. This information helps Microsoft improve the product to better meet customer needs. For example, Microsoft collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use SQL Server, and determine whether features should be added to the product to better serve customers.
@@ -172,3 +165,4 @@ During installation, SQL Server 2016 Analysis Services adds a special account to
 
 You can configure your service not to send usage data, as described in the "Set registry subkeys on the server" section. However, doing this does not remove the service account. 
  
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

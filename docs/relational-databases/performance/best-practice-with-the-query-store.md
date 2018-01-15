@@ -1,13 +1,14 @@
 ---
 title: "Best Practice with the Query Store | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "11/24/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "performance"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
+ms.suite: "sql"
+ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,13 +18,14 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Best Practice with the Query Store
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic outlines the best practices for using the Query Store with your workload.  
   
-##  <a name="SSMS"></a> Use the latest SQL Server Management Studio  
+##  <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has set of user interfaces designed for configuring Query Store as well as for consuming collected data about your workload.  
 Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
@@ -51,7 +53,7 @@ The default parameters are good for a quick start but you should monitor how Que
   
  The default value (100 MB) may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode.  Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -62,15 +64,15 @@ FROM sys.database_query_store_options;
   
  The following script sets a new Max Size (MB):  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Statistics Collection Interval:** Defines level of granularity for the collected runtime statistic (the default is 1 hour). Consider using lower value if you require finer granularity or less time to detect and mitigate issues but keep in mind that it will directly affect the size of Query Store data. Use SSMS or Transact-SQL to set different value for Statistics Collection Interval:  
   
-```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+```sql  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Stale Query Threshold (Days):** Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries.  
@@ -78,16 +80,16 @@ By default, Query Store is configured to keep the data for 30 days which may be 
   
  Avoid keeping historical data that you do not plan to use. This will reduce changes to read-only status. The size of Query Store data as well as the time to detect and mitigate the issue will be more predictable. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or the following script to configure time-based cleanup policy:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **Size Based Cleanup Mode:** Specifies whether automatic data cleanup will take place when Query Store data size approaches the limit.  
   
  It is strongly recommended to activate size-based cleanup to makes sure that Query Store always runs in read-write mode and collects the latest data.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -102,7 +104,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  The following script sets the Query Capture mode to Auto:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -114,7 +116,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Enable Query Store by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] as described in the previous section, or execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -122,9 +124,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Navigate to the Query Store sub-folder under the database node in Object Explorer of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to open troubleshooting views for specific scenarios.   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Query Store views operate with the set of execution metrics, each expressed as any of the following statistic functions:  
   
-|Execution metric|Statistic function|  
-|----------------------|------------------------|  
-|CPU time, Duration, Execution Count, Logical Reads, Logical writes, Memory consumption, and Physical Reads|Average, Maximum, Minimum, Standard Deviation, Total|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version|Execution metric|Statistic function|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU time, Duration, Execution Count, Logical Reads, Logical writes, Memory consumption, Physical Reads, CLR time, Degree of Parallelism (DOP), and Row count|Average, Maximum, Minimum, Standard Deviation, Total|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU time, Duration, Execution Count, Logical Reads, Logical writes, Memory consumption, Physical Reads, CLR time, Degree of Parallelism (DOP), Row count, Log memory, TempDB memory, and Wait times|Average, Maximum, Minimum, Standard Deviation, Total|
   
  The following graphic shows how to locate Query Store views:  
   
@@ -169,10 +172,10 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
   
 -   Rewrite problematic queries. For example to take advantages of query parameterization or to implement more optimal logic.  
   
-##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
+##  <a name="Verify"></a> Verify Query Store is collecting query data continuously  
  Query Store can silently change operations mode. You should regularly monitor the state of the Query Store to ensure that the Query Store is operating, and to take action to avoid failures due to preventable causes. Execute the following query to determine the operation mode and view the most relevant parameters:  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -193,13 +196,13 @@ FROM sys.database_query_store_options;
   
 -   Clean up Query Store data by using the following statement:  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- You can apply one or both of these steps by the executing the following statement that explicitly changes operation mode back to read-write:  
+You can apply one or both of these steps by the executing the following statement that explicitly changes operation mode back to read-write:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -215,7 +218,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### Error State  
  To recover Query Store try explicitly setting the read-write mode and check actual state again.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -227,13 +230,13 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- If  the problem persists, it indicates corruption of the Query Store data is persisted on the disk.
+ If the problem persists, it indicates corruption of the Query Store data is persisted on the disk.
  
  Query Store could be recovered by executing **sp_query_store_consistency_check** stored procedure within the affected database.
  
- If that didn't help, you can try to clear Query Store before requesting read-write mode.  
+ If that did not help, you can try to clear Query Store before requesting read-write mode.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -249,7 +252,7 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
-## Set the Optimal Query Capture Mode  
+## Set the optimal query capture mode  
  Keep the most relevant data in Query Store. The following table describes typical scenarios for each Query Capture Mode:  
   
 |Query Capture Mode|Scenario|  
@@ -258,7 +261,7 @@ FROM sys.database_query_store_options;
 |Auto|Focus your attention on relevant and actionable queries; those queries that execute regularly or that have significant resource consumption.|  
 |None|You have already captured the query set that you want to monitor in runtime and you want to eliminate the distractions  that other queries may introduce.<br /><br /> None is suitable for testing and bench-marking environments.<br /><br /> None is also appropriate for software vendors who ship Query Store configuration configured to monitor their application workload.<br /><br /> None should be used with caution as you might miss the opportunity to track and optimize important new queries. Avoid using None unless you have a specific scenario that requires it.|  
   
-## Keep the Most Relevant Data in Query Store  
+## Keep the most relevant data in Query Store  
  Configure the Query Store to contain only the relevant data and it will run continuously providing great troubleshooting experience with a minimal impact on your regular workload.  
 The following table provides best practices:  
   
@@ -296,7 +299,7 @@ As a result, performance of your workload will be sub-optimal and Query Store mi
 
  Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). The following query returns information about forced plans:  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   
@@ -314,7 +317,15 @@ WHERE is_forced_plan = 1;
  Execution plans reference objects using three-part names `database.schema.object`.   
 
 If you rename a database, plan forcing will fail which will cause recompilation in all subsequent query executions.  
+
+##  <a name="Recovery"></a> Use traceflags on mission critical servers to improve recovery from disaster
+ 
+  The global traceflags 7745 and 7752 can be used to improve performance of Query Store during High Availability and Disaster Recovery scenarios. For more information, refer to [Trace Flags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
+  Traceflag 7745 will prevent the default behavior where Query Store writes data to disk before SQL Server can be shutdown.
+  
+  Traceflag 7752 enables asynchronous load of Query Store, and also allows SQL Server to run queries before Query Store has been fully loaded. Default Query Store behavior prevents queries from running before the Query Store has been recovered.
+
 ## See Also  
  [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

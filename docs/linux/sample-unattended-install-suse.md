@@ -2,33 +2,41 @@
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
 description: SQL Server Script Sample - Unattended Install on SUSE Linux Enterprise Server
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
-ms.date: 07/17/2017
+ms.author: edmaca
+manager: craigg
+ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: sql-linux
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
+ms.workload: "Inactive"
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
 
-This sample Bash script installs SQL Server 2017 RC2 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
+This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
-> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
-- You need at least 3.25 GB of memory to run SQL Server on Linux.
+- You need at least 2 GB of memory to run SQL Server on Linux.
 - The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 > [!IMPORTANT]
-> SQL Server 2017 RC2 requires libsss_nss_idmap0, which is not provided by the default SLES repositories. You can install it from the SLES v12 SP2 SDK.
+> SQL Server 2017 requires libsss_nss_idmap0, which is not provided by the default SLES repositories. You can install it from the SLES v12 SP2 SDK.
 
 ## Sample script
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -57,7 +65,7 @@ then
 fi
 
 echo Adding Microsoft repositories...
-sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
 sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
 sudo zypper --gpg-auto-import-keys refresh
 

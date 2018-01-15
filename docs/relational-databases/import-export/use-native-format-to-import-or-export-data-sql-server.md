@@ -2,9 +2,12 @@
 title: "Use Native Format to Import or Export Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-bulk-import-export"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Use Native Format to Import or Export Data (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Native format is recommended when you bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using a data file that does not contain any extended/double-byte character set (DBCS) characters.  
 
 > [!NOTE]
@@ -100,7 +105,8 @@ The examples in this topic are based on the table, and format file defined below
 
 ### **Sample Table**<a name="sample_table"></a>
 The script below creates a test database, a table named `myNative` and populates the table with some initial values.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -127,7 +133,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ### **Sample Non-XML Format File**<a name="nonxml_format_file"></a>
 SQL Server support two types of format file: non-XML format and XML format.  The non-XML format is the original format that is supported by earlier versions of SQL Server.  Please review [Non-XML Format Files (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) for detailed information.  The following command will use the [bcp utility](../../tools/bcp-utility.md) to generate a non-xml format file, `myNative.fmt`, based on the schema of `myNative`.  To use a [bcp](../../tools/bcp-utility.md) command to create a format file, specify the **format** argument and use **nul** instead of a data-file path.  The format option also requires the **-f** option.  In addition, for this example, the qualifier **c** is used to specify character data, and **T** is used to specify a trusted connection using integrated security.  At a command prompt, enter the following commands:
 
-```
+```cmd
 bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
 
 REM Review file
@@ -145,7 +151,8 @@ The examples below use the database, and format files created above.
 
 ### **Using bcp and Native Format to Export Data**<a name="bcp_native_export"></a>
 **-n** switch and **OUT** command.  Note: the data file created in this example will be used in all subsequent examples.  At a command prompt, enter the following commands:
-```
+
+```cmd
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
 
 REM Review results
@@ -154,7 +161,8 @@ NOTEPAD D:\BCP\myNative.bcp
 
 ### **Using bcp and Native Format to Import Data without a Format File**<a name="bcp_native_import"></a>
 **-n** switch and **IN** command.  At a command prompt, enter the following commands:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
 
@@ -167,7 +175,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 
 ### **Using bcp and Native Format to Import Data with a Non-XML Format File**<a name="bcp_native_import_fmt"></a>
 **-n** and **-f** switches and **IN** command.  At a command prompt, enter the following commands:
-```
+
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myNative;"
 
@@ -180,7 +189,8 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 
 ### **Using BULK INSERT and Native Format without a Format File**<a name="bulk_native"></a>
 **DATAFILETYPE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
 	FROM 'D:\BCP\myNative.bcp'
@@ -194,7 +204,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
 
 ### **Using BULK INSERT and Native Format with a Non-XML Format File**<a name="bulk_native_fmt"></a>
 **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
    FROM 'D:\BCP\myNative.bcp'
@@ -208,7 +219,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
 
 ### **Using OPENROWSET and Native Format with a Non-XML Format File**<a name="openrowset_native_fmt"></a>
 **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myNative;  -- for testing
 INSERT INTO TestDatabase.dbo.myNative
 	SELECT *

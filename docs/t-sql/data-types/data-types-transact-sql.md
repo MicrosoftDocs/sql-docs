@@ -1,10 +1,13 @@
 ---
 title: "Data types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2017"
+ms.date: "9/13/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
@@ -16,13 +19,13 @@ helpviewer_keywords:
  - "data types [SQL Server], about data types"
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
-
 # Data types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.
   
@@ -101,10 +104,11 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based on their sto
   
 |||  
 |-|-|  
-|[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[timestamp](../../t-sql/data-types/rowversion-transact-sql.md)|  
+|[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[rowversion](../../t-sql/data-types/rowversion-transact-sql.md)|  
 |[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
-|[table](../../t-sql/data-types/table-transact-sql.md)|[Spatial Types](http://msdn.microsoft.com/library/d1715574-34b1-4ce5-a29f-25e35027a54c)|  
+|[Spatial Geometry Types](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[Spatial Geography Types](../../t-sql/spatial-geography/spatial-types-geography.md)|  
+|[table](../../t-sql/data-types/table-transact-sql.md) | |
   
 ## See also
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  

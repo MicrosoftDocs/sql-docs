@@ -2,13 +2,16 @@
 title: "Define Semiadditive Behavior | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -19,9 +22,11 @@ ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Define Semiadditive Behavior
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Semiadditive measures, which do not uniformly aggregate across all dimensions, are very common in many business scenarios. Every cube that is based on snapshots of balances over time exhibits this problem. You can find these snapshots in applications dealing with securities, account balances, budgeting, human resources, insurance policies and claims, and many other business domains.  
   
  Add semiadditive behavior to a cube to define an aggregation method for individual measures or members of the account type attribute. If the cube contains an account dimension, you can automatically set semiadditive behavior based on the account type.  

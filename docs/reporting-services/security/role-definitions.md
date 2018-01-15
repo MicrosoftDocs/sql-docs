@@ -2,12 +2,15 @@
 title: "Role Definitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,9 +20,10 @@ helpviewer_keywords:
   - "role-based security [Reporting Services], role definitions"
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Role Definitions
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], a *role**definition* is a named collection of tasks that define the operations available on a report server. Role definitions provide the rules used by the report server to enforce security. When a user attempts to perform a task, such as publishing a report, the report server checks the user's role assignment to determine whether the task is included in their role definition. If the task is included in the role definition, the request is submitted.  

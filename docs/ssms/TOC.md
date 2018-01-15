@@ -1,13 +1,10 @@
-# [Download SSMS](download-sql-server-management-studio-ssms.md)
 # [What is SSMS?](sql-server-management-studio-ssms.md)
-
-# What's New
-## [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
-## [Release notes](sql-server-management-studio-release-notes.md)
-## [New and recently updated articles](new-updated-ssms.md)
-## [Previous SSMS Releases](previous-sql-server-management-studio-releases.md)
-
-# [Download SQL Server PowerShell Module](download-sql-server-ps-module.md)
+# [Download SSMS](download-sql-server-management-studio-ssms.md)
+## [SSMS Changelog & Previous Releases](sql-server-management-studio-changelog-ssms.md)
+## [Release Notes](download-sql-server-management-studio-ssms.md#release-notes)
+## [Install non-English SSMS](install-other-languages.md)
+## [New and updated articles](new-updated-ssms.md)
+# [Install SQL Server PowerShell Module](../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json)
 
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
 # [F1 Help +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
@@ -33,6 +30,7 @@
 # [The SSMS Environment](the-sql-server-management-studio-environment.md)
 # [Property Pages in SSMS](property-pages-in-sql-server-management-studio.md)
 # [Properties Window in SSMS](properties-window-management-studio.md)
+# [Output Window in SSMS](output-window.md)
 
 # [About Dialog Box](about-dialog-box.md)
 # [SSMS Web Browser](sql-server-management-studio-web-browser.md)

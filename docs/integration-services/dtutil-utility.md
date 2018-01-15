@@ -2,9 +2,12 @@
 title: "dtutil Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -29,6 +32,7 @@ caps.latest.revision: 114
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # dtutil Utility
   The **dtutil** command prompt utility is used to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. The utility can copy, move, delete, or verify the existence of a package. These actions can be performed on any [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is stored in one of three locations: a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system. If the utility accesses a package that is stored in **msdb**, the command prompt may require a user name and a password. If the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, the command prompt requires both a user name and a password. If the user name is missing, **dtutil** tries to log on to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Windows Authentication. The storage type of the package is identified by the **/SQL**, **/FILE**, and **/DTS** options.  
@@ -203,7 +207,7 @@ dtutil /SQL srcPackage /EXISTS
  To determine whether a package exists in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, use the following syntax:  
   
 ```dos
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  

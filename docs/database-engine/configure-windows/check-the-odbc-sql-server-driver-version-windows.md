@@ -2,9 +2,12 @@
 title: "Check the ODBC SQL Server Driver Version (Windows) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/07/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "configure-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,10 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Check the ODBC SQL Server Driver Version (Windows)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Your computer may contain a variety of ODBC drivers, from [!INCLUDE[msCoName](../../includes/msconame-md.md)] and from other companies. This topic describes how to use the Windows **ODBC Data Source Administrator** to check the version of the installed ODBC drivers.  
   

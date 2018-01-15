@@ -1,11 +1,13 @@
 ---
 title: "Temporal Table Usage Scenarios | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "05/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
@@ -15,9 +17,10 @@ caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Temporal Table Usage Scenarios
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Temporal Tables are generally useful in scenarios that require tracking history of data changes.    
 We recommend you to consider Temporal Tables in the following use cases for major productivity benefits.  
@@ -460,7 +463,7 @@ ALTER TABLE DimLocation ADD PERIOD FOR SYSTEM_TIME (ValidFrom, ValidTo);
 ALTER TABLE DimLocation SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DimLocationHistory));  
 ```  
   
- Note that Nno additional code is required to maintain SCD during the data warehouse loading process once you created it.  
+ Note that no additional code is required to maintain SCD during the data warehouse loading process once you created it.  
   
  The following illustration shows how you can use Temporal Tables in a simple scenario involving 2 SCDs (DimLocation and DimProduct) and one fact table.  
   

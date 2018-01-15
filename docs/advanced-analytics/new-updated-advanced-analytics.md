@@ -6,16 +6,21 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
+ms.service: ""
+ms.prod: "machine-learning-services"
+ms.prod_service: "machine-learning-services"
+ms.service: ""
+ms.component: ""
+ms.reviewer: ""
+ms.suite: "sql"
+ms.technology: 
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 07/17/2017
+ms.topic: article
+ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: advanced-analytics
+ms.workload: 
 ---
 # New and Recently Updated: Advanced Analytics for SQL Server
 
@@ -29,9 +34,10 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
+- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
 - *Subject area:* &nbsp; **Advanced Analytics for SQL Server**.
 
+<!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
 
 
 
@@ -39,13 +45,25 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [Common Issues with External Script Execution](common-issues-external-script-execution.md)
-2. [Data Collection for Machine Learning Troubleshooting](data-collection-ml-troubleshooting-process.md)
-3. [SQL Server Python Tutorials](tutorials/sql-server-python-tutorials.md)
-4. [SQL Server R Tutorials](tutorials/sql-server-r-tutorials.md)
+1. [Add SQLRUserGroup as a database user](r/add-sqlrusergroup-to-database.md)
+2. [How to use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md)
+3. [Using R in Azure SQL Database](r/using-r-in-azure-sql-database.md)
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -54,21 +72,25 @@ The following links jump to new articles which have been added recently.
 
 <a name="compactupdatedlist"/>
 
-## Compact List of Articles Updated Recently
+### Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Known issues in Machine Learning Services](#TitleNum_1)
+2. [Create a local package repository using miniCRAN](#TitleNum_2)
+3. [Determine which R packages are installed on SQL Server](#TitleNum_3)
+4. [Install additional R packages on SQL Server](#TitleNum_4)
+5. [Installing SQL Server machine learning features on an Azure virtual machine](#TitleNum_5)
+6. [Install pretrained machine learning models on SQL Server](#TitleNum_6)
+7. [Avoiding errors on R packages installed in user libraries](#TitleNum_7)
+8. [Provision a virtual machine for machine learning on Azure](#TitleNum_8)
+9. [RevoScaleR](#TitleNum_9)
+10. [Enable or disable R package management for SQL Server](#TitleNum_10)
+11. [Set up a data science client for use with SQL Server](#TitleNum_11)
+12. [Set up SQL Server Machine Learning Services (In-Database)](#TitleNum_12)
+13. [Unattended installation of Machine Learning Services (In-Database)](#TitleNum_13)
+14. [Step 3: Explore and visualize the data](#TitleNum_14)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -78,43 +100,47 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Introducing revoscalepy](python/what-is-revoscalepy.md)
+### 1. &nbsp; [Known issues in Machine Learning Services](known-issues-for-sql-server-machine-learning-services.md)
 
-*Updated: 2017-06-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2017-11-16* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 112.  ms.author= "jeannt".  -->
+<!-- Source markdown line 321.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 cab7330ac9944508aaa360e00cbc2e866455776d 33f4e0e2421fa79fc11931dc7f29bff4432c6f5a  (PR=2171  ,  Filename=what-is-revoscalepy.md  ,  Dirpath=docs\advanced-analytics\python\  ,  MergeCommitSha40=7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7) -->
+<!-- git diff --ignore-all-space --unified=0 00121c648c21576d5c86494137de1d4d81e2e265 c65973f6ae9253af5ecc621916ef36d7c0398789  (PR=3980  ,  Filename=known-issues-for-sql-server-machine-learning-services.md  ,  Dirpath=docs\advanced-analytics\  ,  MergeCommitSha40=06bb91d138a4d6395c7603a2d8f99c69a20642d3) -->
 
 
 
-**Using revoscalepy with MicrosoftML**
+**Python code execution or Python package issues**
 
 
-The Python functions for MicrosoftML are integrated with the compute contexts and data sources that are provided in revoscalepy. Therefore, you could use an MicrosoftML algorithm to define and train a model in Python, and use the revoscalepy functions to execute the Python code either locally or in a SQl Server compute context.
+This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
 
-Just import the modules in your Python code, and then reference the individual functions you need.
+**Call to pretrained model fails if path to model is too long**
 
+
+If you install the pretrained models in a default installation, depending on your machine name and instance name, the resulting complete path to the trained model file might be too long for Python to read. This limitation will be fixed in an upcoming service release.
+
+There are several potential workarounds:
+
++ When you install the pretrained models, choose a custom location.
++ If possible, install the SQL Server instance under a custom installation path, such as C:\SQL\MSSQL14.MSSQLSERVER.
++ Use the Windows utility [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) to create a hardlink that maps the model file to a shorter path.
+
+**Failure to initialize a varbinary variable causes an error in BxlServer**
+
+
+If you run Python code in SQL Server using `sp_execute_external_script`, and the code has output variables of type varbinary(max), varchar(max) or similar types, the variable must be initialized or set as part of your script. Otherwise, the data exchange component, BxlServer, raises an error and stops working.
+
+This limitation will be fixed in an upcoming service release. As a workaround, make sure that the variable is initialized within the Python script. Any valid value can be used, as in the following examples:
+
+```sql
+declare @b varbinary(max);
+exec sp_execute_external_script
+  @language = N'Python'
 ```
-from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
-from revoscalepy.functions.RxSummary import rx_summary
-from revoscalepy.etl.RxImport import rx_import_datasource
-```
-
-**Requirements**
-
-
-To run Python code in SQL Server, you must have installed SQL Server 2017 together with the feature **Machine Learning Services**, and enabled the Python language. Earlier versions of SQL Server do not support Python integration.
-
-> [!NOTE]
-> Open source distributions of Python do not support SQL Server compute contexts. However, if you need to publish and consume Python applications from Windows, you can install Microsoft Machine Learning Server without installing SQL Server. For more information, see [Create a Standalone R Server--../r/create-a-standalone-r-server.md)
-
-**Get more help**
-
-
 
 
 
@@ -126,53 +152,49 @@ To run Python code in SQL Server, you must have installed SQL Server 2017 togeth
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp; [Step 5: Train and Save a Model using T-SQL](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
+### 2. &nbsp; [Create a local package repository using miniCRAN](r/create-a-local-package-repository-using-minicran.md)
 
-*Updated: 2017-06-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
+*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
 
-<!-- Source markdown line 121.  ms.author= "jeannt".  -->
+<!-- Source markdown line 43.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5c1cbe92282b96105ffdb69efa803f58dc0ac7e2 e4077a2154a90de468c435efa5b2225125d5b0e7  (PR=1904  ,  Filename=sqldev-py5-train-and-save-a-model-using-t-sql.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=dbf91e0d6f8257227cfe8ac6d13c484d0a566f57) -->
+<!-- git diff --ignore-all-space --unified=0 44b77cb127e9ffab1777216a66f0e5be9c82f3d2 65e30f10fc36acb3ce95f60f51f3501fbc98ad08  (PR=4150  ,  Filename=create-a-local-package-repository-using-minicran.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
 
 
 
-1. In [!INCLUDE[ssManStudio--../../includes/ssmanstudio-md.md)], open a new Query window and run the following statement to create the stored procedure _TrainTipPredictionModelRxPy_.  This model will be based on the training data you just prepared. Because the stored procedure already includes a definition of the input data, you don't need to provide an input query.
+-   **Easier offline installation**: To install package to an offline server requires that you also download all package dependencies, Using miniCRAN makes it easier to get all dependencies in the correct format.
 
-    ```SQL
-    DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
-    GO
+-   **Improved version management**: In a multiuser environment, there are good reasons to avoid unrestricted installation of multiple package versions on the server.
 
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModelRxPy] (@trained_model varbinary(max) OUTPUT)
-    AS
-    BEGIN
-    EXEC sp_execute_external_script 
-      @language = N'Python',
-      @script = N'
-    import numpy
-    import pickle
-    import pandas
-    from revoscalepy.functions.RxLogit import rx_logit_ex
-    
-    ## Create a logistic regression model using rx_logit_ex function from revoscalepy package
-    logitObj = rx_logit_ex("tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance", data = InputDataSet);
-    
-    ## Serialize model
-    trained_model = pickle.dumps(logitObj)
-    ',
-    @input_data_1 = N'
-    select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, 
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance
-    from nyctaxi_sample_training
-    ',
-    @input_data_1_name = N'InputDataSet',
-    @params = N'@trained_model varbinary(max) OUTPUT',
-    @trained_model = @trained_model OUTPUT;
-    ;
-    END;
-    ```
+After creating the repository, you can modify it by adding new packages or upgrading the version of existing packages.
+
+**Step 1. Install the miniCRAN package**
+
+
+You begin by creating a miniCRAN repository to use as a source. You should create this repository on a computer that has internet access.
+
+1.  Install the miniCRAN package and the required **igraph** package.
+
+```
+    if(!require("miniCRAN")) install.packages("miniCRAN") if(!require("igraph"))
+    install.packages("igraph") library(miniCRAN)
+```
+
+**Step 2. Define a package source: a CRAN mirror, or an MRAN snapshot**
+
+
+1. Specify a mirror site to use in getting packages.
+
+```
+    CRAN_mirror \<- c(CRAN = "https://mran.microsoft.com/snapshot/2017-08-01")
+```
+
+2.  Indicate a local folder in which to store the collected packages. You needn't name the folder miniCRAN; it could be a more descriptive name like "GeneticsPackages" or "ClientRPackages1.0.2".
+
+    Just be sure to create the folder in advance. An error is raised if the `local_repo` folder does not exist when you run the R code later.
 
 
 
@@ -184,50 +206,44 @@ To run Python code in SQL Server, you must have installed SQL Server 2017 togeth
 
 <a name="TitleNum_3"/>
 
-### 3. &nbsp; [Step 6: Operationalize the Model](tutorials/sqldev-py6-operationalize-the-model.md)
+### 3. &nbsp; [Determine which R packages are installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
 
-*Updated: 2017-06-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
+*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
 
-<!-- Source markdown line 236.  ms.author= "jeannt".  -->
+<!-- Source markdown line 55.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 1eb50ac902d4e80bafb1dd7fdf8f607dcdf0d33f 57d5abdc6119db1ecd81587d625054a5bbfb5fc8  (PR=1904  ,  Filename=sqldev-py6-operationalize-the-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=dbf91e0d6f8257227cfe8ac6d13c484d0a566f57) -->
+<!-- git diff --ignore-all-space --unified=0 13d93acedc6e6b4615f1a244a2a1542910feb69e 9a065066398843a4bed318fa46d4982d712915a9  (PR=4150  ,  Filename=determine-which-packages-are-installed-on-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
 
 
 
-Here is the definition of the stored procedure that performs scoring using the **revoscalepy** model.
++ If the package is found, the message returned should be something like "Commands completed successfully."
 
++ If the package cannot be located or loaded, you get an error like this: "An external script error occurred: Error in library("RevoScaleR"): there is no package called RevoScaleR"
+
+**Get a list of installed packages using R**
+
+
+There are multiple ways to get a list of installed or loaded packages using R tools and R functions. Many R development tools provide an object browser or a list of packages that are installed or that are loaded in the current R workspace.
+
++ From a local R utility, use a base R function, such as `installed.packages()`, which is included in the `utils` package. To get a list that is accurate for an instance, you must either specify the library path explicitly, or use the R tools associated with the instance library.
+
++ To check for a package in a specific compute context, you can use the following functions from the RevoScaleR package. These functions help you identify packages in specified compute contexts:
+
++ [rxFindPackage](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxfindpackage)
+
++ [rxInstalledPackages](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinstalledpackages)
+
+For example, run the following R code to get a list of packages available in the specified SQL Server compute context.
+
+```r
+sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;")
+sqlPackages <- rxInstalledPackages(computeContext = sqlServerCompute)
+sqlPackages
 ```
-CREATE PROCEDURE [dbo].[PredictTipSingleModeRxPy] (@model varchar(50), @passenger_count int = 0,
-  @trip_distance float = 0,
-  @trip_time_in_secs int = 0,
-  @pickup_latitude float = 0,
-  @pickup_longitude float = 0,
-  @dropoff_latitude float = 0,
-  @dropoff_longitude float = 0)
-AS
-BEGIN
-  DECLARE @inquery nvarchar(max) = N'
-    SELECT * FROM [dbo].[fnEngineerFeatures-- 
-      @passenger_count,
-      @trip_distance,
-      @trip_time_in_secs,
-      @pickup_latitude,
-      @pickup_longitude,
-      @dropoff_latitude,
-      @dropoff_longitude)
-    '
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
-  EXEC sp_execute_external_script 
-    @language = N'Python',
-    @script = N'
-      import pickle;
-      import numpy;
-      import pandas;
-      from revoscalepy.functions.RxPredict import rx_predict_ex;
-```
+**See also**
 
 
 
@@ -240,84 +256,572 @@ BEGIN
 
 <a name="TitleNum_4"/>
 
-### 4. &nbsp; [Use Python with revoscalepy to Create a Model](tutorials/use-python-revoscalepy-to-create-model.md)
+### 4. &nbsp; [Install additional R packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
 
-*Updated: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
+*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3) | [Next](#TitleNum_5))
 
-<!-- Source markdown line 119.  ms.author= "jeannt".  -->
+<!-- Source markdown line 266.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 ba48f1838857d90d6692aafc48f393777ac602fa 37de2586a344a99969bcd9a20723c021db2604a4  (PR=4150  ,  Filename=install-additional-r-packages-on-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
+
+
+
+This section provides assorted tips and sample code related to R package installation on SQL Server.
+
+**<a name="packageVersion"></a> Get the correct package version and format**
+
+
+There are multiple sources for R packages, the best known among them being CRAN and Bioconductor. The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Many packages are published to GitHub, where you can obtain the source code. However, you may have been given R packages that were developed by someone in your company.
+
+Regardless of the source, you must ensure that the package you want to install has a binary format for the Windows platform. Otherwise the downloaded package cannot run in the SQL Server environment.
+
+Before downloading, you should also check whether the package is compatible with the version of R that is running in SQL Server.
+
+**<a name="bkmk_zipPreparation"></a> Download package as zipped file**
+
+
+For installation on a server without internet access, download a copy of the package in the format of a zipped file for offline installation. Do not unzip the package.
+
+For example, the following procedure describes now to get the correct version of the
+[FISHalyseR](http://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) package from Bioconductor, assuming the computer has access to the internet.
+
+1.  In the **Package Archives** list, find the **Windows binary** version.
+
+2.  Right-click the link to the .ZIP file, and select **Save target as**.
+
+3.  Navigate to the local folder where zipped packages are stored, and click
+    **Save**.
+
+This process creates a local copy of the package. You can then install the package, or copy the zipped package to a server that does not have internet access.
+
+For more information about the contents of the zip file format, and how to create an R package, we recommend this tutorial, which you can download in PDF format from the R project site: [Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf).
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_5"/>
+
+### 5. &nbsp; [Installing SQL Server machine learning features on an Azure virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+
+*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4) | [Next](#TitleNum_6))
+
+<!-- Source markdown line 55.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0886939f86fe12d7ff7b339689a02c7fc75e0786 23dd469349a05d535063aab3c14aec152ed2cd7b  (PR=2141  ,  Filename=use-python-revoscalepy-to-create-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=76839e39427e24688609353b8708d59fee772d28) -->
+<!-- git diff --ignore-all-space --unified=0 f4d287044b8bfda2dbe77fbf65b0d9cdd8f2ff42 2a8e33de6383f5d3af52256c5dfcb60184659eb8  (PR=4150  ,  Filename=installing-sql-server-r-services-on-an-azure-virtual-machine.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
 
 
 
-**Review the code**
+6. If you plan to connect to the instance from a remote data science client, complete [additional steps--#additional-steps) as necessary.
+
+**Disable machine learning features on a SQL Server VM**
 
 
-Let's review the code and highlight some key steps.
+You can also enable or disable the feature on an existing SQL Server virtual machine at any time.
 
-**Defining a data source and compute context**
+1. Open the virtual machine blade.
+2. Click **Settings**, and select **SQL Server configuration**.
+3. Make changes to features and apply.
 
-
-This is an important part of using **revoscalepy** and its related R package **RevoScaleR**. A data source is different from a compute context. The _data source_ defines the data used in your code. The _compute context_ defines where the code will be executed.
-
-> [!NOTE]
-> Support for some data source types supported in RevoScaleR might be limited in the pre-release version. For more information about functions included in the latest release, see [What is revoscalepy--../python/what-is-revoscalepy.md).
-
-The overall process for creating and using a data source and compute context is as follows:
-
-1. Create Python variables, such as _sqlQuery_ and _connectionString_, that define the source and the data you want to use. Pass these variables to the **RxSqlServerData** constructor to  implement the **data source object** named _dataSource_.
-2. Create a compute context object by using the **RxInSqlServer** constructor. In this example, you pass the same connection string you defined earlier, on the assumption that the data is on the same SQL Server instance that you will be using as the compute context. However, the data source and the compute context could be on different servers. The resulting **compute context object** is named _computeContext_.
-3. Choose the active compute context. By default, operations are run locally, which means that if you don't specify a different compute context, the data will be fetched from the data source, and the model-fitting will run in your current Python environment.
-
-    In RevoScaleR, you can also use the function `rxSetComputeContext` to toggle between compute contexts. The function is not implemented yet in the preview version of **revoscalepy**, but you can specify the compute context as an argument to **rx_lin_mod_ex**.
+**<a name="existing"></a>Add R Services to an existing SQL Server 2016 Enterprise VM**
 
 
+If you created an Azure virtual machine that included SQL Server without machine learning, you can add the feature by following these steps:
+
+1. Re-run ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] setup and add the feature on the **Server Configuration** page of the wizard.
+2. Enable execution of external scripts and restart the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] instance. For more information, see [Set up SQL Server R Services--../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+3. (Optional) Configure database access for R worker accounts, if needed for remote script execution.
+   For more information, see [Set Up SQL Server R Services--../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+3. (Optional) Modify a firewall rule on the Azure virtual machine, if you intend to allow R script execution from remote data science clients. For more information, see [Unblock firewall--#firewall).
+4. Install or enable required network libraries. For more information, see [Add network protocols--#network).
 
 
-
-<a name="similars2"/>
 
 &nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_6"/>
+
+### 6. &nbsp; [Install pretrained machine learning models on SQL Server](r/install-pretrained-models-sql-server.md)
+
+*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_5) | [Next](#TitleNum_7))
+
+<!-- Source markdown line 96.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 07b51584a90568cccceea382c44155e40e09c967 db083f8536fbb2ea5886fed787872867b5de5750  (PR=4150  ,  Filename=install-pretrained-models-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
+
+
+
+    For example, to enable use of the latest version of the pretrained models for Python, in a default instance of SQL Server 2017, you would run this statement:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
+
+    On a named instance, the command would be something like this:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
+
+    + To use Python pretrained models with Machine Learning Server (Standalone):
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<sql_folder>\PYTHON_SERVER\site-packages\microsoftml\mxLibs"`
+
+    For example, assuming a default installation of Machine Learning Server (Standalone) using SQL Server 2017 setup, run this statement:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER\Lib\site-packages\microsoftml\mxLibs"`
+
+5. The following values are supported for the version parameter:
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_7"/>
+
+### 7. &nbsp; [Avoiding errors on R packages installed in user libraries](r/packages-installed-in-user-libraries.md)
+
+*Updated: 2017-10-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_6) | [Next](#TitleNum_8))
+
+<!-- Source markdown line 33.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 52cb9a53d7d9c31ee9bc6977464ebd2a18081ff3 3537aa6755c66f12c19bb3448dc9b5c8abb9cc28  (PR=3619  ,  Filename=packages-installed-in-user-libraries.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=aecf422ca2289b2a417147eb402921bb8530d969) -->
+
+
+
+However, this can never work when running R solutions in SQL Server, because R packages must be installed to a specific default library that is associated with the instance.
+
+If the package is not installed in the default library, you might get this error when you try to call the package:
+
+*Error in library(xxx) : there is no package called 'package-name'*
+
+It is also a bad development practice to install required R packages to a custom user library, as it can lead to errors if a solution is run by another user who does not have access to the library location.
+
+**How to install R packages to an accessible library**
+
+
+**For SQL Server 2016**
+
+Use the package library associated with the instance. For details, see [R packages installed with SQL Server--installing-and-managing-r-packages.md)
+
+**For SQL Server 2017**
+
+SQL Server provides features to help you manage multiple package versions and give users permissions to individual packages, without requiring that users have file system access.
+
+For details on how to set up a shared package library and assign users to roles, see [R package management for SQL Server--r-package-management-for-sql-server-r-services.md).
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_8"/>
+
+### 8. &nbsp; [Provision a virtual machine for machine learning on Azure](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+
+*Updated: 2017-10-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_7) | [Next](#TitleNum_9))
+
+<!-- Source markdown line 132.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 16439b4a8f5f4218edfcd746ed20ccbc8263dabc 1b3a8a7d1ceceaa459b3fd5640da26859df8d80b  (PR=3748  ,  Filename=provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=262e3cf5df2448bb6b532c0549c3d72daefe5a96) -->
+
+
+
+|Name| Comments|
+|----|----|----|
+| **SQL Server 2016**| ***  |
+|SQL Server 2016 SP1 Enterprise on Windows|R Services for integrated advanced analytics.|
+|BYOL SQL Server 2016 SP1 Enterprise on Windows Server |R Services for integrated advanced analytics. |
+|Free License: SQL Server 2016 SP1 Developer on Windows Server 2016 |R Services for integrated advanced analytics. |
+| Data Science Virtual Machine - Windows 2012|Contains popular tools for data science, including Microsoft R Server Developer Edition, SQL Server 2016 Developer edition, the Anaconda Python distribution, Julia Pro developer edition, and Jupyter notebooks for R.|
+| Data Science Virtual Machine - Windows 2016|Includes SQL Server 2016 Developer Edition, with support for in-database R analytics.|
+|**SQL Server 2017**| ***   |
+|SQL Server 2017 Enterprise Windows Server 2016| Machine Learning Services with Python and R language support.|
+|BYOL SQL Server 2017 Enterprise Windows Server 2016|Machine Learning Services with Python and R language support.|
+| Free SQL Server License: SQL Server 2017 Developer on Windows Server|Machine Learning Services with Python and R language support.|
+| **Other**| *** |
+| Machine Learning Server Only SQL Server 2017 Enterprise|Similar to the SQL Server 2016 Enterprise image, but contains the standalone version of Machine Learning Server and has the core ScaleR and Operationalization functionality optimized for Windows environments.|
+| Machine Learning Server for Windows|Contains the standalone version of Machine Learning Server, with operationalization features optimized for Windows environments.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_9"/>
+
+### 9. &nbsp; [RevoScaleR](r/revoscaler-overview.md)
+
+*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_8) | [Next](#TitleNum_10))
+
+<!-- Source markdown line 18.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 92f2dfa2e75037a932415881c55d2fd37fc6847a c6e9f17f2df82447b18beff41769ae3ebfbed562  (PR=4150  ,  Filename=revoscaler-overview.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
+
+
+
+
+RevoScaleR is a package of machine learning functions, provided by Microsoft, that supports data science at scale.
+
++ Functions support data import, data transformation, summarization, visualization, and analysis.
+
++ _At scale_ means that operations can be performed against very large datasets, in parallel, and on distributed file systems. Algorithms can operate over datasets that do not fit in memory, by using chunking and by reassembling results when operations are complete.
+
++ RevoScaleR provides many improvements over open source R functions. There are RevoScaleR functions corresponding to many of the most popular base R functions. RevoScaleR functions are denoted with an **rx** or **Rx** prefix to make them easy to identify.
+
++ RevoScaleR serves as a platform for distributed data science. For example, you can use the RevoScaleR compute contexts and transformations with the state-of-the-art algorithms in [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package). You can also use [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) to run base R functions in parallel.
+
+For examples of RevoScaleR in action, see these blogs:
+
++ [Build and deploy a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
+
++ [One million predictions per second with Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/10/15/1-million-predictionssec-with-machine-learning-server-web-service/)
+
++ [Predicting taxi tips using MicrosoftML](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/01/17/predicting-nyc-taxi-tips-using-microsoftml/)
+
++ [Performance optimization with rxExec](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/11/14/performance-optimization-when-using-rxexec-to-parallelize-algorithms/)
+
+**How to get RevoScaleR**
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### 10. &nbsp; [Enable or disable R package management for SQL Server](r/r-package-how-to-enable-or-disable.md)
+
+*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_9) | [Next](#TitleNum_11))
+
+<!-- Source markdown line 60.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5f846cd7d601459a95e694ada41e9fc5285f3de9 83a4a84adf47670c7fd4599f889f27ec3c219708  (PR=4150  ,  Filename=r-package-how-to-enable-or-disable.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
+
+
+
+    If you do not specify a user, the current security context is used.
+
+3. Repeat the command for each database where packages must be installed.
+
+4.  To verify that the new roles have been successfully created, in SQL Server Management Studio, click the database, expand **Security**, and expand **Database Roles**.
+
+    You can also run a query on sys.database_principals such as the following:
+
+```sql
+    SELECT pr.principal_id, pr.name, pr.type_desc,
+        pr.authentication_type_desc, pe.state_desc,
+        pe.permission_name, s.name + '.' + o.name AS ObjectName
+    FROM sys.database_principals AS pr
+    JOIN sys.database_permissions AS pe
+        ON pe.grantee_principal_id = pr.principal_id
+    JOIN sys.objects AS o
+        ON pe.major_id = o.object_id
+    JOIN sys.schemas AS s
+        ON o.schema_id = s.schema_id;
+```
+
+4.  After the feature has been enabled, any user with the appropriate permissions can use the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement in T-SQL to add packages. For an example of how this works, see [Install additional packages on SQL Server](r/install-additional-r-packages-on-sql-server.md).
+
+**<a name="bkmk_disable"></a> Disable package management**
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_11"/>
+
+### 11. &nbsp; [Set up a data science client for use with SQL Server](r/set-up-a-data-science-client.md)
+
+*Updated: 2017-11-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_10) | [Next](#TitleNum_12))
+
+<!-- Source markdown line 52.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 f674f5d329211e4c7d8dc464bd70f1cdef633350 8c65fc96c04f32d1e4777870774a11f9fd2ee219  (PR=3765  ,  Filename=set-up-a-data-science-client.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=dc67a9c744441f9d556e98fb9a4daf4414060360) -->
+
+
+
+    For setup information, see [How to install R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation).
+
+    To configure RTVS to use your Microsoft R client libraries, see [About Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
+
++ Visual Studio 2017
+
+    Even the free Community Edition includes the data science workload, which installs project templates for R, Python, and F#.
+
+    Download Visual Studio from [this site](https://www.visualstudio.com/vs/).
+
++ RStudio
+
+    If you prefer to use RStudio, some additional steps are required to use the RevoScaleR libraries:
+
+    - Install Microsoft R Client to get the required packages and libraries.
+    - Update your R path to use the Microsoft R runtime.
+
+    For more information, see [R Client - configure your IDE](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client#step-2-configure-your-ide).
+
+**Configure your IDE**
+
+
++ R Tools for Visual Studio
+
+    See [this site](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r) for some examples of how to build and debug R projects using R Tools for Visual Studio.
+
++ Visual Studio 2017
+
+    If you install Microsoft R Client or R Server **before** you install Visual Studio, the R Server libraries are automatically detected and used for your library path. If you have not installed the RevoScaleR libraries, from the **R Tools** menu, select **Install R Client**.
+
+**Run R in SQL Server**
+
+
+This example uses Visual Studio 2017 Community Edition, with the data science workload installed.
+
+1. From the **File** menu, select **New** and then select **Project**.
+
+2. The -hand pane contains a list of preinstalled templates. Click **R**, and select **R Project**. In the **Name** box, type `dbtest` and click **OK**.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_12"/>
+
+### 12. &nbsp; [Set up SQL Server Machine Learning Services (In-Database)](r/set-up-sql-server-r-services-in-database.md)
+
+*Updated: 2017-11-16* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_11) | [Next](#TitleNum_13))
+
+<!-- Source markdown line 111.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 4d355f6494b417dd90dce3943e7176eaece7336e 20bddb8ffd4cf3774b812a7376c70b95ccc57e92  (PR=3980  ,  Filename=set-up-sql-server-r-services-in-database.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=06bb91d138a4d6395c7603a2d8f99c69a20642d3) -->
+
+
+
+   + Database Engine Services
+   + R Services (In-Database)
+
+7. When installation is complete, restart your computer.
+
+
+**<a name="bkmk2017top"></a> Install SQL Server 2017 Machine Learning Services (In-Database)**
+
+
+> [!div class="checklist"]
+> * Install database engine and machine learning features
+> * Required post-installation steps: enable machine learning, and restart
+> * Optional post-installation steps: add firewall rules, add users, change or configure service accounts, set up a remote data science client.
+
+**Get started**
+
+1. Run ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] setup.
+
+2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+
+     ![Install Machine Learning Services (In-Database)--media/2017setup-installation-page-mlsvcs.png "Start installation of database engine with Machine Learning Services")
+
+3. On the **Feature Selection** page, select the following options:
+
+    + Select **Database Engine Services**. The database engine is required in each instance that uses machine learning.
+
+    + Select **Machine Learning Services (In-Database)**. This option installs support for in-database use of R. After you select this option, you can select the machine learning language. You can select only R, or you can add both R and Python.
+
+    ![Machine Learning Services feature selection--media/2017setup-features-page-mls-rpy.png "Select these features for R Services In-Database")
+
+    If you do not select either the R or Python language options, the setup wizard installs only the extensibility framework, which includes SQL Server Trusted Launchpad, and does not install any language-specific components.  Generally we recommend that you install at least one language to start with. However, you might use this option if you intend to immediately use the binding process to upgrade the machine learning components. For more information, see [Use SqlBindR to upgrade an instance of R Services--use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_13"/>
+
+### 13. &nbsp; [Unattended installation of Machine Learning Services (In-Database)](r/unattended-installs-of-sql-server-r-services.md)
+
+*Updated: 2017-11-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_12) | [Next](#TitleNum_14))
+
+<!-- Source markdown line 75.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 ad203c90adff3f515b5f16472fad9753be7a421d 6925a9276bcd4a80babc7504de50400f1a5a2940  (PR=3765  ,  Filename=unattended-installs-of-sql-server-r-services.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=dc67a9c744441f9d556e98fb9a4daf4414060360) -->
+
+
+
+The following example shows the arguments required to perform a silent, unattended install of SQL Server 2017 Machine Services (In-Database) with the Python language added.
+
+```
+Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
+```
+
+Note the flags required for Python in SQL Server 2017:
+
++ `ADVANCEDANALYTICS`
++ `SQL_INST_MPY`
++ `IACCEPTPYTHONOPENLICENSETERMS`
+
+**Install both R and Python on a named instance**
+
+
+The following example shows the arguments required to perform a silent, unattended install of SQL Server 2017 Machine Services (In-Database) on a named instance. Both R and Python languages are added.
+
+```
+Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
+```
+
+**<a name="OldInstall"></a> Command-line installation for SQL Server 2016**
+
+
+The following example shows the arguments required to perform a silent, unattended install of SQL Server 2016 with the R language added.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_14"/>
+
+### 14. &nbsp; [Step 3: Explore and visualize the data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
+
+*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_13))
+
+<!-- Source markdown line 66.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 47edcfbd8da7cf1ea1ad03a05f86d3cd26014827 674a7c7d0e8290fc91970ed2aeda3b97d5165d75  (PR=4150  ,  Filename=sqldev-py3-explore-and-visualize-the-data.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
+
+
+
+    Class 4: `tip_amount` > $20
+
+**Create plots using Python in T-SQL**
+
+
+Developing a data science solution usually includes intensive data exploration and data visualization. Because visualization is such a powerful tool for understanding the distribution of the data and outliers, Python provides many packages for visualizing data. The **matplotlib** module is one of the more popular libraries for visualization, and includes many functions for creating histograms, scatter plots, box plots, and other data exploration graphs.
+
+In this section, you learn how to work with plots using stored procedures. Rather than open the image on the server, you store the Python object  `plot` as **varbinary** data, and then write that to a file that can be shared or viewed elsewhere.
+
+**Create a plot as varbinary data**
+
+
+The **revoscalepy** module included with SQL Server 2017 Machine Learning Services supports features similar to those in the **RevoScaleR** package for R.  This example uses the Python equivalent of `rxHistogram` to plot a histogram based on data from a ..!NCLUDE-NotShown--tsql--../../includes/tsql-md.md)] query.
+
+The stored procedure returns a serialized Python `figure` object as a stream of **varbinary** data. You cannot view the binary data directly, but you can use Python code on the client to deserialize and view the figures, and then save the image file on a client computer.
+
+1. Create the stored procedure _SerializePlots_, if the PowerShell script did not already do so.
+
+    - The variable `@query` defines the query text `SELECT tipped FROM nyctaxi_sample`, which is passed to the Python code block as the argument to the script input variable, `@input_data_1`.
+    - The Python script is fairly simple: **matplotlib** `figure` objects are used to make the histogram and scatter plot, and these objects are then serialized using the `pickle` library.
+
+
+
+
+
+
 
 ## Similar Articles
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+    2017-12-02  23:00pm
+-->
 
-<!--  20170717-1101  -->
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### Subject areas which have no new or recently updated articles
 
+- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

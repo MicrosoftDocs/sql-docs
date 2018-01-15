@@ -3,8 +3,11 @@ title: "Fetching a Row of Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Fetching a Row of Data
 To fetch a row of data, an application calls **SQLFetch**. **SQLFetch** can be called with any kind of cursor, but it only moves the rowset cursor in a forward-only direction. **SQLFetch** advances the cursor to the next row and returns the data for any columns that were bound with calls to **SQLBindCol**. When the cursor reaches the end of the result set, **SQLFetch** returns SQL_NO_DATA. For examples of calling **SQLFetch**, see [Using SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

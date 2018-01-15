@@ -1,9 +1,13 @@
 ---
 title: "DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs"
-ms.date: "7/16/2017"
+ms.date: "11/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -29,10 +33,13 @@ caps.latest.revision: 89
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 Checks the integrity of all the pages and structures that make up the table or indexed view.
+
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## Syntax    
@@ -240,7 +247,7 @@ SET @indid = (SELECT index_id
               FROM sys.indexes    
               WHERE object_id = OBJECT_ID('Production.Product')    
                     AND name = 'AK_Product_Name');    
-DBCC CHECKTABLE ('Production.Product',indid);    
+DBCC CHECKTABLE ('Production.Product',@indid);    
 ```    
     
 ## See Also    

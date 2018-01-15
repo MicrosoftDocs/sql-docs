@@ -1,13 +1,14 @@
 ---
 title: "DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "7/16/2017"
+ms.custom: ""
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
+
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,9 +25,10 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DBCC FLUSHAUTHCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Empties the database authentication cache containing information about logins  and firewall rules,  for the current user database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. This statement does not apply to the logical master database, because the master database contains the physical storage for the information about logins and firewall rules. The user executing the statement and other currently connected users remain connected. (DBCC FLUSHAUTHCACHE is not currently supported for [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
  

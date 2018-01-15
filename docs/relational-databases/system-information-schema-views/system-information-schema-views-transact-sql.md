@@ -3,8 +3,11 @@ title: "System Information Schema Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-information-schema-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,12 +22,13 @@ helpviewer_keywords:
   - "system views [SQL Server], information schema"
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # System Information Schema Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   An information schema view is one of several methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides for obtaining metadata. Information schema views provide an internal, system table-independent view of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadata. Information schema views enable applications to work correctly although significant changes have been made to the underlying system tables. The information schema views included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comply with the ISO standard definition for the INFORMATION_SCHEMA.  
   

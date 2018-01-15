@@ -2,8 +2,12 @@
 title: "AT TIME ZONE (Transact-SQL) | Microsoft Docs"
 ms.date: "11/16/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,9 +22,10 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # AT TIME ZONE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Converts an *inputdate* to the corresponding *datetimeoffset* value in the target time zone. If *inputdate* is provided without offset information, the function applies the offset of the time zone assuming that *inputdate* value is provided in the target time zone. If *inputdate* is provided as a *datetimeoffset* value, than **AT TIME ZONE** clause converts it into the target time zone using time zone conversion rules.  
   

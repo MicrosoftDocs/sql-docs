@@ -3,8 +3,11 @@ title: "Add an External Tool to the Tools Menu | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add an External Tool to the Tools Menu (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can launch any [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows or [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] application from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. External applications can be added to, and run from, the **Tools** menu.  
   
 ### To add an external tool to the Tools menu  

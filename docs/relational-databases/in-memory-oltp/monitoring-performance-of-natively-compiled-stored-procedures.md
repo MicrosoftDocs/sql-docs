@@ -2,9 +2,12 @@
 title: "Monitoring Performance of Natively Compiled Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic discusses how you can monitor the performance of natively compiled stored procedures  
   
 ## Using Extended Events  
@@ -23,7 +28,7 @@ manager: "jhubbard"
   
  **line_number**, along with the **object_id** in the extended event can be used to investigate the query. The following query can be used to retrieve the procedure definition. The line number can be used to identify the query within the definition:  
   
-```tsql  
+```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
@@ -47,7 +52,7 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  The following query returns the procedure names and execution statistics for natively compiled stored procedures in the current database, after statistics collection:  
   
-```tsql  
+```sql  
 select object_id,  
        object_name(object_id) as 'object name',  
        cached_time,  
@@ -69,7 +74,7 @@ order by total_worker_time desc
   
  The following query returns the query text as well as execution statistics for all queries in natively compiled stored procedures in the current database for which statistics have been collected, ordered by total worker time, in descending order:  
   
-```tsql  
+```sql  
 select st.objectid,   
        object_name(st.objectid) as 'object name',   
        SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
@@ -98,7 +103,7 @@ order by qs.total_worker_time desc
   
  Showplan XML is obtained by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC my_proc   

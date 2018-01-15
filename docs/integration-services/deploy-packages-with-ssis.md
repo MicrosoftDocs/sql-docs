@@ -2,9 +2,12 @@
 title: "Deploy Packages with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -24,6 +27,7 @@ caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Deploy Packages with SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides tools that make it easy to deploy packages to another computer. The deployment tools also manage any dependencies, such as configurations and files that the package needs. In this tutorial, you will learn how to use these tools to install packages and their dependencies on a target computer.    
@@ -51,14 +55,14 @@ This tutorial is intended for users who are already familiar with fundamental fi
 - Sample data, completed packages, configurations, and a Readme. These files are installed together if you download the [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550).     
 > **Note!** Make sure you have permission to create and drop tables in AdventureWorks or other data you use.         
     
--   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
 **Destination computer.** The computer to which you deploy packages **must have the following components installed:**    
     
 - SQL Server
 - Sample data, completed packages, configurations, and a Readme. These files are installed together if you download the [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
     
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
     

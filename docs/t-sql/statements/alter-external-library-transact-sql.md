@@ -1,12 +1,15 @@
 ---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/18/2017"
-ms.prod: "sql-server-2017"
+ms.date: "10/05/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,29 +24,24 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-Add new content to an existing package library, or modifies existing library content.
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-New content can be added for a library only when adding content for a new platform. For example, if an existing package library named `ggplot2` contains packages for the WINDOWS platform, then the `ALTER EXTERNAL LIBRARY ADD` statement could be used to add content for the LINUX platform.
+Modifies the content of an existing external package library.
 
 ## Syntax
 
 ```
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
-{ SET | ADD } <file_spec>
-WITH ( <library_option> [,…n] )
+SET <file_spec>
+WITH ( LANGUAGE = 'R' )
 [ ; ]
-
-<library_option> :: =  
-  LANGUAGE = 'R' | 'Python'
-| DATA_SOURCE = external_data_source_name  
 
 <file_spec> ::=
 {
 (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-[, PLATFORM = WINDOWS | LINUX])
+[, PLATFORM = WINDOWS )
 }
 
 <client_library_specifier> :: =
@@ -59,21 +57,17 @@ WITH ( <library_option> [,…n] )
 
 **library_name**
 
-Specifies the name of an existing package library.
-
-Libraries are scoped to the user. That is, library names are considered unique within the context of a specific user or owner.
+Specifies the name of an existing package library. Libraries are scoped to the user. That is, library names are considered unique within the context of a specific user or owner.
 
 **owner_name**
 
 Specifies the name of the user or role that owns the external library.
 
-Database owners can modify user libraries.
-
 **file_spec**
 
-Specifies the content of the package for a specific platform. Only one file artifact per platform will be supported.
+Specifies the content of the package for a specific platform. Only one file artifact per platform is supported.
 
-The file can be specified in the form of a local path, network path, or path to a blob storage account, or as a binary blob. Use of Azure BLOB store URL will be supported only for SQL Database. If the data source option is specified, the file name can be a relative path with respect to the container referenced in the `EXTERNAL DATA SOURCE`.
+The file can be specified in the form of a local path or network path. If the data source option is specified, the file name can be a relative path with respect to the container referenced in the `EXTERNAL DATA SOURCE`.
 
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
 
@@ -81,38 +75,67 @@ Optionally, an OS platform for the file can be specified. Only one file artifact
 
 Specifies the name of the external data source that contains the location of the library file. This location should reference an Azure blob storage path. To create an external data source, use [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
 
-**PLATFORM = WINDOWS | LINUX**
+> [!IMPORTANT] 
+> Currently, blobs are not supported as a data source in the SQL Server 2017 release.
 
-Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform.
+**library_bits**
 
-For example, assume two users **RUser1** and **RUser2** have individually uploaded the R library with the name `ggplot2`, using the zip file containing the Windows version binaries.
+Specifies the content of the package as a hex literal, similar to assemblies. This option allows users to create a library to alter the library if they have the required permission, but do not have file path access to any folder the server can access.
 
-Both users could then call `ALTER EXTERNAL LIBRARY`, and upload the .gz file containing the Linux version binaries, to add the Linux platform version to their libraries.
+**PLATFORM = WINDOWS**
 
-### Return values
-
-An informational message is returned if the statement was successful.  
-- "Library installation successful."  
-
-If the statement failed, these messages might be returned:  
-- "File does not exist in the given path when creating external library."  
-- "The DB user does not have permission to the folder containing the package."  
-- "Extensibility not enabled."  
+Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. Windows is the only supported platform.
 
 ## Remarks
 
-For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows, and .tar files with the .gz extension for Linux.
+For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. Currently, only the Windows platform is supported.  
 
-Instructions will be provided at a later date for package installation on Linux, or for Python libraries.
+The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the database. The modified library is not actually installed until a user runs an external script afterwards, by executing [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+## Permissions
+
+Requires the `ALTER ANY EXTERNAL LIBRARY` permission. Users who created an external library, can alter that external library.
 
 ## Examples
 
-The `ALTER EXTERNAL LIBRARY` DDL statement can be used to add new library content or modify existing library content.
+The following examples modifies an external library called customPackage.
 
-New content can be added for a library only for a new platform. For example, if there is an existing package for `ggplot2` for the WINDOWS platform, the `ALTER EXTERNAL LIBRARY ADD` statement can be used only to add content for the LINUX platform.
+### A. Replace the contents of a library using a file
+
+The following example modifies an external library called customPackage, using a zipped file containing the updated bits.
+
+```sql
+ALTER EXTERNAL LIBRARY customPackage 
+SET 
+  (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
+WITH (LANGUAGE = 'R');
+```  
+
+To install the updated library, execute the stored procedure `sp_execute_external_script`.
+
+```sql   
+EXEC sp_execute_external_script 
+@language =N'R', 
+@script=N'
+# load customPackage
+library(customPackage)
+# call customPackageFunc
+OutputDataSet <- customPackageFunc()
+'
+WITH RESULT SETS (([result] int));
+```
+
+### B. Alter an existing library using a byte stream
+
+The following example alters the existing library by passing the new bits as a hexidecimal literal.
+
+```SQL
+ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+```
 
 ## See also  
-[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)
-[DROP EXTERNAL DATA SOURCE (Transact-SQL)](drop-external-data-source-transact-sql.md)  
+
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

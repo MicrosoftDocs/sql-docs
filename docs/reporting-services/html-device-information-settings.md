@@ -1,12 +1,16 @@
 ---
 title: "HTML Device Information Settings | Microsoft Docs"
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
+ms.custom: ""
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -14,9 +18,10 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], HTML rendering"
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # HTML Device Information Settings
 The following table lists the device information settings for rendering in HTML format.  
@@ -26,7 +31,7 @@ The following table lists the device information settings for rendering in HTML 
   
 |Setting|Value|  
 |-------------|-----------|  
-|**AccessibleTablix**|Indicates whether to render with additional accessibility metadata for use with screen readers. The additional accessibility metadata causes the rendered report to be compliant with the following technical standards in the "Web-based Intranet and Internet Information and Applications" section (1194.22) of the Electronic and Information Technology Accessibility Standards (Section 508) document:<br /><br /> (g) Row and column headers shall be identified for data tables.<br /><br /> (h) Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.<br /><br /> (i) Frames shall be titled with text that facilitates frame identification and navigation.<br /><br /> <br /><br /> This parameter is only applicable to reports that contain simple table or matrix structures with simple grouping. The default value is **false**.<br /><br /> This parameter is supported in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)], but not in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)].|  
+|**AccessibleTablix**|Indicates whether to render with additional accessibility metadata for use with screen readers. The additional accessibility metadata causes the rendered report to be compliant with the following technical standards in the "Web-based Intranet and Internet Information and Applications" section (1194.22) of the Electronic and Information Technology Accessibility Standards (Section 508) document:<br /><br /> (g) Row and column headers shall be identified for data tables.<br /><br /> (h) Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.|  
 |**ActionScript(\*)**|Specifies the name of the JavaScript function to use when an action event occurs, such as a drillthrough or bookmark click. If this parameter is specified, an action event will trigger the named JavaScript function instead of a postback to the server.|  
 |**BookmarkID**|The bookmark ID to jump to in the report.|  
 |**DocMap**|Indicates whether to show or hide the report document map. The default value of this parameter is **true**.|  

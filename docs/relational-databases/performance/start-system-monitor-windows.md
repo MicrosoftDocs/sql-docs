@@ -2,9 +2,12 @@
 title: "Start System Monitor (Windows) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "performance"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,15 +21,17 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Start System Monitor (Windows)
-  Use System Monitor to monitor the utilization of system resources. Collect and view real-time performance data in the form of counters, for server resources such as processor and memory use, and for many Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources such as locks and transactions.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use System Monitor to monitor the utilization of system resources. Collect and view real-time performance data in the form of counters. You can use counters for server resources, such as processor and memory use. You also can use them for many Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources, such as locks and transactions.  
   
-### To start System Monitor in Windows  
+## Start System Monitor in Windows  
   
-1.  On the **Start** menu, point to **Run**, type **perfmon** in the Run dialog box, and then click **OK**.  
+On the **Start** menu, point to **Run**, type **perfmon** in the **Run** dialog box, and then select **OK**.  
   
-## See Also  
+## See also  
  [Run System Monitor](../../relational-databases/performance-monitor/run-system-monitor.md)  
   
   

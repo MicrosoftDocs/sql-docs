@@ -2,12 +2,15 @@
 title: "Move or Delete an Item (Report Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-server"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -15,9 +18,10 @@ helpviewer_keywords:
   - "items [Reporting Services], moving"
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Move or Delete an Item (Report Manager)
   Reports and report-related items that you publish to a report server are stored in folders. You can move items to a different folder and references to those items are maintained automatically by the report server. Before you delete an item, consider whether other items depend on it.  

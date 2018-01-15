@@ -2,9 +2,12 @@
 title: "Buffer Pool Extension | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "configure-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Buffer Pool Extension
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the buffer pool extension provides the seamless integration of a nonvolatile random access memory (that is, solid-state drive) extension to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] buffer pool to significantly improve I/O throughput. The buffer pool extension is not available in every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## Benefits of the Buffer Pool Extension  

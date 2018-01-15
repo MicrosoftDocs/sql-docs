@@ -3,8 +3,11 @@ title: "Create Queries (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create Queries (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Queries allow you to retrieve data from the tables and views in your database. You create and work with queries in **Query and View Designer**, which is composed of four panes: the [Diagram Pane](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), the [SQL Pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), the [Criteria Pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md), and the [Results Pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ### To create a new query  

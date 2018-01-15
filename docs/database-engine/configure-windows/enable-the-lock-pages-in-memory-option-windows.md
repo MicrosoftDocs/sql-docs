@@ -2,9 +2,12 @@
 title: "Enable the Lock Pages in Memory Option (Windows) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "configure-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 35
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Enable the Lock Pages in Memory Option (Windows)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk.  
   
 > [!NOTE]  
@@ -43,7 +48,7 @@ manager: "jhubbard"
   
 7.  In the **Select Users, Service Accounts, or Groups** dialog box, add an account with privileges to run sqlservr.exe.  
   
-8.  Log out and then log back in for this change to take effect.  
+8.  Restart the SQL Server Data Engine service for this setting to take effect.
   
 ## See Also  
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

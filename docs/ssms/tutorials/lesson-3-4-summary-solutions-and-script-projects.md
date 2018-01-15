@@ -2,9 +2,12 @@
 title: "Summary: Solutions and Script Projects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 3-4 - Summary - Solutions and Script Projects
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 By leveraging the extensive developer features of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offers the functionality that developers need for enterprise-level code management. You can create custom templates to support your repetitive tasks, save and manage complex script projects in a centralized and coordinated environment.  
   
 ## Return to SQL Server Tools Tutorials Portal  

@@ -2,9 +2,12 @@
 title: "Use a Recordset Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Use a Recordset Destination
   The Recordset destination does not save data to an external data source. Instead, the Recordset destination saves data in memory in a recordset that is stored in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package variable of the **Object** data type. After the Recordset destination saves the data, you typically use a Foreach Loop container with the Foreach ADO enumerator to process one row of the recordset at a time. The Foreach ADO enumerator saves the value from each column of the current row into a separate package variable. Then, the tasks that you configure inside the Foreach Loop container read those values from the variables and perform some action with them.  
@@ -106,7 +110,7 @@ manager: "jhubbard"
   
     3.  For **SQL command text**, enter the following query:  
   
-        ```  
+        ```sql 
         SELECT     Person.Contact.EmailAddress, Person.Contact.FirstName, CONVERT(float, Sales.SalesPerson.Bonus) AS Bonus  
         FROM         Sales.SalesPerson INNER JOIN  
                               Person.Contact ON Sales.SalesPerson.SalesPersonID = Person.Contact.ContactID  

@@ -3,8 +3,11 @@ title: "Writing Pages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,10 @@ caps.latest.revision: 2
 author: "pmasl"
 ms.author: "pelopes"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Writing Pages
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 The I/O from an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] includes logical and physical writes. A logical write occurs when data is modified in a page in the buffer cache. A physical write occurs when the page is written from the [buffer cache](../relational-databases/memory-management-architecture-guide.md) to disk.
 

@@ -1,11 +1,14 @@
 ---
 title: "ADO Introduction | Microsoft Docs"
-ms.custom: "H1Hack27Feb2017"
+ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology: “drivers”
 ms.topic: "article"
 helpviewer_keywords:
@@ -15,6 +18,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "MightyPen"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADO Overview and Benefits
 ActiveX Data Objects (ADO) is a high-level, easy-to-use interface to OLE DB. OLE DB is a low-level, high-performance interface to a variety of data stores. Both ADO and OLE DB can work with relational (tabular) and nonrelational (hierarchical or stream) data.

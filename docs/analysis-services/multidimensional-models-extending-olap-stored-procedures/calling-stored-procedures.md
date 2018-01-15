@@ -2,12 +2,15 @@
 title: "Calling Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -21,9 +24,11 @@ ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Calling Stored Procedures
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Stored procedures can be called on the server or from client application. In either case, stored procedures always run on the server, either the context of the server or of a database. There are no special permissions required to execute a stored procedure. Once a stored procedure is added by an assembly to the server or database context, any user can execute the stored procedure as long as the role for the user permits the actions performed by the stored procedure.  
   
  Calling a stored procedure in MDX is done in the same manner as calling an intrinsic MDX function. For a stored procedure that takes no parameters, the name of the procedure and an empty pair of parentheses are used, as shown here:  

@@ -2,9 +2,12 @@
 title: "Table and Row Size in Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/19/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Table and Row Size in Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the in-row data size of a memory-optimized table couldn't be longer than [8,060 bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). However, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in Azure SQL Database it is now possible to create a memory-optimized table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)) and perform operations on them using natively compiled T-SQL modules and table types. 
   
@@ -142,7 +146,7 @@ Memory-optimized table, consisting of indexes and rows.
   
  Consider an Orders table with the following definition:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -224,7 +228,7 @@ GO
   
  The actual memory allocated for and used by this table and its indexes can be obtained through the following query:  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

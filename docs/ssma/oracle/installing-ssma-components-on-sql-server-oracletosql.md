@@ -1,10 +1,13 @@
 ---
 title: "Installing SSMA Components on SQL Server (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ helpviewer_keywords:
   - "SQL Server Database Objects"
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Installing SSMA Components on SQL Server (OracleToSQL)
 In addition to installing SSMA, you must also install components on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. These components include the SSMA extension pack, which supports data migration, and Oracle providers to enable server-to-server connectivity.  

@@ -2,9 +2,12 @@
 title: "sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: "sql-data-warehouse"
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,10 @@ caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_pdw_exec_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Holds information about all requests currently or recently active in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. It lists one row per request/query.  
   
@@ -26,10 +30,10 @@ manager: "jhubbard"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Key for this view. Unique numeric id associated with the request.|Unique across all requests in the system.|  
 |session_id|**nvarchar(32)**|Unique numeric id associated with the session in which this query was run. See [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|status|**nvarchar(32)**|Current status of the request.|'Pending', 'Authorizing', 'AcquireSystemResources', 'Initializing', 'Plan', 'Parsing', 'AquireResources', 'Running', 'Cancelling', 'Complete', 'Failed', 'Cancelled'.|  
+|status|**nvarchar(32)**|Current status of the request.|'Running', 'Suspended', 'Completed', 'Cancelled', 'Failed'.|  
 |submit_time|**datetime**|Time at which the request was submitted for execution.|Valid **datetime** smaller or equal to the current time and start_time.|  
-|start_time|**datetime**|Time at which the request execution was started.|0 for queued requests; otherwise, valid **datetime** smaller or equal to current time.|  
-|end_compile_time|**datetime**|Time at which the engine completed compiling the request.|0 for requests that have not been compiled yet; otherwise a valid **datetime** greater than start_time and less than or equal to the current time.|  
+|start_time|**datetime**|Time at which the request execution was started.|NULL for queued requests; otherwise, valid **datetime** smaller or equal to current time.|  
+|end_compile_time|**datetime**|Time at which the engine completed compiling the request.|NULL for requests that have not been compiled yet; otherwise a valid **datetime** less than start_time and less than or equal to the current time.|
 |end_time|**datetime**|Time at which the request execution completed, failed, or was cancelled.|Null for queued or active requests; otherwise, a valid **datetime** smaller or equal to current time.|  
 |total_elapsed_time|**int**|Time elapsed in execution since the request was started, in milliseconds.|Between 0 and the difference between start_time and end_time.<br /><br /> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning “The maximum value has been exceeded.”<br /><br /> The maximum value in milliseconds is equivalent to 24.8 days.|  
 |label|**nvarchar(255)**|Optional label string associated with some SELECT query statements.|Any string containing 'a-z','A-Z','0-9','_'.|  

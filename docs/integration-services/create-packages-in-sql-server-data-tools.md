@@ -2,9 +2,12 @@
 title: "Create Packages in SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create Packages in SQL Server Data Tools
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can create a new package by using one of the following methods:  
@@ -46,7 +50,7 @@ manager: "jhubbard"
  For a video that demonstrates how to create a basic package using the default package template, see [Creating a Basic Package (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131023).  
 
 ## Get SQL Server Data Tools
-To install SQL Server Data Tools (SSDT), see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+To install SQL Server Data Tools (SSDT), see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## Create a package in SQL Server Data Tools using the Package Template  
   

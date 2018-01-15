@@ -2,9 +2,12 @@
 title: "Remote Blob Store (RBS) (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "blob"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,10 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Remote Blob Store (RBS) (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB Store (RBS) is an optional add-on component that lets database administrators store binary large objects in commodity storage solutions instead of directly on the main database server.  
   
@@ -47,7 +51,7 @@ manager: "jhubbard"
  A number of third-party storage solution vendors have developed RBS providers that conform to these standard APIs and support BLOB storage on various storage platforms.  
   
 ## RBS Requirements  
- RBS requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise for the main database server in which the BLOB metadata is stored.  However, if you use the supplied FILESTREAM provider, you can store the BLOBs themselves on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. To connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS requires at least ODBC driver version 11 for [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] and ODBC Driver version 13 for [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Drivers are available at [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).   
+ - RBS requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise for the main database server in which the BLOB metadata is stored.  However, if you use the supplied FILESTREAM provider, you can store the BLOBs themselves on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. To connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS requires at least ODBC driver version 11 for [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] and ODBC Driver version 13 for [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Drivers are available at [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).    
   
  RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
   

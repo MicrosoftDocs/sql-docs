@@ -1,10 +1,13 @@
 ---
-title: "&amp;= (Bitwise AND EQUALS) (Transact-SQL) | Microsoft Docs"
+title: "&amp;= (Bitwise AND Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,15 +19,20 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "compound operators, &="
+  - "assignment operators, &="
+  - "augmented operators, &="
   - "&= (bitwise AND equals)"
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
 caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
-# &amp;= (Bitwise AND EQUALS) (Transact-SQL)
+
+# &amp;= (Bitwise AND Assignment) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
 
   Performs a bitwise logical AND operation between two integer values, and sets a value to the result of the operation.  
   

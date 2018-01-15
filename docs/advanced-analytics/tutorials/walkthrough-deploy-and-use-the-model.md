@@ -2,13 +2,15 @@
 title: "Deploy the R model and use it in SQL (walkthrough) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
 dev_langs: 
@@ -18,6 +20,7 @@ caps.latest.revision: 18
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Deploy the R model and use it in SQL
 
@@ -65,7 +68,7 @@ A stored procedure for batch scoring was created when you initially ran the Powe
 
     + You use a SELECT statement to call the stored model from a SQL table. The model is retrieved from the table as **varbinary(max)** data, stored in the SQL variable _@lmodel2_, and passed as the parameter *mod* to the system stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + The data used as inputs for scoring is defined as a SQL query and stored as a string in the SQL variable _@input_. As data is retrieved from the database, it is stored in a data frame called *InputDataSet*, which is just the default name for input data to the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; you can define another variable name if needed by using the parameter _@input\_data\_1\_name_.
+    + The data used as inputs for scoring is defined as a SQL query and stored as a string in the SQL variable _@input_. As data is retrieved from the database, it is stored in a data frame called *InputDataSet*, which is just the default name for input data to the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; you can define another variable name if needed by using the parameter *_@input_data_1_name_*.
 
     + To generate the scores, the stored procedure calls the `rxPredict` function from the **RevoScaleR** library.
 
@@ -207,7 +210,7 @@ We also recommend that you check out some of these additional samples and resour
 
 + [Data science scenarios and solution templates](data-science-scenarios-and-solution-templates.md)
 
-+ [In-database advanced analytics](/sqldev-in-database-r-for-sql-developers.md)
++ [In-database advanced analytics](sqldev-in-database-r-for-sql-developers.md)
 
 + [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
@@ -215,7 +218,7 @@ We also recommend that you check out some of these additional samples and resour
 
 ## Previous lesson
 
-[Build an R model and save it in SQL Server](/walkthrough-build-and-save-the-model.md)
+[Build an R model and save it in SQL Server](walkthrough-build-and-save-the-model.md)
 
 ## Next steps
 

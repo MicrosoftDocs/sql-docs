@@ -1,13 +1,13 @@
 ---
 title: "sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "03/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
+ms.component: "dmv's"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,9 +27,10 @@ caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # sys.dm_db_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Returns CPU, I/O, and memory consumption for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database. One row exists for every 15 seconds, even if there is no activity in the database. Historical data is maintained for one hour.  
   
@@ -39,7 +40,7 @@ manager: "jhubbard"
 |avg_cpu_percent|**decimal (5,2)**|Average compute utilization in percentage of the limit of the service tier.|  
 |avg_data_io_percent|**decimal (5,2)**|Average data I/O utilization in percentage of the limit of the service tier.|  
 |avg_log_write_percent|**decimal (5,2)**|Average write resource utilization in percentage of the limit of the service tier.|  
-|avg_memory_percent|**decimal (5,2)**|Average memory utilization in percentage of the limit of the service tier.<br /><br /> This includes memory used for storage of In-Memory OLTP objects.|  
+|avg_memory_usage_percent|**decimal (5,2)**|Average memory utilization in percentage of the limit of the service tier.<br /><br /> This includes memory used for storage of In-Memory OLTP objects.|  
 |xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP in percentage of the limit of the service tier (at the end of the reporting interval). This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations.<br /><br /> Returns 0 if In-Memory OLTP is not used in the database.|  
 |max_worker_percent|**decimal (5,2)**|Maximum concurrent workers (requests) in percentage of the limit of the database’s service tier.|  
 |max_session_percent|**decimal (5,2)**|Maximum concurrent sessions in percentage of the limit of the database’s service tier.|  

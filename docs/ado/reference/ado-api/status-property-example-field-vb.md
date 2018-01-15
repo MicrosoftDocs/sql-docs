@@ -1,12 +1,15 @@
 ---
 title: "Status Property Example (Field) (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,6 +21,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Status Property Example (Field) (VB)
 The following example opens a document from a read/write folder using the [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). The [Status](../../../ado/reference/ado-api/status-property-ado-field.md) property of a [Field](../../../ado/reference/ado-api/field-object.md) object of the [Record](../../../ado/reference/ado-api/record-object-ado.md) will first be set to **adFieldPendingInsert**, then be updated to **adFieldOk**.  

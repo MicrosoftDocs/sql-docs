@@ -2,13 +2,15 @@
 title: "Build an R model and save to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
 dev_langs: 
@@ -18,6 +20,7 @@ caps.latest.revision: 21
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Build an R model and save to SQL Server
 
@@ -140,6 +143,7 @@ In this section, you'll experiment with both techniques.
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
+    ```
 
 3. Generate a local plot, based on the values stored in the output variable `pred`.
 
@@ -226,9 +230,9 @@ In the next and final lesson, you learn how to perform scoring against the saved
 
 ## Next lesson
 
-[Deploy the R model and use in SQL](/walkthrough-deploy-and-use-the-model.md)
+[Deploy the R model and use in SQL](walkthrough-deploy-and-use-the-model.md)
 
 ## Previous lesson
 
-[Create data features using R and SQL](/walkthrough-create-data-features.md)
+[Create data features using R and SQL](walkthrough-create-data-features.md)
 

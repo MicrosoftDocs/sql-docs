@@ -2,9 +2,12 @@
 title: "Enable SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Enable SQL Server Managed Backup to Microsoft Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with default settings at both the database and instance level. It also describes how to enable email notifications and how to monitor backup activity.  
   
  This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).  
@@ -70,7 +75,7 @@ manager: "jhubbard"
   
 1.  **Create a SQL Credential for the SAS URL:** Use the SAS token to create a SQL Credential for the blob container URL. In SQL Server Management Studio, use the following Transact-SQL query to create the credential for your blob container URL based on the following example:  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
     WITH IDENTITY = 'Shared Access Signature',  
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
@@ -85,7 +90,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  To enable managed backup at the instance level, specify `NULL` for the `database_name` parameter.  
   
-    ```tsql  
+    ```sql  
     Use msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   

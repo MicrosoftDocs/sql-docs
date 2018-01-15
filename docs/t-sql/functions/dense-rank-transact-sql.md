@@ -3,8 +3,11 @@ title: "DENSE_RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,12 +24,13 @@ helpviewer_keywords:
   - "ranking rows"
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the rank of rows within the partition of a result set, without any gaps in the ranking. The rank of a row is one plus the number of distinct ranks that come before the row in question.  
   
@@ -35,8 +39,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -183,40 +185,24 @@ GROUP BY LastName,SalesTerritoryGroup;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          TotalSales     SalesTerritoryGroup  RankResult`  
-  
- `----------------  -------------  -------------------  --------`  
-  
- `Pak               10514000.0000  Europe               1`  
-  
- `Varkey Chudukatil  5557000.0000  Europe               2`  
-  
- `Valdez             2287000.0000  Europe               3`  
-  
- `Carson            12198000.0000  North America        1`  
-  
- `Mitchell          11786000.0000  North America        2`  
-  
- `Blythe            11162000.0000  North America        3`  
-  
- `Reiter             8541000.0000  North America        4`  
-  
- `Ito                7804000.0000  North America        5`  
-  
- `Saraiva            7098000.0000  North America        6`  
-  
- `Vargas             4365000.0000  North America        7`  
-  
- `Campbell           4025000.0000  North America        8`  
-  
- `Ansman-Wolfe       3551000.0000  North America        9`  
-  
- `Mensa-Annan        2753000.0000  North America        10`  
-  
- `Tsoflias           1687000.0000  Pacific              1`  
-  
-
-
+```
+ LastName          TotalSales     SalesTerritoryGroup  RankResult  
+----------------  -------------  -------------------  --------  
+Pak               10514000.0000  Europe               1  
+Varkey Chudukatil  5557000.0000  Europe               2  
+Valdez             2287000.0000  Europe               3  
+Carson            12198000.0000  North America        1  
+Mitchell          11786000.0000  North America        2  
+Blythe            11162000.0000  North America        3  
+Reiter             8541000.0000  North America        4  
+Ito                7804000.0000  North America        5  
+Saraiva            7098000.0000  North America        6  
+Vargas             4365000.0000  North America        7  
+Campbell           4025000.0000  North America        8  
+Ansman-Wolfe       3551000.0000  North America        9  
+Mensa-Annan        2753000.0000  North America        10  
+Tsoflias           1687000.0000  Pacific              1 
+```  
 
 ## See Also  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   

@@ -2,12 +2,15 @@
 title: "DISCOVER_CALC_DEPENDENCY Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -18,9 +21,11 @@ ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_CALC_DEPENDENCY Rowset
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Reports on the dependencies between calculations and on the objects referenced in those calculations. You can use this information in a client application to report on problems with complex formulas, or to warn when related objects are deleted or modified. You can also use the rowset to extract the DAX expressions used in measures or calculated columns.  
   
  **Applies to:** tabular models  

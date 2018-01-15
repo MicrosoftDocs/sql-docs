@@ -2,9 +2,12 @@
 title: "Enable a Remote Publisher at a Distributor (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Enable a Remote Publisher at a Distributor (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Enable a Publisher to use a remote Distributor on the **Publishers** page. This page is available in the Configure Distribution Wizard and the **Distributor Properties - \<Distributor>** dialog box. For more information about using the wizard and accessing the dialog box, see [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md) and [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 ### To enable a Publisher in the Configure Distribution Wizard  

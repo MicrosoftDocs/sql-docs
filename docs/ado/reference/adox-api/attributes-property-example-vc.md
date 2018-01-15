@@ -1,12 +1,15 @@
 ---
 title: "Attributes Property Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,6 +21,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Attributes Property Example (VC++)
 This example demonstrates the [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md). Setting it to **adColNullable** allows the user to set the value of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Field](../../../ado/reference/ado-api/field-object.md) to an empty string. In this situation, the user can distinguish between a record where data is not known and a record where the data does not apply.  

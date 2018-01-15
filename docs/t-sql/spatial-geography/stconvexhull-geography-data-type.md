@@ -3,8 +3,11 @@ title: "STConvexHull (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,10 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # STConvexHull (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns an object that represents the convex hull of a **geography** instance.  
   
@@ -48,31 +52,34 @@ manager: "jhubbard"
 ### A. Using STConvexHull() on an uninitialized geography instance  
  The following example uses `STConvexHull()` on an uninitialized **geography** instance.  
   
- `DECLARE @g geography;`  
-  
- `SELECT @g.STConvexHull();`  
+```
+ DECLARE @g geography;  
+ SELECT @g.STConvexHull();
+ ```  
   
 ### B. Using STConvexHull on an empty geography instance  
  The following example uses `STConvexHull()` on an empty `Polygon` instance.  
   
- `DECLARE @g geography = 'POLYGON EMPTY';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON EMPTY';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
 ### C. Finding the convex hull of a non-convex Polygon instance  
  The following example uses `STConvexHull()` to find the convex hull of a non-convex `Polygon` instance.  
   
 ```  
-DECLARE @g geography;  
-SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
-SELECT @g.STConvexHull().ToString();  
+ DECLARE @g geography;  
+ SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
+ SELECT @g.STConvexHull().ToString();  
 ```  
   
 ### D. Finding the convex hull on a geography instance with an envelope angle larger than 90 degrees  
  The following example uses `STConvexHull()` on a **geography** instance with an envelope angle larger than 90 degrees.  
   
- `DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
   

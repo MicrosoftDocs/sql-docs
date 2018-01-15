@@ -2,13 +2,15 @@
 title: "Working with inputs and outputs (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 dev_langs: 
   - "R"
   - "SQL"
@@ -17,10 +19,11 @@ caps.latest.revision: 7
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Working with inputs and outputs (R in SQL quickstart)
 
-When you want to run R code in SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
+When you want to run R code in SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
 
 ## <a name="bkmk_SSMSBasics"></a>Create some simple test data
 

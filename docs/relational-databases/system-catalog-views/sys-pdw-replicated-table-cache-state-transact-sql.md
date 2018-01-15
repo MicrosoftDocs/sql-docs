@@ -2,9 +2,12 @@
 title: "sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse"
+ms.service: "sql-data-warehouse"
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ dev_langs:
 author: "ronortloff"
 ms.author: "rortloff;barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

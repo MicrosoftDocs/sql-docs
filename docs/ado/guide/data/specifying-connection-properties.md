@@ -1,12 +1,15 @@
 ---
 title: "Specifying Connection Properties | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,6 +20,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specifying Connection Properties
 You can supply much of the information specified by a [connection string](../../../ado/guide/data/creating-a-connection-string.md) by setting properties of the **Connection** object before opening the connection. For example, you could achieve the same effect as the connection string discussed in [Creating a Connection String](../../../ado/guide/data/creating-a-connection-string.md) by using the following code.  

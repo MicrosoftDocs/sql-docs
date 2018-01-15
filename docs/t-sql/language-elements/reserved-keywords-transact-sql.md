@@ -3,8 +3,11 @@ title: "Reserved Keywords (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,8 +24,10 @@ caps.latest.revision: 53
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
-# Reserved Keywords-Transact-SQL
+
+# Reserved Keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses reserved keywords for defining, manipulating, and accessing databases. Reserved keywords are part of the grammar of the [!INCLUDE[tsql](../../includes/tsql-md.md)] language that is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to parse and understand [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and batches. Although it is syntactically possible to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserved keywords as identifiers and object names in [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, you can do this only by using delimited identifiers.  

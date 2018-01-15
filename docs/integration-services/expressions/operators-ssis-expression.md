@@ -2,9 +2,12 @@
 title: "Operators (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Operators (SSIS Expression)
   This section describes the operators the expression language provides and the operator precedence and associativity that the expression evaluator uses.  
@@ -34,17 +38,17 @@ manager: "jhubbard"
 |[- &#40;Subtract&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/subtract-ssis-expression.md)|Subtracts the second numeric expression from the first one.|  
 |[- &#40;Negate&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/negate-ssis-expression.md)|Negates a numeric expression.|  
 |[&#42; &#40;Multiply&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/multiply-ssis-expression.md)|Multiplies two numeric expressions.|  
-|[Divide &#40;SSIS Expression&#41;](../../integration-services/expressions/divide-ssis-expression.md)|Divides the first numeric expression by the second one.|  
-|[&#40;Modulo&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|Provides the integer remainder after dividing the first numeric expression by the second one.|  
+|[/ (Divide) &#40;SSIS Expression&#41;](../../integration-services/expressions/divide-ssis-expression.md)|Divides the first numeric expression by the second one.|  
+|[% &#40;Modulo&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|Provides the integer remainder after dividing the first numeric expression by the second one.|  
 |[&#124;&#124; &#40;Logical OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|Performs a logical OR operation.|  
 |[&& &#40;Logical AND&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)|Performs a logical AND operation.|  
-|[! &#40;Logical Not&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Negates a Boolean operand.|  
+|[\! &#40;Logical Not&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Negates a Boolean operand.|  
 |[&#124; &#40;Bitwise Inclusive OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|Performs a bitwise OR operation of two integer values.|  
 |[^ &#40;Bitwise Exclusive OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|Performs a bitwise exclusive OR operation of two integer values.|  
 |[& &#40;Bitwise AND&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)|Performs a bitwise AND operation of two integer values.|  
 |[~ &#40;Bitwise Not&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|Performs a bitwise negation of an integer.|  
 |[== &#40;Equal&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/equal-ssis-expression.md)|Performs a comparison to determine if two expressions are equal.|  
-|[!= &#40;Unequal&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|Performs a comparison to determine if two expressions are not equal.|  
+|[\!= &#40;Unequal&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|Performs a comparison to determine if two expressions are not equal.|  
 |[&#62; &#40;Greater Than&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)|Performs a comparison to determine if the first expression is greater than the second one.|  
 |[&#60; &#40;Less Than&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/less-than-ssis-expression.md)|Performs a comparison to determine if the first expression is less than the second one.|  
 |[&#62;= &#40;Greater Than or Equal To&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)|Performs a comparison to determine if the first expression is greater than or equal to the second one.|  

@@ -3,8 +3,11 @@ title: "Operator Precedence (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,9 +24,10 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Operator Precedence (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   When a complex expression has multiple operators, operator precedence determines the sequence in which the operations are performed. The order of execution can significantly affect the resulting value.  
   
@@ -32,8 +36,8 @@ manager: "jhubbard"
 |Level|Operators|  
 |-----------|---------------|  
 |1|~ (Bitwise NOT)|  
-|2|* (Multiply), / (Division), % (Modulo)|  
-|3|+ (Positive), - (Negative), + (Add), (+ Concatenate), - (Subtract), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
+|2|* (Multiplication), / (Division), % (Modulus)|  
+|3|+ (Positive), - (Negative), + (Addition), (+ Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
 |4|=, >, \<, >=, <=, <>, !=, !>, !< (Comparison operators)|  
 |5|NOT|  
 |6|AND|  

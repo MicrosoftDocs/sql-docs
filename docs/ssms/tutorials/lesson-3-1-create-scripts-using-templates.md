@@ -2,9 +2,12 @@
 title: "Create Scripts Using Templates | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 3-1 - Create Scripts Using Templates
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides a large number of script templates containing the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements for many common tasks. These templates contain parameters for the user-provided values such as a table name. Using the parameters, you can type the name once and then automatically copy the name to all the necessary locations within the script. You can write your own custom templates to support the scripts that you write most often. You can also reorganize the template tree, moving templates or creating new folders to hold the templates. In the following practice, you will use a template to create a database, specifying collation template.  
   
 ## Using Templates  

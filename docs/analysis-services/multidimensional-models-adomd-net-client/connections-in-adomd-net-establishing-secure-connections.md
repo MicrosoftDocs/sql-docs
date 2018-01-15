@@ -2,12 +2,15 @@
 title: "Establishing Secure Connections in ADOMD.NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -19,9 +22,11 @@ ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
 caps.latest.revision: 42
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Connections in ADOMD.NET - Establishing Secure Connections
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   When you use a connection in ADOMD.NET, the security method that is used for the connection depends on the value of the **ProtectionLevel** property of the connection string used when you call the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> method of the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  The **ProtectionLevel** property offers four levels of security: unauthenticated, authenticated, signed, and encrypted. The following table describes these various security levels.  

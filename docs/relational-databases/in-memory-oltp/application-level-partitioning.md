@@ -2,9 +2,12 @@
 title: "Application-Level Partitioning | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Application-Level Partitioning
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This application processes orders. There is a lot of processing on recent orders. There is not a lot of processing on older orders. Recent orders are in a memory-optimized table. Older orders are in a disk-based table. All orders after the *hotDate* are in the memory-optimized table. All orders before the *hotDate* are in the disk-based table. Assume an extreme OLTP workload with a lot of concurrent transactions. This business rule (recent orders in a memory-optimized table) must be enforced even if several concurrent transactions are attempting to change the *hotDate*.  
   
  This sample does not use a partitioned table for the disk-based table but does track an explicit split point between the two tables, using a third table. The split point can be used to ensure that newly inserted data is always inserted into the appropriate table based on the date. It could also be used to determine where to look for data. Late arriving data still goes into the appropriate table.  
@@ -24,7 +29,7 @@ manager: "jhubbard"
   
 ## Code Listing  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  

@@ -2,9 +2,12 @@
 title: "Access FileTables with File Input-Output APIs | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "blob"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Access FileTables with File Input-Output APIs
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes how file system I/O works on a FileTable.  
   
 ##  <a name="accessing"></a> Get Started Using File I/O APIs with FileTables  
@@ -54,7 +59,7 @@ manager: "jhubbard"
 ##  <a name="delete"></a> Deleting Files and Directories in a FileTable  
  All Windows file I/O API semantics are enforced when you delete a file or directory.  
   
--   Deleting a directory fails if the directory contains any files subdirectories.  
+-   Deleting a directory fails if the directory contains any files or subdirectories.  
   
 -   Deleting a file or directory removes the corresponding row from the FileTable. This is equivalent to deleting the row through a [!INCLUDE[tsql](../../includes/tsql-md.md)] operation.  
   
@@ -109,7 +114,7 @@ manager: "jhubbard"
 |**Named Streams**|No||  
 |**Sparse Files**|Yes|Sparseness can be set only on files, and affects the storage of the data stream. Since FILESTREAM data is stored on NTFS volumes, the FileTable feature supports sparse files by forwarding the requests to the NTFS file system.|  
 |**Compression**|Yes||  
-|**Encryptiion**|Yes||  
+|**Encryption**|Yes||  
 |**TxF**|No||  
 |**File Ids**|No||  
 |**Object Ids**|No||  

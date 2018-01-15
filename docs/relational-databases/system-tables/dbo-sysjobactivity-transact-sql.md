@@ -3,8 +3,11 @@ title: "dbo.sysjobactivity (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,9 +26,10 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # dbo.sysjobactivity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Records current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job activity and status.  This table is stored in the **msdb** database.
   
@@ -45,7 +49,7 @@ manager: "jhubbard"
 
 ## Example
 This example will return the run-time status for all SQL Server Agent jobs.  Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
-```tsql
+```sql
 SELECT sj.Name, 
 	CASE
 		WHEN sja.start_execution_date IS NULL THEN 'Not running'

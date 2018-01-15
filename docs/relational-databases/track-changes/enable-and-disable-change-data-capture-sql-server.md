@@ -2,9 +2,12 @@
 title: "Enable and Disable Change Data Capture (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "track-changes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Enable and Disable Change Data Capture (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   This topic describes how to enable and disable change data capture for a database and a table.  
   
 ## Enable Change Data Capture for a Database  
@@ -35,7 +40,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  To locate the templates in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], go to **View**, click **Template Explorer**, and then select **SQL Server Templates**. **Change Data Capture** is a sub-folder. Under this folder, you will find all the templates referenced in this topic. There is also a **Template Explorer** icon on the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] toolbar.  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -55,7 +60,7 @@ GO
 > [!IMPORTANT]  
 >  To locate the templates in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], go to **View**, click **Template Explorer**, and then click **SQL Server Templates**. **Change Data Capture** is a sub-folder where you will find all the templates that are referenced in this topic. There is also a **Template Explorer** icon on the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] toolbar.  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -78,7 +83,7 @@ GO
   
  By default, the change table is located in the default filegroup of the database. Database owners who want to control the placement of individual change tables can use the *@filegroup_name* parameter to specify a particular filegroup for the change table associated with the capture instance. The named filegroup must already exist. Generally, it is recommended that change tables be placed in a filegroup separate from source tables. See the **Enable a Table Specifying Filegroup Option** template for an example showing use of the *@filegroup_name* parameter.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -100,7 +105,7 @@ GO
   
  If you do not want to use a gating role, explicitly set the *@role_name* parameter to NULL. See the **Enable a Table Without Using a Gating Role** template for an example of enabling a table without a gating role.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -125,7 +130,7 @@ GO
   
  See the **Enable a Table for All and Net Changes Queries** template for an example demonstrating the creation of a capture instance with both query functions.  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -149,7 +154,7 @@ GO
   
  See the Disable a Capture Instance for a Table template for an example of disabling a table.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

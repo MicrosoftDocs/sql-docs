@@ -3,8 +3,11 @@ title: "Data Buffer Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Buffer Type
 The C data type of a buffer is specified by the application. With a single variable, this occurs when the application allocates the variable. With generic memory — that is, memory pointed to by a pointer of type void — this occurs when the application casts the memory to a particular type. The driver discovers this type in two ways:  

@@ -1,11 +1,13 @@
 ---
 title: "Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -15,8 +17,10 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic contains a sample that introduces you to the syntax for In-Memory OLTP.  
   
  To enable an application to use In-Memory OLTP, you need to complete the following tasks:  
@@ -35,7 +39,7 @@ manager: "jhubbard"
   
  The following code sample requires a directory called c:\Data.  
   
-```tsql  
+```sql  
 CREATE DATABASE imoltp   
 GO  
   

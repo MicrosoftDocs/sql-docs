@@ -3,8 +3,11 @@ title: "Always On Availability Groups Catalog Views (Transact-SQL) | Microsoft D
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,9 +22,10 @@ caps.latest.revision: 19
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Always On Availability Groups Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This section contains catalog views and functions that are related to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
@@ -38,10 +42,10 @@ manager: "jhubbard"
 >  For information about joined availability databases, see the **replica_id** and **group_database_id** columns in [sys.databases (Transact-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## See Also  
- [sys.databases (Transact-SQL)](https://msdn.microsoft.com/library/ms178534.aspx)   
- [sys.database_mirroring_endpoints (Transact-SQL)](https://msdn.microsoft.com/library/ms190278.aspx)   
- [Always On Availability Groups (SQL Server)](https://msdn.microsoft.com/library/hh510230.aspx)   
- [Monitor Availability Groups (Transact-SQL);](https://msdn.microsoft.com/library/ff878305.aspx)   
- [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](https://msdn.microsoft.com/library/ff877943.aspx)  
+ [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)   
+ [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
+ [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Monitor Availability Groups (Transact-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

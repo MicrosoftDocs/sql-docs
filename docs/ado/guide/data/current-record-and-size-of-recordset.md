@@ -1,12 +1,15 @@
 ---
 title: "Current Record and Size of Recordset | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,6 +20,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Current Record and Size of Recordset
 This section describes how to locate the current position of the cursor in the sample **Recordset** in [JScript Code Example to Return a Recordset](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  

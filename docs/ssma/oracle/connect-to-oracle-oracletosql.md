@@ -1,19 +1,23 @@
 ---
 title: "Connect To Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Connect To Oracle (OracleToSQL)
 Use the **Connect to Oracle** dialog box to connect to the Oracle database that you want to migrate.  

@@ -1,11 +1,13 @@
 ---
 title: "Partitioning with Temporal Tables | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "04/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
@@ -15,14 +17,15 @@ caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Partitioning with Temporal Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   You can use partitioning on both the current and the history table independently. However, partitioning cannot be used to change the content of the data without system-versioning.  
   
 > [!NOTE]  
->  Partitioning is an Enterprise Edition feature.  
+>  Partitioning is an Enterprise Edition feature in SQL Server 2016 prior to Service Pack 1 and earlier versions. Partitioning is supported in all editions in SQL Server 2016 Service Pack 1 and later versions.
   
 -   **Current Table:**  
   

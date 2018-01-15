@@ -2,9 +2,12 @@
 title: "sql:overflow-field (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Annotation Interpretation - sql:overflow-field
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In a schema, you can identify a column as an overflow column to receive all unconsumed data from the XML document. This column is specified in the schema by using the **sql:overflow-field** annotation. It is possible to have multiple overflow columns.  
   
  Whenever an XML node (element or attribute) for which there is a **sql:overflow-field** annotation defined enters into scope, the overflow column is activated and receives unconsumed data. When the node goes out of scope, the overflow column is no longer active and XML Bulk Load makes the previous overflow field (if any) active.  

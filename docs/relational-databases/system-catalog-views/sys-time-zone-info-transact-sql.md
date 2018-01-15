@@ -1,11 +1,13 @@
 ---
 title: "sys.time_zone_info (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/15/2016"
+ms.custom: ""
+ms.date: "09/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,20 +25,21 @@ helpviewer_keywords:
   - "sys.time_zone_info system table"
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # sys.time_zone_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Returns information about supported time zones. All time zones installed on the computer are stored in the following registry hive:  
-**KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**.  
+`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Name of the time zone in Windows standard format. For example **Cen. Australia Standard Time** or **Central European Standard Time**.|  
-|**current_utc_offset**|**nvarchar(12)**|Current offset to UTC. For example **+01:00** or **-07:00**.|  
+|**name**|**sysname**|Name of the time zone in Windows standard format. For example, **Cen. Australia Standard Time** or **Central European Standard Time**.|  
+|**current_utc_offset**|**nvarchar(12)**|Current offset to UTC. For example, **+01:00** or **-07:00**.|  
 |**is_currently_dst**|**bit**|True if currently observing daylight savings time.|  
   
 ## See Also  

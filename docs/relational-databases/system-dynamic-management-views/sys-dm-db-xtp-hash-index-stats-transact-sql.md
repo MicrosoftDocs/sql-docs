@@ -3,8 +3,11 @@ title: "sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,9 +26,10 @@ caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   These statistics are useful for understanding and tuning the bucket counts. It can also be used to detect cases where the index key has many duplicates.  
   
@@ -35,11 +39,12 @@ manager: "jhubbard"
   
 -   If the number of empty buckets is high or the maximum chain length is high relative to the average chain length, it is likely that there are many rows with duplicate index key values or there is a skew in the key values. All rows with the same index key value hash to the same bucket, hence there is a long chain length in that bucket.  
   
- Long chain lengths can significantly impact the performance of all DML operations on individual rows, including SELECT and INSERT. Short chain lengths along with a high empty bucket count are in indication of a bucket_count that is too high. This decreases the performance of index scans.  
+Long chain lengths can significantly impact the performance of all DML operations on individual rows, including SELECT and INSERT. Short chain lengths along with a high empty bucket count are in indication of a bucket_count that is too high. This decreases the performance of index scans.  
   
- **sys.dm_db_xtp_hash_index_stats** scans the entire table. So, if there are large tables in your database, **sys.dm_db_xtp_hash_index_stats** may take a long time run.  
+> [!WARNING]
+> **sys.dm_db_xtp_hash_index_stats** scans the entire table. So, if there are large tables in your database, **sys.dm_db_xtp_hash_index_stats** may take a long time run.  
   
- For more information, see [Hash Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
+For more information, see [Hash Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -61,37 +66,35 @@ manager: "jhubbard"
 
 The following query can be used to troubleshoot the hash index bucket count of an existing table. The query returns statistics about percentage of empty buckets and chain length for all hash indexes on user tables.
 
-```Transact-SQL
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [table],   
     i.name                   as [index],   
     h.total_bucket_count,  
     h.empty_bucket_count,  
-      
     FLOOR((  
       CAST(h.empty_bucket_count as float) /  
         h.total_bucket_count) * 100)  
                              as [empty_bucket_percent],  
     h.avg_chain_length,   
     h.max_chain_length  
-  FROM  
-         sys.dm_db_xtp_hash_index_stats  as h   
-    JOIN sys.indexes                     as i  
+  FROM sys.dm_db_xtp_hash_index_stats as h   
+  INNER JOIN sys.indexes as i  
             ON h.object_id = i.object_id  
            AND h.index_id  = i.index_id  
-	JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
-	JOIN sys.tables t on h.object_id=t.object_id
+	INNER JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
+	INNER JOIN sys.tables t on h.object_id=t.object_id
   WHERE ia.type=1
   ORDER BY [table], [index];  
 ``` 
 
-For details on how to interpret the results of this query, see [Hash Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
+For details on how to interpret the results of this query, see [Troubleshooting Hash Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### B. Hash index statistics for internal tables
 
 Certain features use internal tables that leverage hash indexes, for example columnstore indexes on memory-optimized tables. The following query returns stats for hash indexes on internal tables that are linked to user tables.
 
-```Transact-SQL
+```sql
   SELECT  
     QUOTENAME(SCHEMA_NAME(t.schema_id)) + N'.' + QUOTENAME(OBJECT_NAME(h.object_id)) as [user_table],
 	ia.type_desc as [internal_table_type],
@@ -100,13 +103,12 @@ Certain features use internal tables that leverage hash indexes, for example col
     h.empty_bucket_count,  
     h.avg_chain_length,   
     h.max_chain_length  
-  FROM  
-         sys.dm_db_xtp_hash_index_stats  as h   
-    JOIN sys.indexes                     as i  
+  FROM sys.dm_db_xtp_hash_index_stats as h   
+  INNER JOIN sys.indexes as i  
             ON h.object_id = i.object_id  
            AND h.index_id  = i.index_id  
-	JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
-	JOIN sys.tables t on h.object_id=t.object_id
+	INNER JOIN sys.memory_optimized_tables_internal_attributes ia ON h.xtp_object_id=ia.xtp_object_id
+	INNER JOIN sys.tables t on h.object_id=t.object_id
   WHERE ia.type!=1
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
@@ -115,7 +117,7 @@ Note that the BUCKET_COUNT of index on internal tables cannot be changed, thus t
 
 This query is not expected to return any rows unless you are using a feature that leverages hash indexes on internal tables. The following memory-optimized table contains a columnstore index. After creating this table, you will see hash indexes on internal tables.
 
-```Transact-SQL
+```sql
   CREATE TABLE dbo.table_columnstore
   (
   	c1 INT NOT NULL PRIMARY KEY NONCLUSTERED,

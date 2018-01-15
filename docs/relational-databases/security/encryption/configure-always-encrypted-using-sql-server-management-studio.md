@@ -2,9 +2,12 @@
 title: "Configure Always Encrypted using SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,11 +23,12 @@ caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Configure Always Encrypted using SQL Server Management Studio
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-This article describes tasks for configuring Always Encrypted and managing databases that use Always Encrypted with [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+This article describes tasks for configuring Always Encrypted and managing databases that use Always Encrypted with [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
 When you use SSMS to configure Always Encrypted, SSMS handles both Always Encrypted keys and sensitive data, so both the keys and the data appear in plaintext inside the SSMS process. Therefore, it is important you run SSMS on a secure computer. If your database is hosted in SQL Server, make sure SSMS runs on a different computer than the computer hosting your SQL Server instance. As the primary goal of Always Encrypted is to ensure encrypted sensitive data is safe even if the database system gets compromised, executing a PowerShell script that processes keys or sensitive data on the SQL Server computer can reduce or defeat the benefits of the feature. For additional recommendations, see [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
 
@@ -105,7 +109,7 @@ Parameterization for Always Encrypted is a feature in SQL Server Management Stud
   
 Without parameterization, the .NET Framework Data Provider passes each statement, you author in the Query Editor, as a non-parameterized query. If the query contains literals or Transact-SQL variables that target encrypted columns, the .NET Framework Data Provider for SQL Server will not be able to detect and encrypt them, before sending the query to the database. As a result, the query will fail due to type mismatch (between the plaintext literal Transact-SQL variable and the encrypted column). For example, the following query will fail without parameterization, assuming the `SSN` column is encrypted.   
 
-```tsql
+```sql
 DECLARE @SSN NCHAR(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN
@@ -141,7 +145,7 @@ If both Parameterization for Always Encrypted and the Always Encrypted behavior 
 - Are initialized using a single literal. Variables initialized using expressions including any operators or functions will not be parameterized.      
 
 Below are examples of variable, SQL Server Management Studio will parameterize.   
-```tsql
+```sql
 DECLARE @SSN char(11) = '795-73-9838';
    
 DECLARE @BirthDate date = '19990104';
@@ -149,7 +153,7 @@ DECLARE @Salary money = $30000;
 ```
 
 And, here are a few examples of variables SQL Server Management Studio will not attempt to parameterize:   
-```tsql
+```sql
 DECLARE @Name nvarchar(50); --Initialization seperate from declaration
 SET @Name = 'Abel';
    
@@ -163,7 +167,7 @@ For an attempted parameterization to succeed:
 - If the declared type of the variable is a date type or a time type, the variable must be initialized using a string using one of the following ISO 8601-compliant formats.   
 
 Here are the examples of Transact-SQL variable declarations that will result in parameterization errors:   
-```tsql
+```sql
 DECLARE @BirthDate date = '01/04/1999' -- unsupported date format   
    
 DECLARE @Number int = 1.1 -- the type of the literal does not match the type of the variable   
@@ -185,7 +189,7 @@ Another example below, shows two variables that meet pre-requisite conditions fo
 >   [!NOTE]
 >   As Always Encrypted supports a limited subset of type conversions, in many cases it is required that the data type of a Transact-SQL variable is the same as the type of the target database column, it targets. For example, assuming type of the `SSN` column in the `Patients` table is `char(11)`, the below query will fail, as the type of the `@SSN` variable, which is `nchar(11)`, does not match the type of the column.   
 
-```tsql
+```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;

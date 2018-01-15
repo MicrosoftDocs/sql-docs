@@ -1,11 +1,13 @@
 ---
 title: "JSON_VALUE (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
@@ -22,9 +24,10 @@ caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Active"
 ---
 # JSON_VALUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Extracts a scalar value from a JSON string.  
   
@@ -100,10 +103,13 @@ SET @jsonInfo=N'{
 ## Examples  
   
 ### Example 1  
- The following example uses the values of the JSON properties `town` and `state` in query results. Since **JSON_VALUE** preserves the collation of the source, the sort order of the results depends on the collation of the `jsonInfo` column.  
+ The following example uses the values of the JSON properties `town` and `state` in query results. Since **JSON_VALUE** preserves the collation of the source, the sort order of the results depends on the collation of the `jsonInfo` column. 
+
+> [!NOTE]
+> (This example assumes that a table named `Person.Person` contains a `jsonInfo` column of JSON text, and that this column has the structure shown previously in the discussion of lax mode and strict mode. In the AdventureWorks sample database, the `Person` table does not in fact contain a `jsonInfo` column.)
   
 ```sql  
-SELECT FirstName,LastName,
+SELECT FirstName, LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'

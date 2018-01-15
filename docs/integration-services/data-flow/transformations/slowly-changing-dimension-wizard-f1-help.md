@@ -2,9 +2,12 @@
 title: "Slowly Changing Dimension Wizard F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Slowly Changing Dimension Wizard F1 Help
   Use the **Slowly Changing Dimension Wizard** to configure the loading of data into various types of slowly changing dimensions. This section provides F1 Help for the pages of the **Slowly Changing Dimension Wizard**. The following table describes the topics in this section.  

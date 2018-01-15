@@ -3,8 +3,11 @@ title: "Partition Column List Dialog Box (Visual Database Tools) | Microsoft Doc
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Partition Column List Dialog Box (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 If a table has an associated partition scheme, you can use this dialog box to choose which column(s) the partition function is applied to. For the function to work, the data type of the column you switch to must be the same as the data type of the column defined in the partition function.  
   
 For more information on partition schemes and functions see SQL Server Books Online.  

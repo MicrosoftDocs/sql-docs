@@ -3,8 +3,11 @@ title: "SQLBindParam Mapping | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLBindParam Mapping
 **SQLBindParam** cannot truly be called deprecated because it was never there in ODBC; however, it still represents duplicated functionality — the Driver Manager needs to export it because ISO and Open Group–compliant applications will be using it. Because **SQLBindParameter** contains all the functionality of **SQLBindParam**, **SQLBindParam** will be mapped on top of **SQLBindParameter** (when the underlying driver is an ODBC 3*.x* driver). An ODBC 3*.x* driver does not need to implement **SQLBindParam**.  

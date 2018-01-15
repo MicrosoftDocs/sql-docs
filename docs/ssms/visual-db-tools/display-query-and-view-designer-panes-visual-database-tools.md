@@ -3,8 +3,11 @@ title: "Display Query and View Designer Panes (Visual Database Tools) | Microsof
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -21,8 +24,10 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Display Query and View Designer Panes (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The Query and View Designer is composed of four separate panes: the Diagram pane, the Criteria pane, the SQL pane, and the Results pane. Typically when you open a view or create a new query all four windows open, but if you need to open any of these windows, you can do so as long as the Query and View Designer is open.  
   
 ### To display Query and View Designer panes  

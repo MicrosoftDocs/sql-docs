@@ -1,13 +1,15 @@
 ---
-title: "Supported Combinations of SharePoint and Reporting Services Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+title: "Supported combinations of SharePoint and Reporting Services server | Microsoft Docs"
+ms.custom: ""
 ms.date: "07/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,12 +18,13 @@ helpviewer_keywords:
   - "rsSharePoint"
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 caps.latest.revision: 39
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 
-# Supported Combinations of SharePoint and Reporting Services Server
+# Supported combinations of SharePoint and Reporting Services server
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -32,11 +35,11 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 
-## Supported Combinations of SharePoint and Reporting Services Components
+## Supported combinations of SharePoint and Reporting Services components
 
  The following table summarizes the supported combinations of report server, the Reporting Services add-in for SharePoint products, and SharePoint products. Combinations that are not list in the following table are not supported
 
-### Supported Combinations
+### Supported combinations
 
 ||Report server|Add-in|SharePoint version|
 |-|-------------------|-------------|------------------------|
@@ -60,7 +63,7 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 
  For links to the add-in download pages, see [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 
- **Additional Notes:**
+ **Additional considerations:**
 
 - Be sure to upgrade to upgrade all of the SharePoint servers within the farm. This includes the App and Web Front End servers.
 

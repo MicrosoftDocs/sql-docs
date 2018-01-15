@@ -1,12 +1,15 @@
 ---
 title: "Append Method (ADOX Procedures) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -20,6 +23,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Append Method (ADOX Procedures)
 Adds a new [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) object to the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  

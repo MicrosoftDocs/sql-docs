@@ -3,8 +3,11 @@ title: "RADIANS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "RADIANS function"
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # RADIANS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns radians when a numeric expression, in degrees, is entered.  
   
@@ -32,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 RADIANS ( numeric_expression )  
 ```  
   
@@ -115,24 +117,6 @@ The RADIANS of the angle is: 0.00257041
  (1 row(s) affected)  
 ---------------------------------------   
 The RADIANS of the angle is: 3.44022                          
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Using RADIANS to show 0.0  
- The following example returns a result of `0.0` because the numeric expression to convert to radians is too small for the `RADIANS` function.  
-  
-```  
-SELECT RADIANS(1e-307)  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
--------------------   
-0.0                        
 (1 row(s) affected)  
 ```  
   

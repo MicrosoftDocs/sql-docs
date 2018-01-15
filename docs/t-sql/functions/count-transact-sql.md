@@ -3,8 +3,11 @@ title: "COUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "COUNT function [Transact-SQL]"
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # COUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Returns the number of items in a group. COUNT works like the [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) function. The only difference between the two functions is their return values. COUNT always returns an **int** data type value. COUNT_BIG always returns a **bigint** data type value.
   
@@ -100,11 +104,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+67  
   
- `67`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### B. Using COUNT(*)  
 The following example finds the total number of employees who work at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
@@ -117,11 +122,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+290  
   
- `290`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### C. Using COUNT(*) with other aggregates  
 The following example shows that `COUNT(*)` can be combined with other aggregate functions in the select list. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
@@ -135,13 +141,14 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`----------- ---------------------`
+```
+----------- ---------------------
+14            3472.1428
   
-`14            3472.1428`
+(1 row(s) affected)
+```
   
-`(1 row(s) affected)`
-  
-### C. Using the OVER clause  
+### D. Using the OVER clause  
 The following example uses the MIN, MAX, AVG and COUNT functions with the OVER clause to provide aggregated values for each department in the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
 ```sql
@@ -186,7 +193,7 @@ Tool Design                   8.62                  29.8462               23.505
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### D. Using COUNT and DISTINCT  
+### E. Using COUNT and DISTINCT  
 The following example lists the number of different titles that an employee who works at a specific company can hold.
   
 ```sql
@@ -198,11 +205,12 @@ FROM dbo.DimEmployee;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+67
+```  
   
- `67`  
-  
-### E. Using COUNT(*)  
+### F. Using COUNT(*)  
 The following example returns the total number of rows in the `dbo.DimEmployee` table.
   
 ```sql
@@ -214,11 +222,12 @@ FROM dbo.DimEmployee;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-------------`
+```
+-------------
+296
+```  
   
- `296`  
-  
-### F. Using COUNT(*) with other aggregates  
+### G. Using COUNT(*) with other aggregates  
 The following example combines `COUNT(*)` with other aggregate functions in the SELECT list. The query returns the number of sales representatives with a annual sales quota greater than $500,000 and the average sales quota.
   
 ```sql
@@ -232,13 +241,13 @@ WHERE SalesAmountQuota > 500000 AND CalendarYear = 2001;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`TotalCount  Average Sales Quota`
+```
+TotalCount  Average Sales Quota
+----------  -------------------
+10          683800.0000
+```
   
-`----------  -------------------`
-  
-`10          683800.0000`
-  
-### G. Using COUNT with HAVING  
+### H. Using COUNT with HAVING  
 The following example uses COUNT with the HAVING clause to return the departments in a company that have more than 15 employees.
   
 ```sql
@@ -253,15 +262,14 @@ HAVING COUNT(EmployeeKey) > 15;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`DepartmentName  EmployeesInDept`
+```
+DepartmentName  EmployeesInDept
+--------------  ---------------
+Sales           18
+Production      179
+```
   
-`--------------  ---------------`
-  
-`Sales           18`
-  
-`Production      179`
-  
-### H. Using COUNT with OVER  
+### I. Using COUNT with OVER  
 The following example uses COUNT with the OVER clause to return the number of products that are contained in each of the specified sales orders.
   
 ```sql
@@ -275,13 +283,12 @@ WHERE SalesOrderNumber IN (N'SO53115',N'SO55981');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`ProductCount   SalesOrderID`
-  
-`------------   -----------------`
-  
-`3              SO53115`
-  
-`1              SO55981`
+```
+ProductCount   SalesOrderID`
+------------   -----------------
+3              SO53115
+1              SO55981
+```
   
 ## See also
 [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  

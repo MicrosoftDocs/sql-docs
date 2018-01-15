@@ -2,9 +2,12 @@
 title: "Query with Full-Text Search | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -21,9 +24,10 @@ caps.latest.revision: 80
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Query with Full-Text Search
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Write full-text queries by using the full-text predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** with the **SELECT** statement. This topic provides examples of each predicate and function and helps you choose the best one to use.
 
 -   Use **CONTAINS** and **CONTAINSTABLE** to match words and phrases.
@@ -34,7 +38,7 @@ Write full-text queries by using the full-text predicates **CONTAINS** and **FRE
 ### Example - CONTAINS  
  The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -48,7 +52,7 @@ GO
 ### Example - FREETEXT 
  The following example searches for all documents that contain words related to vital, safety, components.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -61,7 +65,7 @@ GO
 ### Example - CONTAINSTABLE  
  The following example returns the description ID and description of all products for which the **Description** column contain the word "aluminum" near either the word "light" or the word "lightweight." Only rows with a rank value of 2 or higher are returned.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -83,7 +87,7 @@ GO
 ### Example- FREETEXTTABLE  
  The following example extends a FREETEXTTABLE query to return the highest ranked rows first and to add the ranking of each row to the select list. To specify the query, you must know that **ProductDescriptionID** is the unique key column for the **ProductDescription** table.  
   
-```tsql 
+```sql 
 USE AdventureWorks2012  
 GO  
   
@@ -99,7 +103,7 @@ GO
   
 Here is an extension of the same query that only returns rows with a rank value of 10 or greater:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -157,7 +161,7 @@ The following table describes the types of words and phrases that you can search
 ###  <a name="Simple_Term"></a> Search for a specific word or phrase (Simple Term)  
  You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) to search a table for a specific phrase. For example, if you want to search the **ProductReview** table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to find all comments about a product with the phrase "learning curve", you could use the CONTAINS predicate as follows:  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -172,7 +176,7 @@ GO
 ###  <a name="Prefix_Term"></a> Search for a word with a prefix (Prefix Term)  
  You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md) or [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) to search for words or phrases with a specified prefix. All entries in the column that contain text beginning with the specified prefix are returned. For example, to search for all rows that contain the prefix `top`-, as in `top``ple`, `top``ping`, and `top`. The query looks like this:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -191,7 +195,7 @@ You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINST
   
 The following example searches for any form of "foot" ("foot", "feet", and so on) in the `Comments` column of the `ProductReview` table in the `AdventureWorks` database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -208,7 +212,7 @@ You can use [CONTAINSTABLE](../../relational-databases/system-functions/contains
   
 The following example shows a query that searches for all customer addresses, using weights, in which any text beginning with the string "Bay" has either "Street" or "View". The results give a higher rank to those rows that contain more of the words specified.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -236,7 +240,7 @@ In contrast, FREETEXT and FREETEXTTABLE treat the Boolean terms as words to be s
 ### Example  
  The following example uses the CONTAINS predicate to search for descriptions in which the description ID is not equal to 5 and the description contains both the word "Aluminum" and the word "spindle." The search condition uses the AND Boolean operator. This example uses the ProductDescription table of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

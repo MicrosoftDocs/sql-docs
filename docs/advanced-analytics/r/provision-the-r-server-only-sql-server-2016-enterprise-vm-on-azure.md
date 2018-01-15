@@ -1,12 +1,14 @@
 ---
-title: "Provision the R Server Only SQL Server 2016 Enterprise VM on Azure | Microsoft Docs"
+title: "Provision a virtual machine for machine learning on Azure | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/05/2017"
-ms.prod: "r-server"
-ms.reviewer: ""
-ms.suite: ""
+ms.date: "10/31/2017"
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
@@ -15,114 +17,87 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Advanced Analytics Virtual Machines on Azure
+# Provision a virtual machine for machine learning on Azure
 
-Virtual machines on Azure are a convenient option for quickly configuring a complete server environment for machine learning solutions. This topic lists some virtual machine images that contain R Server, SQL Server with machine learning, or other data science tools from Microsoft .
+Virtual machines on Azure are a convenient option for quickly configuring a complete server environment for machine learning solutions.
 
-> [!TIP]
-> We recommend that you use the new version of the Azure portal, and the Azure Marketplace. Some images are not available when browsing the Azure Gallery on the classic portal.
+This article lists the virtual machine images that contain SQL Server with machine learning, as well as some related VMs.
 
-The Azure Marketplace contains multiple virtual machines that support data science. This list is not intended to be comprehensive, but only provide the names of images that include either Microsoft R Server or SQL Server machine learning services, to facilitate discovery.
+This article also provides answers to common questions about modifying or upgrading an existing SQL Server instance in a virtual machine.
 
-## How to Provision a VM
++ [List of current virtual machines](#bkmk_list)
+
+## Provision a virtual machine with SQL Server and machine learning
 
 If you are new to using Azure VMs, we recommend that you see these articles for more information about using the portal and configuring a virtual machine.
 
 + [Virtual Machines - Getting Started](https://azure.microsoft.com/documentation/learning-paths/virtual-machines/)
-+ [Getting Started with Windows Virtual Machines](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-hero-tutorial/)
++ [Getting started with Windows Virtual Machines](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-hero-tutorial/)
 
-### Find an image
+Be sure to use the new version of the Azure portal, or the Azure Marketplace. Some images are not available when browsing the Azure Gallery on the classic portal.
 
-1. From the Azure dashboard, click **Marketplace**.
+**Create the virtual machine**
 
-    - Click **Intelligence and analytics** or **Databases**, and then type "R" in the **Filter** control to see a list of R Server virtual machines.
-    - Other possible strings for the **Filter** control are *data science* and *machine learning*
-    - Use the % wildcard in search to find VM names that contain a target string, such as *R* or *Julia*.
+1. Open the Azure portal: [portal.azure.com](https:portal.azure.com).
 
-2. To get R Server for Windows, select **R Server Only SQL Server 2016 Enterprise**.
-  
-    [R Server](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) is licensed as a SQL Server Enterprise Edition feature, but version 9.1. is installed as a standalone server and serviced under the Modern Lifecycle support policy.
+2. Click **Virtual Machines**, or click **New**.
 
-3. After the VM has been created and is running, click the **Connect** button to open a connection and log into the new machine.
+3. Click **Add**.
 
-4. After you connect, you might need to install additional R tools or development tools.
+4. In the search box at the top of the page, type "Machine Learning Server", or "SQL Server" to see a list of related virtual machines.
 
-### Install additional R tools
+5. Review the requirements, and click **Create** to get started.
 
-By default, Microsoft R Server includes all the R tools installed with a base installation of R, including RTerm and RGui. A shortcut to RGui has been added to the desktop, if you want to get started using R right away.
+6. After the virtual machine has been created and is running, click the **Connect** button to open a connection and log in to the new machine.
 
-However, you might wish to install additional R tools, such as RStudio, the R Tools for Visual Studio (RTVS), or Microsoft R Client. See the following links for download locations and instructions:
-+ [R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation)
-+ [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/install-r-client-windows)
-+ [RStudio for Windows](https://www.rstudio.com/products/rstudio/download/)
+5. After you connect, you can install additional R or Python packages, or configure your preferred development tool.
 
-After installation is complete, be sure to change the default R runtime location so that all R development tools use the Microsoft R Server libraries.
+### Connect to the virtual machine
 
-### Configure server for web services
+The way a client connects to SQL Server running on a virtual machine differs depending on the location of the client and the networking configuration.
 
-If the virtual machine includes R Server, additional configuration is required to use web service deployment, remote execution, or leverage R Server as a deployment server in your organization. For instructions, see [Configure R Server for Operationalization](https://msdn.microsoft.com/microsoft-r/operationalize/configuration-initial).
-
-> [!NOTE]
-> Additional configuration is not needed if you just want to use packages such as RevoScaleR or MicrosoftML.
-
-## R Server Images
-
-### Microsoft Data Science Virtual Machine
-
-Comes configured with Microsoft R Server, as well as Python (Anaconda distribution), a Jupyter notebook server, Visual Studio Community Edition, Power BI Desktop, the Azure SDK, and SQL Server Express edition.
-
-The Windows version runs on Windows Server 2012, and contains many special tools for modeling and analytics, including CNTK and mxnet, popular R packages such as xgboost, and Vowpal Wabbit.
-
-### Linux Data Science Virtual Machine
-
-Also contains popular tools for data science and development activities, including Microsoft R Open, Microsoft R Server Developer Edition, Anaconda Python, and Jupyter notebooks for Python, R and Julia.
-
-This VM image was recently updated to include JupyterHub, open source software that enables use by multiple users, through different authentication methods, including local OS account authentication, and Github account authentication. JupyterHub is a particularly useful option if you want to run a training class and want all students to share the same server, but use separate notebooks and directories.
-
-Images are provided for Ubuntu, Centos, and Centos CSP.
-
-### R Server Only SQL Server 2016 Enterprise
-
-This virtual machine includes a standalone installer for [R Server 9.1.](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) that supports the new Modern Software Lifecycle licensing model.
-
- R Server is also available in images for Linux CentOS version 7.2, Linux RedHat version 7.2, and Ubuntu version 16.04.
-
- > [!NOTE]
- > These virtual machines replace the **RRE for Windows Virtual Machine** that was previously available in the Azure Marketplace.
-
-## SQL Server Images
-
-To use R Services (In-Database) or Machine Learning Services, you must install one of the SQL Server Enterprise or Developer edition virtual machines, and add the machine learning service, as described here: [Installing SQL Server R Services on an Azure Virtual Machine](../../advanced-analytics/r-services/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
-
-> [!NOTE]
-> Currently, machine learning services are not supported on the Linux virtual machines for SQL Server 2017, or in Azure SQL Database. You must use either SQL Server 2016 SP1 or SQL Server 2017 for Windows.
-
-The Data Science Virtual Machine also includes SQL Server 2016 with the R services feature already enabled.
-
-
-## Other VMs
-
-### Deep Learning Toolkit for the Data Science Virtual Machine
-
-This virtual machine contains the same machine learning tools available on the Data Science Virtual machine, but with GPU versions of mxnet, CNTK, TensorFlow, and Keras. This image can be used only on Azure GPU N-series instances. 
-
-The deep learning toolkit also provides a set of sample deep learning solutions that use the GPU, including image recognition on the CIFAR-10 database and a character recognition sample on the MNIST database. GPU instances are currently available in South Central US, East US, West Europe, and Southeast Asia.
-
-> [!IMPORTANT]
-> GPU instances are currently only available in the South Central US.
-
+For more information, see [Connect to a SQL Server virtual machine on Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-connect).
 
 ## Frequently Asked Questions
 
+This section contains some common questions about machine learning virtual machines from Microsoft.
+
 ### Can I install a virtual machine with SQL Server 2017?
 
-Images are available that contain SQL Server 2017 CTP 2.0 for Linux environments, but these environments currently do not support Machine Learning Services. 
+A Windows-based virtual machine for SQL Server 2017 Enterprise Edition that includes Machine Learning Services is available beginning November 2017. 
 
-A Windows-based virtual machine for SQL Server 2017 Enterprise Edition that includes Machine Learning Services will be available after public release. 
+For announcements about new data science virtual machines, watch these blog sites:
 
-As an alternative, you can use the SQL Server 2016 image, and upgrade your instance of R as described here: [Upgrade an Instance using SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). 
++ [Cortana Intelligence and Machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
++ [Data Platform Insider](https://blogs.technet.microsoft.com/dataplatforminsider/)
 
-Or, create a virtual machine and download the CTP 2.0 preview of [SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017).
+### Adding SQL Server to an existing virtual machine
+
+In addition to creating a virtual machine using an image that already includes SQL Server machine learning, you can install SQL Server on an existing virtual machine and enable the machine learning features. We recommend Enterprise or Developer edition, to avoid resource constraints. Installation also requires that you use your own license key.
+
+When you run setup, be sure to select the machine learning feature and at least one language (R or Python). Some additional steps are required to enable machine learning services to communicate with SQL Server, and to enable networking on the virtual machine.
+
+For more information, see [Installing SQL Server R Services on an Azure virtual machine](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+
+### Using machine learning in Azure SQL database
+
+Beginning in fall 2017, Azure SQL Database supports using R to train models and use them for prediction. 
+
+R Services in-database is available as a preview feature only, and has some limitations compared to the on-premises edition of SQL Server. For more information, see [Azure SQL DB](../r/using-r-in-azure-sql-database.md).
+
+### Can I upgrade the SQL Server version on a virtual machine?
+
+Although the SQL Server 2016 images support R, if you want to use Python, you can upgrade to SQL Server 2017, which also upgrades other machine learning components.
+
+To update the version of SQL Server that is installed, open the SQL Server Installation Center on the virtual machine, and select the **Upgrade** option. Depending on which virtual machine you created, a license might be required.
+
+For more information, see [Upgrade SQL Server by using the installation wizard](https://docs.microsoft.com/sql/database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup).
+
+### Can I upgrade just the machine learning components?
+
+When new upgrades are published for RevoScaleR, MicrosoftML, or revoscalepy, you can upgrade the machine learning components used by SQL Server, by using a process known as _binding_. This does not change your SQL Server version, but it does change the support policy for the instance.
+
+For more information, see [Use SqlBindR to upgrade machine learning components on SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ### How do I access data in an Azure storage account?
 
@@ -130,13 +105,45 @@ When you need to use data from your Azure storage account, there are several opt
 
 + Copy the data from your storage account to the local file system using a utility, such as [AzCopy](https://azure.microsoft.com/documentation/articles/storage-use-azcopy/#copy-files-in-azure-file-storage-with-azcopy-preview-version-only). 
 
-+ Add the files to a file share on your storage account and then mount the file share as a network drive on your VM.  For more information, see [Mounting Azure files](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-files/). 
++ Add the files to a file share on your storage account and then mount the file share as a network drive on your VM. For more information, see [Mounting Azure files](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-files/). 
 
 ### How do I use data from Azure Data Lake Storage (ADLS)?
 
-You can read data from ADLS storage using RevoScaleR, if you reference the storage account the same way that you would an HDFS file system, by using webHDFS.  For more information, see this article: [Using R to perform FileSystem Operations on Azure Data Lake Store](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/).
+You can read data from ADLS storage using RevoScaleR, by using webHDFS to reference the storage account the same way that you would an HDFS file system. For more information, see this article: [Using R to perform FileSystem Operations on Azure Data Lake Store](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/).
 
-## See Also
+### I can't find the RRE virtual machine
 
-[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)
+The "RRE for Windows Virtual Machine" that was previously available in the Azure Marketplace has been replaced by the "Machine Learning Server for Windows" image.
 
+Machine Learning Server images are also available for Linux CentOS version 7.2, Linux RedHat version 7.2, and Ubuntu version 16.04.
+
+For more information, see [Machine Learning Server in the Cloud](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-in-the-cloud)
+
+### Configuring Machine Learning Server or R Server to support web services
+
+If you use a virtual machine that includes Machine Learning Server, additional configuration might be required to use web service deployment, remote execution, or to use the virtual machine as a deployment server in your organization.
+
+For instructions, see [Configuring Machine Learning Server to operationalize analytics](https://docs.microsoft.com/machine-learning-server/operationalize/configure-machine-learning-server-one-box).
+
+Additional configuration is not needed if you just want to use packages such as RevoScaleR or MicrosoftML.
+
+## <a name="bkmk_list"></a> List of virtual machines
+
+Currently, the following virtual machines are available for machine learning with SQL Server:
+
+|Name| Comments|
+|----|----|----|
+| **SQL Server 2016**| ***  |
+|SQL Server 2016 SP1 Enterprise on Windows|R Services for integrated advanced analytics.|
+|BYOL SQL Server 2016 SP1 Enterprise on Windows Server |R Services for integrated advanced analytics. |
+|Free License: SQL Server 2016 SP1 Developer on Windows Server 2016 |R Services for integrated advanced analytics. |
+| Data Science Virtual Machine - Windows 2012|Contains popular tools for data science, including Microsoft R Server Developer Edition, SQL Server 2016 Developer edition, the Anaconda Python distribution, Julia Pro developer edition, and Jupyter notebooks for R.| 
+| Data Science Virtual Machine - Windows 2016|Includes SQL Server 2016 Developer Edition, with support for in-database R analytics.|
+|**SQL Server 2017**| ***   |
+|SQL Server 2017 Enterprise Windows Server 2016| Machine Learning Services with Python and R language support.|
+|BYOL SQL Server 2017 Enterprise Windows Server 2016|Machine Learning Services with Python and R language support.|
+| Free SQL Server License: SQL Server 2017 Developer on Windows Server|Machine Learning Services with Python and R language support.|
+| **Other**| *** |
+| Machine Learning Server Only SQL Server 2017 Enterprise|Similar to the SQL Server 2016 Enterprise image, but contains the standalone version of Machine Learning Server and has the core ScaleR and Operationalization functionality optimized for Windows environments.|
+| Machine Learning Server for Windows|Contains the standalone version of Machine Learning Server, with operationalization features optimized for Windows environments.|
+|Data Science Virtual Machine |Linux editions include R Server. Linux virtual machines that include SQL Server 2017 cannot run R or Python code in SQL Server. However, you can perform scoring on a trained model using the T-SQL PREDICT function. For more information, see [Native scoring in SQl Server](../sql-native-scoring.md).|

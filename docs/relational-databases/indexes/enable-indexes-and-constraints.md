@@ -2,9 +2,12 @@
 title: "Enable Indexes and Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
@@ -21,9 +24,10 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Enable Indexes and Constraints
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic describes how to enable a disabled index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. After an index is disabled, it remains in a disabled state until it is rebuilt or dropped  
   
@@ -67,7 +71,9 @@ manager: "jhubbard"
     |ALTER INDEX REBUILD.|The action fails.|The action succeeds.|  
     |DROP INDEX.|The action succeeds.|The action succeeds.|  
     |CREATE INDEX WITH DROP_EXISTING.|The action fails.|The action succeeds.|  
-  
+
+-   When rebuilding disabled compressed nonclustered indexes, data_compression will default to 'none', meaning that indexes will be uncompressed. This is due to compression settings metadata is lost when nonclustered indexes are disabled. To work around this you must specifiy explicit data compression in rebuild statement.
+
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  

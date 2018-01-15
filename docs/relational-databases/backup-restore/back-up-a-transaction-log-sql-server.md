@@ -2,9 +2,12 @@
 title: "Back Up a Transaction Log (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -18,18 +21,20 @@ caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Back Up a Transaction Log (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to back up a transaction log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
   
    
 ##  <a name="Restrictions"></a> Limitations and restrictions  
   
--   The BACKUP statement is not allowed in an explicit or [implicit](https://msdn.microsoft.com/library/ms187807.aspx) transaction.  An explicit transaction is one in which you explicitly define both the start and end of the transaction.
+-   The BACKUP statement is not allowed in an explicit or [implicit](../../t-sql/statements/set-implicit-transactions-transact-sql.md) transaction.  An explicit transaction is one in which you explicitly define both the start and end of the transaction.
   
 ##  <a name="Recommendations"></a> Recommendations  
   
--   If a database uses either the full or bulk-logged [recovery model](https://msdn.microsoft.com/library/ms189275.aspx), you must back up the transaction log regularly enough to protect your data, and to prevent the [transaction log from filling](https://msdn.microsoft.com/library/ms175495.aspx). This truncates the log and supports restoring the database to a specific point in time. 
+-   If a database uses either the full or bulk-logged [recovery model](recovery-models-sql-server.md), you must back up the transaction log regularly enough to protect your data, and to prevent the [transaction log from filling](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). This truncates the log and supports restoring the database to a specific point in time. 
   
 -   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log frequently, these success messages accumulate quickly, resulting in huge error logs, making finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226, if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
@@ -143,7 +148,7 @@ The BACKUP DATABASE and BACKUP LOG permissions needed are granted by default to 
   
  This example creates a transaction log backup for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to the previously created named backup device, `MyAdvWorks_FullRM_log1`.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  

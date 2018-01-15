@@ -2,12 +2,15 @@
 title: "Analysis Services Scripting Language XML Elements (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "Schema"
@@ -21,9 +24,11 @@ ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Elements (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Although the Analysis Services Scripting Language (ASSL) schema contains only XML elements, from a developer's point of view, these elements correspond to the following concepts:  
   
 -   Objects, such as **Database**, **Cube**, and **Dimension** objects, in the hierarchy of objects contained by an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

@@ -2,26 +2,30 @@
 title: "Using My Reports (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-builder"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Using My Reports (Report Builder and SSRS)
   On a report server configured in native mode, the My Reports folder is a personal workspace that you can use to store and work with reports that you own. Other report server folders are public and typically require users to have advanced permissions to add to or modify folder contents. In contrast, the My Reports folder is a user-managed workspace. You can add or remove reports and folders and save linked reports with personalized settings.  
   
  Conceptually, the My Reports folder is similar to the My Documents folder in the Windows file system. Although each user has a folder called My Reports, the folder that each accesses is different from all other users. Except for report server administrators, other users cannot access the contents of the My Reports folder that belongs to you.  
   
- The My Reports feature is optional and can be disabled by a report server administrator. If it is enabled, you will see a My Reports folder in the Home folder, which you can access using the Report Manager or a Web browser. For more information, see [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
+ The My Reports feature is optional and can be disabled by a report server administrator. If it is enabled, you will see a My Reports folder in the Home folder, which you can access using the Report Manager or a Web browser. For more information, see [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
  On a report server configured in SharePoint integrated mode, there is no equivalent to the My Reports folder. For more information, see [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   

@@ -1,12 +1,15 @@
 ---
 title: "Using a Connection Object | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,6 +19,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using a Connection Object
 Before opening a **Connection** object, you must define certain information about the data source and type of connection. Most of this information is held by the *ConnectionString* parameter of the [Open method](../../../ado/reference/ado-api/open-method-ado-connection.md) on the **Connection** object, or by the [ConnectionString property](../../../ado/reference/ado-api/connectionstring-property-ado.md) on the **Connection** object. A connection string consists of a list of argument/value pairs separated by semi-colons, with the values enclosed within single quotes. For example:  

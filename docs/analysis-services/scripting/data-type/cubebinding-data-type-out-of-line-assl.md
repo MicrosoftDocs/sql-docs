@@ -2,12 +2,15 @@
 title: "CubeBinding Data Type (out-of-line) (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CubeBinding Data Type (out-of-line) (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a primitive data type that represents the relationship between a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element and a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element.  
   
 ## Syntax  

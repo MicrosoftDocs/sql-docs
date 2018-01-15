@@ -3,8 +3,11 @@ title: "Work with Data in the Results Pane (Visual Database Tools) | Microsoft D
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -23,8 +26,10 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Work with Data in the Results Pane (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 After you run a query or view, the results are shown in the Results pane. You can then work with those results. For example, you can add and delete rows, input or change data, and easily navigate through large results sets.  
   
 The following information can help you avoid problems and work effectively with your results sets.  

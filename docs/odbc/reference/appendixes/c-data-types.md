@@ -3,8 +3,11 @@ title: "C Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # C Data Types
 ODBC C data types indicate the data type of C buffers used to store data in the application.  

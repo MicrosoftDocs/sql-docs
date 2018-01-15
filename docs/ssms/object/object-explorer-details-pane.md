@@ -3,8 +3,11 @@ title: "Object Explorer Details Pane | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -22,8 +25,10 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Object Explorer Details Pane
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Object Explorer Details, a component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], provides a tabular view of all the objects in the server and presents a user interface to manage them. The capabilities of Object Explorer vary slightly depending on the type of server, but generally include the development features for databases and management features for all server types.  
   
 The Object Explorer Details pane is visible in the [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] by default. If you cannot see Object Explorer, on the **View** menu, click **Object Explorer Details** or press **F7**.  

@@ -2,9 +2,12 @@
 title: "Make Schema Changes on Publication Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -21,13 +24,17 @@ caps.latest.revision: 73
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Make Schema Changes on Publication Databases
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Replication supports a wide range of schema changes to published objects. When you make any of the following schema changes on the appropriate published object at a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, that change is propagated by default to all [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  
   
 -   ALTER TABLE  
   
--   ALTER TABLE SET LOCK ESCALATION should not be used if schema change replication is enabled and a topology includes [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.ALTER VIEW  
+-   ALTER TABLE SET LOCK ESCALATION should not be used if schema change replication is enabled and a topology includes [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   

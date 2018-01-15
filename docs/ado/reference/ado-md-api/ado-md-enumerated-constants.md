@@ -1,12 +1,15 @@
 ---
 title: "ADO MD Enumerated Constants | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,6 +19,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADO MD Enumerated Constants
 To assist debugging, the ADO MD enumerated constants list a value for each constant. However, this value is purely advisory, and may change from one release of ADO MD to another. Your code should only depend on the name, not the actual value, of enumerated constants.  

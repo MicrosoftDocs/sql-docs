@@ -3,8 +3,11 @@ title: "CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "CREATE INDEX statement"
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 caps.latest.revision: 89
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates a spatial index on a specified table and column in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. An index can be created before there is data in the table. Indexes can be created on tables or views in another database by specifying a qualified database name. Spatial indexes require the table to have a clustered primary key. For information about spatial indexes, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
@@ -279,8 +283,8 @@ BOUNDING_BOX = ( {
  Can be specified only on a column of the geography data type.  This is the default for this data type and does not need to be specified.  
   
 ### WITH Options  
- BOUNDING_BOX  
- Specifies a numeric four-tuple that defines the four coordinates of the bounding box: the x-min and y-min coordinates of the lower-left corner, and the x-max and y-max coordinates of the upper-right corner.  
+BOUNDING_BOX  
+Specifies a numeric four-tuple that defines the four coordinates of the bounding box: the x-min and y-min coordinates of the lower-left corner, and the x-max and y-max coordinates of the upper-right corner.  
   
  *xmin*  
  Specifies the x-coordinate of the lower-left corner of the bounding box.  
@@ -306,13 +310,14 @@ BOUNDING_BOX = ( {
  YMAX =*ymax*  
  Specifies the property name and value for the y-coordinate of upper-right corner of the bounding box  
   
- Bounding-box coordinates apply only within a USING GEOMETRY_GRID clause.  
-  
- *xmax* must be greater than *xmin* and *ymax* must be greater than *ymin*. You can specify any valid [float](../../t-sql/data-types/float-and-real-transact-sql.md) value representation, assuming that: *xmax* > *xmin* and *ymax* > *ymin*. Otherwise the appropriate errors are raised.  
-  
- There are no default values.  
-  
- The bounding-box property names are case-insensitive regardless of the database collation.  
+ > [!NOTE]
+ > Bounding-box coordinates apply only within a USING GEOMETRY_GRID clause.  
+ >
+ > *xmax* must be greater than *xmin* and *ymax* must be greater than *ymin*. You can specify any valid [float](../../t-sql/data-types/float-and-real-transact-sql.md) value representation, assuming that: *xmax* > *xmin* and *ymax* > *ymin*. Otherwise the appropriate errors are raised.  
+ > 
+ > There are no default values.  
+ >
+ > The bounding-box property names are case-insensitive regardless of the database collation.  
   
  To specify property names, you must specify each of them once and only once. You can specify them in any order. For example, the following clauses are equivalent:  
   
@@ -320,8 +325,8 @@ BOUNDING_BOX = ( {
   
 -   BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
- GRIDS  
- Defines the density of the grid at each level of a tessellation scheme. When GEOMETRY_AUTO_GRID and GEOGRAPHY_AUTO_GRID are selected, this option is disabled.  
+GRIDS  
+Defines the density of the grid at each level of a tessellation scheme. When GEOMETRY_AUTO_GRID and GEOGRAPHY_AUTO_GRID are selected, this option is disabled.  
   
  For information about tessellation, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
@@ -348,12 +353,14 @@ BOUNDING_BOX = ( {
  HIGH  
  Specifies the highest possible density for the grid at a given level. HIGH equates to 256 cells (a 16x16 grid).  
   
- Using level names allows you to specify the levels in any order and to omit levels. If you use the name for any level, you must use the name of any other level that you specify. If you omit a level, its density defaults to MEDIUM.  
+> [!NOTE] 
+> Using level names allows you to specify the levels in any order and to omit levels. If you use the name for any level, you must use the name of any other level that you specify. If you omit a level, its density defaults to MEDIUM.  
   
- If an invalid density is specified, an error is raised.  
+> [!WARNING] 
+> If an invalid density is specified, an error is raised.  
   
- CELLS_PER_OBJECT =*n*  
- Specifies the number of tessellation cells per object that can be used for a single spatial object in the index by the tessellation process. *n* can be any integer between 1 and 8192, inclusive. If an invalid number is passed or the number is larger than the maximum number of cells for the specified tessellation, an error is raised.  
+CELLS_PER_OBJECT =*n*  
+Specifies the number of tessellation cells per object that can be used for a single spatial object in the index by the tessellation process. *n* can be any integer between 1 and 8192, inclusive. If an invalid number is passed or the number is larger than the maximum number of cells for the specified tessellation, an error is raised.  
   
  CELLS_PER_OBJECT has the following default values:  
   
@@ -368,8 +375,8 @@ BOUNDING_BOX = ( {
   
  The CELLS_PER_OBJECT value is used by the cells-per-object tessellation rule. For information about the tessellation rules, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- PAD_INDEX = { ON | **OFF** }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+PAD_INDEX = { ON | **OFF** }  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies index padding. The default is OFF.  
   
@@ -381,7 +388,7 @@ BOUNDING_BOX = ( {
   
  The PAD_INDEX option is useful only when FILLFACTOR is specified, because PAD_INDEX uses the percentage specified by FILLFACTOR. If the percentage specified for FILLFACTOR is not large enough to allow for one row, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] internally overrides the percentage to allow for the minimum. The number of rows on an intermediate index page is never less than two, regardless of how low the value of *fillfactor*.  
   
- FILLFACTOR =*fillfactor*  
+FILLFACTOR =*fillfactor*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or rebuild. *fillfactor* must be an integer value from 1 to 100. The default is 0. If *fillfactor* is 100 or 0, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates indexes with leaf pages filled to capacity.  
@@ -392,12 +399,12 @@ BOUNDING_BOX = ( {
  The FILLFACTOR setting applies only when the index is created or rebuilt. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not dynamically keep the specified percentage of empty space in the pages. To view the fill factor setting, use the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view.  
   
 > [!IMPORTANT]  
->  Creating a clustered index with a FILLFACTOR less than 100 affects the amount of storage space the data occupies because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistributes the data when it creates the clustered index.  
+> Creating a clustered index with a FILLFACTOR less than 100 affects the amount of storage space the data occupies because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] redistributes the data when it creates the clustered index.  
   
  For more information, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
- SORT_IN_TEMPDB = { ON | **OFF** }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+SORT_IN_TEMPDB = { ON | **OFF** }  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies whether to store temporary sort results in tempdb. The default is OFF.  
   
@@ -409,11 +416,11 @@ BOUNDING_BOX = ( {
   
  In addition to the space required in the user database to create the index, tempdb must have about the same amount of additional space to hold the intermediate sort results. For more information, see [SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY =**OFF**  
- Has no effect for spatial indexes because the index type is never unique. Do not set this option to ON, or else an error is raised.  
+IGNORE_DUP_KEY =**OFF**  
+Has no effect for spatial indexes because the index type is never unique. Do not set this option to ON, or else an error is raised.  
   
- STATISTICS_NORECOMPUTE = { ON | **OFF**}  
- Specifies whether distribution statistics are recomputed. The default is OFF.  
+STATISTICS_NORECOMPUTE = { ON | **OFF**}  
+Specifies whether distribution statistics are recomputed. The default is OFF.  
   
  ON  
  Out-of-date statistics are not automatically recomputed.  
@@ -424,10 +431,10 @@ BOUNDING_BOX = ( {
  To restore automatic statistics updating, set the STATISTICS_NORECOMPUTE to OFF, or execute UPDATE STATISTICS without the NORECOMPUTE clause.  
   
 > [!IMPORTANT]  
->  Disabling automatic recomputation of distribution statistics may prevent the query optimizer from picking optimal execution plans for queries involving the table.  
+> Disabling automatic recomputation of distribution statistics may prevent the query optimizer from picking optimal execution plans for queries involving the table.  
   
- DROP_EXISTING = { ON | **OFF** }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DROP_EXISTING = { ON | **OFF** }  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies that the named, preexisting spatial index is dropped and rebuilt. The default is OFF.  
   
@@ -439,16 +446,16 @@ BOUNDING_BOX = ( {
   
  The index type cannot be changed by using DROP_EXISTING.  
   
- ONLINE =**OFF**  
- Specifies that underlying tables and associated indexes are not available for queries and data modification during the index operation. In this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], online index builds are not supported for spatial indexes. If this option is set to ON for a spatial index, an error is raised. Either omit the ONLINE option or set ONLINE to OFF.  
+ONLINE =**OFF**  
+Specifies that underlying tables and associated indexes are not available for queries and data modification during the index operation. In this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], online index builds are not supported for spatial indexes. If this option is set to ON for a spatial index, an error is raised. Either omit the ONLINE option or set ONLINE to OFF.  
   
  An offline index operation that creates, rebuilds, or drops a spatial index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table for the duration of the operation.  
   
 > [!NOTE]  
->  Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ALLOW_ROW_LOCKS = { **ON** | OFF }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_ROW_LOCKS = { **ON** | OFF }  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies whether row locks are allowed. The default is ON.  
   
@@ -458,8 +465,8 @@ BOUNDING_BOX = ( {
  OFF  
  Row locks are not used.  
   
- ALLOW_PAGE_LOCKS = { **ON** | OFF }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_PAGE_LOCKS = { **ON** | OFF }  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies whether page locks are allowed. The default is ON.  
   
@@ -469,13 +476,13 @@ BOUNDING_BOX = ( {
  OFF  
  Page locks are not used.  
   
- MAXDOP =*max_degree_of_parallelism*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+MAXDOP =*max_degree_of_parallelism*  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Overrides the `max degree of parallelism` configuration option for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
 > [!IMPORTANT]  
->  Although the MAXDOP option is syntactically supported, CREATE SPATIAL INDEX currently always uses only a single processor.  
+> Although the MAXDOP option is syntactically supported, CREATE SPATIAL INDEX currently always uses only a single processor.  
   
  *max_degree_of_parallelism* can be:  
   
@@ -491,10 +498,10 @@ BOUNDING_BOX = ( {
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- DATA_COMPRESSION = {NONE | ROW | PAGE}  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DATA_COMPRESSION = {NONE | ROW | PAGE}  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Determines the level of data compression used by the index.  
   
@@ -513,7 +520,7 @@ BOUNDING_BOX = ( {
  You can create up to 249 spatial indexes on each spatial column in a table. Creating more than one spatial index on specific spatial column can be useful, for example, to index different tessellation parameters in a single column.  
   
 > [!IMPORTANT]  
->  There are a number of other restrictions on creating a spatial index. For more information, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  
+> There are a number of other restrictions on creating a spatial index. For more information, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
  An index build cannot make use of available process parallelism.  
   
@@ -541,7 +548,7 @@ BOUNDING_BOX = ( {
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  Represents the information about the tessellation scheme and parameters of each of the spatial indexes.  
   
-## Additional Remarks About Creating Indexes  
+## Additional Remarks about creating indexes  
  For more information about creating indexes, see the "Remarks" section in [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## Permissions  
@@ -552,7 +559,7 @@ BOUNDING_BOX = ( {
 ### A. Creating a spatial index on a geometry column  
  The following example creates a table named `SpatialTable` that contains a **geometry** type column, `geometry_col`. The example then creates a spatial index, `SIndx_SpatialTable_geometry_col1`, on the `geometry_col`. The example uses the default tessellation scheme and specifies the bounding box.  
   
-```  
+```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1   
    ON SpatialTable(geometry_col)  
@@ -562,7 +569,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ### B. Creating a spatial index on a geometry column  
  The following example creates a second spatial index, `SIndx_SpatialTable_geometry_col2`, on the `geometry_col` in the `SpatialTable` table. The example specifies `GEOMETRY_GRID` as the tessellation scheme. The example also specifies the bounding box, different densities on different grid levels, and 64 cells per object. The example also sets the index padding to `ON`.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  
    ON SpatialTable(geometry_col)  
    USING GEOMETRY_GRID  
@@ -576,7 +583,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ### C. Creating a spatial index on a geometry column  
  The following example creates a third spatial index, `SIndx_SpatialTable_geometry_col3`, on the `geometry_col` in the `SpatialTable` table. The example uses the default tessellation scheme. The example specifies the bounding box and uses different cell densities on the third and fourth levels, while using the default number of cells per object.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  
    ON SpatialTable(geometry_col)  
    WITH (  
@@ -587,7 +594,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
 ### D. Changing an option that is specific to spatial indexes  
  The following example rebuilds the spatial index created in the preceding example, `SIndx_SpatialTable_geography_col3`, by specifying a new `LEVEL_3` density with DROP_EXISTING = ON.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable(geography_col)  
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ),  
@@ -598,7 +605,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ### E. Creating a spatial index on a geography column  
  The following example creates a table named `SpatialTable2` that contains a **geography** type column, `geography_col`. The example then creates a spatial index, `SIndx_SpatialTable_geography_col1`, on the `geography_col`. The example uses the default parameters values of the GEOGRAPHY_AUTO_GRID tessellation scheme.  
   
-```  
+```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1   
    ON SpatialTable2(object);  
@@ -610,7 +617,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 ### F. Creating a spatial index on a geography column  
  The following example creates a second spatial index, `SIndx_SpatialTable_geography_col2`, on the `geography_col` in the `SpatialTable2` table. The example specifies `GEOGRAPHY_GRID` as the tessellation scheme. The example also specifies different grid densities on different levels and 64 cells per object. The example also sets the index padding to `ON`.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2  
    ON SpatialTable2(object)  
    USING GEOGRAPHY_GRID  
@@ -623,7 +630,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
 ### G. Creating a spatial index on a geography column  
  The example then creates a third spatial index, `SIndx_SpatialTable_geography_col3`, on the `geography_col` in the `SpatialTable2` table. The example uses the default tessellation scheme, GEOGRAPHY_GRID, and the default CELLS_PER_OBJECT value (16).  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable2(object)  
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  

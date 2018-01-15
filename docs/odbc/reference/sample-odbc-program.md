@@ -3,8 +3,11 @@ title: "Sample ODBC Program | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Sample ODBC Program
 The [ODBC code sample](http://go.microsoft.com/fwlink/?LinkId=244831) prompts you for an ODBC data source name.  You will then be prompted to enter a query and the sample will display the results of the query.

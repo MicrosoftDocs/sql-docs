@@ -3,9 +3,11 @@
 # Overview
 ## [What is Microsoft Machine Learning Services](r/r-services.md)
 ## [What's new in machine learning](what-s-new-in-sql-server-machine-learning-services.md)
-## [New and recently updated articles](new-updated-advanced-analytics.md)
+## [New and updated articles](new-updated-advanced-analytics.md)
 ## [Architecture and overview](architecture-overview-machine-learning.md)
 ## [Differences in machine learning features between editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
+
+## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 
@@ -87,7 +89,7 @@
 
 #### [Download sample data](tutorials/sqldev-py1-download-the-sample-data.md)
 #### [Import data to SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
-#### [Explore and visualize Data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
+#### [Explore and visualize data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
 #### [Create data features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
@@ -102,15 +104,25 @@
 
 # [How To](r/sql-server-machine-learning-tasks.md)
 
-## [R package management](r/r-package-management-for-sql-server-r-services.md)
+## [R package management for SQL Server](r/r-package-management-for-sql-server-r-services.md)
+
+### [Install new R packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
+
+### [Install new Python packages on SQL Server](python/install-additional-python-packages-on-sql-server.md)
 
 ### [Enable R package management for a SQL Server instance](r/r-package-how-to-enable-or-disable.md)
-### [Where to get R packages](r/installing-and-managing-r-packages.md)
-### [Install additional machine learning packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
-### [Create a local package repository using miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+
 ### [Determine which packages are installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
-### [User package libraries](r/packages-installed-in-user-libraries.md)
-### [Synchronize R packages used by SQL Server](r/package-install-uninstall-and-sync.md)
+
+### [Use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md)
+
+### [Synchronize R packages installed on SQL Server](r/package-install-uninstall-and-sync.md)
+
+### [R packages installed with SQL Server](r/installing-and-managing-r-packages.md)
+
+### [Use miniCRAN to create a local package repository](r/create-a-local-package-repository-using-minicran.md)
+
+### [Avoid errors with user package libraries for R](r/packages-installed-in-user-libraries.md)
 
 ## Data exploration and modeling
 
@@ -142,12 +154,14 @@
 ### [Advanced configuration options for Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Security considerations for the R runtime in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modify the user account pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Configure and manage machine learning extensions](r/configure-and-manage-advanced-analytics-extensions.md)
+
+### [Add SQLRUserGroup as a database user](r/add-sqlrusergroup-to-database.md)
 
 ### [Deploy and consume models using web services](operationalization-with-mrsdeploy.md)
+
 ### [Managing and monitoring machine learning solutions](r/managing-and-monitoring-r-solutions.md)
 ### [Resource governance for Machine Learning Services](r/resource-governance-for-r-services.md)
-### [Create a resource pool for R](r/how-to-create-a-resource-pool-for-r.md)
+### [Create a resource pool for machine learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Extended events for Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
 
 ### [DMVs for Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
@@ -169,7 +183,7 @@
 ### [Add R to an existing Azure virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Use sqlBindR.exe to upgrade an instance](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Install R Server from the command line](r/install-microsoft-r-server-from-the-command-line.md)
-### [Provision the Data Science Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Provision an enterprise data science virtual machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Set up data science tools](r/setup-or-configure-r-tools.md)
 ### [Set Up a data science client](r/set-up-a-data-science-client.md)
 

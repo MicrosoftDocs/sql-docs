@@ -3,8 +3,11 @@ title: "managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,9 +27,10 @@ caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # managed_backup.sp_backup_config_basic (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Configures the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] basic settings for a specific database or for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

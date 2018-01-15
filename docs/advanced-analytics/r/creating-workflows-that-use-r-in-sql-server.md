@@ -3,11 +3,13 @@ title: "Creating BI Workflows with R | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "04/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
@@ -15,6 +17,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating BI Workflows with R
 

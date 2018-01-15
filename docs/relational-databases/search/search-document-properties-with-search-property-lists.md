@@ -2,9 +2,12 @@
 title: "Search Document Properties with Search Property Lists | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -22,8 +25,10 @@ caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Search Document Properties with Search Property Lists
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The content of document properties was previously indistinguishable from the content of the document body. This limitation restricted full-text queries to generic searches on whole documents. Now, however, you can configure a full-text index to support property-scoped searching on particular properties, such as Author and Title, for supported document types in a **varbinary**, **varbinary(max)** (including **FILESTREAM**), or **image** binary data column. This form of searching is known as *property searching*.  
   
  The associated [filter](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) determines whether property searching is possible on a specific type of document. For some document types, the associated IFilter extracts some or all of the properties defined for that type of document, as well as the content of the document body. You can configure a full-text index to support property searching only on properties that are extracted by an IFilter during full-text indexing. Among IFilters that extract a number of document properties are the IFilters for Microsoft Office document types (such as .docx, .xlsx, and .pptx). On the other hand, the XML IFilter does not emit properties.  
@@ -155,7 +160,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Querying Search Properties with CONTAINS  
  The basic [CONTAINS](../../t-sql/queries/contains-transact-sql.md) syntax for a property-scoped full-text query is as follows:  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  

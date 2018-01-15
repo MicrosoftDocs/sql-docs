@@ -2,12 +2,15 @@
 title: "Set Permissions for Report Server Operations in a SharePoint Web Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "model item security [Reporting Services]"
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Set Permissions for Report Server Operations in a SharePoint Web Application
   For a report server that runs in SharePoint integrated mode, the security settings defined on the SharePoint site determine how you view and manage reports, report models, and shared data sources. If you are using the default SharePoint groups, permission levels, and permission assignments, you can work with reports and other documents using the current security settings.  

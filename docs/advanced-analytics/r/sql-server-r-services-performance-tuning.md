@@ -2,11 +2,13 @@
 title: "SQL Server R Services Performance Tuning | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
@@ -14,6 +16,7 @@ caps.latest.revision: 20
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Performance tuning for R in SQL Server
 

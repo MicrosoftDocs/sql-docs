@@ -2,21 +2,25 @@
 title: "Report Sections Dialog Box (Report Builder) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-builder"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Report Sections Dialog Box (Report Builder)
   When you open a report, Report Builder verifies that the report contains only one Report Definition Language (RDL) **\<Section>** element. Opening a report with multiple **\<Section>** elements is not supported.  

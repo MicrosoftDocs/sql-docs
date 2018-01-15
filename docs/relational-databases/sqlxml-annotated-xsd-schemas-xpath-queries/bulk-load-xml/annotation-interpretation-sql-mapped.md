@@ -2,9 +2,12 @@
 title: "sql:mapped (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -21,8 +24,10 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Annotation Interpretation - sql:mapped
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML Bulk Load processes the **sql:mapped** annotation in the XSD schema as expected—that is, if the mapping schema specifies **sql:mapped="false"** for any element or attribute, XML Bulk Load does not attempt to store the associated data in the corresponding column.  
   
  XML Bulk Load ignores elements and attributes that are not mapped (either because they are not described in the schema, or because they are annotated in the XSD schema with **sql:mapped="false"**). All unmapped data goes into the overflow column, if such a column is specified by using **sql:overflow-field**.  

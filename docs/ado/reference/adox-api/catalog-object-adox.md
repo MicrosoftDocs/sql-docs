@@ -1,12 +1,15 @@
 ---
 title: "Catalog Object (ADOX) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,6 +22,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Catalog Object (ADOX)
 Contains collections ([Tables](../../../ado/reference/adox-api/tables-collection-adox.md), [Views](../../../ado/reference/adox-api/views-collection-adox.md), [Users](../../../ado/reference/adox-api/users-collection-adox.md), [Groups](../../../ado/reference/adox-api/groups-collection-adox.md), and [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md)) that describe the schema catalog of a data source.  

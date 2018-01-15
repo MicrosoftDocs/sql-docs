@@ -3,8 +3,11 @@ title: "Options (Environment - Keyboard Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Options (Environment - Keyboard Page)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The **Options** dialog box lets you customize the keyboard scheme for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Use this option to choose a keyboard scheme. To access this page, click **Options** on the **Tools** menu, select the **Environment** folder, and then click **Keyboard**.  
   
 The **Keyboard scheme** drop-down list provides the available collections of shortcut keys. To load a specific scheme, select it from the list. When you are ready to leave the **Options** dialog box, click **OK**. Your selected scheme will be loaded into [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

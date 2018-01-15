@@ -2,12 +2,15 @@
 title: "DISCOVER_CSDL_METADATA Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -16,9 +19,11 @@ ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_CSDL_METADATA Rowset
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Returns information about an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data model (either tabular or multidimensional), providing the definition of the model in the CSDLBI format (Conceptual Schema Definition Language with BI annotations). CSDLBI is based on CSDL, an XML schema used by the Entity Data Framework that is used for communication between an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server and the [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] client. The Business Intelligence (BI) annotations provide additional metadata about tabular models and the objects in them. For more information about tabular data models, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  The security context of the command affects the rowset that is returned. Read permissions on the Analysis Services instance are required to obtain the CSDL definition from the server.  

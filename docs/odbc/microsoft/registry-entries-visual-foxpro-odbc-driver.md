@@ -3,8 +3,11 @@ title: "Registry Entries (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Registry Entries (Visual FoxPro ODBC Driver)
 When you install the Visual FoxPro ODBC Driver, the installation program updates your system's registry, in the registry key HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, to add a new key called Microsoft Visual FoxPro Driver. Under that key, the values described in the following table are added.  

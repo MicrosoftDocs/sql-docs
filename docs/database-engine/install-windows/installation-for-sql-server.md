@@ -1,12 +1,13 @@
 ---
-title: "Installation for SQL Server | Microsoft Docs"
+title: "SQL Server Installation | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.date: "09/06/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -23,8 +24,8 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Installation for SQL Server
-
+# SQL Server Installation
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree to install all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

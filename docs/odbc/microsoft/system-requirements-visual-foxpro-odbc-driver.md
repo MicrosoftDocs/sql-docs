@@ -3,8 +3,11 @@ title: "System Requirements (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -22,6 +25,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # System Requirements (Visual FoxPro ODBC Driver)
 The system requirements for installation provide the minimum operating system and disk space needed to successfully install the driver. After you've installed the driver, you can select the specific application software you want to use to access Visual FoxPro data.  

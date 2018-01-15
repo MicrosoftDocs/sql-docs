@@ -2,9 +2,12 @@
 title: "SQL Server Management Studio Keyboard Shortcuts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,8 +27,10 @@ caps.latest.revision: 82
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SQL Server Management Studio Keyboard Shortcuts
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offers users two keyboard schemes. By default, it uses the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] scheme, with keyboard shortcuts based on [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also offers a keyboard scheme similar to the standard scheme from [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. To change the keyboard scheme or add additional keyboard shortcuts, on the **Tools** menu, click **Options**. Select the desired keyboard scheme on the **Environment**, **Keyboard** page.  
   
 > [!NOTE]  

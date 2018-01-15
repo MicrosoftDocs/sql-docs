@@ -1,10 +1,13 @@
 ---
 title: "Distributed Replay Requirements | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/08/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "distributed-replay"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 36
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "ondemand"
 ---
 # Distributed Replay Requirements
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Before using the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature, consider the product requirements that are outlined in this topic.  
   
 ## Input Trace Requirements  
@@ -24,16 +29,12 @@ manager: "jhubbard"
 ### Input Trace Versions  
  Distributed Replay supports input trace data that is collected on the following versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
-  
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Cumulative Update 1 and later. See - [SQL Server 2017 Cumulative updates](http://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
-  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
-  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]    
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
 ### Input Trace Formats  

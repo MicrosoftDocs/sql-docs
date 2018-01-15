@@ -1,12 +1,15 @@
 ---
 title: "Wide World Importers Documentation | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 17cabd9d-cb2f-436c-ad9c-ce02225808b7
@@ -15,8 +18,10 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "On Demand"
 ---
 # Wide World Importers Documentation
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World Importers is the new sample database for SQL Server 2016 and Azure SQL Database. It illustrates the core capabilities of SQL Server 2016 and Azure SQL Database, for transaction processing (OLTP), data warehousing and analytics (OLAP) workloads, as well as hybrid transaction and analytics processing (HTAP) workloads.
 
 ## About this sample

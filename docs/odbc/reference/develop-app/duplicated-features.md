@@ -3,8 +3,11 @@ title: "Duplicated Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -20,6 +23,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Duplicated Features
 The following ODBC 2.*x* functions have been duplicated by ODBC 3.*x* functions. As a result, the ODBC 2.*x* functions are deprecated in ODBC 3.*x*. The ODBC 3.*x* functions are referred to as replacement functions.  

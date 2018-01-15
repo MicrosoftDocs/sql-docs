@@ -1,20 +1,24 @@
-﻿---
+---
 title: "Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-server"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 
 # Turn on Reporting Services events for the SharePoint trace log (ULS)
@@ -146,7 +150,7 @@ Get-SPDiagnosticConfig
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
 ```  
   
- There are also many tools you can download which will allow you read ULS logs. For example, the [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) or [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Both are available on CodePlex.  
+ There are also tools you can download which will allow you read ULS logs. For example, the [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), available on GitHub. 
   
  For more information on how to use PowerShell to view log data, see [View diagnostic logs (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
   

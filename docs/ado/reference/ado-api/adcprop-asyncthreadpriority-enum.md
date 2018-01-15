@@ -1,12 +1,15 @@
 ---
 title: "ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,6 +22,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADCPROP_ASYNCTHREADPRIORITY_ENUM
 For an RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, specifies the execution priority of the asynchronous thread that retrieves data.  

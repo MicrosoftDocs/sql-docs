@@ -2,9 +2,12 @@
 title: "Application Pattern for Partitioning Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Application Pattern for Partitioning Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supports a pattern where a limited amount of active data is kept in a memory-optimized table, while less-frequently accessed data is processed on disk. Typically, this would be a scenario where data is stored based on a **datetime** key.  
   
@@ -46,7 +50,7 @@ Active Data Maintenance
   
  The first part of this sample creates the database and necessary objects. The second part of the sample shows how to move data from a memory-optimized table into a partitioned table.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

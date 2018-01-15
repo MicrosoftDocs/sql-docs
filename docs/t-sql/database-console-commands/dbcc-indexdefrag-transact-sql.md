@@ -1,10 +1,13 @@
 ---
 title: "DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/16/2017"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,9 +30,10 @@ caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # DBCC INDEXDEFRAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Defragments indexes of the specified table or view.
   
@@ -111,7 +115,7 @@ Caller must own the table, or be a member of the **sysadmin** fixed server role,
   
 ## Examples  
 ### A. Using DBCC INDEXDEFRAG to defragment an index  
-The following example defragments all partitions of the `PK_Product`_`ProductID` index in the `Production.Product` table in the `AdventureWorks` database.
+The following example defragments all partitions of the `PK_Product_ProductID` index in the `Production.Product` table in the `AdventureWorks` database.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

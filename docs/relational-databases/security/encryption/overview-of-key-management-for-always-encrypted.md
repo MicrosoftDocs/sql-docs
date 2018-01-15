@@ -2,9 +2,12 @@
 title: "Overview of Key Management for Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/20/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-security"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Overview of Key Management for Always Encrypted
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) uses two types of cryptographic keys to protect your data - one key to encrypt your data, and another key to encrypt the key that encrypts your data. The column encryption key encrypts your data, the column master key encrypts the column encryption key. This article provides a detailed overview for managing these encryption keys.
@@ -64,7 +68,7 @@ When Always Encrypted keys are managed without role separation, a single person 
 
 ## Tools for Managing Always Encrypted Keys
 
-Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) and [PowerShell](https://msdn.microsoft.com/library/hh245198.aspx):
+Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) and [PowerShell](../../scripting/sql-server-powershell.md):
 
 - **SQL Server Management Studio (SSMS)** – provides dialogs and wizards that combine tasks involving key store access and database access, so SSMS does not support role separation, but it makes configuring your keys easy. For more information about managing keys using SSMS, see:
     - [Provisioning Column Master Keys](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)

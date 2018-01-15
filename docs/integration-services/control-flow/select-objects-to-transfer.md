@@ -2,9 +2,12 @@
 title: "Select Objects to Transfer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Select Objects to Transfer
   Use this dialog box to select objects to transfer from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another by using an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] transfer task.  

@@ -2,9 +2,12 @@
 title: "Select the Keyboard Shortcut Scheme | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 1-6 - Select the Keyboard Shortcut Scheme
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Instead of the standard [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] keyboard scheme, you can configure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to use a keyboard scheme compatible with [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
   
 ## Changing to the [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] Keyboard Scheme  

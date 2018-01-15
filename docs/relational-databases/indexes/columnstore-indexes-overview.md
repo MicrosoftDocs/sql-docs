@@ -1,11 +1,13 @@
 ---
-title: "Columnstore indexes - overview | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+title: "Columnstore indexes - Overview | Microsoft Docs"
+ms.custom: ""
 ms.date: "03/07/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,16 +23,16 @@ caps.latest.revision: 80
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
-# Columnstore indexes - overview
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+# Columnstore indexes - Overview
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  The *columnstore index* is the standard for storing and querying large data warehousing fact tables. It uses column-based data storage and query processing to achieve up to **10x query performance** gains in your data warehouse over traditional row-oriented storage, and up to **10x data compression** over the uncompressed data size. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], columnstore indexes enable operational analytics, the ability to run performant real-time analytics on a transactional workload.  
+*Columnstore indexes* are the standard for storing and querying large data warehousing fact tables. It uses column-based data storage and query processing to achieve up to **10x query performance** gains in your data warehouse over traditional row-oriented storage, and up to **10x data compression** over the uncompressed data size. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], columnstore indexes enable operational analytics, the ability to run performant real-time analytics on a transactional workload.  
   
  Jump to scenarios:  
   
--   [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
-  
+-   [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 -   [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
 ## What is a columnstore index?  
@@ -43,21 +45,19 @@ manager: "jhubbard"
  A *columnstore* is data that is logically organized as a table with rows and columns, and physically stored in a column-wise data format.  
   
  rowstore  
- A *rowstore* is data that is logically organized as a table with rows and columns, and then physically stored in a row-wise data format. This has been the traditional way to store relational table data. In SQL Server, rowstore refers to table where the underlying data storage format is a heap, a clustered index, or a memory-optimized table.  
+ A *rowstore* is data that is logically organized as a table with rows and columns, and then physically stored in a row-wise data format. This has been the traditional way to store relational table data. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rowstore refers to table where the underlying data storage format is a heap, a clustered index, or a memory-optimized table.  
   
 > [!NOTE]  
->  In discussions about columnstore indexes, we use the terms *rowstore* and *columnstore* to emphasize the format for the data storage.  
+> In discussions about columnstore indexes, we use the terms *rowstore* and *columnstore* to emphasize the format for the data storage.  
   
  rowgroup  
  A *row group* is a group of rows that are compressed into columnstore format at the same time. A rowgroup usually contains the maximum number of rows per rowgroup which is 1,048,576 rows.  
   
  For high performance and high compression rates, the columnstore index slices the table into groups of rows, called rowgroups, and then compresses each rowgroup in a column-wise manner. The number of rows in the rowgroup must be large enough to improve compression rates, and small enough to benefit from in-memory operations.  
-  
  column segment  
  A *column segment* is a column of data from within the rowgroup.  
   
 -   Each rowgroup contains one column segment for every column in the table.  
-  
 -   Each column segment is compressed together and stored on physical media.  
   
  ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
@@ -114,41 +114,25 @@ manager: "jhubbard"
 ### Can I combine rowstore and columnstore on the same table?  
  Yes. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can  create an updatable  nonclustered columnstore index on a rowstore table. The columnstore index stores a copy of the chosen columns so you do need extra space for this but it will be compressed on average by 10x. By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.  
   
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.  
+ Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore.  
   
 ## Metadata  
  All of the columns in a columnstore index are stored in the metadata as included columns. The columnstore index does not have key columns.  
-  
--   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
-  
--   [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
--   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)  
-  
--   [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)  
-  
--   [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
-  
--   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
-  
--   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)  
-  
--   [sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+
+|||
+|-|-|  
+|[sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
+|[sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|  
+|[sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
+|[sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|  
+|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## Related Tasks  
- All relational tables, unless you specify them as a clustered columnstore index, use rowstore as the underlying data format. CREATE TABLE creates a rowstore table unless you specify the WITH CLUSTERED COLUMNSTORE INDEX option.  
+ All relational tables, unless you specify them as a clustered columnstore index, use rowstore as the underlying data format. `CREATE TABLE` creates a rowstore table unless you specify the `WITH CLUSTERED COLUMNSTORE INDEX` option.  
   
- When you create a table with the CREATE TABLE statement you can create the table as a columnstore by specifying the WITH CLUSTERED COLUMNSTORE INDEX option. If you already have a rowstore table and want to convert it to a columnstore, you can use the CREATE COLUMNSTORE INDEX statement. For examples, see.  
+ When you create a table with the `CREATE TABLE` statement you can create the table as a columnstore by specifying the `WITH CLUSTERED COLUMNSTORE INDEX` option. If you already have a rowstore table and want to convert it to a columnstore, you can use the `CREATE COLUMNSTORE INDEX` statement.  
   
 |Task|Reference Topics|Notes|  
 |----------|----------------------|-----------|  
@@ -174,7 +158,9 @@ manager: "jhubbard"
  [Columnstore Indexes Query Performance](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Columnstore Indexes Defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Columnstore Indexes Defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)   
+ [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   
+ [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
   
   
 

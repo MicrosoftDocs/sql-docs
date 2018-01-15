@@ -3,8 +3,11 @@ title: "Using Bulk Copy with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Using Bulk Copy with the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -852,7 +856,7 @@ public class Program
  The following application demonstrates how to load data using the SQLServerBulkCopy class. In this example, a CSV file is used to copy data exported from the Production.Product table in the SQL Server AdventureWorks database to a similar table in the database.  
   
 > [!IMPORTANT]  
->  This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). You must also create a CSV file with data exported from the Production.Product table and can do this with SQL Server Management Studio (SSMS).  If you do not have SSMS, you can visit [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) to get it.  
+>  This sample will not run unless you have created the work tables as described in [Table setup](../../ssms/download-sql-server-management-studio-ssms.md) to get it.  
   
 1.  Open **SQL Server Management Studio** and connect to the SQL Server with the AdventureWorks database.  
   

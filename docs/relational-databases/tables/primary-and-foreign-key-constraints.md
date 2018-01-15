@@ -1,11 +1,13 @@
 ---
 title: "Primary and Foreign Key Constraints | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
@@ -20,6 +22,7 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Primary and Foreign Key Constraints
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ manager: "jhubbard"
   
  When you specify a primary key constraint for a table, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] enforces data uniqueness by automatically creating a unique index for the primary key columns. This index also permits fast access to data when the primary key is used in queries. If a primary key constraint is defined on more than one column, values may be duplicated within one column, but each combination of values from all the columns in the primary key constraint definition must be unique.  
   
- As shown in the following illustration, the **ProductID** and **VendorID** columns in the **Purchasing.ProductVendor** table form a composite primary key constraint for this table. This makes sure that that every row in the **ProductVendor** table has a unique combination of **ProductID** and **VendorID**. This prevents the insertion of duplicate rows.  
+ As shown in the following illustration, the **ProductID** and **VendorID** columns in the **Purchasing.ProductVendor** table form a composite primary key constraint for this table. This makes sure that every row in the **ProductVendor** table has a unique combination of **ProductID** and **VendorID**. This prevents the insertion of duplicate rows.  
   
  ![Composite PRIMARY KEY constraint](../../relational-databases/tables/media/fund04.gif "Composite PRIMARY KEY constraint")  
   

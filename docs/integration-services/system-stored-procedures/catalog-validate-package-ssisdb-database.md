@@ -2,9 +2,12 @@
 title: "catalog.validate_package (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,17 +20,17 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.validate_package (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Asynchronously validates a package in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
-```  
-  
-validate_package [ @folder_name = ] folder_name  
+```sql
+catalog.validate_package [ @folder_name = ] folder_name  
     , [ @project_name = ] project_name  
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
@@ -53,7 +56,7 @@ validate_package [ @folder_name = ] folder_name
  Indicates if the 32-bit runtime should be used to run the package on a 64-bit operating system. Use the value of `1` to execute the package with the 32-bit runtime when running on a 64-bit operating system. Use the value of `0` to execute the package with the 64-bit runtime when running on a 64-bit operating system. This parameter is optional. The *use32bitruntime* is **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Indicates the environment references that are considered by the validation. When the value is `A`, all environment references associated with the project are included in the validation. When the value is `S`, only a single environment reference is included. When the value is `D`, no environment references are included and each parameter must have a literal default value in order to pass validation. This parameter is optional, the character `D` will be used by default. The *environment_scope* is **Char(1)**.  
+ Indicates the environment references that are considered by the validation. When the value is `A`, all environment references associated with the project are included in the validation. When the value is `S`, only a single environment reference is included. When the value is `D`, no environment references are included and each parameter must have a literal default value in order to pass validation. This parameter is optional. The character `D` is used by default. The *environment_scope* is **Char(1)**.  
   
  [ @reference_id = ] *reference_id*  
  The unique ID of the environment reference. This parameter is required only when a single environment reference is included in the validation, when *environment_scope* is `S`. The *reference_id* is **bigint**.  
@@ -91,6 +94,6 @@ validate_package [ @folder_name = ] folder_name
 -   Variables are referenced in the package parameters, but no referenced environments have been included in the validation  
   
 ## Remarks  
- Validation helps identify issues that will prevent the package from running successfully. Use the [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) or [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) views to monitor for validation status.  
+ Validation helps identify issues that may prevent the package from running successfully. Use the [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) or [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) views to monitor for validation status.  
   
   

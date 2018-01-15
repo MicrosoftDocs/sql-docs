@@ -1,12 +1,15 @@
 ---
 title: "Records and Provider-Supplied Fields | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,6 +20,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Records and Provider-Supplied Fields
 When a [Record](../../../ado/reference/ado-api/record-object-ado.md) object is opened, its source can be the current row of an open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), an absolute URL, or a relative URL in conjunction with an open [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

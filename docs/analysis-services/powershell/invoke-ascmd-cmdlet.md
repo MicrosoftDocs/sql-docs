@@ -2,23 +2,25 @@
 title: "Invoke-ASCmd cmdlet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Invoke-ASCmd cmdlet
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Enables a database administrator to execute an XMLA script, Multidimensional Expressions (MDX), Data Mining Extensions (DMX) statements, or Tabular Model Scripting Language (TMSL) script.  
   
  TMSL is supported only for Tabular server mode on a SQL Server 2016 Analysis Services instance.  

@@ -3,8 +3,11 @@ title: "TOP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,9 +27,10 @@ caps.latest.revision: 60
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. When TOP is used in conjunction with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows; otherwise, it returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement or affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
   
@@ -107,13 +111,12 @@ ORDER BY Price ASC;
   
  Here is the result set.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `convertible   blue       15000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ convertible   blue       15000.00
+ ```  
   
  The unexpected results are returned because the TOP clause is logically executed before the ORDER BY clause, which sorts the results of the operator (UNION ALL in this case). Thus, the previous query returns any one red car and any one blue car and then orders the result of that union by the price. The following example shows the correct method of writing this query to achieve the desired result.  
   
@@ -135,13 +138,12 @@ FROM (SELECT TOP(1) Model, Color, Price
   
  Here is the result set.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `van           blue        8000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ van           blue        8000.00
+ ```  
   
 ## Limitations and Restrictions  
  When TOP is used with INSERT, UPDATE, MERGE, or DELETE, the referenced rows are not arranged in any order and the ORDER BY clause can not be directly specified in these statements. If you need to use TOP to insert, delete, or modify rows in a meaningful chronological order, you must use TOP together with an ORDER BY clause that is specified in a subselect statement. See the Examples section that follows in this topic.  

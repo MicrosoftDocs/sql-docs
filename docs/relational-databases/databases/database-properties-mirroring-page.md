@@ -2,9 +2,12 @@
 title: "Database Properties (Mirroring Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "databases"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 86
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Properties (Mirroring Page)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Access this page from the principal database, and use it to configure and to modify the properties of database mirroring for a database. Also use it to launch the Configure Database Mirroring Security Wizard, to view the status of a mirroring session, and to pause or remove the database mirroring session.  
   
 > **IMPORTANT!!!** Security must be configured before you can start mirroring. If mirroring has not been started, you must begin by using the wizard. The **Mirroring** page textboxes are disabled until the wizard has been finished.  

@@ -3,9 +3,12 @@ title: "Prerequisites for Using the ADO Documentation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology: “drivers”
 ms.topic: "article"
 helpviewer_keywords: 
@@ -15,6 +18,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Prerequisites for Using the ADO Documentation
 To use this documentation, you should have, at a minimum, some experience developing applications with Microsoft Visual Basic, because most of the examples in the guide are written in this language. There are also some examples written in Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript), and Microsoft JScript.  

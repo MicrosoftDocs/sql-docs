@@ -2,9 +2,12 @@
 title: "CursorPrepare Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CursorPrepare Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **CursorPrepare** event class describes cursor prepare events that occur in application programming interface (API) cursors. Cursor prepare events occur when the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compiles a SELECT statement associated with a cursor into an execution plan but does not create the cursor.  
   
  Include the **CursorPrepare** event class in traces that are recording the performance of cursors. When the **CursorPrepare** event class is included in a trace, the amount of overhead incurred will depend on how frequently cursors are used against the database during the trace. If cursors are used extensively, the trace may significantly impede performance.  

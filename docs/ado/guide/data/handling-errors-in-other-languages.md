@@ -1,12 +1,15 @@
 ---
 title: "Handling Errors In Other Languages | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "02/14/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
@@ -14,6 +17,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Handling Errors In Other Languages
 So far, this section has discussed errors from a Microsoft® Visual Basic® point of view. The remainder of this section will give you an overview of error handling in languages other than Visual Basic.  

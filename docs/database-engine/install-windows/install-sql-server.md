@@ -1,13 +1,13 @@
 ---
 title: "Install SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod:
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -23,8 +23,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server
-
- > For content related to previous versions of SQL Server, see [Install SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500395(SQL.120).aspx).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ > For content related to previous versions of SQL Server, see [Install SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx).
 
  Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
 
@@ -43,11 +43,7 @@ manager: "jhubbard"
 
 ## Get the installation media
 
-The download location for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] depends on the edition:
-
-- **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft purchasing website](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx). 
-
-- **Free editions** are available at [SQL Server Downloads](http://www.microsoft.com/sql-server/sql-server-downloads).
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## How to install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
  

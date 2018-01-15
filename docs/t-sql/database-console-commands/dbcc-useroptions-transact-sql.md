@@ -1,10 +1,13 @@
 ---
 title: "DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/17/2017"
+ms.date: "11/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -25,9 +28,10 @@ caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DBCC USEROPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Returns the SET options active (set) for the current connection.
   
@@ -49,23 +53,23 @@ DBCC USEROPTIONS returns a column for the name of the SET option and a column fo
 
 ```sql
 
-| `Set Option                   Value`  
- `---------------------------- ---------------------------`  
- `textsize                     64512`  
- `language                     us_english`  
- `dateformat                   mdy`  
- `datefirst                    7`  
- `lock_timeout                 -1`  
- `quoted_identifier            SET`  
- `arithabort                   SET`  
- `ansi_null_dflt_on            SET`  
- `ansi_warnings                SET`  
- `ansi_padding                 SET`  
- `ansi_nulls                   SET`  
- `concat_null_yields_null      SET`  
- `isolation level              read committed`  
- `(13 row(s) affected)`  
- `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
+Set Option                   Value`  
+---------------------------- ---------------------------`  
+textsize                     64512 
+language                     us_english 
+dateformat                   mdy  
+datefirst                    7 
+lock_timeout                 -1 
+quoted_identifier            SET 
+arithabort                   SET 
+ansi_null_dflt_on            SET 
+ansi_warnings                SET 
+ansi_padding                 SET 
+ansi_nulls                   SET 
+concat_null_yields_null      SET 
+isolation level              read committed  
+(13 row(s) affected) 
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
 ## Remarks  

@@ -3,8 +3,11 @@ title: "Properties Window (Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Properties Window (Management Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use this window to view properties of selected elements. You can also use the Properties window to view file, project, and solution properties. The Properties window is available by clicking **Properties Window** on the **View** menu.  
   
 The Properties window displays different types of editing fields, depending on the needs of a particular property. Properties shown in gray are read-only.  

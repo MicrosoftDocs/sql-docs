@@ -3,8 +3,11 @@ title: "sys.dm_tran_commit_table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,9 +26,10 @@ caps.latest.revision: 17
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Change Tracking - sys.dm_tran_commit_table
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Displays one row for each transaction that is committed for a table that is tracked by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change tracking. The sys.dm_tran_commit_table management view, which is provided for supportability purposes and exposes the transaction-related information that change tracking stores in the sys.syscommittab system table. The sys.syscommittab table provides an efficient persistent mapping from a database-specific transaction ID to the transaction's commit log sequence number (LSN) and commit timestamp. The data that is stored in the sys.syscommittab table and exposed in this management view is subject to cleanup according to the retention period specified when change tracking was configured.  
   

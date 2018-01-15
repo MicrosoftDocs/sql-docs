@@ -3,8 +3,11 @@ title: "ODBC 64-Bit Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ODBC 64-Bit Information
 Beginning with Windows Server 2003, Microsoft operating systems have supported the 64-bit ODBC libraries. The ODBC headers and libraries first shipped with MDAC 2.7 SDK contain changes to allow programmers to easily write code for the new 64 bit platforms. By ensuring that your code uses the ODBC defined types listed below, you can compile the same source code both for 64-bit and 32-bit platforms based on the **_WIN64** or **WIN32** macros.  

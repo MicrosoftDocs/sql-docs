@@ -2,7 +2,10 @@
 title: "Troubleshoot Orphaned Users (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "failover-clusters"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,9 +25,10 @@ caps.latest.revision: 41
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Troubleshoot Orphaned Users (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Orphaned users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occur when a database user is based on  a login in the **master** database, but the login no longer exists in **master**. This can occur when the login is deleted, or when the database is moved to another server where the login does not exist. This topic describes how to find orphaned users, and remap them to logins.  
   

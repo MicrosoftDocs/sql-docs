@@ -1,10 +1,13 @@
 ---
 title: "sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "10/20/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,18 +26,18 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns one row per plan attribute for the plan specified by the plan handle. You can use this table-valued function to get details about a particular plan, such as the cache key values or the number of current simultaneous executions of the plan.  
   
 > [!NOTE]  
->  Some of the information returned through this function maps to the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) backward compatibility view.  
-  ## Syntax  
-  
+>  Some of the information returned through this function maps to the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) backward compatibility view.
+
+## Syntax  
 ```  
-  
 sys.dm_exec_plan_attributes ( plan_handle )  
 ```  
   
@@ -46,17 +49,19 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**attribute**|**varchar(128)**|Name of the attribute associated with this plan. The table immediately below this one lists the possible attributes, their data types, and their descriptions.|  
-|**value**|**sql_variant**|Value of the attribute that is associated with this plan.|  
-|**is_cache_key**|**bit**|Indicates whether the attribute is used as part of the cache lookup key for the plan.|  
-  
+|attribute|**varchar(128)**|Name of the attribute associated with this plan. The table immediately below this one lists the possible attributes, their data types, and their descriptions.|  
+|value|**sql_variant**|Value of the attribute that is associated with this plan.|  
+|is_cache_key|**bit**|Indicates whether the attribute is used as part of the cache lookup key for the plan.|  
+
+From the above table, **attribute** can have the following values:
+
 |Attribute|Data type|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indicates the option values that the plan was compiled with.|  
 |objectid|**int**|One of the main keys used for looking up an object in the cache. This is the object ID stored in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) for database objects (procedures, views, triggers, and so on). For plans of type "Adhoc" or "Prepared", it is an internal hash of the batch text.|  
 |dbid|**int**|Is the ID of the database containing the entity the plan refers to.<br /><br /> For ad hoc or prepared plans, it is the database ID from which the batch is executed.|  
 |dbid_execute|**int**|For system objects stored in the **Resource** database, the database ID from which the cached plan is executed. For all other cases, it is 0.|  
-|user_id|**int**|Value of -2 indicates that the batch submitted does not depend on implicit name resolution and can be shared among different users. This is the preferred method. Any other value represents the user ID of the user submitting the query in the database.|  
+|user_id|**int**|Value of -2 indicates that the batch submitted does not depend on implicit name resolution and can be shared among different users. This is the preferred method. Any other value represents the user ID of the user submitting the query in the database.| 
 |language_id|**smallint**|ID of the language of the connection that created the cache object. For more information, see [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Date format of the connection that created the cache object. For more information, see [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Date first value. For more information, see [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
@@ -141,7 +146,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### A. Returning the attributes for a specific plan  
  The following example returns all plan attributes for a specified plan. The `sys.dm_exec_cached_plans` dynamic management view is queried first to obtain the plan handle for the specified plan. In the second query, replace `<plan_handle>` with a plan handle value from the first query.  
   
-```  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -153,7 +158,7 @@ GO
 ### B. Returning the SET options for compiled plans and the SQL handle for cached plans  
  The following example returns a value representing the options that each plan was compiled with. In addition, the SQL handle for all the cached plans is returned.  
   
-```  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

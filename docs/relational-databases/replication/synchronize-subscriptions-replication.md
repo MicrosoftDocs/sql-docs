@@ -2,9 +2,12 @@
 title: "Synchronize Subscriptions (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 35
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Synchronize Subscriptions (Replication)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Subscriptions are synchronized by replication agents. The Distribution Agent synchronizes subscriptions to transactional and snapshot publications, and the Merge Agent synchronizes subscriptions to merge publications. You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], replication stored procedures, and Replication Management Objects (RMO) to synchronize subscriptions and to control synchronization behavior. The following topics describe how synchronize subscriptions and specify synchronization options.  
   
 ## In This Section  

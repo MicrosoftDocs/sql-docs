@@ -3,8 +3,11 @@ title: "Join Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Join Dialog Box (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use this dialog box to specify options for joining tables. To access this dialog, in the **Design** pane select a join line. Then in the **Properties** window click **Join Condition And Type**, and click the ellipses **(…)** that appear to the right of the property.  
   
 By default, related tables are joined using an inner join that creates a result set based on rows containing matching information in the join columns. By setting options in the **Join** dialog box, you can specify a join based on a different operator, and you can specify an outer join.  

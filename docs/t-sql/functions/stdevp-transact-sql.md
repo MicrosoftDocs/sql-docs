@@ -3,8 +3,11 @@ title: "STDEVP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "statistical standard deviation"
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # STDEVP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the statistical standard deviation for the population for all values in the specified expression.  
   
@@ -97,11 +101,11 @@ FROM ProductInventory;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `397676.79         397226.44`  
+ ```
+Distinct_Values   All_Values  
+----------------  ----------------  
+397676.79         397226.44
+```  
   
 ### C. Using STDEVP with OVER  
  The following example returns the `STDEVP` of the sales quota values for each quarter in a calendar year. Notice that the `ORDER BY` in the `OVER` clause orders the `STDEVP` and the `ORDER BY` of the `SELECT` statement orders the result set.  
@@ -118,17 +122,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              StdDeviation`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             0.00`  
-  
- `2002  2        140000.0000             24500.00`  
-  
- `2002  3         70000.0000             29329.55`  
-  
- `2002  4        154000.0000             34426.55`  
+ ```
+Year  Quarter  SalesQuota              StdDeviation  
+----  -------  ----------------------  -------------------  
+2002  1         91000.0000             0.00  
+2002  2        140000.0000             24500.00  
+2002  3         70000.0000             29329.55  
+2002  4        154000.0000             34426.55
+```  
   
 ## See Also  
  [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

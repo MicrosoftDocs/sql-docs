@@ -3,8 +3,11 @@ title: "sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,18 +23,15 @@ helpviewer_keywords:
   - "sp_cdc_change_job"
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.sp_cdc_change_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifies the configuration of a change data capture cleanup or capture job in the current database. To view the current configuration of a job, query the [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) table, or use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -107,7 +107,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## Examples  
   
 ### A. Changing a capture job  
- The following example updates the `@job`_`type`, `@maxscans`, and `@maxtrans` parameters of a capture job in the `AdventureWorks2012` database. The other valid parameters for a capture job, `@continuous` and `@pollinginterval`, are omitted; their values are not modified.  
+ The following example updates the `@job_type`, `@maxscans`, and `@maxtrans` parameters of a capture job in the `AdventureWorks2012` database. The other valid parameters for a capture job, `@continuous` and `@pollinginterval`, are omitted; their values are not modified.  
   
 ```  
 USE AdventureWorks2012;  

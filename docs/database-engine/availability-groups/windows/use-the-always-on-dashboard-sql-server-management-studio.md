@@ -1,10 +1,13 @@
 ---
 title: "Use the Always On availability group dashboard (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.date: "10/30/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -18,10 +21,11 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Use the Always On availability group dashboard (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Database administrators use the Always On availability group dashboard to obtain an at-a-glance view the health of an availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Some of the typical uses for the availability group d dashboard are:  
   
@@ -116,7 +120,10 @@ manager: "jhubbard"
  Name and state of the cluster where the instance of the connected server and the availability group is a member node.  
   
 ##  <a name="AvReplicaDetails"></a> Availability Replica Details  
- The **Availability replica** pane displays the following columns:  
+
+When connected to the primary replica, **Availability replica details** shows information from all replicas in the availability group. When connected to a secondary replica, the display only shows information from the connected replica.  
+
+The **Availability replica** pane displays the following columns:  
   
  **Name**  
  The name of the server instance that hosts the availability replica. This column is shown by default.  

@@ -2,9 +2,12 @@
 title: "Troubleshoot Full-Text Indexing | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 44
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Troubleshoot Full-Text Indexing
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
 ##  <a name="failure"></a> Troubleshoot Full-Text Indexing Failures  
  While populating or maintaining a full-text index, the full-text indexer, for reasons described below, might fail to index one or more rows. These row-level errors do not prevent the population from completing. The indexer skips these rows, which means that you are not able to query for content contained in these rows.  

@@ -2,9 +2,12 @@
 title: "Populating a Table with Existing Hierarchical Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 1-2 - Populating a Table with Existing Hierarchical Data
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 This task creates a new table and populates it with the data in the **EmployeeDemo** table. This task has the following steps:  
   
 -   Create a new table that contains a **hierarchyid** column. This column could replace the existing **EmployeeID** and **ManagerID** columns. However, you will retain those columns. This is because existing applications might refer to those columns, and also to help you understand the data after the transfer. The table definition specifies that **OrgNode** is the primary key, which requires the column to contain unique values. The clustered index on the **OrgNode** column will store the date in **OrgNode** sequence.  

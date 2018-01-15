@@ -1,6 +1,8 @@
 
 # [Overview of SQL Server Tools and Utilities](../tools/overview-sql-tools.md)
-# [New and recently updated articles](new-updated-tools.md)
+# [New and updated articles](new-updated-tools.md)
+
+# [SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -8,12 +10,12 @@
 
 # [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
-# [dta](../tools/dta/dta-utility.md)
+# [Database Engine Tuning Advisor (dta)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
-# [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)
+# [Service Broker (ssbdiagnose)](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)
 
 # [Command Prompt Utilities](command-prompt-utility-reference-database-engine.md)  
-## [bcp Utility](bcp-utility.md)  
+## [Bulk Copy Utility (bcp)](bcp-utility.md)  
 ## [SqlLocalDB Utility](sqllocaldb-utility.md)  
 ## [osql Utility](osql-utility.md)  
 ## [Profiler Utility](profiler-utility.md)  

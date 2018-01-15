@@ -1,10 +1,13 @@
 ---
 title: "sp_updatestats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/18/2016"
+ms.date: "09/25/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,21 +21,18 @@ helpviewer_keywords:
   - "sp_updatestats"
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # sp_updatestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Runs UPDATE STATISTICS against all user-defined and internal tables in the current database.  
   
  For more information about UPDATE STATISTICS, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
+    
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -54,7 +54,7 @@ sp_updatestats [ [ @resample = ] 'resample']
   
  sp_updatestats updates statistics on disabled nonclustered indexes and does not update statistics on disabled clustered indexes.  
   
- For disk-based tables, **sp_updatestats** updates only the statistics that require updating based on the **modification_counter** information in the **sys.dm_db_stats_properties** catalog view, thus avoiding unnecessary updates of statistics on unchanged rows. Statistics on memory-optimized tables are always updated when executing **sp_updatestats**. Therefore do not execute **sp_updatestats** more than necessary.  
+ For disk-based tables, **sp_updatestats** updates statistics based on the **modification_counter** information in the **sys.dm_db_stats_properties** catalog view, updating statistics where at least one row has been modified. Statistics on memory-optimized tables are always updated when executing **sp_updatestats**. Therefore do not execute **sp_updatestats** more than necessary.  
   
  **sp_updatestats** can trigger a recompile of stored procedures or other compiled code. However, **sp_updatestats** might not cause a recompile, if only one query plan is possible for the tables referenced and the indexes on them. A recompilation would be unnecessary in these cases even if statistics are updated.  
   

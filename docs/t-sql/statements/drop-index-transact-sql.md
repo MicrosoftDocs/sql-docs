@@ -1,11 +1,13 @@
 ---
 title: "DROP INDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "05/11/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -33,12 +35,13 @@ helpviewer_keywords:
   - "DROP INDEX statement"
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 caps.latest.revision: 99
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # DROP INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Removes one or more relational, spatial, filtered, or XML indexes from the current database. You can drop a clustered index and move the resulting table to another filegroup or partition scheme in a single transaction by specifying the MOVE TO option.  
   
@@ -273,7 +276,7 @@ When a clustered index is dropped OFFLINE, only the upper levels of clustered in
 ## Examples  
   
 ### A. Dropping an index  
- The following example deletes the index `IX_ProductVendor`_`VendorID` on the `ProductVendor` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example deletes the index `IX_ProductVendor_VendorID` on the `ProductVendor` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   

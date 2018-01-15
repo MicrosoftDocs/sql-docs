@@ -1,12 +1,15 @@
 ---
 title: "Installation and configuration | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
@@ -15,12 +18,14 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "On Demand"
 ---
 # WideWorldImportersDW Installation and configuration
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Installation and configuration instructions for the WideWorldImportersDW database.
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (or higher) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). To use the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). For the best results use the June 2016 release or later.
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). For the best results use the June 2016 release or later.
 
 ## Download
 

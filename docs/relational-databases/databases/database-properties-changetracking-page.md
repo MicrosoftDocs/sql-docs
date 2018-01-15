@@ -2,9 +2,12 @@
 title: "Database Properties (ChangeTracking Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "databases"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Properties (ChangeTracking Page)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use this page to view or modify change tracking settings for the selected database. For more information about the options available on this page, see [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md).  
   
 ## Options  
@@ -31,7 +36,7 @@ manager: "jhubbard"
  You can also configure change tracking by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
  **Retention Period**  
- Specifies the minimum period for keeping change track information in the database. Data is removed only if the **Auto Clean-Up**value is **True**.  
+ Specifies the minimum period for keeping change track information in the database. Data is removed only if the **Auto Clean-Up** value is **True**.  
   
  The default value is 2.  
   

@@ -2,24 +2,28 @@
 title: "Getting started with the ReportViewer 2016 control | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "application-integration"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Get Started
 
-Learn how developers can embed paginated reports in ASP.Net web sites, and Windows forms apps, through the Reporting Services 2016 ReportViewer Control. You can add the control to a new project, or update an existing project.
+Learn how developers can embed paginated reports in ASP.NET web sites, and Windows Forms apps, through the Reporting Services 2016 ReportViewer Control. You can add the control to a new project, or update an existing project.
 
 ## Adding the ReportViewer control to a new web project
 
@@ -136,7 +140,7 @@ To make use of the ReportViewer 2016 control in an existing project, add the con
 <!DOCTYPE html>
 ```
 
-## Adding the ReportViewer control to a new Windows forms project
+## Adding the ReportViewer control to a new Windows Forms project
 
 1. Create a new **Windows Forms Application** or open an existing project.
 

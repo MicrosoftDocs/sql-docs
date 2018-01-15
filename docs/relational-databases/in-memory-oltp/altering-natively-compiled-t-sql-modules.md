@@ -1,23 +1,26 @@
 ---
 title: "Altering Natively Compiled T-SQL Modules | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Altering Natively Compiled T-SQL Modules
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (and later) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] you can perform ALTER operations on natively compiled stored procedures and other natively compiled T-SQL modules such as scalar UDFs and triggers using the ALTER statement.  
   

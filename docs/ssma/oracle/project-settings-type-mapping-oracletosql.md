@@ -1,19 +1,23 @@
 ---
 title: "Project Settings (Type Mapping) (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Project Settings (Type Mapping) (OracleToSQL)
 The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts Oracle data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types.  

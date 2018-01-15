@@ -2,11 +2,13 @@
 title: "Monitoring R Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
@@ -14,6 +16,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Monitoring R Services
   This section provides information about these common monitoring tasks when using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  

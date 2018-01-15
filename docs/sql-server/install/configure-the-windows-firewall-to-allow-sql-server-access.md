@@ -2,9 +2,12 @@
 title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -27,9 +30,10 @@ caps.latest.revision: 48
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  > For content related to previous versions of SQL Server, see [Configure the Windows Firewall to Allow SQL Server Access](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
 
@@ -116,7 +120,7 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance running over an HTTP endpoint.|Can be specified when an HTTP endpoint is created. The default is TCP port 80 for CLEAR_PORT traffic and 443 for SSL_PORT traffic.|Used for an HTTP connection through a URL.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance running over an HTTPS endpoint.|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses secure sockets layer (SSL).|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP port 4022. To verify the port used, execute the following query:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|There is no default port for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], but this is the conventional configuration used in Books Online examples.|  
-|Database Mirroring|Administrator chosen port. To determine the port, execute the following query:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|There is no default port for database mirroring however Books Online examples use TCP port 7022. It is very important to avoid interrupting an in-use mirroring endpoint, especially in high-safety mode with automatic failover. Your firewall configuration must avoid breaking quorum. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
+|Database Mirroring|Administrator chosen port. To determine the port, execute the following query:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|There is no default port for database mirroring however Books Online examples use TCP port 5022 or 7022. It is very important to avoid interrupting an in-use mirroring endpoint, especially in high-safety mode with automatic failover. Your firewall configuration must avoid breaking quorum. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Replication|Replication connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the typical regular [!INCLUDE[ssDE](../../includes/ssde-md.md)] ports (TCP port 1433 for the default instance, etc.)<br /><br /> Web synchronization and FTP/UNC access for replication snapshot require additional ports to be opened on the firewall. To transfer initial data and schema from one location to another, replication can use FTP (TCP port 21), or sync over HTTP (TCP port 80) or File Sharing. File sharing uses UDP port 137 and 138, and TCP port 139 if it using NetBIOS. File Sharing uses TCP port 445.|For sync over HTTP, replication uses the IIS endpoint (ports for which are configurable but is port 80 by default), but the IIS process connects to the backend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through the standard ports (1433 for the default instance.<br /><br /> During Web synchronization using FTP, the FTP transfer is between IIS and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher, not between subscriber and IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] debugger|TCP port 135<br /><br /> See [Special Considerations for Port 135](#BKMK_port_135)<br /><br /> The [IPsec](#BKMK_IPsec) exception might also be required.|If using [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], on the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] host computer, you must also add **Devenv.exe** to the Exceptions list and open TCP port 135.<br /><br /> If using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], on the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] host computer, you must also add **ssms.exe** to the Exceptions list and open TCP port 135. For more information, see [Configure firewall rules before running the TSQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   

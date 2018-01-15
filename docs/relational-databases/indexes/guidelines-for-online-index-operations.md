@@ -1,14 +1,12 @@
 ---
-title: "Guidelines for Online Index Operations | Microsoft Docs"
+title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
-ms.date: "07/10/2017"
-ms.prod: "sql-server-2016"
+ms.date: 07/10/2017
+ms.prod: "sql-non-specified"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
 helpviewer_keywords: 
   - "clustered indexes, online operations"
   - "online index operations"
@@ -18,12 +16,17 @@ helpviewer_keywords:
   - "transaction logs [SQL Server], indexes"
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.suite: "sql"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "indexes"
+ms.workload: "On Demand"
 ---
 # Guidelines for Online Index Operations
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   When you perform online index operations, the following guidelines apply:  
   
@@ -32,7 +35,7 @@ manager: "jhubbard"
 -   Nonunique nonclustered indexes can be created online when the table contains LOB data types but none of these columns are used in the index definition as either key or nonkey (included) columns.  
   
 -   Indexes on local temp tables cannot be created, rebuilt, or dropped online. This restriction does not apply to indexes on global temp tables.
-- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). This feature is in public preview for SQL Server 2017 and Azure SQL Database.
+- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -87,20 +90,18 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 ## Resumable Index Rebuild Considerations
 
 > [!NOTE]
-> See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). This feature is in public preview for SQL Server 2017 and Azure SQL Database.
->
+> The resumable index option applies to SQL Server (Starting with SQL Server 2017) and SQL Database. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 When you perform resumable online index rebuild the following guidelines apply:
 -	Managing, planning and extending of index maintenance windows. You can pause and restart an index rebuild operation multiple times to fit your maintenance windows.
 - Recovering from index rebuild failures (such as database failovers or running out of disk space).
 - When an index operation is paused, both the original index and the the newly created one require disk space and need to be updated during DML operations.
 
-- Enables truncation of truncation logs during an index rebuild operation (this operation cannot be performed for a regular online index operation).
+- Enables truncation of transaction logs during an index rebuild operation (this operation cannot be performed for a regular online index operation).
 - SORT_IN_TEMPDB=ON option is not supported
 
 > [!IMPORTANT]
-> Resumable rebuild does not require you to keep open a long running truncation, allowing log truncation during this operation and a better log space management. With the new design, we managed to keep necessary data in a database together with all references required to restart the resumable operation.
->
+> Resumable rebuild does not require you to keep open a long running transaction, allowing log truncation during this operation and a better log space management. With the new design, we managed to keep necessary data in a database together with all references required to restart the resumable operation.
 
 Generally, there is no performance difference between resumable and non-resumable online index rebuild. When you update a resumable index while an index rebuild operation is paused:
 - For read-mostly workloads, the performance impact is insignificant. 

@@ -3,8 +3,11 @@ title: "UnionAggregate (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,10 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # UnionAggregate (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Performs a union operation on a set of geometry objects.
   
@@ -51,30 +55,20 @@ UnionAggregate ( geometry_operand )
   
 ## Examples  
  The following example returns the union of a set of **geometry** objects in a table variable.  
-  
- `-- Setup table variable for UnionAggregate example`  
-  
- `DECLARE @Geom TABLE`  
-  
- `(`  
-  
- `shape geometry,`  
-  
- `shapeType nvarchar(50)`  
-  
- `);`  
-  
- `INSERT INTO @Geom(shape,shapeType)`  
-  
- `VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),`  
-  
- `('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');`  
-  
- `-- Perform UnionAggregate on @Geom.shape column`  
-  
- `SELECT geometry::UnionAggregate(shape).ToString()`  
-  
- `FROM @Geom;`  
+ ```
+ -- Setup table variable for UnionAggregate example 
+ DECLARE @Geom TABLE 
+ ( 
+ shape geometry, 
+ shapeType nvarchar(50) 
+ ); 
+ INSERT INTO @Geom(shape,shapeType) 
+ VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'), 
+ ('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle'); 
+ -- Perform UnionAggregate on @Geom.shape column 
+ SELECT geometry::UnionAggregate(shape).ToString() 
+ FROM @Geom;
+``` 
   
 ## See Also  
  [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

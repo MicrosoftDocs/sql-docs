@@ -2,9 +2,12 @@
 title: "Provide a Source Query (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Provide a Source Query (SQL Server Import and Export Wizard)
 If you specified that you want to provide a query to select the data to copy, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Provide a Source Query**. On this page, you write and test the SQL query that selects the data to copy from the data source to the destination. You can also paste the text of a saved query, or load the query text from a file.
@@ -59,19 +63,19 @@ If your data source is Excel, see [Provide a source query for Excel](#excelQueri
 There are three types of Excel objects that you can query.
 -   **Worksheet.** To query a worksheet, append the $ character to the end of the sheet name and add delimiters around the string - for example, **[Sheet1$]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$]
     ```
 
 -   **Named range.** To query a named range, simply use the range name - for example, **MyDataRange**.
     
-    ```
+    ```sql
     SELECT * FROM MyDataRange
     ```
 
 -   **Unnamed range.** To specify a range of cells that you haven't named, append the $ character to the end of the sheet name, add the range specification, and add delimiters around the string - for example, **[Sheet1$A1:B4]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
 

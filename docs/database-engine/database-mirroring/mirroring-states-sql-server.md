@@ -2,9 +2,12 @@
 title: "Mirroring States (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-mirroring"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -23,8 +26,10 @@ caps.latest.revision: 39
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Mirroring States (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   During a database mirroring session, the mirrored database is always in a specific state (the *mirroring state*). The state of the database reflects the communication status, data flow, and the difference in data between the partners. The database mirroring session adopts the same state as the principal database.  
   
  Throughout a database mirroring session, the server instances monitor each other. The partners use the mirroring state to monitor the database. With the exception of the PENDING_FAILOVER state, the principal and mirror database are always in the same state. If a witness is set for the session, each of the partners monitors the witness using its connection state (CONNECTED or DISCONNECTED).  

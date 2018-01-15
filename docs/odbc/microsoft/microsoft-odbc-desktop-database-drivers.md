@@ -3,8 +3,11 @@ title: "Microsoft ODBC Desktop Database Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Microsoft ODBC Desktop Database Drivers
 ODBC is an API that uses Structured Query Language (SQL) as the database access language. You can access a wide variety of database management systems (DBMSs) with the same ODBC source code that is directly incorporated into an application's source code. With the Microsoft ODBC Desktop Database Drivers, a user of an ODBC-enabled application can open, query, and update a desktop database through the ODBC interface.  

@@ -2,9 +2,12 @@
 title: "Quorum: How a Witness Affects Database Availability (Database Mirroring) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-mirroring"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -25,8 +28,10 @@ caps.latest.revision: 36
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Quorum: How a Witness Affects Database Availability (Database Mirroring)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Whenever a witness is set for a database mirroring session, *quorum* is required. Quorum is a relationship that exists when two or more server instances in a database mirroring session are connected to each other. Typically, quorum involves three interconnected server instances. When a witness is set, quorum is required to make the database available. Designed for high-safety mode with automatic failover, quorum makes sure that a database is owned by only one partner at a time.  
   
  If a particular server instance becomes disconnected from a mirroring session, that instance loses quorum. If no server instances are connected, the session loses quorum and the database becomes unavailable. Three types of quorum are possible:  

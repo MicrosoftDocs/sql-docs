@@ -1,20 +1,23 @@
 ---
 title: "Master Data Services Installation and Configuration | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/28/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 44
-author: "sabotta"
-ms.author: "carlasab"
+author: "smartysanthosh"
+ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Active"
 ---
 # Master Data Services Installation and Configuration
   This article covers how to install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 R2 machine, set up the MDS database and website, and deploy the sample models and data. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) enables your organization to manage a trusted version of data.   
@@ -134,7 +137,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     For more information about Windows collation, see [Windows Collation Name (Transact-SQL)](https://msdn.microsoft.com/library/ms188046.aspx).  
+     For more information about Windows collation, see [Windows Collation Name (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md).  
   
 5.  In the **User name** field, specify  the Windows account of the user that will be the default Super User for Master Data Services. A Super User has access to all functional areas and can add, delete, and update all models.  
 

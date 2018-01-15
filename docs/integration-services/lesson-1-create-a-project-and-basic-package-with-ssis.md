@@ -2,9 +2,12 @@
 title: "Lesson 1: Create a Project and Basic Package with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,10 +19,11 @@ caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Lesson 1: Create a Project and Basic Package with SSIS
 
- > For content related to previous versions of SQL Server, see [Lesson 1: Creating the Project and Basic Package](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Lesson 1: Creating the Project and Basic Package](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx).
 
 In this lesson, you will create a simple ETL package that extracts data from a single flat file source, transforms the data using two lookup transformation components, and writes that data to the **FactCurrency** fact table in **AdventureWorksDW2012**. As part of this lesson, you will learn how to create new packages, add and configure data source and destination connections, and work with new control flow and data flow components.  
   
@@ -29,7 +33,7 @@ In this lesson, you will create a simple ETL package that extracts data from a s
 ## Understanding the Package Requirements  
 This tutorial requires Microsoft SQL Server Data Tools.  
   
-For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](http://msdn.microsoft.com/en-us/data/hh297027).  
+For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](http://msdn.microsoft.com/data/hh297027).  
   
 Before creating a package, you need a good understanding of the formatting used in both the source data and the destination. Once you understand both of these data formats, you will be ready to define the transformations necessary to map the source data to the destination.  
   

@@ -3,8 +3,11 @@ title: "Connect to Any SQL Server Component from SSMS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-f1"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Connect to Any SQL Server Component from SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] to connect to:  
   
 -   An instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)].  

@@ -3,8 +3,11 @@ title: "Open With (New File) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Open With (New File)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can open a document in one or more editors by clicking **Open** on the **File** menu and then clicking **File**. In the **Open File** dialog box, select the file, click the **Open** arrow, and then click **Open With**. In the **Open With** dialog box, in the **Select a program to open** list, click the preferred program, and then click **Open**.  
   
 ## Options  

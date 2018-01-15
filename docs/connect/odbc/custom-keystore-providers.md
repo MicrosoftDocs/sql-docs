@@ -3,8 +3,11 @@ title: "Custom Keystore Providers | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 1
 ms.author: "v-chojas"
 manager: "jhubbard"
 author: "MightyPen"
+ms.workload: "Inactive"
 ---
 # Custom Keystore Providers
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

@@ -2,9 +2,12 @@
 title: "Configure Dialog Security for Event Notifications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "service-broker"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure Dialog Security for Event Notifications
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog security should be configured for event notifications that send messages to a service broker on a remote server. Dialog security must be manually configured according to the [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog full-security model. The full-security model enables encryption and decryption of messages that are sent to and from remote servers. Although event notifications are sent in one direction, other messages, such as errors, are also returned in the opposite direction.  
   
 ## Configuring Dialog Security for Event Notifications  

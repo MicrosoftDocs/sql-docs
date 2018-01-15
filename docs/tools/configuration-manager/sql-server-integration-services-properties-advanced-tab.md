@@ -2,9 +2,12 @@
 title: "SQL Server Integration Services Properties (Advanced Tab) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "configuration-manager"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Integration Services Properties (Advanced Tab)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is implemented as the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]service. If custom properties are defined, they appear on this tab, with their values. This tab may have no properties listed.  
   
   

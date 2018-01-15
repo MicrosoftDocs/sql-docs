@@ -1,11 +1,13 @@
 ---
 title: "ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,12 +24,13 @@ helpviewer_keywords:
   - "ALTER COLUMN ENCRYPTION KEY statement"
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Alters a column encryption key in a database, adding or dropping an encrypted value. A CEK can have up to two values which allows for the rotation of the corresponding column master key. A CEK is used when encrypting columns using the [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. Before adding a CEK value, you must define the column master key that was used to encrypt the value by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) statement.  
   

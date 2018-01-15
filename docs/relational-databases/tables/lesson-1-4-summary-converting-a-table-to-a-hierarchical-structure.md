@@ -2,9 +2,12 @@
 title: "Summary: Converting a Table to a Hierarchical Structure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 1-4 - Summary - Converting a Table to a Hierarchical Structure
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 The **hierarchyid** data type can store a hierarchical relationship in a simple, compact format. Proper indexes can efficiently return data by the level of the hierarchy, by sub-trees of the hierarchy, or by traditional singleton lookups.  
   
 In this lesson, you used two of the hierarchical methods. The next lesson will demonstrate how to use more of these methods to query and manipulate the hierarchical data.  

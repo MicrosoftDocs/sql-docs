@@ -1,12 +1,15 @@
 ---
 title: "Groups and Users Append, ChangePassword Methods Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -21,6 +24,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Groups and Users Append, ChangePassword Methods Example (VC++)
 This example demonstrates the [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) method of [Groups](../../../ado/reference/adox-api/groups-collection-adox.md), as well as the [Append](../../../ado/reference/adox-api/append-method-adox-users.md) method of [Users](../../../ado/reference/adox-api/users-collection-adox.md) by adding a new [Group](../../../ado/reference/adox-api/group-object-adox.md) and a new [User](../../../ado/reference/adox-api/user-object-adox.md) to the system. The new **Group** is appended to the **Groups** collection of the new **User**. Consequently, the new **User** is added to the **Group**. Also, the [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) method is used to specify the **User** password.  

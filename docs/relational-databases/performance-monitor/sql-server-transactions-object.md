@@ -2,9 +2,12 @@
 title: "SQL Server, Transactions Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server, Transactions Object
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Transactions** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor the number of transactions active in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], and the effects of those transactions on resources such as the snapshot isolation row version store in **tempdb**. Transactions are logical units of work; a set of operations that must either all succeed or all be erased from a database in order to maintain the logical integrity of the data. All modifications of data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are made in transactions.  
   
  When a database is set to allow snapshot isolation level, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must maintain a record of the modifications made to each row in a database. Each time a row is modified, a copy of the row as it existed before the modification is recorded in a row version store in **tempdb**. Many of the counters in the **Transaction** object can be used to monitor the size and rate of growth of the row version store in **tempdb**.  

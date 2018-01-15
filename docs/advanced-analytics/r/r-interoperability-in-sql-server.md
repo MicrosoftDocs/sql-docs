@@ -2,11 +2,13 @@
 title: "R Interoperability in SQL Server R Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/11/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
@@ -14,6 +16,7 @@ caps.latest.revision: 9
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # R interoperability in SQL Server
 

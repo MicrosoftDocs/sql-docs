@@ -2,12 +2,15 @@
 title: "Backing Up, Restoring, and Synchronizing Databases (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -22,9 +25,11 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Backing Up, Restoring, and Synchronizing Databases (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In XML for Analysis, there are three commands that back up, restore, and synchronize databases:  
   
 -   The [Backup](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) command backs up a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] backup file (.abf), as described in the section, [Backing Up Databases](#backing_up_databases).  

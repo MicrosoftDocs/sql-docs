@@ -1,12 +1,15 @@
 ---
 title: "Use of SQL Server features and capabilities | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
@@ -15,8 +18,10 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "Inactive"
 ---
 # Use of SQL Server features and capabilities
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 WideWorldImporters use of SQL Server features and capabilities in the OLTP database.
 
 WideWorldImporters is designed to showcase many of the key features of SQL Server, including the latest features introduced in SQL Server 2016. The following is a list of SQL Server features and capabilities, and a description of how they are used in WideWorldImporters.

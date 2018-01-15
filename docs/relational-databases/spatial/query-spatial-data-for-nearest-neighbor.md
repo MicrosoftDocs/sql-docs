@@ -2,9 +2,12 @@
 title: "Query Spatial Data for Nearest Neighbor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Query Spatial Data for Nearest Neighbor
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A common query used with spatial data is the Nearest Neighbor query. Nearest Neighbor queries are used to find the closest spatial objects to a specific spatial object. For example a store locater for a Web site often must find the closest store locations to a customer location.  
   
  A Nearest Neighbor query can be written in a variety of valid query formats, but for the Nearest Neighbor query to use a spatial index the following syntax must be used.  
@@ -75,7 +80,7 @@ SELECT TOP ( number )
 ## Example  
  The following code example shows a Nearest Neighbor query that can use a spatial index. The example uses the `Person.Address` table in `AdventureWorks2012` database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -90,7 +95,7 @@ ORDER BY SpatialLocation.STDistance(@g);
 ## Example  
  The following code example shows a Nearest Neighbor query that cannot use a spatial index.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  

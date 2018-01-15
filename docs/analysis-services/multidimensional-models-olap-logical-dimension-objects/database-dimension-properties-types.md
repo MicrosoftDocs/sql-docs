@@ -2,12 +2,15 @@
 title: "Dimension Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -33,9 +36,11 @@ ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Database Dimension Properties - Types
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The **Type** property setting provides information about the contents of a dimension to server and client applications. In some cases, the **Type** setting only provides guidance for client applications and is optional. In other cases, such as **Accounts** or **Time** dimensions, the **Type** property settings for the dimension and its attributes determine specific server-based behaviors and may be required to implement certain behaviors in the cube. For example, the **Type** property of a dimension can be set to **Accounts** to indicate to client applications that the standard dimension contains account attributes. For more information about time, account, and currency dimensions, see [Create a Date type Dimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [Create a Finance Account of parent-child type Dimension](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), and [Create a Currency type Dimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  The default setting for the dimension type is **Regular**, which makes no assumptions about the contents of the dimension. This is the default setting for all dimensions when you initially define a dimension unless you specify **Time** when defining the dimension using the Dimension Wizard. You should also leave **Regular** as the dimension type if the Dimension Wizard does not list an appropriate type for Dimension type.  

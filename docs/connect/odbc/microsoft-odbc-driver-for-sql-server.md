@@ -1,10 +1,13 @@
 ---
 title: "Microsoft ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology:
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,15 +17,25 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Microsoft ODBC Driver for SQL Server
-[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-ODBC is the primary native data access API for applications written in C and C++ for SQL Server, and there is an ODBC driver for most data sources. Other languages, including COBOL, Perl, PHP, and Python use ODBC, and it is widely used in data integration scenarios. The ODBC driver comes with tools such as  [**sqlcmd**](https://msdn.microsoft.com/library/ms162773.aspx) and [**bcp**](https://msdn.microsoft.com/library/ms162802.aspx). The `sqlcmd` utility lets you run Transact-SQL statements, system procedures, and SQL scripts. The `bcp` utility bulk copies data between an instance of Microsoft SQL Server and a data file in a format you choose. You can use `bcp` to import many new rows into SQL Server tables or to export data out of tables into data files.  
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
+ODBC is the primary native data access API for applications written in C and C++ for SQL Server. There is an ODBC driver for most data sources. Other languages that can use ODBC include COBOL, Perl, PHP, and Python. ODBC is widely used in data integration scenarios.
+
+The ODBC driver comes with tools such as [**sqlcmd**](../../tools/sqlcmd-utility.md) and [**bcp**](../../tools/bcp-utility.md). The **sqlcmd** utility lets you run Transact-SQL statements, system procedures, and SQL scripts. The **bcp** utility bulk copies data between an instance of Microsoft SQL Server and a data file in a format you choose. You can use **bcp** to import many new rows into SQL Server tables or to export data out of tables into data files.  
+
+## Code example in C++
+
+We have a small .zip file that contains the source code of a C++ program which uses ODBC:
+
+- [C++ code example, using ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## Download
 
-- [Download ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)  
+- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## Documentation  
 

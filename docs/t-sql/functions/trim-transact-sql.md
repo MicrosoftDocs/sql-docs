@@ -3,8 +3,11 @@ title: "TRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "TRIM function"
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 caps.latest.revision: 4
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # TRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Removes the space character `char(32)` or other specified characters from the start or end of a string.  
  
@@ -51,7 +55,7 @@ By default `TRIM` function removes the space character `char(32)` from both side
 ## Examples
 ### A.  Removes the space character from both sides of string   
 The following example removes spaces from before and after the word `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -62,7 +66,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### B.  Removes specified characters from both sides of string   
 The following example removes a trailing period and trailing spaces.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 

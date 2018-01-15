@@ -3,8 +3,11 @@ title: "TIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "TIMEFROMPARTS function"
 ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # TIMEFROMPARTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Returns a **time** value for the specified time and with the specified precision.  
   
@@ -32,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )  
 ```  
   
@@ -90,7 +92,7 @@ Result
   
 3.  When *fractions* has a value of 500 and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
   
-```tsql  
+```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 50, 2 );  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 500, 3 );  
@@ -115,59 +117,5 @@ GO
   
 (1 row(s) affected)  
 ```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Simple example without fractions of a second  
-  
-```  
-SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Result  
---------------------  
-23:59:59.0000000  
-  
-(1 row(s) affected)  
-```  
-  
-### D. Example with fractions of a second  
- The following example demonstrates the use of the *fractions* and *precision* parameters:  
-  
-1.  When *fractions* has a value of 5 and *precision* has a value of 1, then the value of *fractions* represents 5/10 of a second.  
-  
-2.  When *fractions* has a value of 50 and *precision* has a value of 2, then the value of *fractions* represents 50/100 of a second.  
-  
-3.  When *fractions* has a value of 500 and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
-  
-```tsql  
-SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  
-SELECT TIMEFROMPARTS ( 14, 23, 44, 50, 2 );  
-SELECT TIMEFROMPARTS ( 14, 23, 44, 500, 3 );  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-----------------  
-14:23:44.5  
-  
-(1 row(s) affected)  
-  
-----------------  
-14:23:44.50  
-  
-(1 row(s) affected)  
-  
-----------------  
-14:23:44.500  
-  
-(1 row(s) affected)  
-```  
-  
   
 

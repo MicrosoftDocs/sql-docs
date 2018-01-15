@@ -1,12 +1,15 @@
 ---
 title: "Create a Basic Table Report (SSRS Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/30/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/07/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -19,7 +22,8 @@ ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 caps.latest.revision: 67
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 
 # Create a Basic Table Report (SSRS Tutorial)
@@ -35,9 +39,9 @@ Your system must have the following installed to use this tutorial:
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] in native mode.  
   
--   The [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] database.  For more information, see [Adventure Works 2014 Sample Databases)](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
+-   The [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] database.  For more information, see [Adventure Works 2014 Sample Databases)](https://github.com/Microsoft/sql-server-samples/releases).  
   
- -   [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) with the "SQL Server Reporting Services" components installed so you have the Report Designer.    
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) with the "SQL Server Reporting Services" components installed so you have the Report Designer.    
   
 You must also have read-only permissions to retrieve data from the [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] database.
 

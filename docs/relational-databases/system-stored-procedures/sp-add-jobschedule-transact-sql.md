@@ -3,8 +3,11 @@ title: "sp_add_jobschedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,9 +24,10 @@ caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # sp_add_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a schedule for a job.  
   
@@ -162,7 +166,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  
  ## Example
  The following example assigns a job schedule to `SaturdayReports` which will execute every Saturday at 2:00 AM.
-```tsql  
+```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
 		@job_name = N'SaturdayReports', -- Job name
 		@name = N'Weekly_Sat_2AM',  -- Schedule name

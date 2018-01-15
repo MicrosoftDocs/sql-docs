@@ -1,11 +1,15 @@
 ---
 title: "Developer Guides for SQL Server | Microsoft Docs"
 ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, analysis-services, integration-services, reporting-services, master-data-services"
+ms.service: ""
+ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -15,8 +19,10 @@ caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Developer Guides for SQL Server
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Integrate almost any SQL Server feature through custom code using the programming models and interfaces. Each feature area includes native and managed APIs used for data collection, data access, server administration, or data visualization.  
   
 ## SQL Server Developer Edition (Free!)
@@ -44,6 +50,6 @@ manager: "craigg"
 ## More resources 
 
  [Transact-SQL Reference](../t-sql/language-reference.md)   
- [SQL Server Technical Documentation](https://msdn.microsoft.com/library/ms130214.aspx)   
+ [SQL Server Technical Documentation](../sql-server/sql-server-technical-documentation.md)   
  [SQL Server Tutorials](../sql-server/tutorials-for-sql-server-2016.md)  
   

@@ -3,8 +3,11 @@ title: "sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/30/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,9 +26,10 @@ caps.latest.revision: 10
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
+ms.workload: "Inactive"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Returns a table that displays total space in tempdb used by version store records for each database. **sys.dm_tran_version_store_space_usage** is efficient and performant to run as it doesnt navigate through individual version store records and returns aggregated version store space consumed in tempdb per database.
   
@@ -45,7 +49,7 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW 
 ## Examples  
  The following query can be used to determine space consumed in tempdb by version store of each database in a SQL Server instance. 
   
-```tsql  
+```sql  
 SELECT 
   DB_NAME(database_id) as 'Database Name',
   reserved_page_count,

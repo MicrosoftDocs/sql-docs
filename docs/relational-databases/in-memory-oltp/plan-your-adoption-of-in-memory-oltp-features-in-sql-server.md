@@ -1,10 +1,13 @@
 ---
 title: "Plan your adoption of In-Memory OLTP Features in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/08/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/21/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 This article describes the ways in which the adoption of In-Memory features affects other aspects of your business system.
@@ -93,7 +97,7 @@ One way to convert your disk-based table to a memory-optimized table is to code 
 The Memory Optimization Advisor tool can generate a script to help implement the conversion of a disk-based table to a memory-optimized table. The tool is installed as part of SQL Server Data Tools (SSDT).
 
 - [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)
+- [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### .dacpac file
@@ -251,126 +255,15 @@ A bit more about LOB and off-row columns is available at:
 ## E. Limitations of native procs
 
 
-Particular elements of Transact-SQL are not supported in natively compiled stored procedures.
+Particular elements of Transact-SQL are not supported in natively compiled T-SQL modules, including stored procedures. For details about which features are supported, see:
 
-For considerations when migrating a Transact-SQL script to a native proc, see:
+- [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
+
+For considerations when migrating a Transact-SQL modules that uses unsupported features to natively compiled, see:
 
 - [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
-
-### E.1 No CASE in a native proc
-
-The CASE expression in Transact-SQL cannot be used inside a native proc. You can fashion a work-around:
-
-- [Implementing a CASE Expression in a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
-
-
-### E.2 No MERGE in a native proc
-
-
-The Transact-SQL [MERGE statement](../../t-sql/statements/merge-transact-sql.md) has similarities to what is often called *upsert* functionality. A native proc cannot use the MERGE statement. However, you can achieve the same functionality as MERGE by using a combination of SELECT plus UPDATE plus INSERT statements. A code example is at:
-
-- [Implementing MERGE Functionality in a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)
-
-
-
-### E.3 No joins in UPDATE or DELETE statements, in a native proc
-
-Transact-SQL statements in a native proc can access memory-optimized tables only. In UPDATE and DELETE statements, you cannot join any tables. Attempts in a native proc fail with a message such as Msg 12319 which explains that you:
-
-- Cannot use the FROM clause in an UPDATE statement.
-- Cannot specify a table source in a DELETE statement.
-
-No type of subquery provides a work-around. However, you can use a memory-optimized table variable to achieve a join outcome over multiple statements. Two code samples follow:
-
-- DELETE...JOIN... we want to run in a native proc, but cannot.
-- A work-around set of Transact-SQL statements that achieves the delete join.
-
-
-*Scenario:* The table TabProjectEmployee has a unique key of two columns: ProjectId and EmployeeId. Each row indicates the assignment of an employee to an active project. When an Employee leaves the company, the employee must be deleted from the TabProjectEmployee table.
-
-
-#### Invalid T-SQL, DELETE...JOIN
-
-
-A native proc cannot have a DELETE...JOIN such as the following.
-
-
-```tsql
-DELETE pe
-	FROM
-		     TabProjectEmployee   AS pe
-		JOIN TabEmployee          AS e
-
-			ON pe.EmployeeId = e.EmployeeId
-	WHERE
-			e.EmployeeStatus = 'Left-the-Company'
-;
-```
-
-
-#### Valid work-around, manual delete...join
-
-Next is the work-around code sample, in two parts:
-
-1. The CREATE TYPE is executed one time, days before the type is first used by any actual table variable.
-
-2. The business process uses the created type. It begins by declaring a table variable of the created table type.
-
-
-```tsql
-
-CREATE TYPE dbo.type_TableVar_EmployeeId
-	AS TABLE  
-	(
-		EmployeeId   bigint   NOT NULL
-	);
-```
-
-
-Next, use the create table type.
-
-
-```tsql
-DECLARE @MyTableVarMo  dbo.type_TableVar_EmployeeId  
-
-INSERT INTO @MyTableVarMo (EmployeeId)
-	SELECT
-			e.EmployeeId
-		FROM
-				 TabProjectEmployee  AS pe
-			JOIN TabEmployee         AS e  ON e.EmployeeId = pe.EmployeeId
-		WHERE
-			e.EmployeeStatus = 'Left-the-Company'
-;
-
-DECLARE @EmployeeId   bigint;
-
-WHILE (1=1)
-BEGIN
-	SET @EmployeeId = NULL;
-
-	SELECT TOP 1 @EmployeeId = v.EmployeeId
-		FROM @MyTableVarMo  AS v;
-
-	IF (NULL = @Employeed) BREAK;
-	
-	DELETE TabProjectEmployee
-		WHERE EmployeeId = @EmployeeId;
-
-	DELETE @MyTableVarMo
-		WHERE EmployeeId = @EmployeeId;
-END;
-```
-
-
-### E.4 Query plan limitations for native procs
-
-
-Some types of query plans are not available for native procs. Many details are discussed in:
-
-- [A Guide to Query Processing for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
-
+Besides limitations on certain elements of Transact-SQL, there are also limitation on query operators supported in natively compiled T-SQL modules. Because of these limitations, natively compiled stored procedures are not suitable for analytical queries that process large data sets.
 
 #### No parallel processing in a native proc
 

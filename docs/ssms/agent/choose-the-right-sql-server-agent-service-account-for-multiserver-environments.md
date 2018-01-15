@@ -3,8 +3,11 @@ title: "Choose the Agent Service Account for Multiserver Environments | Microsof
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,8 +20,10 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Choose the Right SQL Server Agent Service Account for Multiserver Environments
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 The Windows account you choose for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service can affect the behavior of a multiserver environment, as follows:  
   
 -   If you run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service under an account that is not a member of the local Windows Administrators group, enlisting target servers to master servers may fail. If it does, the following error message is returned:  

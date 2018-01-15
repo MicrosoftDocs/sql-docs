@@ -3,8 +3,11 @@ title: "REPLICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "repeating character expressions"
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # REPLICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Repeats a string value a specified number of times.  
   
@@ -34,8 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 REPLICATE ( string_expression ,integer_expression )   
 ```  
   
@@ -133,21 +135,16 @@ ORDER BY Name;
   
  Here are the first rows in the result set.  
   
- `Name                     ItemCode       FullItemCode`  
-  
- `------------------------ -------------- ---------------`  
-  
- `Adjustable Race          AR-5381        0000AR-5381`  
-  
- `All-Purpose Bike Stand   ST-1401        0000ST-1401`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `BB Ball Bearing          BE-2349        0000BE-2349`  
+ ```
+Name                     ItemCode       FullItemCode
+------------------------ -------------- ---------------
+Adjustable Race          AR-5381        0000AR-5381
+All-Purpose Bike Stand   ST-1401        0000ST-1401
+AWC Logo Cap             CA-1098        0000CA-1098
+AWC Logo Cap             CA-1098        0000CA-1098
+AWC Logo Cap             CA-1098        0000CA-1098
+BB Ball Bearing          BE-2349        0000BE-2349
+ ```  
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

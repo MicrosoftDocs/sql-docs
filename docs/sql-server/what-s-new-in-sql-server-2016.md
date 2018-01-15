@@ -1,11 +1,13 @@
 ---
 title: "What's New in SQL Server 2016"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/21/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "sql-non-specified"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
@@ -22,8 +24,10 @@ caps.latest.revision: 224
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # What's new in SQL Server 2016
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
  With SQL Server 2016, you can build intelligent, mission-critical applications using a scalable, hybrid database platform that has everything built in, from in-memory performance and advanced security to in-database analytics. The SQL Server 2016 release adds new security features, querying capabilities, Hadoop and cloud integration, R analytics and more, along with numerous improvements and enhancements. 
 
 This page provides summary information and links to more detailed SQL Server 2016 what's new information for each SQL Server component. 
@@ -32,7 +36,7 @@ This page provides summary information and links to more detailed SQL Server 201
 
  **Try SQL Server today!** 
 - Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Download the latest version of [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx). 
+- Download the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
 - Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
 ## SQL Server 2016 Database Engine
@@ -93,7 +97,7 @@ Microsoft has thoroughly revamped Reporting Services in this release.
 - **Redesigned report rendering engine** that supports HTML5 
 - New treemap and sunburst **chart types** 
 
-See [Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx).
+See [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## Next steps   
 - [SQL Server setup](../database-engine/install-windows/installation-for-sql-server-2016.md)   
@@ -105,3 +109,4 @@ See [Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx
 - [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
 - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -3,8 +3,11 @@ title: "Create Make Table Queries (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -20,8 +23,10 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create Make Table Queries (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can copy rows into a new table using a Make Table query, which is useful for creating subsets of data to work with or copying the contents of a table from one database to another. A Make Table query is similar to an Insert Results query but creates a new table to copy rows into.  
   
 When you create a Make Table query, you specify:  
@@ -38,7 +43,7 @@ When you create a Make Table query, you specify:
   
 -   Group By options, if you want to copy only summary information.  
   
-For example, the following query creates a new table called `uk`_`customers` and copies information from the `customers` table to it:  
+For example, the following query creates a new table called `uk_customers` and copies information from the `customers` table to it:  
   
 ```  
 SELECT *   

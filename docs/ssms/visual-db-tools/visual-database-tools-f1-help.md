@@ -3,8 +3,11 @@ title: "Visual Database Tools F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,8 +19,10 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Visual Database Tools F1 Help
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 These topics discuss the commands and options in the dialog boxes and properties windows for Visual Database Tools elements such as the Table Properties window, and the Column Properties tab.  
   
 To access dialog box topics, press F1 when you have a dialog box open and it has focus. To access properties window topics, click in the Properties window and press F1.  

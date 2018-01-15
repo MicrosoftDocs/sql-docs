@@ -1,24 +1,22 @@
 ---
 title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
-ms.date: "07/02/2017"
-ms.prod: "sql-server-2017"
+ms.date: "10/10/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
+ms.custom: ""
 ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "what's new [Reporting Services]"
-  - "Reporting Services, what's new"
-  - "SQL Server Reporting Services, what's new"
-  - "SSRS, what's new"
-ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-caps.latest.revision: 206
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Active"
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)
@@ -26,20 +24,32 @@ manager: "erikre"
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
 Learn about what's new in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This covers the major feature areas and is updated as new items are released.
-  
+
   For information on what's new in other areas of SQL Server, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) or [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
-  
+
  **Download** ![download](../analysis-services/media/download.png "download")
- 
-- To download the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services, along with the Power BI Desktop release (SQL Server Reporting Services), go to the **[Microsoft download center](https://go.microsoft.com/fwlink/?linkid=839351)**.
-  
--   To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
-  
--   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)** to spin up a Virtual Machine with SQL Server already installed.  
 
- ![note](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") For the current release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md) or [Power BI Report Server release notes](https://powerbi.microsoft.com/documentation/reportserver-release-notes/).
+- To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
-For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+For the current release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md) or [Power BI Report Server release notes](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+
+## What's new in SQL Server 2017
+
+### Comments on reports
+
+Comments are now available for reports, to add perspective and collaborate with others. You can also include attachments with comments.
+
+![Comments within a report server](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
+
+For more information, see [Add comments to a report in a report server](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
+
+### DAX queries in reporting tools
+
+In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against supported SQL Server Analysis Services tabular data models by dragging and dropping desired fields in the query designers. See the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+
+### REST API support
+
+To enable development of modern applications and customization, SQL Server Reporting Services now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 ## Query designer support for DAX now in Report Builder and SQL Server Data Tools
 

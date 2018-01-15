@@ -2,9 +2,12 @@
 title: "Generating Dump Files for Package Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Generating Dump Files for Package Execution
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. The information in these files can help you with troubleshooting package execution issues.  
@@ -30,7 +34,7 @@ manager: "jhubbard"
   
      Call this stored procedure to cause a running package to pause and create a dump file.  
   
- If you are using the package deployment model, you create the debug dump files by using either the **dtexec** utility or the **dtutil** utility to specify a debug dump option in the command line. For more information, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md) and [dtutil Utility](../../integration-services/dtutil-utility.md). For more information about the package deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx) and [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ If you are using the package deployment model, you create the debug dump files by using either the **dtexec** utility or the **dtutil** utility to specify a debug dump option in the command line. For more information, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md) and [dtutil Utility](../../integration-services/dtutil-utility.md). For more information about the package deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx) and [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## Debug dump file format  
  When you specify a debug dump option, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates the following debug dump files:  

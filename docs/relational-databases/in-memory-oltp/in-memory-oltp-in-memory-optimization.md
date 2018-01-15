@@ -1,11 +1,13 @@
 ---
 title: "In-Memory OLTP (In-Memory Optimization) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "11/22/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -18,9 +20,10 @@ caps.latest.revision: 106
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # In-Memory OLTP (In-Memory Optimization)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] can significantly improve the performance of transaction processing, data ingestion and data load, and transient data scenarios.  To jump into the basic code and knowledge you need to quickly test your own memory-optimized table and natively compiled stored procedure, see
  -  [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
@@ -39,7 +42,7 @@ For a more detailed overview of In-Memory OLTP and a review of scenarios that se
  
  Note that [!INCLUDE[hek_2](../../includes/hek-2-md.md)] is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technology for improving performance of transaction processing. For the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technology that improves reporting and analytical query performance see [Columnstore Indexes Guide](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
- Several improvements have been made to In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] as well as in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. The Transact-SQL surface area has been increased to make it easier to migrate database applications. Support for performing ALTER operations for memory-optimized tables and natively compiled stored procedures has been added, to make it easier to maintain applications. For information about the new features in [!INCLUDE[hek_2](../../includes/hek-2-md.md)], see [Columnstore indexes - what's new](../../relational-databases/indexes/columnstore-indexes-what-s-new.md).  
+ Several improvements have been made to In-Memory OLTP in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], as well as in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. The Transact-SQL surface area has been increased to make it easier to migrate database applications. Support for performing ALTER operations for memory-optimized tables and natively compiled stored procedures has been added, to make it easier to maintain applications. For information about the new features in [!INCLUDE[hek_2](../../includes/hek-2-md.md)], see [Columnstore indexes - what's new](../../relational-databases/indexes/columnstore-indexes-what-s-new.md).  
   
 > [!NOTE]  
 >  **Try it out**  

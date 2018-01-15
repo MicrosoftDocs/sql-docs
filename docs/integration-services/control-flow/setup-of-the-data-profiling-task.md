@@ -2,9 +2,12 @@
 title: "Setup of the Data Profiling Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Setup of the Data Profiling Task
   Before you can review a profile of the source data, the first step is to set up and run the Data Profiling task. You create this task inside an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. To configure the Data Profiling task, you use the Data Profiling Task Editor. This editor enables you to select where to output the profiles, and which profiles to compute. After you set up the task, you run the package to compute the data profiles.  

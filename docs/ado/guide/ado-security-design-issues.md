@@ -1,11 +1,14 @@
 ---
 title: "ADO Security Design Issues | Microsoft Docs"
-ms.custom: "H1Hack27Feb2017"
+ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology: “drivers”
 ms.topic: "article"
 helpviewer_keywords:
@@ -15,6 +18,7 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADO Security Design Features
 The following sections describe security design features in ActiveX Data Objects (ADO) 2.8 and later. These changes were made in ADO 2.8 to improve security. ADO 6.0, which is included in Windows DAC 6.0 in Windows Vista, is functionally equivalent to ADO 2.8, which was included in MDAC 2.8 in Windows XP and Windows Server 2003. This topic provides information about how to best secure your applications in ADO 2.8 or later.

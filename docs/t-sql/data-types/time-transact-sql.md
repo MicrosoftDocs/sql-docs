@@ -1,10 +1,13 @@
 ---
 title: "time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/07/2017"
+ms.date: "6/7/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,12 +25,13 @@ helpviewer_keywords:
   - "time data type [SQL Server]"
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Defines a time of a day. The time is without time zone awareness and is based on a 24-hour clock.  
   
@@ -38,12 +42,12 @@ manager: "jhubbard"
   
 |Property|Value|  
 |--------------|-----------|  
-|Syntax|**time** [ (*fractional second precision*) ]|  
+|Syntax|**time** [ (*fractional second scale*) ]|  
 |Usage|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
-|*fractional seconds precision*|Specifies the number of digits for the fractional part of the seconds.<br /><br /> This can be an integer from 0 to 7. For Informatica, this can be an integer from 0 to 3.<br /><br /> The default fractional precision is 7 (100ns).|  
-|Default string literal format<br /><br /> (used for down-level client)|hh:mm:ss[.nnnnnnn] (hh:mm:ss[.nnn] for Informatica)<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows..|  
+|*fractional seconds scale*|Specifies the number of digits for the fractional part of the seconds.<br /><br /> This can be an integer from 0 to 7. For Informatica, this can be an integer from 0 to 3.<br /><br /> The default fractional scale is 7 (100ns).|  
+|Default string literal format<br /><br /> (used for down-level client)|hh:mm:ss[.nnnnnnn] for Informatica)<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows..|  
 |Range|00:00:00.0000000 through 23:59:59.9999999 (00:00:00.000 through 23:59:59.999 for Informatica)|  
-|Element ranges|hh is two digits, ranging from 0 to 23, that represent the hour.<br /><br /> mm is two digits, ranging from 0 to 59, that represent the minute.<br /><br /> ss is two digits, ranging from 0 to 59, that represent the second.<br /><br /> n* is zero to seven digits, ranging from 0 to 9999999, that represent the fractional seconds. For Informatica, n\* is zero to three digits, ranging from 0 to 999.|  
+|Element ranges|hh is two digits, ranging from 0 to 23, that represent the hour.<br /><br /> mm is two digits, ranging from 0 to 59, that represent the minute.<br /><br /> ss is two digits, ranging from 0 to 59, that represent the second.<br /><br /> n\* is zero to seven digits, ranging from 0 to 9999999, that represent the fractional seconds. For Informatica, n\* is zero to three digits, ranging from 0 to 999.|  
 |Character length|8 positions minimum (hh:mm:ss) to 16 maximum (hh:mm:ss.nnnnnnn). For Informatica, the maximum is 12 (hh:mm:ss.nnn).|  
 |Precision, scale<br /><br /> (user specifies scale only)|See the table below.|  
 |Storage size|5 bytes, fixed, is the default with the default of 100ns fractional second precision. In Informatica, the default is 4 bytes, fixed, with the default of 1ms fractional second precision.|  

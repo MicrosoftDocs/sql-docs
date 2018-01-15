@@ -2,11 +2,14 @@
 title: "Hierarchy (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,9 +23,10 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Hierarchy (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Returns the hierarchy that contains a specified member or level.  
   
@@ -45,7 +49,7 @@ Level_Expression.Hierarchy
  A valid Multidimensional Expressions (MDX) expression that returns a level.  
   
 ### Examples  
- The following example returns the name of the Calendar hierarchy in the Data dimension in the AdventureWorks cube.  
+ The following example returns the name of the Calendar hierarchy in the Date dimension in the AdventureWorks cube.  
   
  `WITH`  
   

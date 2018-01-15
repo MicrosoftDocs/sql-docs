@@ -2,22 +2,27 @@
 title: "Understanding Power View for Multidimensional Models | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Understanding Power View for Multidimensional Models
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This article describes the Power View for Multidimensional Models feature in SQL Server, and provides important information for BI professionals and administrators who intend to implement Power View for Multidimensional Models in their organization.  
   
  Multidimensional models provide industry leading OLAP data modeling, storage, and analysis solutions. Multidimensional models in SQL Server support ad-hoc data analysis, exploration, and visualization by using Microsoft Power View.  

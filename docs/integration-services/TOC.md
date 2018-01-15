@@ -3,9 +3,34 @@
 # Overview
 ## [What's New in Integration Services in SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [What's New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [New and recently updated articles](new-updated-integration-services.md)
+## [New and updated articles](new-updated-integration-services.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
+
+# Quickstarts
+## Deploy
+### [Deploy with SSMS](./ssis-quickstart-deploy-ssms.md)
+### [Deploy with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Deploy with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
+### [Deploy from the command prompt](./ssis-quickstart-deploy-cmdline.md)
+### [Deploy with PowerShell](ssis-quickstart-deploy-powershell.md)
+### [Deploy with C#](./ssis-quickstart-deploy-dotnet.md) 
+## Run
+### [Run with SSMS](./ssis-quickstart-run-ssms.md)
+### [Run with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+### [Run with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
+### [Run from the command prompt](./ssis-quickstart-run-cmdline.md)
+### [Run with PowerShell](ssis-quickstart-run-powershell.md)
+### [Run with C#](./ssis-quickstart-run-dotnet.md) 
+
+# [Lift and shift SSIS packages to Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Tutorial - Deploy, run, and monitor a package on Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Connect to the SSIS Catalog on Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Schedule package execution on Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Validate packages deployed to Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Connect to data sources with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [Connect to files and file shares](lift-shift/ssis-azure-files-file-shares.md)
+
 # [Install or upgrade](../integration-services/install-windows/install-integration-services.md)
 
 # [Development and management Tools](integration-services-ssis-development-and-management-tools.md)
@@ -48,6 +73,7 @@
 # [Deploy Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
+# [Catalog and server](catalog/integration-services-ssis-server-and-catalog.md)
 # [Service (legacy)](../integration-services/service/integration-services-service-ssis-service.md)
 # [Security](../integration-services/security/security-overview-integration-services.md)
 # [Performance](../integration-services/performance/monitor-running-packages-and-other-operations.md)
@@ -147,3 +173,13 @@
 #### [Lesson 3-1 - Copying the Deployment Bundle](lesson-3-1-copying-the-deployment-bundle.md)
 #### [Lesson 3-2 - Running the Package Installation Wizard](lesson-3-2-running-the-package-installation-wizard.md)
 #### [Lesson 3-3 - Testing the Deployed Packages](lesson-3-3-testing-the-deployed-packages.md)
+
+# Resources
+## Follow the blog
+### [SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
+## Get help
+### [SSIS forum on MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+### [SSIS tag on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## Give feedback
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [Get the docs on your PC](../sql-server/sql-server-help-installation.md)

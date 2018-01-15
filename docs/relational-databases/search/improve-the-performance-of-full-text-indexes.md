@@ -2,9 +2,12 @@
 title: "Improve the Performance of Full-Text Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -21,8 +24,10 @@ caps.latest.revision: 68
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Improve the Performance of Full-Text Indexes
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 This topic describes some of the common causes of poor performance for full-text indexes and queries. It also provides a few suggestions to mitigate these issues and improve performance.
   
 ##  <a name="causes"></a> Common causes of performance issues
@@ -143,7 +148,7 @@ For essential information about the following formulas, see the notes that follo
   
  `F = 8*10*8=640`  
   
- The next calculation obtains the optimal value for **max server memory**—*M*. *T*he total physical memory available on this system in MB—*T*—is `8192`.  
+ The next calculation obtains the optimal value for **max server memory**—*M*. The total physical memory available on this system in MB—*T*—is `8192`.  
   
  `M = 8192-640-500=7052`  
   

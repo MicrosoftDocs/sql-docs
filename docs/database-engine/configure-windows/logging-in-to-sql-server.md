@@ -2,9 +2,12 @@
 title: "Logging In to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "configure-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -25,8 +28,10 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Logging In to SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can log in to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using any of the graphical administration tools or from a command prompt.  
   
  When you log in to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using a graphical administration tool such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you are prompted to supply the server name, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, and a password, if necessary. If you log in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Windows Authentication, you do not have to provide a SQL Server login each time you access an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses your [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account to log you in automatically. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running in mixed mode authentication ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Authentication Mode), and you choose to log in using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, you must provide a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login and password. When possible, use Windows Authentication.  
@@ -69,7 +74,7 @@ manager: "jhubbard"
 ## Verifying your Connection Protocol  
  When connected to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], the following query will return the protocol  used for the current connection, along with the authentication method (NTLM or Kerberos), and will indicate if the connection is encrypted.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

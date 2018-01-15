@@ -3,8 +3,11 @@ title: "AVG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,12 +25,13 @@ helpviewer_keywords:
   - "average values"
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # AVG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Returns the average of the values in a group. Null values are ignored.
   
@@ -87,13 +91,13 @@ WHERE JobTitle LIKE 'Vice President%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Average vacation hours       Total sick leave hours`
+```
+Average vacation hours       Total sick leave hours
+ ----------------------       ----------------------
+25                           97
   
-`----------------------       ----------------------`
-  
-`25                           97`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### B. Using the SUM and AVG functions with a GROUP BY clause  
 When used with a `GROUP BY` clause, each aggregate function produces a single value for each group, instead of for the whole table. The following example produces summary values for each sales territoryin the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The summary lists the average bonus received by the sales people in each territory and the sum of year-to-date sales for each territory.
@@ -135,11 +139,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+437.4042
   
-`437.4042`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### D. Using AVG without DISTINCT  
 Without DISTINCT, the `AVG` function finds the average list price of all products in the `Product` tablein the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database including any duplicate values.
@@ -151,11 +156,12 @@ FROM Production.Product;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`------------------------------`
+```
+------------------------------
+438.6662
   
-`438.6662`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### E. Using the OVER clause  
 The following example uses the AVG function with the OVER clause to provide a moving average of yearly sales for each territory in the `Sales.SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the AVG function is computed for each territory based on the sales year. Notice that for `TerritoryID` 1, there are two rows for sales year 2005 representing the two sales people with sales that year. The average sales for these two rows is computed and then the third row representing sales for the year 2006 is included in the computation.

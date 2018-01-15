@@ -1,12 +1,15 @@
 ---
 title: "Create a New Foreign Key Relationship between Tables Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -22,6 +25,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)
 The following code demonstrates how to create a new foreign key relationship between two existing tables named **Customers** and **Orders**.  

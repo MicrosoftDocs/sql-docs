@@ -1,11 +1,13 @@
 ---
 title: "Get started with PolyBase | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "7/13/2017"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "08/15/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "polybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-polybase"
 ms.tgt_pltfrm: ""
@@ -19,14 +21,14 @@ helpviewer_keywords:
   - "Azure blob storage export"
   - "Hadoop import, PolyBase getting started"
   - "Hadoop export, Polybase getting started"
-ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard" 
+ms.workload: "On Demand"
 ---
 # Get started with PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic contains the basics about running PolyBase on a SQL Server instance.
   
@@ -69,7 +71,7 @@ manager: "jhubbard"
 ### How to confirm installation  
  After installation, run the following command to confirm that PolyBase has been successfully installed. If PolyBase is installed, returns 1; otherwise, 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -84,17 +86,20 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 on Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9 - 5.11 on Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.12 on Linux  
   
 -   Azure Blob Storage  
-  
+ 
+Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
+ 
+
 >  [!NOTE]
 > Azure Data Lake Store connectivity is only supported in Azure SQL Data Warehouse.
   
 ### External data source configuration  
   
 1.  Run [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ and set an appropriate value. By Default, the hadoop connectivity is set to 7. To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-      ```tsql  
+      ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -235,10 +240,15 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
 --3:  Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
   
-CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
-        FORMAT_TYPE = DELIMITEDTEXT,   
-        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
-                USE_TYPE_DEFAULT = TRUE)  
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH (  
+       FORMAT_TYPE = DELIMITEDTEXT,   
+       FORMAT_OPTIONS (
+         FIELD_TERMINATOR ='|',   
+         USE_TYPE_DEFAULT = TRUE
+       )
+);
+         
   
 --4: Create an external table.  
 -- The external table points to data stored in Azure storage.  
@@ -275,7 +285,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Ad-hoc queries  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
     -- Select customers who drive faster than 35 mph: joining structured customer data stored   
     -- in SQL Server with car sensor data stored in Hadoop.  
@@ -289,7 +299,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Importing data  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 2: Import external data into SQL Server.  
     -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
     -- leverage Columnstore technology.  

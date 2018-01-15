@@ -3,8 +3,11 @@ title: "LIKE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -34,9 +37,10 @@ caps.latest.revision: 50
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # LIKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Determines whether a specific character string matches a specified pattern. A pattern can include regular characters and wildcard characters. During pattern matching, regular characters must exactly match the characters specified in the character string. However, wildcard characters can be matched with arbitrary fragments of the character string. Using wildcard characters makes the LIKE operator more flexible than using the = and != string comparison operators. If any one of the arguments is not of character string data type, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] converts it to character string data type, if it is possible.  
   
@@ -84,7 +88,7 @@ match_expression [ NOT ] LIKE pattern
   
  A string comparison using a pattern that contains **char** and **varchar** data may not pass a LIKE comparison because of how the data is stored. You should understand the storage for each data type and where a LIKE comparison may fail. The following example passes a local **char** variable to a stored procedure and then uses pattern matching to find all of the employees whose last names start with a specified set of characters.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -102,7 +106,7 @@ GO
   
  However, the following example succeeds because trailing blanks are not added to a **varchar** variable.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -130,7 +134,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -161,7 +165,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  For example, the following query shows all dynamic management views in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, because they all start with the letters `dm`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -200,7 +204,7 @@ GO
 ### A. Using LIKE with the % wildcard character  
  The following example finds all telephone numbers that have area code `415` in the `PersonPhone` table.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -234,7 +238,7 @@ GO
 ### B. Using NOT LIKE with the % wildcard character  
  The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -265,7 +269,7 @@ Gail                  Westover             305-555-0100
 ### C. Using the ESCAPE clause  
  The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -290,7 +294,7 @@ GO
 ### D. Using the [ ] wildcard characters  
  The following example finds employees on the `Person` table with the first name of `Cheryl` or `Sheryl`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -301,7 +305,7 @@ GO
   
  The following example finds the rows for employees in the `Person` table with last names of `Zheng` or `Zhang`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -316,7 +320,7 @@ GO
 ### E. Using LIKE with the % wildcard character  
  The following example finds all employees in the `DimEmployee` table with telephone numbers that start with `612`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -328,7 +332,7 @@ ORDER by LastName;
 ### F. Using NOT LIKE with the % wildcard character  
  The following example finds all telephone numbers in the `DimEmployee` table that do not start with  `612`.  .  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -340,25 +344,13 @@ ORDER by LastName;
 ### G. Using LIKE with the _ wildcard character  
  The following example finds all telephone numbers that have an area code starting with `6` and ending in `2` in the `DimEmployee` table. Note that the % wildcard character is also included at the end of the search pattern since the area code is the first part of the phone number and additional characters exist after in the column value.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
 FROM DimEmployee  
 WHERE phone LIKE '6_2%'  
 ORDER by LastName;   
-```  
-  
-### H. Using the [ ] wildcard characters  
- The following example finds `DimEmployee` rows with the first name of `Rob` or `Bob`.  
-  
-```tsql  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName, Phone  
-FROM DimEmployee  
-WHERE FirstName LIKE '[RB]ob'  
-ORDER by LastName;  
 ```  
   
 ## See Also  

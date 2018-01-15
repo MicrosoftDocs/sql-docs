@@ -2,24 +2,26 @@
 title: "Tabular Model Programming for Compatibility Level 1200 | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Tabular Model Programming for Compatibility Level 1200 and higher
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 Beginning with compatibility level 1200, Tabular metadata is used to describe model constructs, replacing historical Multidimensional metadata as descriptors for Tabular model objects. Metadata for tables, columns, and relationships are table, column, and relationship, rather than the Multidimensional equivalents (dimension and attribute).  
   
 You can create new models at compatibility level 1200 or higher by using the Microsoft.AnalysisServices.Tabular APIs, the latest version of SQL Server Data Tools (SSDT), or by changing the **CompatibilityLevel** of an existing Tabular model to upgrade it (also done in SSDT). Doing so binds the model to newer versions of the server, tools, and programming interfaces.   

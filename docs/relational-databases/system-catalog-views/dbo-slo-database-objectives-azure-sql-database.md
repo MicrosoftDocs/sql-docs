@@ -1,13 +1,12 @@
 ---
 title: "dbo.slo_database_objectives (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: 
 ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: "sql-database"
-ms.suite: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,6 +26,7 @@ caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # dbo.slo_database_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  **This applies only to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
 >   
->  For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12, use [sys.dm_operation_status (Azure SQL Database)](https://msdn.microsoft.com/library/dn270022.aspx) (on master) for the operation ALTER DATABASE.   
+>  For [!INCLUDE[ssSDSfull](../system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) (on master) for the operation ALTER DATABASE.   
   
  Returns the assignment status of a Service Level Objective (SLO) in a SQL Database.  
   
@@ -66,4 +66,4 @@ INNER JOIN sys.databases AS database_name  ON database_slo.database_id = databas
   
 ## See Also  
  [Managing Premium Databases](http://go.microsoft.com/fwlink/?LinkID=311927)  
-[sys.dm_operation_status (Azure SQL Database)](https://msdn.microsoft.com/library/dn270022.aspx) 
+[sys.dm_operation_status (Azure SQL Database)](../system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 

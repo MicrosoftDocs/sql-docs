@@ -2,22 +2,27 @@
 title: "Add MSOLAP.5 as a Trusted Data Provider in Excel Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Add MSOLAP.5 as a Trusted Data Provider in Excel Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   MSOLAP.5 refers to the Analysis Services OLE DB provider for SQL Server 2012. Excel Services must trust this provider before it will make the connection request that results in the availability of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data on a server.  
   
  If you configured [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint using the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool, MSOLAP.5 might already be a trusted provider because the tool includes an action that satisfies this requirement. However, if you are using PowerShell, Central Administration, or if you excluded the trusted provider action in the configuration tool, the provider might be missing, which case you should add it now as part of configuring the farm for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access.  

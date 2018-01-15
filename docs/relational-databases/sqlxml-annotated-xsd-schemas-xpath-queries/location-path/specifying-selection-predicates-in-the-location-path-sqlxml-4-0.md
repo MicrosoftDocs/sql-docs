@@ -2,9 +2,12 @@
 title: "Specifying Selection Predicates in the Location Path (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -21,8 +24,10 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specifying Selection Predicates in the Location Path (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A predicate filters a node-set with respect to an axis (similar to a WHERE clause in a SELECT statement). The predicate is specified between brackets. For each node in the node-set to be filtered, the predicate expression is evaluated with that node as the context node, with the number of nodes in the node-set as context size. If the predicate expression evaluates to TRUE for that node, the node is included in the resulting node-set.  
   
  XPath also allows position-based filtering. A predicate expression evaluating to a number selects that ordinal node. For example, the location path `Customer[3]` returns the third customer. Such numeric predicates are not supported. Only predicate expressions that return a Boolean result are supported.  

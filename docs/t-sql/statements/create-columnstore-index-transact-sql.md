@@ -1,11 +1,13 @@
 ---
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/13/2017"
+ms.custom: ""
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -33,27 +35,30 @@ caps.latest.revision: 76
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
-
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 Convert a rowstore table to a clustered columnstore index or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload or to improve data compression and query performance for data warehousing workloads.  
   
 > [!NOTE]  
->  Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create the table as a clustered columnstore index.   It is no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.  
-  
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create the table as a clustered columnstore index.   It is no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.  
+
+> [!TIP]
+> For information on index design guidelines, refer to the [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md).
+
 Skip to examples:  
 -   [Examples for converting a rowstore table to columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [Examples for nonclustered columnstore indexes](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 Go to scenarios:  
--   [Columnstore indexes for real-time operational analytics](https://msdn.microsoft.com/library/dn817827.aspx)  
--   [Columnstore indexes for data warehousing](https://msdn.microsoft.com/library/dn913734.aspx)  
+-   [Columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [Columnstore indexes for data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 Learn more:  
--   [Columnstore indexes guide](https://msdn.microsoft.com/library/gg492088.aspx)  
--   [Columnstore indexes feature summary](https://msdn.microsoft.com/library/dn934994.aspx)  
+-   [Columnstore indexes guide](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Columnstore indexes feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -223,7 +228,7 @@ COLUMNSTORE_ARCHIVE
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-WHERE <filter_expression> [ AND <filter_expression> ]  
+WHERE \<filter_expression> [ AND \<filter_expression> ]
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
    Called a filter predicate, this specifies which rows to include in the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates filtered statistics on the data rows in the filtered index.  
@@ -711,3 +716,4 @@ WITH ( DROP_EXISTING = ON);
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
+

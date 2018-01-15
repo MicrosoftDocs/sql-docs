@@ -1,10 +1,13 @@
 ---
 title: "Register a Service Principal Name for Kerberos Connections | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/20/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "configure-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,8 +23,10 @@ caps.latest.revision: 59
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Register a Service Principal Name for Kerberos Connections
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To use Kerberos authentication with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires both the following conditions to be true:  
   
 -   The client and server computers must be part of the same Windows domain, or in trusted domains.  
@@ -31,9 +36,9 @@ manager: "jhubbard"
     > [!NOTE]  
     >  If the server cannot automatically register the SPN, the SPN must be registered manually. See [Manual SPN Registration](#Manual).  
   
- You can verify that a connection is using Kerberos by querying the sys.dm_exec_connections dynamic management view. Run the following query and check the value of the auth_scheme column, which will be "KERBEROS" if Kerberos is enabled.  
+You can verify that a connection is using Kerberos by querying the sys.dm_exec_connections dynamic management view. Run the following query and check the value of the auth_scheme column, which will be "KERBEROS" if Kerberos is enabled.  
   
-```  
+```sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -67,39 +72,40 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ##  <a name="Formats"></a> SPN Formats  
  Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the SPN format is changed in order to support Kerberos authentication on TCP/IP, named pipes, and shared memory. The supported SPN formats for named and default instances are as follows.  
   
- **Named instance**  
+**Named instance**  
   
--   *MSSQLSvc/FQDN*:[*port***|***instancename*], where:  
+-   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]**, where:  
   
-    -   *MSSQLSvc* is the service that is being registered.  
+    -   **MSSQLSvc** is the service that is being registered.  
   
-    -   *FQDN* is the fully qualified domain name of the server.  
+    -   **\<FQDN>** is the fully qualified domain name of the server.  
   
-    -   *port* is the TCP port number.  
+    -   **\<port>** is the TCP port number.  
   
-    -   *instancename* is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+    -   **\<instancename>** is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
- **Default instance**  
+**Default instance**  
   
--   *MSSQLSvc/FQDN*:*port***|***MSSQLSvc/FQDN*, where:  
+-   **MSSQLSvc/\<FQDN>:\<port>** | **MSSQLSvc/\<FQDN>**, where:  
   
-    -   *MSSQLSvc* is the service that is being registered.  
+    -   **MSSQLSvc** is the service that is being registered.  
   
-    -   *FQDN* is the fully qualified domain name of the server.  
+    -   **\<FQDN>** is the fully qualified domain name of the server.  
   
-    -   *port* is the TCP port number.  
+    -   **\<port>** is the TCP port number.  
   
- The new SPN format does not require a port number. This means that a multiple-port server or a protocol that does not use port numbers can use Kerberos authentication.  
-  
-> [!NOTE]  
->  In the case of a TCP/IP connection, where the TCP port is included in the SPN, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must enable the TCP protocol for a user to connect by using Kerberos authentication.  
-  
+    > [!NOTE]
+    > The new SPN format does not require a port number. This means that a multiple-port server or a protocol that does not use port numbers can use Kerberos authentication.  
+   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:port*|The provider-generated, default SPN when TCP is used. *port* is a TCP port number.|  
-|MSSQLSvc/*fqdn*|The provider-generated, default SPN for a default instance when a protocol other than TCP is used. *fqdn* is a fully-qualified domain name.|  
-|MSSQLSvc/*fqdn/InstanceName*|The provider-generated, default SPN for a named instance when a protocol other than TCP is used. *InstanceName* is the name of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-  
+|MSSQLSvc/\<FQDN>:<port>|The provider-generated, default SPN when TCP is used. \<port> is a TCP port number.|  
+|MSSQLSvc/\<FQDN>|The provider-generated, default SPN for a default instance when a protocol other than TCP is used. \<FQDN> is a fully-qualified domain name.|  
+|MSSQLSvc/\<FQDN>:\<instancename>|The provider-generated, default SPN for a named instance when a protocol other than TCP is used. \<instancename> is the name of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+
+> [!NOTE]  
+> In the case of a TCP/IP connection, where the TCP port is included in the SPN, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must enable the TCP protocol for a user to connect by using Kerberos authentication. 
+
 ##  <a name="Auto"></a> Automatic SPN Registration  
  When an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] starts, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to register the SPN for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. When the instance is stopped, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to unregister the SPN. For a TCP/IP connection the SPN is registered in the format *MSSQLSvc/\<FQDN>*:*\<tcpport>*.Both named instances and the default instance are registered as *MSSQLSvc*, relying on the *\<tcpport>* value to differentiate the instances.  
   
@@ -108,44 +114,45 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Manual intervention might be required to register or unregister the SPN if the service account lacks the permissions that are required for these actions.  
   
 ##  <a name="Manual"></a> Manual SPN Registration  
- To register the SPN manually, the administrator must use the Setspn.exe tool that is provided with the Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] Support Tools. For more information, see the [Windows Server 2003 Service Pack 1 Support Tools](http://support.microsoft.com/kb/892777) KB article.  
+To register the SPN manually, the administrator must use the Setspn.exe tool that is provided with the Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] Support Tools. For more information, see the [Windows Server 2003 Service Pack 1 Support Tools](http://support.microsoft.com/kb/892777) KB article.  
   
- Setspn.exe is a command line tool that enables you to read, modify, and delete the Service Principal Names (SPN) directory property. This tool also enables you to view the current SPNs, reset the account's default SPNs, and add or delete supplemental SPNs.  
+Setspn.exe is a command line tool that enables you to read, modify, and delete the Service Principal Names (SPN) directory property. This tool also enables you to view the current SPNs, reset the account's default SPNs, and add or delete supplemental SPNs.  
   
- The following example illustrates the syntax used to register manually register an SPN for a TCP/IP connection.  
-  
-```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
-```  
-  
- **Note** If an SPN already exists, it must be deleted before it can be reregistered. You do this by using the `setspn` command together with the `-D` switch. The following examples illustrate how to manually register a new instance-based SPN. For a default instance, use:  
+The following example illustrates the syntax used to register manually register an SPN for a TCP/IP connection using a domain user account:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 redmond\accountname  
 ```  
   
- For a named instance, use:  
+> [!NOTE]
+> If an SPN already exists, it must be deleted before it can be reregistered. You do this by using the `setspn` command together with the `-D` switch. The following examples illustrate how to manually register a new instance-based SPN. For a default instance using a domain user account, use:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname  
+```  
+  
+For a named instance, use:  
+  
+```  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname  
 ```  
   
 ##  <a name="Client"></a> Client Connections  
  User-specified SPNs are supported in client drivers. However, if an SPN is not provided, it will be generated automatically based on the type of a client connection. For a TCP connection, an SPN in the format *MSSQLSvc*/*FQDN*:[*port*] is used for both the named and default instances.  
   
- For named pipes and shared memory connections, an SPN in the format *MSSQLSvc*/*FQDN*:*instancename* is used for a named instance and *MSSQLSvc*/*FQDN* is used for the default instance.  
+For named pipes and shared memory connections, an SPN in the format *MSSQLSvc/\<FQDN>:\<instancename>* is used for a named instance and *MSSQLSvc/\<FQDN>* is used for the default instance.  
   
  **Using a service account as an SPN**  
   
- Service accounts can be used as an SPN. They are specified through the connection attribute for the Kerberos authentication and take the following formats:  
+Service accounts can be used as an SPN. They are specified through the connection attribute for the Kerberos authentication and take the following formats:  
   
 -   **username@domain** or **domain\username** for a domain user account  
   
 -   **machine$@domain** or **host\FQDN** for a computer domain account such as Local System or NETWORK SERVICES.  
   
- To determine the authentication method of a connection, execute the following query.  
+To determine the authentication method of a connection, execute the following query.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -162,7 +169,7 @@ WHERE session_id = @@SPID;
 |The SPN lookup fails or does not map to a correct domain account, virtual account, MSA, or built-in account, or is not a correct domain account, virtual account, MSA, or built-in account.|Local and remote connections use NTLM.|  
   
 > [!NOTE]  
->  'Correct' means that the account mapped by the registered SPN is the account that the SQL Server service is running under.  
+> 'Correct' means that the account mapped by the registered SPN is the account that the SQL Server service is running under.  
   
 ##  <a name="Comments"></a> Comments  
  The Dedicated Administrator Connection (DAC) uses an instance name based SPN. Kerberos authentication can be used with a DAC if that SPN is registered successfully. As an alternative a user can specify the account name as an SPN.  

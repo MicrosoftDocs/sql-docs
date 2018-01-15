@@ -3,8 +3,11 @@ title: "Microsoft-Supplied ODBC Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Microsoft-Supplied ODBC Drivers
 *Drivers* are libraries that implement the functions in the ODBC API. Each driver is specific to a particular database management system (DBMS). In most cases, drivers expose the capabilities of the underlying DBMS; they are not required to implement capabilities not supported by the DBMS. Drivers perform specific tasks and can be classified into two categories: file-based and DBMS-based. For more information about drivers and driver architecture, see [Drivers](../../odbc/reference/drivers.md).  

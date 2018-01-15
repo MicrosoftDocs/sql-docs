@@ -2,12 +2,15 @@
 title: "Specify Connections for Custom Data Processing Extensions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -23,9 +26,10 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], connections"
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Specify Connections for Custom Data Processing Extensions
   You can create or use third-party custom data processing extensions on a report server to enhance the data processing capability of supported data sources, or to support additional types of data sources that are not available in a default [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation. Connections are handled differently depending on the implementation. The following implementations are available for data processing extensions:  

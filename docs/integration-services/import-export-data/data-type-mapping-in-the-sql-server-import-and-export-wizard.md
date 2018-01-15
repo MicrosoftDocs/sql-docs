@@ -2,9 +2,12 @@
 title: "Data Type Mapping in the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 2
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Data Type Mapping in the SQL Server Import and Export Wizard
  In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, you can set the name, the data type, and the data type properties of columns in new destination tables and files, but you can't specify custom conversions for column values. As a result, the built-in mapping of data types from source to destination is important.  

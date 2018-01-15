@@ -1,12 +1,15 @@
 ---
 title: "FieldEnum | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,6 +22,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FieldEnum
 Specifies the special fields referenced in a [Record](../../../ado/reference/ado-api/record-object-ado.md) object's [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  

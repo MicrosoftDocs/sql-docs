@@ -2,9 +2,12 @@
 title: "Manage Bookmarks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Manage Bookmarks
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   While you are working in a code editor, the **Bookmarks** window allows you to create links to specific lines of code within your document. You can display this window from the **View** menu.  
   
  To create and navigate through bookmarks, click the buttons located on the **TextEditor** toolbar and at the top of the **Bookmarks** window. You can add and remove bookmarks, activate or disable bookmarks, and organize bookmarks into folders. Certain commands are also available from the **Bookmarks** window shortcut menu. To add or remove a bookmark, place the insertion point on the desired line in the Editor, and then click **Toggle a bookmark**. To activate a bookmark, select its check box in the **Bookmarks** window; to disable (but not remove) a bookmark, clear its check box.  

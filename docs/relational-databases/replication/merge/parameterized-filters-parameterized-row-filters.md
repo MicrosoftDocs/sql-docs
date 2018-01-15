@@ -2,9 +2,12 @@
 title: "Parameterized Row Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -24,8 +27,10 @@ caps.latest.revision: 69
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Parameterized Filters - Parameterized Row Filters
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Parameterized row filters allow different partitions of data to be sent to different Subscribers without requiring multiple publications to be created (parameterized filters were referred to as dynamic filters in previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). A partition is a subset of the rows in a table; depending on the settings chosen when creating a parameterized row filter, each row in a published table can belong to one partition only (which produces nonoverlapping partitions) or to two or more partitions (which produces overlapping partitions).  
   
  Nonoverlapping partitions can be shared among subscriptions or they can be restricted so that only one subscription receives a given partition. The settings that control partition behavior are described in "Using the Appropriate Filtering Options" later in this topic. Using these settings you can tailor parameterized filtering according to application and performance requirements. In general, overlapping partitions allow for greater flexibility, and nonoverlapping partitions replicated to a single subscription provide better performance.  

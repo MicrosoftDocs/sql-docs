@@ -6,14 +6,15 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: na
-ms.topic: updart-autogen
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.topic: article
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 07/17/2017
+ms.date: 12/02/2017
 ms.author: genemi
 ms.workload: connect-to-sql
 ---
@@ -29,7 +30,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
+- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
 - *Subject area:* &nbsp; **Connect to SQL Server**.
 
 
@@ -39,40 +40,14 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [FIPS Mode](jdbc/fips-mode.md)
- 
-<!-- Really just file moves.
-3. [Custom Keystore Providers](odbc/custom-keystore-providers.md)
-4. [Connecting with bcp](odbc/linux-mac/connecting-with-bcp.md)
-5. [Connecting with sqlcmd](odbc/linux-mac/connecting-with-sqlcmd.md)
-6. [Connection String Keywords and Data Source Names (DSNs)](odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-7. [Data Access Tracing with the ODBC Driver on Linux and macOS](odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-8. [Frequently Asked Questions (FAQ) for ODBC Linux and macOS](odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
-9. [Installing the Driver Manager](odbc/linux-mac/installing-the-driver-manager.md)
-10. [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-11. [Known Issues in this Version of the Driver](odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-12. [ODBC Driver on Linux and macOS Support for High Availability and Disaster Recovery](odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
-13. [Programming Guidelines](odbc/linux-mac/programming-guidelines.md)
-14. [Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](odbc/linux-mac/release-notes.md)
-15. [System Requirements](odbc/linux-mac/system-requirements.md)
-16. [Using Integrated Authentication](odbc/linux-mac/using-integrated-authentication.md)
-17. [Using Always Encrypted with the ODBC Driver 13.1 for SQL Server](odbc/using-always-encrypted-with-the-odbc-driver.md)
-18. [Using Azure Active Directory with the ODBC Driver](odbc/using-azure-active-directory.md)
-19. [Using Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md)
--->
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## Compact List of Articles Updated Recently
-
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+1. [Data Source Wizard Screen 1](odbc/windows/dsn-wizard-1.md)
+2. [Data Source Wizard Screen 2](odbc/windows/dsn-wizard-2.md)
+3. [Data Source Wizard Screen 3](odbc/windows/dsn-wizard-3.md)
+4. [Data Source Wizard Screen 4](odbc/windows/dsn-wizard-4.md)
+5. [SQL Server Login Dialog Box (ODBC)](odbc/windows/sql-server-login-dialog.md)
 
 
 
@@ -80,11 +55,29 @@ This compact list provides links to all the updated articles which are listed in
 
 ## Updated Articles with Excerpts
 
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
 
 The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
 
 For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
+
+
+
+
+&nbsp;
+
+<a name="compactupdatedlist"/>
+
+### Compact List of Articles Updated Recently
+
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
+
+1. [PDOStatement::bindParam](#TitleNum_1)
+2. [PDOStatement::bindValue](#TitleNum_2)
+3. [sqlsrv_prepare](#TitleNum_3)
+4. [sqlsrv_query](#TitleNum_4)
+
 
 
 
@@ -94,58 +87,40 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Download ODBC Driver for SQL Server](odbc/download-odbc-driver-for-sql-server.md)
+### 1. &nbsp; [PDOStatement::bindParam](php/pdostatement-bindparam.md)
 
-*Updated: 2017-05-26* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 29.  ms.author= "genemi".  -->
+<!-- Source markdown line 119.  ms.author= "genemi".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 897f2c162bb10b137d167ced6e6ca4eecb309a71 2b472e0b20f02e523902aa3acc79257ec0f8af3f  (PR=1835  ,  Filename=download-odbc-driver-for-sql-server.md  ,  Dirpath=docs\connect\odbc\  ,  MergeCommitSha40=760437811d11be3c91dd47b7418979e2fc11f660) -->
+<!-- git diff --ignore-all-space --unified=0 2792d149331f5326f6914721c86687d545685488 e363544e2c6f73277b7f2ca05b9269a4139d1fac  (PR=3663  ,  Filename=pdostatement-bindparam.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
 
 
 
-- [Debian 8 .deb packages](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
-- [RedHat 6 .rpm packages](https://packages.microsoft.com/rhel/6.8/prod/)
-- [RedHat 7 .rpm packages](https://packages.microsoft.com/rhel/7/prod/)
-- [SuSE 12 .rpm packages](https://packages.microsoft.com/sles/12/prod/)
-- [Ubuntu 15.10 .deb packages](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.10 .deb packages](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
+> [!NOTE]
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
 
-- [OS X 10.11 and macOS 10.12 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
+**Example**
 
-See also [Installing the Driver--../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+This code sample shows how to bind a decimal value as an input parameter.
 
-**Microsoft ODBC Driver 13 for SQL Server  **
+```php
+<?php
+$database = "Test";
+$server = "(local)";
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");
 
-
-**All Platforms  **
-
-
-- [Download the Microsoft ODBC Driver 13 for SQL Server - All Platforms](https://www.microsoft.com/download/details.aspx?id=50420)
-
-**Windows**
-
-
-- [Download the Microsoft Command Line Utilities 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)
-
-**Microsoft ODBC Driver 11 for SQL Server  **
-
-
-**Windows**
-
-
-- [Download the Microsoft ODBC Driver 11 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=36434)  
-
-- [Download the Microsoft Command Line Utilities 11 for SQL Server](https://www.microsoft.com/download/details.aspx?id=36433)  
-
-**Linux**
-
-
-- **Red Hat Enterprise Linux 5 and 6 (64-bit)** [Download Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
+// Assume TestTable exists with a decimal field
+$input = 9223372036854.80000;
+$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
+// by default it is PDO::PARAM_STR, rounding of a large input value may
+// occur if PDO::PARAM_INT is specified
+$stmt->bindParam(1, $input, PDO::PARAM_STR);
+$stmt->execute();
+```
 
 
 
@@ -158,88 +133,191 @@ See also [Installing the Driver--../../connect/odbc/linux-mac/installing-the-mic
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp; [Microsoft ODBC Driver for SQL Server](odbc/microsoft-odbc-driver-for-sql-server.md)
+### 2. &nbsp; [PDOStatement::bindValue](php/pdostatement-bindvalue.md)
 
-*Updated: 2017-05-26* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
+*Updated: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
 
-<!-- Source markdown line 29.  ms.author= "genemi".  -->
+<!-- Source markdown line 77.  ms.author= "genemi".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 c1d5ff4d5bfdbfbf1635cf14d71b4d583164075a 6cd5fc88860ae9ffca25ee15e8eeaeba29991fda  (PR=3663  ,  Filename=pdostatement-bindvalue.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
+
+
+
+> [!NOTE]
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+
+**Example**
+
+This code sample shows how to bind a decimal value as an input parameter.
+
+```php
+<?php
+$database = "Test";
+$server = "(local)";
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");
+
+// Assume TestTable exists with a decimal field
+$input = 9223372036854.80000;
+$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
+// by default it is PDO::PARAM_STR, rounding of a large input value may
+// occur if PDO::PARAM_INT is specified
+$stmt->bindValue(1, $input, PDO::PARAM_STR);
+$stmt->execute();
+```
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### 3. &nbsp; [sqlsrv_prepare](php/sqlsrv-prepare.md)
+
+*Updated: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
+
+<!-- Source markdown line 219.  ms.author= "genemi".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 f3c737f9b788a330835ca7d9492b617cc71d5d04 f909b2ca7781677a085e3502c680fce2ef1558a6  (PR=1835  ,  Filename=microsoft-odbc-driver-for-sql-server.md  ,  Dirpath=docs\connect\odbc\  ,  MergeCommitSha40=760437811d11be3c91dd47b7418979e2fc11f660) -->
+<!-- git diff --ignore-all-space --unified=0 7811e459efec90ef79340375d5fb34364130466b 3d28b3d320dc7fe5df12300da5cb9579abf6839a  (PR=3663  ,  Filename=sqlsrv-prepare.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
 
 
 
-**Linux and macOS**
+> [!NOTE]
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+
+**Example**
+
+This code sample shows how to bind a decimal value as an input parameter.
+
+```php
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"YourTestDB");
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+if ($conn === false) {
+    echo "Could not connect.\n";
+    die(print_r(sqlsrv_errors(), true));
+}
+
+// Assume TestTable exists with a decimal field
+$input = "9223372036854.80000";
+$params = array($input);
+$stmt = sqlsrv_prepare($conn, "INSERT INTO TestTable (DecimalCol) VALUES (?)", $params);
+sqlsrv_execute($stmt);
+
+sqlsrv_free_stmt($stmt);
+sqlsrv_close($conn);
+
+?>
+```
 
 
-- [Installing the Driver--../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Connecting with **bcp**--../../connect/odbc/linux-mac/connecting-with-bcp.md)
-- [Connecting with **sqlcmd**--../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
-- [Using Integrated Authentication (Kerberos)--../../connect/odbc/linux-mac/using-integrated-authentication.md)
-- [Connection String Keywords and Data Source Names--../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-- [Data Access Tracing--../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-- [Frequently Asked Questions--../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
-- [Installing the Driver Manager--../../connect/odbc/linux-mac/installing-the-driver-manager.md)
-- [Known Issues--../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-- [Programming Guidelines--../../connect/odbc/linux-mac/programming-guidelines.md)
-- [Release Notes--../../connect/odbc/linux-mac/release-notes.md)
-- [Support for High Availability and Disaster Recovery--../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
-
-**Windows**
-
-
-- [Asynchronous Execution (Notification Method) Sample--../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)
-- [Connection Resiliency in the Windows ODBC Driver--../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
-- [Driver-Aware Connection Pooling--../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
-- [Features and Behavior Changes--../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
-- [Release Notes--../../connect/odbc/windows/release-notes.md)
-
-
-
-
-
-<a name="similars2"/>
 
 &nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_4"/>
+
+### 4. &nbsp; [sqlsrv_query](php/sqlsrv-query.md)
+
+*Updated: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
+
+<!-- Source markdown line 163.  ms.author= "genemi".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 07a84878c07af0b6ad7e247337be5b4567ce03c3 127af26a8a054a45dda51d90f43f08652949ba18  (PR=3663  ,  Filename=sqlsrv-query.md  ,  Dirpath=docs\connect\php\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
+
+
+
+> [!NOTE]
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+
+**Example**
+
+This code sample shows how to bind a decimal value as an input parameter.
+
+```php
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"YourTestDB");
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+if ($conn === false) {
+     echo "Could not connect.\n";
+     die(print_r(sqlsrv_errors(), true));
+}
+
+// Assume TestTable exists with a decimal field
+$input = "9223372036854.80000";
+$params = array($input);
+$stmt = sqlsrv_query($conn, "INSERT INTO TestTable (DecimalCol) VALUES (?)", $params);
+
+sqlsrv_free_stmt($stmt);
+sqlsrv_close($conn);
+
+?>
+```
+
+
+
+
+
+
+
 
 ## Similar Articles
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+    2017-12-02  23:00pm
+-->
 
-<!--  20170717-1101  -->
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### Subject areas which have no new or recently updated articles
 
+- [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

@@ -1,12 +1,15 @@
 ---
 title: "Command Streams | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,6 +20,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Command Streams
 ADO has always supported command input in string format specified by the **CommandText** property. As an alternative, with ADO 2.7 or later, you can also use a stream of information for command input by assigning the stream to the **CommandStream** property. You can assign an ADO **Stream** object, or any object that supports the COM **IStream** interface.  

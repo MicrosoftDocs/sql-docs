@@ -2,20 +2,25 @@
 title: "Comments, Shapes, other objects not supported by Excel Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Comments, Shapes, other objects not supported by Excel Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This error occurs when you add Slicers to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Field List.  
   
 ## Details  

@@ -2,9 +2,12 @@
 title: "Tutorial: Writing Transact-SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "tutorials [Transact-SQL]"
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Tutorial: Writing Transact-SQL Statements
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 Welcome to the Writing [!INCLUDE[tsql](../includes/tsql-md.md)] Statements tutorial. This tutorial is intended for users who are new to writing SQL statements. It will help new users get started by reviewing some basic statements for creating tables and inserting data. This tutorial uses [!INCLUDE[tsql](../includes/tsql-md.md)], the [!INCLUDE[msCoName](../includes/msconame-md.md)] implementation of the SQL standard. This tutorial is intended as a brief introduction to the [!INCLUDE[tsql](../includes/tsql-md.md)] language and not as a replacement for a [!INCLUDE[tsql](../includes/tsql-md.md)] class. The statements in this tutorial are intentionally simple, and are not meant to represent the complexity found in a typical production database.  
   
 >**NOTE:** If you are a beginner you might find it easier to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] instead of writing [!INCLUDE[tsql](../includes/tsql-md.md)] statements.  
@@ -48,7 +53,7 @@ Your system must have the following installed:
   
 -   Any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--  [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)  
+-  [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)  
   
 
  

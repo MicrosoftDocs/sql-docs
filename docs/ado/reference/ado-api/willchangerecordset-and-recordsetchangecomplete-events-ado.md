@@ -1,12 +1,15 @@
 ---
 title: "WillChangeRecordset and RecordsetChangeComplete Events (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -23,6 +26,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # WillChangeRecordset and RecordsetChangeComplete Events (ADO)
 The **WillChangeRecordset** event is called before a pending operation changes the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). The **RecordsetChangeComplete** event is called after the **Recordset** has changed.  

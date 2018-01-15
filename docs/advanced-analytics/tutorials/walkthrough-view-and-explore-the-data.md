@@ -2,13 +2,15 @@
 title: "View and explore the data using SQL (walkthrough)| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
 dev_langs: 
@@ -18,6 +20,7 @@ caps.latest.revision: 33
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View and explore the data using SQL (walkthrough)
 
@@ -47,7 +50,7 @@ First, take a minute to ascertain that your data was loaded correctly.
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    If you don't see any data in the table, refer to the [Troubleshooting](/walkthrough-prepare-the-data.md) section in the previous topic.
+    If you don't see any data in the table, refer to the [Troubleshooting](walkthrough-prepare-the-data.md) section in the previous topic.
 
 4. This data table has been optimized for set-based calculations, by adding a [columnstore index](../../relational-databases/indexes/columnstore-indexes-overview.md). Run this statement to generate a quick summary on the table.
 
@@ -63,8 +66,8 @@ First, take a minute to ascertain that your data was loaded correctly.
 
 ## Next lesson
 
-[Summarize data using R](/walkthrough-view-and-summarize-data-using-r.md)
+[Summarize data using R](walkthrough-view-and-summarize-data-using-r.md)
 
 ## Previous lesson
 
-[Prepare the data using PowerShell](/walkthrough-prepare-the-data.md)
+[Prepare the data using PowerShell](walkthrough-prepare-the-data.md)

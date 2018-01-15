@@ -1,11 +1,13 @@
 ---
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/10/2017"
+ms.custom: ""
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -48,12 +50,13 @@ helpviewer_keywords:
   - "maximum number of bytes per row"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # CREATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -753,7 +756,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  For recommendations on when to use COMPRESSION_DELAY, please see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
- < table_option> ::=  
+ \< table_option> ::= 
  Specifies one or more table options.  
   
  DATA_COMPRESSION  
@@ -1015,7 +1018,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1025,7 +1028,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1038,21 +1041,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `(1 row(s) affected)`  
-  
- `Test1Col`  
-  
- `-----------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
-  
- `Test2Col`  
-  
- `-----------`  
-  
- `2`  
+ ```
+ (1 row(s) affected) 
+ Test1Col 
+ ----------- 
+ 1 
+
+ (1 row(s) affected) 
+ Test2Col 
+ ----------- 
+ 2 
+ ```
   
  When you create local or global temporary tables, the CREATE TABLE syntax supports constraint definitions except for FOREIGN KEY constraints. If a FOREIGN KEY constraint is specified in a temporary table, the statement returns a warning message that states the constraint was skipped. The table is still created without the FOREIGN KEY constraints. Temporary tables cannot be referenced in FOREIGN KEY constraints.  
   
@@ -1068,7 +1067,7 @@ Azure SQL Database supports global temporary tables that are also stored in temp
 Global temporary tables for Azure SQL DB follow the same syntax and semantics that SQL Server uses for temporary tables.  Similarly, global temporary stored procedures are also scoped to the database level in Azure SQL DB. Local temporary tables (initiated with # table name) are also supported for Azure SQL Database and follow the same syntax and semantics that SQL Server uses.  See the above section on [Temporary Tables](#temporary-tables).  
 
 > [!IMPORTANT]
-> This feature is in public preview and is available for Azure SQL Database.
+> This feature is available for Azure SQL Database only.
 >
 
 ### Troubleshooting global temporary tables for Azure SQL DB 
@@ -1084,7 +1083,7 @@ For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space
 
 - Session A creates a global temp table ##test in Azure SQL Database testdb1 and adds 1 row
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1102,7 +1101,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - Session B connects to Azure SQL Database testdb1 and can access table ##test created by session A
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1110,7 +1109,7 @@ SELECT * FROM ##test
 
 - Session C connects to another database in Azure SQL Database testdb2 and wants to access ##test created in testdb1. This select fails due to the database scope for the global temp tables 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1119,7 +1118,7 @@ Invalid object name '##test'
 
 - Addressing system object in Azure SQL Database tempdb from current user database testdb1
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1660,4 +1659,5 @@ GO
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
+
 

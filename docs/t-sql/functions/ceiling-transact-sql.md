@@ -3,8 +3,11 @@ title: "CEILING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "CEILING function [Transact-SQL]"
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # CEILING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Returns the smallest integer greater than, or equal to, the specified numeric expression.
   
@@ -34,8 +38,6 @@ Returns the smallest integer greater than, or equal to, the specified numeric ex
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CEILING ( numeric_expression )  
 ```  
   
@@ -62,20 +64,6 @@ GO
   
 (1 row(s) affected)  
 ```  
-  
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
-The following example shows use of positive numeric, negative, and zero values with the CEILING function.
-  
-```sql
-SELECT CEILING(123.45), CEILING(-123.45), CEILING(0.0);  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-`------- --------- --------`
-  
-`124.00  -123.00   0.00`
   
 ## See also
 [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)

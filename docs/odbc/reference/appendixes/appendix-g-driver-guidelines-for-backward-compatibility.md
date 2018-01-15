@@ -3,8 +3,11 @@ title: "Appendix G: Driver Guidelines for Backward Compatibility | Microsoft Doc
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Appendix G: Driver Guidelines for Backward Compatibility
 This appendix provides information for driver writers working on ODBC 3.*x* drivers that need to support ODBC 2.*x* applications. For more information about backward compatibility, see [Backward Compatibility and Standards Compliance](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  

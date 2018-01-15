@@ -1,11 +1,13 @@
 ---
 title: "Install SQL Server 2016 Business Intelligence Features | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "11/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
   - "setup-install"
@@ -16,8 +18,10 @@ caps.latest.revision: 27
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Install SQL Server Business Intelligence Features
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server features that are part of the Microsoft Business Intelligence platform include [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and several client applications used for creating or working with analytical data. This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install these features.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be installed as standalone servers, in scale-out configurations, or as shared service applications in a SharePoint farm. Installing the services in a farm enables BI features that are only available in SharePoint, including [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint and [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ad hoc interactive report designer that runs on [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] or [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] tabular model databases.  

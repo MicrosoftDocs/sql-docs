@@ -157,7 +157,7 @@ on the database. This permission can be granted by a user with CONTROL permissio
   
  The ALTER_DATABASE_SCOPED_CONFIGURATION event is added as a DDL event that can be used to fire a DDL trigger. This is a child of the ALTER_DATABASE_EVENTS trigger group.  
  
- Database scoped configuration settings will be carried over with the database. This means that when a given database is restored/attached in another server, the same configuration settings remain.
+ Database scoped configuration settings will be carried over with the database. This means that when a given database is restored or attached, the existing configuration settings remain.
   
 ## Limitations and Restrictions  
 **MAXDOP**  

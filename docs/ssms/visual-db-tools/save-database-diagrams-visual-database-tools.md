@@ -20,7 +20,7 @@ ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save Database Diagrams (Visual Database Tools)

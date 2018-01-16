@@ -20,7 +20,7 @@ ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Name Not Found Dialog Box

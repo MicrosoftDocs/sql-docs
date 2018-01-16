@@ -21,7 +21,7 @@ ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Build Database Projects by Using SQL Server Management Studio

@@ -19,7 +19,7 @@ ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # General User Interface Elements

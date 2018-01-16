@@ -22,7 +22,7 @@ ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # F1 Help for Server Connections (SQL Server Management Studio)

@@ -22,7 +22,7 @@ ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete a Job Category

@@ -16,7 +16,7 @@ ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Projects (SQL Server Management Studio)

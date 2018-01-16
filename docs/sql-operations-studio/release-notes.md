@@ -22,13 +22,13 @@ ms.workload: "Inactive"
 ## January 2018 (January Preview Insiders Build)
 
 release date: January 17, 2018  
-version: 0.25.3
+version: 0.25.4
 
 The *January Preview Insiders Build* includes some top feature suggestions and high-priority bug fixes. This release includes the following enhancements:
 
-- Tab-coloring based on Server Group.
 - Saved Server connections are available in the Connection Dialog.
-- Enable HotExit.
+- Enable HotExit. Hot exit is off by default, to enable see [Hot exit setting](settings.md#hot-exit).
+- Tab-coloring based on Server Group. Tab coloring is off by default, to enable see [Tab color setting](settings.md#tab-color)
 - Change *Server name* to *Server* in the Connection Dialog
 - Fix broken *Run Current Query* command
 - Fix drag-and-drop breaking scripting bug.

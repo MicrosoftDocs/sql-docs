@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Name element"
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

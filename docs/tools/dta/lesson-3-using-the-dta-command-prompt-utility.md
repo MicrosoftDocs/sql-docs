@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], tutorials"
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

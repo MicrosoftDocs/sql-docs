@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "client configuration [SQL Server], SQL Server Native Client"
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

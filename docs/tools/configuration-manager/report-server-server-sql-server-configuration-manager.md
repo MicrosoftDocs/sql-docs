@@ -14,8 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ea939db1-ce97-4eea-8223-1ca6a82128d7
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Database element"
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

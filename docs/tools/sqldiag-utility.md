@@ -33,8 +33,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], diagnostic collection"
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

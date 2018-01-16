@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DTAInput element"
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

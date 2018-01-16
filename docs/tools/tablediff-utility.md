@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "non-convergence [SQL Server]"
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

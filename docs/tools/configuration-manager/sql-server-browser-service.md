@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "SQL Server Browser service"
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

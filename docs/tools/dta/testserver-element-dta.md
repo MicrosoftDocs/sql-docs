@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "TestServer element"
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

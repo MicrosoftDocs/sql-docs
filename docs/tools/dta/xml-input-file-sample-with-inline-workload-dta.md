@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sample applications [DTA]"
 ms.assetid: 7c04fe1d-6669-44a1-8b73-36d469e9b002
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

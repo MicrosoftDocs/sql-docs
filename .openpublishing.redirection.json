@@ -3174,6 +3174,116 @@
             "source_path": "docs/integration-services/service/view-the-list-of-packages-on-the-integration-services-server.md",
             "redirect_url": "/sql/integration-services/catalog/view-the-list-of-packages-on-the-integration-services-server",
             "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/sql-server-powershell.md",
+            "redirect_url": "/sql/powershell/sql-server-powershell",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/load-the-smo-assemblies-in-windows-powershell.md",
+            "redirect_url": "/sql/powershell/load-the-smo-assemblies-in-windows-powershell",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/run-windows-powershell-from-sql-server-management-studio.md",
+            "redirect_url": "/sql/powershell/run-windows-powershell-from-sql-server-management-studio",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/run-windows-powershell-steps-in-sql-server-agent.md",
+            "redirect_url": "/sql/powershell/run-windows-powershell-steps-in-sql-server-agent",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/sql-server-powershell-provider.md",
+            "redirect_url": "/sql/powershell/sql-server-powershell-provider",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/navigate-sql-server-powershell-paths.md",
+            "redirect_url": "/sql/powershell/navigate-sql-server-powershell-paths",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/work-with-sql-server-powershell-paths.md",
+            "redirect_url": "/sql/powershell/work-with-sql-server-powershell-paths",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md",
+            "redirect_url": "/powershell/module/sqlserver/Convert-UrnToPath",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/use-the-database-engine-cmdlets.md",
+            "redirect_url": "/sql/powershell/sql-server-powershell",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/sql-server-identifiers-in-powershell.md",
+            "redirect_url": "/sql/powershell/sql-server-identifiers-in-powershell",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/specify-instances-in-the-sql-server-powershell-provider.md",
+            "redirect_url": "/sql/powershell/specify-instances-in-the-sql-server-powershell-provider",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/encode-and-decode-sql-server-identifiers.md",
+            "redirect_url": "/sql/powershell/encode-and-decode-sql-server-identifiers",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/escape-sql-server-identifiers.md",
+            "redirect_url": "/sql/powershell/escape-sql-server-identifiers",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/manage-authentication-in-database-engine-powershell.md",
+            "redirect_url": "/sql/powershell/manage-authentication-in-database-engine-powershell",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/manage-tab-completion-sql-server-powershell.md",
+            "redirect_url": "/sql/powershell/manage-tab-completion-sql-server-powershell",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/get-help-sql-server-powershell.md",
+            "redirect_url": "/sql/powershell/sql-server-powershell",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/sql-server-powershell-license-terms.md",
+            "redirect_url": "/sql/powershell/sql-server-powershell-license-terms",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/ssms/download-sql-server-ps-module.md",
+            "redirect_url": "/sql/powershell/download-sql-server-ps-module",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/powershell/database-engine-powershell-reference.md",
+            "redirect_url": "/sql/powershell/sql-server-powershell",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/powershell/invoke-policyevaluation-cmdlet.md",
+            "redirect_url": "/powershell/module/sqlserver/Invoke-PolicyEvaluation",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/powershell/invoke-sqlcmd-cmdlet.md",
+            "redirect_url": "/powershell/module/sqlserver/invoke-sqlcmd",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/scripting/import-the-sqlps-module.md",
+            "redirect_url": "/sql/powershell/download-sql-server-ps-module",
+            "redirect_document_id": false
           }
     ]
 }

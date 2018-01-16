@@ -1,7 +1,7 @@
 ---
 title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/16/2017"
+ms.date: "01/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

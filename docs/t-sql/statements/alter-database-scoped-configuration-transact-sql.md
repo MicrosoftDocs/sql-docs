@@ -41,7 +41,7 @@ ms.workload: "On Demand"
 - Enable or disable parameter sniffing at the database level.
 - Enable or disable query optimization hotfixes at the database level.
 - Enable or disable the identity cache at the database level.
-- Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time. 
+- Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time.    
   
  ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -22,12 +22,12 @@ ms.workload: "Inactive"
 ## January 2018 (January Public Preview)
 
 release date: January 17, 2018  
-version: 0.25.4
+version: 0.25.5
 
 The *January Public Preview* includes some feature suggestions and high-priority bug fixes. This release includes the following enhancements:
 
 - Saved Server connections are available in the Connection Dialog.
-- Enable HotExit. Hot exit is off by default, to enable see [Hot exit setting](settings.md#hot-exit).
+- Enable Hot exit. Hot exit is off by default, to enable see [Hot exit setting](settings.md#hot-exit).
 - Tab-coloring based on Server Group. Tab coloring is off by default, to enable see [Tab color setting](settings.md#tab-color)
 - Change *Server name* to *Server* in the Connection Dialog
 - Fix broken *Run Current Query* command

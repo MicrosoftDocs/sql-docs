@@ -19,7 +19,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
-Download and install the latest release, the *January Preview Insiders Build*:
+Download and install the latest release, the *January Public Preview*:
 
 |Platform|Download|Release date|
 |:---|:---|:---|

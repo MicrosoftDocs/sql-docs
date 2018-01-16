@@ -17,14 +17,14 @@ ms.workload: "Inactive"
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download the January Preview Insiders Build](download.md)**
+**[Download the January Public Preview](download.md)**
 
-## January 2018 (January Preview Insiders Build)
+## January 2018 (January Public Preview)
 
 release date: January 17, 2018  
 version: 0.25.4
 
-The *January Preview Insiders Build* includes some top feature suggestions and high-priority bug fixes. This release includes the following enhancements:
+The *January Public Preview* includes some feature suggestions and high-priority bug fixes. This release includes the following enhancements:
 
 - Saved Server connections are available in the Connection Dialog.
 - Enable HotExit. Hot exit is off by default, to enable see [Hot exit setting](settings.md#hot-exit).

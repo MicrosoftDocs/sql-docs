@@ -22,7 +22,7 @@ ms.workload: "Inactive"
 # PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Returns the identifier for the row most recently inserted into a table in the database. The table must have an IDENTITY NOT NULL column. If a sequence name is provided, `lastInsertId` returns the most recently inserted sequence for the provided sequence name.
+Returns the identifier for the row most recently inserted into a table in the database. The table must have an IDENTITY NOT NULL column. If a sequence name is provided, `lastInsertId` returns the most recently inserted sequence number for the provided sequence name (for more information about sequence numbers, see [here](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers)).
   
 ## Syntax  
   
@@ -41,8 +41,8 @@ If the method call fails, empty string is returned.
   
 ## Remarks  
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-Between version 2.0 and 4.3, the optional parameter is a table name, and the return value is the row most recently added to the provided table.
-Any versions after 4.3, the optional parameter is a sequence name, and the return value is the sequence most recently added for the provided sequence name.
+Between version 2.0 and 4.3, the optional parameter is a table name, and the return value is the id of the row most recently added to the provided table.
+Starting with 5.2, the optional parameter is regarded as a sequence name, and the return value is the sequence most recently added for the provided sequence name.
 If a table name is provided for versions after 4.3, `lastInsertId` returns an empty string.
 Sequences are supported only in SQL Server 2012 and above.
   

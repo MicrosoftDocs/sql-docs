@@ -23,9 +23,9 @@ You can schedule the execution of packages stored in the SSISDB Catalog database
 
 ## <a name="agent"></a> Schedule a package with SQL Server Agent
 
-### Prerequisite
+### Prerequisite - Create a linked server
 
-Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server as a linked server.
+Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server to your on-premises SQL Server as a linked server.
 
 1.  **Set up the linked server**
 
@@ -52,7 +52,7 @@ Before you can use SQL Server Agent on premises to schedule execution of package
         @rmtpassword = 'myPassword' -- Add your server admin password
     ```
 
-3.  **Set up linked server options
+3.  **Set up linked server options**
 
     ```sql
     EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;

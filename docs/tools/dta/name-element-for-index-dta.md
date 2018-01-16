@@ -20,7 +20,7 @@ ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Name Element for Index (DTA)

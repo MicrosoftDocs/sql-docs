@@ -16,7 +16,7 @@ ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Client Protocols (SQL Server Configuration Manager)

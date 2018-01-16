@@ -20,7 +20,7 @@ ms.assetid: b29c9716-e5c3-4003-9efb-3ade2197b630
 caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XML Input File Sample with User-specified Configuration (DTA)

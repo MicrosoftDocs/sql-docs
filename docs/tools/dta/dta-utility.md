@@ -26,7 +26,7 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 58
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dta Utility

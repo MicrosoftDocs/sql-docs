@@ -20,7 +20,7 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1: Basic Navigation in Database Engine Tuning Advisor

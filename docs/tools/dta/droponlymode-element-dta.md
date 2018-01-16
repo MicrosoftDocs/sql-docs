@@ -20,7 +20,7 @@ ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DropOnlyMode Element (DTA)

@@ -16,7 +16,7 @@ ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: 29
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Modify the Controller and Client Services Accounts

@@ -20,7 +20,7 @@ ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DatabaseToConnect Element (DTA)

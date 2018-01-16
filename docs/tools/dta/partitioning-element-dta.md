@@ -20,7 +20,7 @@ ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Partitioning Element (DTA)

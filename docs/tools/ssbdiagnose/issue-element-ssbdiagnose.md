@@ -20,7 +20,7 @@ ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 caps.latest.revision: 17
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Issue Element (ssbdiagnose)

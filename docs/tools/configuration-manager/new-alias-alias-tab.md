@@ -16,7 +16,7 @@ ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # New Alias (Alias Tab)

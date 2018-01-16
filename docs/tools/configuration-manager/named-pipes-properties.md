@@ -21,7 +21,7 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Named Pipes Properties

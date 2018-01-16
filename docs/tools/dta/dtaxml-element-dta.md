@@ -20,7 +20,7 @@ ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DTAXML Element (DTA)

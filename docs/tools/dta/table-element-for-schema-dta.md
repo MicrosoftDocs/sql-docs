@@ -20,7 +20,7 @@ ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table Element for Schema (DTA)

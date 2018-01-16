@@ -16,7 +16,7 @@ ms.assetid: d0dc03db-5f76-4558-b041-1ac7b9b5bb16
 caps.latest.revision: 8
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Full-text Filter Daemon Launcher (SQL Server Configuration Manager)

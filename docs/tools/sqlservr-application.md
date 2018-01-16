@@ -28,7 +28,7 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 caps.latest.revision: 39
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sqlservr Application

@@ -20,7 +20,7 @@ ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Workload Element (DTA)

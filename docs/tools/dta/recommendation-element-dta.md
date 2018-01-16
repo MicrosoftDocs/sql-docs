@@ -20,7 +20,7 @@ ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Recommendation Element (DTA)

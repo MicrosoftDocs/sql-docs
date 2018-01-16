@@ -20,7 +20,7 @@ ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Server Element for Configuration (DTA)

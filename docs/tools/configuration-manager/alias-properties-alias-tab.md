@@ -18,7 +18,7 @@ ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # &lt;Alias&gt; Properties (Alias Tab)

@@ -20,7 +20,7 @@ ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Banner Element (ssbdiagnose)

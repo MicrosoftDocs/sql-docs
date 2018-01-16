@@ -16,7 +16,7 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Properties (Startup Parameters Tab)

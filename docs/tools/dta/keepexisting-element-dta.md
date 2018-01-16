@@ -20,7 +20,7 @@ ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # KeepExisting Element (DTA)

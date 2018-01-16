@@ -20,7 +20,7 @@ ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DTAInput Element (DTA)

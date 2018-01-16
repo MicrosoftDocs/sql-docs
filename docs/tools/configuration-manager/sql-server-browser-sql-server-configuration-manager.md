@@ -16,7 +16,7 @@ ms.assetid: 5b615023-3c76-4b95-bbd0-9c39f3353f4b
 caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Browser (SQL Server Configuration Manager)

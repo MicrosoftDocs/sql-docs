@@ -16,7 +16,7 @@ ms.assetid: d89cc01f-084b-41b0-8c60-3c6b964d7ad4
 caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Integration Services Properties (Advanced Tab)

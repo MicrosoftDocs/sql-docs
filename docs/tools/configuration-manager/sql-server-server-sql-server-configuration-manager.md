@@ -16,7 +16,7 @@ ms.assetid: a701c5d5-f190-4b57-a3f8-954c2572e682
 caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server &lt;server&gt; (SQL Server Configuration Manager)

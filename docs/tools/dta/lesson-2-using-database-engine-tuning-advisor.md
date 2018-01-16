@@ -20,7 +20,7 @@ ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 caps.latest.revision: 17
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 2: Using Database Engine Tuning Advisor

@@ -16,7 +16,7 @@ ms.assetid: a605417c-4ba7-4f3f-baa9-14166f97c478
 caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # NS$&lt;service name&gt; Properties (Advanced Tab)

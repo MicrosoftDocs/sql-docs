@@ -16,7 +16,7 @@ ms.assetid: d0be29c2-19df-4882-9832-2efdbefb4b89
 caps.latest.revision: 8
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Full-text Filter Daemon Launcher (Advanced)

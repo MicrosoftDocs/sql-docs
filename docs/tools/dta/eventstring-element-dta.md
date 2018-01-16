@@ -20,7 +20,7 @@ ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # EventString Element (DTA)

@@ -18,7 +18,7 @@ ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Shared Memory Properties

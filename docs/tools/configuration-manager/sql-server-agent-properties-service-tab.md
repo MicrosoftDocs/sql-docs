@@ -16,7 +16,7 @@ ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Agent Properties (Service Tab)

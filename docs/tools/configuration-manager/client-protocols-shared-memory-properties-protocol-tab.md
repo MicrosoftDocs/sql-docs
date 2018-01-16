@@ -19,7 +19,7 @@ ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Client Protocols - Shared Memory Properties (Protocol Tab)

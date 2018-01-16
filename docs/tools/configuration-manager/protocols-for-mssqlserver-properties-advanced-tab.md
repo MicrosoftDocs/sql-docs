@@ -16,7 +16,7 @@ ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 caps.latest.revision: 7
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Protocols for MSSQLSERVER Properties (Advanced Tab)

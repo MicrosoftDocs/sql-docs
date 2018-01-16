@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "GO command"
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: 155
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sqlcmd Utility

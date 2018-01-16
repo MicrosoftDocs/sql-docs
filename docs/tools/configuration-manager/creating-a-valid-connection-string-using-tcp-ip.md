@@ -22,7 +22,7 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating a Valid Connection String Using TCP IP

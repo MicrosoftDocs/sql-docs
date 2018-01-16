@@ -20,7 +20,7 @@ ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-1 - Tuning a Workload

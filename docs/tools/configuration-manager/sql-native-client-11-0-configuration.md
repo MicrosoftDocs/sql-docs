@@ -18,7 +18,7 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Native Client 11.0 Configuration

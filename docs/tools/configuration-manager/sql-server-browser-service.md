@@ -24,7 +24,7 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 caps.latest.revision: 61
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Browser Service

@@ -20,7 +20,7 @@ ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Element (DTA)

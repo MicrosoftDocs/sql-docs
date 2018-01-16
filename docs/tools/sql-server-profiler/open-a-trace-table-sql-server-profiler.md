@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "opening trace tables"
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Open a Trace Table (SQL Server Profiler)

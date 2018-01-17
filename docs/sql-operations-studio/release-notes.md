@@ -28,9 +28,9 @@ The *January Public Preview* includes some feature suggestions and high-priority
 
 - Saved Server connections are available in the Connection Dialog.
 - Enable Hot exit. Hot exit is off by default, to enable see [Hot exit setting](settings.md#hot-exit).
-- Tab-coloring based on Server Group. Tab coloring is off by default, to enable see [Tab color setting](settings.md#tab-color)
-- Change *Server name* to *Server* in the Connection Dialog
-- Fix broken *Run Current Query* command
+- Tab-coloring based on Server Group. Tab coloring is off by default, to enable see [Tab color setting](settings.md#tab-color).
+- Change *Server name* to *Server* in the Connection Dialog.
+- Fix broken *Run Current Query* command.
 - Fix drag-and-drop breaking scripting bug.
 - Fix incorrect pinned Start Menu icon.
 - Fix missing Azure Account branding icon.

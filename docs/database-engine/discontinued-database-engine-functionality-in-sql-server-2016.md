@@ -37,9 +37,9 @@ helpviewer_keywords:
   - "SET DISABLE_DEF_CNST_CHK"
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 caps.latest.revision: 100
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Discontinued Database Engine Functionality in SQL Server 2016

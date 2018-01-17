@@ -44,8 +44,7 @@ Checks the integrity of all the pages and structures that make up the table or i
     
 ## Syntax    
     
-```sql
-    
+```    
 DBCC CHECKTABLE     
 (    
     table_name | view_name    
@@ -89,14 +88,17 @@ DBCC CHECKTABLE
  This argument does not repair errors involving FILESTREAM data.  
     
  > [!NOTE]  
- >  Use the REPAIR options only as a last resort. To repair errors, we recommend restoring from a backup. Repair operations do not consider any of the constraints that may exist on or between tables. If the specified table is involved in one or more constraints, we recommend running DBCC CHECKCONSTRAINTS after a repair operation. If you must use REPAIR, run DBCC CHECKTABLE without a repair option to find the repair level to use. If you are going to use the REPAIR_ALLOW_DATA_LOSS level, we recommend that you back up the database before you run DBCC CHECKTABLE with this option.  
+ > Use the REPAIR options only as a last resort. To repair errors, we recommend restoring from a backup. Repair operations do not consider any of the constraints that may exist on or between tables. 
+ > If the specified table is involved in one or more constraints, we recommend running `DBCC CHECKCONSTRAINTS` after a repair operation.
+ > If you must use REPAIR, run `DBCC CHECKTABLE` without a repair option to find the repair level to use. 
+ > If you are going to use the REPAIR_ALLOW_DATA_LOSS level, we recommend that you back up the database before you run `DBCC CHECKTABLE` with this option.  
     
  ALL_ERRORMSGS  
  Displays an unlimited number of errors. All error messages are displayed by default. Specifying or omitting this option has no effect.  
     
  EXTENDED_LOGICAL_CHECKS  
  If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
- For more information, see "Performing Logical Consistency Checks on Indexes" in the "Remarks" section later in this topic.  
+ For more information, see *Performing Logical Consistency Checks on Indexes* in the [Remarks](#remarks) section later in this topic.  
     
  NO_INFOMSGS  
  Suppresses all informational messages.  
@@ -116,7 +118,7 @@ DBCC CHECKTABLE
  Therefore, using the PHYSICAL_ONLY option may cause a much shorter run-time for DBCC CHECKTABLE on large tables and is therefore recommended for frequent use on production systems. We still recommend that a full run of DBCC CHECKTABLE be performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments. PHYSICAL_ONLY always implies NO_INFOMSGS and is not allowed with any one of the repair options.  
     
  > [!NOTE]  
- >  Specifying PHYSICAL_ONLY causes DBCC CHECKTABLE to skip all checks of FILESTREAM data.  
+ > Specifying PHYSICAL_ONLY causes DBCC CHECKTABLE to skip all checks of FILESTREAM data.  
     
  DATA_PURITY  
  Causes DBCC CHECKTABLE to check the table for column values that are not valid or out-of-range. For example, DBCC CHECKTABLE detects columns with date and time values that are larger than or less than the acceptable range for the **datetime** data type; or **decimal** or approximate-numeric data type columns with scale or precision values that are not valid.  
@@ -129,12 +131,12 @@ DBCC CHECKTABLE
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     
  > [!CAUTION]  
- >  If MAXDOP is set to zero then the server chooses the max degree of parallelism.  
+ > If MAXDOP is set to zero then the server chooses the max degree of parallelism.  
     
 ## Remarks    
     
 > [!NOTE]    
->  To perform DBCC CHECKTABLE on every table in the database, use [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).    
+> To perform DBCC CHECKTABLE on every table in the database, use [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).    
     
 For the specified table, DBCC CHECKTABLE checks for the following:
 -   Index, in-row, LOB, and row-overflow data pages are correctly linked.    
@@ -176,7 +178,7 @@ By default, DBCC CHECKTABLE performs parallel checking of objects. The degree of
 Parallel checking can be disabled by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
     
 > [!NOTE]    
->  During a DBCC CHECKTABLE operation, the bytes that are stored in a byte-ordered user-defined type column must be equal to the computed serialization of the user-defined type value. If this is not true, the DBCC CHECKTABLE routine will report a consistency error.    
+> During a DBCC CHECKTABLE operation, the bytes that are stored in a byte-ordered user-defined type column must be equal to the computed serialization of the user-defined type value. If this is not true, the DBCC CHECKTABLE routine will report a consistency error.    
     
 ## Understanding DBCC Error Messages    
 After the DBCC CHECKTABLE command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.
@@ -209,7 +211,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
     
 DBCC CHECKTABLE returns the following result set if the ESTIMATEONLY option is specified:
     
-```sql
+```
 Estimated TEMPDB space needed for CHECKTABLES (KB)     
 --------------------------------------------------     
 21    
@@ -251,7 +253,7 @@ DBCC CHECKTABLE ('Production.Product',@indid);
 ```    
     
 ## See Also    
-[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)     
+[DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
     
   

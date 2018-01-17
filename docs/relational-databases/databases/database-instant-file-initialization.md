@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "database instant file initialization [SQL Server]"
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Database File Initialization

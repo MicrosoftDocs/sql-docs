@@ -20,7 +20,7 @@ ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 caps.latest.revision: 18
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View Availability Group Listener Properties (SQL Server)

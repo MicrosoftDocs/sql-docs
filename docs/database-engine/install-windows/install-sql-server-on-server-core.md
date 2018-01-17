@@ -16,7 +16,7 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 43
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Install SQL Server on Server Core
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

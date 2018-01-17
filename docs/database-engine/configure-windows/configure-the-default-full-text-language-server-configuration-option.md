@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "default full-text language option"
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure the default full-text language Server Configuration Option

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "max worker threads option"
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configure the max worker threads Server Configuration Option

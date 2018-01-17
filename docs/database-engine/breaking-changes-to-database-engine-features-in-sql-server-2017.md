@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "breaking changes 2017 [SQL Server]"
 ms.assetid: 
 caps.latest.revision: 1
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Breaking Changes to Database Engine Features in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]

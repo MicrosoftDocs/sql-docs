@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "hiding instances of Database Engine"
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Hide an Instance of SQL Server Database Engine

@@ -20,7 +20,7 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 caps.latest.revision: 19
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Change the Database Compatibility Mode and Use the Query Store
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

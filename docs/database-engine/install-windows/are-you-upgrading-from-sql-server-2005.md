@@ -16,7 +16,7 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 caps.latest.revision: 21
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Are you upgrading from SQL Server 2005?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

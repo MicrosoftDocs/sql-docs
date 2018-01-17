@@ -18,7 +18,7 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use the Add Azure Replica Wizard (SQL Server)

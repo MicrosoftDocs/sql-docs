@@ -18,7 +18,7 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 14
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Availability Replica Properties (General Page)

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "aliases [SQL Server], creating"
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create or Delete a Server Alias for Use by a Client

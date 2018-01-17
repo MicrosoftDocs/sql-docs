@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "connections [SQL Server], simultaneous"
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Configure the user connections Server Configuration Option

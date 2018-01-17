@@ -16,7 +16,7 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 caps.latest.revision: 2
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Clustered DTC for an Always On Availability Group

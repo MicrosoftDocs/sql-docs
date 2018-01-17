@@ -24,7 +24,7 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 54
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # View and Read SQL Server Setup Log Files
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

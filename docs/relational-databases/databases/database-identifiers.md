@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "database objects [SQL Server], names"
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Identifiers

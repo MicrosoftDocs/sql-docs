@@ -19,7 +19,7 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: 65
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

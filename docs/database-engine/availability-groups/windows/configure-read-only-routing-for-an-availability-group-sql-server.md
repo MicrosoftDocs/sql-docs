@@ -23,7 +23,7 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Configure Read-Only Routing for an Availability Group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

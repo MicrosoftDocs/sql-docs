@@ -20,7 +20,7 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 35
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], SQL Server Agent"
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Agent XPs Server Configuration Option

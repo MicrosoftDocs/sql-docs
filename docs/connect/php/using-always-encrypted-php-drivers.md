@@ -30,7 +30,7 @@ Always Encrypted allows the client application to encrypt data and never reveal 
 |[Enabling Always Encrypted in a PHP Application](../../connect/php/enabling-always-encrypted-php-application.md)|Describes how to connect with Always Encrypted enabled.|
 |[Inserting and Modifying Data with Always Encrypted](../../connect/php/inserting-data-always-encrypted.md)|Describes how to insert data using Always Encrypted in a PHP application.|
 |[Retrieving Data with Always Encrypted](../../connect/php/retrieving-data-always-encrypted.md)|Describes how to retrieve data using Always Encrypted in a PHP application.|
-|Always Encrypted: Limitations](../../connect/php/always-encrypted-limitations.md)|Lists of limitations using Always Encrypted in a PHP application.|
+|[Always Encrypted: Limitations](../../connect/php/always-encrypted-limitations.md)|Lists of limitations using Always Encrypted in a PHP application.|
   
 ## See Also  
 [Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)

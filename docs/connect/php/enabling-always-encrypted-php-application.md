@@ -1,5 +1,5 @@
 ---
-title: "Enabling Always Encrypted in a PHP Application | Microsoft Docs"
+title: "Enabling Always Encrypted in a PHP Application using the PHP Drivers for SQL Server | Microsoft Docs"
 ms.date: "01/08/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
@@ -27,6 +27,8 @@ To use the Always Encrypted feature in the PHP drivers, the user must have acces
 With Windows Certificate Store as the Keystore Provider, a certificate in the Certificate Store can be used as the CMK. One of the simplest options is to create a self-signed certificate and use it as the CMK (see [Creating Column Master Keys in Windows Certificate Store](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted#creating-column-master-keys-in-windows-certificate-store)).
 
 With Custom Keystore Providers, a Keystore Provider needs to be implemented first and then create a CMK (see [Custom Keystore Providers](https://docs.microsoft.com/en-us/sql/connect/odbc/custom-keystore-providers)).
+
+## Examples
 
 The following examples demonstrate how to use the `ColumnEncryption` connection option to enable the Always Encrypted feature in the SQLSRV and PDO_SQLSRV Drivers.
 
@@ -56,10 +58,11 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; CEKeyst
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
+## Performance
+
 Once Column Encryption is enabled in the connection, the performance overhead on the client side is heavier due to:
  -   Cost of encryption and decryption
  -   More round trips to the database needed to get the metadata for the parameter
- -   A result set with max types may need to be retrieved several times due to the limitation with fetching streams
  -   Assessment of CEK and CMK metadata from the database
  -   Assessment of CMK from the column master key store
   

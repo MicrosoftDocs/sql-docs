@@ -1,5 +1,5 @@
 ---
-title: "Always Encrypted: Limitations | Microsoft Docs"
+title: "Always Encrypted with PHP Drivers for SQL Server: Limitations | Microsoft Docs"
 ms.date: "01/08/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"

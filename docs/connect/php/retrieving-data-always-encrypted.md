@@ -1,5 +1,5 @@
 ---
-title: "Retrieving Data with Always Encrypted | Microsoft Docs"
+title: "Retrieving Data with Always Encrypted using the PHP Drivers for SQL Server | Microsoft Docs"
 ms.date: "01/08/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
@@ -23,6 +23,8 @@ Notable items when retrieving sensitive data from an encrypted column:
  -   If the connection option `ColumnEncryption` is enabled, the driver transparently decrypts the data before sending it back to the user.
  -   If the connection option `ColumnEncryption` is disabled, the return value is still encrypted and is returned as a byte array.
  -   If the connection option `ColumnEncryption` is disabled and a WHERE filter is applied on an encrypted column, the query would fail since the value passed to the database is not encrypted.
+ 
+## Examples
  
 The following table schema is used for the examples below:
 ```

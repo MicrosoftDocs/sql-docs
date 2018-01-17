@@ -17,7 +17,7 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Best Practice with the Query Store

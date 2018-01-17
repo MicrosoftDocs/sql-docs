@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "saving execution plans"
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save an Execution Plan in XML Format

@@ -21,7 +21,7 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Live Query Statistics

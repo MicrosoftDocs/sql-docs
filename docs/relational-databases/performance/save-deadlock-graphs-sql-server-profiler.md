@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "saving deadlock graphs"
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Save deadlock graphs (SQL Server Profiler)

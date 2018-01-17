@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Database Engine Tuning Advisor, performance improvements"
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Performance Improvements using DTA recommendations

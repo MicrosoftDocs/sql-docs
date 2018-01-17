@@ -17,7 +17,7 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Query Store Usage Scenarios

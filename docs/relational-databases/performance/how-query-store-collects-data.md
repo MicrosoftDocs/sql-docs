@@ -18,7 +18,7 @@ ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # How Query Store Collects Data

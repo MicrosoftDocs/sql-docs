@@ -26,7 +26,7 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database

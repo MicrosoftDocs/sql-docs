@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 38
 author: "MikeRayMSFT"
-author: "mikeray"
+ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Active"
 ---

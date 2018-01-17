@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 caps.latest.revision: 12
 author: "MikeRayMSFT"
-author: "mikeray"
+ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

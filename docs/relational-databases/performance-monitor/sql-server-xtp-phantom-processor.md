@@ -15,7 +15,7 @@ ms.topic: "article"
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 caps.latest.revision: 7
 author: "MikeRayMSFT"
-author: "mikeray"
+ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

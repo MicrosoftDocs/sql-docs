@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "index types [SQL Server]"
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "barbkess"
+ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

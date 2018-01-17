@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Query Store, in-memory"
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -16,7 +16,7 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 27
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Upgrade to a Different Edition of SQL Server (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

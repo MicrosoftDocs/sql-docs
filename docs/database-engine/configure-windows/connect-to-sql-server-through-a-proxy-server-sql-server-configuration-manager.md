@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "local address tables [SQL Server]"
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to SQL Server Through a Proxy Server (SQL Server Configuration Manager)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "recovery [SQL Server], recovery interval option"
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure the recovery interval Server Configuration Option

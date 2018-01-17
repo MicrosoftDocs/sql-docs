@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "min memory per query option"
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure the min memory per query Server Configuration Option

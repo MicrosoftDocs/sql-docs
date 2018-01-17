@@ -16,7 +16,7 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 14
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Upgrading Always On Availability Group Replica Instances

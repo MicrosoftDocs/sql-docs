@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "connections [SQL Server], remote servers"
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View or Configure Remote Server Connection Options (SQL Server)

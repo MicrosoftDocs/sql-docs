@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "scan for startup procs option"
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure the scan for startup procs Server Configuration Option

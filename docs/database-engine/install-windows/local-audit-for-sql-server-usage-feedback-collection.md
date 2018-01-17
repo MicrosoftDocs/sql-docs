@@ -19,7 +19,7 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 caps.latest.revision: 8
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Local Audit for SQL Server Usage Feedback Collection

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "dedicated administrator connections [SQL Server]"
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Diagnostic Connection for Database Administrators

@@ -48,9 +48,10 @@ ms.workload: "Active"
 
   Checks the logical and physical integrity of all the objects in the specified database by performing the following operations:    
     
-> **NOTE:** DBCC CHECKDB is supported on databases that contain memory-optimized tables but validation only occurs on disk-based tables. However, as part of database backup and recovery, a CHECKSUM validation is done for files in memory-optimized filegroups.    
+> [!NOTE]
+> DBCC CHECKDB is supported on databases that contain memory-optimized tables but validation only occurs on disk-based tables. However, as part of database backup and recovery, a CHECKSUM validation is done for files in memory-optimized filegroups.    
 >     
->  Since DBCC repair options are not available for memory-optimized tables, you must back up your databases regularly and test the backups. If data integrity issues occur in a memory-optimized table, you must restore from the last known good backup.    
+> Since DBCC repair options are not available for memory-optimized tables, you must back up your databases regularly and test the backups. If data integrity issues occur in a memory-optimized table, you must restore from the last known good backup.    
     
 -   Runs [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) on the database.    
     

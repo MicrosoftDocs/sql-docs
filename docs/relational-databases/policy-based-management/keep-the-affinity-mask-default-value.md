@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Keep the Affinity Mask Default Value

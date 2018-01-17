@@ -18,7 +18,7 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 2-1 - Create the Finance Name Policy

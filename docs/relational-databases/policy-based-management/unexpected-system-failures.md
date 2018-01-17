@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: 1679bf9e-a2ef-4f90-8907-a002f7341a7d
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Unexpected System Failures

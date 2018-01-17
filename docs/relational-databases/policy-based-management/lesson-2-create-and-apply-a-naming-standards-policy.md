@@ -18,7 +18,7 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 2: Create and Apply a Naming Standards Policy

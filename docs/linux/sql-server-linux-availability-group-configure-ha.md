@@ -88,7 +88,7 @@ Run **only one** of the following scripts:
 
 - [Create availability group with three synchronous replicas](#threeSynch).
 - [Create availability group with two synchronous replicas and a configuration replica](#configOnly)
-- [Create availability group with three synchronous replicas](#readScale).
+- [Create availability group with two synchronous replicas](#readScale).
 
 <a name="threeSynch"></a>
 

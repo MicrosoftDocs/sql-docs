@@ -28,7 +28,7 @@ ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify Search Criteria (Visual Database Tools)

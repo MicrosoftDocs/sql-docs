@@ -22,7 +22,7 @@ ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View SQL Server Agent Error Log (SQL Server Management Studio)

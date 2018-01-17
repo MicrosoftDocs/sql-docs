@@ -18,7 +18,7 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Object Dependencies

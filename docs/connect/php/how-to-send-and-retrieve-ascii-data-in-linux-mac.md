@@ -1,5 +1,5 @@
 ---
-title: "How to: Send and Retrieve ASCII Data in Linux and macOS | Microsoft Docs"
+title: "How to: Send and Retrieve ASCII Data in Linux and macOS (SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/16/2018"
 ms.prod: "sql-non-specified"

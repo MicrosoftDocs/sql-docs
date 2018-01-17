@@ -21,7 +21,7 @@ ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change the Connection Associated with a Query

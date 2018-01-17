@@ -16,7 +16,7 @@ ms.assetid: 1f911829-8c73-4542-b75e-6273f0dd52bf
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Proxies Node (SQL Server Agent F1 Help)

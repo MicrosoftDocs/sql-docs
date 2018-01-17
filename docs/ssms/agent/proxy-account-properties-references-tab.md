@@ -18,7 +18,7 @@ ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Proxy Account Properties (References Tab)

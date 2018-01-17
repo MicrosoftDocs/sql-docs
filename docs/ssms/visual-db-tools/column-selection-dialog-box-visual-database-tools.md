@@ -19,7 +19,7 @@ ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Column Selection Dialog Box (Visual Database Tools)

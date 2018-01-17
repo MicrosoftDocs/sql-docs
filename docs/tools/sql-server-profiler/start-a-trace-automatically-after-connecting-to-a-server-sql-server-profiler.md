@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "starting trace automatically"
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Start a Trace Automatically after Connecting to a Server (SQL Server Profiler)

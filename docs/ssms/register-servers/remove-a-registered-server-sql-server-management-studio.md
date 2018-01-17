@@ -20,7 +20,7 @@ ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Remove a Registered Server (SQL Server Management Studio)

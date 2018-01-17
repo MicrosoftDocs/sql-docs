@@ -23,7 +23,7 @@ ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Work with Database Diagrams (Visual Database Tools)

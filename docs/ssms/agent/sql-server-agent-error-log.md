@@ -21,7 +21,7 @@ ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Agent Error Log

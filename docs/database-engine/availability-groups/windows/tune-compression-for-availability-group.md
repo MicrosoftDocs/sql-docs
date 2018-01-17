@@ -16,7 +16,7 @@ ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "v-saume"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Tune compression for availability group

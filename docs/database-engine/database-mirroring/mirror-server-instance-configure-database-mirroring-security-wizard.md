@@ -18,7 +18,7 @@ ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: 42
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mirror Server Instance (Configure Database Mirroring Security Wizard)

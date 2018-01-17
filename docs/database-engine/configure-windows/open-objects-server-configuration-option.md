@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "open objects option"
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # open objects Server Configuration Option

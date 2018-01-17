@@ -42,7 +42,7 @@ If the method call fails, empty string is returned.
 ## Remarks  
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 Between version 2.0 and 4.3, the optional parameter is a table name, and the return value is the ID of the row most recently added to the provided table.
-Starting with 5.2, the optional parameter is regarded as a sequence name, and the return value is the sequence most recently added for the provided sequence name.
+Starting with 5.0, the optional parameter is regarded as a sequence name, and the return value is the sequence most recently added for the provided sequence name.
 If a table name is provided for versions after 4.3, `lastInsertId` returns an empty string.
 Sequences are supported only in SQL Server 2012 and above.
   

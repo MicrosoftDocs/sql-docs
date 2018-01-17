@@ -1,7 +1,7 @@
 ---
-title: "Tabular Modeling (Adventure Works Tutorial) | Microsoft Docs"
+title: "Tabular Modeling (1200 compatibility level) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/19/2017"
+ms.date: "01/17/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Active"
 ---
-# Tabular Modeling (Adventure Works Tutorial)
+# Tabular Modeling (1200 compatibility level)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 This tutorial provides lessons on how to create an Analysis Services tabular model at the [1200 compatibility level](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) by using [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt), and deploy your model to an Analysis Services server on-premises or in Azure.  

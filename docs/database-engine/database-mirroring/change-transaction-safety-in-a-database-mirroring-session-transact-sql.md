@@ -18,7 +18,7 @@ ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 caps.latest.revision: 38
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change Transaction Safety in a Database Mirroring Session (Transact-SQL)

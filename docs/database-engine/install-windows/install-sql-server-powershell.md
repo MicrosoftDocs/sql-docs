@@ -16,7 +16,7 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 caps.latest.revision: 9
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Install SQL Server PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

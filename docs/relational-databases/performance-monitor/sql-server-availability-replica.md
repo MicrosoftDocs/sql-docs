@@ -21,7 +21,7 @@ ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 caps.latest.revision: 25
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server, Availability Replica

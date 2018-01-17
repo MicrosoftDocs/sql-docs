@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "agents [SQL Server replication], tasks in Replication Monitor"
 ms.assetid: fbb59d31-2424-4552-9195-0da8d83e755f
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Information and Perform Tasks for Subscription Agents

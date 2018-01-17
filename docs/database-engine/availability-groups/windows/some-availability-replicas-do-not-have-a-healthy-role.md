@@ -20,7 +20,7 @@ ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Some availability replicas do not have a healthy role

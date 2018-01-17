@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.backuptourl.createcred.f1"
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Credential - Authenticate to Azure Storage

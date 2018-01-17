@@ -38,9 +38,9 @@ helpviewer_keywords:
   - "Azure VM"
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Deploy a SQL Server Database to a Microsoft Azure Virtual Machine

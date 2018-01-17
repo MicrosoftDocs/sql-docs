@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], switching"
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "barbkess"
+ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

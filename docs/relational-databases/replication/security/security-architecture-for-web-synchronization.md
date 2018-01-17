@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Web synchronization, security architecture"
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Security Architecture for Web Synchronization

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "filters [SQL Server replication], parameterized"
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Snapshot for a Merge Publication with Parameterized Filters

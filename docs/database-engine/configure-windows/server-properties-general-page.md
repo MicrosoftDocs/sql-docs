@@ -18,9 +18,9 @@ f1_keywords:
   - "sql13.swb.serverproperties.prodinfo.f1"
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Server Properties - General Page

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Distributor Properties dialog box"
 ms.assetid: ab4120ec-e524-4c0c-8b48-f2f40adb1a3b
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Distributor Properties, General

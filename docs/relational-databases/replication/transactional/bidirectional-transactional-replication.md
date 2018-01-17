@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "bidirectional transactional replication"
 ms.assetid: 98772e95-67ed-4010-8108-5113dbe709ff
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Bidirectional Transactional Replication

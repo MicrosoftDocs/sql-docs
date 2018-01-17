@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.serverproperties.miscserversettings.f1"
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Server Properties - Misc Server Settings Page

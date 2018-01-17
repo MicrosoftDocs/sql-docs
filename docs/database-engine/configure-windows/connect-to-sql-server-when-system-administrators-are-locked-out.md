@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "locked out [SQL Server]"
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Connect to SQL Server When System Administrators Are Locked Out

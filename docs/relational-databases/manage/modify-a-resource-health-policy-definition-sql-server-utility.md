@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.SWB.UE.UTILITY.ADMINISTRATION.F1"
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Modify a Resource Health Policy Definition (SQL Server Utility)

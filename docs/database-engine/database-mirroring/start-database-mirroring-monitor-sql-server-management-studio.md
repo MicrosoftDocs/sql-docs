@@ -20,7 +20,7 @@ ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
 caps.latest.revision: 20
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Start Database Mirroring Monitor (SQL Server Management Studio)

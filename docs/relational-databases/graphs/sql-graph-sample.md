@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 1
 author: "shkale-msft"
-ms.author: "shkale"
+ms.author: "shkale;barbkess"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

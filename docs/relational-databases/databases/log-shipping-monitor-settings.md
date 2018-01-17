@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.databaseproperties.logshipping.settings.monitor.f1"
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Log Shipping Monitor Settings

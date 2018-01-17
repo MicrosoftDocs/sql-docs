@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.utility.remove.f1"
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Remove an Instance of SQL Server from the SQL Server Utility

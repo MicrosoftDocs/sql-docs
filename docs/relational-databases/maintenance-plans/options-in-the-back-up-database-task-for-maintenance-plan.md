@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Back Up Database Task dialog box"
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Options in the Back Up Database Task for Maintenance Plan

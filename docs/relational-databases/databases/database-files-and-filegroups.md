@@ -36,9 +36,9 @@ helpviewer_keywords:
   - "file types [SQL Server]"
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Database Files and Filegroups

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "indexes [SQL Server], clustered"
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "barbkess"
+ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

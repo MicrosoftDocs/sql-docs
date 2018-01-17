@@ -19,7 +19,7 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 caps.latest.revision: 39
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Database Mirroring and Replication (SQL Server)

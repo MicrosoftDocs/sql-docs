@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.maint.reportinglogging.f1"
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Maintenance Plan (Reporting and Logging Page)

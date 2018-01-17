@@ -25,7 +25,7 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: 151
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Prereqs, Restrictions, Recommendations - Always On Availability Groups

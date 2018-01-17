@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "articles [SQL Server replication], properties"
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View and Modify Article Properties

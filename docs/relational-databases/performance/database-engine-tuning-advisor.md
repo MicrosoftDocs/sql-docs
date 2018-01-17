@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.dta.general.f1"
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Engine Tuning Advisor

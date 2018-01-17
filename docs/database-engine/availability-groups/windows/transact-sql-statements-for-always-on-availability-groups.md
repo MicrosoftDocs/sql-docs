@@ -19,7 +19,7 @@ ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 caps.latest.revision: 23
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transact-SQL Statements for Always On Availability Groups

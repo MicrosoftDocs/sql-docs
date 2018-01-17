@@ -20,7 +20,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "allanhirt"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Automatic seeding for secondary replicas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

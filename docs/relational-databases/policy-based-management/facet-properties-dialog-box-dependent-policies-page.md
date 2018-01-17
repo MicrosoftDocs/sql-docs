@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.dmf.facet.dependentpolicies.f1"
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Facet Properties Dialog Box, Dependent Policies Page

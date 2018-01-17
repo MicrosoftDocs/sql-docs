@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "publishing [SQL Server replication], configuring"
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configure Publishing and Distribution

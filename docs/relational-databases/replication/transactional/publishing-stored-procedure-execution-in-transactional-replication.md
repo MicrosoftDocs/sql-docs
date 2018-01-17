@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "transactional replication, publishing stored procedure execution"
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Publishing Stored Procedure Execution in Transactional Replication

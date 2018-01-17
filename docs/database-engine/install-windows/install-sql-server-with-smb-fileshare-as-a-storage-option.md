@@ -16,7 +16,7 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 23
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Install SQL Server with SMB fileshare storage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

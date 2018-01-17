@@ -23,7 +23,7 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: 40
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use Warning Thresholds and Alerts on Mirroring Performance Metrics (SQL Server)

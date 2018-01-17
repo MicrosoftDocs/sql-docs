@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "RPC"
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Run System Monitor

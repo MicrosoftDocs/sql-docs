@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "database snapshots [SQL Server], about database snapshots"
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Snapshots (SQL Server)

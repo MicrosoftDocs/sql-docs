@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "viewing plan guide properties"
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Plan Guide Properties

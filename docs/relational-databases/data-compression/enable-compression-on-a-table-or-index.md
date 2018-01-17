@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "compression [SQL Server], enable"
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Enable Compression on a Table or Index

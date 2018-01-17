@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG021798 error"
 ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG021798

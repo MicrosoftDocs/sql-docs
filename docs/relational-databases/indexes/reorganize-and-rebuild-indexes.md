@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "clustered indexes, defragmenting"
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "barbkess"
+ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

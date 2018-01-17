@@ -18,7 +18,7 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server, Memory Broker Clerks Object

@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.databaseproperties.filegroups.f1"
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Properties (Filegroups Page)

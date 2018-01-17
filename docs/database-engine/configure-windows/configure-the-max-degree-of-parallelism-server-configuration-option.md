@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MaxDop"
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Configure the max degree of parallelism Server Configuration Option

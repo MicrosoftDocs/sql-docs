@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.monitor.publicationinfo.allsubscriptions.tran.f1"
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Publication Information, All Subscriptions (Transactional Publication)

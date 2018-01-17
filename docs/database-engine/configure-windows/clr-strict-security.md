@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "clr strict security option"
 ms.assetid: 
 caps.latest.revision: 0
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CLR strict security   

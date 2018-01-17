@@ -18,7 +18,7 @@ ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: 41
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Witness Server Instance (Configure Database Mirroring Security Wizard)

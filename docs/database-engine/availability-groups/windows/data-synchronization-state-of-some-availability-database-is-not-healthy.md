@@ -20,7 +20,7 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Data synchronization state of some availability database is not healthy

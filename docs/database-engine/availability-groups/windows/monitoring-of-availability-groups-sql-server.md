@@ -19,7 +19,7 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 caps.latest.revision: 27
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Monitoring of Availability Groups (SQL Server)

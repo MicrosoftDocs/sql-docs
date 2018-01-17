@@ -18,7 +18,7 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 caps.latest.revision: 21
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Administration of an Availability Group (SQL Server)

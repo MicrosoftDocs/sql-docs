@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "index creation [SQL Server], tempdb database"
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "barbkess"
+ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

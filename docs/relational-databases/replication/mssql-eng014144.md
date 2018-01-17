@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG014144 error"
 ms.assetid: fdc744d5-530e-48c4-9420-cca032fd482b
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG014144

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "unique indexes, design guidelines"
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "barbkess"
+ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

@@ -16,7 +16,7 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 caps.latest.revision: 31
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Upgrade Master Data Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

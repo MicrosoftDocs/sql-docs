@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "custom resolvers [SQL Server replication]"
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Advanced Merge Replication Conflict - COM-Based Resolvers

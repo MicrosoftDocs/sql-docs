@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], between servers"
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Copy Databases to Other Servers

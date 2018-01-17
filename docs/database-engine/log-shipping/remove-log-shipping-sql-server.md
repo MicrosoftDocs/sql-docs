@@ -20,7 +20,7 @@ ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 caps.latest.revision: 18
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Remove Log Shipping (SQL Server)

@@ -34,9 +34,9 @@ helpviewer_keywords:
   - "performance counters [SQL Server], listed"
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 caps.latest.revision: 56
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use SQL Server Objects

@@ -21,7 +21,7 @@ ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Add a Secondary Database to a Log Shipping Configuration (SQL Server)

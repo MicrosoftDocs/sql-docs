@@ -25,7 +25,7 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 caps.latest.revision: 59
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transport Security - Database Mirroring - Always On Availability

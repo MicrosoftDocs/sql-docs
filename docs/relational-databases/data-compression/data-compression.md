@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "compressed tables [SQL Server]"
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Data Compression

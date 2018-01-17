@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.dmf.condition.referencingpolicies.f1"
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Open Condition Dialog Box, Dependent Policies Page

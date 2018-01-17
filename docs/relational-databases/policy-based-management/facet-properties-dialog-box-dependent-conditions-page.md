@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.dmf.facet.dependentconditions.f1"
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Facet Properties Dialog Box, Dependent Conditions Page

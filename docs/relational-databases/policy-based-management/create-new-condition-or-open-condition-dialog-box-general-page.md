@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.dmf.condition.f1"
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create New Condition or Open Condition Dialog Box, General Page

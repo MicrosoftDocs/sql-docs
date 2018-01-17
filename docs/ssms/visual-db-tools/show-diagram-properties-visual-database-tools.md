@@ -19,7 +19,7 @@ ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Show Diagram Properties (Visual Database Tools)

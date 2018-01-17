@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "viewing filter information"
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Filter Information (SQL Server Profiler)

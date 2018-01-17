@@ -22,7 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Audit Backup and Restore Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Audit Backup/Restore** event class occurs whenever a backup or restore command is issued.  
   
 ## Audit Backup/Restore Event Class Data Columns  

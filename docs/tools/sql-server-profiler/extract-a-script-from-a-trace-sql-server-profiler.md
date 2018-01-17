@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "extracting script from trace [SQL Server]"
 ms.assetid: 431126a6-ff91-4818-8763-4442152bd571
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extract a Script from a Trace (SQL Server Profiler)

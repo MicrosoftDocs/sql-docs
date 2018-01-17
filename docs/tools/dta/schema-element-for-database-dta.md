@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Schema element"
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Schema Element for Database (DTA)

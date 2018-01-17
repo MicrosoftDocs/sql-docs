@@ -20,7 +20,7 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Self-Joins Manually (Visual Database Tools)

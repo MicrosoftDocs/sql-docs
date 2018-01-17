@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-3 - Change the Environment Layout

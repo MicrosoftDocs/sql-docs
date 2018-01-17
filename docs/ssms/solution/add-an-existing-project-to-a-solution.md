@@ -22,7 +22,7 @@ ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Add an Existing Project to a Solution

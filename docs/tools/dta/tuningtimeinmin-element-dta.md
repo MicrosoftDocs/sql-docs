@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "TuningTimeInMin element"
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # TuningTimeInMin Element (DTA)

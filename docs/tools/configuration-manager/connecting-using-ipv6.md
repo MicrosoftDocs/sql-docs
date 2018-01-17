@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "IPv6"
 ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connecting Using IPv6

@@ -22,7 +22,7 @@ ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Handle Multiple Job Steps

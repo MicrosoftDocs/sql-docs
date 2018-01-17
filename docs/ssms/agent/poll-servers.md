@@ -22,7 +22,7 @@ ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Poll Servers

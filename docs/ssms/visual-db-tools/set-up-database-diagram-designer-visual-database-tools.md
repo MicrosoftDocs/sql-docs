@@ -22,7 +22,7 @@ ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set Up Database Diagram Designer (Visual Database Tools)

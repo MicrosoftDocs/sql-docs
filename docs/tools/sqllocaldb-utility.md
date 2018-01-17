@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "LocalDB, SqlLocalDB Utility"
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SqlLocalDB Utility

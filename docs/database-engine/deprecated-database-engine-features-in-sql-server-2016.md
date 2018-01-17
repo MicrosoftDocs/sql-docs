@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "deprecation [SQL Server], feature list"
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 215
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Deprecated Database Engine Features in SQL Server 2016

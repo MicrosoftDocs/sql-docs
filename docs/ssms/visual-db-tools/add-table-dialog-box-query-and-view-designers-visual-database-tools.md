@@ -19,7 +19,7 @@ ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Add Table Dialog Box (Query and View Designers) (Visual Database Tools)

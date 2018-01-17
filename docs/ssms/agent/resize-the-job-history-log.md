@@ -23,7 +23,7 @@ ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Resize the Job History Log

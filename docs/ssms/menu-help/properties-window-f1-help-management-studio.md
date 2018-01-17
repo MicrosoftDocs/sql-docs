@@ -29,7 +29,7 @@ ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Properties Window F1 Help (Management Studio)

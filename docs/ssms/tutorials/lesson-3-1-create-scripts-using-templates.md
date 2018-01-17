@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: ed48014c-3fc9-48ff-8c0f-8d1822195f14
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 3-1 - Create Scripts Using Templates

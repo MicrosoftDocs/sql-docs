@@ -20,7 +20,7 @@ ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Job Categories - Manage Job Categories

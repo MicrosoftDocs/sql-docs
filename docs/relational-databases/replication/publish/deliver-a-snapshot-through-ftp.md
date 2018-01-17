@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], FTP"
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Deliver a Snapshot Through FTP

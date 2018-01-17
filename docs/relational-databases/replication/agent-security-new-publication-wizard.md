@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.agentsecurity.articles.f1"
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Agent Security (New Publication Wizard)

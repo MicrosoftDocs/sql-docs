@@ -31,9 +31,9 @@ helpviewer_keywords:
   - "databases [SQL Server], moving"
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 98
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Database Detach and Attach (SQL Server)

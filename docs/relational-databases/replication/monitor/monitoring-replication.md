@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "administering replication, monitoring"
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Monitoring (Replication)

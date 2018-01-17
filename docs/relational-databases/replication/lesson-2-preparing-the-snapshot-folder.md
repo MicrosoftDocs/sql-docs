@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 2: Preparing the Snapshot Folder

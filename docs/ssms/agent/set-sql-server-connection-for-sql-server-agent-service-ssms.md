@@ -19,7 +19,7 @@ ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)

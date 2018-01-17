@@ -19,7 +19,7 @@ ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Object Already Exists

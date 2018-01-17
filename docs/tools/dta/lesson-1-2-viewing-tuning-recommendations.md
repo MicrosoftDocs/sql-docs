@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], tutorials"
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 1-2 - Viewing Tuning Recommendations

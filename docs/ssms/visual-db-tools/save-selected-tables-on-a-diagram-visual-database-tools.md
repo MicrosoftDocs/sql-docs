@@ -18,7 +18,7 @@ ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save Selected Tables on a Diagram (Visual Database Tools)

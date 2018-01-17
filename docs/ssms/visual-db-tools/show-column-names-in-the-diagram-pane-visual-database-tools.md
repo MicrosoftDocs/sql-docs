@@ -21,7 +21,7 @@ ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Show Column Names in the Diagram Pane (Visual Database Tools)

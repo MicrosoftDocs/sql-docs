@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "XML input files [Database Engine Tuning Advisor]"
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XML Input File Reference (Database Engine Tuning Advisor)

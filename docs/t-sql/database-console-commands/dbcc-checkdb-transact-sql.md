@@ -46,26 +46,22 @@ ms.workload: "Active"
 # DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Checks the logical and physical integrity of all the objects in the specified database by performing the following operations:    
-    
-> **NOTE:** DBCC CHECKDB is supported on databases that contain memory-optimized tables but validation only occurs on disk-based tables. However, as part of database backup and recovery, a CHECKSUM validation is done for files in memory-optimized filegroups.    
->     
->  Since DBCC repair options are not available for memory-optimized tables, you must back up your databases regularly and test the backups. If data integrity issues occur in a memory-optimized table, you must restore from the last known good backup.    
+Checks the logical and physical integrity of all the objects in the specified database by performing the following operations:    
     
 -   Runs [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) on the database.    
-    
 -   Runs [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) on every table and view in the database.    
-    
 -   Runs [DBCC CHECKCATALOG](../../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md) on the database.    
-    
 -   Validates the contents of every indexed view in the database.    
-    
 -   Validates link-level consistency between table metadata and file system directories and files when storing **varbinary(max)** data in the file system using FILESTREAM.    
-    
 -   Validates the [!INCLUDE[ssSB](../../includes/sssb-md.md)] data in the database.    
     
 This means that the DBCC CHECKALLOC, DBCC CHECKTABLE, or DBCC CHECKCATALOG commands do not have to be run separately from DBCC CHECKDB. For more detailed information about the checks that these commands perform, see the descriptions of these commands.    
-    
+ 
+> [!NOTE]
+> DBCC CHECKDB is supported on databases that contain memory-optimized tables but validation only occurs on disk-based tables. However, as part of database backup and recovery, a CHECKSUM validation is done for files in memory-optimized filegroups.    
+>     
+> Since DBCC repair options are not available for memory-optimized tables, you must back up your databases regularly and test the backups. If data integrity issues occur in a memory-optimized table, you must restore from the last known good backup.    
+
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## Syntax    

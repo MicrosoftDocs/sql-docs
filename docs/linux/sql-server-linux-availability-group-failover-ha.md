@@ -16,7 +16,7 @@ ms.technology: database-engine
 ms.assetid: 
 ms.workload: "Inactive"
 ---
-# Operate HA availability group for SQL Server on Linux
+# Operate Always On Availability Groups on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 

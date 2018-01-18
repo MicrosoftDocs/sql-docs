@@ -70,7 +70,7 @@ GO
 ```  
   
 ### B. Using @@ERROR to conditionally exit a procedure  
- The following example uses `IF...ELSE` statements to test `@@ERROR` after an `INSERT` statement in a stored procedure. The value of the `@@ERROR` variable determines the return code sent to the calling program, indicating success or failure of the procedure.  
+ The following example uses `IF...ELSE` statements to test `@@ERROR` after an `DELETE` statement in a stored procedure. The value of the `@@ERROR` variable determines the return code sent to the calling program, indicating success or failure of the procedure.  
   
 ```  
 USE AdventureWorks2012;  

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "deleting statistics"
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete Statistics

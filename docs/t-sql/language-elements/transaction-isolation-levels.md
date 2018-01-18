@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "hints [SQL Server], locking"
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Transaction Isolation Levels

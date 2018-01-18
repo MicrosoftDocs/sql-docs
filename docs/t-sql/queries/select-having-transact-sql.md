@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "HAVING clause, about HAVING clause"
 ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

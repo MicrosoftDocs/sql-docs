@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STUnion (geometry Data Type)"
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

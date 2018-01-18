@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "augmented operators, %="
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

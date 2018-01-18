@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Lat method"
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

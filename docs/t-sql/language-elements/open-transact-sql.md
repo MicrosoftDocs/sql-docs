@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "Transact-SQL cursors, opening"
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

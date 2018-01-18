@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STSrid (geometry Data Type)"
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

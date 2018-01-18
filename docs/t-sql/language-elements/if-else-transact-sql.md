@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "IF keyword"
 ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

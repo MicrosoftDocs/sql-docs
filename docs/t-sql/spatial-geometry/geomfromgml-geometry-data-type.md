@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "GeomFromGML (geometry Data Type)"
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

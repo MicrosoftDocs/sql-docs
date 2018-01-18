@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "positive values [SQL Server]"
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

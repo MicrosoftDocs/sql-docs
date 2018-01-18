@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "single-column set of values [SQL Server]"
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

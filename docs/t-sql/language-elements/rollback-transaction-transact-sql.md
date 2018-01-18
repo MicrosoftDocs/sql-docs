@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "savepoints [SQL Server]"
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "WHERE clause"
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

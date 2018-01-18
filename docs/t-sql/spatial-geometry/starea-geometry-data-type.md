@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STArea (geometry Data Type)"
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "IsValidDetailed geography"
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

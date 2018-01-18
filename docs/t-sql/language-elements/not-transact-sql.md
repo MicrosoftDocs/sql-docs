@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "reversing Boolean expression values"
 ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ReorientObject method (geography)"
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

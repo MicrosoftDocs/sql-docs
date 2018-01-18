@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "reading columns"
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

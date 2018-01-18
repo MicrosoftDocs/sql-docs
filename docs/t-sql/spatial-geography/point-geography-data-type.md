@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "Point (geography Data Type)"
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

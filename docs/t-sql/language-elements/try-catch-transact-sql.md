@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "CATCH block"
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 caps.latest.revision: 79
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

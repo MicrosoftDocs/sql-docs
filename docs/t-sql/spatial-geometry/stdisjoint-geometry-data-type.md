@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STDisjoint (geometry Data Type)"
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

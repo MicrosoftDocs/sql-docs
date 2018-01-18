@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STIntersection (geometry Data Type)"
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

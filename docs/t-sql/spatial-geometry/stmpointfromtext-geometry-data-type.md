@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STMPointFromText (geometry Data Type)"
 ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

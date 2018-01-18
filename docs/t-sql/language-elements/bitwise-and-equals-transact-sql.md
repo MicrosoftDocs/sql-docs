@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "&= (bitwise AND equals)"
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "column searches [full-text search]"
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], dropping"
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

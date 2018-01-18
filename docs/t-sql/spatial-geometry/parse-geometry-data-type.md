@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Parse (geometry Data Type)"
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

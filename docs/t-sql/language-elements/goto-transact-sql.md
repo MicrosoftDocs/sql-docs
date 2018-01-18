@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "GOTO statement"
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

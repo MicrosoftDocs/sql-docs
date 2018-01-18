@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "AsTextZM method"
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

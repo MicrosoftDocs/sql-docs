@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "AsTextZM (geometry Data Type)"
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

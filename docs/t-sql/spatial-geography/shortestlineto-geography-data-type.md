@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ShortestLineTo method (geography)"
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

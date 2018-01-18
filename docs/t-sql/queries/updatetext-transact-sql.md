@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "UPDATETEXT statement"
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

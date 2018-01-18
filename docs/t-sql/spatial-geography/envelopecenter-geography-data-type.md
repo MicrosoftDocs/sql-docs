@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "EnvelopeCenter method"
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

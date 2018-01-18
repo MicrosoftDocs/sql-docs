@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STMPolyFromText method"
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

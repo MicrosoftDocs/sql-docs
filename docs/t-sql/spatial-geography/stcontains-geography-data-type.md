@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "STContains method (geography)"
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

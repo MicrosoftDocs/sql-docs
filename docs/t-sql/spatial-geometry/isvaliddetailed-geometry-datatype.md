@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "IsValidDetailed geometry"
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -16,8 +16,8 @@ dev_langs:
   - "TSQL"
 ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

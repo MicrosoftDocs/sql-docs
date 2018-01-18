@@ -40,8 +40,8 @@ helpviewer_keywords:
   - "PAGLOCK table hint"
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: 174
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

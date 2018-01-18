@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "FOR XML clause, escape rules"
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

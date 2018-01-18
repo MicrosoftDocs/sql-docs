@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STContains (geometry Data Type)"
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

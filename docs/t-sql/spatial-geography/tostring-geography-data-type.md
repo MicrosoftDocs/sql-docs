@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ToString method"
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

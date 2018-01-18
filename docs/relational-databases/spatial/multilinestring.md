@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "geometry subtypes [SQL Server]"
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

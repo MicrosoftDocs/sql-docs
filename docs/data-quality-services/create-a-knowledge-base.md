@@ -17,8 +17,8 @@ f1_keywords:
   - "sql13.dqs.kb.newkb.f1"
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STCrosses (geometry Data Type)"
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

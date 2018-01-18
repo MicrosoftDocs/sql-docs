@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "HasM geography"
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

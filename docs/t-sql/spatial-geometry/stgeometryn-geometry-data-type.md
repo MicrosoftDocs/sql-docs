@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STGeometryN (geometry Data Type)"
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

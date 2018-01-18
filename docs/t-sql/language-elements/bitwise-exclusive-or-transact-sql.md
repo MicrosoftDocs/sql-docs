@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "bitwise exclusive OR (^)"
 ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

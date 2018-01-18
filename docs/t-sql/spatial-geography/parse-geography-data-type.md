@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Parse (geography Data Type)"
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "math operations [Transact-SQL]"
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

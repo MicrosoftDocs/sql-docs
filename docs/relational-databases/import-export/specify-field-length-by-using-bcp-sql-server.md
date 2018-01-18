@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "bcp utility [SQL Server], field length"
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

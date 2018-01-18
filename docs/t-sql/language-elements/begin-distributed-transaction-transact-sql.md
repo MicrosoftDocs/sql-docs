@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "starting transactions"
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

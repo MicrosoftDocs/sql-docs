@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "EnvelopeAggregate method (geography)"
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

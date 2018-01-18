@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STPointN method"
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

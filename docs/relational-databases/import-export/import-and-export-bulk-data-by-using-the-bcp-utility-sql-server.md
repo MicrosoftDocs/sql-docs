@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "bcp utility [SQL Server], about bcp utility"
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

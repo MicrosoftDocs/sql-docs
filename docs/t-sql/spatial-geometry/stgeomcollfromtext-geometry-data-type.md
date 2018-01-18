@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STGeomCollFromText (geometry Data Type)"
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

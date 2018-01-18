@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "RAW mode, retrieving XML information example"
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

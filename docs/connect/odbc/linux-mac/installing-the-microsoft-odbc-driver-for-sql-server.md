@@ -28,7 +28,7 @@ This topic explains how to install the [!INCLUDE[msCoName](../../../includes/msc
 
 ## Microsoft ODBC Driver 17 for SQL Server 
 
-### Debian
+### Debian 8 and 9
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -49,7 +49,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### RedHat
+### RedHat Enterprise Server 6 and 7
 ```
 sudo su
 
@@ -69,7 +69,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### SUSE Linux Enterprise Server 12
+### SUSE Linux Enterprise Server 11SP4 and 12
 
 ```
 sudo su
@@ -89,7 +89,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ``` 
 
-### Ubuntu
+### Ubuntu 14.04, 16.04 and 17.10
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -

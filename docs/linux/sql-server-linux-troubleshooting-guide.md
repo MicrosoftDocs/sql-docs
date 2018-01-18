@@ -3,8 +3,8 @@ title: Troubleshoot SQL Server on Linux | Microsoft Docs
 description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
 author: annashres 
 ms.author: anshrest 
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -204,5 +204,5 @@ Support is available through the community and monitored by the engineering team
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Ask database administration questions
 - [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Ask development questions
 - [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Ask technical questions
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): Report bugs and request feature
+- [Microsoft Connect](https://feedback.azure.com/forums/908035-sql-server): Report bugs and request feature
 - [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server

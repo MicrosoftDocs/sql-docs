@@ -29,7 +29,7 @@ Transparent data encryption encrypts the storage of an entire database by using 
 
 On database startup, the encrypted database encryption key is decrypted and then used for decryption and re-encryption of the database files in the SQL Server Database Engine process. Transparent data encryption performs real-time I/O encryption and decryption of the data at the page level. Each page is decrypted when it's read into memory and then encrypted before being written to disk. For a general description of transparent data encryption, see [Transparent data encryption](transparent-data-encryption.md).
 
-SQL Server running on an Azure virtual machine also can use an asymmetric key from Key Vault. The configuration steps are different from using an asymmetric key in a SQL database. For more information, see [Extensible key management by using Azure Key Vault (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md).
+SQL Server running on an Azure virtual machine also can use an asymmetric key from Key Vault. The configuration steps are different from using an asymmetric key in SQL Database. For more information, see [Extensible key management by using Azure Key Vault (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md).
 
 ## Service-managed transparent data encryption
 

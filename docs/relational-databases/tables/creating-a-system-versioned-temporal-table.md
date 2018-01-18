@@ -16,7 +16,7 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 caps.latest.revision: 20
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Creating a System-Versioned Temporal Table

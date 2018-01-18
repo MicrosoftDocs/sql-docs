@@ -16,7 +16,7 @@ ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
 caps.latest.revision: 12
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Getting Started with System-Versioned Temporal Tables

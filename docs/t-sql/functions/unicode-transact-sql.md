@@ -141,6 +141,8 @@ Character # Unicode Character UNICODE Value
 ```  
   
 ## See Also  
+ [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  

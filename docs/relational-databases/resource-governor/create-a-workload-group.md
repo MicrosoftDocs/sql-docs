@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "workload groups [SQL Server], create"
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Workload Group

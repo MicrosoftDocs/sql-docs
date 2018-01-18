@@ -204,5 +204,5 @@ Support is available through the community and monitored by the engineering team
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Ask database administration questions
 - [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Ask development questions
 - [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Ask technical questions
-- [Microsoft Connect](https://feedback.azure.com/forums/908035-sql-server): Report bugs and request feature
+- [Submit feedback](https://feedback.azure.com/forums/908035-sql-server): Report bugs and request feature
 - [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server

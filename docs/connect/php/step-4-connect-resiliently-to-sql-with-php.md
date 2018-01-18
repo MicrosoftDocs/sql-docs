@@ -27,7 +27,7 @@ The demo program is designed so that a [transient error](https://docs.microsoft.
   
 The length of this code sample is due mostly to the catch exception logic.   
   
-The [sqlsrv_query()](../../connect/php/sqlsrv-query) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set which can be iterated over with the use of [sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array). 
+The [sqlsrv_query()](../../connect/php/sqlsrv-query.md) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set, which can be iterated over with the use of [sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md). 
   
 ```php
 

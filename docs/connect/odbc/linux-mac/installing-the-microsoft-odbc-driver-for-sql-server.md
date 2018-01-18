@@ -34,8 +34,12 @@ sudo su
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 #Download appropriate package for the OS version (Debian 8  and 9 are supprted)
-curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list  #Debian 8
-curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list  #Debian 9
+
+#Debian 8
+curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Debian 9
+curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -54,8 +58,12 @@ sudo apt-get install unixodbc-dev
 sudo su
 
 #Download appropriate package for the OS version (RedHat Enterprise Server 6 and 7 are supprted)
-curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo  #RedHat Enterprise Server 6
-curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo  #RedHat Enterprise Server 7
+
+#RedHat Enterprise Server 6
+curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
+
+#RedHat Enterprise Server 7
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
@@ -75,8 +83,12 @@ sudo yum install unixODBC-devel
 sudo su
 
 #Download appropriate package for the OS version (SUSE Linux Enterprise Server 11 SP4 and 12)
-zypper ar https://packages.microsoft.com/config/sles/11/prod.repo  #SUSE Linux Enterprise Server 11 SP4
-zypper ar https://packages.microsoft.com/config/sles/12/prod.repo  #SUSE Linux Enterprise Server 12
+
+#SUSE Linux Enterprise Server 11 SP4
+zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
+
+#SUSE Linux Enterprise Server 12
+zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 exit
 sudo ACCEPT_EULA=Y zypper install msodbcsql
@@ -95,9 +107,15 @@ sudo su
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 #Download appropriate package for the OS version (Ubuntu 14.04, 16.04 and 17.10 are supported)
-curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list  #Ubuntu 14.04
-curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list  #Ubuntu 16.04
-curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list  #Ubuntu 17.10
+
+#Ubuntu 14.04
+curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Ubuntu 16.04
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Ubuntu 17.10
+curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update

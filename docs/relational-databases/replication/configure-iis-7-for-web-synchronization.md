@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Web synchronization, IIS 7 servers"
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure IIS 7 for Web Synchronization

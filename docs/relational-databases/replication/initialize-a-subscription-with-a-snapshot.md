@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "initializing subscriptions [SQL Server replication], snapshots"
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Initialize a Subscription with a Snapshot

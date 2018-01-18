@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], updatable"
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Switch Between Update Modes for an Updatable Transactional Subscription

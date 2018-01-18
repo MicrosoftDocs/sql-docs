@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "restoring filegroups [SQL Server]"
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Restore Files to a New Location (SQL Server)

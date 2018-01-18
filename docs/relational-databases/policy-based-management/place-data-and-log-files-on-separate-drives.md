@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: 6cbedc27-4d77-44ad-bed2-c23b628475a7
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Place Data and Log Files on Separate Drives

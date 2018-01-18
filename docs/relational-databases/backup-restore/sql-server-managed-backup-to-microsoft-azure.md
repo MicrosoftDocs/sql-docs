@@ -14,8 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
-author: "MightyPen"
-ms.author: "genemi"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

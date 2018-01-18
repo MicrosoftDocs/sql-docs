@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.newpubwizard.pubproperties.datapartitions.f1"
 ms.assetid: 5869edb7-d05f-495b-b828-b7fd5e828d20
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Publication Properties, Data Partitions

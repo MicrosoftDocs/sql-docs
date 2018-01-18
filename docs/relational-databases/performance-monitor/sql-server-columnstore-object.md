@@ -16,7 +16,7 @@ ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server, Columnstore Object

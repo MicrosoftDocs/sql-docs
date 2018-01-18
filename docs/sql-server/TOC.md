@@ -50,9 +50,9 @@
 ### [SQL Server Security](https://blogs.msdn.microsoft.com/sqlsecurity/)
 
 ## Feedback and help
+### [Suggestions for SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ### [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 ### [Reddit](https://www.reddit.com/r/SQLServer)
 ## [Local content with Help Viewer](sql-server-help-installation.md)

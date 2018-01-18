@@ -19,7 +19,7 @@
 ## [Analysis Services samples](analysis-services-samples.md)
 
 # Tutorials
-## [Tabular Modeling (Adventure Works Tutorial)](tabular-modeling-adventure-works-tutorial.md)  
+## [Tabular Modeling (1200 compatibility level)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Lesson 2: Add Data](lesson-2-add-data.md)  
 ### [Lesson 3: Mark as Date Table](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [Supplemental Lesson - Implement dynamic security by using row filters](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [Supplemental Lesson - Configure reporting properties for Power View reports](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [Multidimensional modeling (Adventure Works Tutorial)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [Multidimensional modeling](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [Tutorial scenario](analysis-services-tutorial-scenario.md)  
 ### [Install sample data and projects for the Analysis Services Multidimensional modeling tutorial](install-sample-data-and-projects.md)  
 ### [Lesson 1: Defining a data source view within an Analysis Services project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  

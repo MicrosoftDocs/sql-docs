@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.replicationutilities.specifysnapshotfolder.f1"
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Snapshot Folder

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Toolbox [SQL Server Management Studio]"
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Toolbox Component F1 Help

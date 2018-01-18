@@ -27,7 +27,7 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Design Queries and Views How-to Topics (Visual Database Tools)

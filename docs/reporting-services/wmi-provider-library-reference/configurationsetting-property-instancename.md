@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "InstanceName property"
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 caps.latest.revision: 34
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - InstanceName

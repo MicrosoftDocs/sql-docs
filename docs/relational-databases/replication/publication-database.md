@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.newpubwizard.publicationdatabase.f1"
 ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Publication Database

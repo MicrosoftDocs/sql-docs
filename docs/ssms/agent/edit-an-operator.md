@@ -21,7 +21,7 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit an Operator

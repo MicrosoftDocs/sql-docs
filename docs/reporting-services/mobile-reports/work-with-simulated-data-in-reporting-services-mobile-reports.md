@@ -16,7 +16,7 @@ ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Work with simulated data in Reporting Services mobile reports

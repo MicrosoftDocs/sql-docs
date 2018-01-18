@@ -4,8 +4,7 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml",
-          "breadcrumb/toc.yml"
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -14,23 +13,6 @@
           "LICENSE",
           "LICENSE-CODE",
            "**/mref/**"
-        ]
-      },
-      {
-        "files": [
-          "**/*.md",
-          "**/*.yml"
-        ],
-        "group": "ssms",
-        "src": "ssms",
-        "dest": "ssms",
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
         ]
       }
     ],
@@ -45,28 +27,14 @@
           "**/obj/**",
           "**/includes/*.md"
         ]
-      },
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg",
-          "**/*.gif"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**"
-        ],
-        "group": "ssms",
-        "src": "ssms",
-        "dest": "ssms"
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
       "layout": "Conceptual",
-      "breadcrumb_path": "/sql/breadcrumb/toc.json",
-      "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana"],
+      "breadcrumb_path": "~/breadcrumb/toc.yml",
+      "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana","iRaindrop"],
       "searchScope": ["sql"],
       "_op_documentIdPathDepotMapping": {
         "linux/": {
@@ -78,12 +46,6 @@
     "fileMetadata": {},
     "template": [],
     "dest": "docs",
-    "groups": {
-      "ssms": {
-        "dest": "ssms",
-        "moniker_range": ">= ssms-16"
-      }
-    },
     "xref":["mref/sql130.zip","mref/System.Reflection.Assembly.Load.yml","mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml"]
   }
 }

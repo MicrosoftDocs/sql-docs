@@ -19,7 +19,7 @@ ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 caps.latest.revision: 10
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add Custom Locations to a Map (Report Builder and SSRS)

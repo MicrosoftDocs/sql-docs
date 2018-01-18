@@ -21,7 +21,7 @@ ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set Up the Job History Log

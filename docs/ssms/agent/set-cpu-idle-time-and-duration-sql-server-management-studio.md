@@ -22,7 +22,7 @@ ms.assetid: 8647b465-d899-4cc7-9640-134a506d0a2e
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set CPU Idle Time and Duration (SQL Server Management Studio)

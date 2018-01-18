@@ -26,7 +26,7 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)

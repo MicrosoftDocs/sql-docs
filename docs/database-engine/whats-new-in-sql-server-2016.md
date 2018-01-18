@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], what's new"
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 caps.latest.revision: 431
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # What's new in Database Engine - SQL Server 2016

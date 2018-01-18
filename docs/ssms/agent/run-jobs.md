@@ -21,7 +21,7 @@ ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Run Jobs

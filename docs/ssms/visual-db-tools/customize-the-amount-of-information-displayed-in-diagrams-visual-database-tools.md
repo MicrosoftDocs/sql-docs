@@ -21,7 +21,7 @@ ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)

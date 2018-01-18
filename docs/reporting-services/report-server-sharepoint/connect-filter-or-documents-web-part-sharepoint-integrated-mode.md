@@ -13,9 +13,9 @@ ms.technology:
 
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Connect Filter or Documents web part with a Reporting Services Report Viewer web part

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "temporary stored procedures [SQL Server]"
   - "tempdb database [SQL Server]"
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: jhubbard
 ms.reviewer: carlrab
 ---

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Management Studio - License Terms | Microsoft Docs"
+title: "SQL Server Shared Management Objects (SMO) - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: "sql-non-specified"
@@ -14,13 +14,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 caps.latest.revision: 9
-author: "Charles-Gagnon"
-ms.author: "chgagnon"
-manager: "kenvh"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Shared Management Objects (SMO) License Terms
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
 ## MICROSOFT SOFTWARE LICENSE TERMS
 **MICROSOFT SQL SERVER 2017 SHARED MANAGEMENT OBJECTS**
 

@@ -17,7 +17,7 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Built-in Collections - Parameters Collection References (Report Builder)

@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "checksums [SQL Server]"
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Possible Media Errors During Backup and Restore (SQL Server)

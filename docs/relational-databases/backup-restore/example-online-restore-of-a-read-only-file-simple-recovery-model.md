@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "simple recovery model [SQL Server], RESTORE examples"
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Online Restore of a Read-Only File (Simple Recovery Model)

@@ -16,7 +16,7 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: 18
 author: "MikeRayMSFT"
 ms.author: "v-saume"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Automatically initialize Always On Availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,7 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Built-in Collections - Built-in Globals and Users References (Report Builder)

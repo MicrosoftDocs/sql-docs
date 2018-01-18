@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "deploying reports [Reporting Services]"
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Set Deployment Properties (Reporting Services)

@@ -19,7 +19,7 @@ ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Options Dialog Boxes F1 Help

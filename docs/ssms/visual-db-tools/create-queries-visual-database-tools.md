@@ -18,7 +18,7 @@ ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Queries (Visual Database Tools)

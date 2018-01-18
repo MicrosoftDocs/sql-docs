@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.monitor.publicationinfo.warningsandagents.merge.f1"
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Publication Information, Warnings (Merge Publication, SQL Server 2005 and Later)

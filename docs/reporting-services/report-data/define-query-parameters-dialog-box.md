@@ -18,9 +18,9 @@ f1_keywords:
   - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define Query Parameters Dialog Box

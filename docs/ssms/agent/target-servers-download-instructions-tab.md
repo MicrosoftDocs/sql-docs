@@ -18,7 +18,7 @@ ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Target Servers (Download Instructions Tab)

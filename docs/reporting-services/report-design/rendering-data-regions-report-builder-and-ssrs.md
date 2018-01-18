@@ -17,7 +17,7 @@ ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 caps.latest.revision: 6
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Rendering Data Regions (Report Builder and SSRS)

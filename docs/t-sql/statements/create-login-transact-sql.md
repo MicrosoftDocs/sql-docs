@@ -193,6 +193,8 @@ ASYMMETRIC KEY *asym_key_name*
  For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.  
+ 
+ The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
   
  For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Granting Permissions on Report Server Items on a SharePoint Site

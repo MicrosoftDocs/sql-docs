@@ -18,7 +18,7 @@ ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Target Servers (Target Server Status Tab)

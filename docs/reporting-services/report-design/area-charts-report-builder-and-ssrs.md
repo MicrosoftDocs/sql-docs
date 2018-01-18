@@ -17,7 +17,7 @@ ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 caps.latest.revision: 6
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Area Charts (Report Builder and SSRS)

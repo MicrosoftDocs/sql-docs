@@ -20,7 +20,7 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Open Database Diagrams (Visual Database Tools)

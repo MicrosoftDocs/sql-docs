@@ -22,7 +22,7 @@ ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Export Registered Server Information (SQL Server Management Studio)

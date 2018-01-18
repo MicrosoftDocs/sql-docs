@@ -16,7 +16,7 @@ ms.assetid: 32c3bd1a-9f7c-4a01-a271-5868871b8bd5
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Jobs Node (SQL Server Agent F1 Help)

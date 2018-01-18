@@ -19,7 +19,7 @@ ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Copy Queries (Visual Database Tools)

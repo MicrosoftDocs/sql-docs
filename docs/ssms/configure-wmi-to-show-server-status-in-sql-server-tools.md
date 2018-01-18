@@ -19,7 +19,7 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configure WMI to Show Server Status in SQL Server Tools

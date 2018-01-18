@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "opening ODBC Data Source Administrator"
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Open the ODBC Data Source Administrator

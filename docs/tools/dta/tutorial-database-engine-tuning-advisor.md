@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "tutorials [Database Engine Tuning Advisor]"
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Tutorial: Database Engine Tuning Advisor

@@ -114,7 +114,8 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-
+## Check for updates
+To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
 
 ## Next Steps
 

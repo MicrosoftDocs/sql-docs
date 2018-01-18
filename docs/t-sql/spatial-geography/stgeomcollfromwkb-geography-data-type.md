@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STMGeomCollFromWKB method"
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

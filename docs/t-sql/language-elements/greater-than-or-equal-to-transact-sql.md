@@ -27,8 +27,8 @@ helpviewer_keywords:
   - ">= (greater than or equal to operator)"
 ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

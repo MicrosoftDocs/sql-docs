@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STMLineFromText (geometry Data Type)"
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

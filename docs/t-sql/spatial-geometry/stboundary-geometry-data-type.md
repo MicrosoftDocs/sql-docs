@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STBoundary (geometry Data Type)"
 ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "RAW mode, specifying XSINIL example"
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

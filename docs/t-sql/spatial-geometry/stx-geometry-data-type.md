@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STX (geometry Data Type)"
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

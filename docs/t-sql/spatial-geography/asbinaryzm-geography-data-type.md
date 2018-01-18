@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "AsBinaryZM"
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

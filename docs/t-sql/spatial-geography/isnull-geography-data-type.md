@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "IsNull method"
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

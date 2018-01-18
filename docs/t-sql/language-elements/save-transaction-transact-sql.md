@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "duplicate savepoints"
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

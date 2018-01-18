@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "WHERE clause, SELECT statement"
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

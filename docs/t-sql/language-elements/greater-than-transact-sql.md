@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "> (greater than operator)"
 ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

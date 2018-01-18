@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STMPolyFromWKB method"
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

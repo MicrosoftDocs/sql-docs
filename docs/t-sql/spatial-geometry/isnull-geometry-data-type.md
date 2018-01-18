@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "IsNull (geometry Data Type)"
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "CollectionAggregate method (geometry)"
 ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

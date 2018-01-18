@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "UNION operator [SQL Server]"
 ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "range to test [SQL Server]"
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

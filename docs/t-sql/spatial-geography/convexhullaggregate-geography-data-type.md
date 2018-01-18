@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ConvexHullAggregate method (geography)"
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

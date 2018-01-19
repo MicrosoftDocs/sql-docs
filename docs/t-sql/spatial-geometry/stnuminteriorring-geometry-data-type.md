@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STNumInteriorRing (geometry Data Type)"
 ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

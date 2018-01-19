@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "WHILE keyword"
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

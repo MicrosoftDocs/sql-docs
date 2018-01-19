@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "OPTION clause"
 ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STBuffer (geometry Data Type)"
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

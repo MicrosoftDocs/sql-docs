@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "STOverlaps method (geography)"
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

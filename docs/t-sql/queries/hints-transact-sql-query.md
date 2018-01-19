@@ -58,8 +58,8 @@ helpviewer_keywords:
   - "USE HINT query hint"
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 caps.latest.revision: 136
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

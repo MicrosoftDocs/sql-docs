@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ID directive"
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "Transact-SQL bulk export/import operations"
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

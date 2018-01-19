@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "property promotion [XML in SQL Server]"
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

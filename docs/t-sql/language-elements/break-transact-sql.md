@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "BREAK keyword"
 ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STGeomFromText (geometry Data Type)"
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

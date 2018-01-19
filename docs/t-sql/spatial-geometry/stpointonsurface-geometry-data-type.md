@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STPointOnSurface (geometry Data Type)"
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

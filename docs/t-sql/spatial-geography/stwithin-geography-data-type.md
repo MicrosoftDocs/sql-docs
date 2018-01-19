@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "STWithin method (geography)"
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

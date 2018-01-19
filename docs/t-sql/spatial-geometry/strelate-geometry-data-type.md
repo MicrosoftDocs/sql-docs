@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STRelate (geometry Data Type)"
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

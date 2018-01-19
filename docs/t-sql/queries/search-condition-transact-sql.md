@@ -40,8 +40,8 @@ helpviewer_keywords:
   - "LIKE comparisons"
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

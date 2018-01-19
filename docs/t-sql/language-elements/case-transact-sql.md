@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "searched CASE expression"
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

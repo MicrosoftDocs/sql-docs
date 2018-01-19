@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "= (equals operator)"
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

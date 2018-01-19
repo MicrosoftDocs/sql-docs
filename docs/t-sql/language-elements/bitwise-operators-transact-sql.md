@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "bit manipulations"
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

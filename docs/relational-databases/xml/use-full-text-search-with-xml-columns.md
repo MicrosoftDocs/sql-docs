@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "indexes [full-text search]"
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STLength method"
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STDistance method"
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XSINIL parameter"
 ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

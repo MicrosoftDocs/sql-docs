@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STIsValid (geometry Data Type)"
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

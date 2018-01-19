@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STNumCurves method (geography)"
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STMPolyFromText (geometry Data Type)"
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

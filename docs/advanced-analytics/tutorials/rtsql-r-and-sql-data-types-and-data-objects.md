@@ -71,6 +71,7 @@ To figure out why Example 1 and Example 2 have such different results, insert th
 EXECUTE sp_execute_external_script
         @language = N'R'
       , @script = N' mytextvariable <- c("hello", " ", "world");
+      OutputDataSet <- as.data.frame(mytextvariable);
       str(OutputDataSet);'
       , @input_data_1 = N'  '
 ;
@@ -82,7 +83,7 @@ EXECUTE sp_execute_external_script
 EXECUTE sp_execute_external_script
   @language = N'R', 
   @script = N' OutputDataSet <- data.frame(c("hello"), " ", c("world"));
-    str(OutputDataSet)' , 
+    str(OutputDataSet);' , 
   @input_data_1 = N'  ';
 ```
 

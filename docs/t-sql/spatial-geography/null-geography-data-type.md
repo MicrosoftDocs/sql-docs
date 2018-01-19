@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Null method"
 ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

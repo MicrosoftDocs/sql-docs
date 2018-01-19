@@ -204,7 +204,7 @@ The repair can be performed under a user transaction to allow the user to roll b
 ## Result Sets    
 DBCC CHECKTABLE returns the following result set. The same result set is returned if you specify only the table name or any of the options.
     
-```sql
+```
 DBCC results for 'HumanResources.Employee'.    
 There are 288 rows in 13 pages for object 'Employee'.    
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    

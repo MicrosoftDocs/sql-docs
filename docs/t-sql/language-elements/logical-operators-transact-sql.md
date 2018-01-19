@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "logical operators [SQL Server], Transact-SQL"
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

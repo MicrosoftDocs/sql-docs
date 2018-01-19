@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STPolyFromWKB (geometry Data Type)"
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

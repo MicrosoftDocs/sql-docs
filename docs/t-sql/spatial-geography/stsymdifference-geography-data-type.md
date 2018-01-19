@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STSymDifference (geography Data Type)"
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

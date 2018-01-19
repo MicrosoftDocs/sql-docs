@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STNumPoints (geometry Data Type)"
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

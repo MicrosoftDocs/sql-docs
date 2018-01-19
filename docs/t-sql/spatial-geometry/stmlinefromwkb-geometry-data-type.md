@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STMLineFromWKB (geometry Data Type)"
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

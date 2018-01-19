@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Long method"
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

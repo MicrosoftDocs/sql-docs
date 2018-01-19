@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "END (BEGIN...END) keyword"
 ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

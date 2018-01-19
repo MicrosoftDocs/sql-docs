@@ -1,6 +1,6 @@
 ---
 title: "Schedule SSIS package execution on Azure | Microsoft Docs"
-ms.date: "09/25/2017"
+ms.date: "01/16/2018"
 ms.topic: "article"
 ms.prod: "sql-non-specified"
 ms.prod_service: "integration-services"
@@ -23,9 +23,42 @@ You can schedule the execution of packages stored in the SSISDB Catalog database
 
 ## <a name="agent"></a> Schedule a package with SQL Server Agent
 
-### Prerequisite
+### Prerequisite - Create a linked server
 
-Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server as a linked server. For more info, see [Create Linked Servers](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server to your on-premises SQL Server as a linked server.
+
+1.  **Set up the linked server**
+
+    ```sql
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',     
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location=‘’,
+        @provstr=‘’,
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
+
+2.  **Set up linked server credentials**
+
+    ```sql
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer’,
+        @useself = 'false’,
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
+
+3.  **Set up linked server options**
+
+    ```sql
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
+
+For more info, see [Create Linked Servers](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ### Create a SQL Server Agent job
 
@@ -39,19 +72,21 @@ To schedule a package with SQL Server Agent on premises, create a job with a job
 
 4.  In the **New Job Step** dialog box, select `SSISDB` as the **Database.**
 
-5.  In the command field, enter a Transact-SQL script similar to the script shown in the following example:
+5.  In the **Command** field, enter a Transact-SQL script similar to the script shown in the following example:
 
     ```sql
+    -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
     DECLARE	@return_value int, @exe_id bigint 
 
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
-	@folder_name=N'folderName', @project_name=N'projectName', 
-	@package_name=N'packageName', @use32bitruntime=0, 
-    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
- 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
-    GO
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
+        @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
 6.  Finish configuring and scheduling the job.

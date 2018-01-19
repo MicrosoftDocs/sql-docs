@@ -16,7 +16,7 @@ ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Monitoring Memory-Optimized System-Versioned Temporal Tables

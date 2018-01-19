@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STExteriorRing (geometry Data Type)"
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

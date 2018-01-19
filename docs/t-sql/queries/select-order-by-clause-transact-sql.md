@@ -42,8 +42,8 @@ helpviewer_keywords:
   - "FETCH clause"
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: 68
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

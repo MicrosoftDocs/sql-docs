@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "+ (string concatenation)"
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

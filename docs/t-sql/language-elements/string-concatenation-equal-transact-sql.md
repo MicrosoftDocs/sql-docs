@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "+= (concatenate operator)"
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

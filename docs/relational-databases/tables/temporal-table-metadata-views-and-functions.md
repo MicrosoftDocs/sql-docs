@@ -16,7 +16,7 @@ ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 caps.latest.revision: 9
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Temporal Table Metadata Views and Functions

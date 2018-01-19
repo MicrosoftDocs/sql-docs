@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "modifying database context"
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STPointFromText method"
 ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

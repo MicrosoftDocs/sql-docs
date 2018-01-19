@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "geometry data type [SQL Server], Transact-SQL"
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

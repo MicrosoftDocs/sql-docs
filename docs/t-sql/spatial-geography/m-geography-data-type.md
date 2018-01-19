@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "M method"
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "STGeometryN method"
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

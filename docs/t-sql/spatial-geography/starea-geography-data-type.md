@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STArea method"
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

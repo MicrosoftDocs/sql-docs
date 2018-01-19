@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "row existence testing [SQL Server]"
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

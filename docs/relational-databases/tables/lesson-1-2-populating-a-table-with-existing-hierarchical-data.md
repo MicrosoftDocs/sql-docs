@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-2 - Populating a Table with Existing Hierarchical Data

@@ -146,13 +146,13 @@ After installing SSDT, work through these tutorials to learn how to create datab
 -   [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 
 ## See Also  
 [SQL Server Data Tools in Visual Studio](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT Team Blog](http://blogs.msdn.com/b/ssdt/)  
-[SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback)  
 [SSDT Documentation](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

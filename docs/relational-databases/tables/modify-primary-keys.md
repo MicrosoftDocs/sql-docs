@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "primary keys [SQL Server], modifying"
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Modify Primary Keys

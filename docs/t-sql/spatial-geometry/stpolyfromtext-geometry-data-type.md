@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STPolyFromText (geometry Data Type)"
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STDistance (geometry Data Type)"
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

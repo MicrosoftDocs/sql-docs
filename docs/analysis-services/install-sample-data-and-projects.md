@@ -23,6 +23,7 @@ ms.workload: "Active"
 ---
 # Install Sample Data and Projects 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
 Use the instructions and links provided in this topic to install all of the data and project files used in the Analysis Services Tutorials.  
   
 ## Step 1: Install SQL Server Software  

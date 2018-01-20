@@ -892,14 +892,11 @@ IF EXISTS
   
 When you drop a clustered index, you can specify ONLINE **=** ON option so the DROP INDEX transaction does not block queries and modifications to the underlying data and associated nonclustered indexes.  
   
- ONLINE **=** ON has the following restrictions:  
-  
+ONLINE **=** ON has the following restrictions:  
+ 
 -   ONLINE **=** ON is not valid for clustered indexes that are also disabled. Disabled indexes must be dropped by using ONLINE **=** OFF.  
-  
 -   Only one index at a time can be dropped.  
-  
 -   ONLINE **=** ON is not valid for indexed views, nonclustered indexes or indexes on local temp tables.  
-  
 -   ONLINE **=** ON is not valid for columnstore indexes.  
   
 Temporary disk space equal to the size of the existing clustered index is required to drop a clustered index. This additional space is released as soon as the operation is completed.  
@@ -918,9 +915,7 @@ Temporary disk space equal to the size of the existing clustered index is requir
  The following restrictions apply to partitioned tables:  
   
 -   You cannot change the compression setting of a single partition if the table has nonaligned indexes.  
-  
 -   The ALTER TABLE \<table> REBUILD PARTITION ... syntax rebuilds the specified partition.  
-  
 -   The ALTER TABLE \<table> REBUILD WITH ... syntax rebuilds all partitions.  
   
 ## Dropping NTEXT Columns  
@@ -933,14 +928,12 @@ Temporary disk space equal to the size of the existing clustered index is requir
  The ALTER TABLE statement allows only two-part (schema.object) table names. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], specifying a table name using the following formats fails at compile time with error 117.  
   
 -   server.database.schema.table  
-  
 -   .database.schema.table  
-  
 -   ..schema.table  
   
 In earlier versions specifying the format server.database.schema.table returned error 4902. Specifying the format .database.schema.table or the format ..schema.table succeeded.  
   
- To resolve the problem, remove the use of a 4-part prefix.  
+To resolve the problem, remove the use of a 4-part prefix.  
   
 ## Permissions  
  Requires ALTER permission on the table.  
@@ -961,13 +954,13 @@ In earlier versions specifying the format server.database.schema.table returned 
 |[Altering a table definition](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • change tracking|  
 |[Disabling and enabling constraints and triggers](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|  
   
-###  <a name="add"></a> Adding Columns and Constraints  
+###  <a name="add"></a>Adding Columns and Constraints  
  Examples in this section demonstrate adding columns and constraints to a table.  
   
 #### A. Adding a new column  
  The following example adds a column that allows null values and has no values provided through a DEFAULT definition. In the new column, each row will have `NULL`.  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exa (column_a INT) ;  
 GO  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;  
@@ -978,7 +971,7 @@ GO
 #### B. Adding a column with a constraint  
  The following example adds a new column with a `UNIQUE` constraint.  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exc (column_a INT) ;  
 GO  
 ALTER TABLE dbo.doc_exc ADD column_b VARCHAR(20) NULL   
@@ -993,7 +986,7 @@ GO
 #### C. Adding an unverified CHECK constraint to an existing column  
  The following example adds a constraint to an existing column in the table. The column has a value that violates the constraint. Therefore, `WITH NOCHECK` is used to prevent the constraint from being validated against existing rows, and to allow for the constraint to be added.  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exd ( column_a INT) ;  
 GO  
 INSERT INTO dbo.doc_exd VALUES (-1) ;  
@@ -1010,7 +1003,7 @@ GO
 #### D. Adding a DEFAULT constraint to an existing column  
  The following example creates a table with two columns and inserts a value into the first column, and the other column remains NULL. A `DEFAULT` constraint is then added to the second column. To verify that the default is applied, another value is inserted into the first column, and the table is queried.  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exz ( column_a INT, column_b INT) ;  
 GO  
 INSERT INTO dbo.doc_exz (column_a)VALUES ( 7 ) ;  
@@ -1030,7 +1023,7 @@ GO
 #### E. Adding several columns with constraints  
  The following example adds several columns with constraints defined with the new column. The first new column has an `IDENTITY` property. Each row in the table has new incremental values in the identity column.  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exe ( column_a INT CONSTRAINT column_a_un UNIQUE) ;  
 GO  
 ALTER TABLE dbo.doc_exe ADD   
@@ -1067,8 +1060,7 @@ GO
 #### F. Adding a nullable column with default values  
  The following example adds a nullable column with a `DEFAULT` definition, and uses `WITH VALUES` to provide values for each existing row in the table. If WITH VALUES is not used, each row has the value NULL in the new column.  
   
-```  
-  
+```sql  
 CREATE TABLE dbo.doc_exf ( column_a INT) ;  
 GO  
 INSERT INTO dbo.doc_exf VALUES (1) ;  
@@ -1087,7 +1079,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TABLE Production.TransactionHistoryArchive WITH NOCHECK   
@@ -1099,7 +1091,7 @@ GO
 #### H. Adding a sparse column  
  The following examples show adding and modifying sparse columns in table T1. The code to create table `T1` is as follows.  
   
-```  
+```sql  
 CREATE TABLE T1  
 (C1 int PRIMARY KEY,  
 C2 varchar(50) SPARSE NULL,  
@@ -1110,7 +1102,7 @@ GO
   
  To add an additional sparse column `C5`, execute the following statement.  
   
-```  
+```sql  
 ALTER TABLE T1  
 ADD C5 char(100) SPARSE NULL ;  
 GO  
@@ -1118,7 +1110,7 @@ GO
   
  To convert the `C4` non-sparse column to a sparse column, execute the following statement.  
   
-```  
+```sql  
 ALTER TABLE T1  
 ALTER COLUMN C4 ADD SPARSE ;  
 GO  
@@ -1126,7 +1118,7 @@ GO
   
  To convert the `C4` sparse column to a nonsparse column, execute the following statement.  
   
-```  
+```sql  
 ALTER TABLE T1  
 ALTER COLUMN C4 DROP SPARSE;  
 GO  
@@ -1135,7 +1127,7 @@ GO
 #### I. Adding a column set  
  The following examples show adding a column to table `T2`. A column set cannot be added to a table that already contains sparse columns. The code to create table `T2` is as follows.  
   
-```  
+```sql  
 CREATE TABLE T2  
 (C1 int PRIMARY KEY,  
 C2 varchar(50) NULL,  
@@ -1146,7 +1138,7 @@ GO
   
  The following three statements add a column set named `CS`, and then modify columns `C2` and `C3` to `SPARSE`.  
   
-```  
+```sql  
 ALTER TABLE T2  
 ADD CS XML COLUMN_SET FOR ALL_SPARSE_COLUMNS ;  
 GO  
@@ -1163,7 +1155,7 @@ GO
 #### J. Adding an encrypted column  
  The following statement adds an encrypted column named `PromotionCode`.  
   
-```  
+```sql  
 ALTER TABLE Customers ADD  
     PromotionCode nvarchar(100)   
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = MyCEK,  
@@ -1171,13 +1163,13 @@ ALTER TABLE Customers ADD
     ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') ;  
 ```  
   
-###  <a name="Drop"></a> Dropping Columns and Constraints  
+###  <a name="Drop"></a>Dropping Columns and Constraints  
  The examples in this section demonstrate dropping columns and constraints.  
   
 #### A. Dropping a column or columns  
  The first example modifies a table to remove a column. The second example removes multiple columns.  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exb   
     (column_a INT  
      ,column_b VARCHAR(20) NULL  
@@ -1189,13 +1181,12 @@ ALTER TABLE dbo.doc_exb DROP COLUMN column_b ;
 GO  
 -- Remove multiple columns.  
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;  
-  
 ```  
   
 #### B. Dropping constraints and columns  
  The first example removes a `UNIQUE` constraint from a table. The second example removes two constraints and a single column.  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exc ( column_a int NOT NULL CONSTRAINT my_constraint UNIQUE) ;  
 GO  
   
@@ -1218,14 +1209,12 @@ ALTER TABLE dbo.doc_exc
   
     DROP CONSTRAINT CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;  
 GO  
-  
 ```  
   
 #### C. Dropping a PRIMARY KEY constraint in the ONLINE mode  
  The following example deletes a PRIMARY KEY constraint with the `ONLINE` option set to `ON`.  
   
-```  
-  
+```sql  
 ALTER TABLE Production.TransactionHistoryArchive  
 DROP CONSTRAINT PK_TransactionHistoryArchive_TransactionID  
 WITH (ONLINE = ON);  
@@ -1235,7 +1224,7 @@ GO
 #### D. Adding and dropping a FOREIGN KEY constraint  
  The following example creates the table `ContactBackup`, and then alters the table, first by adding a `FOREIGN KEY` constraint that references the table `Person.Person`, then by dropping the `FOREIGN KEY` constraint.  
   
-```  
+```sql  
 CREATE TABLE Person.ContactBackup  
     (ContactID int) ;  
 GO  
@@ -1259,7 +1248,7 @@ DROP TABLE Person.ContactBackup ;
 #### A. Changing the data type of a column  
  The following example changes a column of a table from `INT` to `DECIMAL`.  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exy (column_a INT ) ;  
 GO  
 INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;  
@@ -1273,7 +1262,7 @@ GO
 #### B. Changing the size of a column  
  The following example increases the size of a **varchar** column and the precision and scale of a **decimal** column. Because the columns contain data, the column size can only be increased. Also notice that `col_a` is defined in a unique index. The size of `col_a` can still be increased because the data type is a **varchar** and the index is not the result of a PRIMARY KEY constraint.  
   
-```  
+```sql  
 -- Create a two-column table with a unique index on the varchar column.  
 CREATE TABLE dbo.doc_exy ( col_a varchar(5) UNIQUE NOT NULL, col_b decimal (4,2));  
 GO  
@@ -1300,7 +1289,7 @@ FROM sys.columns WHERE object_id = OBJECT_ID(N'dbo.doc_exy');
 #### C. Changing column collation  
  The following example shows how to change the collation of a column. Frist, a table is created table with the default user collation.  
   
-```  
+```sql  
 CREATE TABLE T3  
 (C1 int PRIMARY KEY,  
 C2 varchar(50) NULL,  
@@ -1311,13 +1300,11 @@ GO
   
  Next, column `C2` collation is changed to Latin1_General_BIN. Note that the data type is required, even though it is not changed.  
   
-```  
+```sql  
 ALTER TABLE T3  
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
-  
 ```  
-
   
 ###  <a name="alter_table"></a> Altering a Table Definition  
  The examples in this section demonstrate how to alter the definition of a table.  
@@ -1325,7 +1312,7 @@ GO
 #### A. Modifying a table to change the compression  
  The following example changes the compression of a nonpartitioned table. The heap or clustered index will be rebuilt. If the table is a heap, all nonclustered indexes will be rebuilt.  
   
-```  
+```sql  
 ALTER TABLE T1   
 REBUILD WITH (DATA_COMPRESSION = PAGE);  
 ```  
@@ -1334,7 +1321,7 @@ REBUILD WITH (DATA_COMPRESSION = PAGE);
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 ALTER TABLE PartitionTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  NONE) ;  
 GO  
@@ -1344,7 +1331,7 @@ The same operation using the following alternate syntax causes all partitions in
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 ALTER TABLE PartitionTable1   
 REBUILD PARTITION = ALL   
 WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;  
@@ -1357,7 +1344,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 ALTER TABLE PartitionTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;  
 GO  
@@ -1367,7 +1354,7 @@ The following example decompresses a columnstore table partition that was  compr
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 ALTER TABLE PartitionTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE) ;  
 GO  
@@ -1376,7 +1363,7 @@ GO
 #### C. Switching partitions between tables  
  The following example creates a partitioned table, assuming that partition scheme `myRangePS1` is already created in the database. Next, a non-partitioned table is created with the same structure as the partitioned table and on the same filegroup as `PARTITION 2` of table `PartitionTable`. The data of `PARTITION 2` of table `PartitionTable` is then switched into table `NonPartitionTable`.  
   
-```  
+```sql  
 CREATE TABLE PartitionTable (col1 int, col2 char(10))  
 ON myRangePS1 (col1) ;  
 GO  
@@ -1392,7 +1379,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 ALTER TABLE dbo.T1 SET (LOCK_ESCALATION = AUTO);  
 GO  
 ```  
@@ -1402,7 +1389,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 ALTER TABLE Person.Person  
 ENABLE CHANGE_TRACKING;  
@@ -1412,7 +1399,7 @@ The following example enables change tracking and enables the tracking of the co
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TABLE Person.Person  
@@ -1424,20 +1411,19 @@ The following example disables change tracking on the `Person.Person` table.
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 Go  
 ALTER TABLE Person.Person  
 DISABLE CHANGE_TRACKING;  
 ```  
 
-  
-###  <a name="disable_enable"></a> Disabling and Enabling Constraints and Triggers  
+###  <a name="disable_enable"></a>Disabling and Enabling Constraints and Triggers  
   
 #### A. Disabling and re-enabling a constraint  
  The following example disables a constraint that limits the salaries accepted in the data. `NOCHECK CONSTRAINT` is used with `ALTER TABLE` to disable the constraint and allow for an insert that would typically violate the constraint. `CHECK CONSTRAINT` re-enables the constraint.  
   
-```  
+```sql  
 CREATE TABLE dbo.cnst_example   
 (id INT NOT NULL,  
  name VARCHAR(10) NOT NULL,  
@@ -1464,7 +1450,7 @@ INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 #### B. Disabling and re-enabling a trigger  
  The following example uses the `DISABLE TRIGGER` option of `ALTER TABLE` to disable the trigger and allow for an insert that would typically violate the trigger. `ENABLE TRIGGER` is then used to re-enable the trigger.  
   
-```  
+```sql  
 CREATE TABLE dbo.trig_example   
 (id INT,   
 name VARCHAR(12),  
@@ -1497,15 +1483,14 @@ INSERT INTO dbo.trig_example VALUES (3,'Mary Booth',100001) ;
 GO  
 ```  
  
-  
-### Online Operations  
+### <a name="online"></a>Online Operations  
   
 #### A. Online index rebuild using low priority wait options  
  The following example shows how to perform an online index rebuild specifying the low priority wait options.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 ALTER TABLE T1   
 REBUILD WITH   
 (  
@@ -1521,7 +1506,7 @@ REBUILD WITH
   
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-```  
+```sql  
 CREATE TABLE dbo.doc_exy (column_a INT ) ;  
 GO  
 INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;  
@@ -1542,7 +1527,7 @@ GO
 ### A. Add System Versioning to Existing Tables  
  The following example shows how to add system versioning to an existing table and create a future history table. This example assumes that there is an existing table called `InsurancePolicy` with a primary key defined. This example populates the newly created period columns for system versioning using default values for the start and end times because these values cannot be null. This example uses the HIDDEN clause to ensure no impact on existing applications interacting with the current table.  It also uses HISTORY_RETENTION_PERIOD that is available on [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only. 
   
-```  
+```sql  
 --Alter non-temporal table to define periods for system versioning  
 ALTER TABLE InsurancePolicy  
 ADD PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime),   
@@ -1558,7 +1543,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ### B. Migrate An Existing Solution to Use System Versioning  
  The following example shows how to migrate to system versioning from a solution that uses triggers to mimic temporal support. The example assumes there is an existing solution that uses a `ProjectTaskCurrent` table and a `ProjectTaskHistory` table for its existing solution, that is uses the Changed Date and Revised Date columns for its periods, that these period columns do not use the datetime2 datatype and that the `ProjectTaskCurrent` table has a primary key defined.  
   
-```  
+```sql  
 -- Drop existing trigger  
 DROP TRIGGER ProjectTaskCurrent_Trigger;  
 -- Adjust the schema for current and history table  
@@ -1581,7 +1566,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSIS
 ### C. Disabling and Re-Enabling System Versioning to Change Table Schema  
  This example shows how to disable system versioning on the `Department` table, add a column, and re-enable system versioning. Disabling system versioning is required in order to modify the table schema. Perform these steps within a transaction to prevent updates to both tables while updating the table schema, which enables the DBA to skip the data consistency check when re-enabling system versioning and gain a performance benefit. Note that tasks such as creating statistics, switching partitions or applying compression to one or both tables does not require disabling system versioning.  
   
-```  
+```sql  
 BEGIN TRAN  
 /* Takes schema lock on both tables */  
 ALTER TABLE Department  
@@ -1602,7 +1587,7 @@ COMMIT
 ### D. Removing System Versioning  
  This example shows how to completely remove system versioning from the Department table and drop the `DepartmentHistory` table. Optionally, you might also want to drop the period columns used by the system to record system versioning information. Note that you cannot drop either the `Department` or the `DepartmentHistory` tables while system versioning is enabled.  
   
-```  
+```sql  
 ALTER TABLE Department  
     SET (SYSTEM_VERSIONING = OFF);  
 ALTER TABLE Department  
@@ -1616,7 +1601,7 @@ DROP TABLE DepartmentHistory;
 ### E. Determining if a table is partitioned  
  The following query returns one or more rows if the table `FactResellerSales` is partitioned. If the table is not partitioned, no rows are returned.  
   
-```  
+```sql  
 SELECT * FROM sys.partitions AS p  
 JOIN sys.tables AS t  
     ON  p.object_id = t.object_id  
@@ -1627,7 +1612,7 @@ WHERE p.partition_id IS NOT NULL
 ### F. Determining boundary values for a partitioned table  
  The following query returns the boundary values for each partition in the `FactResellerSales` table.  
   
-```  
+```sql  
 SELECT t.name AS TableName, i.name AS IndexName, p.partition_number, 
     p.partition_id, i.data_space_id, f.function_id, f.type_desc, 
     r.boundary_id, r.value AS BoundaryValue   
@@ -1649,7 +1634,7 @@ ORDER BY p.partition_number;
 ### G. Determining the partition column for a partitioned table  
  The following query returns the name of the partitioning column for table. `FactResellerSales`.  
   
-```  
+```sql  
 SELECT t.object_id AS Object_ID, t.name AS TableName, 
     ic.column_id as PartitioningColumnID, c.name AS PartitioningColumnName   
 FROM sys.tables AS t  
@@ -1668,11 +1653,11 @@ AND c.column_id = ic.column_id;
 ```  
   
 ### H. Merging two partitions  
- The following example merges two partitions on a table.  
+The following example merges two partitions on a table.  
   
- The `Customer` table has the following definition:  
+The `Customer` table has the following definition:  
   
-```  
+```sql  
 CREATE TABLE Customer (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -1686,13 +1671,13 @@ WITH
   
  The following command combines the 10 and 25 partition boundaries.  
   
-```  
+```sql  
 ALTER TABLE Customer MERGE RANGE (10);  
 ```  
   
  The new DDL for the table is:  
   
-```  
+```sql  
 CREATE TABLE Customer (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -1709,7 +1694,7 @@ WITH
   
  The `Customer` table has the following DDL:  
   
-```  
+```sql  
 DROP TABLE Customer;  
   
 CREATE TABLE Customer (  
@@ -1725,13 +1710,13 @@ WITH
   
  The following command creates a new partition bound by the value 75, between 50 and 100.  
   
-```  
+```sql  
 ALTER TABLE Customer SPLIT RANGE (75);  
 ```  
   
  The new DDL for the table is:  
   
-```  
+```sql  
 CREATE TABLE Customer (  
    id int NOT NULL,  
    lastName varchar(20),  
@@ -1747,7 +1732,7 @@ CREATE TABLE Customer (
   
  The `Orders` table has the following DDL:  
   
-```  
+```sql  
 CREATE TABLE Orders (  
     id INT,  
     city VARCHAR (25),  
@@ -1777,7 +1762,7 @@ WITH
   
 The `OrdersHistory` table has the following DDL, which has identical columns and column names as the `Orders` table. Both are hash-distributed on the `id` column.  
   
-```  
+```sql  
 CREATE TABLE OrdersHistory (  
    id INT,  
    city VARCHAR (25),  
@@ -1796,7 +1781,7 @@ WITH
   
 For the previous two tables, the following command moves all rows with `OrderDate < '2004-01-01'` from the `Orders` table to the `OrdersHistory` table.  
   
-```  
+```sql  
 ALTER TABLE Orders SWITCH PARTITION 1 TO OrdersHistory PARTITION 1;  
 ```  
   
@@ -1817,7 +1802,7 @@ ALTER TABLE Orders SWITCH PARTITION 1 TO OrdersHistory PARTITION 1;
   
 To clean up the `Orders` table, you can remove the empty partition by merging partitions 1 and 2 as follows:  
   
-```  
+```sql  
 ALTER TABLE Orders MERGE RANGE ('2004-01-01');  
 ```  
   
@@ -1832,7 +1817,7 @@ ALTER TABLE Orders MERGE RANGE ('2004-01-01');
   
 Suppose another year passes and you are ready to archive the year 2005. You can allocate an empty partition for the year 2005 in the `OrdersHistory` table by splitting the empty partition as follows:  
   
-```  
+```sql  
 ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');  
 ```  
   

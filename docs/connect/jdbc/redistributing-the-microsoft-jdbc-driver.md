@@ -1,7 +1,7 @@
 ---
 title: "Redistributing the Microsoft JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -35,6 +35,6 @@ ms.workload: "Inactive"
  If you do not have one already, you can get a  [Windows Live ID](https://signup.live.com/)  
   
 
-## Redistribute the Microsoft JDBC 4.1, 4.2, and 6.0 Driver
-Please review the “Distributable Code” clause in the license agreements for the 4.1, 4.2, 6.0, and 6.2 versions of the driver.
+## Redistribute the Microsoft JDBC 4.1, 4.2, 6.0, 6.2, and 6.4 Driver
+Please review the “Distributable Code” clause in the license agreements for the 4.1, 4.2, 6.0, 6.2 and 6.4 versions of the driver.
   

@@ -1,7 +1,7 @@
 ---
 title: "FIPS Mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/28/2017"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -93,7 +93,7 @@ In order to run the JDBC Driver in FIPS-compliant mode, configure connection pro
 |trustStore|String|null|Your Java Keystore file path where you imported your certificate. If you install certificate on your system, then no need to pass anything. Driver uses cacerts or jssecacerts files.||
 |trustStorePassword|String|null|The password used to check the integrity of the trustStore data.||
 |fips|boolean ["true / false"]|"false"|For fips enabled JVM this property should be **true**|Added in 6.1.4||
-|fipsProvider|String|null|FIPS provider configured in JVM. For example, BCFIPS or SunPKCS11-NSS |Added in 6.1.2|
+|fipsProvider|String|null|FIPS provider configured in JVM. For example, BCFIPS or SunPKCS11-NSS |Added in 6.1.2, removed in 6.4.0 - see the details [Here](https://github.com/Microsoft/mssql-jdbc/pull/460).|
 |trustStoreType|String|JKS|For FIPS mode set trust store type either PKCS12 or type defined by FIPS provider |Added in 6.1.2||
 
 

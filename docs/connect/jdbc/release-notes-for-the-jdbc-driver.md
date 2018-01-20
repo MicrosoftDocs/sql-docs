@@ -1,7 +1,7 @@
 ---
 title: "Release Notes for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -21,6 +21,49 @@ ms.workload: "On Demand"
 ---
 # Release Notes for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+## Updates in Microsoft JDBC Driver 6.4 for SQL Server
+The Microsoft JDBC Driver 6.4 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.4 package are named according to Java version compatibility. For example, the mssql-jdbc-6.4.0.jre8.jar file from the 6.4 package is recommended to be used with Java 8. 
+
+**Added new connection property: sslProtocol**
+
+Added a new connection property that lets users specify the TLS protocol keyword. Possible values are: "TLS", "TLSv1", "TLSv1.1", "TLSv1.2". See [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol) for details.
+
+**Removed connection property: fipsProvider**
+
+fipsProvider has been removed from the list of accepted connection properties.
+
+**Added connection properties for specifying custom TrustManager**
+
+Two new connection properties have been added: **trustManagerClass** and **trustManagerConstructorArg**. This allows for dynamic specification of a set of certificates that are trusted on a per connection basis without modifying the global settings for the JVM environment.
+
+**Connection property sendTimeAsDatetime defaulted to 'false'**
+
+**sendTimeAsDatetime** has been defaulted to 'false'. Details can be found in [Configuring How java.sql.Time Values are Sent to the Server](https://docs.microsoft.com/en-us/sql/connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server).
+
+**Added support for datetime/smallDatetime in TVP**
+
+The JDBC Driver now supports datetime/smallDatetime values with TVP.
+
+**Added support for sql_variant datatype**
+
+The JDBC Driver now supports sql_variant datatypes to be used with SQL Server.
+
+**Updated azure-keyvault dependency to version 1.0.0**
+
+The JDBC Driver has updated its dependency for Azure Key Vault to a stable release of 1.0.0.
+
+**Implemented Prepared Statement Metadata Caching**
+
+The JDBC Driver has implemented Prepared Statement Metadata Caching for performance improvement.
+
+**Added support for AAD Integrated Authentication on Linux/Mac**
+
+The JDBC Driver now supports AAD Integrated Authentication on Linux/Mac platforms.
+
+**Updated ADAL4J version to 1.4.0**
+
+The JDBC Driver has updated its dependency upon ADAL4J to version 1.4.0.
 
 ## Updates in Microsoft JDBC Driver 6.2 for SQL Server
 The Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.0 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.1.jre8.jar file from the 6.2 package is recommended to be used with Java 8. 

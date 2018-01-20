@@ -86,7 +86,7 @@ ms.workload: "Inactive"
   
 |Name|Description|  
 |----------|-----------------|  
-|public SQLServerColumnEncryptionAzureKeyVaultProvider (SQLServerKeyVaultAuthenticationCallback authenticationCallback, ExecutorService executorService)|Key store provider for Azure Key Vault.  You need to provide an implementation for the SQLServerKeyVaultAuthenticationCallback interface to retrieve an access token for the key in Azure Key Vault.|  
+|public SQLServerColumnEncryptionAzureKeyVaultProvider (String clientId, String clientKey)|Key store provider for Azure Key Vault.  You need to provide the identifier and the key of the client requesting the token to authenticate to Azure Key Vault.|  
   
  Methods  
   

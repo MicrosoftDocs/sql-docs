@@ -1,7 +1,7 @@
 ---
 title: "Frequently Asked Questions (FAQ) for JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -32,6 +32,14 @@ The JDBC Driver is open source and the source code can be found on [GitHub](http
  See the [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.  
   
  **What should I know when upgrading my driver?**  
+ The Microsoft JDBC Driver 6.4 supports the JDBC 4.1, 4.2, and 4.3 specifications and includes three JAR class libraries in the installation package as follows:  
+  
+|JAR|JDBC Specification|JDK Version|  
+|-|-|-|  
+|mssql-jdbc-6.4.0.jre9.jar|JDBC 4.3, 4.2, and 4.1|JDK 9.0|  
+|mssql-jdbc-6.4.0.jre8.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0|  
+|mssql-jdbc-6.4.0.jre7.jar|JDBC 4.1 and 4.0|JDK 7.0|  
+
  The Microsoft JDBC Driver 6.2 supports the JDBC 4.0, 4.1, and 4.2 specifications and includes two JAR class libraries in the installation package as follows:  
   
 |JAR|JDBC Specification|JDK Version|  
@@ -66,7 +74,7 @@ The JDBC Driver is open source and the source code can be found on [GitHub](http
  The Microsoft JDBC Driver for SQL Server is available at no additional charge.  
   
  **Can I redistribute the driver?** 
- The JDBC Drivers 4.1, 4.2, 6.0, and 6.2 are redistributable. Please review the “Distributable Code” clause in the license agreements.
+ The JDBC Drivers 4.1, 4.2, 6.0, 6.2, and 6.4 are redistributable. Please review the “Distributable Code” clause in the license agreements.
  
  The JDBC Driver 4.0 is freely redistributable under a separate Redistribution License that requires registration. To register or for more information, see our  [Redistributing the Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md). 
  

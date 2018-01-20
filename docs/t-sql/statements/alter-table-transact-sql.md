@@ -142,7 +142,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
     | SWITCH [ PARTITION source_partition_number_expression ]  
         TO target_table   
         [ PARTITION target_partition_number_expression ]  
-        [ WITH ( <low_lock_priority_wait> ) ]  
+        [ WITH ( <low_priority_lock_wait> ) ]  
     | SET   
         (  
             [ FILESTREAM_ON =   
@@ -315,21 +315,22 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 The data type of **text**, **ntext** and **image** columns can be changed only in the following ways:  
   
-    -   **text** to **varchar(max)**, **nvarchar(max)**, or **xml**  
+-   **text** to **varchar(max)**, **nvarchar(max)**, or **xml**  
   
-    -   **ntext** to **varchar(max)**, **nvarchar(max)**, or **xml**  
+-   **ntext** to **varchar(max)**, **nvarchar(max)**, or **xml**  
   
-    -   **image** to **varbinary(max)**  
+-   **image** to **varbinary(max)**  
   
 Some data type changes may cause a change in the data. For example, changing an **nchar** or **nvarchar** column to **char** or **varchar** may cause the conversion of extended characters. For more information, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reducing the precision or scale of a column may cause data truncation.  
   
-     The data type of a column of a partitioned table cannot be changed.  
+> [!NOTE]
+> The data type of a column of a partitioned table cannot be changed.  
+>  
+> The data type of columns included in an index cannot be changed unless the column is a **varchar**, **nvarchar**, or **varbinary** data type, and the new size is equal to or larger than the old size.  
+>  
+> A column included in a primary key constraint, cannot be changed from **NOT NULL** to **NULL**.  
   
- The data type of columns included in an index cannot be changed unless the column is a **varchar**, **nvarchar**, or **varbinary** data type, and the new size is equal to or larger than the old size.  
-  
- A columns included in a primary key constraint, cannot be changed from **NOT NULL** to **NULL**.  
-  
- If the column being modified is encrypted using ENCRYPTED WITH, you can change the datatype to a compatible datatype (such as INT to BIGINT) but you cannot change any encryption settings.  
+If the column being modified is encrypted using `ENCRYPTED WITH`, you can change the datatype to a compatible datatype (such as INT to BIGINT) but you cannot change any encryption settings.  
   
  *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can be a maximum of 128 characters. For new columns, *column_name* can be omitted for columns created with a **timestamp** data type. The name **timestamp** is used if no *column_name* is specified for a **timestamp** data type column.  
@@ -346,19 +347,14 @@ Some data type changes may cause a change in the data. For example, changing an 
 The following are criteria for *type_name* of an altered column:  
   
 -   The previous data type must be implicitly convertible to the new data type.  
-  
 -   *type_name* cannot be **timestamp**.  
-  
 -   ANSI_NULL defaults are always on for ALTER COLUMN; if not specified, the column is nullable.  
-  
 -   ANSI_PADDING padding is always ON for ALTER COLUMN.  
-  
 -   If the modified column is an identity column, *new_data_type* must be a data type that supports the identity property.  
-  
 -   The current setting for SET ARITHABORT is ignored. ALTER TABLE operates as if ARITHABORT is set to ON.  
   
 > [!NOTE]  
->  If the COLLATE clause is not specified, changing the data type of a column will cause a collation change to the default collation of the database.  
+> If the COLLATE clause is not specified, changing the data type of a column will cause a collation change to the default collation of the database.  
   
  *precision*  
  Is the precision for the specified data type. For more information about valid precision values, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
@@ -382,12 +378,10 @@ COLLATE \< *collation_name* >
  ALTER COLUMN cannot have a collation change if one or more of the following conditions exist:  
   
 -   If a CHECK constraint, FOREIGN KEY constraint, or computed columns reference the column changed.  
-  
 -   If any index, statistics, or full-text index are created on the column. Statistics created automatically on the column changed are dropped if the column collation is changed.  
-  
 -   If a schema-bound view or function references the column.  
   
- For more information, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+For more information, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
 NULL | NOT NULL  
  Specifies whether the column can accept null values. Columns that do not allow null values can be added with ALTER TABLE only if they have a default specified or if the table is empty. NOT NULL can be specified for computed columns only if PERSISTED is also specified. If the new column allows null values and no default is specified, the new column contains a null value for each row in the table. If the new column allows null values and a default definition is added with the new column, WITH VALUES can be used to store the default value in the new column for each existing row in the table.  
@@ -396,7 +390,7 @@ NULL | NOT NULL
   
  NULL can be specified in ALTER COLUMN to force a NOT NULL column to allow null values, except for columns in PRIMARY KEY constraints. NOT NULL can be specified in ALTER COLUMN only if the column contains no null values. The null values must be updated to some value before the ALTER COLUMN NOT NULL is allowed, for example:  
   
-```  
+```sql  
 UPDATE MyTable SET NullCol = N'some_value' WHERE NullCol IS NULL;  
 ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;  
 ```  
@@ -406,7 +400,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
  If you add a column with a user-defined data type, we recommend that you define the column with the same nullability as the user-defined data type and specify a default value for the column. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
 > [!NOTE]  
->  If NULL or NOT NULL is specified with ALTER COLUMN, *new_data_type* [(*precision* [, *scale* ])] must also be specified. If the data type, precision, and scale are not changed, specify the current column values.  
+> If NULL or NOT NULL is specified with ALTER COLUMN, *new_data_type* [(*precision* [, *scale* ])] must also be specified. If the data type, precision, and scale are not changed, specify the current column values.  
   
  [ {ADD | DROP} ROWGUIDCOL ]  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -453,11 +447,11 @@ WITH ( ONLINE = ON | OFF) \<as applies to altering a column>
   
 -   Online alter is not supported when the column is referenced by a check constraint and the alter operation is restricting the precision of the column (numeric or datetime).  
   
--   The **low_priority_lock_wait** option cannot be used with online alter column.  
+-   The `WAIT_AT_LOW_PRIORITY` option cannot be used with online alter column.  
   
--   ALTER COLUMN … ADD/DROP PERSISTED is not supported for online alter column.  
+-   `ALTER COLUMN … ADD/DROP PERSISTED` is not supported for online alter column.  
   
--   ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION is not affected by online alter column.  
+-   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` is not affected by online alter column.  
   
 -   Online alter column does not support altering a table where change tracking is enabled or that is a publisher of merge replication.  
   
@@ -469,7 +463,7 @@ WITH ( ONLINE = ON | OFF) \<as applies to altering a column>
   
 -   Online alter column does not support altering more than one column concurrently.  
   
--   Online alter column has no effect in case of system-versioned temporal table. ALTER column is not performed as online regardless of which value was specified for  ONLINE option.  
+-   Online alter column has no effect in case of system-versioned temporal table. ALTER column is not performed as online regardless of which value was specified for ONLINE option.  
   
 Online alter column has similar requirements, restrictions, and functionality as online index rebuild. This includes:  
   
@@ -822,7 +816,7 @@ ALTER TABLE \<table_name>
 WAIT_AT_LOW_PRIORITY  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- An online index rebuild has to wait for blocking operations on this table. **WAIT_AT_LOW_PRIORITY** indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to WA`IT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
+ An online index rebuild has to wait for blocking operations on this table. **WAIT_AT_LOW_PRIORITY** indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
  MAX_DURATION = *time* [**MINUTES** ]  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -857,10 +851,10 @@ IF EXISTS
  You can change the length, precision, or scale of a column by specifying a new size for the column data type in the ALTER COLUMN clause. If data exists in the column, the new size cannot be smaller than the maximum size of the data. Also, the column cannot be defined in an index, unless the column is a **varchar**, **nvarchar**, or **varbinary** data type and the index is not the result of a PRIMARY KEY constraint. See example P.  
   
 ## Locks and ALTER TABLE  
- The changes specified in ALTER TABLE are implemented immediately. If the changes require modifications of the rows in the table, ALTER TABLE updates the rows. ALTER TABLE acquires a schema modify (SCH-M) lock on the table to make sure that no other connections reference even the metadata for the table during the change, except online index operations that require a very short SCH-M lock at the end. In an ALTER TABLE…SWITCH operation, the lock is acquired on both the source and target tables. The modifications made to the table are logged and fully recoverable. Changes that affect all the rows in very large tables, such as dropping a column or, on some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adding a NOT NULL column with a default value, can take a long time to complete and generate many log records. These ALTER TABLE statements should be executed with the same care as any INSERT, UPDATE, or DELETE statement that affects many rows.  
+ The changes specified in ALTER TABLE are implemented immediately. If the changes require modifications of the rows in the table, ALTER TABLE updates the rows. ALTER TABLE acquires a schema modify (SCH-M) lock on the table to make sure that no other connections reference even the metadata for the table during the change, except online index operations that require a very short SCH-M lock at the end. In an `ALTER TABLE…SWITCH` operation, the lock is acquired on both the source and target tables. The modifications made to the table are logged and fully recoverable. Changes that affect all the rows in very large tables, such as dropping a column or, on some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adding a NOT NULL column with a default value, can take a long time to complete and generate many log records. These ALTER TABLE statements should be executed with the same care as any INSERT, UPDATE, or DELETE statement that affects many rows.  
   
 ### Adding NOT NULL Columns as an Online Operation  
- Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, adding a NOT NULL column with a default value is an online operation when the default value is a *runtime constant*. This means that the operation is completed almost instantaneously regardless of the number of rows in the table. This is because the existing rows in the table are not updated during the operation; instead, the default value is stored only in the metadata of the table and the value is looked up as needed in queries that access these rows. This behavior is automatic; no additional syntax is required to implement the online operation beyond the ADD COLUMN syntax. A runtime constant is an expression that produces the same value at runtime for each row in the table regardless of its determinism. For example, the constant expression "My temporary data", or the system function GETUTCDATETIME() are runtime constants. In contrast, the functions NEWID() or NEWSEQUENTIALID() are not runtime constants because a unique value is produced for each row in the table. Adding a NOT NULL column with a default value that is not a runtime constant is always performed offline and an exclusive (SCH-M) lock is acquired for the duration of the operation.  
+ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, adding a NOT NULL column with a default value is an online operation when the default value is a *runtime constant*. This means that the operation is completed almost instantaneously regardless of the number of rows in the table. This is because the existing rows in the table are not updated during the operation; instead, the default value is stored only in the metadata of the table and the value is looked up as needed in queries that access these rows. This behavior is automatic; no additional syntax is required to implement the online operation beyond the ADD COLUMN syntax. A runtime constant is an expression that produces the same value at runtime for each row in the table regardless of its determinism. For example, the constant expression "My temporary data", or the system function GETUTCDATETIME() are runtime constants. In contrast, the functions `NEWID()` or `NEWSEQUENTIALID()` are not runtime constants because a unique value is produced for each row in the table. Adding a NOT NULL column with a default value that is not a runtime constant is always performed offline and an exclusive (SCH-M) lock is acquired for the duration of the operation.  
   
  While the existing rows reference the value stored in metadata, the default value is stored on the row for any new rows that are inserted and do not specify another value for the column. The default value stored in metadata is moved to an existing row when the row is updated (even if the actual column is not specified in the UPDATE statement), or if the table or clustered index is rebuilt.  
   
@@ -885,9 +879,7 @@ IF EXISTS
  When a constraint that created a clustered index is deleted, the data rows that were stored in the leaf level of the clustered index are stored in a nonclustered table. You can drop the clustered index and move the resulting table to another filegroup or partition scheme in a single transaction by specifying the MOVE TO option. The MOVE TO option has the following restrictions:  
   
 -   MOVE TO is not valid for indexed views or nonclustered indexes.  
-  
 -   The partition scheme or filegroup must already exist.  
-  
 -   If MOVE TO is not specified, the table will be located in the same partition scheme or filegroup as was defined for the clustered index.  
   
 When you drop a clustered index, you can specify ONLINE **=** ON option so the DROP INDEX transaction does not block queries and modifications to the underlying data and associated nonclustered indexes.  
@@ -965,7 +957,6 @@ CREATE TABLE dbo.doc_exa (column_a INT) ;
 GO  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;  
 GO  
-  
 ```  
   
 #### B. Adding a column with a constraint  

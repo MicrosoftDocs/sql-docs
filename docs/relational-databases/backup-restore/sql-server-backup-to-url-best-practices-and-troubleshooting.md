@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Backup to URL Best Practices and Troubleshooting | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -42,6 +42,8 @@ ms.workload: "On Demand"
 -   Failed backup activity can result in an invalid backup file. We recommend periodic identification of failed backups and deleting the blob files. For more information, see [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
 -   Using the **WITH COMPRESSION** option during backup can minimize your storage costs and storage transaction costs. It can also decrease the time taken to complete the backup process.  
+
+- Set MAXTRANSFERSIZE and BLOCKSIZE arguments as reccomended at [SQL Server Backup to URL](./sql-server-backup-to-url.md)
   
 ## Handling Large Files  
   

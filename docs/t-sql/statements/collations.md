@@ -37,7 +37,6 @@ ms.workload: "Active"
 ## Syntax  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
@@ -88,7 +87,7 @@ COLLATE { <collation_name> | database_default }
   
  You can execute the system function [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) to retrieve a list of all the valid collation names for Windows collations and SQL Server collations:  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -101,9 +100,11 @@ FROM fn_helpcollations();
   
 -   When restoring or attaching a database, the default collation of the database and the collation of any **char**, **varchar**, and **text** columns or parameters in the database must be supported by the operating system.  
   
-     Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. Data loss during code page translations is not reported.  
+> [!NOTE]
+> Code page translations are supported for **char** and **varchar** data types, but not for **text** data type. Data loss during code page translations is not reported.  
   
- If the collation specified or the collation used by the referenced object uses a code page not supported by Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays an error.  
+> [!NOTE]
+> If the collation specified or the collation used by the referenced object uses a code page not supported by Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays an error.  
   
 ## Examples  
   
@@ -129,30 +130,30 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- Here are the results from the first query.  
+Here are the results from the first query.  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- Here are the results from the second query.  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+Here are the results from the second query.  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### B. Additional examples  
- For additional examples that use **COLLATE**, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) example **V. Changing column collation**.  
+ For additional examples that use **COLLATE**, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) example **G. Creating a database and specifying a collation name and options**, and [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column) example **V. Changing column collation**.  
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

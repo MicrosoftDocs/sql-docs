@@ -1510,12 +1510,12 @@ DROP TABLE dbo.doc_exy ;
 GO  
 ```  
   
-##  <a name="system_versioning"></a> System Versioning  
+###  <a name="system_versioning"></a> System Versioning  
  The following four examples will help you become familiar with the syntax for using system versioning. For additional assistance, see [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).  
   
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-### A. Add System Versioning to Existing Tables  
+#### A. Add System Versioning to Existing Tables  
  The following example shows how to add system versioning to an existing table and create a future history table. This example assumes that there is an existing table called `InsurancePolicy` with a primary key defined. This example populates the newly created period columns for system versioning using default values for the start and end times because these values cannot be null. This example uses the HIDDEN clause to ensure no impact on existing applications interacting with the current table.  It also uses HISTORY_RETENTION_PERIOD that is available on [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] only. 
   
 ```sql  
@@ -1531,7 +1531,7 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));  
 ```  
   
-### B. Migrate An Existing Solution to Use System Versioning  
+#### B. Migrate An Existing Solution to Use System Versioning  
  The following example shows how to migrate to system versioning from a solution that uses triggers to mimic temporal support. The example assumes there is an existing solution that uses a `ProjectTaskCurrent` table and a `ProjectTaskHistory` table for its existing solution, that is uses the Changed Date and Revised Date columns for its periods, that these period columns do not use the datetime2 datatype and that the `ProjectTaskCurrent` table has a primary key defined.  
   
 ```sql  
@@ -1554,7 +1554,7 @@ ALTER TABLE ProjectTaskCurrent
 SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))  
 ```  
   
-### C. Disabling and Re-Enabling System Versioning to Change Table Schema  
+#### C. Disabling and Re-Enabling System Versioning to Change Table Schema  
  This example shows how to disable system versioning on the `Department` table, add a column, and re-enable system versioning. Disabling system versioning is required in order to modify the table schema. Perform these steps within a transaction to prevent updates to both tables while updating the table schema, which enables the DBA to skip the data consistency check when re-enabling system versioning and gain a performance benefit. Note that tasks such as creating statistics, switching partitions or applying compression to one or both tables does not require disabling system versioning.  
   
 ```sql  
@@ -1575,7 +1575,7 @@ ALTER TABLE Department
 COMMIT   
 ```  
   
-### D. Removing System Versioning  
+#### D. Removing System Versioning  
  This example shows how to completely remove system versioning from the Department table and drop the `DepartmentHistory` table. Optionally, you might also want to drop the period columns used by the system to record system versioning information. Note that you cannot drop either the `Department` or the `DepartmentHistory` tables while system versioning is enabled.  
   
 ```sql  

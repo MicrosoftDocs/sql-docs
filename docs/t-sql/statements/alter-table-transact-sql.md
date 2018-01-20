@@ -1587,9 +1587,9 @@ DROP TABLE DepartmentHistory;
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following examples A through C use the FactResellerSales table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  
+ The following examples A through C use the `FactResellerSales` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  
   
-### E. Determining if a table is partitioned  
+### A. Determining if a table is partitioned  
  The following query returns one or more rows if the table `FactResellerSales` is partitioned. If the table is not partitioned, no rows are returned.  
   
 ```sql  
@@ -1600,7 +1600,7 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';  
 ```  
   
-### F. Determining boundary values for a partitioned table  
+### B. Determining boundary values for a partitioned table  
  The following query returns the boundary values for each partition in the `FactResellerSales` table.  
   
 ```sql  
@@ -1622,7 +1622,7 @@ WHERE t.name = 'FactResellerSales' AND i.type <= 1
 ORDER BY p.partition_number;  
 ```  
   
-### G. Determining the partition column for a partitioned table  
+### C. Determining the partition column for a partitioned table  
  The following query returns the name of the partitioning column for table. `FactResellerSales`.  
   
 ```sql  
@@ -1643,7 +1643,7 @@ AND i.type <= 1
 AND c.column_id = ic.column_id;  
 ```  
   
-### H. Merging two partitions  
+### D. Merging two partitions  
 The following example merges two partitions on a table.  
   
 The `Customer` table has the following definition:  
@@ -1680,7 +1680,7 @@ WITH
     FOR VALUES (1, 5, 25, 50, 100)));  
 ```  
   
-### I. Splitting a partition  
+### E. Splitting a partition  
  The following example splits a partition on a table.  
   
  The `Customer` table has the following DDL:  
@@ -1718,7 +1718,7 @@ CREATE TABLE Customer (
       FOR VALUES (1, 5, 10, 25, 50, 75, 100 )));  
 ```  
   
-### J. Using SWITCH to move a partition to a history table  
+### F. Using SWITCH to move a partition to a history table  
  The following example moves the data in a partition of the `Orders` table to a partition in the `OrdersHistory` table.  
   
  The `Orders` table has the following DDL:  

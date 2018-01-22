@@ -137,11 +137,7 @@ ms.workload: "Active"
 > Indexed views are not supported on top of temporal queries (queries that use `FOR SYSTEM_TIME` clause)  
 
 ###  <a name="Recommendations"></a> Recommendations  
- When you refer to **datetime** and **smalldatetime** string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). 
-
-Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. This is because the results depend on the LANGUAGE and DATEFORMAT settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`listopad`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting.  
-  
-Implicit conversion of non-Unicode character data between collations is also considered nondeterministic.  
+ When you refer to **datetime** and **smalldatetime** string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). For more information about deterministic and nondeterministic expressions, see the [Considerations](#nondeterministic) section in this page.
 
 Running DML (such as UPDATE, DELETE or INSERT) on a table referenced by a large number of indexed views, or fewer very complex indexed views, those indexed views will have to be updated as well during DML execution. As a result, this may degrade DML query performance or in some cases, a query plan cannot even be produced. In such scenarios, test your DML queries before production use.
   
@@ -155,6 +151,8 @@ Running DML (such as UPDATE, DELETE or INSERT) on a table referenced by a large 
  All indexes on a view are dropped when the view is dropped. All nonclustered indexes and auto-created statistics on the view are dropped when the clustered index is dropped. User-created statistics on the view are maintained. Nonclustered indexes can be individually dropped. Dropping the clustered index on the view removes the stored result set, and the optimizer returns to processing the view like a standard view.  
   
  Indexes on tables and views can be disabled. When a clustered index on a table is disabled, indexes on views associated with the table are also disabled.  
+ 
+<a name="nondeterministic"></a> Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. This is because the results depend on the LANGUAGE and DATEFORMAT settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`listopad`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting. Implicit conversion of non-Unicode character data between collations is also considered nondeterministic.  
   
 ###  <a name="Security"></a> Security  
   

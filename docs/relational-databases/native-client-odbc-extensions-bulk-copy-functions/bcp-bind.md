@@ -118,7 +118,7 @@ bcp_bind(hdbc, szName, 0,
  Is the count of bytes present in the terminator for the program variable, if any. If there is no terminator for the variable, set *cbTerm* to 0.  
   
  *eDataType*  
- Is the enumerated data type of the program variable. The data in the program variable is converted to the type of the database column. If this parameter is 0, no conversion is performed.  
+ Is the BCP data type of the program variable. The data in the program variable is converted to the type of the database column. If this parameter is 0, no conversion is performed.  
   
  The *eDataType* parameter is enumerated by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type tokens in sqlncli.h, not the ODBC C data type enumerators. For example, you can specify a two-byte integer, ODBC type SQL_C_SHORT, using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type SQLINT2.  
   

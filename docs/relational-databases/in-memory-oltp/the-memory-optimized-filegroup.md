@@ -33,7 +33,7 @@ ms.workload: "On Demand"
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   You need to add one or more containers to the MEMORY_OPTIMIZED_DATA filegroup. For example:  
+-   You need to add one or more containers to the `MEMORY_OPTIMIZED_DATA` filegroup. For example:  
   
     ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
@@ -45,7 +45,7 @@ ms.workload: "On Demand"
   
 -   Data movement with a memory-optimized filegroup is optimized in an Always On Availability Group configuration. Unlike filestream files that are sent to secondary replicas, the checkpoint files (both data and delta) within the memory-optimized filegroup are not sent to secondary replicas. The data and delta files are constructed using the transaction log on the secondary replica.  
   
- The following limitations of memory-optimized filegroup,  
+The following limitations apply to a memory-optimized filegroup:  
   
 -   Once you create a memory-optimized filegroup, you can only remove it by dropping the database. In a production environment, it is unlikely that you will need to remove the memory-optimized filegroup.  
   

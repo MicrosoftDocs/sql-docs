@@ -374,7 +374,7 @@ STDERR message(s) from external script:  ~PYTHON_SERVICES\lib\site-packages\revo
 SyntaxWarning: telemetry_state is used prior to global declaration
 ```
 
-The warning has been fixed in a later service release.
+This issue has been fixed in SQL Server 2017 Cumulative Update 3 (CU3). 
 
 ## Revolution R Enterprise and Microsoft R Open
 

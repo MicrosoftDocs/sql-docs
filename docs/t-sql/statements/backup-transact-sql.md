@@ -460,7 +460,7 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* }
 
 > [!NOTE]  
 > For [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, the default `MAXTRANSFERSIZE` is 65536 (64 KB). For non-TDE encrypted databases the default `MAXTRANSFERSIZE` is 1048576 (1 MB) when using backup to DISK, and 65536 (64 KB) when using VDI or TAPE.
-> For more information about using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases, see the [Remarks](#general-remarks) section.
+> For more information about using backup compression with TDE encrypted databases, see the [Remarks](#general-remarks) section.
   
 **Error Management Options**  
   

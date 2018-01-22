@@ -172,12 +172,12 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  LOG  
  Specifies a backup of the transaction log only. The log is backed up from the last successfully executed log backup to the current end of the log. Before you can create the first log backup, you must create a full backup.  
   
- You can restore a log backup to a specific time or transaction within the backup by specifying WITH STOPAT, STOPATMARK, or STOPBEFOREMARK in your [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) statement.  
+ You can restore a log backup to a specific time or transaction within the backup by specifying `WITH STOPAT`, `STOPATMARK`, or `STOPBEFOREMARK` in your [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) statement.  
   
 > [!NOTE]  
->  After a typical log backup, some transaction log records become inactive, unless you specify WITH NO_TRUNCATE or COPY_ONLY. The log is truncated after all the records within one or more virtual log files become inactive. If the log is not being truncated after routine log backups, something might be delaying log truncation. For more information, see.  
+>  After a typical log backup, some transaction log records become inactive, unless you specify `WITH NO_TRUNCATE` or `COPY_ONLY`. The log is truncated after all the records within one or more virtual log files become inactive. If the log is not being truncated after routine log backups, something might be delaying log truncation. For more information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
   
- { *database_name* | **@**database_name_var* }   
+ { *database_name* | **@***database_name_var* }   
  Is the database from which the transaction log, partial database, or complete database is backed up. If supplied as a variable (**@***database_name_var*), this name can be specified either as a string constant (**@***database_name_var***=***database name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
 > [!NOTE]  
@@ -186,10 +186,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 \<file_or_filegroup> [ **,**...*n* ]  
  Used only with BACKUP DATABASE, specifies a database file or filegroup to include in a file backup, or specifies a read-only file or filegroup to include in a partial backup.  
   
- FILE **=** { *logical_file_name*| **@***logical_file_name_var* }  
+ FILE **=** { *logical_file_name* | **@***logical_file_name_var* }  
  Is the logical name of a file or a variable whose value equates to the logical name of a file that is to be included in the backup.  
   
- FILEGROUP **=** { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
  Is the logical name of a filegroup or a variable whose value equates to the logical name of a filegroup that is to be included in the backup. Under the simple recovery model, a filegroup backup is allowed only for a read-only filegroup.  
   
 > [!NOTE]  
@@ -200,7 +200,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  For more information, see [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
- READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name*| **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
+ READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
  Specifies a partial backup. A partial backup includes all the read/write files in a database: the primary filegroup and any read/write secondary filegroups, and also any specified read-only files or filegroups.  
   
  READ_WRITE_FILEGROUPS  
@@ -209,7 +209,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!IMPORTANT]  
 > Explicitly listing the read/write filegroups by using FILEGROUP instead of READ_WRITE_FILEGROUPS creates a file backup.  
   
- FILEGROUP = { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
 Is the logical name of a read-only filegroup or a variable whose value equates to the logical name of a read-only filegroup that is to be included in the partial backup. For more information, see "\<file_or_filegroup>," earlier in this topic.
   
  *n*  
@@ -344,10 +344,10 @@ Explicitly disables backup compression.
 DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
 Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.  
   
-NAME **=** { *backup_set_name*| **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@***backup_set_var* }  
 Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.  
   
-{ EXPIREDATE **='***date***'**| RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='***date***'** | RETAINDAYS **=** *days* }  
 Specifies when the backup set for this backup can be overwritten. If these options are both used, RETAINDAYS takes precedence over EXPIREDATE.  
   
 If neither option is specified, the expiration date is determined by the **mediaretention** configuration setting. For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
@@ -355,7 +355,7 @@ If neither option is specified, the expiration date is determined by the **media
 > [!IMPORTANT]  
 > These options only prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from overwriting a file. Tapes can be erased using other methods, and disk files can be deleted through the operating system. For more information about expiration verification, see SKIP and FORMAT in this topic.  
   
-EXPIREDATE **=** { **'***date***'**| **@***date_var* }  
+EXPIREDATE **=** { **'***date***'** | **@***date_var* }  
  Specifies when the backup set expires and can be overwritten. If supplied as a variable (@*date_var*), this date must follow the configured system **datetime** format and be specified as one of the following:  
   
 -   A string constant (@*date_var* **=** date)  
@@ -373,7 +373,7 @@ For information about how to specify **datetime** values, see [Date and Time Typ
 > [!NOTE]  
 > To ignore the expiration date, use the `SKIP` option.  
   
-RETAINDAYS **=** { *days*| **@***days_var* }  
+RETAINDAYS **=** { *days* | **@***days_var* }  
  Specifies the number of days that must elapse before this backup media set can be overwritten. If supplied as a variable (**@***days_var*), it must be specified as an integer.  
   
 **Media Set Options**  
@@ -428,13 +428,13 @@ Specifies that a new media set be created. FORMAT causes the backup operation to
   
 Specifying FORMAT implies `SKIP`; `SKIP` does not need to be explicitly stated.  
   
-MEDIADESCRIPTION **=** { *text* | ***@** text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
 Specifies the free-form text description, maximum of 255 characters, of the media set.  
   
-MEDIANAME **=** { *media_name* | ***@** media_name_variable* }  
+MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
 Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters, If `MEDIANAME` is specified, it must match the previously specified media name already existing on the backup volumes. If it is not specified, or if the SKIP option is specified, there is no verification check of the media name.  
   
-BLOCKSIZE **=** { *blocksize* | ***@** blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
 Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes. The default is 65536 for tape devices and 512 otherwise. Typically, this option is unnecessary because BACKUP automatically selects a block size that is appropriate to the device. Explicitly stating a block size overrides the automatic selection of block size.  
   
 If you are taking a backup that you plan to copy onto and restore from a CD-ROM, specify BLOCKSIZE=2048.  
@@ -444,7 +444,7 @@ If you are taking a backup that you plan to copy onto and restore from a CD-ROM,
   
 **Data Transfer Options**  
   
-BUFFERCOUNT **=** { *buffercount* | ***@** buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.  
   
 The total space used by the buffers is determined by: *buffercount/maxtransfersize*.  
@@ -657,7 +657,7 @@ GO
  When multiple devices are listed for each mirror, the order of the devices determines which media family is written to a particular device. For example, in each of the device lists, the second device corresponds to the second media family. For the devices in the above example, the correspondence between devices and media families is shown in the following table.  
   
 |Mirror|Media family 1|Media family 2|Media family 3|  
-|------------|--------------------|--------------------|--------------------|  
+|---------|---------|---------|---------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
 |1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
@@ -665,7 +665,7 @@ GO
   
  For more information about mirrored media sets, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md). For more information about media sets and media families in general, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-###  <a name="Restoring_Backups"></a> Restoring SQL Server Backups  
+###  <a name="Restoring_Backups"></a> Restoring SQL Server backups  
  To restore a database and, optionally, recover it to bring it online, or to restore a file or filegroup, use either the [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement or the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Restore** tasks. For more information see [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 ##  <a name="Additional_Considerations"></a> Additional considerations about BACKUP options  
@@ -692,14 +692,14 @@ GO
   
 BACKUP supports the `RESTART` option to provide backward compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. But RESTART has no effect.  
   
-## General Remarks  
+## General remarks  
 Database or log backups can be appended to any disk or tape device, allowing a database and its transaction logs to be kept within one physical location.  
   
 The BACKUP statement is not allowed in an explicit or implicit transaction.  
   
 Cross-platform backup operations, even between different processor types, can be performed as long as the collation of the database is supported by the operating system.  
  
-When using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, it is recommended to use a **MAXTRANSFERSIZE setting > 65536 (64 KB)**.   
+When using backup compression with [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) enabled databases with a single data file, it is recommended to use a `MAXTRANSFERSIZE` setting **larger than 65536 (64 KB)**.   
 Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this enables an optimized compression algorithm for TDE encrypted databases that first decrypts a page, compresses it and then encrypts it again. If using `MAXTRANSFERSIZE = 65536` (64 KB), backup compression with TDE encrypted databases directly compresses the encrypted pages, and may not yield good compression ratios. For more information, see [Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  

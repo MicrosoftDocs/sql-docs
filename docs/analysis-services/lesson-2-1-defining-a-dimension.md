@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 2-1 - Defining a Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 In the following task, you will use the Dimension Wizard to build a Date dimension.  
   
 > [!NOTE]  

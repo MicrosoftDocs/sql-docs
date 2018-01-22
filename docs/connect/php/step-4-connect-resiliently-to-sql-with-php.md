@@ -1,7 +1,7 @@
 ---
 title: "Step 4: Connect resiliently to SQL with PHP | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/22/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""

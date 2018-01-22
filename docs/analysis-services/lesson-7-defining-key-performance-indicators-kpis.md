@@ -23,6 +23,7 @@ ms.workload: "Inactive"
 ---
 # Lesson 7: Defining Key Performance Indicators (KPIs)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 In this lesson, you learn to define Key Performance Indicators (KPIs) in your [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project. KPIs provide a framework for defining server-side calculations that measure your business, and they standardize how the resulting information is displayed. KPIs can be displayed in reports, portals, and dashboards, through data access APIs, and through [!INCLUDE[msCoName](../includes/msconame-md.md)] tools and third-party tools. KPIs are metadata wrappers around regular measures and other Multidimensional Expressions (MDX) expressions. For more information, see [Key Performance Indicators &#40;KPIs&#41; in Multidimensional Models](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
   
 > [!NOTE]  

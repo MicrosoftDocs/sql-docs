@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 3-2 - Modifying the Customer Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 There are many different ways that you can increase the usability and functionality of the dimensions in a cube. In the tasks in this topic, you modify the Customer dimension.  
   
 ## Renaming Attributes  

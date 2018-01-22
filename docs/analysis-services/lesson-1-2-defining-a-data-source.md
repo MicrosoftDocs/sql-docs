@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 1-2 - Defining a Data Source
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 After you create an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, you generally start working with the project by defining one or more data sources that the project will use. When you define a data source, you are defining the connection string information that will be used to connect to the data source. For more information, see [Create a Data Source &#40;SSAS Multidimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
 In the following task, you define the AdventureWorksDWSQLServer2012 sample database as the data source for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project. While this database is located on your local computer for the purposes of this tutorial, source databases are frequently hosted on one or more remote computers.  

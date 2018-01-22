@@ -117,11 +117,11 @@ The form of file that is used by a database snapshot to store its copy-on-write 
  
 ### Memory Optimized Data Filegroup
 
-For more information on memory-optimized filegroups, see [Memory Optimized Filegroup](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
+For more information on memory-optimized filegroups, see [Memory Optimized Filegroup](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
 
 ### Filestream Filegroup
 
-For more information on filestream filegroups, see [FILESTREAM](../relational-databases/blob/filestream-sql-server#.mdfilestream-storage) and [Create a FILESTREAM-Enabled Database](../relational-databases/blob/create-a-filestream-enabled-database.md).
+For more information on filestream filegroups, see [FILESTREAM](../../relational-databases/blob/filestream-sql-server#.mdfilestream-storage) and [Create a FILESTREAM-Enabled Database](../../relational-databases/blob/create-a-filestream-enabled-database.md).
 
 ### File and Filegroup Example
  The following example creates a database on an instance of SQL Server. The database has a primary data file, a user-defined filegroup, and a log file. The primary data file is in the primary filegroup and the user-defined filegroup has two secondary data files. An ALTER DATABASE statement makes the user-defined filegroup the default. A table is then created specifying the user-defined filegroup. (This example uses a generic path `c:\Program Files\Microsoft SQL Server\MSSQL.1` to avoid specifying a version of SQL Server.)

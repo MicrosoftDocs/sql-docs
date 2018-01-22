@@ -29,13 +29,13 @@ ms.workload: "On Demand"
   
 -   You can only create one memory-optimized filegroup per database. You need to explicitly mark the filegroup as containing memory_optimized_data. You can create the filegroup when you create the database or you can add it later:  
   
-    ```  
+    ```sql  
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
 -   You need to add one or more containers to the MEMORY_OPTIMIZED_DATA filegroup. For example:  
   
-    ```  
+    ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
     ```  
   
@@ -51,14 +51,14 @@ ms.workload: "On Demand"
   
 -   You cannot drop a non-empty container or move data and delta file pairs to another container in the memory-optimized filegroup.  
   
--   You cannot specify MAXSIZE for the container.  
+-   You cannot specify `MAXSIZE` for the container.  
   
 ## Configuring a Memory-Optimized Filegroup  
  You should consider creating multiple containers in the memory-optimized filegroup and distribute them on different drives to achieve more bandwidth to stream the data into memory.  
   
- When configuring storage, you must provide free disk space that is four times the size of durable memory-optimized tables. You must also ensure that your IO subsystem supports the required IOPS for your workload. If data and delta file pairs are populated at a given IOPS, you need 3 times that IOPS to account for storing and merge operations. You can add storage capacity and IOPS by adding one or more containers to the memory-optimized filegroup.  
+ When configuring storage, you must provide free disk space that is four times the size of durable memory-optimized tables. You must also ensure that your I/O subsystem supports the required IOPS for your workload. If data and delta file pairs are populated at a given IOPS, you need 3 times that IOPS to account for storing and merge operations. You can add storage capacity and IOPS by adding one or more containers to the memory-optimized filegroup.  
   
 ## See Also  
  [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md) 
   

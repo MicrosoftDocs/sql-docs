@@ -69,12 +69,13 @@ SET ROWCOUNT { number | @number_var }
  Requires membership in the public role.  
   
 ## Examples  
- SET ROWCOUNT stops processing after the specified number of rows. In the following example, note that over 500 rows meet the criteria of `Quantity` less than `300`. However, after applying SET ROWCOUNT, you can see that not all rows were returned.  
+ SET ROWCOUNT stops processing after the specified number of rows. In the following example, note that this query returns 537 rows that meet the criteria of `Quantity` less than `300`. However, after applying SET ROWCOUNT, you can see that not all rows were returned.  
   
 ```  
 USE AdventureWorks2012;  
 GO  
-SELECT count(*) AS Count  
+
+SELECT *
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
@@ -83,17 +84,17 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
- Count 
- ----------- 
- 537 
- 
- (1 row(s) affected)
+ (537 row(s) affected)
  ```  
   
- Now, set `ROWCOUNT` to `4` and return all rows to demonstrate that only 4 rows are returned.  
+ Now, if a `ROWCOUNT` of `4` is set, you can see that only 4 rows are returned.  
   
 ```  
+USE AdventureWorks2012;  
+GO  
+
 SET ROWCOUNT 4;  
+
 SELECT *  
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  

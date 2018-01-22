@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "logs [SQL Server], viewing"
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # View the SQL Server error log (SQL Server Management Studio)

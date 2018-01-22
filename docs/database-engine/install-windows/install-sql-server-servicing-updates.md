@@ -16,7 +16,7 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 caps.latest.revision: 13
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Install SQL Server Servicing Updates
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

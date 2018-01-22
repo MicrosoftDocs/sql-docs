@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Reduce method"
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

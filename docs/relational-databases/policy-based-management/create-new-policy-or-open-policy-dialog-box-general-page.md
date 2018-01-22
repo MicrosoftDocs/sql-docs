@@ -18,9 +18,9 @@ f1_keywords:
   - "sql13.swb.dmf.newgroup.f1"
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create New Policy or Open Policy Dialog Box, General Page

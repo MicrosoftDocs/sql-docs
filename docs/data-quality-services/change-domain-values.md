@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.dqs.dm.values.f1"
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

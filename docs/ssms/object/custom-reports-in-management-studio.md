@@ -20,7 +20,7 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Custom Reports in Management Studio

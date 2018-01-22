@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "printing deadlock files"
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Open, view, and print a deadlock file (SQL Server Management Studio)

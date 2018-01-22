@@ -16,7 +16,7 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 caps.latest.revision: 47
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Temporal Tables

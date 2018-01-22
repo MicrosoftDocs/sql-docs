@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "viewing foreign keys attributes"
 ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View Foreign Key Properties

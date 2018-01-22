@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "8632 (Database Engine error)"
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

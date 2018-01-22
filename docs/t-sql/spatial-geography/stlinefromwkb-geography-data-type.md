@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STLineFromWKB method"
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

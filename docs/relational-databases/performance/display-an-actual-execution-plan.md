@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "execution plans [SQL Server], displaying"
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Display an Actual Execution Plan

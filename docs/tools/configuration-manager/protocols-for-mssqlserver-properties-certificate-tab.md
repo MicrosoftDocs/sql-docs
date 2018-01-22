@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MSSQLSERVER property protocols"
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Protocols for MSSQLSERVER Properties (Certificate Tab)

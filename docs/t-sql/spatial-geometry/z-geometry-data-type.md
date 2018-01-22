@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Z (geometry Data Type)"
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

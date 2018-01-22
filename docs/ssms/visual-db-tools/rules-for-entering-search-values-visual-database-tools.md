@@ -26,7 +26,7 @@ ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Rules for Entering Search Values (Visual Database Tools)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "set working set size option"
 ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # set working set size Server Configuration Option

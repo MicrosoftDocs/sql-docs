@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "four-digit years [SQL Server]"
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure the two digit year cutoff Server Configuration Option

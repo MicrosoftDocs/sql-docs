@@ -16,7 +16,7 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 caps.latest.revision: 18
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Repair a Failed SQL Server Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

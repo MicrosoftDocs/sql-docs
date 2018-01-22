@@ -16,7 +16,7 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Install SQL Server using a configuration file
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

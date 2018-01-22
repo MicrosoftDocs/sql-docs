@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "UnionAggregate method (geography)"
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

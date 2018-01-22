@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "TCP/IP [SQL Server], port numbers"
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Configure a Server to Listen on a Specific TCP Port

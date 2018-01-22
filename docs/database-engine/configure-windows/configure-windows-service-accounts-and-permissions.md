@@ -54,8 +54,8 @@ helpviewer_keywords:
   - "accounts [SQL Server], user"
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: 207
-author: "BYHAM"
-ms.author: "BYHAM"
+author: "MikeRayMSFT"
+ms.author: "MikeRayMSFT"
 manager: "craigg"
 ms.workload: "Active"
 ---

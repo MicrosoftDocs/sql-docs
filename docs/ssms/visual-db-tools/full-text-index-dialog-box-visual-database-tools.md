@@ -18,7 +18,7 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Full-Text Index Dialog Box (Visual Database Tools)

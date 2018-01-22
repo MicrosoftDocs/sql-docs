@@ -19,7 +19,7 @@ ms.assetid:
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to Microsoft Azure Storage

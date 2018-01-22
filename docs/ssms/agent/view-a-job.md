@@ -21,7 +21,7 @@ ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View a Job

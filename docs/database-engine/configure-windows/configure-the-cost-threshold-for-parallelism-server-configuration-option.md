@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "cost threshold for parallelism option"
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configure the cost threshold for parallelism Server Configuration Option

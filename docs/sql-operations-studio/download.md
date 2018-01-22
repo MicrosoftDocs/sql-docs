@@ -2,7 +2,7 @@
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "12/19/2017"
+ms.date: "01/17/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -19,13 +19,13 @@ ms.workload: "Inactive"
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
-Download and install the latest release, the *December Public Preview*:
+Download and install the latest release, the *January Public Preview*:
 
 |Platform|Download|Release date|
 |:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=865304)|December 19, 2017 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=865306)|December 19, 2017 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=865309)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|December 19, 2017|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|January 17, 2018 |
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|January 17, 2018 |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|January 17, 2018|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -35,27 +35,27 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 **Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=865305).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=866480).
 1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=865304).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 2. Browse to the downloaded file and extract it.
 3. Run `\sqlops-windows\sqlops.exe`
 
 
 ## Get SQL Operations Studio (preview) for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=865306).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=866481).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
 
 ## Get SQL Operations Studio (preview) for Linux
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=865307).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=866482).
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    ```bash
@@ -114,7 +114,8 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-
+## Check for updates
+To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
 
 ## Next Steps
 

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "clr enabled option"
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # clr enabled Server Configuration Option

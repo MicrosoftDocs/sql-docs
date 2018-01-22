@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "table value constructor [SQL Server]"
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

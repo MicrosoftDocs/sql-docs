@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: d57a1876-3fb3-4d82-8b5c-510b6e0d8a11
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 1-4 - Summary - Converting a Table to a Hierarchical Structure

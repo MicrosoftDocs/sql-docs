@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "AsGml (geometry Data Type)"
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

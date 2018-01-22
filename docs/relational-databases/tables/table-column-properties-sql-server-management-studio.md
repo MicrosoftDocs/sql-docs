@@ -18,9 +18,9 @@ f1_keywords:
   - "vdt.ppg.columns"
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Table Column Properties (SQL Server Management Studio)

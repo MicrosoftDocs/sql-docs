@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "methods [XML in SQL Server]"
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

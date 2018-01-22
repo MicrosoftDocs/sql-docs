@@ -19,7 +19,7 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 caps.latest.revision: 78
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Monitoring Database Mirroring (SQL Server)

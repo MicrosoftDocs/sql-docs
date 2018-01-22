@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "creating databases"
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Create a Database

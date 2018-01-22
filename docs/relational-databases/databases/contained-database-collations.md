@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "contained database, collations"
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Contained Database Collations

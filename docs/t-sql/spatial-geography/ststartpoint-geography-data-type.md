@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STStartPoint method"
 ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

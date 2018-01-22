@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "previous versions [SQL Server], import and export data formats"
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

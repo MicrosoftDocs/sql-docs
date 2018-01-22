@@ -20,7 +20,7 @@ ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Define Transact-SQL Job Step Options

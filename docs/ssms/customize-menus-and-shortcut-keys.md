@@ -26,7 +26,7 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Customize Menus and Shortcut Keys

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STDisjoint"
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

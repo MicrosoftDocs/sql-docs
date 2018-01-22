@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "shared memory [SQL Server]"
 ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Shared Memory Properties

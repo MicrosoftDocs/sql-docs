@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "| (bitwise OR operator)"
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

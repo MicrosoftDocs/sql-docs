@@ -18,7 +18,7 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server, Batch Resp Statistics Object

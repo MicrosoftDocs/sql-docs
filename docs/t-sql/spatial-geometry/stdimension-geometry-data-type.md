@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STDimension (geometry Data Type)"
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -16,7 +16,7 @@ ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Temporal Table System Consistency Checks

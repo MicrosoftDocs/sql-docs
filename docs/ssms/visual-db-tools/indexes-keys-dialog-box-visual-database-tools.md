@@ -19,7 +19,7 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Indexes - Keys Dialog Box (Visual Database Tools)

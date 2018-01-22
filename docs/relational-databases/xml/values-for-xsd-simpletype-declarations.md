@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "xsd:simpleType declarations"
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

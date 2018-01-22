@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Z method"
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

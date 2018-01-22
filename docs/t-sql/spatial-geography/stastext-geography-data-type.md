@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STAsText method"
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

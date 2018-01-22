@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "rotating columns"
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

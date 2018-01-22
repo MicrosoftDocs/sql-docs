@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STPointFromWKB method"
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

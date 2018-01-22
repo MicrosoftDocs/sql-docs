@@ -22,7 +22,7 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Overview of Always On Availability Groups (SQL Server)

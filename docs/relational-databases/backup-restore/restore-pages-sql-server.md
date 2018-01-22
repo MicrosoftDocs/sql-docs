@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "restoring [SQL Server], pages"
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Restore Pages (SQL Server)

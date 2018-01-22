@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STIsClosed (geometry Data Type)"
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

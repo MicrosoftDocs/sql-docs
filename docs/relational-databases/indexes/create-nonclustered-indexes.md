@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], PRIMARY KEY constraint"
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "barbkess"
+ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

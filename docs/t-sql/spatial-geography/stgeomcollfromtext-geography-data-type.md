@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "STGeomCollFromText method"
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

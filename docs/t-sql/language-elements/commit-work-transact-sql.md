@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "COMMIT WORK statement"
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

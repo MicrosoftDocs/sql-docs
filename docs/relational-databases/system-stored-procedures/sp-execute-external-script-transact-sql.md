@@ -249,7 +249,7 @@ For scoring, you can also use the native [PREDICT](../../t-sql/queries/predict-t
  [Python Libraries and Data Types](../../advanced-analytics/python/python-libraries-and-data-types.md)  
  [R Libraries and R Data Types](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
- [Known Issues for SQL Server R Services](../../advanced-analytics/r/known-issues-for-sql-server-r-services.md)   
+ [Known Issues for SQL Server Machine Learning Services](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
  [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

@@ -24,10 +24,10 @@ Learn how to configure a SQL Server instance on Kubernetes in Azure Container Se
 This tutorial demonstrates how to configure a highly available SQL Server instance in containers that use AKS. 
 
 > [!div class="checklist"]
-> * Create SA password
+> * Create an SA password
 > * Create storage
-> * Create deployment
-> * Connect with SQL Server Management Studios (SSMS)
+> * Create the deployment
+> * Connect with SQL Server Management Studio (SSMS)
 > * Verify failure and recovery
 
 ## HA solution that uses Kubernetes running in Azure Container Service
@@ -114,7 +114,7 @@ Configure a [persistent volume](http://kubernetes.io/docs/concepts/storage/persi
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
-   * `<Path to pvc.yaml file>` is the location where you saved the file.
+   `<Path to pvc.yaml file>` is the location where you saved the file.
 
    The persistent volume is automatically created as an Azure storage account, and bound to the persistent volume claim. 
 
@@ -126,21 +126,21 @@ Configure a [persistent volume](http://kubernetes.io/docs/concepts/storage/persi
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
-   * `<PersistentVolumeClaim>` is the name of the persistent volume claim.
+   `<PersistentVolumeClaim>` is the name of the persistent volume claim.
 
-    In the preceding step, the persistent volume claim is named `mssql-data`. To see the metadata about the persistent volume claim, run the following command:
+   In the preceding step, the persistent volume claim is named `mssql-data`. To see the metadata about the persistent volume claim, run the following command:
 
-    ```azurecli
-    kubectl describe pvc mssql-data
-    ```
+   ```azurecli
+   kubectl describe pvc mssql-data
+   ```
 
-    The returned metadata includes a value called `Volume`. This value maps to the name of the blob.
+   The returned metadata includes a value called `Volume`. This value maps to the name of the blob.
 
-    ![Screenshot of returned metadata, including Volume](media/tutorial-sql-server-containers-kubernetes/describe-volume.png)
+   ![Screenshot of returned metadata, including Volume](media/tutorial-sql-server-containers-kubernetes/describe-volume.png)
 
-    The value for volume matches part of the name of the blob in the following image from Azure portal: 
+   The value for volume matches part of the name of the blob in the following image from the Azure portal: 
 
-    ![Screenshot of Azure portal blob name](media/tutorial-sql-server-containers-kubernetes/describe-volume-portal.png)
+   ![Screenshot of Azure portal blob name](media/tutorial-sql-server-containers-kubernetes/describe-volume-portal.png)
 
 1. Verify the persistent volume.
 
@@ -208,31 +208,28 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
    Copy the preceding code into a new file, named `sqldeployment.yaml`. Update the following values: 
 
-   * `value: "Developer"`
-     * Sets the container to run SQL Server Developer edition. Developer edition is not licensed for production data. If the deployment is for production use, set the appropriate edition (`Enterprise`, `Standard`, or `Express`). 
+   * `value: "Developer"`: Sets the container to run SQL Server Developer edition. Developer edition is not licensed for production data. If the deployment is for production use, set the appropriate edition (`Enterprise`, `Standard`, or `Express`). 
 
       >[!NOTE]
       >For more information, see [How to license SQL Server](http://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
-   * `persistentVolumeClaim`
-     * This value requires an entry for `claimName:` that maps to the name used for the persistent volume claim. This tutorial uses `mssql-data`. 
+   * `persistentVolumeClaim`: This value requires an entry for `claimName:` that maps to the name used for the persistent volume claim. This tutorial uses `mssql-data`. 
 
-   * `name: SA_PASSWORD`
-      * Configures the container image to set the SA password, as defined in this section.
+   * `name: SA_PASSWORD`: Configures the container image to set the SA password, as defined in this section.
 
-      ```yaml
-      valueFrom:
-        secretKeyRef:
-          name: mssql
-          key: SA_PASSWORD 
-      ```
+     ```yaml
+     valueFrom:
+       secretKeyRef:
+         name: mssql
+         key: SA_PASSWORD 
+     ```
 
-       When Kubernetes deploys the container, it refers to the secret named `mssql` to get the value for the password. 
+     When Kubernetes deploys the container, it refers to the secret named `mssql` to get the value for the password. 
 
    >[!NOTE]
    >By using the `LoadBalancer` service type, the SQL Server instance is accessible remotely (via the internet) at port 1433.
 
-    Save the file (for example, **sqldeployment.yaml**).
+   Save the file (for example, **sqldeployment.yaml**).
 
 1. Create the deployment.
 
@@ -240,7 +237,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
-   * `<Path to sqldeployment.yaml file>` is the location where you saved the file.
+   `<Path to sqldeployment.yaml file>` is the location where you saved the file.
 
    ![Screenshot of deployment command](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
@@ -271,7 +268,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
 ## Connect to the SQL Server instance
 
-If you configured the container as described, you can connect with an application from outside of the Azure virtual network. Use the `sa` account and the external IP address for the service. Use the password that you configured as the Kubernetes secret. 
+If you configured the container as described, you can connect with an application from outside the Azure virtual network. Use the `sa` account and the external IP address for the service. Use the password that you configured as the Kubernetes secret. 
 
 You can use the following applications to connect to the SQL Server instance. 
 
@@ -318,9 +315,9 @@ Kubernetes automatically re-creates the pod to recover a SQL Server instance, an
 In this tutorial, you learned how to deploy SQL Server containers to a Kubernetes cluster for high availability. 
 
 > [!div class="checklist"]
-> * Create SA password
+> * Create an SA password
 > * Create storage
-> * Create deployment
+> * Create the deployment
 > * Connect with SQL Server Management Studios (SSMS)
 > * Verify failure and recovery
 

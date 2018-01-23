@@ -41,9 +41,8 @@ ms.workload: "Active"
 - [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 ##  ![info_tip](../sql-server/media/info-tip.png) Resources
--   Get help & ask questions
-    -   [SSIS forum on MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-    -   [SSIS tag on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+-   [Get help in the SSIS forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+-   [Get help on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
 -   [Follow the SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
--   [Report issues and request features](https://feedback.azure.com/forums/908035-sql-server)
+-   [Report issues & request features](https://feedback.azure.com/forums/908035-sql-server)
 -   [Get the docs on your PC](../sql-server/sql-server-help-installation.md)

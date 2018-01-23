@@ -40,8 +40,8 @@ ms.workload: "Active"
 5.  Create the unique clustered index on the view.  
 
 > [!IMPORTANT]
-> Running DML<sup>1</sup> on a table referenced by a large number of indexed views, or fewer very complex indexed views, those indexed views will have to be updated as well during DML execution. As a result, this may degrade DML query performance or in some cases, a query plan cannot even be produced.
-> In such scenarios, test your DML queries before production use.
+> When executing DML<sup>1</sup> on a table referenced by a large number of indexed views, or fewer but very complex indexed views, those referenced indexed views will have to be updated as well. As a result, DML query performance can degrade significantly, or in some cases, a query plan cannot even be produced.
+> In such scenarios, test your DML queries before production use, analyze the query plan and tune/simplify the DML statement.
 >
 > <sup>1</sup> Such as UPDATE, DELETE or INSERT operations.
   
@@ -139,7 +139,7 @@ ms.workload: "Active"
 ###  <a name="Recommendations"></a> Recommendations  
  When you refer to **datetime** and **smalldatetime** string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). For more information about deterministic and nondeterministic expressions, see the [Considerations](#nondeterministic) section in this page.
 
-Running DML (such as UPDATE, DELETE or INSERT) on a table referenced by a large number of indexed views, or fewer very complex indexed views, those indexed views will have to be updated as well during DML execution. As a result, this may degrade DML query performance or in some cases, a query plan cannot even be produced. In such scenarios, test your DML queries before production use.
+When you execute DML (such as UPDATE, DELETE or INSERT) on a table referenced by a large number of indexed views, or fewer but very complex indexed views, those indexed views will have to be updated as well during DML execution. As a result, DML query performance may degrade significantly, or in some cases, a query plan cannot even be produced. In such scenarios, test your DML queries before production use, analyze the query plan and tune/simplify the DML statement.
   
 ###  <a name="Considerations"></a> Considerations  
  The setting of the **large_value_types_out_of_row** option of columns in an indexed view is inherited from the setting of the corresponding column in the base table. This value is set by using [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). The default setting for columns formed from expressions is 0. This means that large value types are stored in-row.  

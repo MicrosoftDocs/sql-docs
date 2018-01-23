@@ -128,7 +128,35 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
 10. Connecting to WASB also requires DNS forwarding to be configured on the appliance. To configure DNS forwarding, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 Authorized users can now create external data sources, external file formats, and external tables. They can use these to integrate data from multiple sources including Hadoop, Microsoft Azure blob storage, and SQL Server PDW.  
+
+## Kerberos configuration  
+Please note, that when PolyBase authenticates to a Kerberos secured cluster, we require the hadoop.rpc.protection setting to be set to authentication. This will leave the data communication between Hadoop nodes unencrypted. 
+
+ To connect to a Kerberos-secured Hadoop cluster [using MIT KDC] :
+   
   
+1.  Find the Hadoop configuration directory in the installation path on the Control node:  
+  
+    ```  
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```  
+  
+2.  Find the Hadoop side configuration value of the configuration keys listed in the table. (On the Hadoop machine, find the files in the Hadoop configuration directory.)  
+  
+3.  Copy the configuration values into the value property in the corresponding files on the SQL Server machine.  
+  
+    |**#**|**Configuration file**|**Configuration key**|**Action**|  
+    |------------|----------------|---------------------|----------|   
+    |1|core-site.xml|polybase.kerberos.kdchost|Specify the KDC hostname. For example: kerberos.your-realm.com.|  
+    |2|core-site.xml|polybase.kerberos.realm|Specify the Kerberos realm. For example: YOUR-REALM.COM|  
+    |3|core-site.xml|hadoop.security.authentication|Find the Hadoop side configuration and copy to SQL Server machine. For example: KERBEROS<br></br>**Security note:** KERBEROS must be written in upper case. If lower case, it might not be on.|   
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: hdfs/_HOST@YOUR-REALM.COM|  
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: mapred/_HOST@YOUR-REALM.COM|  
+    |6|mapred-site.xml|mapreduce.jobhistory.address|Find the Hadoop side configuration and copy to SQL Server machine. For example: 10.193.26.174:10020|  
+    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: yarn/_HOST@YOUR-REALM.COM|  
+  
+4.  Create a database-scoped credential object to specify the authentication information for each Hadoop user. See [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md).  
+ 
 ## See Also  
 [Appliance Configuration &#40;Analytics Platform System&#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

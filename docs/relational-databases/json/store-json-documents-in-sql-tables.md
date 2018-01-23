@@ -42,7 +42,7 @@ The sample table created in the preceding example assumes that valid JSON docume
 
 ```sql
 ALTER TABLE WebSite.Logs
-    ADD CONSTRAINT \[Log record should be formatted as JSON\]
+    ADD CONSTRAINT [Log record should be formatted as JSON]
                    CHECK (ISJSON(log)=1)
 ```
 
@@ -51,7 +51,7 @@ Every time someone inserts or updates a document in the table, this constraint v
 When you store your JSON documents in the table, you can use standard Transact-SQL language to query the documents. For example:
 
 ```sql
-SELECT TOP 100 JSON\_VALUE(log, ‘$.severity’), AVG( CAST( JSON\_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
  FROM WebSite.Logs
  WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
  GROUP BY JSON_VALUE(log, ‘$.severity’)

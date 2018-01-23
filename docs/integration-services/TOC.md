@@ -175,11 +175,8 @@
 #### [Lesson 3-3 - Testing the Deployed Packages](lesson-3-3-testing-the-deployed-packages.md)
 
 # Resources
-## Follow the blog
-### [SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
-## Get help
-### [SSIS forum on MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [SSIS tag on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## Give feedback
-### [SQL Server feedback forum](https://feedback.azure.com/forums/908035-sql-server)  
+## [Get help in the SSIS forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Get help on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Follow the SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
+## [Report issues & request features](https://feedback.azure.com/forums/908035-sql-server)
 ## [Get the docs on your PC](../sql-server/sql-server-help-installation.md)

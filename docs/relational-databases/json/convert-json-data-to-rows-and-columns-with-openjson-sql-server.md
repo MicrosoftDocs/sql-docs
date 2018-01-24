@@ -1,5 +1,5 @@
 ---
-title: "Convert JSON Data to Rows and Columns with OPENJSON (SQL Server) | Microsoft Docs"
+title: "Parse and Transform JSON Data with OPENJSON (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-non-specified"
@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Active"
 ---
-# Convert JSON Data to Rows and Columns with OPENJSON (SQL Server)
+# Parse and Transform JSON Data with OPENJSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 The **OPENJSON** rowset function converts JSON text into a set of rows and columns. After you transform a JSON collection into a rowset with **OPENJSON**, you can run any SQL query on the returned data or insert it into a SQL Server table. 

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "SQL Server Native Client, additional resources"
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 caps.latest.revision: 44
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"

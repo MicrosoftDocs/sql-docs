@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SQLNCLI, bulk copy operations"
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 caps.latest.revision: 28
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"

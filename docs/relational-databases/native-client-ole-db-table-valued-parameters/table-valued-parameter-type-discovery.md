@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "table-valued parameters, type discovery"
 ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table-Valued Parameter Type Discovery

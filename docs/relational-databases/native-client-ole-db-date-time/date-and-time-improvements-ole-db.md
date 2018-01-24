@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "OLE DB, date/time improvements"
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Date and Time Improvements (OLE DB)

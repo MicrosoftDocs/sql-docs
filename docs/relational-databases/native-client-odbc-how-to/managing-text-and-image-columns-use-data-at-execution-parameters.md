@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "data-at-execution"
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Managing text and image Columns - Use Data-at-Execution Parameters

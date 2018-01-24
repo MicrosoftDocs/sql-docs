@@ -76,10 +76,10 @@ For information, see [High availability and data protection for Availability Gro
 
    >[!NOTE]
    > Other supported configurations can provide read-scale support, but they do not provide high availability. For example:
-   > - Cross-platform Availability Group - where some replicas are on Windows, and other replicas are on Linux. 
-   > - Availability Groups for read-scale. 
+   > - Cross-platform Availability Group  (where some replicas are on Windows, and other replicas are on Linux). 
+   > - Cluster-less Availability Group (where all replicas are on the same operating system platform, but no cluster manager exists).  
    >
-   > In these configurations, the cluster type is None. They do not provide high availability. 
+   > In these configurations, the cluster type is `NONE`. They do not provide high availability. 
    > 
    > Asynchronous replicas may also be used for disaster recovery. 
 

@@ -16,7 +16,7 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Oracle Supplemental Logging Script

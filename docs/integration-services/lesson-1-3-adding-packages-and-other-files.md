@@ -18,7 +18,7 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 1-3 - Adding Packages and Other Files

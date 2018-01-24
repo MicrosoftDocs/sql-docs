@@ -18,7 +18,7 @@ ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Views (Integration Services Catalog)

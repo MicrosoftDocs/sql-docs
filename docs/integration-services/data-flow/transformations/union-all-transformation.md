@@ -24,7 +24,7 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Union All Transformation

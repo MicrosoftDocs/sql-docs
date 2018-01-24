@@ -19,7 +19,7 @@ ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LN (SSIS Expression)

@@ -32,7 +32,7 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Handling Events Programmatically

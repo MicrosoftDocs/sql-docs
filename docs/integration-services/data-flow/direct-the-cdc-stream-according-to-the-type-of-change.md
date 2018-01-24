@@ -16,7 +16,7 @@ ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Direct the CDC Stream According to the Type of Change

@@ -22,7 +22,7 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Troubleshooting Tools for Package Development

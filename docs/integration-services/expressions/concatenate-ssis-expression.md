@@ -20,7 +20,7 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # + (Concatenate) (SSIS Expression)

@@ -18,7 +18,7 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Database (SQL Server Import and Export Wizard)

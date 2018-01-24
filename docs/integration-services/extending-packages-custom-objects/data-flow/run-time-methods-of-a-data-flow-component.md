@@ -24,7 +24,7 @@ ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Run-time Methods of a Data Flow Component

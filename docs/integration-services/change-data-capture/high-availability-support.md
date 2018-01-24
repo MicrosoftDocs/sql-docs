@@ -16,7 +16,7 @@ ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # High Availability Support

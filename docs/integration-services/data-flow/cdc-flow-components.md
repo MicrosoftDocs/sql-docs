@@ -16,7 +16,7 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CDC Flow Components

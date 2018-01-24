@@ -18,7 +18,7 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Performing Operation (SQL Server Import and Export Wizard)

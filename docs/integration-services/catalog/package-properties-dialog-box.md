@@ -19,7 +19,7 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Package Properties Dialog Box

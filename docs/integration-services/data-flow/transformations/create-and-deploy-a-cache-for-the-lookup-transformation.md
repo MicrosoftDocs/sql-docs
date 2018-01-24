@@ -20,7 +20,7 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create and Deploy a Cache for the Lookup Transformation

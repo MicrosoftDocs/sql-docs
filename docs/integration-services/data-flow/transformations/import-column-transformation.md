@@ -23,7 +23,7 @@ ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Import Column Transformation

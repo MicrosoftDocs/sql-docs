@@ -20,7 +20,7 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure Dialog Box

@@ -16,7 +16,7 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Integration Services features supported by the editions of SQL Server

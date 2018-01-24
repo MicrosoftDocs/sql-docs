@@ -16,7 +16,7 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create InfoSource

@@ -26,7 +26,7 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Deploy Packages with SSIS

@@ -16,7 +16,7 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Look Up RFC Destination

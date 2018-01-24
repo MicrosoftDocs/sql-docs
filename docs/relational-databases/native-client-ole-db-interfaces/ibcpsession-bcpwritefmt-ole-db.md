@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "BCPWriteFmt method"
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IBCPSession::BCPWriteFmt (OLE DB)

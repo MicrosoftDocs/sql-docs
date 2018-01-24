@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "bcp_columns function"
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # bcp_columns

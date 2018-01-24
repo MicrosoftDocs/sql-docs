@@ -20,8 +20,8 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 caps.latest.revision: 31
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Service Principal Name (SPN) Support in Client Connections

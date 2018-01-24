@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLTablePrivileges function"
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLTablePrivileges

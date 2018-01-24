@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQLConnect function"
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLConnect

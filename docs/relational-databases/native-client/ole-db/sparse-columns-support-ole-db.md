@@ -15,8 +15,8 @@ ms.topic: "reference"
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 caps.latest.revision: 16
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sparse Columns Support (OLE DB)

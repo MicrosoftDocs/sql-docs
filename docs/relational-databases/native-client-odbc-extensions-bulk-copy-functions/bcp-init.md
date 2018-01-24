@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "bcp_init function"
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # bcp_init

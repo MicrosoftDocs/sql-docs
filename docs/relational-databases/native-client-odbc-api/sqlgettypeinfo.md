@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLGetTypeInfo function"
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLGetTypeInfo

@@ -15,8 +15,8 @@ ms.topic: "reference"
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: 35
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Native Client Support for High Availability, Disaster Recovery

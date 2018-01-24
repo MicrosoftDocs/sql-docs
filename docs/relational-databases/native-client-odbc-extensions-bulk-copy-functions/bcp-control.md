@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "bcp_control function"
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # bcp_control

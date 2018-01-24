@@ -19,8 +19,8 @@ helpviewer_keywords:
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 caps.latest.revision: 22
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sparse Columns Support in SQL Server Native Client

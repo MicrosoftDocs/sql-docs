@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "data updates [SQL Server], OLE DB"
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Updating Data in SQL Server Cursors

@@ -21,8 +21,8 @@ helpviewer_keywords:
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
 caps.latest.revision: 29
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating a Driver Application - Multithreaded Applications

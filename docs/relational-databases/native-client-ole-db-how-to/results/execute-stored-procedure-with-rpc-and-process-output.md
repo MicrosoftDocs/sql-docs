@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], RPC syntax"
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execute Stored Procedure with RPC and Process Output

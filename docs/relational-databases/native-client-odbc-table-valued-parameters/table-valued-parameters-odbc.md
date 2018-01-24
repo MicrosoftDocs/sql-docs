@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "ODBC, table-valued parameters"
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table-Valued Parameters (ODBC)

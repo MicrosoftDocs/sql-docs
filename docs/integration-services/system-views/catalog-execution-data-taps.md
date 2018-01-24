@@ -16,7 +16,7 @@ ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.execution_data_taps

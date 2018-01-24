@@ -26,7 +26,7 @@ ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server Integration Services

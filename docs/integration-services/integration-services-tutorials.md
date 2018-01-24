@@ -18,7 +18,7 @@ ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Integration Services Tutorials

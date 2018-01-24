@@ -18,7 +18,7 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 5-3 - Modifying the Directory Property Configuration Value

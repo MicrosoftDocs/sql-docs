@@ -16,7 +16,7 @@ ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.deny_permission (SSISDB Database)

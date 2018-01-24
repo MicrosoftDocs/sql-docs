@@ -16,7 +16,7 @@ ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
 caps.latest.revision: 3
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.enable_worker_agent (SSISDB Database)

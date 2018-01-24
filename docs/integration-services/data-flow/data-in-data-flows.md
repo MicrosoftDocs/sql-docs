@@ -23,7 +23,7 @@ ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data in Data Flows

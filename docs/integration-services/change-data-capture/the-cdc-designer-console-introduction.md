@@ -16,7 +16,7 @@ ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # The CDC Designer Console Introduction

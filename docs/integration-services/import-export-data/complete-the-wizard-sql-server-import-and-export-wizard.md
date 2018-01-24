@@ -18,7 +18,7 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Complete the Wizard (SQL Server Import and Export Wizard)

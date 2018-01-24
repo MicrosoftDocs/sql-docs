@@ -18,7 +18,7 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 3-1 - Copying the Deployment Bundle

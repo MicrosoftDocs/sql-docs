@@ -20,7 +20,7 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using Variables in the Script Component

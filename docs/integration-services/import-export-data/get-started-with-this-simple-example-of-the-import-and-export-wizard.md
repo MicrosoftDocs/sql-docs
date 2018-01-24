@@ -16,7 +16,7 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Get started with this simple example of the Import and Export Wizard

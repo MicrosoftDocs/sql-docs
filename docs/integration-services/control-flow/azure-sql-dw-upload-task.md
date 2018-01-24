@@ -19,7 +19,7 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 caps.latest.revision: 5
 author: "Lingxi-Li"
 ms.author: "lingxl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure SQL DW Upload Task

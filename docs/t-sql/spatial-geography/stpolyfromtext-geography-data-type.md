@@ -23,7 +23,7 @@ ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # STPolyFromText (geography Data Type)

@@ -28,7 +28,7 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ~ (Bitwise NOT) (Transact-SQL)

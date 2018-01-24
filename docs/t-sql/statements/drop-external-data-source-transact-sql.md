@@ -18,7 +18,7 @@ ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
 caps.latest.revision: 14
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP EXTERNAL DATA SOURCE (Transact-SQL)

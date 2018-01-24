@@ -23,7 +23,7 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STBuffer (geometry Data Type)

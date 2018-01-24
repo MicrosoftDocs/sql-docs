@@ -23,7 +23,7 @@ ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # STAsText (geometry Data Type)

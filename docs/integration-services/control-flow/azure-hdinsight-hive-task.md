@@ -19,7 +19,7 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure HDInsight Hive Task

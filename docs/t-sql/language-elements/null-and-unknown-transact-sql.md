@@ -18,7 +18,7 @@ ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
 caps.latest.revision: 5
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # NULL and UNKNOWN (Transact-SQL)

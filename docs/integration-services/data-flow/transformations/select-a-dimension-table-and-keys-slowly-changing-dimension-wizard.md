@@ -18,7 +18,7 @@ ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)

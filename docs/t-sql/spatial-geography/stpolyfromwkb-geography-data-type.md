@@ -23,7 +23,7 @@ ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STPolyFromWKB (geography Data Type)

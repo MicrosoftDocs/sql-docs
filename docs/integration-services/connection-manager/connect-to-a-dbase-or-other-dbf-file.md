@@ -20,7 +20,7 @@ ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connect to a dBASE or Other DBF File

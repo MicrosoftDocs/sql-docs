@@ -27,7 +27,7 @@ ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # GOTO (Transact-SQL)

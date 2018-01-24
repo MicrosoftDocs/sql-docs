@@ -21,7 +21,7 @@ ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Truncation (SSIS)

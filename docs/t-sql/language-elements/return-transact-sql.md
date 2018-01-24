@@ -30,7 +30,7 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # RETURN (Transact-SQL)

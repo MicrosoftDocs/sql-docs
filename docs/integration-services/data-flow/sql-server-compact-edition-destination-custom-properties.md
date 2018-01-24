@@ -16,7 +16,7 @@ ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Compact Edition Destination Custom Properties

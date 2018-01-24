@@ -26,7 +26,7 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 caps.latest.revision: 171
 author: "pmasl"
 ms.author: "pelopes"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC TRACEON - Trace Flags (Transact-SQL)

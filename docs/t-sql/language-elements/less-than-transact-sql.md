@@ -28,7 +28,7 @@ ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # &lt; (Less Than) (Transact-SQL)

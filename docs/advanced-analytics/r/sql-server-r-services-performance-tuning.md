@@ -15,7 +15,7 @@ ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
 caps.latest.revision: 20
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Performance tuning for R in SQL Server

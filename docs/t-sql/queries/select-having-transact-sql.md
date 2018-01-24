@@ -26,7 +26,7 @@ ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SELECT - HAVING (Transact-SQL)

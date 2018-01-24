@@ -30,7 +30,7 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SOME | ANY (Transact-SQL)

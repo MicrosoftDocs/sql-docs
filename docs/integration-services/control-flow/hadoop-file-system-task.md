@@ -18,7 +18,7 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Hadoop File System Task

@@ -16,7 +16,7 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to Azure Blob Storage (SQL Server Import and Export Wizard)

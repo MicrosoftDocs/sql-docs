@@ -23,7 +23,7 @@ ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STLineFromWKB (geometry Data Type)

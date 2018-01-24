@@ -30,7 +30,7 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 caps.latest.revision: 196
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE AVAILABILITY GROUP (Transact-SQL)

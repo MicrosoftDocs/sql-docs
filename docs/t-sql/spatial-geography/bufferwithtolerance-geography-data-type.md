@@ -23,7 +23,7 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # BufferWithTolerance (geography Data Type)

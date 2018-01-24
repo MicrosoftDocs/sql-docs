@@ -23,7 +23,7 @@ ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STArea (geography Data Type)

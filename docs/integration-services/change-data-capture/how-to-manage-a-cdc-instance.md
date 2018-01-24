@@ -16,7 +16,7 @@ ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # How to Manage a CDC Instance

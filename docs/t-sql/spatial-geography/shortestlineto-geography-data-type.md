@@ -23,7 +23,7 @@ ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ShortestLineTo (geography Data Type)

@@ -21,7 +21,7 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Developing Custom Objects for Integration Services

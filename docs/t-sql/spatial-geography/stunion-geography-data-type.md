@@ -23,7 +23,7 @@ ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STUnion (geography Data Type)

@@ -16,7 +16,7 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XML Source Custom Properties

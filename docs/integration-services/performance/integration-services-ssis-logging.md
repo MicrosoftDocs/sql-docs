@@ -35,7 +35,7 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Integration Services (SSIS) Logging

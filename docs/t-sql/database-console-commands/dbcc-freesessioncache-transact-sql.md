@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "flushing distributed query cache"
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC FREESESSIONCACHE (Transact-SQL)

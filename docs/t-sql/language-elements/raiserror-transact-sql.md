@@ -34,7 +34,7 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 caps.latest.revision: 73
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 

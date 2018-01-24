@@ -23,7 +23,7 @@ ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STDifference (geography Data Type)

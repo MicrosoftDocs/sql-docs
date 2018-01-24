@@ -38,9 +38,9 @@ helpviewer_keywords:
   - "page count accuracy [SQL Server]"
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 caps.latest.revision: 144
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC CHECKDB (Transact-SQL)

@@ -20,7 +20,7 @@ ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ConvexHullAggregate (geometry Data Type)

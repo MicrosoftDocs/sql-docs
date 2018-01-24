@@ -26,7 +26,7 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sort Transformation

@@ -21,7 +21,7 @@ ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Operators (Transact-SQL)

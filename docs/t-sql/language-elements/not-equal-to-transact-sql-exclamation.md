@@ -27,7 +27,7 @@ ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Not Equal To (Transact SQL) - exclamation

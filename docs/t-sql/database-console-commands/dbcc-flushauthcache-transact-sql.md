@@ -24,7 +24,7 @@ ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DBCC FLUSHAUTHCACHE (Transact-SQL)

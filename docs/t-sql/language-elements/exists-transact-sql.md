@@ -30,7 +30,7 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # EXISTS (Transact-SQL)

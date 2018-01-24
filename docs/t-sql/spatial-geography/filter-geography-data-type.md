@@ -24,7 +24,7 @@ ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filter (geography Data Type)

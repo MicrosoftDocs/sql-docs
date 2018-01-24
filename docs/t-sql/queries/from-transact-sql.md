@@ -39,7 +39,7 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: 97
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # FROM (Transact-SQL)

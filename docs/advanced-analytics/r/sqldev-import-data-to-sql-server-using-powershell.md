@@ -20,7 +20,7 @@ ms.assetid: 3c5b5145-fa57-455a-b153-0400fc062dc0
 caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Lesson 2: Import data to SQL Server using PowerShell

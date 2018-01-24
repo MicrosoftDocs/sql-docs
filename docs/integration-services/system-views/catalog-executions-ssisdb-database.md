@@ -19,7 +19,7 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # catalog.executions (SSISDB Database)

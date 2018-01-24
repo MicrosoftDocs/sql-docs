@@ -20,7 +20,7 @@ ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
 caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Lesson 3: Explore and visualize the data

@@ -14,7 +14,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 caps.latest.revision: 19
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ---

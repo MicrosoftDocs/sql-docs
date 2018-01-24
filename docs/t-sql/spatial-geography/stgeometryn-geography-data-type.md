@@ -22,7 +22,7 @@ ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STGeometryN (geography Data Type)

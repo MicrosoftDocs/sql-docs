@@ -29,7 +29,7 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # BEGIN...END (Transact-SQL)

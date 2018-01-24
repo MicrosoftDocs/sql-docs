@@ -18,7 +18,7 @@ ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Microsoft Connector for SAP BW F1 Help

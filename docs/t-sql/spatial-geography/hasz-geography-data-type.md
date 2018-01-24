@@ -23,7 +23,7 @@ ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # HasZ (geography Data Type)

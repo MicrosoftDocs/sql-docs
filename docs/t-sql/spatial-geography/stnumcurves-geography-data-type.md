@@ -23,7 +23,7 @@ ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STNumCurves (geography Data Type)

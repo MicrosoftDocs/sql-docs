@@ -15,7 +15,7 @@ ms.topic: "language-reference"
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.update_logdb_info (SSISDB Database)

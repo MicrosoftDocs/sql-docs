@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, command execution"
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing a Command

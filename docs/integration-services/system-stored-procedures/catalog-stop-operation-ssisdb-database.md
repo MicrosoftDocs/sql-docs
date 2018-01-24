@@ -16,7 +16,7 @@ ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.stop_operation (SSISDB Database)

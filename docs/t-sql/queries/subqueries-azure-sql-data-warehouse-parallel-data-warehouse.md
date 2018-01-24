@@ -16,7 +16,7 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Subqueries (Azure SQL Data Warehouse, Parallel Data Warehouse)

@@ -16,7 +16,7 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Steps in the SQL Server Import and Export Wizard

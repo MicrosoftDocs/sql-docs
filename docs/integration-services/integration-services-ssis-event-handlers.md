@@ -27,7 +27,7 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Integration Services (SSIS) Event Handlers

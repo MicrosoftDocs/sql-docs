@@ -18,7 +18,7 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create the SQL Server Change Database

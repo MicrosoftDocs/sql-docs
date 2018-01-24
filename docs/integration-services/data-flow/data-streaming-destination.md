@@ -18,7 +18,7 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Streaming Destination

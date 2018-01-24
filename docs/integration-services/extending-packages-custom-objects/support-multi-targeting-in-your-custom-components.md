@@ -18,7 +18,7 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Support multi-targeting in your custom components

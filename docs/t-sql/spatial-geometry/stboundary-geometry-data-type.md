@@ -23,7 +23,7 @@ ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STBoundary (geometry Data Type)

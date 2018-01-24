@@ -23,7 +23,7 @@ ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STOverlaps (geometry Data Type)

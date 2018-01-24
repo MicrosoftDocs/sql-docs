@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "DBCC DBREINDEX statement"
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC DBREINDEX (Transact-SQL)

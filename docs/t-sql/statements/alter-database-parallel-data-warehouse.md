@@ -16,7 +16,7 @@ ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
 caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER DATABASE (Parallel Data Warehouse)

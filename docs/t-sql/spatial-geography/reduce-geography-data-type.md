@@ -23,7 +23,7 @@ ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Reduce (geography Data Type )

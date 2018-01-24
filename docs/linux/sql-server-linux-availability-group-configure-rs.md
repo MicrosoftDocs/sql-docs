@@ -23,7 +23,7 @@ ms.workload: "Inactive"
 You can configure a SQL Server Always On Availability Group (AG) for read-scale workloads on Linux. There are two types of architectures for AGs. A architecture for high availability uses a cluster manager to provide improved business continuity. This architecture also can include read-scale replicas. To create the high-availability architecture, see [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md). The other architecture supports only read-scale workloads. This article explains how to create an AG without a cluster manager for read-scale workloads. This architecture provides read-scale only. It doesn't provide high availability.
 
 >[!NOTE]
->An availabilty group with `CLUSTER_TYPE = NONE` can include replicas hosted on different operating system platforms. It cannot support high availability. 
+>An availability group with `CLUSTER_TYPE = NONE` can include replicas hosted on different operating system platforms. It cannot support high availability. 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 

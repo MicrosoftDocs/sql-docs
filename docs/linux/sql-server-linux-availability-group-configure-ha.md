@@ -75,7 +75,7 @@ There are two supported AG configurations for high availability on Linux.
 For information, see [High availability and data protection for Availability Group configurations](sql-server-linux-availability-group-ha.md).
 
    >[!NOTE]
-   > Other supported configurations can provide read-scale support, but they do not provide high availability. For example, an AG with `CLUSTER_TYPE = NONE` can be configured across platforms (where some replicas are on Linux servers and others on Windows). This AG cannot provide HA but can support read-scale or migration scenarios. Another example is an AG for disaster recovery does not require synchronous replicas if automatic failover is not required and the risk of data loss is acceptable.  
+   > Other supported configurations do not provide high availability. For example, an AG with can be configured across platforms (where some replicas are on Linux servers and others on Windows). This AG cannot provide high availability but it can support read-scale or migration scenarios. All replicas need to be asynchronous. Another example is an AG with asynchronous replicas for disaster recovery - and not high availability. In these scenarios the AG `CLUSTER_TYPE = NONE`.    
 
 
 Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) with `CLUSTER_TYPE = EXTERNAL`. 

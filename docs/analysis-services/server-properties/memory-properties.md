@@ -62,6 +62,10 @@ HardMemoryLimit | Another threshold at which Analysis Services begins rejecting 
 The following properties apply to both tabular and multidimensional modes unless specified otherwise.
 
  Values between 1 and 100 represent percentages of **Total Physical Memory** or **Virtual Address Space**, whichever is less. Values over 100 represent memory limits in bytes.
+ 
+**Note:** Maximum memory utilized per instance of Analysis Services is dependant on the SQL Server Edition
+- [SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2016#Cross-BoxScaleLimits)
+- [SQL Server 2017](https://docs.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2017#Cross-BoxScaleLimits)
   
  **LowMemoryLimit**  
  A signed 64-bit double-precision floating-point number property that defines the first threshold at which Analysis Services begins releasing memory for low priority objects, such as an infrequently used cache. Once the memory is allocated, the server does not release memory below this limit. The default value is 65; which indicates the low memory limit is 65% of physical memory or the virtual address space, whichever is less.  

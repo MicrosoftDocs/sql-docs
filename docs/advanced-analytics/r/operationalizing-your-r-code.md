@@ -16,7 +16,7 @@ ms.assetid: f15696b1-2479-4e5f-ac5e-4beaf958a043
 caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Operationalize R code (Machine Learning Services)

@@ -23,7 +23,7 @@ ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STEndpoint (geometry Data Type)

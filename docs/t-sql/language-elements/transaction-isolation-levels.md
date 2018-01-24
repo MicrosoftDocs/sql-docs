@@ -22,7 +22,7 @@ ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Transaction Isolation Levels
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

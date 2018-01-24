@@ -28,7 +28,7 @@ ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # COMMIT WORK (Transact-SQL)

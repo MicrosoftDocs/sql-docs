@@ -30,7 +30,7 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ^ (Bitwise Exclusive OR) (Transact-SQL)

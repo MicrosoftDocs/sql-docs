@@ -17,7 +17,7 @@ ms.assetid:
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # How to use RevoScaleR functions to find or install R packages on SQL Server
 

@@ -15,7 +15,7 @@ ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
 caps.latest.revision: 7
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Configuration and Management

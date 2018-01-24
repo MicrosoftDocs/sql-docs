@@ -18,7 +18,7 @@ ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
 caps.latest.revision: 22
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # R Server (Standalone)
 

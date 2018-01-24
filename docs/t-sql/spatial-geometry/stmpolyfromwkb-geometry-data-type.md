@@ -23,7 +23,7 @@ ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STMPolyFromWKB (geometry Data Type)

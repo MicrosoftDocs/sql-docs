@@ -23,7 +23,7 @@ ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STLength (geometry Data Type)

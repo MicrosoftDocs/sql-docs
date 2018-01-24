@@ -23,7 +23,7 @@ ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STMPolyFromText (geometry Data Type)

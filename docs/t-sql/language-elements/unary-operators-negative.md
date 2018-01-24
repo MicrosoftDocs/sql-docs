@@ -24,7 +24,7 @@ ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Unary Operators - Negative

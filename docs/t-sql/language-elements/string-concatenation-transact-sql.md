@@ -26,7 +26,7 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # + (String Concatenation) (Transact-SQL)

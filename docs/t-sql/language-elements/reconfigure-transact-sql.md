@@ -28,7 +28,7 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # RECONFIGURE (Transact-SQL)

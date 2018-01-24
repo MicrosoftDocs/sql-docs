@@ -20,7 +20,7 @@ ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # HasZ (geometry DataType)

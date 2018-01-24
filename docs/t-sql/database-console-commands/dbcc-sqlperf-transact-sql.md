@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "DBCC SQLPERF statement"
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC SQLPERF (Transact-SQL)

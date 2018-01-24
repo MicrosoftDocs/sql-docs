@@ -23,7 +23,7 @@ ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIntersection (geometry Data Type)

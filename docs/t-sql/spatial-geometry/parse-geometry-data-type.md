@@ -20,7 +20,7 @@ ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Parse (geometry Data Type)

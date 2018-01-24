@@ -21,7 +21,7 @@ ms.assetid:
 caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # Step 5: Train and save a Python model using T-SQL
 

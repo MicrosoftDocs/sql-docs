@@ -18,7 +18,7 @@ ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
 caps.latest.revision: 8
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # R and SQL data types and data objects (R in SQL quickstart)

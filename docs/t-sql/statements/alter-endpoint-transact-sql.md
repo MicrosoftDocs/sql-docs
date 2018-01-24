@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "endpoints [SQL Server], modifying"
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER ENDPOINT (Transact-SQL)

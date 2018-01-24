@@ -23,7 +23,7 @@ ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIsValid (geometry Data Type)

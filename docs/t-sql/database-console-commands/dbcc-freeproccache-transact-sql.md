@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "clearing procedure cache"
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 caps.latest.revision: 61
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC FREEPROCCACHE (Transact-SQL)

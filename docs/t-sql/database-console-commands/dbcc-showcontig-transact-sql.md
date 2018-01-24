@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 caps.latest.revision: 78
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC SHOWCONTIG (Transact-SQL)

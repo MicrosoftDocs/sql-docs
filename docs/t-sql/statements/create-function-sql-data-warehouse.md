@@ -18,7 +18,7 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 caps.latest.revision: 14
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE FUNCTION (SQL Data Warehouse)

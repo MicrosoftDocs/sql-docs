@@ -23,7 +23,7 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STCurveN (geography Data Type)

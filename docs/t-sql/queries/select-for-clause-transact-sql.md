@@ -27,7 +27,7 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SELECT - FOR Clause (Transact-SQL)

@@ -16,7 +16,7 @@ ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
 caps.latest.revision: 37
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER DATABASE (Azure SQL Database)

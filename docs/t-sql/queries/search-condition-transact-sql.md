@@ -42,7 +42,7 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Search Condition (Transact-SQL)

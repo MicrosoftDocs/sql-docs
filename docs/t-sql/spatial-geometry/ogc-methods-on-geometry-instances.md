@@ -20,7 +20,7 @@ ms.assetid: c0c0f441-bf33-410c-9df0-544e3d05b944
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OGC Methods on Geometry Instances

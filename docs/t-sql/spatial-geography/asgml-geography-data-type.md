@@ -25,7 +25,7 @@ ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 #  AsGml - geography Data Type

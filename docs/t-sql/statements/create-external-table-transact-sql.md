@@ -26,7 +26,7 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: 30
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE EXTERNAL TABLE (Transact-SQL)

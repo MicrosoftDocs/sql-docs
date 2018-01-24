@@ -23,7 +23,7 @@ ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STStartPoint (geography Data Type)

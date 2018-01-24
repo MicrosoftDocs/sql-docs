@@ -18,7 +18,7 @@ ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OGC Methods on Geography Instances

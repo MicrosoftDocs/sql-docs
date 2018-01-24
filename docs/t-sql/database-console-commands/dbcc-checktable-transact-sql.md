@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "table integrity checks [SQL Server]"
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 caps.latest.revision: 89
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC CHECKTABLE (Transact-SQL)

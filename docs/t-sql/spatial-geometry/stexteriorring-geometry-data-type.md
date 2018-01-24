@@ -23,7 +23,7 @@ ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STExteriorRing (geometry Data Type)

@@ -24,7 +24,7 @@ ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AsBinaryZM (geography Data Type)

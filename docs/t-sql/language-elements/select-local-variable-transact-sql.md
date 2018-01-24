@@ -30,7 +30,7 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SELECT @local_variable (Transact-SQL)

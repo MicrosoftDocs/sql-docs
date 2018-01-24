@@ -28,7 +28,7 @@ ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # KILL STATS JOB (Transact-SQL)

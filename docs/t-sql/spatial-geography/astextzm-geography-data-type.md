@@ -25,7 +25,7 @@ ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AsTextZM (geography Data Type)

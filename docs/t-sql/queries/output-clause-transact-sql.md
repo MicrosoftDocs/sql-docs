@@ -36,7 +36,7 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 caps.latest.revision: 94
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # OUTPUT Clause (Transact-SQL)

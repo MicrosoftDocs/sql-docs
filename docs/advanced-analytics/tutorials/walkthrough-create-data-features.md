@@ -19,7 +19,7 @@ ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
 caps.latest.revision: 21
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Create data features using R and SQL (walkthrough)

@@ -22,7 +22,7 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Bitwise Operators (Transact-SQL)

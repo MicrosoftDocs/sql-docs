@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use Large CLR UDTs (OLE DB)

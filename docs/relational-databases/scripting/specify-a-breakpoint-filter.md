@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Transact-SQL debugger, breakpoint filter"
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify a Breakpoint Filter

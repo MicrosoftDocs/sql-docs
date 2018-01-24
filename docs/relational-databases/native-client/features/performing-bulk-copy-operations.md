@@ -20,8 +20,8 @@ helpviewer_keywords:
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 caps.latest.revision: 28
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Performing Bulk Copy Operations

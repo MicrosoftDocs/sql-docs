@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLNativeSql function"
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLNativeSql

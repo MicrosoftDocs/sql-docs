@@ -23,8 +23,8 @@ helpviewer_keywords:
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 caps.latest.revision: 30
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating a Driver Application - Asynchronous Mode and SQLCancel

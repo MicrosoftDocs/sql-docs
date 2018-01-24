@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "QuickWatch Dialog [Transact-SQL]"
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Transact-SQL Debugger - QuickWatch Dialog Box

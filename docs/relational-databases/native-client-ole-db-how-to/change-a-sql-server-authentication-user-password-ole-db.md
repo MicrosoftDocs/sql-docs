@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change a SQL Server Authentication User Password (OLE DB)

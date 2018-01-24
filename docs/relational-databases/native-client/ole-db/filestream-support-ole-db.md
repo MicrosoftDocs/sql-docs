@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 caps.latest.revision: 13
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FILESTREAM Support (OLE DB)

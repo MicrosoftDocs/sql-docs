@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], interactive search"
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Search Documents Interactively

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Execute method"
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating Rowsets with ICommand::Execute

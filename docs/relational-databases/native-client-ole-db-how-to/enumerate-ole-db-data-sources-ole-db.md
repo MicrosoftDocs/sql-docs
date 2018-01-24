@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "data sources [OLE DB]"
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Enumerate OLE DB Data Sources (OLE DB)

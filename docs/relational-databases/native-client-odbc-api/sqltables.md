@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLTables function"
 ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLTables

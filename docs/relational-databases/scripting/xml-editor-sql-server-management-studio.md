@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "XML Designer [SQL Server Management Studio]"
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # XML Editor (SQL Server Management Studio)

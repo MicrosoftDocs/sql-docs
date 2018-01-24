@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "text fonts [SQL Server Management Studio]"
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Change Font Color, Size, and Style

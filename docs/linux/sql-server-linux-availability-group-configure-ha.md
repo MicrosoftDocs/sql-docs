@@ -24,13 +24,13 @@ This article describes how to create a SQL Server Always On Availability Group (
 
 You can also create an AG without a cluster manager for *read-scale*. The AG for read scale only provides read-only replicas for performance scale-out. It does not provide high availability. To create an AG for read-scale, see [Configure a SQL Server Availability Group for read-scale on Linux](sql-server-linux-availability-group-configure-rs.md).
 
-Configurations that guarantee high availability and data protection require either two or three synchronous commit replicas. With three synchronous replicas the AG can automatically recovery even if one server is not available. For more information, see [High availability and data protection for Availability Group configurations](sql-server-linux-availability-group-ha.md). 
+Configurations that guarantee high availability and data protection require either two or three synchronous commit replicas. With three synchronous replicas, the AG can automatically recover even if one server is not available. For more information, see [High availability and data protection for Availability Group configurations](sql-server-linux-availability-group-ha.md). 
 
 All servers must be either physical or virtual, and virtual servers must be on the same virtualization platform. This requirement is because the fencing agents are platform specific. See [Policies for Guest Clusters](https://access.redhat.com/articles/29440#guest_policies).
 
 ## Roadmap
 
-The steps to create an AG on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+The steps to create an AG on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high-level steps: 
 
 1. [Configure SQL Server on three cluster servers](sql-server-linux-setup.md).
 
@@ -75,7 +75,7 @@ There are two supported AG configurations for high availability on Linux.
 For information, see [High availability and data protection for Availability Group configurations](sql-server-linux-availability-group-ha.md).
 
    >[!NOTE]
-   > Other supported configurations do not provide high availability. For example, an AG with can be configured across platforms (where some replicas are on Linux servers and others on Windows). This AG cannot provide high availability but it can support read-scale or migration scenarios. All replicas need to be asynchronous. Another example is an AG with asynchronous replicas for disaster recovery - and not high availability. In these scenarios the AG `CLUSTER_TYPE = NONE`.    
+   > Other supported configurations do not provide high availability. For example, an AG with can be configured across platforms (where some replicas are on Linux servers and others on Windows). This AG cannot provide high availability but it can support read-scale or migration scenarios. All replicas need to be asynchronous. Another example is an AG with asynchronous replicas for disaster recovery - and not high availability. In these scenarios, the AG `CLUSTER_TYPE = NONE`.    
 
 
 Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) with `CLUSTER_TYPE = EXTERNAL`. 
@@ -86,7 +86,7 @@ Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP
 * Set Primary and secondary replicas `FAILOVER_MODE = EXTERNAL`. 
    Specifies that the replica interacts with an external cluster manager, like Pacemaker. 
 
-The following Transact-SQL scripts creates an AG for high availability named `ag1`. The script configures the AG replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, `**<node2>**`, or `**<node3>**` values with the names of the SQL Server instances that host the replicas. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. To create the AG, run the following Transact-SQL on the SQL Server instance that hosts the primary replica.
+The following Transact-SQL scripts create an AG for high availability named `ag1`. The script configures the AG replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, `**<node2>**`, or `**<node3>**` values with the names of the SQL Server instances that host the replicas. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. To create the AG, run the following Transact-SQL on the SQL Server instance that hosts the primary replica.
 
 Run **only one** of the following scripts: 
 

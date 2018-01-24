@@ -30,7 +30,7 @@ This topic discusses how you can create a connection to a [!INCLUDE[ssNoVersion]
   
 ## Connection Properties  
 
-See [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md) for all the connection string keywords and attributes supported on Linux and Mac
+See [DSN and Connection String Keywords and Attributes](../../../connect/odbc/dsn-connection-string-attribute.md) for all the connection string keywords and attributes supported on Linux and Mac
 
 > [!IMPORTANT]  
 > When connecting to a database that uses database mirroring (has a failover partner), do not specify the database name in the connection string. Instead, send a **use** *database_name* command to connect to the database before executing your queries.  

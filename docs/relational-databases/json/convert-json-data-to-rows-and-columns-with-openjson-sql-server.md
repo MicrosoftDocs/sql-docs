@@ -28,7 +28,7 @@ ms.workload: "Active"
 The **OPENJSON** rowset function converts JSON text into a set of rows and columns. After you transform a JSON collection into a rowset with **OPENJSON**, you can run any SQL query on the returned data or insert it into a SQL Server table. 
   
 The **OPENJSON** function takes a single JSON object or a collection of JSON objects and transforms them into one or more rows. By default, the **OPENJSON** function returns the following data:
--   From a JSON object, the function returns all the key:value pairs that it finds at the first level.
+-   From a JSON object, the function returns all the key/value pairs that it finds at the first level.
 -   From a JSON array, the function returns all the elements of the array with their indexes.  
 
 You can add an optional **WITH** clause to provide a schema that explicitly defines the structure of the output.  

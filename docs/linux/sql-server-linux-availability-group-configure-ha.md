@@ -76,9 +76,12 @@ For information, see [High availability and data protection for Availability Gro
 
    >[!NOTE]
    > Other supported configurations can provide read-scale support, but they do not provide high availability. For example:
-   > - Cross-platform Availability Group - where some replicas are on SQL Server instances on Windows, and other replicas are on SQL Server on Linux. 
+   > - Cross-platform Availability Group - where some replicas are on Windows, and other replicas are on Linux. 
    > - Availability Groups for read-scale. 
-   > In these configurations, the cluster type is None. 
+   >
+   > In these configurations, the cluster type is None. They do not provide high availability. 
+   > 
+   > Asynchronous replicas may also be used for disaster recovery. 
 
 
 Create the Availability Group for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) with `CLUSTER_TYPE = EXTERNAL`. 

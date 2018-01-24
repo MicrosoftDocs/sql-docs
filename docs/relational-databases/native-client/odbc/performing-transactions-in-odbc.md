@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "ODBC, transactions"
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 caps.latest.revision: 30
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"

@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "SQL Server Native Client, encryption"
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 caps.latest.revision: 18
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"

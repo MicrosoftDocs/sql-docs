@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "bound parameter markers [SQL Server Native Client]"
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using Statement Parameters - Binding Parameters

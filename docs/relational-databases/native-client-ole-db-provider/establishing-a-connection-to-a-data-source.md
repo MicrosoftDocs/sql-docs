@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "OLE DB data sources [SQL Server Native Client]"
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Establishing a Connection to a Data Source

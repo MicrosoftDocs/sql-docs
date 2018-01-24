@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "bulk copy [ODBC], batch sizes"
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Managing Bulk Copy Batch Sizes

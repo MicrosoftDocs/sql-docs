@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "errors [OLE DB], error interfaces"
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Information in Error Interfaces

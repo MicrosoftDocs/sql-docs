@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "table-valued parameters (SQL Server Native Client)"
 ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 caps.latest.revision: 14
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"

@@ -1,5 +1,5 @@
 ---
-title: "Connection String Keywords and Data Source Names (DSNs) | Microsoft Docs"
+title: "Connecting to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
@@ -23,25 +23,17 @@ ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Connection String Keywords and Data Source Names (DSNs)
+# Connecting to SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This topic discusses how you can create a connection to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.  
   
 ## Connection Properties  
-For this release of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux or macOS, you can use the following connection keywords:  
-  
-||||||  
-|-|-|-|-|-|  
-|`Addr`|`Address`|`ApplicationIntent`|`AutoTranslate`|`Database`|
-|`Driver`|`DSN`|`Encrypt`|`FileDSN`|`MARS_Connection`|  
-|`MultiSubnetFailover`|`PWD`|`Server`|`Trusted_Connection`|`TrustServerCertificate`|  
-|`UID`|`WSID`|`ColumnEncryption`|`TransparentNetworkIPResolution`||  
+
+See [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md) for all the connection string keywords and attributes supported on Linux and Mac
 
 > [!IMPORTANT]  
 > When connecting to a database that uses database mirroring (has a failover partner), do not specify the database name in the connection string. Instead, send a **use** *database_name* command to connect to the database before executing your queries.  
-  
-For more information about these keywords, see the ODBC section of [Using Connection String Keywords with SQL Server Native Client](http://go.microsoft.com/fwlink/?LinkID=126696).  
   
 The value passed to the **Driver** keyword can be one of the following:  
   

@@ -50,7 +50,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 The following features have not been verified to work correctly in this release of the ODBC driver on macOS and Linux:
 
 -   Failover Cluster Connection
--   [Transparent Network IP Resolution](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)
+-   [Transparent Network IP Resolution](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (before ODBC Driver 17)
 -   [Advanced Driver Tracing](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 The following features are not available in this release of the ODBC driver on macOS and Linux: 

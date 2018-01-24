@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "ISSAsynchStatus interface"
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ISSAsynchStatus (OLE DB)

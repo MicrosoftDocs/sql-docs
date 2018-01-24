@@ -21,8 +21,8 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 caps.latest.revision: 36
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Performing Transactions - Distributed Transactions

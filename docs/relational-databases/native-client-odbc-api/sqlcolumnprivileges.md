@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLColumnPrivileges function"
 ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLColumnPrivileges

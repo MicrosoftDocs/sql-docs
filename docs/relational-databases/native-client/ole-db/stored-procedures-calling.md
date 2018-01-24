@@ -23,8 +23,8 @@ helpviewer_keywords:
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 caps.latest.revision: 39
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stored Procedures - Calling

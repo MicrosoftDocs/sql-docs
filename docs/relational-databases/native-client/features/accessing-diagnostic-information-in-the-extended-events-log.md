@@ -15,8 +15,8 @@ ms.topic: "reference"
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 caps.latest.revision: 19
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ---
 # Accessing Diagnostic Information in the Extended Events Log
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

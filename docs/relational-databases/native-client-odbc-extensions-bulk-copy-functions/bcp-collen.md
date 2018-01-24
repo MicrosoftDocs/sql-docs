@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "bcp_collen function"
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # bcp_collen

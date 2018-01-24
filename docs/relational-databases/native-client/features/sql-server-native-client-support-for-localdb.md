@@ -15,8 +15,8 @@ ms.topic: "reference"
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
 caps.latest.revision: 7
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Native Client Support for LocalDB

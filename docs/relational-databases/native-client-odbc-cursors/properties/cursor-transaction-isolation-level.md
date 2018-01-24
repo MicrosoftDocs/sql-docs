@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "row versioning [SQL Server], ODBC"
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Cursor Transaction Isolation Level

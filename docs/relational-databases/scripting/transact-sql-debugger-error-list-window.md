@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], error list window"
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transact-SQL Debugger - Error List Window

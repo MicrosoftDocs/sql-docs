@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "OLE DB rowsets, bookmarks"
 ms.assetid: 7d9076f2-bf9c-452e-b816-70371a0c1644
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Bookmarks

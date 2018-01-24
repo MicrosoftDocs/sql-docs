@@ -20,8 +20,8 @@ helpviewer_keywords:
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: 59
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Native Client Features

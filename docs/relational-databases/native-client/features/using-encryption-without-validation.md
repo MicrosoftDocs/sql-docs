@@ -21,8 +21,8 @@ helpviewer_keywords:
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 caps.latest.revision: 18
 author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using Encryption Without Validation

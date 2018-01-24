@@ -24,7 +24,7 @@ ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Compound Operators (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STEndpoint (geography Data Type)

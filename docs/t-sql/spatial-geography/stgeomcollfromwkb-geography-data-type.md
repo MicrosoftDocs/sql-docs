@@ -23,7 +23,7 @@ ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STGeomCollFromWKB (geography Data Type)

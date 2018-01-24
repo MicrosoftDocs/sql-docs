@@ -28,7 +28,7 @@ ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # &lt;= (Less Than or Equal To) (Transact-SQL)

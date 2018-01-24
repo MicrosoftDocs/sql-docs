@@ -23,7 +23,7 @@ ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STCurveToLine (geography Data Type)

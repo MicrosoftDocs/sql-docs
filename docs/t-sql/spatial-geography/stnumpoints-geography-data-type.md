@@ -23,7 +23,7 @@ ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STNumPoints (geography Data Type)

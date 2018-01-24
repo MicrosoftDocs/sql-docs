@@ -39,7 +39,7 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # KILL (Transact-SQL)

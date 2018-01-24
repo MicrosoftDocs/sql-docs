@@ -23,7 +23,7 @@ ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IsValidDetailed (geography Data Type)

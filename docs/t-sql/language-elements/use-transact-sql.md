@@ -26,7 +26,7 @@ ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # USE (Transact-SQL)

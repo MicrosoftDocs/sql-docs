@@ -25,7 +25,7 @@ ms.assetid: 0f1def4e-b0ca-4175-ad58-7c8c9153dab7
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CONTINUE (Transact-SQL)

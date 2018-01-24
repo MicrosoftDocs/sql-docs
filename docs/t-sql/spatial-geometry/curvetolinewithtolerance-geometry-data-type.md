@@ -20,7 +20,7 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CurveToLineWithTolerance (geometry Data Type)

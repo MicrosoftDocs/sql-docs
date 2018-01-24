@@ -18,7 +18,7 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE SELECTIVE XML INDEX (Transact-SQL)

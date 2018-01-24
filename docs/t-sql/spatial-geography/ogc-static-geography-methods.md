@@ -18,7 +18,7 @@ ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OGC Static Geography Methods

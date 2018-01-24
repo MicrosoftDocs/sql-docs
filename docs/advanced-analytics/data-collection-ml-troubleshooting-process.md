@@ -17,7 +17,7 @@ dev_langs:
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Troubleshoot data collection for machine learning

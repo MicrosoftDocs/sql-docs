@@ -22,7 +22,7 @@ ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Cursors (Transact-SQL)

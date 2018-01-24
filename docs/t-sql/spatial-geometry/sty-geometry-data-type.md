@@ -23,7 +23,7 @@ ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STY (geometry Data Type)

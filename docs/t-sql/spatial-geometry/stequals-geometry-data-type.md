@@ -23,7 +23,7 @@ ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STEquals (geometry Data Type)

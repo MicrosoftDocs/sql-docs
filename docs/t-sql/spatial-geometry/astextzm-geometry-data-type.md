@@ -25,7 +25,7 @@ ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AsTextZM (geometry Data Type)

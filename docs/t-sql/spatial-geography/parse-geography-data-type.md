@@ -21,7 +21,7 @@ ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Parse (geography Data Type)

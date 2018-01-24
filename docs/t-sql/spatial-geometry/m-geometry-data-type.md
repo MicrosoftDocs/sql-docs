@@ -23,7 +23,7 @@ ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # M (geometry Data Type)

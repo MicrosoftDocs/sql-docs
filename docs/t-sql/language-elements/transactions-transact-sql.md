@@ -26,7 +26,7 @@ ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Transactions (Transact-SQL)

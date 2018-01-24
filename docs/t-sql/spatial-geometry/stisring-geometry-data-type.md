@@ -23,7 +23,7 @@ ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIsRing (geometry Data Type)

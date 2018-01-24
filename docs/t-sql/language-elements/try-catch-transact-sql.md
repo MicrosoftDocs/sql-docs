@@ -34,7 +34,7 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 caps.latest.revision: 79
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # TRY...CATCH (Transact-SQL)

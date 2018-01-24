@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "contracts [Service Broker], permissions"
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GRANT Service Broker Permissions (Transact-SQL)

@@ -29,7 +29,7 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SET SHOWPLAN_XML (Transact-SQL)

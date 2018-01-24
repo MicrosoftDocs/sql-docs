@@ -37,7 +37,7 @@ ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # IS NULL (Transact-SQL)

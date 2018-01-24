@@ -26,7 +26,7 @@ ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)

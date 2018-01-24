@@ -20,7 +20,7 @@ ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MakeValid (geography Data Type)

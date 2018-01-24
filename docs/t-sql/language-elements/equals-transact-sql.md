@@ -26,7 +26,7 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # = (Equals) (Transact-SQL)

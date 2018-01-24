@@ -23,7 +23,7 @@ ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # STContains (geometry Data Type)

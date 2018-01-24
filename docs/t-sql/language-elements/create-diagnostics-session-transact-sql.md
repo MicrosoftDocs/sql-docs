@@ -18,7 +18,7 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE DIAGNOSTICS SESSION (Transact-SQL)

@@ -20,7 +20,7 @@ ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extended Static Geography Methods

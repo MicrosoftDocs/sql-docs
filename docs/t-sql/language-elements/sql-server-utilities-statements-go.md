@@ -27,7 +27,7 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server Utilities Statements - GO

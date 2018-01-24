@@ -20,7 +20,7 @@ ms.assetid:
 caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # Step 6: Operationalize the Python model using SQL Server
 

@@ -18,7 +18,7 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Queries

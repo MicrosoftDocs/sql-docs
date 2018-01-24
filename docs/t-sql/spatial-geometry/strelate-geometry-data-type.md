@@ -23,7 +23,7 @@ ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STRelate (geometry Data Type)

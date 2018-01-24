@@ -23,7 +23,7 @@ ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # MakeValid (geometry Data Type)

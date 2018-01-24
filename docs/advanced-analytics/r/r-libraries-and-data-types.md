@@ -16,7 +16,7 @@ ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
 caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # R Libraries and R Data Types

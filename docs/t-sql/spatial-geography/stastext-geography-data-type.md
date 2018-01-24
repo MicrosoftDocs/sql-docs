@@ -23,7 +23,7 @@ ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # STAsText (geography Data Type)

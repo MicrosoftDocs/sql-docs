@@ -20,7 +20,7 @@ ms.assetid: 3282e8ed-b515-4ed5-8543-fcef68629a92
 caps.latest.revision: 10
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Lesson 5: Train and save a model using T-SQL

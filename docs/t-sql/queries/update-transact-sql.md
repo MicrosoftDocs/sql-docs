@@ -43,7 +43,7 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 caps.latest.revision: 91
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # UPDATE (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STWithin (geometry Data Type)

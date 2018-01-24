@@ -20,7 +20,7 @@ ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extended Static Geometry Methods

@@ -23,7 +23,7 @@ ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # M (geography Data Type)

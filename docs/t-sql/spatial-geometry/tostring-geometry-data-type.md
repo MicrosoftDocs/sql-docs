@@ -22,7 +22,7 @@ ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ToString (geometry Data Type)

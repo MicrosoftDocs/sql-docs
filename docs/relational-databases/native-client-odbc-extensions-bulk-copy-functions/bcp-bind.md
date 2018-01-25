@@ -125,6 +125,16 @@ bcp_bind(hdbc, szName, 0,
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the ***eDataType*** paramenter.  
  
  The following table lists valid enumerated data types and the corresponding ODBC C data types.
+  
+|eDataType|C type|  
+|-----------------------|------------|  
+|SQLTEXT|char *|  
+|SQLNTEXT|wchar_t *|  
+|SQLCHARACTER|char *|  
+|SQLBIGCHAR|char|  
+ 
+ 
+ 
 |eDataType|C type|  
 |-----------------------|------------|  
 |SQLTEXT|char *|  

@@ -128,7 +128,7 @@ bcp_bind(hdbc, szName, 0,
  |eDataType|C type| 
  |-----------------------|------------|
  |SQLTEXT|char *|
- |SQLNTEXT/wchar_t *|
+ |SQLNTEXT|wchar_t *|
  |SQLCHARACTER|char *|
  |SQLBIGCHAR|char *|
  |SQLVARCHAR|char *|

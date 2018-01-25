@@ -119,6 +119,14 @@ FROM <backup_device> [ ,...n ]
   
 ### Permissions  
  Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], obtaining information about a backup set or backup device requires CREATE DATABASE permission. For more information, see [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
+ 
+## Examples  
+ The following example verifies the backup from disk.
+  
+```  
+RESTORE VERIFYONLY FROM DISK = 'D:\AdventureWorks.bak';
+GO
+```  
   
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

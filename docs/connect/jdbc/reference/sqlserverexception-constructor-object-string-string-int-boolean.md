@@ -25,7 +25,7 @@ ms.workload: "Inactive"
 # SQLServerException Constructor (Object, String, String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initializes a new instance of the [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) class when given an **object** object, a **string** object, a **string** object, an **int**, and a **boolean**.
+  Initializes a new instance of the [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) class when given an **object**, a **string** object, a **string** object, an **int**, and a **boolean**.
 
 ## Syntax  
   
@@ -55,7 +55,7 @@ public SQLServerException(Object obj,
  
  *errNum*  
   
- An int that contains the error code for the exception.
+ An int that contain the error code for the exception.
  
  *bStack*  
   

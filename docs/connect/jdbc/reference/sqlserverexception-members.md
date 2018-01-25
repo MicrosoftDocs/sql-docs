@@ -28,7 +28,7 @@ ms.workload: "Inactive"
 
 |Name|Description|  
 |----------|-----------------|  
-|[SQLServerException ](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|Initializes a new instance of the SQLServerBlob class.|  
+|[SQLServerException ](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Initializes a new instance of the SQLServerException class.|  
   
 ## Fields  
  None.  

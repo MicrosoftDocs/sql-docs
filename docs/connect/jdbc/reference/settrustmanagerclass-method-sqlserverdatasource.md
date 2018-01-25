@@ -39,7 +39,7 @@ public void setTrustManagerClass(java.lang.String trustManagerClass)
 #### Parameters  
  *trustManagerClass*  
   
- A **String** that contains the value of the TrustManagerClass connection property.
+ A **String** that contains the fully qualified class name of a custom javax.net.ssl.TrustManager.
   
 ## See Also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

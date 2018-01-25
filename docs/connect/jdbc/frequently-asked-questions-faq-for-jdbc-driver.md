@@ -26,9 +26,9 @@ ms.workload: "On Demand"
   
 ## Frequently Asked Questions  
 **How can I help improve the JDBC Driver?**  
-The JDBC Driver is open source and the source code can be found on [GitHub](https://github.com/microsoft/mssql-jdbc). You can help improve the driver by filing issues and contributing to the code base.
+The JDBC Driver is open-source and the source code can be found on [GitHub](https://github.com/microsoft/mssql-jdbc). You can help improve the driver by filing issues and contributing to the code base.
 
-**Which versions of SQL Server and Java does the driver support?**  
+**Which versions of SQL Server and Java do the driver support?**  
  See the [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.  
   
  **What should I know when upgrading my driver?**  
@@ -68,7 +68,7 @@ The JDBC Driver is open source and the source code can be found on [GitHub](http
 |sqljdbc.jar|JDBC 3.0|JDK 6.0 and 5.0|  
   
  **Do I need to make any code changes in my application to use the latest driver with my existing SQL Server version?**  
- In general, we design the driver to be backward compatible so that you do not need to change your existing applications when upgrading the driver. In the event that a new driver version introduces a breaking change, the  [Release Notes for the JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) section will provide clear details on the change and the impact to existing applications. In addition, you can review the release notes included with the driver for a list of bugs fixed in that release and known issues.  
+ In general, we design the driver to be backward compatible so that you do not need to change your existing applications when upgrading the driver. In the event that a new driver version introduces a breaking change, the  [Release Notes for the JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) section provides clear details on the change and the impact to existing applications. In addition, you can review the release notes included with the driver for a list of bugs fixed in that release and known issues.  
   
  **How much does the driver cost?**  
  The Microsoft JDBC Driver for SQL Server is available at no additional charge.  
@@ -76,7 +76,7 @@ The JDBC Driver is open source and the source code can be found on [GitHub](http
  **Can I redistribute the driver?** 
  The JDBC Drivers 4.1, 4.2, 6.0, 6.2, and 6.4 are redistributable. Please review the “Distributable Code” clause in the license agreements.
  
- The JDBC Driver 4.0 is freely redistributable under a separate Redistribution License that requires registration. To register or for more information, see our  [Redistributing the Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md). 
+ The JDBC Driver 4.0 is freely redistributable under a separate Redistribution License that requires registration. To register or for more information, see the  [Redistributing the Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md). 
  
    
  **Can I use the driver to access Microsoft SQL Server from a Linux computer?** 
@@ -102,7 +102,7 @@ The JDBC Driver is open source and the source code can be found on [GitHub](http
  Yes, the driver supports the use of IPv6 addresses with the connection properties collection and with the serverName connection string property. For more information, see [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).  
   
 **What is adaptive buffering?**  
- Adaptive buffering is introduced starting with Microsoft SQL Server 2005 JDBC Driver version 1.2, and is designed to retrieve any kind of large-value data without the overhead of server cursors. The adaptive buffering feature of the Microsoft SQL Server JDBC Driver provides a connection string property, responseBuffering, which can be set to "adaptive" or "full". Starting with the JDBC Driver version 2.0, the default behavior of the driver is "adaptive". In other words, in order to get the adaptive buffering behavior, your application does not have to request the adaptive behavior explicitly. In the version 1.2 release, however, the buffering mode was "full" by default and the application had to request the adaptive buffering mode explicitly. For more information, see [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md) topic and the blog [What is adaptiveresponse buffering and why should I use it?](http://go.microsoft.com/fwlink/?LinkId=111575).  
+ Adaptive buffering is introduced starting with Microsoft SQL Server 2005 JDBC Driver version 1.2, and is designed to retrieve any kind of large-value data without the overhead of server cursors. The adaptive buffering feature of the Microsoft SQL Server JDBC Driver provides a connection string property, responseBuffering, which can be set to "adaptive" or "full". Starting with the JDBC Driver version 2.0, the default behavior of the driver is "adaptive". In other words, in order to get the adaptive buffering behavior, your application does not have to request the adaptive behavior explicitly. In the version 1.2 release, however, the buffering mode was "full" by default and the application had to request the adaptive buffering mode explicitly. For more information, see [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md) topic and the blog. [What is adaptiveresponse buffering and why should I use it?](http://go.microsoft.com/fwlink/?LinkId=111575)  
   
 **Does the driver support connection pooling?**  
  The driver provides support for Java Platform, Enterprise Edition 5 (Java EE 5) connection pooling. The driver implements the JDBC 3.0 required interfaces to enable the driver to participate in any connection-pooling implementation that is provided by middleware application server vendors. The driver participates in pooled connections in these environments. For more information, see [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). The driver does not provide its own pooling implementation, but rather it relies on third-party Java application servers.  

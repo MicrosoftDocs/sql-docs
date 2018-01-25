@@ -1,5 +1,5 @@
 ---
-title: "JDBC 4.4 Compliance for the JDBC Driver | Microsoft Docs"
+title: "JDBC 4.3 Compliance for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
@@ -19,7 +19,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# JDBC 4.2 Compliance for the JDBC Driver
+# JDBC 4.3 Compliance for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
     

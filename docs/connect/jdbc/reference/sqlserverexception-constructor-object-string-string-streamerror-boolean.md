@@ -25,7 +25,7 @@ ms.workload: "Inactive"
 # SQLServerException Constructor (Object, String, String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initializes a new instance of the [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) class when given an **object** object, a **string** object, a **string** object, a **StreamError** object, and a **boolean**.
+  Initializes a new instance of the [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) class when given an **object**, a **string** object, a **string** object, a **StreamError** object, and a **boolean**.
 
 ## Syntax  
   

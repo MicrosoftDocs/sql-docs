@@ -21,7 +21,7 @@ ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Guidelines for Using xml Data Type Methods

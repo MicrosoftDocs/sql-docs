@@ -18,7 +18,7 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit the Table Properties

@@ -20,7 +20,7 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Events Logged by the Integration Services Service

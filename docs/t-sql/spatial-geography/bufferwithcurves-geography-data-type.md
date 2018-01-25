@@ -23,7 +23,7 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # BufferWithCurves (geography Data Type)

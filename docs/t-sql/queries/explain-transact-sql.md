@@ -16,7 +16,7 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 caps.latest.revision: 13
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # EXPLAIN (Transact-SQL)

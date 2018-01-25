@@ -23,7 +23,7 @@ ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # STDistance (geography Data Type)

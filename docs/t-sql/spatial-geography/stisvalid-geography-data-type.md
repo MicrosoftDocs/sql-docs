@@ -20,7 +20,7 @@ ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIsValid (geography Data Type)

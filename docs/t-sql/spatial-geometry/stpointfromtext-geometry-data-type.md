@@ -23,7 +23,7 @@ ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STPointFromText (geometry Data Type)

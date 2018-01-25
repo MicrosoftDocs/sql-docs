@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "date/time [OLE DB], schema rowsets"
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Metadata - Date and Time and Schema Rowsets

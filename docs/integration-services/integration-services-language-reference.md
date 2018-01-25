@@ -18,7 +18,7 @@ ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Integration Services Language Reference

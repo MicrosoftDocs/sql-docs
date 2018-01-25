@@ -18,7 +18,7 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Version - Transact SQL Metadata functions

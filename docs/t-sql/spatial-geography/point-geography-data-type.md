@@ -24,7 +24,7 @@ ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Point (geography Data Type)

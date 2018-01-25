@@ -26,7 +26,7 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # TOP (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # delete (XML DML)

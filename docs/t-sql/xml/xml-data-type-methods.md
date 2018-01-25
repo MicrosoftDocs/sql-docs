@@ -21,7 +21,7 @@ ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # xml Data Type Methods

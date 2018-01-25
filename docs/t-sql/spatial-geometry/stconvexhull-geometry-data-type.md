@@ -23,7 +23,7 @@ ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STConvexHull (geometry Data Type)

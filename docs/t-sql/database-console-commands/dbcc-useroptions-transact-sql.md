@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "SET statement, active SET options"
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DBCC USEROPTIONS (Transact-SQL)

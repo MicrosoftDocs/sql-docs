@@ -23,7 +23,7 @@ ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STCrosses (geometry Data Type)

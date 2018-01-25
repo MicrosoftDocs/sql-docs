@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "disabling trace flags"
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC TRACEOFF (Transact-SQL)

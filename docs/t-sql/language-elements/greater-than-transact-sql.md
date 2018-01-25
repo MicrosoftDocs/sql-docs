@@ -28,7 +28,7 @@ ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # &gt; (Greater Than) (Transact-SQL)

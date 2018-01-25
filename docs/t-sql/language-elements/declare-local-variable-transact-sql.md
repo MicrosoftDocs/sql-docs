@@ -26,7 +26,7 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: 76
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DECLARE @local_variable (Transact-SQL)

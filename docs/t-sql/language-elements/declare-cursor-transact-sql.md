@@ -30,7 +30,7 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DECLARE CURSOR (Transact-SQL)

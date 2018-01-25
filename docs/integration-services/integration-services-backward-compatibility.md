@@ -23,7 +23,7 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 caps.latest.revision: 84
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Integration Services Backward Compatibility

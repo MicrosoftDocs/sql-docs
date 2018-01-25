@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "dropping endpoints"
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP ENDPOINT (Transact-SQL)

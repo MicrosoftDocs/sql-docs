@@ -18,7 +18,7 @@ ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 2: Create the Deployment Bundle in SSIS

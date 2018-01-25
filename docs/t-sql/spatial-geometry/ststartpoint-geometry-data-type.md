@@ -23,7 +23,7 @@ ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STStartPoint (geometry Data Type)

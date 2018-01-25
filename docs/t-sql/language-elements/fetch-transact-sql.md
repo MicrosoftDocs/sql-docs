@@ -29,7 +29,7 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # FETCH (Transact-SQL)

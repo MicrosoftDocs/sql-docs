@@ -16,7 +16,7 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Connect to an ODBC Data Source (SQL Server Import and Export Wizard)

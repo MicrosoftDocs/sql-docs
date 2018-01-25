@@ -27,7 +27,7 @@ ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ANY (Transact-SQL)

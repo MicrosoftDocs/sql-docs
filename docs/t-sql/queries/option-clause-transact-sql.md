@@ -26,7 +26,7 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OPTION Clause (Transact-SQL)

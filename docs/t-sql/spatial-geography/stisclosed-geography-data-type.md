@@ -23,7 +23,7 @@ ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIsClosed (geography Data Type)

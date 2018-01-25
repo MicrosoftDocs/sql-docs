@@ -23,7 +23,7 @@ ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STEquals (geography Data Type)

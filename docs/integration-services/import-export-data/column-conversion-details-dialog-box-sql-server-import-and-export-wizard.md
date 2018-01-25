@@ -18,7 +18,7 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)

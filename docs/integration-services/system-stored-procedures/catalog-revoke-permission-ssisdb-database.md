@@ -19,7 +19,7 @@ ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.revoke_permission (SSISDB Database)

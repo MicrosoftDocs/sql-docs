@@ -27,7 +27,7 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # WHERE (Transact-SQL)

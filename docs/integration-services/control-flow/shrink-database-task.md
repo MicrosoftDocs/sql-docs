@@ -22,7 +22,7 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Shrink Database Task

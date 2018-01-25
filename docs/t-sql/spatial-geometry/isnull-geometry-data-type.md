@@ -22,7 +22,7 @@ ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IsNull (geometry Data Type)

@@ -23,7 +23,7 @@ ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GeomFromGml (geometry Data Type)

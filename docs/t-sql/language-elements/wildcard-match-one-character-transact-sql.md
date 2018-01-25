@@ -30,7 +30,7 @@ ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # _ (Wildcard - Match One Character) (Transact-SQL)

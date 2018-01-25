@@ -18,7 +18,7 @@ ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE XML INDEX (Selective XML Indexes)

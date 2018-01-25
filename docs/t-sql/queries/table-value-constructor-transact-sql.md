@@ -23,7 +23,7 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Table Value Constructor (Transact-SQL)

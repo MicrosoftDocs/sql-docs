@@ -23,7 +23,7 @@ ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STMPointFromWKB (geography Data Type)

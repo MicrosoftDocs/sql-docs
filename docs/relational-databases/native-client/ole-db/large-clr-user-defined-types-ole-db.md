@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "large CLR user-defined types [OLE DB]"
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 caps.latest.revision: 24
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"

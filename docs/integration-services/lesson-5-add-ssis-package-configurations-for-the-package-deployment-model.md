@@ -18,7 +18,7 @@ ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 5: Add SSIS Package Configurations for the Package Deployment Model

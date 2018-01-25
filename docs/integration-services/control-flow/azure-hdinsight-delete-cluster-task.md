@@ -19,7 +19,7 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure HDInsight Delete Cluster Task

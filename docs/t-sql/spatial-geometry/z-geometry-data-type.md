@@ -23,7 +23,7 @@ ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Z (geometry Data Type)

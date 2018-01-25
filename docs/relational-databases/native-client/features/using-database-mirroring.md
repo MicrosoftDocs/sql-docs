@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, database mirroring"
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 caps.latest.revision: 55
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"

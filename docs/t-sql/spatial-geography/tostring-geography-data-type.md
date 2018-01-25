@@ -22,7 +22,7 @@ ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ToString (geography Data Type)

@@ -21,7 +21,7 @@ ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Control-of-Flow

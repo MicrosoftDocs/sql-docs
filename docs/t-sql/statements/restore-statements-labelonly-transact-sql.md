@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "backup media [SQL Server], content information"
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RESTORE Statements - LABELONLY (Transact-SQL)

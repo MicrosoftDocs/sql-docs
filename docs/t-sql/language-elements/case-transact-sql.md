@@ -26,7 +26,7 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CASE (Transact-SQL)

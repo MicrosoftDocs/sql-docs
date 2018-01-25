@@ -20,7 +20,7 @@ ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
 caps.latest.revision: 36
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Active"
 ---
 # Using R code in Transact-SQL (R in SQL quickstart)

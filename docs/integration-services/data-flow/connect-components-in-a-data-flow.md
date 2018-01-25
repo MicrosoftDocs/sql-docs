@@ -19,7 +19,7 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect Components in a Data Flow

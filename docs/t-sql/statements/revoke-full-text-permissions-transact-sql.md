@@ -22,7 +22,7 @@ ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REVOKE Full-Text Permissions (Transact-SQL)

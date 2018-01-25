@@ -23,7 +23,7 @@ ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ConvexHullAggregate (geography Data Type)

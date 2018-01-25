@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "space allocation [SQL Server], checking"
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC CHECKALLOC (Transact-SQL)

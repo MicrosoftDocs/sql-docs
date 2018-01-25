@@ -25,7 +25,7 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Merge Transformation

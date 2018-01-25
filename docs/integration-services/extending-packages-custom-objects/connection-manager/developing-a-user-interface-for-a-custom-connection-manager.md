@@ -21,7 +21,7 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Developing a User Interface for a Custom Connection Manager

@@ -28,7 +28,7 @@ ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # BETWEEN (Transact-SQL)

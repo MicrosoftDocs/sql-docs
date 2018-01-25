@@ -32,7 +32,7 @@ ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)

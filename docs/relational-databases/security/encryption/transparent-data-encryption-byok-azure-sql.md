@@ -45,7 +45,9 @@ TDE with BYOK provides the following benefits:
 
 When TDE is first configured to use a TDE protector from Key Vault, the server sends the DEK of each TDE-enabled database to Key Vault for a wrap key request. Key Vault returns the encrypted database encryption key, which is stored in the user database.  
 
-It is important to note that **once a TDE Protector is stored in Azure Key Vault, it never leaves Azure Key Vault**. The logical server can only send key operation requests to the TDE protector key material within Key Vault, and **never accesses or caches the TDE protector**. The Key Vault administrator has the right to revoke Key Vault permissions of the server at any point, in which case all connections to the server are cut off. 
+>[!IMPORTANT]
+>It is important to note that **once a TDE Protector is stored in Azure Key Vault, it never leaves Azure Key Vault**. The logical server can only send key operation requests to the TDE protector key material within Key Vault, and **never accesses or caches the TDE protector**. The Key Vault administrator has the right to revoke Key Vault permissions of the server at any point, in which case all connections to the server are cut off. 
+>
 
 
 ## Guidelines for configuring TDE with BYOK
@@ -57,7 +59,7 @@ It is important to note that **once a TDE Protector is stored in Azure Key Vault
 - Recommended: Keep a copy of the TDE protector on premises.  This requires an HSM device to create a TDE Protector locally and a key escrow system to store a local copy of the TDE Protector.
 
 
-### Guidelines for Configuring Azure Key Vault
+### Guidelines for configuring Azure Key Vault
 
 - Use a key vault with [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) enabled to protect from data loss in case of accidental key – or key vault – deletion:  
   - Soft deleted resources are retained for a set period of time, 90 days unless they are recovered or purged.

@@ -125,46 +125,46 @@ bcp_bind(hdbc, szName, 0,
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the ***eDataType*** paramenter.  
  
  The following table lists valid enumerated data types and the corresponding ODBC C data types.
- |eDataType|C type| 
- |-----------------------|------------|
- |SQLTEXT|char *|
- |SQLNTEXT|wchar_t *|
- |SQLCHARACTER|char *|
- |SQLBIGCHAR|char *|
- |SQLVARCHAR|char *|
- |SQLBIGVARCHAR|char *|
- |SQLNCHAR|wchar_t *|
- |SQLNVARCHAR|wchar_t *|
- |SQLBINARY|byte *|
- |SQLBIGBINARY|byte *|
- |SQLVARBINARY|byte *|
- |SQLBIGVARBINARY|byte *|
- |SQLBIT|bool|
- |SQLBITN|-|
- |SQLINT1|short int|
- |SQLINT2|int|
- |SQLINT4|long int|
- |SQLINT8|_int64|
- |SQLINTN|-|
- |SQLFLT4|float|
- |SQLFLT8|float|
- |SQLFLTN|-|
- |SQLDECIMALN|SQL_NUMERIC_STRUCT|
- |SQLNUMERICN|SQL_NUMERIC_STRUCT|
- |SQLMONEY|DBMONEY|
- |SQLMONEY4|DBMONEY4|
- |SQLMONEYN|-|
- |SQLTIMEN|TIME_STRUCT|
- |SQLDATEN|DATE_STRUCT|
- |SQLDATETIM4|DBDATETIM4|
- |SQLDATETIMN|DBDATETIME|
- |SQLDATETIME|DBDATETIME|
- |SQLDATETIME2N|TIMESTAMP_STRUCT|
- |SQLDATETIMEOFFSETN|DBTIMESTAMPOFFSET|
- |SQLIMAGE|byte *|
- |SQLUDT|byte *|
- |SQLVARIANT|-|
- |SQLXML|-|
+|eDataType|C type|  
+|-----------------------|------------|  
+|SQLTEXT|char *|  
+|SQLNTEXT|wchar_t *|  
+|SQLCHARACTER|char *|  
+|SQLBIGCHAR|char *|  
+|SQLVARCHAR|char *|  
+|SQLBIGVARCHAR|char *|  
+|SQLNCHAR|wchar_t *|  
+|SQLNVARCHAR|wchar_t *|  
+|SQLBINARY|byte *|  
+|SQLBIGBINARY|byte *|  
+|SQLVARBINARY|byte *|  
+|SQLBIGVARBINARY|byte *|  
+|SQLBIT|bool|  
+|SQLBITN|-|  
+|SQLINT1|short int|  
+|SQLINT2|int|  
+|SQLINT4|long int|  
+|SQLINT8|_int64|  
+|SQLINTN|-|  
+|SQLFLT4|float|  
+|SQLFLT8|float|  
+|SQLFLTN|-|  
+|SQLDECIMALN|SQL_NUMERIC_STRUCT|  
+|SQLNUMERICN|SQL_NUMERIC_STRUCT|  
+|SQLMONEY|DBMONEY|  
+|SQLMONEY4|DBMONEY4|  
+|SQLMONEYN|-|  
+|SQLTIMEN|TIME_STRUCT|  
+|SQLDATEN|DATE_STRUCT|  
+|SQLDATETIM4|DBDATETIM4|  
+|SQLDATETIMN|DBDATETIME|  
+|SQLDATETIME|DBDATETIME|  
+|SQLDATETIME2N|TIMESTAMP_STRUCT|  
+|SQLDATETIMEOFFSETN|DBTIMESTAMPOFFSET|  
+|SQLIMAGE|byte *|  
+|SQLUDT|byte *|  
+|SQLVARIANT|-|  
+|SQLXML|-|  
   
  *idxServerCol*  
  Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  

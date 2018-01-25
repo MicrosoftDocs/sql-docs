@@ -1,6 +1,6 @@
 ---
 title: "Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters | Microsoft Docs"
-ms.date: "11/10/2017"
+ms.date: "1/25/2018"
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: database engine
@@ -54,7 +54,7 @@ The proper migration strategy depends on certain parameters of the original [!IN
 | **Cluster uses standalone instances** | [Scenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* Excluding Availability Group listener names
 
-## Scenario 1: Cluster to migrate uses strictly Availability Groups (Windows Server 2008 R2 SP1+)
+## Scenario 1: Windows Cluster with SQL Server Availability Groups and no Failover Clustered Instances (FCIs)
 If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup that uses strictly Availability Groups (AGs), you can migrate to a new cluster by creating a parallel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup on a different Windows Cluster with Windows Server 2016/2012 R2. After this, you can create a distributed AG where the target cluster is the secondary to the current production cluster. This does require that the user upgrade to [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] or above.
 
 ###  To perform the upgrade
@@ -90,7 +90,7 @@ If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup th
 
 11. Resume traffic towards the listener.
 
-## Scenario 2: Cluster to migrate has SQL FCIs only and no AG
+## Scenario 2: Windows Clusters with SQL Server Failover Cluster Instances (FCIs)
 
 If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup that uses no standalone [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] instances (only SQL FCIs), you can migrate to a new cluster by creating a parallel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup on a different Windows Cluster with Windows Server 2016/2012 R2. You will migrate to the target cluster by "stealing" the VNNs of the old SQL FCIs and acquiring them on the new clusters. This will create additional downtime dependent on DNS propagation times.
 
@@ -123,7 +123,7 @@ If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup th
 
 12. As the machines come back online following the restart, start each of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI roles in Failover Cluster Manager.
 
-## Scenario 3: Cluster has SQL FCIs only and uses Availability Groups
+## Scenario 3: Windows Cluster has both SQL FCIs and SQL Servr Availability Groups
 
 If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup that uses no standalone [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] instances, only SQL FCIs, which are contained in at least one Availability Group, you can migrate this to a new cluster using methods similar to the “no Availability Group, no standalone instance” scenario. Prior to copying system tables to the target FCI shared disks, you must drop all Availability Groups in the original environment. After all databases have been migrated to the target machines, you will recreate the Availability Groups with the same schema and listener names. By doing this, the Windows Server failover cluster resources will be correctly formed and managed on the target cluster. **Always On must be enabled in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager on each machine in the target environment prior to migration.**
 
@@ -161,7 +161,7 @@ If you have a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] setup th
 
 16. Create a listener in the new AG with the listener name of the original Availability Group’s listener.
 
-## Scenario 4: Cluster has some non-FCI and no Availability Groups
+## Scenario 4: Windows Cluster with Standalone SQL Server Instances and no Availability Groups
 
 Migrating a cluster with standalone instances is similar in process to migrating a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] cluster with only FCIs, but rather than changing the VNN of the FCI’s network name cluster resource, you change the machine name of the original standalone machine, and "steal" the old machine’s name on the target machine. This does introduce additional downtime relative to the no standalone scenarios, as you cannot join the target standalone machine to the WSFC until you have acquired the old machine’s network name.
 
@@ -197,7 +197,7 @@ Migrating a cluster with standalone instances is similar in process to migrating
 
 15. As the machines come back online following the restart, start each of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] FCI roles in Failover Cluster Manager.
 
-## Scenario 5: Cluster has some non-FCI and uses Availability Groups
+## Scenario 5: Windows Cluster with Standalone SQL Server Instances and Availability Groups
 
 Migrating a cluster that uses Availability Groups with standalone replicas is similar in process to migrating a cluster with strictly FCIs using Availability Groups. You still must delete the original Availability Groups and reconstruct them on the target cluster; however, additional downtime is introduced because of the additional costs in migrating standalone instances. **Always On must be enabled on each FCI in the target environment prior to migration.**
 

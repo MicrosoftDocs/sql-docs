@@ -64,7 +64,10 @@ When TDE is first configured to use a TDE protector from Key Vault, the server s
 - Use a key vault with [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) enabled to protect from data loss in case of accidental key – or key vault – deletion:  
   - Soft deleted resources are retained for a set period of time, 90 days unless they are recovered or purged.
   - The **recover** and **purge** actions have their own permissions associated in a key vault access policy. 
-- Grant the logical server access to the key vault using its Azure Active Directory (AAD) Identity.  When using the Portal UI, the AAD identity gets automatically created and the key vault access permissions are granted to the server.  Using PowerShell to configure TDE with BYOK, the AAD identity must be created and completion should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-azure-sql-configure.md) for detailed step-by-step instructions when using PowerShell.  Note: If the AAD Identity **is accidentally deleted or the server’s permissions are revoked** using the key vault’s access policy, the server loses access to the key vault.
+- Grant the logical server access to the key vault using its Azure Active Directory (AAD) Identity.  When using the Portal UI, the AAD identity gets automatically created and the key vault access permissions are granted to the server.  Using PowerShell to configure TDE with BYOK, the AAD identity must be created and completion should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-azure-sql-configure.md) for detailed step-by-step instructions when using PowerShell.  
+>[!NOTE]
+>If the AAD Identity **is accidentally deleted or the server’s permissions are revoked** using the key vault’s access policy, the server loses access to the key vault.
+>
 - Enable auditing and reporting on all encryption keys: Key Vault provides logs that are easy to inject into other security information and event management (SIEM) tools. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) is one example of a service that is already integrated.
 - To ensure high-availability of encrypted databases, configure each logical server with two Azure Key Vaults that reside in different regions.
 
@@ -73,8 +76,10 @@ When TDE is first configured to use a TDE protector from Key Vault, the server s
 
 - Create your encryption key locally on a local HSM device. Ensure this is an asymmetric, RSA 2048 key so it is storable in Azure Key Vault.
 - Escrow the key in a key escrow system.  
-- Import the encryption key file (*.pfx, *.byok, or *.backup) to Azure Key Vault. 
-    - (Note: For testing purposes, it is possible to create a key with Azure Key Vault, however this key cannot be escrowed, because  the private key can never leave the key vault.  A key used to encrypt production data should always be backed up and escrowed, as the loss of the key (accidental deletion in key vault, expiration etc.) results in permanent data loss.)
+- Import the encryption key file (.pfx, .byok, or .backup) to Azure Key Vault. 
+    >[!NOTE] 
+    >For testing purposes, it is possible to create a key with Azure Key Vault, however this key cannot be escrowed, because  the private key can never leave the key vault.  A key used to encrypt production data should always be backed up and escrowed, as the loss of the key (accidental deletion in key vault, expiration etc.) results in permanent data loss.
+    >
 - Use a key without an expiration date – and never set an expiration date on a key already in use: **once the key expires, the encrypted databases lose access to their TDE Protector and are dropped within 24 hours**.
 - Ensure the key is enabled and has permissions to perform *get*, *wrap key*, and *unwrap key* operations.
 - Create an Azure Key Vault key backup before using the key in Azure Key Vault for the first time. Learn more about the [Backup-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) command.

@@ -4,7 +4,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 06/14/2017
+ms.date: 01/24/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -66,17 +66,16 @@ The steps to create an AG on Linux servers for high availability are different f
 
 ## Create the AG
 
-There are two supported AG configurations for high availability on Linux.
+For high availablity, the AG requires at least three replicas. Either of the following configurations can support high availability:
 
 - [Three synchronous replicas](sql-server-linux-availability-group-ha.md#threeSynch)
 
-- [Two synchronous replicas](sql-server-linux-availability-group-ha.md#twoSynch)
+- [Two synchronous replicas plus a configuration replica](sql-server-linux-availability-group-ha.md#twoSynch)
 
 For information, see [High availability and data protection for Availability Group configurations](sql-server-linux-availability-group-ha.md).
 
-   >[!NOTE]
-   > Other supported configurations do not provide high availability. For example, an AG with can be configured across platforms (where some replicas are on Linux servers and others on Windows). This AG cannot provide high availability but it can support read-scale or migration scenarios. All replicas need to be asynchronous. Another example is an AG with asynchronous replicas for disaster recovery - and not high availability. In these scenarios, the AG `CLUSTER_TYPE = NONE`.    
-
+>[!NOTE]
+>The availability groups can include additional synchronous or asynchronous replicas. 
 
 Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) with `CLUSTER_TYPE = EXTERNAL`. 
 

@@ -21,6 +21,7 @@ ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Active"
 ---
+
 # JSON data (SQL Server)
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
@@ -41,11 +42,8 @@ Here's an example of JSON text:
 By using SQL Server built-in functions and operators, you can perform the following actions with JSON text: 
  
 - Parse JSON text and read or modify values.  
-  
 - Transform arrays of JSON objects into table format.  
-  
 - Run any Transact-SQL query on the converted JSON objects.  
-  
 - Format the results of Transact-SQL queries in JSON format.  
   
 ![Overview of built-in JSON support](../../relational-databases/json/media/jsonslides1overview.png "Overview of built-in JSON support")  
@@ -131,7 +129,7 @@ For more information, see [Convert JSON Data to Rows and Columns with OPENJSON (
 ### Convert SQL Server data to JSON or export JSON
 Format SQL Server data or the results of SQL queries as JSON by adding the **FOR JSON** clause to a **SELECT** statement. Use **FOR JSON** to delegate the formatting of JSON output from your client applications to SQL Server. For more information, see [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
-The following example uses PATH mode with the **FOR JSON** clause.  
+The following example uses PATH mode with the **FOR JSON** clause:  
   
 ```sql  
 SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
@@ -161,7 +159,7 @@ The **FOR JSON** clause formats SQL results as JSON text that can be provided to
 }] 
 ```  
   
- For more information, see [Format query results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) and [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md).  
+For more information, see [Format query results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) and [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md).  
   
 ## Combine relational and JSON data
 SQL Server provides a hybrid model for storing and processing both relational and JSON data by using standard Transact-SQL language. You can organize collections of your JSON documents in tables, establish relationships between them, combine strongly-typed scalar columns stored in tables with flexible key/value pairs stored in JSON columns, and query both scalar and JSON values in one or more tables by using full Transact-SQL.
@@ -253,7 +251,7 @@ WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
 ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified  
 ```  
   
-You can use both standard table columns and values from JSON text in the same query. You can add indexes on the `JSON_VALUE(Tab.json, '$.Status')` expression to improve performance of query. For more information, see [Index JSON data](../../relational-databases/json/index-json-data.md).
+You can use both standard table columns and values from JSON text in the same query. You can add indexes on the `JSON_VALUE(Tab.json, '$.Status')` expression to improve the performance of the query. For more information, see [Index JSON data](../../relational-databases/json/index-json-data.md).
  
 ## Return data from a SQL Server table formatted as JSON  
 If you have a web service that takes data from the database layer and returns it in JSON format, or if you have JavaScript frameworks or libraries that accept data formatted as JSON, you can format JSON output directly in a SQL query. Instead of writing code or including a library to convert tabular query results and then serialize objects to JSON format, you can use **FOR JSON** to delegate the JSON formatting to SQL Server.  
@@ -277,34 +275,34 @@ FOR JSON AUTO
   
 The output of this query is JSON text that's fully compliant with the OData spec. Formatting and escaping are handled by SQL Server. SQL Server can also format query results in any format, such as OData JSON or GeoJSON. For more information, see [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1).  
   
-## Test drive built-in JSON support  
- **Test drive built-in JSON support with the AdventureWorks sample database.** To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49502). 
+## Test drive built-in JSON support with the AdventureWorks sample database
+To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49502). 
  
- After you restore the sample database to an instance of SQL Server 2016, extract the samples file, and then open the *JSON Sample Queries procedures views and indexes.sql* file from the JSON folder. Run the scripts in this file to reformat some existing data as JSON data, test sample queries and reports over the JSON data, index the JSON data, and import and export JSON.  
+After you restore the sample database to an instance of SQL Server 2016, extract the samples file, and then open the *JSON Sample Queries procedures views and indexes.sql* file from the JSON folder. Run the scripts in this file to reformat some existing data as JSON data, test sample queries and reports over the JSON data, index the JSON data, and import and export JSON.  
   
- Here's what you can do with the scripts that are included in the file:  
+Here's what you can do with the scripts that are included in the file:  
   
-1.  Denormalize the existing schema to create columns of JSON data by doing the following:  
+* Denormalize the existing schema to create columns of JSON data by doing the following:  
   
-    a.  Store information from SalesReasons, SalesOrderDetails, SalesPerson, Customer, and other tables that contain information related to sales order into JSON columns in the SalesOrder_json table.  
+    * Store information from SalesReasons, SalesOrderDetails, SalesPerson, Customer, and other tables that contain information related to sales order into JSON columns in the SalesOrder_json table.  
   
-    b.  Store information from EmailAddresses/PersonPhone tables in the Person_json table as arrays of JSON objects.  
+    * Store information from EmailAddresses/PersonPhone tables in the Person_json table as arrays of JSON objects.  
   
-2.  Create procedures and views that query JSON data.  
+* Create procedures and views that query JSON data.  
   
-3.  Index JSON data. Create indexes on JSON properties and full-text indexes.  
+* Index JSON data. Create indexes on JSON properties and full-text indexes.  
   
-4.  Import and export JSON. Create and run procedures that export the content of the Person and the SalesOrder tables as JSON results, and import and update the Person and the SalesOrder tables by using JSON input.  
+* Import and export JSON. Create and run procedures that export the content of the Person and the SalesOrder tables as JSON results, and import and update the Person and the SalesOrder tables by using JSON input.  
   
-5.  Run query examples. Run some queries that call the stored procedures and views that you created in steps 2 and 4.  
+* Run query examples. Run some queries that call the stored procedures and views that you created in steps 2 and 4.  
   
-6.  Clean up scripts. Don't run this part if you want to keep the stored procedures and views that you created in steps 2 and 4.  
+* Clean up scripts. Don't run this part if you want to keep the stored procedures and views that you created in steps 2 and 4.  
   
 ## Learn more about built-in JSON support  
   
 ### Microsoft blog posts  
   
--   For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.  
+-   For specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and Azure SQL Database.  
   
 ### Reference topics  
   

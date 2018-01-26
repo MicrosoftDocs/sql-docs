@@ -28,9 +28,9 @@ In this scenario two servers are on different operating systems. A Windows Serve
 
 ## Steps 
 
-The steps to create the availability group are the same as the steps to create an availability group for read-scale workloads. The availability group cluster type is none, because there is no cluster manager. 
+The steps to create the AG are the same as the steps to create an AG for read-scale workloads. The AG cluster type is none, because there is no cluster manager. 
 
-1. Install SQL Server 2017 on Windows Server 2016 and enable Availability Groups from SQL Server Configuration Manager.
+1. Install SQL Server 2017 on Windows Server 2016 and enable AGs from SQL Server Configuration Manager.
 
 1. Install SQL Server 2017 on Linux. Enable HADR via mssql-conf.
 
@@ -38,7 +38,7 @@ The steps to create the availability group are the same as the steps to create a
 
 1. Open up firewall ports for TPC 1433 and 5022 on both Windows and Linux.
 
-1. Create a database for the availability group. The example steps use a database named `<TestDB>`.
+1. Create a database for the AG. The example steps use a database named `<TestDB>`.
 
 1. On the primary replica, create a database login and password.
 
@@ -78,7 +78,7 @@ The steps to create the availability group are the same as the steps to create a
    GO
    ```
 
-1. On the primary replica, create the availability group with `CLUSTER_TYPE = NONE`.
+1. On the primary replica, create the AG with `CLUSTER_TYPE = NONE`.
 
    ```sql
    CREATE AVAILABILITY GROUP [readscaleag]
@@ -103,7 +103,7 @@ The steps to create the availability group are the same as the steps to create a
    GO
    ```
 
-1. On the primary replica, grant the availability group permission to create any database.
+1. On the primary replica, grant the AG permission to create any database.
 
    ```sql
    ALTER AVAILABILITY GROUP [readscaleag] ADD DATABASE tpcc_workload
@@ -146,7 +146,7 @@ The steps to create the availability group are the same as the steps to create a
    GO
    ```
 
-1. On the secondary replica, join the availability group.
+1. On the secondary replica, join the AG.
 
    ```sql
    ALTER AVAILABILITY GROUP [readscaleag] JOIN WITH (CLUSTER_TYPE = NONE)

@@ -33,7 +33,7 @@ This topic explains how to install the [!INCLUDE[msCoName](../../../includes/msc
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
-#Download appropriate package for the OS version (Debian 8  and 9 are supprted)
+#Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #Debian 8
@@ -58,7 +58,7 @@ sudo apt-get install unixodbc-dev
 ```
 sudo su
 
-#Download appropriate package for the OS version (RedHat Enterprise Server 6 and 7 are supprted)
+#Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #RedHat Enterprise Server 6
@@ -84,7 +84,7 @@ sudo yum install unixODBC-devel
 ```
 sudo su
 
-#Download appropriate package for the OS version (SUSE Linux Enterprise Server 11 SP4 and 12)
+#Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #SUSE Linux Enterprise Server 11 SP4
@@ -109,7 +109,7 @@ sudo zypper install unixODBC-devel
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
-#Download appropriate package for the OS version (Ubuntu 14.04, 16.04 and 17.10 are supported)
+#Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #Ubuntu 14.04

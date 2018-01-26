@@ -141,7 +141,7 @@ bcp_bind(hdbc, szName, 0,
 |SQLVARBINARY|byte *|  
 |SQLBIGVARBINARY|byte *|  
 |SQLBIT|bool|  
-|SQLBITN|-|  
+|SQLBITN|char|  
 |SQLINT1|short int|  
 |SQLINT2|int|  
 |SQLINT4|long int|  

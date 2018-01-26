@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 |SQLINT2|short int|  
 |SQLINT4|int|  
 |SQLINT8|_int64|  
-|SQLINTN|cbIndicator<br /><br /> 1<br /><br /> 2<br /><br /> 4<br /><br /> 8|  
+|SQLINTN|cbIndicator  eDataType<br /><br /> 1            SQLINT1<br /><br /> 2            SQLINT2<br /><br /> 4            SQLINT4<br /><br /> 8            SQLINT8|  
 |SQLFLT4|float|  
 |SQLFLT8|float|  
 |SQLFLTN|-|  

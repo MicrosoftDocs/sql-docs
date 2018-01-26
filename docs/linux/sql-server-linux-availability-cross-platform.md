@@ -20,7 +20,7 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article explains the steps to create an Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server. This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other. This configuration does not support high-availability because there is no automatic failover capability. In this configuration there is no cluster manager. 
+This article explains the steps to create an Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server. This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other. This configuration does not support high-availability because there is no automatic failover capability. 
 
 ## Steps 
 
@@ -34,7 +34,7 @@ The steps to create the availability group are the same as the steps to create a
 
 3. Open up firewall ports for TPC 1433 and 5022 on both Windows and Linux.
 
-4. Create a database that will be in the availability group.
+4. Create a database for the availability group. The example steps use a database named `<TestDB>`.
 
 5. On the primary replica, create a database login and password.
 
@@ -153,7 +153,7 @@ The steps to create the availability group are the same as the steps to create a
 9. On the primary replica, run the SQL query to add the db to the AG.
 
    ```sql
-   ALTER AVAILABILITY GROUP [readscaleag] ADD DATABASE <my_database>
+   ALTER AVAILABILITY GROUP [readscaleag] ADD DATABASE <TestDB>
    GO
    ```
 

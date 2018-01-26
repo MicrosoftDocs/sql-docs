@@ -74,7 +74,8 @@ SELECT db_name
        FROM   
   
        msdb.managed_backup.fn_backup_db_config (NULL)  
-       WHERE is_managed_backup_enabled = 1  
+       WHERE is_managed_backup_enabled = 1 
+       AND is_dropped = 0
   
        --Select DBName from @DBNames  
   

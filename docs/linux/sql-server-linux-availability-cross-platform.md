@@ -22,6 +22,10 @@ ms.workload: "On Demand"
 
 This article explains the steps to create an Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server. This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other. This configuration does not support high-availability because there is no automatic failover capability. 
 
+## Scenario
+
+In this scenario two servers are on different operating systems. A Windows Server 2016 named `WinSQLInstance` hosts the primary replica. A Linux server named `LinuxSQLInstance` host the secondary replica.
+
 ## Steps 
 
 The steps to create the availability group are the same as the steps to create an availability group for read-scale workloads. The availability group cluster type is none, because there is no cluster manager. 
@@ -157,7 +161,7 @@ The steps to create the availability group are the same as the steps to create a
    GO
    ```
 
-10. You should see the db now getting populated on Linux based on what was on the primary REPLIACA.
+10. You should see the db now getting populated on Linux based on what was on the primary replica.
 
 ## Next steps
 

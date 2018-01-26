@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 |SQLINT2|short int|  
 |SQLINT4|int|  
 |SQLINT8|_int64|  
-|SQLINTN|-|  
+|SQLINTN|-\n\n|  
 |SQLFLT4|float|  
 |SQLFLT8|float|  
 |SQLFLTN|-|  

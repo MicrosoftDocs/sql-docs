@@ -20,7 +20,7 @@ ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Static Aggregate Geography Methods

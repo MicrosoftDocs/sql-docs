@@ -23,7 +23,7 @@ ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CurveToLineWithTolerance (geography Data Type)

@@ -19,7 +19,7 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure HDInsight Create Cluster Task

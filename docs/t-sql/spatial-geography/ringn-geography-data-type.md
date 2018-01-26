@@ -23,7 +23,7 @@ ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RingN (geography Data Type)

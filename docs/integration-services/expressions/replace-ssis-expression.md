@@ -19,7 +19,7 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # REPLACE (SSIS Expression)

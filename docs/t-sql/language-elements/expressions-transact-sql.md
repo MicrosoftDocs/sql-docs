@@ -26,7 +26,7 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Expressions (Transact-SQL)

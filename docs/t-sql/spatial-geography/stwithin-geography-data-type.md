@@ -20,7 +20,7 @@ ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STWithin (geography Data Type)

@@ -23,7 +23,7 @@ ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Null (geography Data Type)

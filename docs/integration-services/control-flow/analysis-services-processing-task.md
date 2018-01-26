@@ -23,7 +23,7 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Analysis Services Processing Task

@@ -18,7 +18,7 @@ ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Versions Dialog Box

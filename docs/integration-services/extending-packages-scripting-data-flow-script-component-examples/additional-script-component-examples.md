@@ -22,7 +22,7 @@ ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Additional Script Component Examples

@@ -29,7 +29,7 @@ ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Not Equal To (Transact SQL) - traditional

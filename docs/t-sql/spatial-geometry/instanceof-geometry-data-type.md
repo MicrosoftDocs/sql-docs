@@ -23,7 +23,7 @@ ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InstanceOf (geometry Data Type)

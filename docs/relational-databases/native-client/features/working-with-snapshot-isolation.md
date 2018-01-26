@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function"
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
 caps.latest.revision: 29
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"

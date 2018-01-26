@@ -19,7 +19,7 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # &gt; (Greater Than) (SSIS Expression)

@@ -20,7 +20,7 @@ ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extended Methods on Geometry Instances

@@ -20,7 +20,7 @@ ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STConvexHull (geography Data Type)

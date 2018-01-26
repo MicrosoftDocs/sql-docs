@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "ODBC, about SQL Server Native Client ODBC driver"
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 caps.latest.revision: 46
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "On Demand"

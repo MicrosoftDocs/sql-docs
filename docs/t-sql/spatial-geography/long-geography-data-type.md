@@ -23,7 +23,7 @@ ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Long (geography Data Type)

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "result sets [ODBC], fetching"
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Processing Results - Retrieve Result Set Information

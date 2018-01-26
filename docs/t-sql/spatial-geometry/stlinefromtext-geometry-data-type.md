@@ -23,7 +23,7 @@ ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STLineFromText (geometry Data Type)

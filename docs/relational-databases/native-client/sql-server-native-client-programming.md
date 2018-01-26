@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "native data access [SQL Server Native Client]"
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 caps.latest.revision: 66
-author: "JennieHubbard"
+author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "On Demand"

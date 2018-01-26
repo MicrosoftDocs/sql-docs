@@ -18,7 +18,7 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Lesson 5-2 - Enabling and Configuring Package Configurations

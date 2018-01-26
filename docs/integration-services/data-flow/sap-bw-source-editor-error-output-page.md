@@ -18,7 +18,7 @@ ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SAP BW Source Editor (Error Output Page)

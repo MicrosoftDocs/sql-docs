@@ -16,7 +16,7 @@ ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # How to Create and Edit a CDC Service

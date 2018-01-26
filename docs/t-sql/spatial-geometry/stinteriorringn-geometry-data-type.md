@@ -23,7 +23,7 @@ ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STInteriorRingN (geometry Data Type)

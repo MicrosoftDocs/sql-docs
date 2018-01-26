@@ -23,7 +23,7 @@ ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STPointOnSurface (geometry Data Type)

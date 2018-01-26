@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "checking backups"
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # RESTORE Statements - VERIFYONLY (Transact-SQL)

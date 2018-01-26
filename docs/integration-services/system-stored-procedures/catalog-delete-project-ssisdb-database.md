@@ -16,7 +16,7 @@ ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.delete_project (SSISDB Database)

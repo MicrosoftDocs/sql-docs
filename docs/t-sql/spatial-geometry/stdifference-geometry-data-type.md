@@ -23,7 +23,7 @@ ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STDifference (geometry Data Type)

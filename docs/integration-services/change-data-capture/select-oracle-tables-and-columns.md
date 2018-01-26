@@ -18,7 +18,7 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Select Oracle Tables and Columns

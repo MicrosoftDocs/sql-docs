@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "commands [OLE DB]"
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Commands

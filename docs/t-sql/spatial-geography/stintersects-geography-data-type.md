@@ -23,7 +23,7 @@ ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIntersects (geography Data Type)

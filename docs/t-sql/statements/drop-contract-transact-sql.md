@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "DROP CONTRACT statement"
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP CONTRACT (Transact-SQL)

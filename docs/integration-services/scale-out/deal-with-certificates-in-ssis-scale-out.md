@@ -15,7 +15,7 @@ ms.topic: "article"
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage certificates for SQL Server Integration Services Scale Out

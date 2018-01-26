@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "image columns [ODBC]"
 ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data-at-Execution and Text, ntext, or Image Columns

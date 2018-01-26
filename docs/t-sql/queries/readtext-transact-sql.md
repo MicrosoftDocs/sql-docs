@@ -25,7 +25,7 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # READTEXT (Transact-SQL)

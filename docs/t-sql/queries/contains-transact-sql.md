@@ -40,7 +40,7 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 caps.latest.revision: 117
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CONTAINS (Transact-SQL)

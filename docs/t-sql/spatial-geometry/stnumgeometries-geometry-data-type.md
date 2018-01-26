@@ -23,7 +23,7 @@ ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STNumGeometries (geometry Data Type)

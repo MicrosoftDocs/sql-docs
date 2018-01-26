@@ -25,7 +25,7 @@ ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Logical Operators (Transact-SQL)

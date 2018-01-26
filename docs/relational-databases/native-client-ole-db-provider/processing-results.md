@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "results [SQL Server Native Client]"
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Processing Results

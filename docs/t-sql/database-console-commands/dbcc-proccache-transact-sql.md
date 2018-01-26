@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "DBCC PROCCACHE statement"
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DBCC PROCCACHE (Transact-SQL)

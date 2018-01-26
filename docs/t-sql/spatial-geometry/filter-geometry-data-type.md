@@ -24,7 +24,7 @@ ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filter (geometry Data Type)

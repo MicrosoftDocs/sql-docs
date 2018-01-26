@@ -23,7 +23,7 @@ ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # EnvelopeAggregate (geography Data Type)

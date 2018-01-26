@@ -15,7 +15,7 @@ ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
 caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # Provision a virtual machine for machine learning on Azure
 

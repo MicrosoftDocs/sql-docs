@@ -23,7 +23,7 @@ ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STGeomCollFromWKB (geometry Data Type)

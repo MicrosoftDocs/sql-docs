@@ -16,7 +16,7 @@ ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Connection for Instance Creation

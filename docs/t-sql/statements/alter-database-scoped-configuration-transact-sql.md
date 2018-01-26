@@ -27,7 +27,7 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 caps.latest.revision: 32
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)

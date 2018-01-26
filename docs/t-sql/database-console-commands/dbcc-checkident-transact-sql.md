@@ -32,9 +32,9 @@ helpviewer_keywords:
   - "reporting current identity values"
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC CHECKIDENT (Transact-SQL)

@@ -16,7 +16,7 @@ ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View the List of Packages on the Integration Services Server

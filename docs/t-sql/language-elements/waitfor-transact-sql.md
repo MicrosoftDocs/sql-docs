@@ -32,7 +32,7 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # WAITFOR (Transact-SQL)

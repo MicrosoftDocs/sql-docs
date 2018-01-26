@@ -23,7 +23,7 @@ ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STPointN (geography Data Type)

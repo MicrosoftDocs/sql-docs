@@ -23,7 +23,7 @@ ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Operator Precedence (Transact-SQL)

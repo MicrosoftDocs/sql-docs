@@ -24,7 +24,7 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO NET Destination

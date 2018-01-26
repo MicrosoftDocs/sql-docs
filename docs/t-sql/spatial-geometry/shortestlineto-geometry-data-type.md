@@ -20,7 +20,7 @@ ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ShortestLineTo (geometry Data Type)

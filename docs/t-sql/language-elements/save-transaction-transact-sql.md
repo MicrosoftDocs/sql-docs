@@ -31,7 +31,7 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SAVE TRANSACTION (Transact-SQL)

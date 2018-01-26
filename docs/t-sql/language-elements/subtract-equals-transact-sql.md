@@ -27,7 +27,7 @@ ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 

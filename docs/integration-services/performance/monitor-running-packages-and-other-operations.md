@@ -19,7 +19,7 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Monitor Running Packages and Other Operations

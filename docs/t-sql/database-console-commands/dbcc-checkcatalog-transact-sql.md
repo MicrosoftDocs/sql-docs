@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "consistency [SQL Server], catalogs"
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC CHECKCATALOG (Transact-SQL)

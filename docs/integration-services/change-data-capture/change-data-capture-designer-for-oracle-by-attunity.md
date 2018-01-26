@@ -18,7 +18,7 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change Data Capture Designer for Oracle by Attunity

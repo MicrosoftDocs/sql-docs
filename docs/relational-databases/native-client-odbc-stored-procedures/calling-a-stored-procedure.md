@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CALL statement"
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Calling a Stored Procedure

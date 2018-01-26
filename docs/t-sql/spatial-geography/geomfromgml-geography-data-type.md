@@ -24,7 +24,7 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GeomFromGML (geography Data Type)

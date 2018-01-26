@@ -18,7 +18,7 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Retrieve and Understand the Change Data

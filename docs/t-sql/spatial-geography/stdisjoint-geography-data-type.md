@@ -23,7 +23,7 @@ ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STDisjoint (geography Data Type)

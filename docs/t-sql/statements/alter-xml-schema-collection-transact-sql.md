@@ -34,7 +34,7 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER XML SCHEMA COLLECTION (Transact-SQL)

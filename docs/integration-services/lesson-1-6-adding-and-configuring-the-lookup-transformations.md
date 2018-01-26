@@ -18,7 +18,7 @@ ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-6 - Adding and Configuring the Lookup Transformations

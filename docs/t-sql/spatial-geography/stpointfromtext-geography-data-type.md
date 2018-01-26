@@ -23,7 +23,7 @@ ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # STPointFromText (geography Data Type)

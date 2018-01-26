@@ -18,7 +18,7 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Perform an Incremental Load of Multiple Tables

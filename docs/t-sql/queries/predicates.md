@@ -27,7 +27,7 @@ ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Predicates

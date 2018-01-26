@@ -20,7 +20,7 @@ ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # GETDATE (SSIS Expression)

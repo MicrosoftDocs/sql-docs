@@ -34,6 +34,7 @@ sudo su
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 #Download appropriate package for the OS version (Debian 8  and 9 are supprted)
+#Choose only ONE of the following, corresponding to your OS version
 
 #Debian 8
 curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
@@ -58,6 +59,7 @@ sudo apt-get install unixodbc-dev
 sudo su
 
 #Download appropriate package for the OS version (RedHat Enterprise Server 6 and 7 are supprted)
+#Choose only ONE of the following, corresponding to your OS version
 
 #RedHat Enterprise Server 6
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -83,6 +85,7 @@ sudo yum install unixODBC-devel
 sudo su
 
 #Download appropriate package for the OS version (SUSE Linux Enterprise Server 11 SP4 and 12)
+#Choose only ONE of the following, corresponding to your OS version
 
 #SUSE Linux Enterprise Server 11 SP4
 zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
@@ -107,6 +110,7 @@ sudo su
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 #Download appropriate package for the OS version (Ubuntu 14.04, 16.04 and 17.10 are supported)
+#Choose only ONE of the following, corresponding to your OS version
 
 #Ubuntu 14.04
 curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list

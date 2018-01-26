@@ -24,7 +24,7 @@ This article explains the steps to create an Always On Availability Group (AG) w
 
 ## Scenario
 
-In this scenario two servers are on different operating systems. A Windows Server 2016 named `WinSQLInstance` hosts the primary replica. A Linux server named `LinuxSQLInstance` host the secondary replica.
+In this scenario, two servers are on different operating systems. A Windows Server 2016 named `WinSQLInstance` hosts the primary replica. A Linux server named `LinuxSQLInstance` host the secondary replica.
 
 ## Steps 
 

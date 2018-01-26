@@ -221,11 +221,11 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ``` 
 
-### Ubuntu 14.04
+### Ubuntu 15.10
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/ubuntu/15.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql
@@ -255,11 +255,11 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### Ubuntu 17.10
+### Ubuntu 16.10
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/ubuntu/16.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql

@@ -32,15 +32,15 @@ The steps to create the availability group are the same as the steps to create a
 
 1. Install SQL Server 2017 on Windows Server 2016 and enable Availability Groups from SQL Server Configuration Manager.
 
-2. Install SQL Server 2017 on Linux. Enable HADR via mssql-conf.
+1. Install SQL Server 2017 on Linux. Enable HADR via mssql-conf.
 
 1. Configure hosts on both servers or register the server names with DNS.
 
-3. Open up firewall ports for TPC 1433 and 5022 on both Windows and Linux.
+1. Open up firewall ports for TPC 1433 and 5022 on both Windows and Linux.
 
-4. Create a database for the availability group. The example steps use a database named `<TestDB>`.
+1. Create a database for the availability group. The example steps use a database named `<TestDB>`.
 
-5. On the primary replica, create a database login and password.
+1. On the primary replica, create a database login and password.
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -48,7 +48,7 @@ The steps to create the availability group are the same as the steps to create a
    GO
    ```
 
-6. On the primary replica, create master key, certificate, and backup the certificate.    
+1. On the primary replica, create master key, certificate, and backup the certificate.    
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<C0m9L3xP@55w0rd!>';
    CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
@@ -63,7 +63,7 @@ The steps to create the availability group are the same as the steps to create a
 
 1. Copy the certificate and private key to the Linux server at `/var/opt/mssql/data`. Set the group and ownership to `mssql:mssql`.
 
-7. On the primary replica, create the endpoint.
+1. On the primary replica, create the endpoint.
 
    ```sql
    CREATE ENDPOINT [Hadr_endpoint]
@@ -110,7 +110,7 @@ The steps to create the availability group are the same as the steps to create a
    GO
    ```
 
-8. On the secondary replica, create a database login and password.
+1. On the secondary replica, create a database login and password.
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -154,14 +154,14 @@ The steps to create the availability group are the same as the steps to create a
    GO
    ```
 
-9. On the primary replica, run the SQL query to add the db to the AG.
+1. On the primary replica, run the SQL query to add the db to the AG.
 
    ```sql
    ALTER AVAILABILITY GROUP [readscaleag] ADD DATABASE <TestDB>
    GO
    ```
 
-10. You should see the db now getting populated on Linux based on what was on the primary replica.
+1. You should see the db now getting populated on Linux based on what was on the primary replica.
 
 ## Next steps
 

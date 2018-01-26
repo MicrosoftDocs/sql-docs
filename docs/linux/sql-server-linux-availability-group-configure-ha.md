@@ -66,7 +66,7 @@ The steps to create an AG on Linux servers for high availability are different f
 
 ## Create the AG
 
-For high availablity, the AG requires at least three replicas. Either of the following configurations can support high availability:
+For a high availablity configuration that ensures automatic failover, the AG requires at least three replicas. Either of the following configurations can support high availability:
 
 - [Three synchronous replicas](sql-server-linux-availability-group-ha.md#threeSynch)
 

@@ -1,6 +1,6 @@
-Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In an availability group for high availability, the cluster manager automates the failover process. In a read-scale availability group, the failover process is manual. 
+Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In an availability group for high availability, the cluster manager automates the failover process. In an availability group with cluster type NONE, the failover process is manual. 
 
-There are two ways to fail over the primary replica in a read-scale availability group:
+There are two ways to fail over the primary replica in an availability group with cluster type NONE:
 
 - Forced manual failover with data loss
 - Manual failover without data loss
@@ -69,4 +69,4 @@ To manually fail over without data loss:
    ```  
 
    > [!NOTE] 
-   > To delete an availability group, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group created with CLUSTER_TYPE NONE or EXTERNAL, the command must be executed on all replicas that are part of the availability group.
+   > To delete an availability group, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group created with cluster type NONE or EXTERNAL, the command must be executed on all replicas that are part of the availability group.

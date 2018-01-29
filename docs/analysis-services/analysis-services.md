@@ -35,7 +35,7 @@ A typical workflow includes creating a multidimensional or tabular data model pr
 
 Analysis Services is available in two different platforms: 
 
-**Azure Analysis Services** - Supports tabular models at the 1200 and higher compatibility levels. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
+**Azure Analysis Services** - Supports tabular models at the 1200 and higher compatibility levels. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more, see [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
 
 **SQL Server Analysis Services** - Supports tabular models at all compatibility levels, multidimensional models, data mining, and Power Pivot for SharePoint.
  

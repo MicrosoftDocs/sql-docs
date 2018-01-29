@@ -71,7 +71,28 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
-1. Copy the certificate and private key to the Linux server at `/var/opt/mssql/data`. Set the group and ownership to `mssql:mssql`.
+1. Copy the certificate and private key to the Linux server (secondary replica) at `/var/opt/mssql/data`. Set the group and ownership to `mssql:mssql`.
+
+1. On the secondary replica, create a database login and password.
+
+   ```sql
+   CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
+   CREATE USER dbm_user FOR LOGIN dbm_login;
+   GO
+   ```
+
+1. On the secondary replica, restore the certificate you copied to `/var/opt/mssql/data`. 
+
+   ```sql
+   CREATE CERTIFICATE dbm_certificate   
+       AUTHORIZATION dbm_user
+       FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
+       WITH PRIVATE KEY (
+       FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
+       DECRYPTION BY PASSWORD = '<C0m9L3xP@55w0rd!>'
+   )
+   GO
+   ```
 
 1. On the primary replica, create an endpoint.
 
@@ -122,27 +143,6 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    ```sql
    ALTER AVAILABILITY GROUP [ag1] ADD DATABASE tpcc_workload
-   GO
-   ```
-
-1. On the secondary replica, create a database login and password.
-
-   ```sql
-   CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
-   CREATE USER dbm_user FOR LOGIN dbm_login;
-   GO
-   ```
-
-1. On the secondary replica, restore the certificate you copied to `/var/opt/mssql/data`. 
-
-   ```sql
-   CREATE CERTIFICATE dbm_certificate   
-       AUTHORIZATION dbm_user
-       FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
-       WITH PRIVATE KEY (
-       FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
-       DECRYPTION BY PASSWORD = '<C0m9L3xP@55w0rd!>'
-   )
    GO
    ```
 

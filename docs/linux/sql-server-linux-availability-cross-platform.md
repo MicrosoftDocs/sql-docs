@@ -22,6 +22,8 @@ ms.workload: "On Demand"
 
 This article explains the steps to create an Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server. This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other or disaster recovery (DR). This configuration does not support high-availability because there is no cluster solution to manage a cross-platform configuration. 
 
+![Hybrid None](./media/sql-server-linux-availability-group-overview/image1.png)
+
 Before proceeding, you should be familiar with installation and configuration for SQL Server instances on Windows and Linux. 
 
 ## Scenario

@@ -1,7 +1,7 @@
 ---
 title: "Azure Active Directory support in SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/25/2018"
+ms.date: "01/29/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -44,7 +44,11 @@ Starting with Visual Studio preview (Preview 4), SSDT provides a new authenticat
 
 Active Directory Interactive Authentication supports an interactive authentication allowing to use Azure Active Directory (AD) Multi-Factor Authentication (MFA) to authenticate with Azure SQL Database. This method supports native and federated Azure AD users and guest users from other accounts (including B2B users, Microsft and non-Microsoft accounts such as @outlook.com, @hotmail.com, @live.com as well as @gmail.com). If this method is specified, the **User Name** must be specified, and the Password field will be disabled. 
 
-When authenticating with *Active Directory Interactive Authentication*, an authentication window opens that requires users to enter a password manually. The MFA enforcement is provided by Azure AD through an additional MFA pop-up window during the authentication process.
+When authenticating with *Active Directory Interactive Authentication*, an authentication window opens that requires users to enter a password manually.
+
+![sign in dialog](media/azure-active-directory/sign-in.png)
+
+The MFA enforcement is provided by Azure AD through this additional MFA pop-up window during the authentication process.
 
 > [!NOTE]
 > Because *Active Directory Interactive Authentication* requires users to manually (interactively) enter their password, it is not recommended for automated workflows.

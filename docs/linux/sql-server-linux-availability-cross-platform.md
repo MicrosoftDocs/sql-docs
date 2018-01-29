@@ -139,12 +139,6 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    >[!NOTE]
    >The preceding script uses `SEEDING_MODE = AUTOMATIC` to create the AG. SQL Server 2017 introduces support for automatic seeding in an availability group even if the disk layout is different. This capability supports cross-platform availability groups. For more information, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
 
-1. On the primary replica, grant the AG permission to create any database.
-
-   ```sql
-   ALTER AVAILABILITY GROUP [ag1] ADD DATABASE tpcc_workload
-   GO
-   ```
 
 1. On the secondary replica, join the AG.
 

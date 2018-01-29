@@ -22,17 +22,25 @@ ms.workload: "On Demand"
 
 This article explains the steps to create an Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server. This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other or disaster recovery (DR). This configuration does not support high-availability because there is no cluster solution to manage a cross-platform configuration. 
 
+Before proceeding, you should be familiar with installation and configuration for SQL Server instances on Windows and Linux. 
+
 ## Scenario
 
 In this scenario, two servers are on different operating systems. A Windows Server 2016 named `WinSQLInstance` hosts the primary replica. A Linux server named `LinuxSQLInstance` host the secondary replica.
 
-## Steps 
+## Configure the Availability Group 
 
 The steps to create the AG are the same as the steps to create an AG for read-scale workloads. The AG cluster type is NONE, because there is no cluster manager. 
 
 1. Install SQL Server 2017 on Windows Server 2016 and enable AGs from SQL Server Configuration Manager.
 
 1. Install SQL Server 2017 on Linux. Enable HADR via mssql-conf.
+
+   To enable HADR via mssql-conf from a shell prompt, issue the following command:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 
+   ```
 
 1. Configure hosts file on both servers or register the server names with DNS.
 
@@ -106,7 +114,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    ```
 
    >[!NOTE]
-   >The preceding script uses `SEEDING_MODE = AUTOMATIC` to create the AG. SQL Server 2017 introduces support for automatic seeding in an availability group even if the disk layout is different. This supports cross-platform availability groups. For additional information, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#disk-layout). 
+   >The preceding script uses `SEEDING_MODE = AUTOMATIC` to create the AG. SQL Server 2017 introduces support for automatic seeding in an availability group even if the disk layout is different. This capability supports cross-platform availability groups. For more information, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#disklayout). 
 
 1. On the primary replica, grant the AG permission to create any database.
 

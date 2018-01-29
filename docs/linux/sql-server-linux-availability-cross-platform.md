@@ -157,7 +157,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 1. Verify that the database is getting populated on the secondary replica. 
 
-## Fail over the primary replica on a read-scale Availability Group
+## Fail over the primary replica
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 

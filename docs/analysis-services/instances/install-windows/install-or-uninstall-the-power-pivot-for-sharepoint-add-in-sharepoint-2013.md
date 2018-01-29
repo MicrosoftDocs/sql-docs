@@ -31,24 +31,6 @@ ms.workload: "Inactive"
   
  For information on how to download **spPowerPivot.msi**, see [Microsoft® SQL Server® 2014 Power Pivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854).  
   
- **In this topic:**  
-  
--   [Background](#bkmk_background)  
-  
--   [Where to Install spPowerPivot.msi?](#bkmk_where_to_install)  
-  
--   [Requirements and Prerequisites](#bkmk_prereq)  
-  
--   [To Install Power Pivot for SharePoint](#bkmk_install)  
-  
--   [Deploy the SharePoint Solution Files with the Power Pivot for SharePoint 2013 Configuration Tool](#bkmk_deploy_solution)  
-  
--   [Uninstall or repair the add-in](#bkmk_remove_addin)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ##  <a name="bkmk_background"></a> Background  
   
 -   **Application Server:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] functionality in SharePoint 2013 includes using workbooks as a data source, scheduled data refresh, and the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Management Dashboard.  

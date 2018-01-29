@@ -136,10 +136,10 @@ bcp_bind(hdbc, szName, 0,
 |SQLBIGVARCHAR|char *|  
 |SQLNCHAR|wchar_t *|  
 |SQLNVARCHAR|wchar_t *|  
-|SQLBINARY|byte *|  
-|SQLBIGBINARY|byte *|  
-|SQLVARBINARY|byte *|  
-|SQLBIGVARBINARY|byte *|  
+|SQLBINARY|unsigned char *|  
+|SQLBIGBINARY|unsigned char *|  
+|SQLVARBINARY|unsigned char *|  
+|SQLBIGVARBINARY|unsigned char *|  
 |SQLBIT|char|  
 |SQLBITN|char|  
 |SQLINT1|char|  
@@ -162,11 +162,11 @@ bcp_bind(hdbc, szName, 0,
 |SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
-|SQLIMAGE|byte *|  
-|SQLUDT|byte *|  
+|SQLIMAGE|unsigned char *|  
+|SQLUDT|unsigned char *|  
 |SQLUNIQUEID|SQLGUID|  
 |SQLVARIANT|*Any data type except:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
-|SQLXML|*Supported C data types:*<br />-   char*<br />-   wchar_t *<br />-   byte *|  
+|SQLXML|*Supported C data types:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
   
  *idxServerCol*  
  Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  

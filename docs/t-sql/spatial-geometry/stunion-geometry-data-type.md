@@ -23,7 +23,7 @@ ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STUnion (geometry Data Type)

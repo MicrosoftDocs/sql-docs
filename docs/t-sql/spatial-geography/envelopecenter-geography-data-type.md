@@ -23,7 +23,7 @@ ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # EnvelopeCenter (geography Data Type )

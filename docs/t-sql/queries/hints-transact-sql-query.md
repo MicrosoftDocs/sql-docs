@@ -60,7 +60,7 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 caps.latest.revision: 136
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Hints (Transact-SQL) - Query

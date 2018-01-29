@@ -23,7 +23,7 @@ ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STPointN (geometry Data Type)

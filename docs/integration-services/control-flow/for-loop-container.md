@@ -23,7 +23,7 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 caps.latest.revision: 55
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # For Loop Container

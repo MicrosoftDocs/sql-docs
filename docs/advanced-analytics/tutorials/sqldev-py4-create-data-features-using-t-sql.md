@@ -20,7 +20,7 @@ ms.assetid:
 caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # Step 4: Create Data Features using T-SQL
 

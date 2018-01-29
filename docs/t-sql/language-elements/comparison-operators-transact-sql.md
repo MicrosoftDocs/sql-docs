@@ -26,7 +26,7 @@ ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Comparison Operators (Transact-SQL)

@@ -20,7 +20,7 @@ ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STCurveToLine (geometry Data Type)

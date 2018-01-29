@@ -44,7 +44,7 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: 68
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)

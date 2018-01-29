@@ -26,7 +26,7 @@ ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # COALESCE (Transact-SQL)

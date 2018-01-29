@@ -81,7 +81,7 @@ ms.technology:
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/t-sql/language-reference">T-SQL</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMVs</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
+                                                    <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
                                                 <h4>Samples on GitHub</h4>

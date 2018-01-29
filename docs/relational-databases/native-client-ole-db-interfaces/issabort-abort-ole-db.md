@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Abort method"
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ISSAbort::Abort (OLE DB)

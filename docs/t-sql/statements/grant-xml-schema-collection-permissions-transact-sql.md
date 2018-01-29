@@ -23,7 +23,7 @@ ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GRANT XML Schema Collection Permissions (Transact-SQL)

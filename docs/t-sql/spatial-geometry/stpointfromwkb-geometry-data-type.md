@@ -23,7 +23,7 @@ ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STPointFromWKB (geometry Data Type)

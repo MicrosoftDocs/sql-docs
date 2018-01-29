@@ -36,7 +36,7 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # LIKE (Transact-SQL)

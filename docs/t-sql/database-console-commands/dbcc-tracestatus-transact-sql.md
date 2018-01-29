@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "displaying trace flag status"
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC TRACESTATUS (Transact-SQL)

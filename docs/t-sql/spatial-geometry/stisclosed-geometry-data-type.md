@@ -23,7 +23,7 @@ ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIsClosed (geometry Data Type)

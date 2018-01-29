@@ -20,7 +20,7 @@ ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OGC Static Geometry Methods

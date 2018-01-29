@@ -21,7 +21,7 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Add or Delete a Task or a Container in a Control Flow

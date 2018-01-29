@@ -23,7 +23,7 @@ ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STMLineFromWKB (geography Data Type)

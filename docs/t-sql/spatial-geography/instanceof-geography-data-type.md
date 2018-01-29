@@ -23,7 +23,7 @@ ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InstanceOf (geography Data Type)

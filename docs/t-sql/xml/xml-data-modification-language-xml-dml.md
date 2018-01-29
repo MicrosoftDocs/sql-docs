@@ -27,7 +27,7 @@ ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # XML Data Modification Language (XML DML)

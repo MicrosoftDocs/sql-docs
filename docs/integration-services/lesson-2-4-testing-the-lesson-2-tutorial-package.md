@@ -18,7 +18,7 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 2-4 - Testing the Lesson 2 Tutorial Package

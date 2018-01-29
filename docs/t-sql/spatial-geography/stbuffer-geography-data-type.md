@@ -23,7 +23,7 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # STBuffer (geography Data Type)

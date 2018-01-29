@@ -25,7 +25,7 @@ ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 

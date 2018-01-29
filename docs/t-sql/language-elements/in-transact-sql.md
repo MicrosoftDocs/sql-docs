@@ -28,7 +28,7 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # IN (Transact-SQL)

@@ -27,7 +27,7 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # WHILE (Transact-SQL)

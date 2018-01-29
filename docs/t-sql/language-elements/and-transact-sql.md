@@ -27,7 +27,7 @@ ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # AND (Transact-SQL)

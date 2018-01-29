@@ -32,9 +32,9 @@ helpviewer_keywords:
   - "searches [SQL Server Management Studio], replacing"
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Search and Replace

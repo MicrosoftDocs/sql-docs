@@ -15,7 +15,7 @@ ms.topic: "tutorial"
 caps.latest.revision: 4
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # Use Python with revoscalepy to create a model
 

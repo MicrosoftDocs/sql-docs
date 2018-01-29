@@ -23,7 +23,7 @@ ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STDisjoint (geometry Data Type)

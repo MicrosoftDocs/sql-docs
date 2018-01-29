@@ -18,7 +18,7 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 caps.latest.revision: 96
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Select Source Tables and Views (SQL Server Import and Export Wizard)

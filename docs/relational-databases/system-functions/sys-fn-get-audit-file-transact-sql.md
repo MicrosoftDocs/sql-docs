@@ -117,7 +117,7 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Used to record any extra information the user wants to record in |audit log by using the **sp_audit_write** stored procedure.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**nvarbinary** | SQL Server only (starting with 2016) |  
+|sequence_group_id |**varbinary** | SQL Server only (starting with 2016) |  
 |transaction_id |**bigint** | SQL Server only (starting with 2016) |  
 |client_ip |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
 |application_name |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  

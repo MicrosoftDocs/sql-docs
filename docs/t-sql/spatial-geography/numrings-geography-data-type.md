@@ -23,7 +23,7 @@ ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # NumRings (geography Data Type)

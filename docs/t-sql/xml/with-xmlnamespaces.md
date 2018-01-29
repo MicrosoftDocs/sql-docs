@@ -27,7 +27,7 @@ ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # WITH XMLNAMESPACES

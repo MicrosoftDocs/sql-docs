@@ -1,6 +1,6 @@
----
+﻿---
 title: "Analysis Services | Microsoft Docs"
-ms.date: "05/11/2017"
+ms.date: "01/26/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -29,6 +29,7 @@ ms.workload: "Active"
 ---
 # What is Analysis Services?
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   Analysis Services is an analytical data engine used in decision support and business analytics, providing the analytical data for business reports and client applications such as Power BI, Excel, Reporting Services reports, and other data visualization tools.  
   
  A typical workflow includes authoring a multidimensional or tabular data model, deploying the model as a database to an on-premises SQL Server Analysis Services or Azure Analysis Services server instance, setting up recurring data processing, and assigning permissions to allow data access by end-users. When it's ready to go, your semantic data model can be accessed by any client application supporting Analysis Services as a data source.  
@@ -54,7 +55,7 @@ Analysis Services is now available in the cloud as an Azure service. Azure Analy
 In-general, documentation for Azure Analysis Services is included with Azure documentation. And, documentation for SQL Server Analysis Services is included with SQL documentation. However, at least for tabular models, how you create and deploy your projects is much the same regardless of what platform you're using.  
    
 *  [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)
-*  [What's New in SQL Server Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)   
+*  [What's New in SQL Server Analysis Services](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)   
 *  [Comparing Tabular and Multidimensional Solutions](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [Tabular Models](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [Multidimensional Models](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  

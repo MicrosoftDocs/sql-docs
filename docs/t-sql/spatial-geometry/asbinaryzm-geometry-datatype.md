@@ -20,7 +20,7 @@ ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AsBinaryZM (geometry DataType)

@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "index defragmenting [SQL Server]"
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC INDEXDEFRAG (Transact-SQL)

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "array binding"
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assigning Storage

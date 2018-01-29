@@ -18,7 +18,7 @@ ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Extended Methods on Geography Instances

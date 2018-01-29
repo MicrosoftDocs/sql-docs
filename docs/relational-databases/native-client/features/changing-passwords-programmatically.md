@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "modifying passwords"
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Changing Passwords Programmatically

@@ -23,7 +23,7 @@ ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STTouches (geometry Data Type)

@@ -20,7 +20,7 @@ ms.assetid: 5b2f4c44-6192-40df-abf1-fc983844f1d0
 caps.latest.revision: 10
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Lesson 4: Create data features using T-SQL

@@ -28,7 +28,7 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Set Operators - EXCEPT and INTERSECT (Transact-SQL)

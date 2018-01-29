@@ -23,7 +23,7 @@ ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Point (geometry Data Type)

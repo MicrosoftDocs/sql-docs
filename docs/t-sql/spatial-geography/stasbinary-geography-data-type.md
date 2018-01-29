@@ -23,7 +23,7 @@ ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STAsBinary (geography Data Type)

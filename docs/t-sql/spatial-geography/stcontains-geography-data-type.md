@@ -20,7 +20,7 @@ ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STContains  (geography Data Type)

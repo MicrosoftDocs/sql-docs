@@ -20,7 +20,7 @@ ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STNumCurves (geometry Data Type)

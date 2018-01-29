@@ -23,6 +23,7 @@ ms.workload: "Inactive"
 ---
 # Lesson 10: Defining Administrative Roles
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 In this lesson, you learn to define security roles for administrative tasks.  
   
 > [!NOTE]  

@@ -26,7 +26,7 @@ ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # IF...ELSE (Transact-SQL)

@@ -35,7 +35,7 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 caps.latest.revision: 56
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # BEGIN TRANSACTION (Transact-SQL)

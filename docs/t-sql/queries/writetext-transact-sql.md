@@ -29,7 +29,7 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # WRITETEXT (Transact-SQL)

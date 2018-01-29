@@ -22,7 +22,7 @@ ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execute SQL Server Agent Job Task

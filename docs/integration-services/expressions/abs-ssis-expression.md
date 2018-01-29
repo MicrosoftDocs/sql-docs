@@ -19,7 +19,7 @@ ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ABS (SSIS Expression)

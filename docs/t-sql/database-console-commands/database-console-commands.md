@@ -18,7 +18,7 @@ ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Console Commands

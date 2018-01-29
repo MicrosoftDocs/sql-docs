@@ -26,7 +26,7 @@ ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # END (BEGIN...END) (Transact-SQL)

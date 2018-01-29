@@ -31,7 +31,7 @@ ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 caps.latest.revision: 67
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Developing a Custom Task

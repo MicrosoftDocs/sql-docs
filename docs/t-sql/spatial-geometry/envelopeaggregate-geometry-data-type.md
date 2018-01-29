@@ -20,7 +20,7 @@ ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # EnvelopeAggregate (geometry Data Type)

@@ -16,7 +16,7 @@ ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.execution_parameter_values (SSISDB Database)

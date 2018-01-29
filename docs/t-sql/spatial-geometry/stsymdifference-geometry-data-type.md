@@ -23,7 +23,7 @@ ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STSymDifference (geometry Data Type)

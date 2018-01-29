@@ -16,7 +16,7 @@ ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
 caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Managing and monitoring machine learning solutions

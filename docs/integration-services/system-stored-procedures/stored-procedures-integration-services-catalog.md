@@ -18,7 +18,7 @@ ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stored Procedures (Integration Services Catalog)

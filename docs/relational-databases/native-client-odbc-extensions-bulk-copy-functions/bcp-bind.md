@@ -165,8 +165,8 @@ bcp_bind(hdbc, szName, 0,
 |SQLIMAGE|byte *|  
 |SQLUDT|byte *|  
 |SQLUNIQUEID|SQLGUID|  
-|SQLVARIANT|*Any data type except*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
-|SQLXML|-|  
+|SQLVARIANT|*Any data type except:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLXML|*Supported data type:*<br />-   char*<br />-   wchar_t *<br />-   byte *|  
   
  *idxServerCol*  
  Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  

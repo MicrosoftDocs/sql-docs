@@ -81,9 +81,7 @@ For more information, see [Installing SQL Server R Services on an Azure virtual 
 
 ### Using machine learning in Azure SQL database
 
-Beginning in fall 2017, Azure SQL Database supports using R to train models and use them for prediction. 
-
-R Services in-database is available as a preview feature only, and has some limitations compared to the on-premises edition of SQL Server. For more information, see [Azure SQL DB](../r/using-r-in-azure-sql-database.md).
+Currently, the preview of R support in Azure SQL is suspended for ongoing development work. For more information, see [Azure SQL DB](../r/using-r-in-azure-sql-database.md).
 
 ### Can I upgrade the SQL Server version on a virtual machine?
 

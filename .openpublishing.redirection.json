@@ -1611,6 +1611,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md",
+            "redirect_url": "/sql/analysis-services/instances/data-providers-used-for-analysis-services-connections",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
             "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
             "redirect_document_id": false

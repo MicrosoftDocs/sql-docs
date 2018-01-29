@@ -165,7 +165,7 @@ bcp_bind(hdbc, szName, 0,
 |SQLIMAGE|byte *|  
 |SQLUDT|byte *|  
 |SQLUNIQUEID|SQLGUID|  
-|SQLVARIANT|*Any data type except*<br /> text<br /> ntext<br /> image<br /> varchar(max)<br /> varbinary(max)<br /> nvarchar(max)<br /> xml<br /> timestamp|  
+|SQLVARIANT|*Any data type except*<br />-   text<br /> ntext<br /> image<br /> varchar(max)<br /> varbinary(max)<br /> nvarchar(max)<br /> xml<br /> timestamp|  
 |SQLXML|-|  
   
  *idxServerCol*  

@@ -22,7 +22,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 
-# Work with JSON data in SQL Server
+# JSON data in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON is a popular textual data format that's used for exchanging data in modern web and mobile applications. JSON is also used for storing unstructured data in log files or NoSQL databases such as Microsoft Azure Cosmos DB. Many REST web services return results that are formatted as JSON text or accept data that's formatted as JSON. For example, most Azure services, such as Azure Search, Azure Storage, and Azure Cosmos DB, have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between webpages and web servers by using AJAX calls. 
@@ -39,7 +39,7 @@ Here's an example of JSON text:
 }]
 ``` 
  
-By using SQL Server built-in functions and operators, you can perform the following actions with JSON text: 
+By using SQL Server built-in functions and operators, you can do the following with JSON text: 
  
 - Parse JSON text and read or modify values.  
 - Transform arrays of JSON objects into table format.  
@@ -92,7 +92,7 @@ SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London')
 ### Convert JSON collections to a rowset
 You don't need a custom query language to query JSON in SQL Server. To query JSON data, you can use standard T-SQL. If you must create a query or report on JSON data, you can easily convert JSON data to rows and columns by calling the **OPENJSON** rowset function. For more information, see [Convert JSON Data to Rows and Columns with OPENJSON (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md).  
   
-The following example calls **OPENJSON** and transforms the array of objects that are stored in the `@json` variable to a rowset that can be queried with a standard SQL **SELECT** statement:  
+The following example calls **OPENJSON** and transforms the array of objects that is stored in the `@json` variable to a rowset that can be queried with a standard SQL **SELECT** statement:  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)

@@ -31,18 +31,6 @@ ms.workload: "Inactive"
   
  For information on installing the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
- This topic contains the following sections:  
-  
- [Run Power Pivot for SharePoint 2013 configuration](#bkmk_run_configuration_tool)  
-  
- [Verify Power Pivot Configuration](#bkmk_verify_powerpivot)  
-  
- [Troubleshoot Issues](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
-  
 ##  <a name="bkmk_run_configuration_tool"></a> Run Power Pivot for SharePoint 2013 configuration  
  **Note:** The [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] setup wizard installs two different configuration tools for [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. They each support a different version of SharePoint.  
   

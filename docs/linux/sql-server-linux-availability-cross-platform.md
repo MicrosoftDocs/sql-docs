@@ -165,5 +165,10 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
+This article reviewed the steps to create a cross-platform AG to support migration or read-scale workloads. It can be used for manual disaster recovery. It also explained how to fail over the availability group. A cross-platform availability group uses cluster type `NONE` and does not support high availability because there is no cluster tool across platforms. 
+
 ## Next steps
 
+[Overview of Always On Availability Groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+
+[SQL Server availability basics for Linux deployments](sql-server-linux-ha-basics.md)

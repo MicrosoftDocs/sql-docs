@@ -27,11 +27,11 @@ SQL Server Data Tools (SSDT) provides several [Azure Active Directory](https://d
 
 ## Active Directory Password Authentication
 
-Use Active Directory Password Authentication when users should manually enter their Azure Active Directory user name and password.
+Active Directory Password Authentication is a mechanism of connecting to Azure SQL Database by using identities in Azure Active Directory (Azure AD).  Use this method for connecting if you are logged in to Windows using credentials from a domain that is not federated with Azure, or when using Azure AD authentication using Azure AD based on the initial or the client domain. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
 
 ## Active Directory Integrated Authentication
 
-Use Active Directory Integrated Authentication to authenticate users based on their current Windows user accounts (the current Windows user accounts must be federated with Azure Active Directory).
+Active Directory Integrated Authentication is a mechanism of connecting to Azure SQL Database by using identities in Azure Active Directory (Azure AD). Use this method for connecting if you are logged in to Windows using your Azure Active Directory credentials from a federated domain. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
 ## Active Directory Interactive Authentication
 
@@ -42,7 +42,7 @@ Starting with Visual Studio preview (Preview 4), SSDT provides a new authenticat
 > Active Directory Interactive Authentication is available when connecting with SSDT in Visual Studio preview (Preview 4), and requires .NET 4.7.2 to be installed on the computer running SSDT. If .NET 4.7.2 is not installed, the Active Directory Interactive Authentication option will not be available.
 
 
-**Active Directory Interactive Authentication** supports an interactive authentication allowing to use Azure Active Directory (AD) Multi-Factor Authentication (MFA) to authenticate with Azure SQL Database. This method supports native and federated Azure AD users and guest users from other accounts (including B2B users, Microsft and non-Microsoft accounts such as @outlook.com, @hotmail.com, @live.com as well as @gmail.com). If this method is specified, the **User Name** must be specified, and the Password field will be disabled. 
+Active Directory Interactive Authentication supports an interactive authentication allowing to use Azure Active Directory (AD) Multi-Factor Authentication (MFA) to authenticate with Azure SQL Database. This method supports native and federated Azure AD users and guest users from other accounts (including B2B users, Microsft and non-Microsoft accounts such as @outlook.com, @hotmail.com, @live.com as well as @gmail.com). If this method is specified, the **User Name** must be specified, and the Password field will be disabled. 
 
 When authenticating with *Active Directory Interactive Authentication*, an authentication window opens that requires users to enter a password manually. The MFA enforcement is provided by Azure AD through an additional MFA pop-up window during the authentication process.
 

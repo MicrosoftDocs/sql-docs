@@ -40,7 +40,7 @@ Analysis Services is available in two different platforms:
 **SQL Server Analysis Services** - Supports tabular models at all compatibility levels, multidimensional models, data mining, and Power Pivot for SharePoint.
  
  ## Documentation by area  
-In-general, [Azure Analysis Services documentation](https://docs.microsoft.com/azure/analysis-services/) is included with Azure documentation. If you're interested in having your tabular models in the cloud, it's best to start there. 
+In general, [Azure Analysis Services documentation](https://docs.microsoft.com/azure/analysis-services/) is included with Azure documentation. If you're interested in having your tabular models in the cloud, it's best to start there. 
 
 This article and documentation in this section is mostly for SQL Server Analysis Services. However, at least for tabular models, how you create and deploy your projects is much the same, regardless of the platform you're using. Check out these sections to learn more:
 

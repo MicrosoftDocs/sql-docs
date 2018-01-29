@@ -21,12 +21,26 @@ ms.workload: "Active"
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md.md](../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-SQL Server Data Tools provides a new authentication method for connecting to an Azure SQL database - **Active Directory Interactive Authentication**.
+SQL Server Data Tools (SSDT) provides several [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) authentication methods.
+
+![SSDT connection dialog](media/azure-active-directory/interactive.png)
+
+## Active Directory Password Authentication
+
+Use Active Directory Password Authentication when users should manually enter their Azure Active Directory user name and password.
+
+## Active Directory Integrated Authentication
+
+Use Active Directory Integrated Authentication to authenticate users based on their current Windows user accounts (the current Windows user accounts must be federated with Azure Active Directory).
+
+## Active Directory Interactive Authentication
+
+Starting with Visual Studio preview (Preview 4), SSDT provides a new authentication method for connecting to an Azure SQL database - **Active Directory Interactive Authentication**.
+
 
 > [!NOTE]
-> Active Directory Interactive Authentication is available in SSDT version 15.5.2 and later, and requires .NET 4.7.2 to be installed on the computer running SSDT. If .NET 4.7.2 is not installed, the Active Directory Interactive Authentication option will not be available.
+> Active Directory Interactive Authentication is available when connecting with SSDT in Visual Studio preview (Preview 4), and requires .NET 4.7.2 to be installed on the computer running SSDT. If .NET 4.7.2 is not installed, the Active Directory Interactive Authentication option will not be available.
 
-   ![SSDT connection dialog](media/azure-active-directory/interactive.png)
 
 **Active Directory Interactive Authentication** supports an interactive authentication allowing to use Azure Active Directory (AD) Multi-Factor Authentication (MFA) to authenticate with Azure SQL Database. This method supports native and federated Azure AD users and guest users from other accounts (including B2B users, Microsft and non-Microsoft accounts such as @outlook.com, @hotmail.com, @live.com as well as @gmail.com). If this method is specified, the **User Name** must be specified, and the Password field will be disabled. 
 

@@ -159,7 +159,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
-1. You should see the db now getting populated on Linux based on what was on the primary replica.
+1. Verify that the database is getting populated on the secondary replica. 
 
 ## Fail over the primary replica on a read-scale Availability Group
 

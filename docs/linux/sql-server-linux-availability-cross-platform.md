@@ -20,7 +20,7 @@ ms.workload: "On Demand"
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article explains the steps to create an Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server. This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other. This configuration does not support high-availability because there is no automatic failover capability. 
+This article explains the steps to create an Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server. This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other or disaster recovery (DR). This configuration does not support high-availability because there is no cluster solution to manage a cross-platform configuration. 
 
 ## Scenario
 
@@ -28,13 +28,13 @@ In this scenario, two servers are on different operating systems. A Windows Serv
 
 ## Steps 
 
-The steps to create the AG are the same as the steps to create an AG for read-scale workloads. The AG cluster type is none, because there is no cluster manager. 
+The steps to create the AG are the same as the steps to create an AG for read-scale workloads. The AG cluster type is NONE, because there is no cluster manager. 
 
 1. Install SQL Server 2017 on Windows Server 2016 and enable AGs from SQL Server Configuration Manager.
 
 1. Install SQL Server 2017 on Linux. Enable HADR via mssql-conf.
 
-1. Configure hosts on both servers or register the server names with DNS.
+1. Configure hosts file on both servers or register the server names with DNS.
 
 1. Open up firewall ports for TPC 1433 and 5022 on both Windows and Linux.
 
@@ -63,7 +63,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 1. Copy the certificate and private key to the Linux server at `/var/opt/mssql/data`. Set the group and ownership to `mssql:mssql`.
 
-1. On the primary replica, create the endpoint.
+1. On the primary replica, create an endpoint.
 
    ```sql
    CREATE ENDPOINT [Hadr_endpoint]
@@ -78,10 +78,12 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
+1. On the secondary replica, create the endpoint. Repeat the preceding script on the secondary replica to create the endpoint. 
+
 1. On the primary replica, create the AG with `CLUSTER_TYPE = NONE`.
 
    ```sql
-   CREATE AVAILABILITY GROUP [readscaleag]
+   CREATE AVAILABILITY GROUP [ag1]
        WITH (CLUSTER_TYPE = NONE)
        FOR REPLICA ON
            N'<WinSQLInstance>' 
@@ -103,10 +105,13 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
+   >[!NOTE]
+   >The preceding script uses `SEEDING_MODE = AUTOMATIC` to create the AG. SQL Server 2017 introduces support for automatic seeding in an availability group even if the disk layout is different. This supports cross-platform availability groups. For additional information, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#disk-layout). 
+
 1. On the primary replica, grant the AG permission to create any database.
 
    ```sql
-   ALTER AVAILABILITY GROUP [readscaleag] ADD DATABASE tpcc_workload
+   ALTER AVAILABILITY GROUP [ag1] ADD DATABASE tpcc_workload
    GO
    ```
 
@@ -131,37 +136,26 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
-1. On the secondary replica, create the endpoint.
-
-   ```sql
-   CREATE ENDPOINT [Hadr_endpoint]
-       AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = 5022)
-       FOR DATA_MIRRORING (
-           ROLE = ALL,
-           AUTHENTICATION = CERTIFICATE dbm_certificate,
-           ENCRYPTION = REQUIRED ALGORITHM AES
-           );
-   ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
-   GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
-   GO
-   ```
-
 1. On the secondary replica, join the AG.
 
    ```sql
-   ALTER AVAILABILITY GROUP [readscaleag] JOIN WITH (CLUSTER_TYPE = NONE)
-   ALTER AVAILABILITY GROUP [readscaleag] GRANT CREATE ANY DATABASE
+   ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE)
+   ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
    GO
    ```
 
 1. On the primary replica, run the SQL query to add the db to the AG.
 
    ```sql
-   ALTER AVAILABILITY GROUP [readscaleag] ADD DATABASE <TestDB>
+   ALTER AVAILABILITY GROUP [ag1] ADD DATABASE <TestDB>
    GO
    ```
 
 1. You should see the db now getting populated on Linux based on what was on the primary replica.
+
+## Fail over the primary replica on a read-scale Availability Group
+
+[!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
 ## Next steps
 

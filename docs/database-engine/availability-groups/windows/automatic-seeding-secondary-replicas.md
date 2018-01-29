@@ -50,7 +50,7 @@ Automatic seeding is a single-threaded process that can handle up to five databa
 
 Compression can be used for automatic seeding, but it is disabled by default. Turning on compression reduces network bandwidth and possibly speeds up the process, but the tradeoff is additional processor overhead. To use compression during automatic seeding, enable trace flag 9567 - see [Tune compression for availability group](tune-compression-for-availability-group.md).
 
-### <a name = "disklayout"></a> Disk layout
+### <a name = "disk-layout"></a> Disk layout
 
 In SQL Server 2016 and before, the folder where the database is created by automatic seeding must already exist and be the same as the path on the primary replica. 
 
@@ -152,9 +152,6 @@ If successful, the database(s) are automatically created on the secondary replic
 In addition to the [Dynamic Management Views](#dynamic-management-views) described below, the start and completion of automatic seeding can be seen in the SQL Server Log:
 
 ![SQL server log][2]
-
-
-
 
 ## Combine backup and restore with automatic seeding
 

@@ -38,7 +38,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    ![Enable Availability Groups](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
-   SQL Server Configuration Manager will note that the computer is not a node in a failover cluster. For a cross-platform Availability Group, this is OK. 
+   SQL Server Configuration Manager notes that the computer is not a node in a failover cluster. 
 
    After you enable Availability Groups, restart SQL Server.
 

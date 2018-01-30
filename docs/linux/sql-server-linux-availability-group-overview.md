@@ -167,5 +167,5 @@ If using automatic seeding with a distributed availability group that crosses OS
 
 [Add availability group Cluster Resource on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
-[Configure a cross-platform availability group](sql-server-linux-availability-cross-platform.md)
+[Configure a cross-platform availability group](sql-server-linux-availability-group-cross-platform.md)
 

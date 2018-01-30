@@ -34,15 +34,25 @@ In this scenario, two servers are on different operating systems. A Windows Serv
 
 The steps to create the AG are the same as the steps to create an AG for read-scale workloads. The AG cluster type is NONE, because there is no cluster manager. 
 
-1. Install SQL Server 2017 on Windows Server 2016 and enable AGs from SQL Server Configuration Manager.
+1. Install SQL Server 2017 on Windows Server 2016 and enable Availability Groups from SQL Server Configuration Manager.
 
-1. Install SQL Server 2017 on Linux. Enable HADR via mssql-conf.
+   ![Enable Availability Groups](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
-   To enable HADR via mssql-conf from a shell prompt, issue the following command:
+1. Install SQL Server 2017 on Linux. Enable hadr via mssql-conf.
+
+   To enable hadr via mssql-conf from a shell prompt, issue the following command:
 
    ```bash
-   sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 
+   sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
    ```
+
+   After you enable hadr, restart the SQL Server instance.  
+
+   The following image shows this complete step.
+
+    ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+
+
 
 1. Configure hosts file on both servers or register the server names with DNS.
 

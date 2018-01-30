@@ -3,7 +3,7 @@ title: Manage SQL Server on Linux with SSMS | Microsoft Docs
 description: This tutorial shows how to use SQL Server Management Studio on Windows to connect to SQL Server running on Linux. 
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

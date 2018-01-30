@@ -3,7 +3,7 @@ title: Configure SLES shared disk cluster for SQL Server | Microsoft Docs
 description: Implement high availability by configuring SUSE Linux Enterprise Server (SLES) shared disk cluster for SQL Server.
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

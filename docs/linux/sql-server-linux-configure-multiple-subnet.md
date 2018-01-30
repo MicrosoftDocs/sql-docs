@@ -3,7 +3,7 @@ title: Configure multiple-subnet Always On Availability Groups and failover clus
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 12/1/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

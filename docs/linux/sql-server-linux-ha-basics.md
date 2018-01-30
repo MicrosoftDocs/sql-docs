@@ -3,7 +3,7 @@ title: SQL Server availability basics for Linux deployments | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

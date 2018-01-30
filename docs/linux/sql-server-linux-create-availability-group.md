@@ -3,7 +3,7 @@ title: Create and configure an availability group for SQL Server on Linux | Micr
 description: This tutorial shows how to create and configure availability groups for SQL Server on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

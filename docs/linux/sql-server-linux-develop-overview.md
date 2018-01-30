@@ -3,7 +3,7 @@ title: Develop applications for SQL Server on Linux | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
-manager: jhubbard
+manager: craigg
 ms.date: 11/17/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

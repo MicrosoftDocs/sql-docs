@@ -3,7 +3,7 @@ title: Get started with SQL Server 2017 in the Cloud | Microsoft Docs
 description: This quickstart tutorial shows how to run the SQL Server 2017 on Linux in the cloud of your choice.
 author: annashres
 ms.author: annashres
-manager: jhubbard
+manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified

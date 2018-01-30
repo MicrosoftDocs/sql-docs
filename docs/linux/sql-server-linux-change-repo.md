@@ -3,7 +3,7 @@ title: Register the General Availability repository for SQL Server on Linux | Mi
 description: Change repositories from the preview SQL Server 2017 repository to the General Availability (GA) repository on Linux (GA is also sometimes referred to as RTM).
 author: annashres 
 ms.author: anshrest 
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

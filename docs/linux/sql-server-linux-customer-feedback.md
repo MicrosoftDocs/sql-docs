@@ -3,7 +3,7 @@ title: Customer Feedback for SQL Server on Linux | Microsoft Docs
 description: Describes how SQL Server customer feedback is collected and configured on Linux.
 author: annashres 
 ms.author: anshrest 
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

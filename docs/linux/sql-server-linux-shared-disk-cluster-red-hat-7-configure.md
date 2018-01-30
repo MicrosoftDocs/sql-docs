@@ -3,7 +3,7 @@ title: Configure Red Hat Enterprise Linux shared cluster for SQL Server | Micros
 description: Implement high availability by configuring Red Hat Enterprise Linux shared disk cluster for SQL Server.
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

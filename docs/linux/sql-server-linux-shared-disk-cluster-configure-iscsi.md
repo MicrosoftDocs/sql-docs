@@ -3,7 +3,7 @@ title: Configure failover cluster instance storage iSCSI - SQL Server on Linux |
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

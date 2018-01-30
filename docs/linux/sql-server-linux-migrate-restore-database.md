@@ -3,7 +3,7 @@ title: Migrate a SQL Server database from Windows to Linux | Microsoft Docs
 description: This tutorial shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server 2017.
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

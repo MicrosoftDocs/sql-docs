@@ -3,7 +3,7 @@ title: Configuration options for SQL Server 2017 on Docker | Microsoft Docs
 description: Explore different ways of using and interacting with SQL Server 2017 container images in Docker. This includes persisting data, copying files, and troubleshooting.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

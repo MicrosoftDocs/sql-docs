@@ -3,7 +3,7 @@ title: Export and import a database on Linux | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

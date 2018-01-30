@@ -3,7 +3,7 @@ title: Configure SLES Cluster for SQL Server Availability Group | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

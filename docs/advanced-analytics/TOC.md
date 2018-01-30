@@ -19,11 +19,12 @@
 ## Provision VMs
 ### [Data Science Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [SQL Server Machine Learning Services](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-## [Upgrade FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
-## [Troubleshooting FAQ](machine-learning-troubleshooting-faq.md)
-## [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md)
+## FAQs
+### [Upgrade FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [Troubleshooting FAQ](machine-learning-troubleshooting-faq.md)
+### [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md)
 ## Previous versions
-### [offline installation](r/installing-ml-components-without-internet-access.md)
+### [Offline installation](r/installing-ml-components-without-internet-access.md)
 ### [Add R to an existing Azure virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Use sqlBindR.exe to upgrade an instance](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Install R Server from the command line](r/install-microsoft-r-server-from-the-command-line.md)
@@ -41,10 +42,9 @@
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 
-### [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
-### [Python: Create a model using revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
-### [Python: In-database analytics for SQL developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
-
+### [Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
+### [Create a model using revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+### [In-database analytics for SQL developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
 #### [Download sample data](tutorials/sqldev-py1-download-the-sample-data.md)
 #### [Import data to SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
 #### [Explore and visualize data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
@@ -54,14 +54,14 @@
 
 ## [R](tutorials/sql-server-r-tutorials.md)
 
-### [R: Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
+### [Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 #### [Working with inputs and outputs](tutorials/rtsql-working-with-inputs-and-outputs.md)
 #### [R and SQL data types and data objects](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
 #### [Using R functions with SQL Server data](tutorials/rtsql-using-r-functions-with-sql-server-data.md)
 #### [Create a predictive model](tutorials/rtsql-create-a-predictive-model-r.md)
 #### [Predict and plot from model](tutorials/rtsql-predict-and-plot-from-model.md)
 
-### [R: Data science end-to-end walkthrough](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+### [Data science end-to-end walkthrough](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 #### [Prerequisites for the data science walkthrough](tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)
 #### [Prepare the data](tutorials/walkthrough-prepare-the-data.md)
 #### [Explore the data using SQL](tutorials/walkthrough-view-and-explore-the-data.md)
@@ -71,7 +71,7 @@
 #### [Build and save the model](tutorials/walkthrough-build-and-save-the-model.md)
 #### [Deploy and use the model](tutorials/walkthrough-deploy-and-use-the-model.md)
 
-### [R: Data science deep dive with RevoScaleR](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+### [Data science deep dive with RevoScaleR](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 #### [Work with SQL Server data](tutorials/deepdive-work-with-sql-server-data-using-r.md)
 #### [Create SQL Server data objects using RxSqlServerData](tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
 #### [Query and modify the SQL Server data](tutorials/deepdive-query-and-modify-the-sql-server-data.md)
@@ -88,7 +88,7 @@
 #### [Move data between SQL Server and XDF file](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [Create a simple simulation](tutorials/deepdive-create-a-simple-simulation.md)
 
-### [R: In-database analytics for SQL developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
+### [In-database analytics for SQL developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
 #### [Step 1: Download the sample data](tutorials/sqldev-download-the-sample-data.md)
 #### [Step 2: Import data to SQL Server using PowerShell](r/sqldev-import-data-to-sql-server-using-powershell.md)
 #### [Step 3: Explore and visualize the data](tutorials/sqldev-explore-and-visualize-the-data.md)
@@ -105,17 +105,18 @@
 ## [Architecture](architecture-overview-machine-learning.md)
 ## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
 ## R
-### [R architecture](r/architecture-overview-sql-server-r.md)
-### [Components that support R integration](r/new-components-in-sql-server-to-support-r.md)
-### [R security](r/security-overview-sql-server-r.md)
-### [R libraries and data types](r/r-libraries-and-data-types.md)
-### [R interoperability](r/r-interoperability-in-sql-server.md)
+### [Architecture](r/architecture-overview-sql-server-r.md)
+### [Integration with base R](r/new-components-in-sql-server-to-support-r.md)
+### [Interoperability](r/r-interoperability-in-sql-server.md)
+### [Security](r/security-overview-sql-server-r.md)
+### [Libraries and data types](r/r-libraries-and-data-types.md)
+
 ## Python
 ### [Python architecture](python/architecture-overview-sql-server-python.md)
-### [Components to support Python](python/new-components-in-sql-server-to-support-python-integration.md)
-### [Python security](python/security-overview-sql-server-python-services.md)
-### [Python libraries and data types](python/python-libraries-and-data-types.md)
-### [Python interoperability](python/python-interoperability.md)
+### [Integration with Python](python/new-components-in-sql-server-to-support-python-integration.md)
+### [Interoperability](python/python-interoperability.md)
+### [Security](python/security-overview-sql-server-python-services.md)
+### [Libraries and data types](python/python-libraries-and-data-types.md)
 
 # [How-to guides](r/sql-server-machine-learning-tasks.md)
 
@@ -177,7 +178,7 @@
 ## [MicrosoftML](using-the-microsoftml-package.md)
 ## [RevoScaleR](r/revoscaler-overview.md)
 ## [RevoScaleR Functions for SQL Server Data](r/scaler-functions-for-working-with-sql-server-data.md)
-## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+## [sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 ## [olapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [revoscalepy](python/what-is-revoscalepy.md)
 

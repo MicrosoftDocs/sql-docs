@@ -1,8 +1,8 @@
 ---
 title: Use SSMS to Manage SQL Server on Linux | Microsoft Docs
 description: 
-author: sanagama 
-ms.author: sanagama 
+author: rothja 
+ms.author: jroth 
 manager: craigg
 ms.date: 08/23/2017
 ms.topic: article

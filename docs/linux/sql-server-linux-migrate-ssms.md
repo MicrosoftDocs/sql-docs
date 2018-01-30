@@ -1,8 +1,8 @@
 ---
 title: Export and import a database on Linux | Microsoft Docs
 description: 
-author: sanagama 
-ms.author: sanagama 
+author: rothja 
+ms.author: jroth 
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article

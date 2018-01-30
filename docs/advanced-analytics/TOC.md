@@ -1,4 +1,4 @@
-# [Getting started](getting-started-with-machine-learning-services.md)
+# [SQL Server Machine Learning -- should be like a landing page?](getting-started-with-machine-learning-services.md)
 
 # Overview
 
@@ -9,7 +9,7 @@
 ## [SQL Server R Services](r/sql-server-r-services.md)
 ## [What's new](what-s-new-in-sql-server-machine-learning-services.md)
 
-# [Install & Configure](r/getting-started-with-sql-server-r-services.md)
+# [Install & configure](r/getting-started-with-sql-server-r-services.md)
 
 ## [In-Database](r/set-up-sql-server-r-services-in-database.md)
 ## [Standalone](r/create-a-standalone-r-server.md)
@@ -23,6 +23,7 @@
 ### [Upgrade FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
 ### [Troubleshooting FAQ](machine-learning-troubleshooting-faq.md)
 ### [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md)
+### [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
 ## Previous versions
 ### [Offline installation](r/installing-ml-components-without-internet-access.md)
 ### [Add R to an existing Azure virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
@@ -103,7 +104,6 @@
 
 # Concepts
 ## [Architecture](architecture-overview-machine-learning.md)
-## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
 ## R
 ### [Architecture](r/architecture-overview-sql-server-r.md)
 ### [Integration with base R](r/new-components-in-sql-server-to-support-r.md)

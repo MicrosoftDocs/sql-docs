@@ -38,6 +38,10 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    ![Enable Availability Groups](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
+   SQL Server Configuration Manager will note that the computer is not a node in a failover cluster. For a cross-platform Availability Group, this is OK. 
+
+   After you enable Availability Groups, restart SQL Server.
+
 1. Install SQL Server 2017 on Linux. Enable hadr via mssql-conf.
 
    To enable hadr via mssql-conf from a shell prompt, issue the following command:
@@ -53,12 +57,14 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
     ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 
-
 1. Configure hosts file on both servers or register the server names with DNS.
 
 1. Open up firewall ports for TPC 1433 and 5022 on both Windows and Linux.
 
 1. Create a database for the AG. The example steps use a database named `<TestDB>`.
+
+   >[!NOTE]
+   >For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves are not required for the scripts. 
 
 1. On the primary replica, create a database login and password.
 

@@ -247,6 +247,8 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
    ![Screenshot of get pod command](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
+   In the preceding image, the pod has a status of `Running`. This status indicates that the container is ready. This may take several minutes.
+
    >[!NOTE]
    >After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image from the Docker hub. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it. 
 

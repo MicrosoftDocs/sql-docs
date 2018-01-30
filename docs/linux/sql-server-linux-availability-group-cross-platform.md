@@ -42,15 +42,15 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    After you enable Availability Groups, restart SQL Server.
 
-1. Install SQL Server 2017 on Linux. Enable hadr via mssql-conf.
+1. Install SQL Server 2017 on Linux. Enable `hadr` via mssql-conf.
 
-   To enable hadr via mssql-conf from a shell prompt, issue the following command:
+   To enable `hadr` via mssql-conf from a shell prompt, issue the following command:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
    ```
 
-   After you enable hadr, restart the SQL Server instance.  
+   After you enable `hadr`, restart the SQL Server instance.  
 
    The following image shows this complete step.
 

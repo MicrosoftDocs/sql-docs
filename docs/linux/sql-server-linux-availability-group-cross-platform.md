@@ -54,7 +54,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    The following image shows this complete step.
 
-    ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 
 1. Configure hosts file on both servers or register the server names with DNS.
@@ -65,6 +65,8 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    >[!NOTE]
    >For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves are not required for the scripts. 
+
+1. Take a full backup of the database. 
 
 1. On the primary replica, create a database login and password.
 
@@ -87,7 +89,21 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
-1. Copy the certificate and private key to the Linux server (secondary replica) at `/var/opt/mssql/data`. Set the group and ownership to `mssql:mssql`.
+1. Copy the certificate and private key to the Linux server (secondary replica) at `/var/opt/mssql/data`. You can use `pscp` to copy the files to the Linux server. 
+
+1. Set the group and ownership of the private key and the certificate to `mssql:mssql`.
+
+   The following script sets the group and ownership of the files. 
+
+   ```bash
+   sudo chown mssql:mssql /var/opt/mssql/data/dbm_certificate.pvk
+   sudo chown mssql:mssql /var/opt/mssql/data/dbm_certificate.cer
+   ```
+
+   In the following diagram, ownership and group are set correctly for the certificate and key.
+
+   ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+
 
 1. On the secondary replica, create a database login and password.
 

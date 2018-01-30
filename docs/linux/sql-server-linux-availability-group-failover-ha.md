@@ -18,7 +18,7 @@ ms.workload: "Inactive"
 ---
 # Operate Always On Availability Groups on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ## <a name="failover"></a>Fail over availability group
 

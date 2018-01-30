@@ -18,7 +18,7 @@ ms.workload: "On Demand"
 ---
 # Backup and restore SQL Server databases on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 You can take backups of databases from SQL Server 2017 on Linux with the same tools as other platforms. On a Linux server, you can use **sqlcmd** to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 

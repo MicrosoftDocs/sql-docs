@@ -18,7 +18,7 @@ ms.workload: "Active"
 ---
 # Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This topic shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases.
 

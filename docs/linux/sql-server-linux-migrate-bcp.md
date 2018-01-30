@@ -18,7 +18,7 @@ ms.workload: "On Demand"
 ---
 # Bulk copy data with bcp to SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This topic shows how to use the [bcp](../tools/bcp-utility.md) command line utility to bulk copy data between an instance of SQL Server 2017 on Linux and a data file in a user-specified format.
 

@@ -18,7 +18,7 @@ ms.workload: "Inactive"
 ---
 # Operate Red Hat Enterprise Linux shared disk cluster for SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux.
 

@@ -17,7 +17,7 @@ ms.workload: "Inactive"
 ---
 # Configure failover cluster instance - NFS - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article explains how to configure NFS storage for a failover cluster instance (FCI) on Linux. 
 

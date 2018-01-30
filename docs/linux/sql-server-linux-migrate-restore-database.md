@@ -18,7 +18,7 @@ ms.workload: "On Demand"
 ---
 # Migrate a SQL Server database from Windows to Linux using backup and restore
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server 2017 on Linux. In this tutorial, you will walk through the steps required to move a database to Linux with backup and restore techniques.
 

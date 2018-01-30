@@ -18,7 +18,7 @@ ms.workload: "Inactive"
 ---
 # Operate failover cluster instance - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article explains how to operate a SQL Server failover cluster instance (FCI) on Linux. If you have not created a SQL Server FCI on Linux, see [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 

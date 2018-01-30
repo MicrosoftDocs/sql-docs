@@ -18,7 +18,7 @@ ms.workload: "On Demand"
 ---
 # Choose the right tool to manage SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 There are several ways to manage SQL Server 2017 on Linux. The following section provides a quick overview of different management tools and techniques with pointers to more resources.
 

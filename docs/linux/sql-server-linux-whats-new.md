@@ -18,7 +18,7 @@ ms.workload: "On Demand"
 ---
 # What's new for SQL Server 2017 on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article describes the major features and services available for SQL Server 2017 running on Linux.
 

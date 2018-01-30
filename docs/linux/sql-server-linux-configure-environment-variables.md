@@ -18,7 +18,7 @@ ms.workload: "On Demand"
 ---
 # Configure SQL Server settings with environment variables on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 You can use several different environment variables to configure SQL Server 2017 on Linux. These variables are used in two scenarios:
 

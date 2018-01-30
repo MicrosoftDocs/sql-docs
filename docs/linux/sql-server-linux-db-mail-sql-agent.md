@@ -18,7 +18,7 @@ ms.workload: "Inactive"
 ---
 # DB Mail and Email Alerts with SQL Agent on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 The following steps show you how to set up DB Mail and use it with SQL Server Agent (**mssql-server-agent**) on Linux. 
 

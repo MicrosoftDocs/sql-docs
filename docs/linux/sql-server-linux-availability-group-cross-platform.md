@@ -105,11 +105,13 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
-1. On the secondary replica, create a database login and password.
+1. On the secondary replica, create a database login and password and create a master key.
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
    CREATE USER dbm_user FOR LOGIN dbm_login;
+   GO
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<M@st3rKeyP@55w0rD!>'
    GO
    ```
 

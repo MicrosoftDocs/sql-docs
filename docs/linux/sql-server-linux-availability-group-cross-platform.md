@@ -144,7 +144,9 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    >[!NOTE]
    >If the Windows instance of SQL Server uses different paths for data and log files. Direct seeding will fail to the Linux instance of SQL Server because these paths do not exist on the secondary replica. To use the following script for a cross platform AG, the database requires the same path for the data and log files on the Windows server. Alternatively you can update the script to set `SEEDING_MODE = MANUAL` and use backup and restore to seed the database. 
+   >
    >This applies to Azure Marketplace images. 
+   >
    >For more information, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
 
 

@@ -189,9 +189,9 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
-1. Take a full backup of the database.
+1. Take a full backup of the database. 
 
-1. If you are not using automatic seeding, restore the database on the secondary replica (Linux) server. [Migrate a SQL Server database from Windows to Linux using backup and restore](sql-server-linux-migrate-restore-database).
+1. If you are not using automatic seeding, restore the database on the secondary replica (Linux) server. [Migrate a SQL Server database from Windows to Linux using backup and restore](sql-server-linux-migrate-restore-database.md).
 
 1. On the primary replica, run the SQL query to add the database to the AG.
 

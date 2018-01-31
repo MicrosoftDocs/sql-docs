@@ -25,7 +25,7 @@ To manually fail over without data loss:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        MODIFY REPLICA ON N'**<node2>*' 
+        MODIFY REPLICA ON N'<node2>' 
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 

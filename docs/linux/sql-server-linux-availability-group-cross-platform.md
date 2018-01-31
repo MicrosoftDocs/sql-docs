@@ -180,7 +180,9 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 1. Create a database for the AG. The example steps use a database named `<TestDB>`.
 
    >[!IMPORTANT]
-   >The current Azure Marketplace SQL Server virtual machine image places the user database data files on `F:\Data\` and the log files on `F:\Log\`. For automatic seeding to work, place both data and log files in the same directory.
+   >If you are validating this configuration using Azure Marketplace SQL Server virtual machines, the image places the user database data files on `F:\Data\` and the log files on `F:\Log\`. For automatic seeding to work, place both data and log files in the same directory.
+   >
+   >This configuration is not recommended for production use of availability groups with replicas on different operating systems.
 
    The following command creates a database and places the data and log files in the `F:\Data\` directory. Before you run the command, replace the database name, and database file names. Also, verify that the file path exists on the primary replica server. 
 

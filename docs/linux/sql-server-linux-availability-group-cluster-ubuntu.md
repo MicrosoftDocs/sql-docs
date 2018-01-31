@@ -119,11 +119,11 @@ sudo systemctl enable pacemaker
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-The following command creates a three-node cluster. Before you run the script, replace the values between `**< ... >**`. Run the following command on the primary node. 
+The following command creates a three-node cluster. Before you run the script, replace the values between `< ... >`. Run the following command on the primary node. 
 
    ```bash
-   sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
-   sudo pcs cluster setup --name **<clusterName>** **<node1>** **<node2…>** **<node3>**
+   sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
    sudo pcs cluster start --all
    ```
    
@@ -186,10 +186,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## Create virtual IP resource
 
-To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Before you run the script, replace the values between `**< ... >**` with a valid IP address.
+To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Before you run the script, replace the values between `< ... >` with a valid IP address.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 There is no virtual server name equivalent in Pacemaker. To use a connection string that points to a string server name and not use the IP address, register the IP resource address and desired virtual server name in DNS. For DR configurations, register the desired virtual server name and IP address with the DNS servers on both primary and DR site.

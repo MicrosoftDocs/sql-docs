@@ -3,7 +3,7 @@ title: Configure failover cluster instance storage NFS - SQL Server on Linux | M
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
@@ -17,7 +17,7 @@ ms.workload: "Inactive"
 ---
 # Configure failover cluster instance - NFS - SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article explains how to configure NFS storage for a failover cluster instance (FCI) on Linux. 
 

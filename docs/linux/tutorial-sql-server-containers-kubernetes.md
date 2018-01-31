@@ -3,7 +3,7 @@ title: Configure a SQL Server container in Kubernetes for high availability | Mi
 description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Container Service.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: "sql-non-specified"
@@ -17,7 +17,7 @@ ms.workload: "Inactive"
 ---
 # Configure a SQL Server container in Kubernetes for high availability
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Learn how to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS), with persistent storage for high availability (HA). The solution provides resiliency. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. AKS provides resiliency against a Kubernetes node failure. 
 

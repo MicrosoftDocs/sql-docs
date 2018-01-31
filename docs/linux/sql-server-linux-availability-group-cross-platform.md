@@ -180,19 +180,16 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 1. Create a database for the AG. The example steps use a database named `<TestDB>`.
 
    >[!IMPORTANT]
-   >If you are using Azure Virtual Machines, the Windows Server places the data files on `F:\Data\` and the log files on `F:\Log`. For automatic seeding to work, place both data an log files in the same directory.
+   >The current Azure Marketplace SQL Server virtual machine image places the user database data files on `F:\Data\` and the log files on `F:\Log`. For automatic seeding to work, place both data and log files in the same directory.
 
    The following command creates a database and places the data and log files in the `F:\Data\` directory. Before you run the command, replace the database name, and database file names. Also, verify that the file path exists on the primary replica server. 
 
    ```sql
    CREATE DATABASE [<TestDB>]
       CONTAINMENT = NONE
-     ON  PRIMARY 
-      ( NAME = N'<TestDB>', FILENAME = N'F:\Data\<TestDB>.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
-     LOG ON 
-      ( NAME = N'<TestDB>_log', FILENAME = N'F:\Data\<TestDB>_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+     ON  PRIMARY ( NAME = N'<TestDB>', FILENAME = N'F:\Data\<TestDB>.mdf')
+     LOG ON ( NAME = N'<TestDB>_log', FILENAME = N'F:\Data\<TestDB>_log.ldf')
       GO
-      
    ```
 
 1. Take a full backup of the database. If you don't need to store a full backup at this time, you can back up the database to `NUL:` This does not create a backup file. The following command backs up the database to `NUL:`:

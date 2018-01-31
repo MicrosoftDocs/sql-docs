@@ -3,7 +3,7 @@ title: Failover Cluster Instances - SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

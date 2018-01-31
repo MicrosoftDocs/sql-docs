@@ -3,8 +3,8 @@ title: Configure Ubuntu Cluster for SQL Server Availability Group | Microsoft Do
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -18,19 +18,19 @@ ms.workload: "Inactive"
 ---
 # Configure Ubuntu Cluster and Availability Group Resource
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This document explains how to create a three-node cluster on Ubuntu and add a previously created availability group as a resource in the cluster. 
 For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information will return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
+> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in, and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information will return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
 
 The following sections walk through the steps to set up a failover cluster solution. 
 
 ## Roadmap
 
-The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high-level steps: 
 
 1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
 
@@ -112,7 +112,7 @@ sudo systemctl enable pacemaker
 1. Create the cluster. 
 
    >[!WARNING]
-   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') will fail with below error. This is because the log file configured in /etc/corosync/corosync.conf which is created when the cluster setup command is run, is wrong. To workaround this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
+   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') will fail with below error. This is because the log file configured in /etc/corosync/corosync.conf which is created when the cluster setup command is run, is wrong. To work around this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -138,7 +138,7 @@ Resource level fencing ensures mainly that there is no data corruption in case o
 Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, e.g. an uninterruptible power supply or management interface cards for servers. 
 For more details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-Because the node level fencing configuration depends heavily on your environment, we will disable it for this tutorial (it can be configured at a later time). Run the following script on the primary node: 
+Because the node level fencing configuration depends heavily on your environment, we disable it for this tutorial (it can be configured at a later time). Run the following script on the primary node: 
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -159,7 +159,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->After an automatic failover, when `start-failure-is-fatal = true` the resource manager will attempt to start the resource. If it fails on the first attempt you have to manually run `pcs resource cleanup <resourceName>` to cleanup the resource failure count and reset the configuration.
+>After an automatic failover, when `start-failure-is-fatal = true` the resource manager attempts to start the resource. If it fails on the first attempt you have to manually run `pcs resource cleanup <resourceName>` to clean up the resource failure count and reset the configuration.
 
 ## Install SQL Server resource agent for integration with Pacemaker
 

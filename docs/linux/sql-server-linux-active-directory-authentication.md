@@ -2,9 +2,9 @@
 title: Active Directory Authentication with SQL Server on Linux | Microsoft Docs
 description: This tutorial provides the configuration steps for AAD authentication for SQL Server on Linux.
 author: meet-bhagdev
-ms.date: 10/09/2017
+ms.date: 01/30/2018
 ms.author: meetb 
-manager: jhubbard
+manager: craigg
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -19,7 +19,7 @@ ms.workload: "On Demand"
 ---
 # Active Directory Authentication with SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This tutorial explains how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. AD Authentication enables domain-joined clients on either Windows or Linux to authenticate to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using their domain credentials and the Kerberos protocol.
 
@@ -52,7 +52,7 @@ Before you configure AD Authentication, you need to:
 > [!IMPORTANT]
 > Limitations:
 > - At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
-> - 3rd party AD tools like Centrify, Powerbroker and Vintela are not supported 
+> - Third-party AD tools like Centrify, Powerbroker, and Vintela are not supported 
 
 ## Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 
@@ -92,7 +92,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
       ```
 
       > [!NOTE]
-      > The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
+      > The network interface (eth0) might differ for different machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
 
       After editing this file, restart the network service:
 
@@ -100,7 +100,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
       sudo ifdown eth0 && sudo ifup eth0
       ```
 
-      Now check that your `/etc/resolv.conf` file contains a line like the following:  
+      Now check that your `/etc/resolv.conf` file contains a line like the following example:  
 
       ```Code
       nameserver **<AD domain controller IP address>**
@@ -122,7 +122,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
      sudo systemctl restart network
      ```
 
-     Now check that your `/etc/resolv.conf` file contains a line like the following:  
+     Now check that your `/etc/resolv.conf` file contains a line like the following example:  
 
      ```Code
      nameserver **<AD domain controller IP address>**
@@ -130,9 +130,9 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
 
 1. Join the domain
 
-   Once you've confirmed that your DNS is configured properly, join the domain by running the command below. You'll need to authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain.
+   Once you've confirmed that your DNS is configured properly, join the domain by running the following command. You must authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain.
 
-   Specifically, this command will create a new computer account in AD, create the `/etc/krb5.keytab` host keytab file, and configure the domain in `/etc/sssd/sssd.conf`:
+   Specifically, this command creates a new computer account in AD, create the `/etc/krb5.keytab` host keytab file, and configure the domain in `/etc/sssd/sssd.conf`:
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -143,9 +143,9 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
    > [!NOTE]
    > If you see an error, "Necessary packages are not installed," then you should install those packages using your Linux distribution's package manager before running the `realm join` command again.
    >
-   > If you receive an error, "Insufficient permissions to join the domain," then you will need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
+   > If you receive an error, "Insufficient permissions to join the domain," then you need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
    
-   > SQL Server uses SSSD and NSS for mapping user accounts and groups to security identifiers (SID's). SSSD must be configured and running in order for SQL Server to create AD logins successfully. Realmd will usually do this automatically as part of joining the domain, but in some cases you will need to do this separately.
+   > SQL Server uses SSSD and NSS for mapping user accounts and groups to security identifiers (SID's). SSSD must be configured and running in order for SQL Server to create AD logins successfully. Realmd usually does this automatically as part of joining the domain, but in some cases you must do this separately.
    >
    > Check out the following to configure [SSSD manually](https://access.redhat.com/articles/3023951), and [configure NSS to work with SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
@@ -177,7 +177,7 @@ For more information, see the Red Hat documentation for [Discovering and Joining
 ## Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 
   > [!NOTE]
-  > In the next steps we will use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you will have to **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
+  > In the next steps we will use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
 
 1. On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. This example names the account "mssql," but the account name can be anything you like. You will be prompted to enter a new password for the account:
 
@@ -199,13 +199,13 @@ For more information, see the Red Hat documentation for [Discovering and Joining
    > [!NOTE]
    > If you receive an error, "Insufficient access rights," then you need to check with a domain administrator that you have sufficient permissions to set an SPN on this account.
    >
-   > If you change the TCP port in the future, then you will need to run the setspn command again with the new port number. You will also need to add the new SPN to the SQL Server service keytab by following the steps in the next section.
+   > If you change the TCP port in the future, then you need to run the setspn command again with the new port number. You also need to add the new SPN to the SQL Server service keytab by following the steps in the next section.
 
 3. For more information, see [Register a Service Principal Name for Kerberos Connections](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
 
-1. Check the Key Version Number (kvno) for the AD account created in the previous step. Usually it will be 2, but it could be another integer if you changed the account's password multiple times. On the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine, run the following:
+1. Check the Key Version Number (kvno) for the AD account created in the previous step. Usually it is 2, but it could be another integer if you changed the account's password multiple times. On the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine, run the following:
 
    ```bash
    kinit user@CONTOSO.COM
@@ -290,7 +290,7 @@ The specific connection string parameter for clients to use AD Authentication de
   
 ## Next steps
 
-In this tutorial, we walked through how to setup Active Directory authentication with SQL Server on Linux. You learned how to:
+In this tutorial, we walked through how to set up Active Directory authentication with SQL Server on Linux. You learned how to:
 > [!div class="checklist"]
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 > * Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN

@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2017 on Linux | Microsoft Docs
 description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
+manager: craigg
 ms.date: 01/09/2018
 ms.topic: article
 ms.prod: "sql-non-specified"

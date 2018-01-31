@@ -49,7 +49,9 @@ ms.workload: "Inactive"
   
 -   This option is an advanced option and should be changed only by an experienced database administrator or certified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technician.  
   
--   OLE Automation objects use 2030 as the two-digit cutoff year. You can use the **two digit year cutoff** option to provide consistency in date values between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and client applications. However, to avoid ambiguity with dates, use four-digit years in your data.  
+-   OLE Automation objects use 2030 as the two-digit cutoff year. You can use the **two digit year cutoff** option to provide consistency in date values between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and client applications. 
+
+-   To avoid ambiguity with dates, always use four-digit years in your data.  
   
 ###  <a name="Security"></a> Security  
   

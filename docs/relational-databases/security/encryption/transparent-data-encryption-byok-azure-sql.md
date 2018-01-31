@@ -17,7 +17,7 @@ ms.workload: "On Demand"
 ms.tgt_pltfrm: ""
 ms.devlang: "na"
 ms.topic: "article"
-ms.date: "11/15/2017"
+ms.date: "01/31/2018"
 ms.author: "aliceku"
 --- 
 # Transparent Data Encryption with Bring Your Own Key (PREVIEW) support for Azure SQL Database and Data Warehouse

@@ -34,6 +34,9 @@ In this scenario, two servers are on different operating systems. A Windows Serv
 
 The steps to create the AG are the same as the steps to create an AG for read-scale workloads. The AG cluster type is NONE, because there is no cluster manager. 
 
+   >[!NOTE]
+   >For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves are not required for the scripts. 
+
 1. Install SQL Server 2017 on Windows Server 2016 and enable Availability Groups from SQL Server Configuration Manager.
 
    ![Enable Availability Groups](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
@@ -60,13 +63,6 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 1. Configure hosts file on both servers or register the server names with DNS.
 
 1. Open up firewall ports for TPC 1433 and 5022 on both Windows and Linux.
-
-1. Create a database for the AG. The example steps use a database named `<TestDB>`.
-
-   >[!NOTE]
-   >For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves are not required for the scripts. 
-
-1. Take a full backup of the database. 
 
 1. On the primary replica, create a database login and password.
 
@@ -173,7 +169,6 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    >[!NOTE]
    >The preceding script uses `SEEDING_MODE = AUTOMATIC` to create the AG. SQL Server 2017 introduces support for automatic seeding in an availability group even if the disk layout is different. This capability supports cross-platform availability groups. For more information, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
 
-
 1. On the secondary replica, join the AG.
 
    ```sql
@@ -182,7 +177,31 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
-1. On the primary replica, run the SQL query to add the db to the AG.
+1. Create a database for the AG. The example steps use a database named `<TestDB>`.
+
+   >[!IMPORTANT]
+   >If you are using Azure Virtual Machines, the Windows Server places the data files on `F:\Data\` and the log files on `F:\Log`. For automatic seeding to work, place both data an log files in the same directory.
+
+   The following command creates a database and places the data and log files in the `F:\Data\` directory. Before you run the command, replace the database name, and database file names. Also, verify that the file path exists on the primary replica server. 
+
+   ```sql
+   CREATE DATABASE [<TestDB>]
+      CONTAINMENT = NONE
+     ON  PRIMARY 
+      ( NAME = N'<TestDB>', FILENAME = N'F:\Data\<TestDB>.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+     LOG ON 
+      ( NAME = N'<TestDB>_log', FILENAME = N'F:\Data\<TestDB>_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+      GO
+      
+   ```
+
+1. Take a full backup of the database. If you don't need to store a full backup at this time, you can back up the database to `NUL:` This does not create a backup file. The following command backs up the database to `NUL:`:
+
+   ```sql
+   BACKUP DATABASE <TestDB> TO DISK = N'NUL:'
+   ```
+
+1. On the primary replica, run the SQL query to add the database to the AG.
 
    ```sql
    ALTER AVAILABILITY GROUP [ag1] ADD DATABASE <TestDB>

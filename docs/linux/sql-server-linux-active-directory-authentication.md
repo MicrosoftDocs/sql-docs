@@ -92,7 +92,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
       ```
 
       > [!NOTE]
-      > The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
+      > The network interface (eth0) might differ for different machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
 
       After editing this file, restart the network service:
 

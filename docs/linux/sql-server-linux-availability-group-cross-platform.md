@@ -189,13 +189,14 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
       CONTAINMENT = NONE
      ON  PRIMARY ( NAME = N'<TestDB>', FILENAME = N'F:\Data\<TestDB>.mdf')
      LOG ON ( NAME = N'<TestDB>_log', FILENAME = N'F:\Data\<TestDB>_log.ldf')
-      GO
+   GO
    ```
 
 1. Take a full backup of the database. If you don't need to store a full backup at this time, you can back up the database to `NUL:` This does not create a backup file. The following command backs up the database to `NUL:`:
 
    ```sql
    BACKUP DATABASE <TestDB> TO DISK = N'NUL:'
+   GO
    ```
 
 1. On the primary replica, run the SQL query to add the database to the AG.

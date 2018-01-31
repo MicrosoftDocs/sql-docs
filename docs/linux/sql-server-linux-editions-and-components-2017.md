@@ -34,7 +34,7 @@ ms.assetid:
 caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Editions and supported features of SQL Server 2017 on Linux
 

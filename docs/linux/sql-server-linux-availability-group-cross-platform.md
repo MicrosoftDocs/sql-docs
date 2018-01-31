@@ -37,7 +37,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    >[!NOTE]
    >For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves are not required for the scripts. 
 
-1. Install SQL Server 2017 on Windows Server 2016 and enable Availability Groups from SQL Server Configuration Manager.
+1. Install SQL Server 2017 on Windows Server 2016 and enable Availability Groups from SQL Server Configuration Manager. For instructions, see [Enable and Disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)l
 
    ![Enable Availability Groups](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
@@ -45,7 +45,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    After you enable Availability Groups, restart SQL Server.
 
-1. Install SQL Server 2017 on Linux. Enable `hadr` via mssql-conf.
+1. Install SQL Server 2017 on Linux. For instructions, see [Install SQL Sever](sql-server-linux-setup.md). Enable `hadr` via mssql-conf.
 
    To enable `hadr` via mssql-conf from a shell prompt, issue the following command:
 
@@ -58,7 +58,6 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    The following image shows this complete step.
 
    ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
-
 
 1. Configure hosts file on both servers or register the server names with DNS.
 
@@ -141,7 +140,13 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 1. On the secondary replica, create the endpoint. Repeat the preceding script on the secondary replica to create the endpoint. 
 
-1. On the primary replica, create the AG with `CLUSTER_TYPE = NONE`.
+1. On the primary replica, create the AG with `CLUSTER_TYPE = NONE`. The example script uses `SEEDING_MODE = AUTOMATIC` to create the AG. 
+
+   >[!NOTE]
+   >If the Windows instance of SQL Server uses different paths for data and log files. Direct seeding will fail to the Linux instance of SQL Server because these paths do not exist on the secondary replica. To use the following script for a cross platform AG, the database requires the same path for the data and log files on the Windows server. Alternatively you can update the script to set `SEEDING_MODE = MANUAL` and use backup and restore to seed the database. 
+   >This applies to Azure Marketplace images. 
+   >For more information, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
+
 
    ```sql
    CREATE AVAILABILITY GROUP [ag1]
@@ -165,10 +170,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
            )
    GO
    ```
-
-   >[!NOTE]
-   >The preceding script uses `SEEDING_MODE = AUTOMATIC` to create the AG. SQL Server 2017 introduces support for automatic seeding in an availability group even if the disk layout is different. This capability supports cross-platform availability groups. For more information, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
-
+   
 1. On the secondary replica, join the AG.
 
    ```sql
@@ -177,29 +179,19 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
-1. Create a database for the AG. The example steps use a database named `<TestDB>`.
-
-   >[!IMPORTANT]
-   >If you are validating this configuration using Azure Marketplace SQL Server virtual machines, the image places the user database data files on `F:\Data\` and the log files on `F:\Log\`. For automatic seeding to work, place both data and log files in the same directory.
-   >
-   >This configuration is not recommended for production use of availability groups with replicas on different operating systems.
-
-   The following command creates a database and places the data and log files in the `F:\Data\` directory. Before you run the command, replace the database name, and database file names. Also, verify that the file path exists on the primary replica server. 
+1. Create a database for the AG. The example steps use a database named `<TestDB>`. If you are using automatic seeding, set the same path for both the data and the log files. 
 
    ```sql
    CREATE DATABASE [<TestDB>]
       CONTAINMENT = NONE
-     ON  PRIMARY ( NAME = N'<TestDB>', FILENAME = N'F:\Data\<TestDB>.mdf')
-     LOG ON ( NAME = N'<TestDB>_log', FILENAME = N'F:\Data\<TestDB>_log.ldf')
+     ON  PRIMARY ( NAME = N'<TestDB>', FILENAME = N'<F:\Path>\<TestDB>.mdf')
+     LOG ON ( NAME = N'<TestDB>_log', FILENAME = N'<F:\Path\><TestDB>_log.ldf')
    GO
    ```
 
-1. Take a full backup of the database. If you don't need to store a full backup at this time, you can back up the database to `NUL:` This does not create a backup file. The following command backs up the database to `NUL:`:
+1. Take a full backup of the database.
 
-   ```sql
-   BACKUP DATABASE <TestDB> TO DISK = N'NUL:'
-   GO
-   ```
+1. If you are not using automatic seeding, restore the database on the secondary replica (Linux) server. [Migrate a SQL Server database from Windows to Linux using backup and restore](sql-server-linux-migrate-restore-database).
 
 1. On the primary replica, run the SQL query to add the database to the AG.
 

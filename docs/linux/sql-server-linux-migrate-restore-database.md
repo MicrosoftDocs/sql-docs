@@ -29,6 +29,8 @@ SQL Server's backup and restore feature is the recommended way to migrate a data
 > * Restore the backup file on Linux with Transact-SQL
 > * Run a query to verify the migration
 
+You can also create a SQL Server Always On Availability Group to migrate a SQL Server database from Windows to Linux. See [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
+
 ## Prerequisites
 
 The following prerequisites are required to complete this tutorial:

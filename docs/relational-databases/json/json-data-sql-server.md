@@ -309,13 +309,13 @@ For specific solutions, use cases, and recommendations, see these [blog posts](h
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
 
 *SQL Server 2016 and JSON Support*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
 
 *Using JSON in SQL Server 2016 and Azure SQL Database*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
 *JSON as a bridge between NoSQL and relational worlds*
-> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds]
+> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
    
 ### Reference articles  
   

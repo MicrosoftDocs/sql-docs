@@ -37,7 +37,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    >[!NOTE]
    >For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves are not required for the scripts. 
 
-1. Install SQL Server 2017 on Windows Server 2016 and enable Availability Groups from SQL Server Configuration Manager. For instructions, see [Enable and Disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)l
+1. Install SQL Server 2017 on Windows Server 2016 and enable Availability Groups from SQL Server Configuration Manager. For instructions, see [Enable and Disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 
    ![Enable Availability Groups](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
@@ -71,7 +71,8 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
-1. On the primary replica, create master key, certificate, and backup the certificate.    
+1. On the primary replica, create a master key and certificate, then back up the certificate with a private key.
+
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<C0m9L3xP@55w0rd!>';
    CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
@@ -138,6 +139,9 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
 
+   >[!IMPORTANT]
+   >The firewall must be open for the listener TCP port. In the preceding script, the port is 5022. Use any available TCP port. 
+
 1. On the secondary replica, create the endpoint. Repeat the preceding script on the secondary replica to create the endpoint. 
 
 1. On the primary replica, create the AG with `CLUSTER_TYPE = NONE`. The example script uses `SEEDING_MODE = AUTOMATIC` to create the AG. 
@@ -148,7 +152,6 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    >This applies to Azure Marketplace images. 
    >
    >For more information about automatic seeding, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
-
 
    ```sql
    CREATE AVAILABILITY GROUP [ag1]
@@ -193,7 +196,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 1. Take a full backup of the database. 
 
-1. If you are not using automatic seeding, restore the database on the secondary replica (Linux) server. [Migrate a SQL Server database from Windows to Linux using backup and restore](sql-server-linux-migrate-restore-database.md).
+1. If you are not using automatic seeding, restore the database on the secondary replica (Linux) server. [Migrate a SQL Server database from Windows to Linux using backup and restore](sql-server-linux-migrate-restore-database.md). Restore the database `WITH NORECOVERY` on the secondary replica. 
 
 1. On the primary replica, run the SQL query to add the database to the AG.
 

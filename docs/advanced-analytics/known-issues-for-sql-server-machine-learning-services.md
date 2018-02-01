@@ -1,6 +1,6 @@
 ---
 title: "Known issues in Machine Learning Services | Microsoft Docs"
-ms.date: "01/19/2018"
+ms.date: "01/31/2018"
 ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
@@ -161,6 +161,41 @@ If you encounter resource limitations, check the current default. If 20 percent 
 This section contains known issues that are specific to running R on SQL Server, as well as some issues that are related to the R libraries and tools published by Microsoft, including RevoScaleR.
 
 For additional known issues that might affect R solutions, see the [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues) site.
+
+### Access denied warning when executing R scripts on SQL Server in a non default location
+
+If the instance of SQL Server has been installed to a non-default location, such as outside the `Program Files` folder, the warning ACCESS_DENIED is raised when you try to run scripts that install a package. For example:
+
+```text
+In normalizePath(path.expand(path), winslash, mustWork) :
+  path[2]="E:/SQL17.data/MSSQL14.SQL17/MSSQL/ExternalLibraries/R/8/1": Access is denied
+```
+
+The reason is that an R function attempts to read the path, and fails if the built-in users group **SQLRUserGroup**, does not have read access. The warning that is raised does not block execution of the current R script, but the warning might recur repeatedly whenever the user runs any other R script.
+
+If you have installed SQL Server to the default location, this error does not occur, because all Windows users have read permissions on the `Program Files` folder.
+
+This issue will be addressed in an upcoming service release. As a workaround, provide the group, **SQLRUserGroup**, with read access for all parent folders of `ExternalLibraries`.
+
+### Serialization error between old and new versions of RevoScaleR
+
+When you pass a model using a serialized format to a remote SQL Server instance, you might get the error: "Error in memDecompress(data, type = decompress) internal error -3 in memDecompress(2)."
+
+This error is raised if you saved the model using a recent version of the serialization function, [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), but the SQL Server instance where you deserialize the model has an older version of the RevoScaleR APIs, from SQL Server 2017 CU2 or earlier.
+
+As a workaround, you can upgrade the SQL Server instance to use a later version of RevoScaleR. You can also install the same version of RevoScaleR on your client that is installed on the SQL Server instance. 
+
+The error does not appear if the API version is the same, or if you are moving a model saved with on older serialization function to a server using a newer version of the API.
+
+In other words, use the same version of RevoScaleR for both serialization and deserialization operations.
+
+### Real-time scoring does not correctly handle the learningRate parameter in tree and forest models
+
+If you create a model using a decision tree or decision forest method and specify the learning rate, you might see inconsistent results when using `sp_rxpredict` or the SQL `PREDICT` function, as compared to using `rxPredict`.
+
+The cause is an error in the API that processes serialized models, and is limited to the `learningRate` parameter: for example, in [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), or
+
+This issue will be fixed in an upcoming service release.
 
 ### Limitations on processor affinity for R jobs
 

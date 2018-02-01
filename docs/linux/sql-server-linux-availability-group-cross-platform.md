@@ -143,7 +143,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 1. On the primary replica, create the AG with `CLUSTER_TYPE = NONE`. The example script uses `SEEDING_MODE = AUTOMATIC` to create the AG. 
 
    >[!NOTE]
-   >If the Windows instance of SQL Server uses different paths for data and log files, automatic seeding will fail to the Linux instance of SQL Server because these paths do not exist on the secondary replica. To use the following script for a cross platform AG, the database requires the same path for the data and log files on the Windows server. Alternatively you can update the script to set `SEEDING_MODE = MANUAL` and use backup and restore to seed the database. 
+   >If the Windows instance of SQL Server uses different paths for data and log files, automatic seeding will fail to the Linux instance of SQL Server because these paths do not exist on the secondary replica. To use the following script for a cross-platform AG, the database requires the same path for the data and log files on the Windows server. Alternatively you can update the script to set `SEEDING_MODE = MANUAL` and use backup and restore to seed the database. 
    >
    >This applies to Azure Marketplace images. 
    >
@@ -208,7 +208,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-This article reviewed the steps to create a cross-platform AG to support migration or read-scale workloads. It can be used for manual disaster recovery. It also explained how to fail over the availability group. A cross-platform availability group uses cluster type `NONE` and does not support high availability because there is no cluster tool across platforms. 
+This article reviewed the steps to create a cross-platform AG to support migration or read-scale workloads. It can be used for manual disaster recovery. It also explained how to fail over the availability group. A cross-platform availability group uses cluster type `NONE` and does not support high availability because there is no cluster tool across-platforms. 
 
 ## Next steps
 

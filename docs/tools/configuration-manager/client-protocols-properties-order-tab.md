@@ -22,7 +22,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Client Protocols Properties (Order Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Use the **Order**page on the **Client Protocols Properties** dialog box to view and enable the client protocols.  
   
  Click a protocol, and then click **Enable** or **Disable** to move the selected protocol to the **Disabled Protocols** or **Enabled Protocols** list.  

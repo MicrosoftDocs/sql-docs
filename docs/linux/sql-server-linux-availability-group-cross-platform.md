@@ -37,13 +37,21 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    >[!NOTE]
    >For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves are not required for the scripts. 
 
-1. Install SQL Server 2017 on Windows Server 2016 and enable Availability Groups from SQL Server Configuration Manager. For instructions, see [Enable and Disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
+1. Install SQL Server 2017 on Windows Server 2016, enable Availability Groups from SQL Server Configuration Manager, and set mixed mode authentication. 
+
+  **Enable Availability Groups**
+
+   For instructions, see [Enable and Disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 
    ![Enable Availability Groups](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
    SQL Server Configuration Manager notes that the computer is not a node in a failover cluster. 
 
    After you enable Availability Groups, restart SQL Server.
+
+   **Set mixed mode authentication**
+
+   For instructions, see [Change server authentication mode](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
 
 1. Install SQL Server 2017 on Linux. For instructions, see [Install SQL Sever](sql-server-linux-setup.md). Enable `hadr` via mssql-conf.
 

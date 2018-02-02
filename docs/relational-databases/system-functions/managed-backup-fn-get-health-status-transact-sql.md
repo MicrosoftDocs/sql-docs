@@ -26,7 +26,7 @@ ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # managed_backup.fn_get_health_status (Transact-SQL)

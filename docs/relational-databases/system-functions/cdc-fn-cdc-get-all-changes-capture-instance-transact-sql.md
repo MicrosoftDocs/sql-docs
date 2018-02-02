@@ -24,7 +24,7 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)

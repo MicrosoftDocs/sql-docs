@@ -23,7 +23,7 @@ ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # semantickeyphrasetable (Transact-SQL)

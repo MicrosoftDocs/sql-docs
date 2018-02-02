@@ -18,7 +18,7 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Create a Format File (SQL Server)

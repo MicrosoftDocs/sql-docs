@@ -1,7 +1,7 @@
 ---
 title: "Configuring How java.sql.Time Values are Sent to the Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -48,7 +48,7 @@ ms.workload: "Inactive"
   
  Be aware that when sending java.sql.Time values into a parameter whose data type can also store the date, that default dates are different depending on whether the java.sql.Time value is sent as a **datetime** (1/1/1970) or **time** (1/1/1900) value. For more information about data conversions when sending data to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], see [Using Date and Time Data](http://go.microsoft.com/fwlink/?LinkID=145211).  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0, **sendTimeAsDatetime** is true by default. Starting from release 6.4.0, **sendTimeAsDatetime** is false by default.
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0, **sendTimeAsDatetime** is true by default. In a future release, the **sendTimeAsDatetime** connection property may be set to false by default.  
   
  To ensure that your application continues to work as expected regardless of the default value of the **sendTimeAsDatetime** connection property you can:  
   

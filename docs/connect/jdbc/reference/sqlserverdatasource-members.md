@@ -62,8 +62,8 @@ ms.workload: "Inactive"
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|Returns a **Boolean** value indicating whether sending string parameters to the server in UNICODE format is enabled.|  
 |[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|Returns the setting of the **SendTimeAsDatetime** connection property.|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|Returns the name of the computer running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
-|[getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)|Returns the String value of the TrustManagerClass connection property.|  
-|[getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md)|Returns the String value of the TrustManagerConstructorArg connection property.|  
+|[getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)|Returns the string value of the TrustManagerClass connection property.|  
+|[getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md)|Returns the string value of the TrustManagerConstructorArg connection property.|  
 |[getTrustServerCertificate](../../../connect/jdbc/reference/gettrustservercertificate-method-sqlserverdatasource.md)|Returns a **Boolean** value indicating whether the trustServerCertificate property is enabled.|  
 |[getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md)|Returns the path (including file name) to the certificate trustStore file.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)|Returns the URL used to connect to the data source.|  
@@ -95,8 +95,8 @@ ms.workload: "Inactive"
 |[setSendStringParametersAsUnicode](../../../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md)|Sets a **Boolean** value indicating whether sending string parameters to the server in UNICODE format is enabled.|  
 |[setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)|Specifies how to send java.sql.Time values to the server.|  
 |[setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)|Sets the name of the computer running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
-|[setTrustManagerClass](../../../connect/jdbc/reference/settrustmanagerclass-method-sqlserverdatasource.md)|Sets the String value of the TrustManagerClass connection property.|  
-|[setTrustManagerConstructorArg](../../../connect/jdbc/reference/settrustmanagerconstructorarg-method-sqlserverdatasource.md)|Sets the String value of the TrustManagerConstructorArg connection property.|  
+|[setTrustManagerClass](../../../connect/jdbc/reference/settrustmanagerclass-method-sqlserverdatasource.md)|Sets the string value of the TrustManagerClass connection property.|  
+|[setTrustManagerConstructorArg](../../../connect/jdbc/reference/settrustmanagerconstructorarg-method-sqlserverdatasource.md)|Sets the string value of the TrustManagerConstructorArg connection property.|  
 |[setTrustServerCertificate](../../../connect/jdbc/reference/settrustservercertificate-method-sqlserverdatasource.md)|Sets a **Boolean** value indicating whether the trustServerCertificate property is enabled.|  
 |[setTrustStore](../../../connect/jdbc/reference/settruststore-method-sqlserverdatasource.md)|Sets the path (including file name) to the certificate trustStore file.|  
 |[setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)|Sets the password that is used to check the integrity of the trustStore data.|  

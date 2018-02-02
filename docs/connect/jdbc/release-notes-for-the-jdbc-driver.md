@@ -31,7 +31,7 @@ Added a new connection property that lets users specify the TLS protocol keyword
 
 **Removed connection property: fipsProvider**
 
-fipsProvider has been removed from the list of accepted connection properties.
+fipsProvider has been removed from the list of accepted connection properties. See the details [Here](https://github.com/Microsoft/mssql-jdbc/pull/460).
 
 **Added connection properties for specifying custom TrustManager**
 

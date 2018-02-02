@@ -1,5 +1,5 @@
 ---
-title: "SQLServerException Constructor (String, SQLState, DriverError, Throwable) | Microsoft Docs"
+title: "SQLServerException Constructor (java.lang.String, SQLState, DriverError, java.lang.Throwable) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
@@ -15,14 +15,14 @@ ms.topic: "article"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
-ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
-caps.latest.revision: 14
+ms.assetid:
+caps.latest.revision: 1
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# SQLServerException Constructor (String, SQLState, DriverError, Throwable)
+# SQLServerException Constructor (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Initializes a new instance of the [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) class when given a **string** object, a **sqlstate** object, a **drivererror** object, and a **throwable** object.
@@ -30,10 +30,10 @@ ms.workload: "Inactive"
 ## Syntax  
   
 ```  
-public SQLServerException(String errText,
+public SQLServerException(java.lang.String errText,
             SQLState sqlState,
             DriverError driverError,
-            Throwable cause)
+            java.lang.Throwable cause)
 			
 ```  
   

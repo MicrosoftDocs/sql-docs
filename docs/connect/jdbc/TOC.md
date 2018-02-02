@@ -63,6 +63,7 @@
 # [Compliance and Legal for the JDBC SQL Driver](compliance-and-legal-for-the-jdbc-sql-driver.md)
 ## [JDBC 4.1 Compliance for the JDBC Driver](jdbc-4-1-compliance-for-the-jdbc-driver.md)
 ## [JDBC 4.2 Compliance for the JDBC Driver](jdbc-4-2-compliance-for-the-jdbc-driver.md)
+## [JDBC 4.3 Compliance for the JDBC Driver](jdbc-4-3-compliance-for-the-jdbc-driver.md)
 
 # [Programming Guide for JDBC SQL Driver](programming-guide-for-jdbc-sql-driver.md)
 ## [Connecting to SQL Server with the JDBC Driver](connecting-to-sql-server-with-the-jdbc-driver.md)

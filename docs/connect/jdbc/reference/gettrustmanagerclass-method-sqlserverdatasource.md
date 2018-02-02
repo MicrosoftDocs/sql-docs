@@ -1,5 +1,5 @@
 ---
-title: "getTrustManagerClass Method () | Microsoft Docs"
+title: "getTrustManagerClass Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
@@ -13,18 +13,18 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
-  - "getTrustManagerClass Method ()"
+  - "SQLServerDataSource.getTrustManagerClass"
 apilocation: 
-  - "getTrustManagerClass Method ()"
+  - "sqljdbc.jar"
 apitype: "Assembly"
-ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
-caps.latest.revision: 12
+ms.assetid:
+caps.latest.revision: 1
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# getTrustManagerClass Method ()
+# getTrustManagerClass Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Returns the String value of the TrustManagerClass connection property.

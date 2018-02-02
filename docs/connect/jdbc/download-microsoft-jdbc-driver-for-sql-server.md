@@ -1,7 +1,7 @@
 ---
 title: "Download Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/08/2018"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""

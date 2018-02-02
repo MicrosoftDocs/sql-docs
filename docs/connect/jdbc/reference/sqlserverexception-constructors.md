@@ -12,8 +12,8 @@ ms.technology:
   - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 77c1378c-d68b-4ff7-90bf-2582f44e6a1e
-caps.latest.revision: 12
+ms.assetid:
+caps.latest.revision: 1
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"

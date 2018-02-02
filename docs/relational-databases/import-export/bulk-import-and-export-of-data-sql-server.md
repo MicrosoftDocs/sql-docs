@@ -30,7 +30,7 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Bulk Import and Export of Data (SQL Server)

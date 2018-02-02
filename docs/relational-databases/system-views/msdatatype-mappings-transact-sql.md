@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "MSdatatype_mappings view"
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSdatatype_mappings (Transact-SQL)

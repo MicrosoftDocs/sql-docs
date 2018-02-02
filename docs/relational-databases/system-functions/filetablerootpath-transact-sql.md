@@ -23,7 +23,7 @@ ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FileTableRootPath (Transact-SQL)

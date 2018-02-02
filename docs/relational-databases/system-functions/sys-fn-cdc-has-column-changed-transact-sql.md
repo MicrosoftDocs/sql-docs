@@ -28,7 +28,7 @@ ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_cdc_has_column_changed (Transact-SQL)

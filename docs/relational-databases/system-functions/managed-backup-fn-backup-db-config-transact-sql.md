@@ -26,7 +26,7 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 caps.latest.revision: 14
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # managed_backup.fn_backup_db_config (Transact-SQL)

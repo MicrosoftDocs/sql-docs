@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_xtp_gc_stats dynamic management view"
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_xtp_gc_stats (Transact-SQL)

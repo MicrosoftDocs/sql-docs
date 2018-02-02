@@ -25,7 +25,7 @@ ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_memory_buffers (Transact-SQL)

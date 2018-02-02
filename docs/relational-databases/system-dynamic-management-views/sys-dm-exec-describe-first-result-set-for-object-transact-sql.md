@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sys.dm_exec_describe_first_result_set_for_object catalog view"
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)

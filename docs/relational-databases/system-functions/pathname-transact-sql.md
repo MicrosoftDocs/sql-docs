@@ -23,7 +23,7 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PathName (Transact-SQL)

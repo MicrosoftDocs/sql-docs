@@ -25,7 +25,7 @@ helpviewer_keywords:
 caps.latest.revision: 15
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)

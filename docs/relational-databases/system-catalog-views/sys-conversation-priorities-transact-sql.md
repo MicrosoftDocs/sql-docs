@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "sys.conversation_priorities catalog view"
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.conversation_priorities (Transact-SQL)

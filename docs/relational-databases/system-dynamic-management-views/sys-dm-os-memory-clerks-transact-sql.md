@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_memory_clerks dynamic management view"
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_os_memory_clerks (Transact-SQL)

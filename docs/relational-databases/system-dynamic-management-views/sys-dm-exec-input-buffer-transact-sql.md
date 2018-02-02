@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_input_buffer dynamic management function"
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_input_buffer (Transact-SQL)

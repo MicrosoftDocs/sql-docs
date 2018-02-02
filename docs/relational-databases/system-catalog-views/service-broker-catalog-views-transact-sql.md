@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "catalog views [SQL Server], Service Broker"
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Service Broker Catalog Views (Transact-SQL)

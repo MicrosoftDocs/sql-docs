@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_transactions dynamic management view"
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_xtp_transactions (Transact-SQL)

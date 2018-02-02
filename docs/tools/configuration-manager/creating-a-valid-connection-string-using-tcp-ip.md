@@ -26,7 +26,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating a Valid Connection String Using TCP IP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   To create a valid connection string using TCP/IP, you must:  
   
 -   Specify an **Alias Name**.  

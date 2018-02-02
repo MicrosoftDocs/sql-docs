@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_tran_transactions_snapshot dynamic management view"
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647 
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_tran_transactions_snapshot (Transact-SQL)

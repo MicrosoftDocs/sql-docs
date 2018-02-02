@@ -26,7 +26,7 @@ ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 caps.latest.revision: 17
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # managed_backup.fn_get_parameter (Transact-SQL)

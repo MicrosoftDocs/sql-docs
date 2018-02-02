@@ -18,7 +18,7 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 caps.latest.revision: 12
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_column_store_object_pool (Transact-SQL)

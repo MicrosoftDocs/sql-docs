@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "dynamic management views [SQL Server], object"
 ms.assetid: f9dfff29-2e68-4c76-9460-c46085dca2e8
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Object Related Dynamic Management Views and Functions (Transact-SQL)

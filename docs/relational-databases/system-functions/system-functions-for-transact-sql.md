@@ -20,7 +20,7 @@ ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
 caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # System Functions for Transact-SQL

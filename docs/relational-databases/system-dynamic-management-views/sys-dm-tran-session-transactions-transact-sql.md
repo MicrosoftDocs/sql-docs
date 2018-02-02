@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_tran_session_transactions dynamic management view"
 ms.assetid: c7157491-58c2-49fe-87d7-0c9723113adf
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_tran_session_transactions (Transact-SQL)

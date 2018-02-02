@@ -24,7 +24,7 @@ ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
 caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)

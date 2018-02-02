@@ -25,7 +25,7 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 caps.latest.revision: 38
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_helpcollations (Transact-SQL)

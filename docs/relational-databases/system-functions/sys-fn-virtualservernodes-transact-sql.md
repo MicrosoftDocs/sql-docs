@@ -28,7 +28,7 @@ ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_virtualservernodes (Transact-SQL)

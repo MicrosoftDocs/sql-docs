@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_upgrade_log_shipping"
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_upgrade_log_shipping (Transact-SQL)

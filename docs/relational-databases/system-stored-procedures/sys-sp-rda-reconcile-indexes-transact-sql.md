@@ -23,7 +23,7 @@ ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_rda_reconcile_indexes (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_rda_reauthorize_db (Transact-SQL)

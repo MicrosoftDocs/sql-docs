@@ -23,7 +23,7 @@ ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_rda_reconcile_batch (Transact-SQL)

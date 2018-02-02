@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "restorefilegroup system table"
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # restorefilegroup (Transact-SQL)

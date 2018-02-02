@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_alert"
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_alert (Transact-SQL)

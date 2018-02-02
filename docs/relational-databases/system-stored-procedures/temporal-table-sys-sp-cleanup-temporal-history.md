@@ -16,7 +16,7 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 caps.latest.revision: 4
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Temporal Table - sys.sp_cleanup_temporal_history

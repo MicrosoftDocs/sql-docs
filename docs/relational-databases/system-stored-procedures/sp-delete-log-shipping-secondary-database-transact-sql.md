@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_log_shipping_secondary_database"
 ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_log_shipping_secondary_database (Transact-SQL)

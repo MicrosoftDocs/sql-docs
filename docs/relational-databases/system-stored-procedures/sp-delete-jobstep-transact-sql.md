@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_jobstep"
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_jobstep (Transact-SQL)

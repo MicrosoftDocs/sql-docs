@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_jobs_in_schedule"
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_jobs_in_schedule (Transact-SQL)

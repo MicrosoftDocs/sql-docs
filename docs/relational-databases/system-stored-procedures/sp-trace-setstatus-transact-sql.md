@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_trace_setstatus"
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_trace_setstatus (Transact-SQL)

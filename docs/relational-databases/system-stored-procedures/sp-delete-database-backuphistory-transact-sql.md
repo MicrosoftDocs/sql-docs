@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_database_backuphistory"
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_database_backuphistory (Transact-SQL)

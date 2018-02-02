@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysproxies system table"
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.sysproxies (Transact-SQL)

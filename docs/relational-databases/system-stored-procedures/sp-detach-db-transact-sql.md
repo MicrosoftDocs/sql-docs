@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "detaching databases [SQL Server]"
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 caps.latest.revision: 86
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_detach_db (Transact-SQL)

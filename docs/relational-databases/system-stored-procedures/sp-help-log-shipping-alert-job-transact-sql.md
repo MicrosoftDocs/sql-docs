@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_log_shipping_alert_job"
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_log_shipping_alert_job (Transact-SQL)

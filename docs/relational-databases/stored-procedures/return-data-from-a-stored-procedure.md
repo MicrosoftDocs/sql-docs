@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "returning data from stored procedure"
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Return Data from a Stored Procedure

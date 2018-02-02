@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_stop_job"
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_stop_job (Transact-SQL)

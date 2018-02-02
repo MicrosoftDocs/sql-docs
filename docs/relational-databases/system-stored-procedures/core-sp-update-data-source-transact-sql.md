@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # core.sp_update_data_source (Transact-SQL)

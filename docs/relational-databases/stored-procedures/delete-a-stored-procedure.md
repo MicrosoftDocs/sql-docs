@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "deleting stored procedures"
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Delete a Stored Procedure

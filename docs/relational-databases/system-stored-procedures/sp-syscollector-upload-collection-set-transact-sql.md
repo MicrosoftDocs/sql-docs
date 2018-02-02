@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_upload_collection_set (Transact-SQL)

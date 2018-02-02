@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysdownloadlist system table"
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.sysdownloadlist (Transact-SQL)

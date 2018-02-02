@@ -25,7 +25,7 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 caps.latest.revision: 7
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Temporal Table - sp_xtp_flush_temporal_history

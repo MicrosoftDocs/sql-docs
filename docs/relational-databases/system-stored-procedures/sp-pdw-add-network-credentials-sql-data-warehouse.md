@@ -18,7 +18,7 @@ ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_pdw_add_network_credentials (SQL Data Warehouse)

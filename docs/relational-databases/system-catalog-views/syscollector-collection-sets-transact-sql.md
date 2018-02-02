@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "syscollector_collection_sets view"
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syscollector_collection_sets (Transact-SQL)

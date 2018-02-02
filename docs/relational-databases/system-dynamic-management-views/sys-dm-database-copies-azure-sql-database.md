@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.dm_database_copies"
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_database_copies (Azure SQL Database)

@@ -26,7 +26,7 @@ ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 caps.latest.revision: 39
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_servershareddrives (Transact-SQL)

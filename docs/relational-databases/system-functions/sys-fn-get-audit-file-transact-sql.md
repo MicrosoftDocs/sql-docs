@@ -26,7 +26,7 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.fn_get_audit_file (Transact-SQL)

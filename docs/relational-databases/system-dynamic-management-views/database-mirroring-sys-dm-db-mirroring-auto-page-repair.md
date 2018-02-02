@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "sys.dm_db_mirroring_auto_page_repair dynamic management view"
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Mirroring - sys.dm_db_mirroring_auto_page_repair

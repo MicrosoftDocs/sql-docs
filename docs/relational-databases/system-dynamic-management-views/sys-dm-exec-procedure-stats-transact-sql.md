@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_procedure_stats dynamic management view"
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sys.dm_exec_procedure_stats (Transact-SQL)

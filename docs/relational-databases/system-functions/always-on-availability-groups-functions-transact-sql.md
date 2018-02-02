@@ -18,7 +18,7 @@ ms.assetid: 293cc233-8688-4823-9887-176ed772f53d
 caps.latest.revision: 6
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Always On Availability Groups Functions (Transact-SQL)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_io_backup_tapes dynamic management view"
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_io_backup_tapes (Transact-SQL)

@@ -27,7 +27,7 @@ ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 caps.latest.revision: 18
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_hadr_database_replica_cluster_states (Transact-SQL)

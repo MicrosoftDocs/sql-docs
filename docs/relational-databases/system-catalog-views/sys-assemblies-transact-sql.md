@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.assemblies catalog view"
 ms.assetid: e321753f-293f-42ab-b225-d118713df40b
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.assemblies (Transact-SQL)

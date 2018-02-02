@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "data collector view"
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syscollector_execution_stats (Transact-SQL)

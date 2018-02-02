@@ -26,7 +26,7 @@ ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 caps.latest.revision: 9
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_MSxe_read_event_stream (Transact-SQL)

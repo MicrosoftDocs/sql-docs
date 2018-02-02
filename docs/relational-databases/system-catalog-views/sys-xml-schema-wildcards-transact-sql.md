@@ -25,7 +25,7 @@ ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.xml_schema_wildcards (Transact-SQL)

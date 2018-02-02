@@ -18,7 +18,7 @@ ms.assetid: ddc12f05-edeb-4848-b6d7-e851684cf044
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_os_threads (Transact-SQL)

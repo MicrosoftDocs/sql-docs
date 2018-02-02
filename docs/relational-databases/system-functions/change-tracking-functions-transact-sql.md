@@ -21,7 +21,7 @@ ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
 caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Change Tracking Functions (Transact-SQL)

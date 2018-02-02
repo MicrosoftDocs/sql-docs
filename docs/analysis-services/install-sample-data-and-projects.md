@@ -24,7 +24,7 @@ ms.workload: "Active"
 # Install sample data and multidimensional projects 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
-Use the instructions and links provided in this topic to install all of the data and project files used in the Analysis Services Tutorials.  
+Use the instructions and links provided in this topic to install the data and project files used in the Analysis Services Tutorials.  
   
 ## Step 1: Install SQL Server Software  
 The lessons in this tutorial assume that you have the following software installed. You can install all of the features on a single computer. To install these features, run SQL Server Setup and select them from the Feature Selection page.  
@@ -34,8 +34,6 @@ The lessons in this tutorial assume that you have the following software install
 -   Analysis Services  
   
     Analysis Services is available in these editions only: Evaluation, Enterprise, Business Intelligence, Standard.  
-  
-    Note that SQL Server Express editions do not include Analysis Services. [Download the Evaluation edition](http://go.microsoft.com/fwlink/?LinkId=392824) if you want to try out the software free of charge.  
   
     By default, Analysis Services 2016 and later is installed as a tabular instance, which you can override by choosing Multidimensional Server Mode in the server configuration page of the Installation Wizard. If you want to run both server modes, rerun SQL Server Setup on the same computer to install a second instance of Analysis Services in the other mode.  
   
@@ -53,13 +51,13 @@ In this release, SQL Server Data Tools is downloaded and installed separately fr
 ## Step 3: Install Databases  
 An Analysis Services multidimensional model uses transactional data that you import from a relational database management system. For the purposes of this tutorial, you will use the following relational database as your data source.  
   
--   **AdventureWorksDW2012 or later** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data that will be used by the Analysis Services databases and projects that you build and deploy throughout the tutorial.  
+-   **AdventureWorksDW 2012 or later** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data that will be used by the Analysis Services databases and projects that you build and deploy throughout the tutorial.  
   
-    You can use this sample database with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and later. 
+    You can use this sample database with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and later. In-general, you should use the sample database version matching your database engine version.
   
-To install this database, do the following:  
+To install the database, do the following:  
   
-1.  Download the [AdventureWorkDW2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) database backup from GitHub.  
+1.  Download an [AdventureWorkDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) database backup from GitHub.  
   
 2.  Copy the backup file to the data directory of the local SQL Server Database Engine instance.
   
@@ -86,9 +84,6 @@ The sample projects use data source impersonation settings that specify the secu
 6.  Select the checkbox next to the **AdventureWorksDW2014** database. Role membership should automatically include **db_datareader** and **public**. Click **OK** to accept the defaults.  
   
 ## Step 5: Install Projects  
-The tutorial includes sample projects so you can compare your results against a finished project, or start a lesson that is further on in the sequence.  
-  
-The project file for Lesson 4 is particularly important because it provides the basis for not only that lesson, but all the subsequent lessons that follow. In contrast with the previous project files, where the steps in the tutorial result in an exact copy of the completed project files, the Lesson 4 sample project includes new model information that is not found in the model you built in lessons 1 through 3. Lesson 4 assumes that you are starting with a sample project file that is available in the following download.  
   
 1.  Download the [adventure-works-multidimensional-model-project.zip](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) from the Adventure Works for Analysis Services samples page on GitHub.  
   

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_schedule"
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 caps.latest.revision: 53
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_add_schedule (Transact-SQL)

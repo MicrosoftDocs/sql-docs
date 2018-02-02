@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_refresh_log_shipping_monitor"
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_refresh_log_shipping_monitor (Transact-SQL)

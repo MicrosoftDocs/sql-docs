@@ -20,7 +20,7 @@ ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Full-Text Search and Semantic Search Functions (Transact-SQL)

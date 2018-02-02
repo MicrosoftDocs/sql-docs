@@ -23,7 +23,7 @@ ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # semanticsimilaritytable (Transact-SQL)

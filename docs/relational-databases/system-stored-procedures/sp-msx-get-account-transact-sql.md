@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_msx_get_account"
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_msx_get_account (Transact-SQL)

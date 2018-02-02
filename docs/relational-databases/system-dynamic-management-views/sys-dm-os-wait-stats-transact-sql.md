@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_wait_stats dynamic management view"
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 caps.latest.revision: 111
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sys.dm_os_wait_stats (Transact-SQL)

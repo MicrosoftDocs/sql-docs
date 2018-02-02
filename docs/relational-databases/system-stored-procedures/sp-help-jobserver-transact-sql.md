@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_jobserver"
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_jobserver (Transact-SQL)

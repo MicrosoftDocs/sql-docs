@@ -26,7 +26,7 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_parser (Transact-SQL)

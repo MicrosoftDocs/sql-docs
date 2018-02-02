@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.external_file_formats (Transact-SQL)

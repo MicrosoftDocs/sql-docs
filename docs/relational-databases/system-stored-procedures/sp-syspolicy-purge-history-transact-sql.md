@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_purge_history"
 ms.assetid: 6db414e7-4946-4bd2-8264-6b490810b306
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_syspolicy_purge_history (Transact-SQL)

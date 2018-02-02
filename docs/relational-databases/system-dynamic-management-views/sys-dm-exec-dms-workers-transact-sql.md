@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "sys.dm_exec_dms_workers management view"
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_dms_workers (Transact-SQL)

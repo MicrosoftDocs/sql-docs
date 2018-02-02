@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "server_quotas"
 ms.assetid: 34423903-1aaa-4a55-88a6-8228315d84e7
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.server_quotas (Azure SQL Database)

@@ -22,7 +22,7 @@ ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Full-Text Search and Semantic Search Catalog Views (Transact-SQL)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_targetsvrgrp_member"
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_targetsvrgrp_member (Transact-SQL)

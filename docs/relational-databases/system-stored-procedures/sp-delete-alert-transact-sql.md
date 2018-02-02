@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_alert"
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_alert (Transact-SQL)

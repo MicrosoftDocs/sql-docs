@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_connections dynamic management view"
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_exec_connections (Transact-SQL)

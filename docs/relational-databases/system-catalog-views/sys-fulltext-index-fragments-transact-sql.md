@@ -28,7 +28,7 @@ ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fulltext_index_fragments (Transact-SQL)

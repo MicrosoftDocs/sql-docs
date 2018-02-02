@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.service_contracts catalog view"
 ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.service_contracts (Transact-SQL)

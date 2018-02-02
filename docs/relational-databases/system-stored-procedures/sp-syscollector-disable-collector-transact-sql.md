@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_syscollector_disable_collector"
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_disable_collector (Transact-SQL)

@@ -26,7 +26,7 @@ ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # managed_backup.fn_is_master_switch_on (Transact-SQL)

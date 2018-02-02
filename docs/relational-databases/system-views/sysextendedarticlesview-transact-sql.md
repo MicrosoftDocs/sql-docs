@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysextendedarticlesview view"
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysextendedarticlesview (Transact-SQL)

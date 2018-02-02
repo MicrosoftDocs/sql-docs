@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_query_profiles dynamic management view"
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_query_profiles (Transact-SQL)

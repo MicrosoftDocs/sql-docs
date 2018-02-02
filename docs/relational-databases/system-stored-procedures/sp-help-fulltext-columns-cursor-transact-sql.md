@@ -23,7 +23,7 @@ ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_fulltext_columns_cursor (Transact-SQL)

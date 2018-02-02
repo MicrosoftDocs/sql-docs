@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_unsentitems database mail view"
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_unsentitems (Transact-SQL)

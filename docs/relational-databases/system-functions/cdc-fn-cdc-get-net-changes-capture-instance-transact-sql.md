@@ -22,7 +22,7 @@ ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)

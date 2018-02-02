@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "catalog views [SQL Server]"
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Resource Governor Catalog Views (Transact-SQL)

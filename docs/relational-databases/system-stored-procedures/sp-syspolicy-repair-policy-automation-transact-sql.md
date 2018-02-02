@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_repair_policy_automation"
 ms.assetid: d81682e3-2444-4d66-ad00-1cf628632e8b
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_repair_policy_automation (Transact-SQL)

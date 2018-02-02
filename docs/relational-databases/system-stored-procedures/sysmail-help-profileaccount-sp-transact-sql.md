@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_help_profileaccount_sp"
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sysmail_help_profileaccount_sp (Transact-SQL)

@@ -27,7 +27,7 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_translate_permissions (Transact-SQL)

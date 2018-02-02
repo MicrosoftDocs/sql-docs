@@ -23,7 +23,7 @@ ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Full-Text Search and Semantic Search Stored Procedures (Transact-SQL)

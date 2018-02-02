@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_add_account_sp"
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_add_account_sp (Transact-SQL)

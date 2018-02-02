@@ -19,7 +19,7 @@ ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Use a Format File to Bulk Import Data (SQL Server)

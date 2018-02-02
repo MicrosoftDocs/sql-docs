@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_job"
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_help_job (Transact-SQL)

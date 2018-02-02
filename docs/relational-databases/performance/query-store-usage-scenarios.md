@@ -59,7 +59,7 @@ ms.workload: "Inactive"
   
  Look at the plan summary on the right to analyze the execution history and learn about the different plans and their runtime statistics. Use the bottom pane to examine the different plans or to compare them visually, rendered side by side (use the Compare button).  
   
- When you identify a query with sub-optimal performance, your action depends on the nature of the problem:  
+When you identify a query with sub-optimal performance, your action depends on the nature of the problem:  
   
 1.  If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to ensure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use the optimal plan for future executions  
   
@@ -84,7 +84,7 @@ ms.workload: "Inactive"
   
 -   Adding temporal system-versioning to tables that are frequently modified by your OLTP applications.  
   
- In any of these scenarios apply the following workflow:  
+In any of these scenarios apply the following workflow:  
   
 1.  Run your workload with the Query Store before the planned change to generate performance baseline.  
   
@@ -115,9 +115,9 @@ ms.workload: "Inactive"
  Based on analysis you would likely keep the index as query performance has been improved.  
   
 ## <a name="CEUpgrade"></a> Keep performance stability during the upgrade to newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Prior to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], users were exposed to the risk of performance regression during the upgrade to the latest platform version. The reason for that was the fact that latest version of Query Optimizer became active immediately once new bits are installed.  
+Prior to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], users were exposed to the risk of performance regression during the upgrade to the latest platform version. The reason for that was the fact that latest version of Query Optimizer became active immediately once new bits are installed.  
   
- Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimizer changes are tied to the latest [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. Recommended upgrade workflow is shown in the following picture:  
+Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimizer changes are tied to the latest [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. Recommended upgrade workflow is shown in the following picture:  
   
  ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   

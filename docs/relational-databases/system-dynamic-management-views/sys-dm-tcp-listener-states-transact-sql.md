@@ -27,7 +27,7 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_tcp_listener_states (Transact-SQL)

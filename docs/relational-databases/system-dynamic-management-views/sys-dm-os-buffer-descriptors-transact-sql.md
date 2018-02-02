@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_buffer_descriptors dynamic management view"
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_buffer_descriptors (Transact-SQL)

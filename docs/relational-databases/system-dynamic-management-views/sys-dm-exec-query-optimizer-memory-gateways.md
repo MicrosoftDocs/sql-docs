@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "sys.dm_exec_query_optimizer_memory_gateways dynamic management view"
 author: "josack"
 ms.author: "josack"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)

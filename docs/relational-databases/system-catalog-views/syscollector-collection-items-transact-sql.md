@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "add data collector view"
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syscollector_collection_items (Transact-SQL)

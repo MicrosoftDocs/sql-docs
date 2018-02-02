@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_task_space_usage dynamic management view"
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_task_space_usage (Transact-SQL)

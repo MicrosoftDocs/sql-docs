@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysmergeextendedarticlesview view"
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmergeextendedarticlesview (Transact-SQL)

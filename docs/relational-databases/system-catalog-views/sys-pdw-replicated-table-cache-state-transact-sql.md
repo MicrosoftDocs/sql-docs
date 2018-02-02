@@ -16,7 +16,7 @@ dev_langs:
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff;barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)

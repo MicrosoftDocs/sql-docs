@@ -18,7 +18,7 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_index_mappings (Transact-SQL)

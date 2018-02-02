@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_virtual_address_dump dynamic management view"
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_virtual_address_dump (Transact-SQL)

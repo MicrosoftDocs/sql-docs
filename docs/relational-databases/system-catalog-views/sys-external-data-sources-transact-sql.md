@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.external_data_sources (Transact-SQL)

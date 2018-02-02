@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_checkpoint_files dynamic management view"
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_xtp_checkpoint_files (Transact-SQL)

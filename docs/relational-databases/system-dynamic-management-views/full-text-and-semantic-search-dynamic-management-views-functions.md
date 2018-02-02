@@ -21,7 +21,7 @@ ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Full-Text and Semantic Search Dynamic Management Views - Functions

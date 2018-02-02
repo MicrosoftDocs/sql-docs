@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "dbo.slo_database_objectives"
 ms.assetid: a522569d-8cfc-4643-a170-1cd291e61eee
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.slo_database_objectives (Azure SQL Database)

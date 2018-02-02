@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.database_recovery_status catalog view"
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_recovery_status (Transact-SQL)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_stats_histogram dynamic management function"
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_stats_histogram (Transact-SQL)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "syspolicy_system_health_state view"
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syspolicy_system_health_state (Transact-SQL)

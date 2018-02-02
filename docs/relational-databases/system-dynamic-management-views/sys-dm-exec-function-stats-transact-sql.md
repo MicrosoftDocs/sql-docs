@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_function_stats dynamic management view"
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_function_stats (Transact-SQL)

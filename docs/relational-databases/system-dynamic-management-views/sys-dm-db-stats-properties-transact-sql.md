@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_stats_properties"
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_db_stats_properties (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.xml_schema_model_groups (Transact-SQL)

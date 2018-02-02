@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_clr_properties dynamic management view"
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_clr_properties (Transact-SQL)

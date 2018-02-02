@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.dm_os_dispatcher_pools DMV"
 ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_dispatcher_pools (Transact-SQL)

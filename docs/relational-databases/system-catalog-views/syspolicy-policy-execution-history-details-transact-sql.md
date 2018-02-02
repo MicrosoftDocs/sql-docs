@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "syspolicy_policy_execution_history_details view"
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syspolicy_policy_execution_history_details (Transact-SQL)

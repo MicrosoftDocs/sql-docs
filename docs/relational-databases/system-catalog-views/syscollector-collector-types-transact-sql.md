@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "syscollector_collector_types view"
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syscollector_collector_types (Transact-SQL)

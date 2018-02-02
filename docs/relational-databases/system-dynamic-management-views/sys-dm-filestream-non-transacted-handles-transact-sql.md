@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_filestream_non_transacted_handles dynamic management view"
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_filestream_non_transacted_handles (Transact-SQL)

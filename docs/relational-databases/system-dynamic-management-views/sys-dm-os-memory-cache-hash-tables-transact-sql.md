@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_memory_cache_hash_tables dynamic management view"
 ms.assetid: 68b94f35-8f80-4d2b-bcde-7a21934219af
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_memory_cache_hash_tables (Transact-SQL)

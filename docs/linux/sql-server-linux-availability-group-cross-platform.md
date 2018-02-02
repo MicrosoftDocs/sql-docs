@@ -39,7 +39,10 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 1. Install SQL Server 2017 on Windows Server 2016, enable Availability Groups from SQL Server Configuration Manager, and set mixed mode authentication. 
 
-  **Enable Availability Groups**
+   >[!TIP]
+   >If you are validating this solution in Azure, place both servers in the same availability set to ensure they are separated in the data center. 
+
+   **Enable Availability Groups**
 
    For instructions, see [Enable and Disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 

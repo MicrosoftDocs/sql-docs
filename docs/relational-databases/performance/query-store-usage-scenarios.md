@@ -100,26 +100,26 @@ In any of these scenarios apply the following workflow:
   
 5.  Decide whether to keep the change or perform roll back in case when new performance is unacceptable.  
   
- The following illustration shows Query Store analysis (step 4) in case of missing index creation. Open **Top Resource Consuming Queries** / Plan summary pane to get this view for the query that should be impacted by the index creation:  
+The following illustration shows Query Store analysis (step 4) in case of missing index creation. Open **Top Resource Consuming Queries** / Plan summary pane to get this view for the query that should be impacted by the index creation:  
   
- ![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
+![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
- Additionally, you can compare plans before and after index creation by rendering them side by side. (“Compare the plans for the selected query in a separate window” toolbar option which is marked with red square on the toolbar.)  
+Additionally, you can compare plans before and after index creation by rendering them side by side. (“Compare the plans for the selected query in a separate window” toolbar option which is marked with red square on the toolbar.)  
   
- ![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
+![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
- Plan before index creation (plan_id  = 1, above) has missing index hint and you can inspect that Clustered Index Scan was the most expensive operator in the query (red rectangle).  
+Plan before index creation (plan_id  = 1, above) has missing index hint and you can inspect that Clustered Index Scan was the most expensive operator in the query (red rectangle).  
   
- Plan after missing index creation (plan_id  = 15, below) now has Index Seek (Nonclustered) which reduces the overall cost of the query and improves it performance (green rectangle).  
+Plan after missing index creation (plan_id  = 15, below) now has Index Seek (Nonclustered) which reduces the overall cost of the query and improves it performance (green rectangle).  
   
- Based on analysis you would likely keep the index as query performance has been improved.  
+Based on analysis you would likely keep the index as query performance has been improved.  
   
 ## <a name="CEUpgrade"></a> Keep performance stability during the upgrade to newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 Prior to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], users were exposed to the risk of performance regression during the upgrade to the latest platform version. The reason for that was the fact that latest version of Query Optimizer became active immediately once new bits are installed.  
   
 Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimizer changes are tied to the latest [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. Recommended upgrade workflow is shown in the following picture:  
   
- ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
 1.  Upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without changing the database compatibility level. It doesn’t expose the latest Query Optimizer changes but still provides newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features including Query Store.  
   
@@ -132,15 +132,15 @@ Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimi
 5.  Use Query Store for analysis and regression fixes: for the most part, the new Query Optimizer changes should produce better plans. However, Query Store will provide an easy way to identify plan choice regressions and fix them using a plan forcing mechanism. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], when using the [Automatic Plan Correction](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) feature, this step becomes automatic.  
   
 ## Identify and improve ad-hoc workloads  
- Some workloads do not have dominant queries that you can tune to improve overall application performance. Those workloads are typically characterized with relatively large number of different queries each of them consuming portion of system resources. Being unique, those queries are executed very rarely (usually only once, thus name ad hoc), so their runtime consumption is not critical. On the other hand, given that application is generating net new queries all the time, significant portion of system resources is spent on query compilation which is not optimal. This is not ideal situation for Query Store either given that large number of queries and plans flood the space you have reserved which means that Query Store will likely end up in the read-only mode very quickly. If you activated **Size Based Cleanup Policy** ([highly recommended](best-practice-with-the-query-store.md) to keep Query Store always up and running), then background process will be cleaning Query Store structures most of the time also taking significant system resources.  
+Some workloads do not have dominant queries that you can tune to improve overall application performance. Those workloads are typically characterized with relatively large number of different queries each of them consuming portion of system resources. Being unique, those queries are executed very rarely (usually only once, thus name ad hoc), so their runtime consumption is not critical. On the other hand, given that application is generating net new queries all the time, significant portion of system resources is spent on query compilation which is not optimal. This is not ideal situation for Query Store either given that large number of queries and plans flood the space you have reserved which means that Query Store will likely end up in the read-only mode very quickly. If you activated **Size Based Cleanup Policy** ([highly recommended](best-practice-with-the-query-store.md) to keep Query Store always up and running), then background process will be cleaning Query Store structures most of the time also taking significant system resources.  
   
  **Top Resource Consuming Queries** view will give you first indication of the ad-hoc nature of your workload:  
   
- ![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
- Use **Execution Count** metric to analyze whether your top queries are ad hoc (this requires you to run Query Store with `QUERY_CAPTURE_MODE = ALL`). From diagram above you can see that 90% of your **Top Resource Consuming Queries** are executed only once.  
+Use **Execution Count** metric to analyze whether your top queries are ad hoc (this requires you to run Query Store with `QUERY_CAPTURE_MODE = ALL`). From diagram above you can see that 90% of your **Top Resource Consuming Queries** are executed only once.  
   
- Alternatively, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] script to get total number of query texts, queries and plans in the system and determine how different they are by comparing their query_hash and plan_hash:  
+Alternatively, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] script to get total number of query texts, queries and plans in the system and determine how different they are by comparing their query_hash and plan_hash:  
   
 ```sql  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
@@ -151,17 +151,17 @@ SELECT COUNT(*) AS CountPlanRows FROM sys.query_store_plan;
 SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.query_store_plan;  
 ```  
   
- This is one potential result you can get in case of workload with ad-hoc queries:  
+This is one potential result you can get in case of workload with ad-hoc queries:  
   
- ![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
+![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
- Query result shows that despite the large number of queries and plans in the Query Store their query_hash and plan_hash are actually not different. Ratio between unique query texts and unique query_hash which is much bigger than 1 is an indication that workload is a good candidate for parameterization as the only difference between the queries is literal constant (parameter) provided as part of the query text.  
+Query result shows that despite the large number of queries and plans in the Query Store their query_hash and plan_hash are actually not different. Ratio between unique query texts and unique query_hash which is much bigger than 1 is an indication that workload is a good candidate for parameterization as the only difference between the queries is literal constant (parameter) provided as part of the query text.  
   
- Usually, this situation happens if your application generates queries (instead of invoking stored procedures or parameterized queries) or if it relies on object-relational mapping frameworks that generate queries by default.  
+Usually, this situation happens if your application generates queries (instead of invoking stored procedures or parameterized queries) or if it relies on object-relational mapping frameworks that generate queries by default.  
   
- If you are in control of the application code you may consider rewriting of the data access layer to utilize stored procedures or parameterized queries. However, this situation can be also significantly improved without application changes by forcing query parameterization for the entire database (all queries) or for the individual query templates with the same query_hash.  
+If you are in control of the application code you may consider rewriting of the data access layer to utilize stored procedures or parameterized queries. However, this situation can be also significantly improved without application changes by forcing query parameterization for the entire database (all queries) or for the individual query templates with the same query_hash.  
   
- Approach with individual query templates requires plan guide creation:  
+Approach with individual query templates requires plan guide creation:  
   
 ```sql  
 /*Apply plan guide for the selected query template*/  
@@ -181,39 +181,36 @@ EXEC sp_create_plan_guide
     N'OPTION (PARAMETERIZATION FORCED)';  
 ```  
   
- Solution with plan guides is more precise but it requires more work.  
+Solution with plan guides is more precise but it requires more work.  
   
- If all your queries (or majority of them) are candidates for auto-parameterization than changing `FORCED PARAMETERIZATION` for the entire database may be a better option:  
+If all your queries (or majority of them) are candidates for auto-parameterization than changing `FORCED PARAMETERIZATION` for the entire database may be a better option:  
   
 ```sql  
 /*Apply forced parameterization for entire database*/  
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
 
- > [!NOTE]
- > For more information on this topic, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
+> [!NOTE]
+> For more information on this topic, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).
 
- After you apply any of these steps, **Top Resource Consuming Queries** will show you different picture of your workload.  
+After you apply any of these steps, **Top Resource Consuming Queries** will show you different picture of your workload.  
   
- ![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
- In some cases your application may generate lots of different queries which are not good candidates for auto-parameterization. In that case you will see large number of queries in the system but the ratio between unique queries and unique `query_hash` is likely close to 1.  
+In some cases your application may generate lots of different queries which are not good candidates for auto-parameterization. In that case you will see large number of queries in the system but the ratio between unique queries and unique `query_hash` is likely close to 1.  
   
- In that case you may want to enable the [**Optimize for Ad Hoc Workloads**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) server option to prevent wasting cache memory on queries that won’t likely be executed again. To prevent capture of those queries in the Query Store, set `QUERY_CAPTURE_MODE` to `AUTO`.  
+In that case you may want to enable the [**Optimize for Ad Hoc Workloads**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) server option to prevent wasting cache memory on queries that won’t likely be executed again. To prevent capture of those queries in the Query Store, set `QUERY_CAPTURE_MODE` to `AUTO`.  
   
 ```sql  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
+EXEC sys.sp_configure N'show advanced options', N'1' RECONFIGURE WITH OVERRIDE
+GO
+EXEC sys.sp_configure N'optimize for ad hoc workloads', N'1'
+GO
+RECONFIGURE WITH OVERRIDE
+GO 
   
-sp_configure 'optimize for ad hoc workloads', 1;  
-GO  
-RECONFIGURE;  
-GO  
-  
-ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE CLEAR;  
-ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON   
+ALTER DATABASE [QueryStoreTest] SET QUERY_STORE CLEAR;  
+ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON   
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   

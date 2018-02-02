@@ -32,15 +32,14 @@ This lesson contains the following tasks:
 In this task, you create the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project, based on an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensional model template.  
   
 [Defining a Data Source](../analysis-services/lesson-1-2-defining-a-data-source.md)  
-In this task, you specify the **AdventureWorksDW2012** database as the data source for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dimensions and cubes that you will define in subsequent lessons.  
+In this task, you specify the **AdventureWorksDW** database as the data source for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dimensions and cubes that you will define in subsequent lessons.  
   
 [Defining a Data Source View](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
-In this task, you define a single unified view of the metadata from selected tables in the **AdventureWorksDW2012** database.  
+In this task, you define a single unified view of the metadata from selected tables in the **AdventureWorksDW** database.  
   
 [Modifying Default Table Names](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
 In this task, you modify table names in the data source view, so that the names of subsequent [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects that you define will be more user-friendly.  
   
-Compare your results against a sample project file that was built for this lesson. For more information about downloading the sample projects that go with this tutorial, see [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) on the product samples page on codeplex.  
   
 ## Next Lesson  
 [Lesson 2: Defining and Deploying a Cube](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  

@@ -24,7 +24,7 @@ ms.workload: "Active"
 # Install sample data and multidimensional projects 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
-Use the instructions and links provided in this topic to install the data and project files used in the Analysis Services Tutorials.  
+Use the instructions and links provided in this topic to install the data and project files used in the Analysis Services Tutorials.  If you are completing the multidimensional tutorial, you only need to install the sample projects if you want compare a fully completed project with the one you create in the tutorial.
   
 ## Step 1: Install SQL Server Software  
 The lessons in this tutorial assume that you have the following software installed. You can install all of the features on a single computer. To install these features, run SQL Server Setup and select them from the Feature Selection page.  
@@ -84,6 +84,8 @@ The sample projects use data source impersonation settings that specify the secu
 6.  Select the checkbox next to the **AdventureWorksDW2014** database. Role membership should automatically include **db_datareader** and **public**. Click **OK** to accept the defaults.  
   
 ## Step 5: Install Projects  
+
+The sample projects are only necessary to compare with what you create in the multidimensional modeling tutorial. These are not necessary to complete the tutorial.
   
 1.  Download the [adventure-works-multidimensional-model-project.zip](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) from the Adventure Works for Analysis Services samples page on GitHub.  
   

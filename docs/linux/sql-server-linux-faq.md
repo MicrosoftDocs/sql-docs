@@ -3,7 +3,7 @@ title:  SQL Server on Linux FAQ | Microsoft Docs
 description: This article provides answers to frequently asked questions about SQL Server running on Linux.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

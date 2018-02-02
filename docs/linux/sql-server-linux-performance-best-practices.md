@@ -3,7 +3,7 @@ title: Performance best practices for SQL Server on Linux | Microsoft Docs
 description: This topic provide performance best practices and guidelines for running SQL Server 2017 on Linux.
 author: rgward 
 ms.author: bobward 
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

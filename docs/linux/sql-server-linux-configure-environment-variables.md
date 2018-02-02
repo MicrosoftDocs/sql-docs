@@ -3,7 +3,7 @@ title: Configure SQL Server settings with environment variables | Microsoft Docs
 description: This topic describes how to use environment variables to configure specific SQL Server 2017 settings on Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 07/21/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
@@ -18,7 +18,7 @@ ms.workload: "On Demand"
 ---
 # Configure SQL Server settings with environment variables on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 You can use several different environment variables to configure SQL Server 2017 on Linux. These variables are used in two scenarios:
 

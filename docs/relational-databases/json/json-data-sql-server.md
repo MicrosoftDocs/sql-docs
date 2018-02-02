@@ -39,7 +39,7 @@ Here's an example of JSON text:
 }]
 ``` 
  
-By using SQL Server built-in functions and operators, you can do the following with JSON text: 
+By using SQL Server built-in functions and operators, you can do the following things with JSON text: 
  
 - Parse JSON text and read or modify values.  
 - Transform arrays of JSON objects into table format.  
@@ -164,7 +164,7 @@ For more information, see [Format query results as JSON with FOR JSON (SQL Serve
 ## Combine relational and JSON data
 SQL Server provides a hybrid model for storing and processing both relational and JSON data by using standard Transact-SQL language. You can organize collections of your JSON documents in tables, establish relationships between them, combine strongly typed scalar columns stored in tables with flexible key/value pairs stored in JSON columns, and query both scalar and JSON values in one or more tables by using full Transact-SQL.
  
-JSON text is usually stored in varchar or nvarchar columns and is indexed as plain text. Any SQL Server feature or component that supports text supports JSON, so there are almost no constraints on interaction between JSON and other SQL Server features. You can store JSON in In-memory or Temporal tables, apply Row-Level Security predicates on JSON text, and so on.
+JSON text is stored in varchar or nvarchar columns and is indexed as plain text. Any SQL Server feature or component that supports text supports JSON, so there are almost no constraints on interaction between JSON and other SQL Server features. You can store JSON in In-memory or Temporal tables, apply Row-Level Security predicates on JSON text, and so on.
 
 If you have pure JSON workloads where you want to use a query language that's customized for the processing of JSON documents, consider Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/).  
   
@@ -282,7 +282,7 @@ After you restore the sample database to an instance of SQL Server 2016, extract
   
 Here's what you can do with the scripts that are included in the file:  
   
-* Denormalize the existing schema to create columns of JSON data by doing the following:  
+* Denormalize the existing schema to create columns of JSON data.
   
     * Store information from SalesReasons, SalesOrderDetails, SalesPerson, Customer, and other tables that contain information related to sales order into JSON columns in the SalesOrder_json table.  
   
@@ -298,13 +298,26 @@ Here's what you can do with the scripts that are included in the file:
   
 * Clean up scripts. Don't run this part if you want to keep the stored procedures and views that you created in steps 2 and 4.  
   
-## Learn more about built-in JSON support  
+## Learn more about JSON in SQL Server and Azure SQL Database  
   
 ### Microsoft blog posts  
   
--   For specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and Azure SQL Database.  
-  
-### Reference topics  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+*SQL Server 2016 and JSON Support*
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+
+*Using JSON in SQL Server 2016 and Azure SQL Database*
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+
+*JSON as a bridge between NoSQL and relational worlds*
+> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
+   
+### Reference articles  
   
 -   [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
 -   [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  

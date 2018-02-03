@@ -22,7 +22,9 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for an in-place upgrade of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >[!WARNING]  

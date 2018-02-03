@@ -20,7 +20,9 @@ manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Upgrade Power Pivot for SharePoint
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   This topic summarizes the steps required to upgrade a deployment of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] to [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. The specific steps depend on the version of SharePoint your environment is currently running and include the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Add-in (**spPowerPivot.msi**).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  

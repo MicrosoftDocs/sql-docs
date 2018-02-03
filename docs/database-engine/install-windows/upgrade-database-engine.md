@@ -23,7 +23,9 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Upgrade Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   The topics in this section will help you upgrade the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine from a prior release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 1.  [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Before beginning an upgrade, you need to understand the various upgrade methods. This topic discusses the upgrade methods and the steps involved with each upgrade method.  

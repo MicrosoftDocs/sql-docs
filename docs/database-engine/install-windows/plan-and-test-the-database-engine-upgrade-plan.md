@@ -19,8 +19,10 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Plan and test the database engine upgrade plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  To perform a successful [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] upgrade, regardless of approach, appropriate planning is required.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ To perform a successful [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] upgrade, regardless of approach, appropriate planning is required.  
   
 ## Release notes and known upgrade issues  
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review:

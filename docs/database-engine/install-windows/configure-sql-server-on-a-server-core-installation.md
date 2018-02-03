@@ -22,7 +22,9 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Configure SQL Server on a Server Core Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 This topic covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Configure and Manage Server Core on Windows Server  

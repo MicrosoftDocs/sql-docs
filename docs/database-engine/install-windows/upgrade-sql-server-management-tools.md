@@ -21,7 +21,9 @@ ms.author: "sstein"
 manager: "craigg"
 ---
 # Upgrade SQL Server Management Tools
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later. This topic documents support and behavior for upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools and management components such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Database Mail, Maintenance Plans, XPStar, and XPWeb.  
   
 > [!IMPORTANT]  

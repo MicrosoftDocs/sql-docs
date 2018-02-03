@@ -37,10 +37,6 @@ fipsProvider has been removed from the list of accepted connection properties. S
 
 Two new connection properties have been added: **trustManagerClass** and **trustManagerConstructorArg**. This allows for dynamic specification of a set of certificates that are trusted on a per connection basis without modifying the global settings for the JVM environment.
 
-**Connection property sendTimeAsDatetime defaulted to 'false'**
-
-**sendTimeAsDatetime** has been defaulted to 'false'. Details can be found in [Configuring How java.sql.Time Values are Sent to the Server](https://docs.microsoft.com/en-us/sql/connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server).
-
 **Added support for datetime/smallDatetime in TVP**
 
 The JDBC Driver now supports datetime/smallDatetime values with TVP.

@@ -28,17 +28,17 @@ ms.workload: "On Demand"
 **How can I help improve the JDBC Driver?**  
 The JDBC Driver is open-source and the source code can be found on [GitHub](https://github.com/microsoft/mssql-jdbc). You can help improve the driver by filing issues and contributing to the code base.
 
-**Which versions of SQL Server and Java do the driver support?**  
+**Which versions of SQL Server and Java does the driver support?**  
  See the [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.  
   
  **What should I know when upgrading my driver?**  
- The Microsoft JDBC Driver 6.4 supports the JDBC 4.1, 4.2, and 4.3 specifications and includes three JAR class libraries in the installation package as follows:  
+ The Microsoft JDBC Driver 6.4 supports the JDBC 4.1, 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:  
   
 |JAR|JDBC Specification|JDK Version|  
 |-|-|-|  
-|mssql-jdbc-6.4.0.jre9.jar|JDBC 4.3, 4.2, and 4.1|JDK 9.0|  
-|mssql-jdbc-6.4.0.jre8.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0|  
-|mssql-jdbc-6.4.0.jre7.jar|JDBC 4.1 and 4.0|JDK 7.0|  
+|mssql-jdbc-6.4.0.jre9.jar|JDBC 4.3 (partially), 4.2, and 4.1|JDK 9.0|  
+|mssql-jdbc-6.4.0.jre8.jar|JDBC 4.2, and 4.1|JDK 8.0|  
+|mssql-jdbc-6.4.0.jre7.jar|JDBC 4.1|JDK 7.0|  
 
  The Microsoft JDBC Driver 6.2 supports the JDBC 4.0, 4.1, and 4.2 specifications and includes two JAR class libraries in the installation package as follows:  
   
@@ -93,10 +93,12 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
 |Platform|Authentication|  
 |Non-Windows|Pure Java Kerberos|  
 |Non-Windows|SQL Server|  
+|Non-Windows|Azure Active Directory Authentication|
 |Windows|Pure Java Kerberos|  
-|Windows|SQL Server|  
+|Windows|SQL Server|
 |Windows|Kerberos with NTLM backup|  
 |Windows|NTLM|  
+|Windows|Azure Active Directory Authentication|  
   
 **Does the driver support Internet Protocol version 6 (IPv6) addresses?**  
  Yes, the driver supports the use of IPv6 addresses with the connection properties collection and with the serverName connection string property. For more information, see [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).  

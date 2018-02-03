@@ -24,6 +24,6 @@ ms.workload: "Inactive"
 
     
 > [!NOTE]  
->  Versions prior to Microsoft JDBC Driver 4.3 for SQL Server are compliant for Java Database Connectivity API 4.2 specifications. This section does not apply for versions prior to the 4.3 release.  
+>  Versions prior to Microsoft JDBC Driver 6.4 for SQL Server are compliant for Java Database Connectivity API 4.2 specifications. This section does not apply for versions prior to the 6.4 release.  
   
- Currently,  Microsoft JDBC Driver 4.3 for SQL Server is Java 9 compatible, but it's not compliant for  Java Database Connectivity API 4.3 specifications. When the user tries to call API specific to version 4.3, the driver will throw a SQLFeatureNotSupportedException.
+ Currently,  Microsoft JDBC Driver 6.4 for SQL Server is Java 9 compatible, but it's not fully compliant for  Java Database Connectivity API 4.3 specifications. For newly introduced APIs in JDBC 4.3, if not supported by the driver, the driver will throw a SQLFeatureNotSupportedException.

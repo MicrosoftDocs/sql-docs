@@ -83,7 +83,7 @@ ms.workload: "On Demand"
   
 |JDBC Driver Version|JRE Versions|JDBC API Version| 
 |-|-|-|  
-|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3|  
+|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (partially)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  

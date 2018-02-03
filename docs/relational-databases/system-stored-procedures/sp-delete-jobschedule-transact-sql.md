@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_jobschedule"
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_jobschedule (Transact-SQL)

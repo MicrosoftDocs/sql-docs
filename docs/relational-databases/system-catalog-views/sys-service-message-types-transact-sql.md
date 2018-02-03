@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.service_message_types catalog view"
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.service_message_types (Transact-SQL)

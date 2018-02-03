@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_msx_set_account"
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_msx_set_account (Transact-SQL)

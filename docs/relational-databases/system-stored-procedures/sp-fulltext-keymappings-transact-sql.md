@@ -25,7 +25,7 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_fulltext_keymappings (Transact-SQL)

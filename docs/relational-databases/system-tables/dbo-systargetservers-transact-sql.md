@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "systargetservers system table"
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.systargetservers (Transact-SQL)

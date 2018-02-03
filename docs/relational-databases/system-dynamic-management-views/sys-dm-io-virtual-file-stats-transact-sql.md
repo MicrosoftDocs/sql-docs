@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_io_virtual_file_stats dynamic management function"
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_io_virtual_file_stats (Transact-SQL)

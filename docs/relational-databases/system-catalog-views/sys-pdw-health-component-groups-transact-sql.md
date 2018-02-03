@@ -16,7 +16,7 @@ ms.assetid: 5ba27432-7a29-4420-b73d-def621c0b3ac
 caps.latest.revision: 6
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_health_component_groups (Transact-SQL)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_sql_referenced_entities dynamic management function"
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_sql_referenced_entities (Transact-SQL)

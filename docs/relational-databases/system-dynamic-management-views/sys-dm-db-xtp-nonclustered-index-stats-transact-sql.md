@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_nonclustered_index_stats"
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_maintenance_plan"
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_maintenance_plan (Transact-SQL)

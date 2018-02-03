@@ -27,7 +27,7 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.fn_xe_file_target_read_file (Transact-SQL)

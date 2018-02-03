@@ -25,7 +25,7 @@ ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.xml_schema_namespaces (Transact-SQL)

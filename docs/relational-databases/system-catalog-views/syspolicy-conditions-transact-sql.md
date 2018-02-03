@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "syspolicy_conditions view"
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syspolicy_conditions (Transact-SQL)

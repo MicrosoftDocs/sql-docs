@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_schedulers dynamic management view"
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_os_schedulers (Transact-SQL)

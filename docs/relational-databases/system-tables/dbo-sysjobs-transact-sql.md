@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysjobs system table"
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # dbo.sysjobs (Transact-SQL)

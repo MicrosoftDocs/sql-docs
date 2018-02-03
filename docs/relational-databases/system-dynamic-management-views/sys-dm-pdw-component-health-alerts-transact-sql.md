@@ -16,7 +16,7 @@ ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_component_health_alerts (Transact-SQL)

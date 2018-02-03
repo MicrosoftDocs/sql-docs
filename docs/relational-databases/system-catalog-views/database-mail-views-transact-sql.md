@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "status information [SQL Server], Database Mail"
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Mail Views (Transact-SQL)

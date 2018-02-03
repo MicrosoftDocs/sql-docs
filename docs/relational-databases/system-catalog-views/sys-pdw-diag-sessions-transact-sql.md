@@ -18,7 +18,7 @@ ms.assetid: 4d23688a-cddb-4eed-8231-ecde2a0b0e65
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_diag_sessions (Transact-SQL)

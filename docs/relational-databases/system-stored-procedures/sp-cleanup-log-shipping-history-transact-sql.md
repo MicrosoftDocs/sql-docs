@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_cleanup_log_shipping_history"
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_cleanup_log_shipping_history (Transact-SQL)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "xp_sqlmaint"
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # xp_sqlmaint (Transact-SQL)

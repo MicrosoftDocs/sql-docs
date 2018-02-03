@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_file_space_usage dynamic management view"
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_db_file_space_usage (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
 caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_fulltext_database (Transact-SQL)

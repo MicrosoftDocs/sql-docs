@@ -26,7 +26,7 @@ ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 caps.latest.revision: 65
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_hadr_availability_replica_states (Transact-SQL)

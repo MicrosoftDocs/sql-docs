@@ -25,7 +25,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "tmullaney"
 ms.author: "thmullan;rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_add_trusted_assembly (Transact-SQL)  

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.function_order_columns catalog view"
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.function_order_columns (Transact-SQL)

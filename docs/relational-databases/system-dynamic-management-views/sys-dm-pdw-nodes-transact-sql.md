@@ -18,7 +18,7 @@ ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_nodes (Transact-SQL)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_background_job_queue_stats dynamic management view"
 ms.assetid: 27f62ab5-46c4-417e-814d-8d6437034d1c
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_background_job_queue_stats (Transact-SQL)

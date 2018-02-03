@@ -25,7 +25,7 @@ ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.xml_schema_component_placements (Transact-SQL)

@@ -20,6 +20,8 @@ manager: "craigg"
 ---
 # Repair a Failed SQL Server Installation
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Repair operation can be used in the following scenarios:  
   
 - Repair an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is corrupted after it was successfully installed. 

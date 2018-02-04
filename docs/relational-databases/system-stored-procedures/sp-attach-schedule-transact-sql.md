@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_attach_schedule"
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_attach_schedule (Transact-SQL)

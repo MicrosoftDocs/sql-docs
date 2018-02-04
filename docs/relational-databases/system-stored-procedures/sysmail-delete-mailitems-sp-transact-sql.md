@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_delete_mailitems_sp"
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sysmail_delete_mailitems_sp (Transact-SQL)

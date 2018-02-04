@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DROP PROXY statement"
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_proxy (Transact-SQL)

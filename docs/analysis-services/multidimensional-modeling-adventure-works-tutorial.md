@@ -1,7 +1,7 @@
 ---
 title: "Multidimensional Modeling (Adventure Works Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "02/02/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -49,7 +49,7 @@ Additionally, the following permissions must be in place to successfully complet
   
 -   You must be a member of the Administrators local group on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] computer or be a member of the server administration role in the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
--   You must have Read permissions in the **AdventureWorksDW2012** sample database. This sample database is valid for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release.  
+-   You must have Read permissions in the **AdventureWorksDW** sample database. This sample database is valid for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release.  
   
 ## Lessons  
 This tutorial includes the following lessons.  

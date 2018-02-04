@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_update_job"
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_update_job (Transact-SQL)

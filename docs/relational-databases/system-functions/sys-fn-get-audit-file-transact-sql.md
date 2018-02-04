@@ -79,7 +79,7 @@ fn_get_audit_file ( file_pattern,
  Specifies a known location with the file specified for the initial_file_name. When this argument is used the function will start reading at the first record of the Buffer immediately following the specified offset.  
   
 > [!NOTE]  
->  The *audit_record_offset* argument must contain valid entries or must contain either the default | NULL value. Type is **bitint**.  
+>  The *audit_record_offset* argument must contain valid entries or must contain either the default | NULL value. Type is **bigint**.  
   
 ## Tables Returned  
  The following table describes the audit file content that can be returned by this function.  

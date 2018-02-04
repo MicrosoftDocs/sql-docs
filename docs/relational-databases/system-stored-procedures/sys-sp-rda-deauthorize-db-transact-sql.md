@@ -23,7 +23,7 @@ ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_rda_deauthorize_db (Transact-SQL)

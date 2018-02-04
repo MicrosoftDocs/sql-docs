@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysdbmaintplan_jobs system table"
 ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysdbmaintplan_jobs (Transact-SQL)

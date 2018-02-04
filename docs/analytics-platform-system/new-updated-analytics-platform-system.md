@@ -1,22 +1,17 @@
 ---
 title: Updated - Analytics Platform System for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Analytics Platform System for Microsoft SQL Server.
-services: na
-documentationcenter: ''
-author: MightyPen
-manager: jhubbard
-editor: ''
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 02/03/2018
-ms.author: genemi
-ms.workload: sql-analytics-platform-system
 
+manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: aps-pdw
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: Analytics Platform System for SQL Server
 

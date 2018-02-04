@@ -1,21 +1,17 @@
 ---
 title: Updated - DMA for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Data Migration Assistant (DMA) for Microsoft SQL Server.
-services: na
-documentationcenter: ''
+
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: ''
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 02/03/2018
 ms.author: genemi
-ms.workload: dma-data-migration-assistant
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: dma
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: Data Migration Assistant (DMA) for SQL Server
 

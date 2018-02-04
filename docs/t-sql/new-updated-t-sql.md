@@ -90,9 +90,9 @@ This compact list provides links to all the updated articles that are listed in 
 
 
 MAXDOP = *max_degree_of_parallelism*
-**Applies to**:  *{Included-Content-Goes-Here}*  (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).
+**Applies to**:  *{Included-Content-Goes-Here}*  (Starting with  *{Included-Content-Goes-Here}*  CU3).
 
- Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
+ Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
 
  *max_degree_of_parallelism* can be:
 
@@ -133,9 +133,9 @@ MAXDOP = *max_degree_of_parallelism*
 
 
 MAXDOP = *max_degree_of_parallelism*
-**Applies to**:  *{Included-Content-Goes-Here}*  (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).
+**Applies to**:  *{Included-Content-Goes-Here}*  (Starting with  *{Included-Content-Goes-Here}*  CU3).
 
- Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
+ Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
 
  *max_degree_of_parallelism* can be:
 

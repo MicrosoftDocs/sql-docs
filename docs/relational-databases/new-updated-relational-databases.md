@@ -101,12 +101,12 @@ This compact list provides links to all the updated articles that are listed in 
 Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
 ```
 
-**Applies to:**  *{Included-Content-Goes-Here}*  (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Applies to:**  *{Included-Content-Goes-Here}*  (Starting with  *{Included-Content-Goes-Here}*  SP4,  *{Included-Content-Goes-Here}*  SP2 and  *{Included-Content-Goes-Here}*  through  *{Included-Content-Goes-Here}* )
 
 **Security Considerations**
 
 When using Instant File Initialization (IFI), because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file.
-While the database file is attached to the instance of  *{Included-Content-Goes-Here}* , this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the local administrator.
+While the database file is attached to the instance of  *{Included-Content-Goes-Here}* , this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the  *{Included-Content-Goes-Here}*  service account and the local administrator.
 However, when the file is detached, it may be accessed by a user or service that does not have *SE_MANAGE_VOLUME_NAME*. A similar consideration exists when the database is backed up: if the backup file is not protected with an appropriate DACL, the deleted content can become available to an unauthorized user or service.
 
 Another consideration is that when a file is grown using IFI, a SQL Server administrator could potentially access the raw page contents and see the previously deleted content.
@@ -136,7 +136,7 @@ If the database files are hosted on a storage area network, it is also possible 
 
 
 
- For a description of these database options, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).
+ For a description of these database options, see [ALTER DATABASE SET Options (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 **Tempdb database in SQL Database**
 
@@ -237,7 +237,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  In the **Server name** box, type the name of the instance of the  *{Included-Content-Goes-Here}* . For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the *<computer_name>***\\***<instance_name>,* such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name.
+3.  In the **Server name** box, type the name of the instance of the  *{Included-Content-Goes-Here}* . For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the *<computer_name>***\\***<instance_name>,* such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of  *{Included-Content-Goes-Here}*  on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name.
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
@@ -247,7 +247,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 **<a name="additional"></a>Authorizing Additional Connections**
 
-Now that you have connected to  *{Included-Content-Goes-Here}*  as an administrator, one of your first tasks is to authorize other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be either Windows Authentication logins, which use credentials from Windows, or SQL Server Authentication logins, which store the authentication information in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and are independent of your Windows credentials. Use Windows Authentication whenever possible.
+Now that you have connected to  *{Included-Content-Goes-Here}*  as an administrator, one of your first tasks is to authorize other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be either Windows Authentication logins, which use credentials from Windows, or SQL Server Authentication logins, which store the authentication information in  *{Included-Content-Goes-Here}*  and are independent of your Windows credentials. Use Windows Authentication whenever possible.
 
 
 
@@ -272,13 +272,13 @@ Now that you have connected to  *{Included-Content-Goes-Here}*  as an administra
 
 
 
--   A small growth increment can generate too many small [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+-   A small growth increment can generate too many small [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can reduce performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   A large growth increment can generate too few and large [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+-   A large growth increment can generate too few and large [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   Even with autogrow enabled, you can receive a message that the transaction log is full, if it cannot grow fast enough to satisfy the needs of your query. For more information on changing the growth increment, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+-   Even with autogrow enabled, you can receive a message that the transaction log is full, if it cannot grow fast enough to satisfy the needs of your query. For more information on changing the growth increment, see [ALTER DATABASE &#40;Transact-SQL&#41; File and Filegroup options](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 
--   Having multiple log files in a database does not enhance performance in any way, because the transaction log files do not use [proportional fill](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) like data files in a same filegroup.
+-   Having multiple log files in a database does not enhance performance in any way, because the transaction log files do not use [proportional fill](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) like data files in a same filegroup.
 
 -   Log files can be set to shrink automatically. However this is **not recommended**, and the **auto_shrink** database property is set to FALSE by default. If **auto_shrink** is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused.
 
@@ -455,7 +455,7 @@ GO
 
 Column headings used in Python code are not output to SQL Server; therefore, use the WITH RESULTS statement to specify the column names and data types for SQL to use.
 
-For scoring, you can also use the native [PREDICT](../../t-sql/queries/predict-transact-sql.md) function, which is typically faster because it avoids calling the Python or R runtime.
+For scoring, you can also use the native [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md) function, which is typically faster because it avoids calling the Python or R runtime.
 
 **See also**
 

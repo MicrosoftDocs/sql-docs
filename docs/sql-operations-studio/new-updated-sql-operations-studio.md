@@ -1,21 +1,17 @@
 ---
 title: Updated - SQL Operations Studio docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for SQL Operations Studio.
-services: na
-documentationcenter: ''
+
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: BYHAM
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: sql-operations-studio
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 02/03/2018
 ms.author: genemi
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: ssops
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: SQL Operations Studio docs
 

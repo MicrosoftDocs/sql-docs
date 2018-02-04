@@ -132,7 +132,7 @@ Before you can use SQL Server Agent on premises to schedule execution of package
     EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
 ```
 
-For more info, see [Create Linked Servers](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+For more info, see [Create Linked Servers](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 
 

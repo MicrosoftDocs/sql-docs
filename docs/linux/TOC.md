@@ -85,6 +85,7 @@
 ##### [Operate](sql-server-linux-availability-group-failover-ha.md)
 #### [Create for read-scale only]()
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
+#### [Configure cross-platform (Windows and Linux)](sql-server-linux-availability-group-cross-platform.md)
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)

@@ -101,13 +101,11 @@ This compact list provides links to all the updated articles that are listed in 
 Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
 ```
 
-**Applies to:**  *{Included-Content-Goes-Here}*  (Starting with  *{Included-Content-Goes-Here}*  SP4,  *{Included-Content-Goes-Here}*  SP2 and  *{Included-Content-Goes-Here}*  through  *{Included-Content-Goes-Here}* )
+**Applies to:** SQL Server (Starting with SQL Server 2012 SP4, SQL Server 2014 SP2 and SQL Server 2016 through SQL Server 2017)
 
 **Security Considerations**
 
-When using Instant File Initialization (IFI), because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file.
-While the database file is attached to the instance of  *{Included-Content-Goes-Here}* , this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the  *{Included-Content-Goes-Here}*  service account and the local administrator.
-However, when the file is detached, it may be accessed by a user or service that does not have *SE_MANAGE_VOLUME_NAME*. A similar consideration exists when the database is backed up: if the backup file is not protected with an appropriate DACL, the deleted content can become available to an unauthorized user or service.
+When using Instant File Initialization (IFI), because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal, until some other data writes on that specific area of the data file. While the database file is attached to the instance of SQL Server, this information disclosure risk is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the SQL Server service account and the local administrator. However, when the file is detached, it may be accessed by a user or service that does not have SE\_MANAGE\_VOLUME_NAME. A similar consideration exists when the database is backed up: if the backup file is not protected with an appropriate DACL, the deleted content can become available to an unauthorized user or service.
 
 Another consideration is that when a file is grown using IFI, a SQL Server administrator could potentially access the raw page contents and see the previously deleted content.
 
@@ -192,7 +190,7 @@ If the database files are hosted on a storage area network, it is also possible 
 
 **Analyze JSON data with SQL queries**
 
-If you must filter or aggregate JSON data for reporting purposes, you can use **OPENJSON** to transform JSON to relational format. You can then use standard  *{Included-Content-Goes-Here}*  and built-in functions to prepare the reports.
+If you must filter or aggregate JSON data for reporting purposes, you can use **OPENJSON** to transform JSON to relational format. You can then use standard Transact-SQL and built-in functions to prepare the reports.
 
 ```
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
@@ -237,17 +235,18 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  In the **Server name** box, type the name of the instance of the  *{Included-Content-Goes-Here}* . For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the *<computer_name>***\\***<instance_name>,* such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of  *{Included-Content-Goes-Here}*  on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name.
+3.  In the **Server name** box, type the name of the instance of the Database Engine. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the *<computer_name>***\\***<instance_name>,* such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of SQL Server on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name.
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
 4.  Click **Connect**.
+
 > [!NOTE]
-> This tutorial assumes you are new to  *{Included-Content-Goes-Here}*  and have no special problems connecting. This should be sufficient for most people and this keeps this tutorial simple. For detailed troubleshooting steps, see [Troubleshooting Connecting to the SQL Server Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+> This tutorial assumes you are new to SQL Server and have no special problems connecting. This should be sufficient for most people and this keeps this tutorial simple. For detailed troubleshooting steps, see [Troubleshooting Connecting to the SQL Server Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
 
 **<a name="additional"></a>Authorizing Additional Connections**
 
-Now that you have connected to  *{Included-Content-Goes-Here}*  as an administrator, one of your first tasks is to authorize other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be either Windows Authentication logins, which use credentials from Windows, or SQL Server Authentication logins, which store the authentication information in  *{Included-Content-Goes-Here}*  and are independent of your Windows credentials. Use Windows Authentication whenever possible.
+Now that you have connected to SQL Server as an administrator, one of your first tasks is to authorize other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be either Windows Authentication logins, which use credentials from Windows, or SQL Server Authentication logins, which store the authentication information in SQL Server and are independent of your Windows credentials. Use Windows Authentication whenever possible.
 
 
 
@@ -372,23 +371,23 @@ Now that you have connected to  *{Included-Content-Goes-Here}*  as an administra
 
 
 
-Starting with  *{Included-Content-Goes-Here}* , you can create an updatable **nonclustered columnstore index on a rowstore table**. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.
+Starting with SQL Server 2016, you can create an updatable **nonclustered columnstore index on a rowstore table**. The columnstore index stores a copy of the data so you do need extra storage. However, the data in the columnstore index will compress to a smaller size than the rowstore table requires.  By doing this, you can run analytics on the columnstore index and transactions on the rowstore index at the same time. The column store is updated when data changes in the rowstore table, so both indexes are working against the same data.
 
-Starting with  *{Included-Content-Goes-Here}* , you can have **one or more nonclustered rowstore indexes on a columnstore index**. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.
+Starting with SQL Server 2016, you can have **one or more nonclustered rowstore indexes on a columnstore index**. By doing this, you can perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Since an non-unique value will fail to insert into the rowstore table, SQL Server cannot insert the value into the columnstore.
 
 **Performance considerations**
 
 
 -   The nonclustered columnstore index definition supports using a filtered condition. To minimize the performance impact of adding a columnstore index on an OLTP table, use a filtered condition to create a nonclustered columnstore index on only the cold data of your operational workload.
 
--   An in-memory table can have one columnstore index. You can create it when the table is created or add it later with [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Before  *{Included-Content-Goes-Here}* , only a disk-based table could have a columnstore index.
+-   An in-memory table can have one columnstore index. You can create it when the table is created or add it later with [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md). Before SQL Server 2016, only a disk-based table could have a columnstore index.
 
 For more information, refer to [Columnstore indexes - Query performance](../relational-databases/indexes/columnstore-indexes-query-performance.md).
 
 **Design Guidance**
 
 
--   A rowstore table can have one updateable nonclustered columnstore index. Before  *{Included-Content-Goes-Here}* , the nonclustered columnstore index was read-only.
+-   A rowstore table can have one updateable nonclustered columnstore index. Before SQL Server 2014, the nonclustered columnstore index was read-only.
 
 
 
@@ -457,9 +456,6 @@ Column headings used in Python code are not output to SQL Server; therefore, use
 
 For scoring, you can also use the native [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md) function, which is typically faster because it avoids calling the Python or R runtime.
 
-**See also**
-
-
 
 
 
@@ -487,7 +483,7 @@ For scoring, you can also use the native [PREDICT](system-stored-procedures/../.
 **To create a primary key with nonclustered index in a new table**
 
 
-1.  In **Object Explorer**, connect to an instance of  *{Included-Content-Goes-Here}* .
+1.  In **Object Explorer**, connect to an instance of Database Engine.
 
 2.  On the Standard bar, click **New Query**.
 

@@ -99,9 +99,9 @@ Depending on the update being applied, additional steps may be required for AG r
 
 1. Run the following Transact-SQL on the instance that hosts the primary replica:
 
-```
+   ```
    EXECUTE [master].[sys].[sp_vupgrade_replication];
-```
+   ```
 
    >[!NOTE]
    >This command may take several minutes to run.

@@ -97,9 +97,9 @@ Note, that when PolyBase authenticates to a Kerberos secured cluster, the hadoop
 
 1.  Find the Hadoop configuration directory in the installation path on the Control node:
 
-```
+    ```
     C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
-```
+    ```
 
 2.  Find the Hadoop side configuration value of the configuration keys listed in the table. (On the Hadoop machine, find the files in the Hadoop configuration directory.)
 

@@ -103,7 +103,7 @@ Before you can use SQL Server Agent on premises to schedule execution of package
 
 1.  **Set up the linked server**
 
-```
+    ```
     -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
     EXEC sp_addlinkedserver
         @server='myLinkedServer', -- Name your linked server
@@ -113,24 +113,24 @@ Before you can use SQL Server Agent on premises to schedule execution of package
         @location='',
         @provstr='',
         @catalog='SSISDB'  -- Add SSISDB as the initial catalog
-```
+    ```
 
 2.  **Set up linked server credentials**
 
-```
+    ```
     -- Add your Azure SQL DB server admin credentials
     EXEC sp_addlinkedsrvlogin
         @rmtsrvname = 'myLinkedServer',
         @useself = 'false',
         @rmtuser = 'myUsername', -- Add your server admin username
         @rmtpassword = 'myPassword' -- Add your server admin password
-```
+    ```
 
 3.  **Set up linked server options**
 
-```
+    ```
     EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
-```
+    ```
 
 For more info, see [Create Linked Servers](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md).
 

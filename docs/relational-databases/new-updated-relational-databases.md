@@ -233,11 +233,11 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 2.  Select **Database Engine**.
 
-![object-explorer](../relational-databases/media/object-explorer.png)
+    ![object-explorer](../relational-databases/media/object-explorer.png)
 
 3.  In the **Server name** box, type the name of the instance of the Database Engine. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the *<computer_name>***\\***<instance_name>,* such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of SQL Server on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name.
 
-![connect-to-server](../relational-databases/media/connect-to-server.png)
+    ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
 4.  Click **Connect**.
 

@@ -99,17 +99,17 @@ For details about the latest release, see the [release notes](release-notes.md).
 **Get SQL Operations Studio (preview) for Windows**
 
 
-This release of  *{Included-Content-Goes-Here}*  includes a standard Windows installer experience, and a .zip:
+This release of SQL Operations Studio (preview) includes a standard Windows installer experience, and a .zip:
 
 **Installer**
 
-1. Download and run the [ *{Included-Content-Goes-Here}*  installer for Windows](https://go.microsoft.com/fwlink/?linkid=866480).
-1. Start the  *{Included-Content-Goes-Here}*  app.
+1. Download and run the [SQL Operations Studio (preview) installer for Windows](https://go.microsoft.com/fwlink/?linkid=866480).
+1. Start the SQL Operations Studio (preview) app.
 
 
 **.zip file**
 
-1. Download [ *{Included-Content-Goes-Here}*  .zip for Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+1. Download [SQL Operations Studio (preview) .zip for Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 
 
 

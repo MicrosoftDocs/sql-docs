@@ -106,9 +106,9 @@ If these conditions are met and the server hosting the primary replica fails, th
 **Configuration-only replica and quorum**
 
 
-Also new in  *{Included-Content-Goes-Here}*  as of CU1 is a configuration-only replica. Because Pacemaker is different than a WSFC, especially when it comes to quorum and requiring STONITH, having just a two-node configuration will not work when it comes to an AG. For an FCI, the quorum mechanisms provided by Pacemaker can be fine, because all FCI failover arbitration happens at the cluster layer. For an AG, arbitration under Linux happens in  *{Included-Content-Goes-Here}* , where all the metadata is stored. This is where the configuration-only replica comes into play.
+Also new in SQL Server 2017 as of CU1 is a configuration-only replica. Because Pacemaker is different than a WSFC, especially when it comes to quorum and requiring STONITH, having just a two-node configuration will not work when it comes to an AG. For an FCI, the quorum mechanisms provided by Pacemaker can be fine, because all FCI failover arbitration happens at the cluster layer. For an AG, arbitration under Linux happens in SQL Server, where all the metadata is stored. This is where the configuration-only replica comes into play.
 
-Without anything else, a third node and at least one synchronized replica would be required. This would not work for  *{Included-Content-Goes-Here}* , since it can only have two replicas participating in an AG. The configuration-only replica stores the AG configuration in the master database, same as the other replicas in the AG configuration. The configuration-only replica does not have the user databases participating in the AG. The configuration data is sent synchronously from the primary. This configuration data is then used during failovers, whether they are automatic or manual.
+Without anything else, a third node and at least one synchronized replica would be required. This would not work for SQL Server Standard, since it can only have two replicas participating in an AG. The configuration-only replica stores the AG configuration in the master database, same as the other replicas in the AG configuration. The configuration-only replica does not have the user databases participating in the AG. The configuration data is sent synchronously from the primary. This configuration data is then used during failovers, whether they are automatic or manual.
 
 
 
@@ -133,28 +133,28 @@ Without anything else, a third node and at least one synchronized replica would 
 
 
 
-```
+    ```
     SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
-```
+    ```
 
 2.  Specify the `/de[crypt]` option to enter the password interactively, as shown in the following example:
 
-```
+    ```
     /opt/ssis/bin/dtexec /f package.dtsx /de
 
     Enter decryption password:
-```
+    ```
 
 3.  Specify the `/de` option to provide the password on the command line, as shown in the following example. This method is not recommended because it stores the decryption password with the command in the command history.
 
-```
+    ```
     opt/ssis/bin/dtexec /f package.dtsx /de test
 
     Warning: Using /De[crypt] <password> may store decryption password in command history.
 
     You can use /De[crypt] instead to enter interactive mode,
     or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
-```
+    ```
 
 **Design packages**
 

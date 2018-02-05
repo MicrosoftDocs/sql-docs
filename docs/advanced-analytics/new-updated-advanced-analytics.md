@@ -157,7 +157,7 @@ This error is raised if you saved the model using a recent version of the serial
 
 + Leverage T-SQL tools and ETL processes. Perform feature engineering, feature extraction, and data cleansing in advance as part of data workflows.
 
-    When you are working in a dedicated R development environment such as  *{Included-Content-Goes-Here}*  or RStudio, you might pull data to your computer, analyze the data iteratively, and then write out or display the results.
+    When you are working in a dedicated R development environment such as R Tools for Visual Studio or RStudio, you might pull data to your computer, analyze the data iteratively, and then write out or display the results.
 
     However, when standalone R code is migrated to SQL Server, much of this process can be simplified or delegated to other SQL Server tools.
 

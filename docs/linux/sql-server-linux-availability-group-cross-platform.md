@@ -158,9 +158,9 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 1. On the primary replica, create the AG with `CLUSTER_TYPE = NONE`. The example script uses `SEEDING_MODE = AUTOMATIC` to create the AG. 
 
    >[!NOTE]
-   >If the Windows instance of SQL Server uses different paths for data and log files, automatic seeding will fail to the Linux instance of SQL Server because these paths do not exist on the secondary replica. To use the following script for a cross-platform AG, the database requires the same path for the data and log files on the Windows server. Alternatively you can update the script to set `SEEDING_MODE = MANUAL` and then back up and restore the database with `NORECOVERY` to seed the database. 
+   >When the Windows instance of SQL Server uses different paths for data and log files, automatic seeding fails to the Linux instance of SQL Server because these paths do not exist on the secondary replica. To use the following script for a cross-platform AG, the database requires the same path for the data and log files on the Windows server. Alternatively you can update the script to set `SEEDING_MODE = MANUAL` and then back up and restore the database with `NORECOVERY` to seed the database. 
    >
-   >This applies to Azure Marketplace images. 
+   >This behavior applies to Azure Marketplace images. 
    >
    >For more information about automatic seeding, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
 
@@ -195,7 +195,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
    
-   For additional information, see [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
+   For more information, see [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
 
 1. On the secondary replica, join the AG.
 
@@ -215,7 +215,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
       You can also use the default paths. 
 
-    Run the script to create your database. 
+    To create your database, run the script t. 
 
    ```sql
    CREATE DATABASE [<TestDB>]

@@ -30,7 +30,7 @@ ms.workload: "Active"
 # Install Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a single Setup program to install any or all of its components, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Through Setup, you can install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] with or without other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components on a single computer.    
     
- This topic highlights important considerations that you should know before you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Information in this topic helps you evaluate the installation options so that your selections that result in a successful installation.    
+ This article highlights important considerations that you should know before you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Information in this article helps you evaluate the installation options so that your selections that result in a successful installation.    
     
 ## Preparing to Install Integration Services    
  Before you install [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], review the following information:    
@@ -39,21 +39,21 @@ ms.workload: "Active"
     
 -   [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)    
     
-## Installing Standalone or Side-by-side    
+## Installing Standalone or Side by Side    
 You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in the following configurations:    
     
 -   You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a computer that has no previous instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
--   You can install [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] side-by-side with an existing instance of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].    
+-   You can install [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] side by side with an existing instance of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].    
     
-When you upgrade to the latest version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a computer that has an earlier version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] already installed, the current version is installed side-by-side with the earlier version.    
+When you upgrade to the latest version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a computer that has an earlier version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] already installed, the current version is installed side by side with the earlier version.    
     
 For more information about upgrading [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md).
     
 ## Installing Integration Services    
  After you review the installation requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and ensure that your computer meets those requirements, you are ready to install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].    
      
-If you are using the Setup Wizard to install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you will use a series of pages to specify components and options.
+If you are using the Setup Wizard to install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you use a series of pages to specify components and options.
 
 -   On the **Feature Selection** page, under **Shared Features**, select **Integration Services**.
 
@@ -64,7 +64,7 @@ If you are using the Setup Wizard to install [!INCLUDE[ssISnoversion](../../incl
 
 ### Installing on a Dedicated Server for ETL
 
-To use a dedicated server for extraction, transformation, and loading (ETL) processes, we recommend that you install a local instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] when you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] typically stores packages in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and relies on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling those packages. If the ETL server does not have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], you will have to schedule or run packages from a server that does have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. This means that the packages will not be running on the ETL server, but instead on the server from which they were started. As a result, the resources of the dedicated ETL server are not being used as intended. Furthermore, the resources of other servers may be strained by the running ETL processes
+To use a dedicated server for extraction, transformation, and loading (ETL) processes, we recommend that you install a local instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] when you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] typically stores packages in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and relies on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling those packages. If the ETL server does not have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], you have to schedule or run packages from a server that does have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. As a result, the packages are not running on the ETL server, but instead on the server from which they are started. As a result, the resources of the dedicated ETL server are not being used as intended. Furthermore, the resources of other servers may be strained by the running ETL processes
 
 ### Configuring SSIS Event Logging
     

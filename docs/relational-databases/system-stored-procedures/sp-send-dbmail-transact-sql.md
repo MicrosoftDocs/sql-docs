@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_send_dbmail"
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 caps.latest.revision: 72
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sp_send_dbmail (Transact-SQL)

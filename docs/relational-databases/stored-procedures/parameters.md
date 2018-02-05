@@ -19,7 +19,7 @@ ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 caps.latest.revision: 2
 author: "pmasl"
 ms.author: "pelopes"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Parameters

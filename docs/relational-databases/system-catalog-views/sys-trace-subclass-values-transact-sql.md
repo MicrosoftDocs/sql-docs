@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.trace_subclass_values catalog view"
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.trace_subclass_values (Transact-SQL)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "log_shipping_monitor_error_detail system table"
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # log_shipping_monitor_error_detail (Transact-SQL)

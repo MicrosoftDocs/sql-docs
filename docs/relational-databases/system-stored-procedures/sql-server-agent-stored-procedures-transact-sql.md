@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SQL Server Agent, stored procedures"
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Agent Stored Procedures (Transact-SQL)

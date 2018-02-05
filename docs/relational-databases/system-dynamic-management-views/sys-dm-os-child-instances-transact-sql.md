@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "monitoring server health"
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_child_instances (Transact-SQL)

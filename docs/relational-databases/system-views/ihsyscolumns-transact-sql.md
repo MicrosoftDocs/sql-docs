@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "IHsyscolumns view"
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IHsyscolumns (Transact-SQL)

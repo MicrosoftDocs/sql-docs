@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], about stored procedures"
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Stored Procedures (Database Engine)

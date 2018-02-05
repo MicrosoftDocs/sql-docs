@@ -25,7 +25,7 @@ ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stretch Database Catalog Views - sys.remote_data_archive_databases

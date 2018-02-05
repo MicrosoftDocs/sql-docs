@@ -23,7 +23,7 @@ ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 caps.latest.revision: 10
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)

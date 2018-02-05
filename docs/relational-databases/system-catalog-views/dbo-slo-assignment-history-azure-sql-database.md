@@ -25,7 +25,7 @@ ms.assetid: 048a6fb5-2fc2-4d12-a436-4c53ecd413f3
 caps.latest.revision: 9
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.slo_assignment_history (Azure SQL Database)

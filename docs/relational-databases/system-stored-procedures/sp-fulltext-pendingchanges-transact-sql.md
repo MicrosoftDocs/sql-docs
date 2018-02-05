@@ -23,7 +23,7 @@ ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_fulltext_pendingchanges (Transact-SQL)

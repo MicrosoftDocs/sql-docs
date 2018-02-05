@@ -25,7 +25,7 @@ ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.xml_schema_wildcard_namespaces (Transact-SQL)

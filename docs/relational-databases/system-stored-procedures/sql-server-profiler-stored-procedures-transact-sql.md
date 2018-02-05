@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "performance [SQL Server], stored procedures"
 ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Profiler Stored Procedures (Transact-SQL)

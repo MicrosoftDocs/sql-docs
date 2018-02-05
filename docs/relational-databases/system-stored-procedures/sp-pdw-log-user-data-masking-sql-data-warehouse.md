@@ -18,7 +18,7 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_pdw_log_user_data_masking (SQL Data Warehouse)

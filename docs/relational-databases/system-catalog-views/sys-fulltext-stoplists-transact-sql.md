@@ -28,7 +28,7 @@ ms.assetid: eb69fb8f-f6d9-446e-83c0-67afd05dfba0
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fulltext_stoplists (Transact-SQL)

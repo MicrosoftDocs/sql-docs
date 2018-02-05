@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "system tables [SQL Server], log shipping"
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Log Shipping Tables (Transact-SQL)

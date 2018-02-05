@@ -18,7 +18,7 @@ ms.assetid: a6fb85b2-b010-4ca9-b65f-4402917076ea
 caps.latest.revision: 4
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # System Metadata Functions

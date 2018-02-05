@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "restorehistory system table"
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # restorehistory (Transact-SQL)

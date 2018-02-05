@@ -25,7 +25,7 @@ ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_xml_handles (Transact-SQL)

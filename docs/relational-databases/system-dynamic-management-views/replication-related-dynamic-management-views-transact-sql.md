@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "replication dynamic management objects [SQL Server]"
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Related Dynamic Management Views (Transact-SQL)

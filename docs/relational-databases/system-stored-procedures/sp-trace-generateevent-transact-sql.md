@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_trace_generateevent"
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_trace_generateevent (Transact-SQL)

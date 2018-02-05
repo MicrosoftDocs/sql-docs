@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_syscollector_update_collection_item"
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_update_collection_item (Transact-SQL)

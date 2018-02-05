@@ -27,7 +27,7 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 caps.latest.revision: 9
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_hadr_instance_node_map (Transact-SQL)

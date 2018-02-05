@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sp_polybase_leave_group"
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PolyBase stored procedures - sp_polybase_leave_group

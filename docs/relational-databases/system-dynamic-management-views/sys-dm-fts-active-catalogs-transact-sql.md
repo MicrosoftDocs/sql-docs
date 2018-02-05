@@ -25,7 +25,7 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_active_catalogs (Transact-SQL)

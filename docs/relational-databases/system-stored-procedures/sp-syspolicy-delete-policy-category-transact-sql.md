@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_delete_policy_category"
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_delete_policy_category (Transact-SQL)

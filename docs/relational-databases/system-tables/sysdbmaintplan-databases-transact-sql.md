@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysdbmaintplan_databases system table"
 ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysdbmaintplan_databases (Transact-SQL)

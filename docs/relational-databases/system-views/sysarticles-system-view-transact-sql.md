@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysarticles view"
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysarticles (System View) (Transact-SQL)

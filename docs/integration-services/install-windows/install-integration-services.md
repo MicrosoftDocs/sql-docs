@@ -74,7 +74,7 @@ By default, in a new installation, [!INCLUDE[ssISnoversion](../../includes/ssisn
     
 ## A complete installation of Integration Services
 
-A complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the following components:
+For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], select the components that you need from the following list:
 
 -   **Integration Services (SSIS)**. Install SSIS with the SQL Server Setup wizard. Selecting SSIS installs the following things:
     -   Support for the SSIS Catalog on the SQL Server Database Engine.

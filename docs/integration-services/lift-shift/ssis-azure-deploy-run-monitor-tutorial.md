@@ -40,8 +40,8 @@ Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQ
    | **Server type** | Database Engine | This value is required. |
    | **Server name** | The fully qualified server name | The name should be in this format: **mysqldbserver.database.windows.net**. If you need the server name, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md). |
    | **Authentication** | SQL Server Authentication | This quickstart uses SQL authentication. |
-   | **Login** | The server admin account | This is the account that you specified when you created the server. |
-   | **Password** | The password for your server admin account | This is the password that you specified when you created the server. |
+   | **Login** | The server admin account | The account that you specified when you created the server. |
+   | **Password** | The password for your server admin account | The password that you specified when you created the server. |
 
 3. **Connect to the SSISDB database**. Select **Options** to expand the **Connect to Server** dialog box. In the expanded **Connect to Server** dialog box, select the **Connection Properties** tab. In the **Connect to database** field, select or enter `SSISDB`.
 

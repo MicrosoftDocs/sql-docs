@@ -19,7 +19,9 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Installing Updates from the Command Prompt
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Test and modify installation scripts to meet the needs of your organization. 
  
 ## Sample Syntax for Installation 

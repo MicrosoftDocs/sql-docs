@@ -19,7 +19,9 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Considerations for Installing SQL Server Using SysPrep
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep allows you to prepare a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer and to complete the configuration at a later time. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep involves a two-step process to get to a configured stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The steps include the following:  
   
 - [Prepare Image](#BKMK_PrepareImage)  

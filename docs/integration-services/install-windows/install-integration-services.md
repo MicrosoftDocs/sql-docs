@@ -80,7 +80,7 @@ A complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
     -   32-bit and 64-bit SSIS components.
     -   Installing SSIS does **not** install the tools required to design and develop SSIS packages.
 -   **SQL Server Database Engine**. Install the Database Engine with the SQL Server Setup wizard. Selecting the Database Engine lets you create and host the SSIS Catalog database, `SSISDB`, to store, manager, run, and monitor SSIS packages.
--   **SQL Server Data Tools (SSDT)**. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages. SSDT installs the following things:
+-   **SQL Server Data Tools (SSDT)**. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages. SSDT installs the following things:
     -   The SSIS package design and development tools, including SSIS Designer.
     -   32-bit and 64-bit SSIS components.
     -   A limited version of Visual Studio (if a Visual Studio edition is not already installed).

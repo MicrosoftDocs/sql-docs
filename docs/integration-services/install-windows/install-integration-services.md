@@ -57,14 +57,16 @@ If you are using the Setup Wizard to install [!INCLUDE[ssISnoversion](../../incl
 
 -   On the **Feature Selection** page, under **Shared Features**, select **Integration Services**.
 
--   To install managed assemblies for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] programming, also select **Client Tools SDK**.
+-   Under **Instance Features**, optionally select **Database Engine Services** to host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
+
+-   To install managed assemblies for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] programming, also under **Shared Features**, select **Client Tools SDK**.
 
 > [!NOTE]
 > Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that you can select for installation on the **Feature Selection** page of the Setup Wizard install a partial subset of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components. These components are useful for specific tasks, but the functionality of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is limited. For example, the **Database Engine Services** option installs the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard. To ensure a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you must select **Integration Services** on the **Feature Selection** page.
 
-### Installing on a Dedicated Server for ETL
+### Installing a Dedicated Server for ETL
 
-To use a dedicated server for extraction, transformation, and loading (ETL) processes, we recommend that you install a local instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] when you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] typically stores packages in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and relies on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling those packages. If the ETL server does not have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], you have to schedule or run packages from a server that does have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. As a result, the packages are not running on the ETL server, but instead on the server from which they are started. As a result, the resources of the dedicated ETL server are not being used as intended. Furthermore, the resources of other servers may be strained by the running ETL processes
+To use a dedicated server for extraction, transformation, and loading (ETL) processes, install a local instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] when you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] typically stores packages in an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and relies on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling those packages. If the ETL server does not have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], you have to schedule or run packages from a server that does have an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. As a result, the packages are not running on the ETL server, but instead on the server from which they are started. As a result, the resources of the dedicated ETL server are not being used as intended. Furthermore, the resources of other servers may be strained by the running ETL processes
 
 ### Configuring SSIS Event Logging
     
@@ -79,7 +81,7 @@ A complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion
     -   Optionally, the SSIS Scale Out feature, which consists of a Master and Workers.
     -   32-bit and 64-bit SSIS components.
     -   Installing SSIS does **not** install the tools required to design and develop SSIS packages.
--   **SQL Server Database Engine**. Install the Database Engine with the SQL Server Setup wizard. Selecting the Database Engine lets you create and host the SSIS Catalog database, `SSISDB`, to store, manager, run, and monitor SSIS packages.
+-   **SQL Server Database Engine**. Install the Database Engine with the SQL Server Setup wizard. Selecting the Database Engine lets you create and host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
 -   **SQL Server Data Tools (SSDT)**. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages. SSDT installs the following things:
     -   The SSIS package design and development tools, including SSIS Designer.
     -   32-bit and 64-bit SSIS components.

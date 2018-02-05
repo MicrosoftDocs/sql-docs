@@ -164,6 +164,14 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    >
    >For more information about automatic seeding, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
 
+   Before you run the script, update the values for your availability groups.
+
+      * Replace `<WinSQLInstance>` with the server name of the primary replica SQL Server instance.
+
+      * Replace `<LinuxSQLInstance>` with the server name of the secondary replica SQL Server instance. 
+
+   To create the availability group, update the values and run the script on the primary replica.  
+
    ```sql
    CREATE AVAILABILITY GROUP [ag1]
        WITH (CLUSTER_TYPE = NONE)

@@ -63,7 +63,7 @@ This release of SSMS can be installed in the following languages:
 SQL Server Management Studio 17.5:<br>
 [Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
 
-SQL Server Management Studio 17.5 Upgrade Package (upgrades 17.x to 17.4):<br>
+SQL Server Management Studio 17.5 Upgrade Package (upgrades 17.x to 17.5):<br>
 [Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40a)
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Data Discovery & Classification:
 - Learn more at [SQL Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866999).
 
 Query Editor:
-- Added support for SkipHeaders/SkipRows/FirstRow (SQLDW)  [TODO: I don't think comment is good enough. This is in reference to TFS #10788608]
+- Added support for SkipHeaders/SkipRows/FirstRow (SQL Data Warehouse) 
 
 Showplan:
 - Enabled display of estimated plan button for SQL Data Warehouse

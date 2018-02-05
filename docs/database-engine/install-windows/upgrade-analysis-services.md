@@ -75,7 +75,7 @@ manager: "erikre"
   
  Tabular and multidimensional databases follow different version paths. It's coincidental that both multidimensional and tabular models have similar numbered compatibility levels.  Modes will advance at different rates if feature changes impact only one of them.  
   
- For background purposes, the following table summarizes the compatibility levels, but you should review the detail topics to understand what each level provides.  
+ For background purposes, the following table summarizes the compatibility levels, but you should review the detail articles to understand what each level provides.  
   
 ||||  
 |-|-|-|  

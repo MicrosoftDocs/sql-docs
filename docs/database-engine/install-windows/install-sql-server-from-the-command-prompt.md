@@ -486,10 +486,10 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERVER  
 ```  
   
- To remove a named instance, specify the name of the instance instead of "MSSQLSERVER" in the example that was mentioned earlier in this topic. 
+ To remove a named instance, specify the name of the instance instead of "MSSQLSERVER" in the example that was mentioned earlier in this article. 
   
 ##  <a name="ClusterInstall"></a> Failover Cluster Parameters  
- Before you install a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] failover cluster instance, review the following topics:  
+ Before you install a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] failover cluster instance, review the following articles:  
   
 -   [Hardware and Software Requirements for Installing [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

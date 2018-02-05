@@ -41,7 +41,7 @@ manager: "craigg"
     -   A Subscriber to a merge publication can be any version less than or equal to the Publisher version.  
   
 > [!NOTE]  
->  This topic is available in the Setup Help documentation and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Topic links that appear as bold text in the Setup Help documentation refer to topics that are only available in Books Online. **You can design an upgrade strategy for the Publisher, Subscriber and Distributor using the options outlined in this [post](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+>  This article is available in the Setup Help documentation and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. article links that appear as bold text in the Setup Help documentation refer to articles that are only available in Books Online. **You can design an upgrade strategy for the Publisher, Subscriber and Distributor using the options outlined in this [post](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
   
 ## Run the Log Reader Agent for Transactional Replication Before Upgrade  
  Before you upgrade [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)], you must make sure that all committed transactions from published tables have been processed by the Log Reader Agent. To make sure that all transactions have been processed, perform the following steps for each database that contains transactional publications:  
@@ -65,7 +65,7 @@ manager: "craigg"
   
  Merge replication stores publication and subscription metadata in a number of system tables in the publication and subscription databases. Running the Snapshot Agent updates publication metadata and running the Merge Agent updates subscription metadata. It is only required to generate a publication snapshot. If a merge publication uses parameterized filters, each partition also has a snapshot. It is not necessary to update these partitioned snapshots.  
   
- Run the agents from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor, or from the command line. For more information about running the Snapshot Agent, see the following topics:  
+ Run the agents from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor, or from the command line. For more information about running the Snapshot Agent, see the following articles:  
   
 -   [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -75,7 +75,7 @@ manager: "craigg"
   
 -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- For more information about running the Merge Agent, see the following topics:  
+ For more information about running the Merge Agent, see the following articles:  
   
 -   [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   

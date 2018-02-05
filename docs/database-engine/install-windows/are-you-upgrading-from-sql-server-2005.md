@@ -63,10 +63,10 @@ To see a more comprehensive analysis of these options, [click here](http://sql05
   
 -   Read about how to upgrade.  
   
-    -   Review the available upgrade methods and learn how to plan and test in the topic [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md).  
+    -   Review the available upgrade methods and learn how to plan and test in the article [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md).  
   
         > [!IMPORTANT]  
-        >  You can't upgrade a SQL Server 2005 instance to a SQL Server 2017 server in place. You have to install an instance of SQL Server 2017, then migrate your SQL Server 2005 databases to the new installation. For more info, see the section "New Installation Upgrade" in the topic [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+        >  You can't upgrade a SQL Server 2005 instance to a SQL Server 2017 server in place. You have to install an instance of SQL Server 2017, then migrate your SQL Server 2005 databases to the new installation. For more info, see the section "New Installation Upgrade" in the article [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
    
   
 -   For more info, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  

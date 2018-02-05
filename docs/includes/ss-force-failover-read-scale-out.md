@@ -1,3 +1,14 @@
+---
+title: "SQL Server force failover for availability group"
+description: "Force failover for Availability Group with cluster type of NONE"
+services: ""
+author: MikeRayMSFT
+ms.service: ""
+ms.topic: "include"
+ms.date: 02/05/2018
+ms.author: mikeray
+ms.custom: "include file"
+---
 Each AG has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In an AG for high availability, the cluster manager automates the failover process. In an AG with cluster type NONE, the failover process is manual. 
 
 There are two ways to fail over the primary replica in an AG with cluster type NONE:

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/07/2017"
+ms.date: "02/13/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -24,8 +24,65 @@ ms.workload: "Active"
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
 
-## [SSMS 17.4](download-sql-server-management-studio-ssms.md)
+
+## [SSMS 17.5](download-sql-server-management-studio-ssms.md)
+### What's new
+
+**General SSMS**
+
+Data Discovery & Classification:
+- Added a new SQL Data Discovery & Classification feature for discovering, classifying, labeling & reporting sensitive data in your databases. 
+- Auto-discovering and classifying your most sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in your organizational information protection stature.
+- Learn more at [SQL Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866999).
+
+Query Editor:
+- Added support for SkipHeaders/SkipRows/FirstRow (SQLDW)  [TODO: I don't think comment is good enough. This is in reference to TFS #10788608]
+
+Showplan:
+- Enabled display of estimated plan button for SQL Data Warehouse
+- Added new showplan attribute *EstimateRowsWithoutRowGoal*; and added new showplan attributes to *QueryTimeStats*: *UdfCpuTime* and *UdfElapsedTime*. For more information, see [Optimizer row goal information in query execution plan added in SQL Server 2017 CU3](http://support.microsoft.com/help/4051361).
+
+
+
+### Bug fixes
+
+**General SSMS**
+
+Templates: 
+
+- Fixed a couple of typos (https://feedback.azure.com/forums/908035/suggestions/33143512)
+
+Showplan:
+
+- Fixed Live Query Statistics elapsed time, to show engine execution time instead of time elapsed for LQS connection.
+- Fixed an issue where showplan was not able to recognize Apply logical operators like GbApply and InnerApply.
+- Fixed an issue related to ExchangeSpill
+
+Query Editor:
+
+- Fixed on issue related to SPIDs where SSMS could throw an error like "Input string was not in a correct format. (mscorlib)" when executing a simple query preceded by a "SET SHOWPLAN_ALL ON". 
+
+SMO:
+
+- Fixed an issue where SMO was not able to fetch AvailabilityReplica properties in case the server collation happened to be case-sensitive (as a result, SSMS could display an error message like "The multi-part identifier "a.delimited" could not be bound."
+- Fixed an issue in DatabaseScopedConfigurationCollection class, where incorrectly handling collations (as a result, an SSMS running on an ma machine with a Turkish locale could display an error like "legacy cardinality estimation is not valid scoped configuration" when right clicking on a database running on a server with a case-sensitive collation.) For details, see https://connect.microsoft.com/SQLServer/feedback/details/3138001.
+- Fixed an issue in JobServer class, where SMO was not able to fetch SQL Agent properties on a SQL 2005 server (as a result, SSMS was throwing an error like "Cannot assign a default value to a local variable. Must declare the scalar variable "@ServiceStartMode" and, ultimately, was not displaying the SQL Agent node in Object Explorer.) For details, see https://connect.microsoft.com/SQLServer/feedback/details/3145282.
+
+
+
+<br>
+## Previous SSMS releases
+
+Download previous SSMS versions by clicking the title links in the following sections.
+
+
+
+
+## ![download](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 Generally available | Build number: 14.0.17213.0
+
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
 
 ### What's new
 
@@ -116,9 +173,6 @@ Query Store:
 - Fixed an issue in SQL Profiler where selecting Windows Authentication against Azure AS would still prompt for login.
 
 
-## Previous SSMS releases
-
-Download previous SSMS versions by clicking the title links in the following sections.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Generally available | Build number: 14.0.17199.0

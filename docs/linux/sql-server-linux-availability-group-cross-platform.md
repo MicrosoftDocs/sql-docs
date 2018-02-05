@@ -215,7 +215,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
       You can also use the default paths. 
 
-    To create your database, run the script t. 
+    To create your database, run the script. 
 
    ```sql
    CREATE DATABASE [<TestDB>]

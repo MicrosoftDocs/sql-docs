@@ -24,7 +24,7 @@ This document explains how to create a three-node cluster on Ubuntu and add a pr
 For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in, and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information will return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
+> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in, and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
 
 The following sections walk through the steps to set up a failover cluster solution. 
 
@@ -91,18 +91,18 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->Enable pacemaker command will complete with the error 'pacemaker Default-Start contains no runlevels, aborting.' This is harmless, cluster configuration can continue. We are following up with cluster vendors for fixing this issue.
+>Enable pacemaker command completes with the error 'pacemaker Default-Start contains no runlevels, aborting.' This is harmless, cluster configuration can continue. We are following up with cluster vendors for fixing this issue.
 
 ## Create the Cluster
 
 1. Remove any existing cluster configuration from all nodes. 
 
-   Running 'sudo apt-get install pcs' installs pacemaker, corosync, and pcs at the same time and starts running all 3 of the services.  Starting corosync generates a template '/etc/cluster/corosync.conf' file.  To have next steps succeed this file should not exist – so the workaround is to stop pacemaker / corosync and delete '/etc/cluster/corosync.conf', and then next steps will complete successfully. 'pcs cluster destroy' does the same thing, and you can use it as a one time initial cluster setup step.
+   Running 'sudo apt-get install pcs' installs pacemaker, corosync, and pcs at the same time and starts running all 3 of the services.  Starting corosync generates a template '/etc/cluster/corosync.conf' file.  To have next steps succeed this file should not exist – so the workaround is to stop pacemaker / corosync and delete '/etc/cluster/corosync.conf', and then next steps complete successfully. 'pcs cluster destroy' does the same thing, and you can use it as a one time initial cluster setup step.
    
    The following command removes any existing cluster configuration files and stops all cluster services. This permanently destroys the cluster. Run it as a first step in a pre-production environment. Note that 'pcs cluster destroy' disabled the pacemaker service and needs to be reenabled. Run the following command on all nodes.
    
    >[!WARNING]
-   >The command will destroy any existing cluster resources.
+   >The command destroys any existing cluster resources.
 
    ```bash
    sudo pcs cluster destroy 
@@ -112,7 +112,7 @@ sudo systemctl enable pacemaker
 1. Create the cluster. 
 
    >[!WARNING]
-   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') will fail with below error. This is because the log file configured in /etc/corosync/corosync.conf which is created when the cluster setup command is run, is wrong. To work around this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
+   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') fails with below error. This is because the log file configured in /etc/corosync/corosync.conf which is created when the cluster setup command is run, is wrong. To work around this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -145,11 +145,11 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that at this point there are no fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
+>Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that at this point there are no fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that in future releases.
 
 ## Set cluster property start-failure-is-fatal to false
 
-`start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will demote the replica to secondary and it will automatically rejoin the availability group. 
+`start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster decides whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker retries starting the availability group resource on the former primary once the SQL instance is available. Pacemaker demotes the replica to secondary and it automatically rejoins the availability group. 
 
 To update the property value to `false` run the following script:
 
@@ -197,8 +197,8 @@ There is no virtual server name equivalent in Pacemaker. To use a connection str
 ## Add colocation constraint
 
 Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource, and the cluster resource manager chooses the node with the highest score for a particular resource. (If a node has a negative score for a resource, the resource cannot run on that node.) 
-We can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than INFINITY, it is only a recommendation. A score of INFINITY means it is a must. 
-We want to ensure that primary of the availability group and the virtual ip resource are run on the same host, so we will define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node. 
+Use constraints to configure the decisions of the cluster. Constraints have a score. If a constraint has a score lower than INFINITY, it is only a recommendation. A score of INFINITY means it is mandatory. 
+To ensure that primary replica and the virtual ip resource are on the same host, define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node. 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master

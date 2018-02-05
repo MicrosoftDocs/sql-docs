@@ -195,6 +195,8 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    GO
    ```
    
+   For additional information, see [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
+
 1. On the secondary replica, join the AG.
 
    ```sql
@@ -205,11 +207,21 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 1. Create a database for the AG. The example steps use a database named `<TestDB>`. If you are using automatic seeding, set the same path for both the data and the log files. 
 
+   Before you run the script, update the values for your database.
+
+      * Replace `<TestDB>` with the name of your database.
+
+      * Replace `<F:\Path>` with the path for your database and log files. Use the same path for the database and log files. 
+
+      You can also use the default paths. 
+
+    Run the script to create your database. 
+
    ```sql
    CREATE DATABASE [<TestDB>]
       CONTAINMENT = NONE
      ON  PRIMARY ( NAME = N'<TestDB>', FILENAME = N'<F:\Path>\<TestDB>.mdf')
-     LOG ON ( NAME = N'<TestDB>_log', FILENAME = N'<F:\Path\><TestDB>_log.ldf')
+     LOG ON ( NAME = N'<TestDB>_log', FILENAME = N'<F:\Path>\<TestDB>_log.ldf')
    GO
    ```
 
@@ -217,7 +229,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 1. If you are not using automatic seeding, restore the database on the secondary replica (Linux) server. [Migrate a SQL Server database from Windows to Linux using backup and restore](sql-server-linux-migrate-restore-database.md). Restore the database `WITH NORECOVERY` on the secondary replica. 
 
-1. On the primary replica, run the SQL query to add the database to the AG.
+1. Add the database to the AG. Update the example script. Replace `<TestDB>` witht the name of your database. On the primary replica, run the SQL query to add the database to the AG.
 
    ```sql
    ALTER AVAILABILITY GROUP [ag1] ADD DATABASE <TestDB>

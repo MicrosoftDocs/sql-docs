@@ -1,6 +1,6 @@
-Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In an availability group for high availability, the cluster manager automates the failover process. In an availability group with cluster type NONE, the failover process is manual. 
+Each AG has only one primary replica. The primary replica allows reads and writes. To change which replica is primary, you can fail over. In an AG for high availability, the cluster manager automates the failover process. In an AG with cluster type NONE, the failover process is manual. 
 
-There are two ways to fail over the primary replica in an availability group with cluster type NONE:
+There are two ways to fail over the primary replica in an AG with cluster type NONE:
 
 - Forced manual failover with data loss
 - Manual failover without data loss
@@ -46,7 +46,7 @@ To manually fail over without data loss:
 
 3. Update `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1.
 
-   The following script sets `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1 on an availability group named `ag1`. Before you run the following script, replace `ag1` with the name of your availability group:
+   The following script sets `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1 on an AG named `ag1`. Before you run the following script, replace `ag1` with the name of your AG:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -69,4 +69,4 @@ To manually fail over without data loss:
    ```  
 
    > [!NOTE] 
-   > To delete an availability group, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group created with cluster type NONE or EXTERNAL, the command must be executed on all replicas that are part of the availability group.
+   > To delete an AG, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). For an AG created with cluster type NONE or EXTERNAL, the command must be executed on all replicas that are part of the AG.

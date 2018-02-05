@@ -1,7 +1,7 @@
 ---
 title: "Overview of Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/04/2017"
+ms.date: "02/02/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "dma"
 ms.service: ""
@@ -74,11 +74,13 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2012 
 - SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017 on Windows
 
 **Targets**
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017 on Windows and Linux
 - Azure SQL Database
 
 ## Installation

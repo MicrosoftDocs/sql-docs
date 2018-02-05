@@ -30,21 +30,21 @@ Before proceeding, you should be familiar with installation and configuration fo
 
 In this scenario, two servers are on different operating systems. A Windows Server 2016 named `WinSQLInstance` hosts the primary replica. A Linux server named `LinuxSQLInstance` host the secondary replica.
 
-## Configure the Availability Group 
+## Configure the AG 
 
 The steps to create the AG are the same as the steps to create an AG for read-scale workloads. The AG cluster type is NONE, because there is no cluster manager. 
 
    >[!NOTE]
    >For the scripts in this article, angle brackets `<` and `>` identify values that you need to replace for your environment. The angle brackets themselves are not required for the scripts. 
 
-1. Install SQL Server 2017 on Windows Server 2016, enable Availability Groups from SQL Server Configuration Manager, and set mixed mode authentication. 
+1. Install SQL Server 2017 on Windows Server 2016, enable Always On Availability Groups from SQL Server Configuration Manager, and set mixed mode authentication. 
 
    >[!TIP]
    >If you are validating this solution in Azure, place both servers in the same availability set to ensure they are separated in the data center. 
 
    **Enable Availability Groups**
 
-   For instructions, see [Enable and Disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
+   For instructions, see [Enable and disable Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 
    ![Enable Availability Groups](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
@@ -164,13 +164,13 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
    >
    >For more information about automatic seeding, see [Automatic Seeding - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
 
-   Before you run the script, update the values for your availability groups.
+   Before you run the script, update the values for your AGs.
 
       * Replace `<WinSQLInstance>` with the server name of the primary replica SQL Server instance.
 
       * Replace `<LinuxSQLInstance>` with the server name of the secondary replica SQL Server instance. 
 
-   To create the availability group, update the values and run the script on the primary replica.  
+   To create the AG, update the values and run the script on the primary replica.  
 
    ```sql
    CREATE AVAILABILITY GROUP [ag1]
@@ -232,7 +232,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 1. Add the database to the AG. Update the example script. Replace `<TestDB>` witht the name of your database. On the primary replica, run the SQL query to add the database to the AG.
 
    ```sql
-   ALTER AVAILABILITY GROUP [ag1] ADD DATABASE <TestDB>
+   ALTER AG [ag1] ADD DATABASE <TestDB>
    GO
    ```
 
@@ -242,7 +242,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-This article reviewed the steps to create a cross-platform AG to support migration or read-scale workloads. It can be used for manual disaster recovery. It also explained how to fail over the availability group. A cross-platform availability group uses cluster type `NONE` and does not support high availability because there is no cluster tool across-platforms. 
+This article reviewed the steps to create a cross-platform AG to support migration or read-scale workloads. It can be used for manual disaster recovery. It also explained how to fail over the AG. A cross-platform AG uses cluster type `NONE` and does not support high availability because there is no cluster tool across-platforms. 
 
 ## Next steps
 

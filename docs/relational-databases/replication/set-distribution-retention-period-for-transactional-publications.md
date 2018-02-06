@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "retention periods [SQL Server replication]"
 ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set Distribution Retention Period for Transactional Publications

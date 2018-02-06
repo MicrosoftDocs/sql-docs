@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STLineFromWKB (geometry Data Type)"
 ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STLineFromWKB (geometry Data Type)

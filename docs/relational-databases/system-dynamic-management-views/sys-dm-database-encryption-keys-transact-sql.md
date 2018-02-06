@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_database_encryption_keys dynamic management view"
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_database_encryption_keys (Transact-SQL)

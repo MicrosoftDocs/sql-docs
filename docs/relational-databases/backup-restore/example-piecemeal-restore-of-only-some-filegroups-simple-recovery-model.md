@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "simple recovery model [SQL Server], RESTORE examples"
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Piecemeal Restore of Only Some Filegroups (Simple Recovery Model)

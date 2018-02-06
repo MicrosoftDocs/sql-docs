@@ -23,7 +23,7 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 caps.latest.revision: 41
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Estimate the Interruption of Service During Role Switching (Database Mirroring)

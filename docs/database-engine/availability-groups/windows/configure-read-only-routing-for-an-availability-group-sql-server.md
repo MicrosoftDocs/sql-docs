@@ -23,7 +23,7 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Configure Read-Only Routing for an Availability Group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,13 +133,13 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
   
  For example, the following routing list load balances read-intent connection request across two read-only replicas, `Server1` and `Server2`. The nested parentheses that surround these servers identify the load-balanced set. If neither replica is available in that set, it will proceed to attempt to sequentially connect to the other replicas, `Server3` and `Server4`, in the read-only routing list.  
   
-```tsql  
+```sql  
 READ_ONLY_ROUTING_LIST = (('Server1','Server2'), 'Server3', 'Server4')  
 ```  
   
  Note that each entry in the routing list can itself be a set of load-balanced read-only replicas. The following example demonstrates this.  
   
-```tsql  
+```sql  
 READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5'), 'Server6')  
 ```  
   

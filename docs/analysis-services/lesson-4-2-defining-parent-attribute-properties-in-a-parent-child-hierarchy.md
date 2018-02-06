@@ -2,14 +2,14 @@
 title: "Defining Parent Attribute Properties in a Parent-Child Hierarchy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 4-2 - Defining Parent Attribute Properties in a Parent-Child Hierarchy
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 A parent-child hierarchy is a hierarchy in a dimension that is based on two table columns. Together, these columns define the hierarchical relationships among the members of the dimension. The first column, called the *member key column*, identifies each dimension member. The other column, called the *parent column*, identifies the parent of each dimension member. The **NamingTemplate** property of a parent attribute determines the name of each level in the parent-child hierarchy, and the **MembersWithData** property determines whether data for parent members should be displayed.  
   
 For more information, see [Parent-Child Dimensions](../analysis-services/multidimensional-models/parent-child-dimension.md), [Attributes in Parent-Child Hierarchies](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  

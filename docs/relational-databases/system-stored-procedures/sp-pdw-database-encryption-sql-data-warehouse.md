@@ -18,7 +18,7 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_pdw_database_encryption (SQL Data Warehouse)
@@ -28,7 +28,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;  
@@ -56,7 +56,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## Example  
  The following example enables TDE on the appliance.  
   
-```tsql  
+```sql  
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysdbmaintplan_history system table"
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysdbmaintplan_history (Transact-SQL)

@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.serverproperties.security.f1"
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Server Properties - Security Page

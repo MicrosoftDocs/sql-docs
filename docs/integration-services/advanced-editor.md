@@ -22,7 +22,7 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Advanced Editor

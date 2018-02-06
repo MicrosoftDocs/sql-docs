@@ -19,7 +19,7 @@ ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Tool Windows in SQL Server Management Studio

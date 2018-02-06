@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STStartPoint (geometry Data Type)"
 ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STStartPoint (geometry Data Type)

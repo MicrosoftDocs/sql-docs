@@ -21,7 +21,7 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_service_objectives (Azure SQL Database)
@@ -49,7 +49,7 @@ Returns the edition (service tier), service objective (pricing tier) and elastic
 ## Examples  
  This example can  be run on the master database or on user databases. The query returns the name, service, and performance tier information of the database(s).  
   
-```tsql  
+```sql  
 SELECT  d.name,   
      slo.*    
 FROM sys.databases d   

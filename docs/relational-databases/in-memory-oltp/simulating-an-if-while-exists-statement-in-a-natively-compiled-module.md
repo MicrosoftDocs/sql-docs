@@ -26,7 +26,7 @@ ms.workload: "Inactive"
   
  The following example illustrates a workaround using a BIT variable with a SELECT statement to simulate an EXISTS clause:  
   
-```tsql  
+```sql  
 DECLARE @exists BIT = 0  
 SELECT TOP 1 @exists = 1 FROM MyTable WHERE …  
 IF @exists = 1  

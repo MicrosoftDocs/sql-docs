@@ -23,7 +23,7 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetFileNamespacePath (Transact-SQL)
@@ -78,7 +78,7 @@ ms.workload: "Inactive"
 ## Best Practices  
  To keep code and applications independent of the current computer and database, avoid writing code that relies on absolute file paths. Instead, get the complete path for a file at run time by using the **FileTableRootPath** and **GetFileNamespacePath** functions together, as shown in the following example. By default, the **GetFileNamespacePath** function returns the relative path of the file under the root path for the database.  
   
-```tsql  
+```sql  
 USE MyDocumentDB;  
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  

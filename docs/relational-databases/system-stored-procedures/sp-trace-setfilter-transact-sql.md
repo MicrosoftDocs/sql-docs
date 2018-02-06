@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_trace_setfilter"
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_trace_setfilter (Transact-SQL)

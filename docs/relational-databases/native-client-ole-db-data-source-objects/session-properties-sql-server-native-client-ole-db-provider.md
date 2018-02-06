@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-data-source-objects"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, sessions"
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Session Properties - SQL Server Native Client OLE DB provider

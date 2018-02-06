@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "character formats [SQL Server]"
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use Character Format to Import or Export Data (SQL Server)

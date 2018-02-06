@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "jobs [SQL Server replication]"
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Run Replication Maintenance Jobs (SQL Server Management Studio)

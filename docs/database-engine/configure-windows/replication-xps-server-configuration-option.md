@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Replication XPs option"
 ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication XPs Server Configuration Option

@@ -2,15 +2,15 @@
 title: "Reporting Services Delivery Extension Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "report-server-web-service"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "Web service [Reporting Services], delivery extension settings"
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Reporting Services Delivery Extension Settings

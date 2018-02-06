@@ -25,7 +25,7 @@ helpviewer_keywords:
 caps.latest.revision: 15
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
@@ -73,7 +73,7 @@ ms.workload: "Inactive"
   
  This example joins **sys.dm_db_column_store_row_group_physical_stats** with other system tables and then calculates the `Fragmentation` column as an estimate of the efficiency of each row group in the current database.     To find information on a single table remove the comment hyphens in front of the **WHERE** clause and provide a table name.  
   
-```tsql  
+```sql  
 SELECT i.object_id,   
     object_name(i.object_id) AS TableName,   
     i.name AS IndexName,   

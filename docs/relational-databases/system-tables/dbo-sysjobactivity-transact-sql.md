@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysjobactivity system table"
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # dbo.sysjobactivity (Transact-SQL)
@@ -49,7 +49,7 @@ ms.workload: "On Demand"
 
 ## Example
 This example will return the run-time status for all SQL Server Agent jobs.  Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
-```tsql
+```sql
 SELECT sj.Name, 
 	CASE
 		WHEN sja.start_execution_date IS NULL THEN 'Not running'

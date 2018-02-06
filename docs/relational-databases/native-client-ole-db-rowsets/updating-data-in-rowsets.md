@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-rowsets"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "data updates [SQL Server], OLE DB"
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Updating Data in Rowsets

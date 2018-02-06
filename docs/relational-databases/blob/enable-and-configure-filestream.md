@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], enabling"
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Active"
 ---
@@ -51,7 +51,7 @@ ms.workload: "Active"
   
 11. In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code:  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  

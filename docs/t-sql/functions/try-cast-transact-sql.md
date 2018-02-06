@@ -65,7 +65,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ### A. TRY_CAST returns null  
  The following example demonstrates that TRY_CAST returns null when the cast fails.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CAST('test' AS float) IS NULL   
     THEN 'Cast failed'  
@@ -86,7 +86,7 @@ Cast failed
   
  The following example demonstrates that the expression must be in the expected format.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
 GO  
@@ -105,7 +105,7 @@ NULL
 ### B. TRY_CAST fails with an error  
  The following example demonstrates that TRY_CAST returns an error when the cast is explicitly not permitted.  
   
-```tsql  
+```sql  
 SELECT TRY_CAST(4 AS xml) AS Result;  
 GO  
 ```  

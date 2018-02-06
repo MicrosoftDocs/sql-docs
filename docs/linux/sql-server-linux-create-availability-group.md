@@ -3,7 +3,7 @@ title: Create and configure an availability group for SQL Server on Linux | Micr
 description: This tutorial shows how to create and configure availability groups for SQL Server on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
@@ -18,9 +18,11 @@ ms.workload: "On Demand"
 
 # Create and configure an availability group for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This tutorial covers how to create and configure an availability group (AG) for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Unlike [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] and earlier on Windows, you can enable AGs with or without creating the underlying Pacemaker cluster first. Integration with the cluster, if needed, is not done until later.
+
+The tutorial includes the following tasks:
  
 > [!div class="checklist"]
 > * Enable availability groups.
@@ -409,7 +411,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -473,7 +475,7 @@ This example shows three full replicas and how read-only routing can be configur
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -545,7 +547,7 @@ A Pacemaker high availability cluster underlying [!INCLUDE[ssnoversion-md](../in
     
     GO
     
-    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABLITY GROUP::<AGThatWasCreated> TO PMLogin;
+    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::<AGThatWasCreated> TO PMLogin;
     
     GO
     ```
@@ -589,12 +591,10 @@ The AG resource that is created is a special kind of resource called a clone. Th
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
     ```
 
->[NOTE]
->On RHEL 7.4, you may encounter a warning with the use of --master. To avoid this, use the following syntax:
-    ```bash
-    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-    ```
-
+    >[!NOTE]
+    >On RHEL 7.4, you may encounter a warning with the use of --master. To avoid this, use
+    >`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+   
     **SUSE Linux Enterprise Server (SLES)**
     
     ```bash
@@ -644,8 +644,7 @@ The AG resource that is created is a special kind of resource called a clone. Th
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
-   
-    
+
     **SLES**
     
     ```bash
@@ -687,5 +686,5 @@ In this tutorial, you learned how to create and configure an availability group 
 For most AG administration tasks, including upgrades and failing over, see:
 
 > [!div class="nextstepaction"]
-> [Operate HA availability group for SQL Server on Linux](sql-server-linux-availability-group-failover-ha.md).
+> [Operate HA availability group for SQL Server on Linux](sql-server-linux-availability-group-failover-ha.md)
 

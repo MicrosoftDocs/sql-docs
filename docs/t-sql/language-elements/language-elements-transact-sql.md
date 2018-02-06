@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: e9b8daff-b72f-4a53-907d-5a83a78785ec
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Language Elements (Transact-SQL)

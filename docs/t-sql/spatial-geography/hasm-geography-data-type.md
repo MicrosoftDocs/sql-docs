@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "HasM geography"
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # HasM (geography Data Type)
@@ -47,7 +47,7 @@ ms.workload: "Inactive"
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @p GEOGRAPHY = 'Point(1 1 1 1)'  
 SELECT @p.HasM   
 --Returns: 1 (true)  

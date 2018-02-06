@@ -16,7 +16,7 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.executables

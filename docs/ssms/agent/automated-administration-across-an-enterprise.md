@@ -26,7 +26,7 @@ ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Automated Administration Across an Enterprise

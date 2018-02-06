@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STCentroid (geometry Data Type)"
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # STCentroid (geometry Data Type)

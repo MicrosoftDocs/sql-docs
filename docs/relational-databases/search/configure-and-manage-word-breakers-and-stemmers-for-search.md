@@ -50,7 +50,7 @@ To use the word breakers and stemmers provided for all the languages supported b
 
 To see the list of languages supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The presence of a language in this list indicates that word breakers are registered for the language. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -60,7 +60,7 @@ For Full-Text Search to use the word breakers for a language, they must be regis
 
 To see the list of registered word breaker components, use the following statement.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -85,7 +85,7 @@ If you add, remove, or alter a word breaker, you need to refresh the list of Mic
   
 To view the word breaker language of specific columns, run the following statement.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 

@@ -22,7 +22,7 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Transformation

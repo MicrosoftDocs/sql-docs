@@ -50,7 +50,7 @@ Active Data Maintenance
   
  The first part of this sample creates the database and necessary objects. The second part of the sample shows how to move data from a memory-optimized table into a partitioned table.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

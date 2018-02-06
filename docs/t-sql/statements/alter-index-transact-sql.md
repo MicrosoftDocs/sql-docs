@@ -304,7 +304,11 @@ For columnstore indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 -   For rowgroups in which 10% or more of the rows  have been logically deleted, SQL Server will try to combine this rowgroup with one or more rowgroups.    For example, rowgroup 1 is compressed with 500,000 rows and rowgroup 21 is compressed with the maximum of 1,048,576 rows.  Rowgroup 21 has 60% of the rows deleted which leaves 409,830 rows. SQL Server favors combining these two rowgroups to compress a new rowgroup that has 909,830 rows.  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with 2016) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], the COMPRESS_ALL_ROW_GROUPS provides a way to force OPEN or CLOSED delta rowgroups into the columnstore. With this option, it is not necessary to rebuild the columnstore index to empty the delta rowgroups.  This, combined with the other remove and merge defragmentation features makes it no longer necessary to rebuild the index in most situations.    
+
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS provides a way to force OPEN or CLOSED delta rowgroups into the columnstore. With this option, it is not necessary to rebuild the columnstore index to empty the delta rowgroups.  This, combined with the other remove and merge defragmentation features makes it no longer necessary to rebuild the index in most situations.    
+
 -   ON forces all rowgroups into the columnstore, regardless of size and state (CLOSED or OPEN).  
   
 -   OFF forces all CLOSED rowgroups into the columnstore.  
@@ -390,17 +394,11 @@ FILLFACTOR = *fillfactor*
  If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
 -   Statistics created with indexes that are not partition-aligned with the base table.  
-  
 -   Statistics created on Always On readable secondary databases.  
-  
 -   Statistics created on read-only databases.  
-  
 -   Statistics created on filtered indexes.  
-  
 -   Statistics created on views.  
-  
 -   Statistics created on internal tables.  
-  
 -   Statistics created with spatial indexes or XML indexes.  
  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -411,7 +409,7 @@ FILLFACTOR = *fillfactor*
  For an XML index or spatial index, only ONLINE = OFF is supported, and if ONLINE is set to ON an error is raised.  
   
 > [!NOTE]
->  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  ON  
  Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This allows queries or updates to the underlying table and indexes to continue. At the start of the operation, a Shared (S) lock is very briefly held on the source object. At the end of the operation, an S lock is very briefly held on the source if a nonclustered index is being created, or an SCH-M (Schema Modification) lock is acquired when a clustered index is created or dropped online, or when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.  
@@ -555,7 +553,7 @@ The default is 0 minutes.
   
  To set different types of data compression for different partitions, specify the DATA_COMPRESSION option more than once, for example:  
   
-```t-sql  
+```sql  
 REBUILD WITH   
 (  
 DATA_COMPRESSION = NONE ON PARTITIONS (1),   
@@ -782,7 +780,7 @@ The following restrictions apply to partitioned indexes:
   
 ## Basic syntax example:   
   
-```t-sql 
+```sql 
 ALTER INDEX index1 ON table1 REBUILD;  
   
 ALTER INDEX ALL ON table1 REBUILD;  
@@ -796,7 +794,7 @@ ALTER INDEX ALL ON dbo.table1 REBUILD;
 ### A. REORGANIZE demo  
  This example demonstrates how the ALTER INDEX REORGANIZE command works.  It creates a table that has multiple rowgroups, and then demonstrates how REORGANIZE merges the rowgroups.  
   
-```t-sql  
+```sql  
 -- Create a database   
 CREATE DATABASE [ columnstore ];  
 GO  
@@ -841,20 +839,20 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```t-sql
+```sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
  Use the TABLOCK option to insert rows in parallel. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the INSERT INTO operation can run in parallel when TABLOCK is used.  
   
-```t-sql  
+```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
 SELECT TOP 300000 * FROM staging;  
 ```  
   
  Run this command to see the OPEN delta rowgroups. The number of rowgroups depends on the degree of parallelism.  
   
-```t-sql  
+```sql  
 SELECT *   
 FROM sys.dm_db_column_store_row_group_physical_stats   
 WHERE object_id  = object_id('cci_target');  
@@ -862,20 +860,20 @@ WHERE object_id  = object_id('cci_target');
   
  Run this command to force all CLOSED and OPEN rowgroups into the columnstore.  
   
-```t-sql  
+```sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
  Run this command again and you will see that smaller rowgroups are merged into one compressed rowgroup.  
   
-```t-sql  
+```sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
 ### B. Compress CLOSED delta rowgroups into the columnstore  
  This example uses the REORGANIZE option to compresses each CLOSED delta rowgroup into the columnstore as a compressed  rowgroup.   This is not necessary, but is useful when the tuple-mover is not compressing CLOSED rowgroups fast enough.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW  
 -- REORGANIZE all partitions  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -885,13 +883,13 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### C. Compress all OPEN AND CLOSED delta rowgroups into the columnstore  
- Does not apply to: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can run REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) to compress each OPEN and CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This empties the deltastores and forces all rows to get compressed into the columnstore. This is useful especially after performing many insert operations since these operations store the rows in one or more deltastores.  
+ The command REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) compreses each OPEN and CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This empties the deltastores and forces all rows to get compressed into the columnstore. This is useful especially after performing many insert operations since these operations store the rows in one or more deltastores.  
   
  REORGANIZE combines rowgroups to fill rowgroups up to a maximum number of rows \<= 1,024,576. Therefore, when you compress all OPEN and CLOSED rowgroups you won't end up with lots of compressed rowgroups that only have a few rows in them. You want rowgroups to be as full as possible to reduce the compressed size and improve query performance.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW2016  
 -- Move all OPEN and CLOSED delta rowgroups into the columnstore.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
@@ -908,7 +906,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 > [!NOTE]
 > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], rebuilding a columnstore index is no longer necessary in most situations since REORGANIZE physically removes deleted rows and merges rowgroups. The COMPRESS_ALL_ROW_GROUPS option forces all OPEN or CLOSED delta rowgroups into the columnstore which previously could only be done with a rebuild. REORGANIZE is online and occurs in the background so queries can continue as the operation happens.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
 -- Defragment by physically removing rows that have been logically deleted from the table, and merging rowgroups.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -925,7 +923,7 @@ Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting 
   
  This example shows how to rebuild a clustered columnstore index and force all delta rowgroups into the columnstore. This first step prepares a table FactInternetSales2 with a clustered columnstore index and inserts data from the first four columns.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorksDW  
   
 CREATE TABLE dbo.FactInternetSales2 (  
@@ -946,7 +944,7 @@ SELECT * FROM sys.column_store_row_groups;
   
  The results show there is one OPEN rowgroup, which means [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will wait for more rows to be added before it closes the rowgroup and moves the data to the columnstore. This next statement rebuilds the clustered columnstore index, which forces all rows into the columnstore.  
   
-```t-sql  
+```sql  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
 SELECT * FROM sys.column_store_row_groups;  
 ```  
@@ -958,7 +956,7 @@ SELECT * FROM sys.column_store_row_groups;
  
  To rebuild a partition of a large clustered columnstore index, use ALTER INDEX REBUILD with the partition option. This example rebuilds partition 12. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], we recommend replacing REBUILD with REORGANIZE.  
   
-```t-sql  
+```sql  
 ALTER INDEX cci_fact3   
 ON fact3  
 REBUILD PARTITION = 12;  
@@ -971,7 +969,7 @@ REBUILD PARTITION = 12;
   
  The following example rebuilds a clustered columnstore index to use archival compression, and then shows how to remove the archival compression. The final result will use only columnstore compression.  
   
-```t-sql  
+```sql  
 --Prepare the example by creating a table with a clustered columnstore index.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -1003,7 +1001,7 @@ GO
 ### A. Rebuilding an index  
  The following example rebuilds a single index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
@@ -1012,7 +1010,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```t-sql  
+```sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON);  
 ```  
@@ -1021,7 +1019,7 @@ The following example adds the ONLINE option including the low priority lock opt
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```t-sql  
+```sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH   
 (  
@@ -1036,7 +1034,7 @@ REBUILD WITH
 ### C. Reorganizing an index with LOB compaction  
  The following example reorganizes a single clustered index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the WITH (LOB_COMPACTION) option is not required because the default value is ON.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
 ```  
   
@@ -1045,7 +1043,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```t-sql  
+```sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
     Sales.SalesOrderHeader  
 SET (  
@@ -1059,14 +1057,14 @@ GO
 ### E. Disabling an index  
  The following example disables a nonclustered index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```t-sql  
+```sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 ```  
   
 ### F. Disabling constraints  
  The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;  
 ```  
   
@@ -1083,13 +1081,13 @@ was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
   
 The PRIMARY KEY constraint is enabled by rebuilding the PRIMARY KEY index.  
   
-```t-sql  
+```sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department REBUILD;  
 ```  
   
 The FOREIGN KEY constraint is then enabled.  
   
-```t-sql  
+```sql  
 ALTER TABLE HumanResources.EmployeeDepartmentHistory  
 CHECK CONSTRAINT FK_EmployeeDepartmentHistory_Department_DepartmentID;  
 GO  
@@ -1100,7 +1098,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```t-sql  
+```sql  
 -- Verify the partitioned indexes.  
 SELECT *  
 FROM sys.dm_db_index_physical_stats (DB_ID(),OBJECT_ID(N'Production.TransactionHistory'), NULL , NULL, NULL);  
@@ -1116,7 +1114,7 @@ GO
 ### I. Changing the compression setting of an index  
  The following example rebuilds an index on a nonpartitioned rowstore table.  
   
-```t-sql
+```sql
 ALTER INDEX IX_INDEX1   
 ON T1  
 REBUILD   
@@ -1134,7 +1132,7 @@ For additional data compression examples, see [Data Compression](../../relationa
 
 1. Execute an online index rebuild as resumable operation with MAXDOP=1.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON) ;
    ```
 
@@ -1142,29 +1140,29 @@ For additional data compression examples, see [Data Compression](../../relationa
 
 3. Execute an online index rebuild as resumable operation with MAX_DURATION set to 240 minutes.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240) ; 
    ```
 4. Pause a running resumable online index rebuild.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table PAUSE ;
    ```   
 5. Resume an online index rebuild for an index rebuild that was executed as resumable operation specifying a new value for MAXDOP set to 4.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
 6. Resume an online index rebuild operation for an index online rebuild that was executed as resumable. Set MAXDOP to 2, set the execution time for the index being running as resmumable to 240 minutes and in case of an index being blocked on the lock wait 10 minutes and after that kill all blockers. 
 
-   ```t-sql
+   ```sql
       ALTER INDEX test_idx on test_table  
          RESUME WITH (MAXDOP=2, MAX_DURATION= 240 MINUTES, 
          WAIT_AT_LOW_PRIORITY (MAX_DURATION=10, ABORT_AFTER_WAIT=BLOCKERS)) ;
    ```      
 7. Abort resumable index rebuild operation which is running or paused.
 
-   ```t-sql
+   ```sql
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   

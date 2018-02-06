@@ -39,7 +39,7 @@ ms.workload: "Inactive"
   
  The following example illustrates the error handling behavior with atomic blocks and natively compiled stored procedures:  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  

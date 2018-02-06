@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "objects [SQL Server], data-tier applications"
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DAC Support For SQL Server Objects and Versions

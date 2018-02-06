@@ -18,7 +18,7 @@ ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Proxy Editor - Add Principal

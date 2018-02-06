@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "clr enabled option"
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # clr enabled Server Configuration Option
@@ -44,7 +44,7 @@ When you run RECONFIGURE, and the run value of the clr enabled option is changed
 ## Example  
  The following example first displays the current setting of the clr enabled option and then enables the option by setting the option value to 1. To disable the option, set the value to 0.  
   
-```tsql  
+```sql  
 EXEC sp_configure 'clr enabled';  
 EXEC sp_configure 'clr enabled' , '1';  
 RECONFIGURE;    

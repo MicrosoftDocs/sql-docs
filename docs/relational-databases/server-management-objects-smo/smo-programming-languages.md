@@ -9,7 +9,7 @@ ms.component: "smo"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -21,13 +21,14 @@ helpviewer_keywords:
   - "development environments [SMO]"
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SMO Programming Languages
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   This section describes how to program [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .NET.
   
 |Topic|Description|  

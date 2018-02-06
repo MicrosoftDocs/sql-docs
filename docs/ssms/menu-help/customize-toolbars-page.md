@@ -19,7 +19,7 @@ ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Customize (Toolbars Page)

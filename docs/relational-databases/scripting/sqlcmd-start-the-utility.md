@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "mightypen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sqlcmd - Start the Utility

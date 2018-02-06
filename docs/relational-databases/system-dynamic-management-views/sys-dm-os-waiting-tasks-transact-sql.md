@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_waiting_tasks dynamic management view"
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_os_waiting_tasks (Transact-SQL)
@@ -141,7 +141,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
  
 ## Example
 This example will identify blocked sessions.  Execute the [!INCLUDE[tsql](../../includes/tsql-md.md)] query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
-```tsql
+```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ``` 

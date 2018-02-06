@@ -55,7 +55,7 @@ By default `TRIM` function removes the space character `char(32)` from both side
 ## Examples
 ### A.  Removes the space character from both sides of string   
 The following example removes spaces from before and after the word `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -66,7 +66,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### B.  Removes specified characters from both sides of string   
 The following example removes a trailing period and trailing spaces.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 
@@ -75,7 +75,10 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 
 
 ## See Also
-[String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)   
-[RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)   
-[REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)   
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   

@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-transactions"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, transactions"
 ms.assetid: 3b41e33a-c1ca-4b2a-9464-312b0ed3ca89
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transactions

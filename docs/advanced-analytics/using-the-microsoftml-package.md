@@ -9,7 +9,7 @@ ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,7 +18,7 @@ ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
 caps.latest.revision: 132
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Using the MicrosoftML package with SQL Server

@@ -2,21 +2,21 @@
 title: "Add drillthrough from a mobile report to other mobile reports or URLs | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add drillthrough from a mobile report to other mobile reports or URLs

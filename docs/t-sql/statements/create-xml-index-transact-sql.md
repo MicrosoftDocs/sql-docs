@@ -33,7 +33,7 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE XML INDEX (Transact-SQL)
@@ -253,7 +253,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 ### A. Creating a primary XML index  
  The following example creates a primary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT * FROM sys.indexes  
@@ -269,7 +269,7 @@ GO
 ### B. Creating a secondary XML index  
  The following example creates a secondary XML index on the `CatalogDescription` column in the `Production.ProductModel` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.indexes  

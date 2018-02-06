@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_file_space_usage dynamic management view"
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_db_file_space_usage (Transact-SQL)
@@ -99,7 +99,7 @@ ms.workload: "On Demand"
 ### Determing the Amount of Free Space in tempdb  
  The following query returns the total number of free pages and total free space in megabytes (MB) available in all files in **tempdb**.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 SELECT SUM(unallocated_extent_page_count) AS [free pages],   
@@ -110,7 +110,7 @@ FROM sys.dm_db_file_space_usage;
 ### Determining the Amount of Space Used by User Objects  
  The following query returns the total number of pages used by user objects and the total space used by user objects in tempdb.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],  

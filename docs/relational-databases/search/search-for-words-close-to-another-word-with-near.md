@@ -77,7 +77,7 @@ For more info about the syntax, see [CONTAINS &#40;Transact-SQL&#41;](../../t-sq
 ### Example 1
  For example, you could search for 'John' within two terms of 'Smith', as follows:  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -90,7 +90,7 @@ For more info about the syntax, see [CONTAINS &#40;Transact-SQL&#41;](../../t-sq
 ### Example 2
  The following example searches the `Production.Document` table of the `AdventureWorks` sample database for all document summaries that contain the word "reflector" in the same document as the word "bracket".  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  

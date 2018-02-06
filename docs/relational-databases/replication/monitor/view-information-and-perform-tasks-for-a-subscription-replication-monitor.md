@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "viewing subscription information"
 ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Information and Perform Tasks for a Subscription (Replication Monitor)

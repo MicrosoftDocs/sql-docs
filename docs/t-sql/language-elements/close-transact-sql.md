@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "CLOSE statement"
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CLOSE (Transact-SQL)

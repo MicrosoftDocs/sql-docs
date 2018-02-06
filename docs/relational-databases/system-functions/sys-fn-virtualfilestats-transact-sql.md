@@ -26,7 +26,7 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_virtualfilestats (Transact-SQL)
@@ -78,7 +78,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### A. Displaying statistical information for a database  
  The following example displays statistical information for file ID 1 in the database with an ID of `1`.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
@@ -87,7 +87,7 @@ GO
 ### B. Displaying statistical information for a named database and file  
  The following example displays statistical information for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The system function `DB_ID` is used to specify the *database_id* parameter.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -96,7 +96,7 @@ GO
 ### C. Displaying statistical information for all databases and files  
  The following example displays statistical information for all files in all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  

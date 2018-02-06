@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_update_policy_category_subscription"
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_update_policy_category_subscription (Transact-SQL)

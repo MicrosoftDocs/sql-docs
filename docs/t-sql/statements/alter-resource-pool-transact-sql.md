@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ALTER RESOURCE POOL"
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER RESOURCE POOL (Transact-SQL)

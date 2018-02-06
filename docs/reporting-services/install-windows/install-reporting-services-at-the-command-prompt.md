@@ -2,23 +2,23 @@
 title: "Install Reporting Services at the Command Prompt | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/17/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
   - "command line"
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Install Reporting Services at the Command Prompt

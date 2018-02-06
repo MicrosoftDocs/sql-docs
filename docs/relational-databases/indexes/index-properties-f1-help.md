@@ -22,8 +22,8 @@ f1_keywords:
   - "sql13.swb.indexproperties.spatial.f1"
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "barbkess"
+ms.author: "barbkess"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

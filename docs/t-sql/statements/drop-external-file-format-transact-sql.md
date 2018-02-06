@@ -18,7 +18,7 @@ ms.assetid: 8cf9009b-59f9-4aac-bef1-dcf2cf0708b2
 caps.latest.revision: 12
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP EXTERNAL FILE FORMAT (Transact-SQL)

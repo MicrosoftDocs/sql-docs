@@ -24,7 +24,7 @@ ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Query with Joins (Visual Database Tools)

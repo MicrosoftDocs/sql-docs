@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "geometry subtypes [SQL Server]"
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
@@ -106,7 +106,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
   
  The following example shows how to create a `geometry LineString` instance with two points that are the same. A call to `IsValid` indicates that the **LineString** instance is not valid and a call to `MakeValid` will convert the **LineString** instance into a **Point**.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::STGeomFromText('LINESTRING(1 3, 1 3)',0);  
 IF @g.STIsValid() = 1  

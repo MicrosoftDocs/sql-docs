@@ -1,7 +1,11 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
+<<<<<<< HEAD
 ms.date: "02/09/2018"
+=======
+ms.date: "01/05/2018"
+>>>>>>> 0486382a819cc51db6a64faa3a501f82fbb57a9b
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -97,22 +101,20 @@ This release of **SSDT for VS 2015** can be installed in the following languages
 
 An ISO image of SSDT can be used as an alternative way to install SSDT or to set up an Administrative Installation point. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive or burned to a DVD.
 
-> [!IMPORTANT]
-> The following ISO links install SSDT for VS 2015 17.3
->
-> ISO links for 17.4 will be available soon.
+> [!NOTE]
+> The SSDT for VS 2015 17.4 ISO images are now available.
 
-[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x804) |
-[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x404) |
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x409) |
-[French]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x407) |
-[Italian]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x410) |
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x411) |
-[Korean]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x412) |
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x416) |
-[Russian]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x419) |
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40a)
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
+[French]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |
+[Italian]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x410) |
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x411) |
+[Korean]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x412) |
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x416) |
+[Russian]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x419) |
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40a)
 
 
 ## Download Visual Studio
@@ -146,13 +148,13 @@ After installing SSDT, work through these tutorials to learn how to create datab
 -   [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 
 ## See Also  
 [SQL Server Data Tools in Visual Studio](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT Team Blog](http://blogs.msdn.com/b/ssdt/)  
-[SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback)  
 [SSDT Documentation](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

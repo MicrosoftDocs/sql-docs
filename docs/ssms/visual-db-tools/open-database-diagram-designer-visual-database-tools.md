@@ -21,7 +21,7 @@ ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Open Database Diagram Designer (Visual Database Tools)

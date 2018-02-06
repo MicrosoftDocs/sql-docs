@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "BufferWithCurves method (geometry)"
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # BufferWithCurves (geometry Data Type)

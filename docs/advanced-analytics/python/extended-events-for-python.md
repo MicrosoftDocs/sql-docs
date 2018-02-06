@@ -8,12 +8,12 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Extended Events for Python

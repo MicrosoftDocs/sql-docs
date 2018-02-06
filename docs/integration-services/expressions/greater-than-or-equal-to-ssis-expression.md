@@ -19,7 +19,7 @@ ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # &gt;= (Greater Than or Equal To) (SSIS Expression)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.sp_flush_log"
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_flush_log (Transact-SQL)
@@ -41,7 +41,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
   
 sys.sp_flush_log  
   
@@ -58,7 +58,7 @@ sys.sp_flush_log
   
 ## Sample code  
   
-```tsql  
+```sql  
 .  
 EXECUTE sys.sp_flush_log  
   

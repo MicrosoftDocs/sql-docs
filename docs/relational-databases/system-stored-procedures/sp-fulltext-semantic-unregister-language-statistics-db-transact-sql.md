@@ -23,7 +23,7 @@ ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
@@ -37,7 +37,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -73,7 +73,7 @@ GO
 ## Examples  
  The following example shows how to unregister the Semantic Language Statistics database by calling **sp_fulltext_semantic_unregister_language_statistics_db**.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  

@@ -16,14 +16,16 @@ ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 caps.latest.revision: 7
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Prepare for upgrade by running Data Migration Assistant
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Prepare to upgrade your OLTP databases and to adopt new features in [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] by downloading and running Microsoft Data Migration Assistant.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+Prepare to upgrade your OLTP databases and to adopt new features in [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] by downloading and running Microsoft Data Migration Assistant.  
   
 ## Download and install Data Migration Assistant  
- Download and install Data Migration Assistant from [here](http://go.microsoft.com/fwlink/?LinkID=613421). This tool is not included on the [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] installation media.  
+Download and install Data Migration Assistant from [here](http://go.microsoft.com/fwlink/?LinkID=613421). This tool is not included on the [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] installation media.  
 
   

@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-error-messages"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "status information [ODBC]"
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Diagnostic Records and Fields

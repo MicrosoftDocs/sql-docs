@@ -24,7 +24,7 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: 4
 author: "JasonWHowell"
 ms.author: "jasonh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Availability group database level health detection failover option

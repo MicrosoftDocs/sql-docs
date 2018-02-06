@@ -9,7 +9,7 @@ ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "ALTER EXTERNAL LIBRARY"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  
 

@@ -9,7 +9,7 @@ ms.component: "extending-packages-custom-objects-data-flow-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -18,7 +18,7 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Developing Data Flow Components with Multiple Inputs

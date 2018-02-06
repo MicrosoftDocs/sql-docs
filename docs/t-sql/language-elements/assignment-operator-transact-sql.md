@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "column headings [SQL Server]"
 ms.assetid: c3040db6-21d6-40ac-a783-82c98ec006cc
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 

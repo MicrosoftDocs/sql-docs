@@ -3,7 +3,7 @@ title: "Set or Change the Database Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
-ms.prod_service: "database-engine"
+ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "collations"
 ms.reviewer: ""
@@ -23,7 +23,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Set or Change the Database Collation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
   
  **In This Topic**  
@@ -95,7 +95,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use the [COLLATE](~/t-sql/statements/collations.md) clause to specify a collation name. The example creates the database `MyOptionsTest` that uses the `Latin1_General_100_CS_AS_SC` collation. After you create the database, execute the `SELECT` statement to verify the setting.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -121,7 +121,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use the [COLLATE](~/t-sql/statements/collations.md) clause in an [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement to change the collation name. Execute the `SELECT` statement to verify the change.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE MyOptionsTest  

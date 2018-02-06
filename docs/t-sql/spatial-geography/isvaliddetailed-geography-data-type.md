@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "IsValidDetailed geography"
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IsValidDetailed (geography Data Type)
@@ -69,7 +69,7 @@ ms.workload: "Inactive"
 ## Examples  
  The following example of an invalid spatial object illustrates how the **IsValidDetailed()** methods behaves.  
   
-```tsql  
+```sql  
 DECLARE @p GEOGRAPHY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
 SELECT @p.IsValidDetailed()  
 --Returns: 24409: Not valid because some portion of polygon ring (1) lies in the interior of a polygon.  

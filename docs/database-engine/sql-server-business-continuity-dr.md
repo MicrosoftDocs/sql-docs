@@ -4,7 +4,7 @@ description:
 author: "allanhirt"
 ms.author: mihaelab 
 ms.reviewer: "mikeray"
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

@@ -19,7 +19,7 @@ ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Choose Target Table for Insert Values Dialog Box (Visual Database Tools)

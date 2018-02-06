@@ -3,7 +3,7 @@ title: Operate availability group SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
@@ -16,9 +16,9 @@ ms.technology: database-engine
 ms.assetid: 
 ms.workload: "Inactive"
 ---
-# Operate HA availability group for SQL Server on Linux
+# Operate Always On Availability Groups on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ## <a name="failover"></a>Fail over availability group
 

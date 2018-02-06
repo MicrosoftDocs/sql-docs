@@ -22,7 +22,7 @@ ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Clear Query Results (Visual Database Tools)

@@ -19,7 +19,7 @@ ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
 caps.latest.revision: 4
 author: "Lingxi-Li"
 ms.author: "lingxl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure HDInsight Connection Manager

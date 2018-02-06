@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "filegroups [SQL Server], backing up"
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Back Up Files and Filegroups (SQL Server)
@@ -159,7 +159,7 @@ ms.workload: "On Demand"
 #### A. Create a file backup of two files  
  The following example creates a differential file backup of only the `SGrp1Fi2` file of the `SalesGroup1` and the `SGrp2Fi2` file of the `SalesGroup2` filegroup.  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -171,7 +171,7 @@ GO
 #### B. Create a full file backup of the secondary filegroups  
  The following example creates a full file backup of every file in both of the secondary filegroups.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -183,7 +183,7 @@ GO
 #### C. Create a differential file backup of the secondary filegroups  
  The following example creates a differential file backup of every file in both of the secondary filegroups.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  

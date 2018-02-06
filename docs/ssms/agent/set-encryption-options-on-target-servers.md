@@ -20,7 +20,7 @@ ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set Encryption Options on Target Servers

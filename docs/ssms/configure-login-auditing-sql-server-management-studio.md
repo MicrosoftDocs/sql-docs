@@ -20,7 +20,7 @@ ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configure Login Auditing (SQL Server Management Studio)

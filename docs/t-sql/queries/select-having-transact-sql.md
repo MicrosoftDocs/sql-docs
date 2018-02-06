@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "HAVING clause, about HAVING clause"
 ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SELECT - HAVING (Transact-SQL)

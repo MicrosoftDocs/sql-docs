@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "transact sql scripts"
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "mightypen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sqlcmd - Run Transact-SQL Script Files

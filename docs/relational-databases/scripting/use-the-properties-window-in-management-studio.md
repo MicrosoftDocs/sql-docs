@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "complex properties [SQL Server Management Studio]"
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use the Properties Window in Management Studio

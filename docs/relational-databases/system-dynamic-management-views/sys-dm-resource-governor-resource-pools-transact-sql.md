@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_resource_pools dynamic management view"
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_resource_governor_resource_pools (Transact-SQL)

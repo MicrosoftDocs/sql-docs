@@ -2,22 +2,22 @@
 title: "Device Information Settings for Rendering Extensions (Reporting Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/15/2015"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Device Information Settings for Rendering Extensions (Reporting Services)

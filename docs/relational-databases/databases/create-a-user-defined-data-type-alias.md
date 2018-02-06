@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "alias data types [SQL Server], creating"
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a User-Defined Data Type Alias
@@ -121,7 +121,7 @@ ms.workload: "Inactive"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates a data type alias based on the system-supplied `varchar` data type. The `ssn` data type alias is used for columns holding 11-digit social security numbers (999-99-9999). The column cannot be NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

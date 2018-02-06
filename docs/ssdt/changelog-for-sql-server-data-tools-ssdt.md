@@ -273,7 +273,6 @@ This preview is the first version of SSDT for Visual Studio 2017. This release i
 - SSIS is not localized.
 - SSIS Execute Package Task doesn't support debugging when *ExecuteOutofProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 - For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
-- Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
 - SSIS Packages containing 3rd party extensions cannot be switched to target other server versions.
 
 

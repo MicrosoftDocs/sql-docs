@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-communication"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, connections"
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Disconnecting from a Data Source

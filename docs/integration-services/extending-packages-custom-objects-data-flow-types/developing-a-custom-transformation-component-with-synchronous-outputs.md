@@ -9,7 +9,7 @@ ms.component: "extending-packages-custom-objects-data-flow-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -29,7 +29,7 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 caps.latest.revision: 56
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Developing a Custom Transformation Component with Synchronous Outputs

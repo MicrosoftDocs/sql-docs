@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "optimize for ad hoc workloads option"
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # optimize for ad hoc workloads Server Configuration Option
@@ -39,7 +39,7 @@ ms.workload: "On Demand"
 If the number of single-use plans take a significant portion of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] memory in an OLTP server, and these plans are Ad-hoc plans, use this server option to decrease memory usage with these objects.
 To find the number of single-use cached plans, run the following query:
 
-```t-sql
+```sql
 SELECT objtype, cacheobjtype, 
   AVG(usecounts) AS Avg_UseCount, 
   SUM(refcounts) AS AllRefObjects, 

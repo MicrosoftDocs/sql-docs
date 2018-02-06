@@ -21,7 +21,7 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Send SQL Server Agent Error Messages

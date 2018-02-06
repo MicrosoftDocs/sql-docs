@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "searched CASE expression"
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CASE (Transact-SQL)
@@ -119,7 +119,7 @@ END
   
  The CASE statement evaluates its conditions sequentially and stops with the first condition whose condition is satisfied. In some situations, an expression is evaluated before a CASE statement receives the results of the expression as its input. Errors in evaluating these expressions are possible. Aggregate expressions that appear in WHEN arguments to a CASE statement are evaluated first, then provided to the CASE statement. For example, the following query produces a divide by zero error when producing the value of the MAX aggregate. This occurs prior to evaluating the CASE expression.  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   

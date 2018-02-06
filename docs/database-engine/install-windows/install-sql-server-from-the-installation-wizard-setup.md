@@ -20,15 +20,17 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 91
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > This article explains how to install SQL Server with the Installation Wizard. It applies to [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)], and [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
-This topic provides a step-by-step procedure for installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup installation wizard. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for installation of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components so that you do not have to install them individually. For more information about how to install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+This article explains how to install SQL Server with the Installation Wizard. It applies to [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)], and [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
- These additional topics document other ways to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+This article provides a step-by-step procedure for installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup installation wizard. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for installation of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components so that you do not have to install them individually. For more information about how to install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+
+ These additional articles document other ways to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
 
 -   [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
@@ -45,10 +47,10 @@ This topic provides a step-by-step procedure for installing a new instance of [!
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
 ## Prerequisites  
- Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], review topics in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
+ Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], review articles in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
->  For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
+> For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
  
  ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement 
 
@@ -58,27 +60,27 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
 1.  Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click Setup.exe. To install from a network share, locate the root folder on the share, and then double-click Setup.exe.  
   
-1.  The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], click **Installation** in the left-hand navigation area, and then click **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone installation or add features to an existing installation**.  
+2.  The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], click **Installation** in the left-hand navigation area, and then click **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone installation or add features to an existing installation**.  
 
-1.  On the Product Key page, select an option to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+3.  On the Product Key page, select an option to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or a production version of the product that has a PID key. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
      To continue, click **Next**.  
 
-1.  On the License Terms page, review the license agreement and, if you agree, select the **I accept the license terms** check box, and then click **Next**. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  On the License Terms page, review the license agreement and, if you agree, select the **I accept the license terms** check box, and then click **Next**. To help improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-1.  In the Global Rules window, the setup procedure will automatically advance to the Product Updates window if there are no rule errors.  
+5.  In the Global Rules window, the setup procedure will automatically advance to the Product Updates window if there are no rule errors.  
   
-1.  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update page will appear next if the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update check box in Control Panel\All Control Panel Items\Windows Update\Change settings is not checked. Putting a check in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update page will change the computer settings to include the latest updates when you scan for Windows Update.  
+6.  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update page will appear next if the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update check box in Control Panel\All Control Panel Items\Windows Update\Change settings is not checked. Putting a check in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update page will change the computer settings to include the latest updates when you scan for Windows Update.  
 
-1.  On the Product Updates page, the latest available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product updates are displayed. If no product updates are discovered, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup does not display this page and auto advances to the **Install Setup Files** page.  
+7.  On the Product Updates page, the latest available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product updates are displayed. If no product updates are discovered, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup does not display this page and auto advances to the **Install Setup Files** page.  
 
-1.  On the Install Setup files page, Setup provides the progress of downloading, extracting, and installing the Setup files. If an update for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is found, and is specified to be included, that update will also be installed. If no update is found, Setup will automatically advance. 
+8.  On the Install Setup files page, Setup provides the progress of downloading, extracting, and installing the Setup files. If an update for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is found, and is specified to be included, that update will also be installed. If no update is found, Setup will automatically advance. 
   
-1. On **Install Rules** SQL Server Setup checks to identify potential problems that might occur while running Setup. If failures occur, click in the **Status** column for more information. Otherwise click **Next**. 
+9. On **Install Rules** SQL Server Setup checks to identify potential problems that might occur while running Setup. If failures occur, click in the **Status** column for more information. Otherwise click **Next**. 
 
-1. On **Installation Type** choose either perform a new installation, or add features to an existing installation. Click **Next**. 
+10. On **Installation Type** choose either perform a new installation, or add features to an existing installation. Click **Next**. 
   
-1. On the Feature Selection page, select the components for your installation. For example, to install a new instance of SQL Server database engine, check **Database Engine Services**.
+11. On the Feature Selection page, select the components for your installation. For example, to install a new instance of SQL Server database engine, check **Database Engine Services**.
 
     A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
@@ -96,9 +98,9 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
      The path specified for each of the above options must be different.  
   
-11. The Feature Rules window will automatically advance if all rules pass.  
+12. The Feature Rules window will automatically advance if all rules pass.  
   
-12. On the Instance Configuration page, specify whether to install a default instance or a named instance. For more information, see [Instance Configuration](../../sql-server/install/instance-configuration.md#instance-configuration).  
+13. On the Instance Configuration page, specify whether to install a default instance or a named instance. For more information, see [Instance Configuration](../../sql-server/install/instance-configuration.md#instance-configuration).  
   
      **Instance ID** — By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a non-default instance ID, specify a different value for **Instance ID** text box.  
   
@@ -109,20 +111,23 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
      **Installed instances** — The grid shows instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].  
   
-     The Work flow for the rest of the installation depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
+     The workflow for the rest of the installation depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
   
-13. Use the Server Configuration — Service Accounts page to specify login accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install.  
+14. Use the Server Configuration — Service Accounts page to specify login accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install.  
   
      You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, are started manually, or are disabled. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have to complete their tasks. For more information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      To specify the same logon account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide credentials in the fields at the bottom of the page.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+    > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+    
+    > [!NOTE]
+    > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* to allow the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service account to use [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).
   
      Use the Server Configuration — Collation page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-14. Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Server Configuration page to specify the following:  
+15. Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Server Configuration page to specify the following:  
   
     -   Security Mode — Select Windows Authentication or Mixed Mode Authentication for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select Mixed Mode Authentication, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account.  
   
@@ -133,7 +138,7 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
      Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Data Directories page to specify non-default installation directories. To install to default directories, click **Next**.  
   
     > [!IMPORTANT]  
-    >  If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    > If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      For more information, see [Database Engine Configuration - Data Directories](../../sql-server/install/instance-configuration.md#database-engine-configuration---data-directories).  
   
@@ -141,16 +146,16 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
      Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - TempDB page to configure file size, number of files, non-default installation directories, and file-growth settings for TempDB. For more information see [Database Engine Configuration - TempDB](../../sql-server/install/instance-configuration.md#database-engine-configuration---tempdb).  
   
-15. Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, choose the default option, Multidimensional and Data Mining server mode. Regarding administrator permissions, you must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To add the account under which SQL Server Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning).  
+16. Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, choose the default option, Multidimensional and Data Mining server mode. Regarding administrator permissions, you must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To add the account under which SQL Server Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning).  
 
    When you are finished editing the list, click **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, click **Next**.
    
    Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Data Directories page to specify non-default installation directories. To install to default directories, click **Next**.  
    
-   >[!IMPORTANT]  
-   >When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  if you specify the same directory path for INSTANCEDIR and SQLUSERDBDIR, SQL Server Agent and Full Text Search do not start due to missing permissions.  
+   > [!IMPORTANT]  
+   > When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  if you specify the same directory path for INSTANCEDIR and SQLUSERDBDIR, SQL Server Agent and Full Text Search do not start due to missing permissions.  
    >  
-   >If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+   > If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
    
    For more information, see [Analysis Services Configuration - Data Directories](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories).  
    

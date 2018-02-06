@@ -9,7 +9,7 @@ ms.component: "building-packages-programmatically"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -26,7 +26,7 @@ ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connecting Data Flow Components Programmatically

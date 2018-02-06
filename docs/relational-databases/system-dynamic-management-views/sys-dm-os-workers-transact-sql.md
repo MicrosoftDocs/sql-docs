@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_workers dynamic management view"
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_workers (Transact-SQL)
@@ -89,7 +89,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 ## Examples  
  You can use the following query to find out how long a worker has been running in a SUSPENDED or RUNNABLE state.  
   
-```tsql
+```sql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  

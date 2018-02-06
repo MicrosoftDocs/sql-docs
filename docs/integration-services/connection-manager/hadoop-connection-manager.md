@@ -18,7 +18,7 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Hadoop Connection Manager

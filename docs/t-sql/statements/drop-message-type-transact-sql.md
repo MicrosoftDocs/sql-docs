@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "removing message types"
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP MESSAGE TYPE (Transact-SQL)

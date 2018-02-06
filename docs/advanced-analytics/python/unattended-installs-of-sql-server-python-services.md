@@ -8,14 +8,14 @@ ms.prod: machine-learning-services
 ms.prod_service: r-services
 ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Unattended installation of Python Machine Learning Services (In-Database)

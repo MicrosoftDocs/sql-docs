@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "clauses [SQL Server], WITH common_table_expression"
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # WITH common_table_expression (Transact-SQL)

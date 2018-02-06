@@ -9,7 +9,7 @@ ms.component: "run-manage-packages-programmatically"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -28,7 +28,7 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Loading and Running a Local Package Programmatically

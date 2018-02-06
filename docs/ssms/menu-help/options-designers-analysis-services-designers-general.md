@@ -18,7 +18,7 @@ ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Options (Designers - Analysis Services Designers - General)

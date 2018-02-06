@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_objects_disabled_on_compatibility_level_change catalog view"
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change
@@ -37,7 +37,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
@@ -149,7 +149,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ## Example  
  The following example shows a query on **sys.dm_db_objects_disabled_on_compatibility_level_change** to find the objects impacted by changing the compatibility level to 120.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
 GO  
   

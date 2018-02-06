@@ -2,22 +2,22 @@
 title: "Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "troubleshooting"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server

@@ -18,7 +18,7 @@ ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure SQL Server Agent Error Logs (General Page)

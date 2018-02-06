@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create a Differential Database Backup (SQL Server)
@@ -157,7 +157,7 @@ ms.workload: "On Demand"
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a full and a differential database backup for the `MyAdvWorks` database.  
   
-```tsql  
+```sql  
 -- Create a full database backup first.  
 BACKUP DATABASE MyAdvWorks   
    TO MyAdvWorks_1   

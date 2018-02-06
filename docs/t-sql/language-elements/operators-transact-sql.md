@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "operators [Transact-SQL]"
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Operators (Transact-SQL)

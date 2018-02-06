@@ -83,7 +83,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## Examples  
  The following Transact-SQL script runs a few different test cases. The text output is also provided, which shows the detailed behavior and results from each test case.  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -166,7 +166,7 @@ go
   
  Next is the text output from the preceding Transact-SQL script.  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

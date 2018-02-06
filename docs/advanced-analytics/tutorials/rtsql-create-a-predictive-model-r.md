@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 dev_langs: 
@@ -18,7 +18,7 @@ ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
 caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Create a predictive model (R in SQL quickstart)

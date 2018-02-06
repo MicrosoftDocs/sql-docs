@@ -16,7 +16,7 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Integration Services features supported by the editions of SQL Server
@@ -59,7 +59,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Built-in data source connectors|Yes|Yes|||| 
 |Built in tasks and transformations|Yes|Yes||||  
-|ODBC source and destination by Attunity|Yes|Yes|||| 
+|ODBC source and destination |Yes|Yes|||| 
 |Azure data source connectors and tasks|Yes|Yes||||  
 |Hadoop/HDFS connectors and tasks|Yes|Yes||||  
 |Basic data profiling tools|Yes|Yes|||| 

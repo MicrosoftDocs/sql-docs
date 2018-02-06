@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server], about OLE Automation"
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OLE Automation Objects in Transact-SQL

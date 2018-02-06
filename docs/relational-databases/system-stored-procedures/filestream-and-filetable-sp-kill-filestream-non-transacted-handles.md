@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_kill_filestream_non_transacted_handles"
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filestream and FileTable - sp_kill_filestream_non_transacted_handles
@@ -33,7 +33,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [[ @handle_id = ] @handle_id]]  
 ```  
   
@@ -72,7 +72,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ## Examples  
  The following examples show how to call **sp_kill_filestream_non_transacted_handles** to close non-transactional file handles for FileTable data.  
   
-```tsql  
+```sql  
 -- Close all open handles in the current database.  
 sp_kill_filestream_non_transacted_handles  
   
@@ -85,7 +85,7 @@ sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @hand
   
  The following example shows how to use a script to get a *handle_id* and close it.  
   
-```tsql  
+```sql  
 DECLARE @handle_id varbinary(16);  
 DECLARE @table_name sysname;  
   

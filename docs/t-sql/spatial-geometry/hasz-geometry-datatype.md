@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "HasZ geometry"
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # HasZ (geometry DataType)
@@ -44,7 +44,7 @@ ms.workload: "Inactive"
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @p GEOMETRY = 'Point(1 1 1 1)'  
 SELECT @p.HasZ   
 --Returns: 1 (true)  

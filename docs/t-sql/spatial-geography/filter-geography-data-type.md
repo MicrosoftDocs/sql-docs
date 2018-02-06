@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Filter method"
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filter (geography Data Type)

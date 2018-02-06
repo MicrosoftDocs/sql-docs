@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-text-image-columns"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "image columns [ODBC]"
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Logged vs. Unlogged Modifications

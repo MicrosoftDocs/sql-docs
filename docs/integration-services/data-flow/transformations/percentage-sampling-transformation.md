@@ -27,7 +27,7 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Percentage Sampling Transformation

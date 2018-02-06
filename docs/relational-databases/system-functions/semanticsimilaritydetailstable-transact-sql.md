@@ -23,7 +23,7 @@ ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # semanticsimilaritydetailstable (Transact-SQL)
@@ -37,7 +37,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYDETAILSTABLE  
     (  
     table,  
@@ -96,7 +96,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## Examples  
  The following example retrieves the 5 key phrases that had the highest similarity score between the specified candidates in **HumanResources.JobCandidate** table of the AdventureWorks2012 sample database. The @CandidateId and @MatchedID variables represent values from the key column of the full-text index.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROMSEMANTICSIMILARITYDETAILSTABLE  
     (  

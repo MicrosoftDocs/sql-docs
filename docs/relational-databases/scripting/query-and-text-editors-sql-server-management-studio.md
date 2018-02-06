@@ -31,9 +31,9 @@ helpviewer_keywords:
   - "queries [SQL Server], SQL Server Management Studio"
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Query and Text Editors (SQL Server Management Studio)

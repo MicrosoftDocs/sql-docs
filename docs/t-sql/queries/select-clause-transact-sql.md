@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 caps.latest.revision: 54
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SELECT Clause (Transact-SQL)

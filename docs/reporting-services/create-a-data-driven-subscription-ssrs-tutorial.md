@@ -2,14 +2,14 @@
 title: "Create a Data-Driven Subscription (SSRS Tutorial) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/26/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "data-driven subscriptions"
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Create a Data-Driven Subscription (SSRS Tutorial)

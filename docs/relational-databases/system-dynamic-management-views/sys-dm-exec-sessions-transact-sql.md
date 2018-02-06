@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_sessions dynamic management view"
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sys.dm_exec_sessions (Transact-SQL)
@@ -107,6 +107,10 @@ Everyone can see their own session information.
 -   unsuccessful_logons  
   
  If this option is not enabled, these columns will return null values. For more information about how to set this server configuration option, see [common criteria compliance enabled Server Configuration Option](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
+ 
+ 
+ The admin connections on Azure SQL Database will see one row per authenticated session, while the non-admin connections will only see information related to their database user sessions. 
+ 
   
 ## Relationship Cardinalities  
   
@@ -123,7 +127,7 @@ Everyone can see their own session information.
 ### A. Finding users that are connected to the server  
  The following example finds the users that are connected to the server and returns the number of sessions for each user.  
   
-```tsql  
+```sql  
 SELECT login_name ,COUNT(session_id) AS session_count   
 FROM sys.dm_exec_sessions   
 GROUP BY login_name;  
@@ -132,7 +136,7 @@ GROUP BY login_name;
 ### B. Finding long-running cursors  
  The following example finds the cursors that have been open for more than a specific period of time, who created the cursors, and what session the cursors are on.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT creation_time ,cursor_id   
@@ -146,7 +150,7 @@ WHERE DATEDIFF(mi, c.creation_time, GETDATE()) > 5;
 ### C. Finding idle sessions that have open transactions  
  The following example finds sessions that have open transactions and are idle. An idle session is one that has no request currently running.  
   
-```tsql  
+```sql  
 SELECT s.*   
 FROM sys.dm_exec_sessions AS s  
 WHERE EXISTS   
@@ -166,7 +170,7 @@ WHERE EXISTS
 ### D. Finding information about a queries own connection  
  Typical query to gather information about a queries own connection.  
   
-```tsql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

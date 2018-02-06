@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "backups [SQL Server], copy-only backups"
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Copy-Only Backups (SQL Server)
@@ -62,7 +62,7 @@ In this example, a copy-only backup of the `Sales` database will be backed up to
 ###  <a name="TsqlProcedure"></a>B.  Using Transact-SQL  
 This example creates a copy-only backup for the `Sales` database utilizing the COPY_ONLY parameter.  A copy-only backup of the transaction log is taken as well.
 
-```tsql
+```sql
 BACKUP DATABASE Sales
 TO DISK = 'E:\BAK\Sales_Copy.bak'
 WITH COPY_ONLY;

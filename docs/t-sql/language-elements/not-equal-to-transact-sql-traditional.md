@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "<> (not equal to operator)"
 ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Not Equal To (Transact SQL) - traditional

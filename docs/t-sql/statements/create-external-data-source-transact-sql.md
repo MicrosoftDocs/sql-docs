@@ -25,7 +25,7 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: 58
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
@@ -306,7 +306,7 @@ To ensure successful PolyBase queries in the event of Hadoop NameNode failover, 
 ### A. Create external data source to reference Hadoop  
 To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name or IP address of the Hadoop Namenode and port.  
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -318,7 +318,7 @@ WITH (
 ### B. Create external data source to reference Hadoop with pushdown enabled  
 Specify the RESOURCE_MANAGER_LOCATION option to enable push-down computation to Hadoop for PolyBase queries. Once enabled, PolyBase uses a cost-based decision to determine whether the query computation should be pushed to Hadoop or all the data should be moved to process the query in SQL Server.
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -331,7 +331,7 @@ WITH (
 ###  <a name="credential"></a> C. Create external data source to reference Kerberos-secured Hadoop  
 To verify if the Hadoop cluster is Kerberos-secured, check the value of hadoop.security.authentication property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret. 
   
-```tsql  
+```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
 
@@ -378,7 +378,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### E. Create a Shard map manager external data source
 To create an external data source to reference a SHARD_MAP_MANAGER, specify the logical server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
@@ -398,7 +398,7 @@ WITH (
 ### F. Create an RDBMS external data source
 To create an external data source to reference a RDBMS, specifies the logical server name of the remote database in Azure SQL Database.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
@@ -419,7 +419,7 @@ WITH (
 ### G. Create external data source to reference Azure Data Lake Store
 Azure Data lake Store connectivity is based on your ADLS URI and your Azure Acitve directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
-```tsql
+```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY
 
@@ -442,7 +442,7 @@ WITH (TYPE = HADOOP,
 ### H. Create external data source to reference Hadoop with pushdown enabled
 Specify the JOB_TRACKER_LOCATION option to enable push-down computation to Hadoop for PolyBase queries. Once enabled, PolyBase uses a cost-based decision to determine whether the query computation should be pushed to Hadoop or all the data should be moved to process the query in SQL Server. 
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -456,7 +456,7 @@ To create an external data source to reference your Azure blob storage container
 
 In this example, the external data source is an Azure blob storage container called dailylogs under Azure storage account named myaccount. The Azure storage external data source is for data transfer only and does not support predicate pushdown.
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
         TYPE = HADOOP, 
         LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'
@@ -467,7 +467,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### J. Create an external data source for bulk operations retrieving data from Azure Blob storage.   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Use the following data source for bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,

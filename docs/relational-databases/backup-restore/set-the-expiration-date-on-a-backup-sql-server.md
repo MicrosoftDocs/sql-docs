@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "database backups [SQL Server], expiration dates"
 ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set the Expiration Date on a Backup (SQL Server)
@@ -77,7 +77,7 @@ ms.workload: "Inactive"
   
 3.  In the [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement, specify either the EXPIREDATE or RETAINDAYS option to determine when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can overwrite the backup. If neither option is specified, the expiration date is determined by the [media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) server configuration setting. This example uses the `EXPIREDATE` option to specify an expiration date of June 30, 2015 (`6/30/2015`).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  

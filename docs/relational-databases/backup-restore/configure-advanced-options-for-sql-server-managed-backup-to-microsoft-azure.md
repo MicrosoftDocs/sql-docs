@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure
@@ -58,7 +58,7 @@ ms.workload: "Inactive"
   
 3.  **Create a Backup Certificate or Asymmetric Key:** You can use either a certificate or an asymmetric key for use with the encryption. The following example creates a backup certificate to use for the encryption.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  

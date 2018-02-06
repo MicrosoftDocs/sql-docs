@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_cryptographic_provider_algorithms dynamic management function"
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_cryptographic_provider_algorithms (Transact-SQL)

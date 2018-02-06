@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "dm_exec_external_operations management view"
 ms.assetid: d268217a-85b8-4b7f-9cd1-87865eba2be1
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_external_operations (Transact-SQL)

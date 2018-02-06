@@ -42,9 +42,9 @@ helpviewer_keywords:
   - "FETCH clause"
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: 68
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
@@ -63,7 +63,7 @@ ms.workload: "Active"
 
 ## Syntax  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sp_create_snapshot"
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # core.sp_create_snapshot (Transact-SQL)

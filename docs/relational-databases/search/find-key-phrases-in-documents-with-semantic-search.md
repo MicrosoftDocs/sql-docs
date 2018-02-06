@@ -22,7 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Find Key Phrases in Documents with Semantic Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes how to find the key phrases in documents or text columns that are configured for statistical semantic indexing.  
 
 ##  <a name="howtofind"></a> Find the key phrases in documents with SEMANTICKEYPHRASETABLE  
@@ -41,7 +41,7 @@ ms.workload: "Inactive"
 ###  <a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
  The following example retrieves the top 10 key phrases from the document specified by the @DocumentId variable in the Document column of the Production.Document table of the AdventureWorks sample database. The @DocumentId variable represents a value from the key column of the full-text index.  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -58,7 +58,7 @@ GO
 ###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
  The following example retrieves the top 25 documents that contain the key phrase “Bracket” from the Document column of the Production.Document table of the AdventureWorks sample database.  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

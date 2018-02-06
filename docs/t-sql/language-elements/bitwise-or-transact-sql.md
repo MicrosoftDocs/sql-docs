@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "| (bitwise OR operator)"
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # | (Bitwise OR) (Transact-SQL)
@@ -62,7 +62,7 @@ expression | expression
 ## Examples  
  The following example creates a table with **int** data types to show the original values and puts the table into one row.  
   
-```tsql  
+```sql  
 CREATE TABLE bitwise  
 (   
  a_int_value int NOT NULL,  

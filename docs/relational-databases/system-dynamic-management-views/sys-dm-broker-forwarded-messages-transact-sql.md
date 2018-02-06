@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_broker_forwarded_messages dynamic management view"
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_broker_forwarded_messages (Transact-SQL)

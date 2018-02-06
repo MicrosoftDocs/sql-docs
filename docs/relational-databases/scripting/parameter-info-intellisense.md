@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], Parameter Info option"
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Parameter Info (IntelliSense)

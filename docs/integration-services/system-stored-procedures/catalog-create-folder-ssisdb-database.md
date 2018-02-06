@@ -16,7 +16,7 @@ ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.create_folder (SSISDB Database)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "Profiler [SQL Server Profiler], how-to topics"
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Server Performance and Activity Monitoring

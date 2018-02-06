@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "listing databases"
 ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # View a List of Databases on an Instance of SQL Server
@@ -69,7 +69,7 @@ ms.workload: "Active"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example returns a list of databases on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The list includes the names of the databases, their database IDs, and the dates when the databases were created.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name, database_id, create_date  

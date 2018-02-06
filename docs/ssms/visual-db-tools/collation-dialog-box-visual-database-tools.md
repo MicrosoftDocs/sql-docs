@@ -19,7 +19,7 @@ ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Collation Dialog Box (Visual Database Tools)

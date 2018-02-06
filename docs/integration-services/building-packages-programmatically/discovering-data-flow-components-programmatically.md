@@ -9,7 +9,7 @@ ms.component: "building-packages-programmatically"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -27,7 +27,7 @@ ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Discovering Data Flow Components Programmatically

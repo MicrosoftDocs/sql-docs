@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "clearing trace window"
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Clear a Trace Window (SQL Server Profiler)

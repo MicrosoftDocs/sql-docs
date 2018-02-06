@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "plan guides [SQL Server], parameterized queries"
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Plan Guide for Parameterized Queries

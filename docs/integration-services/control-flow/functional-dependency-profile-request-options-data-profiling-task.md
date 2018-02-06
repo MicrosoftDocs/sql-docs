@@ -18,7 +18,7 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functional Dependency Profile Request Options (Data Profiling Task)

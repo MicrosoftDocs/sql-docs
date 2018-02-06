@@ -193,6 +193,8 @@ ASYMMETRIC KEY *asym_key_name*
  For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.  
+ 
+ The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
   
  For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -311,7 +313,7 @@ GO
 ### G. Creating a SQL Server authentication login with a password  
  The following example creates the login `Mary7` with password `A2c3456`.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   

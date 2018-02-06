@@ -2,16 +2,16 @@
 title: "Configure String Storage for Dimensions and Partitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f

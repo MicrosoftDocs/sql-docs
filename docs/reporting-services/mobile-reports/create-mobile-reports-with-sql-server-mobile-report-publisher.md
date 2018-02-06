@@ -3,21 +3,21 @@ title: "Create mobile reports with SQL Server Mobile Report Publisher | Microsof
 description: "Learn about Reporting Services mobile reports for mobile devices, connected to on-premises data, with an assortment of data visualizations."
 ms.custom: ""
 ms.date: "03/30/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 caps.latest.revision: 35
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Create mobile reports with SQL Server Mobile Report Publisher

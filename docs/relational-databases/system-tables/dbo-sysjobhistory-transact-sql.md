@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysjobhistory system table"
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # dbo.sysjobhistory (Transact-SQL)
@@ -57,7 +57,7 @@ ms.workload: "On Demand"
   ## Example
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] query will convert the **run_time** and **run_duration** columns into a more user friendly format.  Execute the script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
- ```tsql
+ ```sql
  SET NOCOUNT ON;
  
  SELECT sj.name,

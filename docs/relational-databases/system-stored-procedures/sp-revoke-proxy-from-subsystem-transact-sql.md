@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_revoke_proxy_from_subsystem"
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_revoke_proxy_from_subsystem (Transact-SQL)

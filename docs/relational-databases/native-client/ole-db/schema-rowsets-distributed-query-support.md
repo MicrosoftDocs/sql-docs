@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "rowsets [OLE DB], schema"
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Schema Rowsets - Distributed Query Support

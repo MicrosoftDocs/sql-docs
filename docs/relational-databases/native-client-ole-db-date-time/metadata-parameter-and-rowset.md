@@ -9,16 +9,16 @@ ms.component: "native-client-ole-db-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [OLE DB]"
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Metadata - Parameter and Rowset

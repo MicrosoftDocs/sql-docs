@@ -9,7 +9,7 @@ ms.component: "run-manage-packages-programmatically"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -22,7 +22,7 @@ ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Understanding the Differences between Local and Remote Execution

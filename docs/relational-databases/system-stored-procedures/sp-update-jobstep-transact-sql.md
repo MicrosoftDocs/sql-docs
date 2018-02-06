@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_update_jobstep"
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_update_jobstep (Transact-SQL)

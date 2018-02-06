@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 dev_langs: 
@@ -18,7 +18,7 @@ ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
 caps.latest.revision: 8
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Using R functions with SQL Server data (R in SQL quickstart)

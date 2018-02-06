@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "spatial data types [SQL Server]"
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Spatial Types - geography

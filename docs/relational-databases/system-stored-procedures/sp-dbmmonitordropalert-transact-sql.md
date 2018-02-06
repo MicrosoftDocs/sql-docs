@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_dbmmonitordropalert"
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dbmmonitordropalert (Transact-SQL)

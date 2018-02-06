@@ -2,15 +2,15 @@
 title: "Tabular Model Programming for Compatibility Level 1200 | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Replace in Files dialog box"
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replace in Files

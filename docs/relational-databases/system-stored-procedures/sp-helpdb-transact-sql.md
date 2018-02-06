@@ -85,14 +85,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### A. Returning information about a single database  
  The following example displays information about the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### B. Returning information about all databases  
  This following example displays information about all databases on the server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

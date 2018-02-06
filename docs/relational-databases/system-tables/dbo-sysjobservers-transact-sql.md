@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysjobservers system table"
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.sysjobservers (Transact-SQL)

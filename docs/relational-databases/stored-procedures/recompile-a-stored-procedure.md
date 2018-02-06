@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], recompiling"
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Recompile a Stored Procedure
@@ -108,7 +108,7 @@ AS
   
      And then copy and paste the second code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure’s query plan.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -126,7 +126,7 @@ GO
   
      Then, copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  

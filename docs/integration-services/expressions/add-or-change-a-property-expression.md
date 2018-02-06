@@ -19,7 +19,7 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Add or Change a Property Expression

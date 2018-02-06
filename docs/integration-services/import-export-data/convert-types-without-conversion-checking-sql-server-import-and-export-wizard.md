@@ -18,7 +18,7 @@ ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Convert Types without Conversion Checking (SQL Server Import and Export Wizard)

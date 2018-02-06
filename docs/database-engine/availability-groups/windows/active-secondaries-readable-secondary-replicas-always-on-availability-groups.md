@@ -23,7 +23,7 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: 80
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Active Secondaries: Readable Secondary Replicas (Always On Availability Groups)
@@ -206,7 +206,7 @@ ms.workload: "On Demand"
 ##  <a name="bkmk_AccessInMemTables"></a> Accessing memory-optimized tables on a Secondary Replica  
  The transaction isolation levels that can be used with memory-optimized tables on a secondary replica are the same as on the primary replica. The recommendation is to set the session-level isolation level to READ COMMITTED and set the database-level option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT to ON. For example:  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  

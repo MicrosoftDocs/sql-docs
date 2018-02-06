@@ -36,9 +36,9 @@ helpviewer_keywords:
   - "displaying distribution statistics"
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 caps.latest.revision: 75
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC SHOW_STATISTICS (Transact-SQL)
@@ -184,7 +184,7 @@ DBCC SHOW_STATISTICS is not supported on external tables.
 ### A. Returning all statistics information  
 The following example displays all statistics information for the `AK_Address_rowguid` index of the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
 GO  
 ```  
@@ -192,7 +192,7 @@ GO
 ### B. Specifying the HISTOGRAM option  
 This limits the statistics information displayed for Customer_LastName to the HISTOGRAM data.
   
-```t-sql
+```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
@@ -201,7 +201,7 @@ GO
 ### C. Display the contents of one statistics object  
  The following example displays the contents of the Customer_LastName statistics on the DimCustomer table.  
   
-```t-sql
+```sql
 -- Uses AdventureWorks  
 --First, create a statistics object  
 CREATE STATISTICS Customer_LastName   

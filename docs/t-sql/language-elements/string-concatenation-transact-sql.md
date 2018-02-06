@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "+ (string concatenation)"
 ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # + (String Concatenation) (Transact-SQL)

@@ -18,7 +18,7 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Incorporate a Data Profiling Task in Package Workflow

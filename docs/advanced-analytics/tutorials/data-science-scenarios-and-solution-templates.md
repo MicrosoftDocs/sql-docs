@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 applies_to: 
@@ -17,7 +17,7 @@ ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
 caps.latest.revision: 17
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Data science scenarios and solution templates

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_jobstep"
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 caps.latest.revision: 80
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_add_jobstep (Transact-SQL)

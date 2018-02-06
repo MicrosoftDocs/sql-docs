@@ -38,9 +38,9 @@ helpviewer_keywords:
   - "copying databases"
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 caps.latest.revision: 84
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Manage Metadata When Making a Database Available on Another Server

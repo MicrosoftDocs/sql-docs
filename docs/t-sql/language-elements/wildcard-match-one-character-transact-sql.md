@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "_ (wildcard - match one character)"
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # _ (Wildcard - Match One Character) (Transact-SQL)
@@ -44,7 +44,7 @@ Use the underscore character _ to match any single character in a string compari
 
 The following example returns all database names that begin with the letter `m` and have the letter `d` as the third letter. The underscore character specifies that the second character of the name can be any letter. The `model` and `msdb` databases meet this criteria. The `master` database does not.
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -62,7 +62,7 @@ You can use multiple underscores to represent multiple characters. Changing the 
 ### B: More complex example
  The following example uses the _ operator to find all the people in the `Person` table, who have a three-letter first name that ends in `an`.  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -73,14 +73,14 @@ ORDER BY FirstName;
 ## C: Escaping the underscore character   
 The following example returns the names of the fixed database roles like `db_owner` and `db_ddladmin`, but it also returns the `dbo` user. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 The underscore in the third character position is taken as a wildcard, and is not filtering for only principals starting with the letters `db_`. To escape the underscore enclose it in brackets `[_]`. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   

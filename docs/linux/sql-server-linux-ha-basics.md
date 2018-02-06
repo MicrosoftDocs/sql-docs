@@ -3,7 +3,7 @@ title: SQL Server availability basics for Linux deployments | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
@@ -18,7 +18,7 @@ ms.workload: "On Demand"
  
 # SQL Server availability basics for Linux deployments
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Starting with [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] is supported on both Linux and Windows. Like Windows-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] databases and instances need to be highly available under Linux. This article covers the technical aspects of planning and deploying highly available Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] databases and instances, as well as some of the differences from Windows-based installations. Because [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] may be new for Linux professionals, and Linux may be new for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] professionals, the article at times introduces concepts that may be familiar to some and unfamiliar to others.
 

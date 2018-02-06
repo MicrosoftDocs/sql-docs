@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-results"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data types"
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mapping Data Types (ODBC)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "connections [SQL Server], remote servers"
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View or Configure Remote Server Connection Options (SQL Server)
@@ -70,7 +70,7 @@ ms.workload: "On Demand"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_helpserver](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md) to return information about all remote servers.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_helpserver ;  
@@ -84,7 +84,7 @@ EXEC sp_helpserver ;
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md) to configure a remote server. The example configures a remote server corresponding to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `SEATTLE3`, to be collation compatible with the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 USE master;  
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  

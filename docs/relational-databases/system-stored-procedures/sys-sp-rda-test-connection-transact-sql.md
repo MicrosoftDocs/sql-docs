@@ -23,7 +23,7 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_rda_test_connection (Transact-SQL)
@@ -85,7 +85,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ### Check the connection from SQL Server to the remote Azure server  
   
-```tsql  
+```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
 GO  
   
@@ -99,7 +99,7 @@ GO
   
 ### Check the Azure firewall  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -115,7 +115,7 @@ GO
   
 ### Check authentication credentials  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -131,7 +131,7 @@ GO
   
 ### Check the status of the remote Azure server  
   
-```tsql  
+```sql  
 USE <SQL Server database>  
 GO  
 EXECUTE sys.sp_rda_test_connection   

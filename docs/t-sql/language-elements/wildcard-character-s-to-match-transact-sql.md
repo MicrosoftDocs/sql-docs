@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "[ ] (wildcard - character(s) to match)"
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 
@@ -39,7 +39,7 @@ ms.workload: "On Demand"
 ### A: Simple example   
 The following example returns the names of that start with the letter `m`. `[n-z]` specifies that the second letter must be somewhere in the range from `n` to `z`. The percent wildcard `%` allows any or no characters starting with the 3 character. The `model` and `msdb` databases meet this criteria. The `master` database does not and is excluded from the result set.
  
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm[n-z]%';
 ```
@@ -57,7 +57,7 @@ msdb
 ### B: More complex example   
  The following example uses the [] operator to find the IDs and names of all [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] employees who have addresses with a four-digit postal code.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.BusinessEntityID, p.FirstName, p.LastName, a.PostalCode  

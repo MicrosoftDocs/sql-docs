@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "compression [SQL Server], page"
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Page Compression Implementation

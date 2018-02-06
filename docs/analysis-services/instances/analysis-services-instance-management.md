@@ -2,16 +2,16 @@
 title: "Analysis Services Instance Management | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
@@ -22,7 +22,7 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Analysis Services Instance Management
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   An instance of Analysis Services is a copy of the **msmdsrv.exe** executable that runs as an operating system service. Each instance is fully independent of other instances on the same server, having its own configuration settings, permissions, ports, startup accounts, file storage, and server mode properties.  
   
  Each instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] runs as Windows service, Msmdsrv.exe, in the security context of a defined logon account.  

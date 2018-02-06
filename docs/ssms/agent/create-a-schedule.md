@@ -21,7 +21,7 @@ ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Schedule

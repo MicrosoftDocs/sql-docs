@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sys.sp_xtp_control_query_exec_stats"
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_xtp_control_query_exec_stats (Transact-SQL)
@@ -67,7 +67,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## Code Sample  
  The following code sample shows how to enable statistics collection for all natively compiled stored procedures for the instance and then for a specific natively compiled stored procedure.  
   
-```tsql   
+```sql   
 DECLARE @c bit  
   
 EXEC [sys].[sp_xtp_control_query_exec_stats] @new_collection_value = 1;  

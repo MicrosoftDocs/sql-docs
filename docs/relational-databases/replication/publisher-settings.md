@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Publisher Settings dialog box"
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Publisher Settings

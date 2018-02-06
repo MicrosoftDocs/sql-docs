@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Execute SQL Server Agent Job Task dialog box"
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execute SQL Server Agent Job Task (Maintenance Plan)

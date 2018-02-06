@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 dev_langs: 
@@ -18,7 +18,7 @@ ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
 caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Predict and plot from model (R in SQL quickstart)

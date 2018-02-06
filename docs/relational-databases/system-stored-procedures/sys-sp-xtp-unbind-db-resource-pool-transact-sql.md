@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sp_xtp_unbind_db_resource_pool"
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
@@ -38,7 +38,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'database_name'  
 ```  
   
@@ -61,7 +61,7 @@ Database 'Hekaton_DB' does not have a binding to a resource pool.
 ## Example  
  The following code unbinds the database Hekaton_DB from the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] resource pool it is bound to.  If Hekaton_DB is not currently bound to a [!INCLUDE[hek_2](../../includes/hek-2-md.md)] resource pool, a message is given. The database must be restarted for the unbinding to take effect.  
   
-```tsql  
+```sql  
 sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'  
 ```  
   

@@ -19,7 +19,7 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Operator Precedence and Associativity

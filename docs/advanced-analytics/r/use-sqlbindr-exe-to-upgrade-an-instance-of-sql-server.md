@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
@@ -35,7 +35,7 @@ If at any time you want to stop upgrading on the Machine Learning Server schedul
 
 The process of upgrading the machine learning components is referred to as **binding**, because it changes the support model for SQL Server machine learning components to use the new Modern Software Lifecycle Policy. 
 
-In general, switching to the new licensing model ensures that your data scientists can always use the latest version of R or Python. For more information about the terms of the Modern Lifecycle Policy, see [Support Timeline for Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
+In general, switching to the new servicing model ensures that your data scientists can always use the latest version of R or Python. For more information about the terms of the Modern Lifecycle Policy, see [Support Timeline for Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > The upgrade does not change the support model for the SQL Server database and doesn't change the version of SQL Server.

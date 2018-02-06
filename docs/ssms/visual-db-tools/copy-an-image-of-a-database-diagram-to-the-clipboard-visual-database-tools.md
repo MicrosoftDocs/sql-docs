@@ -19,7 +19,7 @@ ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Copy an Image of a Database Diagram to the Clipboard (Visual Database Tools)

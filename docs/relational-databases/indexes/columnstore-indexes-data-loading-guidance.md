@@ -63,7 +63,7 @@ These scenarios describe when loaded rows go directly to the columnstore or when
   
  The following example shows the results of loading 1,048,577 rows into a table. The results show that one COMPRESSED rowgroup in the columnstore (as compressed column segments), and 1 row in the deltastore.  
   
-```t-sql  
+```sql  
 SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id, 
   state state_desc, total_rows, deleted_rows, size_in_bytes   
 FROM sys.dm_db_column_store_row_group_physical_stats  
@@ -76,14 +76,14 @@ If you are loading data only to stage it before running more transformations, lo
 
  A common pattern for data load is to load the data into a staging table, do some transformation and then load it into the target table using the following command  
   
-```t-sql  
+```sql  
 INSERT INTO <columnstore index>  
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
  This command loads the data into the columnstore index in similar ways to BCP or Bulk Insert but in a single batch. If the number of rows in the staging table < 102400, the rows are loaded into a delta rowgroup otherwise the rows are directly loaded into compressed rowgroup. One key limitation was that this `INSERT` operation was single threaded. To load data in parallel, you could create multiple staging table or issue `INSERT`/`SELECT` with non-overlapping ranges of rows from the staging table. This limitation goes away with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. The command below loads the data from staging table in parallel but you will need to specify `TABLOCK`.  
   
-```t-sql  
+```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
 SELECT <list of columns> FROM <Staging Table>  
 ```  
@@ -98,7 +98,7 @@ SELECT <list of columns> FROM <Staging Table>
 
 *Trickle insert* refers to the way individual rows move into the columnstore index. Trickle inserts use the [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) statement. With trickle insert, all of the rows go to the deltastore. This is useful for small numbers of rows, but not practical for large loads.
   
-```t-sql  
+```sql  
 INSERT INTO <table-name> VALUES (<set of values>)  
 ```  
   
@@ -107,13 +107,13 @@ INSERT INTO <table-name> VALUES (<set of values>)
   
  Once the rowgroup contains 1,048,576 rows, the delta rowgroup us marked closed but it is still available for queries and update/delete operations but the newly inserted rows go into an existing or newly created deltastore rowgroup. There is a background thread *Tuple Mover (TM)* that compresses the closed delta rowgroups periodically every 5 minutes or so. You can explicitly invoke the following command to compress the closed delta rowgroup  
   
-```t-sql  
+```sql  
 ALTER INDEX <index-name> on <table-name> REORGANIZE  
 ```  
   
  If you want force a delta rowgroup closed and compressed, you can execute the following command. You may want run this command if you are done loading the rows and don't expect any new rows. By explicitly closing and compressing the delta rowgroup, you can save storage further and improve the analytics query performance. A best practice is to invoke this command if you  don't expect new rows to be inserted.  
   
-```t-sql  
+```sql  
 ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUPS = ON)  
 ```  
   

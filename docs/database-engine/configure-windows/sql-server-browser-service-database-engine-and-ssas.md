@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SQL Server Browser service"
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Browser Service (Database Engine and SSAS)

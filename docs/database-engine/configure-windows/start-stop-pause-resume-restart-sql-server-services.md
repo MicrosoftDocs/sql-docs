@@ -44,9 +44,9 @@ helpviewer_keywords:
   - "Management Studio [SQL Server], starting or stopping services"
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Start, Stop, Pause, Resume, Restart SQL Server Services
@@ -272,13 +272,13 @@ ms.workload: "Active"
   
 -   To wait for currently running [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and stored procedures to finish, and then stop the [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute the following statement.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   To stop the [!INCLUDE[ssDE](../../includes/ssde-md.md)] immediately, execute the following statement.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

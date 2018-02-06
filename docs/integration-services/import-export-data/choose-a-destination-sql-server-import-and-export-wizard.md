@@ -18,7 +18,7 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 caps.latest.revision: 104
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Choose a Destination (SQL Server Import and Export Wizard)

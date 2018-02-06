@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "replaying traces"
 ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Considerations for Replaying Traces (SQL Server Profiler)

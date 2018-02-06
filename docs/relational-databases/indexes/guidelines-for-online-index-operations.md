@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "transaction logs [SQL Server], indexes"
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: "sql"
 ms.prod_service: "database-engine, sql-database"
@@ -90,8 +90,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 ## Resumable Index Rebuild Considerations
 
 > [!NOTE]
-> See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
->
+> The resumable index option applies to SQL Server (Starting with SQL Server 2017) and SQL Database. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 When you perform resumable online index rebuild the following guidelines apply:
 -	Managing, planning and extending of index maintenance windows. You can pause and restart an index rebuild operation multiple times to fit your maintenance windows.
@@ -103,7 +102,6 @@ When you perform resumable online index rebuild the following guidelines apply:
 
 > [!IMPORTANT]
 > Resumable rebuild does not require you to keep open a long running transaction, allowing log truncation during this operation and a better log space management. With the new design, we managed to keep necessary data in a database together with all references required to restart the resumable operation.
->
 
 Generally, there is no performance difference between resumable and non-resumable online index rebuild. When you update a resumable index while an index rebuild operation is paused:
 - For read-mostly workloads, the performance impact is insignificant. 

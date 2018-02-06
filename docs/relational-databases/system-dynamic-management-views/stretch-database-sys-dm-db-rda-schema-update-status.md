@@ -23,7 +23,7 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stretch Database - sys.dm_db_rda_schema_update_status

@@ -37,7 +37,7 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Legacy Package Deployment (SSIS)

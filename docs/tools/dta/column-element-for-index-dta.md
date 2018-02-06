@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Column element"
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Column Element for Index (DTA)

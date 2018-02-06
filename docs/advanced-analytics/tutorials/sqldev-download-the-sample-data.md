@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 applies_to: 
@@ -20,7 +20,7 @@ ms.assetid: 32a5d5ad-c58a-4669-a90d-ef296b48fcd8
 caps.latest.revision: 10
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Lesson 1: Download the sample data

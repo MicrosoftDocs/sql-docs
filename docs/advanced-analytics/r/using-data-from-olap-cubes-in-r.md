@@ -7,11 +7,11 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: "r-services"
+ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs:
- - "r-services"
+ 
 ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
 caps.latest.revision: 12
 author: "jeannt"

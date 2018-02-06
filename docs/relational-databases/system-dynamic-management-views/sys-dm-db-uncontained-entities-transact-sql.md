@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_uncontained_entities dynamic management view"
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_uncontained_entities (Transact-SQL)
@@ -73,7 +73,7 @@ ms.workload: "Inactive"
 ## Examples  
  The following example creates a procedure named P1, and then queries `sys.dm_db_uncontained_entities`. The query reports that P1 uses **sys.endpoints** which is outside of the database.  
   
-```tsql  
+```sql  
 CREATE DATABASE Test;  
 GO  
   

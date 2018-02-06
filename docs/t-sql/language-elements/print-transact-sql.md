@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "conditionally returning messages [SQL Server]"
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 

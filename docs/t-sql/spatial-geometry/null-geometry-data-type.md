@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Null (geometry Data Type)"
 ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Null (geometry Data Type)

@@ -26,7 +26,7 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
@@ -67,7 +67,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 ### A. Validating all plan guides in a database  
  The following example checks the validity of all plan guides in the current database. If an empty result set is returned, all plan guides are valid.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
@@ -79,7 +79,7 @@ GO
 ### B. Testing plan guide validation before implementing a change to the database  
  The following example uses an explicit transaction to drop an index. The `sys.fn_validate_plan_guide` function is executed to determine whether this action will invalidate any plan guides in the database. Based on the results of the function, the `DROP INDEX` statement is either committed or the transaction is rolled back, and the index is not dropped.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN TRANSACTION;  

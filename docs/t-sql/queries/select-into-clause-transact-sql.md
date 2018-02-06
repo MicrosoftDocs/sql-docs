@@ -32,13 +32,13 @@ helpviewer_keywords:
   - "row additions [SQL Server], INTO clause"
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 caps.latest.revision: 63
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SELECT - INTO Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT…INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -106,7 +106,7 @@ If any one of these conditions is true, the column is created NOT NULL instead o
 ### A. Creating a table by specifying columns from multiple sources  
  The following example creates the table `dbo.EmployeeAddresses` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by selecting seven columns from various employee-related and address-related tables.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -125,7 +125,7 @@ GO
 ### B. Inserting rows using minimal logging  
  The following example creates the table `dbo.NewProducts` and inserts rows from the `Production.Product` table. The example assumes that the recovery model of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database is set to FULL. To ensure minimal logging is used, the recovery model of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database is set to BULK_LOGGED before rows are inserted and reset to FULL after the SELECT...INTO statement. This process ensures that the SELECT...INTO statement uses minimal space in the transaction log and performs efficiently.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -141,7 +141,7 @@ GO
 ### C. Creating an identity column using the IDENTITY function  
  The following example uses the IDENTITY function to create an identity column in the new table `Person.USAddress` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. This is required because the SELECT statement that defines the table contains a join, which causes the IDENTITY property to not transfer to the new table. Notice that the seed and increment values specified in the IDENTITY function are different from those of the `AddressID` column in the source table `Person.Address`.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -170,7 +170,7 @@ WHERE name = 'AddressID';
   
  **Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -213,7 +213,7 @@ GO
   
  **Applies to:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -227,11 +227,11 @@ ORDER BY YearlyIncome
   
 ```  
 ### F. Creating a new table as a copy of another table and loading it a specified filegroup
-The following example demostrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
+The following example demonstrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
 
  **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE

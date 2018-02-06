@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.dmf.runnow.f1"
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Evaluate Policies Dialog Box, Policy Selection Page

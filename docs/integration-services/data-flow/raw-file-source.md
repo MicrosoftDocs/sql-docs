@@ -24,7 +24,7 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Raw File Source

@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 dev_langs: 
@@ -18,7 +18,7 @@ ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
 caps.latest.revision: 7
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Working with inputs and outputs (R in SQL quickstart)

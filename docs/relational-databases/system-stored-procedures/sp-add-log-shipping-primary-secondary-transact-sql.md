@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_log_shipping_primary_secondary"
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_log_shipping_primary_secondary (Transact-SQL)

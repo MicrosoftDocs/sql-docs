@@ -24,7 +24,7 @@ ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
@@ -65,7 +65,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## Examples  
  The following example determines whether the `Salary` column of the `Employees` table was updated. The `COLUMNPROPERTY` function returns the column ID of the `Salary` column. The `@change_columns` local variable must be set to the results of a query by using CHANGETABLE as a data source.  
   
-```tsql  
+```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
     (COLUMNPROPERTY(OBJECT_ID('Employees'), 'Salary', 'ColumnId')  
     ,@change_columns);  

@@ -2,15 +2,15 @@
 title: "MSReportServer_ConfigurationSetting Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "wmi-provider-library-reference"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "MSReportServer_ConfigurationSetting class"
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MSReportServer_ConfigurationSetting Methods

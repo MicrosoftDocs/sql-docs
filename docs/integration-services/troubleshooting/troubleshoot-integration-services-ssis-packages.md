@@ -16,7 +16,7 @@ ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
 caps.latest.revision: 2
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Troubleshoot Integration Services (SSIS) Packages

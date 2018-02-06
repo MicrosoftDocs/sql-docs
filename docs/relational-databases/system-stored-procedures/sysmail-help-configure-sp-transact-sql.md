@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_help_configure_sp"
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_help_configure_sp (Transact-SQL)

@@ -21,7 +21,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Planning a SQL Server Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   To install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], follow these steps:  
   
 -   Review installation requirements, system configuration checks, and security considerations for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  

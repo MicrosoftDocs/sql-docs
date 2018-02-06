@@ -24,7 +24,8 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Configure a Multi-Homed Computer for SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   When a server must provide a connection to two or more networks or network subnets, a typical scenario uses a multi-homed computer. Frequently this computer is located in a perimeter network (also known as DMZ, demilitarized zone, or screened subnet). This topic describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a multi-homed environment.  
   
 > [!NOTE]  

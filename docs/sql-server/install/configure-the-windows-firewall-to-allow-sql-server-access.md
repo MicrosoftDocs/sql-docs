@@ -33,7 +33,8 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
  > For content related to previous versions of SQL Server, see [Configure the Windows Firewall to Allow SQL Server Access](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
 

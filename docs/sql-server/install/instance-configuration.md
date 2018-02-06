@@ -26,6 +26,7 @@ ms.workload: "On Demand"
 ---
 # Installation Wizard Help
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 This topic describes some of the configuration pages in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard. 
 
 ## Instance Configuration

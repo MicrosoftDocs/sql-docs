@@ -36,7 +36,7 @@ Data Discovery & Classification:
 - Learn more at [SQL Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866999).
 
 Query Editor:
-- Added support for SkipHeaders/SkipRows/FirstRow (SQLDW)  [TODO: I don't think comment is good enough. This is in reference to TFS #10788608]
+- Added support for SkipHeaders/SkipRows/FirstRow (SQL Data Warehouse).
 
 Showplan:
 - Enabled display of estimated plan button for SQL Data Warehouse
@@ -50,13 +50,13 @@ Showplan:
 
 Templates: 
 
-- Fixed a couple of typos (https://feedback.azure.com/forums/908035/suggestions/33143512)
+- Fixed a couple of typos [https://feedback.azure.com/forums/908035/suggestions/33143512](https://feedback.azure.com/forums/908035/suggestions/33143512).
 
 Showplan:
 
 - Fixed Live Query Statistics elapsed time, to show engine execution time instead of time elapsed for LQS connection.
 - Fixed an issue where showplan was not able to recognize Apply logical operators like GbApply and InnerApply.
-- Fixed an issue related to ExchangeSpill
+- Fixed an issue related to ExchangeSpill.
 
 Query Editor:
 

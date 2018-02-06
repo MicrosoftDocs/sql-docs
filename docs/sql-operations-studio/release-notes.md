@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "01/17/2018"
+ms.date: "02/15/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -17,7 +17,17 @@ ms.workload: "Inactive"
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download the January Public Preview](download.md)**
+**[Download the February Public Preview](download.md)**
+
+## February 2018 (February Public Preview)
+
+release date: February 15, 2018  
+version: 0.25.5
+
+The *February Public Preview* includes some feature suggestions and high-priority bug fixes. This release includes the following enhancements:
+
+- February enhancements here.
+- and here!
 
 ## January 2018 (January Public Preview)
 

@@ -38,7 +38,7 @@ ms.workload: "On Demand"
 |XML document|`http://localhost/XML/Customers.xml`|  
 |Embedded XML document|*Empty*|  
   
- For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/ms156450.aspx).  
+ For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Credentials  
  Credentials are required to run queries, to preview the report locally, and to preview the report from the report server.  

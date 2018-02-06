@@ -1,21 +1,17 @@
 ---
 title: Updated - T-SQL docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Transact-SQL.
-services: na
-documentationcenter: ''
+
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: BYHAM
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: t-sql
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: t-sql
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: Transact-SQL docs
 
@@ -29,7 +25,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
+- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
 - *Subject area:* &nbsp; **T-SQL**.
 
 
@@ -68,8 +64,8 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Backslash (Line Continuation) (Transact-SQL)](#TitleNum_1)
-2. [SELECT - ORDER BY Clause (Transact-SQL)](#TitleNum_2)
+1. [CREATE STATISTICS (Transact-SQL)](#TitleNum_1)
+2. [UPDATE STATISTICS (Transact-SQL)](#TitleNum_2)
 
 
 
@@ -80,37 +76,37 @@ This compact list provides links to all the updated articles that are listed in 
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Backslash (Line Continuation) (Transact-SQL)](language-elements/sql-server-utilities-statements-backslash.md)
+### 1. &nbsp; [CREATE STATISTICS (Transact-SQL)](statements/create-statistics-transact-sql.md)
 
-*Updated: 2017-11-15* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 83.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 200.  ms.author= "edmaca".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9484441710ac9a083a554ffadb59a3b7e92484b3 19b9c37c65ba462a32067c80e81a920eeb339851  (PR=3966  ,  Filename=sql-server-utilities-statements-backslash.md  ,  Dirpath=docs\t-sql\language-elements\  ,  MergeCommitSha40=b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1) -->
+<!-- git diff --ignore-all-space --unified=0 384e68493597bcc36876a3c7bada2630106256e2 c22168ea59b6020e8ebe1ccac5fa6a6049e6db4d  (PR=4460  ,  Filename=create-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
 
 
 
-**B. Splitting a binary string**
+MAXDOP = *max_degree_of_parallelism*
+**Applies to**: SQL Server (Starting with SQL Server 2017 CU3).
 
+ Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
 
-The following example uses a backslash and a carriage return to split a binary string into two lines.
+ *max_degree_of_parallelism* can be:
 
-```
-SELECT 0xabc\
-def AS [ColumnResult];
+ 1
+ Suppresses parallel plan generation.
 
-```
+ \>1
+ Restricts the maximum number of processors used in a parallel statistic operation to the specified number or fewer based on the current system workload.
 
- ..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
+ 0 (default)
+ Uses the actual number of processors or fewer based on the current system workload.
 
-```
- ColumnResult
- ------------
- 0xABCDEF
-```
+ \<update_stats_stream_option>
+ Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.
 
 
 
@@ -123,39 +119,35 @@ def AS [ColumnResult];
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp; [SELECT - ORDER BY Clause (Transact-SQL)](queries/select-order-by-clause-transact-sql.md)
+### 2. &nbsp; [UPDATE STATISTICS (Transact-SQL)](statements/update-statistics-transact-sql.md)
 
-*Updated: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
+*Updated: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
 
-<!-- Source markdown line 481.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 167.  ms.author= "edmaca".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 b8d7bc7bab46e914eb2facf6c654a5944383077e de7e4f3f7826011e273120a2b6b08af4d263a510  (PR=3663  ,  Filename=select-order-by-clause-transact-sql.md  ,  Dirpath=docs\t-sql\queries\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
+<!-- git diff --ignore-all-space --unified=0 5721e21a9f43fa784fe9357c47cb2a814385e63d 24ae47c553635f389a182e5e643bf9bd6bf59e78  (PR=4460  ,  Filename=update-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
 
 
 
-**<a name="Union"></a> Using ORDER BY with UNION, EXCEPT, and INTERSECT**
+MAXDOP = *max_degree_of_parallelism*
 
- When a query uses the UNION, EXCEPT, or INTERSECT operators, the ORDER BY clause must be specified at the end of the statement and the results of the combined queries are sorted. The following example returns all products that are red or yellow and sorts this combined list by the column `ListPrice`.
+**Applies to**: SQL Server (Starting with SQL Server 2017 CU3).
 
-```sql
-USE AdventureWorks2012;
-GO
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Red'
--- ORDER BY cannot be specified here.
-UNION ALL
-SELECT Name, Color, ListPrice
-FROM Production.Product
-WHERE Color = 'Yellow'
-ORDER BY ListPrice ASC;
+ Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
 
-```
+ *max_degree_of_parallelism* can be:
 
-**Examples: ..!NCLUDE-NotShown--ssSDWfull--../../includes/sssdwfull-md.md)] and ..!NCLUDE-NotShown--ssPDW--../../includes/sspdw-md.md)]**
+ 1
+ Suppresses parallel plan generation.
+
+ \>1
+ Restricts the maximum number of processors used in a parallel statistic operation to the specified number or fewer based on the current system workload.
+
+ 0 (default)
+ Uses the actual number of processors or fewer based on the current system workload.
 
 
 
@@ -164,45 +156,44 @@ ORDER BY ListPrice ASC;
 
 
 
-## Similar Articles
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## Similar articles about new or updated articles
 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### Subject areas which do have new or recently updated articles
 
-- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+#### Subject areas that *do* have new or recently updated articles
 
-#### Subject areas which have no new or recently updated articles
+
+- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### Subject areas that do *not* have any new or recently updated articles
+
 
 - [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

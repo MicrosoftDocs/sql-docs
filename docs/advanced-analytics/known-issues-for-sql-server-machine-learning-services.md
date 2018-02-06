@@ -1,6 +1,6 @@
 ---
 title: "Known issues in Machine Learning Services | Microsoft Docs"
-ms.date: "01/31/2018"
+ms.date: "02/05/2018"
 ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
@@ -67,11 +67,25 @@ To avoid problems with R packages, you can also upgrade the version of the R lib
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
+### R components missing from CU3 setup
+
+A limited number of Azure virtual machines were provisioned without the R installation files that should be included with SQL Server. The issue applies to virtual machines provisioned in the period from 2018-01-05 to 2018-01-23. This issue might also affect on-premises installations, if you applied the CU3 update for SQL Server 2017 during the period from 2018-01-05 to 2018-01-23.
+
+A service release has been provided that includes the correct version of the R installation files. 
+
++ [Cumulative Update Package 3 for SQL Server 2017 - KB4052987 ](https://www.microsoft.com/en-us/download/details.aspx?id=56128).
+
+To install the components and repair SQL Server 2017 CU3, you must uninstall CU3, and reinstall the updated version:
+
+1. Download the updated CU3 installation file, which includes the R installers.
+2. Uninstall CU3. In Control Panel, search for **Uninstall an update**, and then select "Hotfix 3015 for SQL Server 2017 (KB4052987) (64-bit)". Proceed with uninstall steps.
+3. Reinstall the CU3 update, by double-clicking on the update for KB4052987 that you just downloaded: `SQLServer2017-KB4052987-x64.exe`. Follow the installation instructions.
+
 ### Unable to install Python components in offline installations of SQL Server 2017 CTP 2.0 or later
 
 If you install a pre-release version of SQL Server 2017 on a computer without internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components. In such an instance, you can install the Machine Learning Services feature, but not the Python components.
 
-This issue is fixed in the release version. If you encounter this issue, as a workaround, you can temporarily enable internet access for the duration of the setup. This limitation does not apply to R.
+This issue is fixed in the release version. Also, this limitation does not apply to R components.
 
 **Applies to:** SQL Server 2017 with Python
 

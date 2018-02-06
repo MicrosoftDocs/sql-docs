@@ -31,21 +31,21 @@ You can configure a SQL Server Always On Availability Group (AG) for read-scale 
 
 Create the AG. Set `CLUSTER_TYPE = NONE`. In addition, set each replica with `FAILOVER_MODE = NONE`. Client applications running analytics or reporting workloads can directly connect to the secondary databases. You also can create a read-only routing list. Connections to the primary replica forward read connection requests to each of the secondary replicas from the routing list in a round-robin fashion.
 
-The following Transact-SQL script creates an AG named `ag1`. The script configures the AG replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the AG. Update the following script for your environment. Replace the `**<node1>**` and `**<node2>**` values with the names of the SQL Server instances that host the replicas. Replace the `**<5022>**` value with the port you set for the endpoint. Run the following Transact-SQL script on the primary SQL Server replica:
+The following Transact-SQL script creates an AG named `ag1`. The script configures the AG replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the AG. Update the following script for your environment. Replace the `<node1>` and `<node2>` values with the names of the SQL Server instances that host the replicas. Replace the `<5022>` value with the port you set for the endpoint. Run the following Transact-SQL script on the primary SQL Server replica:
 
 ```SQL
 CREATE AVAILABILITY GROUP [ag1]
     WITH (CLUSTER_TYPE = NONE)
     FOR REPLICA ON
-        N'**<node1>**' WITH (
-            ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+        N'<node1>' WITH (
+            ENDPOINT_URL = N'tcp://<node1>:<5022>',
 		    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = MANUAL,
 		    SEEDING_MODE = AUTOMATIC,
                     SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
 		    ),
-        N'**<node2>**' WITH ( 
-		    ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+        N'<node2>' WITH ( 
+		    ENDPOINT_URL = N'tcp://<node2>:<5022>', 
 		    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = MANUAL,
 		    SEEDING_MODE = AUTOMATIC,

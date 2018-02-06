@@ -1,7 +1,7 @@
 ---
 title: "Lesson 1: Connecting to the Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/05/2016"
+ms.date: "02/05/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -84,7 +84,8 @@ At least one administrator account was selected when [!INCLUDE[ssNoVersion_md](.
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
-4.  Click **Connect**.  
+4.  Click **Connect**.
+
 > [!NOTE]
 > This tutorial assumes you are new to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and have no special problems connecting. This should be sufficient for most people and this keeps this tutorial simple. For detailed troubleshooting steps, see [Troubleshooting Connecting to the SQL Server Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 

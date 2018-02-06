@@ -72,11 +72,11 @@ SQL Server Management Studio 17.5 Upgrade Package (upgrades 17.x to 17.5):<br>
 
 **Version Information**
 
-The release number: 17.5
+Release number: 17.5
 
-The build number for this release: NEEDED
+Build number for this release: NEEDED
 
-The release date: February 13, 2018
+Release date: February 13, 2018
 
 ## New in this Release
 
@@ -131,8 +131,6 @@ This release of SSMS supports the following 64-bit platforms when used with the 
   * Close any other instances of Visual Studio that are open on the computer.
   * Make sure all the latest OS updates are installed on the computer.
   * The noted actions are typically required only once. There are few cases where a reboot is required during additional upgrades to the same major version of SSMS. For minor upgrades, all the prerequirements for SSMS are already be installed on the computer.
-
-* To see the list of known issues and work-arounds, see [SQL Server Management Studio -  Release Notes](../ssms/sql-server-management-studio-release-notes.md)
 
 
 ## Release Notes

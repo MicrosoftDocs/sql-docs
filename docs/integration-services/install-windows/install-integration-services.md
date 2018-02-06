@@ -84,9 +84,9 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 -   **SQL Server Database Engine**. Install the Database Engine with the SQL Server Setup wizard. Selecting the Database Engine lets you create and host the SSIS Catalog database, `SSISDB`, to store, manage, run, and monitor SSIS packages.
 -   **SQL Server Data Tools (SSDT)**. To download and install SSDT, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Installing SSDT lets you design and deploy SSIS packages. SSDT installs the following things:
     -   The SSIS package design and development tools, including SSIS Designer.
-    -   32-bit and 64-bit SSIS components.
+    -   32-bit SSIS components only.
     -   A limited version of Visual Studio (if a Visual Studio edition is not already installed).
-    -   Visual Studio Tools for Applications (VSTA), used by the SSIS Script Task and Script Component.
+    -   Visual Studio Tools for Applications (VSTA), the script editor used by the SSIS Script Task and Script Component.
     -   SSIS wizards including the Deployment Wizard and the Package Upgrade Wizard.
     -   SQL Server Import and Export Wizard.
 -   **Integration Services Feature Pack for Azure**. To download and install the Feature Pack, see [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798). Installing the Feature Pack lets your packages connect to storage and analytics services in the Azure cloud, including the following services:

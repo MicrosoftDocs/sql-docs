@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.syslockinfo compatibility view"
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.syslockinfo (Transact-SQL)

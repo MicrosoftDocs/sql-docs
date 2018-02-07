@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "expressions [XQuery], logical"
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Logical Expressions (XQuery)

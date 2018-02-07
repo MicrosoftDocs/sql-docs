@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "sys.fn_cdc_increment_lsn"
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

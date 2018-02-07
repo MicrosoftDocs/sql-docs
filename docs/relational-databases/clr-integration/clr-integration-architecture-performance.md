@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "performance [CLR integration]"
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CLR Integration Architecture  - Performance

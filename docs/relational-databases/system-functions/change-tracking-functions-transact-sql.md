@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server], functions"
 ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

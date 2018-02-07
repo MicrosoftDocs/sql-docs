@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "ODS [SQL Server]"
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Engine Extended Stored Procedures - Programming

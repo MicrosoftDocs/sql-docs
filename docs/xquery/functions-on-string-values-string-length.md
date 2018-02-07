@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:string-length function"
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on String Values - string-length

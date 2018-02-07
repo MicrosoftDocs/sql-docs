@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "fn_cdc_map_lsn_to_time"
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

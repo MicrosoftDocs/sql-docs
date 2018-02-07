@@ -146,6 +146,18 @@ DBCC CHECKIDENT ('Person.AddressType', RESEED, 10);
 GO  
   
 ```  
+### D. Resetting the identity value on an empty table
+ The following example forces the current identity value in the `ErrorLogID` column in the `ErrorLog` table to a value of 1, after deleting all records from table. Because the table has no existing rows, the next row inserted will use 1 as the value, that is, the new current identity value, without adding the increment value defined for the column.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+TRUNCATE TABLE dbo.ErrorLog
+GO
+DBCC CHECKIDENT ('dbo.ErrorLog', RESEED, 1);  
+GO  
+  
+```  
   
 ## See Also  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

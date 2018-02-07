@@ -19,7 +19,7 @@ ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FilterCriterion Property (RDS)

@@ -19,7 +19,7 @@ ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # The Fields Collection

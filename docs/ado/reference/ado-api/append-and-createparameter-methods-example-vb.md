@@ -21,7 +21,7 @@ ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Append and CreateParameter Methods Example (VB)

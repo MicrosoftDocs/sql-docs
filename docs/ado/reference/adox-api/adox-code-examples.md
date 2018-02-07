@@ -18,7 +18,7 @@ ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADOX Code Examples

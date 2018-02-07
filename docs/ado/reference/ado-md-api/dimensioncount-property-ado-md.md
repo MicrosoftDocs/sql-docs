@@ -22,7 +22,7 @@ ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DimensionCount Property (ADO MD)

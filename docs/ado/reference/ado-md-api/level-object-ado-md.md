@@ -21,7 +21,7 @@ ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Level Object (ADO MD)

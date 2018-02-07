@@ -20,7 +20,7 @@ ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # State Property Example (VC++)

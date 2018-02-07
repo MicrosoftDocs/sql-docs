@@ -21,7 +21,7 @@ ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LineSeparator Property (ADO)

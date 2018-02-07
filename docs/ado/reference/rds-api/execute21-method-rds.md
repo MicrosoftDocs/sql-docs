@@ -19,7 +19,7 @@ ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execute21 Method (RDS)

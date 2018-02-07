@@ -20,7 +20,7 @@ ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # StayInSync Property Example (VB)

@@ -20,7 +20,7 @@ ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Type Property Example (Field) (VB)

@@ -31,7 +31,7 @@ ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)

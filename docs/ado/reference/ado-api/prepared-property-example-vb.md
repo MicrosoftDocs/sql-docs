@@ -20,7 +20,7 @@ ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Prepared Property Example (VB)

@@ -24,7 +24,7 @@ ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetPermissions Method (ADOX)

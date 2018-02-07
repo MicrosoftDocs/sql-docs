@@ -20,7 +20,7 @@ ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MarshalOptions Property Example (VB)

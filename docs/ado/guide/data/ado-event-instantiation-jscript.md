@@ -18,7 +18,7 @@ ms.assetid: b37e5957-7f00-4d62-b0f1-929fec996f4e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Event Instantiation: JScript

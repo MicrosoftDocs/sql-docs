@@ -19,7 +19,7 @@ ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ConvertToString Method (RDS)

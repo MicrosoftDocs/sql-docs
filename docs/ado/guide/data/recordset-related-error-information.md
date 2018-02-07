@@ -19,7 +19,7 @@ ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Recordset-Related Error Information

@@ -22,7 +22,7 @@ ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CursorType, LockType, and EditMode Properties Example (VC++)

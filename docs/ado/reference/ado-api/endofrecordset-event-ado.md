@@ -22,7 +22,7 @@ ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # EndOfRecordset Event (ADO)

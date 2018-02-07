@@ -21,7 +21,7 @@ ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IsolationLevel Property

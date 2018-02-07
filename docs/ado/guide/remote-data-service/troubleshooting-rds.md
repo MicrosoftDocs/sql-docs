@@ -18,7 +18,7 @@ ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Troubleshooting RDS

@@ -20,7 +20,7 @@ ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ParentCatalog Property Example (VB)

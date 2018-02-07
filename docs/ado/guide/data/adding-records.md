@@ -21,7 +21,7 @@ ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Adding Records to a Recordset

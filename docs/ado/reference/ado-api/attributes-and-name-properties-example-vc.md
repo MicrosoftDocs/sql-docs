@@ -21,7 +21,7 @@ ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Attributes and Name Properties Example (VC++)

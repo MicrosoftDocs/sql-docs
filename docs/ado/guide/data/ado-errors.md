@@ -18,7 +18,7 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Run-Time Errors

@@ -19,7 +19,7 @@ ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Recordset (ADO - WFC Syntax)

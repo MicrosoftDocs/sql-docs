@@ -21,7 +21,7 @@ ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Field (ADO for Visual C++ Syntax)

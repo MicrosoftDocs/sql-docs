@@ -21,7 +21,7 @@ ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OriginalValue and UnderlyingValue Properties Example (VB)

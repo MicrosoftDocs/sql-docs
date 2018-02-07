@@ -21,7 +21,7 @@ ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADORecordConstruction Interface

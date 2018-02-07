@@ -20,7 +20,7 @@ ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Views Append Method Example (VB)

@@ -19,7 +19,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Local Language Versions in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports all languages that are supported by Windows operating systems.  
   
 ## Cross-Language Support  

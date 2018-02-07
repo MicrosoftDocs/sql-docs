@@ -20,7 +20,7 @@ ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetString Method Example (VB)

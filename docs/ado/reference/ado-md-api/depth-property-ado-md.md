@@ -22,7 +22,7 @@ ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Depth Property (ADO MD)

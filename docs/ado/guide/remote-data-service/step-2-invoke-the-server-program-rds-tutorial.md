@@ -18,7 +18,7 @@ ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Step 2: Invoke the Server Program (RDS Tutorial)

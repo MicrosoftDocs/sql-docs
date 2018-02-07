@@ -19,7 +19,7 @@ ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Server Property Example (VBScript)

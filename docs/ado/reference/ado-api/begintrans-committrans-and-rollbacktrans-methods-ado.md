@@ -28,7 +28,7 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)

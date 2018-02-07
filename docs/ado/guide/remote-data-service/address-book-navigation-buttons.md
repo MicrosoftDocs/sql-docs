@@ -19,7 +19,7 @@ ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Address Book Navigation Buttons

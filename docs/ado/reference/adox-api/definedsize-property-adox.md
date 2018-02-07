@@ -25,7 +25,7 @@ ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DefinedSize Property (ADOX)

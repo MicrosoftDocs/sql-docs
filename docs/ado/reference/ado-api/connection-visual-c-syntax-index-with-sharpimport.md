@@ -21,7 +21,7 @@ ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connection (Visual C++ Syntax Index with #import)

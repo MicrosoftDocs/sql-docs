@@ -21,7 +21,7 @@ ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AffectEnum

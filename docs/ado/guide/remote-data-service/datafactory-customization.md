@@ -18,7 +18,7 @@ ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DataFactory Customization

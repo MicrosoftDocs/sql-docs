@@ -18,7 +18,7 @@ ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filtering for Updated Records

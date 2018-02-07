@@ -21,7 +21,7 @@ ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AbsolutePage Property (ADO)

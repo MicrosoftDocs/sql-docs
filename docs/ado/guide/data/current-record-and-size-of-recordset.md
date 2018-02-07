@@ -19,7 +19,7 @@ ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Current Record and Size of Recordset

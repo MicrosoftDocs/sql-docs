@@ -20,7 +20,7 @@ ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Find Method Example (VC++)

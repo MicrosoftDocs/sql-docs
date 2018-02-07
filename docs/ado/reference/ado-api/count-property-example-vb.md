@@ -20,7 +20,7 @@ ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Count Property Example (VB)

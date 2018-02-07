@@ -20,7 +20,7 @@ ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CompareBookmarks Method Example (VC++)

@@ -20,7 +20,7 @@ ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CacheSize Property Example (VC++)

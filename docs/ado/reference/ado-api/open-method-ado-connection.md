@@ -23,7 +23,7 @@ ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Open Method (ADO Connection)

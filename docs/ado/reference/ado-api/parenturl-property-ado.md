@@ -21,7 +21,7 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ParentURL Property (ADO)

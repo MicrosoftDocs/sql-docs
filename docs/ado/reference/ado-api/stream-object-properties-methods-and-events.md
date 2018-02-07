@@ -18,7 +18,7 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Stream Object Properties, Methods, and Events

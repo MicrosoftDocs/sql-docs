@@ -22,7 +22,7 @@ ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ChangePassword Method (ADOX)

@@ -18,7 +18,7 @@ ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Command Object Parameters

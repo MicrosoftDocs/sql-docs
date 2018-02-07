@@ -21,7 +21,7 @@ ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IsolationLevel and Mode Properties Example (VC++)

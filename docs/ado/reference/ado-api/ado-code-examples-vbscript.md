@@ -21,7 +21,7 @@ ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Code Examples VBScript

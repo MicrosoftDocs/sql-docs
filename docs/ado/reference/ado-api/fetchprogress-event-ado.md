@@ -22,7 +22,7 @@ ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FetchProgress Event (ADO)

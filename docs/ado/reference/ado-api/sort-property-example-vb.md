@@ -20,7 +20,7 @@ ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sort Property Example (VB)

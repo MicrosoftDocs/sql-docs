@@ -21,7 +21,7 @@ ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # The Significance of Cursor Location

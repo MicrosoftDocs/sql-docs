@@ -22,7 +22,7 @@ ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using Pages

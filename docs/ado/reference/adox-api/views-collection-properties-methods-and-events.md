@@ -18,7 +18,7 @@ ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Views Collection Properties, Methods, and Events

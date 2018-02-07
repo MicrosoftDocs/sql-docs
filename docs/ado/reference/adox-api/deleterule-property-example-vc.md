@@ -20,7 +20,7 @@ ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DeleteRule Property Example (VC++)

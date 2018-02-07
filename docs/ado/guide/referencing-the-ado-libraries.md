@@ -19,7 +19,7 @@ ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Referencing the ADO Libraries

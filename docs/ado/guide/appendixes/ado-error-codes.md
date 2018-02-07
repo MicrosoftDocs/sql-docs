@@ -18,7 +18,7 @@ ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Capture ADO Error Codes

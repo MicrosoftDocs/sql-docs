@@ -23,7 +23,7 @@ ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Chapter Property (ADO)

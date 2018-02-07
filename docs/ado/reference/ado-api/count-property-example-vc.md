@@ -20,7 +20,7 @@ ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Count Property Example (VC++)

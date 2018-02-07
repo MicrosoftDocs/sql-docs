@@ -19,7 +19,7 @@ ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Internet Information Services Error Codes for Remote Data Service

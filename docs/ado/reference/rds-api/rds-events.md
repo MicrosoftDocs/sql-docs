@@ -18,7 +18,7 @@ ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RDS Events

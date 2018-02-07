@@ -20,7 +20,7 @@ ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AddNew Method Example (VBScript)

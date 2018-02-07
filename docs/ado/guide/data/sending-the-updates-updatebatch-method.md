@@ -16,7 +16,7 @@ ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sending the Updates: UpdateBatch Method

@@ -18,7 +18,7 @@ ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Dealing with Failed Updates

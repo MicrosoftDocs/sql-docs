@@ -21,7 +21,7 @@ ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DateCreated and DateModified Properties Example (VC++)

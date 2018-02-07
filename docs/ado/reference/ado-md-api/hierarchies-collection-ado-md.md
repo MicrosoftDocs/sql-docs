@@ -22,7 +22,7 @@ ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Hierarchies Collection (ADO MD)

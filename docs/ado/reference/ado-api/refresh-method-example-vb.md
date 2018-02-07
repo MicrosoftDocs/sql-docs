@@ -20,7 +20,7 @@ ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Refresh Method Example (VB)

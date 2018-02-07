@@ -70,7 +70,7 @@ SMO:
 
 Templates: 
 
-- Fixed a couple of typos [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).
+- "Database Mail": fixed a couple of typos [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).
 
 <br>
 

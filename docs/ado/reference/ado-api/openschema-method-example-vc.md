@@ -20,7 +20,7 @@ ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OpenSchema Method Example (VC++)

@@ -26,7 +26,7 @@ ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Description Property (ADO MD)

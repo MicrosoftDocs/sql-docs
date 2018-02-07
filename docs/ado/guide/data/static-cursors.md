@@ -19,7 +19,7 @@ ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Static Cursors

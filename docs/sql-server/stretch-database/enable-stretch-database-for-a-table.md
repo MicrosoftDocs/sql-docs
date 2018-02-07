@@ -23,7 +23,8 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Enable Stretch Database for a table
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   To configure a table for  Stretch Database, select **Stretch | Enable** for a table in SQL Server Management Studio to open the **Enable Table for Stretch** wizard. You can also use Transact-SQL to enable Stretch Database on an existing table, or to create a new table with Stretch Database enabled.  
   
@@ -31,7 +32,7 @@ ms.workload: "Inactive"
   
 -   If your table contains both hot and cold data, you can specify a filter function to select the rows to migrate.    
  
- **Prerequisites**. If you select **Stretch | Enable** for a table, and you have not yet enabled Stretch Database for the database, the wizard first configures the database for Stretch Database. Follow the steps in [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) instead of the steps in this topic.  
+ **Prerequisites**. If you select **Stretch | Enable** for a table, and you have not yet enabled Stretch Database for the database, the wizard first configures the database for Stretch Database. Follow the steps in [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) instead of the steps in this article.  
   
  **Permissions**. Enabling Stretch Database on a database or a table requires db_owner permissions. Enabling Stretch Database on  a table also requires ALTER permissions on the table.  
 
@@ -56,7 +57,7 @@ ms.workload: "Inactive"
   
 -   Run the ALTER TABLE statement to specify a filter function after you exit the wizard. For the required steps, see [Add a filter function after running the Wizard](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
- The ALTER TABLE syntax is described later in this topic.  
+ The ALTER TABLE syntax is described later in this article.  
   
  **Summary**  
  Review the values that you entered and the options that you selected in the wizard. Then select **Finish** to enable Stretch.  

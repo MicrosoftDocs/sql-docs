@@ -20,7 +20,7 @@ ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADOX Code Examples in Microsoft Visual C++

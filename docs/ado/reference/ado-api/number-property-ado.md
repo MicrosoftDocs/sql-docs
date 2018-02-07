@@ -23,7 +23,7 @@ ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Number Property (ADO)

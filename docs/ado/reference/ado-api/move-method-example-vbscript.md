@@ -20,7 +20,7 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Move Method Example (VBScript)

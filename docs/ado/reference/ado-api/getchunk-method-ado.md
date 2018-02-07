@@ -22,7 +22,7 @@ ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetChunk Method (ADO)

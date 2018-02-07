@@ -28,7 +28,7 @@ ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events (ADO)

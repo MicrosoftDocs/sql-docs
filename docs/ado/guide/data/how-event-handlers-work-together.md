@@ -23,7 +23,7 @@ ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # How Event Handlers Work Together

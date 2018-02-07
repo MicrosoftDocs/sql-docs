@@ -21,7 +21,7 @@ ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Hierarchy Object (ADO MD)

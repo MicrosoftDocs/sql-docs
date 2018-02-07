@@ -22,7 +22,7 @@ ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FetchComplete Event (ADO)

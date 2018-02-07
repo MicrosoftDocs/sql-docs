@@ -21,7 +21,7 @@ ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AbsolutePosition and CursorLocation Properties Example (VC++)

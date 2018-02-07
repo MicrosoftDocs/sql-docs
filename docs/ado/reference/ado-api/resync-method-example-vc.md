@@ -20,7 +20,7 @@ ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Resync Method Example (VC++)

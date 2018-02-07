@@ -19,7 +19,7 @@ ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Appendix D: ADO Samples in the Windows SDK

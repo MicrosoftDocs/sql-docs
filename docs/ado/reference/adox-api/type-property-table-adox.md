@@ -23,7 +23,7 @@ ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Type Property (Table) (ADOX)

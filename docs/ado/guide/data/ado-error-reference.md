@@ -20,7 +20,7 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Errors

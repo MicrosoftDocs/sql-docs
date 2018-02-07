@@ -21,7 +21,7 @@ ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SortOrderEnum

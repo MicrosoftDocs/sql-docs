@@ -19,7 +19,7 @@ ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RDS Object Model Summary

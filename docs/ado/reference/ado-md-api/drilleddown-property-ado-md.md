@@ -22,7 +22,7 @@ ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DrilledDown Property (ADO MD)

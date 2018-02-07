@@ -19,7 +19,7 @@ ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Collections

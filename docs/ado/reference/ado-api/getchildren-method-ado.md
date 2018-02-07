@@ -22,7 +22,7 @@ ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetChildren Method (ADO)

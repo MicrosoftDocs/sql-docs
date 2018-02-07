@@ -21,7 +21,7 @@ ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # StreamTypeEnum

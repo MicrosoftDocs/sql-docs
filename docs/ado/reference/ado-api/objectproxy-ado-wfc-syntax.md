@@ -19,7 +19,7 @@ ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ObjectProxy (ADO - WFC Syntax)

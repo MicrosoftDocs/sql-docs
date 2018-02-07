@@ -21,7 +21,7 @@ ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AbsolutePosition and CursorLocation Properties Example (VB)

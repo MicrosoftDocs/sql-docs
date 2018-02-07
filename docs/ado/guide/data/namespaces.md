@@ -18,7 +18,7 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Namespaces

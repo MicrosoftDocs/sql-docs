@@ -20,7 +20,7 @@ ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # NextRecordset Method Example (VC++)

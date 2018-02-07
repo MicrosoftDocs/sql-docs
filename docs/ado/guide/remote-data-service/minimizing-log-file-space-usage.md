@@ -18,7 +18,7 @@ ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Minimizing Log File Space Usage

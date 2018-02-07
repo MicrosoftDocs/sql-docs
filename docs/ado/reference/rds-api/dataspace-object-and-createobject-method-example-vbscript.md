@@ -21,7 +21,7 @@ ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DataSpace Object and CreateObject Method Example (VBScript)

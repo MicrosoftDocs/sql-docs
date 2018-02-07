@@ -21,7 +21,7 @@ ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # State Property (ADO)

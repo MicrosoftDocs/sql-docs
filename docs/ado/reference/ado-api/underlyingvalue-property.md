@@ -23,7 +23,7 @@ ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # UnderlyingValue Property

@@ -16,7 +16,7 @@ ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Event Instantiation: ADO and WFC

@@ -22,7 +22,7 @@ ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Seek Method

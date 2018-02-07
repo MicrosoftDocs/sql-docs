@@ -22,7 +22,7 @@ ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DataFactory Object, Query Method, and CreateObject Method Example (VBScript)

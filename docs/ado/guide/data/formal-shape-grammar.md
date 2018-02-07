@@ -19,7 +19,7 @@ ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Formal Shape Grammar

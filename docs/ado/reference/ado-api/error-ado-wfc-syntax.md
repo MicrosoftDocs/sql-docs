@@ -19,7 +19,7 @@ ms.assetid: a22c6688-5321-4e6a-ba2a-87985a0e854a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Error (ADO - WFC Syntax)

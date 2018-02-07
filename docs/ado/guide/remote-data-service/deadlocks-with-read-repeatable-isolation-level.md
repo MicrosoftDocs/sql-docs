@@ -19,7 +19,7 @@ ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Deadlocks with Read Repeatable Isolation Level

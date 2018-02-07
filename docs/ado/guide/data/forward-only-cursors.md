@@ -19,7 +19,7 @@ ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Forward-Only Cursors

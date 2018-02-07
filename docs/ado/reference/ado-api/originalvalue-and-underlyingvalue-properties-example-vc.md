@@ -21,7 +21,7 @@ ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OriginalValue and UnderlyingValue Properties Example (VC++)

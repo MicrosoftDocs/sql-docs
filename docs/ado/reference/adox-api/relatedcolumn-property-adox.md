@@ -25,7 +25,7 @@ ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RelatedColumn Property (ADOX)

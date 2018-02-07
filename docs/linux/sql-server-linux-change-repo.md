@@ -173,7 +173,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
 After you have configured the correct repository, you can proceed to [install](sql-server-linux-setup.md#platforms) or [update](sql-server-linux-setup.md#upgrade) SQL Server and any related packages from the new repository.
 
 > [!IMPORTANT]
-> At this point, if you choose to use one of the installation tutorials, such as the [quickstart tutorials](#platforms), remember that you have already configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstart tutorials use the CU repository.
+> At this point, if you choose to use one of the installation articles, such as the [quickstarts](sql-server-linux-setup.md#platforms), remember that you have already configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstarts use the CU repository.
 
 > [!IMPORTANT]
 > Any version of SQL Server 2017 prior to CTP 2.1 must be upgraded to at least 2.1 before upgrading to GA. Another option is to backup your databases, uninstall the previous version, and then perform a fresh install of a GA version.

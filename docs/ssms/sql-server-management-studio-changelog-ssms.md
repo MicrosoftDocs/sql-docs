@@ -50,7 +50,7 @@ Showplan:
 
 Templates: 
 
-- Fixed a couple of typos [https://feedback.azure.com/forums/908035/suggestions/33143512](https://feedback.azure.com/forums/908035/suggestions/33143512).
+- Fixed a couple of typos [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).
 
 Showplan:
 
@@ -61,16 +61,18 @@ Showplan:
 Query Editor:
 
 - Fixed on issue related to SPIDs where SSMS could throw an error like "Input string was not in a correct format. (mscorlib)" when executing a simple query preceded by a "SET SHOWPLAN_ALL ON". 
+- Added support for SkipRows option to the Delimited Text External File Format for Azure SQL DW. This capability allows users to skip a specified number of rows when loading delimited text files into SQL DW. Also added the corresponding intellisense/SMO support for the FIRST_ROW keyword. 
 
 SMO:
 
 - Fixed an issue where SMO was not able to fetch AvailabilityReplica properties in case the server collation happened to be case-sensitive (as a result, SSMS could display an error message like "The multi-part identifier "a.delimited" could not be bound."
-- Fixed an issue in DatabaseScopedConfigurationCollection class, where incorrectly handling collations (as a result, an SSMS running on an ma machine with a Turkish locale could display an error like "legacy cardinality estimation is not valid scoped configuration" when right clicking on a database running on a server with a case-sensitive collation.) For details, see https://connect.microsoft.com/SQLServer/feedback/details/3138001.
-- Fixed an issue in JobServer class, where SMO was not able to fetch SQL Agent properties on a SQL 2005 server (as a result, SSMS was throwing an error like "Cannot assign a default value to a local variable. Must declare the scalar variable "@ServiceStartMode" and, ultimately, was not displaying the SQL Agent node in Object Explorer.) For details, see https://connect.microsoft.com/SQLServer/feedback/details/3145282.
+- Fixed an issue in DatabaseScopedConfigurationCollection class, where incorrectly handling collations (as a result, an SSMS running on an ma machine with a Turkish locale could display an error like "legacy cardinality estimation is not valid scoped configuration" when right clicking on a database running on a server with a case-sensitive collation).
+- Fixed an issue in JobServer class, where SMO was not able to fetch SQL Agent properties on a SQL 2005 server (as a result, SSMS was throwing an error like "Cannot assign a default value to a local variable. Must declare the scalar variable "@ServiceStartMode" and, ultimately, was not displaying the SQL Agent node in Object Explorer).
 
 
 
 <br>
+
 ## Previous SSMS releases
 
 Download previous SSMS versions by clicking the title links in the following sections.

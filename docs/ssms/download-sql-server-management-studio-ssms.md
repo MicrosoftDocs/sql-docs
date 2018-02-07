@@ -84,16 +84,18 @@ SSMS 17.5 is the latest version of SQL Server Management Studio. The 17.x genera
 
 Version 17.5 includes:
 
-
 Data Discovery & Classification:
+
 - Added a new SQL Data Discovery & Classification feature for discovering, classifying, labeling & reporting sensitive data in your databases. 
 - Auto-discovering and classifying your most sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in your organizational information protection stature.
 - Learn more at [SQL Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866999).
 
 Query Editor:
-- Added support for SkipHeaders/SkipRows/FirstRow (SQL Data Warehouse) 
+
+- Added support for SkipRows option to the Delimited Text External File Format for Azure SQL DW. This capability allows users to skip a specified number of rows when loading delimited text files into SQL DW. Also added the corresponding intellisense/SMO support for the FIRST_ROW keyword. 
 
 Showplan:
+
 - Enabled display of estimated plan button for SQL Data Warehouse
 - Added new showplan attribute *EstimateRowsWithoutRowGoal*; and added new showplan attributes to *QueryTimeStats*: *UdfCpuTime* and *UdfElapsedTime*. For more information, see [Optimizer row goal information in query execution plan added in SQL Server 2017 CU3](http://support.microsoft.com/help/4051361).
 

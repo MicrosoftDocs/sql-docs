@@ -20,7 +20,7 @@ ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # GetRows Method Example (VB)

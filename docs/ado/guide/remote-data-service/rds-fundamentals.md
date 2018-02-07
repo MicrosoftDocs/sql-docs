@@ -19,7 +19,7 @@ ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RDS Fundamentals

@@ -21,7 +21,7 @@ ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IsolationLevel and Mode Properties Example (VB)

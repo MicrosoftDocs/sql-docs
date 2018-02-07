@@ -25,9 +25,10 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage and troubleshoot Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  To manage and troubleshoot Stretch Database, use the tools and methods described in this topic .  
+
+  To manage and troubleshoot Stretch Database, use the tools and methods described in this article .  
 ## Manage local data  
   
 ###  <a name="LocalInfo"></a> Get info about local databases and tables enabled for Stretch Database  

@@ -18,7 +18,7 @@ ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Level Object Properties, Methods, and Events

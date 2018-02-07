@@ -20,7 +20,7 @@ ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Service Providers and Components

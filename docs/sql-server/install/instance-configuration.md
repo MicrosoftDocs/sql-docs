@@ -26,7 +26,8 @@ ms.workload: "On Demand"
 ---
 # Installation Wizard Help
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-This topic describes some of the configuration pages in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard. 
+
+This article describes some of the configuration pages in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard. 
 
 ## Instance Configuration
 Use the **Instance Configuration** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify whether to create a default instance or a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not already installed, a default instance will be created unless you specify a named instance.  

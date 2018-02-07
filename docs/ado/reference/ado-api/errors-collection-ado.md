@@ -23,7 +23,7 @@ ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Errors Collection (ADO)

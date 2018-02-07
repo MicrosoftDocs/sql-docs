@@ -20,7 +20,7 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Microsoft OLE DB Simple Provider Overview

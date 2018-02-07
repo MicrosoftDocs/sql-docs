@@ -20,7 +20,7 @@ ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Indexes Append Method Example (VC++)

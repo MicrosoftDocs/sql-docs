@@ -21,7 +21,7 @@ ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Index Property

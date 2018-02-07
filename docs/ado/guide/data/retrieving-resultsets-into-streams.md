@@ -20,7 +20,7 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Retrieving Resultsets into Streams

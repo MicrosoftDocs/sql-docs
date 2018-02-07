@@ -21,7 +21,7 @@ ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Recordset (ADO for Visual C++ Syntax)

@@ -18,7 +18,7 @@ ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Internet Server Error: Access Denied

@@ -18,7 +18,7 @@ ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO MD Code Examples

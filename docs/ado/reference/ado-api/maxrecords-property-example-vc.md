@@ -20,7 +20,7 @@ ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MaxRecords Property Example (VC++)

@@ -21,7 +21,7 @@ ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # UpdateBatch and CancelBatch Methods Example (VC++)

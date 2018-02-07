@@ -21,7 +21,7 @@ ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Columns and Tables Append Methods, Name Property Example (VC++)

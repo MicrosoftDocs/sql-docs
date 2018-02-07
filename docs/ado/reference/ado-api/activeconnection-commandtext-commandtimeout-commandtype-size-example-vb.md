@@ -24,7 +24,7 @@ ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VB)

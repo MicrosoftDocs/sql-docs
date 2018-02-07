@@ -20,7 +20,7 @@ ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Handler Property Example (VC++)

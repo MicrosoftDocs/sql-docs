@@ -22,7 +22,7 @@ ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetObjectOwner Method

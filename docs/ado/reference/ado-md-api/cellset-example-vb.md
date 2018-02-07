@@ -20,7 +20,7 @@ ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Cellset Example (VB)

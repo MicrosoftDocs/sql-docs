@@ -27,7 +27,7 @@ ms.workload: "Inactive"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
- **In this topic:**  
+ **In this article:**  
   
 -   [Prerequisites](#prereq)  
   

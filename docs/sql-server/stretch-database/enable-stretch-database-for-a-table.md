@@ -32,7 +32,7 @@ ms.workload: "Inactive"
   
 -   If your table contains both hot and cold data, you can specify a filter function to select the rows to migrate.    
  
- **Prerequisites**. If you select **Stretch | Enable** for a table, and you have not yet enabled Stretch Database for the database, the wizard first configures the database for Stretch Database. Follow the steps in [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) instead of the steps in this topic.  
+ **Prerequisites**. If you select **Stretch | Enable** for a table, and you have not yet enabled Stretch Database for the database, the wizard first configures the database for Stretch Database. Follow the steps in [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) instead of the steps in this article.  
   
  **Permissions**. Enabling Stretch Database on a database or a table requires db_owner permissions. Enabling Stretch Database on  a table also requires ALTER permissions on the table.  
 
@@ -57,7 +57,7 @@ ms.workload: "Inactive"
   
 -   Run the ALTER TABLE statement to specify a filter function after you exit the wizard. For the required steps, see [Add a filter function after running the Wizard](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz).  
   
- The ALTER TABLE syntax is described later in this topic.  
+ The ALTER TABLE syntax is described later in this article.  
   
  **Summary**  
  Review the values that you entered and the options that you selected in the wizard. Then select **Finish** to enable Stretch.  

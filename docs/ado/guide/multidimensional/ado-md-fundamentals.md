@@ -18,7 +18,7 @@ ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO MD Fundamentals

@@ -22,7 +22,7 @@ ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Tables Collection (ADOX)

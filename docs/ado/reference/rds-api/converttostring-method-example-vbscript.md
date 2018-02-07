@@ -20,7 +20,7 @@ ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ConvertToString Method Example (VBScript)

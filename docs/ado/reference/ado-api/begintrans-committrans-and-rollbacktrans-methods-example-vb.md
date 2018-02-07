@@ -22,7 +22,7 @@ ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # BeginTrans, CommitTrans, and RollbackTrans Methods Example (VB)

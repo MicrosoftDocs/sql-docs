@@ -20,7 +20,7 @@ ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Handling ADO Events

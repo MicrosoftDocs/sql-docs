@@ -21,7 +21,7 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FieldStatusEnum

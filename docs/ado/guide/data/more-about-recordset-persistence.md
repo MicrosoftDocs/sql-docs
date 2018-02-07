@@ -21,7 +21,7 @@ ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # More About Recordset Persistence

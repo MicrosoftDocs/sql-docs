@@ -21,7 +21,7 @@ ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Recordset (Visual C++ Syntax Index with #import)

@@ -20,7 +20,7 @@ ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AddNew Method Example (VC++)

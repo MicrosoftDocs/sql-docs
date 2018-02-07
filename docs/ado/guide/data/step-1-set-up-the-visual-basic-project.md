@@ -16,7 +16,7 @@ ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Step 1: Set Up the Visual Basic Project

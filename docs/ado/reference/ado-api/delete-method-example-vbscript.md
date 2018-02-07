@@ -20,7 +20,7 @@ ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete Method Example (VBScript)

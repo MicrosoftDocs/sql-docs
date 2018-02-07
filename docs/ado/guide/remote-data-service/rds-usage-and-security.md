@@ -19,7 +19,7 @@ ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RDS Usage and Security

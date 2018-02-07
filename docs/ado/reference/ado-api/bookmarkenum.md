@@ -21,7 +21,7 @@ ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # BookmarkEnum

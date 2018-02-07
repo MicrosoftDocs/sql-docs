@@ -21,7 +21,7 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Record Object (ADO)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "lower-case"
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on String Values - lower-case

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysfulltextcatalogs system table"
 ms.assetid: 18ac6ad5-01e8-428f-8422-a9ca29626977
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysfulltextcatalogs (Transact-SQL)

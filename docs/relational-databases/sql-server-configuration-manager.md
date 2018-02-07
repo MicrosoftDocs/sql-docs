@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "configuration manager [SQL Server]"
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server Configuration Manager

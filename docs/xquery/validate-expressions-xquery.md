@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "validate expressions [XQuery]"
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Validate Expressions (XQuery)

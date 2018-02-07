@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysconfigures system table"
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysconfigures (Transact-SQL)

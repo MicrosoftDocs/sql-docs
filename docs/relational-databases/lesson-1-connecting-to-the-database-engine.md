@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Lesson 1: Connecting to the Database Engine

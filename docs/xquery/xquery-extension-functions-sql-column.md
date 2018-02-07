@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sql:column() function"
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # XQuery Extension Functions - sql:column()

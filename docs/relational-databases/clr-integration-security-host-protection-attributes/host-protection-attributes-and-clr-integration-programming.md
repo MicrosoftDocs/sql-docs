@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "HPAs [CLR integration]"
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Host Protection Attributes and CLR Integration Programming

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "filtering sequences [XQuery]"
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sequence Expressions (XQuery)

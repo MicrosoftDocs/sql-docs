@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "cursors [SQL Server], about cursors"
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ---
 # Cursors
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

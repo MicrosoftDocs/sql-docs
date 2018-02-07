@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.syslanguages compatibility view"
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.syslanguages (Transact-SQL)

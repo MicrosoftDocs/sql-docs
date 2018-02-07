@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "true function"
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Boolean Constructor Functions - true (XQuery)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "syscurconfigs system table"
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.syscurconfigs (Transact-SQL)

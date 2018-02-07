@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "FileTables [SQL Server], system functions"
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

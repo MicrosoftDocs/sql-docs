@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "EBV"
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Conditional Expressions (XQuery)

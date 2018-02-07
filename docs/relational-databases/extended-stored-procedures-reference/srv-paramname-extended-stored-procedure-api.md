@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "srv_paramname"
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # srv_paramname (Extended Stored Procedure API)

@@ -359,15 +359,15 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### Offline installation
 If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 to be installed on a computer with no internet connection, you will need to resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 has the following direct dependencies:
 - Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
-- Red Hat: glibc, e2fsprogs, krb5-libs, openssl, unixODBC
-- SuSE: glibc, libuuid1, krb5, openssl, unixODBC
+- Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
+- SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
 Each of these packages in turn has their own dependencies which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
 
 #### Redhat Linux Enterprise Server 7
-  - Download the latest msodbcsql .rpm from here: http://packages.microsoft.com/rhel/7/prod/
+  - Download the latest `msodbcsql` .rpm from here: http://packages.microsoft.com/rhel/7/prod/
   - Install dependencies and the driver
   
 ```
@@ -376,7 +376,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### Ubuntu 16.04
-- Download the latest msodbcsql .deb from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Download the latest `msodbcsql` `.deb` from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Install dependencies and the driver 
 
 ```
@@ -385,7 +385,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### SUSE Linux Enterprise Server 12
-- Download the latest msodbcsql .rpm from here: http://packages.microsoft.com/sles/12/prod/
+- Download the latest `msodbcsql` .rpm from here: http://packages.microsoft.com/sles/12/prod/
 - Install the dependencies and the driver
 
 ```
@@ -411,23 +411,23 @@ To install the driver:
 
 1.  Make sure that you have root permission.  
 
-2.  Change to the directory where the download placed the file `msodbcsql-11.0.2270.0.tar.gz`. Make sure that you have the \*.tar.gz file that matches your version of Linux. To extract the files, execute the following command, **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
+2.  Change to the directory where the download placed the file `msodbcsql-11.0.2270.0.tar.gz`. Make sure that you have the \*.tar.gz file that matches your version of Linux. To extract the files, execute the following command, `tar xvzf msodbcsql-11.0.2270.0.tar.gz`.  
   
 3.  Change to the `msodbcsql-11.0.2270.0` directory and there you should see a file called **install.sh**.  
   
 4.  To see a list of the available installation options, execute the following command: **./install.sh**.  
   
-5.  Make a backup of **odbcinst.ini**. The driver installation updates **odbcinst.ini**. odbcinst.ini contains the list of drivers that are registered with the unixODBC Driver Manager. To discover the location of odbcinst.ini on your computer, execute the following command: **odbc_config --odbcinstini**.  
+5.  Make a backup of **odbcinst.ini**. The driver installation updates **odbcinst.ini**. odbcinst.ini contains the list of drivers that are registered with the unixODBC Driver Manager. To discover the location of odbcinst.ini on your computer, execute the following command: ```odbc_config --odbcinstini```.  
   
 6.  Before you install the driver, execute the following command: **./install.sh verify**. The output of **./install.sh verify** reports if your computer has the required software to support the ODBC driver on Linux.  
   
-7.  When you are ready to install the ODBC driver on Linux, execute the command: **./install.sh install**. If you need to specify an install command (**bin-dir** or **lib-dir**), specify the command after the **install** option.  
+7.  When you are ready to install the ODBC driver on Linux, execute the command: **./install.sh install**. If you need to specify an install command (`bin-dir` or `lib-dir`), specify the command after the **install** option.  
   
 8.  After reviewing the license agreement, type **YES** to continue with the installation.  
   
 Installation puts the driver in `/opt/microsoft/msodbcsql/11.0.2270.0`. The driver and its support files must be in `/opt/microsoft/msodbcsql/11.0.2270.0`.  
   
-To verify that the Microsoft ODBC driver on Linux was registered successfully, execute the following command: **odbcinst -q -d -n "ODBC Driver 11 for SQL Server"**.  
+To verify that the Microsoft ODBC driver on Linux was registered successfully, execute the following command: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
   
 [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) shows a code sample that connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] using the ODBC driver on Linux.  
   

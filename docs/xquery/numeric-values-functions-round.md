@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "round function [XQuery]"
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Numeric Values Functions - round

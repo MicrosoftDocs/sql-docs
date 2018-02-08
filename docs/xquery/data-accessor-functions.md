@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "data-accessor functions [XQuery]"
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Accessor Functions

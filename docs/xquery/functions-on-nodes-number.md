@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:number function"
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on Nodes - number

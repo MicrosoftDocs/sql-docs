@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "syscomments system table"
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.syscomments (Transact-SQL)

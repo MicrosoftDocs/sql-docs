@@ -19,7 +19,9 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Monitoring R Services
-  This section provides information about these common monitoring tasks when using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This section provides information about these common monitoring tasks when using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
   
 -   Identifying server resources being used by R  
   

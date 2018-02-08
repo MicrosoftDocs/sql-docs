@@ -20,6 +20,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Advanced configuration options for Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes changes that you can make after setup, to modify the configuration of the external script runtime and other services associated with machine learning in SQL Server.
 

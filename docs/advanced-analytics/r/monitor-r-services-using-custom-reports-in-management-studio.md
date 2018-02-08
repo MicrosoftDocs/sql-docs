@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Monitor Machine Learning Services using custom reports in Management Studio
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 To make it easier to manage instance used for machine learning, the product team has provided a number of sample custom reports that you can add to SQL Server Management Studio. In these reports, you can view details such as:
 

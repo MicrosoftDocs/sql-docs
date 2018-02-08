@@ -20,6 +20,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Using data from OLAP cubes in R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The **olapR** package is an R package, provided by Microsoft for use with Machine Learning Server and SQL Server, that lets you run MDX queries to get data from OLAP cubes. With this package, you don't need to create linked servers or clean up flattened rowsets; you can get OLAP data directly from R.
 

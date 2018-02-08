@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Known issues in Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes known problems or limitations with machine learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
 

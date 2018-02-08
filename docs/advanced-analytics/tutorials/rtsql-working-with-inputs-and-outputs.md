@@ -22,6 +22,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Working with inputs and outputs (R in SQL quickstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 When you want to run R code in SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
 

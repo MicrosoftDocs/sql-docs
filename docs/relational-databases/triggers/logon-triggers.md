@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "triggers [SQL Server], logon"
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Logon Triggers

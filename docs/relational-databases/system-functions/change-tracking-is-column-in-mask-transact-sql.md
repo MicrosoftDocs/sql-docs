@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "CHANGE_TRACKING_IS_COLUMN_IN_MASK"
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysfiles compatibility view"
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysfiles (Transact-SQL)

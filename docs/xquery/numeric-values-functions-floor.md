@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:floor function"
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Numeric Values Functions - floor

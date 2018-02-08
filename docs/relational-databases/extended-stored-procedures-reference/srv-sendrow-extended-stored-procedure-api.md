@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "srv_sendrow"
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # srv_sendrow (Extended Stored Procedure API)

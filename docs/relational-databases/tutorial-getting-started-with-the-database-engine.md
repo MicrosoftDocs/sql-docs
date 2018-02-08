@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "connecting tutorial [SQL Server]"
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Tutorial: Getting Started with the Database Engine

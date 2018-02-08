@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "fn:position function"
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Context Functions - position (XQuery)

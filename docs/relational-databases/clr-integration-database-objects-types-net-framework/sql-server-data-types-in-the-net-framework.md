@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "mapping data types [CLR integration]"
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Data Types in the .NET Framework

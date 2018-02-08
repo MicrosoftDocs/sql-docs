@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "context [CLR integration]"
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Context Connection

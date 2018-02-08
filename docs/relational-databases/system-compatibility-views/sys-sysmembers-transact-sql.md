@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysmembers compatibility view"
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysmembers (Transact-SQL)

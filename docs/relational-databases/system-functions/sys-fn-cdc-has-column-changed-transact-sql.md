@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "fn_cdc_has_column_changed"
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

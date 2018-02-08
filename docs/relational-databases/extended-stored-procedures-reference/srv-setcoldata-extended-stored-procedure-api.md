@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "srv_setcoldata"
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # srv_setcoldata (Extended Stored Procedure API)

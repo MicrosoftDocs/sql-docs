@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "sys.fn_check_object_signatures function"
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

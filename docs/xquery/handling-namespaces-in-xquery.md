@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "XQuery, namespaces"
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Handling Namespaces in XQuery

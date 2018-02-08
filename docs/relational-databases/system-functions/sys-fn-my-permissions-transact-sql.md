@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "sys.fn_my_permissions function"
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Active"
 ---

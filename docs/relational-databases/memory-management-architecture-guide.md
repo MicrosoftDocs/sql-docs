@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "memory management architecture guide"
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Memory Management Architecture Guide

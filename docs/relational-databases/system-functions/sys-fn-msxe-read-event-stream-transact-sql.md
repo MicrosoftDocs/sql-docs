@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "fn_MSxe_read_event_stream"
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

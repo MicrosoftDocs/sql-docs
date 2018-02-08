@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "XQuery, string search"
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # String Search in XQuery

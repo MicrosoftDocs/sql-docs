@@ -20,6 +20,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Creating BI Workflows with R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A relational database is a highly optimized technology for delivering scalable solutions for transaction processing, storage, and querying of data.
 

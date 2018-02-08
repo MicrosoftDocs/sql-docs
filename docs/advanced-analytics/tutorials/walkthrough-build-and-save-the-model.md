@@ -23,6 +23,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Build an R model and save to SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this step, you'll learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

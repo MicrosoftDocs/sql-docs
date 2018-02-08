@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Performance for R Services: results and resources
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is the fourth and final in a series that describes performance optimization for R Services. This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 

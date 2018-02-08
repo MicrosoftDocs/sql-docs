@@ -21,6 +21,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Upgrade machine learning components in a SQL Server instance
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article explains the process of _binding_, which you can use to upgrade the machine learning components used in SQL Server. The process of binding locks the server into an update cadence based on releases of Machine Learning Server, rather than using the SQL Server release and update schedule.
 

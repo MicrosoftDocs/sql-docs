@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Performance tuning for R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is the first in a series of four articles that describe performance optimization for R Services, based on two case studies:
 

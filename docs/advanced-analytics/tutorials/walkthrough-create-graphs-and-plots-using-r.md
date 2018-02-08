@@ -22,6 +22,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Create graphs and plots using SQL and R (walkthrough)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this part of the walkthrough, you learn techniques for generating plots and maps using R with SQL Server data. You create a simple histogram, to get some practice, and then develop a more complex map plot.
 

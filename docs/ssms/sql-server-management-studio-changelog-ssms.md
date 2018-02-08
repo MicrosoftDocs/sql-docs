@@ -542,10 +542,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Ctrl-R now toggles results pane in SSMS DAX query editor
 
 
-## ![download](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=799832)
+## ![download](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 Generally available | Build number: 13.0.16106.4
 
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 The following issues were fixed this release:
 

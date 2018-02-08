@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service

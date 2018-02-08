@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "GetFileNamespacePath function"
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -51,7 +51,7 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    ```
 
    > [!NOTE]
-   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Change source repositories](sql-server-linux-setup.md#repositories).
+   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
 1. Run the following commands to install SQL Server:
 

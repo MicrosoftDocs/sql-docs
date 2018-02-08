@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:empty function"
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on Sequences - empty

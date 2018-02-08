@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "value comparison operators"
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Comparison Expressions (XQuery)

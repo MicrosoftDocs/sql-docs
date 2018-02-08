@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "change data capture [SQL Server], disabling tables"
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Enable and Disable Change Data Capture (SQL Server)

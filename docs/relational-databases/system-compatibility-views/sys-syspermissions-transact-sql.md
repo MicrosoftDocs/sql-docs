@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.syspermissions compatibility view"
 ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.syspermissions (Transact-SQL)

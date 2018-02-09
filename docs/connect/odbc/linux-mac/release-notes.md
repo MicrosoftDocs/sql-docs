@@ -20,6 +20,20 @@ ms.workload: "Inactive"
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS
+
+Azure SQL Managed Instance (Extended Private Preview). Note that there are a number of differences when using Managed Instance:
+-   FILESTREAM is not supported 
+-   Local filesystem access is not supported, but required for things like tracefiles 
+-   Create UDT from local path not supported 
+-   Windows Integrated Authentication not supported 
+-   DTC not supported 
+-   'sa' account is not present (default account is called 'cloudSA')
+-   TDS token ERROR (0xAA) returns incorrect server name
+-   Special characters in database name are not supported 
+-   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
+-   The error messages are always shown in English, regardless of language settings (same as Azure) 
+
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS  
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] adds support for Always Encrypted and Azure Active Directory when used in conjunction with Microsoft SQL Server 2016.

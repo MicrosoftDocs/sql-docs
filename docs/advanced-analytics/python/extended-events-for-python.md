@@ -17,6 +17,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Extended Events for Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This section is under development.
 

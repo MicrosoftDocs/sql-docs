@@ -24,6 +24,7 @@ manager: "cgronlund"
 ms.workload: "Active"
 ---
 # Using R code in Transact-SQL (R in SQL quickstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This tutorial walks you through the basic mechanics of calling an R script from a T-SQL stored procedure.
 

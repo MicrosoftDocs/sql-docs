@@ -21,6 +21,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Create a Stored Procedure Using sqlrutils
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic describes the steps for converting your R code to run as a T-SQL stored procedure. For best possible results, your code might need to be modified somewhat, to ensure that all inputs can be parameterized.
 

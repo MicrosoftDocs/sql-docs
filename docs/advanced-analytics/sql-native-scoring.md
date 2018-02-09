@@ -18,6 +18,7 @@ manager: "cgronlund"
 ---
 
 # Native scoring
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic describes features in SQL Server 2017 that provide scoring on machine learning models in near realtime.
 

@@ -21,6 +21,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # R package management for SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes features for management of R packages in SQL Server 2017 and in SQL Server 2016.
 

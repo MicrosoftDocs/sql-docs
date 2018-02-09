@@ -29,7 +29,7 @@ SSDT 15.5.2 is a standalone web installation experience for SQL Server Database,
 
 | SSDT for Visual Studio 2017 | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.5.2) ](https://go.microsoft.com/fwlink/?LinkId=865748) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)|
+|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.5.2) ](https://go.microsoft.com/fwlink/?LinkId=866452) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)|
 |||
 
 > [!IMPORTANT]
@@ -56,17 +56,17 @@ SSDT for Visual Studio 2017 has the same system requirements as installing VS, s
   
 This release of **SSDT for VS 2017** can be installed in the following languages:  
 
-[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x804) | 
-[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x404) | 
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x409) | 
-[French]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x407) | 
-[Italian]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x410) | 
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x411) | 
-[Korean]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x412) | 
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x416) | 
-[Russian]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x419) | 
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x40a)  
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x804) | 
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x404) | 
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x409) | 
+[French]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x407) | 
+[Italian]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x410) | 
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x411) | 
+[Korean]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x412) | 
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x416) | 
+[Russian]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x419) | 
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=866452&clcid=0x40a)  
 
 ## SSDT for Visual Studio 2015
 **Version Information**  

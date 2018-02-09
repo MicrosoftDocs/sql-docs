@@ -20,6 +20,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # How to use RevoScaleR functions to find or install R packages on SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft R Server release 9.0.1 introduced new RevoScaleR functions that support working with installed packages in a SQL Server compute context. These new functions make it easier for a data scientist to run R code in SQL Server without direct access to the server.
 

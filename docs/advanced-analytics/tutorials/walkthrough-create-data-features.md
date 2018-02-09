@@ -23,6 +23,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Create data features using R and SQL (walkthrough)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Data engineering is an important part of machine learning. Data often requires transformation before you can use it for predictive modeling. If the data does not have the features you need, you can engineer them from existing values.
 

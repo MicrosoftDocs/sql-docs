@@ -21,6 +21,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # R packages installed with SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes the R packages that are installed with SQL Server if you install and enable machine learning features. This article also describes how to manage and view existing packages, or add new packages to a SQL Server instance.
 

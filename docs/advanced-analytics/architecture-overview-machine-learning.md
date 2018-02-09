@@ -19,6 +19,7 @@ ms.workload: "Inactive"
 ---
 
 # Architecture overview for SQL Server Machine Learning Services 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic describes the goals of the extensibility framework that supports execution of Python and R script in SQL Server.
 

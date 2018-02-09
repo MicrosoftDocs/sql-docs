@@ -24,6 +24,7 @@ manager: "cgronlund"
 ms.workload: "Active"
 ---
 # Set up SQL Server Machine Learning Services (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic describes how to install and configure the following machine learning features that support in-database analytics in SQL Server:
 

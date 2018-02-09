@@ -23,6 +23,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # Step 6: Operationalize the Python model using SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 

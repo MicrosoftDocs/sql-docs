@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Installing machine learning components without internet access
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Because the R and Python components provided with SQL Server 2016 and SQL Server 2017 are open source, Microsoft does not install R or Python components by default. Instead, we provide the related installers and bundled packages as a convenience on the Microsoft Download Center and other trusted sites. You must consent to the appropriate license, and then SQL Server setup installs R or Python components for you.
 

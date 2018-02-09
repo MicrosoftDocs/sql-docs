@@ -17,6 +17,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Components in SQL Server to support Python integration
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Beginning in SQL Server 2017, Machine Learning Services supports Python as an external language that can be executed from T-SQL, or executed remotely using SQL Server as the compute context.
 

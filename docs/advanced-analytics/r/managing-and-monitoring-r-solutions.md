@@ -20,6 +20,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Managing and monitoring machine learning solutions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes features in SQL Server Machine Learning Services that are relevant to database administrators who need to begin working with R and Python solutions.
 

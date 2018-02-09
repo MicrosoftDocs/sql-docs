@@ -1,5 +1,5 @@
 ---
-title: "DSN and Connection String Keywords and Attributes | Microsoft Docs"
+title: "DSN and Connection String Keywords and Attributes Used in the ODBC Driver for SQL Server| Microsoft Docs"
 ms.custom: ""
 ms.date: "01/24/2018"
 ms.prod: "sql-non-specified"

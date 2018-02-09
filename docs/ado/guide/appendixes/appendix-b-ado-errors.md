@@ -18,7 +18,7 @@ ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Appendix B: ADO Error Codes

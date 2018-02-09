@@ -17,9 +17,9 @@ f1_keywords:
   - "sql13.swb.reportserver.systemroleproperties.f1"
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # System Role Properties (Management Studio)

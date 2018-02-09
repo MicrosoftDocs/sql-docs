@@ -16,7 +16,7 @@ ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Look Up Process Chain

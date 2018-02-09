@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "AsGml method"
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 #  AsGml - geography Data Type

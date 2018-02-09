@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "bcp_colptr function"
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # bcp_colptr

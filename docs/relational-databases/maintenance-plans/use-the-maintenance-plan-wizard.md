@@ -38,9 +38,9 @@ helpviewer_keywords:
   - "Database Maintenance Plan Wizard, starting"
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Use the Maintenance Plan Wizard

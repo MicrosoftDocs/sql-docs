@@ -1,12 +1,13 @@
-# [What is Analysis Services?](analysis-services.md)
+# [About SQL Server Analysis Services?](analysis-services.md)
 
 # Overview
 ## [What's new in SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
 ## [What's new in SQL Server Analysis Services 2017](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [New and updated articles](new-updated-analysis-services.md)
 ## [Tools and applications](tools-and-applications-used-in-analysis-services.md)   
+## [Client libraries (data providers)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [Comparing Tabular and Multidimensional solutions](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [Analysis Services features supported by SQL Server 2016 editions](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [Analysis Services features supported by SQL Server editions](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [Backward compatibility (SQL Server 2016 Analysis Services)](analysis-services-backward-compatibility.md)  
 ## [Backward compatibility (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)  
 ## [Globalization and translation](globalization-scenarios-for-analysis-services.md)  
@@ -15,11 +16,8 @@
 ### [Currency conversions](currency-conversions-analysis-services.md)  
 ### [Tips and best practices](globalization-tips-and-best-practices-analysis-services.md) 
 
-# Samples
-## [Analysis Services samples](analysis-services-samples.md)
-
 # Tutorials
-## [Tabular Modeling (Adventure Works Tutorial)](tabular-modeling-adventure-works-tutorial.md)  
+## [Tabular Modeling (1200 compatibility level)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Lesson 2: Add Data](lesson-2-add-data.md)  
 ### [Lesson 3: Mark as Date Table](lesson-3-mark-as-date-table.md)  
@@ -36,7 +34,7 @@
 ### [Supplemental Lesson - Implement dynamic security by using row filters](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [Supplemental Lesson - Configure reporting properties for Power View reports](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [Multidimensional modeling (Adventure Works Tutorial)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [Multidimensional modeling](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [Tutorial scenario](analysis-services-tutorial-scenario.md)  
 ### [Install sample data and projects for the Analysis Services Multidimensional modeling tutorial](install-sample-data-and-projects.md)  
 ### [Lesson 1: Defining a data source view within an Analysis Services project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  
@@ -112,6 +110,8 @@
 ## [Schema rowsets](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services Scripting Language (ASSL for XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# Samples
+## [Analysis Services samples](analysis-services-samples.md)
 
 # Reference
 ## [Data Analysis Expressions (DAX) on MSDN](https://msdn.microsoft.com/library/gg413422.aspx)

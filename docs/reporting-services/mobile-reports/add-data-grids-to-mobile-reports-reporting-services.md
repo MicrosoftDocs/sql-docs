@@ -16,7 +16,7 @@ ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 caps.latest.revision: 4
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add data grids to mobile reports | Reporting Services

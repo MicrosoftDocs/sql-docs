@@ -34,7 +34,7 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: 76
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)

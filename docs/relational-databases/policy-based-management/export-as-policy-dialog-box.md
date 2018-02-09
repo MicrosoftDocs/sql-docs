@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.dmf.exportaspolicy.f1"
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Export As Policy Dialog Box

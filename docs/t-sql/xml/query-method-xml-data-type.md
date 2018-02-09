@@ -21,7 +21,7 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # query() Method (xml Data Type)

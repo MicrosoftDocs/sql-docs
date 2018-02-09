@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_configuration dynamic management view"
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_resource_governor_configuration (Transact-SQL)

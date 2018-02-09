@@ -26,7 +26,7 @@ ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Disable or Reactivate an Alert

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.database_filestream_options catalog view"
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_filestream_options (Transact-SQL)

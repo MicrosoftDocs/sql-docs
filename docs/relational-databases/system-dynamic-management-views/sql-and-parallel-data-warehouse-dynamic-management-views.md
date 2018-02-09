@@ -18,7 +18,7 @@ ms.assetid: e713365e-d44c-4b66-84c9-81a1bcc32414
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL and Parallel Data Warehouse Dynamic Management Views

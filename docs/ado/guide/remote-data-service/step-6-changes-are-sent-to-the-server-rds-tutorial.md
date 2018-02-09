@@ -18,7 +18,7 @@ ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Step 6: Changes are Sent to the Server (RDS Tutorial)

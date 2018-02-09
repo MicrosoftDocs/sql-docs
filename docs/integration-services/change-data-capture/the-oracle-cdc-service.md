@@ -16,7 +16,7 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # The Oracle CDC Service

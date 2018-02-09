@@ -22,7 +22,7 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Functions (SSIS Expression)

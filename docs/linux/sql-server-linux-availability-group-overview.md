@@ -3,7 +3,7 @@ title: Always On Availability Groups for SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
@@ -19,7 +19,7 @@ ms.workload: "On Demand"
 
 # Always On Availability Groups on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article describes the characteristics of Always On Availability Groups (AGs) under Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installations. It also covers differences between Linux- and Windows Server failover cluster (WSFC)-based AGs. See the [Windows-based documentation](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) for the basics of AGs, as they work the same on Windows and Linux except for the WSFC.
 
@@ -143,7 +143,7 @@ The instance associated with the provided IP address then becomes the coordinato
 
 An AG that has a cluster type of External or one that is WSFC cannot have its replicas cross platforms. This is true whether the AG is [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] or [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. That means in a traditional AG configuration with an underlying cluster, one replica cannot be on a WSFC and the other on Linux with Pacemaker.
 
-An AG with a cluster type of None can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown below where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
+An AG with a cluster type of NONE can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown below where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
 
 ![Hybrid None](./media/sql-server-linux-availability-group-overview/image1.png)
 
@@ -166,4 +166,6 @@ If using automatic seeding with a distributed availability group that crosses OS
 [Add availability group Cluster Resource on SLES](sql-server-linux-availability-group-cluster-sles.md)
 
 [Add availability group Cluster Resource on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
+
+[Configure a cross-platform availability group](sql-server-linux-availability-group-cross-platform.md)
 

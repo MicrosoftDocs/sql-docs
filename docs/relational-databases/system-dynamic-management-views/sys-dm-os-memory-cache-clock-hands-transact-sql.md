@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_memory_cache_clock_hands dynamic management view"
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_memory_cache_clock_hands (Transact-SQL)

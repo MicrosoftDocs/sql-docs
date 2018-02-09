@@ -18,7 +18,7 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Review Data Type Mapping (SQL Server Import and Export Wizard)

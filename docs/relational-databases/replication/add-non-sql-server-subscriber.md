@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.newsubwizard.addnonsqlsubscriber.f1"
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Add Non-SQL Server Subscriber

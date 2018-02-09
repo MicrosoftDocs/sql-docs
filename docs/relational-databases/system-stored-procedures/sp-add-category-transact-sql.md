@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_category"
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_category (Transact-SQL)

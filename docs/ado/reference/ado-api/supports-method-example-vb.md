@@ -20,7 +20,7 @@ ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Supports Method Example (VB)

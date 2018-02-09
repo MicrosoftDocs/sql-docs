@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STWithin (geometry Data Type)"
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STWithin (geometry Data Type)

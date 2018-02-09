@@ -21,7 +21,7 @@ ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AppendChunk and GetChunk Methods Example (VB)

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "comments [SQL Server]"
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 

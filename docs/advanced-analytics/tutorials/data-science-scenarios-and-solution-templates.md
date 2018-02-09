@@ -17,10 +17,11 @@ ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
 caps.latest.revision: 17
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Data science scenarios and solution templates
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Templates are sample solutions that demonstrate best practices and provide building blocks to help you implement a solution fast. Each template is designed to solve a specific problem, for a specific vertical or industry. The tasks in each template extend from data preparation and feature engineering to model training and scoring. Use these templates to learn how [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] works. Then, feel free to customize the template to fit your own scenario and build a custom solution. 
 

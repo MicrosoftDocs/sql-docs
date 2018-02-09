@@ -20,7 +20,7 @@ ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IndexNulls Property Example (VB)

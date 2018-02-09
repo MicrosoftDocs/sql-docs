@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "OPTION clause"
 ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OPTION Clause (Transact-SQL)

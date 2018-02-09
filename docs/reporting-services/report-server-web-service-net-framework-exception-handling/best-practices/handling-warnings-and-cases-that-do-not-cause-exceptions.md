@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "warnings [Reporting Services]"
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Handling Warnings and Cases That Do Not Cause Exceptions

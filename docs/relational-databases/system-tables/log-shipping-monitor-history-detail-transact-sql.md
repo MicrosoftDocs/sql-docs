@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "log_shipping_monitor_history_detail system table"
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # log_shipping_monitor_history_detail (Transact-SQL)

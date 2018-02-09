@@ -16,13 +16,13 @@ helpviewer_keywords:
   - "contained database, threats"
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Security Best Practices with Contained Databases
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Contained databases have some unique threats that should be understood and mitigated by [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] administrators. Most of the threats are related to the **USER WITH PASSWORD** authentication process, which moves the authentication boundary from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] level to the database level.  
   

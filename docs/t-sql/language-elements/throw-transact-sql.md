@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "THROW statement"
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # THROW (Transact-SQL)

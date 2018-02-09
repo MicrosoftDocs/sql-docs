@@ -25,7 +25,7 @@ ms.assetid: d095ab62-270b-484b-a541-9f9e7c951cf0
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fulltext_index_catalog_usages (Transact-SQL)

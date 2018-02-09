@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "unit of work [SQL Server]"
 ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Transactions (Transact-SQL)

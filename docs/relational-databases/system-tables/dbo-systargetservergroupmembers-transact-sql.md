@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "systargetservergroupmembers system table"
 ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.systargetservergroupmembers (Transact-SQL)

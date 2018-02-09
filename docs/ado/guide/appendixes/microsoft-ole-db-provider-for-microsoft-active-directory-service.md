@@ -21,7 +21,7 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Microsoft OLE DB Provider for Microsoft Active Directory Service

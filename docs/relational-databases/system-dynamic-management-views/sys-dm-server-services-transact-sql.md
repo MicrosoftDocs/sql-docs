@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_server_services dynamic management view"
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_server_services (Transact-SQL)

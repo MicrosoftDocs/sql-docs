@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "InstanceOf (geometry Data Type)"
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InstanceOf (geometry Data Type)

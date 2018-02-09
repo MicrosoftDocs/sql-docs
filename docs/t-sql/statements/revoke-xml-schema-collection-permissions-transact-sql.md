@@ -22,7 +22,7 @@ ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REVOKE XML Schema Collection Permissions (Transact-SQL)

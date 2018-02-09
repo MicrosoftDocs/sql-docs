@@ -1,6 +1,6 @@
 ---
 title: "Connect to data sources and file shares with Windows Authentication | Microsoft Docs"
-ms.date: "11/27/2017"
+ms.date: "02/05/2018"
 ms.topic: "article"
 ms.prod: "sql-non-specified"
 ms.prod_service: "integration-services"
@@ -18,7 +18,14 @@ ms.workload: "Inactive"
 # Connect to on-premises data sources and Azure file shares with Windows Authentication
 This article describes how to configure the SSIS Catalog on Azure SQL Database to run packages that use Windows Authentication to connect to on-premises data sources and Azure file shares. You can use Windows authentication to connect to data sources in the same virtual network as the Azure SSIS Integration Runtime, both on premises and on Azure virtual machines and in Azure Files.
 
-The domain credentials that you provide when you follow the steps in this article apply to all package executions on the SQL Database instance until you change or remove the credentials.
+> [!WARNING]
+> If you don't provide valid domain credentials for Windows Authentication by running `catalog`.`set_execution_credential` as described in this article, packages that depend on Windows Authentication can't connect to data sources and fail at run time.
+
+## You can only use one set of credentials
+
+At this time, you can only use one set of credentials in a package. The domain credentials that you provide when you follow the steps in this article apply to all package executions - interactive or scheduled - on the SQL Database instance until you change or remove the credentials. If your package has to connect to multiple data sources with different sets of credentials, you may have to separate the package into multiple packages.
+
+If one of your data sources is Azure Files, you can work around this limitation by mounting the Azure file share at package run time with `net use` or the equivalent in an Execute Process Task. For more info, see [Mount an Azure File share and access the share in Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows).
 
 ## Provide domain credentials for Windows Authentication
 To provide domain credentials that let packages use Windows Authentication to connect to on-premises data sources, do the following things:

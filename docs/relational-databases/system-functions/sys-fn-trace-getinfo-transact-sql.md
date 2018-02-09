@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "fn_trace_getinfo function"
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.fn_trace_getinfo (Transact-SQL)

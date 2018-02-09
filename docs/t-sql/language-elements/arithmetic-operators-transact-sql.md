@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "math operations [Transact-SQL]"
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Arithmetic Operators (Transact-SQL)

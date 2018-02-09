@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "content validation [XML]"
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

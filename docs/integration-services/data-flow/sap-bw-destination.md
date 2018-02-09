@@ -16,7 +16,7 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SAP BW Destination

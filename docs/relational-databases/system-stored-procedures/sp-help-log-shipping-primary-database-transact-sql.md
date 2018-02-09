@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_log_shipping_primary_database"
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_log_shipping_primary_database (Transact-SQL)

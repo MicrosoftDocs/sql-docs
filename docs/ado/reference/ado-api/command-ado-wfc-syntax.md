@@ -19,7 +19,7 @@ ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Command (ADO - WFC Syntax)

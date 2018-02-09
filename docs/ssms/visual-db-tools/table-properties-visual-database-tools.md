@@ -19,7 +19,7 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table Properties (Visual Database Tools)

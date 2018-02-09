@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn_syscollector_get_execution_stats function"
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # fn_syscollector_get_execution_stats (Transact-SQL)

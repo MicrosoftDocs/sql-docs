@@ -20,7 +20,7 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Schedule a Job

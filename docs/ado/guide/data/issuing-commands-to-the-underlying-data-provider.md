@@ -20,7 +20,7 @@ ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Issuing Commands to the Underlying Data Provider

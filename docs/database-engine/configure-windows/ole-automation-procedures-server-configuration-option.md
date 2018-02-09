@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Ole Automation Procedures option"
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Ole Automation Procedures Server Configuration Option

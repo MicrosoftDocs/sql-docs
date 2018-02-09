@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "syssubsystems system table"
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.syssubsystems (Transact-SQL)

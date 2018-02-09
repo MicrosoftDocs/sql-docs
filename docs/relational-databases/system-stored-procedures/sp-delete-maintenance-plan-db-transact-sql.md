@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "disassociating maintenance plan"
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_maintenance_plan_db (Transact-SQL)

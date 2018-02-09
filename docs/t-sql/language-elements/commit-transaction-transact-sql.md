@@ -32,9 +32,9 @@ helpviewer_keywords:
   - "rolling back transactions, COMMIT TRANSACTION"
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # COMMIT TRANSACTION (Transact-SQL)

@@ -13,10 +13,11 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This section contains links to API reference specific to Machine Learning Services in SQL Server 2017.
 

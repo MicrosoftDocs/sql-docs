@@ -18,7 +18,7 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 5-1 - Copying the Lesson 4 Package

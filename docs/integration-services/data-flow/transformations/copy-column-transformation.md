@@ -23,7 +23,7 @@ ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Copy Column Transformation

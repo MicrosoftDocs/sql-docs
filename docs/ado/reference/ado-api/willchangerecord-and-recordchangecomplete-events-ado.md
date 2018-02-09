@@ -24,7 +24,7 @@ ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # WillChangeRecord and RecordChangeComplete Events (ADO)

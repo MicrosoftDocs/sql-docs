@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "dm_db_xtp_table_memory_stats"
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_xtp_table_memory_stats (Transact-SQL)

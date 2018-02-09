@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, columns"
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Removing a Column from a SQL Server Table

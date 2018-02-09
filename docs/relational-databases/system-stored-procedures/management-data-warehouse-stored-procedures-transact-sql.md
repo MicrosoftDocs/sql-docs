@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "management data warehouse, data collector stored procedures"
 ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Management Data Warehouse Stored Procedures (Transact-SQL)

@@ -19,7 +19,7 @@ ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DataSpace Object (RDS)

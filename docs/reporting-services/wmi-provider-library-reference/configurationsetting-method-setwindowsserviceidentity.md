@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "SetWindowsServiceIdentity method"
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - SetWindowsServiceIdentity

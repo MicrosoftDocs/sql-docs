@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "change data capture [SQL Server], query functions"
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Work with Change Data (SQL Server)

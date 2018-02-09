@@ -16,7 +16,7 @@ ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lay out a Reporting Services mobile report for phone or tablet

@@ -18,7 +18,7 @@ ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Options (Environment - Help - General Page)

@@ -20,7 +20,7 @@ ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP INDEX (Selective XML Indexes)

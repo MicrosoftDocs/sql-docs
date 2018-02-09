@@ -23,7 +23,7 @@ ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Exclude Duplicate Rows (Visual Database Tools)

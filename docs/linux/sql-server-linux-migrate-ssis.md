@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle 
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -18,7 +18,7 @@ ms.workload: "On Demand"
 ---
 # Extract, transform, and load data on Linux with SSIS
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article describes how to run SQL Server Integration Services (SSIS) packages on Linux. SSIS solves complex data integration problems by extracting data from multiple sources and formats, transforming and cleansing the data, and loading the data into multiple destinations. 
 
@@ -40,6 +40,34 @@ To run an SSIS package on a Linux computer, do the following things:
 2.  Run the following command:
     ```
     $ dtexec /F \<package name \> /DE <protection password>
+    ```
+
+## Run an encrypted (password-protected) package
+There are three ways to run an SSIS package that's encrypted with a password:
+
+1.  Set the value of the environment variable `SSIS_PACKAGE_DECRYPT`, as shown in the following example:
+
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
+
+2.  Specify the `/de[crypt]` option to enter the password interactively, as shown in the following example:
+
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
+    
+    Enter decryption password:
+    ```
+
+3.  Specify the `/de` option to provide the password on the command line, as shown in the following example. This method is not recommended because it stores the decryption password with the command in the command history.
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
+    
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
     ```
 
 ## Design packages

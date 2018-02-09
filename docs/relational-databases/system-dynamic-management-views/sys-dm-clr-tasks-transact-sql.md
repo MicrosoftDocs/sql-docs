@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_clr_tasks dynamic management view"
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_clr_tasks (Transact-SQL)

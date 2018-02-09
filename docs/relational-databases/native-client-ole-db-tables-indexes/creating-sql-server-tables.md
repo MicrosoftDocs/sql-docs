@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "CreateTable function"
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating SQL Server Tables

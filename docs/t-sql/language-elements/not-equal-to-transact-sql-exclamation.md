@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "not equal to operator (!=)"
 ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Not Equal To (Transact SQL) - exclamation

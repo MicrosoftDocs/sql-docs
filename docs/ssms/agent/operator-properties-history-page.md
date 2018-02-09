@@ -18,7 +18,7 @@ ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Operator Properties (History Page)

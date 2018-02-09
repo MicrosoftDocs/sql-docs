@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_cryptographic_provider_properties dynamic management view"
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_cryptographic_provider_properties (Transact-SQL)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "dynamic errors [XQuery]"
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Error Handling (XQuery)

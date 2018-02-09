@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "sys.database_mirroring_endpoints catalog view"
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)

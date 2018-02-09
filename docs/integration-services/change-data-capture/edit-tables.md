@@ -18,7 +18,7 @@ ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit Tables

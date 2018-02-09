@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "ConvexHullAggregate method (geometry)"
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ConvexHullAggregate (geometry Data Type)

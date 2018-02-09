@@ -23,7 +23,7 @@ ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DateModified Property (ADOX)

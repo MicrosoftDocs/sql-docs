@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "sys.fn_cdc_map_time_to_lsn"
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_cdc_map_time_to_lsn (Transact-SQL)

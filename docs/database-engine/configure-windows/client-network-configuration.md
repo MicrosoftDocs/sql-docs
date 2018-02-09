@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "network connections [SQL Server], client configuration"
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Client Network Configuration

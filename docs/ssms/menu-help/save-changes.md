@@ -21,7 +21,7 @@ ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save Changes

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_unsubscribe_from_policy_category"
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)

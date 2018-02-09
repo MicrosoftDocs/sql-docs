@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_category"
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_category (Transact-SQL)

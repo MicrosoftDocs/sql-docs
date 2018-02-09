@@ -18,7 +18,7 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table-Valued Object (Column) Properties (Visual Database Tools)

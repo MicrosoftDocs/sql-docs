@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "ODBC, transactions"
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Performing Transactions in ODBC

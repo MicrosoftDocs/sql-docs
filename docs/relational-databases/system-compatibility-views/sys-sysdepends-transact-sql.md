@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysdepends compatibility view"
 ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysdepends (Transact-SQL)

@@ -17,9 +17,9 @@ f1_keywords:
   - "sql13.swb.spproperties.general.f1"
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stored Procedure Properties (General Page)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "events [SQL Server], Showplan XML"
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save Showplan XML Statistics Profile events separately (SQL Server Profiler)

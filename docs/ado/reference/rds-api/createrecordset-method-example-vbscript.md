@@ -20,7 +20,7 @@ ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CreateRecordset Method Example (VBScript)

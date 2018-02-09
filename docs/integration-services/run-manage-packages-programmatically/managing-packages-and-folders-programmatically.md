@@ -22,7 +22,7 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Managing Packages and Folders Programmatically

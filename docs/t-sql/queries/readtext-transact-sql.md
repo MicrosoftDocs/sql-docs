@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "reading columns"
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # READTEXT (Transact-SQL)

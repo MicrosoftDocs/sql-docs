@@ -19,7 +19,7 @@ ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DataSpace Object (RDS) Properties, Methods, and Events

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.resource_governor_workload_groups catalog view"
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.resource_governor_workload_groups (Transact-SQL)

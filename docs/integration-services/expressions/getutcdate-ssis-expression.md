@@ -21,7 +21,7 @@ ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GETUTCDATE (SSIS Expression)

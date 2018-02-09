@@ -30,7 +30,7 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Manage Job Steps

@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 2-2 - Defining a Cube
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 The Cube Wizard helps you define the measure groups and dimensions for a cube. In the following task, you will use the Cube Wizard to build a cube.  
   
 ### To define a cube and its properties  

@@ -15,10 +15,11 @@ ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
 caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Performance for R Services - data optimization
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is the third in a series that describes performance optimization for R Services based on two case studies. This article discusses performance optimizations for R or Python scripts that run in SQL Server. It also describes methods that you can use to update your R code, both to boost performance and to avoid known issues.
 

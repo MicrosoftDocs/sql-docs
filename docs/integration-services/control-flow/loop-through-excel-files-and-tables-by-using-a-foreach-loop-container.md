@@ -20,7 +20,7 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Loop through Excel Files and Tables by Using a Foreach Loop Container

@@ -18,7 +18,7 @@ ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
 caps.latest.revision: 5
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_hadoop_operations (Transact-SQL)

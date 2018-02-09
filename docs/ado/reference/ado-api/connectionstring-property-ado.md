@@ -21,7 +21,7 @@ ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ConnectionString Property (ADO)

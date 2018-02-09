@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "hints [SQL Server], join"
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Hints (Transact-SQL) - Join

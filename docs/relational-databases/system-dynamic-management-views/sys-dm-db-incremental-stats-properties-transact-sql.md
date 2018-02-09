@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "sys.dm_db_incremental_stats_properties"
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_incremental_stats_properties (Transact-SQL)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_query_resource_semaphores dynamic management view"
 ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_query_resource_semaphores (Transact-SQL)

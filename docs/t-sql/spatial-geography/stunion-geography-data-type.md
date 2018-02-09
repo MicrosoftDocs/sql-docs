@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STUnion method"
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STUnion (geography Data Type)

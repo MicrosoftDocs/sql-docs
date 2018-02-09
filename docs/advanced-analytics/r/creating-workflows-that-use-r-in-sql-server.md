@@ -16,10 +16,11 @@ ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
 caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Creating BI Workflows with R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A relational database is a highly optimized technology for delivering scalable solutions for transaction processing, storage, and querying of data.
 

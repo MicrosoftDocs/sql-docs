@@ -22,7 +22,7 @@ ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Requery Method

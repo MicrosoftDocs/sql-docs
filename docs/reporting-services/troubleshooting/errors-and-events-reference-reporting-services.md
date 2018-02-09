@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "events [Reporting Services]"
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Errors and Events Reference (Reporting Services)

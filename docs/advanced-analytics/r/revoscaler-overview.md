@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: "r-services"
+ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
@@ -17,6 +17,7 @@ ms.workload: "Inactive"
 ---
 
 # RevoScaleR
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 RevoScaleR is a package of machine learning functions, provided by Microsoft, that supports data science at scale.
 

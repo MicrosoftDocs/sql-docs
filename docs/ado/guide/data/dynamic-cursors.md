@@ -19,7 +19,7 @@ ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Dynamic Cursors

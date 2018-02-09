@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "sys.fn_net_changes_<capture_instance>"
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)

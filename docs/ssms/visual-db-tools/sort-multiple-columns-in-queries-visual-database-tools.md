@@ -18,7 +18,7 @@ ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sort Multiple Columns in Queries (Visual Database Tools)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "log_shipping_monitor_alert system table"
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # log_shipping_monitor_alert (Transact-SQL)

@@ -13,11 +13,11 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Monitoring
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!NOTE]
 > Python support is a new feature in SQL Server 2017 and is in prerelease.

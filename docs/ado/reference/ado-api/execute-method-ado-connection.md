@@ -22,7 +22,7 @@ ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Execute Method (ADO Connection)

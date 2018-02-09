@@ -24,7 +24,7 @@ ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete Rows in the Results Pane (Visual Database Tools)

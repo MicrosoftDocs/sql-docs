@@ -15,9 +15,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ATOM Device Information Settings

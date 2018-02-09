@@ -21,7 +21,7 @@ ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Property Object (ADO)

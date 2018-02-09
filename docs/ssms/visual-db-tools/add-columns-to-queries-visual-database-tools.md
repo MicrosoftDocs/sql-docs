@@ -21,7 +21,7 @@ ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Add Columns to Queries (Visual Database Tools)

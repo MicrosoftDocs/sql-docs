@@ -21,7 +21,7 @@ ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Associate a Query with a Connection in a Project

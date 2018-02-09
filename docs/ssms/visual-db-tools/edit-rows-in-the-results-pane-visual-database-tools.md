@@ -23,7 +23,7 @@ ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit Rows in the Results Pane (Visual Database Tools)

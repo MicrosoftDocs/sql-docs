@@ -19,7 +19,7 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Field-Related Error Information

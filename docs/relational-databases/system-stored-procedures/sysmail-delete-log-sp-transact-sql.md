@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_delete_log_sp"
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_delete_log_sp (Transact-SQL)

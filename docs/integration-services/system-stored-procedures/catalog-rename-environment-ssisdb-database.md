@@ -16,7 +16,7 @@ ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.rename_environment (SSISDB Database)

@@ -14,13 +14,13 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ef2e5e6a-e2cf-4391-803c-23096dee1a14
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Network Configuration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   This section contains the F1 Help topics for the **Server Network Configuration** dialog boxes in SQL Server Configuration Manager.  
   
 ## See Also  

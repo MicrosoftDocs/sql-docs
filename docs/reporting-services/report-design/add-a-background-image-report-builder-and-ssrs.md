@@ -17,7 +17,7 @@ ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 caps.latest.revision: 10
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Add a Background Image (Report Builder and SSRS)

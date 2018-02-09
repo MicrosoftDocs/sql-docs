@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "DDL triggers, about DDL triggers"
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DDL Triggers

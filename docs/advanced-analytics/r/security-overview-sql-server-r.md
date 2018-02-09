@@ -15,10 +15,11 @@ ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
 caps.latest.revision: 9
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Security for SQL Server machine learning and R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes the overall security architecture that is used to connect the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] database engine and related components to the R runtime. Examples of the security process are provided for these common scenarios for using R in an enterprise environment:
 

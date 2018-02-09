@@ -27,27 +27,21 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 caps.latest.revision: 32
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  This statement enables several database configuration settings at the **individual database** level. This statement is available in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and in SQL Server beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Those settings are:  
+  This statement enables several database configuration settings at the **individual database** level. This statement is available in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Those settings are:  
   
 - Clear procedure cache.  
-  
 - Set the MAXDOP parameter to an arbitrary value (1,2, ...) for the primary database based on what works best for that particular database and set a different value (e.g. 0) for all secondary database used (such as for reporting queries).  
-  
 - Set the query optimizer cardinality estimation model independent of the database to compatibility level.  
-  
 - Enable or disable parameter sniffing at the database level.
-  
 - Enable or disable query optimization hotfixes at the database level.
-
 - Enable or disable the identity cache at the database level.
-
-- Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time. 
+- Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time.    
   
  ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -155,13 +149,15 @@ Enables or disables a compiled plan stub to be stored in cache when a batch is c
 on the database. This permission can be granted by a user with CONTROL permission on a database.  
   
 ## General Remarks  
- While you can configure secondary databases to have different scoped configuration settings from their primary,  all secondary databases use the same configuration. Different settings cannot be configured for individual secondaries.  
+ While you can configure secondary databases to have different scoped configuration settings from their primary, all secondary databases use the same configuration. Different settings cannot be configured for individual secondaries.  
   
  Executing this statement clears the procedure cache in the current database, which means that all queries have to recompile.  
   
  For 3-part name queries, the settings for the current database connection for the query is honored, other than for SQL modules (such as procedures, functions, and triggers) that are compiled in the current database context and therefore uses the options of the database in which they reside.  
   
  The ALTER_DATABASE_SCOPED_CONFIGURATION event is added as a DDL event that can be used to fire a DDL trigger. This is a child of the ALTER_DATABASE_EVENTS trigger group.  
+ 
+ Database scoped configuration settings will be carried over with the database. This means that when a given database is restored or attached, the existing configuration settings remain.
   
 ## Limitations and Restrictions  
 **MAXDOP**  

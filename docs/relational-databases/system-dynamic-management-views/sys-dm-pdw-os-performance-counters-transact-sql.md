@@ -18,7 +18,7 @@ ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_os_performance_counters (Transact-SQL)

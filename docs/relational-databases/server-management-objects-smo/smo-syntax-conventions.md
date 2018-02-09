@@ -19,13 +19,14 @@ helpviewer_keywords:
   - "SQL Server Management Objects, syntax conventions"
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SMO Syntax Conventions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) typographical conventions are based on those used in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET reference materials.  
   
 |Convention|Used for|  

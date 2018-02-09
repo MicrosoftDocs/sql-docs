@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "12/19/2017"
+ms.date: "01/17/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -17,11 +17,30 @@ ms.workload: "Inactive"
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download SQL Operations Studio (preview)](download.md)**
+**[Download the January Public Preview](download.md)**
+
+## January 2018 (January Public Preview)
+
+release date: January 17, 2018  
+version: 0.25.4
+
+The *January Public Preview* includes some feature suggestions and high-priority bug fixes. This release includes the following enhancements:
+
+- Saved Server connections are available in the Connection Dialog.
+- Enable Hot exit. Hot exit is off by default, to enable see [Hot exit setting](settings.md#hot-exit).
+- Tab-coloring based on Server Group. Tab coloring is off by default, to enable see [Tab color setting](settings.md#tab-color).
+- Change *Server name* to *Server* in the Connection Dialog.
+- Fix broken *Run Current Query* command.
+- Fix drag-and-drop breaking scripting bug.
+- Fix incorrect pinned Start Menu icon.
+- Fix missing Azure Account branding icon.
+
+For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+
 
 ## December 2017 (December Public Preview)
 
-release date: 12/19/2017  
+release date: December 19, 2017  
 version: 0.24.1
 
 The *December Public Preview* includes several bugs fixes across all feature areas, as well as the following enhancements:
@@ -35,12 +54,10 @@ The *December Public Preview* includes several bugs fixes across all feature are
 - Enable Sideloading of VSIX Extension files.
 - Support "GO N" batch iteration syntax.
 
-For more information see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
-
 
 ## November 2017
 
-release date: 11/15/2017  
+release date: November 15, 2017  
 version: 0.23.6
 
 - Initial release of [!INCLUDE[name-sos](../includes/name-sos-short.md)].

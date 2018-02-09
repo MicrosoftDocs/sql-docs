@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "RSExecRole"
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 
 # Create the RSExecRole

@@ -16,7 +16,7 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.catalog_properties (SSISDB Database)

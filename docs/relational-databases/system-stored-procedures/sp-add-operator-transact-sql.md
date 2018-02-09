@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_operator"
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_operator (Transact-SQL)

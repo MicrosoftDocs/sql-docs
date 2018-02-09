@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "assemblies [CLR integration], runtime checks"
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CLR Integration Programming Model Restrictions

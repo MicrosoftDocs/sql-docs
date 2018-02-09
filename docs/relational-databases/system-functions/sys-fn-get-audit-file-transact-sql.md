@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "fn_get_audit_file function"
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.fn_get_audit_file (Transact-SQL)
@@ -79,7 +79,7 @@ fn_get_audit_file ( file_pattern,
  Specifies a known location with the file specified for the initial_file_name. When this argument is used the function will start reading at the first record of the Buffer immediately following the specified offset.  
   
 > [!NOTE]  
->  The *audit_record_offset* argument must contain valid entries or must contain either the default | NULL value. Type is **bitint**.  
+>  The *audit_record_offset* argument must contain valid entries or must contain either the default | NULL value. Type is **bigint**.  
   
 ## Tables Returned  
  The following table describes the audit file content that can be returned by this function.  
@@ -117,7 +117,7 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Used to record any extra information the user wants to record in |audit log by using the **sp_audit_write** stored procedure.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**nvarbinary** | SQL Server only (starting with 2016) |  
+|sequence_group_id |**varbinary** | SQL Server only (starting with 2016) |  
 |transaction_id |**bigint** | SQL Server only (starting with 2016) |  
 |client_ip |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
 |application_name |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  

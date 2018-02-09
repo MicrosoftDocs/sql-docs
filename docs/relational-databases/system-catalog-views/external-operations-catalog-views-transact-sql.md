@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # External Operations Catalog Views (Transact-SQL)

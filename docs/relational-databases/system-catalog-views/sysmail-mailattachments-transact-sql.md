@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_mailattachments database mail view"
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_mailattachments (Transact-SQL)

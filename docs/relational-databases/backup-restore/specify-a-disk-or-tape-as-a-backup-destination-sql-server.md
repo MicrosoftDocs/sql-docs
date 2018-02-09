@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "tape backup devices, backing up"
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Specify a Disk or Tape As a Backup Destination (SQL Server)

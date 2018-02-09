@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # TOP (Transact-SQL)

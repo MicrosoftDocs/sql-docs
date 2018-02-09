@@ -20,7 +20,7 @@ ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetRows Method Example (VC++)

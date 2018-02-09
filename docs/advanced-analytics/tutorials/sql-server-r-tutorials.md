@@ -19,10 +19,11 @@ dev_langs:
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # SQL Server R tutorials
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides a list of tutorials and samples that demonstrate the use of R with SQL Server 2016 or SQL Server 2017. Through these samples and demos, you will learn:
 

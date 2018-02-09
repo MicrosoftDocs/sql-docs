@@ -20,7 +20,7 @@ ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Join Properties (Visual Database Tools)

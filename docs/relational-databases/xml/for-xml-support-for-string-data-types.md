@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "strings [SQL Server], XML"
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

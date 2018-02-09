@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "bcp utility [SQL Server], compatibility"
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Specify Data Formats for Compatibility when Using bcp (SQL Server)

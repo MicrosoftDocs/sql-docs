@@ -17,7 +17,7 @@ ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Include Indicators and Gauges in a Gauge Panel (Report Builder and SSRS)

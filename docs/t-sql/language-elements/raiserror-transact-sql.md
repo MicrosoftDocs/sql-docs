@@ -32,9 +32,9 @@ helpviewer_keywords:
   - "messages [SQL Server], RAISERROR statement"
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 

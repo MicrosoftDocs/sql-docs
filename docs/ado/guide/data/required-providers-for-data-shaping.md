@@ -19,7 +19,7 @@ ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Required Providers for Data Shaping

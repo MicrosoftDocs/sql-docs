@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Use Built-in Security in Windows SharePoint Services for Report Server Items

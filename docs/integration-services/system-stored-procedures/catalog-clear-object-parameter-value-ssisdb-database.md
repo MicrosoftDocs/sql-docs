@@ -16,7 +16,7 @@ ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.clear_object_parameter_value (SSISDB Database)

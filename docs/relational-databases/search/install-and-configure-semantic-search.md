@@ -23,7 +23,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Install and Configure Semantic Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes the prerequisites for statistical semantic search and how to install or check them.  
   
 ## Install Semantic Search  

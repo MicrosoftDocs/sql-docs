@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "RAW mode, with FOR XML example"
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

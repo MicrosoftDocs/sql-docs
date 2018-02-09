@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "srv_paramsetoutput"
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # srv_paramsetoutput (Extended Stored Procedure API)

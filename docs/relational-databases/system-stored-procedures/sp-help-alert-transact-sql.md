@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_alert"
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_alert (Transact-SQL)

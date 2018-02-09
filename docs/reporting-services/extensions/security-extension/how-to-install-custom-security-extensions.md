@@ -15,9 +15,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 caps.latest.revision: 3
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 

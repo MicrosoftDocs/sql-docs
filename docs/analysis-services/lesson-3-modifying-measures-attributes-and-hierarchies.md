@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 3: Modifying Measures, Attributes and Hierarchies
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 After defining your initial cube, you are ready to improve the usefulness and friendliness of the cube. You can do this by adding hierarchies that support navigation and aggregation at various levels, by applying formats to specific measure, and by defining calculations and relationships.  
   
 > [!NOTE]  

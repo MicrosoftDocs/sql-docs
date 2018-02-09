@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 3-3 - Save Scripts as Projects or Solutions

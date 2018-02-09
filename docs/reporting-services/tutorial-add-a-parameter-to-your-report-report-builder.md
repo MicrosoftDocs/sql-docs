@@ -18,7 +18,7 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Tutorial: Add a Parameter to Your Report (Report Builder)

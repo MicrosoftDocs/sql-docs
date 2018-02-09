@@ -139,9 +139,9 @@ helpviewer_keywords:
   - "execution plans [SQL Server], reading output"
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Showplan Logical and Physical Operators Reference

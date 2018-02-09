@@ -18,7 +18,7 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Hadoop Hive Task

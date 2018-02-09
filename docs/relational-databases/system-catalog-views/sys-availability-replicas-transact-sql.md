@@ -26,7 +26,7 @@ ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 caps.latest.revision: 62
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.availability_replicas (Transact-SQL)

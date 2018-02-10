@@ -1,6 +1,6 @@
 ---
 title: "Known issues in Machine Learning Services | Microsoft Docs"
-ms.date: "01/31/2018"
+ms.date: "02/05/2018"
 ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Known issues in Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes known problems or limitations with machine learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
 
@@ -67,17 +68,31 @@ To avoid problems with R packages, you can also upgrade the version of the R lib
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
+### R components missing from CU3 setup
+
+A limited number of Azure virtual machines were provisioned without the R installation files that should be included with SQL Server. The issue applies to virtual machines provisioned in the period from 2018-01-05 to 2018-01-23. This issue might also affect on-premises installations, if you applied the CU3 update for SQL Server 2017 during the period from 2018-01-05 to 2018-01-23.
+
+A service release has been provided that includes the correct version of the R installation files.
+
++ [Cumulative Update Package 3 for SQL Server 2017 KB4052987](https://www.microsoft.com/en-us/download/details.aspx?id=56128).
+
+To install the components and repair SQL Server 2017 CU3, you must uninstall CU3, and reinstall the updated version:
+
+1. Download the updated CU3 installation file, which includes the R installers.
+2. Uninstall CU3. In Control Panel, search for **Uninstall an update**, and then select "Hotfix 3015 for SQL Server 2017 (KB4052987) (64-bit)". Proceed with uninstall steps.
+3. Reinstall the CU3 update, by double-clicking on the update for KB4052987 that you just downloaded: `SQLServer2017-KB4052987-x64.exe`. Follow the installation instructions.
+
 ### Unable to install Python components in offline installations of SQL Server 2017 CTP 2.0 or later
 
 If you install a pre-release version of SQL Server 2017 on a computer without internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components. In such an instance, you can install the Machine Learning Services feature, but not the Python components.
 
-This issue is fixed in the release version. If you encounter this issue, as a workaround, you can temporarily enable internet access for the duration of the setup. This limitation does not apply to R.
+This issue is fixed in the release version. Also, this limitation does not apply to R components.
 
 **Applies to:** SQL Server 2017 with Python
 
 ### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-When you run R code in a SQL Server 2016 compute context, you might see an error like the following:
+When you run R code in a SQL Server 2016 compute context, you might see the following error:
 
 > *You are running version 9.0.0 of Microsoft R Client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
 
@@ -166,13 +181,13 @@ For additional known issues that might affect R solutions, see the [Machine Lear
 
 If the instance of SQL Server has been installed to a non-default location, such as outside the `Program Files` folder, the warning ACCESS_DENIED is raised when you try to run scripts that install a package. For example:
 
-> *In normalizePath(path.expand(path), winslash, mustWork) : path[2]="~ExternalLibraries/R/8/1": Access is denied*
+> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": Access is denied*
 
 The reason is that an R function attempts to read the path, and fails if the built-in users group **SQLRUserGroup**, does not have read access. The warning that is raised does not block execution of the current R script, but the warning might recur repeatedly whenever the user runs any other R script.
 
 If you have installed SQL Server to the default location, this error does not occur, because all Windows users have read permissions on the `Program Files` folder.
 
-This issue will be addressed in an upcoming service release. As a workaround, provide the group, **SQLRUserGroup**, with read access for all parent folders of `ExternalLibraries`.
+This issue ia addressed in an upcoming service release. As a workaround, provide the group, **SQLRUserGroup**, with read access for all parent folders of `ExternalLibraries`.
 
 ### Serialization error between old and new versions of RevoScaleR
 
@@ -188,13 +203,13 @@ The error does not appear if the API version is the same, or if you are moving a
 
 In other words, use the same version of RevoScaleR for both serialization and deserialization operations.
 
-### Real-time scoring does not correctly handle the learningRate parameter in tree and forest models
+### Real-time scoring does not correctly handle the _learningRate_ parameter in tree and forest models
 
 If you create a model using a decision tree or decision forest method and specify the learning rate, you might see inconsistent results when using `sp_rxpredict` or the SQL `PREDICT` function, as compared to using `rxPredict`.
 
 The cause is an error in the API that processes serialized models, and is limited to the `learningRate` parameter: for example, in [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), or
 
-This issue will be fixed in an upcoming service release.
+This issue is addressed in an upcoming service release.
 
 ### Limitations on processor affinity for R jobs
 
@@ -372,7 +387,7 @@ There are several potential workarounds:
 
 + When you install the pretrained models, choose a custom location.
 + If possible, install the SQL Server instance under a custom installation path with a shorter path, such as C:\SQL\MSSQL14.MSSQLSERVER.
-+ Use the Windows utility [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) to create a hardlink that maps the model file to a shorter path. 
++ Use the Windows utility [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) to create a hard link that maps the model file to a shorter path.
 + Update to the latest service release.
 
 ### Error when saving serialized model to SQL Server

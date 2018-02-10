@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Change Data Capture and Other SQL Server Features

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.syscacheobjects compatibility view"
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.syscacheobjects (Transact-SQL)

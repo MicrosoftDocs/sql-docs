@@ -21,7 +21,7 @@ ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using AddNew in Immediate and Batch Modes

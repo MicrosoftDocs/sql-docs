@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "22832 (Database Engine error)"
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # About Change Data Capture (SQL Server)

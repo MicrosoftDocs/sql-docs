@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "triggers [SQL Server], security"
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage Trigger Security

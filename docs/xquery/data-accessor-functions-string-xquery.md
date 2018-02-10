@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:string function"
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Accessor Functions - string (XQuery)

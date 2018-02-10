@@ -18,7 +18,7 @@ ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Errors Collection Properties, Methods, and Events

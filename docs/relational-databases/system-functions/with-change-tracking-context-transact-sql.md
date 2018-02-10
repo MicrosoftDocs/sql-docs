@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server], WITH CHANGE_TRACKING_CONTEXT"
 ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

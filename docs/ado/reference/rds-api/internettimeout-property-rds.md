@@ -19,7 +19,7 @@ ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InternetTimeout Property (RDS)

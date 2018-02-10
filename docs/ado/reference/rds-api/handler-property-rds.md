@@ -19,7 +19,7 @@ ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Handler Property (RDS)

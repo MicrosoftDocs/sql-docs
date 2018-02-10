@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DML triggers, deleted or inserted tables"
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Use the inserted and deleted Tables

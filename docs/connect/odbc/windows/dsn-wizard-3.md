@@ -79,6 +79,10 @@ Alters the behavior of **Multi-subnet failover** to allow for faster reconnectio
 
 Enables automatic decryption and encryption of data transfers to and from columns encrypted with the [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) feature available in SQL Server 2016 and later.
 
+### Use FMTONLY metadata discovery:
+
+Use the legacy SET FMTONLY metadata discovery method when connecting to SQL Server 2012 or newer. Enable this only when using queries not supported by [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), such as those containing temporary tables. 
+
 ### Next
 
 Proceeds to the next screen of the wizard.

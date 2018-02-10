@@ -22,7 +22,7 @@ ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)

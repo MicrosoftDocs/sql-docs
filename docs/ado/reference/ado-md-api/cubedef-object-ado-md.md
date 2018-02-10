@@ -21,7 +21,7 @@ ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CubeDef Object (ADO MD)

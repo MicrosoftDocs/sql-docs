@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "arithmetic expressions"
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Arithmetic Expressions (XQuery)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:expanded-QName function"
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions Related to QNames - expanded-QName

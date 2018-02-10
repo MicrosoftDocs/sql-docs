@@ -20,7 +20,8 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # What&#39;s New in SQL Server Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
  Installation is supported on x64 processors only. For more information, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   
  Installation of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] will prompt you to specify the directory to save the extracted package. If no location is entered, the server will default to the computer's system drive. The extracted files will remain after [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installation is complete.  

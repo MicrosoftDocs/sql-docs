@@ -20,7 +20,7 @@ ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IndexNulls Property Example (VC++)

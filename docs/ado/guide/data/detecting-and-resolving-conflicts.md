@@ -19,7 +19,7 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Detecting and Resolving Conflicts

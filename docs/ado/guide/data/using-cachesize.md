@@ -19,7 +19,7 @@ ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using CacheSize

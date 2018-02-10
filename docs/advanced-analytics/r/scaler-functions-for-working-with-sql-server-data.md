@@ -21,6 +21,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # RevoScaleR functions for working with SQL Server data
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic provides an overview of the main functions provided in RevoScaleR for working with SQL Server data.
 

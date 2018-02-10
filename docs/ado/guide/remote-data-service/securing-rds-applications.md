@@ -18,7 +18,7 @@ ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Securing RDS Applications

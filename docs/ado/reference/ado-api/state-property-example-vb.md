@@ -20,7 +20,7 @@ ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # State Property Example (VB)

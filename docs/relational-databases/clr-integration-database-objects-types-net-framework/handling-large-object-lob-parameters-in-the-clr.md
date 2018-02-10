@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SqlChars data type"
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Handling Large Object (LOB) Parameters in the CLR

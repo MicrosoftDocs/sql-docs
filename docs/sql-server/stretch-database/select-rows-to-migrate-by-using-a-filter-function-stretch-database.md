@@ -25,9 +25,10 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Select rows to migrate by using a filter function (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  If you store cold data in a separate table, you can configure Stretch Database to migrate the entire table. If your table contains both hot and cold data, on the other hand, you can specify a filter predicate to select the rows to migrate. The filter predicate is an inline table-valued function. This topic describes how to write an inline table-valued function to select rows to migrate.  
+
+  If you store cold data in a separate table, you can configure Stretch Database to migrate the entire table. If your table contains both hot and cold data, on the other hand, you can specify a filter predicate to select the rows to migrate. The filter predicate is an inline table-valued function. This article describes how to write an inline table-valued function to select rows to migrate.  
   
 > [!IMPORTANT]
 > If you provide a filter function that performs poorly, data migration also performs poorly. Stretch Database applies the filter function to the table by using the CROSS APPLY operator.  
@@ -40,7 +41,7 @@ ms.workload: "Inactive"
   
 -   Run the ALTER TABLE statement to specify a filter function after you exit the wizard.  
   
- The ALTER TABLE syntax for adding a function is described later in this topic.  
+ The ALTER TABLE syntax for adding a function is described later in this article.  
   
 ## Basic requirements for the filter function  
  The inline table-valued function required for a Stretch Database filter predicate looks like the following example.  

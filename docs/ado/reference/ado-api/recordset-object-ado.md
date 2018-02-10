@@ -21,7 +21,7 @@ ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Recordset Object (ADO)

@@ -21,7 +21,7 @@ ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Parameters Collection, Command Property Example (VC++)

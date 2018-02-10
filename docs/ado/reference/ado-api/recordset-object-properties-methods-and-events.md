@@ -18,7 +18,7 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Recordset Object Properties, Methods, and Events

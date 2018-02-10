@@ -21,7 +21,7 @@ ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Append and CreateParameter Methods Example (JScript)

@@ -22,7 +22,7 @@ ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Type Property (ADO MD)

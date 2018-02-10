@@ -21,7 +21,7 @@ ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Parameter (ADO for Visual C++ Syntax)

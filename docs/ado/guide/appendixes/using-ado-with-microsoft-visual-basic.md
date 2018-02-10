@@ -21,7 +21,7 @@ ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Using ADO with Microsoft Visual Basic and Visual Basic for Applications

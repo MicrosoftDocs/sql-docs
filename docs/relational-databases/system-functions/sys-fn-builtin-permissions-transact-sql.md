@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "sys.fn_builtin_permissions function"
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "rothja"
+ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

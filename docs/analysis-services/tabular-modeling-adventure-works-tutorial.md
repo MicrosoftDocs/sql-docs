@@ -1,7 +1,7 @@
 ---
 title: "Tabular Modeling (1200 compatibility level) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/17/2018"
+ms.date: "02/10/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -66,13 +66,13 @@ This tutorial does not provide lessons or information about managing a deployed 
 ## Prerequisites  
 In order to complete this tutorial, you'll need the following prerequisites:  
   
--   The latest version of [!INCLUDE[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).
+-   The latest version of [SSDT](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 -   The latest version of SQL Server Management Studio. [Get the latest version](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). 
   
--   A client application such as [Power BI Desktop](https://powerbi.microsoft.com/desktop/) or [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel.    
+-   A client application such as [Power BI Desktop](https://powerbi.microsoft.com/desktop/) or Excel.    
   
--   A SQL Server instance with the Adventure Works DW 2014 sample database. This sample database includes the data necessary to complete this tutorial. [Get the latest version](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   A SQL Server instance with the Adventure Works DW sample database. This sample database includes the data necessary to complete this tutorial. [Get the latest version](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 
 -   An Azure Analysis Services or SQL Server 2016 or later Analysis Services instance to deploy your model to. [Sign up for a free Azure Analysis Services trial](https://azure.microsoft.com/services/analysis-services/).

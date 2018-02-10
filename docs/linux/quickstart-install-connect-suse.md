@@ -4,7 +4,7 @@ description:  This quickstart shows how to install SQL Server 2017 on SUSE Linux
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/09/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -47,12 +47,17 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
-   sudo zypper --gpg-auto-import-keys refresh
    ```
 
    > [!NOTE]
    > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
+1. Refresh your repositories.
+
+   ```bash
+   sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
 1. Run the following commands to install SQL Server:
 
    ```bash

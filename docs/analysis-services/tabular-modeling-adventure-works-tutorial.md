@@ -34,7 +34,7 @@ This tutorial provides lessons on how to create an Analysis Services tabular mod
 If you are using SQL Server 2017 or Azure Analysis Services, and you want to create your model at the 1400 compatibility level, use the [Azure Analysis Services - Adventure Works tutorial](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). This updated version uses the new, modern Get Data feature to connect and import source data, and uses the M language to configure partitions.
  
   
-## What you'll learn   
+## What you learn   
   
 -   How to create a new tabular model project in SSDT.
   
@@ -44,7 +44,7 @@ If you are using SQL Server 2017 or Azure Analysis Services, and you want to cre
   
 -   How to create and manage calculations, measures, and Key Performance Indicators that help users analyze model data.  
   
--   How to create and manage perspectives and hierarchies that help users more easily browse model data by providing business and application specific viewpoints.  
+-   How to create and manage perspectives and hierarchies that help users more easily browse model data by providing business and application-specific viewpoints.  
   
 -   How to create partitions that divide table data into smaller logical parts that can be processed independent from other partitions.  
   
@@ -57,14 +57,14 @@ This tutorial is based on Adventure Works Cycles, a fictitious company. Adventur
   
 To better support the data analysis needs of sales and marketing teams and of senior management, you are tasked with creating a tabular model for users to analyze Internet sales data in the AdventureWorksDW sample database.  
   
-In order to complete the tutorial, and the Adventure Works Internet Sales tabular model, you must complete a number of lessons. Within each lesson are a number of tasks; completing each task in order is necessary for completing the lesson. While in a particular lesson there may be several tasks that accomplish a similar outcome, but how you complete each task is slightly different. This is to show that there is often more than one way to complete a particular task, and to challenge you by using skills you've learned in previous tasks.  
+In order to complete the tutorial, and the Adventure Works Internet Sales tabular model, you must complete a number of lessons. In each lesson is a number of tasks; completing each task in order is necessary for completing the lesson. While in a particular lesson there may be several tasks that accomplish a similar outcome, but how you complete each task is slightly different. This is to show that there is often more than one way to complete a particular task, and to challenge you by using skills you've learned in previous tasks.  
   
-The purpose of the lessons is to guide you through authoring a basic tabular model running in In-Memory mode by using many of the features included in SSDT. Because each lesson builds upon the previous lesson, you should complete the lessons in order. Once you've completed all of the lessons, you will have authored and deployed the Adventure Works Internet Sales sample tabular model on an Analysis Services server.  
+The purpose of the lessons is to guide you through authoring a basic tabular model running in In-Memory mode by using many of the features included in SSDT. Because each lesson builds upon the previous lesson, you should complete the lessons in order. Once you've completed all of the lessons, you have authored and deployed the Adventure Works Internet Sales sample tabular model on an Analysis Services server.  
   
 This tutorial does not provide lessons or information about managing a deployed tabular model database by using SQL Server Management Studio, or using a reporting client application to connect to a deployed model to browse model data.  
   
 ## Prerequisites  
-In order to complete this tutorial, you'll need the following prerequisites:  
+In order to complete this tutorial, you need the following prerequisites:  
   
 -   The latest version of [SSDT](../ssdt/download-sql-server-data-tools-ssdt.md).
 

@@ -1,7 +1,7 @@
 ---
 title: "bcp Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2018"
+ms.date: "02/12/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -217,7 +217,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     The following example imports data using Azure AD Integrated auth. The example imports data from file `c:\last\data2.txt` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Azure AD Integrated auth:
 
     ```
-    bcp bcptest in "c:\last\data2.txt" -S aadserver.database.windows.net -d testdb -G -c -t
+    bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
   

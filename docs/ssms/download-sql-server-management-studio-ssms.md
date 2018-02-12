@@ -88,7 +88,7 @@ Data Discovery & Classification:
 
 - Added a new SQL Data Discovery & Classification feature for discovering, classifying, labeling & reporting sensitive data in your databases. 
 - Auto-discovering and classifying your most sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in your organizational information protection stature.
-- Learn more at [SQL Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866999).
+- Learn more at [SQL Data Discovery & Classification](../relational-databases/security/sql-data-discovery-and-classification.md).
 
 Query Editor:
 

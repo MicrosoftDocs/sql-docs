@@ -9,9 +9,9 @@ ms.topic: tutorial
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: "mvc"
+ms.custom: "sql-linux,mvc"
 ms.technology: database-engine
 ms.workload: "Inactive"
 ---

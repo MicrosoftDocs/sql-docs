@@ -1,11 +1,11 @@
 ---
 title: "Editions and supported features of SQL Server 2017 ~ Linux | Microsoft Docs"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.date: "09/14/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -37,6 +37,8 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Editions and supported features of SQL Server 2017 on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article provides details of features supported by the various editions of SQL Server 2017 on Linux. For editions and supported features of SQL Server on Windows, see [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   

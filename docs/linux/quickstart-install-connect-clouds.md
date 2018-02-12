@@ -8,7 +8,7 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: "database-engine"
-ms.component: "sql-linux"
+ms.component: ""
 ms.technology: database-engine
 ms.assetid:
 ---

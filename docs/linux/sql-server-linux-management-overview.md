@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.workload: "On Demand"
 ---
 # Choose the right tool to manage SQL Server on Linux

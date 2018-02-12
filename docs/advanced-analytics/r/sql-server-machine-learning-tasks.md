@@ -7,7 +7,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 52ad3f10-6d24-477a-aeb6-110456b2ed1c
@@ -18,6 +18,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Machine learning lifecycle and personas
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine learning projects can be complex, because they require the skills and collaboration of a disparate set of professionals. This article describes the principal tasks in the machine learning lifecycle, the type of data professionals who are engaged in machine learning, and how SQL Server supports the needs.
 

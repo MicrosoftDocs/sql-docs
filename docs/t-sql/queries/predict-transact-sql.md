@@ -9,7 +9,7 @@ ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "PREDICT clause"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

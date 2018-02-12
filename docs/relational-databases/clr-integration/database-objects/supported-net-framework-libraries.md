@@ -9,7 +9,7 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - ".NET Framework [CLR Integration]"
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Supported .NET Framework Libraries

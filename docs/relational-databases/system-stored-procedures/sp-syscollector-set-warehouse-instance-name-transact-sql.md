@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_syscollector_set_warehouse_instance_name"
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_set_warehouse_instance_name (Transact-SQL)

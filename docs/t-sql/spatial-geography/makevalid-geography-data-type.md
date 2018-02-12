@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MakeValid method (geography)"
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MakeValid (geography Data Type)

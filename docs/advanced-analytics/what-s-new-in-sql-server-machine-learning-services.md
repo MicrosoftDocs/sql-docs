@@ -1,6 +1,6 @@
 ---
 title: "What&#39;s new in Machine Learning Services | Microsoft Docs"
-ms.date: "11/16/2017"
+ms.date: "01/08/2018"
 ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
@@ -8,17 +8,18 @@ ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
 caps.latest.revision: 36
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # What's new in Machine Learning Services in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In SQL Server 2016, Microsoft introduced SQL Server R Services, a feature that supports enterprise-scale data science, by integrating the R language with the SQL Server database engine.
 
@@ -30,9 +31,11 @@ Catch the latest announcement here! [Python in SQL Server 2017: enhanced in-data
 
 Machine Learning Server in SQL Server provides comprehensive support for building and deploying machine learning solutions in either R or Python. Here are the highlights of this release:
 
-### What's new in Cumulative Update 1 for SQL Server 2017
+### What's new in Cumulative Update 3 for SQL Server 2017
 
-You can now upgrade your Python and R components to Machine Learning Server 9.2.1.24. This release features many enhancements to **revoscalepy** and **RevoScaleR**, including performance improvements.
+This release contains updates to Python and R components. 
+
++ Added support for Python model serialization in revoscalepy, using the rx_serialize_model function
 
 ### In-database Python integration
 

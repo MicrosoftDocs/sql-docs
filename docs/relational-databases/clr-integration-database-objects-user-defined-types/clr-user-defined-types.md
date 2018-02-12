@@ -9,7 +9,7 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -36,9 +36,9 @@ helpviewer_keywords:
   - "indexes [CLR integration]"
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CLR User-Defined Types

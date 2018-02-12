@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "tuning reports [SQL Server]"
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 1-3 - Viewing Tuning Reports

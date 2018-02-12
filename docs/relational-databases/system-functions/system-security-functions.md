@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
 caps.latest.revision: 4
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # System Security Functions

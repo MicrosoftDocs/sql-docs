@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "savepoints [SQL Server]"
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ROLLBACK WORK (Transact-SQL)

@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "consistency [SQL Server], catalogs"
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC CHECKCATALOG (Transact-SQL)
@@ -42,7 +42,6 @@ ms.workload: "On Demand"
 ## Syntax  
   
 ```  
-  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -75,23 +74,23 @@ DBCC CHECKCATALOG performs various consistency checks between system metadata ta
 If a snapshot cannot be created DBCC CHECKCATALOG acquires an exclusive database lock to obtain the required consistency. If any inconsistencies are detected, they cannot be repaired and the database must be restored from a backup.
   
 > [!NOTE]  
->  Running DBCC CHECKCATALOG against **tempdb** does not perform any checks. This is because, for performance reasons, database snapshots are not available on **tempdb**. This means that the required transactional consistency cannot be obtained. Recycle the server to resolve any **tempdb** metadata issues.  
+> Running DBCC CHECKCATALOG against **tempdb** does not perform any checks. This is because, for performance reasons, database snapshots are not available on **tempdb**. This means that the required transactional consistency cannot be obtained. Recycle the server to resolve any **tempdb** metadata issues.  
   
 > [!NOTE]  
->  DBCC CHECKCATALOG does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
+> DBCC CHECKCATALOG does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
   
 DBCC CHECKCATALOG is also run as part of [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## Result Sets  
 If no database is specified, DBCC CHECKCATALOG returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 If [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is specified as the database name, DBCC CHECKCATALOG returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

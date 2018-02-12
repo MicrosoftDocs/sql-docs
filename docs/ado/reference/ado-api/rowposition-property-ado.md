@@ -25,7 +25,7 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RowPosition Property (ADO)

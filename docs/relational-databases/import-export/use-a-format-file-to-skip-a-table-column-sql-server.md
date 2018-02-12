@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "format files [SQL Server], skipping columns"
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use a Format File to Skip a Table Column (SQL Server)

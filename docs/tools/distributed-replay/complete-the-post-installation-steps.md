@@ -16,7 +16,7 @@ ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
 caps.latest.revision: 8
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Complete the Post-Installation Steps

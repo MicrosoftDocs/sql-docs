@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STIntersects (geometry Data Type)"
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # STIntersects (geometry Data Type)

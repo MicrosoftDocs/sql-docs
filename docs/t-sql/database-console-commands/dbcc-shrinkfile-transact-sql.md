@@ -33,9 +33,9 @@ helpviewer_keywords:
   - "DBCC SHRINKFILE statement"
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 caps.latest.revision: 87
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC SHRINKFILE (Transact-SQL)

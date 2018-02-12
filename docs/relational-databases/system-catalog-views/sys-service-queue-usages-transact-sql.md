@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.service_queue_usages catalog view"
 ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.service_queue_usages (Transact-SQL)

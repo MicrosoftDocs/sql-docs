@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "backup compression [SQL Server], backup compression default Option"
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View or Configure the backup compression default Server Configuration Option

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "searched CASE expression"
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # CASE (Transact-SQL)

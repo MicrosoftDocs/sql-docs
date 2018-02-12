@@ -19,7 +19,7 @@ ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Type Change Required Dialog Box (Visual Database Tools)

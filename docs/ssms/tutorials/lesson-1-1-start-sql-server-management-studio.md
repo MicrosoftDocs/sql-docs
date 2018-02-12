@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Lesson 1-1 - Start SQL Server Management Studio

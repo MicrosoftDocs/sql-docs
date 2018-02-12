@@ -20,7 +20,7 @@ ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Group Rows in Query Results (Visual Database Tools)

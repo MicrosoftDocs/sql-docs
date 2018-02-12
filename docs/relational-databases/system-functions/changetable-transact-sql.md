@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "change tracking [SQL Server], CHANGETABLE"
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CHANGETABLE (Transact-SQL)

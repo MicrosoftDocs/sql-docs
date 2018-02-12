@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_category"
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_category (Transact-SQL)

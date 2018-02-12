@@ -21,7 +21,7 @@ ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Direction Property

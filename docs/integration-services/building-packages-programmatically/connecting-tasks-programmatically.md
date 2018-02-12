@@ -9,7 +9,7 @@ ms.component: "building-packages-programmatically"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -25,7 +25,7 @@ ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connecting Tasks Programmatically

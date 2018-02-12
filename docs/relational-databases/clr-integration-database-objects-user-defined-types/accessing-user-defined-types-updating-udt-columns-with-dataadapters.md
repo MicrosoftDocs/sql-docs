@@ -9,7 +9,7 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "data adapters [CLR integration]"
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Accessing User-Defined Types - Updating UDT Columns with DataAdapters

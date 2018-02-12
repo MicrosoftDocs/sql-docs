@@ -25,7 +25,7 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.selective_xml_index_paths (Transact-SQL)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "file restores [SQL Server], restorefile system table"
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # restorefile (Transact-SQL)

@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "characters [SQL Server], wildcard"
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)

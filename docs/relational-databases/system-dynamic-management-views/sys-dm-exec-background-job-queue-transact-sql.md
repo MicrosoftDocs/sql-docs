@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_background_job_queue dynamic management function"
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_background_job_queue (Transact-SQL)

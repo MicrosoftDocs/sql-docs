@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
@@ -18,6 +18,7 @@ ms.workload: "Inactive"
 ---
 
 # Publish and consume Python web services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 You can deploy a working Python solution to a web service by using the operationalization feature in Microsoft Machine Learning Server. This topic describes the steps to successfully publish and then run your solution.
 

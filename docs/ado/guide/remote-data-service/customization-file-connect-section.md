@@ -19,7 +19,7 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Customization File Connect Section

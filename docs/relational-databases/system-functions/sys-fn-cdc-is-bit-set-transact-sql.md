@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "fn_cdc_is_bit_set"
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_cdc_is_bit_set (Transact-SQL)

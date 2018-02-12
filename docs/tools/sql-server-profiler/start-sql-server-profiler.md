@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "running SQL Server Profiler"
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Run SQL Server Profiler

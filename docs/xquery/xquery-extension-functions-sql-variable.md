@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sql:variable function"
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # XQuery Extension Functions - sql:variable()

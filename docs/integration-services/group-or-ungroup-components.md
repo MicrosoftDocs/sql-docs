@@ -21,7 +21,7 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Group or Ungroup Components

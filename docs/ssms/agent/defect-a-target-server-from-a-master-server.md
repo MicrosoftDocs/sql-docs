@@ -22,7 +22,7 @@ ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Defect a Target Server from a Master Server

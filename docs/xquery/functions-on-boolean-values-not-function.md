@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "EBV"
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on Boolean Values - not Function 

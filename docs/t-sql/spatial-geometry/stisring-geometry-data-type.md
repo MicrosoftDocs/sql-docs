@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STIsRing (geometry Data Type)"
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIsRing (geometry Data Type)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "query notifications [SQL Server], subscriptions"
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)

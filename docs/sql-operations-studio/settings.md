@@ -48,6 +48,16 @@ Depending on your platform, the user settings file is located here:
 
 The workspace setting file is located under the `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` folder in your project.
 
+## Hot Exit
+
+SQL Operations Studio will remember unsaved changes to files when you exit by default. This is the same as the Hot exit feature in Visual Studio Code.
+
+By default, Hot exit is off. Enable Hot exit by editing the `files.hotExit` setting. For details, see [Hot Exit (in the Visual Studio Code documentation)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+
+
+## Tab color
+
+To simplify identifying what connections you are working with, open tabs in the editor can have their colors set to match the color of the Server Group the connection belongs to. By default, tab colors are off by default. Enable tab colors by editing the `sql.tabColorMode` setting.
 
 ## Additional resources
 

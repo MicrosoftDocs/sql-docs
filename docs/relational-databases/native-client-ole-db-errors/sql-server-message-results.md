@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-errors"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "OLE DB error handling, SQL Server message results"
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Message Results

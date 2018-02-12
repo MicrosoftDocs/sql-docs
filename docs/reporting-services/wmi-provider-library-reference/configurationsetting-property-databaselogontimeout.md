@@ -2,15 +2,15 @@
 title: "DatabaseLogonTimeout Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "wmi-provider-library-reference"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DatabaseLogonTimeout property"
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
 caps.latest.revision: 38
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - DatabaseLogonTimeout

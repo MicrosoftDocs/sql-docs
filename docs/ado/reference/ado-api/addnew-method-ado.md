@@ -22,7 +22,7 @@ ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # AddNew Method (ADO)

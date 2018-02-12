@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server]"
 ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # System Dynamic Management Views

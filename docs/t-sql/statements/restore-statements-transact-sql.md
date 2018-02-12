@@ -43,9 +43,9 @@ helpviewer_keywords:
   - "RESTORE LOG, see RESTORE statement"
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: 248
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # RESTORE Statements (Transact-SQL)

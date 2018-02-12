@@ -20,7 +20,7 @@ ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Supports Method Example (VC++)

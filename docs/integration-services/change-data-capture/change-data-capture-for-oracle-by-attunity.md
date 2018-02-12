@@ -16,7 +16,7 @@ ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 caps.latest.revision: 2
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change Data Capture for Oracle by Attunity

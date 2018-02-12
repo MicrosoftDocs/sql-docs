@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "atomization [XQuery]"
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Atomization (XQuery)

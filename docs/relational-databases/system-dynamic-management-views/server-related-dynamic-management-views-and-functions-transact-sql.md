@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 caps.latest.revision: 4
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Server-Related Dynamic Management Views and Functions (Transact-SQL)

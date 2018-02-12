@@ -22,7 +22,7 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Integration Services User Interface

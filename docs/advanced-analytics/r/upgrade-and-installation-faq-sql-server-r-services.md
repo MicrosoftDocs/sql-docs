@@ -7,7 +7,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
@@ -18,6 +18,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades.
 

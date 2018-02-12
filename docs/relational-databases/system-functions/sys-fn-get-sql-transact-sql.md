@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "SQL handles"
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_get_sql (Transact-SQL)

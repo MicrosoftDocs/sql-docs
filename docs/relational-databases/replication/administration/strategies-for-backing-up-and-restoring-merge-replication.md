@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], backup and restore"
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Strategies for Backing Up and Restoring Merge Replication

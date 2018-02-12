@@ -9,14 +9,14 @@ ms.component: "native-client|ODBC"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: c2f86810-2775-4ddd-8df7-e8373785a7fc
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Data Source Names and 64-Bit Operating Systems

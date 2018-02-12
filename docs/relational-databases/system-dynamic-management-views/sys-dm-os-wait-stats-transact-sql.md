@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_wait_stats dynamic management view"
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 caps.latest.revision: 111
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sys.dm_os_wait_stats (Transact-SQL)
@@ -77,7 +77,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
  The contents of this dynamic management view can be reset by running the following command:  
   
-``` t-sql  
+```sql  
 DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);  
 GO  
 ```  
@@ -126,7 +126,7 @@ This command resets all counters to 0.
 |BROKER_FORWARDER |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_INIT |Occurs when initializing Service Broker in each active database. This should occur infrequently.| 
 |BROKER_MASTERSTART |Occurs when a task is waiting for the primary event handler of the Service Broker to start. This should occur very briefly.| 
-|BROKER_RECEIVE_WAITFOR |Occurs when the RECEIVE WAITFOR is waiting. This is typical if no messages are ready to be received.| 
+|BROKER_RECEIVE_WAITFOR |Occurs when the RECEIVE WAITFOR is waiting. This may mean that either no messages are ready to be received in the queue or a lock contention is preventing it from receiving messages from the queue.| 
 |BROKER_REGISTERALLENDPOINTS |Occurs during the initialization of a Service Broker connection endpoint. This should occur very briefly.| 
 |BROKER_SERVICE |Occurs when the Service Broker destination list that is associated with a target service is updated or re-prioritized.| 
 |BROKER_SHUTDOWN |Occurs when there is a planned shutdown of Service Broker. This should occur very briefly, if at all.| 

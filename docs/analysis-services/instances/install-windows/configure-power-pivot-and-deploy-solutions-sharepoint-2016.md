@@ -2,14 +2,14 @@
 title: "Configure Power Pivot and Deploy Solutions (SharePoint 2016) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
@@ -30,18 +30,6 @@ ms.workload: "Inactive"
 -   For information on backend services and installing a [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode, see [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  For information on installing the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 Configuration tool, see [Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
-  
- This topic contains the following sections:  
-  
- [Run Power Pivot for SharePoint 2016 configuration](#bkmk_run_configuration_tool)  
-  
- [Verify Power Pivot Configuration](#bkmk_verify_powerpivot)  
-  
- [Troubleshoot Issues](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Run Power Pivot for SharePoint 2016 configuration  
  **Note:** To complete the following steps, you must be a farm administrator. If you see an error message similar to the following:  

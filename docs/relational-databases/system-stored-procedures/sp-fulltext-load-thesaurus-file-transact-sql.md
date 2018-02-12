@@ -25,7 +25,7 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_fulltext_load_thesaurus_file (Transact-SQL)

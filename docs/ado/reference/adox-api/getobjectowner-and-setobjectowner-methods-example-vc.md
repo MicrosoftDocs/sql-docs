@@ -21,7 +21,7 @@ ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetObjectOwner and SetObjectOwner Methods Example (VC++)

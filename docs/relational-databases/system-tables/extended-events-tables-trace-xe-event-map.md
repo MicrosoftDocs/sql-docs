@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "extended events [SQL Server], tables"
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extended Events Tables - trace_xe_event_map

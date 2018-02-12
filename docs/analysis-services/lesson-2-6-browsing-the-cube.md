@@ -2,14 +2,14 @@
 title: "Browsing the Cube | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 2-6 - Browsing the Cube
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 After you deploy a cube, the cube data is viewable on the **Browser** tab in Cube Designer, and the dimension data is viewable on the **Browser** tab in Dimension Designer. Browsing cube and dimension data is way to check your work incrementally. You can verify that small changes to properties, relationships, and other objects have the desired effect once the object is processed. While the Browser tab is used to view both cube and dimension data, the tab provides different capabilities based on the object you are browsing.  
   
 For dimensions, the Browser tab provides a way to view members or navigate a hierarchy all the way down to the leaf node. You can browse dimension data in different languages, assuming you have added the translations to your model.  

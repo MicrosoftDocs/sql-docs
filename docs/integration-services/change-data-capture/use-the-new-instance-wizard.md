@@ -16,7 +16,7 @@ ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use the New Instance Wizard

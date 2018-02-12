@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DDL triggers, metadata"
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Get Information About DDL Triggers

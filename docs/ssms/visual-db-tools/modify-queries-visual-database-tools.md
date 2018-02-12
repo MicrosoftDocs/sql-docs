@@ -19,7 +19,7 @@ ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Modify Queries (Visual Database Tools)

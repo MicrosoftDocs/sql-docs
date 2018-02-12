@@ -2,15 +2,15 @@
 title: "Data Mining Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304

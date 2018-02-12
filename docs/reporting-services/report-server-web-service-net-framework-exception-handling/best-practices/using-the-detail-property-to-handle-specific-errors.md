@@ -2,15 +2,15 @@
 title: "Using the Detail Property to Handle Specific Errors | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "report-server-web-service-net-framework-exception-handling"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "InnerText property"
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Using the Detail Property to Handle Specific Errors

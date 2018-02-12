@@ -9,16 +9,16 @@ ms.component: "native-client-odbc-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), metadata for prepared statements"
 ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table-Valued Parameter Metadata for Prepared Statements

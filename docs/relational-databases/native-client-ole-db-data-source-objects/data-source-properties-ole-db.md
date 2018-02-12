@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-data-source-objects"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "OLE DB data source properties [SQL Server Native Client]"
 ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Source Properties (OLE DB)

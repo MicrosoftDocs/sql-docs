@@ -9,7 +9,7 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
@@ -35,9 +35,9 @@ helpviewer_keywords:
   - "exposing UDT properties [CLR integration]"
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating User-Defined Types - Coding

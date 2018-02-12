@@ -20,7 +20,7 @@ ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Development, Test, and Production Databases (Visual Database Tools)

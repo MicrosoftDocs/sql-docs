@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services Tutorials (SSAS) | Microsoft Docs"
 ms.date: "03/17/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.custom: ""
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -23,6 +23,7 @@ ms.workload: "Active"
 ---
 # Analysis Services Tutorials (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 This section contains tutorials for SQL Server Analysis Services.  
   
 [Tabular Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  

@@ -2,14 +2,14 @@
 title: "Defining a Fact Relationship | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 5-2 - Defining a Fact Relationship
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Users sometimes want to be able to dimension measures by data items that are in the fact table or to query the fact table for specific additional related information, such as invoice numbers or purchase order numbers related to specific sales facts. When you define a dimension based on such a fact table item, the dimension is called a *fact dimension*. Fact dimensions are also known as degenerate dimensions. Fact dimensions are useful for grouping together related fact table rows, such as all the rows that are related to a particular invoice number. Although you can put this information in a separate dimension table in the relational database, creating a separate dimension table for the information provides no benefit because the dimension table would grow at the same rate as the fact table, and would just create duplicate data and unnecessary complexity.  
   
 Within [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can determine whether to duplicate the fact dimension data in a MOLAP dimension structure for increased query performance, or whether to define the fact dimension as a ROLAP dimension to save storage space at the expense of query performance. When you store a dimension with the MOLAP storage mode, all the dimension members are stored in the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in a highly compressed MOLAP structure, in addition to being stored in the measure group's partitions. When you store a dimension with the ROLAP storage mode, only the dimension definition is stored in the MOLAP structure—the dimension members themselves are queried from the underlying relational fact table at query time. You decide the appropriate storage mode based on how frequently the fact dimension is queried, the number of rows returned by a typical query, the performance of the query, and the processing cost. Defining a dimension as ROLAP does not require that all cubes that use the dimension also be stored with the ROLAP storage mode. The storage mode for each dimension can be configured independently.  

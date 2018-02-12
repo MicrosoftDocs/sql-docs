@@ -1,25 +1,17 @@
 ---
 title: Updated - Reporting Services for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Reporting Services for Microsoft SQL Server.
-services: na
-documentationcenter: ''
+
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: ''
-ms.service: ""
-ms.component: "reporting-services"
-ms.suite: "pro-bi"
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: ""
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 12/02/2017
-ms.prod: "reporting-services"
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.author: genemi
-ms.workload: reporting-services
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: ssrs
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: Reporting Services for SQL Server
 
@@ -33,7 +25,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
+- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
 - *Subject area:* &nbsp; **Reporting Services for SQL Server**.
 
 
@@ -46,10 +38,7 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Change log for SQL Server Reporting Services](change-log-sql-server-reporting-services.md)
-2. [Develop with the REST APIs for Reporting Services](developer/rest-api.md)
-3. [Report Viewer web part on a SharePoint site](report-server-sharepoint/report-viewer-web-part-sharepoint-site.md)
-4. [SharePoint site settings for the Report Viewer web part](report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md)
+1. [How to find the product key for SQL Server 2017 Reporting Services](install-windows/find-reporting-services-product-key-ssrs.md)
 
 
 
@@ -75,148 +64,57 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Install SQL Server Reporting Services](#TitleNum_1)
-2. [Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site](#TitleNum_2)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [Install SQL Server Reporting Services](install-windows/install-reporting-services.md)
-
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
-
-<!-- Source markdown line 66.  ms.author= "asaxton".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 c959622d4d10a71ed598256e8e284130eb49af5b 77dc1b4f6696e911ed036fc27724ff8a96b79f57  (PR=4150  ,  Filename=install-reporting-services.md  ,  Dirpath=docs\reporting-services\install-windows\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
-
-
-
-    > The default path is C:\Program Files\Microsoft SQL Server Reporting Services.
-
-7. After a successful setup, select **Configure Report Server** to launch the Reporting Services Configuration Manager.
-
-    ![Configure the report server--media/install-reporting-services/report-server-install-configure.png)
-
-**Configuration your report server**
-
-
-After you select **Configure Report Server** in the setup, you will be presented with **Report Server Configuration Manager**. For more information, see [Report Server Configuration Manager--reporting-services-configuration-manager-native-mode.md).
-
-You need to [create a report server database--ssrs-report-server-create-a-report-server-database.md) to complete the initial configuration of Reporting Services. A SQL Server Database server is required to complete this step.
-
-**Creating a database on a different server**
-
-
-If you are creating the report server database on a database server on a different machine, you need to change the service account for the report server to a credential that is recognized on the database server.
-
-By default, the report server uses the virtual service account. If you try to create a database on a different server, you may receive the following error on the Applying connection rights step.
-
-`System.Data.SqlClient.SqlException (0x80131904): Windows NT user or group '(null)' not found. Check the name again.`
-
-To work around the error, you can change the service account to either Network Service or a domain account. Changing the service account to Network Service applies rights in the context of the machine account for the report server.
-
-For more information, see [Configure the report server service account--configure-the-report-server-service-account-ssrs-configuration-manager.md).
-
-**Windows Service**
-
-
-A windows service is created as part of the installation. It is displayed as **SQL Server Reporting Services**. The service name is **SQLServerReportingServices**.
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site](report-server-sharepoint/deploy-report-viewer-web-part.md)
-
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
-
-<!-- Source markdown line 129.  ms.author= "asaxton".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 99275aa597f491bb09688060b3f713406e2f0624 a282486da6df55154212c98fa06c7e62e66c8350  (PR=4150  ,  Filename=deploy-report-viewer-web-part.md  ,  Dirpath=docs\reporting-services\report-server-sharepoint\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
-
-
-
-Deletion of the web part can be attempted by using PowerShell, but there is not a direct command for it. For a script example, see [How to delete web parts from the web part Gallery](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
-
-**Supported languages**
-
-
-The following languages are supported with the web part:
-
-* English (en)
-* German (de)
-* Spanish (sp)
-* French (fr)
-* Italian (it)
-* Japanese (ja)
-* Korean (ko)
-* Portuguese (pt)
-* Russian (ru)
-* Chinese (Simplified - zh-HANS and zh-CHS)
+***No articles in this area were updated recently, this time.***
 
 
 
 
 
 
-
-## Similar Articles
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## Similar articles about new or updated articles
 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### Subject areas which do have new or recently updated articles
 
-- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+#### Subject areas that *do* have new or recently updated articles
 
-#### Subject areas which have no new or recently updated articles
+
+- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### Subject areas that do *not* have any new or recently updated articles
+
 
 - [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

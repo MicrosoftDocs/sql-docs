@@ -2,15 +2,15 @@
 title: "Render a Report History Snapshot Using URL Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "snapshots [Reporting Services], rendering report history"
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Render a Report History Snapshot Using URL Access

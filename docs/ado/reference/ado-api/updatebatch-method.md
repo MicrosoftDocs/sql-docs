@@ -22,7 +22,7 @@ ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # UpdateBatch Method

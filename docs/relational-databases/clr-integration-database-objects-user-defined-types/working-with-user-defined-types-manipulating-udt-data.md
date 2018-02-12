@@ -9,7 +9,7 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
@@ -33,9 +33,9 @@ helpviewer_keywords:
   - "inserting data"
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Working with User-Defined Types - Manipulating UDT Data

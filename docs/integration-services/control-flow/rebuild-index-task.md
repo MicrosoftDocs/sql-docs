@@ -22,7 +22,7 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Rebuild Index Task

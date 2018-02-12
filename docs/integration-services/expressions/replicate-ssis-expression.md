@@ -18,7 +18,7 @@ ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REPLICATE (SSIS Expression)

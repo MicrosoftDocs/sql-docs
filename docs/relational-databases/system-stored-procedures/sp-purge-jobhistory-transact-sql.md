@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_purge_jobhistory"
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_purge_jobhistory (Transact-SQL)

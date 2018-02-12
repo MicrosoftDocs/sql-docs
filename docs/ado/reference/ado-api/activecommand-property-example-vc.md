@@ -20,7 +20,7 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ActiveCommand Property Example (VC++)

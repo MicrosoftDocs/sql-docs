@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sample applications [DTA]"
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XML Input File Samples (DTA)

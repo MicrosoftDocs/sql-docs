@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "syssubscriptions view"
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syssubscriptions (System View) (Transact-SQL)

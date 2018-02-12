@@ -18,7 +18,7 @@ ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Service Accounts (Configure Database Mirroring Security Wizard)

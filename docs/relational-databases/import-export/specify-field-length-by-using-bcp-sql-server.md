@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "bcp utility [SQL Server], field length"
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify Field Length by Using bcp (SQL Server)

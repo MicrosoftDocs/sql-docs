@@ -20,7 +20,7 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Data Profiling Task and Viewer

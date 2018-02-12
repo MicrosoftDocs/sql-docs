@@ -22,7 +22,7 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Integration Services (SSIS) Expressions

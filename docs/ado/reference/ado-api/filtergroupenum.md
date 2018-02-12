@@ -21,7 +21,7 @@ ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FilterGroupEnum

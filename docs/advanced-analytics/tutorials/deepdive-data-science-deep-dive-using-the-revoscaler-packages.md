@@ -7,7 +7,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 applies_to: 
@@ -23,6 +23,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Data science deep dive: Using the RevoScaleR packages with SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This tutorial demonstrates how to use the enhanced R packages provided in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] to work with SQL Server data and create scalable R solutions, by using the server as a compute context for high-performance big data analytics.
 

@@ -1,7 +1,7 @@
 ---
 title: "Discontinued functionality to SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
 ms.date: "07/02/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.custom: ""
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "unsupported features [Reporting Services]"
 ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
 caps.latest.revision: 54
-author: "guyinacube"
-ms.author: "asaxton"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Inactive"
 ---

@@ -9,7 +9,7 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 dev_langs: 
@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "library [CLR integration]"
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Getting Started with CLR Integration

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQL Server:Query Store"
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server, Query Store Object

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "path expressions [XQuery]"
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Path Expressions - Specifying Predicates

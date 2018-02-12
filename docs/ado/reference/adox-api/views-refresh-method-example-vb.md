@@ -20,7 +20,7 @@ ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Views Refresh Method Example (VB)

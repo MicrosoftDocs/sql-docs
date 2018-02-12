@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "EBV"
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FLWOR Statement and Iteration (XQuery)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysservers compatibility view"
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysservers (Transact-SQL)

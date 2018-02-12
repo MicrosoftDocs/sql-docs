@@ -2,15 +2,15 @@
 title: "Handling Warnings and Cases That Do Not Cause Exceptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "report-server-web-service-net-framework-exception-handling"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "warnings [Reporting Services]"
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
 caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Handling Warnings and Cases That Do Not Cause Exceptions

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysobjects system table"
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.sysobjects (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Work with Data in the Results Pane (Visual Database Tools)

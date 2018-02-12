@@ -21,7 +21,7 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using ADO for Internet Publishing

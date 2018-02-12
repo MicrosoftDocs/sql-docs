@@ -2,14 +2,14 @@
 title: "Modifying Default Table Names | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 1-4 - Modifying Default Table Names
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 You can change the value of the **FriendlyName** property for objects in the data source view to make them easier to notice and use.  
   
 In the following task, you will change the friendly name of each table in the data source view by removing the "**Dim**" and "**Fact**" prefixes from these tables. This will make the cube and dimension objects (that you will define in the next lesson) easier to notice and use.  

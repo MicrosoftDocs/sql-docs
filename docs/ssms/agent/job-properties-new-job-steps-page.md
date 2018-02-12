@@ -18,7 +18,7 @@ ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Job Properties - New Job (Steps Page)

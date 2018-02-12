@@ -18,7 +18,7 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 6-4 - Deploying the Lesson 6 Package

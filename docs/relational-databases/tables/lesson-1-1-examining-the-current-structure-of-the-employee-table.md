@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "examining the current structure of the employee"
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-1 - Examining the Current Structure of the Employee Table

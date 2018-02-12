@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Policy-Based Management, tutorials"
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Tutorial: Administering Servers by Using Policy-Based Management

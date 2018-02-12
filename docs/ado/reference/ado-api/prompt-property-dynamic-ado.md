@@ -19,7 +19,7 @@ ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Prompt Property-Dynamic (ADO)

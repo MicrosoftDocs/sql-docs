@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_proxy"
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_proxy (Transact-SQL)

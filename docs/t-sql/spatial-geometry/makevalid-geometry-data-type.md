@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "MakeValid (geometry Data Type)"
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # MakeValid (geometry Data Type)

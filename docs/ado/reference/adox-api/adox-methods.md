@@ -19,7 +19,7 @@ ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADOX Methods

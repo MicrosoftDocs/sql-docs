@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Activity Monitor [SQL Server]"
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Activity Monitor

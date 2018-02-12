@@ -21,7 +21,7 @@ ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CursorType Property (ADO)

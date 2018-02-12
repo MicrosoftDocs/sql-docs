@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "parent axis"
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Path Expressions - Specifying Axis

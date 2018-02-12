@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_server_memory_dumps dynamic management view"
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_server_memory_dumps (Transact-SQL)

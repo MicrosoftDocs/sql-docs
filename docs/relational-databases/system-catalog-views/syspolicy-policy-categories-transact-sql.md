@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "syspolicy_policy_groups view"
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syspolicy_policy_categories (Transact-SQL)

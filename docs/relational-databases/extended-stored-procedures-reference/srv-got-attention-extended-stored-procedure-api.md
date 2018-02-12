@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "srv_got_attention"
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # srv_got_attention (Extended Stored Procedure API)

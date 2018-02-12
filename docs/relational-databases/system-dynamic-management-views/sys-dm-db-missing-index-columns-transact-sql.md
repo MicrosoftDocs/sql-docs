@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function"
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_missing_index_columns (Transact-SQL)

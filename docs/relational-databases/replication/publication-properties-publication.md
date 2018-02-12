@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Publication Properties dialog box"
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Publication Properties  - &lt;Publication&gt;

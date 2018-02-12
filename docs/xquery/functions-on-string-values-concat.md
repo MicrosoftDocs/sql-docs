@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "concat function [XQuery]"
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on String Values - concat

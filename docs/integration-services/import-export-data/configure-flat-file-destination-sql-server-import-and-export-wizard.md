@@ -18,7 +18,7 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configure Flat File Destination (SQL Server Import and Export Wizard)

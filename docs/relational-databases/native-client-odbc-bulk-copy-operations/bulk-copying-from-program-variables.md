@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-bulk-copy-operations"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "program variables [ODBC]"
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Bulk Copying from Program Variables

@@ -9,16 +9,16 @@ ms.component: "native-client-ole-db-how-to"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "user-defined functions [OLE DB]"
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execute a User-Defined Function and Process Return Code (OLE DB)

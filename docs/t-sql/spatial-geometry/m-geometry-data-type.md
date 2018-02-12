@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "M (geometry Data Type)"
 ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # M (geometry Data Type)

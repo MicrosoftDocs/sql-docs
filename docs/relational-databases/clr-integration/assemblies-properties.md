@@ -9,16 +9,16 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.assemblies.general.f1"
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assemblies - Properties

@@ -2,15 +2,15 @@
 title: "PPTX Device Information Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2015"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "export"
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # PPTX Device Information Settings

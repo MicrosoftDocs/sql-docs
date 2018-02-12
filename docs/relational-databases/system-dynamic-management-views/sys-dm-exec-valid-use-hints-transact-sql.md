@@ -25,7 +25,7 @@ ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 caps.latest.revision: 5
 author: "pmasl"
 ms.author: "pelopes"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_valid_use_hints (Transact-SQL)

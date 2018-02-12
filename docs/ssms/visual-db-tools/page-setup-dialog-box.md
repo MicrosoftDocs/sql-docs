@@ -18,7 +18,7 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Page Setup Dialog Box

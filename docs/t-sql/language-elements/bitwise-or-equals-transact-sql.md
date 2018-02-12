@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "|= (bitwise OR equals)"
 ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 

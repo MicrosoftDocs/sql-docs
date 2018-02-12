@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STAsBinary (geometry Data Type)"
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STAsBinary (geometry Data Type)

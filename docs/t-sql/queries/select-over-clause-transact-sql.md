@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "OVER clause"
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 caps.latest.revision: 75
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SELECT - OVER Clause (Transact-SQL)

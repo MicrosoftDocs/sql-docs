@@ -8,8 +8,8 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "analysis-services"
-  - "r-services"
+  
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -22,6 +22,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # How to create MDX queries using olapR
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) package supports MDX queries against cubes hosted in SQL Server Analysis Services. You can build a query against an existing cube, explore dimensions and other cube objects, and paste in existing MDX queries to retrieve data.
 

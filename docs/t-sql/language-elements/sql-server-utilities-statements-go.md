@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "GO command"
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server Utilities Statements - GO

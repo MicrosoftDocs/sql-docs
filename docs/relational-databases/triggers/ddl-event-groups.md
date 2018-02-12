@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DDL triggers, event groups"
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DDL Event Groups

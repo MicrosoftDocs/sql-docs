@@ -22,7 +22,7 @@ ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 47
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # The Database Mirroring Endpoint (SQL Server)

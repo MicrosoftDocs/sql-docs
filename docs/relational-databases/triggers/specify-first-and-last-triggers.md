@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "AFTER triggers"
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify First and Last Triggers

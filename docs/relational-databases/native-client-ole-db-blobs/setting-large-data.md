@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-blobs"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "large data, OLE objects"
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Setting Large Data

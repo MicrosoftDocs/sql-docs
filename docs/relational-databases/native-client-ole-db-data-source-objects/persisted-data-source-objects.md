@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-data-source-objects"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "persisted data source objects"
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Persisted Data Source Objects

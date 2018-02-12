@@ -25,11 +25,11 @@
 
 # [Lift and shift SSIS packages to Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [Tutorial - Deploy, run, and monitor a package on Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Connect to the SSIS Catalog on Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Schedule package execution on Azure](lift-shift/ssis-azure-schedule-packages.md)
-## [Validate packages deployed to Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Connect to data sources with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Connect to files and file shares](lift-shift/ssis-azure-files-file-shares.md)
+## [Validate packages deployed to Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Connect to the SSIS Catalog on Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Schedule package execution on Azure](lift-shift/ssis-azure-schedule-packages.md)
 
 # [Install or upgrade](../integration-services/install-windows/install-integration-services.md)
 
@@ -175,11 +175,8 @@
 #### [Lesson 3-3 - Testing the Deployed Packages](lesson-3-3-testing-the-deployed-packages.md)
 
 # Resources
-## Follow the blog
-### [SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
-## Get help
-### [SSIS forum on MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [SSIS tag on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## Give feedback
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [Get help in the SSIS forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Get help on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Follow the SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
+## [Report issues & request features](https://feedback.azure.com/forums/908035-sql-server)
 ## [Get the docs on your PC](../sql-server/sql-server-help-installation.md)

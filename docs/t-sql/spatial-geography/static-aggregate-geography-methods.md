@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Aggregate Geography Methods [SQL Server]"
 ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Static Aggregate Geography Methods

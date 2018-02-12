@@ -9,7 +9,7 @@ ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -20,7 +20,7 @@ ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating a Custom Connection Manager

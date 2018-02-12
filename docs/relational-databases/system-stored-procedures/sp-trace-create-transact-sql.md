@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_trace_create"
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_trace_create (Transact-SQL)

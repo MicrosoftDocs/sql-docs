@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STEndpoint method"
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STEndpoint (geography Data Type)

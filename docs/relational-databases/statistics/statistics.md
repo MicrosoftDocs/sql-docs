@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "statistics [SQL Server]"
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Statistics
@@ -70,7 +70,7 @@ For each histogram step above:
   
 -   Dotted lines represent the sampled values used to estimate total number of distinct values in the range (*distinct_range_rows*) and total number of values in the range (*range_rows*). The query optimizer uses *range_rows* and *distinct_range_rows* to compute *average_range_rows* and does not store the sampled values.   
   
-#### <a name="density"></a> Density Vector  
+#### <a name="density"></a>Density Vector  
 **Density** is information about the number of duplicates in a given column or combination of columns and it is calculated as 1/(number of distinct values). The query optimizer uses densities to enhance cardinality estimates for queries that return multiple columns from the same table or indexed view. The density vector contains one density for each prefix of columns in the statistics object. 
 
 > [!NOTE]
@@ -90,7 +90,7 @@ For example, if a statistics object has the key columns `CustomerId`, `ItemId` a
 ### Statistics Options  
  There are three options that you can set that affect when and how statistics are created and updated. These options are set at the database level only.  
   
-#### AUTO_CREATE_STATISTICS Option  
+#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS Option  
  When the automatic create statistics option, [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) is ON, the Query Optimizer creates statistics on individual columns in the query predicate, as necessary, to improve cardinality estimates for the query plan. These single-column statistics are created on columns that do not already have a [histogram](#histogram) in an existing statistics object. The AUTO_CREATE_STATISTICS option does not determine whether statistics get created for indexes. This option also does not generate filtered statistics. It applies strictly to single-column statistics for the full table.  
   
  When the Query Optimizer creates statistics as a result of using the AUTO_CREATE_STATISTICS option, the statistics name starts with `_WA`. You can use the following query to determine if the Query Optimizer has created statistics for a query predicate column.  

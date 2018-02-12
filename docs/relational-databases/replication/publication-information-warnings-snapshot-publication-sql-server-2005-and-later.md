@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.monitor.publicationinfo.warningsandagents.snapshot.f1"
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)

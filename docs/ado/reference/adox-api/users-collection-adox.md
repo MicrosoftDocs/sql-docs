@@ -23,7 +23,7 @@ ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Users Collection (ADOX)

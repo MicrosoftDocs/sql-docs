@@ -37,9 +37,9 @@ helpviewer_keywords:
   - "derived tables"
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: 97
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # FROM (Transact-SQL)

@@ -9,7 +9,7 @@ ms.component: "extending-packages-scripting"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -21,7 +21,7 @@ ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component

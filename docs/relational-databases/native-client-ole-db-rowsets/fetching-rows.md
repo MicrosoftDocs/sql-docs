@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-rowsets"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, fetching"
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Fetching Rows

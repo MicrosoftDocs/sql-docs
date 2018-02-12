@@ -21,7 +21,7 @@ ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Choose Toolbox Items (Maintenance Tasks Page)

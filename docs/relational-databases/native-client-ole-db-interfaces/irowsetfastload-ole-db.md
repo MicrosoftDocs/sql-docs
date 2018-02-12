@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-interfaces"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "COM"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "IRowsetFastLoad interface"
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IRowsetFastLoad (OLE DB)

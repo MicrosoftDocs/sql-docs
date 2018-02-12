@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "renaming views"
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Modify Views

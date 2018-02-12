@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "count function [XQuery]"
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Aggregate Functions - count

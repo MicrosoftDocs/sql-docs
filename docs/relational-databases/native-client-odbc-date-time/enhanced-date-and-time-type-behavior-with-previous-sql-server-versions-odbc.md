@@ -9,16 +9,16 @@ ms.component: "native-client-odbc-date-time"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [ODBC], enhanced behavior with earlier SQL Server versions"
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)

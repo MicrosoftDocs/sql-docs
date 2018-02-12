@@ -9,16 +9,16 @@ ms.component: "native-client-ole-db-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, rowset creation"
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table-Valued Parameter Rowset Creation

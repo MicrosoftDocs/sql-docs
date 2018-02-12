@@ -27,7 +27,7 @@ ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Make a Master Server

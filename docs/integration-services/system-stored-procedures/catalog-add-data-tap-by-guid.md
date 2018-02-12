@@ -16,7 +16,7 @@ ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.add_data_tap_by_guid

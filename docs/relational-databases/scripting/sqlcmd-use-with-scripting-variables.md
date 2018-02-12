@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "setvar command"
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "mightypen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sqlcmd - Use with Scripting Variables

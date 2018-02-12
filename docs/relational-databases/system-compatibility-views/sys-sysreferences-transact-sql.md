@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysreferences system table"
 ms.assetid: 81276f13-202e-4e74-962d-46eb98c98d2e
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysreferences (Transact-SQL)

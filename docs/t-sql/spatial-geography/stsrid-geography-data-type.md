@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STSrid method"
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STSrid (geography Data Type)

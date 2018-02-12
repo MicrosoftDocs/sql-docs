@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "changing startup accounts for services"
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SCM Services - Change the Service Startup Account

@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "range to test [SQL Server]"
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # BETWEEN (Transact-SQL)

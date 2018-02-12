@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-data-source-objects"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "initialization properties [OLE DB]"
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Initialization and Authorization Properties

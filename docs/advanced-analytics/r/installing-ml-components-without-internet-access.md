@@ -1,14 +1,14 @@
 ---
 title: "Installing machine learning components without internet access | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/30/2017"
+ms.date: "01/08/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Installing machine learning components without internet access
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Because the R and Python components provided with SQL Server 2016 and SQL Server 2017 are open source, Microsoft does not install R or Python components by default. Instead, we provide the related installers and bundled packages as a convenience on the Microsoft Download Center and other trusted sites. You must consent to the appropriate license, and then SQL Server setup installs R or Python components for you.
 
@@ -122,15 +123,20 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |use previous|
+Microsoft R Open     |no change; use previous|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Microsoft Python Open     |use previous |
+Microsoft Python Open     |no change; use previous |
 Microsoft Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 CU2** |
-Microsoft R Open     |use previous|
-Microsoft R Server      |use previous|
-Microsoft Python Open     |use previous |
-Microsoft Python Server    |use previous|
+Microsoft R Open     |no change; use previous|
+Microsoft R Server      |no change; use previous|
+Microsoft Python Open     |no change; use previous|
+Microsoft Python Server    |no change; use previous|
+**SQL Server 2017 CU3** |
+Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+Microsoft Python Open     |no change; use previous|
+Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
 
 ### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
 
@@ -183,7 +189,7 @@ Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlin
 Microsoft R Open     |no change; use previous|
 Microsoft R Server    |no change; use previous |
 
-If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/r-server/install/r-server-install-windows#download)
+If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 ### <a name = "bkmk_OtherComponents"></a>Additional prerequisites
 

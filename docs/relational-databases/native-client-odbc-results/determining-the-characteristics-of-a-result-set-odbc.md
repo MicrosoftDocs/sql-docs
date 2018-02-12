@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-results"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "SQLNumResultCols function"
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Determining the Characteristics of a Result Set (ODBC)

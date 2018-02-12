@@ -18,7 +18,7 @@ ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Cellset Object Properties, Methods, and Events

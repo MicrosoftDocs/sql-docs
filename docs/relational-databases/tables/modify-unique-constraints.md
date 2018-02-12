@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "constraints [SQL Server], unique"
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Modify Unique Constraints

@@ -2,15 +2,15 @@
 title: "How to: Debug Custom Assemblies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "custom-assemblies"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], custom assemblies"
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 caps.latest.revision: 44
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # How to: Debug Custom Assemblies

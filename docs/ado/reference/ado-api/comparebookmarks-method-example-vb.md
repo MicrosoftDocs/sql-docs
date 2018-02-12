@@ -20,7 +20,7 @@ ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CompareBookmarks Method Example (VB)

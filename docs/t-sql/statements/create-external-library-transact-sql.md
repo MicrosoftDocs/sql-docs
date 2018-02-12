@@ -9,7 +9,7 @@ ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "CREATE EXTERNAL LIBRARY"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # CREATE EXTERNAL LIBRARY (Transact-SQL)  
 

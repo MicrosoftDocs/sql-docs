@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
@@ -18,6 +18,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # Set up a data science client for use with SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 After you have configured an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to support machine learning, you should set up a development environment that is capable of connecting to the server for remote execution and deployment.
 

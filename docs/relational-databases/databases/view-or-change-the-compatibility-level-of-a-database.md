@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "compatibility levels [SQL Server], changing"
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # View or Change the Compatibility Level of a Database

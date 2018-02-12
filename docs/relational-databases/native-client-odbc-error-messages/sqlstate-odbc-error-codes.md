@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-error-messages"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "errors [ODBC], cause information"
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQLSTATE (ODBC Error Codes)

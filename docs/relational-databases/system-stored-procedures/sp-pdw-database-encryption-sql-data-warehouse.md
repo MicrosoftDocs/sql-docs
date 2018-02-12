@@ -18,7 +18,7 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_pdw_database_encryption (SQL Data Warehouse)

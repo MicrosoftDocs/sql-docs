@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "disallow results from triggers option"
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # disallow results from triggers Server Configuration Option

@@ -20,7 +20,7 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use Annotations in Packages

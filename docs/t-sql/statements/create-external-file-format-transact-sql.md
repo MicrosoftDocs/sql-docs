@@ -25,7 +25,7 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: 25
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -103,26 +103,26 @@ WITH (
  *file_format_name*  
  Specifies a name for the external file format.
   
- FORMAT_TYPE
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET]
  Specifies the format of the external data.
   
- PARQUET
- Specifies a Parquet  format.
+   -   PARQUET
+   Specifies a Parquet  format.
   
- ORC  
- Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
-  
- RCFILE (in combination with SERDE_METHOD = *SERDE_method*)
- Specifies a Record Columnar file format (RcFile). This option requires you to specify a Hive Serializer and Deserializer (SerDe) method. This requirement is the same if you use Hive/HiveQL in Hadoop to query RC files. Note, the SerDe method is case-sensitive.
-  
- Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
-  
- DELIMITEDTEXT
- Specifies a text format with column delimiters, also called field terminators.
+   -   ORC  
+   Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
+
+   -   RCFILE (in combination with SERDE_METHOD = *SERDE_method*)
+   Specifies a Record Columnar file format (RcFile). This option requires you to specify a Hive Serializer and Deserializer (SerDe) method. This requirement is the same if you use Hive/HiveQL in Hadoop to query RC files. Note, the SerDe method is case-sensitive.
+
+   Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+
+   -   DELIMITEDTEXT
+   Specifies a text format with column delimiters, also called field terminators.
   
  FIELD_TERMINATOR = *field_terminator*
  Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
@@ -154,7 +154,7 @@ WITH (
   
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
   
- DATE\_FORMAT = *datetime_format*
+DATE\_FORMAT = *datetime_format*
  Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option is not necessary. Only one custom datetime format is allowed per file. You cannot specify multiple custom datetime formats per file. However, you can use multiple datetime formats, if each one is the default format for its respective data type in the external table definition.
 
 PolyBase only uses the custom date format for importing the data. It does not use the custom format for writing data to an external file.

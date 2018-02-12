@@ -2,22 +2,22 @@
 title: "Data collection in ReportViewer Control 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "application-integration"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 caps.latest.revision: 2
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Data Collection

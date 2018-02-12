@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "RAW mode, querying XML example"
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

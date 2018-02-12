@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "[ ] (wildcard - character(s) to match)"
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 

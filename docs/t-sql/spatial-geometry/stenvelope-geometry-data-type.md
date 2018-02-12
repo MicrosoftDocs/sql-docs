@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STEnvelope (geometry Data Type)"
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STEnvelope (geometry Data Type)

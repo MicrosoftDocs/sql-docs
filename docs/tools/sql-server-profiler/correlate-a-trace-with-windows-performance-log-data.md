@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SQL Server Profiler, correlating trace with log data"
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Correlate a trace with Windows Performance Log data

@@ -16,7 +16,7 @@ ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connect to an Excel Data Source (SQL Server Import and Export Wizard)

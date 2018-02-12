@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STNumGeometries (geometry Data Type)"
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STNumGeometries (geometry Data Type)

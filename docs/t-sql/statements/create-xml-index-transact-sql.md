@@ -33,7 +33,7 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE XML INDEX (Transact-SQL)

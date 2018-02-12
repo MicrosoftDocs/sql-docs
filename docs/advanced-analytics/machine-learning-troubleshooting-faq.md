@@ -9,16 +9,17 @@ ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 
 # Troubleshoot machine learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides troubleshooting information related to setup and configuration of machine learning features in SQL Server. The information includes links to setup guides, known issues, and release notes. Other articles linked to from this article provide advice about performance optimization for machine learning solutions in SQL Server.
 

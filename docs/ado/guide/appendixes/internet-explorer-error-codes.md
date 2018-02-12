@@ -19,7 +19,7 @@ ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Internet Explorer Error Codes for Remote Data Service

@@ -3,7 +3,7 @@ title: Overview of SQL Server on Linux | Microsoft Docs
 description: This topic describes how SQL Server runs on Linux and provides information on how to learn more.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
@@ -54,5 +54,5 @@ If you are already familiar with SQL Server, review the [Release notes](sql-serv
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Ask database administration questions
 - [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Ask development questions
 - [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Ask technical questions
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): Report bugs and request feature
+- [Submit feedback](https://feedback.azure.com/forums/908035-sql-server): Report bugs and request feature
 - [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server

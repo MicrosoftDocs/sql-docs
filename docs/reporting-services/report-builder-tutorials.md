@@ -2,14 +2,14 @@
 title: "Report Builder Tutorials | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -18,7 +18,7 @@ ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Report Builder Tutorials

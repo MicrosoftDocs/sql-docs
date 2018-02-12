@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "trace flags [SQL Server], enabling"
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC TRACEON (Transact-SQL)

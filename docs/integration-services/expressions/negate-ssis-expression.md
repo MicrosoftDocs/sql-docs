@@ -19,7 +19,7 @@ ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # - (Negate) (SSIS Expression)

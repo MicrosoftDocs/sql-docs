@@ -18,7 +18,7 @@ ms.assetid: bffb915e-bc84-4417-aa35-183243ca3312
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete Jobs

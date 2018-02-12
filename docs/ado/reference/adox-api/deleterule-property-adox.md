@@ -25,7 +25,7 @@ ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DeleteRule Property (ADOX)

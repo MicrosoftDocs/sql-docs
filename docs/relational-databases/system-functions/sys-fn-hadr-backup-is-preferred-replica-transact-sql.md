@@ -27,7 +27,7 @@ ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 caps.latest.revision: 19
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)

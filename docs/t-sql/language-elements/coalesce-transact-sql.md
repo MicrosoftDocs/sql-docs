@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "nonnull expressions"
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # COALESCE (Transact-SQL)

@@ -36,9 +36,9 @@ helpviewer_keywords:
   - "displaying distribution statistics"
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 caps.latest.revision: 75
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC SHOW_STATISTICS (Transact-SQL)

@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
@@ -21,6 +21,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Upgrade machine learning components in a SQL Server instance
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article explains the process of _binding_, which you can use to upgrade the machine learning components used in SQL Server. The process of binding locks the server into an update cadence based on releases of Machine Learning Server, rather than using the SQL Server release and update schedule.
 
@@ -35,7 +36,7 @@ If at any time you want to stop upgrading on the Machine Learning Server schedul
 
 The process of upgrading the machine learning components is referred to as **binding**, because it changes the support model for SQL Server machine learning components to use the new Modern Software Lifecycle Policy. 
 
-In general, switching to the new licensing model ensures that your data scientists can always use the latest version of R or Python. For more information about the terms of the Modern Lifecycle Policy, see [Support Timeline for Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
+In general, switching to the new servicing model ensures that your data scientists can always use the latest version of R or Python. For more information about the terms of the Modern Lifecycle Policy, see [Support Timeline for Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > The upgrade does not change the support model for the SQL Server database and doesn't change the version of SQL Server.

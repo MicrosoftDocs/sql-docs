@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_msx_enlist"
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_msx_enlist (Transact-SQL)

@@ -9,7 +9,7 @@ ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -20,7 +20,7 @@ ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Coding a Custom Foreach Enumerator

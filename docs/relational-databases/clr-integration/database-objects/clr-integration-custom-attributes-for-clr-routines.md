@@ -9,7 +9,7 @@ ms.component: "clr"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "SqlUserDefinedTypeAttribute attribute"
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 caps.latest.revision: 82
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CLR Integration Custom Attributes for CLR Routines

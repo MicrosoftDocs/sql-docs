@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG021797 error"
 ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG021797

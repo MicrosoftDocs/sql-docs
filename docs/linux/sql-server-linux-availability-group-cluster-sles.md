@@ -87,7 +87,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ## Configure an Always On Availability Group
 
-On Linux servers configure the availability group and then configure the cluster resources. To configure the availability group, see [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+On Linux servers, configure the availability group and then configure the cluster resources. To configure the availability group, see [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
 
 ## Install and configure Pacemaker on each cluster node
 
@@ -146,7 +146,7 @@ If you have a cluster running with one or more nodes, add more cluster nodes wit
 
 If you have configured the existing cluster nodes with the `YaST` cluster module, make sure the following prerequisites are fulfilled before you run `ha-cluster-join`:
 - The root user on the existing nodes has SSH keys in place for passwordless login. 
-- `Csync2` is configured on the existing nodes. For details, refer to Configuring Csync2 with YaST. 
+- `Csync2` is configured on the existing nodes. For more information,see Configuring Csync2 with YaST. 
 
 1. Log in as root to the physical or virtual machine supposed to join the cluster. 
 2. Start the bootstrap script by executing: 
@@ -161,7 +161,7 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
 
 4. If you have not already configured a passwordless SSH access between both machines, you will also be prompted for the root password of the existing node. 
 
-   After logging in to the specified node, the script will copy the Corosync configuration, configure SSH and `Csync2`, and will bring the current machine online as new cluster node. Apart from that, it will start the service needed for Hawk. If you have configured shared storage with `OCFS2`, it will also automatically create the mountpoint directory for the `OCFS2` file system. 
+   After logging in to the specified node, the script copies the Corosync configuration, configures SSH and `Csync2`, and brings the current machine online as new cluster node. Apart from that, it starts the service needed for Hawk. If you have configured shared storage with `OCFS2`, it also automatically creates the mountpoint directory for the `OCFS2` file system. 
 
 5. Repeat the previous steps for all machines you want to add to the cluster. 
 
@@ -182,11 +182,11 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
    >[!NOTE]
    >`admin_addr` is the virtual IP cluster resource which is configured during initial one-node cluster setup.
 
-After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information, refer to Section 4.1.2, Option no-quorum-policy. 
+After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information,see Section 4.1.2, Option no-quorum-policy. 
 
 ## Set cluster property start-failure-is-fatal to false
 
-`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will take care of demoting the replica to secondary and it will automatically rejoin the availability group. Also, if `start-failure-is-fatal` is set to `false`, the cluster will fall back to the configured failcount limits configured with migration-threshold so you need to make sure default for migration threshold is updated accordingly.
+`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster decides whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker retries starting the availability group resource on the former primary once the SQL instance is available. Pacemaker takes care of demoting the replica to secondary and it automatically rejoins the availability group. Also, if `start-failure-is-fatal` is set to `false`, the cluster falls back to the configured failcount limits configured with migration-threshold so you need to make sure default for migration threshold is updated accordingly.
 
 To update the property value to false run:
 ```bash
@@ -263,7 +263,7 @@ primitive admin_addr \
 ```
 
 ### Add colocation constraint
-Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource, and the cluster resource manager chooses the node with the highest score for a particular resource. (If a node has a negative score for a resource, the resource cannot run on that node.) We can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than INFINITY, it is only a recommendation. A score of INFINITY means it is a must. We want to ensure that primary of the availability group and the virtual ip resource are run on the same host, so we will define a colocation constraint with a score of INFINITY. 
+Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource, and the cluster resource manager chooses the node with the highest score for a particular resource. (If a node has a negative score for a resource, the resource cannot run on that node.) We can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than INFINITY, it is only a recommendation. A score of INFINITY means it is a must. We want to ensure that primary of the availability group and the virtual ip resource are run on the same host, so we define a colocation constraint with a score of INFINITY. 
 
 To set colocation constraint for the virtual IP to run on same node as the master, run the following command on one node:
 

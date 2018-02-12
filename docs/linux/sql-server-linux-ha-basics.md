@@ -108,7 +108,7 @@ Similar to Windows, Linux distributions have a built-in firewall. If your compan
 | Variable    | TCP/UDP  | NFS – port for `MOUNTD_PORT` (found in `/etc/sysconfig/nfs` on RHEL)                                                |
 | Variable    | TCP/UDP  | NFS – port for `STATD_PORT` (found in `/etc/sysconfig/nfs` on RHEL)                                                 |
 
-For additional ports that may be used by Samba, refer to [Samba Port Usage](https://wiki.samba.org/index.php/Samba_Port_Usage).
+For additional ports that may be used by Samba,see [Samba Port Usage](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
 Conversely, the name of the service under Linux can also be added as an exception instead of the port; for example, `high-availability` for Pacemaker. Refer to your distribution for the names if this is the direction you wish to pursue. For example, on RHEL the command to add in Pacemaker is
 

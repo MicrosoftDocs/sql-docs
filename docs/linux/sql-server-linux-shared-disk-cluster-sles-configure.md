@@ -101,7 +101,7 @@ Another storage option is to use SMB file share:
 
 ### Configure an NFS server
 
-To configure an NFS server, refer to the following steps in the SUSE documentation: [Configuring NFS Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+To configure an NFS server,see the following steps in the SUSE documentation: [Configuring NFS Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### Configure all cluster nodes to connect to the NFS shared storage
 
@@ -247,7 +247,7 @@ Full list of resources:
 
 ## Managing cluster resources
 
-To manage your cluster resources, refer to the following SUSE topic:
+To manage your cluster resources,see the following SUSE topic:
 [Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### Manual failover

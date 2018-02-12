@@ -24,7 +24,7 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)

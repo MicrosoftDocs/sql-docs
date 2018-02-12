@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Object Derived Permission event class"
 ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Object Derived Permission Event Class

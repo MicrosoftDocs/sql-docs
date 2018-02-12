@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "TM: Commit Tran Starting event class"
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # TM: Commit Tran Starting Event Class

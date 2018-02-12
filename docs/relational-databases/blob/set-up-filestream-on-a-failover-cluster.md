@@ -18,7 +18,7 @@ ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set Up FILESTREAM on a Failover Cluster

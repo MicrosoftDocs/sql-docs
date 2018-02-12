@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "RPC:Starting event class"
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RPC:Starting Event Class

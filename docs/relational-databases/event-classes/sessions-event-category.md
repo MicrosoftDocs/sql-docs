@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "event classes [SQL Server], Sessions event category"
 ms.assetid: 61881d22-381d-407e-8c43-a07ba94389f6
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sessions Event Category

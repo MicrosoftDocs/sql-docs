@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "TM: Save Tran Starting event class"
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # TM: Save Tran Starting Event Class

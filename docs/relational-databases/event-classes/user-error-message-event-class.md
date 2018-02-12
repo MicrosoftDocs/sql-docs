@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "User Error Message event class"
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # User Error Message Event Class

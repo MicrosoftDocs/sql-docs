@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "saving mail messages and attachments"
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs

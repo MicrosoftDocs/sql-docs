@@ -16,7 +16,7 @@ ms.assetid: 80ff73c1-2861-438b-a13f-309155f3d6e1
 caps.latest.revision: 17
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # PolyBase configuration

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Crawl Started event class"
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FT:Crawl Started Event Class

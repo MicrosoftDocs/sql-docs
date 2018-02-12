@@ -23,7 +23,7 @@ ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetStrValue Method (SqlServiceAdvancedProperty Class)

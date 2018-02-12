@@ -25,12 +25,12 @@ This guide provides instructions to create a three-node cluster for SQL Server o
 For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources, including the availability group resource. On Linux, you should not rely on Always On Availability Group Dynamic Management Views (DMVs) that provide cluster information like sys.dm_hadr_cluster. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
+>At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources, including the availability group resource. On Linux, you should not rely on Always On Availability Group Dynamic Management Views (DMVs) that provide cluster information like sys.dm_hadr_cluster. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
 
 
 ## Roadmap
 
-The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high-level steps: 
+The procedure for creating an availability group for high availability differs between Linux servers and a Windows Server failover cluster. The following list describes the high-level steps: 
 
 1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
 
@@ -41,7 +41,7 @@ The steps to create an availability group on Linux servers for high availability
    The way to configure a cluster resource manager depends on the specific Linux distribution. 
 
    >[!IMPORTANT]
-   >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
+   >Production environments require a fencing agent, like STONITH for high availability. The examples in this article do not use fencing agents. They are for testing and validation only. 
    
    >A Pacemaker cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
@@ -113,7 +113,7 @@ On Linux servers, configure the availability group and then configure the cluste
 
    If NTP has not been configured to start at boot time, a message appears. 
 
-   If you decide to continue anyway, the script will automatically generate keys for SSH access and for the Csync2 synchronization tool and start the services needed for both. 
+   If you decide to continue anyway, the script automatically generates keys for SSH access and for the Csync2 synchronization tool and start the services needed for both. 
 
 3. To configure the cluster communication layer (Corosync): 
 
@@ -186,7 +186,7 @@ After adding all nodes, check if you need to adjust the no-quorum-policy in the 
 
 ## Set cluster property start-failure-is-fatal to false
 
-`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster decides whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker retries starting the availability group resource on the former primary once the SQL instance is available. Pacemaker takes care of demoting the replica to secondary and it automatically rejoins the availability group. Also, if `start-failure-is-fatal` is set to `false`, the cluster falls back to the configured failcount limits configured with migration-threshold so you need to make sure default for migration threshold is updated accordingly.
+`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster decides whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker retries starting the availability group resource on the former primary once the SQL instance is available. Pacemaker takes care of demoting the replica to secondary and it automatically rejoins the availability group. Also, if `start-failure-is-fatal` is set to `false`, the cluster falls back to the configured failcount limits configured with migration-threshold. Make sure default for migration threshold is updated accordingly.
 
 To update the property value to false run:
 ```bash
@@ -199,8 +199,11 @@ For more information on Pacemaker cluster properties, see [Configuring Cluster R
 
 # Configure fencing (STONITH)
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
-Resource level fencing ensures mainly that there is no data corruption in case of an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
-Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, e.g. an uninterruptible power supply or management interface cards for servers.
+
+Resource level fencing ensures mainly that there is no data corruption during an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
+
+Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, such as an uninterruptible power supply or management interface cards for servers.
+
 For more information, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html) and [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 At cluster initialization time, STONITH is disabled if no configuration is detected. It can be enabled later by running following command:
@@ -210,7 +213,7 @@ sudo crm configure property stonith-enabled=true
 ```
   
 >[!IMPORTANT]
->Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that SUSE does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
+>Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. SUSE does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
 
 
 ## Configure the cluster resources for SQL Server
@@ -219,7 +222,7 @@ Refer to [SLES Administration Guid](https://www.suse.com/documentation/sle-ha-12
 
 ### Create availability group resource
 
-The following command creates and configures the availability group resource for 3 replicas of availability group [ag1]. The monitor operations and timeouts have to be specified explicitly in SLES based on the fact that timeouts are highly workload dependent and need to be carefully adjusted for each deployment.
+The following command creates and configures the availability group resource for three replicas of availability group [ag1]. The monitor operations and timeouts have to be specified explicitly in SLES based on the fact that timeouts are highly workload-dependent and need to be carefully adjusted for each deployment.
 Run the command on one of the nodes in the cluster:
 
 1. Run `crm configure` to open the crm prompt:
@@ -295,10 +298,10 @@ crm crm configure \
 >[!IMPORTANT]
 >After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In SLES use `crm`. 
 
-Manually fail over the availability group with `crm`. Do not initiate failover with Transact-SQL. For instructions, see [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
+Manually fail over the availability group with `crm`. Don't initiate failover with Transact-SQL. For more information, see [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
-For additional details, see:
+For more information, see:
 - [Managing cluster resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm).   
 - [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 

@@ -10,6 +10,7 @@ ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: ""
+ms.custom: "sql-linux"
 ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66

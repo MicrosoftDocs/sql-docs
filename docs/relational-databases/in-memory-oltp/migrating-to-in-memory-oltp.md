@@ -16,7 +16,7 @@ ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 caps.latest.revision: 34
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Migrating to In-Memory OLTP

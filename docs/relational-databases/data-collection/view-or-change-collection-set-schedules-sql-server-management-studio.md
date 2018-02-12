@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "schedules [SQL Server], viewing collection set"
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View or Change Collection Set Schedules (SQL Server Management Studio)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "OLEDB QueryInterface event class"
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OLEDB QueryInterface Event Class

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Deadlock Graph event class"
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Deadlock Graph Event Class

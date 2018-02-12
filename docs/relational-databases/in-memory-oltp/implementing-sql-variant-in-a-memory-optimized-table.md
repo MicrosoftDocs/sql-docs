@@ -16,7 +16,7 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Implementing SQL_VARIANT in a Memory-Optimized Table

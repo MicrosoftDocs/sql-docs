@@ -23,7 +23,7 @@ ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IsReadOnly Property (SqlServiceAdvancedProperty Class)

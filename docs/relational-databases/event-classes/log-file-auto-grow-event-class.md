@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Log File Auto Grow event class"
 ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Log File Auto Grow Event Class

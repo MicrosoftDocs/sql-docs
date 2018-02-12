@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Database Object Access event class"
 ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Database Object Access Event Class

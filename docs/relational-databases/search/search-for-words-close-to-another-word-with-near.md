@@ -26,7 +26,7 @@ ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 65
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Search for Words Close to Another Word with NEAR

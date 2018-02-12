@@ -16,7 +16,7 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 caps.latest.revision: 16
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Columnstore indexes - Design guidance

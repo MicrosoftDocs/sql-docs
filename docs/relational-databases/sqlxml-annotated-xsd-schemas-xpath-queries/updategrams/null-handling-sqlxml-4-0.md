@@ -21,7 +21,7 @@ ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # NULL Handling (SQLXML 4.0)

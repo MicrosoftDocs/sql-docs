@@ -19,7 +19,7 @@ ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 caps.latest.revision: 36
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Clustered and Nonclustered Indexes Described

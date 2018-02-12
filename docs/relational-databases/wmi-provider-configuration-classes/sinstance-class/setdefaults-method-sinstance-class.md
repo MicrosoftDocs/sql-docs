@@ -23,7 +23,7 @@ ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetDefaults Method (SInstance Class)

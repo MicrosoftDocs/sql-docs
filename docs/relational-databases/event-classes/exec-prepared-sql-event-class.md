@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Exec Prepared SQL event class"
 ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Exec Prepared SQL Event Class

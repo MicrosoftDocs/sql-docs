@@ -16,7 +16,7 @@ ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 caps.latest.revision: 2
 author: "jodebrui"
 ms.author: "jodebrui"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server In-Memory OLTP Internals for SQL Server 2016

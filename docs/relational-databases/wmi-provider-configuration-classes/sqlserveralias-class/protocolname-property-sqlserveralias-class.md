@@ -23,7 +23,7 @@ ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ProtocolName Property (SqlServerAlias Class)

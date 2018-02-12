@@ -18,7 +18,7 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Open Log File Viewer

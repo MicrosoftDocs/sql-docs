@@ -20,7 +20,7 @@ ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Schema Caching (SQLXML 4.0)

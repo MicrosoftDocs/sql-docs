@@ -22,7 +22,7 @@ ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing XPath Queries (SQLXML Managed Classes)

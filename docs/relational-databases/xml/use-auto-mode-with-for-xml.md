@@ -21,7 +21,7 @@ ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use AUTO Mode with FOR XML

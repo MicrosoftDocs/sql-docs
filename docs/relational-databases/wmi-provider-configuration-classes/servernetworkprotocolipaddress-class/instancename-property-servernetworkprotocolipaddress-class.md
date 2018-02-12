@@ -23,7 +23,7 @@ ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InstanceName Property (ServerNetworkProtocolIPAddress Class)

@@ -16,7 +16,7 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server

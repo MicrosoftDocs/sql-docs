@@ -25,7 +25,7 @@ ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specifying a Target Namespace Using the targetNamespace Attribute (SQLXML 4.0)

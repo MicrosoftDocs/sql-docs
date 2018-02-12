@@ -16,7 +16,7 @@ ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PolyBase Versioned Feature Summary

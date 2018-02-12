@@ -21,7 +21,7 @@ ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LocalDBStartTracing Function

@@ -22,7 +22,7 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using ADO to Execute SQLXML 4.0 Queries

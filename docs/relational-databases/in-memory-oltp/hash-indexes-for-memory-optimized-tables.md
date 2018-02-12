@@ -16,7 +16,7 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Troubleshooting Hash Indexes for Memory-Optimized Tables

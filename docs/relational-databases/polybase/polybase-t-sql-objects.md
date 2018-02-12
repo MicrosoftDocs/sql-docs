@@ -19,7 +19,7 @@ helpviewer_keywords:
 caps.latest.revision: 20
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # PolyBase T-SQL objects

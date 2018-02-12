@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Trace File Close event class"
 ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Trace File Close Event Class

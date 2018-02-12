@@ -18,7 +18,7 @@ ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Constructing Siblings with EXPLICIT Mode

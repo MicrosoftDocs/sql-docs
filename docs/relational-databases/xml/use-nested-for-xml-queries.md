@@ -20,7 +20,7 @@ ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use Nested FOR XML Queries

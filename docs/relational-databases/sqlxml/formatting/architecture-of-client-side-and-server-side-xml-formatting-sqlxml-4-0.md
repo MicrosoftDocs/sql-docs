@@ -25,7 +25,7 @@ ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)

@@ -17,7 +17,7 @@ ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server

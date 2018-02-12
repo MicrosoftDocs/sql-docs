@@ -25,7 +25,7 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create Instances of XML Data

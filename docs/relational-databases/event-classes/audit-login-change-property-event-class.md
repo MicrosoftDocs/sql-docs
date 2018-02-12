@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Login Change Property event class"
 ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Login Change Property Event Class

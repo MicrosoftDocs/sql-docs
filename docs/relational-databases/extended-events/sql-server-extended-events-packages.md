@@ -20,7 +20,7 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Extended Events Packages

@@ -23,7 +23,7 @@ ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 62
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Back Up and Restore Full-Text Catalogs and Indexes

@@ -16,7 +16,7 @@ ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Cross-Database Queries

@@ -23,7 +23,7 @@ ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PauseService Method (SqlService Class)

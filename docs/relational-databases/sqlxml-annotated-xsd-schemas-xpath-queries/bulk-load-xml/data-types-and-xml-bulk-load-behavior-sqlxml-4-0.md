@@ -20,7 +20,7 @@ ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Types and XML Bulk Load Behavior (SQLXML 4.0)

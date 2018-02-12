@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Attention event class"
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Attention Event Class

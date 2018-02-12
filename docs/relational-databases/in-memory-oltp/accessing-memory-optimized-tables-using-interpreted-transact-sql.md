@@ -13,7 +13,7 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Accessing Memory-Optimized Tables Using Interpreted Transact-SQL

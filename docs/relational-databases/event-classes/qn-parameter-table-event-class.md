@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "event classes [SQL Server], QN:Parameter Table"
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # QN:Parameter Table Event Class

@@ -16,7 +16,7 @@ ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create, Alter, and Drop Secondary Selective XML Indexes

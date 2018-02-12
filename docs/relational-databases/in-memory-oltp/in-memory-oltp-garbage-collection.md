@@ -16,7 +16,7 @@ ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # In-Memory OLTP Garbage Collection

@@ -16,7 +16,7 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 caps.latest.revision: 40
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Get started with Columnstore for real time operational analytics

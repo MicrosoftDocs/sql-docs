@@ -20,7 +20,7 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Monitor System Activity Using Extended Events

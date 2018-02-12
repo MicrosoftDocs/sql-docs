@@ -16,7 +16,7 @@ ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
 caps.latest.revision: 17
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Columnstore indexes - defragmentation

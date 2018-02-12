@@ -19,7 +19,7 @@ ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Specifying the ID and IDREF Directives

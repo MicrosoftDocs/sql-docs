@@ -22,7 +22,7 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 caps.latest.revision: 73
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create Filtered Indexes

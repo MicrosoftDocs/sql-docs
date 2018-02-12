@@ -17,7 +17,7 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Quick Start: Extended events in SQL Server

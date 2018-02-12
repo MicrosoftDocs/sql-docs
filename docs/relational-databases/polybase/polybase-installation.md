@@ -18,7 +18,7 @@ ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
 caps.latest.revision: 25
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # PolyBase installation

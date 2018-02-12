@@ -18,7 +18,7 @@ ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Views over XML Columns

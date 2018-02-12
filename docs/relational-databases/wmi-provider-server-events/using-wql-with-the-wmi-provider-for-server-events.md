@@ -22,7 +22,7 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using WQL with the WMI Provider for Server Events

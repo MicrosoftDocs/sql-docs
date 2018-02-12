@@ -23,7 +23,7 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Index Disk Space Example

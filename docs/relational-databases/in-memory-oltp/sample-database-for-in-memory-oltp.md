@@ -16,7 +16,7 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sample Database for In-Memory OLTP

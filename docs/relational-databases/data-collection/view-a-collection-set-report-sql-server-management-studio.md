@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "reports [SQL Server], viewing collection set"
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View a Collection Set Report (SQL Server Management Studio)

@@ -16,7 +16,7 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Implementing MERGE Functionality in a Natively Compiled Stored Procedure

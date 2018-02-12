@@ -18,7 +18,7 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 caps.latest.revision: 2
 author: "pmasl"
 ms.author: "pelopes"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Writing Pages

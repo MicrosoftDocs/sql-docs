@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Broker:Message Undeliverable event class"
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Broker:Message Undeliverable Event Class

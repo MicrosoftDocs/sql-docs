@@ -18,7 +18,7 @@ ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Access FileTables with Transact-SQL

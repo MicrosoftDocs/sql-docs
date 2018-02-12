@@ -24,7 +24,7 @@ ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Client-side vs. Server-side XML Formatting (SQLXML 4.0)

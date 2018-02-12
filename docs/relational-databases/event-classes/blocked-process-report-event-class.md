@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Blocked Process Report event class"
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Blocked Process Report Event Class

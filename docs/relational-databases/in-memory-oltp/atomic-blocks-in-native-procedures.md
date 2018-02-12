@@ -16,7 +16,7 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Atomic Blocks in Native Procedures

@@ -21,7 +21,7 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Semantic Search (SQL Server)

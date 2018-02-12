@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Mount Tape event class"
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mount Tape Event Class

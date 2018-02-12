@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "EventLog event class"
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # EventLog Event Class

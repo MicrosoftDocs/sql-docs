@@ -39,7 +39,7 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # XML Indexes (SQL Server)

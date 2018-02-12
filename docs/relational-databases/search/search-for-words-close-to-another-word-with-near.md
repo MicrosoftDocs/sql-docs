@@ -113,15 +113,15 @@ GO
 ## Combine NEAR with other terms  
  You can combine NEAR with some other terms. You can use AND (&), OR (|), or AND NOT (&!) to combine a custom proximity term with another custom proximity term, a simple term, or a prefix term. For example:  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) OR *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NOT *term3*')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND NOT *term3*')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) AND NEAR((*term3*,*term4*),2)')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) AND NEAR((*term3*, *term4*),2)')  
   
--   CONTAINS('NEAR((*term1*,*term2*),5) OR NEAR((*term3*,*term4*),2, TRUE)')  
+-   CONTAINS('NEAR((*term1*, *term2*),5) OR NEAR((*term3*, *term4*),2, TRUE)')  
   
  For example,  
   

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], design and implementation"
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

@@ -18,7 +18,7 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Access FileTables with File Input-Output APIs

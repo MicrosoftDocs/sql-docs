@@ -28,7 +28,7 @@ ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLXML 4.0 .NET Framework Support - Managed Classes

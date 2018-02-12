@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQL:StmtCompleted event class"
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL:StmtCompleted Event Class

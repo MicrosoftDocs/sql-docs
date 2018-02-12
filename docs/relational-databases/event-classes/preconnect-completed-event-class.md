@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "PreConnect:Completed Event Class"
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PreConnect:Completed Event Class

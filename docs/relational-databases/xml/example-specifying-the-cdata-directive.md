@@ -18,7 +18,7 @@ ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Specifying the CDATA Directive

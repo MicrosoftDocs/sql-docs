@@ -23,7 +23,7 @@ ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FlagName Property (ClientSettingsGeneralFlag Class)

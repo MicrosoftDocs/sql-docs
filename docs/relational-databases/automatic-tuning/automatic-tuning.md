@@ -19,7 +19,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Automatic tuning

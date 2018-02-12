@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "User-Configurable event category [SQL Server]"
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # User-Configurable Event Category

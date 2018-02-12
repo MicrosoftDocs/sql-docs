@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Broker:Remote Message Ack event class"
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Broker:Remote Message Ack Event Class

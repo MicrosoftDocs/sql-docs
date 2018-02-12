@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQL:StmtRecompile event class"
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL:StmtRecompile Event Class

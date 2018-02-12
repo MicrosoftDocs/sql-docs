@@ -19,7 +19,7 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Promote Frequently Used XML Values with Computed Columns

@@ -16,7 +16,7 @@ ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Simulating an IF-WHILE EXISTS Statement in a Natively Compiled Module

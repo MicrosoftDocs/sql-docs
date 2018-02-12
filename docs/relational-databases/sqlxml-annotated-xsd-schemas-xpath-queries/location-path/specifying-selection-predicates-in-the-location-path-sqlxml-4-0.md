@@ -23,7 +23,7 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specifying Selection Predicates in the Location Path (SQLXML 4.0)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "event classes [SQL Server], Performance event category"
 ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Performance Event Category

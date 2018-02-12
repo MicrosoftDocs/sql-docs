@@ -18,7 +18,7 @@ ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FOR XML Support for the timestamp Data Type

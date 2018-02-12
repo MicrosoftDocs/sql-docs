@@ -19,7 +19,7 @@ ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Non-Deterministic Content Models

@@ -19,7 +19,7 @@ ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Large XML Schema Collections and Out-of-Memory Conditions

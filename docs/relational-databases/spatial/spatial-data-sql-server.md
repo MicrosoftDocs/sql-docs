@@ -24,7 +24,7 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Spatial Data (SQL Server)

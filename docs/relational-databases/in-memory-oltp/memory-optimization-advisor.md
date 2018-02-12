@@ -19,7 +19,7 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Memory Optimization Advisor

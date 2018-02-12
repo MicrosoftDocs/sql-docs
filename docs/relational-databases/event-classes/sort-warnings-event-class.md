@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Sort Warnings event class"
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sort Warnings Event Class

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Login Change Password event class"
 ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Login Change Password Event Class

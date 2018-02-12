@@ -18,7 +18,7 @@ ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Database Principal Impersonation event class"
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Database Principal Impersonation Event Class

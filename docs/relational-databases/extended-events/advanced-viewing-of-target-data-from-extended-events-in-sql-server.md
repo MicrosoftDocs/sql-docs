@@ -16,7 +16,7 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Advanced Viewing of Target Data from Extended Events in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

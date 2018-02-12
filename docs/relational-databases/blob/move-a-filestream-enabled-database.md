@@ -18,7 +18,7 @@ ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Move a FILESTREAM-Enabled Database

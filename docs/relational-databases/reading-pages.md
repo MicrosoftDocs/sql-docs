@@ -18,7 +18,7 @@ ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 caps.latest.revision: 3
 author: "pmasl"
 ms.author: "pelopes"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Reading Pages

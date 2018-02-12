@@ -21,7 +21,7 @@ ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 caps.latest.revision: 22
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PolyBase troubleshooting

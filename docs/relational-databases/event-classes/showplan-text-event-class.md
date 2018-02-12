@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Showplan Text event class"
 ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Showplan Text Event Class

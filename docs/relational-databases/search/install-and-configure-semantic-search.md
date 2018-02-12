@@ -19,7 +19,7 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Install and Configure Semantic Search

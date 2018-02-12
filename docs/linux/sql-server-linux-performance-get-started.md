@@ -1,6 +1,6 @@
 ---
 title: Get started with performance features of SQL Server on Linux | Microsoft Docs
-description: This topic provides an introduction of SQL Server performance features for Linux users who are new to SQL Server. Many of these examples work on all platforms, but the context of this article is Linux. 
+description: This article provides an introduction of SQL Server performance features for Linux users who are new to SQL Server. Many of these examples work on all platforms, but the context of this article is Linux. 
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -28,7 +28,7 @@ If you are a Linux user who is new to SQL Server, the following tasks walk you t
 ## Create a Columnstore Index
 A columnstore index is a technology for storing and querying large stores of data in a columnar data format, called a columnstore.  
 
-1. Add a Columnstore index to the SalesOrderDetail table by executing the T-SQL below:
+1. Add a Columnstore index to the SalesOrderDetail table by executing the following Transact-SQL commands:
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -63,7 +63,7 @@ A columnstore index is a technology for storing and querying large stores of dat
 SQL Server provides In-Memory OLTP features that can greatly improve the performance of application systems.  This section of the Evaluation Guide will walk you through the steps to create a memory-optimized table stored in memory and a natively compiled stored procedure that can access the table without needing to be compiled or interpreted.
 
 ### Configure Database for In-Memory OLTP
-1. It’s recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP.  Use the query below to check the current compatibility level of AdventureWorks:  
+1. It’s recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP.  Use the following query to check the current compatibility level of AdventureWorks:  
 
    ```sql
    USE AdventureWorks

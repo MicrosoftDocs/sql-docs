@@ -36,7 +36,7 @@ For conceptual information, see [SQL Server Failover Cluster Instance (FCI) on L
 
 ## Prerequisites
 
-To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server for storage. Below steps outline how these servers will be configured.
+To complete the following end-to-end scenario, you need two machines to deploy the two nodes cluster and another server for storage. Below steps outline how these servers will be configured.
 
 ## Set up and configure Linux
 
@@ -202,7 +202,7 @@ This example will create an FCI in the group NewLinFCIGrp. The name of the resou
 
     \<FolderToMountNFSShare> is the folder to mount the disk (for system databases and the default location, it would be /var/opt/mssql/data)
 
-     An example is shown below:
+    An example is shown here:
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr

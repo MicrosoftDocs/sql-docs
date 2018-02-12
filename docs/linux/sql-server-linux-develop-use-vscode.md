@@ -20,7 +20,7 @@ ms.workload: "Active"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This topic shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases.
+This article shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases.
 
 Visual Studio Code is a graphical code editor for Linux, macOS, and Windows that supports extensions. The [**mssql** extension for VS Code] enables you to connect to SQL Server, query with Transact-SQL (T-SQL), and view the results.
 

@@ -26,7 +26,7 @@ For more details on cluster configuration, resource agent options, management, b
 
 ## Prerequisites
 
-To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server to configure the NFS share. Below steps outline how these servers will be configured.
+To complete the following end-to-end scenario you need two machines to deploy the two nodes cluster and another server to configure the NFS share. Below steps outline how these servers will be configured.
 
 ## Setup and configure the operating system on each cluster node
 
@@ -198,7 +198,7 @@ The following steps explain how to configure the cluster resource for SQL Server
 - **SQL Server Resource Name**: A name for the clustered SQL Server resource. 
 - **Timeout Value**: The timeout value is the amount of time that the cluster waits while a resource is brought online. For SQL Server, this is the time that you expect SQL Server to take to bring the `master` database online. 
 
-Update the values from the script below for your environment. Run on one node to configure and start the clustered service.
+Update the values from the following script for your environment. Run on one node to configure and start the clustered service.
 
 ```bash
 sudo crm configure

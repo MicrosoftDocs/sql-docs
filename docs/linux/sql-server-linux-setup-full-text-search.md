@@ -1,6 +1,6 @@
 ---
 title: Install SQL Server Full-Text Search on Linux | Microsoft Docs
-description: This topic describes how to install SQL Server Full-Text Search on Linux.
+description: This article describes how to install SQL Server Full-Text Search on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -46,7 +46,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the topic [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Install on Ubuntu</a>
 
@@ -64,7 +64,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the topic [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Install on SLES</a>
 
@@ -81,7 +81,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the topic [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
 ## Supported languages
 

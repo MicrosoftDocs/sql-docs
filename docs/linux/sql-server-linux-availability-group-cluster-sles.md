@@ -25,7 +25,7 @@ This guide provides instructions to create a three-node cluster for SQL Server o
 For more details on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources, including the availability group resource. On Linux, you should not rely on Always On Availability Group Dynamic Management Views (DMVs) that provide cluster information like sys.dm_hadr_cluster. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
+>At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources, including the availability group resource. On Linux, you should not rely on Always On Availability Group Dynamic Management Views (DMVs) that provide cluster information like sys.dm_hadr_cluster. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
 
 
 ## Roadmap
@@ -49,7 +49,7 @@ The steps to create an availability group on Linux servers for high availability
 
 ## Prerequisites
 
-To complete the end-to-end scenario below you need three machines to deploy the three nodes cluster. The steps below outline how to configure these servers.
+To complete the following end-to-end scenario you need three machines to deploy the three nodes cluster. The following steps outline how to configure these servers.
 
 ## Setup and configure the operating system on each cluster node 
 
@@ -142,7 +142,7 @@ On Linux servers configure the availability group and then configure the cluster
 
 ## Add nodes to the existing cluster
 
-If you have a cluster running with one or more nodes, add more cluster nodes with the ha-cluster-join bootstrap script. The script only needs access to an existing cluster node and will complete the basic setup on the current machine automatically. Follow the steps below:
+If you have a cluster running with one or more nodes, add more cluster nodes with the ha-cluster-join bootstrap script. The script only needs access to an existing cluster node and will complete the basic setup on the current machine automatically. Use the following steps:
 
 If you have configured the existing cluster nodes with the `YaST` cluster module, make sure the following prerequisites are fulfilled before you run `ha-cluster-join`:
 - The root user on the existing nodes has SSH keys in place for passwordless login. 
@@ -203,7 +203,7 @@ Resource level fencing ensures mainly that there is no data corruption in case o
 Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, e.g. an uninterruptible power supply or management interface cards for servers.
 For more details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html) and [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
-At cluster initialization time, STONITH is disabled if no configuration is detected. It can be enabled later by running below command
+At cluster initialization time, STONITH is disabled if no configuration is detected. It can be enabled later by running following command:
 
 ```bash
 sudo crm configure property stonith-enabled=true
@@ -228,7 +228,7 @@ Run the command on one of the nodes in the cluster:
    sudo crm configure 
    ```
 
-1. In the crm prompt, run the command below to configure the resource properties.
+1. In the crm prompt, run the following command to configure the resource properties.
 
    ```bash
 primitive ag_cluster \

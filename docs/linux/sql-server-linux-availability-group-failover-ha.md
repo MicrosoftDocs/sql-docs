@@ -153,7 +153,7 @@ If you cannot fail over the availability group with the cluster management tools
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Fail over the availability group with Transact-SQL. In the example below replace `<**MyAg**>` with the name of your availability group. Connect to the instance of SQL Server that hosts the target secondary replica and run the following command:
+1. Fail over the availability group with Transact-SQL. In the following example, replace `<**MyAg**>` with the name of your availability group. Connect to the instance of SQL Server that hosts the target secondary replica and run the following command:
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;

@@ -24,7 +24,7 @@ This document explains how to create a three-node cluster on Ubuntu and add a pr
 For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in, and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
+> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in, and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
 
 The following sections walk through the steps to set up a failover cluster solution. 
 
@@ -112,7 +112,7 @@ sudo systemctl enable pacemaker
 1. Create the cluster. 
 
    >[!WARNING]
-   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') fails with below error. This is because the log file configured in /etc/corosync/corosync.conf which is created when the cluster setup command is run, is wrong. To work around this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
+   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') fails with following error. This is because the log file configured in /etc/corosync/corosync.conf which is created when the cluster setup command is run, is wrong. To work around this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

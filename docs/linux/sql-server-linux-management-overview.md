@@ -1,6 +1,6 @@
 ---
 title: Manage SQL Server on Linux | Microsoft Docs
-description: This topic provides links to common management tasks and tools for SQL Server running on Linux.
+description: This article provides links to common management tasks and tools for SQL Server running on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -31,7 +31,7 @@ Almost everything you can do in a client tool can also be accomplished with Tran
 
 ## SQL Server Operations Studio (preview)
 
-The new Microsoft SQL Operations Studio (preview) is a cross-platform tool for managing SQL Server. For more information, see [What is Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
+The new Microsoft SQL Operations Studio (preview) is a cross-platform tool for managing SQL Server. For more information, see [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
 
 ## SQL Server Management Studio on Windows
 

@@ -1,6 +1,6 @@
 ---
 title: Get started with SQL Server security on Linux | Microsoft Docs 
-description: This topic describes typical security actions.  
+description: This article describes typical security actions.  
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"  
@@ -98,7 +98,7 @@ For more information about the permission system, see [Getting Started with Data
 
 [Row-Level Security](../relational-databases/security/row-level-security.md) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
 
-The steps below walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
+The following steps walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
 
 Create two user accounts to test the row level security:    
    

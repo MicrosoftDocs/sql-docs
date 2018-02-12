@@ -1,6 +1,6 @@
 ---
 title: Security limitations for SQL Server on Linux | Microsoft Docs
-description: This topic describes SQL Server on Linux restrictions.
+description: This article describes SQL Server on Linux restrictions.
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"

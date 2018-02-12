@@ -1,6 +1,6 @@
 ---
 title: Install SQL Server command-line tools on Linux | Microsoft Docs
-description: This topic describes how to install the SQL Server Tools on Linux.
+description: This article describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -33,7 +33,7 @@ Install the tools for your platform:
 - [macOS](#macos)
 - [Docker](#docker)
 
-This topic describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
+This article describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
 
 ## <a id="RHEL"><a/>Install tools on RHEL 7
 

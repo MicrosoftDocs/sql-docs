@@ -25,7 +25,7 @@ This guide provides instructions to create a two-node shared disk cluster for SQ
 > [!NOTE] 
 > Access to Red Hat HA add-on and documentation requires a subscription. 
 
-As the diagram below shows storage is presented to two servers. Clustering components - Corosync and Pacemaker - coordinate communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
+As the following diagram shows, storage is presented to two servers. Clustering components - Corosync and Pacemaker - coordinate communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
 
 ![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -34,13 +34,13 @@ For more details on cluster configuration, resource agents options, and manageme
 
 > [!NOTE] 
 > At this point, SQL Server's integration with Pacemaker is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also for example, cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records.
-To use a connection string that points to a string server name and not use the IP, they will have to register in their DNS server the IP used to create the virtual IP resource (as explained below) with the chosen server name.
+To use a connection string that points to a string server name and not use the IP, they will have to register in their DNS server the IP used to create the virtual IP resource (as explained in the following sections) with the chosen server name.
 
 The following sections walk through the steps to set up a failover cluster solution. 
 
 ## Prerequisites
 
-To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server to configure the NFS server. Below steps outline how these servers will be configured.
+To complete the following end-to-end scenario, you need two machines to deploy the two nodes cluster and another server to configure the NFS server. Below steps outline how these servers will be configured.
 
 ## Setup and configure the operating system on each cluster node
 
@@ -228,7 +228,7 @@ For additional information about using NFS, see the following resources:
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->If using a File System (FS) resource as recomended below, there is no need to preserve the mounting command in /etc/fstab. Pacemaker will take care of mounting the folder when it starts the FS clustered resource. With the help of fencing, it will ensurethe FS is never mounted twice. 
+>If using a File System (FS) resource as recommended here, there is no need to preserve the mounting command in /etc/fstab. Pacemaker will take care of mounting the folder when it starts the FS clustered resource. With the help of fencing, it will ensure the FS is never mounted twice. 
 
 1.  Run `mount -a` command for the system to update the mounted paths.  
 
@@ -337,7 +337,7 @@ At this point both instances of SQL Server are configured to run with the databa
    - **device**: The local path that it's mounted to the share
    - **fstype**: File share type (i.e. nfs)
 
-   Update the values from the script below for your environment. Run on one node to configure and start the clustered service.  
+   Update the values from the following script for your environment. Run on one node to configure and start the clustered service.  
 
    ```bash
    sudo pcs cluster cib cfg 

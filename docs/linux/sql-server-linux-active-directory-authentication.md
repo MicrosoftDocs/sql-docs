@@ -262,7 +262,7 @@ For more information, see the Red Hat documentation for [Discovering and Joining
 
 Log in to a client machine using your domain credentials. Now you can connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] without reentering your password, by using AD Authentication. If you create a login for an AD group, any AD user who is a member of that group can connect in the same way.
 
-The specific connection string parameter for clients to use AD Authentication depends on which driver you are using. A few examples are below.
+The specific connection string parameter for clients to use AD Authentication depends on which driver you are using. Consider the following examples.
 
 * `sqlcmd` on a domain-joined Linux client
 

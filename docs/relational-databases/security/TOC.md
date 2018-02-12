@@ -12,6 +12,7 @@
 # [Surface Area Configuration](surface-area-configuration.md)  
 # [SQL Injection](sql-injection.md)
 # [SQL Vulnerability Assessment](sql-vulnerability-assessment.md)  
+# [SQL Data Discovery & Classification](sql-data-discovery-and-classification.md)  
 # [TRUSTWORTHY Database Property](trustworthy-database-property.md)  
 # [Permissions](permissions-database-engine.md)  
 # [Permissions Hierarchy](permissions-hierarchy-database-engine.md)  

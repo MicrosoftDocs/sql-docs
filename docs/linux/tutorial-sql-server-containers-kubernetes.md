@@ -9,9 +9,9 @@ ms.topic: tutorial
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: "mvc"
+ms.custom: "sql-linux,mvc"
 ms.technology: database-engine
 ms.workload: "Inactive"
 ---
@@ -262,7 +262,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
    ![Screenshot of get service command](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
 
-   For additional information about the status of the objects in the Kubernetes cluster, run:
+   For more information about the status of the objects in the Kubernetes cluster, run:
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>

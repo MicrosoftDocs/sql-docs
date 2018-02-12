@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], populations"
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 78
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

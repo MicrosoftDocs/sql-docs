@@ -26,6 +26,9 @@ This article provides details about updates, improvements, and bug fixes for the
 
 
 ## [SSMS 17.5](download-sql-server-management-studio-ssms.md)
+
+Generally available | Build number: NEEDED
+
 ### What's new
 
 **General SSMS**
@@ -70,7 +73,10 @@ SMO:
 
 Templates: 
 
-- "Database Mail": fixed a couple of typos [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).
+- "Database Mail": fixed a couple of typos [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
+
+Object Explorer:
+- Fixed an issue where Managed Compression would fail for indexes (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o)
 
 <br>
 

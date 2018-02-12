@@ -23,7 +23,7 @@ ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SqlService Class

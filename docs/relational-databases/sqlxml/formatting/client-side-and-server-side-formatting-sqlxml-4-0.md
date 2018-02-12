@@ -21,7 +21,7 @@ ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Client-side and Server-side Formatting (SQLXML 4.0)

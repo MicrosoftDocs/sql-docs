@@ -24,7 +24,7 @@ ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Choose a Language When Creating a Full-Text Index

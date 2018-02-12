@@ -30,7 +30,7 @@ ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Hiding Elements and Attributes by Using sql:hide

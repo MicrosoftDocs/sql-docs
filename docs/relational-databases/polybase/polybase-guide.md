@@ -25,7 +25,7 @@ helpviewer_keywords:
 caps.latest.revision: 26
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # PolyBase Guide

@@ -23,7 +23,7 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Access FILESTREAM Data with OpenSqlFilestream

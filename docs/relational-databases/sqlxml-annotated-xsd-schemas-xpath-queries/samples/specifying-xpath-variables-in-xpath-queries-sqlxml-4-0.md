@@ -19,7 +19,7 @@ ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specifying XPath Variables in XPath Queries (SQLXML 4.0)

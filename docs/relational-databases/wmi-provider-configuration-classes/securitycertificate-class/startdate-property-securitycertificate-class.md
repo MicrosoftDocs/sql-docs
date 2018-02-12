@@ -23,7 +23,7 @@ ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # StartDate Property (SecurityCertificate Class)

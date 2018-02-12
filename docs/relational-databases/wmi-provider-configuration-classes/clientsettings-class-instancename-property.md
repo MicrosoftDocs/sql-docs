@@ -23,7 +23,7 @@ ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ClientSettings Class - InstanceName Property

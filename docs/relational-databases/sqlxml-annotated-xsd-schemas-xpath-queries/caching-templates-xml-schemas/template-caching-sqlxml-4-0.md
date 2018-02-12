@@ -20,7 +20,7 @@ ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Template Caching (SQLXML 4.0)

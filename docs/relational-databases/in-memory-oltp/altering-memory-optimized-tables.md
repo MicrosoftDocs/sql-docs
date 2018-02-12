@@ -16,7 +16,7 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Altering Memory-Optimized Tables

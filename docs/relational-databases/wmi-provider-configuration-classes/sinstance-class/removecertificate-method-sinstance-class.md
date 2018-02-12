@@ -23,7 +23,7 @@ ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RemoveCertificate Method (SInstance Class)

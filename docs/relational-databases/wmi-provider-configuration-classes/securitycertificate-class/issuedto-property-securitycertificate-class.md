@@ -23,7 +23,7 @@ ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IssuedTo Property (SecurityCertificate Class)

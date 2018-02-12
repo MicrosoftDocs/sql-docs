@@ -22,7 +22,7 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specifying a Location Path (SQLXML 4.0)

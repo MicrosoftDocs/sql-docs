@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Schema Object GDR event class"
 ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Schema Object GDR Event Class

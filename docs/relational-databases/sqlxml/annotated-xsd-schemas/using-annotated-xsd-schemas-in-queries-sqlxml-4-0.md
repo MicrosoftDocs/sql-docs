@@ -27,7 +27,7 @@ ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using Annotated XSD Schemas in Queries (SQLXML 4.0)

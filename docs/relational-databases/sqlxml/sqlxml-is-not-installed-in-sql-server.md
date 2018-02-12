@@ -16,7 +16,7 @@ ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLXML Is Not Installed in SQL Server

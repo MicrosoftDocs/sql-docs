@@ -23,7 +23,7 @@ ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FlagValue Property (ServerSettingsGeneralFlag Class)

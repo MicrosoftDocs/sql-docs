@@ -22,7 +22,7 @@ ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # BinaryPath Property (SqlService Class )

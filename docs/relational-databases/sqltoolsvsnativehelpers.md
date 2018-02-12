@@ -16,7 +16,7 @@ ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SqlToolsVSNativeHelpers

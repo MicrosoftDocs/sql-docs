@@ -21,7 +21,7 @@ ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Annotation Interpretation - sql:overflow-field

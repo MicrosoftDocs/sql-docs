@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], viewing"
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

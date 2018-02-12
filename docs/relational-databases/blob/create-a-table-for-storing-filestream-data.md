@@ -18,7 +18,7 @@ ms.assetid: 029c3059-5c83-43e2-a859-9027031b7de1
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create a Table for Storing FILESTREAM Data

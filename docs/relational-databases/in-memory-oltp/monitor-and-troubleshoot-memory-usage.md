@@ -16,7 +16,7 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Monitor and Troubleshoot Memory Usage

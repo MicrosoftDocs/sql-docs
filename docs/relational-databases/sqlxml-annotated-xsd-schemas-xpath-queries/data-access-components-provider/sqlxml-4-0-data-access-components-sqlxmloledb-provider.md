@@ -23,7 +23,7 @@ ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLXML 4.0 Data Access Components - SQLXMLOLEDB Provider

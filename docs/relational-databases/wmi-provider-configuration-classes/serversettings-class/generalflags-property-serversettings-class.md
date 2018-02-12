@@ -23,7 +23,7 @@ ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GeneralFlags Property (ServerSettings Class)

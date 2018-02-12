@@ -19,7 +19,7 @@ ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FOR XML Support for the User-Defined Data Types (UDT)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "event classes [SQL Server], Query Notifications event category"
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Query Notifications Event Category

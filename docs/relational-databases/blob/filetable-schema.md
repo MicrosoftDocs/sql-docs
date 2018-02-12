@@ -18,7 +18,7 @@ ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 caps.latest.revision: 7
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FileTable Schema

@@ -22,7 +22,7 @@ ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)

@@ -26,7 +26,7 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 caps.latest.revision: 89
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure and Manage Word Breakers and Stemmers for Search

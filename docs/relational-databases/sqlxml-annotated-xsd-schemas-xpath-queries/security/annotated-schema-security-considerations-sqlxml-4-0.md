@@ -26,7 +26,7 @@ ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Annotated Schema Security Considerations (SQLXML 4.0)

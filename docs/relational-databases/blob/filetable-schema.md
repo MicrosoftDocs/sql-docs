@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "FileTables [SQL Server], table schema"
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

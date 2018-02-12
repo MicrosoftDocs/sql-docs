@@ -34,7 +34,7 @@ To create a SQL Server FCI on Linux, see [Configure SQL Server FCI on Linux](sql
 
 * In SLES, the clustering layer is based on SUSE Linux Enterprise [High Availability Extension (HAE)](https://www.suse.com/products/highavailability).
 
-    For more details on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+    For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 Both the RHEL HA add-on and the SUSE HAE are built on [Pacemaker](http://clusterlabs.org/).
 

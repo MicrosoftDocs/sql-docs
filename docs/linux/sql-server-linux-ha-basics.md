@@ -55,7 +55,7 @@ Some common commands, each of which have various switches and options that can b
 This section covers tasks that are common to all Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments.
 
 ### Ensure that files can be copied
-One thing that anyone using [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux should be able to do is copy files from one server to another. This task is very important for AG configurations.
+Copying files from one server to another is a task that anyone using [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux should be able to do. This task is very important for AG configurations.
 
 Things like permission issues can exist on Linux as well as on Windows-based installations. However, those familiar with how to copy from server to server on Windows may not be familiar with how it is done on Linux. A common method is to use the command-line utility `scp`, which stands for secure copy. Behind the scenes, `scp` uses OpenSSH. SSH stands for secure shell. Depending on the Linux distribution, OpenSSH itself may not be installed. If it is not, OpenSSH needs to be installed first. For more information on configuring OpenSSH, see the information at the following links for each distribution:
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
@@ -131,7 +131,7 @@ When AGs or FCIs are configured on a Windows-based configuration, they are clust
 The other optional packages for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.
 
 ## Pacemaker for Always On Availability Groups and failover cluster instances on Linux
-As noted above, the only clustering mechanism currently supported by Microsoft for AGs and FCIs is Pacemaker with Corosync. This section covers the basic information to understand the solution, as well as how to plan and deploy it for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurations.
+As previous noted, the only clustering mechanism currently supported by Microsoft for AGs and FCIs is Pacemaker with Corosync. This section covers the basic information to understand the solution, as well as how to plan and deploy it for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurations.
 
 ### HA add-on/extension basics
 All of the currently supported distributions ship a high availability add-on/extension, which is based on the Pacemaker clustering stack. This stack incorporates two key components: Pacemaker and Corosync. All the components of the stack are:
@@ -167,7 +167,7 @@ A node is a server participating in the cluster. A Pacemaker cluster natively su
 #### Resource
 Both a WSFC and a Pacemaker cluster have the concept of a resource. A resource is specific functionality that runs in context of the cluster, such as a disk or an IP address. For example, under Pacemaker both FCI and AG resources can get created. This is not dissimilar to what is done in a WSFC, where you see a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] resource for either an FCI or an AG resource when configuring an AG, but is not exactly the same due to the underlying  differences in how [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] integrates with Pacemaker.
 
-Pacemaker has standard and clone resources. Clone resources are ones that run simultaneously on all nodes. An example would be an IP address that runs on multiple nodes for load balancing purposes. Any resource that gets created for FCIs uses a standard resource, since only one node can host a FCI at any given time.
+Pacemaker has standard and clone resources. Clone resources are ones that run simultaneously on all nodes. An example would be an IP address that runs on multiple nodes for load balancing purposes. Any resource that gets created for FCIs uses a standard resource, since only one node can host an FCI at any given time.
 
 When an AG is created, it requires a specialized form of a clone resource called a multi-state resource. While an AG only has one primary replica, the AG itself is running across all nodes that it is configured to work on, and can potentially allow things such as read-only access. Because this is a “live” use of the node, the resources have the concept of two states: master and slave. For more information, see [Multi-state resources: Resources that have multiple modes](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
@@ -243,7 +243,7 @@ Currently, there is no direct way for a WSFC and a Pacemaker cluster to work tog
 -   A distributed AG, which is a special type of availability group that allows two different AGs to be configured as their own availability group. For more information on distributed AGs, see the documentation [Distributed Availability Groups](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
 #### Other Linux distributions
-On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a RHEL node cannot be part of a Pacemaker cluster that has a SLES node. The main reason for this was stated above: the distributions may have different versions and functionality, so things could not work properly. Mixing distributions has the same story as mixing WSFCs and Linux: use None or distributed AGs.
+On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a RHEL node cannot be part of a Pacemaker cluster that has a SLES node. The main reason for this was previously stated: the distributions may have different versions and functionality, so things could not work properly. Mixing distributions has the same story as mixing WSFCs and Linux: use None or distributed AGs.
 
 ## Next steps
 [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)

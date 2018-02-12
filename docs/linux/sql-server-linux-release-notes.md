@@ -32,7 +32,7 @@ The following release notes apply to SQL Server 2017 running on Linux. This arti
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> For more details, review the [system requirements](sql-server-linux-setup.md#system) for SQL Server on Linux. For the latest support policy for SQL Server 2017, see the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> For more information, review the [system requirements](sql-server-linux-setup.md#system) for SQL Server on Linux. For the latest support policy for SQL Server 2017, see the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## Supported client tools
 

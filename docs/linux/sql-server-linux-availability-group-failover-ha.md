@@ -239,7 +239,7 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. After failover, upgrade SQL Server on the old primary replica by repeating the same procedure described in steps b.1-b.3 above.
+1. After failover, upgrade SQL Server on the old primary replica by repeating the same procedure described in steps b.1-b.3.
 
    The following example upgrades `mssql-server` and `mssql-server-ha` packages.
 

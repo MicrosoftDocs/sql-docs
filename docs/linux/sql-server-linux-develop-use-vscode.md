@@ -100,7 +100,7 @@ The following steps show how to connect to SQL Server with VS Code.
    | **[Optional] Enter a name for this profile** | The Connection Profile name. For example, you could name the profile **localhost profile**. 
 
    > [!Tip] 
-   > You can create and edit connection profiles in User Settings file (settings.json). Open the settings file by selecting **Preference** and then **User Settings** in the VS Code menu. For more details, see [manage connection profiles].
+   > You can create and edit connection profiles in User Settings file (settings.json). Open the settings file by selecting **Preference** and then **User Settings** in the VS Code menu. For more information, see [manage connection profiles].
 
 6. Press the **ESC** key to close the info message that informs you that the profile is created and connected.
 

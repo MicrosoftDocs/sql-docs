@@ -205,7 +205,7 @@ For more information on iSCSI initiator for the supported distributions, consult
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName> is the name of the volume group and \<LogicalVolumeName> is the name of the logical volume that was created. The example syntax below matches the volume group and logical volume crated above.
+    \<VolumeGroupName> is the name of the volume group and \<LogicalVolumeName> is the name of the logical volume that was created. The following example syntax matches the volume group and logical volume from the previous command.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data

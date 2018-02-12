@@ -30,7 +30,7 @@ For more details on cluster configuration, resource agent options, management, b
 
 ## Roadmap
 
-The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high-level steps: 
 
 1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
 
@@ -57,13 +57,13 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ### Install and configure SQL Server service on each cluster node
 
-1. Install and setup SQL Server service on all nodes. For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and setup SQL Server service on all nodes. For detailed instructions, see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
 1. Designate one node as primary and other nodes as secondaries. Use these terms throughout this guide.
 
 1. Make sure nodes that are going to be part of the cluster can communicate to each other.
 
-   The following example shows `/etc/hosts` with additions for three nodes named SLES1, SLES2 and SLES3.
+   The following example shows `/etc/hosts` with additions for three nodes named SLES1, SLES2, and SLES3.
 
    ```
    127.0.0.1   localhost
@@ -78,7 +78,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   For additional information, see the [SLES Administration Guide - Miscellaneous section](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
+   For more information, see the [SLES Administration Guide - Miscellaneous section](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
 
 
 ## Create a SQL Server login for Pacemaker
@@ -193,9 +193,9 @@ To update the property value to false run:
 sudo crm configure property start-failure-is-fatal=false
 sudo crm configure rsc_defaults migration-threshold=5000
 ```
-If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to cleanup the resource failure count and reset the configuration using: `sudo crm resource cleanup <resourceName>` command.
+If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to clean up the resource failure count and reset the configuration using: `sudo crm resource cleanup <resourceName>` command.
 
-For more details on Pacemaker cluster properties see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
+For more details on Pacemaker cluster properties, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
 # Configure fencing (STONITH)
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
@@ -298,7 +298,7 @@ crm crm configure \
 Manually fail over the availability group with `crm`. Do not initiate failover with Transact-SQL. For instructions, see [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
-For additional details see:
+For additional details, see:
 - [Managing cluster resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm).   
 - [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 

@@ -55,7 +55,7 @@ A Pacemaker cluster can only have up to 16 nodes when Corosync is involved, so a
 In a SQL Server FCI, the SQL Server instance is active on either one node or the other.
 
 ## IP Address and Name
-On a Linux Pacemaker cluster, each SQL Server FCI will need its own unique IP address and name. If the FCI configuration spans multiple subnets, one IP address will be required per subnet. The unique name and IP address(es) are used to access the FCI so that applications and end users do not need to know which underlying server of the Pacemaker cluster.
+On a Linux Pacemaker cluster, each SQL Server FCI needs its own unique IP address and name. If the FCI configuration spans multiple subnets, one IP address will be required per subnet. The unique name and IP address(es) are used to access the FCI so that applications and end users do not need to know which underlying server of the Pacemaker cluster.
 
 The name of the FCI in DNS should be the same as the name of the FCI resource that gets created in the Pacemaker cluster.
 Both the name and IP address must be registered in DNS.

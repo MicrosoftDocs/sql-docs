@@ -180,7 +180,7 @@ The following sections explain how to perform a rolling upgrade with SQL Server 
 
 When availability group replicas are on instances of SQL Server in Linux, the cluster type of the availability group is either `EXTERNAL` or `NONE`. An availability group that is managed by a cluster manager besides Windows Server Failover Cluster (WSFC) is `EXTERNAL`. Pacemaker with Corosync is an example of an external cluster manager. An availability group with no cluster manager has cluster type `NONE` The upgrade steps outlined here are specific for availability groups of cluster type `EXTERNAL` or `NONE`.
 
-1. Before you begin, backup each database.
+1. Before you begin, back up each database.
 2. Upgrade instances of SQL Server that host secondary replicas.
 
     a. Upgrade asynchronous secondary replicas first.
@@ -262,7 +262,7 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. For an availability groups with an external cluster manager - where cluster type is EXTERNAL, cleanup the location constraint that was caused by the manual failover. 
+1. For an availability groups with an external cluster manager - where cluster type is EXTERNAL, clean up the location constraint that was caused by the manual failover. 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  

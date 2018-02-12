@@ -34,7 +34,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ## Install and configure SQL Server on each cluster node
 
-1. Install and setup SQL Server on both nodes. For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and setup SQL Server on both nodes. For detailed instructions, see [Install SQL Server on Linux](sql-server-linux-setup.md).
 2. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide. 
 3. On the secondary node, stop and disable SQL Server. The following example stops and disables SQL Server:
 
@@ -45,7 +45,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
     > [!NOTE]
     > At setup time, a Server Master Key is generated for the SQL Server instance and placed at `/var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key.
-4. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server.
+4. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker uses this account to verify which node is running SQL Server.
 
     ```bash
     sudo systemctl start mssql-server

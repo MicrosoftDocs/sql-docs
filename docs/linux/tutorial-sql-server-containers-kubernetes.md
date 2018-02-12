@@ -262,7 +262,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
    ![Screenshot of get service command](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
 
-   For additional information about the status of the objects in the Kubernetes cluster, run:
+   For more information about the status of the objects in the Kubernetes cluster, run:
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>

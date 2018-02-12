@@ -37,7 +37,7 @@ A columnstore index is a technology for storing and querying large stores of dat
    GO
    ```
 
-2. Execute the following query that will use the Columnstore Index to scan the table:
+2. Execute the following query that uses the Columnstore Index to scan the table:
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,

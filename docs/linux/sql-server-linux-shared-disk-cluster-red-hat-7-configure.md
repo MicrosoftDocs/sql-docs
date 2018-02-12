@@ -48,7 +48,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ## Install and configure SQL Server on each cluster node
 
-1. Install and setup SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and setup SQL Server on both nodes.  For detailed instructions, see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
 1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.  
 
@@ -63,7 +63,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 > [!NOTE] 
 > At setup time, a Server Master Key is generated for the SQL Server instance and placed at `/var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key. 
 
-1. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
+1. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker uses this account to verify which node is running SQL Server. 
 
    ```bash
    sudo systemctl start mssql-server
@@ -138,7 +138,7 @@ On the NFS Server do the following:
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.	Edit `/etc/exports` to export the directory you want to share. You will need 1 line for each share you want. For example: 
+1.	Edit `/etc/exports` to export the directory you want to share. You need 1 line for each share you want. For example: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -198,7 +198,7 @@ Do the following steps on all cluster nodes.
 
 1. Repeat these steps on all cluster nodes.
 
-For additional information about using NFS, see the following resources:
+For more information about using NFS, see the following resources:
 
 * [NFS servers and firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Mounting an NFS Volume | Linux Network Administrators Guide](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
@@ -327,11 +327,11 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. Configure the cluster resources for SQL Server, File System and virtual IP resources and push the configuration to the cluster. You will need the following information:
+2. Configure the cluster resources for SQL Server, File System and virtual IP resources and push the configuration to the cluster. You need the following information:
 
    - **SQL Server Resource Name**: A name for the clustered SQL Server resource. 
    - **Floating IP Resource Name**: A name for the virtual IP address resource.
-   - **IP Address**: THe IP address that clients will use to connect to the clustered instance of SQL Server. 
+   - **IP Address**: The IP address that clients will use to connect to the clustered instance of SQL Server. 
    - **File System Resource Name**: A name for the File System resource.
    - **device**: The NFS share path
    - **device**: The local path that it's mounted to the share

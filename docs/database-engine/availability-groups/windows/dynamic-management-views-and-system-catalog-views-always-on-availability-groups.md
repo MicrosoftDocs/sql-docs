@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## Check the WSFC cluster node configuration  
  The following Transact-SQL (T-SQL) query retrieves the status of all the nodes in the current Windows Server Failover Clustering (WSFC) cluster.  
   
-```tsql  
+```sql  
 use master  
 go  
 select * from sys.dm_hadr_cluster_members  
@@ -38,7 +38,7 @@ go
 ## Explore the cluster network  
  The following query retrieves the network configuration of the current WSFC cluster.  
   
-```tsql  
+```sql  
 select * from sys.dm_hadr_cluster_networks  
 ```  
   
@@ -47,7 +47,7 @@ select * from sys.dm_hadr_cluster_networks
 ## Explore the availability groups  
  The following query retrieves information about an availability group.  
   
-```tsql  
+```sql  
 select primary_replica, primary_recovery_health_desc, synchronization_health_desc from sys.dm_hadr_availability_group_states  
 go  
 select * from sys.availability_groups  
@@ -66,7 +66,7 @@ go
 ## Explore the availability replicas  
  The following query retrieves information about the availability replicas defined in your availability groups.  
   
-```tsql  
+```sql  
 select replica_id, role_desc, connected_state_desc, synchronization_health_desc from sys.dm_hadr_availability_replica_states  
 go  
 select replica_server_name, replica_id, availability_mode_desc, endpoint_url from sys.availability_replicas  
@@ -80,7 +80,7 @@ go
 ## Explore availability replica health  
  The following query retrieves current health information about the availability replicas.  
   
-```tsql  
+```sql  
 select replica_id, role_desc, recovery_health_desc, synchronization_health_desc from sys.dm_hadr_availability_replica_states  
 go  
 ```  
@@ -104,7 +104,7 @@ go
 ## Explore availability database health  
  The following query retrieves information about the health of each availability databases on the replicas. You can observe the change in the query results before and after you suspend data movement on an availability database.  
   
-```tsql  
+```sql  
 select dc.database_name, dr.database_id, dr.synchronization_state_desc,   
 dr.suspend_reason_desc, dr.synchronization_health_desc  
 from sys.dm_hadr_database_replica_states dr  join sys.availability_databases_cluster dc  

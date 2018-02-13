@@ -261,7 +261,7 @@ The following table lists extended events related to automatic seeding.
 |hadr_automatic_seeding_failure|Occurs when an automatic seeding operation fails.|
 |hadr_automatic_seeding_timeout|Occurs when an automatic seeding operation times out.|
 
-## Next steps
+## See also
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 

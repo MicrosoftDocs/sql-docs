@@ -48,7 +48,7 @@ A single distributed availability group can have up to 17 readable secondary rep
 
 
 
-## Next steps 
+## See also 
 
 [Configure a read-scale availability group on Linux](../../../linux/sql-server-linux-availability-group-configure-rs.md)
 

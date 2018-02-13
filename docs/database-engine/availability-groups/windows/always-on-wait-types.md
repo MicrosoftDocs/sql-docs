@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Query for Always On wait types  
  Use the T-SQL query below to retrieve all wait statistics with the Always On wait types:  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_os_wait_stats   
 WHERE wait_type LIKE '%hadr%'  
 ORDER BY wait_time_ms DESC  

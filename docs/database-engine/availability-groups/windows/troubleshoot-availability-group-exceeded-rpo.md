@@ -71,7 +71,7 @@ manager: "jhubbard"
   
  The following script lets you see the number of reads and writes on each data and log file for every availability database running on an instance of SQL Server. It’s sorted by average I/O stall time, in milliseconds. Note that the numbers are cumulative from the last time the server instance was started. Therefore, you should take the difference between two measurements after some time has elapsed.  
   
-```tsql  
+```sql  
 SELECT DB_NAME(database_id) AS   
    [Database Name] ,   
    file_id ,   
@@ -92,7 +92,7 @@ ORDER BY avg_io_stall_ms DESC;
   
  This next query provides a point-in-time (not cumulative) snapshot of I/O requests pending on your system.  
   
-```tsql  
+```sql  
 SELECT DB_NAME(mf.database_id) AS [Database] ,   
    mf.physical_name ,  
    r.io_pending ,   

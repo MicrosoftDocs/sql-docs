@@ -20,13 +20,13 @@ manager: "jhubbard"
   
  The following Transact-SQL (T-SQL) query retrieves all event records from the Always On ring buffers.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_os_ring_buffers WHERE ring_buffer_type LIKE '%HADR%'  
 ```  
   
  To make the data more manageable, filter the data by date and the ring buffer type. The following query retrieves records from the specified ring buffer that occurred today.  
   
-```tsql  
+```sql  
 DECLARE @runtime datetime  
 SET @runtime = GETDATE()  
 SELECT CONVERT (varchar(30), @runtime, 121) as data_collection_runtime,   
@@ -38,7 +38,7 @@ CROSS JOIN sys.dm_os_sys_info inf where ring_buffer_type='<RING_BUFFER_TYPE>'
   
  The Record column in each record contains diagnostic data in XML format. The XML data differs between the ring buffer types. For more information on each ring buffer type, see [Always On ring buffer types](#BKMK_RingBufferTypes). To make the XML data more readable, you need to customize your T-SQL query to extract the desired XML elements. For example, the following query retrieves all events from the RING_BUFFER_HADRDBMGR_API ring buffer and formats the XML data into separate table columns.  
   
-```tsql  
+```sql  
 WITH hadr(ts, type, record) AS  
 (  
   SELECT timestamp AS ts, ring_buffer_type AS type, CAST(record AS XML) AS record   

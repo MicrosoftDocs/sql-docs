@@ -16,14 +16,14 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Always On Availability Groups troubleshooting and monitoring guide
-  This guide helps you get started on troubleshooting some of the common issues in Always On Availability Groups and monitoring availability groups. It is intended to provide original content as well as a landing page of useful information that is already published elsewhere.  
+  This guide helps you get started on monitoring Always On Availability Groups and troubleshooting some of the common issues in availability groups. It provides original content as well as a landing page of useful information that is already published elsewhere.  
   
- While this guide cannot fully discuss all the issues that can occur on the large surface area covered by availability groups, it can point you in the right direction in your root-cause analysis and resolution of the issues. As availability groups are an integrated technology, many of the problems you encounter are only symptoms of other issues in your database system. Some issues are caused by settings within an availability group, such as an availability database being suspended. Other issues can include problems you can isolate to other aspects of SQL Server, such as SQL Server settings, database file deployments, and systemic performance issues unrelated to the availability group, replica, or database. Still other problems and exist outside of SQL Server, such as network I/O, TCP/IP, Active Directory, and Windows Server Failover Clustering (WSFC). Often, problems that surface in an availability group, replica, or database require you to troubleshoot multiple technologies before you can identify the root cause.  
+ While this guide cannot fully discuss all the issues that can occur in the large area of availability groups, it can point you in the right direction in your root-cause analysis and resolution of issues. Because availability groups are an integrated technology, many problems you encounter may be symptoms of other issues in your database system. Some issues are caused by settings within an availability group, such as an availability database being suspended. Other issues can include problems with other aspects of SQL Server, such as SQL Server settings, database file deployments, and systemic performance issues unrelated to availability. Still other problems can exist outside of SQL Server, such as network I/O, TCP/IP, Active Directory, and Windows Server Failover Clustering (WSFC) issues. Often, problems that surface in an availability group, replica, or database require you to troubleshoot multiple technologies to identify the root cause.  
   
 
   
 ##  <a name="BKMK_SCENARIOS"></a> Troubleshooting scenarios  
- The table below contains links to the common troubleshooting scenarios for availability groups. They are categorized by their scenario types, such as configuration, client connectivity, failover, and performance.  
+ The following table contains links to the common troubleshooting scenarios for availability groups. They are categorized by their scenario types, such as configuration, client connectivity, failover, and performance.  
   
 |Scenario|Scenario type|Description|  
 |--------------|-------------------|-----------------|  
@@ -34,9 +34,10 @@ manager: "jhubbard"
 |[Troubleshoot: Availability group exceeded RTO](troubleshoot-availability-group-exceeded-rto.md)|Performance|After an automatic failover or a planned manual failover without data loss, the failover time exceeds your RTO. Or, when you estimate the failover time of a synchronous-commit secondary replica (such as an automatic failover partner), you find that it exceeds your RTO.|  
 |[Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md)|Performance|After you perform a forced manual failover, your data loss is more than your RPO. Or, when you calculate the potential data loss of an asynchronous-commit secondary replica, you find that it exceeds your RPO.|  
 |[Troubleshoot: Changes on the primary replica are not reflected on the secondary replica](troubleshoot-availability-primary-changes-not-reflected-on-secondary.md)|Performance|The client application completes an update on the primary replica successfully, but querying the secondary replica shows that the change is not reflected.|  
-|[Troubleshoot: High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|HADR_SYNC_COMMIT indicates the time between when a transaction ready to commit in the primary replica, and all secondary replicas have acknowledged the hardening of the commit.  
+|[Troubleshoot: High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Performance|If HADR_SYNC_COMMIT is unusually long, there is a performance issue in data movement flow or secondary replica log hardening.|  
+
 ##  <a name="BKMK_TOOLS"></a> Useful tools for troubleshooting  
- When configuring or running availability groups, the different tools can help you diagnose different types of issues. The table below provides links to useful information on the tools.  
+ When configuring or running availability groups, different tools can help you diagnose different types of issues. The following table provides links to useful information about the tools.  
   
 |Tool|Description|  
 |----------|-----------------|  
@@ -48,13 +49,13 @@ manager: "jhubbard"
 |[Dynamic management views and system catalog views &#40;Always On Availability Groups&#41;](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)|Reports information on the availability groups such as configuration, health status, and performance metrics.|  
 |[Always On extended events](always-on-extended-events.md)|Provides detailed diagnostics of the availability groups and useful for root-cause analysis.|  
 |[Always On wait types](always-on-wait-types.md)|Provides wait statistics specific to availability groups and useful for performance tuning.|  
-|Always On performance counters|Monitor availability groups activity and are reflected in System Monitor, and are useful for performance tuning. For more information, see [SQL Server, availability replica](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server, database replica](~/relational-databases/performance-monitor/sql-server-database-replica.md).|  
+|Always On performance counters|Monitor availability groups activity, are reflected in System Monitor, and are useful for performance tuning. For more information, see [SQL Server, availability replica](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server, database replica](~/relational-databases/performance-monitor/sql-server-database-replica.md).|  
 |[Always On ring buffers](always-on-ring-buffers.md)|Record alerts within the SQL Server system for internal diagnostics, and can be used to debug issues related to the availability groups.|  
   
 ##  <a name="BKMK_MONITOR"></a> Monitoring availability groups  
  The ideal time to troubleshoot an availability group is before a problem necessitates a failover, whether automatic or manual. This can be done by monitoring the availability group’s performance metrics and sending alerts when the availability replicas are performing outside the bounds of your service-level agreement (SLA). For example, if a synchronous secondary replica has performance issues that cause the estimated failover time to increase, you do not want to wait until an automatic failover occurs and you find out that the failover time exceeds your recovery time objective.  
   
- As availability groups are a high availability and disaster recovery solution, the most important performance metrics to monitor are the estimated failover time, which affects your recovery time objective (RTO), and the potential data loss in a disaster, which affects your recovery point objective (RPO). You can gather these metrics from the data that SQL Server exposes at any given time, so you can be alerted of a problem in the HADR capabilities of your system before the actual failure events occur. Therefore, it is important to familiarize yourself with the data synchronization process of availability groups and gather the metrics accordingly.  
+ Because availability groups are a high availability and disaster recovery solution, the most important performance metrics to monitor are the estimated failover time, which affects your recovery time objective (RTO), and the potential data loss in a disaster, which affects your recovery point objective (RPO). You can gather these metrics from the data that SQL Server exposes at any given time, so you can be alerted of a problem in the High Availability Disaster Recovery (HADR) capabilities of your system before actual failure events occur. Therefore, it is important to familiarize yourself with the data synchronization process of availability groups and gather the metrics accordingly.  
   
  This table below points you to topics that can help you monitor the health of your availability groups solution.  
   
@@ -62,12 +63,14 @@ manager: "jhubbard"
 |-----------|-----------------|  
 |[Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md)|Describes the data synchronization process for availability groups, the flow control gates, and useful metrics when monitoring an availability group; and also shows how to gather RTO and RPO metrics.|  
 |[Monitoring of availability groups &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Provides information on tools for monitoring an availability group.|  
-<!–– |[The Always On health model, part 1: Health model architecture](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Provides an overview of the Always On health model.|  
+<!–– 
+|[The Always On health model, part 1: Health model architecture](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Provides an overview of the Always On health model.|  
 |[The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Shows how to customize the Always On health model and customize the Always On Dashboard to show extra information.|  
 |[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Provides a basic overview of the Always On PowerShell cmdlets that can be used to monitor the health of an availability group.|  
 |[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Provides information on advanced usage of the Always On PowerShell cmdlets to monitor the health of an availability group.|  
 |[Monitoring Always On health with PowerShell, part 3: A simple monitoring application](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Shows how to automatically monitor an availability group with an application.|  
-|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Provides information on how to integrate availability group monitoring with SQL Server Agent and configure notification to the appropriate parties when problems arise.| --> 
+|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Provides information on how to integrate availability group monitoring with SQL Server Agent and configure notification to the appropriate parties when problems arise.| 
+--> 
   
 ## Next steps  
  [SQL Server Always On Team Blog](http://blogs.msdn.com/b/sqlalwayson/)   

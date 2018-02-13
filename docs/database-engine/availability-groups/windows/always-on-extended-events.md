@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Always On extended events
   SQL Server 2012 defines extended events that are specific to Always On. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group. You can view the Always On extended events using the following query:  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
   
@@ -28,7 +28,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [Always On extended events reference](always-on-extended-events.md#BKMK_Reference)  
   
-##  <a name="BKMK_alwayson_health"></a> Alwayson_health Session  
+##  <a name="BKMK_alwayson_health"></a> Alwayson_health session  
  The Alwayson_health extended events session is created automatically when you create the availability group and captures a subset of the Always On related events. This session is preconfigured as a useful and convenient tool to help you get started quickly while troubleshooting an availability group. The Create Availability Group Wizard automatically starts the session on every participating availability replica configured in the wizard.  
   
 > [!IMPORTANT]  
@@ -39,9 +39,9 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 1.  In the **Object Explorer**, expand **Management**, **Extended Events**, and then **Sessions**.  
   
 2.  Right-click **Alwayson_health**, then point to **Script Session as**, then point to **CREATE To**, and then click **New Query Editor Window**.  
-  
- For information on a some of the events covered by Alwayson_health, see [Always On extended events reference](always-on-extended-events.md#BKMK_Reference).  
-  
+ 
+ For information on some of the events covered by Alwayson_health, see [Always On extended events reference](always-on-extended-events.md#BKMK_Reference).  
+ 
 ##  <a name="BKMK_Debugging"></a> Extended events for debugging  
  In addition to the extended events covered by the Alwayson_health session, SQL Server defines an extensive set of debug events for Always On Availability Groups. To harness these additional extended events in a session, follow the procedures below:  
   
@@ -101,7 +101,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 #### alwayson_health session definition  
   
-```tsql  
+```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
 ADD EVENT availability_replica_state_change  
 ADD TARGET package0.event_file(SET filename=N'alwayson_health.xel',max_file_size=(5),max_rollover_files=(4),metadatafile=N'alwayson_health.xem')  
@@ -129,7 +129,7 @@ GO
   
 #### Alwayson_health session definition  
   
-```tsql  
+```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
 ADD EVENT availability_group_lease_expired  
 ADD TARGET package0.event_file(SET filename=N'alwayson_health.xel',max_file_size=(5),max_rollover_files=(4),metadatafile=N'alwayson_health.xem')  
@@ -161,7 +161,7 @@ GO
   
 #### alwayson_health session definition  
   
-```tsql  
+```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
   
 ADD EVENT availability_replica_automatic_failover_validation (  
@@ -208,7 +208,7 @@ GO
   
 #### alwayson_health session definition  
   
-```tsql  
+```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
 ADD EVENT sqlserver.error_reported(  
     WHERE   
@@ -265,7 +265,7 @@ GO
   
 #### alwayson_health session definition  
   
-```tsql  
+```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
   
 ADD EVENT data_movement_suspend_resume (  
@@ -303,7 +303,7 @@ GO
   
 #### alwayson_health session definition  
   
-```tsql  
+```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
   
 ADD EVENT alwayson_ddl_executed  
@@ -332,7 +332,7 @@ GO
   
 #### Alwayson_health session definition  
   
-```tsql  
+```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
   
 ADD EVENT availability_replica_manager_state (  
@@ -357,7 +357,7 @@ GO
   
 #### alwayson_health session definition  
   
-```tsql  
+```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
 ADD EVENT sqlserver.error_reported(  
     WHERE   

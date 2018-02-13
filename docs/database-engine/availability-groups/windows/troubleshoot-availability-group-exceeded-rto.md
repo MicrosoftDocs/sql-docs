@@ -36,7 +36,7 @@ manager: "jhubbard"
 ### Diagnosis and resolution  
  When the redo thread is blocked, an extended event called `sqlserver.lock_redo_blocked` is generated. Additionally, you can query the DMV sys.dm_exec_request on the secondary replica to find out which session is blocking the REDO thread, and then you can take corrective action. The following query returns the session ID of the read-only query that is blocking the redo thread.  
   
-```tsql  
+```sql  
 select session_id, command, blocking_session_id, wait_time, wait_type, wait_resource   
 from sys.dm_exec_requests where command = 'DB STARTUP'  
 ```  
@@ -52,7 +52,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
 #### Diagnosis and resolution  
  You can use the following DMV query to see how far the redo thread has fallen behind, by measuring the difference between the gap between `last_redone_lsn` and `last_received_lsn`.  
   
-```tsql  
+```sql  
 select recovery_lsn, truncation_lsn, last_hardened_lsn, last_received_lsn,   
    last_redone_lsn, last_redone_time  
 from sys.dm_hadr_database_replica_states  

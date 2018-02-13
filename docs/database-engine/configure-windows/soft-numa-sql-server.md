@@ -29,30 +29,30 @@ ms.workload: "On Demand"
 # Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Modern processors have multiple to many cores per socket. Each socket is represented, usually, as a single NUMA node. The SQL Server database engine partitions various internal structures and partitions service threads per NUMA node.  With processors containing 10 or more cores per socket, using software NUMA to split hardware NUMA nodes generally increases scalability and performance. Prior to SQL Server 2014 SP2, software-based NUMA (soft-NUMA) required you to edit the registry to add a node configuration affinity mask and was configured per computer rather than per instance.  With SQL Server 2014 SP2 and SQL Server 2016, soft-NUMA is configured automatically at the database-instance level when the SQL Server service starts.  
+  Modern processors have multiple to many cores per socket. Each socket is represented, usually, as a single NUMA node. The SQL Server database engine partitions various internal structures and partitions service threads per NUMA node.  With processors containing 10 or more cores per socket, using software NUMA to split hardware NUMA nodes generally increases scalability and performance. Prior to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, software-based NUMA (soft-NUMA) required you to edit the registry to add a node configuration affinity mask and was configured per computer rather than per instance. Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], soft-NUMA is configured automatically at the database-instance level when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service starts.  
   
 > [!NOTE]  
->  Hot-add processors are not supported by soft-NUMA.  
+> Hot-add processors are not supported by soft-NUMA.  
   
 ## Automatic Soft-NUMA  
- With SQL Server 2016, whenever the database engine server detects more than 8 physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. Hyper-threaded processor cores are not differentiated when counting physical cores in a node.  When the number of physical cores detected is more than 8 per socket, the database engine service will create soft-NUMA nodes that ideally contain 8 cores, but can go down to 5 or up to 9 logical cores per node. The size of the hardware node can be limited by a CPU affinity mask. See   
-            [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md). The number of NUMA nodes will never exceed the maximum number of supported NUMA nodes.  
+ With [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], whenever the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  detects more than 8 physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. Hyper-threaded processor cores are not differentiated when counting physical cores in a node.  When the number of physical cores detected is more than 8 per socket, the database engine service will create soft-NUMA nodes that ideally contain 8 cores, but can go down to 5 or up to 9 logical cores per node. The size of the hardware node can be limited by a CPU affinity mask. See [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md). The number of NUMA nodes will never exceed the maximum number of supported NUMA nodes.  
   
- You can disable or re-enable soft-NUMA using the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the SET SOFTNUMA argument. Changing the value of this setting requires a restart of the database engine to take effect.  
+ You can disable or re-enable soft-NUMA using the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the `SET SOFTNUMA` argument. Changing the value of this setting requires a restart of the database engine to take effect.  
   
  The figure below shows the type of information regarding soft-NUMA that you will see in the SQL Server error log when SQL Server detects hardware NUMA nodes with greater than 8 physical cores in each node or socket.  
 
 
 ```
 2016-11-14 13:39:43.17 Server      SQL Server detected 2 sockets with 12 cores per socket and 24 logical processors per socket, 48 total logical processors; using 48 logical processors based on SQL Server licensing. This is an informational message; no user action is required.     
-**2016-11-14 13:39:43.35 Server      Automatic soft-NUMA was enabled because SQL Server has detected hardware NUMA nodes with greater than 8 physical cores.**     
+2016-11-14 13:39:43.35 Server      Automatic soft-NUMA was enabled because SQL Server has detected hardware NUMA nodes with greater than 8 physical cores.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 0: CPU mask: 0x0000000000555555:0 Active CPU mask: 0x0000000000555555:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.    
 2016-11-14 13:39:43.63 Server      Node configuration: node 1: CPU mask: 0x0000000000aaaaaa:0 Active CPU mask: 0x0000000000aaaaaa:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.    
 2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
-```
+```   
+
 ## Manual Soft-NUMA  
-To manually configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use soft-NUMA, disable automatic soft-NUMA by editing the registry, to add a node configuration affinity mask. When using this method, the soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). After modifying the registry, you must restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for the soft-NUMA configuration to take effect.  
+To manually configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use soft-NUMA, disable automatic soft-NUMA, and edit the registry to add a node configuration affinity mask. When using this method, the soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). After modifying the registry, you must restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for the soft-NUMA configuration to take effect.  
   
 > [!TIP]
 > CPUs are numbered starting with 0.  

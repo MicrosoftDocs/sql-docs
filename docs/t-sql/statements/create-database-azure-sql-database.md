@@ -98,7 +98,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 *SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation.  This is the default setting on Azure SQL Database if unspecified.
 
  *EDITION*  
- Specifies the service tier of the database. The available values are: 'basic', 'standard', and 'premium'. Support for `premiumrs` has been removed. For questions, use this e-mail alias: `premium-rs@microsoft.com`.
+ Specifies the service tier of the database. The available values are: 'basic', 'standard', and 'premium'. Support for 'premiumrs' has been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
   
  When EDITION is specified but MAXSIZE is not specified, MAXSIZE is set to the most restrictive size that the edition supports.  
   

@@ -20,14 +20,13 @@ manager: "jhubbard"
   
  If your automatic failover still has not completed, see [Troubleshooting automatic failover problems in SQL Server 2012 Always On environments](http://support.microsoft.com/kb/2833707).  
   
-## Common causes  
- This section describes the common causes for a failover time that exceeds RTO.  
+ The following sections describe the common causes for a failover time that exceeds RTO.  
   
 1.  [Reporting workload blocks the redo thread from running](#BKMK_REDOBLOCK)  
   
 2.  [Redo thread falls behind due to resource contention](#BKMK_CONTENTION)  
   
-###  <a name="BKMK_REDOBLOCK"></a> Reporting workload blocks the redo thread from running  
+##  <a name="BKMK_REDOBLOCK"></a> Reporting workload blocks the redo thread from running  
  The redo thread on the secondary replica is blocked from making data definition language (DDL) changes by a long-running read-only query.  
   
 ### Explanation  
@@ -43,13 +42,13 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  You can let the reporting workload to finish, at which point the redo thread is unblocked. You can unblock the redo thread immediately by executing the [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) command on the blocking session ID.  
   
-###  <a name="BKMK_CONTENTION"></a> Redo thread falls behind due to resource contention  
+##  <a name="BKMK_CONTENTION"></a> Redo thread falls behind due to resource contention  
  A large reporting workload on the secondary replica has slowed down the performance of the secondary replica, and the redo thread has fallen behind.  
   
-#### Explanation  
+### Explanation  
  When applying log records on the secondary replica, the redo thread reads the log records from the log disk, and then for each log record it accesses the data pages to apply the log record. The page access can be I/O bound (accessing the physical disk) if the page is not already in the buffer pool. If there is I/O bound reporting workload, the reporting workload competes for I/O resources with the redo thread and can slow down the redo thread.  
   
-#### Diagnosis and resolution  
+### Diagnosis and resolution  
  You can use the following DMV query to see how far the redo thread has fallen behind, by measuring the difference between the gap between `last_redone_lsn` and `last_received_lsn`.  
   
 ```sql  

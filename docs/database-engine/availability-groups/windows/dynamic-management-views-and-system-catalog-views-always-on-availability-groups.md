@@ -16,7 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Dynamic management views and system catalog views (Always On Availability Groups)
-  This topic shows you some of the common queries on the Always On dynamic management views (DMV) you can use to monitor and troubleshoot your availability groups.  
+  This topic shows you some of the common queries on the Always On dynamic management views (DMV) that you can use to monitor and troubleshoot availability groups.  
   
 > [!TIP]  
 >  In the Always On Dashboard, you can easily configure the GUI to display many of the DMVs for the availability replicas and availability databases by right-clicking the respective table header and selecting the DMV you wish to display or hide.  
@@ -90,7 +90,7 @@ go
 ## Explore the availability databases  
  The following query retrieves information about the availability replicas defined in your availability group. You can observe the change in the query results before and after you suspend data movement on an availability database.  
   
-```  
+```sql
 select * from sys.availability_databases_cluster  
 go  
 select group_database_id, database_name, is_failover_ready  from sys.dm_hadr_database_replica_cluster_states  

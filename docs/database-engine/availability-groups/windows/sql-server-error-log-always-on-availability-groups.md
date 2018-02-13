@@ -33,18 +33,17 @@ manager: "jhubbard"
 -   Lease status between the SQL Server resource DLL (running in the WSFC cluster) and the SQL Server instance (for more information, see [How It Works: SQL Server Always On lease timeout](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx))  
   
 -   Error events in the availability group  
-  
+
  The following symptoms should lead to review of the SQL Server error log:  
-  
+
 -   Cannot access availability databases  
   
 -   Unexpected availability group failover  
   
--   Availability group is in the Resolving state unexpectedly  
+-   Availability group in the Resolving state unexpectedly  
   
--   Availability group is in an indeterminate state  
+-   Availability group in an indeterminate state  
   
-## Next steps  
- [View the SQL Server error log &#40;SQL Server Management Studio&#41;](~/relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
+For more information, see [View the SQL Server error log &#40;SQL Server Management Studio&#41;](~/relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).  
   
   

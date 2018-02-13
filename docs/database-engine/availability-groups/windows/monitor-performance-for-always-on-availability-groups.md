@@ -16,7 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Monitor performance for Always On Availability Groups
-  The performance aspect of Always On Availability Groups is crucial to maintaining the service-level agreement (SLA) for your mission-critical databases. Understanding how availability Groups ship logs to secondary replicas can help you estimate the recovery time objective (RTO) and recovery point objective (RPO) of your Always On implementation and identify bottlenecks in poorly performing availability groups or replicas. This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios.  
+  The performance aspect of Always On Availability Groups is crucial to maintaining the service-level agreement (SLA) for your mission-critical databases. Understanding how availability groups ship logs to secondary replicas can help you estimate the recovery time objective (RTO) and recovery point objective (RPO) of your Always On implementation and identify bottlenecks in poorly performing availability groups or replicas. This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios.  
   
  The following topics are covered:  
   
@@ -114,9 +114,9 @@ manager: "jhubbard"
 -   Policies are evaluated on all servers, but only on the availability groups for which the local availability replica is the primary replica. If the local availability replica is not the primary replica, the policies are not evaluated.  
   
 -   Policy failures are conveniently displayed in the Always On Dashboard when you view it on the primary replica.  
-  
- Follow the instructions below on all server instances that participate in the availability group:  
-  
+
+To create the policies, follow the instructions below on all server instances that participate in the availability group:  
+
 1.  [Start the SQL Server Agent service](~/ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md) if it is not already started.  
   
 2.  In SQL Server Management Studio, from the **Tools** menu, click **Options**.  

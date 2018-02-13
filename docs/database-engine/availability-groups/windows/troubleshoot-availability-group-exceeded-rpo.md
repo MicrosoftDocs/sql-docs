@@ -20,25 +20,24 @@ manager: "jhubbard"
   
  A synchronous-commit secondary replica guarantees zero data loss, but the potential data loss of an asynchronous-commit secondary replica depends on how much log is still waiting to be hardened on the secondary replica.  
   
-## Common causes  
- This section describes the common causes for high potential data loss of an asynchronous-commit secondary replica. It assumes that you do not have a systemic performance issue in your server instance that is unrelated to availability groups.  
+ The following sections describe the common causes for high potential data loss of an asynchronous-commit secondary replica, assuming that you do not have a systemic performance issue in your server instance that is unrelated to availability groups.  
   
 1.  [High network latency or low network throughput causes log build-up on the primary replica](#BKMK_LATENCY)  
   
 2.  [Disk I/O bottleneck slows down log hardening on the secondary replica](#BKMK_IO_BOTTLENECK)  
   
-###  <a name="BKMK_LATENCY"></a> High network latency or low network throughput causes log build-up on the primary replica  
+##  <a name="BKMK_LATENCY"></a> High network latency or low network throughput causes log build-up on the primary replica  
  The most common reason for the databases exceeding their RPO is that they cannot be sent to the secondary replica fast enough.  
   
-#### Explanation  
+### Explanation  
  The primary replica activates flow control on the log send when it has exceeded the maximum allowable number of unacknowledged messages sent over to the secondary replica. Until some of these messages have been acknowledged, no more log blocks can be sent to the secondary replica. Since data loss can be prevented only when they have been hardened on the secondary replica, the build-up of unsent log messages increases potential data loss.  
   
-#### Diagnosis and resolution  
+### Diagnosis and resolution  
  A high number of messages resent to the secondary replica can indicate high network latency and network noise. You can also compare the DMV value **log_send_rate** with the performance object Log Bytes Flushed/sec. If logs are being flushed to disk faster than they are being sent, the potential data loss can increase indefinitely.  
   
  Also, it is useful to check the two performance objects `SQL Server:Availability Replica > Flow Control Time (ms/sec)` and `SQL Server:Availability Replica > Flow Control/sec`. Multiplying these two values shows you in the last second how much time was spent waiting for flow control to clear. The longer the flow control wait time, the lower the send rate.  
   
- Below is a list of useful metrics in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe**, [Resource Monitor](http://technet.microsoft.com/video/Video/ff710685), and [Network Monitor](http://www.microsoft.com/download/details.aspx?id=4865) to evaluate latency and network utilization.  
+ The following metrics are useful in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe**, [Resource Monitor](http://technet.microsoft.com/video/Video/ff710685), and [Network Monitor](http://www.microsoft.com/download/details.aspx?id=4865) to evaluate latency and network utilization.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -58,15 +57,15 @@ manager: "jhubbard"
   
 -   Performance counter `SQL Server:Availability Replica > Resent Messages/sec`  
   
- To remedy this issue, try upgrading your network bandwidth or removing or reducing unnecessary network traffic.  
-  
-###  <a name="BKMK_IO_BOTTLENECK"></a> Disk I/O bottleneck slows down log hardening on the secondary replica  
+To remedy this issue, try upgrading your network bandwidth or removing or reducing unnecessary network traffic.  
+
+##  <a name="BKMK_IO_BOTTLENECK"></a> Disk I/O bottleneck slows down log hardening on the secondary replica  
  Depending on the database file deployment, log hardening can slow down due to I/O contention with reporting workload.  
   
-#### Explanation  
+### Explanation  
  Data loss is prevented as soon as the log block is hardened on the log file. Therefore, it is critical to isolate the log file from the data file. If the log file and the data file are both mapped to the same hard disk, reporting workload with intensive reads on the data file will consume the same I/O resources needed by the log hardening operation. Slow log hardening can translate to slow acknowledgment to the primary replica, which can cause excessive activation of the flow control and long flow control wait times.  
   
-#### Diagnosis and resolution  
+### Diagnosis and resolution  
  If you have verified that the network is not suffering from high latency or low throughput, then you should investigate the secondary replica for I/O contentions. Queries from [SQL Server: Minimize Disk I/O](http://technet.microsoft.com/magazine/jj643251.aspx) are useful in identifying contentions. Examples from that article are derived below for your convenience.  
   
  The following script lets you see the number of reads and writes on each data and log file for every availability database running on an instance of SQL Server. It’s sorted by average I/O stall time, in milliseconds. Note that the numbers are cumulative from the last time the server instance was started. Therefore, you should take the difference between two measurements after some time has elapsed.  
@@ -109,7 +108,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
  You can compare how the read I/O and the write I/O match up with one another to identify I/O contention.  
   
- Below are some other performance counters that can help you in diagnosing I/O bottlenecks:  
+ The following are some other performance counters that can help you in diagnosing I/O bottlenecks:  
   
 -   **Physical Disk: all counters**  
   

@@ -17,7 +17,7 @@ manager: "jhubbard"
 ---
 # Useful tools for troubleshooting
     
- This article lists useful links to tools for troubleshooting and performance tuning Always On Availability Groups.  
+ This article lists useful links to tools for troubleshooting and performance tuning for Always On Availability Groups.  
   
   - [Always On policies](always-on-policies.md)  
   

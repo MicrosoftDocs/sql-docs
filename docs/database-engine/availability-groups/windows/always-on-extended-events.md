@@ -22,7 +22,7 @@ manager: "jhubbard"
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
   
- [alwayson_health session](always-on-extended-events.md#BKMK_alwayson_health)  
+ [Alwayson_health session](always-on-extended-events.md#BKMK_alwayson_health)  
   
  [Extended events for debugging](always-on-extended-events.md#BKMK_Debugging)  
   

@@ -29,11 +29,11 @@ manager: "jhubbard"
   -   Long-running transactions on the primary replica  
   
   -   Redo on secondary replica  
-  
+
  **Asynchronous commit**  
-  
+ 
  Since asynchronous commit acknowledges a transaction as soon as it is flushed to the local disk, the bottleneck can be anywhere after that point:  
-  
+ 
   -   Long-running transactions on the primary replica  
   
   -   Network latency or throughput  

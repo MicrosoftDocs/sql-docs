@@ -31,7 +31,7 @@ ORDER BY wait_time_ms DESC
   
  To monitor the wait statistics by capturing extended events, use the following T-SQL command.  
   
-```  
+```sql
 CREATE EVENT SESSION [alwayson] ON SERVER   
 ADD EVENT sqlos.wait_info(  
     WHERE ([wait_type]=(758) OR [wait_type]=(776) OR [wait_type]=(853) OR [wait_type]=(833)))  
@@ -42,7 +42,7 @@ GO
   
  You can view the key-value mapping of the wait type by running the following query:  
   
-```  
+```sql
 SELECT * FROM sys.dm_xe_map_values   
 WHERE name='wait_types' AND map_value LIKE '%hadr%'   
 ORDER BY map_key ASC  

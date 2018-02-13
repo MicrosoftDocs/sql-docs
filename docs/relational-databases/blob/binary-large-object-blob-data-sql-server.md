@@ -25,11 +25,12 @@ ms.workload: "On Demand"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides solutions for storing files and documents in the database or on remote storage devices.  
   
-##  <a name="section"></a> In This Section  
-### [Compare Options for Storing Blobs &#40;SQL Server&#41;](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md)  
+## Compare Options for Storing Blobs in SQL Server
 
-Compare the advantages of FILESTREAM, FileTables, and Remote Blob Store.  
+Compare the advantages of FILESTREAM, FileTables, and Remote Blob Store. See [Compare Options for Storing Blobs &#40;SQL Server&#41;](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md).
   
+##  Options for Storing Blobs  
+
 ### [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 
 FILESTREAM enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-based applications to store unstructured data, such as documents and images, on the file system. Applications can leverage the rich streaming APIs and performance of the file system and at the same time maintain transactional consistency between the unstructured data and corresponding structured data.  

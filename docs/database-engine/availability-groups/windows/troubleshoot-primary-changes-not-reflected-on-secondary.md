@@ -30,7 +30,8 @@ manager: "jhubbard"
   
   -   Redo on secondary replica  
 
- **Asynchronous commit**  
+
+**Asynchronous commit**  
  
  Since asynchronous commit acknowledges a transaction as soon as it is flushed to the local disk, the bottleneck can be anywhere after that point:  
  

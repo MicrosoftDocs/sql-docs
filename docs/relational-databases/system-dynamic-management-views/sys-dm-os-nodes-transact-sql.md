@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2017"
+ms.date: "02/13/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -31,11 +31,15 @@ ms.workload: "Inactive"
 # sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  An internal component named the SQLOS creates node structures that mimic hardware processor locality. These structures can be changed by using soft-NUMA to create custom node layouts.  
+An internal component named the SQLOS creates node structures that mimic hardware processor locality. These structures can be changed by using [soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) to create custom node layouts.  
+
+> [!NOTE]
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will automatically use soft-NUMA for certain hardware configurations. For more information, see [Automatic Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
- The following table provides information about these nodes.  
+The following table provides information about these nodes.  
   
-> **NOTE:** To call this DMV from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_nodes**.  
+> [!NOTE]
+> To call this DMV from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_nodes**.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -62,11 +66,7 @@ ms.workload: "Inactive"
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
   
-## See Also  
-  
+## See Also    
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
-  
-
-

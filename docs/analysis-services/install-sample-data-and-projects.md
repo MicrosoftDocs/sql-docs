@@ -24,34 +24,36 @@ ms.workload: "Active"
 # Install sample data and multidimensional projects 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
-Use the instructions and links provided in this topic to install the data and project files used in the Analysis Services Tutorials. 
+Use the instructions and links provided in this article to install the data and project files used in the Analysis Services Tutorials. 
   
 ## Step 1: Install prerequisites 
 The lessons in this tutorial assume that you have the following software installed. You can install all of the features on a single computer. To install these features, run SQL Server Setup and select them from the Feature Selection page.  
   
--   Database Engine  
+-   SQL Server Database Engine  
   
--   SQL Serer Analysis Services  (SSAS) 
+-   SQL Server Analysis Services  (SSAS) 
   
     Analysis Services is available in these editions only: Evaluation, Enterprise, Business Intelligence, Standard. Multidimensional models are not supported in Azure Analysis Services.
   
-    By default, Analysis Services 2016 and later is installed as a tabular instance, which you can override by choosing Multidimensional Server Mode in the server configuration page of the Installation Wizard. If you want to run both server modes, rerun SQL Server Setup on the same computer to install a second instance of Analysis Services in the other mode.  
+    By default, Analysis Services 2016 and later is installed as a tabular instance, which you can override by choosing Multidimensional Server Mode in the server configuration page of the Installation Wizard.
   
--   [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)  
+## Step 2: Download and install developer and management tools
+SQL Server Data Tools (SSDT) for Visual Studio is downloaded and installed separately from other SQL Server features. The designers and project templates used to create BI models and reports are included in SSDT for Visual Studio 2015 or as [Nuget packages](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) for Visual Studio 2017.  
   
+[Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542).   
+
+SQL Server Management Studio (SSMS) is downloaded and installed separately from other SQL Server features.  
+
+[Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)  
+
 Optionally, consider installing Excel to browse your multidimensional data as you proceed through the tutorial. Installing Excel enables the **Analyze in Excel** feature that starts Excel using a PivotTable field list that is connected to the cube you are building. Using Excel to browse data is recommended because you can quickly build a pivot report that lets you interact with the data.  
   
 Alternatively, you can browse data using the built-in MDX query designer that is built into [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The query designer returns the same data, except the data is presented as a flat rowset.  
   
-## Step 2: Download SQL Server Data Tools for Visual Studio 
-In this release, SQL Server Data Tools is downloaded and installed separately from other SQL Server features. The designers and project templates used to create BI models and reports are included in SSDT for Visual Studio 2015 or as [Nuget packages](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) for Visual Studio 2017.  
+## Step 3: Install databases  
+An Analysis Services multidimensional model uses transactional data that you import from a relational database management system. For the purposes of this tutorial, you use the following relational database as your data source.  
   
--   [Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542). The file is saved to the Downloads folder. Run setup to install the tool.  
-  
-## Step 3: Install Databases  
-An Analysis Services multidimensional model uses transactional data that you import from a relational database management system. For the purposes of this tutorial, you will use the following relational database as your data source.  
-  
--   **AdventureWorksDW2012 or later** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data that will be used by the Analysis Services databases and projects that you build and deploy throughout the tutorial. The tutorial assumes you are using AdventureWorksDW2012, however, later versions do work.
+-   **AdventureWorksDW2012 or later** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data  used by the Analysis Services databases and projects that you build and deploy throughout the tutorial. The tutorial assumes you are using AdventureWorksDW2012, however, later versions do work.
   
     You can use this sample database with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and later. In-general, you should use the sample database version matching your database engine version.
   
@@ -65,7 +67,7 @@ To install the database, do the following:
   
 4.  Restore the database.  
   
-## Step 4: Grant Database Permissions  
+## Step 4: Grant database permissions  
 The sample projects use data source impersonation settings that specify the security context under which data is imported or processed. By default, the impersonation settings specify the Analysis Services service account for accessing the data. To use this default setting, you must ensure that the service account under which Analysis Services runs has data reader permissions on the **AdventureWorksDW** database.  
   
 > [!NOTE]  
@@ -83,7 +85,7 @@ The sample projects use data source impersonation settings that specify the secu
   
 6.  Select the checkbox next to the **AdventureWorksDW** database. Role membership should automatically include **db_datareader** and **public**. Click **OK** to accept the defaults.  
   
-## Step 5: Install Projects  
+## Step 5: Install projects  
 
 The tutorial includes sample projects so that you can compare your results against a finished project, or start a lesson that is further on in the sequence.  
   
@@ -99,9 +101,9 @@ The tutorial includes sample projects so that you can compare your results again
 
 5.  Open the solution (.sln) file that corresponds to the lesson you are in. For example, in the folder named "Lesson 1 Complete", you would open the Analysis Services Tutorial.sln file.  
   
-6.  Deploy the solution to verify that database permissions and server location information is set up correctly.  
+6.  Deploy the solution to verify that database permissions and server location information are setup correctly.  
   
-    If Analysis Services and the Database Engine are installed as the default instance (MSSQLServer) and all software is running on the same computer, you can click **Deploy Solution** on the Build menu to build and deploy the sample project to the local Analysis Services instance. During deployment, data will be processed (or imported) from the **AdventureWorksDW** database on the local Database Engine instance. A new Analysis Services database will be created on the Analysis Services instance that contains the data retrieved from the Database Engine.  
+    If Analysis Services and the Database Engine are installed as the default instance (MSSQLServer) and all software is running on the same computer, you can click **Deploy Solution** on the Build menu to build and deploy the sample project to the local Analysis Services instance. During deployment, data is processed (or imported) from the **AdventureWorksDW** database on the local Database Engine instance. A new Analysis Services database is created on the Analysis Services instance that contains the data retrieved from the Database Engine.  
   
     If you encounter errors, review the previous steps on setting up database permissions. Additionally, you might also need to change server names. The default server name is localhost. If your servers are installed on remote computers or as named instances, you must override the default to use a server name that is valid for your installation. Furthermore, if the servers are on remote computers, you might need to configure Windows Firewall to allow access to the servers.  
   
@@ -111,10 +113,10 @@ The tutorial includes sample projects so that you can compare your results again
   
 7.  In SQL Server Management Studio, connect to Analysis Services. Verify the database named **Analysis Services Tutorial** is running on the server.  
   
-## Next Step  
+## Next step  
 You are now ready to use the tutorial. For more information about how to get started, see [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).  
   
-## See Also  
+## See also  
 [Configure the Windows Firewall to Allow Analysis Services Access](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   

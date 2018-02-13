@@ -1,7 +1,7 @@
 ---
 title: "Tabular Model Solution Deployment (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2017"
+ms.date: "02/13/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -23,21 +23,7 @@ ms.workload: "On Demand"
 ---
 # Tabular Model Solution Deployment (SSAS Tabular)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  After authoring a tabular model project, you must deploy it in order for users to browse the model by using a reporting client application. This topic describes the various properties and methods you can use when deploying tabular model solutions in your environment.  
-  
- Sections in this topic:  
-  
--   [Benefits](#bkmk_benefits)  
-  
--   [Deploying a Tabular Model from SQL Server Data Tools (SSDT)](#bkmk_deploying_bism)  
-  
--   [Deployment Properties](#bkmk_deploy_props)  
-  
--   [Deployment Methods](#bkmk_meth)  
-  
--   [Configuring the deployment server and connecting to a deployed model](#bkmk_connecting)  
-  
--   [Related Tasks](#bkmk_rt)  
+  After authoring a tabular model project, you must deploy it in order for users to browse the model by using a reporting client application. This article describes the various properties and methods you can use when deploying tabular model solutions in your environment.  
   
 ##  <a name="bkmk_benefits"></a> Benefits  
  Deploying a tabular model creates a model database in a test, staging, or production environment. Users can then connect to the deployed model through a .bism connection file in Sharepoint or by using a data connection directly from reporting client applications such as Microsoft Excel, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], or a custom application. The model workspace database, created when you create a new tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and used to author the model will remain on the workspace server instance, allowing you to make changes to the model project and then re-deploying to the test, staging, or production environment when necessary.  
@@ -45,7 +31,7 @@ ms.workload: "On Demand"
 ##  <a name="bkmk_deploying_bism"></a> Deploying a Tabular Model from SQL Server Data Tools (SSDT)  
  Deploying is a simple process; however, certain steps must be taken to ensure your model is deployed to the correct Analysis Services instance and with the correct configuration options.  
   
- Tabular models are defined with several deployment specific properties. When you deploy, a connection to the Analysis Services instance specified in the **Server** property is established. A new model database with the name specified in the **Database** property is then created on that instance, if one does not already exist. Metadata from the model project’s Model.bim file is used to configure objects in the model database on the deployment server. With the **Processing Option**, you can specify whether or not just the model metadata is deployed, creating the model database, or if **Default** or **Full** is specified, impersonation credentials used to connect to data sources are passed in-memory from the model workspace database to the deployed model database. Analysis Services then runs processing to populate data into the deployed model. Once the deployment process is complete, the model can then be connected to by client applications using a data connection or by using an .bism connection file in SharePoint.  
+ Tabular models are defined with several deployment-specific properties. When you deploy, a connection to the Analysis Services instance specified in the **Server** property is established. A new model database with the name specified in the **Database** property is then created on that instance, if one does not already exist. Metadata from the model project’s Model.bim file is used to configure objects in the model database on the deployment server. With the **Processing Option**, you can specify whether or not just the model metadata is deployed, creating the model database, or if **Default** or **Full** is specified, impersonation credentials used to connect to data sources are passed in-memory from the model workspace database to the deployed model database. Analysis Services then runs processing to populate data into the deployed model. Once the deployment process is complete, the model can then be connected to by client applications using a data connection or by using an .bism connection file in SharePoint.  
   
 ##  <a name="bkmk_deploy_props"></a> Deployment Properties  
  The project Deployment Options and Deployment Server properties specify how and where a model is deployed to a staging or production Analysis Services environment. While default property settings are defined for all model projects, depending on your particular deployment requirements, you can change these property settings for each project. For more information about setting default deployment properties, see [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
@@ -81,7 +67,7 @@ ms.workload: "On Demand"
   
 |Method|Description|Link|  
 |------------|-----------------|----------|  
-|**Deploy command in SQL Server Data Tools**|The Deploy command provides a simple and intuitive method to deploy a tabular model project from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] authoring environment.<br /><br /> **\*\* Caution \*\*** This method should not be used to deploy to production servers. Using this method can overwrite certain properties in an existing model.|[Deploy From SQL Server Data Tools &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
+|**Deploy command in SQL Server Data Tools**|The Deploy command provides a simple and intuitive method to deploy a tabular model project from the [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] authoring environment.<br /><br /> **Caution** This method should not be used to deploy to production servers. Using this method can overwrite certain properties in an already deployed, existing model; for example, when using scripts or SSMS to modify properties.|[Deploy From SQL Server Data Tools &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
 |**Analysis Management Objects (AMO) Automation**|AMO provides a programmatic interface to the complete command set for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], including commands that can be used for solution deployment. As an approach for solution deployment, AMO automation is the most flexible, but it also requires a programming effort.  A key advantage to using AMO is that you can use SQL Server Agent with your AMO application to run deployment on a preset schedule.|[Developing with Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to generate an XMLA script of the metadata of an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, and then run that script on another server to recreate the initial database. XMLA scripts are easily formed in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] by defining the deployment process, then codifying it and saving it in an XMLA script. Once you have the XMLA script in a saved file, you can easily run the script according to a schedule, or embed the script in an application that connects directly to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> You can also run XMLA Scripts on a preset basis using SQL Server Agent, but you do not have the same flexibility with XMLA Scripts as with AMO. AMO provides a larger breadth of functionality by hosting the complete spectrum of administrative commands.|[Deploy Model Solutions Using XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**Deployment Wizard**|Use the Deployment Wizard to use the XMLA output files generated by an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project to deploy the project's metadata to a destination server. With the Deployment Wizard, you can deploy directly from the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] file, as created by the output directory by project build.<br /><br /> The primary advantage of using the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard is convenience. Just as you can save an XMLA script for use later in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can save Deployment Wizard scripts. The Deployment Wizard can be run both interactively and at the command prompt via the Deployment Utility.|[Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  

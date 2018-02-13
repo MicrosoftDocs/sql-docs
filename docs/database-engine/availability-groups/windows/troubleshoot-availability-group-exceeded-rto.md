@@ -61,7 +61,7 @@ from sys.dm_hadr_database_replica_states
   
  If the redo thread is indeed falling behind, you need to investigate the root cause of the performance degradation on the secondary replica. If there is an I/O contention with the reporting workload, you can use [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) to control CPU cycles that are used by the reporting workload to indirectly control the I/O cycles taken, to some extent. For example, if your reporting workload is consuming 10 percent of CPU but the workload is I/O bound, you can use Resource Governor to limit CPU resource usage to 5 percent to throttle read workload, which minimizes the impact on I/O.  
   
-## See also  
+## Next steps  
  [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](http://msdn.microsoft.com/en-us/library/dd672789(v=SQL.100).aspx)  
   
   

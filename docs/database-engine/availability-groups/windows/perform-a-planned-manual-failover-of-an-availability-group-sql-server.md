@@ -119,7 +119,7 @@ A planned manual failover is supported only when the primary replica and the tar
 
 [!INCLUDE[Force failover](../../../includes/ss-force-failover-read-scale-out.md)]
 
-## See also 
+## Next steps 
 
  * [Overview of AlwaysOn availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [Failover and failover modes &#40;AlwaysOn availability groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 

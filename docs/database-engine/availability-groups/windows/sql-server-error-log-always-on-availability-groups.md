@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   Availability group is in an indeterminate state  
   
-## See also  
+## Next steps  
  [View the SQL Server error log &#40;SQL Server Management Studio&#41;](~/relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
   
   

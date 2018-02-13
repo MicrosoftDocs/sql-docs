@@ -52,7 +52,7 @@ A single distributed availability group can have up to 17 readable secondary rep
 
 [Configure a read-scale availability group on Linux](../../../linux/sql-server-linux-availability-group-configure-rs.md)
 
-## See also 
+## Next steps 
  [Overview of AlwaysOn availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
   
   

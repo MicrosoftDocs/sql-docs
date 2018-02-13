@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 3.  To view all the availability groups system policies, in the **Select a page** pane, click **Policy Selection**.  
   
-## See also  
+## Next steps  
  [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
   

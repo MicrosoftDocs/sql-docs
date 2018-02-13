@@ -377,7 +377,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-## See also  
+## Next steps  
  [View event session data](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
  
   

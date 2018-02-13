@@ -69,7 +69,7 @@ manager: "jhubbard"
 |[Monitoring Always On health with PowerShell, part 3: A simple monitoring application](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Shows how to automatically monitor an availability group with an application.|  
 |[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Provides information on how to integrate availability group monitoring with SQL Server Agent and configure notification to the appropriate parties when problems arise.| --> 
   
-## See also  
+## Next steps  
  [SQL Server Always On Team Blog](http://blogs.msdn.com/b/sqlalwayson/)   
  [CSS SQL Server Engineers Blogs](http://blogs.msdn.com/b/psssql/)  
   

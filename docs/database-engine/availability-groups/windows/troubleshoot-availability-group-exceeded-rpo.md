@@ -123,7 +123,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
  If you identify an I/O bottleneck and you have placed the log file and the data file on the same hard disk, the first thing you should do is to place the data file and the log file on separate disks. This best practice prevents reporting workload from interfering with the log transfer path from the primary replica to the log buffer and its ability to harden the transaction on the secondary replica.  
   
-## See also  
+## Next steps  
  [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

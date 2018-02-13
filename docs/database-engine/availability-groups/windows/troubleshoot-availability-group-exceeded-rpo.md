@@ -36,27 +36,27 @@ manager: "jhubbard"
 #### Diagnosis and resolution  
  A high number of messages resent to the secondary replica can indicate high network latency and network noise. You can also compare the DMV value **log_send_rate** with the performance object Log Bytes Flushed/sec. If logs are being flushed to disk faster than they are being sent, the potential data loss can increase indefinitely.  
   
- Also, it is useful to check the two performance objects **SQL Server:Availability Replica > Flow Control Time (ms/sec)** and **SQL Server:Availability Replica > Flow Control/sec**. Multiplying these two values shows you in the last second how much time was spent waiting for flow control to clear. The longer the flow control wait time, the lower the send rate.  
+ Also, it is useful to check the two performance objects `SQL Server:Availability Replica > Flow Control Time (ms/sec)` and `SQL Server:Availability Replica > Flow Control/sec`. Multiplying these two values shows you in the last second how much time was spent waiting for flow control to clear. The longer the flow control wait time, the lower the send rate.  
   
  Below is a list of useful metrics in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe**, [Resource Monitor](http://technet.microsoft.com/video/Video/ff710685), and [Network Monitor](http://www.microsoft.com/download/details.aspx?id=4865) to evaluate latency and network utilization.  
   
--   DMV **sys.dm_hadr_database_replica_states, log_send_queue_size**  
+-   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
--   DMV **sys.dm_hadr_database_replica_states, log_send_rate**  
+-   DMV `sys.dm_hadr_database_replica_states, log_send_rate`  
   
--   Performance counter **SQL Server:Database > Log Bytes Flushed/sec**  
+-   Performance counter `SQL Server:Database > Log Bytes Flushed/sec`  
   
--   Performance counter **SQL Server:Database Mirroring > Send/Receive Ack Time**  
+-   Performance counter `SQL Server:Database Mirroring > Send/Receive Ack Time`  
   
--   Performance counter **SQL Server:Availability Replica > Bytes Sent to Replica/sec**  
+-   Performance counter `SQL Server:Availability Replica > Bytes Sent to Replica/sec`  
   
--   Performance counter **SQL Server:Availability Replica > Bytes Sent to Transport/sec**  
+-   Performance counter `SQL Server:Availability Replica > Bytes Sent to Transport/sec`  
   
--   Performance counter **SQL Server:Availability Replica > Flow Control Time (ms/sec)**  
+-   Performance counter `SQL Server:Availability Replica > Flow Control Time (ms/sec)`  
   
--   Performance counter **SQL Server:Availability Replica > Flow Control/sec**  
+-   Performance counter `SQL Server:Availability Replica > Flow Control/sec`  
   
--   Performance counter **SQL Server:Availability Replica > Resent Messages/sec**  
+-   Performance counter `SQL Server:Availability Replica > Resent Messages/sec`  
   
  To remedy this issue, try upgrading your network bandwidth or removing or reducing unnecessary network traffic.  
   
@@ -109,7 +109,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
  You can compare how the read I/O and the write I/O match up with one another to identify I/O contention.  
   
- Below or some other performance counters that can help you diagnosing I/O bottleneck:  
+ Below are some other performance counters that can help you in diagnosing I/O bottlenecks:  
   
 -   **Physical Disk: all counters**  
   
@@ -121,7 +121,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **SQL Server: Databases > Log Pool Disk Reads/sec**  
   
- If you identify an I/O bottleneck and you place the log file and the data file on the same hard disk, the first thing you should do is to place the data file and the log file on separate disks. This best practice prevents reporting workload from interfering with the log transfer path from the primary replica to the log buffer and its ability to harden the transaction on the secondary replica.  
+ If you identify an I/O bottleneck and you have placed the log file and the data file on the same hard disk, the first thing you should do is to place the data file and the log file on separate disks. This best practice prevents reporting workload from interfering with the log transfer path from the primary replica to the log buffer and its ability to harden the transaction on the secondary replica.  
   
 ## See also  
  [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  

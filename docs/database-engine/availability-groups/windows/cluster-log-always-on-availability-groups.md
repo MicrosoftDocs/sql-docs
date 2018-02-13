@@ -18,7 +18,7 @@ manager: "jhubbard"
 # CLUSTER.LOG (Always On Availability Groups)
   As a failover cluster resource, there are external interactions between SQL Server, the Windows Server Failover Cluster service (WSFC) cluster, and the SQL Server resource DLL (hadrres.dll), that cannot be monitored within SQL Server. The WSFC log, CLUSTER.LOG, can diagnose issues in the WSFC cluster or in the SQL Server resource DLL.  
   
- The following diagram demonstrates the relationship between applications like SQL Server and Windows Cluster Manager that initiate availability group resource creation, destruction or state changes  
+ The following diagram demonstrates the relationship between applications like SQL Server and Windows Cluster Manager that initiate availability group resource creation, destruction, or state changes.  
   
 ## Generate cluster log  
  You can generate the cluster logs in two ways:  
@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 2.  Use the [Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet. The advantage of this method is that you can generate the cluster log from all nodes to one destination directory on the node that you run the cmdlet. The disadvantage is that you cannot specify the level of detail in the generated logs.  
   
- The following PowerShell commands generate the cluster logs from all cluster nodes from the last 15 minutes and place them in the current directory. You should run the commands in a PowerShell window with Administrative privileges.  
+ The following PowerShell commands generate the cluster logs from all cluster nodes from the last 15 minutes and place them in the current directory. Run the commands in a PowerShell window with Administrative privileges.  
   
 ```powershell  
 Import-Modeul FailoverClusters   
@@ -35,11 +35,11 @@ Get-ClusterLog –TimeSpan 15 –Destination .
 ```  
   
 ## Always On log verbosity  
- You can increase the verbosity of the logs in CLUSTER.LOG for an availability group. To do this, follow the steps below:  
+ You can increase the verbosity of the logs in CLUSTER.LOG for an availability group. To modify the verbosity, follow the steps below:  
   
 1.  From the **Start** menu, open the **Failover Cluster Manager**.  
   
-2.  Expand the your cluster and the **Services and applications** node, then click the  availability group name.  
+2.  Expand your cluster and the **Services and applications** node, then click the availability group name.  
   
 3.  In the detail pane, right-click the availability group resource and click **Properties**.  
   
@@ -58,13 +58,13 @@ Get-ClusterLog –TimeSpan 15 –Destination .
   
 |Identifier|Source|Example from CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Messages prefixed with RES and '[hadrag]'|hadrres.dll (Always On Resource DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: [hadrag] Offline request.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server Availability Group \<ag>: [hadrag] Lease Thread terminated<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server Availability Group \<ag>: [hadrag] Free SQL statement<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server Availability Group \<ag>: [hadrag] Disconnect from SQL Server|  
-|Messages prefixed with [RHS]|RHS.EXE (Resource Hosting Subsystem, host process of hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag has come offline. RHS is about to report resource status to RCM.|  
-|Messages prefixed with [RCM]|Resource Control Monitor (Cluster Service)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: Bringing group 'ag' offline first...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|Messages prefixed with `[RES]` and `[hadrag]`|hadrres.dll (Always On Resource DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server|  
+|Messages prefixed with `[RHS]`|RHS.EXE (Resource Hosting Subsystem, host process of hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag has come offline. RHS is about to report resource status to RCM.|  
+|Messages prefixed with `[RCM]`|Resource Control Monitor (Cluster Service)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: Bringing group 'ag' offline first...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|An API call, which mostly means SQL Server is requesting the action|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## Debug Always On resource DLL in isolation  
- It is a debugging best practice to configure your cluster to run the Always On resource DLL (hadrres.dll) in isolation from other resource DLLs. By default, the WSFC cluster runs all resource DLLs in a single instance of rhs.exe. This causes all resources within the cluster to share the same rhs.exe instance. When you attempt to debug hadrres.dll with a debugger, pausing at a break point may cause other resources that share the rhs.exe instance to be paused as well. Also, when you run multiple availability groups in the same cluster, the same configuration can cause all availability groups to be paused when you pause at ta break point to debug one availability group.  
+ It is a debugging best practice to configure your cluster to run the Always On resource DLL (hadrres.dll) in isolation from other resource DLLs. By default, the WSFC cluster runs all resource DLLs in a single instance of rhs.exe. This causes all resources within the cluster to share the same rhs.exe instance. When you attempt to debug hadrres.dll with a debugger, pausing at a break point may cause other resources that share the rhs.exe instance to be paused as well. Also, when you run multiple availability groups in the same cluster, the same configuration can cause all availability groups to be paused when you pause at a break point to debug one availability group.  
   
  To isolate an availability group from the other cluster resource DLLs, including other availability groups, do the following to run hadrres.dll inside a separate rhs.exe process:  
   

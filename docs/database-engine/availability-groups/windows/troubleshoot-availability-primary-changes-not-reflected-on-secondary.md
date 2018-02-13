@@ -72,19 +72,19 @@ manager: "jhubbard"
   
 -   DMV [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
--   Performance counter **SQL Server:Database > Log Bytes Flushed/sec**  
+-   Performance counter `SQL Server:Database > Log Bytes Flushed/sec`  
   
--   Performance counter **SQL Server:Database Mirroring > Send/Receive Ack Time**  
+-   Performance counter `SQL Server:Database Mirroring > Send/Receive Ack Time`  
   
--   Performance counter **SQL Server:Availability Replica > Bytes Sent to Replica/sec**  
+-   Performance counter `SQL Server:Availability Replica > Bytes Sent to Replica/sec`  
   
--   Performance counter **SQL Server:Availability Replica > Bytes Sent to Transport/sec**  
+-   Performance counter `SQL Server:Availability Replica > Bytes Sent to Transport/sec`  
   
--   Performance counter **SQL Server:Availability Replica > Flow Control Time (ms/sec)**  
+-   Performance counter `SQL Server:Availability Replica > Flow Control Time (ms/sec)`  
   
--   Performance counter **SQL Server:Availability Replica > Flow Control/sec**  
+-   Performance counter `SQL Server:Availability Replica > Flow Control/sec`  
   
--   Performance counter **SQL Server:Availability Replica > Resent Messages/sec**  
+-   Performance counter `SQL Server:Availability Replica > Resent Messages/sec`  
   
  To remedy this issue, try upgrading your network bandwidth or removing or reducing unnecessary network traffic.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
  The redo thread on the secondary replica is blocked from making data definition language (DDL) changes by a long-running read-only query. The redo thread must be unblocked before it can make further updates available for read workload.  
   
 #### Explanation  
- On the secondary replica, the read-only queries acquire schema stability (Sch-S) locks. These Sch-S locks can block the redo thread from acquiring schema modification (Sch-M) locks to make any DDL changes. A blocked redo thread cannot apply log records until it is unblocked.  
+ On the secondary replica, the read-only queries acquire schema stability (`Sch-S`) locks. These `Sch-S` locks can block the redo thread from acquiring schema modification (`Sch-M`) locks to make any DDL changes. A blocked redo thread cannot apply log records until it is unblocked.  
   
 #### Diagnosis and resolution  
  When the redo thread is blocked, an extended event called `sqlserver.lock_redo_blocked` is generated. Additionally, you can query the DMV sys.dm_exec_request on the secondary replica to find out which session is blocking the REDO thread, and then you can take corrective action. The following query returns the session ID of the reporting workload that is blocking the redo thread.  

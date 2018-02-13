@@ -1,7 +1,7 @@
 ---
 title: "Soft-NUMA (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
+ms.date: "02/13/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -43,16 +43,16 @@ ms.workload: "On Demand"
  The figure below shows the type of information regarding soft-NUMA that you will see in the SQL Server error log when SQL Server detects hardware NUMA nodes with greater than 8 physical cores in each node or socket.  
 
 
-``2016-11-14 13:39:43.17 Server      SQL Server detected 2 sockets with 12 cores per socket and 24 logical processors per socket, 48 total logical processors; using 48 logical processors based on SQL Server licensing. This is an informational message; no user action is required.``  
-  **``2016-11-14 13:39:43.35 Server      Automatic soft-NUMA was enabled because SQL Server has detected hardware NUMA nodes with greater than 8 physical cores.``**  
-  ``2016-11-14 13:39:43.63 Server      Node configuration: node 0: CPU mask: 0x0000000000555555:0 Active CPU mask: 0x0000000000555555:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.``  
-  ``2016-11-14 13:39:43.63 Server      Node configuration: node 1: CPU mask: 0x0000000000aaaaaa:0 Active CPU mask: 0x0000000000aaaaaa:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.``  
-  ``2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.``  
-  ``2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.``
-
-  
+```
+2016-11-14 13:39:43.17 Server      SQL Server detected 2 sockets with 12 cores per socket and 24 logical processors per socket, 48 total logical processors; using 48 logical processors based on SQL Server licensing. This is an informational message; no user action is required.     
+**2016-11-14 13:39:43.35 Server      Automatic soft-NUMA was enabled because SQL Server has detected hardware NUMA nodes with greater than 8 physical cores.**     
+2016-11-14 13:39:43.63 Server      Node configuration: node 0: CPU mask: 0x0000000000555555:0 Active CPU mask: 0x0000000000555555:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.    
+2016-11-14 13:39:43.63 Server      Node configuration: node 1: CPU mask: 0x0000000000aaaaaa:0 Active CPU mask: 0x0000000000aaaaaa:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.    
+2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
+2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
+```
 ## Manual Soft-NUMA  
- To manually configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use soft-NUMA by disabling automatic soft_NUMA and editing the registry to add a node configuration affinity mask. When using this method, the soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values. (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].) After modifying the registry, you must restart the  [!INCLUDE[ssDE](../../includes/ssde-md.md)] for the soft-NUMA configuration to take  effect.  
+To manually configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use soft-NUMA, disable automatic soft-NUMA by editing the registry, to add a node configuration affinity mask. When using this method, the soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). After modifying the registry, you must restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for the soft-NUMA configuration to take effect.  
   
 > [!TIP]
 > CPUs are numbered starting with 0.  
@@ -60,8 +60,8 @@ ms.workload: "On Demand"
 > [!WARNING]
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- Consider the following example. A computer with eight CPUs does not have hardware NUMA. Three soft-NUMA nodes are configured.   
-            [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance A is configured to use CPUs 0 through 3. A second instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is installed and configured to use CPUs 4 through 7. The example can be visually represented as:  
+Consider the following example. A computer with eight CPUs does not have hardware NUMA. Three soft-NUMA nodes are configured.   
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] instance A is configured to use CPUs 0 through 3. A second instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is installed and configured to use CPUs 4 through 7. The example can be visually represented as:  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -71,8 +71,7 @@ ms.workload: "On Demand"
   
  Instance A, which experiences significant I/O, now has two I/O threads and one lazy writer thread, while instance B, which performs processor-intensive operations, has only one I/O thread and one lazy writer thread. Differing amounts of memory can be assigned to the instances, but unlike hardware NUMA, they both receive memory from the same operating system memory block and there is no memory-to-processor affinity.  
   
- The lazy writer thread is tied to the SQL OS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as physical NUMA nodes will equate to the number of lazy writer threads that are created. For more information, see   
-            [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ The lazy writer thread is tied to the SQLOS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as physical NUMA nodes will equate to the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
 > The **Soft-NUMA** registry keys are not copied when you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -85,7 +84,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=0 TO 3;  
 ```  
   
- Run the following statement on instance B to configure it to use CPUs 4, 5, 6, and 7 by setting the CPU affinity mask:  
+Run the following statement on instance B to configure it to use CPUs 4, 5, 6, and 7 by setting the CPU affinity mask:  
   
 ```  
 ALTER SERVER CONFIGURATION   
@@ -128,21 +127,18 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node11|DWORD|Group|3|  
   
 ## Metadata  
- You can use the following DMVs to view the current state and configuration of soft_NUMA.  
+ You can use the following DMVs to view the current state and configuration of soft-NUMA.  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): Displays the current value (0 or 1) for SOFTNUMA  
-  
--   [sys.dm_os_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql.md): The node_state_desc column for each NUMA node will show whether the node was created by soft-NUMA or not.  
   
 -   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): The softnuma and softnuma_desc columns will show the configuration values.  
   
 > [!NOTE]
-> While you can view the running value for automatic soft-NUMA using [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), you cannot change its value using **sp_configure**. You must use the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the SET SOFTNUMA argument.  
+> While you can view the running value for automatic soft-NUMA using [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), you cannot change its value using **sp_configure**. You must use the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the `SET SOFTNUMA` argument.  
   
 ## See Also  
- [Map TCP IP Ports to NUMA Nodes &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
- [affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
- [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
+[Map TCP IP Ports to NUMA Nodes &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
+[affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
+[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)    
+[sys.dm_os_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql.md) 
   
-  
-

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/13/2018"
+ms.date: "02/14/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -27,7 +27,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## [SSMS 17.5](download-sql-server-management-studio-ssms.md)
 
-Generally available | Build number: NEEDED
+Generally available | Build number: 14.0.17224.0
 
 ### What's new
 
@@ -76,8 +76,10 @@ Templates:
 - "Database Mail": fixed a couple of typos [(https://feedback.azure.com/forums/908035/suggestions/33143512)](https://feedback.azure.com/forums/908035/suggestions/33143512).  
 
 Object Explorer:
-- Fixed an issue where Managed Compression would fail for indexes (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o)
+- Fixed an issue where Managed Compression would fail for indexes (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o).
 
+Auditing:
+- Fixed an issue with the *Merge Audit Files* feature.
 <br>
 
 ## Previous SSMS releases

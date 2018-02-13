@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/13/2018"
+ms.date: "02/14/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -42,7 +42,7 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 17.x is the latest generation of *SQL Server Management Studio* and provides support for SQL Server 2017.
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.5](https://go.microsoft.com/fwlink/?linkid=864329)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.5](https://go.microsoft.com/fwlink/?linkid=867670)**
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.5 Upgrade Package (upgrades 17.x to 17.5)](https://go.microsoft.com/fwlink/?linkid=864331)**
 
@@ -61,7 +61,7 @@ If a computer contains side by side installations of SSMS, verify you start the 
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 17.5:<br>
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
 SQL Server Management Studio 17.5 Upgrade Package (upgrades 17.x to 17.5):<br>
 [Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40a)
@@ -74,9 +74,9 @@ SQL Server Management Studio 17.5 Upgrade Package (upgrades 17.x to 17.5):<br>
 
 Release number: 17.5
 
-Build number for this release: NEEDED
+Build number for this release: 14.0.17224.0
 
-Release date: February 13, 2018
+Release date: February 14, 2018
 
 ## New in this Release
 

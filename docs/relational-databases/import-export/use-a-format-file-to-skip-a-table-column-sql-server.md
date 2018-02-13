@@ -83,7 +83,7 @@ The previous command creates a non-XML format file, `myTestSkipCol_Default.fmt`.
 >  For more information about the format-file fields, see [Non-XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ### Step #2 - Modify a non-XML format file  
-Two alternatives exist for modifying a default non-XML data file. Either alternative indicates that the data field does not exist in the data file and that no data will be inserted into the corresponding table column.
+Two alternatives exist for modifying a default non-XML data file. Either alternative indicates that the data field does not exist in the data file and that no data is to be inserted into the corresponding table column.
 
 To skip a table column, edit the default non-XML format file and modify the file by using one of the following alternative methods:  
 

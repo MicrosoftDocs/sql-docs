@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "restore operations [full-text search]"
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "FileTables [SQL Server], managing access"
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

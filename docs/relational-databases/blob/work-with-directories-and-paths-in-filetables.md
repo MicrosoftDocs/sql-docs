@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "FileTables [SQL Server], directories"
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

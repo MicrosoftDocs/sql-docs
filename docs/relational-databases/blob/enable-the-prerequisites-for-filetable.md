@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "FileTables [SQL Server], prerequisites"
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

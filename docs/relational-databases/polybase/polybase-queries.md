@@ -24,7 +24,7 @@ ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 caps.latest.revision: 18
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PolyBase Queries

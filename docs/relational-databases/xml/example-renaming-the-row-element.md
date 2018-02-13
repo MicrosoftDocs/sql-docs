@@ -18,7 +18,7 @@ ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Renaming the &lt;row&gt; Element

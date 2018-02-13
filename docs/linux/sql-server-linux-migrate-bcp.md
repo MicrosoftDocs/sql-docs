@@ -9,9 +9,9 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.workload: "On Demand"
@@ -57,7 +57,7 @@ Create the table **TestEmployees** in the database **BcpSampleDB**:
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### Create the source data file
-Copy and paste the following command into your terminal window. We will use the built-in `cat` command to create a sample text data file with three records save the file in your home directory as **~/test_data.txt**. The fields in the records are delimited by a comma.
+Copy and paste the following command into your terminal window. We use the built-in `cat` command to create a sample text data file with three records save the file in your home directory as **~/test_data.txt**. The fields in the records are delimited by a comma.
 
 ```bash
 cat > ~/test_data.txt << EOF

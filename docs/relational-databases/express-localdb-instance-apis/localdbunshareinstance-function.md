@@ -21,7 +21,7 @@ ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LocalDBUnshareInstance Function

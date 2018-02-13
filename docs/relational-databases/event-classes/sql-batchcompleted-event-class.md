@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQL:BatchCompleted event class"
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL:BatchCompleted Event Class

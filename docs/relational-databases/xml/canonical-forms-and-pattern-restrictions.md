@@ -19,7 +19,7 @@ ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Canonical Forms and Pattern Restrictions

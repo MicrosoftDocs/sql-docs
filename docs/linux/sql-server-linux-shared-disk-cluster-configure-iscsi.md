@@ -9,9 +9,9 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.workload: "Inactive"
 ---
@@ -36,7 +36,7 @@ The most important thing to ensure is completed on the target is that the disks 
 
 This section will cover how to configure an iSCSI initiator on the servers that will serve as nodes for the FCI. The instructions should work as is on RHEL and Ubuntu.
 
-For additional information on iSCSI initiator for the supported distributions, consult the following links:
+For more information on iSCSI initiator for the supported distributions, consult the following links:
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
@@ -205,7 +205,7 @@ For additional information on iSCSI initiator for the supported distributions, c
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName> is the name of the volume group and \<LogicalVolumeName> is the name of the logical volume that was created. The example syntax below matches the volume group and logical volume crated above.
+    \<VolumeGroupName> is the name of the volume group and \<LogicalVolumeName> is the name of the logical volume that was created. The following example syntax matches the volume group and logical volume from the previous command.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -273,7 +273,7 @@ For additional information on iSCSI initiator for the supported distributions, c
     mkdir <FolderName>
     ```
 
-    \<FolderName> is the name of the folder. The folder’s full path will need to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
+    \<FolderName> is the name of the folder. The folder’s full path needs to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata

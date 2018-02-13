@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Database Object Take Ownership event class"
 ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Database Object Take Ownership Event Class

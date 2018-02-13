@@ -1,11 +1,11 @@
 ---
 title: "SQL Server Always On availability group deployment patterns | Microsoft Docs"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.date: "10/16/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: database-engine

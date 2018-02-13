@@ -9,9 +9,9 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "sql-linux"
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1 
 ms.workload: "On Demand"
@@ -63,7 +63,7 @@ There are three values that can be set for `required_synchronized_secondaries_to
 
 `required_synchronized_secondaries_to_commit` controls not only the behavior of failovers with synchronous replicas, but data loss. With a value of 1 or 2, a secondary replica is always required to be synchronized, so there will always be data redundancy. That means no data loss.
 
-To change the value of `required_synchronized_secondaries_to_commit`, use the syntax below.
+To change the value of `required_synchronized_secondaries_to_commit`, use the following syntax:
 
 >[!NOTE]
 >Changing the value causes the resource to restart, meaning a brief outage. The only way to avoid this is to set the resource to not be managed by the cluster temporarily.
@@ -128,7 +128,7 @@ As on Windows-based AGs, the drive and folder structure for the user databases p
 
 The listener is optional functionality for an AG. It provides a single point of entry for all connections (read/write to the primary replica and/or read-only to secondary replicas) so that applications and end users do not need to know which server is hosting the data. In a WSFC, this is the combination of a network name resource and an IP resource, which is then registered in AD DS (if needed) as well as DNS. In combination with the AG resource itself, it provides that abstraction. For more information on a listener, see [Listeners, Client Connectivity, and Application Failover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).
 
-The listener under Linux is configured differently, but its functionality is the same. There is no concept of a network name resource in Pacemaker, nor is an object created in AD DS; there is just an IP address resource created in Pacemaker that can run on any of the nodes. An entry associated with the IP resource for the listener in DNS with a “friendly name” will need to be created. The IP resource for the listener will only be active on the server hosting the primary replica for that availability group.
+The listener under Linux is configured differently, but its functionality is the same. There is no concept of a network name resource in Pacemaker, nor is an object created in AD DS; there is just an IP address resource created in Pacemaker that can run on any of the nodes. An entry associated with the IP resource for the listener in DNS with a “friendly name” needs to be created. The IP resource for the listener will only be active on the server hosting the primary replica for that availability group.
 
 If Pacemaker is used and an IP address resource is created that is associated with the listener, there will be a brief outage as the IP address stops on the one server and starts on the other, whether it is automatic or manual failover. While this provides abstraction through the combination of a single name and IP address, it does not mask the outage. An application must be able to handle the disconnect by having some sort of functionality to detect this and reconnect.
 
@@ -143,11 +143,11 @@ The instance associated with the provided IP address then becomes the coordinato
 
 An AG that has a cluster type of External or one that is WSFC cannot have its replicas cross platforms. This is true whether the AG is [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] or [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. That means in a traditional AG configuration with an underlying cluster, one replica cannot be on a WSFC and the other on Linux with Pacemaker.
 
-An AG with a cluster type of NONE can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown below where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
+An AG with a cluster type of NONE can have its replicas cross OS boundaries, so there could be both Linux- and Windows-based replicas in the same AG. An example is shown here where the primary replica is Windows-based, while the secondary is on one of the Linux distributions.
 
 ![Hybrid None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-A distributed AG can also cross OS boundaries. The underlying AGs are bound by the rules for how they are configured, such as one configured with External being Linux-only, but the AG that it is joined to could be configured using a WSFC. An example is shown below.
+A distributed AG can also cross OS boundaries. The underlying AGs are bound by the rules for how they are configured, such as one configured with External being Linux-only, but the AG that it is joined to could be configured using a WSFC. Consider the following example:
 
 ![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

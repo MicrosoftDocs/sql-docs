@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "names [SQL Server], registered server or server group"
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

@@ -22,7 +22,7 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Move an Existing Index to a Different Filegroup

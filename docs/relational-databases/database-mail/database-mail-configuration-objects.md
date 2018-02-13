@@ -36,9 +36,9 @@ helpviewer_keywords:
   - "accounts [Database Mail]"
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Mail Configuration Objects

@@ -16,7 +16,7 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Columnstore indexes - Data Warehouse

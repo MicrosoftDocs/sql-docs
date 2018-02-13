@@ -22,7 +22,7 @@ ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XML System Stored Procedures

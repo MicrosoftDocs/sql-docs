@@ -23,7 +23,7 @@ ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FOR XML Security Considerations (SQLXML 4.0)

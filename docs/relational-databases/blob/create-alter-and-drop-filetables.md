@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "FileTables [SQL Server], creating"
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create, Alter, and Drop FileTables

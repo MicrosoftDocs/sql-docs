@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Showplan All for Query Compile event class"
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Showplan All for Query Compile Event Class

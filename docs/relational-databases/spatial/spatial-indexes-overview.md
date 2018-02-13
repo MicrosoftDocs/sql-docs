@@ -18,7 +18,7 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Spatial Indexes Overview

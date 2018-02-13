@@ -1,6 +1,6 @@
 ---
 title: Release notes for SQL Server 2017 on Linux | Microsoft Docs
-description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for the most recent release and several previous releases.
+description: This article contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -9,16 +9,18 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: "Active"
 ---
 # Release notes for SQL Server 2017 on Linux
 
-The following release notes apply to SQL Server 2017 running on Linux. The topic below is broken into sections for each release. The GA release has detailed supportability and known issues listed. Each Cumulative Update (CU) release has a link to a support topic describing the CU changes as well as links to the Linux package downloads.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+The following release notes apply to SQL Server 2017 running on Linux. This article is broken into sections for each release. The GA release has detailed supportability and known issues listed. Each Cumulative Update (CU) release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 
 ## Supported platforms
 
@@ -30,7 +32,7 @@ The following release notes apply to SQL Server 2017 running on Linux. The topic
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> For more details, review the [system requirements](sql-server-linux-setup.md#system) for SQL Server on Linux. For the latest support policy for SQL Server 2017, see the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> For more information, review the [system requirements](sql-server-linux-setup.md#system) for SQL Server on Linux. For the latest support policy for SQL Server 2017, see the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## Supported client tools
 

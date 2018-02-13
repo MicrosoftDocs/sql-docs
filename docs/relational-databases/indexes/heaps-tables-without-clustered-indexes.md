@@ -18,7 +18,7 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Heaps (Tables without Clustered Indexes)

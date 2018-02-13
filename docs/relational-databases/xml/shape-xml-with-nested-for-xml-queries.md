@@ -20,7 +20,7 @@ ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Shape XML with Nested FOR XML Queries

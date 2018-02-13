@@ -1,6 +1,6 @@
 ---
 title: DB Mail and Email Alerts with SQL Agent on Linux | Microsoft Docs
-description: This topic describes how to use DB Mail and Email Alerts with SQL Server on Linux
+description: This article describes how to use DB Mail and Email Alerts with SQL Server on Linux
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -9,9 +9,9 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: tbd
 ms.workload: "Inactive"

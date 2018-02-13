@@ -18,7 +18,7 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Core SQLXML Security Considerations

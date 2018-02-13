@@ -20,7 +20,7 @@ ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # FILESTREAM (SQL Server)

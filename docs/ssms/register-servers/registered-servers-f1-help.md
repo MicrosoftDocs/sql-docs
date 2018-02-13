@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio Help [SQL Server], registered servers"
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

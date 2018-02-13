@@ -23,7 +23,7 @@ ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetCurrentCertificate Method (SInstance Class)

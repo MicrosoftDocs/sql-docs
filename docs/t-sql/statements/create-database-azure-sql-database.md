@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 
-ms.date: "08/28/2017"
+ms.date: "02/13/2018"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -56,11 +56,10 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | ( EDITION = {  'basic' | 'standard' | 'premium' | 'premiumrs'}   
+    | ( EDITION = {  'basic' | 'standard' | 'premium' }   
     | SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
             | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
-            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
 
@@ -76,7 +75,6 @@ CREATE DATABASE database_name
     [ ( SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
             | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'  
-            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
     ]  
  [;] 
@@ -100,14 +98,14 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 *SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation.  This is the default setting on Azure SQL Database if unspecified.
 
  *EDITION*  
- Specifies the service tier of the database. The available values are: 'basic', 'standard', 'premium', and 'premiumrs'.  
+ Specifies the service tier of the database. The available values are: 'basic', 'standard', and 'premium'. Support for `premiumrs` has been removed. For questions, use this e-mail alias: `premium-rs@microsoft.com`.
   
  When EDITION is specified but MAXSIZE is not specified, MAXSIZE is set to the most restrictive size that the edition supports.  
   
  *MAXSIZE*  
  Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6 and PRS1-PRS6**| **P11-P15** 
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** 
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  

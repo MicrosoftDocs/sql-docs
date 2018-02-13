@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "FDHOST Launcher (MSSQLFDLauncher) [SQL Server]"
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

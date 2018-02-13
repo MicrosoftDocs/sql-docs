@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], configuring"
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

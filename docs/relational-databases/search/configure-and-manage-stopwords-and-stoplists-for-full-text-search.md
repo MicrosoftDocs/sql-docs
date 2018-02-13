@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "stopwords [full-text search]"
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 81
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

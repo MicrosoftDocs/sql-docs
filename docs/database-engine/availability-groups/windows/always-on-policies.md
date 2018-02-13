@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Always On policies
   The Always On Availability Groups system policies are used by the Always On Dashboard to provide information on the availability group health to the user. They are very useful for initial troubleshooting of an availability group’s operational issues. These policies can be extended and used to customize the Always On Dashboard, or run instantly to report the desired health information.  
   
- There are 14 system policies for availability groups. For detailed information on each policy, see [Always On policies for operational issues with Always On Availability Groups (SQL Server)](Always%20On%20Policies%20for%20Operational%20Issues%20with%20Always%20On%20Availability%20Groups%20\(SQL%20Server\).md).  
+ There are 14 system policies for availability groups. For detailed information on each policy, see [Always On policies for operational issues with Always On Availability Groups (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 ## View or evaluate availability groups system policies  
  To view or run the availability groups system policies in SQL Server Management Studio (SSMS), do the following:  

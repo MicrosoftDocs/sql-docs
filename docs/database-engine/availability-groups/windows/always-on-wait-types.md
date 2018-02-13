@@ -16,7 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Always On wait types
-  When troubleshooting Always On latency, wait statistics can be monitored for accumulation using the Always On-specific wait types in the dynamic management view (DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../Topic/sys.dm_os_wait_stats%20(Transact-SQL).md).  
+  When troubleshooting Always On latency, wait statistics can be monitored for accumulation using the Always On-specific wait types in the dynamic management view (DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
  For general information on using wait statistics, see [SQL Server 2005 Waits and Queues](https://technet.microsoft.com/library/cc966413.aspx). That document was written for SQL Server 2005, but its information can be applied to later SQL Server versions.  
   
@@ -49,6 +49,6 @@ ORDER BY map_key ASC
 ```  
   
 ## See also  
- [Types of Waits](../Topic/sys.dm_os_wait_stats%20(Transact-SQL).md#WaitTypes)  
+ [Types of Waits](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)  
   
   

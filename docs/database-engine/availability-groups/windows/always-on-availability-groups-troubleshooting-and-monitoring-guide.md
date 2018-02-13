@@ -27,8 +27,8 @@ manager: "jhubbard"
   
 |Scenario|Scenario type|Description|  
 |--------------|-------------------|-----------------|  
-|[Troubleshoot Always On Availability Groups configuration &#40;SQL Server&#41;](../Topic/Troubleshoot%20Always On%20Availability%20Groups%20Configuration%20(SQL%20Server).md)|Configuration|Provides information to help you troubleshoot typical problems with configuring server instances for availability groups. Typical configuration problems include availability groups are disabled, accounts are incorrectly configured, the database mirroring endpoint does not exist, the endpoint is inaccessible (SQL Server Error 1418), network access does not exist, and a join database command fails (SQL Server Error 35250).|  
-|[Troubleshoot a failed add-file operation &#40;Always On Availability Groups&#41;](../Topic/Troubleshoot%20a%20Failed%20Add-File%20Operation%20(Always On%20Availability%20Groups).md)|Configuration|An add-file operation caused the secondary database to be suspended and be in the NOT SYNCHRONIZING state.|  
+|[Troubleshoot Always On Availability Groups configuration &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configuration|Provides information to help you troubleshoot typical problems with configuring server instances for availability groups. Typical configuration problems include availability groups are disabled, accounts are incorrectly configured, the database mirroring endpoint does not exist, the endpoint is inaccessible (SQL Server Error 1418), network access does not exist, and a join database command fails (SQL Server Error 35250).|  
+|[Troubleshoot a failed add-file operation &#40;Always On Availability Groups&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configuration|An add-file operation caused the secondary database to be suspended and be in the NOT SYNCHRONIZING state.|  
 |[Cannot connect to availability group listener in a multi-subnet environment](http://support.microsoft.com/kb/2792139/en-us)|Client Connectivity|After you configure the availability group listener, you are unable to ping the listener or connect to it from an application.|  
 |[Troubleshoot failed automatic failovers](http://support.microsoft.com/kb/2833707)|Failover|An automatic failover did not complete successfully.|  
 |[Troubleshoot: Availability group exceeded RTO](troubleshoot-availability-group-exceeded-rto.md)|Performance|After an automatic failover or a planned manual failover without data loss, the failover time exceeds your RTO. Or, when you estimate the failover time of a synchronous-commit secondary replica (such as an automatic failover partner), you find that it exceeds your RTO.|  
@@ -40,15 +40,15 @@ manager: "jhubbard"
   
 |Tool|Description|  
 |----------|-----------------|  
-|[Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20Always On%20Dashboard%20(SQL%20Server%20Management%20Studio).md)|Reports an at-a-glance view of the health of your availability group in a user-friendly interface.|  
+|[Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|Reports an at-a-glance view of the health of your availability group in a user-friendly interface.|  
 |[Always On Policies](always-on-policies.md)|Used by the Always On Dashboard.|  
 |[SQL Server Error Log &#40;Always On Availability Groups&#41;](sql-server-error-log-always-on-availability-groups.md)|Logs state transition events for availability groups, replicas, and databases, statuses of other Always On components, and Always On errors.|  
 |[CLUSTER.LOG &#40;Always On Availability Groups&#41;](cluster-log-always-on-availability-groups.md)|Logs cluster events, including state transitions of the availability group resource, as well as events and errors from SQL Server resource DLL.|  
-|[Always On health diagnostics log](always-on-health-diagnostics-log.md)|Logs SQL Server health diagnostics as reported to the WSFC cluster (SQL Server resource DLL) by [sp_server_diagnostics &#40;Transact-SQL&#41;](../Topic/sp_server_diagnostics%20(Transact-SQL).md).|  
+|[Always On health diagnostics log](always-on-health-diagnostics-log.md)|Logs SQL Server health diagnostics as reported to the WSFC cluster (SQL Server resource DLL) by [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).|  
 |[Dynamic management views and system catalog views &#40;Always On Availability Groups&#41;](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)|Reports information on the availability groups such as configuration, health status, and performance metrics.|  
 |[Always On extended events](always-on-extended-events.md)|Provides detailed diagnostics of the availability groups and useful for root-cause analysis.|  
 |[Always On wait types](always-on-wait-types.md)|Provides wait statistics specific to availability groups and useful for performance tuning.|  
-|Always On performance counters|Monitor availability groups activity and are reflected in System Monitor, and are useful for performance tuning. For more information, see [SQL Server, availability replica](../Topic/SQL%20Server,%20Availability%20Replica.md) and [SQL Server, database replica](../Topic/SQL%20Server,%20Database%20Replica.md).|  
+|Always On performance counters|Monitor availability groups activity and are reflected in System Monitor, and are useful for performance tuning. For more information, see [SQL Server, availability replica](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server, database replica](~/relational-databases/performance-monitor/sql-server-database-replica.md).|  
 |[Always On ring buffers](always-on-ring-buffers.md)|Record alerts within the SQL Server system for internal diagnostics, and can be used to debug issues related to the availability groups.|  
   
 ##  <a name="BKMK_MONITOR"></a> Monitoring availability groups  
@@ -61,7 +61,7 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md)|Describes the data synchronization process for availability groups, the flow control gates, and useful metrics when monitoring an availability group; and also shows how to gather RTO and RPO metrics.|  
-|[Monitoring of availability groups &#40;SQL Server&#41;](../Topic/Monitoring%20of%20Availability%20Groups%20(SQL%20Server).md)|Provides information on tools for monitoring an availability group.|  
+|[Monitoring of availability groups &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Provides information on tools for monitoring an availability group.|  
 <!–– |[The Always On health model, part 1: Health model architecture](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Provides an overview of the Always On health model.|  
 |[The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Shows how to customize the Always On health model and customize the Always On Dashboard to show extra information.|  
 |[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Provides a basic overview of the Always On PowerShell cmdlets that can be used to monitor the health of an availability group.|  

@@ -53,7 +53,7 @@ manager: "jhubbard"
  All read workloads on the secondary replica are snapshot isolation queries. In snapshot isolation, read-only clients see the availability database on the secondary replica at the beginning point of the oldest active transaction in the redone log. If a transaction has not committed for hours, the open transaction blocks all read-only queries from seeing any new updates.  
   
 #### Diagnosis and resolution  
- On the primary replica, use [DBCC OPENTRAN &#40;Transact-SQL&#41;](../Topic/DBCC%20OPENTRAN%20(Transact-SQL).md) to view the oldest active transactions and see if they can be rolled back. Once, the oldest active transactions are rolled back and synchronized to the secondary replica, read workloads on the secondary replica can see updates in the availability database up to the beginning of the then-oldest active transaction.  
+ On the primary replica, use [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) to view the oldest active transactions and see if they can be rolled back. Once, the oldest active transactions are rolled back and synchronized to the secondary replica, read workloads on the secondary replica can see updates in the availability database up to the beginning of the then-oldest active transaction.  
   
 ###  <a name="BKMK_LATENCY"></a> High network latency or low network throughput causes log build-up on the primary replica  
  High network latency or low throughput can prevent logs from being sent to the secondary replica fast enough.  
@@ -62,15 +62,15 @@ manager: "jhubbard"
  The primary replica activates flow control on the log send when it has exceeded the maximum allowable number of unacknowledged messages sent over to the secondary replica. Until some of these messages have been acknowledged, no more log blocks can be sent to the secondary replica. This situation can have a more serious impact on potential data loss, possibly jeopardizing your recovery point objective (RPO).  
   
 #### Diagnosis and resolution  
- A high DMV value [log_send_queue_size](../Topic/sys.dm_hadr_database_replica_states%20(Transact-SQL).md) can indicate logs being held back at the primary replica. Dividing this value by [log_send_rate](../Topic/sys.dm_hadr_database_replica_states%20(Transact-SQL).md) can give you a rough estimate on how soon data can be caught up on the secondary replica.  
+ A high DMV value [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) can indicate logs being held back at the primary replica. Dividing this value by [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) can give you a rough estimate on how soon data can be caught up on the secondary replica.  
   
- Also, it is useful to check the two performance objects [SQL Server:Availability Replica > Flow Control Time (ms/sec)](../Topic/SQL%20Server,%20Availability%20Replica.md) and [SQL Server:Availability Replica > Flow control/sec](../Topic/SQL%20Server,%20Availability%20Replica.md). Multiplying these two values shows you in the last second how much time was spent waiting for flow control to clear. The longer the flow control wait time, the lower the send rate.  
+ Also, it is useful to check the two performance objects [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md). Multiplying these two values shows you in the last second how much time was spent waiting for flow control to clear. The longer the flow control wait time, the lower the send rate.  
   
  Below is a list of useful metrics in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe** and [Resource Monitor](http://technet.microsoft.com/video/Video/ff710685) to evaluate network utilization.  
   
--   DMV [log_send_queue_size](../Topic/sys.dm_hadr_database_replica_states%20(Transact-SQL).md)  
+-   DMV [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
--   DMV [log_send_rate](../Topic/sys.dm_hadr_database_replica_states%20(Transact-SQL).md)  
+-   DMV [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
 -   Performance counter **SQL Server:Database > Log Bytes Flushed/sec**  
   
@@ -102,7 +102,7 @@ select session_id, command, blocking_session_id, wait_time, wait_type, wait_reso
 from sys.dm_exec_requests where command = 'DB STARTUP'  
 ```  
   
- You can let the reporting workload to finish, at which point the redo thread is unblocked. You can unblock the redo thread immediately by executing the [KILL &#40;Transact-SQL&#41;](../Topic/KILL%20(Transact-SQL).md) command on the blocking session ID.  
+ You can let the reporting workload to finish, at which point the redo thread is unblocked. You can unblock the redo thread immediately by executing the [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) command on the blocking session ID.  
   
 ###  <a name="BKMK_REDOBEHIND"></a> Redo thread falls behind due to resource contention  
  A large reporting workload on the secondary replica has slowed down the performance of the secondary replica, and the redo thread has fallen behind.  
@@ -120,7 +120,7 @@ from sys.dm_hadr_database_replica_states
   
 ```  
   
- If the redo thread is indeed falling behind, you need to investigate the root cause of the performance degradation on the secondary replica. If there is an I/O contention with the reporting workload, you can use [Resource Governor](../Topic/Resource%20Governor.md) to control CPU cycles that are used by the reporting workload to indirectly control the I/O cycles taken, to some extent. For example, if your reporting workload is consuming 10 percent of CPU but the workload is I/O bound, you can use Resource Governor to limit CPU resource usage to 5 percent to throttle read workload, which minimizes the impact on I/O.  
+ If the redo thread is indeed falling behind, you need to investigate the root cause of the performance degradation on the secondary replica. If there is an I/O contention with the reporting workload, you can use [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) to control CPU cycles that are used by the reporting workload to indirectly control the I/O cycles taken, to some extent. For example, if your reporting workload is consuming 10 percent of CPU but the workload is I/O bound, you can use Resource Governor to limit CPU resource usage to 5 percent to throttle read workload, which minimizes the impact on I/O.  
   
 ## See also  
  [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)  

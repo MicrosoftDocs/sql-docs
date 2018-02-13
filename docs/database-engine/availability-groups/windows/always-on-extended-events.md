@@ -22,7 +22,7 @@ manager: "jhubbard"
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
   
- [Alwayson_health session](always-on-extended-events.md#BKMK_alwayson_health)  
+ [alwayson_health session](always-on-extended-events.md#BKMK_alwayson_health)  
   
  [Extended events for debugging](always-on-extended-events.md#BKMK_Debugging)  
   
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 2.  Right-click **Alwayson_health**, then point to **Script Session as**, then point to **CREATE To**, and then click **New Query Editor Window**.  
   
- For information on a some of the events covered by Alwayson_health, see [Always On extended events reference](../Topic/Always On%20Extended%20Events%20Reference.md).  
+ For information on a some of the events covered by Alwayson_health, see [Always On extended events reference](always-on-extended-events.md#BKMK_Reference).  
   
 ##  <a name="BKMK_Debugging"></a> Extended events for debugging  
  In addition to the extended events covered by the Alwayson_health session, SQL Server defines an extensive set of debug events for Always On Availability Groups. To harness these additional extended events in a session, follow the procedures below:  
@@ -60,7 +60,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 7.  When finished with the session, click **OK** to close it. Make sure that the session is started so that it captures the events that you selected.  
   
 ##  <a name="BKMK_Reference"></a> Always On extended events reference  
- This section describes some of the Always On extended events that are used by the Always On extended events to monitor the availability groups.  
+ This section describes some of the Always On extended events that are used to monitor the availability groups.  
   
  [availability_replica_state_change](#BKMK_availability_replica_state_change)  
   
@@ -99,7 +99,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |previous_state|availability_replica_state|The role of the replica before the change.<br /><br /> **Possible values are:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|The role of the replica after the change.<br /><br /> **Possible values are:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
-#### Alwayson_health session definition  
+#### alwayson_health session definition  
   
 ```tsql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -159,7 +159,7 @@ GO
 |joined_and_synchronized|validation_result_type|If the value is FALSE, then the automatic failover is invalidated on this availability replica.<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|If the value is FALSE, then the automatic failover is invalidated on this availability replica.<br /><br /> TRUE<br /><br /> FALSE|  
   
-#### Alwayson_health session definition  
+#### alwayson_health session definition  
   
 ```tsql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -206,7 +206,7 @@ GO
 |28091|Starting endpoint for %S_MSG with no authentication is not supported.|  
 |33309|Cannot start cluster endpoint because the default %S_MSG endpoint  configuration has not been loaded yet.|  
   
-#### Alwayson_health session definition  
+#### alwayson_health session definition  
   
 ```tsql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -263,7 +263,7 @@ GO
 |suspend_source|suspend_source_type|The source of the suspend or resume action.|  
 |suspend_reason|unicode_string|The suspend reason captured in database replica manager.|  
   
-#### Alwayson_health session definition  
+#### alwayson_health session definition  
   
 ```tsql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -301,7 +301,7 @@ GO
 |ddl_phase|ddl_opcode|Indicates the phase of the DDL operation: BEGIN, COMMIT or ROLLBACK.|  
 |Statement|unicode_string|The text of the statement that was executed.|  
   
-#### Alwayson_health session definition  
+#### alwayson_health session definition  
   
 ```tsql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -355,7 +355,7 @@ GO
 |Category|errors|  
 |Channel|Admin|  
   
-#### Alwayson_health session definition  
+#### alwayson_health session definition  
   
 ```tsql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -378,6 +378,6 @@ GO
 ```  
   
 ## See also  
- [View event session data](../Topic/View%20Event%20Session%20Data.md)   
+ [View event session data](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
  
   

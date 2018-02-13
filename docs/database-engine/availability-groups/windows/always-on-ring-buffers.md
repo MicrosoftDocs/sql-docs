@@ -134,7 +134,7 @@ GO
 ```  
   
 ## Parse XML data from a ring buffer  
- You can parse the Record field from the ring buffer you are inspecting by using [value&#40;&#41; Method &#40;xml Data Type&#41;](../Topic/value()%20Method%20(xml%20Data%20Type).md) in your query. To use this method, you first need to [CAST](../Topic/CAST%20and%20CONVERT%20(Transact-SQL).md) the record column in the ring buffer into XML. For example, the query below demonstrates how to parse RING_BUFFER_HADRDBMGR_API into readable format using this method.  
+ You can parse the Record field from the ring buffer you are inspecting by using [value&#40;&#41; Method &#40;xml Data Type&#41;](~/t-sql/xml/value-method-xml-data-type.md) in your query. To use this method, you first need to [CAST](~/t-sql/functions/cast-and-convert-transact-sql.md) the record column in the ring buffer into XML. For example, the query below demonstrates how to parse RING_BUFFER_HADRDBMGR_API into readable format using this method.  
   
 ```  
 WITH hadr(ts, type, record) AS  

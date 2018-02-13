@@ -230,7 +230,7 @@ To create the policies, follow the instructions below on all server instances th
 |--------------|-----------------|  
 |[Troubleshoot: Availability group exceeded RTO](troubleshoot-availability-group-exceeded-rto.md)|After an automatic failover or a planned manual failover without data loss, the failover time exceeds your RTO. Or, when you estimate the failover time of a synchronous-commit secondary replica (such as an automatic failover partner), you find that it exceeds your RTO.|  
 |[Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md)|After you perform a forced manual failover, your data loss is more than your RPO. Or, when you calculate the potential data loss of an asynchronous-commit secondary replica, you find that it exceeds your RPO.|  
-|[Troubleshoot: Changes on the primary replica are not reflected on the secondary replica](troubleshoot-availability-primary-changes-not-reflected-on-secondary.md)|The client application completes an update on the primary replica successfully, but querying the secondary replica shows that the change is not reflected.|  
+|[Troubleshoot: Changes on the primary replica are not reflected on the secondary replica](troubleshoot-primary-changes-not-reflected-on-secondary.md)|The client application completes an update on the primary replica successfully, but querying the secondary replica shows that the change is not reflected.|  
   
 ##  <a name="BKMK_XEVENTS"></a> Useful extended events  
  The following extended events are useful when troubleshooting replicas in the **Synchronizing** state.  

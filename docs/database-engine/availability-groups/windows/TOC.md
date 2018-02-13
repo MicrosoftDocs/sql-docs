@@ -146,7 +146,7 @@
 ### [Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md)
 ### [Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md)
 ### [Troubleshoot: Availability group exceeded RTO](troubleshoot-availability-group-exceeded-rto.md)
-### [Troubleshoot: Changes on the primary replica are not reflected on the secondary replica](troubleshoot-availability-primary-changes-not-reflected-on-secondary.md)
+### [Troubleshoot: Changes on the primary replica are not reflected on the secondary replica](troubleshoot-primary-changes-not-reflected-on-secondary.md)
 ### Useful tools
 #### [Always On extended events](always-on-extended-events.md)
 #### [Always On health diagnostics log](always-on-health-diagnostics-log.md)

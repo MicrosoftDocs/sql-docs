@@ -14,8 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

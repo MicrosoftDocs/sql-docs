@@ -1,7 +1,6 @@
 ---
 title: "Retrieving Data Using the XmlReader | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -27,7 +26,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Retrieving Data Using the XmlReader
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The **XmlReader** class, part of the **System.Xml** namespace for the Microsoft .NET Framework Class Library, is similar to the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> class in that the **XmlReader** class also provides fast, non-cached, forward-only access to data. If there is no need for an in-memory, analytical view of the data using the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object, the **XmlReader** object is perfect for retrieving XML data, especially for large quantities of data. Because **XmlReader** streams data, **XmlReader** does not have to retrieve and cache all the data before exposing the data to the caller, as would be the case if a <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object were used to convert the XML for Analysis response into an analytical object model representation.  
   
  The **XmlReader** class provides direct access to the XML for Analysis response received by ADOMD.NET when the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> method of the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> object is called. Because the retrieved data is raw XML, you must parse the data and metadata manually. As soon as the data has been retrieved, the **XmlReader** object should be closed.  

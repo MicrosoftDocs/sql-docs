@@ -139,7 +139,9 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 The following are issues and limitations with this 17.5 release:
 
-There are no known issues at this time.
+Data classification:
+- Removing a classification and then manually adding a new classification for the same column results in the old information type and sensitivity label being assigned to the column in the main view.<br>
+*Workaround*: Assign the new information type and sensitivity label after the classification was added back to the main view and before saving.  
 
 ## Previous releases
 

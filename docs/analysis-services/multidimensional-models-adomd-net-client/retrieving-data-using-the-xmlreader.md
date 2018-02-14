@@ -1,6 +1,7 @@
 ---
 title: "Retrieving Data Using the XmlReader | Microsoft Docs"
 ms.custom: ""
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""

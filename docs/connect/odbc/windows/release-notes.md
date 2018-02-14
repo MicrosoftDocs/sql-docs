@@ -1,7 +1,7 @@
 ---
-title: "Release Notes | Microsoft Docs"
+title: "Release Notes (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/14/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -22,7 +22,10 @@ manager: "jhubbard"
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Release Notes for Microsoft ODBC Driver for SQL Server on Windows.  
-  
+
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows  
+ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] adds [Always Encrypted Support for BCP API](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) and a new connection string attribute [UseFMTONLY](../../../connect/odbc/dsn-connection-string-attribute.md) to use legacy metadata in special cases requiring temp tables. 
+
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows  
  ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] adds support for [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) and [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) when used in conjunction with Microsoft SQL Server 2016.  Corresponding connection pooling keywords/attributes are described in [Driver Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
 

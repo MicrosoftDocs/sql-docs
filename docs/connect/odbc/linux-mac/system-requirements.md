@@ -1,7 +1,7 @@
 ---
-title: "System Requirements | Microsoft Docs"
+title: "System Requirements (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/14/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -28,23 +28,29 @@ ms.workload: "On Demand"
 
 This topic lists the requirements to use the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS.
 
-## Microsoft ODBC Driver 13 and 13.1 for SQL Server
+
+## Microsoft ODBC Driver 17, 13.1 and 13 for SQL Server
 
 The Linux and macOS drivers are available only for the 64-bit versions of the following operating systems:
 
-- Apple macOS 10.12 (Sierra)
-- Apple OS X 10.11 (El Capitan)
-- Debian Linux 8
-- RedHat Enterprise Linux 6
-- RedHat Enterprise Linux 7
-- SuSE Linux Enterprise Server 11
-- SuSE Linux Enterprise Server 12
-- Ubuntu Linux 14.04
-- Ubuntu Linux 15.10
-- Ubuntu Linux 16.04
-- Ubuntu Linux 16.10
+|Operating System|Supported Driver Version|
+|------------------------------------|--------------------------------|
+|Apple OS X 10.11 (El Capitan)|17 or 13.1 or 13|
+|Apple macOS 10.12 (Sierra)|17 or 13.1 or 13|
+|Apple macOS 10.13 (High Sierra)|17| 
+|Debian Linux 8|17 or 13.1 or 13|
+|Debian Linux 9|17|
+|RedHat Enterprise Linux 6|17 or 13.1 or 13|
+|RedHat Enterprise Linux 7|17 or 13.1 or 13|
+|SuSE Linux Enterprise Server 11|17 or 13.1 or 13 <br /><br /> **NOTE:** ODBC Driver 17 supports SuSE Linux Enterprise Server 11 SP4 only|
+|SuSE Linux Enterprise Server 12|17 or 13.1 or 13|
+|Ubuntu Linux 14.04|17 or 13.1 or 13|
+|Ubuntu Linux 15.10|13.1 or 13|
+|Ubuntu Linux 16.04|17 or 13.1 or 13|
+|Ubuntu Linux 16.10|13.1 or 13|
+|Ubuntu Linux 17.10|17|
 
-The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 and 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS resolve the driver's dependencies automatically when installed using the package management system of your distribution, as described in [Installing the Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17, 13.1 and 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS resolve the driver's dependencies automatically when installed using the package management system of your distribution, as described in [Installing the Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ## Microsoft ODBC Driver 11 for SQL Server  
   

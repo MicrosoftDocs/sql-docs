@@ -16,6 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Useful tools for troubleshooting
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
  This article lists useful links to tools for troubleshooting and performance tuning for Always On Availability Groups.  
   

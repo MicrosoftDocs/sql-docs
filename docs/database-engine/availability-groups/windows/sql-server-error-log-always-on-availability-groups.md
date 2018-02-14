@@ -16,6 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # SQL Server error log (Always On Availability Groups)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The SQL Server error log reports events affecting Always On Availability Groups, such as:  
   
 -   Communication with the Windows Server Failover Clustering (WSFC) cluster  
@@ -34,7 +35,8 @@ manager: "jhubbard"
   
 -   Error events in the availability group  
 
- The following symptoms should lead to review of the SQL Server error log:  
+
+The following symptoms should lead to review of the SQL Server error log:  
 
 -   Cannot access availability databases  
   

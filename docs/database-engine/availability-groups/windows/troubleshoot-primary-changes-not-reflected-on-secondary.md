@@ -16,6 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Troubleshoot: Changes on the primary replica are not reflected on the secondary replica
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The client application completes an update on the primary replica successfully, but querying the secondary replica shows that the change is not reflected. This case assumes that your availability has a healthy synchronization state. In most cases, this behavior resolves itself after a few minutes.  
   
  If changes are still not reflected on the secondary replica after a few minutes, there may be a bottleneck in the synchronization work flow. The location of the bottleneck depends on whether the secondary replica is set to synchronous commit or asynchronous commit.  

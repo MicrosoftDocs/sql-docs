@@ -16,6 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Always On Availability Groups extended events
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server defines extended events that are specific to Always On Availability Groups. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group. You can view the availability group extended events using the following query:  
   
 ```sql  
@@ -39,9 +40,10 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 1.  In the **Object Explorer**, expand **Management**, **Extended Events**, and then **Sessions**.  
   
 2.  Right-click **Alwayson_health**, then point to **Script Session as**, then point to **CREATE To**, and then click **New Query Editor Window**.  
- 
- For information on some of the events covered by alwayson_health, see the [extended events reference](always-on-extended-events.md#BKMK_Reference).  
- 
+
+For information on some of the events covered by alwayson_health, see the [extended events reference](always-on-extended-events.md#BKMK_Reference).  
+
+
 ##  <a name="BKMK_Debugging"></a> Extended events for debugging  
  In addition to the extended events covered by the Alwayson_health session, SQL Server defines an extensive set of debug events for availability groups. To harness these additional extended events in a session, follow the procedures below:  
   

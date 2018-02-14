@@ -16,6 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Dynamic management views and system catalog views (Always On Availability Groups)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic shows you some of the common queries on the Always On dynamic management views (DMV) that you can use to monitor and troubleshoot availability groups.  
   
 > [!TIP]  

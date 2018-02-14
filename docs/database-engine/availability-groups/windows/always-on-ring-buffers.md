@@ -1,5 +1,5 @@
 ---
-title: "Always On ring buffers | Microsoft Docs"
+title: "Always On Availability Groups ring buffers (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"
@@ -15,10 +15,10 @@ author: "rothja"
 ms.author: "jroth"
 manager: "jhubbard"
 ---
-# Always On ring buffers
-  Some diagnostic Always On information can be obtained from the SQL Server ring buffers, or the sys.dm_os_ring_buffers dynamic management view (DMV). The ring buffers are created during SQL Server startup, and record alerts within the SQL Server system for internal diagnostics. They are not supported, but you can still extract valuable information from them when troubleshooting issues. These ring buffers provide another source of diagnostics when SQL Server hangs or has crashed.  
+# Always On Availability Groups ring buffers
+  Some diagnostic Always On Availability Groups information can be obtained from the SQL Server ring buffers, or the sys.dm_os_ring_buffers dynamic management view (DMV). The ring buffers are created during SQL Server startup, and record alerts within the SQL Server system for internal diagnostics. They are not supported, but you can still extract valuable information from them when troubleshooting issues. These ring buffers provide another source of diagnostics when SQL Server hangs or has crashed.  
   
- The following Transact-SQL (T-SQL) query retrieves all event records from the Always On ring buffers.  
+ The following Transact-SQL (T-SQL) query retrieves all event records from the availability groups ring buffers.  
   
 ```sql  
 SELECT * FROM sys.dm_os_ring_buffers WHERE ring_buffer_type LIKE '%HADR%'  
@@ -36,7 +36,7 @@ FROM sys.dm_os_ring_buffers ring
 CROSS JOIN sys.dm_os_sys_info inf where ring_buffer_type='<RING_BUFFER_TYPE>'  
 ```  
   
- The Record column in each record contains diagnostic data in XML format. The XML data differs between the ring buffer types. For more information on each ring buffer type, see [Always On ring buffer types](#BKMK_RingBufferTypes). To make the XML data more readable, you need to customize your T-SQL query to extract the desired XML elements. For example, the following query retrieves all events from the RING_BUFFER_HADRDBMGR_API ring buffer and formats the XML data into separate table columns.  
+ The Record column in each record contains diagnostic data in XML format. The XML data differs between the ring buffer types. For more information on each ring buffer type, see [Availability groups ring buffer types](#BKMK_RingBufferTypes). To make the XML data more readable, you need to customize your T-SQL query to extract the desired XML elements. For example, the following query retrieves all events from the RING_BUFFER_HADRDBMGR_API ring buffer and formats the XML data into separate table columns.  
   
 ```sql  
 WITH hadr(ts, type, record) AS  
@@ -59,8 +59,8 @@ ORDER BY record.value('(./Record/@time)[1]','bigint') DESC
 GO  
 ```  
   
-##  <a name="BKMK_RingBufferTypes"></a> Always On ring buffer types  
- There are 4 Always On ring buffers in sys.dm_os_ring_buffers. The table below describes the ring buffer types and a sample of the content of the Record column for each ring buffer type.  
+##  <a name="BKMK_RingBufferTypes"></a> Availability groups ring buffer types  
+ There are four availability groups ring buffers in sys.dm_os_ring_buffers. The table below describes the ring buffer types and a sample of the content of the Record column for each ring buffer type.  
   
  **RING_BUFFER_HADRDBMGR_API**  
   

@@ -1,5 +1,5 @@
 ---
-title: "Always On extended events | Microsoft Docs"
+title: "Always On Availability Groups extended events (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"
@@ -15,8 +15,8 @@ author: "rothja"
 ms.author: "jroth"
 manager: "jhubbard"
 ---
-# Always On extended events
-  SQL Server 2012 defines extended events that are specific to Always On. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group. You can view the Always On extended events using the following query:  
+# Always On Availability Groups extended events
+  SQL Server defines extended events that are specific to Always On Availability Groups. You can monitor these extended events in a session to help with root-cause diagnosis when you troubleshoot an availability group. You can view the availability group extended events using the following query:  
   
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
@@ -26,41 +26,41 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [Extended events for debugging](always-on-extended-events.md#BKMK_Debugging)  
   
- [Always On extended events reference](always-on-extended-events.md#BKMK_Reference)  
+ [Always On Availability Groups extended events reference](always-on-extended-events.md#BKMK_Reference)  
   
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health session  
- The Alwayson_health extended events session is created automatically when you create the availability group and captures a subset of the Always On related events. This session is preconfigured as a useful and convenient tool to help you get started quickly while troubleshooting an availability group. The Create Availability Group Wizard automatically starts the session on every participating availability replica configured in the wizard.  
+ The alwayson_health extended events session is created automatically when you create the availability group, and captures a subset of the availability group related events. This session is preconfigured as a useful and convenient tool to help you get started quickly while troubleshooting an availability group. The Create Availability Group Wizard automatically starts the session on every participating availability replica configured in the wizard.  
   
 > [!IMPORTANT]  
->  If you did not create the availability group using the **New Availability Group Wizard**, the Alwayson_health session may not be automatically started. If the session is not started, it cannot capture event data when an unexpected issue occurs. You should manually start the session and configure the session to start automatically by configuring the session properties.  
+>  If you did not create the availability group using the **New Availability Group Wizard**, the alwayson_health session may not be automatically started. If the session is not started, it cannot capture event data when an unexpected issue occurs. You should manually start the session and configure the session to start automatically by configuring the session properties.  
   
- To view the definition of the Alwayson_health session:  
+ To view the definition of the alwayson_health session:  
   
 1.  In the **Object Explorer**, expand **Management**, **Extended Events**, and then **Sessions**.  
   
 2.  Right-click **Alwayson_health**, then point to **Script Session as**, then point to **CREATE To**, and then click **New Query Editor Window**.  
  
- For information on some of the events covered by Alwayson_health, see [Always On extended events reference](always-on-extended-events.md#BKMK_Reference).  
+ For information on some of the events covered by alwayson_health, see the [extended events reference](always-on-extended-events.md#BKMK_Reference).  
  
 ##  <a name="BKMK_Debugging"></a> Extended events for debugging  
- In addition to the extended events covered by the Alwayson_health session, SQL Server defines an extensive set of debug events for Always On Availability Groups. To harness these additional extended events in a session, follow the procedures below:  
+ In addition to the extended events covered by the Alwayson_health session, SQL Server defines an extensive set of debug events for availability groups. To harness these additional extended events in a session, follow the procedures below:  
   
 1.  In the **Object Explorer**, expand **Management**, **Extended Events**, and then **Sessions**.  
   
-2.  Right-click **Sessions** and select **New Session**. Or, right-click Alwayson_health and select **Properties**.  
+2.  Right-click **Sessions** and select **New Session**. Or, right-click **Alwayson_health** and select **Properties**.  
   
 3.  In the **Select a page** pane, click **Events**.  
   
 4.  In the event library, in the **Category** column, select **alwayson** and clear all other categories.  
   
-5.  In the **Channel** column, select **Debug**. All the Always On related events that are not already selected are now shown in the event library.  
+5.  In the **Channel** column, select **Debug**. All the availability group related events that are not already selected are now shown in the event library.  
   
 6.  Highlight an event in the event library, then click the **>** button to select it for the session.  
   
 7.  When finished with the session, click **OK** to close it. Make sure that the session is started so that it captures the events that you selected.  
   
-##  <a name="BKMK_Reference"></a> Always On extended events reference  
- This section describes some of the Always On extended events that are used to monitor the availability groups.  
+##  <a name="BKMK_Reference"></a> Always On Availability Groups extended events reference  
+ This section describes some of the extended events that are used to monitor the availability groups.  
   
  [availability_replica_state_change](#BKMK_availability_replica_state_change)  
   
@@ -127,7 +127,7 @@ GO
 |availability_group_id|guid|The id of availability group.|  
 |availability_group_name|unicode_string|The name of availability group.|  
   
-#### Alwayson_health session definition  
+#### alwayson_health session definition  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -281,7 +281,7 @@ GO
 ```  
   
 ###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
- Occurs when an Always On data definition language (DDL) statement is being executed, including CREATE, ALTER or DROP. The main purpose of the event is to indicate an issue with a user action on an availability replica, or to indicate the starting point of an operational action, which is followed by a runtime issue such as a manual failover, a forced failover, suspended data movement, resumed data movement.  
+ Occurs when an availability group data definition language (DDL) statement is being executed, including CREATE, ALTER or DROP. The main purpose of the event is to indicate an issue with a user action on an availability replica, or to indicate the starting point of an operational action, which is followed by a runtime issue such as a manual failover, a forced failover, suspended data movement, or resumed data movement.  
   
 #### Event information  
   

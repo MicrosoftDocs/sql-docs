@@ -1,5 +1,5 @@
 ---
-title: "Always On Policies | Microsoft Docs"
+title: "Always On Availability Groups policies (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"
@@ -15,7 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 manager: "jhubbard"
 ---
-# Always On policies
+# Always On Availability Groups policies
   The Always On Availability Groups system policies are used by the Always On Dashboard to provide information on the availability group health to the user. They are very useful for initial troubleshooting of an availability group’s operational issues. These policies can be extended and used to customize the Always On Dashboard, or run instantly to report the desired health information.  
   
  There are 14 system policies for availability groups. For detailed information on each policy, see [Always On policies for operational issues with Always On Availability Groups (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  

@@ -1,5 +1,5 @@
 ---
-title: "Always On health diagnostics log | Microsoft Docs"
+title: "Always On Availability Groups health diagnostics log (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"
@@ -15,10 +15,10 @@ author: "rothja"
 ms.author: "jroth"
 manager: "jhubbard"
 ---
-# Always On health diagnostics log
-  To monitor the health of the primary availability replica, the SQL Server resource DLL run by the Windows Server Failover Clustering (WSFC) cluster uses a stored procedure in the SQL Server 2012 instance called sp_server_diagnostics.  
+# Always On Availability Groups health diagnostics log
+  To monitor the health of the primary availability replica, the SQL Server resource DLL run by the Windows Server Failover Clustering (WSFC) cluster uses a stored procedure in the SQL Server instance called [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).  
   
- The SQL Server resource DLL maintains a dedicated open connection with the SQL Server instance, through which the SQL Server instance periodically sends detailed health diagnostics to the SQL Server resource DLL. The health diagnostics, coupled with the failover policy configured in the availability group resource in the cluster (the FailoverConditionLevel property), is used by the cluster to determine whether to restart or fail over the availability group resource. This stored procedure is the new SQL Server instance “heartbeat” to the WSFC cluster, which is more granular and reliable than in SQL Server 2008 R2 or lower, where a periodic connection to the instance is made with the query `SELECT @@SERVERNAME`. You can then control the conditions that trigger failovers by setting the availability group FailureConditonLevel property.  
+ The SQL Server resource DLL maintains a dedicated open connection with the SQL Server instance, through which the SQL Server instance periodically sends detailed health diagnostics to the SQL Server resource DLL. The health diagnostics, coupled with the failover policy configured in the availability group resource in the cluster (the FailoverConditionLevel property), are used by the cluster to determine whether to restart or fail over the availability group resource. This stored procedure is the SQL Server 2012 and above instance “heartbeat” to the WSFC cluster, which is more granular and reliable than in SQL Server 2008 R2 or lower, where a periodic connection to the instance is made with the query `SELECT @@SERVERNAME`. You can then control the conditions that trigger failovers by setting the availability group FailureConditonLevel property.  
   
  **Use the SQL Server failover cluster diagnostic logs**
  

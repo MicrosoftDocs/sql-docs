@@ -1,5 +1,5 @@
 ---
-title: "CLUSTER.LOG (Always On Availability Groups) | Microsoft Docs"
+title: "CLUSTER.LOG (Always On Availability Groups) (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2016"

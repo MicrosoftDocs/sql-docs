@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot: Availability group exceeded RTO | Microsoft Docs"
+title: "Troubleshoot: Availability group exceeded RTO (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"
@@ -40,7 +40,7 @@ select session_id, command, blocking_session_id, wait_time, wait_type, wait_reso
 from sys.dm_exec_requests where command = 'DB STARTUP'  
 ```  
   
- You can let the reporting workload to finish, at which point the redo thread is unblocked. You can unblock the redo thread immediately by executing the [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) command on the blocking session ID.  
+ You can let the reporting workload finish, at which point the redo thread is unblocked, or you can unblock the redo thread immediately by executing the [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) command on the blocking session ID.  
   
 ##  <a name="BKMK_CONTENTION"></a> Redo thread falls behind due to resource contention  
  A large reporting workload on the secondary replica has slowed down the performance of the secondary replica, and the redo thread has fallen behind.  

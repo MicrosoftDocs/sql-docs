@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot: Availability group exceeded RPO | Microsoft Docs"
+title: "Troubleshoot: Availability group exceeded RPO (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"
@@ -56,8 +56,9 @@ manager: "jhubbard"
 -   Performance counter `SQL Server:Availability Replica > Flow Control/sec`  
   
 -   Performance counter `SQL Server:Availability Replica > Resent Messages/sec`  
-  
+
 To remedy this issue, try upgrading your network bandwidth or removing or reducing unnecessary network traffic.  
+
 
 ##  <a name="BKMK_IO_BOTTLENECK"></a> Disk I/O bottleneck slows down log hardening on the secondary replica  
  Depending on the database file deployment, log hardening can slow down due to I/O contention with reporting workload.  

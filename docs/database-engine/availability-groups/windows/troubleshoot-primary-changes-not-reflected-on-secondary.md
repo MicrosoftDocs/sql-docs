@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot: Changes on the primary replica are not reflected on the secondary replica | Microsoft Docs"
+title: "Troubleshoot: Changes on primary not reflected on secondary replica (Always On Availability Groups-SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"
@@ -42,10 +42,11 @@ manager: "jhubbard"
   -   Log harden on the secondary replica  
   
   -   Redo on the secondary replica  
-  
- The following sections describe the common causes of changes on the primary replica not being reflected on the secondary replica for read-only queries.  
-  
-  
+
+
+The following sections describe the common causes of changes on the primary replica not being reflected on the secondary replica for read-only queries.  
+
+
 ##  <a name="BKMK_OLDTRANS"></a> Long-running active transactions  
  A long-running transaction on the primary replica prevents the updates from being read on the secondary replica.  
   
@@ -102,7 +103,7 @@ select session_id, command, blocking_session_id, wait_time, wait_type, wait_reso
 from sys.dm_exec_requests where command = 'DB STARTUP'  
 ```  
   
- You can let the reporting workload to finish, at which point the redo thread is unblocked. You can unblock the redo thread immediately by executing the [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) command on the blocking session ID.  
+ You can let the reporting workload finish, at which point the redo thread is unblocked, or you can unblock the redo thread immediately by executing the [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) command on the blocking session ID.  
   
 ##  <a name="BKMK_REDOBEHIND"></a> Redo thread falls behind due to resource contention  
  A large reporting workload on the secondary replica has slowed down the performance of the secondary replica, and the redo thread has fallen behind.  
@@ -122,7 +123,7 @@ from sys.dm_hadr_database_replica_states
   
  If the redo thread is indeed falling behind, you need to investigate the root cause of the performance degradation on the secondary replica. If there is an I/O contention with the reporting workload, you can use [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) to control CPU cycles that are used by the reporting workload to indirectly control the I/O cycles taken, to some extent. For example, if your reporting workload is consuming 10 percent of CPU but the workload is I/O bound, you can use Resource Governor to limit CPU resource usage to 5 percent to throttle read workload, which minimizes the impact on I/O.  
   
-<!-- ## Next steps  
- [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)  -->
+## Next steps  
+ [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) 
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Always On Availability Groups troubleshooting and monitoring guide | Microsoft Docs"
+title: "Always On Availability Groups troubleshooting and monitoring guide (SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "2016-10-05"
 ms.prod: "sql-server-2016"
@@ -16,7 +16,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Always On Availability Groups troubleshooting and monitoring guide
- This guide helps you get started on monitoring Always On Availability Groups and troubleshooting some of the common issues in availability groups. It provides original content as well as a landing page of useful information that is already published elsewhere. While this guide cannot fully discuss all the issues that can occur in the large area of availability groups, it can point you in the right direction in your root-cause analysis and resolution of issues. 
+ This guide helps you get started on monitoring Always On Availability Groups and troubleshooting some of the common issues in availability groups. It provides original content as well as a landing page of useful information that is published elsewhere. While this guide cannot fully discuss all the issues that can occur in the large area of availability groups, it can point you in the right direction in your root-cause analysis and resolution of issues. 
  
  Because availability groups are an integrated technology, many problems you encounter may be symptoms of other issues in your database system. Some issues are caused by settings within an availability group, such as an availability database being suspended. Other issues can include problems with other aspects of SQL Server, such as SQL Server settings, database file deployments, and systemic performance issues unrelated to availability. Still other problems can exist outside of SQL Server, such as network I/O, TCP/IP, Active Directory, and Windows Server Failover Clustering (WSFC) issues. Often, problems that surface in an availability group, replica, or database require you to troubleshoot multiple technologies to identify the root cause.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
 |Tool|Description|  
 |----------|-----------------|  
 |[Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|Reports an at-a-glance view of the health of your availability group in a user-friendly interface.|  
-|[Always On Policies](always-on-policies.md)|Used by the Always On Dashboard.|  
+|[Always On policies](always-on-policies.md)|Used by the Always On Dashboard.|  
 |[SQL Server Error Log &#40;Always On Availability Groups&#41;](sql-server-error-log-always-on-availability-groups.md)|Logs state transition events for availability groups, replicas, and databases, statuses of other Always On components, and Always On errors.|  
 |[CLUSTER.LOG &#40;Always On Availability Groups&#41;](cluster-log-always-on-availability-groups.md)|Logs cluster events, including state transitions of the availability group resource, as well as events and errors from SQL Server resource DLL.|  
 |[Always On health diagnostics log](always-on-health-diagnostics-log.md)|Logs SQL Server health diagnostics as reported to the WSFC cluster (SQL Server resource DLL) by [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).|  
@@ -63,7 +63,13 @@ manager: "jhubbard"
 |-----------|-----------------|  
 |[Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md)|Describes the data synchronization process for availability groups, the flow control gates, and useful metrics when monitoring an availability group; and also shows how to gather RTO and RPO metrics.|  
 |[Monitoring of availability groups &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Provides information on tools for monitoring an availability group.|  
-  
+|[The Always On health model, part 1: Health model architecture](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Provides an overview of the Always On health model.|  
+|[The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Shows how to customize the Always On health model and customize the Always On Dashboard to show extra information.|  
+|[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Provides a basic overview of the Always On PowerShell cmdlets that can be used to monitor the health of an availability group.|  
+|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Provides information on advanced usage of the Always On PowerShell cmdlets to monitor the health of an availability group.|  
+|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Shows how to automatically monitor an availability group with an application.|  
+|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Provides information on how to integrate availability group monitoring with SQL Server Agent and configure notification to the appropriate parties when problems arise.|  
+
 ## Next steps  
  [SQL Server Always On Team Blog](http://blogs.msdn.com/b/sqlalwayson/)   
  [CSS SQL Server Engineers Blogs](http://blogs.msdn.com/b/psssql/)  

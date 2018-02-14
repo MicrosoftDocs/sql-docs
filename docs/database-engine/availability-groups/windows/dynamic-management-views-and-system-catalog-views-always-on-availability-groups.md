@@ -1,5 +1,5 @@
 ---
-title: "Dynamic management views and system catalog views (Always On Availability Groups) | Microsoft Docs"
+title: "Dynamic management views and system catalog views (Always On Availability Groups-SQL Server) | Microsoft Docs"
 ms.custom: "ag-guide"
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"

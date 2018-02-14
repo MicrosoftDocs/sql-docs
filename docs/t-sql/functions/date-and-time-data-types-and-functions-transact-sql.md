@@ -50,11 +50,11 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types are lis
 |Data type|Format|Range|Accuracy|Storage size (bytes)|User-defined fractional second precision|Time zone offset|  
 |---|---|---|---|---|---|---|
 |[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 through 23:59:59.9999999|100 nanoseconds|3 to 5|Yes|No|  
-|[date](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01 through 9999-12-31|1 day|3|No|No|  
-|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 through 2079-06-06|1 minute|4|No|No|  
-|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 through 9999-12-31|0.00333 second|8|No|No|  
-|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 through 9999-12-31 23:59:59.9999999|100 nanoseconds|6 to 8|Yes|No|  
-|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 through 9999-12-31 23:59:59.9999999 (in UTC)|100 nanoseconds|8 to 10|Yes|Yes|  
+|[date](../../t-sql/data-types/date-transact-sql.md)|yyyy-MM-dd|0001-01-01 through 9999-12-31|1 day|3|No|No|  
+|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|yyyy-MM-dd hh:mm:ss|1900-01-01 through 2079-06-06|1 minute|4|No|No|  
+|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|yyyy-MM-dd hh:mm:ss[.nnn]|1753-01-01 through 9999-12-31|0.00333 second|8|No|No|  
+|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|yyyy-MM-dd hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 through 9999-12-31 23:59:59.9999999|100 nanoseconds|6 to 8|Yes|No|  
+|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|yyyy-MM-dd hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 through 9999-12-31 23:59:59.9999999 (in UTC)|100 nanoseconds|8 to 10|Yes|Yes|  
   
 > [!NOTE]  
 >  The [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) data type is not a date or time data type. **timestamp** is a deprecated synonym for **rowversion**.  

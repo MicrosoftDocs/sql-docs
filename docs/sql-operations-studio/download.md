@@ -26,7 +26,6 @@ Download and install the latest release, the *February Public Preview*:
 |Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=867998)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=867997)|February 15, 2018 |0.26.4|
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|February 15, 2018 |0.26.4|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=868001)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|February 15, 2018|0.26.4|
-|Darwin|[.zip](https://go.microsoft.com/fwlink/?linkid=NEEDED)|February 15, 2018 |0.26.4|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

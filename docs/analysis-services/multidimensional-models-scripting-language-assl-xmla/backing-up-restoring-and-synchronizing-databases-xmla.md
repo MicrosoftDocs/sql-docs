@@ -1,7 +1,7 @@
 ---
 title: "Backing Up, Restoring, and Synchronizing Databases (XMLA) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -29,7 +29,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Backing Up, Restoring, and Synchronizing Databases (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In XML for Analysis, there are three commands that back up, restore, and synchronize databases:  
   
 -   The [Backup](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) command backs up a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] backup file (.abf), as described in the section, [Backing Up Databases](#backing_up_databases).  

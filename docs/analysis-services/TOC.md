@@ -93,9 +93,9 @@
 
 # Developer
 ## [Tabular Model Programming for Compatibility Level 1200 and higher](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [Tabular Model Scripting Language (TMSL) commands](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [Tabular Model Scripting Language (TMSL) objects](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+### [Tabular Model Scripting Language (TMSL) commands](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [Tabular Model Scripting Language (TMSL) objects](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
 ## [Tabular Model Programming for Compatibility Levels 1050 and 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
 ## [Analysis Services Scripting Language (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)

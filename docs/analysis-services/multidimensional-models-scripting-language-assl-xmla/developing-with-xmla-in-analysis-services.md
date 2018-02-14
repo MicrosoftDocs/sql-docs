@@ -1,7 +1,7 @@
 ---
 title: "Developing with XMLA in Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -30,7 +30,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Developing with XMLA in Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   XML for Analysis (XMLA) is a SOAP-based XML protocol, designed specifically for universal data access to any standard multidimensional data source that can be accessed over an HTTP connection. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses XMLA as its only protocol when communicating with client applications. Fundamentally, all client libraries supported by Analysis Services formulate requests and responses in XMLA.  
   
  As a developer, you can use XMLA to integrate a client application with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], without any dependencies on the .NET Framework or COM interfaces. Application requirements that include hosting on a wide range of platforms can be satisfied by using XMLA and an HTTP connection to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

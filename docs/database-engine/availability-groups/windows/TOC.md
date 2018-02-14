@@ -147,7 +147,7 @@
 ### [Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md)
 ### [Troubleshoot: Availability group exceeded RTO](troubleshoot-availability-group-exceeded-rto.md)
 ### [Troubleshoot: Changes on primary not reflected on secondary replica](troubleshoot-primary-changes-not-reflected-on-secondary.md)
-### [Useful tools for troubleshooting availability groups](useful-tools-for-troubleshooting.md)(
+### [Useful tools for troubleshooting availability groups](useful-tools-for-troubleshooting.md)
 #### [Extended events](always-on-extended-events.md)
 #### [Health diagnostics log](always-on-health-diagnostics-log.md)
 #### [Policies](always-on-policies.md)

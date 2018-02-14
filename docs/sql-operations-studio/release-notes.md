@@ -22,7 +22,7 @@ ms.workload: "Inactive"
 ## February 2018 (February Public Preview)
 
 release date: February 15, 2018  
-version: 0.26.3
+version: 0.26.4
 
 The *February Public Preview* includes some feature suggestions and high-priority bug fixes. This release includes the following enhancements:
 

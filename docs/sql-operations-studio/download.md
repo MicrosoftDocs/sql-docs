@@ -23,9 +23,10 @@ Download and install the latest release, the *February Public Preview*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|February 15, 2018 |0.26.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|February 15, 2018 |0.26.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|February 15, 2018|0.26.3|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|February 15, 2018 |0.26.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|February 15, 2018 |0.26.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|February 15, 2018|0.26.4|
+|Darwin|[.zip](https://go.microsoft.com/fwlink/?linkid=New)|February 15, 2018 |0.26.4|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

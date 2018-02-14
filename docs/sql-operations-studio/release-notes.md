@@ -22,12 +22,12 @@ ms.workload: "Inactive"
 ## February 2018 (February Public Preview)
 
 release date: February 15, 2018  
-version: 0.26.4
+version: 0.26.5
 
 The *February Public Preview* includes some feature suggestions and high-priority bug fixes. This release includes the following enhancements:
 
+- Introducing Auto-Update Installation, which provides a notification when a new release is available to download 
 - The Connection Dialog 'Database' field is now a dynamically populated drop-down list that will contain a list of databases populated from the specified server.
-
 - Fix [issue 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Keep connection and selected database when opening new query tabs.
 - Fix [issue 22](https://github.com/Microsoft/sqlopsstudio/issues/22): 'Server Name' and 'Database Name' - Can these be drop downs instead of text boxes?
 - Fix [issue 549](https://github.com/Microsoft/sqlopsstudio/issues/549): Silent/Very Silent Install results in application opening after installation.

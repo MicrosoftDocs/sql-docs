@@ -82,6 +82,14 @@ Auditing:
 - Fixed an issue with the *Merge Audit Files* feature.
 <br>
 
+### Known issues
+
+Data classification:
+- Removing a classification and then manually adding a new classification for the same column results in the old information type and sensitivity label being assigned to the column in the main view.<br>
+*Workaround*: Assign the new information type and sensitivity label after the classification was added back to the main view and before saving.
+
+
+
 ## Previous SSMS releases
 
 Download previous SSMS versions by clicking the title links in the following sections.

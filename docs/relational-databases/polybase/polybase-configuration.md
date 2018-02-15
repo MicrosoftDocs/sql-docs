@@ -1,7 +1,7 @@
 ---
 title: "PolyBase configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/13/2017"
+ms.date: "02/15/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -12,8 +12,6 @@ ms.technology:
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 80ff73c1-2861-438b-a13f-309155f3d6e1
-caps.latest.revision: 17
 author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
@@ -28,8 +26,9 @@ ms.workload: "On Demand"
  You must ensure connectivity to the external data source from SQL Server. The type of connectivity strongly influences query performance. For example, a 10Gbit Ethernet link will result in a faster query response time for PolyBase queries than a 1Gbit Ethernet link.  
   
  You must configure SQL Server to connect to  either your Hadoop version or Azure Blob storage using **sp_configure**. PolyBase supports two Hadoop distributions: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  For a complete list of supported external data sources, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-1 
- Please note: PolyBase does not support Cloudera Encrypted Zones. 
+
+ **Applies to:** SQL Server (starting with 2016 SP1 CU7 and SQL Server 2017 RTM CU3). PolyBase supports Hadoop encrypted zones.
+
   
 ### Run sp_configure  
   

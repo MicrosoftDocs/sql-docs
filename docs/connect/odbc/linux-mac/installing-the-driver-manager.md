@@ -24,7 +24,7 @@ ms.workload: "On Demand"
 # Installing the Driver Manager
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This topic contains instructions to install the unixODBC Driver Manager for use with all the versions of Microsoft ODBC Driver for SQL Server on Linux and macOS.  
+This article contains instructions to install the unixODBC Driver Manager for use with all the versions of Microsoft ODBC Driver for SQL Server on Linux and macOS.  
 
 > [!IMPORTANT]  
 > Delete any driver manager packages installed on your computer before you install the unixODBC Driver Manager. Installing the unixODBC Driver Manager could cause a failure of an existing Driver Manager.  

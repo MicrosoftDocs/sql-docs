@@ -48,7 +48,7 @@ The model you build is a binary classifier that predicts whether the taxi driver
      *Results*
 
      *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
+     direct_distance* 
      <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
      <br/>*Dependent variable(s): tipped*
      <br/>*Total independent variables: 5*

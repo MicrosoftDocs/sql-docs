@@ -27,7 +27,7 @@ ms.workload: "On Demand"
   
  You must configure SQL Server to connect to  either your Hadoop version or Azure Blob storage using **sp_configure**. PolyBase supports two Hadoop distributions: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  For a complete list of supported external data sources, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
 
- **Applies to:** SQL Server (starting with 2016 SP1 CU7 and SQL Server 2017 RTM CU3). PolyBase supports Hadoop encrypted zones.
+Note, PolyBase supports Hadoop encrypted zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017.
 
   
 ### Run sp_configure  
@@ -187,7 +187,7 @@ Note that we added the property mapreduce.application.classpath. In CDH 5.x you 
 ```
   
 ## Kerberos configuration  
-Please note, that when PolyBase authenticates to a Kerberos secured cluster, we require the hadoop.rpc.protection setting to be set to authentication. This will leave the data communication between Hadoop nodes unencrypted. 
+Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting to be set to Authenticate by default. This will leave the data communication between Hadoop nodes unencrypted. To use Privacy or Integrity settings for hadoop.rpc.protection, you need to update the core-site.xml file on the PolyBase server. For more information, see the previous Connecting to Hadoop Cluster with Hadoop.rpc.protection setting section.
 
  To connect to a Kerberos-secured Hadoop cluster [using MIT KDC] :
    

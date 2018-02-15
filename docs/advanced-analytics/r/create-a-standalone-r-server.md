@@ -1,7 +1,7 @@
 ---
 title: "Install Machine Learning Server Standalone or R Server Standalone | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2017"
+ms.date: "02/14/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -147,11 +147,12 @@ The following table lists the paths for each installation.
 |----|----|----|
 |R Server (Standalone) |SQL Server 2016 setup wizard|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (Standalone) |Windows standalone installer|`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|Machine Learning Server (Standalone) |  SQL Server 2017 setup wizard |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning Server (Standalone) |  SQL Server 2017 setup wizard, with R language option |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
+|Machine Learning Server (Standalone) |  SQL Server 2017 setup wizard, with Python language option |`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Machine Learning Server (Standalone) |  Windows standalone installer |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services (In-Database) |SQL Server 2016 setup wizard|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning Services (In-Database) |SQL Server 2017 setup wizard|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES` or `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-
+|Machine Learning Services (In-Database) |SQL Server 2017 setup wizard, with R language option|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  |
+|Machine Learning Services (In-Database) |SQL Server 2017 setup wizard, with Python language option| `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 ### Development tools
 
 A development IDE is not installed as part of setup. Additional tools are not required, as all the standard tools are included that would be provided with a distribution of R or Python.

@@ -1,7 +1,7 @@
 ---
 title: "Connecting using Azure Active Directory Authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
@@ -20,14 +20,14 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Connecting using Azure Active Directory Authentication
-This article provides information on how to develop Java applications to use the Azure Active Directory authentication feature with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.
+This article provides information on how to develop Java applications to use the Azure Active Directory authentication feature with Microsoft JDBC Driver 6.4 (or higher) for SQL Server.
 
-Beginning with Microsoft JDBC Driver 6.0 for SQL Server, you can use Azure Active Direcoty (AAD) authentication which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver 6.0 (or higher) allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL DB. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+You can use Azure Active Directory (AAD) authentication which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL DB. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
 Two new connection properties have been added to support Azure Active Directory Authentication:
 *	**authentication**:  Use this property to indicate which SQL authentication method to use for connection. Possible values are: **ActiveDirectoryIntegrated**, **ActiveDirectoryPassword**, **SqlPassword** and the default **NotSpecified**.
 	* Use 'authentication=ActiveDirectoryIntegrated' to connect to a SQL Database using integrated Windows authentication. To use this authentication mode you need to federate the on-premise Active Directory Federation
-Services (ADFS) with Azure AD in the cloud. Once this is setup, you can access Azure SQL DB without being prompted for ceredentials when you are logged in a domain joined machine. 
+Services (ADFS) with Azure AD in the cloud. Once this is setup as well as a Kerberos ticket, you can access Azure SQL DB without being prompted for credentials when you are logged in a domain joined machine. 
 	* Use 'authentication=ActiveDirectoryPassword' to connect to a SQL Database using an Azure AD principal name and password.
 	* Use 'authentication=SqlPassword' to connect to a SQL Server using userName/user and password properties.
 	* Use 'authentication=NotSpecified' or leave it as default if none of these authentication methods is needed.
@@ -40,23 +40,18 @@ For details see the authentication property on the [Setting the Connection Prope
 ## Client Setup Requirements
 Please make sure that the following components are installed on the client machine:
 * Java 7 or above
-*	Microsoft JDBC Driver 6.2 (or higher) for SQL Server
+*	Microsoft JDBC Driver 6.4 (or higher) for SQL Server
 *	If you are using the access token based authentication mode, you will need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. See **Connecting using Access Token** section for more details.
 *	If you are using the ActiveDirectoryPassword authentication mode you will need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. See **Connecting using ActiveDirectoryPassword Authentication Mode** section for more details.
-*	If you are using the ActiveDirectoryIntegrated mode, you will need to install the Active Directory Authentication Library for SQL Server (ADALSQL.DLL) and sqljdbc_auth.dll.
-	* ADALSQL.DLL enables applications to authenticate to Microsoft Azure SQL Database using Azure Active Directory. Download the DLL from [Microsoft Active Directory Authentication Library for Microsoft SQL Server](http://www.microsoft.com/en-us/download/details.aspx?id=48742)
-	* For ADALSQL.DLL two binary versions X86 and X64 are available to download. If the wrong binary version is installed or if the DLL is missing, the driver will raise the following error: "Unable to load adalsql.dll (Authentication=…….). Error code: 0x2.". In such case download the right version of ADALSQL.DLL. 
-	* sqljdbc_auth.dll is available in the driver package. Copy the sqljdbc_auth.dll file to a directory on the Windows system path on the computer where the JDBC driver is installed. Alternatively you can set the java.libary.path system property to specify the directory of the sqljdbc_auth.dll. 
-	* If you are running a 64-bit JVM on a x64 processor, use the sqljdbc_auth.dll file in the x64 folder. 
-	* If you are running a 32-bit Java Virtual Machine (JVM), use the sqljdbc_auth.dll file in the x86 folder, even if the operating system is the x64 version. 
-	* For example, if you are using the 32-bit JVM and the JDBC driver is installed in the default directory, you can specify the location of the DLL by using the following virtual machine (VM) argument when the Java application is started:  
-		```
-		-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86
-		```
+*	If you are using the ActiveDirectoryIntegrated mode, you will need azure-activedirectory-library-for-java and its dependencies. See **Connecting using ActiveDirectoryIntegrated Authentication Mode** section for more details.
 	
 ## Connecting using ActiveDirectoryIntegrated Authentication Mode
+**Note:** As of version 6.4, Microsoft JDBC Driver no longer needs sqljdbc_auth.dll or Active Directory Authentication Library for SQL Server (ADALSQL.DLL) for ActiveDirectoryIntegrated Authentication. Instead, the driver requires Kerberos ticket to work with ActiveDirectoryIntegrated Authentication. See **Set Kerberos ticket on Windows, Linux And Mac** for more details.
+
 The following example shows how to use 'authentication=ActiveDirectoryIntegrated' mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups, you belong to, must exist in the database and must have the CONNECT permission. 
-	
+
+Before building and running the example, on the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path
+
 Replace the server/database name with your server/database name in the following lines before executing the example:
 
 ```
@@ -89,10 +84,65 @@ public class IntegratedExample {
 	}
 }
 ```
-Running this example on a machine joined to a domain that is federated with Azure Active Directory will automatically use your Windows credentials and no password is required. If connection is established, you will see the following message:
+Running this example on client machine will automatically use your Kerberos ticket and no password is required. If connection is established, you will see the following message:
 ```
 You have successfully logged on as: <your domain user name>
 ```
+
+### Set Kerberos ticket on Windows, Linux And Mac
+
+You will need to setup a Kerberos ticket linking your current user to a Windows domain account. A summary of key steps are included below.
+
+#### Windows
+JDK comes with `kinit` which you can use to get a TGT from KDC (Key Distribution Center) on a domain joined machine that is federated with Azure Active Directory.
+
+##### Step 1: Ticket Granting Ticket retrieval
+- **Run on**: Windows
+- **Action**:
+  - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC. You will be prompted for your domain password.
+  - Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket from krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
+
+	**Note** You may need to specify a `.ini` file with `-Djava.security.krb5.conf` for your application to locate KDC.
+
+#### Linux and Mac
+
+##### Requirements
+Access to a Windows domain-joined machine in order to query your Kerberos Domain Controller
+
+##### Step 1: Find Kerberos KDC
+- **Run on**: Windows command line
+- **Action**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (where “DOMAIN.COMPANY.COM” maps to your domain’s name)
+- **Sample Output**
+  ```
+  DC: \\co1-red-dc-33.domain.company.com
+  Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
+  ...
+  The command completed successfully
+  ```
+- **Information to extract**
+  The DC name, in this case `co1-red-dc-33.domain.company.com`
+
+##### Step 2: Configuring KDC in krb5.conf
+- **Run on**: Linux/Mac
+- **Action**: Edit the /etc/krb5.conf in an editor of your choice. Configure the following keys
+  ```
+  [libdefaults]
+    default_realm = DOMAIN.COMPANY.COM
+   
+  [realms]
+  DOMAIN.COMPANY.COM = {
+     kdc = co1-red-dc-28.domain.company.com
+  }
+  ```
+  Then save the krb5.conf file and exit
+
+  **Note** Domain must be in ALL CAPS
+
+##### Step 3: Testing the Ticket Granting Ticket retrieval
+- **Run on**: Linux/Mac
+- **Action**:
+  - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC. You will be prompted for your domain password.
+  - Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket from krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 ## Connecting using ActiveDirectoryPassword Authentication Mode
 The following example shows how to use 'authentication=ActiveDirectoryPassword' mode.

@@ -27,7 +27,7 @@ ms.workload: "On Demand"
   
  You must configure SQL Server to connect to  either your Hadoop version or Azure Blob storage using **sp_configure**. PolyBase supports two Hadoop distributions: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  For a complete list of supported external data sources, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
 
-Note, PolyBase supports Hadoop encrypted zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017.
+Note, PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017.
 
   
 ### Run sp_configure  
@@ -66,7 +66,7 @@ Note, PolyBase supports Hadoop encrypted zones starting with SQL Server 2016 SP1
 4. For all CDH 5.X versions, you will need to add the **mapreduce.application.classpath** configuration parameters either to the end of your **yarn.site.xml file** or into the **mapred-site.xml file**. HortonWorks includes these configurations within the **yarn.application.classpath** configurations.
 
 ## Connecting to Hadoop Cluster with Hadoop.RPC.Protection setting
-A common way to secure communication in a hadoop cluster is by changing the hadoop.rpc.protection configuration to 'Privacy' or 'Integrity'. By Default, PolyBase assumes the configuration is set to 'Authenticate'. To override this default you need to add the following property to your core-site.xml file. Changing this configuration will enable secure data transfer among the hadoop nodes as well as SSL connection to SQL Server.
+A common way to secure communication in a hadoop cluster is by changing the hadoop.rpc.protection configuration to 'Privacy' or 'Integrity'. By Default, PolyBase assumes the configuration is set to 'Authenticate'. To override this default, add the following property to the core-site.xml file. Changing this configuration will enable secure data transfer among the hadoop nodes and SSL connection to SQL Server.
 
 ```
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
@@ -187,7 +187,7 @@ Note that we added the property mapreduce.application.classpath. In CDH 5.x you 
 ```
   
 ## Kerberos configuration  
-Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting to be set to Authenticate by default. This will leave the data communication between Hadoop nodes unencrypted. To use Privacy or Integrity settings for hadoop.rpc.protection, you need to update the core-site.xml file on the PolyBase server. For more information, see the previous Connecting to Hadoop Cluster with Hadoop.rpc.protection setting section.
+Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting is 'Authenticate' by default. This leaves the data communication between Hadoop nodes unencrypted. To use 'Privacy' or 'Integrity' settings for hadoop.rpc.protection, update the core-site.xml file on the PolyBase server. For more information, see the previous section [Connecting to Hadoop Cluster with Hadoop.rpc.protection](#connecting-to-hadoop-cluster- with-hadoop.rpc.protection-setting).
 
  To connect to a Kerberos-secured Hadoop cluster [using MIT KDC] :
    

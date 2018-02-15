@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/14/2018"
+ms.date: "02/15/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -44,7 +44,7 @@ SSMS 17.x is the latest generation of *SQL Server Management Studio* and provide
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.5](https://go.microsoft.com/fwlink/?linkid=867670)**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.5 Upgrade Package (upgrades 17.x to 17.5)](https://go.microsoft.com/fwlink/?linkid=864331)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.5 Upgrade Package (upgrades 17.x to 17.5)](https://go.microsoft.com/fwlink/?linkid=867672)**
 
 The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 17*, and has a new icon: 
@@ -64,7 +64,7 @@ SQL Server Management Studio 17.5:<br>
 [Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
 SQL Server Management Studio 17.5 Upgrade Package (upgrades 17.x to 17.5):<br>
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40a)
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=867672&clcid=0x40a)
 
 > [!NOTE]
 > The SQL Server PowerShell module is now a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
@@ -76,7 +76,7 @@ Release number: 17.5
 
 Build number for this release: 14.0.17224.0
 
-Release date: February 14, 2018
+Release date: February 15, 2018
 
 ## New in this Release
 

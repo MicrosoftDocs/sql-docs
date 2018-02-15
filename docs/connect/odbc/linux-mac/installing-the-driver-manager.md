@@ -59,7 +59,7 @@ If your computer cannot access an external site via FTP, get `unixODBC-2.3.0.tar
 
 7.  After the script stops running, follow the instructions on the screen to install the unixODBC Driver Manager.
 
-You are now ready to install the driver. See [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) for more information.  
+You are now ready to install the driver. For more information, see [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
 
 **Manual Installation**
 

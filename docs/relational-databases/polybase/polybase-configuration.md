@@ -66,7 +66,7 @@ Note, PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP
 4. For all CDH 5.X versions, you will need to add the **mapreduce.application.classpath** configuration parameters either to the end of your **yarn.site.xml file** or into the **mapred-site.xml file**. HortonWorks includes these configurations within the **yarn.application.classpath** configurations.
 
 ## Connecting to Hadoop Cluster with Hadoop.RPC.Protection setting
-A common way to secure communication in a hadoop cluster is by changing the hadoop.rpc.protection configuration to 'Privacy' or 'Integrity'. By Default, PolyBase assumes the configuration is set to 'Authenticate'. To override this default, add the following property to the core-site.xml file. Changing this configuration will enable secure data transfer among the hadoop nodes and SSL connection to SQL Server.
+A common way to secure communication in a hadoop cluster is by changing the hadoop.rpc.protection configuration to 'Privacy' or 'Integrity'. By default, PolyBase assumes the configuration is set to 'Authenticate'. To override this default, add the following property to the core-site.xml file. Changing this configuration will enable secure data transfer among the hadoop nodes and SSL connection to SQL Server.
 
 ```
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
@@ -187,7 +187,7 @@ Note that we added the property mapreduce.application.classpath. In CDH 5.x you 
 ```
   
 ## Kerberos configuration  
-Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting is 'Authenticate' by default. This leaves the data communication between Hadoop nodes unencrypted. To use 'Privacy' or 'Integrity' settings for hadoop.rpc.protection, update the core-site.xml file on the PolyBase server. For more information, see the previous section [Connecting to Hadoop Cluster with Hadoop.rpc.protection](#connecting-to-hadoop-cluster- with-hadoop.rpc.protection-setting).
+Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting is 'Authenticate' by default. This leaves the data communication between Hadoop nodes unencrypted. To use 'Privacy' or 'Integrity' settings for hadoop.rpc.protection, update the core-site.xml file on the PolyBase server. For more information, see the previous section [Connecting to Hadoop Cluster with Hadoop.rpc.protection](#connecting-to-hadoop-cluster-with-hadoop.rpc.protection-setting).
 
  To connect to a Kerberos-secured Hadoop cluster [using MIT KDC] :
    

@@ -52,16 +52,19 @@ The examples in this article also use a sample data file, `myTestSkipCol2.dat`. 
 1,DataForColumn3  
 ```  
   
-To bulk import data from `myTestSkipCol2.dat` into the `myTestSkipCol` table, the format file must map the first data field to `Col1`, skip `Col2`, and map the second field to `Col3`.  
-  
-## Option #1 - Use a non-XML format file  
-You can use a non-XML format file to skip a table column. There are two steps:
+## Basic steps
 
-1.   Use the **bcp** command-line utility to create a default non-XML format file.
+You can use a non-XML format file or an XML format file to skip a table column. In both cases, there are two steps:
+
+1.   Use the **bcp** command-line utility to create a default format file.
 
 2.   Modify the default format file in a text editor.
 
 The modified format file must map each existing field to its corresponding column in the destination table. It must also indicate which table column or columns to skip. 
+
+For example, to bulk import data from `myTestSkipCol2.dat` into the `myTestSkipCol` table, the format file must map the first data field to `Col1`, skip `Col2`, and map the second field to `Col3`.  
+ 
+## Option #1 - Use a non-XML format file  
   
 ### Step #1 - Create a default non-XML format file  
 Create a default non-XML format file for the `myTestSkipCol` sample table by running the following **bcp** command at the command prompt:  
@@ -135,14 +138,6 @@ GO
 ```  
   
 ## Option #2 - Use an XML format file  
-
--   With `bcp` and `BULK INSERT`. With an XML format file, you cannot skip a column when you are importing directly into a table by using a **bcp** command or a `BULK INSERT` statement. However, you can import into all but the last column of a table. If you have to skip any column other than the last column, you must create a view of the target table that contains only the columns contained in the data file. Then, you can bulk import data from that file into the view.  
-  
--   With `OPENROWSET(BULK...)` To use an XML format file to skip a table column by using `OPENROWSET(BULK...)`, you have to provide an explicit list of columns in the select list and also in the target table, as follows:  
-  
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
   
 ### Step #1 - Create a default XML format file   
 
@@ -200,6 +195,9 @@ The following examples are based on the `myTestSkipCol` sample table and the `my
 To import the data from `myTestSkipCol2.dat` into the `myTestSkipCol` table, the examples use the modified XML format file, `myTestSkipCol2.xml`.   
   
 #### Using BULK INSERT with a view  
+
+With an XML format file, you cannot skip a column when you are importing directly into a table by using a **bcp** command or a `BULK INSERT` statement. However, you can import into all but the last column of a table. If you have to skip any column other than the last column, you must create a view of the target table that contains only the columns contained in the data file. Then, you can bulk import data from that file into the view.  
+  
 The following example creates the `v_myTestSkipCol` view on the `myTestSkipCol` table. This view skips the second table column, `Col2`. The example then uses `BULK INSERT` to import the `myTestSkipCol2.dat` data file into this view.  
   
 In SSMS, run the following code. Update the file system paths for the location of the sample files on your computer. 
@@ -220,6 +218,13 @@ GO
 ```  
 
 #### Using OPENROWSET(BULK...)  
+
+To use an XML format file to skip a table column by using `OPENROWSET(BULK...)`, you have to provide an explicit list of columns in the select list and also in the target table, as follows:  
+  
+    ```sql
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+    ```
+
 The following example uses the `OPENROWSET` bulk rowset provider and the `myTestSkipCol2.xml` format file. The example bulk imports the `myTestSkipCol2.dat` data file into the `myTestSkipCol` table. The statement contains an explicit list of columns in the select list and also in the target table, as required.  
   
 In SSMS, run the following code. Update the file system paths for the location of the sample files on your computer.

@@ -1,7 +1,7 @@
 ---
 title: "Designing Aggregations (XMLA) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -31,7 +31,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Designing Aggregations (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Aggregation designs are associated with the partitions of a particular measure group to make sure that the partitions use the same structure when storing aggregations. Using the same storage structure for partitions lets you to easily define partitions that can be later merged using the [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) command. For more information about aggregation designs, see [Aggregations and Aggregation Designs](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  To define aggregations for an aggregation design, you can use the [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) command in XML for Analysis (XMLA). The **DesignAggregations** command has properties that identify which aggregation design to use as a reference and how to control the design process based upon that reference. Using the **DesignAggregations** command and its properties, you can design aggregations iteratively or in batch, and then view the resulting design statistics to evaluate the design process.  

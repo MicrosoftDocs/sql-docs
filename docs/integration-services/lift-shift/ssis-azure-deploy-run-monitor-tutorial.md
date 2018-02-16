@@ -85,7 +85,9 @@ Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQ
 
 ## Deploy a project with PowerShell
 
-To deploy a project with PowerShell to SSISDB on Azure SQL Database, adapt the following script to your requirements:
+To deploy a project with PowerShell to SSISDB on Azure SQL Database, adapt the following script to your requirements. The script enumerates the child folders under `$ProjectFilePath` and the projects in each child folder, then creates the same folders in SSISDB and deploys the projects to those folders.
+
+This script requires SQL Server Data Tools version 17.x or SQL Server Management Studio installed on the computer where you run the script.
 
 ```powershell
 # Variables

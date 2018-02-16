@@ -1,7 +1,7 @@
 ---
 title: "ADOMD.NET Client Functionality | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -26,7 +26,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ADOMD.NET Client Functionality
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   ADOMD.NET, as with other [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework data providers, serves as a bridge between an application and a data source. However, ADOMD.NET is unlike other .NET Framework data providers in that ADOMD.NET works with analytical data. To work with analytical data, ADOMD.NET supports functionality that is very different than other .NET Framework data providers. ADOMD.NET not only allows you to retrieve data, but also to retrieve metadata and change the structure of the analytical data store:  
   
  **Retrieving Metadata**  

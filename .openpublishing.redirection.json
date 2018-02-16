@@ -3289,6 +3289,21 @@
             "source_path": "docs/relational-databases/scripting/import-the-sqlps-module.md",
             "redirect_url": "/sql/powershell/download-sql-server-ps-module",
             "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/system-catalog-views/dbo-slo-assignment-history-azure-sql-database.md",
+            "redirect_url": "/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/system-catalog-views/dbo-slo-database-objectives-azure-sql-database.md",
+            "redirect_url": "/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/system-catalog-views/dbo-slo-service-objectives-azure-sql-database.md",
+            "redirect_url": "/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database",
+            "redirect_document_id": false
           }
     ]
 }

@@ -1,7 +1,7 @@
 ---
 title: "Managing Caches (XMLA) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -28,7 +28,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Managing Caches (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can use the [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) command in XML for Analysis (XMLA) to clear the cache of a specified dimension or partition. Clearing the cache forces [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to rebuild the cache for that object.  
   
 ## Specifying Objects  

@@ -4,7 +4,7 @@ description: Check and configure source repositories for SQL Server 2017 on Linu
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/07/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -176,8 +176,5 @@ After you have configured the correct repository, you can proceed to [install](s
 
 > [!IMPORTANT]
 > At this point, if you choose to use one of the installation articles, such as the [quickstarts](sql-server-linux-setup.md#platforms), remember that you have already configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstarts use the CU repository.
-
-> [!IMPORTANT]
-> Any version of SQL Server 2017 prior to CTP 2.1 must be upgraded to at least 2.1 before upgrading to GA. Another option is to backup your databases, uninstall the previous version, and then perform a fresh install of a GA version.
 
 For more information on how to install SQL Server 2017 on Linux, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).

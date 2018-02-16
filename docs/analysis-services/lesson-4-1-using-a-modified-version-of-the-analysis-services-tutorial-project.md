@@ -30,15 +30,15 @@ Before you can continue with the tutorial, you must download, extract, load and 
   
 ## Downloading and Extracting the Project File  
   
-1.  [Click here](http://go.microsoft.com/fwlink/?LinkID=221866) to go to the download page that provides the sample projects that go with this tutorial. The tutorial projects are included in the **Analysis Services Tutorial SQL Server 2012** download.  
+1.  [Click here](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) to go to the download page that provides the sample projects that go with this tutorial. The tutorial projects are included in the **adventure-works-multidimensional-tutorial-projects.zip** download.  
   
-2.  Click **Analysis Services Tutorial SQL Server 2012** to download the package that contains the projects for this tutorial.  
+2.  Click **adventure-works-multidimensional-tutorial-projects.zip** to download the package that contains the projects for this tutorial.  
   
     By default, a .zip file is saved to the Downloads folder. You must move the .zip file to a location that has a shorter path (for example, create a C:\Tutorials folder to store the files).  You can then extract the files contained in the .zip file. If you attempt to unzip the files from the Downloads folder, which has a longer path, you will only get Lesson 1.  
   
 3.  Create a subfolder at or near the root drive, for example, C:\Tutorial.  
   
-4.  Move the **Analysis Services Tutorial SQL Server 2012.zip** file to the subfolder.  
+4.  Move the **adventure-works-multidimensional-tutorial-projects.zip** file to the subfolder.  
   
 5.  Right-click the file and select **Extract All**.  
   

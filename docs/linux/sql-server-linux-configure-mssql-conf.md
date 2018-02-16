@@ -33,7 +33,7 @@ ms.workload: "On Demand"
 | [Default master database file directory](#masterdatabasedir) | Changes the default directory for the master database files on existing SQL installation.|
 | [Default master database file name](#masterdatabasename) | Changes the name of master database files. |
 | [Default dump directory](#dumpdir) | Change the default directory for new memory dumps and other troubleshooting files. |
-| [Default error log directory](#errorlogdir) | Changes the default directory for new SQL Server ErrorLog, Default Profiler Trace, System Health Session XE and Hekaton Session XE files. |
+| [Default error log directory](#errorlogdir) | Changes the default directory for new SQL Server ErrorLog, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
 | [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
 | [High availability](#hadr) | Enable Availability Groups. |

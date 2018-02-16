@@ -25,7 +25,7 @@ ms.workload: "Inactive"
 **New distributions supported**:
 macOS High Sierra and Ubuntu 17.10 
 
-**Performance Improvemnes**:
+**Performance Improvements**:
 Greater than 10x performance improvement when driver converts to/from UTF-8/16.
 
 **Features Added**:

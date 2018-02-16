@@ -57,14 +57,14 @@ ms.workload: "On Demand"
 
 ## <a id="agent"></a> Enable SQL Server Agent
 
-The **sqlagent.enabled** setting enables SQL Server Agent. By default, SQL Server Agent is disabled.
+The **sqlagent.enabled** setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, SQL Server Agent is disabled.
 
-To change these settings, use the following steps:
+To change this settings, use the following steps:
 
 1. Enable the SQL Server Agent:
 
    ```bash
-     sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    ```
 
 1. Restart the SQL Server service:
@@ -152,6 +152,7 @@ The **filelocation.defaultdatadir** and **filelocation.defaultlogdir** settings 
 ## <a id="masterdatabasedir"></a> Change the default master database file directory location
 
 The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting changes the location where the SQL Server engine looks for the master database files. By default, this location is /var/opt/mssql/data. 
+
 To change these settings, use the following steps:
 
 1. Create the target directory for new error log files. The following example creates a new **/tmp/masterdatabasedir** directory:
@@ -180,7 +181,7 @@ To change these settings, use the following steps:
    sudo systemctl stop mssql-server
    ```
 
-1. Move the master.mdf and masterlog.ldf 
+1. Move the master.mdf and masterlog.ldf: 
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -259,7 +260,8 @@ To set up this new location, use the following commands:
 ## <a id="errorlogdir"></a> Change the default error log file directory location
 
 The **filelocation.errorlogfile** setting changes the location where the new error log, default profiler trace, system health session XE and Hekaton session XE files are created. By default, this location is /var/opt/mssql/data. 
-To change these settings, use the following steps:
+
+To change these settings:
 
 1. Create the target directory for new error log files. The following example creates a new **/tmp/logs** directory:
 

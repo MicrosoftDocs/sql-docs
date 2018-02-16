@@ -34,14 +34,14 @@ Always Encrypted support for BCP API
 
 New connection string attribute UseFMTOnly causes driver to use legacy metadata in special cases requiring temp tables.
 
-Azure SQL Managed Instance (Extended Private Preview). 
+Support for Azure SQL Managed Instance (Extended Private Preview). 
 > [!NOTE]
 > There are a number of differences when using Managed Instance:
 > -   FILESTREAM is not supported 
 > -   Local filesystem access is not supported, but required for things like tracefiles 
-> -   Create UDT from local path not supported 
-> -   Windows Integrated Authentication not supported 
-> -   DTC not supported 
+> -   Create UDT from local path is not supported 
+> -   Windows Integrated Authentication is not supported 
+> -   DTC is not supported 
 > -   'sa' account is not present (default account is called 'cloudSA')
 > -   TDS token ERROR (0xAA) returns incorrect server name
 > -   Special characters in database name are not supported 

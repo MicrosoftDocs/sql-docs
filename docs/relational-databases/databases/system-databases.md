@@ -24,7 +24,7 @@ ms.author: "sstein"
 manager: "craigg"
 ---
 # System Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following system databases.  
   
 |System database|Description|  
@@ -34,6 +34,9 @@ manager: "craigg"
 |[model Database](../../relational-databases/databases/model-database.md)|Is used as the template for all databases created on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Modifications made to the **model** database, such as database size, collation, recovery model, and other database options, are applied to any databases created afterward.|  
 |[Resource Database](../../relational-databases/databases/resource-database.md)|Is a read-only database that contains system objects that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. System objects are physically persisted in the **Resource** database, but they logically appear in the **sys** schema of every database.|  
 |[tempdb Database](../../relational-databases/databases/tempdb-database.md)|Is a workspace for holding temporary objects or intermediate result sets.|  
+
+> [!IMPORTANT]
+> For Azure SQL Database, only master Database and tempdb Database apply. For the concept of a logical server and logical master database, see [What is an Azure SQL logical server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb Database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database).
   
 ## Modifying System Data  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support users directly updating the information in system objects such as system tables, system stored procedures, and catalog views. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a complete set of administrative tools that let users fully administer their system and manage all users and objects in a database. These include the following:  

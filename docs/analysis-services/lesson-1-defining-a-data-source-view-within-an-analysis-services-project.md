@@ -45,9 +45,7 @@ In this task, you modify table names in the data source view, so that the names 
 [Lesson 2: Defining and Deploying a Cube](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## See Also  
-[Create an Analysis Services Project &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
-[Supported Data Sources &#40;SSAS Multidimensional&#41;](https://msdn.microsoft.com/library/ms175608(v=sql.110).aspx)   
 [Data Source Views in Multidimensional Models](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
-[Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
+
 [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
   

@@ -175,7 +175,7 @@ This deployment feature is for use only with an Azure Storage Account created th
   
     -   \<DeploymentSettings>  
   
-        -   <OtherSettings  
+        -   \<OtherSettings  
   
             -   TraceLevel="Debug" \<!-- Logging level -->  
   

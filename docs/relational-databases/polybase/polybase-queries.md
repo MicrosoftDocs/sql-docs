@@ -30,7 +30,7 @@ ms.workload: "Inactive"
 # PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  This article provides examples of queries using the [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server 2016. Before using these examples, you must also understand the T-SQL statements required to set up PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)
+  This article provides examples of queries using the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server 2016. Before using these examples, you must also understand the T-SQL statements required to set up PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)
   
 ## Queries  
  Run Transact-SQL statements against external tables or use BI tools to query external tables.

@@ -25,7 +25,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Contained Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   A *contained database* is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] helps user to isolate their database from the instance in 4 ways.  
   

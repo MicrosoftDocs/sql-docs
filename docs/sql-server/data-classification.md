@@ -20,14 +20,17 @@ ms.workload: "Active"
 ---
 # SQL Server Documentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 This topic summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. The data classification in this topic only applies to versions of the SQL Server on-premises product. It does not apply to the following: 
 - Azure SQL Database
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT) 
 - SQL Operations Studio
 
-## Access Control
+>## Access Control
+
 Credential-related information used to secure logins, users, or accounts within a SQL Server installation.
+
 ### Examples
 - Passwords
 - Certificates
@@ -40,7 +43,8 @@ Credential-related information used to secure logins, users, or accounts within 
 |Crash Dumps may contain Access Control Data.     |-         |Crash Dumps: Maximum 30 days.         |
 |These credentials never leave the user machine via User Feedback unless Customer injects it manually    |Limit to MSFT internal with no third party access.         |User Feedback: Max 1 year         |
  |
-## Customer Content
+>## Customer Content
+
 Data stored within user tables, directly or indirectly, including statistics or user literals within query texts that might be stored within user tables.
 
 ### Examples
@@ -55,7 +59,8 @@ Data stored within user tables, directly or indirectly, including statistics or 
 |Crash Dumps may contain Customer Content and be emitted to Microsoft. |- |Crash Dumps: Max 30 days. |
 |Customers with their consent can send User Feedback that contain Customer Content to Microsoft. |Limit to MSFT internal with no third party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
-## End-User Identifiable Information (EUII)
+>## End-User Identifiable Information (EUII)
+
 Data received from a user, or generated from their use of the product.
 - Linkable to an individual user
 - Does not contain content.
@@ -77,7 +82,7 @@ Data received from a user, or generated from their use of the product.
 |Customer Identification ID may be emitted to Microsoft to deliver new hybrid and cloud features that the users have subscribed to. |N/A |Currently no such hybrid or cloud features exist.|
 |Customers with their consent can send User Feedback that contain Customer Content to Microsoft.|Limit to MSFT internal with no third party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
-## Internet-Based Services Data
+>## Internet-Based Services Data
 Data needed to provide Internet-based services per the SQL Server EULA.
 
 ### Examples
@@ -95,7 +100,8 @@ Data needed to provide Internet-based services per the SQL Server EULA.
 |Customers with their consent can send User Feedback that contain Customer Content to Microsoft. |Limit to MSFT internal with no third party access. |Customers with their consent can send User Feedback that contain Customer Content to Microsoft. |
 |Power View and SQL Reporting Services Map Item(s) may send data for use of Bing Maps. |Limit to session data |- |
 
-## System Metadata
+>## System Metadata
+
 Data generated in the course of running the server.  It does not contain Customer Content.
 
 ### Examples
@@ -121,7 +127,8 @@ May be used by Microsoft for future product planning. |Microsoft may share this 
 |May be used by Microsoft to provide cloud-based services based on emitted Usage Feedback (Example: a customer dashboard showing feature usage across all SQL Server installations in an organization) |Microsoft can expose the data to the original customer (dashboards, etc.) |Min 90 days - Max 3 years |
 |Customers with their consent can send User Feedback that contain Customer Content to Microsoft. |Limit to MSFT internal with no third party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
-#Object Metadata
+>## Object Metadata
+
 Data that describes or is used to configure servers, databases, tables, and other resources.  Object metadata includes database table and column names but not the contents of database rows or other Customer Content.
 
 ### Examples

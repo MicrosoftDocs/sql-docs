@@ -187,7 +187,7 @@ Note that we added the property mapreduce.application.classpath. In CDH 5.x you 
 ```
   
 ## Kerberos configuration  
-Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting is 'Authenticate' by default. This leaves the data communication between Hadoop nodes unencrypted. To use 'Privacy' or 'Integrity' settings for hadoop.rpc.protection, update the core-site.xml file on the PolyBase server. For more information, see the previous section [Connecting to Hadoop Cluster with Hadoop.rpc.protection](#connecting-to-hadoop-cluster-with-hadoop.rpc.protection-setting).
+Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting is 'Authenticate' by default. This leaves the data communication between Hadoop nodes unencrypted. To use 'Privacy' or 'Integrity' settings for hadoop.rpc.protection, update the core-site.xml file on the PolyBase server. For more information, see the previous section [Connecting to Hadoop Cluster with Hadoop.rpc.protection](#connecting-to-hadoop-cluster-with-hadooprpcprotection-setting).
 
  To connect to a Kerberos-secured Hadoop cluster [using MIT KDC] :
    

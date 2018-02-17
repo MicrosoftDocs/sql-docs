@@ -15,11 +15,13 @@ ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
 caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Monitoring R Services
-  This section provides information about these common monitoring tasks when using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This section provides information about these common monitoring tasks when using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
   
 -   Identifying server resources being used by R  
   

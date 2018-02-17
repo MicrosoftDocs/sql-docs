@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "servers [SQL Server], backup"
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Back Up and Restore of System Databases (SQL Server)

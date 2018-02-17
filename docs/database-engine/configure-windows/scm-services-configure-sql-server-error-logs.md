@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.configurelogs.configureerrorlogs.f1"
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SCM Services - Configure SQL Server Error Logs

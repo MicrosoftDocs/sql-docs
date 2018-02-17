@@ -21,7 +21,7 @@ ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stream (Visual C++ Syntax Index with #import)

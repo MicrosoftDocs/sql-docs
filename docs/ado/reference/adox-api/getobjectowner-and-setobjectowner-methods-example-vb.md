@@ -21,7 +21,7 @@ ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetObjectOwner and SetObjectOwner Methods Example (VB)

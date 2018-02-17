@@ -18,7 +18,7 @@ ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Index Columns Dialog Box (Visual Database Tools)

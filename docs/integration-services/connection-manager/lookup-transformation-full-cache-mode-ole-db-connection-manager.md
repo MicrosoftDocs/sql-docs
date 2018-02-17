@@ -18,7 +18,7 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lookup Transformation Full Cache Mode - OLE DB Connection Manager

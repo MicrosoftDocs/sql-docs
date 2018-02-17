@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysusers compatibility view"
 ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.sysusers (Transact-SQL)

@@ -21,7 +21,7 @@ ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ResyncEnum

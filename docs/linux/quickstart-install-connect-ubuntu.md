@@ -3,22 +3,22 @@ title: Get started with SQL Server 2017 on Ubuntu | Microsoft Docs
 description: This quickstart shows how to install SQL Server 2017 on Ubuntu and then create and query a database with sqlcmd.
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: database-engine
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: sql
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: "Active"
 ---
 # Install SQL Server and create a database on Ubuntu
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 In this quickstart, you first install SQL Server 2017 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
 
@@ -56,7 +56,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    ```
 
    > [!NOTE]
-   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Change source repositories](sql-server-linux-setup.md#repositories).
+   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
 1. Run the following commands to install SQL Server:
 

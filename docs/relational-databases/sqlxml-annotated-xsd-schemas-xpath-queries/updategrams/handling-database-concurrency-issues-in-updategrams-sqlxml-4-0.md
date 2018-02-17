@@ -26,7 +26,7 @@ ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Handling Database Concurrency Issues in Updategrams (SQLXML 4.0)

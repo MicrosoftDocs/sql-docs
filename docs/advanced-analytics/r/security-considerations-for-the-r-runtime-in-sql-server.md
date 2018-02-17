@@ -1,6 +1,6 @@
 ---
 title: "Security considerations for machine learning in SQL Server | Microsoft Docs"
-ms.date: "11/16/2017"
+ms.date: "02/01/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -18,6 +18,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Security considerations for machine learning in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article lists security considerations that the administrator or architect should bear in mind when using machine learning services.
 
@@ -46,9 +47,9 @@ The use of SQL logins is also supported in this scenario. However, this requires
  In general, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] starts the external script runtime and executes scripts under its own account. However, if the external runtime makes an ODBC call, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] impersonates the credentials of the user that sent the command to ensure that the ODBC call does not fail. This is called *implied authentication*.
  
  > [!IMPORTANT]
- > For implied authentication to succeed, the Windows users group that contains the worker accounts (by default, **SQLRUser**) must have an account in the master database for the instance, and this account must be given permissions to connect to the instance.
+ > For implied authentication to succeed, the Windows users group that contains the worker accounts (by default, **SQLRUserGroup**) must have an account in the master database for the instance, and this account must be given permissions to connect to the instance.
  > 
- > The group **SQLRUser** is also used when running Python scripts. 
+ > The group **SQLRUserGroup** is also used when running Python scripts. 
 
 In general, we recommend that you move larger datasets into SQL Server beforehand, rather than try to read data using RODBC or another library. Also, use a SQL Server query or view as your primary data source, for better performance. 
 

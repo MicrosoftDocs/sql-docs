@@ -22,7 +22,7 @@ ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View the Job History

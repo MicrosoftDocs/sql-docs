@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Replication Monitor, refreshing"
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Caching, Refresh, and Replication Monitor Performance

@@ -16,7 +16,7 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 caps.latest.revision: 5
 author: "jodebrui"
 ms.author: "jodebrui"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Overview and Usage Scenarios

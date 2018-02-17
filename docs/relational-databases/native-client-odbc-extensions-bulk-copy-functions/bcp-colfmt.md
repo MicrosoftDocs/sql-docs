@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "bcp_colfmt function"
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # bcp_colfmt

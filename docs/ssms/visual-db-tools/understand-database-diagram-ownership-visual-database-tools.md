@@ -22,7 +22,7 @@ ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Understand Database Diagram Ownership (Visual Database Tools)

@@ -23,7 +23,7 @@ ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Display Query and View Designer Panes (Visual Database Tools)

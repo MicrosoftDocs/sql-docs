@@ -20,7 +20,7 @@ ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Copy Items in a Solution

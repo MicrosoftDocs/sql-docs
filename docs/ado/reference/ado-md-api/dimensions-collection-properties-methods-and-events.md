@@ -18,7 +18,7 @@ ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Dimensions Collection Properties, Methods, and Events

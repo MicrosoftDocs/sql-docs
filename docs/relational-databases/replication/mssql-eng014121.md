@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG014121 error"
 ms.assetid: c8595854-cce1-4566-ad64-d565555caded
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG014121

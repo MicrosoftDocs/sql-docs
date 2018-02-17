@@ -24,7 +24,7 @@ ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sending to a Remote Private Message Queue with the Script Task

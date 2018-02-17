@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sp_xtp_bind_db_resource_pool"
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_xtp_bind_db_resource_pool (Transact-SQL)

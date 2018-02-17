@@ -20,7 +20,7 @@ ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit an Alert

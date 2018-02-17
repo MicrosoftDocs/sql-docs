@@ -34,7 +34,7 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specifying Relationships Using sql:relationship (SQLXML 4.0)

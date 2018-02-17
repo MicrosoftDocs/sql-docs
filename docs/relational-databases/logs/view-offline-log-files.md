@@ -19,7 +19,7 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Offline Log Files

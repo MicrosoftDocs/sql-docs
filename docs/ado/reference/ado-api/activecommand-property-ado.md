@@ -21,7 +21,7 @@ ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ActiveCommand Property (ADO)

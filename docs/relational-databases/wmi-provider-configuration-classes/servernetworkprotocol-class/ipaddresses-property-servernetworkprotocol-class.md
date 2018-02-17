@@ -23,7 +23,7 @@ ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IpAddresses Property (ServerNetworkProtocol Class)

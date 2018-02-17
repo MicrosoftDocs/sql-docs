@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "ODBC data types, autotranslating character data"
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Autotranslation of Character Data

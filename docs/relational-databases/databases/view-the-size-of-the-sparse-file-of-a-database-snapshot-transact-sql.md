@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "space [SQL Server], database snapshots"
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View the Size of the Sparse File of a Database Snapshot (Transact-SQL)

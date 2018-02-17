@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "OLE DB, creating applications"
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating a SQL Server Native Client OLE DB Provider Application

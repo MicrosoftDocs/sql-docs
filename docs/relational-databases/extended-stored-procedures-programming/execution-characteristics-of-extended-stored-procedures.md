@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "executing extended stored procedures [SQL Server]"
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execution Characteristics of Extended Stored Procedures

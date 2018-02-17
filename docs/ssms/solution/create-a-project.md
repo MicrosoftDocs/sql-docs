@@ -21,7 +21,7 @@ ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Project

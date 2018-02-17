@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_delete_policy_category_subscription"
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_delete_policy_category_subscription (Transact-SQL)

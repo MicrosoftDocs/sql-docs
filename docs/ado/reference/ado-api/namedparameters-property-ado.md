@@ -21,7 +21,7 @@ ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # NamedParameters Property (ADO)

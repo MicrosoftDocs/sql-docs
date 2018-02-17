@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "UnionAggregate method (geometry)"
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # UnionAggregate (geometry Data Type)

@@ -18,7 +18,7 @@ ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
 caps.latest.revision: 25
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # PolyBase installation
@@ -49,7 +49,8 @@ Before you start installing PolyBase on your SQL Server Instances, it is good to
 For a PolyBase Scaleout group, you will need to make sure that: 
 - All of the machines are on the same domain.
 - You use the same service account and password during installation.
-- That your SQL Server Instances can communicate with one another over the network.
+- Your SQL Server Instances can communicate with one another over the network.
+- The SQL Server Instances are all the same version of SQL Server.
 
 Once you have installed PolyBase as either stand alone or in a scaleout group, you cannot change. You will have to uninstall and reinstall the feature to change this setting.
 

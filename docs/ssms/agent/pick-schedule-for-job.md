@@ -20,7 +20,7 @@ ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Pick Schedule for Job

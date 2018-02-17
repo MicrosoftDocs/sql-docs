@@ -16,7 +16,7 @@ ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.execution_property_override_values

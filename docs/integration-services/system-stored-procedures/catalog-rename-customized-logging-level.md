@@ -16,7 +16,7 @@ ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.rename_customized_logging_level

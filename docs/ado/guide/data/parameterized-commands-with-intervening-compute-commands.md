@@ -21,7 +21,7 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Parameterized Commands with Intervening COMPUTE Commands

@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "GO command"
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: 155
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sqlcmd Utility
@@ -45,6 +45,8 @@ ms.workload: "Active"
   
 > [!NOTE]
 > The most recent versions of the sqlcmd utility is available as a web release from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643). You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
+
+You can try the sqlcmd utility from Azure Cloud Shell as it is pre-installed by default: [![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com)
 
   To run sqlcmd statements in SSMS, select SQLCMD Mode from the top navigation Query Menu dropdown.  
   

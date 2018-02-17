@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.dm_cdc_log_scan_sessions dynamic management view"
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change Data Capture - sys.dm_cdc_log_scan_sessions

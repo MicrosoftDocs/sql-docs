@@ -28,7 +28,7 @@ ms.assetid: 487de53f-c637-4d78-85f6-fef5e768cd0c
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fulltext_system_stopwords (Transact-SQL)

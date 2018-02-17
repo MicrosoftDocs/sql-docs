@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-6 - Select the Keyboard Shortcut Scheme

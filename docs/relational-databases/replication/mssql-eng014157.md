@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG014157 error"
 ms.assetid: 1a0890cf-d977-43e0-a2ba-9c5ff1a8f856
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG014157

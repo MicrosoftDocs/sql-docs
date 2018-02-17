@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Snapshot Backup - sp_delete_backup

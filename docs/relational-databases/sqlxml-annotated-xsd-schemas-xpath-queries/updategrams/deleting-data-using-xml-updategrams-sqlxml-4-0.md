@@ -22,7 +22,7 @@ ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)

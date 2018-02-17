@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_dbmmonitoraddmonitoring"
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dbmmonitoraddmonitoring (Transact-SQL)

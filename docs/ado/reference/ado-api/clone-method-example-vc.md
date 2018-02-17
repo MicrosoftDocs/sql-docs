@@ -20,7 +20,7 @@ ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Clone Method Example (VC++)

@@ -19,7 +19,7 @@ ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create Jobs

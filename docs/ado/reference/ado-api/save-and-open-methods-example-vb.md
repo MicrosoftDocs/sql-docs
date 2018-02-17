@@ -21,7 +21,7 @@ ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save and Open Methods Example (VB)

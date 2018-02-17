@@ -1,6 +1,6 @@
 ---
 title: "Known issues in Machine Learning Services | Microsoft Docs"
-ms.date: "11/16/2017"
+ms.date: "02/05/2018"
 ms.prod: "machine-learning-services"
 ms.prod_service: "machine-learning-services"
 ms.service: ""
@@ -19,21 +19,22 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Known issues in Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes known problems or limitations with machine learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
 
 The information here applies to all of the following, unless otherwise indicated:
 
-* SQL Server 2016
+SQL Server 2016
 
-  - R Services (In-Database)
-  - Microsoft R Server (Standalone)
+- R Services (In-Database)
+- Microsoft R Server (Standalone)
 
-* SQL Server 2017
+SQL Server 2017
 
-  - Machine Learning Services for R (In-Database)
-  - Machine Learning Services for Python (In-Database)
-  - Machine Learning Server (Standalone)
+- Machine Learning Services for R (In-Database)
+- Machine Learning Services for Python (In-Database)
+- Machine Learning Server (Standalone)
 
 ## Setup and configuration issues
 
@@ -43,11 +44,11 @@ For a description of processes and common questions that are related to initial 
 
 If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller, setup fails, with these errors:
 
->*"An error occurred during the setup process of the feature."*
+> *An error occurred during the setup process of the feature*
 > 
->*"Cannot find group with identity..."*
+> *Cannot find group with identity*
 > 
->*"Component error code: 0x80131509"*
+> *Component error code: 0x80131509*
 
 The failure occurs because, on a domain controller, the service cannot create the 20 local accounts required to run machine learning. In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
@@ -55,7 +56,7 @@ The failure occurs because, on a domain controller, the service cannot create th
 
 If you install the latest version of Microsoft R Client and use it to run R on SQL Server in a remote compute context, you might get an error like the following:
 
->*You are running version 9.x.x of Microsoft R Client on your computer, which is incompatible with Microsoft R Server version 8.x.x. Download and install a compatible version.*
+> *You are running version 9.x.x of Microsoft R Client on your computer, which is incompatible with Microsoft R Server version 8.x.x. Download and install a compatible version.*
 
 SQL Server 2016 requires that the R libraries on the client exactly match the R libraries on the server. The restriction has been removed for releases later than R Server 9.0.1. However, if you encounter this error, verify the version of the R libraries that's used by your client and the server and, if necessary, update the client to match the server version.
 
@@ -63,25 +64,44 @@ The version of R that is installed with SQL Server R Services is updated wheneve
 
 To ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262).
 
-To avoid problems with R packages, you can also upgrade the version of the R libraries that are installed on the server, by changing to the Modern Lifecycle policy that's described in [the next section](#bkmk_sqlbindr). When you do so, the version of R that's installed with SQL Server is updated on the same schedule that updates are published for Microsoft R Server, which ensures that both server and client always have the latest releases of Microsoft R.
+To avoid problems with R packages, you can also upgrade the version of the R libraries that are installed on the server, by changing your servicing agreement to use the Modern Lifecycle Support policy, as described in [the next section](#bkmk_sqlbindr). When you do so, the version of R that's installed with SQL Server is updated on the same schedule used for updates of machine Learning Server (formerly Microsoft R Server).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
+
+### R components missing from CU3 setup
+
+A limited number of Azure virtual machines were provisioned without the R installation files that should be included with SQL Server. The issue applies to virtual machines provisioned in the period from 2018-01-05 to 2018-01-23. This issue might also affect on-premises installations, if you applied the CU3 update for SQL Server 2017 during the period from 2018-01-05 to 2018-01-23.
+
+A service release has been provided that includes the correct version of the R installation files.
+
++ [Cumulative Update Package 3 for SQL Server 2017 KB4052987](https://www.microsoft.com/en-us/download/details.aspx?id=56128).
+
+To install the components and repair SQL Server 2017 CU3, you must uninstall CU3, and reinstall the updated version:
+
+1. Download the updated CU3 installation file, which includes the R installers.
+2. Uninstall CU3. In Control Panel, search for **Uninstall an update**, and then select "Hotfix 3015 for SQL Server 2017 (KB4052987) (64-bit)". Proceed with uninstall steps.
+3. Reinstall the CU3 update, by double-clicking on the update for KB4052987 that you just downloaded: `SQLServer2017-KB4052987-x64.exe`. Follow the installation instructions.
 
 ### Unable to install Python components in offline installations of SQL Server 2017 CTP 2.0 or later
 
 If you install a pre-release version of SQL Server 2017 on a computer without internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components. In such an instance, you can install the Machine Learning Services feature, but not the Python components.
 
-This issue is fixed in the release version. If you encounter this issue, as a workaround, you can temporarily enable internet access for the duration of the setup. This limitation does not apply to R.
+This issue is fixed in the release version. Also, this limitation does not apply to R components.
 
-**Applies to:** SQL Server 2017 with Python### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+**Applies to:** SQL Server 2017 with Python
 
-When you run R code in a SQL Server 2016 compute context, and either of the following two statements is true, you might see an error like the following:
-* You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
-* You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/r-server/install/r-server-install-windows).
+### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
->*You are running version 9.0.0 of Microsoft R Client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
+When you run R code in a SQL Server 2016 compute context, you might see the following error:
 
-You can use _binding_ in Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+> *You are running version 9.0.0 of Microsoft R Client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
+
+This message is displayed if either of the following two statements is true,
+
++ You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
++ You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+
+To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -89,7 +109,7 @@ You can use _binding_ in Microsoft R Server 9.0 and later releases, to upgrade t
 
 When you install a cumulative update or install a service pack for SQL Server 2016 on a computer that is not connected to the internet, the setup wizard might fail to display the prompt that lets you update the R components by using downloaded CAB files. This failure typically occurs when multiple components were installed together with the database engine.
 
-As a workaround, you can install the service release by using the command line and specifying the */MRCACHEDIRECTORY* argument as shown in this example, which installs CU1 updates:
+As a workaround, you can install the service release by using the command line and specifying the `MRCACHEDIRECTORY` argument as shown in this example, which installs CU1 updates:
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
@@ -101,13 +121,13 @@ To get the latest installers, see [Install machine learning components without i
 
 If you install SQL Server R Services separately from the database engine, and the build versions are different, you might see the following error in the System Event log:
 
->_The SQL Server Launchpad service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion._
+> *The SQL Server Launchpad service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion.*
 
 For example, this error might occur if you install the database engine by using the release version, apply a patch to upgrade the database engine, and then add the R Services feature by using the release version.
 
-To avoid this problem, make sure that all components have the same version number. If you upgrade one component, be sure to apply the same upgrade to all other installed components.
+To avoid this problem, use a utility such as File Manager to compare the versions of Launchpad.exe with version of SQL binaries, such as sqldk.dll. All components should have the same version number. If you upgrade one component, be sure to apply the same upgrade to all other installed components.
 
-To view a list of the R version numbers that are required for each release of SQL Server 2016, see [Install R components without internet access](r/installing-ml-components-without-internet-access.md).
+Look for Launchpad in the `Binn` folder for the instance. For example, in a default installation of SQL Server 2016, the path might be `C:\Program Files\Microsoft SQL Server\MSSQL.13.InstanceNameMSSQL\Binn`. 
 
 ### Remote compute contexts are blocked by a firewall in SQL Server instances that are running on Azure virtual machines
 
@@ -121,7 +141,7 @@ When you run R jobs from a remote data-science workstation by using Integrated W
 
 To fix the issue, we recommend that you upgrade to a later service release.
 
-If you cannot upgrade, you can use a SQL login to run remote R jobs that might require embedded ODBC calls.
+If upgrade is not feasible, as a workaround, use  a SQL login to run remote R jobs that might require embedded ODBC calls.
 
 **Applies to:** SQL Server 2016 R Services Express Edition
 
@@ -131,8 +151,17 @@ It is possible to call the machine learning libraries that are installed for SQL
 
 For example, even if you are using the Enterprise Edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. To get the benefits of performance in SQL Server, initiate a SQL Server connection and use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to call the external script runtime.
 
-+ In general, avoid calling the machine learning libraries that are used by SQL Server from external tools.
-+ If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same libraries that are in SQL Server, you can install Microsoft R Client or [Machine Learning Server](r/create-a-standalone-r-server.md).
+In general, avoid calling the machine learning libraries that are used by SQL Server from external tools. If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same  libraries that are in SQL Server, you can install Microsoft R Client or [Machine Learning Server](r/create-a-standalone-r-server.md).
+
+### SQL Server Data Tools does not support permissions required by external scripts
+
+When you use Visual Studio or SQL Server Data Tools to publish a database project, if any principal has permissions specific to external script execution, you might get an error like this one:
+
+> *TSQL Model: Error detected when reverse engineering the database. The permission was not recognized and was not imported.*
+
+Currently the DACPAC model does not support the permissions used by R Services or Machine Learning Services, such as GRANT ANY EXTERNAL SCRIPT, or EXECUTE ANY EXTERNAL SCRIPT. This issue will be fixed in a later release.
+
+As a workaround, run the additional GRANT statements in a post-deployment script.
 
 ### External script execution is throttled due to resource governance default values
 
@@ -146,7 +175,41 @@ If you encounter resource limitations, check the current default. If 20 percent 
 
 This section contains known issues that are specific to running R on SQL Server, as well as some issues that are related to the R libraries and tools published by Microsoft, including RevoScaleR.
 
-For additional known issues that might affect R solutions, go to the [Microsoft R Server site](https://docs.microsoft.com/machine-learning-server/resources-known-issues).
+For additional known issues that might affect R solutions, see the [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues) site.
+
+### Access denied warning when executing R scripts on SQL Server in a non default location
+
+If the instance of SQL Server has been installed to a non-default location, such as outside the `Program Files` folder, the warning ACCESS_DENIED is raised when you try to run scripts that install a package. For example:
+
+> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": Access is denied*
+
+The reason is that an R function attempts to read the path, and fails if the built-in users group **SQLRUserGroup**, does not have read access. The warning that is raised does not block execution of the current R script, but the warning might recur repeatedly whenever the user runs any other R script.
+
+If you have installed SQL Server to the default location, this error does not occur, because all Windows users have read permissions on the `Program Files` folder.
+
+This issue ia addressed in an upcoming service release. As a workaround, provide the group, **SQLRUserGroup**, with read access for all parent folders of `ExternalLibraries`.
+
+### Serialization error between old and new versions of RevoScaleR
+
+When you pass a model using a serialized format to a remote SQL Server instance, you might get the error: 
+
+> *Error in memDecompress(data, type = decompress) internal error -3 in memDecompress(2).*
+
+This error is raised if you saved the model using a recent version of the serialization function, [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), but the SQL Server instance where you deserialize the model has an older version of the RevoScaleR APIs, from SQL Server 2017 CU2 or earlier.
+
+As a workaround, you can upgrade the SQL Server 2017 instance to CU3 or later.
+
+The error does not appear if the API version is the same, or if you are moving a model saved with an older serialization function to a server that uses a newer version of the serialization API.
+
+In other words, use the same version of RevoScaleR for both serialization and deserialization operations.
+
+### Real-time scoring does not correctly handle the _learningRate_ parameter in tree and forest models
+
+If you create a model using a decision tree or decision forest method and specify the learning rate, you might see inconsistent results when using `sp_rxpredict` or the SQL `PREDICT` function, as compared to using `rxPredict`.
+
+The cause is an error in the API that processes serialized models, and is limited to the `learningRate` parameter: for example, in [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), or
+
+This issue is addressed in an upcoming service release.
 
 ### Limitations on processor affinity for R jobs
 
@@ -162,10 +225,11 @@ If your compute context is set to the SQL Server instance, you cannot use the _c
 
 For example, the following statement would result in an error if the column CRSDepTimeStr is not already an integer:
 
-```r
-data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM AirlineDemoSmall",
-                                connectionString = connectionString,
-                                colClasses = c(CRSDepTimeStr = "integer"))
+```R
+data <- RxSqlServerData(
+  sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM AirlineDemoSmall", 
+  connectionString = connectionString, 
+  colClasses = c(CRSDepTimeStr = "integer"))
 ```
 
 As a workaround, you can rewrite the SQL query to use CAST or CONVERT and present the data to R by using the correct data type. In general, performance is better when you work with data by using SQL rather than by changing data in the R code.
@@ -190,15 +254,13 @@ If you need to use larger models, the following workarounds are available:
 
 ### Avoid clearing workspaces when you execute R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context
 
-If you use the R command to clear your workspace of objects while running R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context, or if you clear the workspace as part of an R script called by using [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), you might get this error: 
-
->*workspace object 'revoScriptConnection' not found*
+If you use an R command to clear your workspace of objects while running R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context, or if you clear the workspace as part of an R script called by using [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), you might get this error: *workspace object revoScriptConnection not found*
 
 `revoScriptConnection` is an object in the R workspace that contains information about an R session that is called from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, if your R code includes a command to clear the workspace (such as `rm(list=ls()))`, all information about the session and other objects in the R workspace is cleared as well.
 
 As a workaround, avoid indiscriminate clearing of variables and other objects while you're running R in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Although clearing the workspace is common when working in the R console, it can have unintended consequences.
 
-* To delete specific variables, use the R *remove* function: `remove('name1', 'name2', ...)`.
+* To delete specific variables, use the R `remove` function: for example, `remove('name1', 'name2', ...)`
 * If there are multiple variables to delete, save the names of temporary variables to a list and perform periodic garbage collection.
 
 ### Restrictions on data that can be provided as input to an R script
@@ -225,9 +287,9 @@ For a discussion of this issue, and other tips, see [Performance for R Services 
 
 When you use the rxDataStep function to write results to a table, using the *varsToKeep* and *varsToDrop* is a handy way of specifying the columns to include or exclude as part of the operation. However, these arguments are not supported for SQL Server data sources.
 
-### Limited support for SQL data types in `sp_execute_external_script`
+### Limited support for SQL data types in sp\_execute\_external\_script
 
-Not all data types that are supported in SQL can be used in R. As a workaround, consider casting the unsupported data type to a supported data type before passing the data to sp_execute_external_script.
+Not all data types that are supported in SQL can be used in R. As a workaround, consider casting the unsupported data type to a supported data type before passing the data to sp\_execute\_external\_script.
 
 For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
 
@@ -253,11 +315,13 @@ Because [!INCLUDE[tsql](../includes/tsql-md.md)] and R support various data type
 
 For more information about implicit data-type conversion, see [R libraries and data types](r/r-libraries-and-data-types.md).
 
-### Variable scoping error when you use the transformFunc parameter: *The sample data set for the analysis has no variables*
+### Variable scoping error when you use the transformFunc parameter
 
 To transform data while you are modeling, you can pass a *transformFunc* argument in a function such as `rxLinmod` or `rxLogit`. However, nested function calls can lead to scoping errors in the SQL Server compute context, even if the calls work correctly in the local compute context.
 
-For example, assume that you have defined two functions, `f` and `g`, in your local global environment, and `g` calls `f`. In distributed or remote calls involving `g`, the call to `g` might fail because `f` cannot be found, even if you have passed both `f` and `g` to the remote call.
+> *The sample data set for the analysis has no variables*
+
+For example, assume that you have defined two functions, `f` and `g`, in your local global environment, and `g` calls `f`. In distributed or remote calls involving `g`, the call to `g` might fail with this error, because `f` cannot be found, even if you have passed both `f` and `g` to the remote call.
 
 If you encounter this problem, you can work around the issue by embedding the definition of `f` inside your definition of `g`, anywhere before `g` would ordinarily call `f`.
 
@@ -299,16 +363,10 @@ Parallelism for `rxExec` across multiple processes is planned for a future relea
 
 If you use data sets with extremely large numbers of variables (for example, over 40,000), set the `max-ppsize` flag when you start R to use functions such as `rxGetVarInfo`. The `max-ppsize` flag specifies the maximum size of the pointer protection stack.
 
-If you are using the R console (for example, in rgui.exe or rterm.exe), you can set the value of max-ppsize to 500000 by typing:
+If you are using the R console (for example, RGui.exe or RTerm.exe), you can set the value of _max-ppsize_ to 500000 by typing:
 
-```r
+```R
 R --max-ppsize=500000
-```
-
-If you are using the [!INCLUDE[rsql_developr](../includes/rsql-developr-md.md)] environment, you can set the `max-ppsize` flag by making the following call to the RevoIDE executable:
-
-```
-RevoIDE.exe /RCommandLine --max-ppsize=500000  
 ```
 
 ### Issues with the rxDTree function
@@ -323,13 +381,24 @@ This section contains known issues that are specific to running Python on SQL Se
 
 ### Call to pretrained model fails if path to model is too long
 
-If you install the pretrained models in a default installation, depending on your machine name and instance name, the resulting complete path to the trained model file might be too long for Python to read. This limitation will be fixed in an upcoming service release.
+If you installed the pretrained models in an early release of SQL Server 2017, the complete path to the trained model file might be too long for Python to read. This limitation is fixed in a later service release.
 
 There are several potential workarounds: 
 
 + When you install the pretrained models, choose a custom location.
-+ If possible, install the SQL Server instance under a custom installation path, such as C:\SQL\MSSQL14.MSSQLSERVER.
-+ Use the Windows utility [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) to create a hardlink that maps the model file to a shorter path. 
++ If possible, install the SQL Server instance under a custom installation path with a shorter path, such as C:\SQL\MSSQL14.MSSQLSERVER.
++ Use the Windows utility [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) to create a hard link that maps the model file to a shorter path.
++ Update to the latest service release.
+
+### Error when saving serialized model to SQL Server
+
+When you pass a model to a remote SQL Server instance, and try to read the binary model using the `rx_unserialize` function in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), you might get the error: 
+
+> *NameError: name 'rx_unserialize_model' is not defined*
+
+This error is raised if you saved the model using a recent version of the serialization function, but the SQL Server instance where you deserialize the model does not recognize the  serialization API.
+
+To resolve the issue, upgrade the SQL Server 2017 instance to CU3 or later.
 
 ### Failure to initialize a varbinary variable causes an error in BxlServer
 
@@ -357,28 +426,36 @@ exec sp_execute_external_script
 go
 ```
 
+### Telemetry warning on successful execution of Python code
+
+Beginning with SQL Server 2017 CU2, the following message might appear even if Python code otherwise runs successfully:
+
+> *STDERR message(s) from external script:*
+> **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
+> *SyntaxWarning: telemetry_state is used prior to global declaration*
+
+
+This issue has been fixed in SQL Server 2017 Cumulative Update 3 (CU3). 
+
 ## Revolution R Enterprise and Microsoft R Open
 
 This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
 In general, we recommend that you uninstall these previous versions and install the latest version of SQL Server or Microsoft R Server.
 
-### Running side-by-side versions of Revolution R Enterprise
+### Revolution R Enterprise is not supported
 
 Installing Revolution R Enterprise side by side with any version of [!INCLUDE[rsql_productname_md](../includes/rsql-productname-md.md)] is not supported.
 
-If you have a license to use a different version of Revolution R Enterprise, you must put it on a separate computer from both the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and any workstation that you want to use to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.
+If you have an existing license for Revolution R Enterprise, you must put it on a separate computer from both the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and any workstation that you want to use to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.
 
-### The use of an R productivity environment is not supported
+Some pre-release versions of [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] included an R development environment for Windows that was created by Revolution Analytics. This tool is no longer provided, and is not supported.
 
-Some pre-release versions of [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] included an R development environment for Windows that was created by Revolution Analytics. This tool is no longer provided, and it is not supported.
-
-For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], we strongly recommend that you install Microsoft R Client or Microsoft R Server instead of the Revolution Analytics tools. [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) and [Visual Studio Code](https://code.visualstudio.com/) also supports Microsoft R solutions.
+For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], we recommend that you install Microsoft R Client instead. [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) and [Visual Studio Code](https://code.visualstudio.com/) also supports Microsoft R solutions.
 
 ### Compatibility issues with SQLite ODBC driver and RevoScaleR
 
 Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisions 0.88-0.91 and 0.93 and later are known to be compatible.
-
 
 ## See also
 

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "stored procedures [ODBC], executing"
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Running Stored Procedures

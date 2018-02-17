@@ -35,8 +35,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Security Considerations for a SQL Server Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- Security is important for every product and every business. By following simple best practices, you can avoid many security vulnerabilities. This topic discusses some security best practices that you should consider both before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Security guidance for specific features is included in the reference topics for those features.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ Security is important for every product and every business. By following simple best practices, you can avoid many security vulnerabilities. This article discusses some security best practices that you should consider both before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Security guidance for specific features is included in the reference articles for those features.  
   
 ## Before Installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Follow these best practices when you set up the server environment:  

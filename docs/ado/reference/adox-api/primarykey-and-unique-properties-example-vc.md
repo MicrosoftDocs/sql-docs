@@ -21,7 +21,7 @@ ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PrimaryKey and Unique Properties Example (VC++)

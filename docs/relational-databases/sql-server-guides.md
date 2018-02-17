@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "guide, list"
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Guides

@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.external_tables (Transact-SQL)

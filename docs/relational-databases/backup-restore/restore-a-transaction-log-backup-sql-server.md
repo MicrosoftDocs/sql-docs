@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "transaction log restores [SQL Server], SQL Server Management Studio"
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Restore a Transaction Log Backup (SQL Server)

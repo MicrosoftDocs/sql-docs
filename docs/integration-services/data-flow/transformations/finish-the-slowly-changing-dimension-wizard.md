@@ -18,7 +18,7 @@ ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Finish the Slowly Changing Dimension Wizard

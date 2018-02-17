@@ -20,7 +20,7 @@ ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Designate an Events Forwarding Server (SQL Server Management Studio)

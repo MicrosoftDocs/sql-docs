@@ -18,7 +18,7 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Lesson 1-1 - Creating a New Integration Services Project

@@ -18,7 +18,7 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View

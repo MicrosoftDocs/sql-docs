@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STNumPoints method"
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STNumPoints (geography Data Type)

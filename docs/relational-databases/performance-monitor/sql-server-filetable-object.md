@@ -18,7 +18,7 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server, FileTable Object

@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "CREATE EXTERNAL LIBRARY"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # CREATE EXTERNAL LIBRARY (Transact-SQL)  
 

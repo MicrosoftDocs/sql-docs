@@ -18,7 +18,7 @@ ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_waits (Transact-SQL)

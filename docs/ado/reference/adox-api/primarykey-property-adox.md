@@ -25,7 +25,7 @@ ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PrimaryKey Property (ADOX)

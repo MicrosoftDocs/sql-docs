@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], syntax pair matching"
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Automatic Matching of Syntax Pairs

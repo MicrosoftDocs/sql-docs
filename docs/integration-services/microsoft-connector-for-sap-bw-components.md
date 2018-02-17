@@ -16,7 +16,7 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Microsoft Connector for SAP BW Components

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_sessions dynamic management view"
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sys.dm_exec_sessions (Transact-SQL)
@@ -107,6 +107,10 @@ Everyone can see their own session information.
 -   unsuccessful_logons  
   
  If this option is not enabled, these columns will return null values. For more information about how to set this server configuration option, see [common criteria compliance enabled Server Configuration Option](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
+ 
+ 
+ The admin connections on Azure SQL Database will see one row per authenticated session, while the non-admin connections will only see information related to their database user sessions. 
+ 
   
 ## Relationship Cardinalities  
   

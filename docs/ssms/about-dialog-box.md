@@ -19,7 +19,7 @@ ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # About Dialog Box

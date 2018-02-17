@@ -20,7 +20,7 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Load Data by Using the OLE DB Destination

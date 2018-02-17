@@ -21,7 +21,7 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # value() Method (xml Data Type)

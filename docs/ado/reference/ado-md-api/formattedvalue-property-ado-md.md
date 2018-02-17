@@ -22,7 +22,7 @@ ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FormattedValue Property (ADO MD)

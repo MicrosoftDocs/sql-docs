@@ -23,7 +23,7 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating an ODBC Destination with the Script Component

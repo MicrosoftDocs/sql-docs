@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MinDbCompatibilityLevel method (geometry)"
 ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MinDbCompatibilityLevel (geometry Data Type)

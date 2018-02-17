@@ -21,7 +21,7 @@ ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Groups and Users Append, ChangePassword Methods Example (VB)

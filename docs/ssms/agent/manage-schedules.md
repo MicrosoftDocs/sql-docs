@@ -18,7 +18,7 @@ ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage Schedules

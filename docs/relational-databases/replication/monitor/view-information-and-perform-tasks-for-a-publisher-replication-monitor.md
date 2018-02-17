@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Publishers [SQL Server replication], viewing information"
 ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Information and Perform Tasks for a Publisher (Replication Monitor)

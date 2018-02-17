@@ -16,7 +16,7 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 caps.latest.revision: 11
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)

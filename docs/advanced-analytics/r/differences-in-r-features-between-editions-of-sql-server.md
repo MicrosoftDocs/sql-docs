@@ -20,6 +20,7 @@ ms.workload: "Inactive"
 ---
 
 # Differences in machine learning features between editions of SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  Support for machine learning is available in SQL Server 2016 and SQL Server 2017. This article lists the editions that support the feature, describes additional limitations that apply in specific editions, and lists capabilities available only in certain editions.
 

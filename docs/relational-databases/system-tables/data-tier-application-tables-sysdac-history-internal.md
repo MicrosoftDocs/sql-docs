@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysdac_history_internal"
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data-tier Application Tables - sysdac_history_internal

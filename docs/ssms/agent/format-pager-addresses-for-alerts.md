@@ -23,7 +23,7 @@ ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Format Pager Addresses for Alerts

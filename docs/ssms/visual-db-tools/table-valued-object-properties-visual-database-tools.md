@@ -18,7 +18,7 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table-Valued Object Properties (Visual Database Tools)

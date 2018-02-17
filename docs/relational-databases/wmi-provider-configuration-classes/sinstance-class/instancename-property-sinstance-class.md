@@ -23,7 +23,7 @@ ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InstanceName Property (SInstance Class)

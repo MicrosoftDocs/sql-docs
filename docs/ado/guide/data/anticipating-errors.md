@@ -20,7 +20,7 @@ ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Anticipating Errors

@@ -15,10 +15,11 @@ ms.assetid: 27f2a1ce-316f-4347-b206-8a1b9eebe90b
 caps.latest.revision: 4
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Create a local package repository using miniCRAN
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 There are two ways that you can prepare R packages for installation onto a server without internet access.
 

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQLExecute function"
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLExecute

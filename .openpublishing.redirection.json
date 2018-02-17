@@ -1611,6 +1611,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md",
+            "redirect_url": "/sql/analysis-services/instances/data-providers-used-for-analysis-services-connections",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
             "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
             "redirect_document_id": false
@@ -3283,6 +3288,21 @@
           {
             "source_path": "docs/relational-databases/scripting/import-the-sqlps-module.md",
             "redirect_url": "/sql/powershell/download-sql-server-ps-module",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/system-catalog-views/dbo-slo-assignment-history-azure-sql-database.md",
+            "redirect_url": "/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/system-catalog-views/dbo-slo-database-objectives-azure-sql-database.md",
+            "redirect_url": "/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database",
+            "redirect_document_id": false
+          },
+          {
+            "source_path": "docs/relational-databases/system-catalog-views/dbo-slo-service-objectives-azure-sql-database.md",
+            "redirect_url": "/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database",
             "redirect_document_id": false
           }
     ]

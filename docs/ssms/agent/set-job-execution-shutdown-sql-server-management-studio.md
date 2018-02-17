@@ -21,7 +21,7 @@ ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set Job Execution Shutdown (SQL Server Management Studio)

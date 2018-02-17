@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "AUTO FOR XML mode, BINARY BASE64 option"
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use the BINARY BASE64 Option

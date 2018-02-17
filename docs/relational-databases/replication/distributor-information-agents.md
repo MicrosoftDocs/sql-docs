@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.monitor.Distributor.commonjobs..f1"
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Distributor Information, Agents

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Broker:Conversation Group event class"
 ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Broker:Conversation Group Event Class

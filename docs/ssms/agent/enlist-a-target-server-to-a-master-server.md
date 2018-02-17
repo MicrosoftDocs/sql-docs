@@ -22,7 +22,7 @@ ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Enlist a Target Server to a Master Server

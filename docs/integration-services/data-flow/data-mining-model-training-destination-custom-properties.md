@@ -16,7 +16,7 @@ ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Mining Model Training Destination Custom Properties

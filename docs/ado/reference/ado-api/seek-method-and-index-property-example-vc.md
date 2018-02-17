@@ -21,7 +21,7 @@ ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Seek Method and Index Property Example (VC++)

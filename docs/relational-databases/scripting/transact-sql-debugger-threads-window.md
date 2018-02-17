@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Threads Window [Transact-SQL]"
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transact-SQL Debugger - Threads Window

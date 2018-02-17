@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_memory_cache_counters dynamic management view"
 ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_memory_cache_counters (Transact-SQL)

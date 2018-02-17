@@ -26,7 +26,7 @@ ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_outstanding_batches (Transact-SQL)

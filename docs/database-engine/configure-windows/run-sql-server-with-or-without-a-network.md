@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "SQL Server, running"
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Run SQL Server With or Without a Network

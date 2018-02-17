@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_jobserver"
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_jobserver (Transact-SQL)

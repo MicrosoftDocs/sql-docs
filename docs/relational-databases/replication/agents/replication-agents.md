@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "replication [SQL Server], agents and profiles"
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Agents

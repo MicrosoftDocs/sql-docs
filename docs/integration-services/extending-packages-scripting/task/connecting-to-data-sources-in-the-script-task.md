@@ -31,7 +31,7 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connecting to Data Sources in the Script Task

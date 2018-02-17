@@ -22,7 +22,7 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Cache Transform

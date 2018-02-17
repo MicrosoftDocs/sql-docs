@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysproxylogin system table"
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.sysproxylogin (Transact-SQL)

@@ -16,7 +16,7 @@ ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure the remote data archive Server Configuration Option

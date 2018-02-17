@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "IBCPSession2 interface"
 ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IBCPSession2 (OLE DB)

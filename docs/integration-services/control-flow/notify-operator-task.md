@@ -22,7 +22,7 @@ ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Notify Operator Task

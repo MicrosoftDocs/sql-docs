@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "system tables [SQL Server], database maintenance plans"
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Maintenance Plan Tables (Transact-SQL)

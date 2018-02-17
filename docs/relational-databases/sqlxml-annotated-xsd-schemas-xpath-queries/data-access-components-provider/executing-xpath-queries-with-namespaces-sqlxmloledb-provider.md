@@ -23,7 +23,7 @@ ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)

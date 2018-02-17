@@ -16,7 +16,7 @@ ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.execution_component_phases

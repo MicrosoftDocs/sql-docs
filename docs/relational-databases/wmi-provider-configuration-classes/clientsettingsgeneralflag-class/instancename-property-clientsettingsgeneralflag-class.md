@@ -23,7 +23,7 @@ ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InstanceName Property (ClientSettingsGeneralFlag Class)

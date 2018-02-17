@@ -20,7 +20,7 @@ ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Define the Response to an Alert (SQL Server Management Studio)

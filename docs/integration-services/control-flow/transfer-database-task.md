@@ -24,7 +24,7 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transfer Database Task

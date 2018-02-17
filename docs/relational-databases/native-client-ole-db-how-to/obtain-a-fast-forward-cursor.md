@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "fast forward-only cursors"
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Obtain a FAST_FORWARD Cursor

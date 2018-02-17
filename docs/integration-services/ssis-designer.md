@@ -30,7 +30,7 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SSIS Designer

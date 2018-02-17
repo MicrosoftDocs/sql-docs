@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_tran_locks dynamic management view"
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_tran_locks (Transact-SQL)

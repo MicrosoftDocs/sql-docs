@@ -27,7 +27,7 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Select an Account for the SQL Server Agent Service

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "ALTER EXTERNAL LIBRARY"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  
 

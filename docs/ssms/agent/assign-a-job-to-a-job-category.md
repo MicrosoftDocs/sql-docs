@@ -23,7 +23,7 @@ ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assign a Job to a Job Category

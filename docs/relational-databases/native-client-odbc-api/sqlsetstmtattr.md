@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLSetStmtAttr function"
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLSetStmtAttr

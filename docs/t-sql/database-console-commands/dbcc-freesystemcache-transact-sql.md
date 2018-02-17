@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "cleaning unused cache entries"
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC FREESYSTEMCACHE (Transact-SQL)

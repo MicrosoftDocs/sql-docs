@@ -21,7 +21,7 @@ ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Filter and RecordCount Properties Example (VB)

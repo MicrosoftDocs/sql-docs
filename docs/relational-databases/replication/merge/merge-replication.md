@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication]"
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Merge Replication

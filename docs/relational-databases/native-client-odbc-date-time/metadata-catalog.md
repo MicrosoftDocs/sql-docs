@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "catalog metadata [ODBC]"
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Metadata - Catalog

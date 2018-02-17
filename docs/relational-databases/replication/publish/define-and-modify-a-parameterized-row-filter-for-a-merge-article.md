@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "dynamic filters [SQL Server replication]"
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Define and Modify a Parameterized Row Filter for a Merge Article

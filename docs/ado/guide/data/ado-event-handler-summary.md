@@ -19,7 +19,7 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Connection and Recordset Events

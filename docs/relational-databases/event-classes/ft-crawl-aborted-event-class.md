@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Crawl Aborted event class"
 ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FT:Crawl Aborted Event Class

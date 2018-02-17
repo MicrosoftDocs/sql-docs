@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_update_alert"
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_update_alert (Transact-SQL)

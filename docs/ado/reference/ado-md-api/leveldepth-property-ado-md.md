@@ -22,7 +22,7 @@ ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LevelDepth Property (ADO MD)

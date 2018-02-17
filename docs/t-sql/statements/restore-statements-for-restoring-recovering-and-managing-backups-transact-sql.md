@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "transaction log backups [SQL Server], RESTORE statement"
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)

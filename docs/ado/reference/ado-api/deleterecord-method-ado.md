@@ -22,7 +22,7 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DeleteRecord Method (ADO)

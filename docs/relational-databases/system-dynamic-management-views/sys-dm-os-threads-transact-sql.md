@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_threads dynamic management view"
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_threads (Transact-SQL)

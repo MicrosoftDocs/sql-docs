@@ -28,7 +28,7 @@ ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
 caps.latest.revision: 14
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.availability_databases_cluster (Transact-SQL)

@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-5 - Show the Object Explorer Details Page

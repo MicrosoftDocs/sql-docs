@@ -18,7 +18,7 @@ ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Step 1: Specify a Server Program (RDS Tutorial)

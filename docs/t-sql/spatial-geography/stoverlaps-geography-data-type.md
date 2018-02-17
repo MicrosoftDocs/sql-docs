@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "STOverlaps method (geography)"
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STOverlaps (geography Data Type)

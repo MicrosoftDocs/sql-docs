@@ -18,7 +18,7 @@ ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_loader_run_stages (Transact-SQL)

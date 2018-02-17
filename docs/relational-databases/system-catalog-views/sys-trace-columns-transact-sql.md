@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.trace_columns catalog view"
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.trace_columns (Transact-SQL)

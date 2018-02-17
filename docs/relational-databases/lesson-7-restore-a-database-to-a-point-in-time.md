@@ -18,7 +18,7 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 caps.latest.revision: 13
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 7: Restore a database to a point in time

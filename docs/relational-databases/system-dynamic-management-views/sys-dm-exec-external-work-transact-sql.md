@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "PolyBase"
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_external_work (Transact-SQL)

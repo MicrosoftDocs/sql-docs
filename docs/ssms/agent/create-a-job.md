@@ -19,7 +19,7 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Create a Job

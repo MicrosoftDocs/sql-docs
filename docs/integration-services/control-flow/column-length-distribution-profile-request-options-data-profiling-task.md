@@ -18,7 +18,7 @@ ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Column Length Distribution Profile Request Options (Data Profiling Task)

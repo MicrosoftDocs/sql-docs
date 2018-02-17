@@ -26,7 +26,7 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_db_resource_stats (Azure SQL Database)

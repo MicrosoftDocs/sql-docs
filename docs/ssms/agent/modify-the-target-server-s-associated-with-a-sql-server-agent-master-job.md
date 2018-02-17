@@ -16,7 +16,7 @@ ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Modify the Target Server(s) Associated with a SQL Server Agent Master Job

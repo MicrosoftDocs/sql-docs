@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.newpubwizard.configuresnapshotagent.f1"
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Snapshot Agent (New Publication Wizard)

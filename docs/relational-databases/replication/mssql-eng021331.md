@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG021331 error"
 ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG021331

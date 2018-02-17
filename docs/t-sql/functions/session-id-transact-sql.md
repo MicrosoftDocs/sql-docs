@@ -18,7 +18,7 @@ ms.assetid: 2a0d500a-f6c8-490f-9abd-3ae824986404
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SESSION_ID (Transact-SQL)

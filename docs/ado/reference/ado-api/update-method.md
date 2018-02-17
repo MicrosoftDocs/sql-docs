@@ -21,7 +21,7 @@ ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Update Method

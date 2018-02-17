@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_maintenance_plan_job"
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_maintenance_plan_job (Transact-SQL)

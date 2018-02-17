@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "prolog"
 ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Modules and Prologs (XQuery)

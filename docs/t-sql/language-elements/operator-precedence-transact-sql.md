@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "precedence [SQL Server], operators"
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Operator Precedence (Transact-SQL)

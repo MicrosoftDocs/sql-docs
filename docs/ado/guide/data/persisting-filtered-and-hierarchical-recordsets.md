@@ -22,7 +22,7 @@ ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Persisting Filtered and Hierarchical Recordsets

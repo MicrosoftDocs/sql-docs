@@ -21,7 +21,7 @@ ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MoveRecordOptionsEnum

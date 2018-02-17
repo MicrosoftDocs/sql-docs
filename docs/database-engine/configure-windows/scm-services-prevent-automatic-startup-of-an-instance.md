@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "preventing automatic startups [SQL Server]"
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SCM Services - Prevent Automatic Startup of an Instance

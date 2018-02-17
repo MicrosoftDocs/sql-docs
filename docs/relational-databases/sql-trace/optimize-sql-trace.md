@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "performance [SQL Server], trace"
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Optimize SQL Trace

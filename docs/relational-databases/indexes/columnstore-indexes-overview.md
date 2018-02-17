@@ -22,7 +22,7 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 80
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Columnstore indexes - Overview

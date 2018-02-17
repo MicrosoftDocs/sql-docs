@@ -23,7 +23,7 @@ ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Read, ReadText, Write, and WriteText Methods Example (VB)

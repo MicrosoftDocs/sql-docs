@@ -27,7 +27,7 @@ ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 caps.latest.revision: 19
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.availability_group_listeners (Transact-SQL)

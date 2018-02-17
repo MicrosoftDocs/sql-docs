@@ -22,7 +22,7 @@ ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Refresh Method (RDS)

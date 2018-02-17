@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.assembly_types catalog view"
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.assembly_types (Transact-SQL)

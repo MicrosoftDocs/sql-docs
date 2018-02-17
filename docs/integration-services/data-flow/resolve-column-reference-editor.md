@@ -19,7 +19,7 @@ ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Resolve Column Reference Editor

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Transact-SQL debugger, breakpoint location"
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit a Breakpoint Location

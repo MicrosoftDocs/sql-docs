@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STConvexHull (geometry Data Type)"
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STConvexHull (geometry Data Type)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SQLExecDirect function"
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Batches of Statements

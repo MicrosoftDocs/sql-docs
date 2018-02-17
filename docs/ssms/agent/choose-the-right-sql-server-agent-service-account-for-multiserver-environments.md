@@ -19,7 +19,7 @@ ms.assetid: a07e2f38-281c-495b-965b-13fad03ba548
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Choose the Right SQL Server Agent Service Account for Multiserver Environments

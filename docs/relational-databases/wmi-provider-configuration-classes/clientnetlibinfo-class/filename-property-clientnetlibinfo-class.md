@@ -23,7 +23,7 @@ ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FileName Property (ClientNetLibInfo Class)

@@ -18,7 +18,7 @@ f1_keywords:
 author: "Lingxi-Li"
 ms.author: "lingxl"
 ms.reviewer: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure Data Lake Store File System Task

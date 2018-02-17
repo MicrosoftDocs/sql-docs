@@ -18,7 +18,7 @@ f1_keywords:
   - "sql13.dts.designer.sapbwconnectionmanager.f1"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SAP BW Connection Manager

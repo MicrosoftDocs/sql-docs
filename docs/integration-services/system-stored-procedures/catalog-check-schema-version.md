@@ -16,7 +16,7 @@ ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.check_schema_version

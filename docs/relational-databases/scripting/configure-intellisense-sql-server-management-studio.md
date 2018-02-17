@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], modifying options"
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Configure IntelliSense (SQL Server Management Studio)

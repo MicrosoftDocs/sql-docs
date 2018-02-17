@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STIntersection method"
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIntersection (geography Data Type)

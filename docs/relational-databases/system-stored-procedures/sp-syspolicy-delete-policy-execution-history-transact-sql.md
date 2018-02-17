@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_delete_policy_execution_history"
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_delete_policy_execution_history (Transact-SQL)

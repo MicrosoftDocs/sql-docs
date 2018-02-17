@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Unattended installation of Machine Learning Services (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to use command-line arguments with SQL Server setup to install the machine learning components.
 
@@ -44,7 +45,7 @@ By unattended installation, we mean that you do not use the interactive features
 
 > [!IMPORTANT]
 > 
-> Additional steps are required after setup is finished to enable the feature. These include a reconfiguration and restart of the instance. Be sure to review all items in the section on [post-installation steps] (#bkmk_PostInstall) to determine actions needed after setup completes.
+> Additional steps are required after setup is finished to enable the feature. These include a reconfiguration and restart of the instance. Be sure to review all items in the section on [post-installation steps](#bkmk_PostInstall) to determine actions needed after setup completes.
 
 ## <a name="bkmk_NewInstall"></a>  Command-line installation for SQL Server 2017
 

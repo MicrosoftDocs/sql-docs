@@ -19,7 +19,7 @@ ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.effective_object_permissions (SSISDB Database)

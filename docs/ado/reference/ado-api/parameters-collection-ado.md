@@ -23,7 +23,7 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Parameters Collection (ADO)

@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.p2pwizard.DA.f1"
 ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Distribution Agent Security (Peer-to-Peer Replication)

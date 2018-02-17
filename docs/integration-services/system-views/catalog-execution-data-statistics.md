@@ -16,7 +16,7 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.execution_data_statistics

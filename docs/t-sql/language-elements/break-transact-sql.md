@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "BREAK keyword"
 ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # BREAK (Transact-SQL)

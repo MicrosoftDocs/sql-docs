@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "timing executions"
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # WAITFOR (Transact-SQL)

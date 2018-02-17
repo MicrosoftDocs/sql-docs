@@ -16,7 +16,7 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.cleanup_server_log

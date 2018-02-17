@@ -18,7 +18,7 @@ ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Appendix C: Programming with ADO in Development Environments

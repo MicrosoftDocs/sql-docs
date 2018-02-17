@@ -17,7 +17,7 @@ ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ADO Programmer&#39;s Guide for using ADO Objects

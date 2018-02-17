@@ -23,7 +23,7 @@ ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Properties Collection (ADO)

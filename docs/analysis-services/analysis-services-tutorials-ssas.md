@@ -23,6 +23,7 @@ ms.workload: "Active"
 ---
 # Analysis Services Tutorials (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 This section contains tutorials for SQL Server Analysis Services.  
   
 [Tabular Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  

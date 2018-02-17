@@ -23,7 +23,7 @@ ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ServiceName Property (SqlServiceAdvancedProperty Class)

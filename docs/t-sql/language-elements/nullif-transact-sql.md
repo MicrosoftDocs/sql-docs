@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "equivalent expressions [SQL Server]"
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # NULLIF (Transact-SQL)

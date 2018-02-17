@@ -25,7 +25,7 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stretch Database - sys.dm_db_rda_migration_status

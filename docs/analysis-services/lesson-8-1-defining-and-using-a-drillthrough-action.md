@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 8-1 - Defining and Using a Drillthrough Action
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Dimensioning fact data by a fact dimension without correctly filtering the data that the query returns can cause slow query performance. To avoid this, you can define a drillthrough action that restricts the total number of rows that are returned. This will significantly improve query performance.  
   
 In the tasks in this topic, you define a drillthrough action to return order detail information for sales to customers over the Internet.  

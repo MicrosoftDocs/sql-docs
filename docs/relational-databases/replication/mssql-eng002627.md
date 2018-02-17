@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG002627 error"
 ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG002627

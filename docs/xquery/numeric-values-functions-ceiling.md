@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ceiling function [XQuery]"
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Numeric Values Functions - ceiling 

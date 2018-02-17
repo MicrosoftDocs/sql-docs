@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "ELEMENT directive"
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Specifying the ELEMENT Directive

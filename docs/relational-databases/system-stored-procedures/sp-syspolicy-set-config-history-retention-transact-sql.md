@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_set_config_history_retention"
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_set_config_history_retention (Transact-SQL)

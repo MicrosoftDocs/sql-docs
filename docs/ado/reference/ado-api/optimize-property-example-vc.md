@@ -20,7 +20,7 @@ ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Optimize Property Example (VC++)

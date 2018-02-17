@@ -20,7 +20,7 @@ ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SIGN (SSIS Expression)

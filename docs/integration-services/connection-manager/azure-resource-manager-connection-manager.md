@@ -19,7 +19,7 @@ ms.assetid: 8ce8024f-153f-4066-b607-0d36fefc79ed
 caps.latest.revision: 3
 author: "Lingxi-Li"
 ms.author: "lingxl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure Resource Manager Connection Manager

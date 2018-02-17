@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], initializing subscriptions"
 ms.assetid: d6013845-cb7a-4203-8e21-edce32f1d330
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Initialize a Subscription

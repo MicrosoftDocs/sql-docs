@@ -29,7 +29,7 @@ ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.registered_search_properties (Transact-SQL)

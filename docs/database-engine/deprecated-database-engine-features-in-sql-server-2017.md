@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "deprecation [SQL Server], feature list"
 ms.assetid: 
 caps.latest.revision: 
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Deprecated Database Engine Features in SQL Server 2017

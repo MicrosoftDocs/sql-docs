@@ -18,7 +18,7 @@ ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Comment Dialog Box (Visual Database Tools)

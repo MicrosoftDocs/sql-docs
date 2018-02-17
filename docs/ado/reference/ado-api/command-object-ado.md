@@ -21,7 +21,7 @@ ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Command Object (ADO)

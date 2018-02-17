@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "database restores [SQL Server], point of failure"
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Restore Database to Point of Failure - Full Recovery

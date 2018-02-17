@@ -19,7 +19,7 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Streams and Persistence

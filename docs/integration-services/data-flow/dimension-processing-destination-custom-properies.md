@@ -16,7 +16,7 @@ ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Dimension Processing Destination Custom Properies

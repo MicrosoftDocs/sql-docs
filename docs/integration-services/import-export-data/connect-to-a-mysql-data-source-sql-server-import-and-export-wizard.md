@@ -16,7 +16,7 @@ ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connect to a MySQL Data Source (SQL Server Import and Export Wizard)

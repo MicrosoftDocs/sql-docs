@@ -20,7 +20,7 @@ ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Value Property Example (VB)

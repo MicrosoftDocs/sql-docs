@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysdatabases system table"
 ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.sysdatabases (Transact-SQL)

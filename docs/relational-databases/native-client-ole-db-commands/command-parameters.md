@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "commands [OLE DB]"
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Command Parameters

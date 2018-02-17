@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "negative values"
 ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Unary Operators - Negative

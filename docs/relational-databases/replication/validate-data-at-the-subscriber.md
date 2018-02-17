@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "merge replication data validation [SQL Server replication], SQL Server Management Studio"
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Validate Data at the Subscriber

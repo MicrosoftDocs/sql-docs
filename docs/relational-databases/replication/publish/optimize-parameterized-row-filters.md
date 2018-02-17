@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "parameterized filters [SQL Server replication], optimizing"
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Optimize Parameterized Row Filters

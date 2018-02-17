@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "remote access option"
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Remote Servers

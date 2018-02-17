@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysdevices system table"
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysdevices (Transact-SQL)

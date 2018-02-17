@@ -16,7 +16,7 @@ ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.delete_environment_variable (SSISDB Database)

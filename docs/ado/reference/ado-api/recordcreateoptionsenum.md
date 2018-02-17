@@ -21,7 +21,7 @@ ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RecordCreateOptionsEnum

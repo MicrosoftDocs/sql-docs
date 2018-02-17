@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "srv_rpcoptions"
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # srv_rpcoptions (Extended Stored Procedure API)

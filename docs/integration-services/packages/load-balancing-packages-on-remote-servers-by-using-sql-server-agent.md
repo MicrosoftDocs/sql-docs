@@ -20,7 +20,7 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Load-Balancing Packages on Remote Servers by Using SQL Server Agent

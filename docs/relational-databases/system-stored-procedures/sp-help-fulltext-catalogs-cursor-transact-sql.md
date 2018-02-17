@@ -23,7 +23,7 @@ ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_fulltext_catalogs_cursor (Transact-SQL)

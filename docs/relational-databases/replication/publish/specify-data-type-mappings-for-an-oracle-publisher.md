@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "mapping data types [SQL Server replication]"
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify Data Type Mappings for an Oracle Publisher

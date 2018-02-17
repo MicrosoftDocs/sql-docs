@@ -16,7 +16,7 @@ ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ODBC Destination Custom Properties

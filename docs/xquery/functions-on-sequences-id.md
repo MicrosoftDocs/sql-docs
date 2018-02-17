@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "id function"
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on Sequences - id

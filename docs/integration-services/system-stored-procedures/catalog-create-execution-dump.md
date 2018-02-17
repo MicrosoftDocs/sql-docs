@@ -16,7 +16,7 @@ ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.create_execution_dump

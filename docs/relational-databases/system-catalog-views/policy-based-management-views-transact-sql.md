@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Policy-Based Management, system views"
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Policy-Based Management Views (Transact-SQL)

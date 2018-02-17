@@ -18,7 +18,7 @@ ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Member Object Properties, Methods, and Events

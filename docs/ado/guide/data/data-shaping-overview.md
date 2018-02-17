@@ -18,7 +18,7 @@ ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Shaping Overview

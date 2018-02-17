@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_targetservergroup"
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_targetservergroup (Transact-SQL)

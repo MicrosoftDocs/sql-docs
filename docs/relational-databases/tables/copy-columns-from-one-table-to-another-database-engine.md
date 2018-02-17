@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "columns [SQL Server], copying"
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Copy Columns from One Table to Another (Database Engine)

@@ -23,7 +23,7 @@ ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Defect Multiple Target Servers from a Master Server

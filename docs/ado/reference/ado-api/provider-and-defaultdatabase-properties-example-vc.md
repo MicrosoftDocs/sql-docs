@@ -21,7 +21,7 @@ ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Provider and DefaultDatabase Properties Example (VC++)

@@ -18,7 +18,7 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # General Page of Integration Services Designers Options

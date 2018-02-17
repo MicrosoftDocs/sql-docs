@@ -22,7 +22,7 @@ ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetObjectOwner Method (ADOX)

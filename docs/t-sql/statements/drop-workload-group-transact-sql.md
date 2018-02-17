@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "DROP WORKLOAD GROUP statement"
 ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP WORKLOAD GROUP (Transact-SQL)

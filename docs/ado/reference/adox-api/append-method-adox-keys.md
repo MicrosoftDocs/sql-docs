@@ -22,7 +22,7 @@ ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Append Method (ADOX Keys)

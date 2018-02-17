@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-2 - Connect with Registered Servers and Object Explorer

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.transmission_queue catalog view"
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.transmission_queue (Transact-SQL)

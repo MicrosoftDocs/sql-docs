@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), error messages"
 ms.assetid: edd45234-59dc-4338-94fc-330e820cc248
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table-Valued Parameter Data Conversion and Other Errors and Warnings

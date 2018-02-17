@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "backupfilegroup system table"
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 caps.latest.revision: 53
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # backupfilegroup (Transact-SQL)

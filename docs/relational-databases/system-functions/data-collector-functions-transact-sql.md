@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "data collector [SQL Server], functions"
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Collector Functions  (Transact-SQL)

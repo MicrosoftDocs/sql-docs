@@ -21,7 +21,7 @@ ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DiffGram Examples (SQLXML 4.0)

@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.newsubwizard.updatablesubscriptions.f1"
 ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Updatable Subscriptions

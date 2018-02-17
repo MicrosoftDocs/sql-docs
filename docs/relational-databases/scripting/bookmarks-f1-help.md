@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "SQL Server Management Studio Help [SQL Server], bookmarks"
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Bookmarks F1 Help

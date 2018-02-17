@@ -3,24 +3,24 @@ title: Troubleshoot SQL Server on Linux | Microsoft Docs
 description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
 author: annashres 
 ms.author: anshrest 
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: "On Demand"
 ---
 # Troubleshoot SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, please remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
+This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a> Troubleshoot connection failures
 If you are having difficulty connecting to your Linux SQL Server, there are a few things to check. 
@@ -46,7 +46,7 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
 
 - Verify that the user name and password do not contain any typos or extra spaces or incorrect casing.
 
-- Try to explicitly set the protocol and port number with the server name like the following: **tcp:servername,1433**.
+- Try to explicitly set the protocol and port number with the server name like the following example: **tcp:servername,1433**.
 
 - Network connectivity issues can also cause connection errors and timeouts. After verifying your connection information and network connectivity, try the connection again.
 
@@ -56,7 +56,7 @@ The following sections show how to start, stop, restart, and check the status of
 
 ### Manage the mssql-server service in Red Hat Enterprise Linux (RHEL) and Ubuntu 
 
-Check the status of the status of the SQL Server service using this command:
+Check the status of the SQL Server service using this command:
 
    ```bash
    sudo systemctl status mssql-server
@@ -72,7 +72,7 @@ You can stop, start, or restart the SQL Server service as needed using the follo
 
 ### Manage the execution of the mssql Docker container
 
-You can get the status and container ID of the latest created SQL Server Docker container by running the following command (The ID will be under the “CONTAINER ID” column):
+You can get the status and container ID of the latest created SQL Server Docker container by running the following command (The ID is under the **CONTAINER ID** column):
 
    ```bash
    sudo docker ps -l
@@ -147,7 +147,7 @@ Start SQL Server in Single User Mode with SQLCMD
 > [!WARNING]  
 >  Start SQL Server on Linux with the "mssql" user to prevent future startup issues. Example "sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" 
 
-If you have accidentally started SQL Server with another user, you will need to change ownership of SQL Server database files back to the 'mssql' user prior to starting SQL Server with systemd. For example, to change ownership of all database files under /var/opt/mssql to the 'mssql' user, run the following command
+If you have accidentally started SQL Server with another user, you must change ownership of SQL Server database files back to the 'mssql' user prior to starting SQL Server with systemd. For example, to change ownership of all database files under /var/opt/mssql to the 'mssql' user, run the following command
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -155,9 +155,9 @@ If you have accidentally started SQL Server with another user, you will need to 
 
 ## Common issues
 
-1. You can not connect to your remote SQL Server instance.
+1. You cannot connect to your remote SQL Server instance.
 
-   See the troubleshooting section of the topic, [Connect to SQL Server on Linux](#connection).
+   See the troubleshooting section of the article, [Connect to SQL Server on Linux](#connection).
 
 2. ERROR: Hostname must be 15 characters or less.
 
@@ -165,10 +165,10 @@ If you have accidentally started SQL Server with another user, you will need to 
 
 3. Resetting the system administration (SA) password.
 
-   If you have forgotten the system administrator (SA) password or need to reset it for some other reason please follow these steps.
+   If you have forgotten the system administrator (SA) password or need to reset it for some other reason, follow these steps.
 
    > [!NOTE]
-   > Following these steps will stop the SQL Server service temporarily.
+   > The following steps stop the SQL Server service temporarily.
 
    Log into the host terminal, run the following commands and follow the prompts to reset the SA password:
 
@@ -179,7 +179,7 @@ If you have accidentally started SQL Server with another user, you will need to 
 
 4. Using special characters in password.
 
-   If you use some characters in the SQL Server login password you may need to escape them when using them in the Linux terminal. You will need to escape the $ anytime using the backslash character you are using it in a terminal command/shell script:
+   If you use some characters in the SQL Server login password you may need to escape them when using them in the Linux terminal. You must escape the $ anytime using the backslash character you are using it in a terminal command/shell script:
 
    Does not work:
 
@@ -204,5 +204,5 @@ Support is available through the community and monitored by the engineering team
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Ask database administration questions
 - [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Ask development questions
 - [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Ask technical questions
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): Report bugs and request feature
+- [Submit feedback](https://feedback.azure.com/forums/908035-sql-server): Report bugs and request feature
 - [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server

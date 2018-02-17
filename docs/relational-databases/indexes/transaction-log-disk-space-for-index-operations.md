@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "space [SQL Server], transaction logs"
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transaction Log Disk Space for Index Operations

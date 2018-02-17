@@ -19,7 +19,7 @@ ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InvokeService (RDS)

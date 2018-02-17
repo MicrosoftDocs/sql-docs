@@ -16,7 +16,7 @@ ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
 caps.latest.revision: 2
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Integration Services (SSIS) Catalog Transact-SQL Reference

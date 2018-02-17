@@ -18,7 +18,7 @@ ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Visual Database Tools F1 Help

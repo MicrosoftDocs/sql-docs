@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_log_shipping_primary_secondary"
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_log_shipping_primary_secondary (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 caps.latest.revision: 79
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_fulltext_service (Transact-SQL)

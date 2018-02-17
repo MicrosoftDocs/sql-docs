@@ -15,10 +15,11 @@ ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
 caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Determine which R packages are installed on SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 When you install machine learning in SQL Server with the R language option, an R package library is created specifically for use by the instance. Each instance on the server has its own package library. Package libraries cannot be shared across instances.
 

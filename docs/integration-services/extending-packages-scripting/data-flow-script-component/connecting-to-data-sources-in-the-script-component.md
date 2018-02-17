@@ -20,7 +20,7 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connecting to Data Sources in the Script Component

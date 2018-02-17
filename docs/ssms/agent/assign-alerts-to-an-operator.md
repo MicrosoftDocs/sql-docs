@@ -23,7 +23,7 @@ ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assign Alerts to an Operator

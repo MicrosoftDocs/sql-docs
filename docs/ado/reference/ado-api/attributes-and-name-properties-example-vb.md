@@ -21,7 +21,7 @@ ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Attributes and Name Properties Example (VB)

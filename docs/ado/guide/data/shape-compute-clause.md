@@ -20,7 +20,7 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Shape COMPUTE Clause

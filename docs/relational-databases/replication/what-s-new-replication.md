@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "what's new [SQL Server replication]"
 ms.assetid: 130a760a-4162-4d7d-b266-453eb5759d7a
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # What&#39;s New (Replication)

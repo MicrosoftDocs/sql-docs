@@ -28,7 +28,7 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change an Operator&#39;s Availability

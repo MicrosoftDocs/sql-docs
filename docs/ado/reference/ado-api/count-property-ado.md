@@ -21,7 +21,7 @@ ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Count Property (ADO)

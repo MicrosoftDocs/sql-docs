@@ -16,7 +16,7 @@ ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PowerShell Cmdlet for Migration Evaluation

@@ -21,7 +21,7 @@ ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADCPROP_UPDATERESYNC_ENUM

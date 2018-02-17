@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "bcp_moretext function"
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # bcp_moretext
@@ -58,7 +58,7 @@ RETCODE bcp_moretext (
 ## Remarks  
  This function can be used in conjunction with [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) and [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) to copy long, variable-length data values to SQL Server in a number of smaller chunks. **bcp_moretext** can be used with columns that have the following SQL Server data types: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, user-defined type (UDT), and XML. **bcp_moretext** does not support data conversions, the data supplied must match the data type of the target column.  
   
- If **bcp_bind** is called with a nonNULL *pData* parameter for data types that are supported by **bcp_moretext**, **bcp_sendrow** sends the entire data value, regardless of length. If, however, **bcp_bind** has a NULL *pData* parameter for supported data types, **bcp_moretext** can be used to copy data immediately after a successful return from **bcp_sendrow** indicating that any bound columns with data present have been processed.  
+ If **bcp_bind** is called with a non-NULL *pData* parameter for data types that are supported by **bcp_moretext**, **bcp_sendrow** sends the entire data value, regardless of length. If, however, **bcp_bind** has a NULL *pData* parameter for supported data types, **bcp_moretext** can be used to copy data immediately after a successful return from **bcp_sendrow** indicating that any bound columns with data present have been processed.  
   
  If you use **bcp_moretext** to send one supported data type column in a row, you must also use it to send all other supported data type columns in the row. No columns may be skipped. Supported data types are SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT and SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY and SQLVARBINARY also fall into this category if the column is a varchar(max), nvarchar(max) or varbinary(max), respectively.  
   

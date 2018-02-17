@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "change data capture [SQL Server], functions"
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Change Data Capture Functions (Transact-SQL)

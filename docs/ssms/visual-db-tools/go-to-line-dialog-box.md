@@ -18,7 +18,7 @@ ms.assetid: 779fdb9a-4ede-4784-b9eb-997a6683c26e
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Go To Line Dialog Box

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STIntersects method"
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIntersects (geography Data Type)

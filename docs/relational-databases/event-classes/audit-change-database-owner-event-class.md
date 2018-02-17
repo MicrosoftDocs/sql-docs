@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Change Database Owner event class"
 ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Change Database Owner Event Class

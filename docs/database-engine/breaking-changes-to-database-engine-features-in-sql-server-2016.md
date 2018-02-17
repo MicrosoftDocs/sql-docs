@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "breaking changes [SQL Server]"
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 caps.latest.revision: 144
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Breaking Changes to Database Engine Features in SQL Server 2016

@@ -18,7 +18,7 @@ ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
 caps.latest.revision: 12
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP EXTERNAL TABLE (Transact-SQL)

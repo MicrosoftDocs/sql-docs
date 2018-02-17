@@ -26,7 +26,7 @@ ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DENY XML Schema Collection Permissions (Transact-SQL)

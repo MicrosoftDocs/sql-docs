@@ -18,6 +18,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Getting started with machine learning in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Microsoft provides an integrated, scalable set of machine learning solutions for both on-premises and the cloud:
 

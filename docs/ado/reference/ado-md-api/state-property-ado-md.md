@@ -22,7 +22,7 @@ ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # State Property (ADO MD)

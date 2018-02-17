@@ -16,7 +16,7 @@ ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.delete_environment (SSISDB Database)

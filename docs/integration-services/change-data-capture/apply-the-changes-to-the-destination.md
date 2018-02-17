@@ -18,7 +18,7 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Apply the Changes to the Destination

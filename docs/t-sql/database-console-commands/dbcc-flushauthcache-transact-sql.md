@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DBCC FLUSHAUTHCACHE"
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DBCC FLUSHAUTHCACHE (Transact-SQL)

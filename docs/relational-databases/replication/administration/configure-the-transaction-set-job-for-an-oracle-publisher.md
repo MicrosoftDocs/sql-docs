@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], configuring"
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure the Transaction Set Job for an Oracle Publisher

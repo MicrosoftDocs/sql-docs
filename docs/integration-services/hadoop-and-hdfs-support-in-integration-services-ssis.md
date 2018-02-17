@@ -18,7 +18,7 @@ ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Hadoop and HDFS Support in Integration Services (SSIS)

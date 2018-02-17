@@ -20,7 +20,7 @@ ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Type Property Example (Property) (VC++)

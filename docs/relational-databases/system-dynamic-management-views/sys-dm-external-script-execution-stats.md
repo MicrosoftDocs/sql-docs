@@ -25,7 +25,7 @@ ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 caps.latest.revision: 5
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_external_script_execution_stats

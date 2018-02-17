@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STAsBinary method"
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STAsBinary (geography Data Type)

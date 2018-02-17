@@ -25,7 +25,7 @@ ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 caps.latest.revision: 15
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database)

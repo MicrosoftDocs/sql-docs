@@ -18,7 +18,7 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Types of Cursors (ADO)

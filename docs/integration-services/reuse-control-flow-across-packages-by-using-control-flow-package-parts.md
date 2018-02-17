@@ -21,7 +21,7 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Reuse Control Flow across Packages by Using Control Flow Package Parts

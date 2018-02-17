@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.routes catalog view"
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.routes (Transact-SQL)

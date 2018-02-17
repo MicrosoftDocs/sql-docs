@@ -22,7 +22,7 @@ ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # BOF, EOF, and Bookmark Properties Example (VB)

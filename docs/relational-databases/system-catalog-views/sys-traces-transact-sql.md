@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.traces catalog view"
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.traces (Transact-SQL)

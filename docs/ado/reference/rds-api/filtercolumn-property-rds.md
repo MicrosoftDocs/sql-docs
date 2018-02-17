@@ -19,7 +19,7 @@ ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FilterColumn Property (RDS)

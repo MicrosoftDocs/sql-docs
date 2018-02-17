@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Analysis Services Features Supported by the Editions of SQL Server 2016
+# Analysis Services features supported by SQL Server editions
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 This topic provides details of features supported by the different editions of SQL Server 2016 Analysis Services. For features supported by Evaluation and Developer editions, see Enterprise edition.
@@ -120,6 +120,6 @@ This topic provides details of features supported by the different editions of S
   
  ## See also  
  [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Installation for SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

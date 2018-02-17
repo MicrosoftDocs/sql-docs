@@ -16,7 +16,7 @@ ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Install Distributed Replay - Overview

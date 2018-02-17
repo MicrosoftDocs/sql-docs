@@ -16,7 +16,7 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # catalog.create_execution (SSISDB Database)
@@ -61,9 +61,9 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] *useanyworker*  
 Indicate whether any Scale Out Worker is allowed to do the execution.
 
--   Use the value of 1 to execute the package with any Scale Out Worker. When you set `@useanyworker` to true, any worker whose maximum task count (as specified in the worker configuration file) is not yet reached is available to run the package.
+-   Use the value of 1 to execute the package with any Scale Out Worker. When you set `@useanyworker` to true, any worker whose maximum task count (as specified in the worker configuration file) is not yet reached is available to run the package. For info about the worker configuration file, see [Integration Services (SSIS) Scale Out Worker](../scale-out/integration-services-ssis-scale-out-worker.md).
 
--   Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. When you set `@useanyworker` to false, you have to specify the workers that are allowed to run the package by using Scale Out Manager or by calling the stored procedure `[catalog].[add_execution_worker]`.
+-   Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. When you set `@useanyworker` to false, you have to specify the workers that are allowed to run the package by using Scale Out Manager or by calling the stored procedure `[catalog].[add_execution_worker]`. If you specify a worker that's already running another package, the worker finishes running the current package before it requests another execution.
 
 This parameter is optional. If not specified, its value is set to 1. The *useanyworker* is **bit**. 
   

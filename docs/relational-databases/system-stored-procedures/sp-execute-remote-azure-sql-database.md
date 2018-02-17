@@ -22,7 +22,7 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 caps.latest.revision: 17
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_execute_remote (Azure SQL Database)

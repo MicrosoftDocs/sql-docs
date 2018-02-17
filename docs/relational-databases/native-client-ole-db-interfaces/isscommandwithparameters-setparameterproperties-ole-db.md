@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SetParameterProperties method"
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ISSCommandWithParameters::SetParameterProperties (OLE DB)

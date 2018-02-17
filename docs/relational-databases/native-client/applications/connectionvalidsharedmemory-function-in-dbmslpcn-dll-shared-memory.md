@@ -16,7 +16,7 @@ ms.assetid: 6ae35826-7d75-4542-b686-5f79316b6157
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory

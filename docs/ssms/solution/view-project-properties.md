@@ -19,7 +19,7 @@ ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Project Properties

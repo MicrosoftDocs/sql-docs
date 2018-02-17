@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "syscollector_execution_log_full view"
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syscollector_execution_log_full (Transact-SQL)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "publications [SQL Server replication], backward compatibility"
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set the Compatibility Level for Merge Publications

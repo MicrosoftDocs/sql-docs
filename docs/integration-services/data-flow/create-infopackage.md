@@ -16,7 +16,7 @@ ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create InfoPackage

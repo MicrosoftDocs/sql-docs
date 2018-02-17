@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "snapshots.fn_trace_getdata function"
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # snapshots.fn_trace_getdata (Transact-SQL)

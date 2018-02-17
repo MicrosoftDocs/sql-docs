@@ -16,7 +16,7 @@ ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.delete_folder (SSISDB Database)

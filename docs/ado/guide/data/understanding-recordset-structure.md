@@ -18,7 +18,7 @@ ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Understanding Recordset Structure

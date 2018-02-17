@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_enum_login_for_proxy"
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_enum_login_for_proxy (Transact-SQL)

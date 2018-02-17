@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.newsubwizard.agentnameagentsecurity.f1"
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # &lt;AgentName&gt; Agent Security

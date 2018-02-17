@@ -21,7 +21,7 @@ ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Annotated XDR Schemas (Deprecated in SQLXML 4.0)

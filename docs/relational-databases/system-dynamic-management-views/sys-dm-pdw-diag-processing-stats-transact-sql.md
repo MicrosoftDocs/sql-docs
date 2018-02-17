@@ -18,7 +18,7 @@ ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_diag_processing_stats (Transact-SQL)

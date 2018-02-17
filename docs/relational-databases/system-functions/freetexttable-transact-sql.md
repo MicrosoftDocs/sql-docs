@@ -27,7 +27,7 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # FREETEXTTABLE (Transact-SQL)

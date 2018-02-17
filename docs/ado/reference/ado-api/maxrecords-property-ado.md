@@ -21,7 +21,7 @@ ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MaxRecords Property (ADO)

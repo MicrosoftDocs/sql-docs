@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:sum function"
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Aggregate Functions - sum

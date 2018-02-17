@@ -18,7 +18,7 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_nodes_indexes (Transact-SQL)

@@ -19,7 +19,7 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Customization File SQL Section

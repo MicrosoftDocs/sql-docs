@@ -18,7 +18,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "allanhirt"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Domain Independent Availability Groups
@@ -82,63 +82,81 @@ Creating a Domain Independent Availability Group cannot currently be achieved co
 1. [Using the instructions at this link](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), deploy a Workgroup Cluster composed of all servers that will participate in the availability group. Ensure that the common DNS suffix is already configured before configuring the Workgroup Cluster.
 2. [Enable the Always On Availability Groups feature](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) on each instance that will be participating in the availability group. This will require a restart of each SQL Server instance.
 3. Each instance that will host the primary replica requires a database master key. If a master key does not exist already, run the following command:
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. On the instance that will be the primary replica, create the certificate that will be used both for inbound connections on the secondary replicas and for securing the endpoint on the primary replica.
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. Back up the certificate. You can also secure it further with a private key if desired. This example does not use a private key.
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. Repeat Steps 4 and 5 to create and back up certificates for each secondary replica, using appropriate names for the certificates, such as InstanceB_Cert.
 7. On the primary replica, you must create a login for each secondary replica of the availability group. This login will be granted permissions to connect to the endpoint used by the Domain Independent Availability Group. For example, for a replica named InstanceB:
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. On each secondary replica, create a login for the primary replica. This login will be granted permissions to connect to the endpoint. For example, on a replica named InstanceB:
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. On all instances, create a user for each login that was created. This will be used when restoring the certificates. For example, to create a user for the primary replica:
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. For any replica that may be a primary, create a login and user on all relevant secondary replicas.
 11. On each instance, restore the certificates for the other instances that had a login and user created. On the primary replica, restore all secondary replica certificates. On each secondary, restore the certificate of the primary replica, and also on any other replica that could be a primary. For example:
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. Create the endpoint that will be used by the availability group on each instance that will be a replica. For availability groups, the endpoint must have a type of DATABASE_MIRRORING. The endpoint uses the certificate created in Step 4 for that instance for authentication. Example syntax is shown below to create an endpoint using a certificate. Use the appropriate encryption method and other options relevant to your environment. For more information on the options available see [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
 	LISTENER_PORT = 5022,
 	LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
 	AUTHENTICATION = CERTIFICATE InstanceX_Cert,
 	ROLE = ALL
-)
-```
+         )
+   ```
+
 13. Assign rights to each user created on that instance in Step 9 to be able to connect to the endpoint. 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. Once the underlying certificates and endpoint security are configured, create the availability group using your preferred method. It is recommended to manually back up, copy, and restore the backup used to initialize the secondary, or use [automatic seeding](automatically-initialize-always-on-availability-group.md). Using the Wizard to initialize the secondary replicas involves the use of Server Message Block (SMB) files, which may not work when using a non-domain-joined Workgroup Cluster.
 15. If creating a listener, make sure that both its name and its IP address are registered in DNS.
 

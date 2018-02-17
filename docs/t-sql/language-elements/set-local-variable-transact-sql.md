@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "local variables [SQL Server]"
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SET @local_variable (Transact-SQL)

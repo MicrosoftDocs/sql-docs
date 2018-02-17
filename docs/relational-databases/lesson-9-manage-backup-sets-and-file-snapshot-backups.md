@@ -18,7 +18,7 @@ ms.assetid: 766a0846-db15-4346-b814-4049039bcbfc
 caps.latest.revision: 10
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 9: Manage backup sets and file-snapshot backups

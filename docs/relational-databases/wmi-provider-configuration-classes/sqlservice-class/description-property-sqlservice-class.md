@@ -23,7 +23,7 @@ ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Description Property (SqlService Class)

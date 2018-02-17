@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Server Starts and Stops event class"
 ms.assetid: 8ddb55af-c77b-4d07-b803-a97320c0804e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Server Starts and Stops Event Class

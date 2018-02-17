@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/22/2017"
+ms.date: "02/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -24,6 +24,30 @@ ms.workload: "Active"
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+## SSDT for Visual Studio 2017 (15.5.2)
+Build number: 14.0.16156.0
+  
+### What's New?
+
+**SSIS**
+1.	Fix an issue that migrating SSIS 2008 projects will fail when both SSAS and SSIS are installed to same VS 2017 instance.
+2.	Fix an issue that Rdlc projects cannot be built when both Rdlc report designer and SSIS are installed to same VS 2017 instance.
+3.	Fix an issue that the annotation color can't update.
+4.	Fix an issue that some strings in Hadoop connection manager editor are truncated in other languages.
+5.	Fix an issue that some strings are truncated in OData connection manager editor.
+6.	Fix an issue that some strings are truncated in Integration Services import project wizard window.
+7.	Fix an issue that the title in SSIS tool box information window.
+8.	Fix an issue that some strings are truncated in Integration Services Deployment Wizard window. 
+
+**Installer**
+- Fix an issue that sometimes downloading payload will fail with error "The system cannot find the file specified (0x80070002)"  
+
+### Known issues
+- SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+
 
 ## SSDT for Visual Studio 2017 (15.5.1)
 Build number: 14.0.16148.0
@@ -249,7 +273,6 @@ This preview is the first version of SSDT for Visual Studio 2017. This release i
 - SSIS is not localized.
 - SSIS Execute Package Task doesn't support debugging when *ExecuteOutofProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 - For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
-- Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
 - SSIS Packages containing 3rd party extensions cannot be switched to target other server versions.
 
 

@@ -19,7 +19,7 @@ ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect Property (RDS)

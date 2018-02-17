@@ -20,7 +20,7 @@ ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AddNew Method Example (JScript)

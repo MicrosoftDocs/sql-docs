@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "UCP"
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a SQL Server Utility Control Point (SQL Server Utility)

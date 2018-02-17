@@ -39,7 +39,7 @@ ms.workload: "On Demand"
   
      ![Live Query Stats button on toolbar](../../relational-databases/performance/media/livequerystatstoolbar.png "Live Query Stats button on toolbar")  
   
-     You can also view access the live query execution plan by right clicking on a selected query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and then click **Include Live Query Statistics**.  
+     You can also view access the live query execution plan by right-clicking on a selected query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and then click **Include Live Query Statistics**.  
   
      ![Live Query Stats button on popup menu](../../relational-databases/performance/media/livequerystatsmenu.png "Live Query Stats button on popup menu")  
   
@@ -54,13 +54,13 @@ ms.workload: "On Demand"
 ## Remarks  
  The statistics profile infrastructure must be enabled before live query statistics can capture information about the progress of queries. Specifying **Include Live Query Statistics** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] enables the statistics infrastructure for the current query session. 
  
-Until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there are two other ways to enable the statistics infrastructure which can be used to view the live query statistics from other sessions (such as from Activity Monitor):  
+Until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there are two other ways to enable the statistics infrastructure, which can be used to view the live query statistics from other sessions (such as from Activity Monitor):  
   
 -   Execute `SET STATISTICS XML ON;` or `SET STATISTICS PROFILE ON;` in the target session.  
   
  or  
   
--   Enable the **query_post_execution_showplan** extended event. This is a server wide setting that enable live query statistics on all sessions. To enable extended events, see [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+-   Enable the **query_post_execution_showplan** extended event. This is a server-wide setting that enables live query statistics on all sessions. To enable extended events, see [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
 
 Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a lightweight version of the statistics profile infrastructure. There are two ways to enable the lightweight statistics infrastructure which can be used to view the live query statistics from other sessions (such as from Activity Monitor):
 

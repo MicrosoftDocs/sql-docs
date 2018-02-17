@@ -76,7 +76,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 | PHP | [Eloquent ORM, included in Laravel install](http://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
+| Ruby | [Ruby on Rails](http://rubyonrails.org/)<br />[Sequel: The Database Toolkit for Ruby](http://sequel.jeremyevans.net/) |
 | &nbsp; | <br /> |
 
 

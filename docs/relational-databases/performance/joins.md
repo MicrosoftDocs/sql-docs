@@ -34,7 +34,7 @@ ms.workload: "On Demand"
 -   Merge joins   
 -   Hash joins   
 
-## <a name="join_fundamentals"></a> Join Fundamentals
+## <a name="fundamentals"></a> Join Fundamentals
 By using joins, you can retrieve data from two or more tables based on logical relationships between the tables. Joins indicate how Microsoft SQL Server should use data from one table to select the rows in another table.    
 
 A join condition defines the way two tables are related in a query by:    

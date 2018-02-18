@@ -1641,7 +1641,7 @@ DBCC USEROPTIONS;
 GO  
 ```  
   
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]  
   
 ```
 Set Option                   Value  

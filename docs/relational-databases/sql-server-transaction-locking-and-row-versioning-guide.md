@@ -1695,9 +1695,9 @@ ROLLBACK;
 GO  
 ```  
   
- The only lock taken that references `HumanResources.Employee` is a schema stability (Sch-S) lock. In this case, serializability is no longer guaranteed.  
+ The only lock taken that references *HumanResources.Employee* is a schema stability (Sch-S) lock. In this case, serializability is no longer guaranteed.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the LOCK_ESCALATION option of ALTER TABLE can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can but used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the `LOCK_ESCALATION` option of `ALTER TABLE` can disfavor table locks, and enable HoBT locks on partitioned tables. This option is not a locking hint, but can but used to reduce lock escalation. For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Customize"></a> Customizing Locking for an Index  
  The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a dynamic locking strategy that automatically chooses the best locking granularity for queries in most cases. We recommend that you do not override the default locking levels, which have page and row locking on, unless table or index access patterns are well understood and consistent, and there is a resource contention problem to solve. Overriding a locking level can significantly impede concurrent access to a table or index. For example, specifying only table-level locks on a large table that users access heavily can cause bottlenecks because users must wait for the table-level lock to be released before accessing the table.  
@@ -1708,7 +1708,7 @@ GO
   
  Occasionally a deadlock occurs when two concurrent operations acquire row locks on the same table and then block because they both need to lock the page. Disallowing row locks forces one of the operations to wait, avoiding the deadlock.  
   
- The granularity of locking used on an index can be set using the CREATE INDEX and ALTER INDEX statements. The lock settings apply to both the index pages and the table pages. In addition, the CREATE TABLE and ALTER TABLE statements can be used to set locking granularity on PRIMARY KEY and UNIQUE constraints. For backwards compatibility, the **sp_indexoption** system stored procedure can also set the granularity. To display the current locking option for a given index, use the INDEXPROPERTY function. Page-level locks, row-level locks, or a combination of page-level and row-level locks can be disallowed for a given index.  
+ The granularity of locking used on an index can be set using the `CREATE INDEX` and `ALTER INDEX` statements. The lock settings apply to both the index pages and the table pages. In addition, the `CREATE TABLE` and `ALTER TABLE` statements can be used to set locking granularity on `PRIMARY KEY` and `UNIQUE` constraints. For backwards compatibility, the `sp_indexoption` system stored procedure can also set the granularity. To display the current locking option for a given index, use the `INDEXPROPERTY` function. Page-level locks, row-level locks, or a combination of page-level and row-level locks can be disallowed for a given index.  
   
 |Disallowed locks|Index accessed by|  
 |----------------------|-----------------------|  
@@ -1721,7 +1721,7 @@ GO
 ### Nesting Transactions  
  Explicit transactions can be nested. This is primarily intended to support transactions in stored procedures that can be called either from a process already in a transaction or from processes that have no active transaction.  
   
- The following example shows the intended use of nested transactions. The procedure `TransProc` enforces its transaction regardless of the transaction mode of any process that executes it. If `TransProc` is called when a transaction is active, the nested transaction in `TransProc` is largely ignored, and its INSERT statements are committed or rolled back based on the final action taken for the outer transaction. If `TransProc` is executed by a process that does not have an outstanding transaction, the COMMIT TRANSACTION at the end of the procedure effectively commits the INSERT statements.  
+ The following example shows the intended use of nested transactions. The procedure *TransProc* enforces its transaction regardless of the transaction mode of any process that executes it. If *TransProc* is called when a transaction is active, the nested transaction in *TransProc* is largely ignored, and its `INSERT` statements are committed or rolled back based on the final action taken for the outer transaction. If `TransProc` is executed by a process that does not have an outstanding transaction, the `COMMIT TRANSACTION` at the end of the procedure effectively commits the `INSERT` statements.  
   
 ```sql  
 SET QUOTED_IDENTIFIER OFF;  
@@ -1758,19 +1758,19 @@ GO
   
  Committing inner transactions is ignored by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. The transaction is either committed or rolled back based on the action taken at the end of the outermost transaction. If the outer transaction is committed, the inner nested transactions are also committed. If the outer transaction is rolled back, then all inner transactions are also rolled back, regardless of whether or not the inner transactions were individually committed.  
   
- Each call to COMMIT TRANSACTION or COMMIT WORK applies to the last executed BEGIN TRANSACTION. If the BEGIN TRANSACTION statements are nested, then a COMMIT statement applies only to the last nested transaction, which is the innermost transaction. Even if a COMMIT TRANSACTION *transaction_name* statement within a nested transaction refers to the transaction name of the outer transaction, the commit applies only to the innermost transaction.  
+ Each call to `COMMIT TRANSACTION` or `COMMIT WORK` applies to the last executed `BEGIN TRANSACTION`. If the `BEGIN TRANSACTION` statements are nested, then a `COMMIT` statement applies only to the last nested transaction, which is the innermost transaction. Even if a `COMMIT TRANSACTION` *transaction_name* statement within a nested transaction refers to the transaction name of the outer transaction, the commit applies only to the innermost transaction.  
   
- It is not legal for the *transaction_name* parameter of a ROLLBACK TRANSACTION statement to refer to the inner transactions of a set of named nested transactions. *transaction_name* can refer only to the transaction name of the outermost transaction. If a ROLLBACK TRANSACTION *transaction_name* statement using the name of the outer transaction is executed at any level of a set of nested transactions, all of the nested transactions are rolled back. If a ROLLBACK WORK or ROLLBACK TRANSACTION statement without a *transaction_name* parameter is executed at any level of a set of nested transaction, it rolls back all of the nested transactions, including the outermost transaction.  
+ It is not legal for the *transaction_name* parameter of a `ROLLBACK TRANSACTION` statement to refer to the inner transactions of a set of named nested transactions. *transaction_name* can refer only to the transaction name of the outermost transaction. If a ROLLBACK TRANSACTION *transaction_name* statement using the name of the outer transaction is executed at any level of a set of nested transactions, all of the nested transactions are rolled back. If a `ROLLBACK WORK` or `ROLLBACK TRANSACTION` statement without a *transaction_name* parameter is executed at any level of a set of nested transaction, it rolls back all of the nested transactions, including the outermost transaction.  
   
- The @@TRANCOUNT function records the current transaction nesting level. Each BEGIN TRANSACTION statement increments @@TRANCOUNT by one. Each COMMIT TRANSACTION or COMMIT WORK statement decrements @@TRANCOUNT by one. A ROLLBACK WORK or a ROLLBACK TRANSACTION statement that does not have a transaction name rolls back all nested transactions and decrements @@TRANCOUNT to 0. A ROLLBACK TRANSACTION that uses the transaction name of the outermost transaction in a set of nested transactions rolls back all of the nested transactions and decrements @@TRANCOUNT to 0. When you are unsure if you are already in a transaction, SELECT @@TRANCOUNT to determine if it is 1 or more. If @@TRANCOUNT is 0, you are not in a transaction.  
+ The `@@TRANCOUNT` function records the current transaction nesting level. Each `BEGIN TRANSACTION` statement increments `@@TRANCOUNT` by one. Each `COMMIT TRANSACTION` or `COMMIT WORK` statement decrements `@@TRANCOUNT` by one. A `ROLLBACK WORK` or a `ROLLBACK TRANSACTION` statement that does not have a transaction name rolls back all nested transactions and decrements `@@TRANCOUNT` to 0. A `ROLLBACK TRANSACTION` that uses the transaction name of the outermost transaction in a set of nested transactions rolls back all of the nested transactions and decrements `@@TRANCOUNT` to 0. When you are unsure if you are already in a transaction, `SELECT @@TRANCOUNT` to determine if it is 1 or more. If `@@TRANCOUNT` is 0, you are not in a transaction.  
   
 ### Using Bound Sessions  
  Bound sessions ease the coordination of actions across multiple sessions on the same server. Bound sessions allow two or more sessions to share the same transaction and locks, and can work on the same data without lock conflicts. Bound sessions can be created from multiple sessions within the same application or from multiple applications with separate sessions.  
   
- To participate in a bound session, a session calls **sp_getbindtoken** or **srv_getbindtoken** (through Open Data Services) to get a bind token. A bind token is a character string that uniquely identifies each bound transaction. The bind token is then sent to the other sessions to be bound with the current session. The other sessions bind to the transaction by calling **sp_bindsession**, using the bind token received from the first session.  
+ To participate in a bound session, a session calls `sp_getbindtoken` or `srv_getbindtoken` (through Open Data Services) to get a bind token. A bind token is a character string that uniquely identifies each bound transaction. The bind token is then sent to the other sessions to be bound with the current session. The other sessions bind to the transaction by calling **sp_bindsession**, using the bind token received from the first session.  
   
 > [!NOTE]  
-> A session must have an active user transaction in order for **sp_getbindtoken** or **srv_getbindtoken** to succeed.  
+> A session must have an active user transaction in order for `sp_getbindtoken` or `srv_getbindtoken` to succeed.  
   
  Bind tokens must be transmitted from the application code that makes the first session to the application code that subsequently binds their sessions to the first session. There is no [!INCLUDE[tsql](../includes/tsql-md.md)] statement or API function that an application can use to get the bind token for a transaction started by another process. Some of the methods that can be used to transmit a bind token include the following:  
   
@@ -1787,40 +1787,35 @@ GO
 #### Types of Bound Sessions  
  The two types of bound sessions are local and distributed.  
   
--   Local bound session  
+-   **Local bound session**  
+    Allows bound sessions to share the transaction space of a single transaction in a single instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
-     Allows bound sessions to share the transaction space of a single transaction in a single instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
+-   **Distributed bound session**  
+    Allows bound sessions to share the same transaction across two or more instances until the entire transaction is either committed or rolled back by using [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
   
--   Distributed bound session  
-  
-     Allows bound sessions to share the same transaction across two or more instances until the entire transaction is either committed or rolled back by using [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
-  
- Distributed bound sessions are not identified by a character string bind token; they are identified by distributed transaction identification numbers. If a bound session is involved in a local transaction and executes an RPC on a remote server with SET REMOTE_PROC_TRANSACTIONS ON, the local bound transaction is automatically promoted to a distributed bound transaction by MS DTC and an MS DTC session is started.  
+ Distributed bound sessions are not identified by a character string bind token; they are identified by distributed transaction identification numbers. If a bound session is involved in a local transaction and executes an RPC on a remote server with `SET REMOTE_PROC_TRANSACTIONS ON`, the local bound transaction is automatically promoted to a distributed bound transaction by MS DTC and an MS DTC session is started.  
   
 #### When to Use Bound Sessions  
  In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], bound sessions were primarily used in developing extended stored procedures that must execute [!INCLUDE[tsql](../includes/tsql-md.md)] statements on behalf of the process that calls them. Having the calling process pass in a bind token as one parameter of the extended stored procedure allows the procedure to join the transaction space of the calling process, thereby integrating the extended stored procedure with the calling process.  
   
- In the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], stored procedures written using CLR are more secure, scalable, and stable than extended stored procedures. CLR-stored procedures use the **SqlContext** object to join the context of the calling session, not **sp_bindsession**.  
+ In the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], stored procedures written using CLR are more secure, scalable, and stable than extended stored procedures. CLR-stored procedures use the **SqlContext** object to join the context of the calling session, not `sp_bindsession`.  
   
  Bound sessions can be used to develop three-tier applications in which business logic is incorporated into separate programs that work cooperatively on a single business transaction. These programs must be coded to carefully coordinate their access to a database. Because the two sessions share the same locks, the two programs must not try to modify the same data at the same time. At any point in time, only one session can be doing work as part of the transaction; there can be no parallel execution. The transaction can only be switched between sessions at well-defined yield points, such as when all DML statements have completed and their results have been retrieved.  
   
 ### Coding Efficient Transactions  
- It is important to keep transactions as short as possible. When a transaction is started, a database management system (DBMS) must hold many resources until the end of the transaction to protect the atomicity, consistency, isolation, and durability (ACID) properties of the transaction. If data is modified, the modified rows must be protected with exclusive locks that prevent any other transaction from reading the rows, and exclusive locks must be held until the transaction is committed or rolled back. Depending on transaction isolation level settings, SELECT statements may acquire locks that must be held until the transaction is committed or rolled back. Especially in systems with many users, transactions must be kept as short as possible to reduce locking contention for resources between concurrent connections. Long-running, inefficient transactions may not be a problem with small numbers of users, but they are intolerable in a system with thousands of users. Beginning with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports delayed durable transactions. Delayed durable transactions do not guarantee durability. See the topic [Transaction Durability](../relational-databases/logs/control-transaction-durability.md) for more information.  
+ It is important to keep transactions as short as possible. When a transaction is started, a database management system (DBMS) must hold many resources until the end of the transaction to protect the atomicity, consistency, isolation, and durability (ACID) properties of the transaction. If data is modified, the modified rows must be protected with exclusive locks that prevent any other transaction from reading the rows, and exclusive locks must be held until the transaction is committed or rolled back. Depending on transaction isolation level settings, `SELECT` statements may acquire locks that must be held until the transaction is committed or rolled back. Especially in systems with many users, transactions must be kept as short as possible to reduce locking contention for resources between concurrent connections. Long-running, inefficient transactions may not be a problem with small numbers of users, but they are intolerable in a system with thousands of users. Beginning with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports delayed durable transactions. Delayed durable transactions do not guarantee durability. See the topic [Transaction Durability](../relational-databases/logs/control-transaction-durability.md) for more information.  
   
 #### Coding Guidelines  
  These are guidelines for coding efficient transactions:  
   
 -   Do not require input from users during a transaction.  
-  
-     Get all required input from users before a transaction is started. If additional user input is required during a transaction, roll back the current transaction and restart the transaction after the user input is supplied. Even if users respond immediately, human reaction times are vastly slower than computer speeds. All resources held by the transaction are held for an extremely long time, which has the potential to cause blocking problems. If users do not respond, the transaction remains active, locking critical resources until they respond, which may not happen for several minutes or even hours.  
+    Get all required input from users before a transaction is started. If additional user input is required during a transaction, roll back the current transaction and restart the transaction after the user input is supplied. Even if users respond immediately, human reaction times are vastly slower than computer speeds. All resources held by the transaction are held for an extremely long time, which has the potential to cause blocking problems. If users do not respond, the transaction remains active, locking critical resources until they respond, which may not happen for several minutes or even hours.  
   
 -   Do not open a transaction while browsing through data, if at all possible.  
-  
-     Transactions should not be started until all preliminary data analysis has been completed.  
+    Transactions should not be started until all preliminary data analysis has been completed.  
   
 -   Keep the transaction as short as possible.  
-  
-     After you know the modifications that have to be made, start a transaction, execute the modification statements, and then immediately commit or roll back. Do not open the transaction before it is required.  
+    After you know the modifications that have to be made, start a transaction, execute the modification statements, and then immediately commit or roll back. Do not open the transaction before it is required.  
   
 -   To reduce blocking, consider using a row versioning-based isolation level for read-only queries.  
   
@@ -1829,15 +1824,13 @@ GO
      Many applications can be readily coded to use a read-committed transaction isolation level. Not all transactions require the serializable transaction isolation level.  
   
 -   Make intelligent use of lower cursor concurrency options, such as optimistic concurrency options.  
-  
-     In a system with a low probability of concurrent updates, the overhead of dealing with an occasional "somebody else changed your data after you read it" error can be much lower than the overhead of always locking rows as they are read.  
+    In a system with a low probability of concurrent updates, the overhead of dealing with an occasional "somebody else changed your data after you read it" error can be much lower than the overhead of always locking rows as they are read.  
   
 -   Access the least amount of data possible while in a transaction.  
-  
-     This lessens the number of locked rows, thereby reducing contention between transactions.  
+    This lessens the number of locked rows, thereby reducing contention between transactions.  
   
 #### Avoiding Concurrency and Resource Problems  
- To prevent concurrency and resource problems, manage implicit transactions carefully. When using implicit transactions, the next [!INCLUDE[tsql](../includes/tsql-md.md)] statement after COMMIT or ROLLBACK automatically starts a new transaction. This can cause a new transaction to be opened while the application browses through data, or even when it requires input from the user. After completing the last transaction required to protect data modifications, turn off implicit transactions until a transaction is once again required to protect data modifications. This process lets the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] use autocommit mode while the application is browsing data and getting input from the user.  
+ To prevent concurrency and resource problems, manage implicit transactions carefully. When using implicit transactions, the next [!INCLUDE[tsql](../includes/tsql-md.md)] statement after `COMMIT` or `ROLLBACK` automatically starts a new transaction. This can cause a new transaction to be opened while the application browses through data, or even when it requires input from the user. After completing the last transaction required to protect data modifications, turn off implicit transactions until a transaction is once again required to protect data modifications. This process lets the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] use autocommit mode while the application is browsing data and getting input from the user.  
   
  In addition, when the snapshot isolation level is enabled, although a new transaction will not hold locks, a long-running transaction will prevent the old versions from being removed from `tempdb`.  
   
@@ -1846,7 +1839,7 @@ GO
   
  A long running transaction can cause serious problems for a database, as follows:  
   
--   If a server instance is shut down after an active transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified by the **recovery interval** server configuration option or by the ALTER DATABASE… SET TARGET_RECOVERY_TIME option. These options control the frequency of active and indirect checkpoints, respectively. For more information about the types of checkpoints, see [Database Checkpoints &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+-   If a server instance is shut down after an active transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified by the **recovery interval** server configuration option or by the `ALTER DATABASE … SET TARGET_RECOVERY_TIME` option. These options control the frequency of active and indirect checkpoints, respectively. For more information about the types of checkpoints, see [Database Checkpoints &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 -   More importantly, although a waiting transaction might generate very little log, it holds up log truncation indefinitely, causing the transaction log to grow and possibly fill up. If the transaction log fills up, the database cannot perform any more updates. For more information, see [SQL Server Transaction Log Architecture and Management Guide](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md), [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md), and [The Transaction Log &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
   
@@ -1855,13 +1848,13 @@ GO
   
 -   **sys.dm_tran_database_transactions**  
   
-     This dynamic management view returns information about transactions at the database level. For a long-running transaction, columns of particular interest include the time of the first log record (**database_transaction_begin_time**), the current state of the transaction (**database_transaction_state**), and the log sequence number (LSN) of the begin record in the transaction log (**database_transaction_begin_lsn**).  
+    This dynamic management view returns information about transactions at the database level. For a long-running transaction, columns of particular interest include the time of the first log record (**database_transaction_begin_time**), the current state of the transaction (**database_transaction_state**), and the log sequence number (LSN) of the begin record in the transaction log (**database_transaction_begin_lsn**).  
   
-     For more information, see [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).  
+    For more information, see [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).  
   
 -   DBCC OPENTRAN  
   
-     This statement lets you identify the user ID of the owner of the transaction, so you can potentially track down the source of the transaction for a more orderly termination (committing it rather than rolling it back). For more information, see [DBCC OPENTRAN &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).  
+    This statement lets you identify the user ID of the owner of the transaction, so you can potentially track down the source of the transaction for a more orderly termination (committing it rather than rolling it back). For more information, see [DBCC OPENTRAN &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).  
   
 #### Stopping a Transaction  
  You may have to use the KILL statement. Use this statement very carefully, however, especially when critical processes are running. For more information, see [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  

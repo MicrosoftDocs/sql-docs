@@ -56,6 +56,7 @@ WHERE ListPrice =
     (SELECT ListPrice
      FROM Production.Product
      WHERE Name = 'Chainring Bolts' );
+GO
 
 /* SELECT statement built using a join that returns
    the same result set. */
@@ -64,6 +65,7 @@ FROM Production.Product AS Prd1
      JOIN Production.Product AS Prd2
        ON (Prd1.ListPrice = Prd2.ListPrice)
 WHERE Prd2. Name = 'Chainring Bolts';
+GO
 ```
 
 A subquery nested in the outer SELECT statement has the following components:    
@@ -101,10 +103,10 @@ A subquery is subject to the following restrictions:
 -   The `COMPUTE` and `INTO` clauses cannot be specified.   
 -   `ORDER BY` can only be specified when `TOP` is also specified.   
 -   A view created by using a subquery cannot be updated.   
--   The select list of a subquery introduced with `EXISTS`, by convention, has an asterisk (*) instead of a single column name. The rules for a subquery introduced with `EXISTS` are the same as those for a standard select list, because a subquery introduced with `EXISTS` creates an existence test and returns TRUE or FALSE, instead of data.   
+-   The select list of a subquery introduced with `EXISTS`, by convention, has an asterisk (\*) instead of a single column name. The rules for a subquery introduced with `EXISTS` are the same as those for a standard select list, because a subquery introduced with `EXISTS` creates an existence test and returns TRUE or FALSE, instead of data.   
 
 ## <a name="qualifying"></a> Qualifying column names in subqueries
-In the following example, the *CustomerID* column in the `WHERE` clause of the outer query is implicitly qualified by the table name in the outer query's `FROM` clause (*Sales.Store*). The reference to *CustomerID* in the select list of the subquery is qualified by the subquery's `FROM` clause, that is, by the Sales.Customer table.
+In the following example, the *CustomerID* column in the `WHERE` clause of the outer query is implicitly qualified by the table name in the outer query `FROM` clause (*Sales.Store*). The reference to *CustomerID* in the select list of the subquery is qualified by the subquery `FROM` clause, that is, by the *Sales.Customer* table.
 
 ```sql
 USE AdventureWorks2016;

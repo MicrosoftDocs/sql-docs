@@ -82,9 +82,9 @@ A subquery can be nested inside the `WHERE` or `HAVING` clause of an outer `SELE
 If a table appears only in a subquery and not in the outer query, then columns from that table cannot be included in the output (the select list of the outer query).   
 
 Statements that include a subquery usually take one of these formats:   
--   WHERE expression [NOT] IN (subquery)
--   WHERE expression comparison_operator [ANY | ALL] (subquery)
--   WHERE [NOT] EXISTS (subquery)   
+-   WHERE expression \[NOT] IN (subquery)
+-   WHERE expression comparison_operator \[ANY | ALL] (subquery)
+-   WHERE \[NOT] EXISTS (subquery)   
 
 In some [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the subquery can be evaluated as if it were an independent query. Conceptually, the subquery results are substituted into the outer query (although this is not necessarily how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actually processes [!INCLUDE[tsql](../../includes/tsql-md.md)] statements with subqueries).    
 

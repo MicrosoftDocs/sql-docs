@@ -55,7 +55,7 @@ ms.workload: "Inactive"
 -   Transaction management features that enforce transaction atomicity and consistency. After a transaction has started, it must be successfully completed (committed), or the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] undoes all of the data modifications made since the transaction started. This operation is referred to as rolling back a transaction because it returns the data to the state it was prior to those changes.  
   
 ### Controlling Transactions  
- Applications control transactions mainly by specifying when a transaction starts and ends. This can be specified by using either [!INCLUDE[tsql](../includes/tsql-md.md)] statements or database application programming interface (API) functions. The system must also be able to correctly handle errors that terminate a transaction before it completes. For more information, see [Transactions](../t-sql/language-elements/transactions-[!INCLUDE[tsql](../includes/tsql-md.md)].md), [Transactions in ODBC](../relational-databases/native-client/odbc/performing-transactions-in-odbc.md) and [Transactions in SQL Server Native Client (OLEDB)](../relational-databases/native-client-ole-db-transactions/transactions.md).  
+ Applications control transactions mainly by specifying when a transaction starts and ends. This can be specified by using either [!INCLUDE[tsql](../includes/tsql-md.md)] statements or database application programming interface (API) functions. The system must also be able to correctly handle errors that terminate a transaction before it completes. For more information, see [Transactions](../t-sql/language-elements/transactions-transact-sql.md), [Transactions in ODBC](../relational-databases/native-client/odbc/performing-transactions-in-odbc.md) and [Transactions in SQL Server Native Client (OLEDB)](../relational-databases/native-client-ole-db-transactions/transactions.md).  
   
  By default, transactions are managed at the connection level. When a transaction is started on a connection, all [!INCLUDE[tsql](../includes/tsql-md.md)] statements executed on that connection are part of the transaction until the transaction ends. However, under a multiple active result set (MARS) session, a [!INCLUDE[tsql](../includes/tsql-md.md)] explicit or implicit transaction becomes a batch-scoped transaction that is managed at the batch level. When the batch completes, if the batch-scoped transaction is not committed or rolled back, it is automatically rolled back by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Using Multiple Active Result Sets (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
@@ -577,7 +577,7 @@ INSERT mytable VALUES ('Dan');
 -   Increased performance. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] minimizes system overhead by using locks appropriate to the task.  
 -   Application developers can concentrate on development. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] adjusts locking automatically.  
   
- In [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] and later versions, the behavior of lock escalation has changed with the introduction of the `LOCK_ESCALATION` option. For more information, see the `LOCK_ESCALATION` option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
+ In [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and later versions, the behavior of lock escalation has changed with the introduction of the `LOCK_ESCALATION` option. For more information, see the `LOCK_ESCALATION` option of [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
 ### Deadlocking  
  A deadlock occurs when two or more tasks permanently block each other by each task having a lock on a resource which the other tasks are trying to lock. For example:  
@@ -1190,7 +1190,7 @@ BEGIN TRANSACTION
   
  If you use any of the row versioning features, you might need to allocate additional disk space for the database to accommodate the 14 bytes per database row. Adding the row versioning information can cause index page splits or the allocation of a new data page if there is not enough space available on the current page. For example, if the average row length is 100 bytes, the additional 14 bytes cause an existing table to grow up to 14 percent.  
   
- Decreasing the [fill factor](../Topic/Specify%20Fill%20Factor%20for%20an%20Index.md) might help to prevent or decrease fragmentation of index pages. To view fragmentation information for the data and indexes of a table or view, you can use [DBCC SHOWCONTIG](../Topic/DBCC%20SHOWCONTIG%20([!INCLUDE[tsql](../includes/tsql-md.md)]).md).  
+ Decreasing the [fill factor](../relational-databases/indexes/specify-fill-factor-for-an-index.md) might help to prevent or decrease fragmentation of index pages. To view fragmentation information for the data and indexes of a table or view, you can use [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
 #### Space Used in Large Objects  
  The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] supports six data types that can hold large strings up to 2 gigabytes (GB) in length: `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text`, and `image`. Large strings stored using these data types are stored in a series of data fragments that are linked to the data row. Row versioning information is stored in each fragment used to store these large strings. Data fragments are a collection of pages dedicated to large objects in a table.  
@@ -1611,9 +1611,9 @@ GO
 -   When starting a transaction, applications using OLE DB can call ITransactionLocal::StartTransaction with *isoLevel* set to the desired transaction isolation level. When specifying the isolation level in autocommit mode, applications that use OLE DB can set the DBPROPSET_SESSION property DBPROP_SESS_AUTOCOMMITISOLEVELS to the desired transaction isolation level.  
 -   Applications that use ODBC can set the SQL_COPT_SS_TXN_ISOLATION attribute by using SQLSetConnectAttr.  
   
- When the isolation level is specified, the locking behavior for all queries and data manipulation language (DML) statements in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] session operates at that isolation level. The isolation level remains in effect until the session terminates or until the isolation level is set to another level.  
+When the isolation level is specified, the locking behavior for all queries and data manipulation language (DML) statements in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] session operates at that isolation level. The isolation level remains in effect until the session terminates or until the isolation level is set to another level.  
   
- The following example sets the `SERIALIZABLE` isolation level:  
+The following example sets the `SERIALIZABLE` isolation level:  
   
 ```sql  
 USE AdventureWorks2016;  
@@ -1626,11 +1626,11 @@ SELECT BusinessEntityID
 GO  
 ```  
   
- The isolation level can be overridden for individual query or DML statements, if necessary, by specifying a table-level hint. Specifying a table-level hint does not affect other statements in the session. We recommend that table-level hints be used to change the default behavior only when absolutely necessary.  
+The isolation level can be overridden for individual query or DML statements, if necessary, by specifying a table-level hint. Specifying a table-level hint does not affect other statements in the session. We recommend that table-level hints be used to change the default behavior only when absolutely necessary.  
   
- The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] might have to acquire locks when reading metadata even when the isolation level is set to a level where share locks are not requested when reading data. For example, a transaction running at the read-uncommitted isolation level does not acquire share locks when reading data, but might sometime request locks when reading a system catalog view. This means it is possible for a read uncommitted transaction to cause blocking when querying a table when a concurrent transaction is modifying the metadata of that table.  
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] might have to acquire locks when reading metadata even when the isolation level is set to a level where share locks are not requested when reading data. For example, a transaction running at the read-uncommitted isolation level does not acquire share locks when reading data, but might sometime request locks when reading a system catalog view. This means it is possible for a read uncommitted transaction to cause blocking when querying a table when a concurrent transaction is modifying the metadata of that table.  
   
- To determine the transaction isolation level currently set, use the `DBCC USEROPTIONS` statement as shown in the following example. The result set may vary from the result set on your system.  
+To determine the transaction isolation level currently set, use the `DBCC USEROPTIONS` statement as shown in the following example. The result set may vary from the result set on your system.  
   
 ```sql  
 USE AdventureWorks2016;  
@@ -1641,22 +1641,22 @@ DBCC USEROPTIONS;
 GO  
 ```  
   
- [!INCLUDE[ssResult](../Token/ssResult_md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- Set Option                   Value  
- ---------------------------- -------------------------------------------  
- textsize                     2147483647  
- language                     us_english  
- dateformat                   mdy  
- datefirst                    7  
- ...                          ...  
- Isolation level              repeatable read  
-  
- (14 row(s) affected)   
-  
- DBCC execution completed. If DBCC printed error messages, contact your system administrator.
- ```  
+```
+Set Option                   Value  
+---------------------------- -------------------------------------------  
+textsize                     2147483647  
+language                     us_english  
+dateformat                   mdy  
+datefirst                    7  
+...                          ...  
+Isolation level              repeatable read  
+ 
+(14 row(s) affected)   
+ 
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+```  
   
 ### Locking Hints  
  Locking hints can be specified for individual table references in the SELECT, INSERT, UPDATE, and DELETE statements. The hints specify the type of locking or row versioning the instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses for the table data. Table-level locking hints can be used when a finer control of the types of locks acquired on an object is required. These locking hints override the current transaction isolation level for the session.  

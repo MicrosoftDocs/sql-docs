@@ -47,7 +47,7 @@ Because the versioned record is stored as binary, there are no problems with dif
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 
 ## Examples  
- The following query can be used to determine space consumed in tempdb by version store of each database in a SQL Server instance. 
+ The following query can be used to determine space consumed in tempdb, by version store of each database in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. 
   
 ```sql  
 SELECT 

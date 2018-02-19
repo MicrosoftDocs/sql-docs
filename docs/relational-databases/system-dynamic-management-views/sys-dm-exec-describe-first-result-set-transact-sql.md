@@ -40,7 +40,7 @@ ms.workload: "On Demand"
   
 ```  
   
-sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)  
+sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_information)  
 ```  
   
 ## Arguments  

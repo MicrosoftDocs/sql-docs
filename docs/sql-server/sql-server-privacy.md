@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Privacy Supplement| Microsoft Docs"
+title: "SQL Server Privacy Supplement | Microsoft Docs"
 ms.date: "2/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ms.workload: "Active"
 ---
-# SQL Server Documentation
+# SQL Server Privacy Supplement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the following:
@@ -147,6 +147,8 @@ Data that describes or is used to configure servers, databases, tables, and othe
 
 ### Permitted Usage Scenarios
 
-None
+|Scenario  |Access Restrictions  |Retention Requirements|
+|---------|---------|---------|
+|May be used by Microsoft to improve features and or fix bugs in current features. |Limited to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years|
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

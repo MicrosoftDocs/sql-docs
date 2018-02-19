@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Data Classification Matrix | Microsoft Docs"
-ms.date: "2/14/2018"
+title: "SQL Server Privacy Supplement| Microsoft Docs"
+ms.date: "2/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -96,7 +96,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 - Browser name/version
 - SQL Server version
 - Language Code
-- Partial IP Address
+- An IP Address with specif octets removed
 - Map Data
 
 ### Permitted Usage Scenarios
@@ -113,38 +113,37 @@ Data generated in the course of running the server.  It does not contain Custome
 
 ### Examples of system metadata
 
-The following are are considered system metadata when they do not inlcude customer content, customer access control, or EUII:
+The following are considered system metadata when they do not inlcude customer content, customer access control, or EUII:
 
 - Database GUID
 - Hash of Machine Name
 - Hash of Instance Name
 - Hash of Application Name
 - Behavioral/Usage Data
-- SQM Data
 - SQL Customer Experience improvement program data  (SQLCEIP)
 - Server configuration data, for example settings of sp_configure
 - Feature configuration data
-- Database names
-- Table, Column, Statistics Names
 - Event Names and Error Codes
 
 ### Permitted Usage Scenarios
 
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
-|May be used by Microsoft to improve features and/or fix bugs in current features.|Limit to Microsoft internal with no third-party access. |Min 90 days - Max 3 years |
-|May be used to make suggestions to the customer.  For examples, “Based on your usage of the product, consider using feature X since it would perform better for you than what you are doing now”. |Microsoft can expose the data to the original customer (dashboards, etc.) |Customer Data Security Logs: Min 3 years - Max 6 years |
+|May be used by Microsoft to improve features and or fix bugs in current features.|Limit to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years |
+|May be used to make suggestions to the customer.  For example, “Based on your usage of the product, consider using feature X since it would perform better.”. |Microsoft can expose the data to the original customer, for example through dashboards. |Customer Data Security Logs: Min 3 years - Max 6 years |
 May be used by Microsoft for future product planning. |Microsoft may share this information with other hardware and software vendors to improve how their products run with Microsoft software. |Min 90 days - Max 3 years|
-|May be used by Microsoft to provide cloud-based services based on emitted Usage Feedback (Example: a customer dashboard showing feature usage across all SQL Server installations in an organization) |Microsoft can expose the data to the original customer (dashboards, etc.) |Min 90 days - Max 3 years |
+|May be used by Microsoft to provide cloud-based services based on emitted Usage Feedback. For example, a customer dashboard showing feature usage across all SQL Server installations in an organization. |Microsoft can expose the data to the original customer, for example, through dashboards. |Min 90 days - Max 3 years |
 |Customers with their consent can send User Feedback that contain Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
 >## Object Metadata
 
-Data that describes or is used to configure servers, databases, tables, and other resources.  Object metadata includes database table and column names but not the contents of database rows or other Customer Content.
+Data that describes or is used to configure servers, databases, tables, and other resources.  Object metadata includes database table and column names but not the contents of database rows or other Customer Content. Customers should not place personal data, such as end-user identifiable information in Object Metadata fields or create applications designed to store personal data in these fields.
 
 ### Examples of object metadata
 
 - SQL Server database names
+- Table names and Column names
+- Statistics Names
 
 ### Permitted Usage Scenarios
 

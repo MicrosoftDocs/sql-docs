@@ -49,9 +49,9 @@ If you're new to Analysis Services and tabular modeling, completing this tutoria
 
 To complete this tutorial, you need:  
   
--   An Azure Analysis Services server. Sign up for a free [Azure Analysis Services trial](https://azure.microsoft.com/services/analysis-services/) and [create a server](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server). 
+-   An Azure Analysis Services server or an on-premises SQL Server 2017 Analysis Services server in Tabular mode. Sign up for a free [Azure Analysis Services trial](https://azure.microsoft.com/services/analysis-services/) and [create a server](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server). Or, download a free [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
--   An [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) with the **sample AdventureWorksDW database**, or an on-premises SQL Server Data Warehouse with an [AdventureWorksDW sample database](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).
+-   An [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) with the **sample AdventureWorksDW database**, or an on-premises SQL Server Data Warehouse with an [AdventureWorksDW sample database](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). When installing an AdventureWorksDW database to an on-premises SQL Server Data Warehouse, use the sample datbase version that corresponds with your server version. 
 
     **Important:** If you install the sample database to an on-premises SQL Server Data Warehouse, and deploy your model to an Azure Analysis Services server, an [On-premises data gateway](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) is required.
 

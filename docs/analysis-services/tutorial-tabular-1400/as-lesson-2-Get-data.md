@@ -29,7 +29,7 @@ In this lesson, you use **Get Data** to connect to the AdventureWorksDW sample d
 By using Get Data, you can import data from a wide variety of sources. Data can also be queried using a Power Query M formula expression or a [native SQL query expression](../tabular-models/ssas-import-query.md).
 
 > [!NOTE]
-> Tasks and images in this tutorial show connecting to an AdventureWorksDW2014 database on an on-premises server. In some cases, an AdventureWorksDW database on Azure may show different objects.
+> Tasks and images in this tutorial show connecting to an AdventureWorksDW2014 database on an on-premises server. In some cases, an AdventureWorksDW database on Azure SQL Data Warehouse may show different objects; however, they are fundamentally the same.
   
 Estimated time to complete this lesson: **10 minutes**  
   

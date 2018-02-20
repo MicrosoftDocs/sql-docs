@@ -23,7 +23,7 @@ ms.author: owend
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-In this lesson, you configure deployment properties; specifying an Azure Analysis Services server to deploy to and a name for the model. You then deploy the model to that instance. After your model is deployed, users can connect to it by using a reporting client application. To learn more, see [Deploy to Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy) and [Tabular model solution deployment](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
+In this lesson, you configure deployment properties; specifying a server to deploy to and a name for the model. You then deploy the model to the server. After your model is deployed, users can connect to it by using a reporting client application. To learn more, see [Deploy to Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy) and [Tabular model solution deployment](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
 Estimated time to complete this lesson: **5 minutes**  
   
@@ -44,7 +44,7 @@ This article is part of a tabular modeling tutorial, which should be completed i
   
 1.  In **Solution Explorer**, right-click the **AW Internet Sales** project, and then click **Properties**.  
   
-2.  In the **AW Internet Sales Property Pages** dialog box, under **Deployment Server**, in the **Server** property, enter the full server.  
+2.  In the **AW Internet Sales Property Pages** dialog box, under **Deployment Server**, in the **Server** property, enter the full server name. If connecting to Azure Analysis Services, server name must inlcude the full URL.
 
     ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   

@@ -1,4 +1,4 @@
-# [About SQL Server Analysis Services?](analysis-services.md)
+# [About SQL Server Analysis Services](analysis-services.md)
 
 # Overview
 ## [What's new in SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  

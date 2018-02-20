@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/08/2017"
+ms.date: "2/20/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.service: ""
@@ -31,11 +31,11 @@ ms.workload: "On Demand"
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Creates a PolyBase external file format definition for external data stored in Hadoop, Azure blob storage, or Azure Data Lake Store. Creating an external file format is a prerequisite for creating a PolyBase external table. By creating an external file format, you specify the actual layout of the data referenced by an external table.  
+  Creates an External File Format object defining external data stored in Hadoop, Azure Blob Storage, or Azure Data Lake Store. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table.  
   
  PolyBase supports the following file formats:
   
--   Delimited text  
+-   Delimited Text  
   
 -   Hive RCFile  
   
@@ -43,7 +43,7 @@ ms.workload: "On Demand"
   
 -   Parquet  
   
- To create an external table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
+ To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -92,7 +92,8 @@ WITH (
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
-    | STRING_DELIMITER = string_delimiter  
+    | STRING_DELIMITER = string_delimiter 
+    | First_Row = integer -- ONLY AVAILABLE SQL DW
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -124,8 +125,8 @@ WITH (
    -   DELIMITEDTEXT
    Specifies a text format with column delimiters, also called field terminators.
   
- FIELD_TERMINATOR = *field_terminator*
- Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
+ FIELD_TERMINATOR = *field_terminator*  
+Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
   
   
  Examples:  
@@ -139,7 +140,7 @@ WITH (
 -   FIELD_TERMINATOR = '~|~'  
   
  STRING_DELIMITER = *string_delimiter*  
- Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ascii characters.
+Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ascii characters.
  
   
  Examples:  
@@ -153,9 +154,12 @@ WITH (
 -   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
-  
-DATE\_FORMAT = *datetime_format*
- Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option is not necessary. Only one custom datetime format is allowed per file. You cannot specify multiple custom datetime formats per file. However, you can use multiple datetime formats, if each one is the default format for its respective data type in the external table definition.
+ 
+ FIRST_ROW = *First_row_int*  
+Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1-15. If the value is set to 2, then the first row in every file (header row) will be skipped. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to ensure it can be read back with no data loss. If the value is set to >2 the first row exported is the Column names of the external table.
+
+ DATE\_FORMAT = *datetime_format*  
+Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option is not necessary. Only one custom datetime format is allowed per file. You cannot specify multiple custom datetime formats per file. However, you can use multiple datetime formats, if each one is the default format for its respective data type in the external table definition.
 
 PolyBase only uses the custom date format for importing the data. It does not use the custom format for writing data to an external file.
 
@@ -228,10 +232,10 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 -   The letters 'zzz' designate the time zone offset for the system's current time zone in the format {+|-}HH:ss].
   
- USE_TYPE_DEFAULT = { TRUE | **FALSE** }
+ USE_TYPE_DEFAULT = { TRUE | **FALSE** }  
  Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file.
   
- TRUE
+ TRUE  
  When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:  
   
 -   0 if the column is defined as a numeric column.
@@ -240,13 +244,13 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 -   1900-01-01 if the column is a date column.
   
- FALSE
+ FALSE  
  Store all missing values as NULL. Any NULL values that are stored by using the word NULL in the delimited text file are imported as the string 'NULL'.
   
-   Encoding = {'UTF8' | 'UTF16'}
+   Encoding = {'UTF8' | 'UTF16'}  
  In Azure SQL Data Warehouse, PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server and PDW, PolyBase does not support reading UTF16 encoded files.
   
- DATA_COMPRESSION = *data_compression_method*
+ DATA_COMPRESSION = *data_compression_method*  
  Specifies the data compression method for the external data. When DATA_COMPRESSION is not specified, the default is uncompressed data.
  In order to work properly, Gzip compressed files must have the ".gz" file extension.
  
@@ -353,7 +357,20 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
+### E. Create a Delimited Text File Skipping Header Row (Azure SQL DW Only)
+ This example creates an external file format for CSV file with a single header row. 
   
+```  
+CREATE EXTERNAL FILE FORMAT skipHeader_CSV
+WITH (FORMAT_TYPE = DELIMITEDTEXT,
+      FORMAT_OPTIONS(
+          FIELD_TERMINATOR = ',',
+          STRING_DELIMITER = '"',
+          FIRST_ROW = 2, 
+          USE_TYPE_DEFAULT = True)
+)
+```   
+
 ## See Also
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   

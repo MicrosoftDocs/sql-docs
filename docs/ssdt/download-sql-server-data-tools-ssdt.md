@@ -33,7 +33,7 @@ SSDT 15.5.2 is a standalone web installation experience for SQL Server Database,
 |||
 
 > [!IMPORTANT]
-> Before installing SSDT for Visual Studio 2017 (15.5.2), uninstall the "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed on VS 2017, andclose all VS instances. 
+> Before installing SSDT for Visual Studio 2017 (15.5.2), uninstall the "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed on VS 2017, and close all VS instances. 
 > 
 > Non-English versions of SSDT for Visual Studio 2017 15.5.x do not support upgrading from the English 15.4.0 Preview, you must uninstall the English 15.4.0 Preview before installing 15.5.x in other languages. 
 

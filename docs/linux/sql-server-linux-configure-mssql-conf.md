@@ -193,6 +193,9 @@ To change these settings, use the following steps:
    ```bash
    sudo systemctl start mssql-server
    ```
+   
+> [!NOTE]
+> If SQL Server cannot find master.mdf and mastlog.ldf files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and SQL Server will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new master database. You will have to stop SQL Server and move your old master.mdf and mastlog.ldf to the new specified location and start SQL Server to continue using the existing metadata. 
 
 
 ## <a id="masterdatabasename"></a> Change the name of master database files.
@@ -216,7 +219,7 @@ The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting c
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /var/opt/mssql/data/masternew.mdf
-   sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data /mastlognew.ldf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data/mastlognew.ldf
    ```
 
 1. Start the SQL Server service:
@@ -224,6 +227,7 @@ The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting c
    ```bash
    sudo systemctl start mssql-server
    ```
+
 
 
 ## <a id="dumpdir"></a> Change the default dump directory location

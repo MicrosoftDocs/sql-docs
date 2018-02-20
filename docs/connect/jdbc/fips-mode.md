@@ -74,7 +74,7 @@ Use the following snippet to import the SSL certificate and store it in a workin
 ````
 
 
-In the following example, we are importing an Azure SSL Certificate in PKCS12 format with BouncyCastle Provider. The certificate is imported in the working directory named _MyTrustStore_PKCS12_ by using the following snippet:
+The following example is importing an Azure SSL Certificate in PKCS12 format with BouncyCastle Provider. The certificate is imported in the working directory named _MyTrustStore_PKCS12_ by using the following snippet:
 
 ` saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer"); `
 
@@ -89,7 +89,7 @@ In order to run the JDBC Driver in FIPS-compliant mode, configure connection pro
 |Property|Type|Default|Description|Notes|
 |---|---|---|---|---|
 |encrypt|boolean ["true / false"]|"false"|For FIPS enabled JVM encrypt property should be **true**||
-|TrustServerCertificate|boolean ["true / false"]|"false"|For FIPS we need to validate certificate chain, so we should use **"false"** value for this property. ||
+|TrustServerCertificate|boolean ["true / false"]|"false"|For FIPS, the user needs to validate certificate chain, so the user should use **"false"** value for this property. ||
 |trustStore|String|null|Your Java Keystore file path where you imported your certificate. If you install certificate on your system, then no need to pass anything. Driver uses cacerts or jssecacerts files.||
 |trustStorePassword|String|null|The password used to check the integrity of the trustStore data.||
 |fips|boolean ["true / false"]|"false"|For fips enabled JVM this property should be **true**|Added in 6.1.4 (Stable release 6.2.2)||

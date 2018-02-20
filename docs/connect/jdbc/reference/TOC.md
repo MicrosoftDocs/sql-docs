@@ -24,7 +24,6 @@
 ### [free Method (SQLServerBlob)](free-method-sqlserverblob.md)
 ### [getBinaryStream Method (SQLServerBlob)](getbinarystream-method-sqlserverblob.md)
 #### [getBinaryStream Method ()](getbinarystream-method.md)
-#### [getBinaryStream Method (long, long)](getbinarystream-method-long-long.md)
 ### [getBytes Method (SQLServerBlob)](getbytes-method-sqlserverblob.md)
 ### [length Method (SQLServerBlob)](length-method-sqlserverblob.md)
 ### [position Method (SQLServerBlob)](position-method-sqlserverblob.md)

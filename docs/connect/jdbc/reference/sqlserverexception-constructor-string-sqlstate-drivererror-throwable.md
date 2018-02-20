@@ -40,19 +40,19 @@ public SQLServerException(java.lang.String errText,
 #### Parameters  
  *errText*  
   
- A string containing the error text.
+ A string that holds the error text.
   
  *sqlState*  
   
- An enum object that contains the SQL state.
+ An enum object that holds the SQL state.
  
  *driverError*  
   
- An enum object that contains the driver error.
+ An enum object that holds the driver error.
  
  *cause*  
   
- A throwable object that contains the cause of the exception.
+ A throwable object that holds the cause of the exception.
   
 ## See Also  
  [SQLServerException Constructors](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

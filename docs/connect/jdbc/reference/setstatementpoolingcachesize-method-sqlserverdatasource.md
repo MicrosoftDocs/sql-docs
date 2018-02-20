@@ -38,7 +38,10 @@ public void setStatementPoolingCacheSize(boolean statementPoolingCacheSize);
 
 ## Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
-  
+ 
+## Remarks  
+ This method is available from JDBC driver version 6.4 and onward.
+ 
 ## See Also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

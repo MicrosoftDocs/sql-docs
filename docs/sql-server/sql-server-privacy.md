@@ -100,7 +100,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 - Browser name/version
 - SQL Server version
 - Language Code
-- An IP Address with specify octets removed
+- An IP Address with specific octets removed
 - Map Data
 
 ### Permitted Usage Scenarios
@@ -134,10 +134,10 @@ The following are considered system metadata when they do not inlcude customer c
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
 |May be used by Microsoft to improve features and or fix bugs in current features.|Limit to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years |
-|May be used to make suggestions to the customer.  For example, “Based on your usage of the product, consider using feature X since it would perform better.”. |Microsoft can expose the data to the original customer, for example through dashboards. |Customer Data Security Logs: Min 3 years - Max 6 years |
+|May be used to make suggestions to the customer.  For example, “Based on your usage of the product, consider using feature X since it would perform better.” |Microsoft can expose the data to the original customer, for example through dashboards. |Customer Data Security Logs: Min 3 years - Max 6 years |
 May be used by Microsoft for future product planning. |Microsoft may share this information with other hardware and software vendors to improve how their products run with Microsoft software. |Min 90 days - Max 3 years|
 |May be used by Microsoft to provide cloud-based services based on emitted Usage Feedback. For example, a customer dashboard showing feature usage across all SQL Server installations in an organization. |Microsoft can expose the data to the original customer, for example, through dashboards. |Min 90 days - Max 3 years |
-|Customers with their consent can send User Feedback that contain Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
+|Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
 >## Object Metadata
 

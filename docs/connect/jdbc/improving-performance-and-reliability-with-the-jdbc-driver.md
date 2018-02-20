@@ -36,7 +36,7 @@ ms.workload: "Inactive"
 |[Working with Statements and Result Sets](../../connect/jdbc/working-with-statements-and-result-sets.md)|Describes techniques for improving performance when using the Statement or ResultSet objects.|  
 |[Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md)|Describes an adaptive buffering feature, which is designed to retrieve any kind of large-value data without the overhead of server cursors.|  
 |[Sparse Columns](../../connect/jdbc/sparse-columns.md)|Discusses the JDBC driver's support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sparse columns.|  
-|[Prepared Statement Caching](../../connect/jdbc/prepared-statement-caching.md)|Discusses the techniques for improving performance with prepared statement queries. 
+|[Prepared Statement Metadata Caching](../../connect/jdbc/prepared-statement-metadata-caching.md)|Discusses the techniques for improving performance with prepared statement queries.|
   
 ## See Also  
  [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

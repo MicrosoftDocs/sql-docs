@@ -1,5 +1,5 @@
-###  Sample application using Aazure keyvault feaure
-This application is runnable using JDBC Driver 6.2.0 and above and Azure-Keyvault (version 1.0.0),  Adal4j (version 1.4.0) and their dependencies.  The underlying dependencies can be resolved by adding the above to the pom file of the project as described [here](something): 
+###  Sample application using Azure Key Vault feature
+This application is runnable using JDBC Driver 6.2.0 and above and Azure-Keyvault (version 1.0.0),  Adal4j (version 1.4.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/dependency.md): 
 
 ```xml
 import java.net.URISyntaxException;

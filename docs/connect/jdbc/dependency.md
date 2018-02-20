@@ -87,7 +87,7 @@ Specific projects that require either of the above two features will need to exp
 - JDBC Driver version 6.4.0
 	- Dependency versions:  Adal4j (version 1.4.0) and its dependencies
 		- In this version of the driver, your application does not require using ADALSQL.DLL. Depending on the operating systems. For **Non-Windows operating systems**, the driver requires Kerberos ticket to work with ActiveDirectoryIntegrated Authentication. See **Set Kerberos ticket on Windows, Linux And Mac** for more details. For **Windows operating systems**, driver by default will check if sqljdbc_auth.dll is loaded and does not require Kerberos ticket setup or adal4j dependency . However, If sqljdbc_auth.dll is not loaded, driver behaves the same way as non-Windows operating systems and would require setup which is described in the following example. 
- A sample application using this feature can be found [here](../../connect/jdbc/code-samples/connecting-using-azure-active-directory-authentication.md).
+ A sample application using this feature can be found [here](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md).
 ## See Also  
  [JDBC Driver GitHub Repository](https://github.com/microsoft/mssql-jdbc)  
  [JDBC Driver API Reference](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  

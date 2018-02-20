@@ -37,7 +37,7 @@
 ## [Working with Statements and Result Sets](working-with-statements-and-result-sets.md)
 ## [Using Adaptive Buffering](using-adaptive-buffering.md)
 ## [Sparse Columns](sparse-columns.md)
-## [Prepared Statement Metadata Caching](prepared-statement-metadata-caching)
+## [Prepared Statement Metadata Caching](prepared-statement-metadata-caching.md)
 
 # [Diagnosing Problems with the JDBC Driver](diagnosing-problems-with-the-jdbc-driver.md)
 ## [Handling Errors](handling-errors.md)

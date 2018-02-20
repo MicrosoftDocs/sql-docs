@@ -20,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Connecting using Azure Active Directory Authentication
-This article provides information on how to develop Java applications to use the Azure Active Directory authentication feature with Microsoft JDBC Driver 6.4 (or higher) for SQL Server.
+This article provides information on how to develop Java applications to use the Azure Active Directory authentication feature with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.
 
 You can use Azure Active Directory (AAD) authentication which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL DB. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
@@ -40,13 +40,13 @@ For details see the authentication property on the [Setting the Connection Prope
 ## Client Setup Requirements
 Please make sure that the following components are installed on the client machine:
 * Java 7 or above
-*	Microsoft JDBC Driver 6.4 (or higher) for SQL Server
+*	Microsoft JDBC Driver 6.0 (or higher) for SQL Server
 *	If you are using the access token based authentication mode, you will need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. See **Connecting using Access Token** section for more details.
 *	If you are using the ActiveDirectoryPassword authentication mode you will need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. See **Connecting using ActiveDirectoryPassword Authentication Mode** section for more details.
 *	If you are using the ActiveDirectoryIntegrated mode, you will need azure-activedirectory-library-for-java and its dependencies. See **Connecting using ActiveDirectoryIntegrated Authentication Mode** section for more details.
 	
 ## Connecting using ActiveDirectoryIntegrated Authentication Mode
-**Note:** As of version 6.4, Microsoft JDBC Driver no longer needs sqljdbc_auth.dll or Active Directory Authentication Library for SQL Server (ADALSQL.DLL) for ActiveDirectoryIntegrated Authentication. Instead, the driver requires Kerberos ticket to work with ActiveDirectoryIntegrated Authentication. See **Set Kerberos ticket on Windows, Linux And Mac** for more details.
+**Note:** As of version 6.4, Microsoft JDBC Driver no longer needs sqljdbc_auth.dll or the Active Directory Authentication Library for SQL Server (ADALSQL.DLL) for ActiveDirectoryIntegrated Authentication. Instead, the driver requires a Kerberos ticket to work with ActiveDirectoryIntegrated Authentication. See **Set Kerberos ticket on Windows, Linux And Mac** for more details.
 
 The following example shows how to use 'authentication=ActiveDirectoryIntegrated' mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups, you belong to, must exist in the database and must have the CONNECT permission. 
 
@@ -84,7 +84,7 @@ public class IntegratedExample {
 	}
 }
 ```
-Running this example on client machine will automatically use your Kerberos ticket and no password is required. If connection is established, you will see the following message:
+Running this example on a client machine will automatically use your Kerberos ticket and no password is required. If a connection is established, you will see the following message:
 ```
 You have successfully logged on as: <your domain user name>
 ```

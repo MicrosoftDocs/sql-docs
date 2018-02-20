@@ -143,6 +143,10 @@ Data classification:
 - Removing a classification and then manually adding a new classification for the same column results in the old information type and sensitivity label being assigned to the column in the main view.<br>
 *Workaround*: Assign the new information type and sensitivity label after the classification was added back to the main view and before saving.  
 
+**SQL Server Integration Services (SSIS)**
+
+SSMS version 17.x does not support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side-by-side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages.
+
 ## Previous releases
 
 [Previous SQL Server Management Studio Releases](../ssms/sql-server-management-studio-changelog-ssms.md#previous-ssms-releases)

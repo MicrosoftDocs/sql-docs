@@ -156,14 +156,14 @@ Specifies the field terminator for data of type string in the text-delimited fil
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
  
  FIRST_ROW = *First_row_int*  
-Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1-15. If the value is set to 2, the first row in every file (header row) will be skipped. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to ensure it can be read back with no data loss. If the value is set to >2, the first row exported is the Column names of the external table.
+Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1-15. If the value is set to 2, the first row in every file (header row) will be skipped. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to make sure the file can be read with no data loss. If the value is set to >2, the first row exported is the Column names of the external table.
 
  DATE\_FORMAT = *datetime_format*  
-Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option is not necessary. Only one custom datetime format is allowed per file. You cannot specify multiple custom datetime formats per file. However, you can use multiple datetime formats, if each one is the default format for its respective data type in the external table definition.
+Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option isn't necessary. Only one custom datetime format is allowed per file. You can't specify more than one custom datetime formats per file. However, you can use more than one datetime formats, if each one is the default format for its respective data type in the external table definition.
 
-PolyBase only uses the custom date format for importing the data. It does not use the custom format for writing data to an external file.
+PolyBase only uses the custom date format for importing the data. It doesn't use the custom format for writing data to an external file.
 
- When DATE_FORMAT is not specified or is the empty string, PolyBase uses the following default formats:
+ When DATE_FORMAT isn't specified or is the empty string, PolyBase uses the following default formats:
   
 -   DateTime: 'yyyy-MM-dd HH:mm:ss'  
   
@@ -185,7 +185,7 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 -   Milliseconds (fffffff) are not required.
   
--   Am, pm (tt) is not required. The default is AM.
+-   Am, pm (tt) isn't required. The default is AM.
   
 |Date Type|Example|Description|  
 |---------------|-------------|-----------------|  
@@ -248,11 +248,11 @@ PolyBase only uses the custom date format for importing the data. It does not us
  Store all missing values as NULL. Any NULL values that are stored by using the word NULL in the delimited text file are imported as the string 'NULL'.
   
    Encoding = {'UTF8' | 'UTF16'}  
- In Azure SQL Data Warehouse, PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server and PDW, PolyBase does not support reading UTF16 encoded files.
+ In Azure SQL Data Warehouse, PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server and PDW, PolyBase doesn't support reading UTF16 encoded files.
   
  DATA_COMPRESSION = *data_compression_method*  
- Specifies the data compression method for the external data. When DATA_COMPRESSION is not specified, the default is uncompressed data.
- In order to work properly, Gzip compressed files must have the ".gz" file extension.
+ Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.
+ To work properly, Gzip compressed files must have the ".gz" file extension.
  
  The DELIMITEDTEXT format type supports these compression methods:
   
@@ -309,7 +309,7 @@ PolyBase only uses the custom date format for importing the data. It does not us
 ## Examples  
   
 ### A. Create a DELIMITEDTEXT external file format  
- This example creates an external file format named *textdelimited1* for a text-delimited file. The options listed for FORMAT\_OPTIONS specify that the fields in the file should be separated using a pipe character '|'. The text file is also compressed with the Gzip codec. If DATA\_COMPRESSION is not specified, the text file is uncompressed.
+ This example creates an external file format named *textdelimited1* for a text-delimited file. The options listed for FORMAT\_OPTIONS specify that the fields in the file should be separated using a pipe character '|'. The text file is also compressed with the Gzip codec. If DATA\_COMPRESSION isn't specified, the text file is uncompressed.
   
  For a delimited text file, the data compression method can either be the default Codec, 'org.apache.hadoop.io.compress.DefaultCodec', or the Gzip Codec, 'org.apache.hadoop.io.compress.GzipCodec'.
   
@@ -325,7 +325,7 @@ WITH (
 ```  
   
 ### B. Create an RCFile external file format  
- This example creates an external file format for a RCFile that uses the serialization/deserialization method org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION is not specified, the default is no compression.
+ This example creates an external file format for a RCFile that uses the serialization/deserialization method org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
 ```  
 CREATE EXTERNAL FILE FORMAT rcfile1  
@@ -337,7 +337,7 @@ WITH (
 ```  
   
 ### C. Create an ORC external file format  
- This example creates an external file format for an ORC file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION is not specified, the default is no compression.
+ This example creates an external file format for an ORC file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
 ```  
 CREATE EXTERNAL FILE FORMAT orcfile1  
@@ -348,7 +348,7 @@ WITH (
 ```  
   
 ### D. Create a PARQUET external file format  
- This example creates an external file format for a Parquet file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION is not specified, the default is no compression.  
+ This example creates an external file format for a Parquet file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.  
   
 ```  
 CREATE EXTERNAL FILE FORMAT parquetfile1  

@@ -21,12 +21,16 @@ ms.workload: "Active"
 # SQL Server Privacy Supplement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the following:
+This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 
 - Azure SQL Database
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
 - SQL Operations Studio
+
+Definition of *Permitted usage Scenarios*. For the context of this article, Microsoft defines “Permitted Usages Scenarios” as actions or activities that are initiated by Microsoft.
+
+***
 
 >## Access Control
 
@@ -60,7 +64,7 @@ Customer content is defined as data stored within user tables, directly or indir
 |---------|---------|---------|
 |This data does not leave the user machine via Usage Feedback. |- |- |
 |Crash Dumps may contain Customer Content and be emitted to Microsoft. |- |Crash Dumps: Max 30 days. |
-|Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
+|Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
 >## End-User Identifiable Information (EUII)
 
@@ -70,12 +74,12 @@ Data received from a user, or generated from their use of the product.
 
 ### Examples end-User identifiable information
 
-- Interface ID (Full IP address)
+- Interface Identification. The Full IP address
 - Machine Name
 - Login/User names
 - Local-part of e-mail address (joe@contoso.com)
 - Location Information
-- Customer Identification ID
+- Customer Identification
 
 ### Permitted Usage Scenarios
 
@@ -84,7 +88,7 @@ Data received from a user, or generated from their use of the product.
 |This data does not leave the user machine via Usage Feedback. |- |- |
 |Crash Dumps may contain EUII and be emitted to Microsoft. |- |Crash Dumps: Max 30 days |
 |Customer Identification ID may be emitted to Microsoft to deliver new hybrid and cloud features that the users have subscribed to. |- |Currently no such hybrid or cloud features exist.|
-|Customers with their consent can send User Feedback that contain Customer Content to Microsoft.|Limit to Microsoft internal use with no third party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
+|Customers with their consent can send User Feedback that contains Customer Content to Microsoft.|Limit to Microsoft internal use with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
 >## Internet-Based Services Data
 
@@ -96,7 +100,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 - Browser name/version
 - SQL Server version
 - Language Code
-- An IP Address with specif octets removed
+- An IP Address with specify octets removed
 - Map Data
 
 ### Permitted Usage Scenarios
@@ -104,12 +108,12 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------| 
 |May be used by Microsoft to improve features and/or fix bugs in current features. |Limit to Microsoft internal use with no third-party access. Microsoft can expose the data to the original customer.  For example, dashboards |Min 90 days - Max 3 years |
-|Customers with their consent can send User Feedback that contain Customer Content to Microsoft. |Limit to Microsoft internal use with no third-party access. |Customers with their consent can send User Feedback that contain Customer Content to Microsoft. |
+|Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal use with no third-party access. |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |
 |Power View and SQL Reporting Services Map Item(s) may send data for use of Bing Maps. |Limit to session data |- |
 
 >## System Metadata
 
-Data generated in the course of running the server.  It does not contain Customer content.
+Data generated in the course of running the server.  The data does not contain Customer content.
 
 ### Examples of system metadata
 

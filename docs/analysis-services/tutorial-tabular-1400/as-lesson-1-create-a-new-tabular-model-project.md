@@ -21,7 +21,7 @@ ms.author: owend
 ---
 # Create a tabular model project
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
 In this lesson, you use SQL Server Data Tools (SSDT) or Visual Studio with Microsoft Analysis Services Projects to create a new tabular model project at the 1400 compatibility level. Once your new project is created, you can begin adding data and authoring your model. This lesson also gives you a brief introduction to the tabular model authoring environment in Visual Studio.  
   

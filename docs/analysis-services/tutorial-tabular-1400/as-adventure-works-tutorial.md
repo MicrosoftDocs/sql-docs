@@ -19,9 +19,9 @@ ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
 ---
-# Analysis Services - Adventure Works tutorial
+# Tabular modeling (1400 compatibility level)
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
 This tutorial provides lessons on how to create and deploy a tabular model at the 1400 [compatibility level](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) by using Visual Studio with [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt). 
 

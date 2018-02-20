@@ -16,7 +16,7 @@
 ### [Currency conversions](currency-conversions-analysis-services.md)  
 ### [Tips and best practices](globalization-tips-and-best-practices-analysis-services.md) 
 
-# Tutorials
+# [Tutorials](analysis-services-tutorials-ssas.md)
 ## [Tabular modeling (1400 compatibility level)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
 ### [1 - Create a tabular model project](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
 ### [2 - Get data](tutorial-tabular-1400/as-lesson-2-get-data.md)

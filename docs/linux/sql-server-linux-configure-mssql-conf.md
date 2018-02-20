@@ -24,12 +24,16 @@ ms.workload: "On Demand"
 
 |||
 |---|---|
+| [Agent](#agent) | Enable SQL Server Agent |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
 | [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux |
 | [Default data directory](#datadir) | Change the default directory for new SQL Server database data files (.mdf). |
 | [Default log directory](#datadir) | Changes the default directory for new SQL Server database log (.ldf) files. |
+| [Default master database file directory](#masterdatabasedir) | Changes the default directory for the master database files on existing SQL installation.|
+| [Default master database file name](#masterdatabasename) | Changes the name of master database files. |
 | [Default dump directory](#dumpdir) | Change the default directory for new memory dumps and other troubleshooting files. |
+| [Default error log directory](#errorlogdir) | Changes the default directory for new SQL Server ErrorLog, Default Profiler Trace, System Health Session XE, and Hekaton Session XE files. |
 | [Default backup directory](#backupdir) | Change the default directory for new backup files. |
 | [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
 | [High availability](#hadr) | Enable Availability Groups. |
@@ -50,6 +54,24 @@ ms.workload: "On Demand"
 * For the shared disk cluster scenario, do not attempt to restart the **mssql-server** service to apply changes. SQL Server is running as an application. Instead, take the resource offline and then back online.
 
 * These examples run mssql-conf by specify the full path: **/opt/mssql/bin/mssql-conf**. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: **./mssql-conf**.
+
+## <a id="agent"></a> Enable SQL Server Agent
+
+The **sqlagent.enabled** setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, SQL Server Agent is disabled.
+
+To change this settings, use the following steps:
+
+1. Enable the SQL Server Agent:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+   ```
+
+1. Restart the SQL Server service:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
 
 ## <a id="collation"></a> Change the SQL Server collation
 
@@ -126,6 +148,84 @@ The **filelocation.defaultdatadir** and **filelocation.defaultlogdir** settings 
 
 1. This command also assumes that a /tmp/log directory exists, and that it is under the user and group **mssql**.
 
+
+## <a id="masterdatabasedir"></a> Change the default master database file directory location
+
+The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting changes the location where the SQL Server engine looks for the master database files. By default, this location is /var/opt/mssql/data. 
+
+To change these settings, use the following steps:
+
+1. Create the target directory for new error log files. The following example creates a new **/tmp/masterdatabasedir** directory:
+
+   ```bash
+   sudo mkdir /tmp/masterdatabasedir
+   ```
+
+1. Change the owner and group of the directory to the **mssql** user:
+
+   ```bash
+   sudo chown mssql /tmp/masterdatabasedir
+   sudo chgrp mssql /tmp/masterdatabasedir
+   ```
+
+1. Use mssql-conf to change the default master database directory for the master data and log files with the **set** command:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. Stop the SQL Server service:
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Move the master.mdf and masterlog.ldf: 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. Start the SQL Server service:
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
+
+## <a id="masterdatabasename"></a> Change the name of master database files.
+
+The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting changes the location where the SQL Server engine looks for the master database files. By default, this location is /var/opt/mssql/data. To change these settings, use the following steps:
+
+1. Stop the SQL Server service:
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Use mssql-conf to change the expected master database names for the master data and log files with the **set** command:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   ```
+
+1. Change the name of the master database data and log files 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /var/opt/mssql/data/masternew.mdf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data /mastlognew.ldf
+   ```
+
+1. Start the SQL Server service:
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
+
 ## <a id="dumpdir"></a> Change the default dump directory location
 
 The **filelocation.defaultdumpdir** setting changes the default location where the memory and SQL dumps are generated whenever there is a crash. By default, these files are generated in /var/opt/mssql/log.
@@ -156,6 +256,38 @@ To set up this new location, use the following commands:
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+## <a id="errorlogdir"></a> Change the default error log file directory location
+
+The **filelocation.errorlogfile** setting changes the location where the new error log, default profiler trace, system health session XE and Hekaton session XE files are created. By default, this location is /var/opt/mssql/log. The directory in which SQL errorlog file is set becomes the default log directory for other logs.
+
+To change these settings:
+
+1. Create the target directory for new error log files. The following example creates a new **/tmp/logs** directory:
+
+   ```bash
+   sudo mkdir /tmp/logs
+   ```
+
+1. Change the owner and group of the directory to the **mssql** user:
+
+   ```bash
+   sudo chown mssql /tmp/logs
+   sudo chgrp mssql /tmp/logs
+   ```
+
+1. Use mssql-conf to change the default errorlog filename with the **set** command:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog
+   ```
+
+1. Restart the SQL Server service:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
 
 ## <a id="backupdir"></a> Change the default backup directory location
 

@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial lesson 4: Create relationships | Microsoft Docs"
 description: Describes how to create relationships in the Analysis Services tutorial project. 
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,22 +16,24 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Create relationships
 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-In this lesson, you verify the relationships that were created automatically when you imported data and add new relationships between different tables. A relationship is a connection between two tables that establishes how the data in those tables should be correlated. For example, the DimProduct table and the DimProductSubcategory table have a relationship based on the fact that each product belongs to a subcategory. To learn more, see [Relationships](https://docs.microsoft.com/sql/analysis-services/tabular-models/relationships-ssas-tabular).
+In this lesson, you verify the relationships that were created automatically when you imported data and add new relationships between different tables. A relationship is a connection between two tables that establishes how the data in those tables should be correlated. For example, the DimProduct table and the DimProductSubcategory table have a relationship based on the fact that each product belongs to a subcategory. To learn more, see [Relationships](../tabular-models/relationships-ssas-tabular).
   
 Estimated time to complete this lesson: **10 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 3: Mark as Date Table](../tutorials/as-lesson-3-mark-as-date-table.md). 
+
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 3: Mark as Date Table](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
 ## Review existing relationships and add new relationships  
-When you imported data by using Get Data, you got seven tables from the AdventureWorksDW2014 database. Generally, when you import data from a relational source, existing relationships are automatically imported together with the data. In order for Get Data to automatically create relationships in the data model, there must be relationsips between tables at the data source.
+
+When you imported data by using Get Data, you got seven tables from the AdventureWorksDW database. Generally, when you import data from a relational source, existing relationships are automatically imported together with the data. In order for Get Data to automatically create relationships in the data model, there must be relationsips between tables at the data source.
 
 Before you proceed with authoring your model, you should verify those relationships between tables were created properly. For this tutorial, you also add three new relationships.  
 
@@ -40,7 +44,7 @@ Before you proceed with authoring your model, you should verify those relationsh
 
     The model designer now appears in Diagram View, a graphical format displaying all the tables you imported with lines between them. The lines between tables indicate the relationships that were automatically created when you imported the data.
     
-    ![as-lesson4-diagram](../tutorials/media/as-lesson4-diagram.png)
+    ![as-lesson4-diagram](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
   
     > [!NOTE]
     > If you don't see any relationships between tables, it likely means there are no relationships between those tables at the datasource.
@@ -67,15 +71,16 @@ Before you proceed with authoring your model, you should verify those relationsh
     If any of the relationships are missing, verify your model includes the following tables: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory, and FactInternetSales. If tables from the same datasource connection are imported at separate times, any relationships between those tables are not be created and must be created manually. If no relationships appear, it means there are no relationships at the datasource. You can create them manually in the data model.
 
 ### Take a closer look
+
 In Diagram View, notice an arrow, an asterisk, and a number on the lines that show the relationship between tables.
 
-![as-lesson4-line](../tutorials/media/as-lesson4-line.png)
+![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 The arrow shows the filter direction. The asterisk shows this table is the many side in the relationship's cardinality, and the one shows this table is the one side of the relationship. If you need to edit a relationship; for example, change the relationship's filter direction or cardinality, double-click the relationship line to open the Edit Relationship dialog.
 
-![as-lesson4-edit](../tutorials/media/as-lesson4-edit.png)
+![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
-These features are meant for advanced data modeling and are outside the scope of this tutorial. To learn more, see [Bi-directional cross filters for tabular models in Analysis Services](https://docs.microsoft.com/sql/analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services).
+These features are meant for advanced data modeling and are outside the scope of this tutorial. To learn more, see [Bi-directional cross filters for tabular models in Analysis Services](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
 In some cases, you may need to create additional relationships between tables in your model to support certain business logic. For this tutorial, you need to create three additional relationships between the FactInternetSales table and the DimDate table.  
   
@@ -85,7 +90,7 @@ In some cases, you may need to create additional relationships between tables in
 
     A solid line appears showing you have created an active relationship between the **OrderDate** column in the **Internet Sales** table, and the **Date** column in the **Date** table. 
   
-      ![as-lesson4-new](../tutorials/media/as-lesson4-new.png) 
+      ![as-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
   
     > [!NOTE]  
     > When creating relationships, the cardinality and filter direction between the primary table and the related lookup table is automatically selected.  
@@ -96,10 +101,11 @@ In some cases, you may need to create additional relationships between tables in
   
 3.  Finally, create one more relationship. In the **FactInternetSales** table, click and hold on the **ShipDate** column, then drag the cursor to the **Date** column in the **DimDate** table, and then release.  
     
-     ![as-lesson4-newinactive](../tutorials/media/as-lesson4-newinactive.png)
+     ![as-lesson4-newinactive](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
   
 ## What's next?
-[Lesson 5: Create calculated columns](../tutorials/as-lesson-5-create-calculated-columns.md).
+
+[Lesson 5: Create calculated columns](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).
   
   
   

@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial supplemental lesson: Dynamic security | Microsoft Docs"
 description: Describes how to use dynamic security by using row filters in the Analysis Services tutorial.
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,7 +16,7 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Supplemental lesson - Dynamic security
@@ -32,9 +34,11 @@ Those tasks that are unique to this Adventure Works tabular model scenario, but 
 Estimated time to complete this lesson: **30 minutes**  
   
 ## Prerequisites  
+
 This supplemental lesson topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this supplemental lesson, you should have completed all previous lessons.  
   
 ## Add the DimSalesTerritory table to the AW Internet Sales Tabular Model Project  
+
 To implement dynamic security for this Adventure Works scenario, you must add two additional tables to your model. The first table you add is DimSalesTerritory (as Sales Territory) from the same AdventureWorksDW database. You later apply a row filter to the SalesTerritory table that defines the particular data the logged on user can browse.  
   
 #### To add the DimSalesTerritory table  
@@ -54,6 +58,7 @@ To implement dynamic security for this Adventure Works scenario, you must add tw
 9. After the table has been imported successfully, click **Close**.  
 
 ## Add a table with user name data  
+
 The DimEmployee table in the AdventureWorksDW sample database contains users from the AdventureWorks domain. Those user names do not exist in your own environment. You must create a table in your model that contains a small sample (at least three) of actual users from your organization. You then add these users as members to the new role. You do not need the passwords for the sample user names, but you do need actual Windows user names from your own domain.  
   
 #### To add an EmployeeSecurity table  
@@ -90,6 +95,7 @@ The DimEmployee table in the AdventureWorksDW sample database contains users fro
     A new table named EmployeeSecurity with employee data copied from the SampleEmployee worksheet is created.  
   
 ## Create relationships between FactInternetSales, DimGeography, and DimSalesTerritory table  
+
 The FactInternetSales, DimGeography, and DimSalesTerritory table all contain a common column, SalesTerritoryId. The SalesTerritoryId column in the DimSalesTerritory table contains values with a different Id for each sales territory.  
   
 #### To create relationships between the FactInternetSales, DimGeography, and the DimSalesTerritory table  
@@ -101,6 +107,7 @@ The FactInternetSales, DimGeography, and DimSalesTerritory table all contain a c
     Notice the Active property for this relationship is False, meaning it's inactive. The FactInternetSales table already has another active relationship.  
   
 ## Hide the EmployeeSecurity Table from client applications  
+
 In this task, you hide the EmployeeSecurity table, keeping it from appearing in a client application’s field list. Keep in mind that hiding a table does not secure it. Users can still query EmployeeSecurity table data if they know how. To secure the EmployeeSecurity table data, preventing users from being able to query any of its data, you apply a filter in a later task.  
   
 #### To hide the EmployeeSecurity table from client applications  
@@ -108,10 +115,11 @@ In this task, you hide the EmployeeSecurity table, keeping it from appearing in 
 -   In the model designer, in Diagram View, right-click the **Employee** table heading, and then click **Hide from Client Tools**.  
   
 ## Create a Sales Employees by Territory user role  
+
 In this task, you create a user role. This role includes a row filter defining which rows of the DimSalesTerritory table are visible to users. The filter is then applied in the one-to-many relationship direction to all other tables related to DimSalesTerritory. You also apply a filter that secures the entire EmployeeSecurity table from being queryable by any user that is a member of the role.  
   
 > [!NOTE]  
-> The Sales Employees by Territory role you create in this lesson restricts members to browse (or query) only sales data for the sales territory to which they belong. If you add a user as a member to the Sales Employees by Territory role that also exists as a member in a role created in [Lesson 11: Create Roles](../tutorials/as-lesson-11-create-roles.md), you get a combination of permissions. When a user is a member of multiple roles, the permissions, and row filters defined for each role are cumulative. That is, the user has the greater permissions determined by the combination of roles.  
+> The Sales Employees by Territory role you create in this lesson restricts members to browse (or query) only sales data for the sales territory to which they belong. If you add a user as a member to the Sales Employees by Territory role that also exists as a member in a role created in [Lesson 11: Create Roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md), you get a combination of permissions. When a user is a member of multiple roles, the permissions, and row filters defined for each role are cumulative. That is, the user has the greater permissions determined by the combination of roles.  
   
 #### To create a Sales Employees by Territory user role  
   
@@ -157,6 +165,7 @@ In this task, you create a user role. This role includes a row filter defining w
 10. In Role Manager, click **Ok**.  
   
 ## Test the Sales Employees by Territory User Role  
+
 In this task, you use the Analyze in Excel feature in SSDT to test the efficacy of the Sales Employees by Territory user role. You specify one of the user names you added to the EmployeeSecurity table and as a member of the role. This user name is then used as the effective user name in the connection created between Excel and the model.  
   
 #### To test the Sales Employees by Territory user role  
@@ -178,10 +187,10 @@ In this task, you use the Analyze in Excel feature in SSDT to test the efficacy 
 6.  Select the **SalesTerritoryId** column from the **DimSalesTerritory** table. The column is entered into the **Row Labels** fields.  
   
     Notice Internet sales figures appear only for the one region to which the effective user name you used belongs. If you select another column, like City from the DimGeography table as Row Label field, only cities in the sales territory to which the effective user belongs are displayed.  
-  
     This user cannot browse or query any Internet sales data for territories other than the one they belong to. This restriction is because the row filter defined for the DimSalesTerritory table, in the Sales Employees by Territory user role, secures data for all data related to other sales territories.  
   
 ## See Also  
+
 [USERNAME Function (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
 [LOOKUPVALUE Function (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
 [CUSTOMDATA Function (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  

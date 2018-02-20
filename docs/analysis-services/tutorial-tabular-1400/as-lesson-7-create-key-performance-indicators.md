@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial lesson 7: Create Key Performance Indicators | Microsoft Docs"
 description: Describes how to create Key Performance Indicators in the Analysis Services tutorial project. 
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,19 +16,20 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Create Key Performance Indicators
 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-In this lesson, you create Key Performance Indicators (KPIs). KPIs are used to gauge performance of a value defined by a *Base* measure, against a *Target* value also defined by a measure, or by an absolute value. In reporting client applications, KPIs can provide business professionals a quick and easy way to understand a summary of business success or to identify trends. To learn more, see [KPIs](https://docs.microsoft.com/sql/analysis-services/tabular-models/kpis-ssas-tabular)
+In this lesson, you create Key Performance Indicators (KPIs). KPIs are used to gauge performance of a value defined by a *Base* measure, against a *Target* value also defined by a measure, or by an absolute value. In reporting client applications, KPIs can provide business professionals a quick and easy way to understand a summary of business success or to identify trends. To learn more, see [KPIs](../tabular-models/kpis-ssas-tabular.md)
   
 Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 6: Create measures](../tutorials/as-lesson-6-create-measures.md).   
+
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 6: Create measures](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
   
 ## Create Key Performance Indicators  
   
@@ -52,7 +55,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 8.  In **Select Icon Style**, select the diamond (red), triangle (yellow), circle (green) icon type.
   
-    ![as-lesson7-kpi](../tutorials/media/as-lesson7-kpi.png)
+    ![as-lesson7-kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
     > Notice the expandable **Descriptions** label below the available icon styles. Use descriptions for the various KPI elements to make them more identifiable in client applications.  
@@ -80,6 +83,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
 6.  In **Select Icon Style**, select the diamond (red), triangle (yellow), circle (green) icon type, and then click **OK**.  
   
 ## What's next?
-[Lesson 8: Create perspectives](../tutorials/as-lesson-8-create-perspectives.md).
+
+[Lesson 8: Create perspectives](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).
   
   

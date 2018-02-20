@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial lesson 11: Create roles | Microsoft Docs"
 description: Describes how to create roles in the Analysis Services tutorial project. 
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,14 +16,14 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Create roles
 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-In this lesson, you create roles. Roles provide model database object and data security by limiting access to only those users that are role members. Each role is defined with a single permission: None, Read, Read and Process, Process, or Administrator. Roles can be defined during model authoring by using Role Manager. After a model has been deployed, you can manage roles by using SQL Server Management Studio (SSMS). To learn more, see [Roles](https://docs.microsoft.com/sql/analysis-services/tabular-models/roles-ssas-tabular).
+In this lesson, you create roles. Roles provide model database object and data security by limiting access to only those users that are role members. Each role is defined with a single permission: None, Read, Read and Process, Process, or Administrator. Roles can be defined during model authoring by using Role Manager. After a model has been deployed, you can manage roles by using SQL Server Management Studio (SSMS). To learn more, see [Roles](../tabular-models/roles-ssas-tabular.md).
   
 > [!NOTE]  
 > Creating roles is not necessary to complete this tutorial. By default, the account you are currently logged in with has Administrator privileges on the model. However, for other users in your organization to browse by using a reporting client, you must create at least one role with Read permissions and add those users as members.  
@@ -39,7 +41,8 @@ Because Windows user and group accounts in your organization are unique, you can
 Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 10: Create partitions](../tutorials/as-lesson-10-create-partitions.md).  
+
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 10: Create partitions](../tutorial-tabular-1400/as-lesson-10-create-partitions.md).  
   
 ## Create roles  
   
@@ -53,7 +56,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 4.  In the **Permissions** column, click the dropdown list, and then select the **Read** permission. 
 
-    ![as-lesson11-new-role](../tutorials/media/as-lesson11-new-role.png) 
+    ![as-lesson11-new-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
   
 5.  Optional: Click the **Members** tab, and then click **Add**. In the **Select Users or Groups** dialog box, enter the Windows users or groups from your organization you want to include in the role.  
   
@@ -72,7 +75,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     ```
     
     A Row Filter formula must resolve to a Boolean (TRUE/FALSE) value. With this formula, you are specifying that only rows with the Country Region Code value of “US” are visible to the user.  
-    ![as-lesson11-role-filter](../tutorials/media/as-lesson11-role-filter.png) 
+    ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
 6.  Optional: Click the **Members** tab, and then click **Add**. In the **Select Users or Groups** dialog box, enter the Windows users or groups from your organization you want to include in the role.  
   
@@ -88,7 +91,8 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
   
 ## What's next?
-[Lesson 12: Analyze in Excel](../tutorials/as-lesson-12-analyze-in-excel.md).
+
+[Lesson 12: Analyze in Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).
 
   
   

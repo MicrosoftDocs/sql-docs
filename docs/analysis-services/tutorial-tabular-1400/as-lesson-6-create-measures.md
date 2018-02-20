@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial lesson 6: Create measures | Microsoft Docs"
 description: Describes how to create measures in the Analysis Services tutorial project. 
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,14 +16,14 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Create measures
 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-In this lesson, you create measures to be included in your model. Similar to the calculated columns you created, a measure is a calculation created by using a DAX formula. However, unlike calculated columns, measures are evaluated based on a user selected *filter*. For example, a particular column or slicer added to the Row Labels field in a PivotTable. A value for each cell in the filter is then calculated by the applied measure. Measures are powerful, flexible calculations that you want to include in almost all tabular models to perform dynamic calculations on numerical data. To learn more, see [Measures](https://docs.microsoft.com/sql/analysis-services/tabular-models/measures-ssas-tabular).
+In this lesson, you create measures to be included in your model. Similar to the calculated columns you created, a measure is a calculation created by using a DAX formula. However, unlike calculated columns, measures are evaluated based on a user selected *filter*. For example, a particular column or slicer added to the Row Labels field in a PivotTable. A value for each cell in the filter is then calculated by the applied measure. Measures are powerful, flexible calculations that you want to include in almost all tabular models to perform dynamic calculations on numerical data. To learn more, see [Measures](../tabular-models/measures-ssas-tabular).
   
 To create measures, you use the *Measure Grid*. By default, each table has an empty measure grid; however, you typically do not create measures for every table. The measure grid appears below a table in the model designer when in Data View. To hide or show the measure grid for a table, click the **Table** menu, and then click **Show Measure Grid**.  
   
@@ -32,7 +34,8 @@ In this lesson, you create measures by both entering a DAX formula in the formul
 Estimated time to complete this lesson: **30 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 5: Create calculated columns](../tutorials/as-lesson-5-create-calculated-columns.md).  
+
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 5: Create calculated columns](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   
 ## Create measures  
   
@@ -50,7 +53,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
     Notice the top-left cell now contains a measure name, **DaysCurrentQuarterToDate**, followed by the result, **92**. The result is not relevant at this point because no user filter has been applied.
     
-      ![as-lesson6-newmeasure](../tutorials/media/as-lesson6-newmeasure.png) 
+      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     Unlike calculated columns, with measure formulas you can type the measure name, followed by a colon, followed by the formula expression.
 
@@ -77,7 +80,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
     The AutoSum feature automatically creates a measure for the selected column using the DistinctCount standard aggregation formula.  
     
-       ![as-lesson6-newmeasure2](../tutorials/media/as-lesson6-newmeasure2.png)
+       ![as-lesson6-newmeasure2](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
   
 4.  In the measure grid, click the new measure, and then in the **Properties** window, in **Measure Name**, rename the measure to **InternetDistinctCountSalesOrder**. 
  
@@ -126,6 +129,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
 Measures created for the FactInternetSales table can be used to analyze critical financial data such as sales, costs, and profit margin for items defined by the user selected filter.  
   
 ## What's next?
-[Lesson 7: Create Key Performance Indicators](../tutorials/as-lesson-7-create-key-performance-indicators.md).  
+
+[Lesson 7: Create Key Performance Indicators](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md).  
 
   

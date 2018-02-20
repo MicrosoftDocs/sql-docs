@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial lesson 10: Create partitions | Microsoft Docs"
 description: Describes how to create partitions in the Analysis Services tutorial project. 
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,19 +16,20 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Create partitions
 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-In this lesson, you create partitions to divide the FactInternetSales table into smaller logical parts that can be processed (refreshed) independent of other partitions. By default, every table you include in your model has one partition, which includes all the table’s columns and rows. For the FactInternetSales table, we want to divide the data by year; one partition for each of the table’s five years. Each partition can then be processed independently. To learn more, see [Partitions](https://docs.microsoft.com/sql/analysis-services/tabular-models/partitions-ssas-tabular). 
+In this lesson, you create partitions to divide the FactInternetSales table into smaller logical parts that can be processed (refreshed) independent of other partitions. By default, every table you include in your model has one partition, which includes all the table’s columns and rows. For the FactInternetSales table, we want to divide the data by year; one partition for each of the table’s five years. Each partition can then be processed independently. To learn more, see [Partitions](../tabular-models/partitions-ssas-tabular.md). 
   
 Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 9: Create Hierarchies](../tutorials/as-lesson-9-create-hierarchies.md).  
+
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 9: Create Hierarchies](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).  
   
 ## Create partitions  
   
@@ -42,11 +45,11 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
 
 5.  In preview, click the down arrow in the **OrderDate** column heading, and then click **Date/Time Filters** > **Between**.
 
-    ![as-lesson10-query-editor](../tutorials/media/as-lesson10-query-editor.png)
+    ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
 6.  In the Filter Rows dialog box, in **Show rows where: OrderDate**, leave **is after or equal to**, and then in the date field, enter **1/1/2010**. Leave the **And** operator selected, then select **is before**, then in the date field, enter **1/1/2011**, and then click **OK**.
 
-    ![as-lesson10-filter-rows](../tutorials/media/as-lesson10-filter-rows.png)
+    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Notice in Query Editor, in APPLIED STEPS, you see another step named Filtered Rows. This filter is to select only order dates from 2010.
 
@@ -54,7 +57,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
 
     In Partition Manager, notice the query expression now has an additional Filtered Rows clause.
 
-    ![as-lesson10-query](../tutorials/media/as-lesson10-query.png)
+    ![as-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
     This statement specifies this partition should include only the data in those rows where the OrderDate is in the 2010 calendar year as specified in the filtered rows clause.  
   
@@ -84,14 +87,17 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 
 ## Delete the FactInternetSales partition
+
 Now that you have partitions for each year, you can delete the FactInternetSales partition; preventing overlap when choosing Process all when processing partitions.
 
 #### To delete the FactInternetSales partition
--  Click the FactInternetSales partition, and then click **Delete**.
+
+-  Click the **FactInternetSales** partition, and then click **Delete**.
 
 
 
 ## Process partitions  
+
 In Partition Manager, notice the **Last Processed** column for each of the new partitions you created shows these partitions have never been processed. When you create partitions, you should run a Process Partitions or Process Table operation to refresh the data in those partitions.  
   
 #### To process the FactInternetSales partitions  
@@ -104,13 +110,14 @@ In Partition Manager, notice the **Last Processed** column for each of the new p
   
 4.  Select the checkbox in the **Process** column for each of the five partitions you created, and then click **OK**.  
 
-    ![as-lesson10-process-partitions](../tutorials/media/as-lesson10-process-partitions.png)
+    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     If you're prompted for Impersonation credentials, enter the Windows user name and password you specified in Lesson 2.  
   
     The **Data Processing** dialog box appears and displays process details for each partition. Notice that a different number of rows for each partition are transferred. Each partition includes only those rows for the year specified in the WHERE clause in the SQL Statement. When processing is finished, go ahead and close the Data Processing dialog box.  
   
-    ![as-lesson10-process-complete](../tutorials/media/as-lesson10-process-complete.png)
+    ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   
  ## What's next?
-Go to the next lesson: [Lesson 11: Create Roles](../tutorials/as-lesson-11-create-roles.md). 
+
+Go to the next lesson: [Lesson 11: Create Roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md). 

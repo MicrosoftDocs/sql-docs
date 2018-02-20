@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial supplemental lesson: Detail Rows | Microsoft Docs"
 description: Describes how to create a Detail Rows Expression in the Analysis Services tutorial.
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,7 +16,7 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Supplemental lesson - Detail Rows
@@ -26,20 +28,22 @@ In this supplemental lesson, you use the DAX Editor to define a custom Detail Ro
 Estimated time to complete this lesson: **10 minutes**  
   
 ## Prerequisites  
+
 This supplemental lesson is part of a tabular modeling tutorial. Before performing the tasks in this supplemental lesson, you should have completed all previous lessons or have a completed Adventure Works Internet Sales sample model project.  
   
 ## What's the issue?
+
 Let's look at the details of our InternetTotalSales measure, before adding a Detail Rows Expression.
 
 1.  In SSDT, click the **Model** menu > **Analyze in Excel** to open Excel and create a blank PivotTable.
   
 2.  In **PivotTable Fields**, add the **InternetTotalSales** measure from the FactInternetSales table to **Values**, **CalendarYear** from the DimDate table to **Columns**, and **EnglishCountryRegionName** to **Rows**. The PivotTable now gives us aggregated results from the InternetTotalSales measure by regions and year. 
 
-    ![as-lesson-detail-rows-pivottable](../tutorials/media/as-lesson-detail-rows-pivottable.png)
+    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
 
 3. In the PivotTable, double-click an aggregated value for a year and a region name. Here we double-clicked the value for Australia and the year 2014. A new sheet opens containing data, but not useful data.
 
-    ![as-lesson-detail-rows-pivottable](../tutorials/media/as-lesson-detail-rows-sheet.png)
+    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
   
 What we would like to see here is a table containing columns and rows of data that contribute to the aggregated result of our InternetTotalSales measure. To do that, we can add a Detail Rows Expression as a property of the measure.
 
@@ -51,7 +55,7 @@ What we would like to see here is a table containing columns and rows of data th
 
 2. In **Properties** > **Detail Rows Expression**, click the editor button to open the DAX Editor.
 
-    ![as-lesson-detail-rows-ellipse](../tutorials/media/as-lesson-detail-rows-ellipse.png)
+    ![as-lesson-detail-rows-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
 
 3. In DAX Editor, enter the following expression:
 
@@ -72,12 +76,13 @@ What we would like to see here is a table containing columns and rows of data th
 
 4. Back in Excel, delete the sheet created in Step 3, then double-click an aggregated value. This time, with a Detail Rows Expression property defined for the measure, a new sheet opens containing a lot more useful data.
 
-    ![as-lesson-detail-rows-detailsheet](../tutorials/media/as-lesson-detail-rows-detailsheet.png)
+    ![as-lesson-detail-rows-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
 
 5. Redeploy your model.
 
   
 ## See also  
+
 [SELECTCOLUMNS Function (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
-[Supplemental lesson - Dynamic security](../tutorials/as-supplemental-lesson-dynamic-security.md)  
-[Supplemental lesson - Ragged hierarchies](../tutorials/as-supplemental-lesson-ragged-hierarchies.md)  
+[Supplemental lesson - Dynamic security](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
+[Supplemental lesson - Ragged hierarchies](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)  

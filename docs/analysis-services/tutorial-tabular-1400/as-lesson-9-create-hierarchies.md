@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial lesson 9: Create hierarchies | Microsoft Docs"
 description: 
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,21 +16,22 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Create hierarchies
 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-In this lesson, you create hierarchies. Hierarchies are groups of columns arranged in levels. For example, a Geography hierarchy might have sublevels for Country, State, County, and City. Hierarchies can appear separate from other columns in a reporting client application field list, making them easier for client users to navigate and include in a report. To learn more, see [Hierarchies](https://docs.microsoft.com/sql/analysis-services/tabular-models/hierarchies-ssas-tabular)
+In this lesson, you create hierarchies. Hierarchies are groups of columns arranged in levels. For example, a Geography hierarchy might have sublevels for Country, State, County, and City. Hierarchies can appear separate from other columns in a reporting client application field list, making them easier for client users to navigate and include in a report. To learn more, see [Hierarchies](../tabular-models/hierarchies-ssas-tabular.md)
   
 To create hierarchies, use the model designer in *Diagram View*. Creating and managing hierarchies is not supported in Data View.  
   
 Estimated time to complete this lesson: **20 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 8: Create perspectives](../tutorials/as-lesson-8-create-perspectives.md).  
+
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 8: Create perspectives](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
   
 ## Create hierarchies  
   
@@ -49,7 +52,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
 
 6.  Finally, add **EnglishProductName** to the Category hierarchy. Rename it **Product**.  
 
-    ![as-lesson9-category](../tutorials/media/as-lesson9-category.png)
+    ![as-lesson9-category](../tutorial-tabular-1400/media/as-lesson9-category.png)
   
 #### To create hierarchies in the DimDate table  
   
@@ -77,6 +80,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     *  DayNumberOfWeek
   
  ## What's next?
-[Lesson 10: Create partitions](../tutorials/as-lesson-10-create-partitions.md). 
+
+[Lesson 10: Create partitions](../tutorial-tabular-1400/as-lesson-10-create-partitions.md). 
   
   

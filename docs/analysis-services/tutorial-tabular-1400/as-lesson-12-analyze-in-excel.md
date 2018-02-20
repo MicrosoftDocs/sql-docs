@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial lesson 12: Analyze in Excel | Microsoft Docs"
 description: Describes how to use Analyze in Excel in the Analysis Services tutorial project. 
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,7 +16,7 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Analyze in Excel
@@ -25,12 +27,14 @@ In this lesson, you use the Analyze in Excel feature to open Microsoft Excel, au
   
 To complete this lesson, Excel must be installed on the same computer as Visual Studio.
   
-Estimated time to complete this lesson: **Five minutes**  
+Estimated time to complete this lesson: **5 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 11: Create roles](../tutorials/as-lesson-11-create-roles.md).  
+
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 11: Create roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
   
 ## Browse using the Default and Internet Sales perspectives  
+
 In these first tasks, you browse your model by using both the default perspective, which includes all model objects, and also by using the Internet Sales perspective you earlier. The Internet Sales perspective excludes the Customer table object.  
   
 #### To browse by using the Default perspective  
@@ -51,15 +55,16 @@ In these first tasks, you browse your model by using both the default perspectiv
   
 2.  In the **Analyze in Excel** dialog box, leave **Current Windows User** selected, then in the **Perspective** drop-down listbox, select **Internet Sales**, and then click **OK**. 
     
-    ![as-lesson12-perspective](../tutorials/media/as-lesson12-perspective.png)
+    ![as-lesson12-perspective](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
     
 3.  In Excel, in **PivotTable Fields**, notice the DimCustomer table is excluded from the field list.  
     
-    ![as-lesson12-fields](../tutorials/media/as-lesson12-fields.png)
+    ![as-lesson12-fields](../tutorial-tabular-1400/media/as-lesson12-fields.png)
     
 4.  Close Excel without saving the workbook.  
   
 ## Browse by using roles  
+
 Roles are an important part of any tabular model. Without at least one role to which users are added as members, users cannot access and analyze data using your model. The Analyze in Excel feature provides a way for you to test the roles you have defined.  
   
 #### To browse by using the Sales Manager user role  
@@ -73,7 +78,8 @@ Roles are an important part of any tabular model. Without at least one role to w
 3.  Close Excel without saving the workbook.  
   
 ## What's next?
-Go to the next lesson: [Lesson 13: Deploy](../tutorials/as-lesson-13-deploy.md).
+
+Go to the next lesson: [Lesson 13: Deploy](../tutorial-tabular-1400/as-lesson-13-deploy.md).
 
   
   

@@ -1,7 +1,9 @@
 ---
 title: "Analysis Services tutorial lesson 5: Create calculated columns | Microsoft Docs"
 description: Describes how to create calculated columns in the Analysis Services tutorial project. 
+ms.prod_service: "analysis-services, azure-analysis-services"
 services: analysis-services
+ms.suite: "pro-bi"
 documentationcenter: ''
 author: Minewiskan
 manager: kfile
@@ -14,23 +16,24 @@ ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
 ms.workload: na
-ms.date: 01/08/2018
+ms.date: 02/20/2018
 ms.author: owend
 ---
 # Create calculated columns
 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-In this lesson, you create data in your model by adding calculated columns. You can create calculated columns (as custom columns) when using Get Data, by using the Query Editor, or later in the model designer like you do here. To learn more, see [Calculated columns](https://docs.microsoft.com/sql/analysis-services/tabular-models/ssas-calculated-columns).
+In this lesson, you create data in your model by adding calculated columns. You can create calculated columns (as custom columns) when using Get Data, by using the Query Editor, or later in the model designer like you do here. To learn more, see [Calculated columns](../tabular-models/ssas-calculated-columns.md).
   
 You create five new calculated columns in three different tables. The steps are slightly different for each task showing there are several ways to create columns, rename them, and place them in various locations in a table.  
 
-This lesson is also where you first use Data Analysis Expressions (DAX). DAX is a special language for creating highly customizable formula expressions for tabular models. In this tutorial, you use DAX to create calculated columns, measures, and role filters. To learn more, see [DAX in tabular models](https://docs.microsoft.com/sql/analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular). 
+This lesson is also where you first use Data Analysis Expressions (DAX). DAX is a special language for creating highly customizable formula expressions for tabular models. In this tutorial, you use DAX to create calculated columns, measures, and role filters. To learn more, see [DAX in tabular models](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md). 
   
 Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 4: Create relationships](../tutorials/as-lesson-4-create-relationships.md). 
+
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 4: Create relationships](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
   
 ## Create calculated columns  
   
@@ -56,7 +59,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 5.  Rename this column to **MonthCalendar**. 
 
-    ![as-lesson5-newcolumn](../tutorials/media/as-lesson5-newcolumn.png) 
+    ![as-lesson5-newcolumn](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
   
 The MonthCalendar calculated column provides a sortable name for Month.  
   
@@ -124,12 +127,13 @@ The ProductCategoryName calculated column is used to create a hierarchy in the D
 
 4.  Rename the column to **Margin**.  
  
-      ![as-lesson5-newmargin](../tutorials/media/as-lesson5-newmargin.png)
+      ![as-lesson5-newmargin](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
       
     The Margin calculated column is used to analyze profit margins for each sale.  
   
 ## What's next?
-[Lesson 6: Create measures](../tutorials/as-lesson-6-create-measures.md).
+
+[Lesson 6: Create measures](../tutorial-tabular-1400/as-lesson-6-create-measures.md).
   
   
   

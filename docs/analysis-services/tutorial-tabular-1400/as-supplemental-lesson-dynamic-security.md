@@ -35,7 +35,7 @@ Estimated time to complete this lesson: **30 minutes**
   
 ## Prerequisites  
 
-This supplemental lesson topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this supplemental lesson, you should have completed all previous lessons.  
+This supplemental lesson article is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this supplemental lesson, you should have completed all previous lessons.  
   
 ## Add the DimSalesTerritory table to the AW Internet Sales Tabular Model Project  
 

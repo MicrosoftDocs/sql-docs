@@ -42,7 +42,7 @@ Estimated time to complete this lesson: **15 minutes**
   
 ## Prerequisites  
 
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 10: Create partitions](../tutorial-tabular-1400/as-lesson-10-create-partitions.md).  
+This article is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 10: Create partitions](../tutorial-tabular-1400/as-lesson-10-create-partitions.md).  
   
 ## Create roles  
   

@@ -29,7 +29,7 @@ Estimated time to complete this lesson: **10 minutes**
   
 ## Prerequisites
 
-This topic is the first lesson in a tabular model authoring tutorial. To complete this lesson, there are several prerequisites you need to have in-place. To learn more, see [Analysis Services - Adventure Works tutorial](../tutorial-tabular-1400/as-adventure-works-tutorial.md).  
+This article is the first lesson in a tabular model authoring tutorial. To complete this lesson, there are several prerequisites you need to have in-place. To learn more, see [Analysis Services - Adventure Works tutorial](../tutorial-tabular-1400/as-adventure-works-tutorial.md).  
   
 ## Create a new tabular model project  
   

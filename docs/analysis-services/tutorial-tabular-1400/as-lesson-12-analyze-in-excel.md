@@ -31,7 +31,7 @@ Estimated time to complete this lesson: **5 minutes**
   
 ## Prerequisites  
 
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 11: Create roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
+This article is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 11: Create roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
   
 ## Browse using the Default and Internet Sales perspectives  
 

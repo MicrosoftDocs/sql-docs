@@ -31,7 +31,7 @@ Estimated time to complete this lesson: **20 minutes**
   
 ## Prerequisites  
 
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 8: Create perspectives](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
+This article is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 8: Create perspectives](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
   
 ## Create hierarchies  
   

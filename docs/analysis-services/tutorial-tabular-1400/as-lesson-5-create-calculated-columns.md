@@ -33,7 +33,7 @@ Estimated time to complete this lesson: **15 minutes**
   
 ## Prerequisites  
 
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 4: Create relationships](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
+This article is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 4: Create relationships](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
   
 ## Create calculated columns  
   

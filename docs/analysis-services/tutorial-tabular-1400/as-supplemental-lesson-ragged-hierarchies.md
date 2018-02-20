@@ -32,7 +32,7 @@ Tabular models at the 1400 compatibility level have an additional **Hide Members
 Estimated time to complete this lesson: **20 minutes**  
   
 ## Prerequisites  
-This supplemental lesson topic is part of a tabular modeling tutorial. Before performing the tasks in this supplemental lesson, you should have completed all previous lessons or have a completed Adventure Works Internet Sales sample model project. 
+This supplemental lesson article is part of a tabular modeling tutorial. Before performing the tasks in this supplemental lesson, you should have completed all previous lessons or have a completed Adventure Works Internet Sales sample model project. 
 
 If you've created the AW Internet Sales project as part of the tutorial, your model does not yet contain any data or hierarchies that are ragged. To complete this supplemental lesson, you first have to create the problem by adding some additional tables, create relationships, calculated columns, a measure, and a new Organization hierarchy. That part takes about 15
  minutes. Then, you get to solve it in just a few minutes.  

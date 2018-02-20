@@ -23,17 +23,17 @@ ms.author: owend
 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-In this lesson, you verify the relationships that were created automatically when you imported data and add new relationships between different tables. A relationship is a connection between two tables that establishes how the data in those tables should be correlated. For example, the DimProduct table and the DimProductSubcategory table have a relationship based on the fact that each product belongs to a subcategory. To learn more, see [Relationships](../tabular-models/relationships-ssas-tabular).
+In this lesson, you verify the relationships that were created automatically when you imported data and add new relationships between different tables. A relationship is a connection between two tables that establishes how the data in those tables should be correlated. For example, the DimProduct table and the DimProductSubcategory table have a relationship based on the fact that each product belongs to a subcategory. To learn more, see [Relationships](../tabular-models/relationships-ssas-tabular.md).
   
 Estimated time to complete this lesson: **10 minutes**  
   
 ## Prerequisites  
 
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 3: Mark as Date Table](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
+This article is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 3: Mark as Date Table](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
 ## Review existing relationships and add new relationships  
 
-When you imported data by using Get Data, you got seven tables from the AdventureWorksDW database. Generally, when you import data from a relational source, existing relationships are automatically imported together with the data. In order for Get Data to automatically create relationships in the data model, there must be relationsips between tables at the data source.
+When you imported data by using Get Data, you got seven tables from the AdventureWorksDW database. Generally, when you import data from a relational source, existing relationships are automatically imported together with the data. In order for Get Data to automatically create relationships in the data model, there must be relationships between tables at the data source.
 
 Before you proceed with authoring your model, you should verify those relationships between tables were created properly. For this tutorial, you also add three new relationships.  
 
@@ -56,7 +56,7 @@ Before you proceed with authoring your model, you should verify those relationsh
     Notice the **GeographyKey** column in the **DimCustomer** table and the **GeographyKey** column in the **DimGeography** table now both each appear within a box. These columns are used in the relationship. The relationship’s properties now also appear in the **Properties** window.  
   
     > [!TIP]  
-    > In addition to using the model designer in diagram view, you can also use the Manage Relationships dialog box to show the relationships between all tables in a table format. In Tabular Model Explorer, right-click **Relationships** > **Manage Relationships**.
+    > You can also use the Manage Relationships dialog box to show the relationships between all tables in a table format. In Tabular Model Explorer, right-click **Relationships** > **Manage Relationships**.
   
 3.  Verify the following relationships were created when each of the tables were imported from the AdventureWorksDW database:  
   
@@ -76,7 +76,7 @@ In Diagram View, notice an arrow, an asterisk, and a number on the lines that sh
 
 ![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
-The arrow shows the filter direction. The asterisk shows this table is the many side in the relationship's cardinality, and the one shows this table is the one side of the relationship. If you need to edit a relationship; for example, change the relationship's filter direction or cardinality, double-click the relationship line to open the Edit Relationship dialog.
+The arrow shows the filter direction. The asterisk shows this table is the *many* side in the relationship's cardinality, and the one shows this table is the *one* side of the relationship. If you need to edit a relationship; for example, change the relationship's filter direction or cardinality, double-click the relationship line to open the Edit Relationship dialog.
 
 ![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 

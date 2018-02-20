@@ -35,7 +35,7 @@ Estimated time to complete this lesson: **Three minutes**
   
 ## Prerequisites  
 
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 2: Get data](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
+This article is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 2: Get data](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
 
 ### To rename the FullDateAlternateKey column
 

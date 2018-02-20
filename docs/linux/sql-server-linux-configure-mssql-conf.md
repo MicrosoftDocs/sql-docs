@@ -172,7 +172,7 @@ To change these settings, use the following steps:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/masterlog.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
 1. Stop the SQL Server service:
@@ -185,7 +185,7 @@ To change these settings, use the following steps:
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
-   sudo mv /var/opt/mssql/data/masterlog.ldf /tmp/masterdatabasedir/masterlog.ldf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
    ```
 
 1. Start the SQL Server service:
@@ -209,14 +209,14 @@ The **filelocation.masterdatafile** and **filelocation.masterlogfile** setting c
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /var/opt/mssql/data /masterlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
    ```
 
 1. Change the name of the master database data and log files 
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /var/opt/mssql/data/masternew.mdf
-   sudo mv /var/opt/mssql/data/masterlog.ldf /var/opt/mssql/data /masterlognew.ldf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data /mastlognew.ldf
    ```
 
 1. Start the SQL Server service:

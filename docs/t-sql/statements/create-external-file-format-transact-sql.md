@@ -156,10 +156,10 @@ Specifies the field terminator for data of type string in the text-delimited fil
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
  
  FIRST_ROW = *First_row_int*  
-Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1-15. If the value is set to 2, the first row in every file (header row) will be skipped. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to make sure the file can be read with no data loss. If the value is set to >2, the first row exported is the Column names of the external table.
+Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1-15. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to make sure the file can be read with no data loss. If the value is set to >2, the first row exported is the Column names of the external table.
 
  DATE\_FORMAT = *datetime_format*  
-Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option isn't necessary. Only one custom datetime format is allowed per file. You can't specify more than one custom datetime formats per file. However, you can use more than one datetime formats, if each one is the default format for its respective data type in the external table definition.
+Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option isn't necessary. Only one custom datetime format is allowed per file. You can't specify more than one custom datetime formats per file. However, you can use more than one datetime formats if each one is the default format for its respective data type in the external table definition.
 
 PolyBase only uses the custom date format for importing the data. It doesn't use the custom format for writing data to an external file.
 
@@ -181,7 +181,7 @@ PolyBase only uses the custom date format for importing the data. It doesn't use
   
  Notes about the table:  
   
--   Year, month, and day can have a variety of formats and orders. The table shows only the **ymd** format. Month can have 1 or 2 digits, or 3 characters. Day can have 1 or 2 digits. Year can have 2 or 4 digits.
+-   Year, month, and day can have a variety of formats and orders. The table shows only the **ymd** format. Month can have one or two digits, or three characters. Day can have one or two digits. Year can have two or four digits.
   
 -   Milliseconds (fffffff) are not required.
   
@@ -222,7 +222,7 @@ PolyBase only uses the custom date format for importing the data. It doesn't use
   
 -   To separate month, day and year values, you can use '–', '/', or '.'. For simplicity, the table uses only the ' – ' separator.
   
--   To specify the month as text, use three or more characters. Months with 1 or 2 characters are interpreted as a number.
+-   To specify the month as text, use three or more characters. Months with one or two characters are interpreted as a number.
   
 -   To separate time values, use the ':' symbol.
   
@@ -304,7 +304,7 @@ PolyBase only uses the custom date format for importing the data. It doesn't use
 ## Performance
  Using compressed files always comes with the tradeoff between transferring less data between the external data source and SQL Server while increasing the CPU usage to compress and decompress the data.
   
- Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node in the current release. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
+ Gzip compressed text files are not splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node in the current release. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.  
   
 ## Examples  
   

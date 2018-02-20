@@ -108,7 +108,7 @@ WITH (
  Specifies the format of the external data.
   
    -   PARQUET
-   Specifies a Parquet  format.
+   Specifies a Parquet format.
   
    -   ORC  
    Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
@@ -156,7 +156,7 @@ Specifies the field terminator for data of type string in the text-delimited fil
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
  
  FIRST_ROW = *First_row_int*  
-Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1-15. If the value is set to 2, then the first row in every file (header row) will be skipped. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to ensure it can be read back with no data loss. If the value is set to >2 the first row exported is the Column names of the external table.
+Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1-15. If the value is set to 2, the first row in every file (header row) will be skipped. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to ensure it can be read back with no data loss. If the value is set to >2, the first row exported is the Column names of the external table.
 
  DATE\_FORMAT = *datetime_format*  
 Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option is not necessary. Only one custom datetime format is allowed per file. You cannot specify multiple custom datetime formats per file. However, you can use multiple datetime formats, if each one is the default format for its respective data type in the external table definition.
@@ -177,13 +177,13 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 -   Time: 'HH:mm:ss'  
   
- **Example date formats** are in the following table.  
+ **Example date formats** are in the following table:
   
  Notes about the table:  
   
 -   Year, month, and day can have a variety of formats and orders. The table shows only the **ymd** format. Month can have 1 or 2 digits, or 3 characters. Day can have 1 or 2 digits. Year can have 2 or 4 digits.
   
--   Milliseconds (fffffff) is not required.
+-   Milliseconds (fffffff) are not required.
   
 -   Am, pm (tt) is not required. The default is AM.
   
@@ -220,11 +220,11 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
  Details:  
   
--   To separate month, day and year values, you can use ' – ', ' / ', or ' . '. For simplicity, the table uses only the ' – ' separator.
+-   To separate month, day and year values, you can use '–', '/', or '.'. For simplicity, the table uses only the ' – ' separator.
   
 -   To specify the month as text, use three or more characters. Months with 1 or 2 characters are interpreted as a number.
   
--   To separate time values, use the ' : ' symbol.
+-   To separate time values, use the ':' symbol.
   
 -   Letters enclosed in square brackets are optional.
   
@@ -270,7 +270,7 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
- The PARQUET file format type supports the folliwing compression methods:
+ The PARQUET file format type supports the following compression methods:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   

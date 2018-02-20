@@ -259,7 +259,7 @@ To set up this new location, use the following commands:
 
 ## <a id="errorlogdir"></a> Change the default error log file directory location
 
-The **filelocation.errorlogfile** setting changes the location where the new error log, default profiler trace, system health session XE and Hekaton session XE files are created. By default, this location is /var/opt/mssql/data. 
+The **filelocation.errorlogfile** setting changes the location where the new error log, default profiler trace, system health session XE and Hekaton session XE files are created. By default, this location is /var/opt/mssql/log. The directory in which SQL errorlog file is set becomes the default log directory for other logs.
 
 To change these settings:
 
@@ -276,7 +276,7 @@ To change these settings:
    sudo chgrp mssql /tmp/logs
    ```
 
-1. Use mssql-conf to change the default errorlog directory with the **set** command:
+1. Use mssql-conf to change the default errorlog filename with the **set** command:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog

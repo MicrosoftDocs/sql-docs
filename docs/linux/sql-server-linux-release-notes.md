@@ -67,7 +67,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 
 ## <a id="CU4"></a> CU4 (February 2018)
 
-This is the Cumulative Update 4 (CU4) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3022.28. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4053439](https://support.microsoft.com/en-us/help/4053439).
+This is the Cumulative Update 4 (CU4) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3022.28. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498).
 
 ### Package details
 

@@ -64,22 +64,23 @@ After the repository has been created, you can move the repository to a differen
 
 You begin by creating a **miniCRAN** repository to use as a source. You should create this repository on a computer that has internet access.
 
-1.  Install the **miniCRAN** package and the required **igraph** package.
+1. Install the **miniCRAN** package and the required **igraph** package. This example checks for whether the package is already installed, but you can bypass the if statements and install the packages directly.
 
     ```R
-    if(!require("miniCRAN")) install.packages("miniCRAN") if(!require("igraph"))
-    install.packages("igraph") library(miniCRAN)
+    if(!require("miniCRAN")) install.packages("miniCRAN") 
+    if(!require("igraph")) install.packages("igraph") 
+    library("miniCRAN")
     ```
 
 ### Step 2. Define a package source: a CRAN mirror, or an MRAN snapshot
 
-1. Specify a mirror site to use in getting packages.
+1. Specify a mirror site to use in getting packages. This example specifies a particular snapshot from the MRAN site, but you should always open the MRAN site and find the latest snapshot. 
 
     ```R
-    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2017-08-01")
+    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2014-08-18_0233/")
     ```
 
-2.  Type the name of a local folder in which to store the collected packages. 
+2. Type the name of a local folder in which to store the collected packages. 
 
     Be sure to create the folder in advance. An error is raised if the `local_repo` folder does not exist when you run the R code later.
 
@@ -93,7 +94,7 @@ You begin by creating a **miniCRAN** repository to use as a source. You should c
 
 ### Step 3. Add packages to the repository
 
-1.  After **miniCRAN** is installed, create a list that specifies the additional packages you want to download.
+1. After **miniCRAN** is installed, create a list that specifies the additional packages you want to download.
 
     Do **not** add dependencies to this initial list. The **igraph** package used by **miniCRAN** generates the list of dependencies for you. For more information about how to use the generated dependency graph, see [Using miniCRAN to identify package
     dependencies](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).

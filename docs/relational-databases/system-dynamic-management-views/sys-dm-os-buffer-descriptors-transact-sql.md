@@ -43,8 +43,16 @@ format test
 
 [!INCLUDE[SQL Managed Instance limitation](../../includes/sql-db-mi-limitation.md)] *sys.dm_os_buffer_descriptors* is not supported.
 
-> [!IMPORTANT]
-> On [Azure SQL Database Managed Instance]( https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance),
+[!INCLUDE[SQL Managed Instance limitation](../../includes/sql-db-mi-limitation.md)], *sys.dm_os_buffer_descriptors* is not supported.
+
+[!INCLUDE[SQL Managed Instance limitation](../../includes/sql-db-mi-limitation.md)] 
+> *sys.dm_os_buffer_descriptors* is not supported.
+
+[!INCLUDE[SQL Managed Instance limitation](../../includes/sql-db-mi-limitation.md)] 
+*sys.dm_os_buffer_descriptors* is not supported.
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Table Properties (SSAS Tabular) | Microsoft Docs"
+title: "Table Properties | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Table Properties (SSAS Tabular)
+# Table Properties 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   This topic describes tabular model table properties. The properties described here are different from those in the Edit Table Properties dialog box, which define which columns from the source are imported.  
   
@@ -47,7 +47,7 @@ ms.workload: "Inactive"
   
  **Reporting Properties**  
   
- For detailed descriptions and configuration information for reporting properties, see [Power View Reporting Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
+ For detailed descriptions and configuration information for reporting properties, see [Power View reporting properties](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  

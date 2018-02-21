@@ -1,5 +1,5 @@
 ---
-title: "KPIs (SSAS Tabular) | Microsoft Docs"
+title: "KPIs | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
 ms.prod: analysis-services

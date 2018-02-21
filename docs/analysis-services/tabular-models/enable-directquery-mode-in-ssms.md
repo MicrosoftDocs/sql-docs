@@ -35,7 +35,7 @@ ms.workload: "Inactive"
   
 -   Ensure that the model does not have features which might cause validation errors in DirectQuery mode, and then change the data storage mode on the model from in-memory to DirectQuery.  
   
-     A list of feature restrictions is documented in [DirectQuery Mode &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+     A list of feature restrictions is documented in [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 -   Review  the connection string and credentials used by the deployed database to retrieve data from the backend external database. Make sure there is only one connection, and that its settings are suitable for query execution.  
   
@@ -92,7 +92,7 @@ ms.workload: "Inactive"
   
 -   When both the cache and the relational data source are available, you can set the preferred connection method, but ultimately the client controls which source is used, using the DirectQueryMode connection string property.  
   
--   You can configure partitions on the cache in such a way that the primary partition used for DirectQuery mode is never processed and must always reference the relational source. There are many ways to use partitions to optimize the model design and reporting experience. For more information, see [Define partitions in DirectQuery models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
+-   You can configure partitions on the cache in such a way that the primary partition used for DirectQuery mode is never processed and must always reference the relational source. There are many ways to use partitions to optimize the model design and reporting experience. For more information, see [Define partitions in DirectQuery models](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
   
 -   After the model has been deployed, you can change the preferred connection method. For example, you might use a hybrid mode for testing, and switch the model over to **DirectQuery only** mode only after thoroughly testing any reports or queries that use the model. For more information, see [Set or Change the Preferred Connection Method for DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
@@ -103,7 +103,7 @@ ms.workload: "Inactive"
   
 1.  In Object Explorer, expand **Connections** and double-click a connection to view its properties.  
   
-     For DirectQuery models, there should only be one connection defined for the database, and the data source must be relational, and of a supported database type. See [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
+     For DirectQuery models, there should only be one connection defined for the database, and the data source must be relational, and of a supported database type. See [Data Sources Supported](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 2.  **Connection string** should specify the server, database name, and the authentication method used in DirectQuery operations. If you're using SQL Server authentication, you can specify the database login here.  
   
@@ -129,7 +129,7 @@ ms.workload: "Inactive"
   
 ## See also  
  [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Data Sources Supported](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
  [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   

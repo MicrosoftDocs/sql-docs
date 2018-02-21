@@ -1,7 +1,7 @@
 ---
-title: "Analyze in Excel (SSAS Tabular) | Microsoft Docs"
+title: "Analyze in Excel | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "02/21/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -49,10 +49,10 @@ ms.workload: "Inactive"
   
 |**Topic**|**Description**|  
 |---------------|---------------------|  
-|[Analyze a Tabular Model in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|This topic describes how to use the Analyze in Excel feature in the model designer to open Excel, create a data source connection to the model workspace database, and add a PivotTable to the worksheet.|  
+|[Analyze a tabular model in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|This topic describes how to use the Analyze in Excel feature in the model designer to open Excel, create a data source connection to the model workspace database, and add a PivotTable to the worksheet.|  
   
-## See Also  
- [Analyze a Tabular Model in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+## See also  
+ [Analyze a tabular model in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   

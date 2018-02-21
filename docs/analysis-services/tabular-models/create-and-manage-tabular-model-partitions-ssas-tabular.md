@@ -1,5 +1,5 @@
 ---
-title: "Create and Manage Tabular Model Partitions (SSAS Tabular) | Microsoft Docs"
+title: "Create and Manage Tabular Model Partitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/31/2017"
 ms.prod: analysis-services

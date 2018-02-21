@@ -1,5 +1,5 @@
 ---
-title: "Create a Relationship Between Two Tables (SSAS Tabular) | Microsoft Docs"
+title: "Create a Relationship Between Two Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: analysis-services
@@ -23,9 +23,9 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Create a Relationship Between Two Tables (SSAS Tabular)
+# Create a Relationship Between Two Tables 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  If the tables in your data source do not have existing relationships, or if you add new tables, you can use the tools in the model designer to create new relationships. For information about how relationships are used in tabular models, see [Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+  If the tables in your data source do not have existing relationships, or if you add new tables, you can use the tools in the model designer to create new relationships. For information about how relationships are used in tabular models, see [Relationships](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## Create a relationship between two tables  
   
@@ -74,7 +74,7 @@ ms.workload: "Inactive"
 6.  Click **Create**.  
   
 ## See Also  
- [Delete Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
- [Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
+ [Delete Relationships](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
+ [Relationships](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   

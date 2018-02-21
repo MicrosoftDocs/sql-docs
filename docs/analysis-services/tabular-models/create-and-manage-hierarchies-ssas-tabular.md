@@ -1,5 +1,5 @@
 ---
-title: "Create and Manage Hierarchies (SSAS Tabular) | Microsoft Docs"
+title: "Create and Manage Hierarchies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: analysis-services
@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Create and Manage Hierarchies (SSAS Tabular)
+# Create and Manage Hierarchies 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Hierarchies can be created and managed in the model designer, in Diagram View. To view the model designer in Diagram View, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Model** menu, then point to **Model View**, and then click **Diagram View**.  
   
@@ -99,8 +99,8 @@ ms.workload: "On Demand"
 -   Or, click the parent hierarchy level, and then press Delete. This also removes all the child levels.  
   
 ## See Also  
- [Tabular Model Designer &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [Hierarchies &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [Tabular Model Designer ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

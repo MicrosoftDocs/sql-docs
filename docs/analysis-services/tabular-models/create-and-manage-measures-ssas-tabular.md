@@ -1,5 +1,5 @@
 ---
-title: "Create and Manage Measures (SSAS Tabular) | Microsoft Docs"
+title: "Create and Manage Measures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: analysis-services
@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Create and Manage Measures (SSAS Tabular)
+# Create and Manage Measures 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   A measure is a formula that is created for use in a report or Excel PivotTable (or PivotChart). Measures can be based on standard aggregation functions, such as COUNT or SUM, or you can define your own formula by using DAX. The tasks in this topic describe how to create and manage measures by using a table’s measure grid.  
   
@@ -65,8 +65,8 @@ ms.workload: "On Demand"
 -   In the measure grid, right-click a measure, and then click **Delete**.  
   
 ## See Also  
- [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Calculated Columns](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

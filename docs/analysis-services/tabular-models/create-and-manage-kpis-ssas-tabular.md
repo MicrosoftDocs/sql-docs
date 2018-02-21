@@ -1,5 +1,5 @@
 ---
-title: "Create and Manage KPIs (SSAS Tabular) | Microsoft Docs"
+title: "Create and Manage KPIs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: analysis-services
@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Create and Manage KPIs (SSAS Tabular)
+# Create and Manage KPIs 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   This topic describes how to create, edit, or delete a KPI (Key Performance Indicator) in a tabular model. To create a KPI, you select a measure that evaluates to the KPI’s Base value. You then use the Key Performance Indicator dialog box to select a second measure or an absolute value that evaluates to a target value. You can then define status thresholds that measure the performance between the Base and Target measures.  
   
@@ -40,7 +40,7 @@ ms.workload: "Inactive"
 ## Tasks  
   
 > [!IMPORTANT]  
->  Before creating a KPI, you must first create a Base measure that evaluates to value. You then extend the Base measure to a KPI. How to create measures are described in another topic, [Create and Manage Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md). A KPI also requires a target value. This value can be from another pre-defined measure or an absolute value. Once you have extended a Base measure to a KPI, you can then select the target value and define status thresholds in the Key Performance Indicator dialog box.  
+>  Before creating a KPI, you must first create a Base measure that evaluates to value. You then extend the Base measure to a KPI. How to create measures are described in another topic, [Create and Manage Measures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md). A KPI also requires a target value. This value can be from another pre-defined measure or an absolute value. Once you have extended a Base measure to a KPI, you can then select the target value and define status thresholds in the Key Performance Indicator dialog box.  
   
 ###  <a name="bkmk_create_KPI"></a> To create a KPI  
   
@@ -59,7 +59,7 @@ ms.workload: "Inactive"
 5.  Click on **Descriptions**, and then type descriptions for KPI, Value, Status, and Target.  
   
 > [!TIP]  
->  You can use the Analyze in Excel feature to test your KPI. For more information, see [Analyze in Excel &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+>  You can use the Analyze in Excel feature to test your KPI. For more information, see [Analyze in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ###  <a name="bkmk_edit_KPI"></a> To edit a KPI  
   
@@ -88,8 +88,8 @@ ms.workload: "Inactive"
 |Trend|ALT+T|  
   
 ## See Also  
- [KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Create and Manage Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Create and Manage Measures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   

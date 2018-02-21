@@ -33,10 +33,10 @@ ms.workload: "Inactive"
   
 3.  In **Name**, type a name for the project, then specify a location and solution name, and then click **OK**.  
   
- After your new project is created, it is important to set project and model properties. For more information, see [Project Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md) and [Model Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md).  
+ After your new project is created, it is important to set project and model properties. For more information, see [Project properties](../../analysis-services/tabular-models/project-properties-ssas-tabular.md) and [Model properties](../../analysis-services/tabular-models/model-properties-ssas-tabular.md).  
   
 ## See Also  
- [Project Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Model Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
+ [Project properties](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
+ [Model properties](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
   
   

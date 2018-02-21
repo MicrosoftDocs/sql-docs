@@ -1,5 +1,5 @@
 ---
-title: "Create and Manage Perspectives (SSAS Tabular) | Microsoft Docs"
+title: "Create and Manage Perspectives | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: analysis-services
@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Create and Manage Perspectives (SSAS Tabular)
+# Create and Manage Perspectives 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Perspectives define viewable subsets of a model that provide focused, business-specific, or application-specific viewpoints of the model. The tasks in this topic describe how to create and manage perspectives by using the **Perspectives** dialog box in the model designer.  
   
@@ -65,7 +65,7 @@ ms.workload: "Inactive"
 -   When you hover over a perspective’s column header, the **Copy** button appears. To create a copy of that perspective, click the **Copy** button. A copy of the selected perspective is added as a new perspective to the right of existing perspectives. The new perspective inherits the name of the copied perspective and a *- Copy* annotation is appended to the end of the name. For example, if a copy of the *Sales* perspective is created, the new perspective is called *Sales – Copy*.  
   
 ## See Also  
- [Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Hierarchies &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+ [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

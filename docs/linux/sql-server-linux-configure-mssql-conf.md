@@ -4,7 +4,7 @@ description: This article describes how to use the mssql-conf tool to  configure
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 09/20/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"

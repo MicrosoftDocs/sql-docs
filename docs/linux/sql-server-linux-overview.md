@@ -4,7 +4,7 @@ description: This article describes how SQL Server runs on Linux and provides in
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"

@@ -4,7 +4,7 @@ description: This article highlights what's new for SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 11/28/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"

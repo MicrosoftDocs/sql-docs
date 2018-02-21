@@ -37,6 +37,8 @@ ms.workload: "Inactive"
   
 > **NOTE:** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_buffer_descriptors**.  
   
+[!INCLUDE[SQL Managed Instance limitation](../../includes/sql-db-mi-limitation.md)] *sys.dm_os_buffer_descriptors* is not supported.
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID of database associated with the page in the buffer pool. Is nullable.|  

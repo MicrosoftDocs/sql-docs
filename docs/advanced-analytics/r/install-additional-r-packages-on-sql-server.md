@@ -174,7 +174,7 @@ However, at present this process is more complicated than installing packages us
 + The feature must be enabled on the instance and on specific databases beforehand.
 + All packages must be be available as a local zipped file, rather than downloading from the internet.
 + The statement fails if all packages are not prepared in advance. We strongly recommend that you use [miniCRAN]( to prepare packages in advance.
-+ If you do not have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](..\..\t-sql\statements\create-external-library-transact-sql.md).
++ If you do not have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 ### Prepare the package archive
 

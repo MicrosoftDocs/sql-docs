@@ -68,7 +68,7 @@ ms.workload: "On Demand"
   
 8.  Press F5 to execute this script, creating the **WorkOrdersForBlade** procedure.  
   
-9. In Object Explorer, right-click your server, and then click **New Query**. A new Query Editor window opens.  
+9. In Object Explorer, right-click the **AdventureWorks2012** database, and then click **New Query**. A new Query Editor window opens.  
   
 10. In Query Editor, type **EXECUTE dbo.WorkOrdersForBlade**, and then press F5 to execute the query. Confirm that the **Results** pane returns a list of work orders for blades.  
   

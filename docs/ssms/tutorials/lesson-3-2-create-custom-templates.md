@@ -48,7 +48,7 @@ ms.workload: "On Demand"
 7.  In Query Editor, type the following script to create a stored procedure that looks up orders for a particular part, in this case the Blade. (You can copy and paste the code from the Tutorial window.)  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -80,7 +80,7 @@ ms.workload: "On Demand"
 12. Now the script should look like:  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

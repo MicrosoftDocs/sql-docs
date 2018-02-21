@@ -1,7 +1,7 @@
 ---
 title: "Avoiding errors on R packages installed in user libraries | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2017"
+ms.date: "02/20/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -27,7 +27,7 @@ This topic provides workarounds to help you avoid this error. It explains how yo
 
 ## Why R user libraries cannot be accessed from SQL Server
 
-R developers who need to install new R packages are accustomed to installing packages at will, and using a private, user library whenever the default library is not available, or when the developer is not an administrator on the computer.
+R developers who need to install new R packages are accustomed to installing packages at will, using a private, user library whenever the default library is not available, or when the developer is not an administrator on the computer.
 
 For example, in a typical R development environment, the user would add the  location of the package to the R environment variable `libPath`, or reference the full package path, like this:
 
@@ -35,36 +35,36 @@ For example, in a typical R development environment, the user would add the  loc
 library("c:/Users/<username>/R/win-library/packagename")
 ```
 
-However, this can never work when running R solutions in SQL Server, because R packages must be installed to a specific default library that is associated with the instance.
-
-If the package is not installed in the default library, you might get this error when you try to call the package:
+This does not work when running R solutions in SQL Server, because R packages must be installed to a specific default library that is associated with the instance. When a package is not available in the default library, you get this error when you try to call the package:
 
 *Error in library(xxx) : there is no package called 'package-name'*
 
+## How to avoid “package not found” errors
+
+### eliminate dependencies on user libraries. 
+
 It is also a bad development practice to install required R packages to a custom user library, as it can lead to errors if a solution is run by another user who does not have access to the library location.
 
-## How to install R packages to an accessible library
+When you migrate R solutions to run in [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)], it is important that you modify your code to run in a shared environments:
+
++ Ensure that packages are loaded from the default library, not from ad hoc directories or user libraries.
++ Avoid installing packages as part of a solution. If you don’t have permissions to install packages, the code will fail. Even if you do have permissions to install packages, you should do so separately from other code that you want to execute.
++ Check your code to make sure that there are no calls to uninstalled packages. 
++ Update your code to remove direct references to the paths of R packages or R libraries. If a package is installed in the default library, the R runtime loads the package from the default library, even if a different library is specified in the R code.
+
+### Install packages to the instance library
 
 **For SQL Server 2016**
 
-Use the package library associated with the instance. For details, see [R packages installed with SQL Server](installing-and-managing-r-packages.md)
+Use the package library associated with the instance. You must have administrator rights to install new packages. For more information, see [R packages installed with SQL Server](installing-and-managing-r-packages.md)
 
 **For SQL Server 2017**
 
-SQL Server provides features to help you manage multiple package versions and give users permissions to individual packages, without requiring that users have file system access.
+SQL Server provides some new features to make installing and managing packages easier for the database administrator versions. You can continue to install packages instance-wide as an administrator, or the the database administrator an enable new roles for package management.
 
-For details on how to set up a shared package library and assign users to roles, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
+After package management has been enabled, remote users who have the appropriate permissions can install packages using rx functions. Package can also be installed and shared at the database level.
 
-If you take the package management approach based on database roles, it is not necessary to install multiple copies of the same package in different user directories. Install a single copy of the package you need and share it with authenticated users. Because packages are managed at the database level, you can also copy groups of packages and related permission between databases.
+For more information, see:
 
-## Tips for avoiding “package not found” errors
-
-+ Modify code to eliminate dependencies on user libraries. When you migrate R solutions to run in [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)], it is important that you do the following:
-
-    + Install any packages that you need to the default library associated with the instance.
-
-    + Edit code to ensure that packages are loaded from the default library, not from ad hoc directories or user libraries.
-
-+ Avoid ad hoc package installation as part of a solution. Check your code to make sure that there are no calls to uninstalled packages, or code that installs packages dynamically. If you don’t have permissions to install packages, the code will fail. Even if you do have permissions to install packages, you should do so separately from other code that you want to execute.
-
-+ Update your code to remove direct references to the paths of R packages or R libraries. If a package is installed in the default library, the R runtime will load the package from the default library, even if a different library is specified in the R code.
+Enable DDL access (LINK)
+Install packages

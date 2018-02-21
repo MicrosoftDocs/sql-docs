@@ -43,7 +43,7 @@ ms.workload: "On Demand"
   
 -   Parquet  
   
- To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
+To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -177,9 +177,9 @@ PolyBase only uses the custom date format for importing the data. It doesn't use
   
 -   Time: 'HH:mm:ss'  
   
- **Example date formats** are in the following table:
+**Example date formats** are in the following table:
   
- Notes about the table:  
+Notes about the table:  
   
 -   Year, month, and day can have a variety of formats and orders. The table shows only the **ymd** format. Month can have one or two digits, or three characters. Day can have one or two digits. Year can have two or four digits.
   

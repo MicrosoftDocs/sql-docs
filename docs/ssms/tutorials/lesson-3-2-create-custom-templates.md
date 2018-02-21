@@ -80,7 +80,7 @@ ms.workload: "On Demand"
 12. Now the script should look like:  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

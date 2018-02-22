@@ -51,7 +51,7 @@ ms.workload: "Inactive"
  Processing is a highly configurable operation, controlled by a set of processing options that determine whether full or incremental processing occurs at the object level. For more information about processing options and objects, see [Processing Options and Settings &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) and [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  This topic describes the tools and approaches for processing multidimensional models. For more information about processing tabular models, see [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) and [Process Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+>  This topic describes the tools and approaches for processing multidimensional models. For more information about processing tabular models, see [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) and [Process Data](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### Processing objects in SQL Server Management Studio  
   

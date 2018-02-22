@@ -29,7 +29,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_host_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Returns one row that displays operating system version information.  
   

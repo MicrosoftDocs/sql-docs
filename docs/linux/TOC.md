@@ -2,7 +2,8 @@
 
 # Overview
 ## [Release notes](sql-server-linux-release-notes.md)
-## [What's new in this release?](sql-server-linux-whats-new.md)
+## [What's new?](sql-server-linux-whats-new.md)
+## [FAQ](sql-server-linux-faq.md)
 ## [New and updated articles](new-updated-linux.md)
 ## [Editions and supported features](sql-server-linux-editions-and-components-2017.md)
 
@@ -102,7 +103,6 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Resources
-## [FAQ](sql-server-linux-faq.md)
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server Documentation](../sql-server/sql-server-technical-documentation.md)
 ## Partners

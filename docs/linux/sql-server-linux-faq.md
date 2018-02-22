@@ -4,7 +4,7 @@ description: This article provides answers to frequently asked questions about S
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -126,6 +126,4 @@ The following sections provide common questions and answers for SQL Server runni
 
    We do not support changing the ownership of SQL Server directory and files from the default installation. The mssql account and group is specifically used for SQL Server and has no interactive login access.
 
-## Next steps
-
-For more information about running SQL Server on Linux, see the [Overview of SQL Server on Linux](sql-server-linux-overview.md).
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

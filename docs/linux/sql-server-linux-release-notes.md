@@ -327,3 +327,5 @@ To get started, see the following quickstarts:
 - [Run on Docker](quickstart-install-connect-ubuntu.md)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
+
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).

@@ -25,6 +25,8 @@ This article explains how to install, update, and uninstall SQL Server 2017 on L
 > [!TIP]
 > To get started quickly, jump to one of the quickstarts for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), or [Docker](quickstart-install-connect-docker.md).
 
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md).
+
 ## <a id="supportedplatforms"></a> Supported platforms
 
 SQL Server 2017 is supported on the following Linux platforms:

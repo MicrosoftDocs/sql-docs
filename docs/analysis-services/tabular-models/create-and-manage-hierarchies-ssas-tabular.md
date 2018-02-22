@@ -1,7 +1,7 @@
 ---
-title: "Create and Manage Hierarchies (SSAS Tabular) | Microsoft Docs"
+title: "Create and manage hierarchies | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -21,11 +21,11 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Create and Manage Hierarchies (SSAS Tabular)
+# Create and manage hierarchies 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Hierarchies can be created and managed in the model designer, in Diagram View. To view the model designer in Diagram View, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Model** menu, then point to **Model View**, and then click **Diagram View**.  
   
- This topic includes the following tasks:  
+ This article includes the following tasks:  
   
 -   [Create a Hierarchy](#bkmk_create)  
   
@@ -33,7 +33,7 @@ ms.workload: "On Demand"
   
 -   [Delete a Hierarchy](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a> Create a Hierarchy  
+##  <a name="bkmk_create"></a> Create a hierarchy  
  You can create a hierarchy by using the columns and table context menu. When you create a hierarchy, a new parent level displays with selected columns as child levels.  
   
 #### To create a hierarchy from the context menu  
@@ -51,7 +51,7 @@ ms.workload: "On Demand"
 > [!NOTE]  
 >  The Create Hierarchy command is disabled in the context menu if you multi-select a measure along with one or more columns or you select columns from multiple tables.  
   
-##  <a name="bkmk_edit"></a> Edit a Hierarchy  
+##  <a name="bkmk_edit"></a> Edit a hierarchy  
  You can rename a hierarchy, rename a child level, change the order of the child levels, add additional columns as child levels, remove a child level from a hierarchy, show the source name of a child level (the column name), and hide a child level if it has the same name as the hierarchy parent level.  
   
 #### To change the name of a hierarchy or child level  
@@ -99,8 +99,8 @@ ms.workload: "On Demand"
 -   Or, click the parent hierarchy level, and then press Delete. This also removes all the child levels.  
   
 ## See Also  
- [Tabular Model Designer &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [Hierarchies &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [Tabular Model Designer ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Data types supported in Analysis Services tabular models | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/16/2017"
+ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""

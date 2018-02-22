@@ -23,9 +23,7 @@ ms.author: owend
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-This tutorial provides lessons on how to create and deploy a tabular model at the 1400 [compatibility level](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) by using Visual Studio with [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt). 
-
-If you're new to Analysis Services and tabular modeling, completing this tutorial is the quickest way to learn how to create and deploy a basic tabular model by using Visual Studio. Once you have the prerequisites in-place, it should take two to three hours to complete.  
+This tutorial provides lessons on how to create and deploy a tabular model at the [1400 compatibility level](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md). If you're new to Analysis Services and tabular modeling, completing this tutorial is the quickest way to learn how to create and deploy a basic tabular model by using Visual Studio. Once you have the prerequisites in-place, it should take two to three hours to complete.  
   
 ## What you learn   
   
@@ -49,7 +47,7 @@ If you're new to Analysis Services and tabular modeling, completing this tutoria
 
 To complete this tutorial, you need:  
   
--   An Azure Analysis Services server or an on-premises SQL Server 2017 Analysis Services server in Tabular mode. Sign up for a free [Azure Analysis Services trial](https://azure.microsoft.com/services/analysis-services/) and [create a server](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server). Or, download a free [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+-   An Azure Analysis Services server or a SQL Server 2017 Analysis Services server in Tabular mode. Sign up for a free [Azure Analysis Services trial](https://azure.microsoft.com/services/analysis-services/) and [create a server](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server) or download a free [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 -   An [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) with the **sample AdventureWorksDW database**, or an on-premises SQL Server Data Warehouse with an [AdventureWorksDW sample database](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). When installing an AdventureWorksDW database to an on-premises SQL Server Data Warehouse, use the sample datbase version that corresponds with your server version. 
 

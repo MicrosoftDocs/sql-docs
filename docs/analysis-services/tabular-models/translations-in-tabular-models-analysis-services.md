@@ -115,6 +115,6 @@ ms.workload: "Inactive"
 ## See Also  
  [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Globalization scenarios for Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Analyze in Excel &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Analyze in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

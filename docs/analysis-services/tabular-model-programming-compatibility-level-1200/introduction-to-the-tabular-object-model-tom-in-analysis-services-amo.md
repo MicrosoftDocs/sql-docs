@@ -51,7 +51,7 @@ In contrast, when you manage objects that are part of Tabular metadata (such as 
 
 ### TOM and XMLA
 
-On the wire, TOM uses the XMLA protocol to communicate with the Analysis Services server and to manage objects. When managing non-tabular objects, TOM uses [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), the Analysis Services Scripting Language extension of XMLA. When managing tabular objects, TOM uses the SSAS tabular protocol, also an extension of XMLA. See [MS-SSAS-T SQL Server Analysis Services Tabular protocol documentation](https://msdn.microsoft.com/library/mt719260.aspx) for more information.
+On the wire, TOM uses the XMLA protocol to communicate with the Analysis Services server and to manage objects. When managing non-tabular objects, TOM uses [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), the Analysis Services Scripting Language extension of XMLA. When managing tabular objects, TOM uses the MS-SSAS tabular protocol, also an extension of XMLA. See [MS-SSAS-T SQL Server Analysis Services Tabular protocol documentation](https://msdn.microsoft.com/library/mt719260.aspx) for more information.
 
 ### TOM and JSON
 

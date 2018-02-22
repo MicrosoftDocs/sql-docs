@@ -4,7 +4,7 @@ description: This quickstart shows how to use Docker to run the SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"

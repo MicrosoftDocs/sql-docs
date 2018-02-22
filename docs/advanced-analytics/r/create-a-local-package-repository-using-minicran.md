@@ -26,7 +26,7 @@ The [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html)  pac
 + Analyzing package dependencies for a single package or set of packages
 + Preparing a set of R packages for installation onto a server without internet access.
 
-The user specifies a set of desired packages, and miniCRAN recursively reads the dependency tree for these packages, and downloads only the listed packages and their dependencies from CRAN or similar repositories. 
+The user specifies a set of desired packages, and miniCRAN recursively reads the dependency tree for these packages, and downloads only the listed packages and their dependencies from CRAN or similar repositories.
 
 As an output, miniCRAN creates an internally consistent repository consisting of the selected packages and all required dependencies. You can then move this local repository to the server, and proceed to install the packages without using the internet.
 
@@ -41,13 +41,13 @@ The [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) pack
 
 Package repositories are useful in these scenarios:
 
--   **Security**: Many R users are accustomed to downloading and installing new R packages at will, from CRAN or one of its mirror sites. However, for security reasons, production servers running [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] typically do not have internet connectivity.
+- **Security**: Many R users are accustomed to downloading and installing new R packages at will, from CRAN or one of its mirror sites. However, for security reasons, production servers running [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] typically do not have internet connectivity.
 
--   **Easier offline installation**: To install package to an offline server requires that you also download all package dependencies, Using miniCRAN makes it easier to get all dependencies in the correct format.
+- **Easier offline installation**: To install package to an offline server requires that you also download all package dependencies, Using miniCRAN makes it easier to get all dependencies in the correct format.
 
--   **Improved version management**: In a multiuser environment, there are good reasons to avoid unrestricted installation of multiple package versions on the server.
+- **Improved version management**: In a multiuser environment, there are good reasons to avoid unrestricted installation of multiple package versions on the server.
 
-By using miniCRAN, you can avoid package dependency errors when using the CREATE EXTERNAL LIBRARY statement. 
+By using miniCRAN, you can avoid package dependency errors when preparing packages to install with the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement.
 
 You can also use miniCRAN to prepare packages for use in Azure Machine Learning. For more information, see this blog: [Using miniCRAN in Azure ML, by Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
@@ -135,12 +135,6 @@ You begin by creating a **miniCRAN** repository to use as a source. You should c
 
 After you have created the repository and added the packages you need, you must move the package repository to the server computer, and ensure that the R packages are installed in the correct library for use from SQL Server.
 
-Depending on the version of SQL Server, there are two options for adding new packages to the R library associated with the SQL Server instance:
-
-- Install to the instance library using the miniCRAN repository and R tools.
-
-- Upload packages to a location on the SQL Server computer, and install using the CREATE EXTERNAL LIBRARY statement. This option requires SQL Server 2017. 
-
 The following procedure describes how to install the packages using R tools.
 
 1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages.
@@ -155,7 +149,7 @@ The following procedure describes how to install the packages using R tools.
 
     -  If you have installed SQL Server to a different drive, or made any other changes in the installation path, be sure to make those changes as well.
 
-3.  Get the path for the instance library, and add it to the list of library paths.
+3. Get the path for the instance library, and add it to the list of library paths.
 
     ```R
     .libPaths()[1]  
@@ -164,7 +158,7 @@ The following procedure describes how to install the packages using R tools.
 
     On SQL Server, this command should return the path of the library associated with the instance, such as: "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library "
 
-4.  Specify the location on the server where you copied the **miniCRAN** repository in `server_repo`.
+4. Specify the location on the server where you copied the **miniCRAN** repository in `server_repo`.
 
     In this example, we assume that you copied the repository to your user folder on the server.
 
@@ -172,19 +166,19 @@ The following procedure describes how to install the packages using R tools.
     R server_repo <- "C:\\Users\\MyUserName\\miniCRAN"
     ```
 
-5.  Since you are working in a new R workspace on the server, you must also furnish the list of packages to install.
+5. Since you are working in a new R workspace on the server, you must also furnish the list of packages to install.
 
     ```R
     tspackages <- c("zoo", "forecast")
     ```
 
-6.  Install the packages, providing the path to the local copy of the miniCRAN repo.
+6. Install the packages, providing the path to the local copy of the miniCRAN repo.
 
     ```R
     install.packages(tspackages, repos = file.path("file://", normalizePath(server_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE)
     ```
 
-7.  From the instance library, you can view the installed packages using a command like the following:
+7. From the instance library, you can view the installed packages using a command like the following:
 
     ```R
     installed.packages()
@@ -205,4 +199,4 @@ After downloading the packages, you install the R packages from the zipped file 
 
 3. Install the packages into the SQL Server instance library using conventional R commands. If the package has dependencies that are not already installed, and you have not included them, installation might fail. 
 
-You can also upload individual packages into an instance of SQL Server 2017, by using the CREATE EXTERNAL LIBRARY statement. This feature requires some additional steps to prepare the server. For example, a script must be run to create database roles on the instance and on specific databases. If the package library is successfully created, you must then install the package into the R environment by calling install.packages from sp_execute_external_script. For more information, see these resources:
+You can also upload individual packages into an instance of SQL Server 2017, by using the [CREATE EXTERNAL LIBRARY statement](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql). This process also required administrative access.

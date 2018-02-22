@@ -45,17 +45,13 @@ See the following articles for detailed steps on how to install new R or Python 
 
 ### Install new R packages
 
-Install R packages on SQL Server 2016 or 2017 as administrator, using R tools:
-
 + [Install additional R packages on SQL Server](install-additional-r-packages-on-sql-server.md)
 
-Install R packages from a remote R client. Requires R Server 9.0.2 or later:
+    You can install R packages on SQL Server 2016 or 2017 as administrator, using R tools.
 
-+ [Install packages in a remote compute contexxt using RevoScaleR functions](#bkmk_remoteInstall)
+    You can also install R packages from a remote R client where R Server 9.0.2 or later is installed.
 
-Install R packages in SQL Server 2017 using DDL statements:
-
-+ [Enable package management](r-package-how-to-enable-or-disable.md)
+    You can also install R packages in SQL Server 2017 using DDL statements.
 
 ### Install new Python packages
 

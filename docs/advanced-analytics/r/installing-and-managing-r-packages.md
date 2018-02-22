@@ -28,9 +28,6 @@ This article describes the default libraries for R and Python that are installed
 
 When you install machine learning with SQL Server, a package library is created at the instance level for each language that you install. This article describes these instance libraries, provides their locations, and explains how you can determine which packages and which version of R or Python are installed in each instance library.
 
-> [!IMPORTANT]
-> These features are installed only if you have installed and enable machine learning features. For more information, see SETUP LINK>
-
 ## Where is the default instance library
 
 The default instance library is installed to a secured folder that is registered with SQL Server and can be modified only by a computer administrator. The security on this library means that only approved packages can be installed and run on the server.

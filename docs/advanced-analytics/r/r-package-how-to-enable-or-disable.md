@@ -1,5 +1,5 @@
 ---
-title: "Enable or disable DDL package management for SQL Server | Microsoft Docs"
+title: "Enable or disable remote package management for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/20/2018"
 ms.reviewer: 
@@ -17,18 +17,15 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---
-# Enable or disable DDL package management for SQL Server
+# Enable or disable remote package management for SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to enable management of external code libraries using a DDL statement. This feature is new in SQL Server 2017, and is designed to allow the database administrator to control package installation on the instance using T-SQL rather than R or Python tools.
+This article describes how to enable management of R packages from a remote instance of Machine Learning Server. After the package management feature has been enabled, you can use RevoScaleR commands to install packages on a database from a remote client.
 
 > [!NOTE]
 > Currently management of R libraries is supported; support for Python is on the roadmap.
 
-After the package management feature has been enabled, you can use DDL statements to create a package library. You can also use RevoScaleR commands to install packages on a database from a remote client.
-
-> [!NOTE]
-> By default, the external package management feature for SQL Server is disabled, even if machine learning features have been installed. You must run a separate script to enable the feature as described in the next section.
+By default, the external package management feature for SQL Server is disabled, even if machine learning features have been installed. You must run a separate script to enable the feature as described in the next section.
 
 ## Overview of process and tools
 
@@ -81,6 +78,8 @@ To enable or disable package management, use the command-line utility **Register
         ON o.schema_id = s.schema_id;
     ```
 
+After you have enabled this feature, you can use RevoScaleR function to install or uninstall packages from a remote R client.
+
 ## <a name="bkmk_disable"></a> Disable package management
 
 1. From an elevated command prompt, run the RegisterRExt utility again, and disable package management at the database level:
@@ -96,3 +95,4 @@ To enable or disable package management, use the command-line utility **Register
     `RegisterRExt.exe /uninstallpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
     This command removes the package management feature from the instance. You might need to manually restart the Launchpad service once more to see changes.
+

@@ -41,30 +41,18 @@ This does not work when running R solutions in SQL Server, because R packages mu
 
 ## How to avoid “package not found” errors
 
-### eliminate dependencies on user libraries. 
++ Eliminate dependencies on user libraries 
 
-It is also a bad development practice to install required R packages to a custom user library, as it can lead to errors if a solution is run by another user who does not have access to the library location.
+    It is a bad development practice to install required R packages to a custom user library, as it can lead to errors if a solution is run by another user who does not have access to the library location.
 
-When you migrate R solutions to run in [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)], it is important that you modify your code to run in a shared environments:
+    Also, if a package is installed in the default library, the R runtime loads the package from the default library, even if you specified a different version in the R code.
 
-+ Ensure that packages are loaded from the default library, not from ad hoc directories or user libraries.
++ Modify your code to run in a shared environment.
+
 + Avoid installing packages as part of a solution. If you don’t have permissions to install packages, the code will fail. Even if you do have permissions to install packages, you should do so separately from other code that you want to execute.
-+ Check your code to make sure that there are no calls to uninstalled packages. 
-+ Update your code to remove direct references to the paths of R packages or R libraries. If a package is installed in the default library, the R runtime loads the package from the default library, even if a different library is specified in the R code.
 
-### Install packages to the instance library
++ Check your code to make sure that there are no calls to uninstalled packages.
 
-**For SQL Server 2016**
++ Update your code to remove direct references to the paths of R packages or R libraries. 
 
-Use the package library associated with the instance. You must have administrator rights to install new packages. For more information, see [R packages installed with SQL Server](installing-and-managing-r-packages.md)
-
-**For SQL Server 2017**
-
-SQL Server provides some new features to make installing and managing packages easier for the database administrator versions. You can continue to install packages instance-wide as an administrator, or the the database administrator an enable new roles for package management.
-
-After package management has been enabled, remote users who have the appropriate permissions can install packages using rx functions. Package can also be installed and shared at the database level.
-
-For more information, see:
-
-Enable DDL access (LINK)
-Install packages
++ Know which package library is associated with the instance. For more information, see [R packages installed with SQL Server](installing-and-managing-r-packages.md)

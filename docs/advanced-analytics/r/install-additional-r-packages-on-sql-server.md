@@ -22,23 +22,17 @@ ms.workload: "On Demand"
 
 This article describes how to install new R packages to an instance of SQL Server where machine learning is enabled.
 
-There are multiple methods for installing new R packages, depending on which version of SQL Server you have, and if you have upgraded your instance to use the latest version of the RevoScaleR libraries.
+There are multiple methods for installing new R packages, depending on which version of SQL Server you have, and whether the server has internet access.
 
-+ [Install new packages using R tools, with Internet access](#bkmk_rInstall)
++ [Install new packages using R tools, with internet access](#bkmk_rInstall)
 
-    Use conventional R commands to install packages from the Internet. this is the simplest method, but requires administrative access. 
+    Use conventional R commands to install packages from the Internet. this is the simplest method, but requires administrative access.
 
     **Applies to:**  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]. Also required for instances of [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] where package management via DDLs has not been enabled.
 
 + [Install new R packages on a server with **no** internet access](#bkmk_offlineInstall)
 
-    If the server does not have internet access, some additional steps are required to prepare the packages. This topic describes how to prepare files required for installation of the package and its dependencies, after which you can install them using either conventional R tools, or the CREATE LIBRARY statement.
-
-+ [Use RevoScaleR functions to install packages in a SQL Server compute context](#bkmk_rAddPackage)
-
-    If you have R Server 9.0.1 or later, you can use the [rxInstallPackages](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxinstallpackages) function from a remote R client to install packages in a SQL Server compute context. To use this option, you must have enabled package management on the server and database. This feature also requires that an equivalent version of R Services or Machine Learning Services be installed on the server. 
-
-    **Applies to:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]. Also supported in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] with an upgrade to R Server 9.0 or later. Other restrictions apply.
+    If the server does not have internet access, some additional steps are required to prepare the packages. This topic describes how to prepare files required for installation of the package and its dependencies.
 
 + [Install packages using the CREATE EXTERNAL LIBRARY statement](#bkmk_createlibrary) 
 
@@ -132,64 +126,29 @@ This procedure assumes that you have prepared all the packages that you need, in
 
     If any required packages are not present in the instance library, and cannot be found in the zipped files, installation of the target package fails.
 
-## <a name="bkmk_rAddPackage"></a> Use rxInstallPackages to install new packages from a remote R client
+## <a name="bkmk_createlibrary"></a> Use a DDL statement to install a package 
 
-In recent versions of [R Server or Machine Learning Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server), RevoScaleR includes functions that support installing or uninstalling R packages in a SQL Server compute context.
+In SQL Server 2017, you can use the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement to add a package or set of packages to an instance or a specific database. This DDL statement and the supporting database roles are intended to facilitate installation and management of packages by a BA without having to use R or Python tools.
 
-Before you start, ensure that these conditions are met:
+This process requires some preparation, in comparison to installing packages using conventional R or Python methods.
 
-+ Your client has RevoScale 9.0.1 or later.
-+ An equivalent version of RevoScaleR has been installed on the SQL Server instance.
-+ The [package management feature](..\r\r-package-how-to-enable-or-disable.md) has been enabled on the instance.
-+ You are a member of a database role that allows you to install packages on the specified instance and database. In future, roles will support installing packages to either a shared or private location. For now, you can install packages if you are a database owner.
-
-1. From an R command line, define a connection string to the instance and database.
-2. Use the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) constructor to define a SQL Server compute context, using the connection string.
-
-    ```R
-    sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
-    ```
-3. Create a list of the packages you want to install and save the list in a string variable.
-
-    ```R
-    packageList <- c("e1071", "mice")
-    ```
-
-4. Call [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) and pass the compute context and the string variable containing the package names.
-
-    ```R
-    rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)
-    ```
-
-    If dependent packages are required, they are also installed, assuming an internet connection is available on the client.
-    
-    Packages are installed using the credentials of the user making the connection, in the default scope for that user.
-
-## <a name="bkmk_createlibrary"></a> Use a DDL statement to install a single package or a miniCRAN repository 
-
-In SQL Server 2017, you can use the CREATE EXTERNAL LIBRARY statement to add a package or set of packages to an instance or a specific database. This DDL statement and the supporting database roles are intended to facilitate installation and management of packages by a BA without having to use R or Python tools.
-
-However, at present this process is more complicated than installing packages using conventional R or Python methods.
-
-+ The feature must be enabled on the instance and on specific databases beforehand.
 + All packages must be be available as a local zipped file, rather than downloading from the internet.
-+ The statement fails if all packages are not prepared in advance. We strongly recommend that you use [miniCRAN]( to prepare packages in advance.
-+ If you do not have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
-### Prepare the package archive
+    If you do not have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
-1.  If you are installing a single package, prepare the package in zipped format. 
++ The statement fails if required packages are not available. You must analyze dependencies of the package you want to install and make sure that the packages are uploaded to the server and database. We recommend using **miniCRAN** or **igraph** for analyzing packages dependencies.
 
-    If you need to install a package that has any dependencies, we recommend that you use miniCRAN to create a package repository that contains the target package and all its dependencies. 
+### Prepare the packages in archive format
 
-2. Copy the zipped file or repository to a local folder on the server.
+1. If you are installing a single package, download the package in zipped format. 
 
-     > [!IMPORTANT]
-     > This file serves as the source for installation, and must contain the target package as well as any related required packages. Installation fails if all dependencies are not available.
+2. If the package requires any other packages, you must verify that the required packages are available. You can use miniCRAN to analyze the target package and identify all its dependencies. 
 
-3. Open a Query window, using an account with administrative privileges.
+3. Copy the zipped files or miniCRAN repository containing all packages to a local folder on the server.
 
-4. Run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package collection to the database.
+4. Open a **Query** window, using an account with administrative privileges.
+
+5. Run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package collection to the database.
 
     For example, the following statement names as the package source a miniCRAN repository containing the **randomForest** package, together with its dependencies. 
 
@@ -201,19 +160,14 @@ However, at present this process is more complicated than installing packages us
 
     You cannot use an arbitrary name; the external library name must have the same name that you expect to use when loading or calling the package.
 
-5. If the library is successfully created, you can then install the package or packages for use with SQL Server, by running R code inside a stored procedure.
+6. If the library is successfully created, you can run the package in SQL Server, by calling it inside a stored procedure.
     
     ```SQL
     EXEC sp_execute_external_script
     @language =N'R',
     @script=N'
-    # install randomForest and its dependencies
     library(randomForest)'
     ```
-
-6. If all dependencies were provided and installation is successful, the **Messages** window should report a message such as "package randomForest successfully unpacked and MD5 sums checked", or "Finished chained execution".
-
-    If installation fails, all packages fail installation. 
 
 ### Known issues with CREATE EXTERNAL LIBRARY
 
@@ -226,7 +180,6 @@ The DDL statement fails if any package dependencies are missing. For example, th
 
 + You installed a package that has second-level dependencies and your analysis did not extend to second-level packages. For example, you want to install **gglot2**, and identified all the packages listed in the manifest; however, those packages had other dependencies that were not installed.
 + You installed a set of packages that require different versions of a supporting package, and your server had the wrong version.
-
 
 ## Package installation tips
 
@@ -262,43 +215,12 @@ For example, the following procedure describes now to get the correct version of
 > 
 > However, when you obtain packages using this method, the dependencies are not included. 
 
-For more information about the contents of the zip file format, and how to create an R package, we recommend this tutorial, which you can download in PDF format from the R project site: [Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf).
-
-### <a name="bkmk_packageDependencies"></a> Get package dependencies
+### <a name="bkmk_packageDependencies"></a> Get required packages
 
 R packages frequently depend on multiple other packages, some of which might not be available in the default R library used by the instance. Sometimes a package requires a different version of a dependent package that is already installed.
 
-If you need to install multiple packages, or want to ensure that everyone in your organization gets the correct package type and version, we recommend that you use the [miniCRAN](https://mran.microsoft.com/package/miniCRAN) package to create a local repository that can be shared among multiple users or computer. For more information, see [Create a local package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
+If you need to install multiple packages, or want to ensure that everyone in your organization gets the correct package type and version, we recommend that you use the [miniCRAN](https://mran.microsoft.com/package/miniCRAN) package to analyze the complete dependency chain. minicRAN creates a local repository that can be shared among multiple users or computers. For more information, see [Create a local package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
 
-### Permissions
-
-This section describes the different level of permissions required for installing packages in SQL Server 2016 and SQL Server 2017. Installation can be done using either R tools or SQL Server, but the process and permissions differ slightly.
-
-- SQL Server 2016
-
-    In this release, only an administrator on the computer can install packages to the required location. You use standard R tools to install packages, but you must run as an administrator, and use the R tools associated with the instance.
-
-- SQL Server 2017
-
-    If you have administrative access, you can install packages on an instance-wide basis by using R tools.
-
-    If you are a database owner, you can install R packages from a remote client, if you define a connection string and connect to the instance using RxInSqlServer.
-    
-    This release also includes new features to support administration of R or Python packages by database administrators in upcoming releases. 
-
-    To use this feature, a DBA must first enable package management features on a per instance basis. For more information, see [Enable or disable R package management for SQL Server](../r/r-package-how-to-enable-or-disable.md).
-
-Experienced R users are accustomed to installing packages in a user library, and then referencing the package in that folder as part of the R solution, by specifying a file path. However, this practice is not supported in SQL Server. For more information and workarounds, see [How to use packages in user libraries](packages-installed-in-user-libraries.md).
-
-### Establish a single mirror site as standard
-
-To avoid having to select a mirror site each time you add a new package, you can configure your R development environment to always use the same repository. To do this, edit the global R settings file, **.Rprofile**, and add the following line:
-
-`options(repos=structure(c(CRAN="<mirror site URL>")))`
-
-Current CRAN mirrors are listed on [this site](https://cran.r-project.org/mirrors.html).
-
-For detailed information about preferences and other files loaded when the R runtime starts, run this command from an R console: `?Startup`
 
 ### Know which library you are using for installation
 
@@ -310,11 +232,7 @@ This path should point to the R_SERVICES folder for the instance. For more infor
 
 If you have installed Microsoft Machine Learning Server (Standalone) in addition to SQL Server Machine Learning Services, your computer should have separate installations of R for each, with duplicates of all the R tools and libraries.
 
-> [!IMPORTANT]
-> 
-> Packages that are installed to the R_SERVER library are used only by Microsoft R Server and cannot be accessed by SQL Server.
-> 
-> Be sure to use the `R_SERVICES` library when installing packages that you want to use in SQL Server.
+Packages that are installed to the R_SERVER library are used only by Microsoft R Server and cannot be accessed by SQL Server. Be sure to use the `R_SERVICES` library when installing packages that you want to use in SQL Server.
 
 ### How to determine which packages are already installed?
 

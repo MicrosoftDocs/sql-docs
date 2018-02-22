@@ -8,6 +8,8 @@
 
 # [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
+# [mssql-cli (command-line query tool)](mssql-cli.md)
+
 # [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
 # [Database Engine Tuning Advisor (dta)](../tools/dta/dta-utility.md)

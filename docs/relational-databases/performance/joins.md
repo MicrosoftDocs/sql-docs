@@ -235,7 +235,8 @@ The results do not make it easy to distinguish a NULL in the data from a NULL th
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Comparison Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)    
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
-[Subqueries](../../relational-databases/performance/subqueries.md)           
+[Subqueries](../../relational-databases/performance/subqueries.md)      
+[Adaptive Joins](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)    
 
 
   

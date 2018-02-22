@@ -23,7 +23,7 @@ ms.workload: "Inactive"
 
 Experienced R users are accustomed to installing R packages in a user library, whenever the default library is blocked or not available. However, this approach is not supported in SQL Server, and installation to a user library usually ends in a “package not found” error.
 
-This topic provides workarounds to help you avoid this error. It explains how you can modify your R code, and suggests the correct R package installation process for using R packages from a SQL Server instance.
+This article describes workarounds to help you avoid this error. It explains how you can modify your R code, and suggests the correct R package installation process for using R packages from a SQL Server instance.
 
 ## Why R user libraries cannot be accessed from SQL Server
 

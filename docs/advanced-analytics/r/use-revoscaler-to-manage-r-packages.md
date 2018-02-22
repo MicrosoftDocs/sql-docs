@@ -29,7 +29,7 @@ If you have R Server 9.0.1 or later, you can use the [rxInstallPackages](https:/
 
 The new version of RevoScaleR also includes these functions: 
 
-+ The [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) functions gets the path for one or more packages in the specified compute context.
++ The [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) function gets the path for one or more packages in the specified compute context.
 
     You can use a combination of users and scope to find packages or add packages to a particular database:
 
@@ -39,7 +39,7 @@ The new version of RevoScaleR also includes these functions:
 
     This function checks for dependencies and ensures that any related packages can be installed to SQL Server, just like R package installation in the local compute context.
 
-+ The [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) functions removes packages from a specified compute context.
++ The [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) function removes packages from a specified compute context.
 
     It also computes dependencies and ensures that packages that are no longer used by other packages on SQL Server are removed, to free up resources.
 
@@ -131,7 +131,7 @@ print(sqlPackagePaths)
 "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
 
 > [!TIP]
-> If you have enabled the option to see SQL console output, you might also get a lot of status messages from the function that precedes the `print` statement. After you have finished testing your code, set `consoleOutput` to FALSE in the compute context constructor to eliminate messages.
+> If you have enabled the option to see SQL console output, you might get status messages from the function that precedes the `print` statement. After you have finished testing your code, set `consoleOutput` to FALSE in the compute context constructor to eliminate messages.
 
 ### Get locations for multiple packages
 

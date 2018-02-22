@@ -21,7 +21,7 @@ ms.workload: "Inactive"
 # Viewing installed R or Python packages
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library and then not be able to find it later, or get confused as to which environment you are using..
+If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library or environment and then not be able to find it later. 
 
 This article provides some queries you can use to determine your current version, and to list the packages that are installed in the current SQL Server environment.
 
@@ -238,5 +238,5 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
 ```
 
-For more information about the variable `sys.path` and how it is used to set the interpreter’s search path for modules, see the Python documenttion](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+For more information about the variable `sys.path` and how it is used to set the interpreter’s search path for modules, see the [Python documentation](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 

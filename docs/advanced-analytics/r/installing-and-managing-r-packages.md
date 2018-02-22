@@ -22,7 +22,7 @@ ms.workload: "On Demand"
 # Default package libraries for machine learning on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the default libraries for R and Python that are installed with SQL Server.  
+This article describes the default libraries for R and Python that are installed with SQL Server.
 
 ## What is the default instance library
 
@@ -68,7 +68,7 @@ This section provides a summary of the R or Python features that are installed b
 
 By default the R **base** packages are installed. Base packages include core functionality provided by packages such as `stats` and `utils`.
 
-A base installation of R also includes numerous sample datasets, and standard R tools such as RGui (a lightweight interactive editor) and RTerm (a command line tool).
+A base installation of R also includes numerous sample datasets, and standard R tools such as RGui (a lightweight interactive editor) and RTerm (an R command prompt).
 
 Installation of R in SQL Server 2016 or SQL Server 2017 also includes the **RevoScaleR** package, and related enhanced packages and providers, which supports remote compute contexts, streaming, parallel execution of rx function, and many other features.
 
@@ -106,14 +106,14 @@ The permissions required for package installation have changed between SQL Serve
 
 + In SQL Server 2017, you can continue to install packages as an administrator for both R and Python, and this is probably the easiest method.
 
-    However, if you enable package management on the instance, you can also use database roles and DDL statements to install R packages at the database level. This feature will be extended to support Python in later releases.
+    The DDL statement, CREATE EXTERNAL LIBRARY, allows the database administrator  to install packages without using R tools. 
 
-    After this feature has been enabled, a database administrator can grant users the ability to install their own packages on a per database basis. You can also use R commands from a remote client to install packages into the instance library. This feature requires some additional configuration on the instance. for more information, see [Enable package management using DDLs](r-package-how-to-enable-or-disable.md).
+    If you use the package management feature for Machine Learning Server, you can use RevoScaleR to install R packages at the database level. The database administrator must enable the feature and then grant users the ability to install their own packages on a per database basis. For more information, see [Enable package management using DDLs](r-package-how-to-enable-or-disable.md).
 
 ### User libraries are not supported
 
-Often users who cannot install a package to a secured location will install a package to a user library. However, this is not possible in the SQL Server environment.
+Users who cannot install a package to a secured location often resort to installing a package to a user library. However, this is not possible in the SQL Server environment.Even file system access is often restricted on the server.
 
-Often file system access is restricted on the server, but even if you have admin rights and access to a user document folder on the server, the external script runtime that executes in SQL Server cannot access any packages installed outside the default instance library.
+Even if you have admin rights and access to a user document folder on the server, the external script runtime that executes in SQL Server cannot access any packages installed outside the default instance library.
 
 For tips on how to resolve problems related to user libraries, see [Package installed in user libraries](packages-installed-in-user-libraries.md).

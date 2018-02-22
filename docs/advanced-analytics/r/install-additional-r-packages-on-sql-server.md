@@ -32,7 +32,7 @@ There are multiple methods for installing new R packages, depending on which ver
 
 + [Install new R packages on a server with **no** internet access](#bkmk_offlineInstall)
 
-    If the server does not have internet access, some additional steps are required to prepare the packages. This topic describes how to prepare files required for installation of the package and its dependencies.
+    If the server does not have internet access, some additional steps are required to prepare the packages. This section describes how to prepare files required for installation of the package and its dependencies.
 
 + [Install packages using the CREATE EXTERNAL LIBRARY statement](#bkmk_createlibrary) 
 
@@ -122,7 +122,7 @@ This procedure assumes that you have prepared all the packages that you need, in
     install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)
     ```
 
-    This command extracts the R package `mynewpackage` from its local zipped file, assuming you saved the copy in the directory `C:\Temp\Downloaded packages`, and installs the package on the local computer. If the package has any dependencies, the installer checks for existing packages in the library. If you have created a repository that includes the dependencies, the installer installs the requireed packages as well.
+    This command extracts the R package `mynewpackage` from its local zipped file, assuming you saved the copy in the directory `C:\Temp\Downloaded packages`, and installs the package on the local computer. If the package has any dependencies, the installer checks for existing packages in the library. If you have created a repository that includes the dependencies, the installer installs the required packages as well.
 
     If any required packages are not present in the instance library, and cannot be found in the zipped files, installation of the target package fails.
 
@@ -189,7 +189,7 @@ This section provides assorted tips and common questions related to R package in
 
 There are multiple sources for R packages, such as CRAN and Bioconductor. The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Many packages are published to GitHub, where you can obtain the source code. Finally, you might have been given R packages that were developed by someone in your company, or you have a custom package you have written.
 
-Regardless of the source, before trying to install the package, ensure that you hae obtained the binary format for the Windows platform. 
+Regardless of the source, before trying to install the package, ensure that you have obtained the binary format for the Windows platform. 
 
 ### <a name="bkmk_zipPreparation"></a> Download the package as a zipped file
 

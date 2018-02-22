@@ -37,7 +37,7 @@ To investigate the symptoms you encounter, follow the steps below one by one unt
 ### Solution
 1.  Check whether Scale Out is enabled.
 
-    In SSMS, in Objecy Explorer, right-click **SSISDB** and check **Scale Out feature is enabled**.
+    In SSMS, in Object Explorer, right-click **SSISDB** and check **Scale Out feature is enabled**.
 
     ![Is Scale Out enabled](media\isenabled.PNG)
 
@@ -109,7 +109,7 @@ Check whether the account running the Scale Out Worker service has access to the
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
-If the account does not have access, grant access by running the folloowing command, and restart Scale Out Worker service.
+If the account does not have access, grant access by running the following command, and restart Scale Out Worker service.
 
 ```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}

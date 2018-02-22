@@ -78,6 +78,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## See Also  
  [Determine the Server Mode of an Analysis Services Instance](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Tabular Modeling (SSAS Tabular)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
+ [Tabular Modeling](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   

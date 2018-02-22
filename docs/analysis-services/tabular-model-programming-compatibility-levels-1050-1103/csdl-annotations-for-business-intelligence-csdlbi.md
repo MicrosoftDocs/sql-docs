@@ -31,9 +31,9 @@ ms.workload: "Inactive"
   
  Although CSDL is compliant with the Entity Data Framework, you do not need to understand the entity-relationship model or have any special tools to build a tabular model or a report based on a model. You build models by using client tools such as [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or an API such as AMO, and deploy the model to a server. Clients connect to the model by using a model definition file, typically published to a SharePoint library where it can be used by report designers and report consumers. For more information, see these links:  
   
--   [Tabular Model Solutions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+-   [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
--   [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Tabular model solution deployment](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Power Pivot BI Semantic Model Connection &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   

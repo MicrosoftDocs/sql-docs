@@ -1,7 +1,7 @@
 ---
 title: "Enable DirectQuery mode in SSDT | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
+ms.date: "02/22/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""

@@ -76,7 +76,7 @@ Specific projects that require either of the above two features need to explicit
 - JDBC Driver version 6.0.0 
 	- Dependency versions: Azure-Keyvault (version 0.9.7),  Adal4j (version 1.3.0) and their dependencies ( [Sample application](../../connect/jdbc/AKVSample6.0.0.md))
 - JDBC Driver version 6.2.2 and above (including the latest 6.4.0)
-	- Dependency versions:  Azure-Keyvault (version 1.0.0),  Adal4j (version 1.4.0) and their dependencies ([Sample Application](../../connect/jdbc/AKVSample6.4.0.md))
+	- Dependency versions:  Azure-Keyvault (version 1.0.0),  Adal4j (version 1.4.0) and their dependencies ([Sample Application](../../connect/jdbc/AKVSample6.2.2.md))
 	- **Note:**  As of v6.2.2, the azure-keyvault-java dependency is updated to version 1.0.0. However, the new version is not compatible with the previous version (version 0.9.7) and therefore breaks the existing implementation in the driver. The new implementation in the driver requires API changes, which in turn break client programs that use the Azure Key Vault feature.
 
   

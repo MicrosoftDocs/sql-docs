@@ -28,7 +28,7 @@ ms.workload: "On Demand"
 **How can I help improve the JDBC Driver?**  
 The JDBC Driver is open-source and the source code can be found on [GitHub](https://github.com/microsoft/mssql-jdbc). You can help improve the driver by filing issues and contributing to the code base.
 
-**Which versions of SQL Server and Java does the driver support?**  
+**Which versions of SQL Server and Java do the driver support?**  
  See the [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.  
   
  **What should I know when upgrading my driver?**  
@@ -61,16 +61,16 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
 |sqljdbc41.jar|JDBC 4.0|JDK 7.0 and 6.0|
   
  **Do I need to make any code changes in my application to use the latest driver with my existing SQL Server version?**  
- In general, we design the driver to be backward compatible so that you do not need to change your existing applications when upgrading the driver. In the event that a new driver version introduces a breaking change, the  [Release Notes for the JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) section provides clear details on the change and the impact to existing applications. In addition, you can review the release notes included with the driver for a list of bugs fixed in that release and known issues.  
+ In general, the driver is designed to be backward compatible so that you do not need to change your existing applications when upgrading the driver. In the event that a new driver version introduces a breaking change, the  [Release Notes for the JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) section provides clear details on the change and the impact to existing applications. In addition, you can review the release notes included with the driver for a list of bugs fixed in that release and known issues.  
   
  **How much does the driver cost?**  
  The Microsoft JDBC Driver for SQL Server is available at no additional charge.  
   
  **Can I redistribute the driver?** 
- The JDBC Drivers 4.1, 4.2, 6.0, 6.2, and 6.4 are redistributable. Please review the “Distributable Code” clause in the license agreements. 
+ The JDBC Drivers 4.1, 4.2, 6.0, 6.2, and 6.4 are redistributable. Review the “Distributable Code” clause in the license agreements. 
    
  **Can I use the driver to access Microsoft SQL Server from a Linux computer?** 
- Yes! You can use the driver to access SQL Server from Linux, Unix, and other non-Windows platforms. See our  [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) for more details.  
+ Yes! You can use the driver to access SQL Server from Linux, Unix, and other non-Windows platforms. See [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) for more details.  
   
  **Does the driver support Secure Sockets Layer (SSL) encryption?** 
  Starting with version 1.2, the driver supports Secure Sockets Layer (SSL) encryption. For more information, see  [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).  
@@ -100,7 +100,7 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
  The driver provides support for Java Platform, Enterprise Edition 5 (Java EE 5) connection pooling. The driver implements the JDBC 3.0 required interfaces to enable the driver to participate in any connection-pooling implementation that is provided by middleware application server vendors. The driver participates in pooled connections in these environments. For more information, see [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). The driver does not provide its own pooling implementation, but rather it relies on third-party Java application servers.  
   
 **Is support available for the driver?**  
- Several support options are available. You may post your question or issue to our [GitHub repository](https://github.com/microsoft/mssql-jdbc) which is monitored by Microsoft. [Forums](http://go.microsoft.com/fwlink/?LinkID=246673) are monitored by Microsoft, MVP’s, and the community. You may also contact Microsoft Customer Support. We may ask you to reproduce the issue outside any third-party application servers. If the issue cannot be reproduced outside the hosting Java container environment, you will need to involve the related third-party so that we can continue to assist you. We may also ask you to reproduce your issue on an operating system such as Windows so we can best assist you.  
+ Several support options are available. You may post your question or issue to our [GitHub repository](https://github.com/microsoft/mssql-jdbc) which is monitored by Microsoft. [Forums](http://go.microsoft.com/fwlink/?LinkID=246673) are monitored by Microsoft, MVPs, and the community. You may also contact Microsoft Customer Support. The development team may ask you to reproduce the issue outside any third-party application servers. If the issue cannot be reproduced outside the hosting Java container environment, you will need to involve the related third-party so that the team can continue to assist you. The team may also ask you to reproduce your issue on an operating system such as Windows so the problem can be best supported.  
   
 **Is the driver certified for use with any third-party application servers?**
  The driver has been tested against various application servers including IBM WebSphere and SAP Netweaver.  
@@ -109,12 +109,12 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
  The driver supports the use of tracing (or logging) to help resolve issues and problems with the JDBC Driver when it is used in your application. To enable the use of client-side JAR tracing, the JDBC Driver uses the logging APIs in java.util.logging. For more information, see  [Tracing Driver Operation](../../connect/jdbc/tracing-driver-operation.md). For server-side XA tracing, see [Data Access Tracing in SQL Server](http://go.microsoft.com/fwlink/?LinkId=248705).  
   
 **Where can I download older versions of the driver such as the SQL Server 2000 JDBC driver, 2005 driver, 1.0, 1.1, or 1.2 driver?**  
- These driver versions are not available for download as they are no longer supported. We are continually improving our Java connectivity support. As such we highly recommend you work with the latest version of our JDBC driver.  
+ These driver versions are not available for download as they are no longer supported. We are continually improving the Java connectivity support. As such, we highly recommend you work with the latest version of Microsoft JDBC driver.  
   
  **I am using JRE 1.4. Which driver is compatible with JRE 1.4** 
  For customers who are using SAP products and require JRE 1.4 support, you may contact [SAPService Marketplace](http://service.sap.com/) to obtain the 1.2 Microsoft JDBC driver.  
   
 **Can the driver communicate using FIPS validated algorithms?** 
- The Microsoft JDBC Driver does not contain any cryptographic algorithms. If a customer leverages operating system, application, and JVM algorithms that are deemed acceptable by Federal Information Processing Standards (FIPS) and configures the driver to use those algorithms then the driver will use only the designated algorithms for communication.  
+ The Microsoft JDBC Driver does not contain any cryptographic algorithms. If a customer leverages operating system, application, and JVM algorithms that are deemed acceptable by Federal Information Processing Standards (FIPS) and configures the driver to use those algorithms then the driver uses only the designated algorithms for communication.  
   
   

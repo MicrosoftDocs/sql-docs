@@ -129,4 +129,4 @@
 ### [Using SQL Escape Sequences](using-sql-escape-sequences.md)
 ### [Using Statements with Stored Procedures](using-statements-with-stored-procedures.md)
 ### [Azure Key Vault sample version 6.0.0](AKVSample6.0.0.md)
-### [Azure Key Vault sample version 6.4.0](AKVSample6.4.0.md)
+### [Azure Key Vault sample version 6.2.2](AKVSample6.2.2.md)

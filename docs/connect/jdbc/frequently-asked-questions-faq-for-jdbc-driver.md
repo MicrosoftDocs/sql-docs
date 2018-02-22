@@ -60,13 +60,6 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
 |-|-|-|  
 |sqljdbc41.jar|JDBC 4.0|JDK 7.0 and 6.0|
   
- The Microsoft JDBC Driver 4.0 for SQL Server supports both JDBC 3.0 and JDBC 4.0 specifications and includes two JAR class libraries in the installation package for each specification: sqljdbc.jar and sqljdbc4.jar, respectively.  
-  
-|JAR|JDBC Specification|JDK Version|   
-|-|-|-|  
-|sqljdbc4.jar|JDBC 4.0|JDK 6.0 and 5.0|  
-|sqljdbc.jar|JDBC 3.0|JDK 6.0 and 5.0|  
-  
  **Do I need to make any code changes in my application to use the latest driver with my existing SQL Server version?**  
  In general, we design the driver to be backward compatible so that you do not need to change your existing applications when upgrading the driver. In the event that a new driver version introduces a breaking change, the  [Release Notes for the JDBC Driver](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) section provides clear details on the change and the impact to existing applications. In addition, you can review the release notes included with the driver for a list of bugs fixed in that release and known issues.  
   
@@ -74,10 +67,7 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
  The Microsoft JDBC Driver for SQL Server is available at no additional charge.  
   
  **Can I redistribute the driver?** 
- The JDBC Drivers 4.1, 4.2, 6.0, 6.2, and 6.4 are redistributable. Please review the “Distributable Code” clause in the license agreements.
- 
- The JDBC Driver 4.0 is freely redistributable under a separate Redistribution License that requires registration. To register or for more information, see the  [Redistributing the Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md). 
- 
+ The JDBC Drivers 4.1, 4.2, 6.0, 6.2, and 6.4 are redistributable. Please review the “Distributable Code” clause in the license agreements. 
    
  **Can I use the driver to access Microsoft SQL Server from a Linux computer?** 
  Yes! You can use the driver to access SQL Server from Linux, Unix, and other non-Windows platforms. See our  [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) for more details.  

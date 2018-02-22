@@ -32,9 +32,7 @@ ms.workload: "Active"
   The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server provide **sqljdbc41.jar**, and **sqljdbc42.jar** class library files to be used depending on your preferred Java Runtime Environment (JRE) settings.  
   
  The Microsoft JDBC Driver 4.1 for SQL Server provides the **sqljdbc41.jar** class library file to be used depending on your preferred Java Runtime Environment (JRE) settings.  
-  
- The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 provides **sqljdbc.jar** and **sqljdbc4.jar** class library files to be used depending on your preferred Java Runtime Environment (JRE) settings.  
-  
+    
  Your choice will also determine available features. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## Setting the Classpath  
@@ -51,13 +49,13 @@ ms.workload: "Active"
   
  The following is an example of the CLASSPATH statement that is used for a Windows application:  
   
- `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre8.jar`  
+ `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
   
  The following is an example of the CLASSPATH statement that is used for a Unix/Linux application:  
   
- `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre8.jar`  
+ `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
   
- You must make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar or mssql-jdbc-6.4.0.jre8.jar.   
+ You must make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar or mssql-jdbc-6.4.0.jre9.jar.   
 
 ### For Microsoft JDBC Driver 6.2
  The **mssql-jdbc-6.2.1.jre7.jar** or **mssql-jdbc-6.2.1.jre8.jar** files are installed in the following location:  
@@ -76,7 +74,7 @@ ms.workload: "Active"
   
  You must make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either mssql-jdbc-6.2.1.jre7.jar or mssql-jdbc-6.2.1.jre8.jar.  
 
-### For Microsoft JDBC Driver 4.0, 4.1, 4.2, and 6.0
+### For Microsoft JDBC Driver 4.1, 4.2, and 6.0
  The sqljdbc.jar file, sqljdbc4.jar file, sqljdbc41.jar, or sqljdbc42.jar file are installed in the following location:  
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc.jar  

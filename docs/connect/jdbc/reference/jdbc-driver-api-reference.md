@@ -47,9 +47,7 @@ ms.workload: "Inactive"
 >  Microsoft JDBC Drivers 6.0 and 4.2 support compilation with JDK 5.0, 6.0, 7.0, and 8.0.  
 >   
 >  Microsoft JDBC Driver 4.1 supports compilation with JDK 5.0, 6.0, and 7.0.  
->   
->  Microsoft JDBC Driver 4.0 supports compilation with JDK 5.0 and 6.0.  
-  
+
 ## Interfaces  
   
 |Interface Name|Description|  

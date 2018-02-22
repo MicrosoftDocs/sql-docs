@@ -24,41 +24,43 @@ ms.workload: "Inactive"
 
 This article provides information on the two changes that are implemented to enhance the performance of the driver.
 
-## Batching of Un-prepare for Prepared Statements
-Since version 6.1.6-preview, an improvement in performance was implemented through minimizing server round trips to SQL Server. Previously, for every prepareStatement query, a call to un-prepare was also sent. Now, the driver is batching un-prepare queries up to the threshold “ServerPreparedStatementDiscardThreshold“, which has a default value of 10.
+## Batching of Unprepare for Prepared Statements
+Since version 6.1.6-preview, an improvement in performance was implemented through minimizing server round trips to SQL Server. Previously, for every prepareStatement query, a call to unprepare was also sent. Now, the driver is batching unprepare queries up to the threshold “ServerPreparedStatementDiscardThreshold“, which has a default value of 10.
 
 > [!NOTE]  
 >  Users can change the default value with the following method:
 >  setServerPreparedStatementDiscardThreshold(int value)
 
-One more change introduced from 6.1.6-preview is that prior to this, driver would always call sp_prepexec. Now, for the first execution of a prepared statement, driver calls sp_executesql and for the rest it will execute sp_prepexec and assigns a handle to it. More details can be found [here](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching).
+One more change introduced from 6.1.6-preview is that prior to this, driver would always call sp_prepexec. Now, for the first execution of a prepared statement, driver calls sp_executesql and for the rest it executes sp_prepexec and assigns a handle to it. More details can be found [here](https://github.com/Microsoft/mssql-jdbc/wiki/PreparedStatement-metadata-caching).
 
 > [!NOTE]  
 >  Users can change the default behavior to the previous versions of always calling sp_prepexec by setting enablePrepareOnFirstPreparedStatementCall to **true** using the following method:
 >  setEnablePrepareOnFirstPreparedStatementCall(boolean value)
 
-## List of the New APIs Introduced With This Change, for Batching of Un-prepare for Prepared Statements
+## List of the New APIs Introduced With This Change, for Batching of Unprepare for Prepared Statements
 
  **SQLServerConnection**
+ 
 |New Method|Description|  
 |-----------|-----------------|  
-|int getDiscardedServerPreparedStatementCount()|Returns the number of currently outstanding prepared statement un-prepare actions.|
-|void closeUnreferencedPreparedStatementHandles()|Forces the un-prepare requests for any outstanding discarded prepared statements to be executed.|
+|int getDiscardedServerPreparedStatementCount()|Returns the number of currently outstanding prepared statement unprepare actions.|
+|void closeUnreferencedPreparedStatementHandles()|Forces the unprepare requests for any outstanding discarded prepared statements to be executed.|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|Returns the behavior for a specific connection instance. If false the first execution calls sp_executesql and not prepare a statement, once the second execution happens it calls sp_prepexec and actually setup a prepared statement handle. Following executions calls sp_execute. This relieves the need for sp_unprepare on prepared statement close if the statement is only executed once. The default for this option can be changed by calling setDefaultEnablePrepareOnFirstPreparedStatementCall().|
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|Specifies the behavior for a specific connection instance. If value is false the first execution calls sp_executesql and not prepare a statement, once the second execution happens it calls sp_prepexec and actually setup a prepared statement handle. Following executions calls sp_execute. This relieves the need for sp_unprepare on prepared statement close if the statement is only executed once.|
-|int getServerPreparedStatementDiscardThreshold()|Returns the behavior for a specific connection instance. This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1, un-prepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1, these calls are batched together to avoid overhead of calling sp_unprepare too often. The default for this option can be changed by calling getDefaultServerPreparedStatementDiscardThreshold().|
-|void setServerPreparedStatementDiscardThreshold(int value)|Specifies the behavior for a specific connection instance. This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 un-prepare actions are executed immediately on prepared statement close. If it is set to > 1 these calls are batched together to avoid overhead of calling sp_unprepare too often.|
+|int getServerPreparedStatementDiscardThreshold()|Returns the behavior for a specific connection instance. This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1, unprepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1, these calls are batched together to avoid overhead of calling sp_unprepare too often. The default for this option can be changed by calling getDefaultServerPreparedStatementDiscardThreshold().|
+|void setServerPreparedStatementDiscardThreshold(int value)|Specifies the behavior for a specific connection instance. This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 unprepare actions are executed immediately on prepared statement close. If it is set to > 1 these calls are batched together to avoid overhead of calling sp_unprepare too often.|
 
  **SQLServerDataSource**
+ 
 |New Method|Description|  
 |-----------|-----------------|  
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|If this configuration is false the first execution of a prepared statement calls sp_executesql and not prepare a statement, once the second execution happens it calls sp_prepexec and actually setup a prepared statement handle. Following executions calls sp_execute. This relieves the need for sp_unprepare on prepared statement close if the statement is only executed once.|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|If this configuration returns false the first execution of a prepared statement calls sp_executesql and not prepare a statement, once the second execution happens, it calls sp_prepexec and actually setup a prepared statement handle. Following executions calls sp_execute. This relieves the need for sp_unprepare on prepared statement close if the statement is only executed once.|
-|void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 un-prepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1 these calls are batched together to avoid overhead of calling sp_unprepare too often|
-|int getServerPreparedStatementDiscardThreshold()|This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 un-prepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1 these calls are batched together to avoid overhead of calling sp_unprepare too often.|
+|void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 unprepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1 these calls are batched together to avoid overhead of calling sp_unprepare too often|
+|int getServerPreparedStatementDiscardThreshold()|This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 unprepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1 these calls are batched together to avoid overhead of calling sp_unprepare too often.|
 
 ## Prepared Statement Metatada caching
-As of 6.3.0-preview version, Microsoft JDBC driver for SQL Server supports prepared statement caching. Prior to v6.3.0-preview, if one executes a query that has been already prepared and stored in the cache, calling the same query again will not result in preparing it. Now, the driver will look up the query in cache and find the handle and execute it with sp_execute.
+As of 6.3.0-preview version, Microsoft JDBC driver for SQL Server supports prepared statement caching. Prior to v6.3.0-preview, if one executes a query that has been already prepared and stored in the cache, calling the same query again will not result in preparing it. Now, the driver looks up the query in cache and find the handle and execute it with sp_execute.
 Prepared Statement Metadata caching is **disabled** by default. In order to enable it, you need to call the following method on the connection object:
 
 `setStatementPoolingCacheSize(int value)   //value is the desired cache size (any value bigger than 0)`
@@ -71,6 +73,7 @@ For example:
 ## List of the New APIs Introduced With This Change, for Prepared Statement Metadata Caching
 
  **SQLServerConnection**
+ 
 |New Method|Description|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean value)|Sets statement pooling to true or false.|
@@ -81,6 +84,7 @@ For example:
 |boolean isPreparedStatementCachingEnabled()|Whether statement pooling is enabled or not for this connection.|
 
  **SQLServerDataSource**
+ 
 |New Method|Description|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean disableStatementPooling)|Sets the statement pooling to true or false|

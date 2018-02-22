@@ -26,11 +26,11 @@ You can use Azure Active Directory (AAD) authentication, which is a mechanism of
 
 Two new connection properties have been added to support Azure Active Directory Authentication:
 *	**authentication**:  Use this property to indicate which SQL authentication method to use for connection. Possible values are: **ActiveDirectoryIntegrated**, **ActiveDirectoryPassword**, **SqlPassword**, and the default **NotSpecified**.
-	* Use 'authentication=ActiveDirectoryIntegrated' to connect to a SQL Database using integrated Windows authentication. To use this authentication mode you need to federate the on-premise Active Directory Federation
+	* Use 'authentication=ActiveDirectoryIntegrated' to connect to a SQL Database using integrated Windows authentication. To use this authentication mode, you need to federate the on-premise Active Directory Federation
 Services (ADFS) with Azure AD in the cloud. Once this is set up as well as a Kerberos ticket, you can access Azure SQL DB without being prompted for credentials when you are logged in a domain joined machine. 
 	* Use 'authentication=ActiveDirectoryPassword' to connect to a SQL Database using an Azure AD principal name and password.
 	* Use 'authentication=SqlPassword' to connect to a SQL Server using userName/user and password properties.
-	* Use 'authentication=NotSpecified' or leave it as default if none of these authentication methods are needed.
+	* Use 'authentication=NotSpecified' or leave it as default when none of these authentication methods are needed.
 
 *	**accessToken**: Use this property to connect to a SQL database using an access token. accessToken can only be set using the Properties parameter of the getConnection() method in the DriverManager class. It cannot be used in the connection URL.  
 
@@ -41,14 +41,14 @@ For details see the authentication property on the [Setting the Connection Prope
 Please make sure that the following components are installed on the client machine:
 * Java 7 or above
 *	Microsoft JDBC Driver 6.0 (or higher) for SQL Server
-*	If you are using the access token-based authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. See **Connecting using Access Token** section for more details.
-*	If you are using the ActiveDirectoryPassword authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. See **Connecting using ActiveDirectoryPassword Authentication Mode** section for more details.
-*	If you are using the ActiveDirectoryIntegrated mode, you need azure-activedirectory-library-for-java and its dependencies. See **Connecting using ActiveDirectoryIntegrated Authentication Mode** section for more details.
+*	If you are using the access token-based authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. For more information, see **Connecting using Access Token** section.
+*	If you are using the ActiveDirectoryPassword authentication mode, you need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. For more information, see **Connecting using ActiveDirectoryPassword Authentication Mode** section.
+*	If you are using the ActiveDirectoryIntegrated mode, you need azure-activedirectory-library-for-java and its dependencies. For more information, see **Connecting using ActiveDirectoryIntegrated Authentication Mode** section.
 	
 ## Connecting using ActiveDirectoryIntegrated Authentication Mode
  With version 6.4, Microsoft JDBC Driver adds support for ActiveDirectoryIntegrated Authentication using a Kerberos ticket on multiple platforms (Windows/Linux and Mac).
 See **Set Kerberos ticket on Windows, Linux And Mac** for more details. Alternatively, on Windows, sqljdbc_auth.dll can also be used for ActiveDirectoryIntegrated Authentication with JDBC Driver.
-**Note:** If you are using an older version of the driver, please check this [link](../../connect/jdbc/dependency.md) for the respective dependencies that are required to use this authentication mode. 
+**Note:** If you are using an older version of the driver, check this [link](../../connect/jdbc/dependency.md) for the respective dependencies that are required to use this authentication mode. 
 
 The following example shows how to use 'authentication=ActiveDirectoryIntegrated' mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups, you belong to, must exist in the database and must have the CONNECT permission. 
 
@@ -86,7 +86,7 @@ public class IntegratedExample {
 	}
 }
 ```
-Running this example on a client machine will automatically use your Kerberos ticket and no password is required. If a connection is established, you will see the following message:
+Running this example on a client machine automatically uses your Kerberos ticket and no password is required. If a connection is established, you should see the following message:
 ```
 You have successfully logged on as: <your domain user name>
 ```
@@ -101,7 +101,7 @@ JDK comes with `kinit` which you can use to get a TGT from KDC (Key Distribution
 ##### Step 1: Ticket Granting Ticket retrieval
 - **Run on**: Windows
 - **Action**:
-  - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC. You will be prompted for your domain password.
+  - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC, then it will prompt you for your domain password.
   - Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket from krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 	**Note** You may need to specify a `.ini` file with `-Djava.security.krb5.conf` for your application to locate KDC.
@@ -143,7 +143,7 @@ Access to a Windows domain-joined machine in order to query your Kerberos Domain
 ##### Step 3: Testing the Ticket Granting Ticket retrieval
 - **Run on**: Linux/Mac
 - **Action**:
-  - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC. You will be prompted for your domain password.
+  - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC, then it will prompt you for your domain password.
   - Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket from krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 ## Connecting using ActiveDirectoryPassword Authentication Mode
@@ -189,7 +189,7 @@ public class UserPasswordExample {
 	}
 }
 ```
-If connection is established, you will see the following message as output:
+If connection is established, you should see the following message as output:
 ```
 You have successfully logged on as: <your user name>
 ```
@@ -212,7 +212,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	7. Enter mytokentest as a friendly name for the application, select "Web Application and/or Web API", and click next.
 	8. Assuming this application is a daemon/service and not a web application, it doesn't have a sign-in URL or app ID URI. For these two fields, enter http://mytokentest
 	9. While still in the Azure portal, click the Configure tab of your application
-	10. Find the Client ID value and copy it aside, you need this later when configuring your application (for example, a4bbfe26-dbaa-4fec-8ef5-223d229f647d). See the snapshot below.
+	10. Find the Client ID value and copy it aside, you need this later when configuring your application (for example, a4bbfe26-dbaa-4fec-8ef5-223d229f647d). See the following snapshot.
 	11. Under section “Keys”, select the duration of the key, save the configuration, and copy the key for later use. This is the client Secret.
 	12. On the bottom, click on “view endpoints”, and copy the URL under “OAUTH 2.0 AUTHORIZATION ENDPOINT” for later use. This is the STS URL.
 
@@ -228,9 +228,9 @@ provision a contained database user for your application principal. See the [Con
 	CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
 	```
 
-3.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) library and its dependencies, and include them in the Java build path. Note that the azure-activedirectory-library-for-java is only needed to run this specific example as it uses the APIs from this library to retrieve the access token from Azure AD. If you already have an access token, you can skip this step. Note that you will also need to remove the section in the example that retrieves access token.
+3.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) library and its dependencies, and include them in the Java build path. Note that the azure-activedirectory-library-for-java is only needed to run this specific example as it uses the APIs from this library to retrieve the access token from Azure AD. If you already have an access token, you can skip this step. Note that you also need to remove the section in the example that retrieves access token.
 
-In the example below, replace the STS URL, Client ID, Client Secret, server and database name with your values.
+In the following example, replace the STS URL, Client ID, Client Secret, server and database name with your values.
 
 ```
 import java.sql.Connection;
@@ -281,7 +281,7 @@ public class TokenBasedExample {
 }
 ``` 
 
-If the connection is successful, you will see the following message as output:
+If the connection is successful, you should see the following message as output:
 ```
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>	

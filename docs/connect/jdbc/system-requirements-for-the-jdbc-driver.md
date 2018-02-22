@@ -27,11 +27,11 @@ ms.workload: "Active"
 -   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]  
   
      You can download the Microsoft JDBC Driver from the Microsoft Download Center links below: 
+	 * [Microsoft JDBC Driver 6.4 for SQL Server](http://go.microsoft.com/fwlink/?linkid=868290)
      * [Microsoft JDBC Driver 6.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=852460)
      * [Microsoft JDBC Driver 6.0 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841535)
      * [Microsoft JDBC Driver 4.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841534) 
      * [Microsoft JDBC Driver 4.1 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
-     * [Microsoft JDBC Driver 4.0 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841532)
   
 -   Java Runtime Environment  
   
@@ -122,19 +122,8 @@ ms.workload: "Active"
 |---------|------------------|---------------------|-------------------------|   
 |sqljdbc41.jar|4|7|7 6 5|  
   
- **Microsoft JDBC Driver 4.0 for SQL Server:**  
-  
- To support backward compatibility and possible upgrade scenarios, the JDBC Driver includes two JAR class libraries in each installation package: **sqljdbc.jar** and **sqljdbc4.jar**.  
-  
-|JAR|Description|  
-|---------|-----------------|  
-|sqljdbc.jar|**sqljdbc.jar** class library provides support for JDBC 3.0.<br /><br /> **sqljdbc.jar** class library requires a Java Runtime Environment (JRE) of version 5.0. Using **sqljdbc.jar** on JRE 6.0 or JRE 7.0 throws an exception when connecting to a database.<br /><br /> **Note:** The JDBC Driver does not support JRE 1.4. You must upgrade JRE 1.4 to JRE 5.0, JRE 6.0, or JRE 7.0 when using the JDBC Driver. In some cases, you might need to recompile your application because it might not be compatible with JDK 5.0 API or JDK 6.0 API. For more information, see the documentation on the Sun Microsystems website.<br /><br /> [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] does not support JDK 7.|  
-|sqljdbc4.jar|**sqljdbc4.jar** class library provides support for JDBC 4.0 API. It includes all of the features of the **sqljdbc.jar** as well as the new JDBC 4.0 API methods.<br /><br /> **sqljdbc4.jar** class library requires a Java Runtime Environment (JRE) of version 6.0 or 7.0. Using **sqljdbc4.jar** on JRE 5.0 throws an exception.<br /><br /> **Note:**  Use **sqljdbc4.jar** when your application must run on JRE 6.0 or 7.0, even if your application does not use JDBC 4.0 API features.|  
-  
- Note that the JDBC driver is designed to work with and be supported by all major Sun equivalent Java virtual machines, but is tested on Sun JRE 5.0, 6.0 and 7.0.  
-  
 ## SQL Server Requirements  
- The JDBC driver supports connections to Azure SQL database and SQL Server. For Microsoft JDBC Driver 4.2 and 4.1 for SQL Server, support begins with SQL Server 2008. For Microsoft JDBC Driver 4.0 for SQL Server, support beings with SQL Server 2005.  
+ The JDBC driver supports connections to Azure SQL database and SQL Server. For Microsoft JDBC Driver 4.2 and 4.1 for SQL Server, support begins with SQL Server 2008.
   
 ## Operating System Requirements  
  The JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). However, only Sun Solaris, SUSE Linux, and Windows operating systems have officially been tested.  

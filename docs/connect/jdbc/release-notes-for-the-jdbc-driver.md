@@ -25,41 +25,56 @@ ms.workload: "On Demand"
 ## Updates in Microsoft JDBC Driver 6.4 for SQL Server
 The Microsoft JDBC Driver 6.4 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.4 package are named according to Java version compatibility. For example, the mssql-jdbc-6.4.0.jre8.jar file from the 6.4 package is recommended to be used with Java 8. 
 
+**Support for JDK 9**  
+  
+Support for Java Development Kit (JDK) version 9.0 in addition to JDK 8.0 and 7.0.
+  
+**JDBC 4.3 compliance**  
+  
+Support for Java Database Connectivity API 4.3 specification, in addition to 4.1 and 4.2. The JDBC 4.3 API methods are added but not implemented yet. For details see [JDBC 4.3 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+ 
 **Added new connection property: sslProtocol**
 
 Added a new connection property that lets users specify the TLS protocol keyword. Possible values are: "TLS", "TLSv1", "TLSv1.1", "TLSv1.2". See [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol) for details.
 
-**Removed connection property: fipsProvider**
+**Deprecated connection property: fipsProvider**
 
-fipsProvider has been removed from the list of accepted connection properties. See the details [Here](https://github.com/Microsoft/mssql-jdbc/pull/460).
+Connection property "fipsProvider" is removed from the list of accepted connection properties. See the details [Here](https://github.com/Microsoft/mssql-jdbc/pull/460).
 
 **Added connection properties for specifying custom TrustManager**
 
-Two new connection properties have been added: **trustManagerClass** and **trustManagerConstructorArg**. This allows for dynamic specification of a set of certificates that are trusted on a per connection basis without modifying the global settings for the JVM environment.
+Driver now supports specifying custom TrustManager with added "trustManagerClass" and "trustManagerConstructorArg" connection properties. This allows for dynamic specification of a set of certificates that are trusted on a per connection basis without modifying the global settings for the JVM environment.
 
-**Added support for datetime/smallDatetime in TVP**
+**Added support for datetime/smallDatetime in Table-Valued Parameters (TVP)**
 
-The JDBC Driver now supports datetime/smallDatetime values with TVP.
+Driver now supports datatypes DATETIME and SMALLDATETIME when using Table-Valued Parameters (TVP).
 
 **Added support for sql_variant datatype**
 
-The JDBC Driver now supports sql_variant datatypes to be used with SQL Server.
+The JDBC Driver now supports sql_variant datatypes to be used with SQL Server. Sql_variant is also supported with features such as Table-Valued Parameters (TVP) and BulkCopy with below limitations:
 
-**Updated azure-keyvault dependency to version 1.0.0**
+1. For Date values
+When using TVP to populate a table that contains datetime/smalldatetime/date values stored in sql_variant column, calling getDateTime()/getSmallDateTime()/getDate() methods on resultset does not work and throws the following exception:
+	```
+	java.lang.String cannot be cast to java.sql.Timestamp
+	```
+	Workaround: use "getString()" or "getObject()" methods instead.
 
-The JDBC Driver has updated its dependency for Azure Key Vault to a stable release of 1.0.0.
+2. Using TVP with SQL Variant for null values
+
+If you are using TVP to populate a table and send NULL value to sql_variant column type, you will encounter an exception as inserting NULL value with column type sql_variant in TVP is currently not supported.
 
 **Implemented Prepared Statement Metadata Caching**
 
-The JDBC Driver has implemented Prepared Statement Metadata Caching for performance improvement.
+The JDBC Driver has implemented Prepared Statement Metadata Caching for performance improvement. Driver now supports caching Prepared Statement metadata in the driver with "disableStatementPooling" and "statementPoolingCacheSize" connection properties. This feature is disabled by default. More information can be found [here](../../connect/jdbc/prepared-statement-metadata-caching.md)
 
 **Added support for AAD Integrated Authentication on Linux/Mac**
 
-The JDBC Driver now supports AAD Integrated Authentication on Linux/Mac platforms.
+The JDBC Driver now also supports Azure Active Directory Integrated Authentication on all supported Operating Systems (Windows/Linux/Mac) with Kerberos. Alternatively, on Windows Operating Systems, users can authenticate with sqljdbc_auth.dll.
 
 **Updated ADAL4J version to 1.4.0**
 
-The JDBC Driver has updated its dependency upon ADAL4J to version 1.4.0.
+The JDBC Driver has updated its maven dependency upon azure-activedirectory-library-for-java (ADAL4J) to version 1.4.0. For more information on dependencies, refer to [here](../../connect/jdbc/dependency.md)
 
 ## Updates in Microsoft JDBC Driver 6.2 for SQL Server
 The Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.0 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.1.jre8.jar file from the 6.2 package is recommended to be used with Java 8. 
@@ -157,36 +172,12 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Support for Java Development Kit (JDK) version 7.0 in addition to JDK 6.0 and 5.0.  
   
-## Updates in Microsoft JDBC Driver 4.0 for SQL Server and later  
- **Information about Connecting to an Azure SQL Database**  
+## Itanium Not Supported for JDBC Driver 6.4, 6.0, 4.2, and 4.1 Applications  
   
- There is now a topic with information about connecting to an Azure SQL database. See [Connecting to an Azure SQL database](../../connect/jdbc/connecting-to-an-azure-sql-database.md) for more information.  
-  
- **Support for High Availability, Disaster Recovery**  
-  
- Support for high-availability, disaster recovery connections to AlwaysOn Availability Groups in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. See [JDBC Driver Support for High Availability, Disaster Recovery](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) for more information.  
-  
- **Using Kerberos Integrated Authentication to Connect to SQL Server**  
-  
- Support for type 4 Kerberos integrated authentication for applications to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. For more information, see [Using Kerberos Integrated Authentication to Connect to SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). (Type 2 Kerberos integrated authentication is available in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] versions prior to 4.0.)  
-  
- **Accessing Diagnostic Information in the Extended Events Log**  
-  
- You can access information in the server's extended events log to understand connection failures. For more information, see [Accessing Diagnostic Information in the Extended Events Log](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
-  
- **Additional Support for Sparse Columns**  
-  
- If your application already accesses data in a table that uses sparse columns, you should see an increase in performance. You can get information about columns (including sparse column information) with [getColumns Method &#40;SQLServerDatabaseMetaData&#41;](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md). For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sparse columns, see [Using Sparse Columns](http://go.microsoft.com/fwlink/?LinkId=224244).  
-  
- **Xid.getFormatId**  
-  
- Beginning in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], the JDBC driver will pass the format identifier from the application to the database server. To get the updated behavior, make sure the sqljdbc_xa.dll on the server is updated. For more information on copying an updated version of sqljdbc_xa.dll to the server, see [Understanding XA Transactions](../../connect/jdbc/understanding-xa-transactions.md).  
-  
-## Itanium Not Supported for JDBC Driver 6.0, 4.2, 4.1, and 4.0 Applications  
-  
- Microsoft JDBC Drivers 6.0, 4.2, 4.1, and 4.0 for SQL Server applications are not supported to run on an Itanium computer.  
+ Microsoft JDBC Drivers 6.4, 6.0, 4.2, and 4.1 for SQL Server applications are not supported to run on an Itanium computer.  
   
 ## See Also  
  [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

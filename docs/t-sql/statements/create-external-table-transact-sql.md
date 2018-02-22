@@ -32,19 +32,13 @@ ms.workload: "On Demand"
 # CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Creates a table for accessing external data in Hadoop or Azure blob storage, or for using with an [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/). All of the products and services do not support all of the options.
-
-
-|------|------|-----|----|----|
-| Capability | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] | SQL Database | SQL Data Warehouse | Parallel Data Warehouse |
-| Access data in Hadoop |  yes | no | no | yes |
-| Access data in Azure blob | yes | no | yes | yes |
-| Elastic database query | yes | yes | yes | yes | 
- 
+  Creates an external table for PolyBase, or Elastic Database queries. Depending on the scenario, the syntax differs significantly. An external table created for PolyBase cannot be used for Elastic Database queries.  Similarly, an external table created for Elastic Database queries cannot be used for PolyBase, etc. 
+  
+> [!NOTE]  
+>  PolyBase is supported only on SQL Server 2016 (or higher), Azure SQL Data Warehouse, and Parallel Data Warehouse. Elastic Database queries are supported only on Azure SQL Database v12 or later.  
 
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses external tables to access
-
 data stored in a Hadoop cluster or Azure blob storagea PolyBase external table that references data stored in a Hadoop cluster or Azure blob storage. Can also be used to create an external table for [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
  Use an external table to:  

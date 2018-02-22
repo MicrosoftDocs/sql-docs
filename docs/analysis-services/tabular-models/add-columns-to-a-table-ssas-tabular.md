@@ -23,7 +23,7 @@ ms.workload: "On Demand"
 ---
 # Add columns to a table
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  This topic describes how to add columns to an existing table.  
+  This article describes how to add columns to an existing table.  
   
 ## Add columns from the datasource  
  When using the Table Import Wizard to import data from a data source table, a new table is created in the model which includes all of the columns in the source table, or if you choose to filter out certain columns by using the Preview and Filter feature, only those columns and filtered data you select. You can also write a SQL Query that specifies only certain columns to import. You may, however, later determine a source table has additional columns that you want to add to the model table, or you need to add a calculated column with values derived from a DAX formula.  

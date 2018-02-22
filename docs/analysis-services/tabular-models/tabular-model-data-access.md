@@ -25,7 +25,7 @@ ms.workload: "On Demand"
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Tabular model databases in Analysis Services can be accessed by most of the same clients, interfaces, and languages that you use to retrieve data or metadata from a multidimensional model. For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- This topic describes the clients, query languages, and programmatic interfaces that work with tabular models.  
+ This article describes the clients, query languages, and programmatic interfaces that work with tabular models.  
   
 ## Clients  
  The following Microsoft client applications support native connections to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model databases.  

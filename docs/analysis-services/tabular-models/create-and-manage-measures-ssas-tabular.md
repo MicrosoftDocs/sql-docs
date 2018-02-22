@@ -1,7 +1,7 @@
 ---
 title: "Create and Manage Measures | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -21,21 +21,9 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Create and Manage Measures 
+# Create and manage measures 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   A measure is a formula that is created for use in a report or Excel PivotTable (or PivotChart). Measures can be based on standard aggregation functions, such as COUNT or SUM, or you can define your own formula by using DAX. The tasks in this topic describe how to create and manage measures by using a table’s measure grid.  
-  
- This topic includes the following tasks:  
-  
--   [To create a measure using a standard aggregation formula](#bkmk_create_stand)  
-  
--   [To create a measure using a custom formula](#bkmk_create_custom)  
-  
--   [To edit measure properties](#bkmk_edit)  
-  
--   [To rename a measure](#bkmk_rename)  
-  
--   [To delete a measure](#bkmk_delete)  
   
 ## Tasks  
  To create and manage measures, you will use a table’s measure grid. You can view the measure grid for a table in the model designer in Data View only. You cannot create measures or view the measure grid when in Diagram View; however, you can view existing measures in Diagram View. To show the measure grid for a table, click the **Table** menu, and then click **Show Measure Grid**.  
@@ -67,6 +55,6 @@ ms.workload: "On Demand"
 ## See Also  
  [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Calculated Columns](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+ [Calculated columns](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

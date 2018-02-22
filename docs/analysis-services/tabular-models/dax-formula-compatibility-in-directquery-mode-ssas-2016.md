@@ -1,7 +1,7 @@
 ---
-title: "DAX formula compatibility in DirectQuery mode (SSAS 2016) | Microsoft Docs"
+title: "DAX formula compatibility in DirectQuery mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
+ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""

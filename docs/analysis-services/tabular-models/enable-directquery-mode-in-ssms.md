@@ -1,7 +1,7 @@
 ---
 title: "Enable DirectQuery mode in SSMS | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
+ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -25,7 +25,7 @@ ms.workload: "Inactive"
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], steps for DirectQuery configuration differ based on the model's compatibility level. Below you'll find steps that work for all compatibility levels.  
   
- This topic assumes that you have created and validated an in-memory tabular model at compatibility level 1200 or higher, and only need to enable DirectQuery access and update connection strings. If you're starting from a lower compatibility level, you need to manually upgrade it first. See [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) for steps.  
+ This article assumes that you have created and validated an in-memory tabular model at compatibility level 1200 or higher, and only need to enable DirectQuery access and update connection strings. If you're starting from a lower compatibility level, you need to manually upgrade it first. See [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) for steps.  
   
 > [!IMPORTANT]  
 >  We recommend using [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] instead of Management Studio to switch data storage modes. When you use  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to change  model, and then follow that up with deployment to the server,  the model and database stay in sync. Moreover, changing the storage modes in the model lets you review any validation errors that occur. When using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as described in this article, validation errors are not reported.  
@@ -128,9 +128,9 @@ ms.workload: "Inactive"
 3.  In the trace, you should see evidence of query execution on the relational database.  
   
 ## See also  
- [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Data Sources Supported](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+ [Compatibility level](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [Data sources supported](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Extended events](../../relational-databases/extended-events/extended-events.md)   
+ [Monitor an Analysis Services instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Delete a Column | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "02/22/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -23,7 +23,7 @@ ms.workload: "Inactive"
 ---
 # Delete a Column 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  This topic describes how to delete a column from a tabular model table.  
+  This article describes how to delete a column from a tabular model table.  
   
 ## Delete a Model Table Column  
   

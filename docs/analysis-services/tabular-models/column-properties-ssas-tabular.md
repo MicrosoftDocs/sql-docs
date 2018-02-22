@@ -25,7 +25,7 @@ ms.workload: "On Demand"
 ---
 # Column properties 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  This topic describes tabular model column properties.  
+  This article describes tabular model column properties.  
   
 >  [!NOTE]  
 >  Some properties are not supported in all compatibility levels.    

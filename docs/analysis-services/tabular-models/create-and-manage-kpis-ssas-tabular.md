@@ -1,7 +1,7 @@
 ---
-title: "Create and Manage KPIs | Microsoft Docs"
+title: "Create and manage KPIs | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -23,19 +23,9 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Create and Manage KPIs 
+# Create and manage KPIs 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  This topic describes how to create, edit, or delete a KPI (Key Performance Indicator) in a tabular model. To create a KPI, you select a measure that evaluates to the KPI’s Base value. You then use the Key Performance Indicator dialog box to select a second measure or an absolute value that evaluates to a target value. You can then define status thresholds that measure the performance between the Base and Target measures.  
-  
- This topic includes the following tasks:  
-  
--   [To create a KPI](#bkmk_create_KPI)  
-  
--   [To edit a KPI](#bkmk_edit_KPI)  
-  
--   [To delete a KPI and the base measure](#bkmk_delete)  
-  
--   [To delete a KPI, but keep the base measure](#bkmk_delete_KPI)  
+  This article describes how to create, edit, or delete a KPI (Key Performance Indicator) in a tabular model. To create a KPI, you select a measure that evaluates to the KPI’s Base value. You then use the Key Performance Indicator dialog box to select a second measure or an absolute value that evaluates to a target value. You can then define status thresholds that measure the performance between the Base and Target measures.  
   
 ## Tasks  
   
@@ -73,7 +63,7 @@ ms.workload: "Inactive"
   
 -   In the measure grid, right-click the measure that serves as the Base measure (value) of the KPI, and then click **Delete KPI**.  
   
-## ALT Shortcuts  
+## ALT shortcuts  
   
 |UI section|Key command|  
 |----------------|-----------------|  
@@ -87,9 +77,9 @@ ms.workload: "Inactive"
 |Descriptions|ALT+D|  
 |Trend|ALT+T|  
   
-## See Also  
+## See also  
  [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Create and Manage Measures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
+ [Create and managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Deploy From SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -67,7 +67,7 @@ ms.workload: "Inactive"
  **Stop Deploy**  
  Click to halt the Deploy operation. This option is useful if the Deploy operation is taking too long, or if there are too many errors.  
   
-## See Also  
+## See also  
  [Tabular model solution deployment](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)   
  [Configure default data modeling and deployment properties](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
   

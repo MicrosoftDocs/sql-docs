@@ -29,8 +29,8 @@ ms.workload: "On Demand"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create a New Tabular Model Project &#40;Analysis Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)|This topic describes how to create a new, blank tabular model project.|  
-|[Import from Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)|This topic describes how to create a new tabular model project based on an existing model already in Analysis Services. Metadata from the existing model is extracted and used to create the new model.|  
-|[Import from Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|This topic describes how to create a new tabular model project by extracting the metadata and data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel file (.xlsx).|  
+|[Create a New Tabular Model Project &#40;Analysis Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)|This article describes how to create a new, blank tabular model project.|  
+|[Import from Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)|This article describes how to create a new tabular model project based on an existing model already in Analysis Services. Metadata from the existing model is extracted and used to create the new model.|  
+|[Import from Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|This article describes how to create a new tabular model project by extracting the metadata and data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel file (.xlsx).|  
   
   

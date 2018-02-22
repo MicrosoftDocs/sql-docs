@@ -24,7 +24,7 @@ This article describes how to install new Python packages on an instance of SQL 
 
 In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
-For help determining where packages are installed, or which packages are installed on the current instance, see [Viewing installed R or Python packages](determine-which-packages-are-installed-on-sql-server.md).
+For help figuring out where packages are installed, or which packages are installed, see [Viewing installed R or Python packages](../r/determine-which-packages-are-installed-on-sql-server.md).
 
 ## Prerequisites
 

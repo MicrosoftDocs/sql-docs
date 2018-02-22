@@ -55,4 +55,8 @@
 ## [Delete a Plan Guide](delete-a-plan-guide.md)  
 ## [Enable or Disable a Plan Guide](enable-or-disable-a-plan-guide.md)  
 
-#[Monitor Resource Usage (System Monitor)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [Monitor Resource Usage (System Monitor)](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [Joins](joins.md)   
+
+# [Subqueries](subqueries.md)    

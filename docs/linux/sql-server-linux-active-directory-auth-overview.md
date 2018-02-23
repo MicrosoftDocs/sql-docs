@@ -1,0 +1,56 @@
+---
+title: Active Directory authentication for SQL Server on Linux | Microsoft Docs
+description: This article provides an overview of Active Directory Authentication for SQL Server on Linux.
+author: rothja
+ms.date: 02/23/2018
+ms.author: jroth 
+manager: craigg
+ms.topic: article
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: ""
+ms.suite: "sql"
+ms.custom: "sql-linux"
+ms.technology: database-engine
+helpviewer_keywords: 
+  - "Linux, AAD authentication"
+ms.workload: "On Demand"
+---
+# Active Directory authentication for SQL Server on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+This article provides an overview of Active Directory (AD) authentication for SQL Server on Linux. AD authentication is also known as Integrated authentication in [!INCLUDE[ssNoVersion]. 
+
+## AD authentication overview
+
+AD authentication enables domain-joined clients on either Windows or Linux to authenticate to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using their domain credentials and the Kerberos protocol.
+
+AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication:
+
+- Users authenticate via single sign-on, without being prompted for a password.   
+- By creating logins for AD groups, you can manage access and permissions in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD group memberships.  
+- Each user has a single identity across your organization, so you don’t have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
+- AD enables you to enforce a centralized password policy across your organization.   
+
+## Configuration steps
+
+In order to use Active Directory authentication, you must have an AD Domain Controller (Windows) on your network.
+
+The details for how to configure AD authentication are provided in the tutorial, [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md). The following list provides a summary with a link to each section in the tutorial:
+
+1. [Join a SQL Server host to AD domain](sql-server-linux-active-directory-auth-overview.md#join).
+1. [Create AD user for SQL Server and set SPN](sql-server-linux-active-directory-auth-overview.md#createuser).
+1. [Configure SQL Server service keytab](sql-server-linux-active-directory-auth-overview.md#configurekeytab).
+1. [Create AD-based logins in Transact-SQL](sql-server-linux-active-directory-auth-overview.md#createsqllogins).
+1. [Connect to SQL Server using AD Authentication](sql-server-linux-active-directory-auth-overview.md#connect).
+
+## Known issues
+
+- At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
+- Third-party AD tools like Centrify, Powerbroker, and Vintela are not supported.
+
+## Next Steps
+
+For more information on how to implement Active Directory authentication for SQL Server on Linux, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).

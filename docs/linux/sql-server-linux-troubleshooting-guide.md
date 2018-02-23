@@ -4,7 +4,7 @@ description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
 author: annashres 
 ms.author: anshrest 
 manager: craigg
-ms.date: 01/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -21,6 +21,9 @@ ms.workload: "On Demand"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
+
+> [!TIP]
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Troubleshoot connection failures
 If you are having difficulty connecting to your Linux SQL Server, there are a few things to check. 
@@ -197,12 +200,4 @@ If you have accidentally started SQL Server with another user, you must change o
    [Special characters](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## Support
-
-Support is available through the community and monitored by the engineering team. For specific questions, use the following resources:
-
-- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Ask database administration questions
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Ask development questions
-- [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Ask technical questions
-- [Submit feedback](https://feedback.azure.com/forums/908035-sql-server): Report bugs and request feature
-- [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

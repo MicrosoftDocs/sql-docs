@@ -4,7 +4,7 @@ description:  This quickstart shows how to install SQL Server 2017 on Red Hat En
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -16,7 +16,7 @@ ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: "Active"
 ---
-# Install SQL Server and create a database on Red Hat
+# Quickstart: Install SQL Server and create a database on Red Hat
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

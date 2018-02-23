@@ -22,7 +22,7 @@ ms.workload: "On Demand"
 # SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-To manage (query, monitor, etc.) your database you need a tool. There are several database tools available. While your databases can be running in the cloud, on Windows, or even [SQL Server on Linux](../linux/sql-server-linux-overview.md) - your tool doesn't need to run on the same platform as the database. 
+To manage (query, monitor, etc.) your database you need a tool. There are several database tools available. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md, your tool doesn't need to run on the same platform as the database. 
 
 This article provides information about the available tools for working with your SQL databases. 
 
@@ -49,7 +49,8 @@ This article provides information about the available tools for working with you
 
 | Tool | Description |
 |:--|:--|
-| [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Use SQL Server Configuration Manager to configure SQL Server services and configure network connectivity.|
+| [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Use SQL Server Configuration Manager to configure SQL Server services and configure network connectivity. Configuration Manager runs on Windows|
+|[mssql-conf](../linux/sql-server-linux-configure-mssql-conf.md)|Use mssql-conf to configure SQL Server running on Linux.|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Use SQL Server Migration Assistant to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and Sybase.|
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Use the Distributed Replay feature to help you assess the impact of future SQL Server upgrades. Also use Distributed Replay to help assess the impact of hardware and operating system upgrades, and SQL Server tuning. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | The ssbdiagnose utility reports issues in Service Broker conversations or the configuration of Service Broker services. |

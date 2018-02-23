@@ -19,22 +19,19 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SQL Server 2012 Service Pack release notes
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 This topic contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
 
-The Service Packs are available online only, not on the installation media, and can be downloaded here:
+The Service Packs are available online only, not on the installation media, and can be downloaded as follows:
 - [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
-
 - [SQL Server 2012 SP3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
-
 - [SQL Server 2012 SP2](http://support.microsoft.com/KB/2958429)
-
 - [SQL Server 2012 SP1](http://go.microsoft.com/fwlink/p/?LinkID=268158)
 
 ## Service Pack 4 release notes
 
 ### Download pages
-The following items link to the primary download packages for SQL Server 2012 SP4. Download pages have system requirements and basic installation instructions.
+
 - [SQL Server 2012 SP4 Feature Pack](https://go.microsoft.com/fwlink/?linkid=846907)
 - [SQL Server 2012 SP4 Patch installation](https://go.microsoft.com/fwlink/?linkid=846829)
 - [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
@@ -64,7 +61,6 @@ The following items link to the primary download packages for SQL Server 2012 SP
 ## Service Pack 3 release notes
 
 ### Download pages
-The following items link to the main download packages for SQL Server 2012 SP3.
 - [SQL Server 2012 SP3 Feature Pack](http://go.microsoft.com/fwlink/?linkid=615935)
 - [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
 
@@ -73,8 +69,6 @@ For more detailed information to identify the location and name of the file to d
 ## Service Pack 2 release notes
   
 ### Download pages 
-
-The following items link to the main download packages for SQL Server 2012 SP2.
 - [SQL Server 2012 SP2 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=401008)
 - [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)
 
@@ -100,8 +94,6 @@ Use the table below to identify the location and name of the file to download ba
 ## Service Pack 1 release notes
 
 ### Download pages  
-
-The following items link to the main download packages for SQL Server 2012 SP2.
 - [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268158)
 - [SQL Server 2012 SP1 Express](http://go.microsoft.com/fwlink/p/?LinkID=26815)
 

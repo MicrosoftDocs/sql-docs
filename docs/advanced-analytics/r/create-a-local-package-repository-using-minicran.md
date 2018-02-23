@@ -32,7 +32,6 @@ As an output, miniCRAN creates an internally consistent repository consisting of
 
 Experienced R users often look for the list of dependent packages in the DESCRIPTION file for the downloaded package. However, packages listed in **Imports** might have second-level dependencies. For this reason, we recommend use of the **miniCRAN** method.
 
-
 ## What is a package repository
 
 The goal of creating a local package repository is to provide a single location that a server administrator or other users in the organization can use to install new R packages on a server that does not have internet access. After creating the repository, you can modify it by adding new packages or upgrading the version of existing packages.
@@ -45,12 +44,12 @@ Package repositories are useful in these scenarios:
 
 - **Easier offline installation**: To install package to an offline server requires that you also download all package dependencies, Using miniCRAN makes it easier to get all dependencies in the correct format.
 
-- **Improved version management**: In a multiuser environment, there are good reasons to avoid unrestricted installation of multiple package versions on the server.
+    By using miniCRAN, you can avoid package dependency errors when preparing packages to install with the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement.
 
-By using miniCRAN, you can avoid package dependency errors when preparing packages to install with the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement.
+- **Improved version management**: In a multiuser environment, there are good reasons to avoid unrestricted installation of multiple package versions on the server. Use a local repository to provide a consistent set of packages for use by your analysts. 
 
-You can also use miniCRAN to prepare packages for use in Azure Machine Learning. For more information, see this blog: [Using miniCRAN in Azure ML, by Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
-
+> [!TIP]
+> You can also use miniCRAN to prepare packages for use in Azure Machine Learning. For more information, see this blog: [Using miniCRAN in Azure ML, by Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## Prepare packages using miniCRAN
 
@@ -74,17 +73,18 @@ You begin by creating a **miniCRAN** repository to use as a source. You should c
 
 ### Step 2. Define a package source: a CRAN mirror, or an MRAN snapshot
 
-1. Specify a mirror site to use in getting packages. This example specifies a particular snapshot from the MRAN site, but you should always open the MRAN site and find the latest snapshot. 
+1. Specify a mirror site to use in getting packages. For example, you could use the MRAN site, or any other site in your region that contains the packages you need. If download fails, try another mirror site.
 
     ```R
-    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2014-08-18_0233/")
+    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com")
+    CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
     ```
 
 2. Type the name of a local folder in which to store the collected packages. 
 
     Be sure to create the folder in advance. An error is raised if the `local_repo` folder does not exist when you run the R code later.
 
-    The folder should have a descriptive name. For example, avoid using "miniCRAN", and instead type something like "GeneticsPackages" or "TeamRPackages1.0.2".
+    The folder should have a descriptive name. Here we've used "miniCRAN", but if you repeat this often, you should probably use a more descriptive name, such as "miniCRANZooPackages" or "miniCRANMyRPackagev2".
 
     ```R
     local_repo <- "~/miniCRAN"
@@ -114,8 +114,8 @@ You begin by creating a **miniCRAN** repository to use as a source. You should c
 3. Create the local repo. Be sure to change the R version if necessary
 
     ```R
-    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror)
-    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3")
+    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
+    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
     From this information, the miniCRAN package creates the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] later.
@@ -125,9 +125,9 @@ You begin by creating a **miniCRAN** repository to use as a source. You should c
     You can run the following code to list the packages contained in the miniCRAN repository.
 
     ```R
-    pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE)
-    head(pdb)
-    pdb$Package
+    pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE);
+    head(pdb);
+    pdb$Package;
     pdb[, c("Package", "Version", "License")]
     ```
 
@@ -137,7 +137,7 @@ After you have created the repository and added the packages you need, you must 
 
 The following procedure describes how to install the packages using R tools.
 
-1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages.
+1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages. The folder typically has this structure: miniCRAN root> -> bin -> windows -> contrib -> version no -> all packages.
 
 2. Open an R command prompt using the R tool associated with the instance.
 
@@ -152,18 +152,18 @@ The following procedure describes how to install the packages using R tools.
 3. Get the path for the instance library, and add it to the list of library paths.
 
     ```R
-    .libPaths()[1]  
-    lib \<- .libPaths()[1]
+    .libPaths()[1];
+    lib <- .libPaths()[1]
     ```
 
     On SQL Server, this command should return the path of the library associated with the instance, such as: "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library "
 
-4. Specify the location on the server where you copied the **miniCRAN** repository in `server_repo`.
+4. Specify the new location on the server where you copied the **miniCRAN** repository, as `server_repo`.
 
-    In this example, we assume that you copied the repository to your user folder on the server.
+    In this example, we assume that you copied the repository to a temporary folder on the server.
 
     ```R
-    R server_repo <- "C:\\Users\\MyUserName\\miniCRAN"
+    source_repo <- "C:\\temp\\miniCRAN"
     ```
 
 5. Since you are working in a new R workspace on the server, you must also furnish the list of packages to install.
@@ -175,7 +175,7 @@ The following procedure describes how to install the packages using R tools.
 6. Install the packages, providing the path to the local copy of the miniCRAN repo.
 
     ```R
-    install.packages(tspackages, repos = file.path("file://", normalizePath(server_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE)
+    install.packages(tspackages, repos = file.path("file://", normalizePath;(source_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE);
     ```
 
 7. From the instance library, you can view the installed packages using a command like the following:

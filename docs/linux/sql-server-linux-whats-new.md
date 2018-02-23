@@ -65,8 +65,9 @@ To install SQL Server on Linux, use one of the following tutorials:
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-For other information regarding SQL Server on Linux, see the [overview](sql-server-linux-overview.md). For package downloads and a list of unsupported features and known issues, see the [Release notes](sql-server-linux-release-notes.md).
-
 To see other improvements introduced in SQL Server 2017, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
+
+> [!TIP]
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

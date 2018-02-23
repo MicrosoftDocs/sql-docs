@@ -22,6 +22,10 @@ ms.workload: "On Demand"
 # SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+Databases run as services on servers, virtual machines, on-premises, in the cloud, etc. To manage (query, monitor, etc.) your database you need a tool. There are several database tools available. Your databases could be running on multiple platforms - in the cloud, on Windows, [SQL Server on Linux](../linux/sql-server-linux-overview.md), but your client tool doesn't need to run on the same platform as the database. 
+
+This article provides information about the available tools for working with your SQL databases. 
+
 
 ## Tools to run queries and manage databases  
 
@@ -87,5 +91,6 @@ ms.workload: "On Demand"
 |`monospace`|Sample commands and program code.|  
 |*italic*|User-supplied parameters.|  
 |**bold**|Commands, parameters, and other syntax that must be typed exactly as shown.|  
+
 
 

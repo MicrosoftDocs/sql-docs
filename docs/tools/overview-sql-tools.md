@@ -22,7 +22,7 @@ ms.workload: "On Demand"
 # SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-To manage (query, monitor, etc.) your database you need a tool. There are several database tools available. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md, your tool doesn't need to run on the same platform as the database. 
+To manage (query, monitor, etc.) your database you need a tool. There are several database tools available. While your databases can be running in the cloud, on Windows, or on [Linux](../linux/sql-server-linux-overview.md), your tool doesn't need to run on the same platform as the database. 
 
 This article provides information about the available tools for working with your SQL databases. 
 
@@ -39,10 +39,10 @@ This article provides information about the available tools for working with you
 
 ## Which tool should I choose?
 
-- Do you want to manage a SQL Server instance or database, in a light-weight editor on Windows, Linux or Mac? Choose [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
+- Do you want to manage a SQL Server instance or database, in a light-weight editor on Windows, Linux or Mac? Choose [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
 - Do you want to manage a SQL Server instance or database on Windows with full GUI support? Choose [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - Do you want to create or maintain database code, including compile time validation, refactoring and designer support on Windows? Choose [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- Do you want to query SQL Server with a command-line tool that features IntelliSense, syntax high-lighting, and more? Choose [mssql-cli](mssql-cli.md).
+- Do you want to query SQL Server with a command-line tool that features IntelliSense, syntax high-lighting, and more? Choose [mssql-cli](mssql-cli.md)
 - Do you want to write T-SQL scripts in a light-weight editor on Windows, Linux or Mac? Choose [Visual Studio Code](https://code.visualstudio.com/) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## Additional tools

@@ -92,7 +92,7 @@ If the return value is out of range for **int** (-2,147,483,648 to +2,147,483,64
   
 If *startdate* and *enddate* are both assigned only a time value and the *datepart* is not a time *datepart*, 0 is returned.
   
-A time zone offset component of *startdate* or *endate* is not used in calculating the return value.
+A time zone offset component of *startdate* or *enddate* is not used in calculating the return value.
   
 Because [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) is accurate only to the minute, when a **smalldatetime** value is used for *startdate* or *enddate*, seconds and milliseconds are always set to 0 in the return value.
   
@@ -101,7 +101,7 @@ If only a time value is assigned to a variable of a date data type, the value of
 If *startdate* and *enddate* are of different date data types and one has more time parts or fractional seconds precision than the other, the missing parts of the other are set to 0.
   
 ## datepart boundaries  
-The following statements have the same *startdate* and the same *endate*. Those dates are adjacent and differ in time by .0000001 second. The difference between the *startdate* and *endate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If different years are used for this example and if both *startdate* and *endate* are in the same calendar week, the return value for **week** would be 0.
+The following statements have the same *startdate* and the same *enddate*. Those dates are adjacent and differ in time by .0000001 second. The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If different years are used for this example and if both *startdate* and *enddate* are in the same calendar week, the return value for **week** would be 0.
   
 ```sql
 SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');

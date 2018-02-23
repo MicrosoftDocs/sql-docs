@@ -1,5 +1,5 @@
 ---
-title: "Relationships (SSAS Tabular) | Microsoft Docs"
+title: "Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: analysis-services
@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Relationships (SSAS Tabular)
+# Relationships 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   In tabular models, a relationship is a connection between two tables of data. The relationship establishes how the data in the two tables should be correlated. For example, a Customers table and an Orders table can be related in order to show the customer name that is associated with each order.  
   

@@ -179,11 +179,14 @@ Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise 
 
 A preview of **sqlcmd** and **bcp** is now available on macOS. For more information, see the [announcement](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
+*Install [Homebrew](https://brew.sh) if you don't have it already:*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 To install the tools for Mac El Capitan and Sierra, use the following commands:
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools

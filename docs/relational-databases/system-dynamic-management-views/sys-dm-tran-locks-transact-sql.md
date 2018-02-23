@@ -36,7 +36,7 @@ ms.workload: "On Demand"
  The columns in the result set are divided into two main groups: resource and request. The resource group describes the resource on which the lock request is being made, and the request group describes the lock request.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_tran_locks**.  
+> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_tran_locks**.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -65,8 +65,6 @@ ms.workload: "On Demand"
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
  
-
-  
 ## Remarks  
  A granted request status indicates that a lock has been granted on a resource to the requestor. A waiting request indicates that the request has not yet been granted. The following waiting-request types are returned by the **request_status** column:  
   
@@ -290,7 +288,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 ### A. Using sys.dm_tran_locks with other tools  
  The following example works with a scenario in which an update operation is blocked by another transaction. By using **sys.dm_tran_locks** and other tools, information about locking resources is provided.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -328,7 +326,7 @@ BEGIN TRAN
   
  The following query will display lock information. The value for `<dbid>` should be replaced with the **database_id** from **sys.databases**.  
   
-```  
+```sql  
 SELECT resource_type, resource_associated_entity_id,  
     request_status, request_mode,request_session_id,  
     resource_description   
@@ -346,7 +344,7 @@ SELECT object_name(object_id), *
   
  The following query will show blocking information.  
   
-```  
+```sql  
 SELECT   
         t1.resource_type,  
         t1.resource_database_id,  
@@ -361,7 +359,7 @@ SELECT
   
  Release the resources by rolling back the transactions.  
   
-```  
+```sql  
 -- Session 1  
 ROLLBACK;  
 GO  
@@ -374,7 +372,7 @@ GO
 ### B. Linking session information to operating system threads  
  The following example returns information that associates a session ID with a Windows thread ID. The performance of the thread can be monitored in the Windows Performance Monitor. This query does not return session IDs that are currently sleeping.  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
     FROM sys.dm_os_tasks AS STasks  
     INNER JOIN sys.dm_os_threads AS SThreads  
@@ -386,9 +384,6 @@ GO
   
 ## See Also  
  [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
-  
-
-

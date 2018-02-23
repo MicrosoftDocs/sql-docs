@@ -1,5 +1,5 @@
 ---
-title: "Tabular Model Solutions (SSAS Tabular) | Microsoft Docs"
+title: "Tabular Model Solutions | Microsoft Docs"
 ms.date: "05/22/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
@@ -60,7 +60,7 @@ ms.workload: "On Demand"
   
  [Analyze in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Tabular Model Solution Deployment](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Tabular model solution deployment](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 ## See Also  
  [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)   

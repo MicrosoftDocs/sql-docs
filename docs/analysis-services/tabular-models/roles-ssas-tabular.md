@@ -1,5 +1,5 @@
 ---
-title: "Roles (SSAS Tabular) | Microsoft Docs"
+title: "Roles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: analysis-services

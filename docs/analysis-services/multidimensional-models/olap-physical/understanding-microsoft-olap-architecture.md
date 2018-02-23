@@ -55,6 +55,6 @@ ms.workload: "Inactive"
  [Globalization scenarios for Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
 ## See Also  
- [Technical Reference &#40;SSAS&#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
+ [Technical Reference ](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   

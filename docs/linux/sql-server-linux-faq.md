@@ -26,7 +26,11 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **What Linux platforms are supported?**
 
-   SQL Server is currently supported on Red Hat Enterprise Server, SUSE Linux Enterprise Server, and Ubuntu. For the latest information about the supported versions, see [Supported platforms](sql-server-linux-setup.md#supportedplatforms).
+   SQL Server is currently supported on Red Hat Enterprise Server, SUSE Linux Enterprise Server, and Ubuntu. It also runs in a container with Docker. For the latest information about the supported versions, see [Supported platforms](sql-server-linux-setup.md#supportedplatforms).
+
+1. **Will SQL Server on Linux work on other platforms**?
+
+   You can possibly install and run SQL Server on other distributions of Linux. For example, CentOS is closely related to Red Hat Enterprise Server, so you might be able to install the RPM SQL Server packages. This might be true for other closely related distributions as well. The main issue is testing and support. SQL Server has only been tested and is only supported on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu.
 
 1. **What SQL Server features are supported on Linux?**
 

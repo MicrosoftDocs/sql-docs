@@ -38,6 +38,9 @@ SQL Server 2017 is supported on the following Linux platforms:
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
 
+> [!NOTE]
+> It is sometimes possible to install and run SQL Server on other closely-related Linux platforms, but SQL Server is only tested and supported on the platforms listed in the preceding table.
+
 Microsoft supports deploying and managing SQL Server containers by using OpenShift and Kubernetes.
 
 For the latest support policy for SQL Server 2017, see [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).

@@ -25,7 +25,7 @@ ms.workload: "Active"
 # Rename Tables (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  You can rename a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+Rename a table in SQL Server or Azure SQL Database.
 
 To rename a table in Azure SQL Data Warehouse or Parallel Data Warehouse, use the t-sql [RENAME OBJECT](../../t-sql/statements/rename.md) statement. 
   

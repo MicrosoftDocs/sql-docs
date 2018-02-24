@@ -12,7 +12,7 @@
 ## [Query Processing Architecture](query-processing-architecture-guide.md)
 ## [Thread and Task Architecture](thread-and-task-architecture-guide.md)
 ## [Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management-guide.md)
-## Transaction Locking and Row Versioning Guide
+## [Transaction Locking and Row Versioning Guide](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Backup and restore](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -55,6 +55,7 @@
 ## [Database Lifecycle Management](database-lifecycle-management.md)  
 ## [Administer Multiple Servers Using Central Management Servers](administer-multiple-servers-using-central-management-servers.md)  
 
+# [Joins](../relational-databases/performance/joins.md)
 # [Partitions](../relational-databases/partitions/partitioned-tables-and-indexes.md)
 # [Performance](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Policy-based management](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
@@ -71,6 +72,7 @@
 # [SQL Trace](../relational-databases/sql-trace/sql-trace.md)
 # [Statistics](../relational-databases/statistics/statistics.md)
 # [Stored procedures](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+# [Subqueries](../relational-databases/performance/subqueries.md)
 # [Synonyms](../relational-databases/synonyms/synonyms-database-engine.md)
 # [System catalog views](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 # [System compatibility views](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)

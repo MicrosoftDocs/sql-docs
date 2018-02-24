@@ -30,7 +30,7 @@ ms.workload: "On Demand"
 ## In This Section  
  The following topics provide guidance on designing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database objects.  
   
- [Multidimensional Model Databases &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Multidimensional Model Databases ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
  Describes how to define an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
   
  [Supported Data Sources &#40;SSAS - Multidimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  

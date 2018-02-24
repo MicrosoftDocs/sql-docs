@@ -417,7 +417,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
   
 7.  Pass the permission check if the **required permission** was not denied and the **required permission** contains a GRANT or a GRANT WITH GRANT permission either directly or implicitly to any of the identities in the **security context** for any object in the **permission space**.  
 
-## Secial considerations for column level permissions
+## Special considerations for column level permissions
 
 Column level permissions are granted with the syntax *<table_name>(\<column _name>)*. For example:
 ```sql

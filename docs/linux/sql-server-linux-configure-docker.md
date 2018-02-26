@@ -4,7 +4,7 @@ description: Explore different ways of using and interacting with SQL Server 201
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/15/2018
+ms.date: 02/26/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -55,14 +55,14 @@ The quickstart in the previous section runs the free Developer edition of SQL Se
 
       ```bash
       docker run --name sqlenterprise \
-         -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+         -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
          -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
          -d store/microsoft/mssql-server-linux:2017-latest
       ```
 
       ```PowerShell
       docker run --name sqlenterprise `
-         -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+         -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
          -e "MSSQL_PID=Enterprise" -p 1433:1433 `
          -d "store/microsoft/mssql-server-linux:2017-latest"
       ```

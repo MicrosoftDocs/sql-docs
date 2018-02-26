@@ -1,7 +1,7 @@
 ---
 title: "Rename Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/23/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -17,17 +17,17 @@ helpviewer_keywords:
   - "table names [SQL Server]"
   - "tables [SQL Server], Visual Database Tools"
   - "renaming tables"
-ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
-caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
 ---
 # Rename Tables (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  You can rename a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Rename a table in SQL Server or Azure SQL Database.
+
+To rename a table in Azure SQL Data Warehouse or Parallel Data Warehouse, use the t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) statement. 
   
 > [!CAUTION]  
 >  Think carefully before you rename a table. If existing queries, views, user-defined functions, stored procedures, or programs refer to that table, the name modification will make these objects invalid.  

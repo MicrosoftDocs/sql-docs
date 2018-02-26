@@ -64,7 +64,7 @@ The Service Packs are available online only, not on the installation media, and 
 - [SQL Server 2012 SP3 Feature Pack](http://go.microsoft.com/fwlink/?linkid=615935)
 - [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
 
-For more detailed information to identify the location and name of the file to download based on your currently installed version, see the "Select the correct file to download" section in [SQL Server 2012 Service Pack 3 release information](https://support.microsoft.com/en-us/help/3072779/sql-server-2012-service-pack-3-release-information).
+For more detailed information to identify the location and name of the file to download based on your currently installed version, see the "Select the correct file to download" section in [SQL Server 2012 Service Pack 3 release information](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).
 
 ## Service Pack 2 release notes
   
@@ -212,7 +212,7 @@ This version of the Data-Tier Application Framework (DACFx) supports in-place up
   
 **Support for Selective XML Index**  
   
-SQL Server 2012 SP1 includes support for [Selective XML Index (SXI)](http://msdn.microsoft.com/en-us/598ecdcd-084b-4032-81b2-eed6ae9f5d44), a new SQL Server feature that provides a new way of indexing XML column data with increased performance and efficiency.  
+SQL Server 2012 SP1 includes support for [Selective XML Index (SXI)](http://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44), a new SQL Server feature that provides a new way of indexing XML column data with increased performance and efficiency.  
   
 DACFx now supports SXI indexes across all DAC scenarios and client tools. SXI is only supported in the latest version of SSDT. SSDT RTM and September 2012 versions do not support SXI.  
   
@@ -244,10 +244,10 @@ This release introduces several forward compatibility scenarios for DAC packages
   
 ## See Also
 - [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
-- [How to identify your SQL Server version and edition](https://support.microsoft.com/en-us/help/321185)
-- [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/en-us/library/hh479746(v=sql.110).aspx)
-- [How to identify your SQL Server version and edition ](https://support.microsoft.com/en-us/help/321185) 
+- [How to identify your SQL Server version and edition](https://support.microsoft.com/help/321185)
+- [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [How to identify your SQL Server version and edition ](https://support.microsoft.com/help/321185) 
 - [How to determine the version and edition of SQL Server](http://support.microsoft.com/kb/321185)  
-- [Features Supported by the Editions of SQL Server 2014](http://msdn.microsoft.com/en-us/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [Features Supported by the Editions of SQL Server 2014](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -68,7 +68,7 @@ The PARAMETERS parameter is used to specify optional user-defined parameters use
 
 The name of each parameter is specific to the model type. For example, the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function in RevoScaleR supports the parameter `@computeResiduals`, which indicates whether residuals should be computed when scoring a logistic regression model. If you are calling a compatible model, you could pass that parameter name and a TRUE or FALSE value to the `PREDICT` function.
 
-> [NOTE]
+> [!NOTE]
 > This option does not work in pre-release versions of SQL Server 2017.
 
 **WITH ( <result_set_definition> )**

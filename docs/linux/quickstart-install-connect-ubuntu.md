@@ -4,7 +4,7 @@ description: This quickstart shows how to install SQL Server 2017 on Ubuntu and 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: database-engine
@@ -16,7 +16,7 @@ ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: "Active"
 ---
-# Install SQL Server and create a database on Ubuntu
+# Quickstart: Install SQL Server and create a database on Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

@@ -4,7 +4,7 @@ description: This article describes how SQL Server runs on Linux and provides in
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -49,12 +49,9 @@ After installation, connect to the SQL Server instance on your Linux machine. Yo
 
 SQL Server 2017 has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux. This area of the documentation exposes some of these features from a Linux perspective. It also calls out areas that have unique requirements on Linux.
 
-If you are already familiar with SQL Server, review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server on Linux](sql-server-linux-whats-new.md) as well as [what's new for SQL Server 2017 overall](../sql-server/what-s-new-in-sql-server-2017.md). For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+If you are already familiar with SQL Server, review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server on Linux](sql-server-linux-whats-new.md) as well as [what's new for SQL Server 2017 overall](../sql-server/what-s-new-in-sql-server-2017.md). 
 
-##  ![info_tip](./media/general/info_tip.png) Engage with the SQL Server engineering team
+> [!TIP]
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
 
-- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Ask database administration questions
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Ask development questions
-- [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Ask technical questions
-- [Submit feedback](https://feedback.azure.com/forums/908035-sql-server): Report bugs and request feature
-- [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -38,7 +38,7 @@ Write full-text queries by using the full-text predicates **CONTAINS** and **FRE
 The following examples use the AdventureWorks sample database. For the final release of AdventureWorks, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). To run the sample queries, you have to set up Full-Text Search. For more info, see [Get Started with Full-Text Search](get-started-with-full-text-search.md). 
 
 ### Example - CONTAINS  
- The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`.  
+The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`:
   
 ```sql
 USE AdventureWorks2012  
@@ -87,7 +87,7 @@ GO
 ```  
   
 ### Example- FREETEXTTABLE  
- The following example extends a FREETEXTTABLE query to return the highest ranked rows first and to add the ranking of each row to the select list. To write a query like this, you have to know that **ProductDescriptionID** is the unique key column for the **ProductDescription** table.  
+ The following example extends a FREETEXTTABLE query to return the highest ranked rows first and to add the ranking of each row to the select list. To write a similar query, you have to know that **ProductDescriptionID** is the unique key column for the **ProductDescription** table.  
   
 ```sql 
 USE AdventureWorks2012  
@@ -122,7 +122,7 @@ GO
 
 ## Match words or match meaning
 
-`CONTAINS`/`CONTAINSTABLE` and `FREETEXT`/`FREETEXTTABLE` are useful for different kinds of matching. The following info helps you to choose the best predicate or function for your query.
+`CONTAINS`/`CONTAINSTABLE` and `FREETEXT`/`FREETEXTTABLE` are useful for different kinds of matching. The following info helps you to choose the best predicate or function for your query:
 
 ### CONTAINS/CONTAINSTABLE
 
@@ -136,7 +136,7 @@ GO
 
 ## Compare predicates and functions
 
-The predicates `CONTAINS`/`FREETEXT` and the rowset-valued functions `CONTAINSTABLE`/`FREETEXTTABLE` have different syntax and options. The following info helps you to choose the best predicate or function for your query.
+The predicates `CONTAINS`/`FREETEXT` and the rowset-valued functions `CONTAINSTABLE`/`FREETEXTTABLE` have different syntax and options. The following info helps you to choose the best predicate or function for your query:
 
 ### Predicates CONTAINS and FREETEXT
 
@@ -158,7 +158,7 @@ You can use a four-part name in the CONTAINS or FREETEXT predicate to query full
 
 You have to specify the base table to search when you use either of these functions. As with the predicates, you can specify a single column, a list of columns, or all columns in the table to be searched, and optionally, the language whose resources are used by given full-text query.
 
-Typically you have to join the results of CONTAINSTABLE or FREETEXTTABLE with the base table. To do this, you have to know the unique key column name. This column, which occurs in every full-text enabled table, is used to enforce unique rows for the table (the *unique**key column*). For more info about the key column, see [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md).
+Typically you have to join the results of CONTAINSTABLE or FREETEXTTABLE with the base table. To join the tables, you have to know the unique key column name. This column, which occurs in every full-text enabled table, is used to enforce unique rows for the table (the *unique**key column*). For more info about the key column, see [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md).
 
 **Results**. These functions return a table of zero, one, or more rows that match the full-text query. The returned table contains only rows from the base table that match the selection criteria specified in the full-text search condition of the function.
 
@@ -184,7 +184,7 @@ WHERE CONTAINS(Comments, '"learning curve"')
 GO  
 ```  
   
-The search condition, in this case "learning curve," can be quite complex and can be composed of one or more terms.
+The search condition, in this case "learning curve," can be complex and can be composed of one or more terms.
 
 #### More info about simple term searches
 
@@ -195,7 +195,7 @@ For example, "croissant" is a word, and "café au lait" is a phrase. Words and p
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) look for an exact match for the phrase. [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) break up the phrase into separate words.
 
 ###  <a name="Prefix_Term"></a> Search for a word with a prefix (Prefix Term)  
- You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md) or [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) to search for words or phrases with a specified prefix. All entries in the column that contain text beginning with the specified prefix are returned. For example, to search for all rows that contain the prefix `top`-, as in `top``ple`, `top``ping`, and `top`. The query looks like this:  
+ You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md) or [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) to search for words or phrases with a specified prefix. All entries in the column that contain text beginning with the specified prefix are returned. For example, to search for all rows that contain the prefix `top`-, as in `top``ple`, `top``ping`, and `top`. The query looks like the following example:  
   
 ```sql  
 USE AdventureWorks2012  
@@ -209,7 +209,7 @@ GO
   
  All text that matches the text specified before the asterisk (*) is returned. If the text and asterisk are not delimited by double quotation marks, as in `CONTAINS (DESCRIPTION, 'top*')`, full-text search does not consider the asterisk to be a wildcard..  
   
- When the prefix term is a phrase, each token making up the phrase is considered a separate prefix term. All rows that have words beginning with the prefix terms will be returned. For example, the prefix term "light bread*" will find rows with text of "light breaded," "lightly breaded," or "light bread," but it will not return "lightly toasted bread".
+ When the prefix term is a phrase, each token making up the phrase is considered a separate prefix term. All rows that have words beginning with the prefix terms will be returned. For example, the prefix term "light bread*" will find rows with text of "light breaded," "lightly breaded," or "light bread," but it will not return "lightly toasted bread."
 
 #### More info about prefix searches
 
@@ -217,14 +217,14 @@ A *prefix term* refers to a string that is affixed to the front of a word to pro
 
 -   For a single prefix term, any word starting with the specified term will be part of the result set. For example, the term "auto*" matches "automatic," "automobile," and so forth.
 
--   For a phrase, each word within the phrase is considered to be a prefix term. For example, the term "auto tran\*" matches "automatic transmission" and "automobile transducer," but it does not match "automatic motor transmission".
+-   For a phrase, each word within the phrase is considered to be a prefix term. For example, the term "auto tran\*" matches "automatic transmission" and "automobile transducer," but it does not match "automatic motor transmission."
 
 Prefix searches are supported by [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
   
 ###  <a name="Inflectional_Generation_Term"></a> Search for inflectional forms of a specific word (Generation Term)  
 You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) to search for all the different tenses and conjugations of a verb or both the singular and plural forms of a noun (an inflectional search) or for synonymous forms of a specific word (a thesaurus search).  
   
-The following example searches for any form of "foot" ("foot," "feet," and so on) in the `Comments` column of the `ProductReview` table in the `AdventureWorks` database.  
+The following example searches for any form of "foot" ("foot," "feet," and so on) in the `Comments` column of the `ProductReview` table in the `AdventureWorks` database: 
   
 ```sql  
 USE AdventureWorks2012  
@@ -242,7 +242,7 @@ Full-text search uses *stemmers*, which allow you to search for the different te
 
 The *inflectional forms* are the different tenses and conjugations of a verb or the singular and plural forms of a noun.
 
-For example, search for the inflectional form of the word "drive". If various rows in the table include the words "drive," "drives," "drove," "driving," and "driven," all would be in the result set because each of these can be inflectionally generated from the word drive.
+For example, search for the inflectional form of the word "drive." If various rows in the table include the words "drive," "drives," "drove," "driving," and "driven," all would be in the result set because each of these can be inflectionally generated from the word drive.
 
 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) look for inflectional terms of all specified words by default. [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) support an optional `INFLECTIONAL` argument.
 
@@ -250,7 +250,7 @@ For example, search for the inflectional form of the word "drive". If various ro
 
 A *thesaurus* defines user-specified synonyms for terms. For more info about thesaurus files, see [Configure and Manage Thesaurus Files for Full-Text Search](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).
 
-For example, if an entry, "{car, automobile, truck, van}," is added to a thesaurus, you can search for the thesaurus form of the word "car". All rows in the table queried that include the words "automobile," "truck," "van," or "car," appear in the result set because each of these words belongs to the synonym expansion set containing the word "car".
+For example, if an entry, "{car, automobile, truck, van}," is added to a thesaurus, you can search for the thesaurus form of the word "car." All rows in the table queried that include the words "automobile," "truck," "van," or "car," appear in the result set because each of these words belongs to the synonym expansion set containing the word "car."
 
 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) use the thesaurus by default. [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) support an optional `THESAURUS` argument.
 
@@ -258,7 +258,7 @@ For example, if an entry, "{car, automobile, truck, van}," is added to a thesaur
 
 A *proximity term* indicates words or phrases that are near to each other. You can also specify the maximum number of non-search terms that separate the first and last search terms. In addition, you can search for words or phrases in any order, or in the order in which you specify them.
 
-For example, you want to find the rows in which the word "ice" is near the word "hockey" or in which the phrase "ice skating" is near the phrase "ice hockey". 
+For example, you want to find the rows in which the word "ice" is near the word "hockey" or in which the phrase "ice skating" is near the phrase "ice hockey." 
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)
 
@@ -267,7 +267,7 @@ For more info about proximity searches, see [Search for Words Close to Another W
 ###  <a name="Weighted_Term"></a> Search for words or phrases using weighted values (Weighted Term)  
 You can use [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) to search for words or phrases and specify a weighting value. Weight, measured as a number from 0.0 through 1.0, indicates the importance of each word and phrase within a set of words and phrases. A weight of 0.0 is the lowest, and a weight of 1.0 is the highest.  
   
-The following example shows a query that searches for all customer addresses, using weights, in which any text beginning with the string "Bay" has either "Street" or "View". The results give a higher rank to those rows that contain more of the words specified.  
+The following example shows a query that searches for all customer addresses, using weights, in which any text beginning with the string "Bay" has either "Street" or "View." The results give a higher rank to those rows that contain more of the words specified.  
   
 ```sql  
 USE AdventureWorks2012  
@@ -296,7 +296,7 @@ Weighted term searches are supported by [CONTAINSTABLE](../../relational-databas
 
 ##  <a name="Using_Boolean_Operators"></a> Use AND, OR, and NOT (Boolean operators)
  
-The CONTAINS predicate and CONTAINSTABLE function use the same search conditions. Both support combining several search terms by using Boolean operators - AND, OR, and NOT - to perform logical operations. You can use AND, for example, to find rows that contain both "latte" and "New York-style bagel". You can use AND NOT, for example, to find the rows that contain "bagel" but do not contain "cream cheese".  
+The CONTAINS predicate and CONTAINSTABLE function use the same search conditions. Both support combining several search terms by using Boolean operators - AND, OR, and NOT - to perform logical operations. You can use AND, for example, to find rows that contain both "latte" and "New York-style bagel." You can use AND NOT, for example, to find the rows that contain "bagel" but do not contain "cream cheese."  
   
 In contrast, FREETEXT and FREETEXTTABLE treat the Boolean terms as words to be searched.  
   
@@ -318,7 +318,7 @@ GO
   
 ##  <a name="Additional_Considerations"></a> Case, stopwords, language, and thesaurus
 
- When you write full-text queries, you can also specify the following options.
+ When you write full-text queries, you can also specify the following options:
   
 -   **Case sensitivity**. Full-text search queries are case-insensitive. However, in Japanese, there are multiple phonetic orthographies in which the concept of orthographic normalization is akin to case insensitivity (for example, kana = insensitivity). This type of orthographic normalization is not supported.  
 

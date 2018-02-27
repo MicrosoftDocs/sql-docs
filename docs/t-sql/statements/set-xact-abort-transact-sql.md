@@ -41,7 +41,7 @@ ms.workload: "Active"
 
     
 > [!NOTE]  
->  The **THROW** statement honors **SET XACT_ABORT RAISERROR** does not. New Applications should use **THROW** instead of **RAISERROR**.  
+>  The **THROW** statement honors **SET XACT_ABORT**. **RAISERROR** does not. New applications should use **THROW** instead of **RAISERROR**.  
   
  Specifies whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically rolls back the current transaction when a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement raises a run-time error.  
   

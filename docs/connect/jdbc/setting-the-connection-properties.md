@@ -45,8 +45,8 @@ Synonyms are allowed and are resolved in order, just as duplicate property names
 
 The following table lists all the currently available connection string properties for the JDBC driver.
 
-|Property|Type|Default|Description|  
-|--------------|----------|-------------|-----------------|  
+|Property|Type|Default|Description| 
+| :--------------| :----------| :-------------| :-----------------|   
 |accessToken|String|null|Use this property to connect to a SQL database using an access token. **accessToken** cannot be set using the connection URL.|  
 |applicationIntent|String|ReadWrite|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**. For more information, see [JDBC Driver Support for High Availability, Disaster Recovery](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md).|  
 |applicationName|String<br /><br /> [<=128 char]|null|The application name, or "[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]" if no name is provided. Used to identify the specific application in various [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] profiling and logging tools.|  

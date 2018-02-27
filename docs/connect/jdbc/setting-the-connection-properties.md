@@ -95,7 +95,7 @@ The following table lists all the currently available connection string properti
 |userName, user<br />String<br /><br /> [<=128 char]<br />null|The database user, in case of connection with SQL user and password.<BR/>For Kerberos connection with principal name and password, this property is set to Kerberos Principal name.|
 |workstationID<br />String<br /><br /> [<=128 char]<br />\<empty string>|The workstation ID. Used to identify the specific workstation in various [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] profiling and logging tools. If none is specified, the \<empty string> is used.|
 |xopenStates<br />boolean<br /><br /> ["true"&#124;"false"]<br />false|Set to "true" to specify that the driver returns XOPEN-compliant state codes in exceptions. The default is to return SQL 99 state codes.|
-| &nbsp; | &nbsp |
+| &nbsp; | &nbsp; |
 
 
 > [!NOTE]  

@@ -28,14 +28,14 @@ ms.workload: "Active"
 ---
 # Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Write full-text queries by using the full-text predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** with a **SELECT** statement. This article provides examples of each predicate and function and helps you choose the best one to use.
+Write full-text queries by using the predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** with a **SELECT** statement. This article provides examples of each predicate and function and helps you choose the best one to use.
 
 -   To match words and phrases, use **CONTAINS** and **CONTAINSTABLE**.
 -   To match the meaning, but not the exact wording, use **FREETEXT** and **FREETEXTTABLE**.
 
 ## <a name="examples_simple"></a> Examples of each predicate and function
 
-The following examples use the AdventureWorks sample database. For the final release of AdventureWorks, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). To run the sample queries, you have to set up Full-Text Search. For more info, see [Get Started with Full-Text Search](get-started-with-full-text-search.md). 
+The following examples use the AdventureWorks sample database. For the final release of AdventureWorks, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). To run the sample queries, you also have to set up Full-Text Search. For more info, see [Get Started with Full-Text Search](get-started-with-full-text-search.md). 
 
 ### Example - CONTAINS  
 The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`:
@@ -52,7 +52,7 @@ GO
 ```  
   
 ### Example - FREETEXT 
- The following example searches for all documents that contain words related to `vital safety components`.  
+ The following example searches for all documents that contain words related to `vital safety components`:
   
 ```sql
 USE AdventureWorks2012  
@@ -86,7 +86,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-### Example- FREETEXTTABLE  
+### Example - FREETEXTTABLE  
  The following example extends a FREETEXTTABLE query to return the highest ranked rows first and to add the ranking of each row to the select list. To write a similar query, you have to know that **ProductDescriptionID** is the unique key column for the **ProductDescription** table.  
   
 ```sql 
@@ -127,7 +127,10 @@ GO
 ### CONTAINS/CONTAINSTABLE
 
 -   Match single words and phrases with precise or fuzzy (less precise) matching.
--   You can specify the proximity of words within a certain distance of one another.<br/><br/>You can return weighted matches.<br/><br/>You can use logical operation to combine search conditions. For more info, see [Using Boolean operators (AND, OR, and NOT)](#Using_Boolean_Operators) later in this article.
+-   You can also do the following things:
+    -   Specify the proximity of words within a certain distance of one another.
+    -   Return weighted matches.
+    -   Combine search conditions with logical operators. For more info, see [Using Boolean operators (AND, OR, and NOT)](#Using_Boolean_Operators) later in this article.
 
 ### FREETEXT/FREETEXTTABLE
 
@@ -146,7 +149,9 @@ The predicates `CONTAINS`/`FREETEXT` and the rowset-valued functions `CONTAINSTA
 
 **More options**. You can combine the predicates with any of the other [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates, such as LIKE and BETWEEN.
 
-You can specify either a single column, a list of columns, or all columns in the table to be searched.<br/><br/>Optionally, you can specify the language whose resources are used by the full-text query for word breaking and stemming, thesaurus lookups, and noise-word removal.
+You can specify either a single column, a list of columns, or all columns in the table to be searched.
+
+Optionally, you can specify the language whose resources are used by the full-text query for word breaking and stemming, thesaurus lookups, and noise-word removal.
 
 You can use a four-part name in the CONTAINS or FREETEXT predicate to query full-text indexed columns of the target tables on a linked server. To prepare a remote server to receive full-text queries, create a full-text index on the target tables and columns on the remote server and then add the remote server as a linked server.
 

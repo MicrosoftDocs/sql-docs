@@ -40,7 +40,7 @@ There are multiple methods for installing new R packages, depending on which ver
 
     **Applies to:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; other restrictions apply
 
-## <a name="bkmk_rInstall"></a> Install new R packages on a computer with Internet access, using R tools
+## <a name="bkmk_rInstall"></a> Install new R packages using the Internet
 
 You can use standard R tools to install new packages on an instance of SQL Server 2016 or SQL Server 2017. This process requires that you are an administrator on the computer.
 

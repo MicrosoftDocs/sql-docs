@@ -1,5 +1,6 @@
 ---
 title: "Create a local package repository using miniCRAN | Microsoft Docs"
+titleSuffix: "SQL Server"
 ms.custom: ""
 ms.date: "02/20/2018"
 ms.reviewer: 

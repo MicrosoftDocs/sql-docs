@@ -151,9 +151,12 @@ sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), co
 ```
 
 **Results**
-[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
-[2] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/lattice" 
 
+```text
+[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
+
+[2] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/lattice"
+```
 
 ### Install a package on SQL Server
 

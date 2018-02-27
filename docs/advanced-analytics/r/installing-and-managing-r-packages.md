@@ -22,17 +22,17 @@ ms.workload: "On Demand"
 # Default package libraries for machine learning on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the default libraries for R and Python that are installed with SQL Server.
+This article describes the default libraries for R and Python that are installed with SQL Server. This article provides the default locations for these libraries, and explains how you can determine which packages and which version of R or Python are installed in each instance library.
 
-## What is the default instance library
+## Using the default instance library
 
-When you install machine learning with SQL Server, a package library is created at the instance level for each language that you install. This article describes these instance libraries, provides their locations, and explains how you can determine which packages and which version of R or Python are installed in each instance library.
+When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. SQL Server cannot access packages installed to other libraries.
 
-## Where is the default instance library
+If you connect to the server from a remote client, any R or Python code that you want to run in the server compute context can use only packages installed in the instance library.
 
-The default instance library is installed to a secured folder that is registered with SQL Server and can be modified only by a computer administrator. The security on this library means that only approved packages can be installed and run on the server.
+To protect server assets, the default instance library is installed to a secured folder that is registered with SQL Server and can be modified only by a computer administrator. If you are not the owner of the computer, you might need to get permission from an administrator to install packages to this library. 
 
-Even when you connect to the server from a remote client, R or Python code that you want to run in the server compute context must use packages installed in the instance library.
+Even if you own the computer, you should consider the usefulness of any particular R or Python package in a server environment before adding the package to the instance library. Consider factors such as the size of package files and the need for multiple versions, as well as whether the package requires network or internet access.
 
 ### SQL Server
 
@@ -80,14 +80,12 @@ To upgrade the RevoScaleR package, either use binding to upgrade just the machin
 
 ### Default Python installation for SQL Server
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md(../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-
 If you select the machine learning features and the Python language option, an Anaconda distribution is installed. The exact version depends on the version of SQL Server you have installed and whether you have upgraded the instance using Machine Learning Server installer.
 
 |Release| Anaconda version| Other changes|
 |------|------|------|
 | SQL Server 2017 RTM| 3.5.2| New: revoscalepy|
-| update via Machine Learning Server 9.2.1 Sept 2017| Anaconda 4.2| updates to revoscalepy 
+| update via Machine Learning Server 9.2.1 Sept 2017| Anaconda 4.2| updates to revoscalepy |
 | SQL Server 2017 CU3| Anaconda 4.2| updates to revoscalepy |
 
 In addition to Python code libraries, the standard installation includes sample data, unit tests, and sample scripts.

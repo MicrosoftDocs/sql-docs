@@ -1,5 +1,5 @@
 ---
-title: "Viewing installed R or Python packages | Microsoft Docs"
+title: "Viewing R or Python packages installed on SQL Server| Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2018"
 ms.reviewer: 
@@ -18,7 +18,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---
-# Viewing installed R or Python packages
+# Viewing R or Python packages installed on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 If you have installed multiple Python environments, or use multiple R tools, it is easy to install a package to the wrong library or environment and then not be able to find it later. 

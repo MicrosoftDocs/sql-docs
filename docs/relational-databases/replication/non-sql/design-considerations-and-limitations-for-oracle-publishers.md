@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], design considerations and limitations"
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Design Considerations and Limitations for Oracle Publishers

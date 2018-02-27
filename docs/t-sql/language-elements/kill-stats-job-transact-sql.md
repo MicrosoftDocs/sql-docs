@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "statistics update jobs [SQL Server]"
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # KILL STATS JOB (Transact-SQL)

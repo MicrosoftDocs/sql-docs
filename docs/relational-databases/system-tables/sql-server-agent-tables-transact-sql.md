@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "system tables [SQL Server], SQL Server Agent"
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Agent Tables (Transact-SQL)

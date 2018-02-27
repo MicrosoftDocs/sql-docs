@@ -27,7 +27,7 @@ ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating a Custom Data Flow Component

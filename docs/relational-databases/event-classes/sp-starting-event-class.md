@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SP:Starting event class"
 ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SP:Starting Event Class

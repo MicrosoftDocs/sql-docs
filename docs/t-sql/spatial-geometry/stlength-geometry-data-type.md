@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STLength (geometry Data Type)"
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STLength (geometry Data Type)

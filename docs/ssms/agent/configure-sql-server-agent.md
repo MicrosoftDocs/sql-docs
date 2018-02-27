@@ -21,7 +21,7 @@ ms.assetid: 2e361a62-9e92-4fcd-80d7-d6960f127900
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configure SQL Server Agent

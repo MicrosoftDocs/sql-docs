@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "xml data type [SQL Server], about xml data type"
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # xml (Transact-SQL)

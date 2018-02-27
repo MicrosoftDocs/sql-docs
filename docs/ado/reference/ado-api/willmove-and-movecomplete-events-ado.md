@@ -25,7 +25,7 @@ ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # WillMove and MoveComplete Events (ADO)

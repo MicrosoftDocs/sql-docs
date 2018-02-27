@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], deterministic"
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Deterministic and Nondeterministic Functions

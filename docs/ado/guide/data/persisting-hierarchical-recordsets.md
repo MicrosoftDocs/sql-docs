@@ -20,7 +20,7 @@ ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Persisting Hierarchical Recordsets

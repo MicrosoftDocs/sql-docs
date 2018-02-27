@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "server registration [SQL Server]"
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Register Servers

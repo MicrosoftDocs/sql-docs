@@ -20,7 +20,7 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Microsoft OLE DB Provider for Microsoft Jet Overview

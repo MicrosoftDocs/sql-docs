@@ -21,7 +21,7 @@ ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LocalDBStopTracing Function

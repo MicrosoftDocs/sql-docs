@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ODBC CALL escape sequence"
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Batching Stored Procedure Calls

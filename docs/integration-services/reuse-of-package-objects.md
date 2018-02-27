@@ -22,7 +22,7 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Reuse of Package Objects

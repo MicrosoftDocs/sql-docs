@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "index creation [SQL Server], tempdb database"
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SORT_IN_TEMPDB Option For Indexes

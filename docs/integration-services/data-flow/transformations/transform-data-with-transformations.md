@@ -20,7 +20,7 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transform Data with Transformations

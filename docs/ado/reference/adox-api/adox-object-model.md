@@ -18,7 +18,7 @@ ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADOX Object Model

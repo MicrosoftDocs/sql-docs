@@ -20,9 +20,10 @@ ms.assetid:
 caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # In-Database Python analytics for SQL developers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The goal of this walkthrough is to provide SQL programmers with hands-on experience building a machine learning solution using Python that runs in SQL Server. In this walkthrough, you'll learn how to add Python code to stored procedures and run stored procedures to build and predict from models.
 

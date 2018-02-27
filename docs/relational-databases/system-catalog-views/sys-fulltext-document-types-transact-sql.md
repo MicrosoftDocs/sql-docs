@@ -25,7 +25,7 @@ ms.assetid: 156fcfa4-7304-4a5c-b96f-1c3e061e5df0
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fulltext_document_types (Transact-SQL)

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "ODBC, FILESTREAM support"
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FILESTREAM Support (ODBC)

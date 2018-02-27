@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "contained database, modifications to DBs"
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Modified Features (Contained Database)

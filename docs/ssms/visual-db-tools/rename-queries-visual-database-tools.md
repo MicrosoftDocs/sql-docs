@@ -19,7 +19,7 @@ ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Rename Queries (Visual Database Tools)

@@ -18,7 +18,7 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # HDFS File Destination

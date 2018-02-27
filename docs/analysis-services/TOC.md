@@ -1,12 +1,13 @@
-# [What is Analysis Services?](analysis-services.md)
+# [About SQL Server Analysis Services](analysis-services.md)
 
 # Overview
 ## [What's new in SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
 ## [What's new in SQL Server Analysis Services 2017](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [New and updated articles](new-updated-analysis-services.md)
 ## [Tools and applications](tools-and-applications-used-in-analysis-services.md)   
+## [Client libraries (data providers)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [Comparing Tabular and Multidimensional solutions](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [Analysis Services features supported by SQL Server 2016 editions](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [Analysis Services features supported by SQL Server editions](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [Backward compatibility (SQL Server 2016 Analysis Services)](analysis-services-backward-compatibility.md)  
 ## [Backward compatibility (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)  
 ## [Globalization and translation](globalization-scenarios-for-analysis-services.md)  
@@ -15,11 +16,26 @@
 ### [Currency conversions](currency-conversions-analysis-services.md)  
 ### [Tips and best practices](globalization-tips-and-best-practices-analysis-services.md) 
 
-# Samples
-## [Analysis Services samples](analysis-services-samples.md)
+# [Tutorials](analysis-services-tutorials-ssas.md)
+## [Tabular modeling (1400 compatibility level)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+### [1 - Create a tabular model project](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+### [2 - Get data](tutorial-tabular-1400/as-lesson-2-get-data.md)
+### [3 - Mark as Date Table](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+### [4 - Create relationships](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+### [5 - Create calculated columns](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+### [6 - Create measures](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+### [7 - Create Key Performance Indicators](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+### [8 - Create perspectives](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+### [9 - Create hierarchies](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+### [10 - Create partitions](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+### [11 - Create roles](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+### [12 - Analyze in Excel](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+### [13 - Deploy](tutorial-tabular-1400/as-lesson-13-deploy.md)
+### [Supplemental lesson - Detail Rows](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+### [Supplemental lesson - Dynamic security](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+### [Supplemental lesson - Ragged hierarchies](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
 
-# Tutorials
-## [Tabular Modeling (Adventure Works Tutorial)](tabular-modeling-adventure-works-tutorial.md)  
+## [Tabular modeling (1200 compatibility level)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Lesson 2: Add Data](lesson-2-add-data.md)  
 ### [Lesson 3: Mark as Date Table](lesson-3-mark-as-date-table.md)  
@@ -36,7 +52,7 @@
 ### [Supplemental Lesson - Implement dynamic security by using row filters](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [Supplemental Lesson - Configure reporting properties for Power View reports](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [Multidimensional modeling (Adventure Works Tutorial)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [Multidimensional modeling](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [Tutorial scenario](analysis-services-tutorial-scenario.md)  
 ### [Install sample data and projects for the Analysis Services Multidimensional modeling tutorial](install-sample-data-and-projects.md)  
 ### [Lesson 1: Defining a data source view within an Analysis Services project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  
@@ -94,24 +110,24 @@
 ## [Trace-events](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # Developer
-## Tabular models
-### [Tabular Model Programming for Compatibility Level 1200 and higher](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-#### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [Tabular Model Scripting Language (TMSL) commands](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
-#### [Tabular Model Scripting Language (TMSL) objects](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
-### [Tabular Model Programming for Compatibility Levels 1050 and 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+## [Tabular Model Programming for Compatibility Level 1200 and higher](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+### [Tabular Model Scripting Language (TMSL) commands](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+### [Tabular Model Scripting Language (TMSL) objects](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
+## [Tabular Model Programming for Compatibility Levels 1050 and 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
 
-## Multimdimensional models
-### [Analysis Services Scripting Language (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
-### [Analysis management objects +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
-### [OLAP logical +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
-### [OLAP physical +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
-### [Extending OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+## [Analysis Services Scripting Language (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+## [Analysis management objects (AMO)+](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+## [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+## [OLAP logical +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+## [OLAP physical +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+## [Extending OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [Schema rowsets](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services Scripting Language (ASSL for XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# Samples
+## [Analysis Services samples](analysis-services-samples.md)
 
 # Reference
 ## [Data Analysis Expressions (DAX) on MSDN](https://msdn.microsoft.com/library/gg413422.aspx)

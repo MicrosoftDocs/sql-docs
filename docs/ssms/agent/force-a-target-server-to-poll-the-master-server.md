@@ -21,7 +21,7 @@ ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Force a Target Server to Poll the Master Server

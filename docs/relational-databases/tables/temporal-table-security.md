@@ -16,7 +16,7 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 caps.latest.revision: 9
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Temporal Table Security

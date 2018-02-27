@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_start_sp"
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sysmail_start_sp (Transact-SQL)

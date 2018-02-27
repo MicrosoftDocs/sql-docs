@@ -1,7 +1,7 @@
 ---
 title: "Retrieving Data from an Analytical Data Source | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -28,7 +28,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Retrieving Data from an Analytical Data Source
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Once you make a connection and create the query, you can retrieve any data. In ADOMD.NET, you can retrieve data using three different objects (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, and <xref:System.Xml.XmlReader>) by calling one of the **Execute** methods of the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> object.  
   
  Each of these three objects balances interactivity and overhead:  

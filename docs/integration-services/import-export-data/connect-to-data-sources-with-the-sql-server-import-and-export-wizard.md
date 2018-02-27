@@ -16,7 +16,7 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connect to Data Sources with the SQL Server Import and Export Wizard

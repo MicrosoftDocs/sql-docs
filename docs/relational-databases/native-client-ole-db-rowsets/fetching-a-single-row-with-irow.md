@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, fetching"
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Fetching a Single Row with IRow

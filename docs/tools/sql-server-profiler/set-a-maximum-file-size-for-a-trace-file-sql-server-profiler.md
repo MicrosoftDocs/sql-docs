@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "size [SQL Server], trace files"
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set a Maximum File Size for a Trace File (SQL Server Profiler)

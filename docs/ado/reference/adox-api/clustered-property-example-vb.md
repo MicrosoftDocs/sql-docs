@@ -20,7 +20,7 @@ ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Clustered Property Example (VB)

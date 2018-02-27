@@ -19,7 +19,7 @@ ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Make Table Dialog Box (Visual Database Tools)

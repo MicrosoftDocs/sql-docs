@@ -23,7 +23,7 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ODBC Connection Manager

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "syspolicy_policies view"
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syspolicy_policies (Transact-SQL)

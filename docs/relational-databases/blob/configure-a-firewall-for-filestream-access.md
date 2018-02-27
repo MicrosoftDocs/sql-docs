@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], Windows Firewall"
 ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure a Firewall for FILESTREAM Access

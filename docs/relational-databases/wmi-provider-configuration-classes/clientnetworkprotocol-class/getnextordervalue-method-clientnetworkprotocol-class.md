@@ -23,7 +23,7 @@ ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetNextOrderValue Method (ClientNetworkProtocol Class)

@@ -21,6 +21,7 @@ ms.workload: "On Demand"
 ---
 # What&#39;s New in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
 SQL Server 2016 Analysis Services includes many new enhancements providing improved performance, easier solution authoring, automated database management, enhanced relationships with bi-directional cross filtering, parallel partition processing, and much more. At the heart of most enhancements for this release is the new 1200 compatibility level for tabular model databases.     
 
 ## Azure Analysis Services
@@ -72,7 +73,7 @@ New in this release is a built-in approach for enabling bi-directional cross fil
  ### Calculated tables in SSDT    
 A *calculated table* is a model-only construction based on a DAX expression or query in SSDT. When deployed in a database, a calculated table is indistinguishable from regular tables.    
 
- There are several uses for calculated tables, including the creation of new tables to expose an existing table in a specific role. The classic example is a Date table that operates in multiple contexts (order date, ship date, and so forth). By creating a calculated table for a given role, you can now activate a table relationship to facilitate queries or data interaction using the calculated table. Another use for calculated tables is to combine parts of existing tables into an entirely new table that exists only in the model.  See [Create a Calculated Table &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) to learn more.    
+ There are several uses for calculated tables, including the creation of new tables to expose an existing table in a specific role. The classic example is a Date table that operates in multiple contexts (order date, ship date, and so forth). By creating a calculated table for a given role, you can now activate a table relationship to facilitate queries or data interaction using the calculated table. Another use for calculated tables is to combine parts of existing tables into an entirely new table that exists only in the model.  See [Create a Calculated Table](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) to learn more.    
  ### Formula fixup    
  With formula fixup on a tabular 1200 model,  SSDT will automatically update any measures that is referencing a column or table that was renamed.    
  ### Support for Visual Studio configuration manager    
@@ -82,7 +83,7 @@ A *calculated table* is a model-only construction based on a DAX expression or q
  ### Administer Tabular 1200 models in SSMS    
  In this release, an Analysis Services instance in Tabular server mode can run tabular models at any compatibility level (1100, 1103, 1200). The latest [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) is updated to display properties and provide database model administration for tabular models at the 1200 compatibility level.    
  ### Parallel processing for multiple table partitions in tabular models    
- This release includes new parallel processing functionality for tables with two or more partitions, increasing processing performance. There are no configuration settings for this feature. For more information about configuring partitions and processing tables, see [Tabular Model Partitions &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ This release includes new parallel processing functionality for tables with two or more partitions, increasing processing performance. There are no configuration settings for this feature. For more information about configuring partitions and processing tables, see [Tabular Model Partitions](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### Add computer accounts as Administrators in SSMS    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrators can now use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to configure computer accounts to be members of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrators group. In the **Select Users or Groups** dialog, set the **Locations** for the computers domain and then add the **Computers** object type. For more information, see [Grant server admin rights to an  Analysis Services instance](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### DBCC for Analysis Services    
@@ -201,7 +202,7 @@ This release sees significant enhancements in DirectQuery for tabular 1200 model
 ### New data sources for DirectQuery mode    
  Data sources supported for tabular 1200 models in DirectQuery mode now include Oracle, Teradata and Microsoft Analytics Platform (formerly known as Parallel Data Warehouse).    
     
-To learn more, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
+To learn more, see [DirectQuery Mode](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
 ## See Also
 [Analysis Services team blog](http://blogs.msdn.microsoft.com/analysisservices/)    

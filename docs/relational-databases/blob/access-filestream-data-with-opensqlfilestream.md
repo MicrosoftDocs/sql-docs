@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "OpenSqlFilestream"
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Access FILESTREAM Data with OpenSqlFilestream

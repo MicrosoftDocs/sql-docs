@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "indexes [SQL Server], renaming"
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Rename Indexes

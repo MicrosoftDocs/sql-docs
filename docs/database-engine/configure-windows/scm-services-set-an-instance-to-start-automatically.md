@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "starting SQL Server, automatically"
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SCM Services - Set an Instance to Start Automatically

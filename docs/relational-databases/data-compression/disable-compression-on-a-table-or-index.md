@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "data compression [SQL Server], disabling"
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Disable Compression on a Table or Index

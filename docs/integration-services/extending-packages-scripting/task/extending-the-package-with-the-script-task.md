@@ -27,7 +27,7 @@ ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extending the Package with the Script Task

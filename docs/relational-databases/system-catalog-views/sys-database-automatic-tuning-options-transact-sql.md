@@ -27,7 +27,7 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 caps.latest.revision: 24
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)

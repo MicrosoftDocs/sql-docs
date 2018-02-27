@@ -19,7 +19,7 @@ ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Arguments Dialog Box

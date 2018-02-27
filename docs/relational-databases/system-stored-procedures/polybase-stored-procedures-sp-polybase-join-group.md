@@ -20,7 +20,7 @@ ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 caps.latest.revision: 12
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PolyBase stored procedures - sp_polybase_join_group

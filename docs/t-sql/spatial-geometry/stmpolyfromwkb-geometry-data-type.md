@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STMPolyFromWKB (geometry Data Type)"
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STMPolyFromWKB (geometry Data Type)

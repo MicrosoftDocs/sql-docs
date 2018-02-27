@@ -24,4 +24,5 @@ ms.workload: "Inactive"
 ---
 # Rename columns
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
 This lesson is being removed. 

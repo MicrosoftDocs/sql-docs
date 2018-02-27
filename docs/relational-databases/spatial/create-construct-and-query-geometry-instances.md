@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "geometry data type [SQL Server], getting started"
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create, Construct, and Query geometry Instances

@@ -21,7 +21,7 @@ ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Developing a User Interface for a Custom Log Provider

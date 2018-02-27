@@ -37,9 +37,9 @@ helpviewer_keywords:
   - "terminating process"
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # KILL (Transact-SQL)

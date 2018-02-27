@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Schema Object Access event class"
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Schema Object Access Event Class

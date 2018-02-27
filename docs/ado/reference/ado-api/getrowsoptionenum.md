@@ -21,7 +21,7 @@ ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetRowsOptionEnum

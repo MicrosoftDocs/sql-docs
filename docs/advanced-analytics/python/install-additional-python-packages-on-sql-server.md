@@ -18,6 +18,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Install new Python packages on SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to install new Python packages on an instance of SQL Server 2017.
 

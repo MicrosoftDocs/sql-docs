@@ -19,7 +19,7 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sort Rows (Visual Database Tools)

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], log shipping"
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Log Shipping Stored Procedures (Transact-SQL)

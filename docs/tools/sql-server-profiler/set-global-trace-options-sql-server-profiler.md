@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "global trace options [SQL Server]"
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set Global Trace Options (SQL Server Profiler)

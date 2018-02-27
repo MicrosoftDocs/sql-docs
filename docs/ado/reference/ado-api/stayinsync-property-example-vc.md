@@ -20,7 +20,7 @@ ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # StayInSync Property Example (VC++)

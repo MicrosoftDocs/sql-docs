@@ -23,7 +23,7 @@ ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetServiceAccount Method (SqlService Class)

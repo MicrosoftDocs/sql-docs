@@ -20,7 +20,7 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Viewer

@@ -18,7 +18,7 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit the Oracle Database Properties

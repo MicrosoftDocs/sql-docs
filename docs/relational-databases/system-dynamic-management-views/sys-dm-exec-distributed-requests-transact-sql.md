@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "dm_exec_distributed_sql_requests management view"
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_distributed_requests (Transact-SQL)

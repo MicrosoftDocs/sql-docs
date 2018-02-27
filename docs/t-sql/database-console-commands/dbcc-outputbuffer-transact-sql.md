@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "current output buffer"
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DBCC OUTPUTBUFFER (Transact-SQL)

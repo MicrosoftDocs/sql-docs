@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "BCPSetBulkMode function"
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IBCPSession2::BCPSetBulkMode

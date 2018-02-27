@@ -1,5 +1,5 @@
 ---
-title: "Convert JSON Data to Rows and Columns with OPENJSON (SQL Server) | Microsoft Docs"
+title: "Parse and Transform JSON Data with OPENJSON (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-non-specified"
@@ -22,13 +22,13 @@ ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Active"
 ---
-# Convert JSON Data to Rows and Columns with OPENJSON (SQL Server)
+# Parse and Transform JSON Data with OPENJSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 The **OPENJSON** rowset function converts JSON text into a set of rows and columns. After you transform a JSON collection into a rowset with **OPENJSON**, you can run any SQL query on the returned data or insert it into a SQL Server table. 
   
 The **OPENJSON** function takes a single JSON object or a collection of JSON objects and transforms them into one or more rows. By default, the **OPENJSON** function returns the following data:
--   From a JSON object, the function returns all the key:value pairs that it finds at the first level.
+-   From a JSON object, the function returns all the key/value pairs that it finds at the first level.
 -   From a JSON array, the function returns all the elements of the array with their indexes.  
 
 You can add an optional **WITH** clause to provide a schema that explicitly defines the structure of the output.  
@@ -140,8 +140,21 @@ You can check compatibility level in the `sys.databases` view or in database pro
 You can change the compatibility level of a database by using the following command:   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
-## Learn more about the built-in JSON support in SQL Server  
-For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft blog posts  
+  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## See Also  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

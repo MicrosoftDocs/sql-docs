@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLEndTran function"
 ms.assetid: 95cff841-c2d5-4e1e-a18d-f3d4696a5b85
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLEndTran

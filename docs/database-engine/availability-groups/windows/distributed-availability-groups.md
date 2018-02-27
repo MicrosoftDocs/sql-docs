@@ -18,7 +18,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "allanhirt"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Distributed availability groups

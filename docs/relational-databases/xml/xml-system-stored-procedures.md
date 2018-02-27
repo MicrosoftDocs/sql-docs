@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "XML [SQL Server], system stored procedures"
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XML System Stored Procedures

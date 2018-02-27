@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Check Database Integrity Task dialog box"
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Check Database Integrity Task (Maintenance Plan)

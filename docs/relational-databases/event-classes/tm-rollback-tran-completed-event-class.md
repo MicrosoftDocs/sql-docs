@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "TM: Rollback Tran Completed event class"
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # TM: Rollback Tran Completed Event Class

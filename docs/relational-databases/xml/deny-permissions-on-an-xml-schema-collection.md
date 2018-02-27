@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], XML server collections"
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Deny Permissions on an XML Schema Collection

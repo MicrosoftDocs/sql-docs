@@ -25,7 +25,7 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 caps.latest.revision: 16
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)

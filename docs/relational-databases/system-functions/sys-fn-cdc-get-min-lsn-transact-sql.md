@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "sys.fn_cdc_get_min_lsn"
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_cdc_get_min_lsn (Transact-SQL)

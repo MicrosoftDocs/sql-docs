@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server], large"
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Large XML Schema Collections and Out-of-Memory Conditions

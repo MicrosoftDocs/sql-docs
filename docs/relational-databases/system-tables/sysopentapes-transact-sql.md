@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sysopentapes system table"
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysopentapes (Transact-SQL)

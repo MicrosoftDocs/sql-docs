@@ -16,7 +16,7 @@ ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CDC Instance Deployment Script

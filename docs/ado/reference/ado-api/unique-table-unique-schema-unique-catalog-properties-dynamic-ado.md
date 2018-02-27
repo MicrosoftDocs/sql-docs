@@ -21,7 +21,7 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)

@@ -24,7 +24,7 @@ ms.assetid: c982b208-e2d1-4d34-8cee-940b9baf6586
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete an Alert

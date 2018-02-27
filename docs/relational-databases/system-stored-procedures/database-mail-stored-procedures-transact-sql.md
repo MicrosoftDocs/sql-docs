@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], mail"
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Mail Stored Procedures (Transact-SQL)

@@ -22,7 +22,7 @@ ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Procedures Collection (ADOX)

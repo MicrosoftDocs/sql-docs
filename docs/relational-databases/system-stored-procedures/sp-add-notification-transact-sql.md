@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_notification"
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_notification (Transact-SQL)

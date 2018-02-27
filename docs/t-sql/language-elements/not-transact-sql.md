@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "reversing Boolean expression values"
 ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # NOT (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Provider Property (ADO)

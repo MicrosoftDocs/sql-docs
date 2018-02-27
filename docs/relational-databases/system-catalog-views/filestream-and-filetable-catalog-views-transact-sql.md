@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "FileTables [SQL Server], catalog views"
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filestream and FileTable Catalog Views (Transact-SQL)

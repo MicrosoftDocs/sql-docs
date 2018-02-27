@@ -20,7 +20,7 @@ ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Method Example (VB)

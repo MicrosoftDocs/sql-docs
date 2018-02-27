@@ -18,7 +18,7 @@ ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Alert Properties - New Alert (Options Page)

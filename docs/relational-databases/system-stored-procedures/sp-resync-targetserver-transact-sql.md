@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_resync_targetserver"
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_resync_targetserver (Transact-SQL)

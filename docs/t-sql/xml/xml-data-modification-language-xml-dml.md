@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "xml data type [SQL Server], XML DML"
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # XML Data Modification Language (XML DML)

@@ -20,7 +20,7 @@ ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Move Method Example (VC++)

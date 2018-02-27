@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "geography data type [SQL Server], about geography data type"
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create, Construct, and Query geography Instances

@@ -19,7 +19,7 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Installing Integration Services Versions Side by Side

@@ -20,7 +20,7 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Expression Builder

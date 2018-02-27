@@ -16,7 +16,7 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.cleanup_server_execution_keys

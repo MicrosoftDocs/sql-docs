@@ -20,7 +20,7 @@ ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Members Example (VBScript)

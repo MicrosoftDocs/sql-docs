@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "default trace enabled option"
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # default trace enabled Server Configuration Option

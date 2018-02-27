@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysaltfiles compatibility view"
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysaltfiles (Transact-SQL)

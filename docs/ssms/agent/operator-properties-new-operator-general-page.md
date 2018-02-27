@@ -18,7 +18,7 @@ ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Operator Properties - New Operator (General Page)

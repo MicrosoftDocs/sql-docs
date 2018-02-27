@@ -22,7 +22,7 @@ ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CubeDefs Collection (ADO MD)

@@ -20,7 +20,7 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stop a Job

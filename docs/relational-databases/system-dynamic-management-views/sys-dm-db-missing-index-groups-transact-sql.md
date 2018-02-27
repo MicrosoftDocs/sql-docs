@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_groups dynamic management view"
 ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_missing_index_groups (Transact-SQL)

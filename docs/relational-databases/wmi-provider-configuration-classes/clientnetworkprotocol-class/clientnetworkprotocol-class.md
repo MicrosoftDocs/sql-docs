@@ -22,7 +22,7 @@ ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ClientNetworkProtocol Class

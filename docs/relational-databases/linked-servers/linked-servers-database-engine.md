@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "linked servers [SQL Server], about linked servers"
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Linked Servers (Database Engine)

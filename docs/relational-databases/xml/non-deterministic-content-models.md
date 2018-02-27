@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "content models [XML in SQL Server]"
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Non-Deterministic Content Models

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG020596 error"
 ms.assetid: fa33627c-2e99-4be3-9424-52ab83446e07
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG020596

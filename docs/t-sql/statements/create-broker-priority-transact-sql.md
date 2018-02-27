@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "CREATE BROKER PRIORITY statement"
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE BROKER PRIORITY (Transact-SQL)

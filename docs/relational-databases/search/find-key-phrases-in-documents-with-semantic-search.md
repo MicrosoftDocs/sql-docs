@@ -18,7 +18,7 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Find Key Phrases in Documents with Semantic Search

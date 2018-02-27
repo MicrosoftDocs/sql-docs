@@ -21,7 +21,7 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_service_objectives (Azure SQL Database)

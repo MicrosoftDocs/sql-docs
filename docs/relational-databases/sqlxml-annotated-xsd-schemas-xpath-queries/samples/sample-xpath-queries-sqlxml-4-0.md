@@ -22,7 +22,7 @@ ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sample XPath Queries (SQLXML 4.0)

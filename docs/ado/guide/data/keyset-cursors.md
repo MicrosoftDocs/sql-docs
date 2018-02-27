@@ -19,7 +19,7 @@ ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Keyset Cursors

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "command prompt utilities [SQL Server], sqlagent90"
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sqlagent90 Application

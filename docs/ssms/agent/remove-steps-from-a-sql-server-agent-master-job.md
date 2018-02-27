@@ -16,7 +16,7 @@ ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Remove Steps from a SQL Server Agent Master Job

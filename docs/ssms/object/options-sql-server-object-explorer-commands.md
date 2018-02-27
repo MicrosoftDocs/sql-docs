@@ -18,7 +18,7 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Options (SQL Server Object Explorer - Commands)

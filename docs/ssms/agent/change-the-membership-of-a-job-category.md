@@ -21,7 +21,7 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change the Membership of a Job Category

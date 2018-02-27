@@ -16,7 +16,7 @@ ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to a Microsoft Azure Subscription

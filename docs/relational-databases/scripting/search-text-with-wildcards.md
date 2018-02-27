@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "wildcard options [SQL Server Management Studio]"
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Search Text with Wildcards

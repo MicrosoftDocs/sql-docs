@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Command Window [Transact-SQL]"
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transact-SQL Debugger - Command Window

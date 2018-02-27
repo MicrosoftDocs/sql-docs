@@ -18,6 +18,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # Using R in Azure SQL Database
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!IMPORTANT]
 > Currently, the preview of R support is suspended for ongoing development work. A broader preview release is coming soon. Stay tuned!

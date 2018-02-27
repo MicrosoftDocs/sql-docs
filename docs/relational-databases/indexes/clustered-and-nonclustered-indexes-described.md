@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "index concepts [SQL Server]"
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Clustered and Nonclustered Indexes Described

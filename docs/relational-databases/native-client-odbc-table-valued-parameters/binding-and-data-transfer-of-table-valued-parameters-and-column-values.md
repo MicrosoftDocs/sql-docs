@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), binding and data transfer"
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Binding and Data Transfer of Table-Valued Parameters and Column Values

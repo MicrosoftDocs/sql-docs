@@ -28,7 +28,7 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use the Query and View Designer with International Data (Visual Database Tools)

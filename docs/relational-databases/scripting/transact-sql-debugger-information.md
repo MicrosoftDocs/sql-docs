@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "Transact-SQL debugger, viewing information"
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transact-SQL Debugger - Information

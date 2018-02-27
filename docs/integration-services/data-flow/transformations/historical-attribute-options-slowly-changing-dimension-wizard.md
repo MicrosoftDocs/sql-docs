@@ -18,7 +18,7 @@ ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Historical Attribute Options (Slowly Changing Dimension Wizard)

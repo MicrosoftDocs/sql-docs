@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "cursors [SQL Server], statements"
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Cursors (Transact-SQL)

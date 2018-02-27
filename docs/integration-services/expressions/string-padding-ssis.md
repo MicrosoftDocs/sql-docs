@@ -20,7 +20,7 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # String Padding (SSIS)

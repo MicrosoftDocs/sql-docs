@@ -19,7 +19,7 @@ ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Position Object Properties, Methods, and Events

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "stored procedures [SQL Server replication], publishing"
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify Article Types (Replication Transact-SQL Programming)

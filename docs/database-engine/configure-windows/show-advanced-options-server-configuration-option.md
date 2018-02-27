@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "show advanced options option"
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # show advanced options Server Configuration Option

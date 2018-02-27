@@ -20,7 +20,7 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SSIS Toolbox

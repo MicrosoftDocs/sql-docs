@@ -28,7 +28,7 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Row Sampling Transformation

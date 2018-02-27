@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 2: Creating a Subscription to the Merge Publication

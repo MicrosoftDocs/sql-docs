@@ -19,7 +19,7 @@ ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Modify a SQL Server Agent Proxy

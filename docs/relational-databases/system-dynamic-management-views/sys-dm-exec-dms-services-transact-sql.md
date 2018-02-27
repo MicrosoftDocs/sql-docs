@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "sys.dm_exec_dms_services management view"
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_dms_services (Transact-SQL)

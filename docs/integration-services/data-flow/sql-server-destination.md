@@ -27,7 +27,7 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Destination

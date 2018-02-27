@@ -17,7 +17,7 @@ dev_langs:
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 caps.latest.revision: 33
 author: "stevestein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Always Encrypted (client development)

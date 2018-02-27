@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.assembly_files catalog view"
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.assembly_files (Transact-SQL)

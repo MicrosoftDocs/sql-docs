@@ -1,7 +1,7 @@
 ---
 title: "sys.column_store_segments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/30/2016"
+ms.date: "01/15/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -43,8 +43,8 @@ Returns one row for each column segment in a columnstore index. There is one col
 |**encoding_type**|**int**|Type of encoding used for that segment:<br /><br /> 1 = VALUE_BASED     -  non-string/binary with no dictionary (very similar to 4 with some internal variations)<br /><br /> 2 = VALUE_HASH_BASED   - non-string/binary column with common values in dictionary<br /><br /> 3 = STRING_HASH_BASED  - string/binary column with common values in dictionary<br /><br /> 4 = STORE_BY_VALUE_BASED - non-string/binary with no dictionary<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - string/binary with no dictionary<br /><br /> All encodings take advantage of bit-packing and run-length encoding when possible.|  
 |**row_count**|**int**|Number of rows in the row group.|  
 |**has_nulls**|**int**|1 if the column segment has null values.|  
-|**base_id**|**bigint**|Base value id if encoding type 1 is being used.  If encoding type 1 is not being used, base_id is set to 1.|  
-|**magnitude**|**float**|Magnitude if encoding type 1 is being used.  If encoding type 1 is not being used, magnitude is set to 1.|  
+|**base_id**|**bigint**|Base value id if encoding type 1 is being used.  If encoding type 1 is not being used, base_id is set to -1.|  
+|**magnitude**|**float**|Magnitude if encoding type 1 is being used.  If encoding type 1 is not being used, magnitude is set to -1.|  
 |**primary_dictionary_id**|**int**|A value of 0 represents the global dictionary. A value of -1 indicates that there is no global dictionary created for this column.|  
 |**secondary_dictionary_id**|**int**|A non-zero value points to the local dictionary for this column in the current segment (i.e. the rowgroup). A value of -1 indicates that there is no local dictionary for this segment.|  
 |**min_data_id**|**bigint**|Minimum data id in the column segment.|  

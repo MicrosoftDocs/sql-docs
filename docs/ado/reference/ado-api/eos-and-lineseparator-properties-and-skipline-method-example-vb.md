@@ -22,7 +22,7 @@ ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # EOS and LineSeparator Properties and SkipLine Method Example (VB)

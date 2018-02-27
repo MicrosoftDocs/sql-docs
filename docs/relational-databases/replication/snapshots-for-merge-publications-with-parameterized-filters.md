@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "initializing subscriptions [SQL Server replication], snapshots"
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Snapshots for Merge Publications with Parameterized Filters

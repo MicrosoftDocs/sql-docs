@@ -26,7 +26,7 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Creating a Package Programmatically

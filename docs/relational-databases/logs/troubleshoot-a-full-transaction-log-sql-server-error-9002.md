@@ -24,7 +24,7 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 59
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)

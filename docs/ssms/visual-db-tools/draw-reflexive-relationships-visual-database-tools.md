@@ -20,7 +20,7 @@ ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Draw Reflexive Relationships (Visual Database Tools)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Filter method"
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filter (geometry Data Type)

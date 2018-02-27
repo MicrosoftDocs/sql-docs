@@ -1,7 +1,7 @@
 ---
 title: "Basic Availability Groups (Always On Availability Groups) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
+ms.date: "02/01/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -16,7 +16,7 @@ ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 caps.latest.revision: 9
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Basic Availability Groups (Always On Availability Groups)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,7 @@ manager: "jhubbard"
 - No integrity checks on secondary replicas. 
 
 - No support for replicas hosted on servers running a version of SQL Server prior to SQL Server 2016 Community Technology Preview 3 (CTP3).  
-  
-- No support for adding or removing a replica to an existing basic availability group.  
-  
+
 - Support for one availability database.  
   
 - Basic availability groups cannot be upgraded to advanced availability groups. The group must be dropped and re-added to a group that contains servers running only SQL Server 2016 Enterprise Edition.  

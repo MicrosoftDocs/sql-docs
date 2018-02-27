@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "table-valued parameters, executing commands containing"
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing Commands Containing Table-Valued Parameters

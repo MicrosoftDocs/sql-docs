@@ -16,7 +16,7 @@ ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Open and Configure Object Explorer

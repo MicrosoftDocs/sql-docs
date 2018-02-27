@@ -25,7 +25,7 @@ ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Type Property (Key) (ADOX)

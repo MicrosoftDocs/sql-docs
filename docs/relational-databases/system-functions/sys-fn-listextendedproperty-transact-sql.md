@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "table extended properties [SQL Server]"
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.fn_listextendedproperty (Transact-SQL)

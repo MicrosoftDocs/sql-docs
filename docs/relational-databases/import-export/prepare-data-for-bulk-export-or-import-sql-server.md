@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "quoted fields in CSV files [SQL Server]"
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Prepare Data for Bulk Export or Import (SQL Server)

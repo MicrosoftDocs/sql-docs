@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLForeignKeys function"
 ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLForeignKeys

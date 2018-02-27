@@ -18,7 +18,7 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 caps.latest.revision: 67
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Table SQL Statement (SQL Server Import and Export Wizard)

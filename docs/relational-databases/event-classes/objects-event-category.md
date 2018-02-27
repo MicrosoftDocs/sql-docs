@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "event classes [SQL Server], Objects event category"
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Objects Event Category

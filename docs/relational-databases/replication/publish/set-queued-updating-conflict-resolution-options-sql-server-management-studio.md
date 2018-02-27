@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "queued updating subscriptions [SQL Server replication]"
 ms.assetid: bb6b6c71-42c7-421a-a0fa-d5594d27e35d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set Queued Updating Conflict Resolution Options (SQL Server Management Studio)

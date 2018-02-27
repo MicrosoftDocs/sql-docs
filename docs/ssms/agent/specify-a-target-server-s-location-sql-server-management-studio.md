@@ -19,7 +19,7 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify a Target Server&#39;s Location (SQL Server Management Studio)

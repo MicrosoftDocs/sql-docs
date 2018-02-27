@@ -18,7 +18,7 @@ ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Setting DCOM Stream Marshaling Format

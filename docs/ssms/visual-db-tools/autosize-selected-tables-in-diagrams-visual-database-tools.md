@@ -21,7 +21,7 @@ ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Autosize Selected Tables in Diagrams (Visual Database Tools)

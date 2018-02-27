@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_broker_connections dynamic management view"
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_broker_connections (Transact-SQL)

@@ -19,7 +19,7 @@
 ## [Finding Additional JDBC Driver Information](finding-additional-jdbc-driver-information.md)
 ## [Microsoft JDBC Driver for SQL Server Support Matrix](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [Frequently Asked Questions (FAQ) for JDBC Driver](frequently-asked-questions-faq-for-jdbc-driver.md)
-## [Feature dependencies of Microsoft JDBC Driver for SQL Server](../../connect/jdbc/dependency.md) 
+## [Feature dependencies of Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [Securing JDBC Driver Applications](securing-jdbc-driver-applications.md)
 ## [Securing Connection Strings](securing-connection-strings.md)
@@ -37,7 +37,7 @@
 ## [Working with Statements and Result Sets](working-with-statements-and-result-sets.md)
 ## [Using Adaptive Buffering](using-adaptive-buffering.md)
 ## [Sparse Columns](sparse-columns.md)
-## [Prepared Statement Metadata Caching](prepared-statement-metadata-caching.md)
+## [Prepared Statement Metadata Caching for the JDBC Driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 # [Diagnosing Problems with the JDBC Driver](diagnosing-problems-with-the-jdbc-driver.md)
 ## [Handling Errors](handling-errors.md)
@@ -128,5 +128,5 @@
 ### [Configuring How java.sql.Time Values are Sent to the Server](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
 ### [Using SQL Escape Sequences](using-sql-escape-sequences.md)
 ### [Using Statements with Stored Procedures](using-statements-with-stored-procedures.md)
-### [Azure Key Vault sample version 6.0.0](AKVSample6.0.0.md)
-### [Azure Key Vault sample version 6.2.2](AKVSample6.2.2.md)
+### [Azure Key Vault sample version 6.0.0](azure-key-vault-sample-version-6.0.0.md)
+### [Azure Key Vault sample version 6.2.2](azure-key-vault-sample-version-6.2.2.md)

@@ -31,13 +31,13 @@ The Microsoft JDBC Driver for SQL Server supports *FIPS 140 Compliant Mode*. For
 * Appropriate Configuration Parameters. 
 
 
-## FIPS Configured JVM:
+## FIPS Configured JVM
 
 To see the approved modules for FIPS Configuration, refer to the [Validated FIPS 140-1 and FIPS 140-2 Cryptographic Modules](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
 
 Vendors may have some additional steps to configure JVM with FIPS.
 
-### Ensure your JVM is in FIPS Mode:
+### Ensure your JVM is in FIPS Mode
 In order to ensure your JVM is FIPS enabled, execute the following snippet: 
 
 ````
@@ -47,10 +47,10 @@ public boolean isFIPS() throws Exception {
 }
 ````
 
-## Appropriate SSL Certificate:
+## Appropriate SSL Certificate
 In order to connect SQL Server in FIPS mode, a valid SSL Certificate is required. Install or import it in the Java Key Store on the client machine (JVM) where FIPS is enabled. If you did not import / install the appropriate certificate, you could not be able to connect to SQL Server as a secure connection cannot be made.
 
-### Importing SSL Certificate in Java KeyStore:
+### Importing SSL Certificate in Java KeyStore
 For FIPS, most likely you need to import the certificate (.cert) to either PKCS or in a provider-specific format. 
 Use the following snippet to import the SSL certificate and store it in a working directory with the appropriate KeyStore format. _TRUST_STORE_PASSWORD_ is your password for Java KeyStore. 
 
@@ -78,10 +78,10 @@ The following example is importing an Azure SSL Certificate in PKCS12 format wit
 
 ` saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer"); `
 
-## Appropriate policy files: 
+## Appropriate policy files
 For some FIPS Providers, unrestricted Policy jars are needed. In such cases, for Sun / Oracle, download the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files for [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) or [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
 
-## Appropriate Configuration Parameters: 
+## Appropriate Configuration Parameters
 In order to run the JDBC Driver in FIPS-compliant mode, configure connection properties as shown in following table. 
 
 **Properties**: 

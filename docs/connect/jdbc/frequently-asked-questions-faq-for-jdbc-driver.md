@@ -24,7 +24,7 @@ ms.workload: "On Demand"
 
   This article provides answers to frequently asked questions about the Microsoft JDBC Driver for SQL Server.  
   
-## Frequently Asked Questions  
+### Frequently Asked Questions  
 **How can I help improve the JDBC Driver?**  
 The JDBC Driver is open-source and the source code can be found on [GitHub](https://github.com/microsoft/mssql-jdbc). You can help improve the driver by filing issues and contributing to the code base.
 
@@ -111,10 +111,10 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
 **Where can I download older versions of the driver such as the SQL Server 2000 JDBC driver, 2005 driver, 1.0, 1.1, or 1.2 driver?**  
  These driver versions are not available for download as they are no longer supported. We are continually improving the Java connectivity support. As such, we highly recommend you work with the latest version of Microsoft JDBC driver.  
   
- **I am using JRE 1.4. Which driver is compatible with JRE 1.4** 
+**I am using JRE 1.4. Which driver is compatible with JRE 1.4?**  
  For customers who are using SAP products and require JRE 1.4 support, you may contact [SAPService Marketplace](http://service.sap.com/) to obtain the 1.2 Microsoft JDBC driver.  
   
-**Can the driver communicate using FIPS validated algorithms?** 
+**Can the driver communicate using FIPS validated algorithms?**  
  The Microsoft JDBC Driver does not contain any cryptographic algorithms. If a customer leverages operating system, application, and JVM algorithms that are deemed acceptable by Federal Information Processing Standards (FIPS) and configures the driver to use those algorithms then the driver uses only the designated algorithms for communication.  
   
   

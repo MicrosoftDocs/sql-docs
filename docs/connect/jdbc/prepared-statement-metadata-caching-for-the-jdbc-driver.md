@@ -1,5 +1,5 @@
 ---
-title: "Prepared Statement Metadata Caching | Microsoft Docs"
+title: "Prepared Statement Metadata Caching for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
@@ -19,7 +19,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# Prepared Statement Metadata Caching
+# Prepared Statement Metadata Caching for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This article provides information on the two changes that are implemented to enhance the performance of the driver.
@@ -37,7 +37,7 @@ One more change introduced from 6.1.6-preview is that prior to this, driver woul
 >  Users can change the default behavior to the previous versions of always calling sp_prepexec by setting enablePrepareOnFirstPreparedStatementCall to **true** using the following method:
 >  setEnablePrepareOnFirstPreparedStatementCall(boolean value)
 
-## List of the New APIs Introduced With This Change, for Batching of Unprepare for Prepared Statements
+### List of the New APIs Introduced With This Change, for Batching of Unprepare for Prepared Statements
 
  **SQLServerConnection**
  
@@ -70,7 +70,7 @@ For example:
 `connection.setStatementPoolingCacheSize(10)`
 `connection.setDisableStatementPooling(false)`
 
-## List of the New APIs Introduced With This Change, for Prepared Statement Metadata Caching
+### List of the New APIs Introduced With This Change, for Prepared Statement Metadata Caching
 
  **SQLServerConnection**
  

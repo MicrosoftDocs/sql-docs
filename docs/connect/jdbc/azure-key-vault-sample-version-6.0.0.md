@@ -1,5 +1,29 @@
+---
+title: "Azure Key Vault Sample Version 6.0.0 | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/28/2018"
+ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
+ms.reviewer: ""
+ms.suite: "sql"
+ms.technology: 
+  - "drivers"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid:
+caps.latest.revision: 1
+author: "MightyPen"
+ms.author: "genemi"
+manager: "jhubbard"
+ms.workload: "Active"
+---
+# Azure Key Vault Sample Version 6.0.0
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 ###  Sample application using Azure Key Vault feature
-This application is runnable using JDBC Driver 6.2.2 and above and Azure-Keyvault (version 1.0.0),  Adal4j (version 1.4.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/dependency.md): 
+This application is runnable using JDBC Driver 6.0.0 and Azure-Keyvault (version 0.9.7),  Adal4j (version 1.3.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
 
 ```xml
 import java.net.URISyntaxException;
@@ -15,10 +39,15 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import com.microsoft.aad.adal4j.AuthenticationContext;
+import com.microsoft.aad.adal4j.AuthenticationResult;
+import com.microsoft.aad.adal4j.ClientCredential;
+
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionAzureKeyVaultProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerConnection;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
+import com.microsoft.sqlserver.jdbc.SQLServerKeyVaultAuthenticationCallback;
 
 public class AE_AKV_Maven {
 
@@ -36,16 +65,41 @@ public class AE_AKV_Maven {
 			+ "DeterministicNvarcharMax nvarchar(max) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', COLUMN_ENCRYPTION_KEY = "
 			+ cekName + ") NULL" + ");";
 
+	static ExecutorService service = Executors.newFixedThreadPool(2);
+
+	private static SQLServerColumnEncryptionAzureKeyVaultProvider tryAuthenticationCallback()
+			throws URISyntaxException, SQLServerException {
+		SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {
+
+			@Override
+			public String getAccessToken(String authority, String resource, String scope) {
+				AuthenticationResult result = null;
+				try {
+					AuthenticationContext context = new AuthenticationContext(authority, false, service);
+					ClientCredential cred = new ClientCredential(applicationClientID, applicationKey);
+
+					Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);
+					result = future.get();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				return result.getAccessToken();
+			}
+		};
+
+		SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(
+				authenticationCallback, service);
+		return akvProvider;
+	}
+
 	public static void main(String[] args) throws ClassNotFoundException, Exception {
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		try (Connection connection = DriverManager.getConnection(connectionUrl);
 				Statement statement = connection.createStatement()) {
 
-			 statement.execute("DBCC FREEPROCCACHE");
+			statement.execute("DBCC FREEPROCCACHE");
 
-			 SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new
-			 SQLServerColumnEncryptionAzureKeyVaultProvider(applicationClientID,
-			 applicationKey);
+			SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = tryAuthenticationCallback();
 
 			setupKeyStoreProviders(akvProvider.getName(), akvProvider);
 
@@ -224,6 +278,7 @@ public class AE_AKV_Maven {
 	}
 
 }
+
 
 
 ```

@@ -40,7 +40,7 @@ ms.workload: "On Demand"
 |[Finding Additional JDBC Driver Information](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Describes where to find additional resources about the Microsoft JDBC driver, including links to external resources.|  
 |[Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Support matrix and support lifecycle policy for the Microsoft JDBC driver for SQL Server.|  
 |[Frequently Asked Questions &#40;FAQ&#41; for JDBC Driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Frequently asked questions about the Microsoft JDBC driver.|  
-|[Feature dependencies of Microsoft JDBC Driver for SQL Server](../../connect/jdbc/dependency.md)|Feature dependencies of Microsoft JDBC Driver for SQL Server.|
+|[Feature dependencies of Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Feature dependencies of Microsoft JDBC Driver for SQL Server.|
 
 ## See Also  
  [JDBC Driver GitHub Repository](https://github.com/microsoft/mssql-jdbc)  

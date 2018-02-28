@@ -32,8 +32,8 @@ The JDBC Drivers 4.1, 4.2, 6.0, 6.2, and 6.4 can be redistributed. Please review
   
  [Redistribution License for Microsoft JDBC Driver 4.0 for SQL Server](https://msdn.microsoft.com/sqlserver/jj589698)  
   
- Note: Microsoft uses Windows Live ID for secure authentication and registration. When you register for redistribution rights for SQL Server JDBC Driver Redistribution through Windows Live ID, you will be prompted to provide information that becomes part of your secure profile.  
+ Note: Microsoft uses Windows account for secure authentication and registration. When you register for redistribution rights for SQL Server JDBC Driver Redistribution through Windows Live ID, you will be prompted to provide information that becomes part of your secure profile.  
   
- If you do not have one already, you can get a  [Windows Live ID](https://signup.live.com/)  
+ If you do not have one already, you can get a  [Windows account](https://signup.live.com/)  
   
   

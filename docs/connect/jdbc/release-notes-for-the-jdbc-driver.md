@@ -53,7 +53,7 @@ Driver now supports datatypes DATETIME and SMALLDATETIME when using Table-Valued
 
 The JDBC Driver now supports sql_variant datatypes to be used with SQL Server. Sql_variant is also supported with features such as Table-Valued Parameters (TVP) and BulkCopy with below limitations:
 
-1. For Date values
+1. For Date values:
 When using TVP to populate a table that contains datetime/smalldatetime/date values stored in sql_variant column, calling getDateTime()/getSmallDateTime()/getDate() methods on resultset does not work and throws the following exception:
 	```
 	java.lang.String cannot be cast to java.sql.Timestamp
@@ -66,7 +66,7 @@ If you are using TVP to populate a table and send NULL value to sql_variant colu
 
 **Implemented Prepared Statement Metadata Caching**
 
-The JDBC Driver has implemented Prepared Statement Metadata Caching for performance improvement. Driver now supports caching Prepared Statement metadata in the driver with "disableStatementPooling" and "statementPoolingCacheSize" connection properties. This feature is disabled by default. More information can be found [here](../../connect/jdbc/prepared-statement-metadata-caching.md)
+The JDBC Driver has implemented Prepared Statement Metadata Caching for performance improvement. Driver now supports caching Prepared Statement metadata in the driver with "disableStatementPooling" and "statementPoolingCacheSize" connection properties. This feature is disabled by default. More information can be found [here](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 **Added support for AAD Integrated Authentication on Linux/Mac**
 
@@ -74,12 +74,13 @@ The JDBC Driver now also supports Azure Active Directory Integrated Authenticati
 
 **Updated ADAL4J version to 1.4.0**
 
-The JDBC Driver has updated its maven dependency upon azure-activedirectory-library-for-java (ADAL4J) to version 1.4.0. For more information on dependencies, refer to [here](../../connect/jdbc/dependency.md)
+The JDBC Driver has updated its maven dependency upon azure-activedirectory-library-for-java (ADAL4J) to version 1.4.0. For more information on dependencies, refer to [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
 
 ## Updates in Microsoft JDBC Driver 6.2 for SQL Server
 The Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.0 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.1.jre8.jar file from the 6.2 package is recommended to be used with Java 8. 
 
-**Note:** An issue with the metadata caching improvement was found in the JDBC 6.2 RTW released on June 29, 2017. The improvement was rolled back and new jars (version 6.2.1) were released on July 17, 2017 on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), and [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Please update your projects to use the 6.2.1 release jars. Please view [release notes](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) for more details.
+> [!NOTE]  
+>  An issue with the metadata caching improvement was found in the JDBC 6.2 RTW released on June 29, 2017. The improvement was rolled back and new jars (version 6.2.1) were released on July 17, 2017 on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), and [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Please update your projects to use the 6.2.1 release jars. Please view [release notes](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) for more details.
 
 **Azure Active Directory (AAD) support for Linux**
 

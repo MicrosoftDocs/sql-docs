@@ -191,7 +191,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  If Always Encrypted is disabled for a query and the query returns results from encrypted columns, the query will return encrypted values. The encrypted values will have the varbinary datatype.  
   
-## See Also  
+ ### See Also  
  [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
-  
+

@@ -47,8 +47,10 @@ Please make sure that the following components are installed on the client machi
 	
 ## Connecting using ActiveDirectoryIntegrated Authentication Mode
  With version 6.4, Microsoft JDBC Driver adds support for ActiveDirectoryIntegrated Authentication using a Kerberos ticket on multiple platforms (Windows/Linux and Mac).
-See **Set Kerberos ticket on Windows, Linux And Mac** for more details. Alternatively, on Windows, sqljdbc_auth.dll can also be used for ActiveDirectoryIntegrated Authentication with JDBC Driver.
-**Note:** If you are using an older version of the driver, check this [link](../../connect/jdbc/dependency.md) for the respective dependencies that are required to use this authentication mode. 
+See [Set Kerberos ticket on Windows, Linux And Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) for more details. Alternatively, on Windows, sqljdbc_auth.dll can also be used for ActiveDirectoryIntegrated Authentication with JDBC Driver.
+
+> [!NOTE]
+>  If you are using an older version of the driver, check this [link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode. 
 
 The following example shows how to use 'authentication=ActiveDirectoryIntegrated' mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups, you belong to, must exist in the database and must have the CONNECT permission. 
 
@@ -104,7 +106,8 @@ JDK comes with `kinit` which you can use to get a TGT from KDC (Key Distribution
   - Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC, then it will prompt you for your domain password.
   - Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket from krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
-	**Note** You may need to specify a `.ini` file with `-Djava.security.krb5.conf` for your application to locate KDC.
+> [!NOTE]
+>  You may need to specify a `.ini` file with `-Djava.security.krb5.conf` for your application to locate KDC.
 
 #### Linux and Mac
 
@@ -138,7 +141,8 @@ Access to a Windows domain-joined machine in order to query your Kerberos Domain
   ```
   Then save the krb5.conf file and exit
 
-  **Note** Domain must be in ALL CAPS
+> [!NOTE]
+>  Domain must be in ALL CAPS.
 
 ##### Step 3: Testing the Ticket Granting Ticket retrieval
 - **Run on**: Linux/Mac
@@ -217,11 +221,11 @@ The example below contains a simple Java application that connects to Azure SQL 
 	12. On the bottom, click on “view endpoints”, and copy the URL under “OAUTH 2.0 AUTHORIZATION ENDPOINT” for later use. This is the STS URL.
 
 
-![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)
+	![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)
 
 
 2. Log on to your Azure SQL Server’s user database as an Azure Active Directory admin and using a T-SQL command
-provision a contained database user for your application principal. See the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/en-us/documentation/articles/sql-database-aad-authentication/)
+provision a contained database user for your application principal. See the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)
  for more details on how to create an Azure Active Directory admin and a contained database user.
 
 	```

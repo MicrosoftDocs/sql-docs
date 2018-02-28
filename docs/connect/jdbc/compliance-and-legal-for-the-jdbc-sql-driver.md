@@ -22,6 +22,8 @@ ms.workload: "Inactive"
 # JDBC Specification Compliance
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
+ This page contains the list of JDBC compliance information for the JDBC Driver.
+
 * [JDBC 4.1 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md)
 * [JDBC 4.2 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)
 * [JDBC 4.3 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)

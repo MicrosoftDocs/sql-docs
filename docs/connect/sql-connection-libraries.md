@@ -25,7 +25,7 @@ This article provides download links to connection modules or *drivers* that you
 
 #### OOP-to-relational mismatch
 
-*Relational*: Client programs that are written in an object-oriented programming (OOP) language often use SQL drivers which return queried data in a format that is more relational than object oriented. C# using ADO.NET is one example. The OOP-relational format mismatch sometimes makes the OOP code harder to write and understand.
+*Relational*: Client programs that are written in an object-oriented programming (OOP) language often use SQL drivers that return queried data in a format that is more relational than object oriented. C# using ADO.NET is one example. The OOP-relational format mismatch sometimes makes the OOP code harder to write and understand.
 
 *ORM*: Other drivers or frameworks return queried data in the OOP format, avoiding the mismatch. These drivers work by expecting that classes have been defined to match the data columns of particular SQL tables. The driver then performs the *object-relational mapping* (ORM) to return queried data as an instance of a class. Microsoft's Entity Framework (EF) for C#, and Hibernate for Java, are two examples.
 
@@ -85,9 +85,9 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 ## Build-an-app webpages
 
 
-[http://aka.ms/sqldev](http://aka.ms/sqldev) takes you to a set of our *Build-an-app* webpages. The webpages provide information about numerous combinations of programming language, operating system, and SQL connection driver. Among the information provided by the Build-an-app webpages are the following items:
+[http://aka.ms/sqldev](http://aka.ms/sqldev) takes you to a set of *Build-an-app* webpages. The webpages provide information about numerous combinations of programming language, operating system, and SQL connection driver. Among the information provided by the Build-an-app webpages are the following items:
 
-- Details about how to get started from the very beginning, for each combination of language + oper sys + driver.
+- Details about how to get started from the very beginning, for each combination of language + operating system + driver.
     - Instructions for installing the latest SQL connection drivers.
 - Code examples for each of the following items:
     - Object-relational code examples.

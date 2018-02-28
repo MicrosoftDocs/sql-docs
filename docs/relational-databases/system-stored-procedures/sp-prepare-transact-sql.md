@@ -1,7 +1,7 @@
 ---
 title: "sp_prepare (Transact SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/28/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.service: ""
@@ -36,7 +36,6 @@ ms.workload: "Inactive"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
@@ -69,18 +68,7 @@ Exec sp_prepare @P1 output,
 Exec sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
 ```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example prepares and executes a simple statement.  
-  
-```  
-Declare @P1 int;  
-Exec sp_prepare @P1 output,   
-    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
-    N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
-Exec sp_execute @P1, N'tempdb', N'ONLINE';  
-EXEC sp_unprepare @P1;  
-```  
+
   
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -32,7 +32,7 @@ As you learned in the [previous lesson](running-python-in-sql-stored-procedure.m
 + Provide input data as a parameter to the stored procedure, and execute the stored procedure to actually train it
 + Get the output and do something with it, like saving the model into a table, or passing it to another statement
 
-Run this code in SQL Server Management Studio to created the stored procedure that builds a model.
+Run this code in SQL Server Management Studio to create the stored procedure that builds a model.
 
 ```sql
 CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -63,7 +63,7 @@ Keep in mind these rules for working with SQL and Python variables:
 
 + All variables in the Python code must have exactly the same names as the corresponding SQL variables. 
 + If you create a SQL parameter to use with Python, you can output that parameter back to SQL by adding the `OUTPUT` or `OUT` keywords.
-+ All variables must be explicitly mapped using the pattern above. For example, say you add three new SQL variables to control how the model is built: one variable for the model name, another for the code author, and another containing the system date. A line is required at the end of the stored procedure for each variable mapping, like this:
++ All variables must be explicitly mapped. Suppose you add some new variables: one variable for the model name, another for the code author, and another containing the system date. You would add a line at the end of the stored procedure for each variable mapping:
 
     ```sql
     , @trained_model = @trained_model OUTPUT;
@@ -85,7 +85,7 @@ EXEC generate_iris_model @model OUTPUT;
 INSERT INTO iris_models (model_name, model) values('Naive Bayes', @model);
 ```
 
-Now, try running the model generation code above once more. You should get the error: "Violation of PRIMARY KEY constraint Cannot insert duplicate key in object 'dbo.iris_models'. The duplicate key value is (Naive Bayes)".
+Now, try running the model generation code once more. You should get the error: "Violation of PRIMARY KEY constraint Cannot insert duplicate key in object 'dbo.iris_models'. The duplicate key value is (Naive Bayes)".
 
 That's because the model name was provided by manually typing in "Naive Bayes" as part of the INSERT statement. Assuming you plan to create lots of models, perhaps using different parameters or different algorithms on each run, consider setting up a metadata scheme so that you can automatically name models and more easily identify them.
 
@@ -104,7 +104,7 @@ To view the model, run a simple SELECT statement.
 
 ```sql
 SELECT * FROM iris_models;
-go
+GO
 ```
 
 **Results**
@@ -161,12 +161,12 @@ If you are used to working in Python, you might be accustomed to loading data, c
 
 However, if your goal is to operationalize the process (model creation, scoring, etc.) in SQL Server, it is important to consider ways that you can separate the process into repeatable steps that can be modified using parameters. As much as possible, you want the Python code you embed in a stored procedure to have clearly defined inputs and outputs that map to stored procedure inputs and outputs.
 
-You can also improve performance by separating the data exploration process from the processes of training a model or generating scores, and by optimizing your scoring and training processes to use parallel processing, or by using revoscalepy or MicrosoftML rather than standard Python libraries. 
+You can also improve performance by separating the data exploration process from the processes of training a model or generating scores, and by optimizing your scoring and training processes to use parallel processing, or by using [revoscalepy](../python/what-is-revoscalepy.md) or [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) rather than standard Python libraries. 
 
 ## Next steps
 
-These additional Python samples and tutorials demonstrate end-to-end scenarios using more complex data sources.
+These additional Python samples and tutorials demonstrate end-to-end scenarios using more complex data sources, as well as the use of remote compute contexts.
 
-+ [Use Python revoscalepy to create a model](use-python-revoscalepy-to-create-model.md)
 + [In-Database Python for SQL developers](sqldev-in-database-python-for-sql-developers.md)
 + [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
++ [Create a revoscalepy model from a Python client](use-python-revoscalepy-to-create-model.md)

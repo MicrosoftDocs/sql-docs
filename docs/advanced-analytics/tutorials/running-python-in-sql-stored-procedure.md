@@ -45,7 +45,7 @@ GO;
 ```
 
 > [!TIP] 
-> If you're new to SQL Server, or are working on a server you own, a common mistake to do log in and start working without noticing that you are in the **master** database. To be sure that you are using the correct database, always specify the context using the `USE <database name>` statement.
+> If you're new to SQL Server, or are working on a server you own, a common mistake is tolog in and start working without noticing that you are in the **master** database. To be sure that you are using the correct database, always specify the context using the `USE <database name>` statement.
 
 Add some empty tables: one to store the data, and one to store the models you train. Later you populate the tables using Python.
 
@@ -63,7 +63,7 @@ CREATE TABLE iris_data (
 ```
 
  > [!TIP]
- > If you are new to T-SQL, it pays to memorize the `DROP...IF` statement. When you try to  create a table and one already exists, SQL Server will sensibly return an error: "There is already an object named 'iris_data' in the database". To avoid such errors, a standard practice is to delete any existing tables as part of your code.
+ > If you are new to T-SQL, it pays to memorize the `DROP...IF` statement. When you try to  create a table and one already exists, SQL Server returns an error: "There is already an object named 'iris_data' in the database." One way to avoid such errors is to delete any existing tables or other objects as part of your code.
 
 The following code creates the table used for storing the trained model. 
 

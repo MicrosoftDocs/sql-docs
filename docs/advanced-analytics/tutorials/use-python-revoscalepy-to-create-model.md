@@ -1,15 +1,13 @@
 ---
-title: "Use Python with revoscalepy to Create a Model| Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/19/2017"
+title: "Use Python with revoscalepy to create a model| Microsoft Docs"
+titleSuffix: "SQL Server"
+ms.date: "02/28/2018"
 mms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 caps.latest.revision: 4
@@ -20,16 +18,23 @@ manager: "cgronlund"
 # Use Python with revoscalepy to create a model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This example demonstrates how you can create a linear regression model in SQL Server, using an algorithm from the **revoscalepy** package.
+This example demonstrates how you can create a linear regression model in SQL Server, using an algorithm from the **revoscalepy** package. The code in this sample uses data that is in SQL Server, but the code is executed from a remote Python development client.
 
-The **revoscalepy** package for Python contains objects, transformations, and algorithms similar to those provided for the **RevoScaleR** package for the R language. With this library, you can create a compute context, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more.
+The **revoscalepy** package for Python contains objects, transformations, and algorithms similar to those provided for the **RevoScaleR** package for the R language. This library also supports the notion of a compute context, which lets you specify an environment such a sSQL Server, Spark, or your local computer, to perform operations. Functions in the library support moving data between compute contexts, transforming data, and training predictive models using popular algorithms such as logistic and linear regression, decision trees, and more.
 
-For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.md) and the [Python function reference](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
+For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.md) and the [Python function reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
 
 ## Prerequisites
 
-> [!IMPORTANT]
-> To run Python code in SQL Server, you must have installed SQL Server 2017 CTP 2.0 or later, and you must install and enable the feature, **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration.
++ To run Python code in SQL Server, you must have installed SQL Server 2017, and you must install and enable the feature, **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration. 
+
+    If you installed a pre-release version of SQL Server 2017, we strongly recommend that you update to at least the RTM version. Later service releases continue to upgrade and expand on Python functionality, so we recommend getting the latest version whenever possible.
+
++ This sample uses the Airline dataset, which is available in both R and Python. You should create a database for your Python samples, and populate a table with the data before running this code. 
+
+    This article provides information about the sample datasets, and how you can import the data from a CSV file into SQL Server: [Sample data in RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/sample-built-in-data).
+
++ The code that is provided uses the database `PyTestDb`. You can change the name of this database, but be sure to update your connection string.
 
 ## Run the sample code
 
@@ -45,7 +50,7 @@ This code performs the following steps:
 All operations are performed using an instance of SQL Server as the compute context.
 
 In general, the process of calling Python in a remote compute context is similar to the way you use R in a remote compute context. 
-You execute the sample as a Python script from the command line, or by using a Python development environment that includes the Python integration components provided in this release. 
+You can execute the sample either as a Python script from the command line, or by using a Python development environment that includes the Python integration components provided in this release. 
 In your code, you create and use a compute context object to indicate where you want specific computations to be performed.
 
 > [!NOTE]

@@ -220,10 +220,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	11. Under section “Keys”, select the duration of the key, save the configuration, and copy the key for later use. This is the client Secret.
 	12. On the bottom, click on “view endpoints”, and copy the URL under “OAUTH 2.0 AUTHORIZATION ENDPOINT” for later use. This is the STS URL.
 
-
- ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
-
-
+	![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Log on to your Azure SQL Server’s user database as an Azure Active Directory admin and using a T-SQL command
 provision a contained database user for your application principal. See the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)
  for more details on how to create an Azure Active Directory admin and a contained database user.

@@ -4,7 +4,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 07/20/2017
+ms.date: 03/01/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -27,21 +27,21 @@ Use the cluster management tools to fail over an availability group managed by a
 > [!IMPORTANT]
 > Under normal operations, do not fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager. 
 
-### Manual failover examples
+### <a name="manualFailover">Manual failover examples
 
-Manually fail over the availability group with the external cluster management tools. Under normal operations, do not initiate failover with Transact-SQL. If the external cluster management tools do not respond, you can force the availability group to fail over. For instructions to force the manual failover, see [Manual move when cluster tools are not responsive](#forceManual).
+Manually fail over the availability group with the external cluster management tools. Under normal operations, do not initiate failover with Transact-SQL. If the external cluster management tools do not respond, you can force the availability group to fail over. For instructions to force the manual failover, see [Force manual failover](#forceManual).
 
 Complete the manual failover in two steps. 
 
 1. Move the availability group resource from the cluster node that owns the resources to a new node.
 
-   The cluster manager moves the availability group resource and adds a location constraint. This constraint configures the resource to run on the new node. You must remove this constraint in order to move either manually or automatically fail over in the future.
+   The cluster manager moves the availability group resource and adds a location constraint. This constraint configures the resource to run on the new node. Remove this constraint in order to move either manually or automatically fail over in the future.
 
 2. Remove the location constraint.
 
 #### 1. Manually fail over
 
-To manually fail over an availability group resource named *ag_cluster* to cluster node named *nodeName2*, run appropriate command for your distribution:
+To manually fail over an availability group resource named *ag_cluster* to cluster node named *nodeName2*, run the appropriate command for your distribution:
 
 - **RHEL/Ubuntu example**
 
@@ -76,9 +76,9 @@ During a manual move, the `pcs` command `move` or `crm` command `migrate` adds a
    crm config show
    ```
 
-You need to remove the location constraint so future moves - including automatic failover - succeed. 
+Remove the location constraint so future moves - including automatic failover - succeed. 
 
-To remove the constraint run the following command. 
+To remove the constraint, run the following command: 
 
 - **RHEL/Ubuntu example**
 
@@ -124,47 +124,52 @@ For more information:
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a> Manual move when cluster tools are not responsive 
+### <a name="forceManual"></a> Force manual failover 
 
-In extreme cases, if a user cannot use the cluster management tools for interacting with the cluster (i.e. the cluster is unresponsive, cluster management tools have a faulty behavior), the user might have to fail over manually - bypassing the external cluster manager. This is not recommended for regular operations, and should be used within cases cluster is failing to execute the failover action using the cluster management tools.
+If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to fail over manually to bypass the external cluster manager. This procedure is not recommended for regular operations, and should be used when the cluster is fails to execute the failover action using the cluster management tools. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an availability group in Windows.
 
-If you cannot fail over the availability group with the cluster management tools, follow these steps to fail over from SQL Server tools:
+A forced failover is a form of manual failover that is intended strictly for disaster recovery. For example, when you cannot fail over with cluster management tools. If you force failover to an unsynchronized secondary replica, some data loss is possible. Only force failover if you must restore service to the availability group immediatley and are willing to risk losing data. 
+
+The process for forcing manual failover is specific to SQL Server on Linux.
 
 1. Verify that the availability group resource is not managed by the cluster any more. 
 
-      - Attempt to set the resource to unmanaged mode. This signals the resource agent to stop resource monitoring and management. For example: 
+      - Attempt to set the resource to unmanaged mode. This command signals the resource agent to stop resource monitoring and management. For example: 
       
       ```bash
-      sudo pcs resource unmanage <**resourceName**>
+      sudo pcs resource unmanage <resourceName>
       ```
 
       - If the attempt to set the resource mode to unmanaged mode fails, delete the resource. For example:
 
       ```bash
-      sudo pcs resource delete <**resourceName**>
+      sudo pcs resource delete <resourceName>
       ```
 
       >[!NOTE]
-      >When you delete a resource it also deletes all of the associated constraints. 
+      >When you delete a resource, it also deletes all of the associated constraints. 
 
-1. Manually set the session context variable `external_cluster`.
+1. On the instance of SQL Server that hosts the secondary replica, set the session context variable `external_cluster`.
 
    ```Transact-SQL
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Fail over the availability group with Transact-SQL. In the following example, replace `<**MyAg**>` with the name of your availability group. Connect to the instance of SQL Server that hosts the target secondary replica and run the following command:
+1. Fail over the availability group with Transact-SQL. In the following example, replace `<MyAg>` with the name of your availability group. Connect to the instance of SQL Server that hosts the target secondary replica and run the following command:
 
    ```Transact-SQL
-   ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
+   ALTER AVAILABILITY GROUP <MyAg> FORCE_FAILOVER_ALLOW_DATA_LOSS;
    ```
 
 1. Restart cluster resource monitoring and management. Run the following command:
 
    ```bash
-   sudo pcs resource manage <**resourceName**>
-   sudo pcs resource cleanup <**resourceName**>
+   sudo pcs resource manage <resourceName>
+   sudo pcs resource cleanup <resourceName>
    ```
+
+>[!TIP]
+>Do not use the preceding steps for disaster recovery drills because they risk data loss. Instead, follow the instructions for [normal manual failover](#manualFailover).
 
 ## Database level monitoring and failover trigger
 
@@ -172,7 +177,7 @@ For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compa
 
 ## Upgrade availability group
 
-Before you upgrade an availability group, review the best practices at [Upgrading availability group replica instances](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
+Before you upgrade an availability group, review the patterns and practices at [Upgrading availability group replica instances](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
 
 The following sections explain how to perform a rolling upgrade with SQL Server instances on Linux with availability groups. 
 
@@ -268,13 +273,13 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
 
-1. Resume data movement for the newly upgraded secondary replica - the former primary replica. This is required when a higher version instance of SQL Server is transferring log blocks to a lower version instance in an availability group. Run the following command on the new secondary replica (the previous primary replica).
+1. Resume data movement for the newly upgraded secondary replica - the former primary replica. This step is required when a higher version instance of SQL Server is transferring log blocks to a lower version instance in an availability group. Run the following command on the new secondary replica (the previous primary replica).
 
    ```transact-sql
    ALTER DATABASE database_name SET HADR RESUME;
    ```
 
-After upgrading all servers, you can failback - fail over back to the original primary - if necessary. 
+After upgrading all servers, you can fail back. Fail over back to the original primary - if necessary. 
 
 ## Drop an availability group
 

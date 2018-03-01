@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "collations [SQL Server], server"
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
 ---

@@ -24,7 +24,7 @@ ms.workload: "On Demand"
 
   This article provides answers to frequently asked questions about the Microsoft JDBC Driver for SQL Server.  
   
-### Frequently Asked Questions  
+## Frequently Asked Questions  
 **How can I help improve the JDBC Driver?**  
 The JDBC Driver is open-source and the source code can be found on [GitHub](https://github.com/microsoft/mssql-jdbc). You can help improve the driver by filing issues and contributing to the code base.
 
@@ -117,4 +117,5 @@ The JDBC Driver is open-source and the source code can be found on [GitHub](http
 **Can the driver communicate using FIPS validated algorithms?**  
  The Microsoft JDBC Driver does not contain any cryptographic algorithms. If a customer leverages operating system, application, and JVM algorithms that are deemed acceptable by Federal Information Processing Standards (FIPS) and configures the driver to use those algorithms then the driver uses only the designated algorithms for communication.  
   
-  
+ ## See Also  
+ [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

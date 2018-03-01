@@ -109,9 +109,11 @@ The following table lists all the currently available connection string properti
  >2. Go to the [GitHub page](https://github.com/Microsoft/mssql-jdbc) of the driver
  >3. Download the pom.xml file
  >4. Run  the following Maven command to download the library and its dependencies: 
- > 
- > mvn dependency:copy-dependencies
-  
+
+```
+mvn dependency:copy-dependencies
+```
+
 ## See Also
 [Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
 [FIPS Mode](../../connect/jdbc/fips-mode.md)

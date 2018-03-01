@@ -221,7 +221,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	12. On the bottom, click on “view endpoints”, and copy the URL under “OAUTH 2.0 AUTHORIZATION ENDPOINT” for later use. This is the STS URL.
 
 
-	![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)
+ ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 
 
 2. Log on to your Azure SQL Server’s user database as an Azure Active Directory admin and using a T-SQL command

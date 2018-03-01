@@ -22,7 +22,7 @@ ms.workload: "Active"
 # Azure Key Vault Sample Version 6.0.0
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-###  Sample application using Azure Key Vault feature
+##  Sample application using Azure Key Vault feature
 This application is runnable using JDBC Driver 6.0.0 and Azure-Keyvault (version 0.9.7),  Adal4j (version 1.3.0), and their dependencies.  The underlying dependencies can be resolved by adding these libraries to the pom file of the project as described [here](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
 
 ```xml
@@ -282,3 +282,6 @@ public class AE_AKV_Maven {
 
 
 ```
+
+## See Also  
+ [Azure Key Vault Sample Version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  

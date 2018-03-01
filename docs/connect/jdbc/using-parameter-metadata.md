@@ -38,8 +38,5 @@ When using SQL Server 2008 or 2008 R2, the JDBC driver supports SELECT, DELETE, 
 MERGE queries are also not supported for  SQLServerParameterMetaData class when using SQL Server 2008 or 2008 R2. For SQL Server 2012 and higher versions parameter metadata with complex queries are supported.  
 
 Retrieval of parameter metadata for encrypted columns are not supported. **With Microsoft JDBC Driver 4.1 or 4.2 for SQL Server**: The JDBC driver supports SELECT, DELETE, INSERT, and UPDATE statements as long as these statements does not contain subqueries and/or joins. MERGE queries are also not supported for  SQLServerParameterMetaData class.  
-
-### See Also  
- [Handling Metadata with the JDBC Driver](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)  
   
   

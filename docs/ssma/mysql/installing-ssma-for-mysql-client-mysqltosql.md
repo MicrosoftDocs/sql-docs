@@ -40,7 +40,7 @@ The SSMA for MySQL client consists of the program files that perform the followi
 This topic provides the installation prerequisites and instructions for installing SSMA for MySQL client.  
   
 ## Prerequisites  
-SSMA for MySQL is designed to work with MySQL 4.1 or later versions and all editions of SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016 and Azure SQL DB.  
+SSMA for MySQL is designed to work with MySQL 4.1 or later versions and all editions of SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, and Azure SQL DB.  
   
 Before you install SSMA, make sure that the computer meets the following requirements:  
   

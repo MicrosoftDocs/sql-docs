@@ -20,10 +20,6 @@ manager: "cgronlund"
 
 This example demonstrates how you can create a linear regression model in SQL Server, using an algorithm from the **revoscalepy** package. The code in this sample uses data that is in SQL Server, but the code is executed from a remote Python development client.
 
-The **revoscalepy** package for Python contains objects, transformations, and algorithms similar to those provided for the **RevoScaleR** package for the R language. This library also supports the notion of a compute context, which lets you specify an environment such a sSQL Server, Spark, or your local computer, to perform operations. Functions in the library support moving data between compute contexts, transforming data, and training predictive models using popular algorithms such as logistic and linear regression, decision trees, and more.
-
-For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.md) and the [Python function reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
-
 ## Prerequisites
 
 + To run Python code in SQL Server, you must have installed SQL Server 2017, and you must install and enable the feature, **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration. 
@@ -35,6 +31,16 @@ For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.m
     This article provides information about the sample datasets, and how you can import the data from a CSV file into SQL Server: [Sample data in RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/sample-built-in-data).
 
 + The code that is provided uses the database `PyTestDb`. You can change the name of this database, but be sure to update your connection string.
+
+## Overview of revoscalepy and compute contexts 
+
+The **revoscalepy** package for Python contains objects, transformations, and algorithms similar to those provided for the **RevoScaleR** package for the R language. 
+
+For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.md) and the [Python function reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
+
+This library also supports the notion of a _compute context_, which lets you work from a client, but specify a remote environment, such as SQL Server, Spark, or Machine Learning Server, where the operations are actually performed. Functions that can be run in  remote compute context include moving data between compute contexts, transforming data, and training predictive models using popular algorithms such as logistic and linear regression, decision trees, and neural networks.
+
+This sample demonstrates how to set up and then use a SQL Server compute context. For a discussion of how compute contexts work with other platforms, and which compute contexts are supported, see [Compute context for script execution in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)
 
 ## Run the sample code
 

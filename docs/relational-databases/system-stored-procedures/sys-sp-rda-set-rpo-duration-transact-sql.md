@@ -23,7 +23,7 @@ ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_rda_set_rpo_duration (Transact-SQL)

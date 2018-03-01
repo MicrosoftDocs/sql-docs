@@ -20,7 +20,7 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Debugging Script

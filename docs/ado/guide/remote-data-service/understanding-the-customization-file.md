@@ -18,7 +18,7 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Understanding the Customization File

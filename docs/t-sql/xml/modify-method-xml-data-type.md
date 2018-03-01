@@ -21,7 +21,7 @@ ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # modify() Method (xml Data Type)

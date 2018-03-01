@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "upper-case Function (XQuery)"
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on String Values - upper-case

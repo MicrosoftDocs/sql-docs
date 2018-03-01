@@ -18,7 +18,7 @@ ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 3: Install SSIS Packages

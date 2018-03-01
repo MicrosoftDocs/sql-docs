@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_db_backup_file_snapshots (Transact-SQL)

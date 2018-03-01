@@ -25,7 +25,7 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 caps.latest.revision: 13
 author: "jodebrui"
 ms.author: "jodebrui"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.memory_optimized_tables_internal_attributes (Transact-SQL)

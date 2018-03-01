@@ -1,7 +1,7 @@
 ---
 title: "Programming AMO OLAP Basic Objects | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -28,7 +28,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Programming AMO OLAP Basic Objects
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Creating complex [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects is simple and straightforward but requires attention to detail. This topic explains the programming details of OLAP basic objects. This topic contains the following sections:  
   
 -   [Dimension Objects](#Dim)  

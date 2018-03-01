@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.resource_governor_configuration catalog view"
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.resource_governor_configuration (Transact-SQL)

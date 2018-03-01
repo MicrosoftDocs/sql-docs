@@ -22,7 +22,7 @@ ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Keys Collection (ADOX)

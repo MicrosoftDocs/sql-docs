@@ -19,7 +19,7 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Shape Commands in General

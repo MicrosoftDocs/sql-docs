@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_altermessage"
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_altermessage (Transact-SQL)

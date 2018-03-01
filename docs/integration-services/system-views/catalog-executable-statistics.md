@@ -16,7 +16,7 @@ ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.executable_statistics

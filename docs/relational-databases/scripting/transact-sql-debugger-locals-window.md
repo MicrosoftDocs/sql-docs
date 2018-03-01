@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Locals Window [Transact-SQL]"
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transact-SQL Debugger - Locals Window

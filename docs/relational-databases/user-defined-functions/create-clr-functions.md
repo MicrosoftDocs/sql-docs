@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], CLR"
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create CLR Functions

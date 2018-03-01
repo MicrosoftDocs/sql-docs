@@ -18,7 +18,7 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-4 - Adding a Data Flow Task to the Package

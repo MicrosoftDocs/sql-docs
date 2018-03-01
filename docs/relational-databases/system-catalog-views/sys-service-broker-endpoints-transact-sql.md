@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.service_broker_endpoints catalog view"
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.service_broker_endpoints (Transact-SQL)

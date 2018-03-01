@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.monitor.Distributor.SubscriptionSummary.snapshot.f1"
 ms.assetid: 016ac5f8-ce40-4627-aceb-11747d54fed1
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Distributor Info, Subscription Watch List (Snapshot Pub, SQL 2005+)

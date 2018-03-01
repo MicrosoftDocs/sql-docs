@@ -19,7 +19,7 @@ ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Management Studio Menu Help

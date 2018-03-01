@@ -21,7 +21,7 @@ ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Implement Jobs

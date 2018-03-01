@@ -19,7 +19,7 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools)

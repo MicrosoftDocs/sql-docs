@@ -22,7 +22,7 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 caps.latest.revision: 42
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server 2016 Express LocalDB

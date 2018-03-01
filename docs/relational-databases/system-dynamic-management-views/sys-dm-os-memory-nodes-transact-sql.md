@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_memory_nodes dynamic management view"
 ms.assetid: bf4032fe-7db1-40e9-a62e-d69cebff4b44
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_memory_nodes (Transact-SQL)

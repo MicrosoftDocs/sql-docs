@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "profiles [SQL Server], replication agents"
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Work with Replication Agent Profiles
@@ -288,7 +288,7 @@ ms.workload: "Inactive"
 5.  Call the <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> method to remove the user-defined profile represented by this object from the server.  
   
 ##  <a name="FollowUp"></a> Follow Up: After Changing Agent Parameters  
- Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent.  
+Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent. Starting with SQL Server 2017 CU3, some agent parameter changes take effect without having to restart the Agents. 
   
 ## See Also  
  [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)   

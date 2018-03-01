@@ -18,7 +18,7 @@ ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Alert Properties (History Page)

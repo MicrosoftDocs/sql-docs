@@ -20,7 +20,7 @@ ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Tune Automated Administration Across an Enterprise

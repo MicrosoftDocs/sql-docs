@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], limitations"
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FILESTREAM Compatibility with Other SQL Server Features

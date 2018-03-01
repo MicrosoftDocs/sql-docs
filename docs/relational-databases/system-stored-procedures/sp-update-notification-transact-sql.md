@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_updatenotification"
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_update_notification (Transact-SQL)

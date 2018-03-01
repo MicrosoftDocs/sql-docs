@@ -25,6 +25,7 @@ ms.workload: "On Demand"
 ---
 # Data Mining Tutorials (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] makes it easy to create data mining solutions using wizards and integrated visualizations. Particularly if you are new to machine learning, the tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] are an easy way to design, train, and explore data mining models. The data in your models can be stored in a cube, relational database, or any other source support by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. After creating a model, you can put it into production by accessing the model to create predictions using prediction multiple clients, including [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and ASP.NET.  
   
 > [!NOTE]  

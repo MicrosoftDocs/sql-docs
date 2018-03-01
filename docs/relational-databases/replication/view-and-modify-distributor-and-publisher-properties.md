@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Distributors [SQL Server replication], properties"
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View and Modify Distributor and Publisher Properties

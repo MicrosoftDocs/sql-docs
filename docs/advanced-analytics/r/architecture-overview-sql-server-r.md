@@ -15,10 +15,11 @@ ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
 caps.latest.revision: 9
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Architecture overview for R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This section provides an overview of the architecture of SQL Server 2016 R Services, and of SQL Server 2017 Machine Learning Services.
 

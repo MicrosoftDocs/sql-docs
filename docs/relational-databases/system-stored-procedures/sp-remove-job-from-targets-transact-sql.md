@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_remove_job_from_targets"
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_remove_job_from_targets (Transact-SQL)

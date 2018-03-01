@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "namespace-uri function"
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on Nodes - namespace-uri

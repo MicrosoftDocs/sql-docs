@@ -27,7 +27,7 @@ ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fulltext_index_columns (Transact-SQL)

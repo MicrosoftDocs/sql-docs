@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Database Suspect Data Page event class"
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Suspect Data Page Event Class

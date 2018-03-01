@@ -58,9 +58,9 @@ helpviewer_keywords:
   - "USE HINT query hint"
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 caps.latest.revision: 136
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Hints (Transact-SQL) - Query
@@ -198,7 +198,7 @@ ms.workload: "Active"
  Overrides the **max degree of parallelism** configuration option of **sp_configure** and Resource Governor for the query specifying this option. The MAXDOP query hint can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the **max degree of parallelism** configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]  
->  If MAXDOP is set to zero then the server chooses the max degree of parallelism.  
+> If MAXDOP is set to zero then the server chooses the max degree of parallelism.  
   
  MAXRECURSION *number*  
  Specifies the maximum number of recursions allowed for this query. *number* is a nonnegative integer between 0 and 32767. When 0 is specified, no limit is applied. If this option is not specified, the default limit for the server is 100.  
@@ -237,7 +237,7 @@ ms.workload: "Active"
  Specifies the parameterization rules that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer applies to the query when it is compiled.  
   
 > [!IMPORTANT]  
->  The PARAMETERIZATION query hint can only be specified inside a plan guide. It cannot be specified directly within a query.  
+> The PARAMETERIZATION query hint can only be specified inside a plan guide. It cannot be specified directly within a query.  
   
  SIMPLE instructs the query optimizer to attempt simple parameterization. FORCED instructs the optimizer to attempt forced parameterization. The PARAMETERIZATION query hint is used to override the current setting of the PARAMETERIZATION database SET option inside a plan guide. For more information, see [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
@@ -251,11 +251,10 @@ ms.workload: "Active"
   
  If such a plan is not possible, the query optimizer returns an error instead of deferring error detection to query execution. Rows may contain variable-length columns; the [!INCLUDE[ssDE](../../includes/ssde-md.md)] allows for rows to be defined that have a maximum potential size beyond the ability of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to process them. Generally, despite the maximum potential size, an application stores rows that have actual sizes within the limits that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can process. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encounters a row that is too long, an execution error is returned.  
  
- USE HINT ( **'***hint_name***'** )  
- **Applies to**: Applies to SQL Server (starting with 2016 SP1) and Azure SQL Database.
+<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )  
+ **Applies to**: Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Provides one or more additional hints to the query processor as specified by a hint name **inside single quotation marks**. 
-  **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
  The following hint names are supported:
  

@@ -18,7 +18,7 @@ ms.assetid: 59bb3e9c-2829-49a0-b382-652ed1f54f88
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_diag_events (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # UpdateRule Property (ADOX)

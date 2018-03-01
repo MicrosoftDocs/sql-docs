@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "allow updates option"
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # allow updates Server Configuration Option

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_help_principalprofile_sp"
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_help_principalprofile_sp (Transact-SQL)

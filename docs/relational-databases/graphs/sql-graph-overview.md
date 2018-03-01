@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 1
 author: "shkale-msft"
-ms.author: "shkale"
-manager: "jhubbard"
+ms.author: "shkale;barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Graph processing with SQL Server and Azure SQL Database

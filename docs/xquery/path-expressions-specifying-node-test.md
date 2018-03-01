@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "node test [XQuery]"
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Path Expressions - Specifying Node Test

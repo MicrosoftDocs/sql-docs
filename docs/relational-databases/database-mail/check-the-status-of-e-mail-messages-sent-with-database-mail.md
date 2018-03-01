@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "status information [Database Mail]"
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Check the Status of E-Mail Messages Sent With Database Mail

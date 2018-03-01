@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sys.sp_xtp_control_proc_exec_stats"
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_xtp_control_proc_exec_stats (Transact-SQL)

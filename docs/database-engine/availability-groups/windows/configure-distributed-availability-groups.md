@@ -16,7 +16,7 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 caps.latest.revision: 28
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure distributed availability group  
@@ -206,17 +206,17 @@ GO
 ```  
 
 ## <a name="failover"></a> Join the database on the secondary of the second availability group
-After the database on the secondary of the second availability group has went into a restoring state you have to manually join it to the availability group.
+After the database on the secondary of the second availability group is in a restoring state you have to manually join it to the availability group.
 
 ```sql  
-ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```  
   
 ## <a name="failover"></a> Fail over to a secondary availability group  
 Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  
 
 
-1. Set the availability mode to synchronous commit for the secondary availability group. 
+1. Set the availability mode to synchronous commit for both availability groups. 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
@@ -225,7 +225,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
       'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = MANUAL, 
           SEEDING_MODE = MANUAL 
           ), 

@@ -16,7 +16,7 @@ ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_xe_database_sessions (Azure SQL Database)

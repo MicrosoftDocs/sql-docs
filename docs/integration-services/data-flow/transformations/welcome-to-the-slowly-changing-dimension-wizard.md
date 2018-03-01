@@ -18,7 +18,7 @@ ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Welcome to the Slowly Changing Dimension Wizard

@@ -17,7 +17,7 @@ dev_langs:
 caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)

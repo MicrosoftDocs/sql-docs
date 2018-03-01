@@ -21,7 +21,7 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ODBC Source

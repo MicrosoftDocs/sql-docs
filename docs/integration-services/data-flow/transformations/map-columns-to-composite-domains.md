@@ -16,7 +16,7 @@ ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Map Columns to Composite Domains

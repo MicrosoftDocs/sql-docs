@@ -22,7 +22,7 @@ ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete Method (ADO Fields Collection)

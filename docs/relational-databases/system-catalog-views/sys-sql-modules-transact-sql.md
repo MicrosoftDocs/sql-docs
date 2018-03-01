@@ -1,7 +1,7 @@
 ---
 title: "sys.sql_modules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "01/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -38,7 +38,7 @@ ms.workload: "On Demand"
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID of the object of the containing object. Is unique within a database.|  
-|**definition**|**nvarchar(max)**|SQL text that defines this module.<br /><br /> NULL = Encrypted.|  
+|**definition**|**nvarchar(max)**|SQL text that defines this module. This value can also be obtained using the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function.<br /><br /> NULL = Encrypted.|  
 |**uses_ansi_nulls**|**bit**|Module was created with SET ANSI_NULLS ON.<br /><br /> Will always be = 0 for rules and defaults.|  
 |**uses_quoted_identifier**|**bit**|Module was created with SET QUOTED_IDENTIFIER ON.|  
 |**is_schema_bound**|**bit**|Module was created with SCHEMABINDING option.<br /><br /> Always contains a value of 1 for natively compiled stored procedures.|  

@@ -19,7 +19,7 @@ ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Add Text Annotations to Diagrams (Visual Database Tools)

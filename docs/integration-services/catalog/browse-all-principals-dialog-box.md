@@ -18,7 +18,7 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Browse All Principals Dialog Box

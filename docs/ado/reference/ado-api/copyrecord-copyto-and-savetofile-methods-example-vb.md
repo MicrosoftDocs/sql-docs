@@ -22,7 +22,7 @@ ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CopyRecord, CopyTo, and SaveToFile Methods Example (VB)

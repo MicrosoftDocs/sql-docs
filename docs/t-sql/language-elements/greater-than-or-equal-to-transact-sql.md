@@ -27,9 +27,9 @@ helpviewer_keywords:
   - ">= (greater than or equal to operator)"
 ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # &gt;= (Greater Than or Equal To) (Transact-SQL)

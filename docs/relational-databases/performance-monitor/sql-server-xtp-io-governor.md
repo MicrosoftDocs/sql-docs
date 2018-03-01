@@ -16,7 +16,7 @@ ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
 caps.latest.revision: 2
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server XTP IO Governor

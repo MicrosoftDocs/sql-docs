@@ -33,7 +33,7 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XPath Data Types (SQLXML 4.0)

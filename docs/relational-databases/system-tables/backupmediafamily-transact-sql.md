@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "backup media [SQL Server], backupmediafamily system table"
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # backupmediafamily (Transact-SQL)

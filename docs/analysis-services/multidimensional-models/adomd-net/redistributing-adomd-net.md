@@ -1,7 +1,7 @@
 ---
 title: "Redistributing ADOMD.NET | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -26,7 +26,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Redistributing ADOMD.NET
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   When you write applications that use ADOMD.NET, you must redistribute the appropriate version of ADOMD.NET along with your application. To redistribute ADOMD.NET, include the ADOMD.NET setup program in your application's setup program.  
   
  The ADOMD.NET setup program, as well as the latest version of ADOMD.NET, can be found on the Microsoft Download Center as part of the SQL Server Feature Pack.  

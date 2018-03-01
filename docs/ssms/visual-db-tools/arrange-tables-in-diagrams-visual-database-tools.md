@@ -20,7 +20,7 @@ ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Arrange Tables in Diagrams (Visual Database Tools)

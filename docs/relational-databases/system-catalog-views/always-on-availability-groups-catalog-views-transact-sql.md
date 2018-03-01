@@ -21,7 +21,7 @@ ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 caps.latest.revision: 19
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Always On Availability Groups Catalog Views (Transact-SQL)

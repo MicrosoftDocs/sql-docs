@@ -18,7 +18,7 @@ ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using Related Technologies with RDS

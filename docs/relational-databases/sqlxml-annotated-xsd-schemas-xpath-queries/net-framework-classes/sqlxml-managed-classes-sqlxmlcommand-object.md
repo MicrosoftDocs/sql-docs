@@ -36,7 +36,7 @@ ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLXML Managed Classes - SqlXmlCommand Object

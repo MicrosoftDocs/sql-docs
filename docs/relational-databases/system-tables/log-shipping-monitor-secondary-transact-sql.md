@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "log_shipping_monitor_secondary system table"
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # log_shipping_monitor_secondary (Transact-SQL)

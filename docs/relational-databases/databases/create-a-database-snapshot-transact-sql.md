@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "database snapshots [SQL Server], creating"
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create a Database Snapshot (Transact-SQL)

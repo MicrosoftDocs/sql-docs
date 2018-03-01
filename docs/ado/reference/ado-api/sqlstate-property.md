@@ -23,7 +23,7 @@ ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLState Property

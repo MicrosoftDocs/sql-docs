@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "bitwise AND (&)"
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # &amp; (Bitwise AND) (Transact-SQL)

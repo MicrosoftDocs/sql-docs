@@ -33,9 +33,10 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Get started by running the Enable Database for Stretch Wizard
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- To configure a database for Stretch Database, run the Enable Database for Stretch Wizard.  This topic describes the info that you have to enter and the choices that you have to make in the wizard.  
+
+ To configure a database for Stretch Database, run the Enable Database for Stretch Wizard.  This article describes the info that you have to enter and the choices that you have to make in the wizard.  
   
  To learn more about Stretch Database, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md). 
  

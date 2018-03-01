@@ -18,7 +18,7 @@ ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Tables Collection Properties, Methods, and Events

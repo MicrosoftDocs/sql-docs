@@ -17,7 +17,7 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Security Design Features

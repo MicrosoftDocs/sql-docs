@@ -17,7 +17,7 @@ dev_langs:
 caps.latest.revision: 11
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC SHRINKLOG (Azure SQL Data Warehouse)

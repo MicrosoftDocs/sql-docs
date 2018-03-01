@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG014163 error"
 ms.assetid: b53dd463-ba36-421e-9745-67c7387e68dd
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG014163

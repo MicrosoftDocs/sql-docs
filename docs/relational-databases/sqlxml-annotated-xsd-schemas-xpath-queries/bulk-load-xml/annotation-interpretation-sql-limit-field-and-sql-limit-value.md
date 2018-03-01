@@ -23,7 +23,7 @@ ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Annotation Interpretation - sql:limit-field and sql:limit-value

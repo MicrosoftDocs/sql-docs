@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "Reduce method"
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Reduce (geometry Data Type)

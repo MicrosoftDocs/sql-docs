@@ -22,7 +22,7 @@ ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # GetString Method (ADO)

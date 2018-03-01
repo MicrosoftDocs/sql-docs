@@ -16,7 +16,7 @@ ms.topic: "article"
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Scale Out support for high availability

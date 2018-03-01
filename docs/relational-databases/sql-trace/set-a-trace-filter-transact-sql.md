@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set a Trace Filter (Transact-SQL)

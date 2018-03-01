@@ -18,7 +18,7 @@ ms.assetid: 10bc2dd1-0505-4527-8ec7-d3b4e5d6352b
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Recycle SQL Server Agent Error Logs

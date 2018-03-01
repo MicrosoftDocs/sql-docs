@@ -35,9 +35,9 @@ helpviewer_keywords:
   - "checking nullability"
 ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # IS NULL (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: 58d8564b-9c43-4965-a31c-2893890334ef
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_population_ranges (Transact-SQL)

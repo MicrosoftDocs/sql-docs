@@ -17,9 +17,9 @@ f1_keywords:
   - "sql13.swb.maint.maintplanproperties.server.f1"
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Maintenance Plan (Servers)

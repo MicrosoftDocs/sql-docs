@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_maintenance_plan_job"
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_maintenance_plan_job (Transact-SQL)

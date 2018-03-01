@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "RECONFIGURE, ALTER RESOURCE GOVERNOR"
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)

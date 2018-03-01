@@ -19,7 +19,7 @@ ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Command Streams

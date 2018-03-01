@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "systypes system table"
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.systypes (Transact-SQL)

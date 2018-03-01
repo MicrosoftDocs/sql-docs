@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "user-defined types [SQL Server], XML"
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FOR XML Support for the User-Defined Data Types (UDT)

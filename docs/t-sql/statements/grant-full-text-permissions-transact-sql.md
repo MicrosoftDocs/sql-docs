@@ -24,7 +24,7 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GRANT Full-Text Permissions (Transact-SQL)

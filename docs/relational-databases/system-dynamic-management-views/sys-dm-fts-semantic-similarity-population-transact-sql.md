@@ -25,7 +25,7 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_semantic_similarity_population (Transact-SQL)

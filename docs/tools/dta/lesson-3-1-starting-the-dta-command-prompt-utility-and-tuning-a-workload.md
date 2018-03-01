@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], tutorials"
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 3-1 - Starting the dta Command Prompt Utility and Tuning a Workload

@@ -21,7 +21,7 @@ ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Update and CancelUpdate Methods Example (VB)

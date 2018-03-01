@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "ending conversations [SQL Server]"
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # END CONVERSATION (Transact-SQL)

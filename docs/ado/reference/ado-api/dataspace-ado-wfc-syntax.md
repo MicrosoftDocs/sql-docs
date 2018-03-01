@@ -19,7 +19,7 @@ ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DataSpace (ADO - WFC Syntax)

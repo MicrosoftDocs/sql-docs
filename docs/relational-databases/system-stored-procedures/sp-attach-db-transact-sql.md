@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_attach_db"
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 caps.latest.revision: 69
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_attach_db (Transact-SQL)

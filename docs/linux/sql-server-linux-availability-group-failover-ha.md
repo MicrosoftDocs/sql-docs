@@ -3,22 +3,22 @@ title: Operate availability group SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: "Inactive"
 ---
-# Operate HA availability group for SQL Server on Linux
+# Operate Always On Availability Groups on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ## <a name="failover"></a>Fail over availability group
 
@@ -153,7 +153,7 @@ If you cannot fail over the availability group with the cluster management tools
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Fail over the availability group with Transact-SQL. In the example below replace `<**MyAg**>` with the name of your availability group. Connect to the instance of SQL Server that hosts the target secondary replica and run the following command:
+1. Fail over the availability group with Transact-SQL. In the following example, replace `<**MyAg**>` with the name of your availability group. Connect to the instance of SQL Server that hosts the target secondary replica and run the following command:
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -180,7 +180,7 @@ The following sections explain how to perform a rolling upgrade with SQL Server 
 
 When availability group replicas are on instances of SQL Server in Linux, the cluster type of the availability group is either `EXTERNAL` or `NONE`. An availability group that is managed by a cluster manager besides Windows Server Failover Cluster (WSFC) is `EXTERNAL`. Pacemaker with Corosync is an example of an external cluster manager. An availability group with no cluster manager has cluster type `NONE` The upgrade steps outlined here are specific for availability groups of cluster type `EXTERNAL` or `NONE`.
 
-1. Before you begin, backup each database.
+1. Before you begin, back up each database.
 2. Upgrade instances of SQL Server that host secondary replicas.
 
     a. Upgrade asynchronous secondary replicas first.
@@ -239,7 +239,7 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. After failover, upgrade SQL Server on the old primary replica by repeating the same procedure described in steps b.1-b.3 above.
+1. After failover, upgrade SQL Server on the old primary replica by repeating the same procedure described in steps b.1-b.3.
 
    The following example upgrades `mssql-server` and `mssql-server-ha` packages.
 
@@ -262,7 +262,7 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. For an availability groups with an external cluster manager - where cluster type is EXTERNAL, cleanup the location constraint that was caused by the manual failover. 
+1. For an availability groups with an external cluster manager - where cluster type is EXTERNAL, clean up the location constraint that was caused by the manual failover. 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  

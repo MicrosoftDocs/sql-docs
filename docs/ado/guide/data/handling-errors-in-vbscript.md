@@ -21,7 +21,7 @@ ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Handling Errors in VBScript

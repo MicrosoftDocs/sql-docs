@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_downloadlist"
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_downloadlist (Transact-SQL)

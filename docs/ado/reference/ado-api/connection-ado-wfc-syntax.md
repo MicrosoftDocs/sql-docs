@@ -19,7 +19,7 @@ ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connection (ADO - WFC Syntax)

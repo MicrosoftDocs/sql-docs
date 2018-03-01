@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_update_category"
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_update_category (Transact-SQL)

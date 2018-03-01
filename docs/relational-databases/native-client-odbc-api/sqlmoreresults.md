@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLMoreResults function"
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLMoreResults

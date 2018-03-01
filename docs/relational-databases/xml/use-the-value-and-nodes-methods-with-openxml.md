@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "nodes method [XML in SQL Server]"
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use the value() and nodes() Methods with OPENXML

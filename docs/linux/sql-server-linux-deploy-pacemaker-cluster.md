@@ -3,22 +3,22 @@ title: Deploy a Pacemaker cluster for SQL Server on Linux | Microsoft Docs
 description: This tutorial shows how to deploy a Pacemaker cluster for SQL Server on Linux. 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "sql-linux"
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.workload: "On Demand"
 ---
 
 # Deploy a Pacemaker cluster for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This tutorial documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux can be done before or after installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
 > [!IMPORTANT]
@@ -34,7 +34,7 @@ This tutorial documents the tasks required to deploy a Linux Pacemaker cluster f
 [Install SQL Server 2017](sql-server-linux-setup.md).
 
 ## Install the high availability add-on
-Use the syntax below to install the packages that make up the high availability (HA) add-on for each distribution of Linux. 
+Use the following syntax to install the packages that make up the high availability (HA) add-on for each distribution of Linux. 
 
 **Red Hat Enterprise Linux (RHEL)**
 1.  Register the server using the following syntax. You are prompted for a valid username and password.
@@ -149,7 +149,7 @@ Configuring Ubuntu is similar to RHEL. However, there is one major difference: i
 
 **SLES**
 
-The process for creating a Pacemaker cluster is completely different on SLES than it is on RHEL and Ubuntu. The steps below document how to create a cluster with SLES.
+The process for creating a Pacemaker cluster is completely different on SLES than it is on RHEL and Ubuntu. The following steps document how to create a cluster with SLES.
 1. Start the cluster configuration process by running 
    ```bash
    sudo ha-cluster-init
@@ -196,7 +196,7 @@ The process for creating a Pacemaker cluster is completely different on SLES tha
 12. Repeat Steps 8-11 for all other servers to be added to the cluster.
 
 ## Install the SQL Server HA and SQL Server Agent packages
-Use the commands below to install the SQL Server HA package and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, if they are not installed already. Installing the HA package after installing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
+Use the following commands to install the SQL Server HA package and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, if they are not installed already. Installing the HA package after installing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requires a restart of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] for it to be used. These instructions assume that the repositories for the Microsoft packages have already been set up, since [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should be installed at this point.
 > [!NOTE]
 > - If you will not use [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent for log shipping or any other use, it does not have to be installed, so package *mssql-server-agent* can be skipped.
 > - The other optional packages for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) and [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), are not required for high availability, either for an FCI or an AG.

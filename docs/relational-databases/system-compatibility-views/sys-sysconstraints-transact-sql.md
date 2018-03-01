@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysconstraints system table"
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysconstraints (Transact-SQL)

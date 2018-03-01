@@ -18,7 +18,7 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lookup Transformation Full Cache Mode - Cache Connection Manager

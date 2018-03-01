@@ -22,10 +22,7 @@ ms.workload: "Inactive"
 # Verify a Power Pivot for SharePoint Installation
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint instance that you install in a SharePoint farm is administered through SharePoint Central Administration. At a minimum, you can check pages in Central Administration and on SharePoint sites to verify that [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server components and features are available. However, to fully verify an installation, you must have a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbook that you can publish to SharePoint and access from a library. For testing purposes, you can publish a sample workbook that already contains [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data and use it to confirm that SharePoint integration is correctly configured.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
+
   
 ##  <a name="verifyinstall"></a> Verify Central Administration Integration  
  To verify [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] integration with Central Administration, do the following:  

@@ -22,7 +22,7 @@ ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ConnectionString, ConnectionTimeout, and State Properties Example (VB)

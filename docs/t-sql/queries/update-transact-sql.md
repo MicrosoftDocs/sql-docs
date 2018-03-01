@@ -41,9 +41,9 @@ helpviewer_keywords:
   - "WHERE clause, UPDATE statement"
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 caps.latest.revision: 91
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # UPDATE (Transact-SQL)

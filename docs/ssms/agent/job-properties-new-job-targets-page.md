@@ -18,7 +18,7 @@ ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Job Properties - New Job (Targets Page)

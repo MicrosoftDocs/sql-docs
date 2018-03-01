@@ -21,7 +21,7 @@ ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Axis Object (ADO MD)

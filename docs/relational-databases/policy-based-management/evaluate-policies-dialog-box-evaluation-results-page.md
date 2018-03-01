@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.dmf.evalpoliciesresults.f1"
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Evaluate Policies Dialog Box, Evaluation Results Page

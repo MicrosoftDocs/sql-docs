@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "troubleshooting [IntelliSense]"
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Troubleshooting IntelliSense

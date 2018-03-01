@@ -51,7 +51,7 @@ ms.workload: "Inactive"
   
 ### A. Viewing current parallel worker availability  
 
-``` tsql 
+```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  
 ```  
   

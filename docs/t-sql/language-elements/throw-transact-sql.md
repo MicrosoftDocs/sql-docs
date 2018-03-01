@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "THROW statement"
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # THROW (Transact-SQL)
@@ -55,9 +55,9 @@ THROW [ { error_number | @local_variable },
 ## Remarks  
  The statement before the THROW statement must be followed by the semicolon (;) statement terminator.  
   
- If a TRY…CATCH construct is not available, the session is ended. The line number and procedure where the exception is raised are set. The severity is set to 16.  
+ If a TRY…CATCH construct is not available, the statement batch is terminated. The line number and procedure where the exception is raised are set. The severity is set to 16.  
   
- If the THROW statement is specified without parameters, it must appear inside a CATCH block. This causes the caught exception to be raised. Any error that occurs in a THROW statement causes the statement batch to be ended.  
+ If the THROW statement is specified without parameters, it must appear inside a CATCH block. This causes the caught exception to be raised. Any error that occurs in a THROW statement causes the statement batch to be terminated.  
   
  % is a reserved character in the message text of a THROW statement and must be escaped. Double the % character to return % as part of the message text, for example 'The increase exceeded 15%% of the original value.'  
   

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "thread and task architecture guide"
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Thread and Task Architecture Guide

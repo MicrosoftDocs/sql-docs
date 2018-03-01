@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "GetParameterProperties method"
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ISSCommandWithParameters::GetParameterProperties (OLE DB)

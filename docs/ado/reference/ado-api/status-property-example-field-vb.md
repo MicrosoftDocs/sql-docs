@@ -20,7 +20,7 @@ ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Status Property Example (Field) (VB)

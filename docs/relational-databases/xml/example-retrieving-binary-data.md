@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "RAW mode, retrieving binary data example"
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Retrieving Binary Data

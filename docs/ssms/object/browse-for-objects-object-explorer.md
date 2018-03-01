@@ -19,7 +19,7 @@ ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Browse for Objects (Object Explorer)

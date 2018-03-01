@@ -19,7 +19,7 @@ ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CEILING (SSIS Expression)

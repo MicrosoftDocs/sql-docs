@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "transactional replication, backup and restore"
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Quiesce a Replication Topology (Replication Transact-SQL Programming)

@@ -44,6 +44,6 @@ ms.workload: "Inactive"
   
  [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [Performance Counters &#40;SSAS&#41;](../../analysis-services/instances/performance-counters-ssas.md)  
+ [Performance Counters ](../../analysis-services/instances/performance-counters-ssas.md)  
   
   

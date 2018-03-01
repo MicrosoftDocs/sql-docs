@@ -21,7 +21,7 @@ ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Columns and Tables Append Methods, Name Property Example (VB)

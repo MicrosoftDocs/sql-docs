@@ -21,7 +21,7 @@ ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OriginalValue Property (ADO)

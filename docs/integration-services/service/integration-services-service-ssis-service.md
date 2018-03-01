@@ -28,7 +28,7 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Integration Services Service (SSIS Service)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "user-defined stored procedures [SQL Server]"
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Execute a Stored Procedure

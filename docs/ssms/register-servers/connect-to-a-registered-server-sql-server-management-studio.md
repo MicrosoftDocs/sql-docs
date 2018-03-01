@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "connections [SQL Server], registered servers"
 ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to a Registered Server (SQL Server Management Studio)

@@ -1,7 +1,7 @@
 ---
 title: "Merging Partitions (XMLA) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -28,7 +28,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Merging Partitions (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   If partitions have the same aggregation design and structure, you can merge the partition by using the [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) command in XML for Analysis (XMLA). Merging partitions is an important action to perform when you manage partitions, especially those partitions that contain historical data partitioned by date.  
   
  For example, a financial cube may use two partitions:  

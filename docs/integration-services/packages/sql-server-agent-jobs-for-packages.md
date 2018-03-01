@@ -21,7 +21,7 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server Agent Jobs for Packages

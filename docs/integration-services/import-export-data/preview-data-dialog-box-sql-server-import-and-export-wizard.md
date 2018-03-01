@@ -18,7 +18,7 @@ ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Preview Data Dialog Box (SQL Server Import and Export Wizard)

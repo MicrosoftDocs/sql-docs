@@ -21,7 +21,7 @@ ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Rename a SQL Server Agent Error Log (SQL Server Management Studio)

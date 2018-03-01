@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "subtracting numbers"
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "AUTO FOR XML mode, heuristics in shaping returned XML"
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AUTO Mode Heuristics in Shaping Returned XML

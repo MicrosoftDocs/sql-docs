@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_apply_job_to_targets"
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_apply_job_to_targets (Transact-SQL)

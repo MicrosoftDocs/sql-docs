@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_jobsteplog"
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_jobsteplog (Transact-SQL)

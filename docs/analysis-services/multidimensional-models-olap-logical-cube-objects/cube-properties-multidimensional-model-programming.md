@@ -70,7 +70,7 @@ ms.workload: "Inactive"
 |**ScriptErrorHandlingMode**|Determines error handling. Options are **IgnoreNone** or **IgnoreAll**|  
 |**Source**|Displays the data source view used for the cube.|  
 |**StorageLocation**|Specifies the file system storage location for the cube. If none is specified, the location is inherited from the database that contains the cube object.|  
-|**StorageMode**|Specifies the storage mode for the cube. Values are **MOLAP**, **ROLAP**, or **HOLAP****.**|  
+|**StorageMode**|Specifies the storage mode for the cube. Values are **MOLAP**, **ROLAP**, or **HOLAP**.|  
 |**Visible**|Determines the visibility of the cube.|  
   
 > [!NOTE]  

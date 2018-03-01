@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.monitor.main.f1"
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Monitor, Main Page

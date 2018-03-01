@@ -20,7 +20,7 @@ ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Start a Job

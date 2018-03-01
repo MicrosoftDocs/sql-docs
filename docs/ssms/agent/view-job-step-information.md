@@ -21,7 +21,7 @@ ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Job Step Information

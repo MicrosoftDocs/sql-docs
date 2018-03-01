@@ -18,7 +18,7 @@ ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server, LogPool FreePool Object

@@ -21,7 +21,7 @@ ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Charset Property (ADO)

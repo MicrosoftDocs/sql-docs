@@ -1,25 +1,17 @@
 ---
 title: Updated - Analytics Platform System for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Analytics Platform System for Microsoft SQL Server.
-services: na
-documentationcenter: ''
-author: MightyPen
-manager: jhubbard
-editor: ''
-ms.suite: sql
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.topic: article
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
-ms.author: genemi
-ms.workload: sql-analytics-platform-system
 
+manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: aps-pdw
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: Analytics Platform System for SQL Server
 
@@ -33,7 +25,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
+- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
 - *Subject area:* &nbsp; **Analytics Platform System for SQL Server**.
 
 
@@ -46,93 +38,7 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Acquire and configure a backup server](acquire-and-configure-backup-server.md)
-2. [Acquire and configure a loading server](acquire-and-configure-loading-server.md)
-3. [Antivirus Software](antivirus-software.md)
-4. [Appliance Configuration](appliance-configuration.md)
-5. [Appliance Installation and Configuration Overview](appliance-installation-and-configuration-overview.md)
-6. [Appliance Management Tasks](appliance-management-tasks.md)
-7. [Appliance Monitoring](appliance-monitoring.md)
-8. [Appliance Network Configuration](appliance-network-configuration.md)
-9. [Appliance Time Zone Configuration](appliance-time-zone-configuration.md)
-10. [Appliance Topology](appliance-topology.md)
-11. [Apply Analytics Platform System Hotfixes](apply-analytics-platform-system-hotfixes.md)
-12. [Backup and loading hardware overview](backup-and-loading-hardware.md)
-13. [Backup and restore](backup-and-restore-overview.md)
-14. [Backup server capacity planning worksheet](backup-capacity-planning-worksheet.md)
-15. [Configure an External SMP SQL Server to Receive Remote Table Copies](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)
-16. [Configure an External Windows System To Receive Remote Table Copies Using InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)
-17. [Configure InfiniBand network adapters for Analytics Platform System](configure-infiniband-network-adapters.md)
-18. [Configure PolyBase Connectivity to External Data](configure-polybase-connectivity-to-external-data.md)
-19. [Configure SCOM to Monitor Analytics Platform System](configure-scom-to-monitor-analytics-platform-system.md)
-20. [Configure SQL Server PDW for Remote Table Copies](configure-sql-server-pdw-for-remote-table-copies.md)
-21. [Configure Windows Server Update Services (WSUS)](configure-windows-server-update-services-wsus.md)
-22. [Connect to Appliance Nodes](connect-to-appliance-nodes.md)
-23. [Create an APS Domain Administrator](create-an-aps-domain-administrator-aps.md)
-24. [How to create a script task that uses the SSIS PDW destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)
-25. [Determine Polling Frequency](determine-polling-frequency.md)
-26. [Determine Which Cluster Node Failed](determine-which-cluster-node-failed.md)
-27. [Download and Apply Microsoft Updates](download-and-apply-microsoft-updates.md)
-28. [dwloader Command-Line Loader](dwloader.md)
-29. [Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md)
-30. [Error Messages](error-messages.md)
-31. [Grant permissions](grant-permissions.md)
-32. [Analytics Platform System hardware components](hardware-components.md)
-33. [Hardware configurations](hardware-configurations.md)
-34. [Hardware Installation](hardware-installation.md)
-35. [Analytics Platform System high availability](high-availability.md)
-36. [Import the SCOM Management Pack for PDW](import-the-scom-management-pack-for-pdw.md)
-37. [Information to Obtain from Your IHV](information-to-obtain-from-your-ihv.md)
-38. [Install the SCOM Management Packs](install-the-scom-management-packs.md)
-39. [Instant File Initialization Configuration](instant-file-initialization-configuration.md)
-40. [Launch the Configuration Manager](launch-the-configuration-manager.md)
-41. [Loading server capacity planning worksheet](loading-server-capacity-planning-worksheet.md)
-42. [Load (SQL Server PDW)](load-overview.md)
-43. [Load data with INSERT](load-with-insert.md)
-44. [Load data with Integration Services](load-with-ssis.md)
-45. [Locking Behavior](locking-behavior.md)
-46. [master Database](master-database.md)
-47. [Monitor Appliance Health State](monitor-appliance-health-state.md)
-48. [Monitoring Active Queries](monitoring-active-queries.md)
-49. [Monitor loads](monitor-loads.md)
-50. [Monitor the Appliance by Using System Center Operations Manager](monitor-the-appliance-by-using-system-center-operations-manager.md)
-51. [Monitor the Appliance by Using System Views](monitor-the-appliance-by-using-system-views.md)
-52. [Monitor the Appliance by Using the Admin Console](monitor-the-appliance-by-using-the-admin-console.md)
-53. [Parallel Data Warehouse overview](parallel-data-warehouse-overview.md)
-54. [Password Reset](password-reset.md)
-55. [PDW and Appliance Fabric Physical Components](pdw-and-appliance-fabric-physical-components.md)
-56. [PDW Certificate Provisioning](pdw-certificate-provisioning.md)
-57. [PDW Firewall Configuration](pdw-firewall-configuration.md)
-58. [PDW Permissions](pdw-permissions.md)
-59. [PDW Services Status](pdw-services-status.md)
-60. [PDW Topology](pdw-topology.md)
-61. [Power the APS Appliance On or Off](power-the-aps-appliance-on-or-off.md)
-62. [Analytics Platform System processing and storage capacity](processing-and-storage-capacity-planning.md)
-63. [PDW Certificate Provisioning](provision-certificate.md)
-64. [Remote Table Copy](remote-table-copy.md)
-65. [Reserved Database Names](reserved-database-names.md)
-66. [Restore a database protected by TDE](restore-database-protected-by-tde.md)
-67. [Restore the Master Database](restore-the-master-database.md)
-68. [Send Telemetry Feedback to Microsoft](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)
-69. [Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode (DSRM)](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)
-70. [Software Servicing](software-servicing.md)
-71. [Staging database](staging-database.md)
-72. [System Databases](system-databases.md)
-73. [tempdb Database](tempdb-database.md)
-74. [Track Appliance Alerts](track-appliance-alerts.md)
-75. [Transparent Data Encryption](transparent-data-encryption.md)
-76. [Language elements](tsql-language-elements.md)
-77. [T-SQL topics](tsql-statements.md)
-78. [System views](tsql-system-views.md)
-79. [Understanding Admin Console Alerts](understanding-admin-console-alerts.md)
-80. [Uninstall Analytics Platform System Hotfixes](uninstall-analytics-platform-system-hotfixes.md)
-81. [Uninstall Microsoft Updates](uninstall-microsoft-updates.md)
-82. [Use a DNS Forwarder to Resolve Non-Appliance DNS Names](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)
-83. [User Sessions](user-sessions.md)
-84. [View Capacity Utilization](view-capacity-utilization.md)
-85. [What's new in Analytics Platform System 2016, a scale-out MPP data warehouse](whats-new-analytics-platform-system.md)
-86. [Workload Management](workload-management.md)
-87. [Workload Management Tasks](workload-management-tasks.md)
+***There are no new articles to list, this time.***
 
 
 
@@ -158,58 +64,101 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Configure PolyBase Connectivity to External Data](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-***No articles in this area were updated recently, this time.***
+&nbsp;
+
+<a name="TitleNum_1"/>
+
+### 1. &nbsp; [Configure PolyBase Connectivity to External Data](configure-polybase-connectivity-to-external-data.md)
+
+*Updated: 2018-01-29* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!-- Source markdown line 132.  ms.author= "barbkess".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 947f789480da66b9f636f39b30caec6be60d8c4d d4d4d45fbbb8e10ed6f26fe12f9a25d2e8e4f068  (PR=4741  ,  Filename=configure-polybase-connectivity-to-external-data.md  ,  Dirpath=docs\analytics-platform-system\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
+
+
+
+**Kerberos configuration**
+
+Note, that when PolyBase authenticates to a Kerberos secured cluster, the hadoop.rpc.protection setting must be set to authentication. This leaves the data communication between Hadoop nodes unencrypted.
+
+ To connect to a Kerberos-secured Hadoop cluster [using MIT KDC]:
+
+
+1.  Find the Hadoop configuration directory in the installation path on the Control node:
+
+    ```
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```
+
+2.  Find the Hadoop side configuration value of the configuration keys listed in the table. (On the Hadoop machine, find the files in the Hadoop configuration directory.)
+
+3.  Copy the configuration values into the value property in the corresponding files on the Control node.
+
+    |**#**|**Configuration file**|**Configuration key**|**Action**|
+    |------------|----------------|---------------------|----------|
+    |1|core-site.xml|polybase.kerberos.kdchost|Specify the KDC hostname. For example: kerberos.your-realm.com.|
+    |2|core-site.xml|polybase.kerberos.realm|Specify the Kerberos realm. For example: YOUR-REALM.COM|
+    |3|core-site.xml|hadoop.security.authentication|Find the Hadoop side configuration and copy to SQL Server machine. For example: KERBEROS<br></br>**Security note:** KERBEROS must be written in upper case. If lower case, it might not be on.|
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: hdfs/_HOST@YOUR-REALM.COM|
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: mapred/_HOST@YOUR-REALM.COM|
+    |6|mapred-site.xml|mapreduce.jobhistory.address|Find the Hadoop side configuration and copy to SQL Server machine. For example: 10.193.26.174:10020|
+    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: yarn/_HOST@YOUR-REALM.COM|
 
 
 
 
 
 
-## Similar Articles
 
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## Similar articles about new or updated articles
 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### Subject areas which do have new or recently updated articles
 
-- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+#### Subject areas that *do* have new or recently updated articles
 
-#### Subject areas which have no new or recently updated articles
+
+- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### Subject areas that do *not* have any new or recently updated articles
+
 
 - [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

@@ -27,7 +27,7 @@ ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Monitor and Respond to Events

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "TM: Promote Tran Starting event class"
 ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # TM: Promote Tran Starting Event Class

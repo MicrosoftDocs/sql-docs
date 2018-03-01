@@ -18,7 +18,7 @@ ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_nodes_column_store_dictionaries (Transact-SQL)

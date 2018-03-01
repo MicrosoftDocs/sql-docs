@@ -20,7 +20,8 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure compatible SQL Server features with Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 Take simple steps to configure the following SQL Server features to work with Stretch Database.
 -   Always On

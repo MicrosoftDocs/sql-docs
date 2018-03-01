@@ -23,7 +23,7 @@ Get the connection information you need to connect to the SSISDB Catalog databas
 - login information 
 
 > [!IMPORTANT]
-> You can't create the SSISDB Catalog database on Azure SQL Database at this time independently of creating the Azure-SSIS Integration Runtime in Azure Data Factory version 2. It's the Azure-SSIS IR that runs SSIS packages on Azure. For more info and a sample PowerShell script, see [Deploy SQL Server Integration Services packages to Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+> You can't create the SSISDB Catalog database on Azure SQL Database at this time independently of creating the Azure-SSIS Integration Runtime in Azure Data Factory version 2. It's the Azure-SSIS IR that runs SSIS packages on Azure. For more info, see [Deploy SSIS packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## Prerequisites
 Before you start, make sure you have version 17.2 or later of SQL Server Management Studio. To download the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

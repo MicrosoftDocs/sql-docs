@@ -126,11 +126,11 @@ For more information:
 
 ### <a name="forceManual"></a> Force manual failover 
 
-If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to fail over manually to bypass the external cluster manager. This procedure is not recommended for regular operations, and should be used when the cluster is fails to execute the failover action using the cluster management tools. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an availability group in Windows.
+If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to fail over manually to bypass the external cluster manager. This procedure is not recommended for regular operations, and should be used when the cluster fails to execute the failover action using the cluster management tools. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an availability group in Windows.
 
 A forced failover is a form of manual failover that is intended strictly for disaster recovery. For example, when you cannot fail over with cluster management tools. If you force failover to an unsynchronized secondary replica, some data loss is possible. Only force failover if you must restore service to the availability group immediatley and are willing to risk losing data. 
 
-The process for forcing manual failover is specific to SQL Server on Linux.
+This process for forcing manual failover is specific to SQL Server on Linux.
 
 1. Verify that the availability group resource is not managed by the cluster any more. 
 
@@ -202,7 +202,8 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
-   b.2. Upgrade SQL Server on the secondary replica
+
+1. Upgrade SQL Server on the secondary replica
 
    The following example upgrades `mssql-server` and `mssql-server-ha` packages.
 
@@ -210,7 +211,7 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-   b.3. Remove the location constraint
+1. Remove the location constraint
 
    Before running the upgrade command, stop the resource so the cluster will not monitor it and fail it unnecessarily. The following example adds a location constraint on the node that will result on the resource to be stopped. Update `ag_cluster-master` with the resource name and `nodeName1` with the node hosting the replica targeted for upgrade.
 

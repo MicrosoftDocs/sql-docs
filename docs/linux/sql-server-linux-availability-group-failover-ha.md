@@ -16,7 +16,7 @@ ms.technology: database-engine
 ms.assetid: 
 ms.workload: "Inactive"
 ---
-# Manage Always On availability groups failover on Linux
+# Manage Always On availability group failover on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

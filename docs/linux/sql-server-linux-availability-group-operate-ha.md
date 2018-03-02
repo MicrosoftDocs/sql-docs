@@ -30,17 +30,14 @@ The following sections explain how to perform a rolling upgrade with SQL Server 
 
 When availability group replicas are on instances of SQL Server in Linux, the cluster type of the availability group is either `EXTERNAL` or `NONE`. An availability group that is managed by a cluster manager besides Windows Server Failover Cluster (WSFC) is `EXTERNAL`. Pacemaker with Corosync is an example of an external cluster manager. An availability group with no cluster manager has cluster type `NONE` The upgrade steps outlined here are specific for availability groups of cluster type `EXTERNAL` or `NONE`.
 
-1. Before you begin, back up each database.
-2. Upgrade instances of SQL Server that host secondary replicas.
-
-    a. Upgrade asynchronous secondary replicas first.
-
-    b. Upgrade synchronous secondary replicas.
+The order in which you upgrade instances depends on if their role is secondary and whether or not they host synchronous or asynchronous replicas. Upgrade instances of SQL Server that host aynchronous secondary replicas first. Then upgrade instances that host synchronous secondary replicas. 
 
    >[!NOTE]
    >If an availability group only has asynchronous replicas, to avoid any data loss change one replica to synchronous and wait until it is synchronized. Then upgrade this replica.
    
-   b.1. Stop the resource on the node hosting the secondary replica targeted for upgrade
+Before you begin, back up each database.
+
+1. Stop the resource on the node hosting the secondary replica targeted for upgrade.
    
    Before running the upgrade command, stop the resource so the cluster will not monitor it and fail it unnecessarily. The following example adds a location constraint on the node that will result on the resource to be stopped. Update `ag_cluster-master` with the resource name and `nodeName1` with the node hosting the replica targeted for upgrade.
 
@@ -48,7 +45,7 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
 
-1. Upgrade SQL Server on the secondary replica
+1. Upgrade SQL Server on the secondary replica.
 
    The following example upgrades `mssql-server` and `mssql-server-ha` packages.
 
@@ -56,7 +53,7 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
-1. Remove the location constraint
+1. Remove the location constraint.
 
    Before running the upgrade command, stop the resource so the cluster will not monitor it and fail it unnecessarily. The following example adds a location constraint on the node that will result on the resource to be stopped. Update `ag_cluster-master` with the resource name and `nodeName1` with the node hosting the replica targeted for upgrade.
 

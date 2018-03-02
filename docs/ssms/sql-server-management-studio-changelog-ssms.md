@@ -657,8 +657,7 @@ Generally available | Build number: 13.0.16100.1
 * Fixed an issue where clicking query plan XML does not open the proper SSMS UI.
 
 
-## ![download](../ssdt/media/download.png) [SSMS 16.5](h
-ttp://go.microsoft.com/fwlink/?LinkID=799832)
+## ![download](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=799832)
 Generally available | Build number: 13.0.16000.28
 
 

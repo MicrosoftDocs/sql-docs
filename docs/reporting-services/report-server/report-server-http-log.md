@@ -1,7 +1,7 @@
 ---
 title: "Report Server HTTP Log | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "03/02/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""

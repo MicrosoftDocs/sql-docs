@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "creating subscription views [Master Data Services]"
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

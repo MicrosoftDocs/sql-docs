@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "deleting attributes [Master Data Services]"
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

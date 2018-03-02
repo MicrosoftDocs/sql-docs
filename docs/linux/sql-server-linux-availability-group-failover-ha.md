@@ -1,5 +1,5 @@
 ---
-title: Operate availability group SQL Server on Linux | Microsoft Docs
+title: Manage availability group failover - SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -16,22 +16,26 @@ ms.technology: database-engine
 ms.assetid: 
 ms.workload: "Inactive"
 ---
-# Operate Always On Availability Groups on Linux
+# Manage Always On availability groups failover on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+For backround information about failover, see [Failover and failover modes](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
+
+## Database level monitoring and failover trigger
+
+For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compared to WSFC. When the availability group is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the availability group health to report a fault. This signals the cluster manager to trigger a failover action. On Linux, the SQL Server instance cannot communicate with the cluster. Monitoring for database health is done *outside-in*. If user opted in for database level failover monitoring and failover (by setting the option `DB_FAILOVER=ON` when creating the availability group), the cluster will check if the database state is `ONLINE` every time it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different than `ONLINE`, it will trigger a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action as well as the database state being updated in sys.databases.
+
+Automatic failover requires at least one synchronous replica.
 
 ## <a name="failover"></a>Fail over availability group
 
 Use the cluster management tools to fail over an availability group managed by an external cluster manager. For example, if a solution uses Pacemaker to manage a Linux cluster, use `pcs` to perform manual failovers on RHEL or Ubuntu. On SLES use `crm`. 
 
 > [!IMPORTANT]
-> Under normal operations, do not fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager. 
-
-For backround information, see [Failover and failover modes](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
+> Under normal operations, do not fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager. For instructions to force failover with potential data loss, see [Force  failover](#forceFailover).
 
 ### <a name="manualFailover">Manual failover examples
-
-Manually fail over the availability group with the external cluster management tools. Under normal operations, do not initiate failover with Transact-SQL. If the external cluster management tools do not respond, you can force the availability group to fail over. For instructions to force failover, see [Force  failover](#forceFailover).
 
 To fail over, the secondary replica that will become the primary replica must be synchronous. If a secondary replica is asynchronous, [change the availability mode](../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).
 
@@ -58,8 +62,6 @@ To manually fail over an availability group resource named *ag_cluster* to clust
    ```bash
    crm resource migrate ag_cluster nodeName2
    ```
-
-
 
 >[!IMPORTANT]
 >After you manually fail over a resource, you need to remove a location constraint that is automatically added during the move.
@@ -127,12 +129,11 @@ For more information:
 - [Pacemaker - Move Resources Manually](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
+## <a name="forceFailover"></a> Force failover 
 
-### <a name="forceFailover"></a> Force failover 
+If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to force fail over to bypass the external cluster manager. This procedure is not recommended for regular operations. Use it when the cluster management tools fail to execute the failover action. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an availability group in Windows.
 
-If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to fail over manually to bypass the external cluster manager. This procedure is not recommended for regular operations, and should be used when the cluster fails to execute the failover action using the cluster management tools. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an availability group in Windows.
-
-A forced failover is a form of manual failover that is intended strictly for disaster recovery. For example, when you cannot fail over with cluster management tools. If you force failover to an unsynchronized secondary replica, some data loss is possible. Only force failover if you must restore service to the availability group immediately and are willing to risk losing data. 
+A forced failover is intended strictly for disaster recovery. For example, when you cannot fail over with cluster management tools. If you force failover to an unsynchronized secondary replica, some data loss is possible. Only force failover if you must restore service to the availability group immediately and are willing to risk losing data. 
 
 This process for forcing manual failover is specific to SQL Server on Linux.
 
@@ -174,127 +175,6 @@ This process for forcing manual failover is specific to SQL Server on Linux.
 
 >[!TIP]
 >Do not use the preceding steps for disaster recovery drills because they risk data loss. Instead change the asynchronous replica to synchronous, and the instructions for [normal manual failover](#manualFailover).
-
-## Database level monitoring and failover trigger
-
-For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compared to WSFC. When the availability group is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the availability group health to report a fault. This signals the cluster manager to trigger a failover action. On Linux, the SQL Server instance cannot communicate with the cluster. Monitoring for database health is done *outside-in*. If user opted in for database level failover monitoring and failover (by setting the option `DB_FAILOVER=ON` when creating the availability group), the cluster will check if the database state is `ONLINE` every time when it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different than `ONLINE`, it will trigger a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action as well as the database state being updated in sys.databases.
-
-## Upgrade availability group
-
-Before you upgrade an availability group, review the patterns and practices at [Upgrading availability group replica instances](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
-
-The following sections explain how to perform a rolling upgrade with SQL Server instances on Linux with availability groups. 
-
-### Upgrade steps on Linux
-
-When availability group replicas are on instances of SQL Server in Linux, the cluster type of the availability group is either `EXTERNAL` or `NONE`. An availability group that is managed by a cluster manager besides Windows Server Failover Cluster (WSFC) is `EXTERNAL`. Pacemaker with Corosync is an example of an external cluster manager. An availability group with no cluster manager has cluster type `NONE` The upgrade steps outlined here are specific for availability groups of cluster type `EXTERNAL` or `NONE`.
-
-1. Before you begin, back up each database.
-2. Upgrade instances of SQL Server that host secondary replicas.
-
-    a. Upgrade asynchronous secondary replicas first.
-
-    b. Upgrade synchronous secondary replicas.
-
-   >[!NOTE]
-   >If an availability group only has asynchronous replicas, to avoid any data loss change one replica to synchronous and wait until it is synchronized. Then upgrade this replica.
-   
-   b.1. Stop the resource on the node hosting the secondary replica targeted for upgrade
-   
-   Before running the upgrade command, stop the resource so the cluster will not monitor it and fail it unnecessarily. The following example adds a location constraint on the node that will result on the resource to be stopped. Update `ag_cluster-master` with the resource name and `nodeName1` with the node hosting the replica targeted for upgrade.
-
-   ```bash
-   pcs constraint location ag_cluster-master avoids nodeName1
-   ```
-
-1. Upgrade SQL Server on the secondary replica
-
-   The following example upgrades `mssql-server` and `mssql-server-ha` packages.
-
-   ```bash
-   sudo yum update mssql-server
-   sudo yum update mssql-server-ha
-   ```
-1. Remove the location constraint
-
-   Before running the upgrade command, stop the resource so the cluster will not monitor it and fail it unnecessarily. The following example adds a location constraint on the node that will result on the resource to be stopped. Update `ag_cluster-master` with the resource name and `nodeName1` with the node hosting the replica targeted for upgrade.
-
-   ```bash
-   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
-   ```
-   As a best practice, ensure the resource is started (using `pcs status` command) and the secondary replica is connected and synchronized state after upgrade.
-
-1. After all secondary replicas are upgraded, manually fail over to one of the synchronous secondary replicas.
-
-   For availability groups with `EXTERNAL` cluster type, use the cluster management tools to fail over; availability groups with `NONE` cluster type should use Transact-SQL to fail over. 
-   The following example fails over an availability group with the cluster management tools. Replace `<targetReplicaName>` with the name of the synchronous secondary replica that will become primary:
-
-   ```bash
-   sudo pcs resource move ag_cluster-master <targetReplicaName> --master  
-   ``` 
-   
-   >[!IMPORTANT]
-   >The following steps only apply to availability groups that do not have a cluster manager.
-
-   If the availability group cluster type is `NONE`, manually fail over. Complete the following steps in order:
-
-      a. The following command sets the primary replica to secondary. Replace `AG1` with the name of your availability group. Run the Transact-SQL command on the instance of SQL Server that hosts the primary replica.
-
-      ```transact-sql
-      ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
-      ```
-
-      b. The following command sets a synchronous secondary replica to primary. Run the following Transact-SQL command on the target instance of SQL Server - the instance that hosts the synchronous secondary replica.
-
-      ```transact-sql
-      ALTER AVAILABILITY GROUP [ag1] FAILOVER;
-      ```
-
-1. After failover, upgrade SQL Server on the old primary replica by repeating the same procedure described in steps b.1-b.3.
-
-   The following example upgrades `mssql-server` and `mssql-server-ha` packages.
-
-   ```bash
-   # add constraint for the resource to stop on the upgraded node
-   # replace 'nodename2' with the name of the cluster node targeted for upgrade
-   pcs constraint location ag_cluster-master avoids nodeName2
-   sudo yum update mssql-server
-   sudo yum update mssql-server-ha
-   ```
-   
-   ```bash
-   # upgrade mssql-server and mssql-server-ha packages
-   sudo yum update mssql-server
-   sudo yum update mssql-server-ha
-   ```
-
-   ```bash
-   # remove the constraint; make sure the resource is started and replica is connected and synchronized
-   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
-   ```
-
-1. For an availability groups with an external cluster manager - where cluster type is EXTERNAL, clean up the location constraint that was caused by the manual failover. 
-
-   ```bash
-   sudo pcs constraint remove cli-prefer-ag_cluster-master  
-   ```
-
-1. Resume data movement for the newly upgraded secondary replica - the former primary replica. This step is required when a higher version instance of SQL Server is transferring log blocks to a lower version instance in an availability group. Run the following command on the new secondary replica (the previous primary replica).
-
-   ```transact-sql
-   ALTER DATABASE database_name SET HADR RESUME;
-   ```
-
-After upgrading all servers, you can fail back. Fail over back to the original primary - if necessary. 
-
-## Drop an availability group
-
-To delete an availability group, run [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). If the cluster type is `EXTERNAL` or `NONE` run the command on every instance of SQL Server that hosts a replica. For example, to drop an availability group named `group_name` run the following command:
-
-   ```transact-sql
-   DROP AVAILABILITY GROUP group_name
-   ```
- 
 
 ## Next steps
 

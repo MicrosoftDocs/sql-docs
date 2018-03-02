@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "attribute groups [Master Data Services], deleting"
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

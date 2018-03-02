@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "staging process [Master Data Services], viewing errors"
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 caps.latest.revision: 8
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

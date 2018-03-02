@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "deleting entities [Master Data Services]"
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

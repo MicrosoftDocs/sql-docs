@@ -31,6 +31,8 @@ Use the cluster management tools to fail over an availability group managed by a
 
 Manually fail over the availability group with the external cluster management tools. Under normal operations, do not initiate failover with Transact-SQL. If the external cluster management tools do not respond, you can force the availability group to fail over. For instructions to force the manual failover, see [Force manual failover](#forceManual).
 
+To failover, the secondary replica that will become the primary replica must be synchronous. 
+
 Complete the manual failover in two steps. 
 
 1. Move the availability group resource from the cluster node that owns the resources to a new node.
@@ -169,7 +171,7 @@ This process for forcing manual failover is specific to SQL Server on Linux.
    ```
 
 >[!TIP]
->Do not use the preceding steps for disaster recovery drills because they risk data loss. Instead, follow the instructions for [normal manual failover](#manualFailover).
+>Do not use the preceding steps for disaster recovery drills because they risk data loss. Instead change the asynchronous replica to synchronous, and the instructions for [normal manual failover](#manualFailover).
 
 ## Database level monitoring and failover trigger
 

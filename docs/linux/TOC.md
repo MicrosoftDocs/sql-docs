@@ -83,7 +83,7 @@
 ##### [Configure on RHEL](sql-server-linux-availability-group-cluster-rhel.md)
 ##### [Configure on SLES](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Configure on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
-##### [Fail over](sql-server-linux-availability-group-failover-ha.md)
+##### [Failover](sql-server-linux-availability-group-failover-ha.md)
 ##### [Operate](sql-server-linux-availability-group-operate-ha.md)
 #### [Create for read-scale only]()
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)

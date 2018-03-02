@@ -27,9 +27,11 @@ Use the cluster management tools to fail over an availability group managed by a
 > [!IMPORTANT]
 > Under normal operations, do not fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager. 
 
+For backround information, see [Failover and failover modes](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
+
 ### <a name="manualFailover">Manual failover examples
 
-Manually fail over the availability group with the external cluster management tools. Under normal operations, do not initiate failover with Transact-SQL. If the external cluster management tools do not respond, you can force the availability group to fail over. For instructions to force the manual failover, see [Force manual failover](#forceManual).
+Manually fail over the availability group with the external cluster management tools. Under normal operations, do not initiate failover with Transact-SQL. If the external cluster management tools do not respond, you can force the availability group to fail over. For instructions to force failover, see [Force  failover](#forceFailover).
 
 To fail over, the secondary replica that will become the primary replica must be synchronous. If a secondary replica is asynchronous, [change the availability mode](../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).
 
@@ -126,7 +128,7 @@ For more information:
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a> Force manual failover 
+### <a name="forceFailover"></a> Force failover 
 
 If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to fail over manually to bypass the external cluster manager. This procedure is not recommended for regular operations, and should be used when the cluster fails to execute the failover action using the cluster management tools. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an availability group in Windows.
 

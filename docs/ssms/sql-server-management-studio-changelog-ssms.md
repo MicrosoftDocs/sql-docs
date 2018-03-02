@@ -657,7 +657,8 @@ Generally available | Build number: 13.0.16100.1
 * Fixed an issue where clicking query plan XML does not open the proper SSMS UI.
 
 
-## ![download](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=799832)
+## ![download](../ssdt/media/download.png) [SSMS 16.5](h
+ttp://go.microsoft.com/fwlink/?LinkID=799832)
 Generally available | Build number: 13.0.16000.28
 
 
@@ -717,7 +718,7 @@ Generally available | Build number: 13.0.15900.1
 	
 *  Fixed an issue where scripting out a 1200-level Analysis Services tabular model wouldn’t strip out the password for scripting, even though the server version had [client model object is now sync’d before scripting].
 	
-*  Fixed an issue where 'SELECT TOP N ROWS' option generated deprecated syntax for the the TOP operator.  
+*  Fixed an issue where 'SELECT TOP N ROWS' option generated deprecated syntax for the TOP operator.  
 [Microsoft Connect item #3065435](https://connect.microsoft.com/SQLServer/feedback/details/3065435)
 	
 *  Fixed various layout issues throughout SSMS, including the Login Properties page and Advanced Query Execution Options.   

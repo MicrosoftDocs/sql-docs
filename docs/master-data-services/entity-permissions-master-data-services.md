@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], entities"
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

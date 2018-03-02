@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "collections [Master Data Services], creating"
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 caps.latest.revision: 8
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

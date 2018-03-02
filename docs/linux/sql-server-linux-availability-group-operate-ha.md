@@ -30,7 +30,7 @@ The following sections explain how to perform a rolling upgrade with SQL Server 
 
 When availability group replicas are on instances of SQL Server in Linux, the cluster type of the availability group is either `EXTERNAL` or `NONE`. An availability group that is managed by a cluster manager besides Windows Server Failover Cluster (WSFC) is `EXTERNAL`. Pacemaker with Corosync is an example of an external cluster manager. An availability group with no cluster manager has cluster type `NONE` The upgrade steps outlined here are specific for availability groups of cluster type `EXTERNAL` or `NONE`.
 
-The order in which you upgrade instances depends on if their role is secondary and whether or not they host synchronous or asynchronous replicas. Upgrade instances of SQL Server that host aynchronous secondary replicas first. Then upgrade instances that host synchronous secondary replicas. 
+The order in which you upgrade instances depends on if their role is secondary and whether or not they host synchronous or asynchronous replicas. Upgrade instances of SQL Server that host asynchronous secondary replicas first. Then upgrade instances that host synchronous secondary replicas. 
 
    >[!NOTE]
    >If an availability group only has asynchronous replicas, to avoid any data loss change one replica to synchronous and wait until it is synchronized. Then upgrade this replica.

@@ -20,11 +20,11 @@ ms.workload: "Inactive"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-For backround information about failover, see [Failover and failover modes](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
+For background information about failover, see [Failover and failover modes](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
 ## Database level monitoring and failover trigger
 
-For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compared to WSFC. When the availability group is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the availability group health to report a fault. This signals the cluster manager to trigger a failover action. On Linux, the SQL Server instance cannot communicate with the cluster. Monitoring for database health is done *outside-in*. If user opted in for database level failover monitoring and failover (by setting the option `DB_FAILOVER=ON` when creating the availability group), the cluster will check if the database state is `ONLINE` every time it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different than `ONLINE`, it will trigger a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action as well as the database state being updated in sys.databases.
+For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compared to WSFC. When the availability group is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the availability group health to report a fault. In response, the cluster manager triggers a failover action. On Linux, the SQL Server instance cannot communicate with the cluster. Monitoring for database health is done *outside-in*. If user opted in for database level failover monitoring and failover (by setting the option `DB_FAILOVER=ON` when creating the availability group), the cluster will check if the database state is `ONLINE` every time it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different than `ONLINE`, it will trigger a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action as well as the database state being updated in sys.databases.
 
 Automatic failover requires at least one synchronous replica.
 
@@ -131,7 +131,7 @@ For more information:
  
 ## <a name="forceFailover"></a> Force failover 
 
-If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to force fail over to bypass the external cluster manager. This procedure is not recommended for regular operations. Use it when the cluster management tools fail to execute the failover action. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an availability group in Windows.
+If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to force fail over to bypass the external cluster manager. This procedure is not recommended for regular operations because it risks data loss. Use it when the cluster management tools fail to execute the failover action. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an availability group in Windows.
 
 A forced failover is intended strictly for disaster recovery. For example, when you cannot fail over with cluster management tools. If you force failover to an unsynchronized secondary replica, some data loss is possible. Only force failover if you must restore service to the availability group immediately and are willing to risk losing data. 
 

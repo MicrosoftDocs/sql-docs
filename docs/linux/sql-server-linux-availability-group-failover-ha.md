@@ -131,7 +131,7 @@ A forced failover is intended strictly for disaster recovery. In this case, you 
 
 If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to force failover to bypass the external cluster manager. This procedure is not recommended for regular operations because it risks data loss. Use it when the cluster management tools fail to execute the failover action. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an availability group in Windows.
  
-This process for forcing manual failover is specific to SQL Server on Linux.
+This process for forcing failover is specific to SQL Server on Linux.
 
 1. Verify that the availability group resource is not managed by the cluster any more. 
 
@@ -172,6 +172,8 @@ This process for forcing manual failover is specific to SQL Server on Linux.
    ```
 
    If you deleted the cluster resource, recreate it. To recreate the cluster resource, follow the instructions at [Create availability group resource](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).
+
+1. Review the [Essential Tasks After a Forced Failover](database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#FollowUp) to bring the availability group to a healthy state.
 
 >[!TIP]
 >Do not use the preceding steps for disaster recovery drills because they risk data loss. Instead change the asynchronous replica to synchronous, and the instructions for [normal manual failover](#manualFailover).

@@ -173,7 +173,7 @@ This process for forcing failover is specific to SQL Server on Linux.
 
    If you deleted the cluster resource, recreate it. To recreate the cluster resource, follow the instructions at [Create availability group resource](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).
 
-1. Review the [Essential Tasks After a Forced Failover](database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#FollowUp) to bring the availability group to a healthy state.
+1. Review the [Essential Tasks After a Forced Failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#FollowUp) to bring the availability group to a healthy state.
 
 >[!TIP]
 >Do not use the preceding steps for disaster recovery drills because they risk data loss. Instead change the asynchronous replica to synchronous, and the instructions for [normal manual failover](#manualFailover).

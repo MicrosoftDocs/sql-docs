@@ -189,6 +189,9 @@ If you do not have the ability to save the package files in a location on the se
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
+> [!NOTE]
+> This code sample only demonstrates the syntax; the binary value in `CONTENT =` has been truncated for readability and does not create a working library. The actual contents of the binary variable would be much longer.
+
 ### D. Change an existing package library
 
 The `ALTER EXTERNAL LIBRARY` DDL statement can be used to add new library content or modify existing library content. To modify an existing library requires the `ALTER ANY EXTERNAL LIBRARY` permission.

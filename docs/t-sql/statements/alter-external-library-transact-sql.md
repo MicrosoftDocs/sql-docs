@@ -1,7 +1,7 @@
 ---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/25/2018"
+ms.date: "03/05/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -56,7 +56,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Specifies the name of an existing package library. Libraries are scoped to the user. That is, library names are considered unique within the context of a specific user or owner.
+Specifies the name of an existing package library. Libraries are scoped to the user. Library names are must be unique within the context of a specific user or owner.
 
 The library name cannot be arbitrarily assigned. That is, you must use the name that the calling runtime expects when it loads the package.
 
@@ -99,7 +99,9 @@ The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the data
 
 ## Permissions
 
-Requires the `ALTER ANY EXTERNAL LIBRARY` permission. Users who created an external library, can alter that external library.
+Requires the `ALTER ANY EXTERNAL LIBRARY` permission. 
+
+By default, the **dbo** user or any member of the role **db_owner** has permission to run ALTER EXTERNAL LIBRARY. Additionally, the user who created the external library can alter that external library.
 
 ## Examples
 
@@ -133,7 +135,8 @@ The following example alters the existing library by passing the new bits as a h
 ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-In this code sample, the variable contents are truncated for readability.
+> [!NOTE]
+> This code sample only demonstrates the syntax; the binary value in `CONTENT =` has been truncated for readability and does not create a working library. The actual contents of the binary variable would be much longer.
 
 ## See also
 

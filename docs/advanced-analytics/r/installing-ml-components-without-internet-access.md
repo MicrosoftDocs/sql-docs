@@ -47,14 +47,14 @@ In general, separate installers are provided for open source and proprietary com
 
 **For R**
 
-The R language is supported in both SQL Server 2016 and SQL Server 2017. 
+The R language is supported in SQL Server 2016 and later. 
 
 + Installers with **SRO** in the name provide the open source components.
 + Installers with **SRS** in the name contain components provided by Microsoft, including those for database integration.
 
 **For Python**
 
-The Python language is supported only in SQL Server 2017. 
+The Python language requires SQL Server 2017 or later. 
 
 + Installers with **SPO** in the name are for Microsoft Python Open, and provide the open source components.
 + Installers with **SPS** in the name are for Microsoft Python Server, and contain components provided by Microsoft, including those for database integration.

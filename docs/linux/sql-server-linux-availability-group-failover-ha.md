@@ -129,7 +129,7 @@ For more information:
 
 A forced failover is intended strictly for disaster recovery. In this case, you cannot fail over with cluster management tools because the primary datacenter is down. If you force failover to an unsynchronized secondary replica, some data loss is possible. Only force failover if you must restore service to the AG immediately and are willing to risk losing data.
 
-If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive, you might have to force failover to bypass the external cluster manager. This procedure is not recommended for regular operations because it risks data loss. Use it when the cluster management tools fail to execute the failover action. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an AG in Windows.
+If you cannot use the cluster management tools for interacting with the cluster - for example, if the cluster is unresponsive due to a disaster event in the primary data center, you might have to force failover to bypass the external cluster manager. This procedure is not recommended for regular operations because it risks data loss. Use it when the cluster management tools fail to execute the failover action. Functionally, this procedure is similar to [performing a forced manual failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) on an AG in Windows.
  
 This process for forcing failover is specific to SQL Server on Linux.
 

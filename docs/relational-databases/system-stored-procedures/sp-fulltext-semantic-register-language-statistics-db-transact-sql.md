@@ -23,7 +23,7 @@ ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)

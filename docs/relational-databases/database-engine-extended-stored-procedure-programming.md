@@ -22,7 +22,7 @@ ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
 caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Engine Extended Stored Procedure Programming

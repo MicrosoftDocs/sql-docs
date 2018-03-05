@@ -25,7 +25,7 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fulltext_semantic_language_statistics_database (Transact-SQL)

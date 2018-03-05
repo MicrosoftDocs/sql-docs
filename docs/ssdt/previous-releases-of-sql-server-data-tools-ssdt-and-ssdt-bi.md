@@ -1,7 +1,7 @@
 ---
 title: "Previous releases of SQL Server Data Tools (SSDT and SSDT-BI) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2017"
+ms.date: "02/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -34,13 +34,26 @@ SSDT is backwards compatible, so you can always use [the newest SSDT](download-s
 
 The last few downloads are provided for the unlikely event that you experience issues with the [latest release](download-sql-server-data-tools-ssdt.md). 
 
-|Release| Visual Studio 2015|Visual Studio 2013|
-|:---|:---|:---|
-|17.3|[SSDT for VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| \* n/a|
-|17.2|[SSDT for VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| \* n/a|
-|17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* n/a|
-|17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* n/a|
-|16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
+|Release| Visual Studio 2017|
+|:---|:---|
+|15.5.1|[SSDT for VS2017 15.5.1](https://go.microsoft.com/fwlink/?LinkId=865748)|  
+<br>
+
+
+|Release| Visual Studio 2015|
+|:---|:---|
+|17.3|[SSDT for VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| 
+|17.2|[SSDT for VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| 
+|17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)|
+|17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| 
+|16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+<br>
+
+|Release| Visual Studio 2013|
+|:---|:---|
+|16.5|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+<br>
+
 
 \* SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2017, SSDT for VS2013 is no longer being updated. For additional information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 

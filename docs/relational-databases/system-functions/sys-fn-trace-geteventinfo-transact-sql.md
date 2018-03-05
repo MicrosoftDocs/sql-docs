@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "status information [SQL Server], events"
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_trace_geteventinfo (Transact-SQL)

@@ -26,12 +26,12 @@ ms.workload: "On Demand"
 ---
 # Live Query Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides the ability to view the live execution plan of an active query. This live query plan provides real-time insights into the query execution process as the controls flow from one query plan operator to another. The live query plan displays the overall query progress and operator-level run-time execution statistics such as the number of rows produced, elapsed time, operator progress, etc. Because this data is available in real time without needing to wait for the query to complete, these execution statistics are extremely useful for debugging query performance issues. This feature is available beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], however it can work with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides the ability to view the live execution plan of an active query. This live query plan provides real-time insights into the query execution process as the controls flow from one [query plan operator](../../relational-databases/showplan-logical-and-physical-operators-reference.md) to another. The live query plan displays the overall query progress and operator-level run-time execution statistics such as the number of rows produced, elapsed time, operator progress, etc. Because this data is available in real time without needing to wait for the query to complete, these execution statistics are extremely useful for debugging query performance issues. This feature is available beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], however it can work with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 > [!WARNING]  
->  This feature is primarily intended for troubleshooting purposes. Using this feature can moderately slow the overall query performance. This feature can be used with the [Transact-SQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+> This feature is primarily intended for troubleshooting purposes. Using this feature can moderately slow the overall query performance. This feature can be used with the [Transact-SQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
 #### To view live query statistics  
   
@@ -39,7 +39,7 @@ ms.workload: "On Demand"
   
      ![Live Query Stats button on toolbar](../../relational-databases/performance/media/livequerystatstoolbar.png "Live Query Stats button on toolbar")  
   
-     You can also view access the live query execution plan by right clicking on a selected query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and then click **Include Live Query Statistics**.  
+     You can also view access the live query execution plan by right-clicking on a selected query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and then click **Include Live Query Statistics**.  
   
      ![Live Query Stats button on popup menu](../../relational-databases/performance/media/livequerystatsmenu.png "Live Query Stats button on popup menu")  
   
@@ -54,15 +54,15 @@ ms.workload: "On Demand"
 ## Remarks  
  The statistics profile infrastructure must be enabled before live query statistics can capture information about the progress of queries. Specifying **Include Live Query Statistics** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] enables the statistics infrastructure for the current query session. 
  
-Until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there are two other ways to enable the statistics infrastructure which can be used to view the live query statistics from other sessions (such as from Activity Monitor):  
+Until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], there are two other ways to enable the statistics infrastructure, which can be used to view the live query statistics from other sessions (such as from Activity Monitor):  
   
 -   Execute `SET STATISTICS XML ON;` or `SET STATISTICS PROFILE ON;` in the target session.  
   
  or  
   
--   Enable the **query_post_execution_showplan** extended event. This is a server wide setting that enable live query statistics on all sessions. To enable extended events, see [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+-   Enable the **query_post_execution_showplan** extended event. This is a server-wide setting that enables live query statistics on all sessions. To enable extended events, see [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
 
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a lightweight version of the statistics profile infrastructure. There are two ways to enable the lightweight statistics infrastructure which can be used to view the live query statistics from other sessions (such as from Activity Monitor):
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a lightweight version of the statistics profile infrastructure. There are two ways to enable the lightweight statistics infrastructure, which can be used to view the live query statistics from other sessions (such as from Activity Monitor):
 
 -   Use global trace flag 7412.  
   
@@ -77,11 +77,12 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, [!INCLUDE[s
  Requires the database level **SHOWPLAN** permission to populate the **Live Query Statistics** results page, the server level **VIEW SERVER STATE** permission to see the live statistics, and requires any permissions necessary to execute the query.  
   
 ## See Also  
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
- [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
- [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)   
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)   
- [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)   
- [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+ [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
+ [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
+ [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)     
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
+ [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
+ [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
+ [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)

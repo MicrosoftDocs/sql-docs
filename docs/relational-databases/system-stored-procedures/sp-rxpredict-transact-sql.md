@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "sp_rxPredict procedure"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_rxPredict  

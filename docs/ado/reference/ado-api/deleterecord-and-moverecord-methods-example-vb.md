@@ -21,7 +21,7 @@ ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DeleteRecord and MoveRecord Methods Example (VB)

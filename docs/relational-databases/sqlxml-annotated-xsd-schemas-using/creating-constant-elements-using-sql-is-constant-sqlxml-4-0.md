@@ -24,7 +24,7 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating Constant Elements Using sql:is-constant (SQLXML 4.0)

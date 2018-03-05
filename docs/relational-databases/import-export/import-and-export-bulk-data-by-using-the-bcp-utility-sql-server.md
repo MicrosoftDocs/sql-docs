@@ -20,7 +20,7 @@ ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Import and Export Bulk Data by Using the bcp Utility (SQL Server)

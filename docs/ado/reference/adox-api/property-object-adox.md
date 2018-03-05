@@ -19,7 +19,7 @@ ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Property Object (ADOX)

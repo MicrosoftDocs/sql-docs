@@ -19,7 +19,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # File Locations for Default and Named Instances of SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   An installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consists of one or more separate instances. An instance, whether default or named, has its own set of program and data files, as well as a set of common files shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer.  
   
  For an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that includes the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], each component has a full set of data and executable files, and common files shared by all components.  

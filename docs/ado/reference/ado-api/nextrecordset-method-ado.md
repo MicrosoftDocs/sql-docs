@@ -23,7 +23,7 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # NextRecordset Method (ADO)

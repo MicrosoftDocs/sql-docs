@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "inference [XQuery]"
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XQuery and Static Typing

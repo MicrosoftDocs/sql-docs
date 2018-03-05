@@ -20,7 +20,7 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Shape APPEND Clause

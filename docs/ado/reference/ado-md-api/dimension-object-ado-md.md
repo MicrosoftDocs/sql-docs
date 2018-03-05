@@ -21,7 +21,7 @@ ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Dimension Object (ADO MD)

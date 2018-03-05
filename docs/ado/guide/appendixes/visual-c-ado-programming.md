@@ -21,7 +21,7 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Visual C++ ADO Programming

@@ -1,7 +1,7 @@
 ---
-title: "Define partitions in DirectQuery models (SSAS Tabular) | Microsoft Docs"
+title: "Define partitions in DirectQuery models | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
+ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -21,7 +21,7 @@ ms.workload: "Inactive"
 ---
 # Define partitions in DirectQuery models
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  This section explains how partitions are used in DirectQuery models. For more general information about partitions in tabular models, see [Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+  This section explains how partitions are used in DirectQuery models. For more general information about partitions in tabular models, see [Partitions](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Although a table can have multiple partitions, in DirectQuery mode, only one of them can be designated for use in query execution. The single partition requirement applies to DirectQuery models at all compatibility levels.  
@@ -79,6 +79,6 @@ ms.workload: "Inactive"
 |DirectQueryUsage=InMemory With DirectQuery<br /><br /> Applies to Tabular 1100 or 1103 models  running in a combination of in-memory and DirectQuery mode|Allow partition to be processed|If the model is using hybrid mode, you should use the same partition for queries against the in-memory and DirectQuery data source.|  
   
 ## See also  
- [Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
+ [Partitions](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

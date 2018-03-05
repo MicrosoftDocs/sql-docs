@@ -22,7 +22,9 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for an in-place upgrade of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >[!WARNING]  
@@ -106,7 +108,7 @@ You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](..
   
      **Installed instances**  — The grid will show instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
-13. Work flow for the rest of this topic depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
+13. Work flow for the rest of this article depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
   
 14. On the Server Configuration — Service Accounts page, the default service accounts are displayed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you are upgrading.  
   

@@ -25,7 +25,7 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_index_population (Transact-SQL)

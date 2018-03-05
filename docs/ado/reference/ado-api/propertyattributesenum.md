@@ -21,7 +21,7 @@ ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PropertyAttributesEnum

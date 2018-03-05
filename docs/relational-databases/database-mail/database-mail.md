@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], components"
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Mail

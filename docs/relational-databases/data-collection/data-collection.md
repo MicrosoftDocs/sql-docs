@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "data collection [SQL Server]"
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Data Collection

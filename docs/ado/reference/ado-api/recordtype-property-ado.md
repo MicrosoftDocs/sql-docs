@@ -23,7 +23,7 @@ ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RecordType Property (ADO)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SP:CacheInsert event class"
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SP:CacheInsert Event Class

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "TM: Begin Tran Starting event class"
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # TM: Begin Tran Starting Event Class

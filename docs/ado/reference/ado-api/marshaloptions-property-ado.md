@@ -21,7 +21,7 @@ ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MarshalOptions Property (ADO)

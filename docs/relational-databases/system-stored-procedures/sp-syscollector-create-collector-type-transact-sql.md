@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_create_collector_type (Transact-SQL)

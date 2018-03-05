@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_stacks dynamic management view"
 ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_stacks (Transact-SQL)

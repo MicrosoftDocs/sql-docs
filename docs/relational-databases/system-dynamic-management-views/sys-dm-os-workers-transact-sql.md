@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_workers dynamic management view"
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_workers (Transact-SQL)

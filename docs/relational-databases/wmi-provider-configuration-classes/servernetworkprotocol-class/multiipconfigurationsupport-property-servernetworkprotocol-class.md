@@ -23,7 +23,7 @@ ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)

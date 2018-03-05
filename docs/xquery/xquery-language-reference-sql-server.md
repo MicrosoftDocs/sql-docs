@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "queries [XML in SQL Server], XQuery"
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # XQuery Language Reference (SQL Server)

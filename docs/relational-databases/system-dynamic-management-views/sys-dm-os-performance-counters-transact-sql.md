@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_performance_counters dynamic management view"
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_os_performance_counters (Transact-SQL)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQL:FullTextQuery event class"
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL:FullTextQuery Event Class

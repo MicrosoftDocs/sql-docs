@@ -19,7 +19,7 @@ ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use a Format File to Skip a Data Field (SQL Server)

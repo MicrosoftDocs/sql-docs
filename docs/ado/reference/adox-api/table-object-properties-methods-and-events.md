@@ -18,7 +18,7 @@ ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table Object Properties, Methods, and Events

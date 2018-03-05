@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "nested DML triggers"
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create Nested Triggers

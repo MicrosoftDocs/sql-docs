@@ -21,7 +21,7 @@ ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Import Native and Character Format Data from Earlier Versions of SQL Server

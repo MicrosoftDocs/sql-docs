@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "valid statements [SQL Server]"
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Create User-defined Functions (Database Engine)

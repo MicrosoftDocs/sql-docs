@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Database Management event class"
 ms.assetid: 3e3de528-c3f8-413f-a6b9-d324ca95ad8e
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Database Management Event Class

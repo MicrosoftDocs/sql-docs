@@ -24,7 +24,7 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Index Properties F1 Help

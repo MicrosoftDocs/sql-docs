@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_rename_condition"
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_rename_condition (Transact-SQL)

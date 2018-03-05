@@ -21,7 +21,7 @@ ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transaction Processing

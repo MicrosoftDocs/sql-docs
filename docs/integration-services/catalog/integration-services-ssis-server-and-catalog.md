@@ -34,9 +34,9 @@ ms.workload: "On Demand"
  For an overview of the SSISDB catalog functionality, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ## High Availability  
- Like other user databases, the **SSISDB** database does support database mirroring and replication. For more information about mirroring and replication, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ Like other user databases, the **SSISDB** database supports database mirroring and replication. For more information about mirroring and replication, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- You can also provide high-availability of SSISDB and its contents by making use of SSIS and Always On Availability Groups. For more information, see this blog post by Matt Masson, [SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
+ You can also provide high-availability of SSISDB and its contents by making use of SSIS and Always On Availability Groups. For more information, see [Always On for SSIS Catalog (SSISDB](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Also see this blog post by Matt Masson, [SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
   
 ##  <a name="ssms"></a> Integration Services Server in SQL Server Management Studio  
  When you connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that hosts the **SSISDB** database, you see the following objects in Object Explorer:  

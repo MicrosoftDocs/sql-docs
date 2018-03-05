@@ -26,7 +26,7 @@ ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_cursors dynamic management function"
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_cursors (Transact-SQL)

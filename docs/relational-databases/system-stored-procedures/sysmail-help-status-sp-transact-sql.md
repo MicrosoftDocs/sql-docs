@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_help_status_sp"
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_help_status_sp (Transact-SQL)

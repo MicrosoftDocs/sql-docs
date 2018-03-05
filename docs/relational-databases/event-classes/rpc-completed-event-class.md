@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "RPC:Completed event class"
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RPC:Completed Event Class

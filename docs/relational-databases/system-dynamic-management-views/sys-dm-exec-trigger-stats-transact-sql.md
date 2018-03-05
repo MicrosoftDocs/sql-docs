@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_trigger_stats dynamic management function"
 ms.assetid: 863498b4-849c-434d-b748-837411458738
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_trigger_stats (Transact-SQL)

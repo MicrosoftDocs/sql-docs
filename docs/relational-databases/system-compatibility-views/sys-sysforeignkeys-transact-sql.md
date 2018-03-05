@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysforeignkeys compatibility view"
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysforeignkeys (Transact-SQL)

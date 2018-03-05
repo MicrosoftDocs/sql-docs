@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "dynamic context [XQuery]"
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Expression Context and Query Evaluation (XQuery)

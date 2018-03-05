@@ -1,7 +1,7 @@
 ---
 title: "Programming AMO Complementary Classes and Methods | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -32,7 +32,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Programming AMO Complementary Classes and Methods
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topic contains the following sections:  
   
 -   [Assembly Class](#Assembly)  

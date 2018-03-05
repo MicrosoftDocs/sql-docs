@@ -1,24 +1,24 @@
 ---
 title: Configure SQL Server settings with environment variables | Microsoft Docs
-description: This topic describes how to use environment variables to configure specific SQL Server 2017 settings on Linux.
+description: This article describes how to use environment variables to configure specific SQL Server 2017 settings on Linux.
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 07/21/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: "On Demand"
 ---
 # Configure SQL Server settings with environment variables on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 You can use several different environment variables to configure SQL Server 2017 on Linux. These variables are used in two scenarios:
 
@@ -44,7 +44,11 @@ You can use several different environment variables to configure SQL Server 2017
 | **MSSQL_DATA_DIR** | Change the directory where the new SQL Server database data files (.mdf) are created. |
 | **MSSQL_LOG_DIR** | Change the directory where the new SQL Server database log (.ldf) files are created. |
 | **MSSQL_DUMP_DIR** | Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default. |
-| **MSSQL_ENABLE_HADR** | Enable Availability Groups. |
+| **MSSQL_ENABLE_HADR** | Enable Availability Group. For example, '1' is enabled, and '0' is disabled |
+| **MSSQL_AGENT_ENABLED** | Enable SQL Server Agent. For example, 'true' is enabled and 'false' is disabled. By default, agent is disabled.  |
+| **MSSQL_MASTER_DATA_FILE** | Sets the location of the master database data file. |
+| **MSSQL_MASTER_LOG_FILE** | Sets the location of the master database log file. |
+
 
 ## Example: initial setup
 

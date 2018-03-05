@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_memory_pools dynamic management view"
 ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_memory_pools (Transact-SQL)

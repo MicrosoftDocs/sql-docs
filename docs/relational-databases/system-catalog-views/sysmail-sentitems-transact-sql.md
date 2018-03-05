@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_sentitems database mail view"
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_sentitems (Transact-SQL)

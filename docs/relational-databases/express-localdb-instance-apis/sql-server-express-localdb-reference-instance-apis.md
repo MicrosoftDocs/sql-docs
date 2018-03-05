@@ -16,7 +16,7 @@ ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Express LocalDB Reference - Instance APIs

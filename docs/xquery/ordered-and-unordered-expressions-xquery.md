@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "expressions [XQuery], unordered"
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Ordered and Unordered Expressions (XQuery)

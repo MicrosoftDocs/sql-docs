@@ -19,7 +19,7 @@ ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RDS Programming Model with Objects

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SP:CacheHit event class"
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SP:CacheHit Event Class

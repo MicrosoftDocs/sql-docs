@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "derived hierarchies, derived hierarchies with explicit caps"
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

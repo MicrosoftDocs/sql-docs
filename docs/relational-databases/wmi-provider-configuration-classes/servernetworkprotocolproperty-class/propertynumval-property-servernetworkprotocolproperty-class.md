@@ -23,7 +23,7 @@ ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PropertyNumVal Property (ServerNetworkProtocolProperty Class)

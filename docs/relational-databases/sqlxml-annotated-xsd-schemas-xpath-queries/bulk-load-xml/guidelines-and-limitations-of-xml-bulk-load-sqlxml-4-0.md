@@ -19,7 +19,7 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Guidelines and Limitations of XML Bulk Load (SQLXML 4.0)

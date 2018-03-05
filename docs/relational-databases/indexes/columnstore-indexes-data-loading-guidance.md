@@ -16,7 +16,7 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 caps.latest.revision: 31
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Columnstore indexes - Data loading guidance

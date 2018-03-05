@@ -24,7 +24,7 @@ ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VC++)

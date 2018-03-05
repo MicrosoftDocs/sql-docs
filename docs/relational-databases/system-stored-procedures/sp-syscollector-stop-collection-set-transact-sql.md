@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_stop_collection_set (Transact-SQL)

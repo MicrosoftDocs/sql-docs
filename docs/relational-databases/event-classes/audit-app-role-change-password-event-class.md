@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit App Role Change Password event class"
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit App Role Change Password Event Class

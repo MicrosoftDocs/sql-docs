@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "locking versions [Master Data Services]"
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

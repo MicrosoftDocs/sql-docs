@@ -22,7 +22,7 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CreateParameter Method (ADO)

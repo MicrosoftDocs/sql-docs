@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Broker:Forwarded Message Sent event class"
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Broker:Forwarded Message Sent Event Class

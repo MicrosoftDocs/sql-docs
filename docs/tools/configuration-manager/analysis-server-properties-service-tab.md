@@ -20,7 +20,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Analysis Server Properties (Service Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   This service is the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. This service must be running for [!INCLUDE[ssAS](../../includes/ssas-md.md)] to work properly. The property values in light gray cannot be changed using this application.  
   
 ## Options  

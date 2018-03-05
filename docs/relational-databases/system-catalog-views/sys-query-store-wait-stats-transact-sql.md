@@ -24,7 +24,7 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 caps.latest.revision: 18
 author: "AndrejsAnt"
 ms.author: "AndrejsAnt"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.query_store_wait_stats (Transact-SQL)

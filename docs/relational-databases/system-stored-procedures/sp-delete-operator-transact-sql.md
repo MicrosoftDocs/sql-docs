@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_operator"
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_operator (Transact-SQL)

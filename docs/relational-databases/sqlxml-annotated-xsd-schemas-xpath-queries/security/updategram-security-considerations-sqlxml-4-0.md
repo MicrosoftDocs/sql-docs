@@ -20,7 +20,7 @@ ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Updategram Security Considerations (SQLXML 4.0)

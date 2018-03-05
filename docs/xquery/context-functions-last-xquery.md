@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:last function"
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Context Functions - last (XQuery)

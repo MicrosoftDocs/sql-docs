@@ -20,7 +20,7 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Synonyms (Database Engine)

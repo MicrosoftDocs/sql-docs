@@ -31,7 +31,7 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use XML Data in Applications

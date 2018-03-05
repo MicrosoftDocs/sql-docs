@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Execution Warnings event class"
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execution Warnings Event Class

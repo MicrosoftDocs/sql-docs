@@ -21,6 +21,8 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Generating an R Stored Procedure for R Code using the sqlrutils Package
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 The **sqlrutils** package provides a mechanism for R users to put their R scripts into a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an R development environment. 
 
 By converting your R code to run within a single stored procedure, you can make more effective use of SQL Server R Services, which requires that R script be embedded as a parameter to [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). The **sqlrutils** package helps you build this embedded R script and set related parameters appropriately.

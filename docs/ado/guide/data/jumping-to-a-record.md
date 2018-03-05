@@ -19,7 +19,7 @@ ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Jumping to a Record

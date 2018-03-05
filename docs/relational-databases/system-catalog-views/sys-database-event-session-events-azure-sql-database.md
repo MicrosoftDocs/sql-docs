@@ -18,7 +18,7 @@ ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_event_session_events (Azure SQL Database)

@@ -19,7 +19,7 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Operation of Parameterized Commands

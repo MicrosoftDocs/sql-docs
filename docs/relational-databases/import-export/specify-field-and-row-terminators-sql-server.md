@@ -22,7 +22,7 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Specify Field and Row Terminators (SQL Server)

@@ -19,7 +19,7 @@ ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IRDSService Interface (RDS)

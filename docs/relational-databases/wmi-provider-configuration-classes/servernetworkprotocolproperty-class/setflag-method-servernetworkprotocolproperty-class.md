@@ -23,7 +23,7 @@ ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetFlag Method (ServerNetworkProtocolProperty Class)

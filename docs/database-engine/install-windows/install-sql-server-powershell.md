@@ -19,8 +19,9 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Install SQL Server PowerShell
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup automatically configures PowerShell components.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup automatically configures PowerShell components.  
 
 You install the software that provides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for Windows PowerShell by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. When you select any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that require PowerShell support, Setup installs the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components:  
   

@@ -3,21 +3,21 @@ title: Configure a SQL Server container in Kubernetes for high availability | Mi
 description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Container Service.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: "mvc"
+ms.custom: "sql-linux,mvc"
 ms.technology: database-engine
 ms.workload: "Inactive"
 ---
 # Configure a SQL Server container in Kubernetes for high availability
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Learn how to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS), with persistent storage for high availability (HA). The solution provides resiliency. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. AKS provides resiliency against a Kubernetes node failure. 
 
@@ -32,7 +32,7 @@ This tutorial demonstrates how to configure a highly available SQL Server instan
 
 ## HA solution that uses Kubernetes running in Azure Container Service
 
-Kubernetes 1.6 and later has support for [storage classes](http://kubernetes.io/docs/concepts/storage/storage-classes/), [persistent volume claims](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), and the [Azure disk volume driver](http://github.com/Azure/azurefile-dockervolumedriver). You can create and manage your SQL Server instances natively in Kubernetes. The example in this article shows how to create a [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) to achieve a high availability configuration similar to a shared disk failover cluster instance. In this configuration, Kubernetes plays the role of the cluster orchestrator. When a SQL Server instance in a container fails, the orchestrator bootstraps another instance of the container that attaches to the same persistent storage.
+Kubernetes 1.6 and later has support for [storage classes](http://kubernetes.io/docs/concepts/storage/storage-classes/), [persistent volume claims](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), and the [Azure disk volume type](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). You can create and manage your SQL Server instances natively in Kubernetes. The example in this article shows how to create a [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) to achieve a high availability configuration similar to a shared disk failover cluster instance. In this configuration, Kubernetes plays the role of the cluster orchestrator. When a SQL Server instance in a container fails, the orchestrator bootstraps another instance of the container that attaches to the same persistent storage.
 
 ![Diagram of Kubernetes SQL Server cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
@@ -247,6 +247,8 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
    ![Screenshot of get pod command](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
+   In the preceding image, the pod has a status of `Running`. This status indicates that the container is ready. This may take several minutes.
+
    >[!NOTE]
    >After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image from the Docker hub. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it. 
 
@@ -260,7 +262,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
    ![Screenshot of get service command](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
 
-   For additional information about the status of the objects in the Kubernetes cluster, run:
+   For more information about the status of the objects in the Kubernetes cluster, run:
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>

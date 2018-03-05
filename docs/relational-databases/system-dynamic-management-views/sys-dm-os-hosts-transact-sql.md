@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_hosts dynamic management view"
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_hosts (Transact-SQL)

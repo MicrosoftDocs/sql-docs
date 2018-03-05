@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "creating link attributes [Master Data Services]"
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 caps.latest.revision: 9
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

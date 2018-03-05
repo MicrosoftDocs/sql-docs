@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.syscharsets compatibility view"
 ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.syscharsets (Transact-SQL)

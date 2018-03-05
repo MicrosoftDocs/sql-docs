@@ -206,10 +206,10 @@ GO
 ```  
 
 ## <a name="failover"></a> Join the database on the secondary of the second availability group
-After the database on the secondary of the second availability group has went into a restoring state you have to manually join it to the availability group.
+After the database on the secondary of the second availability group is in a restoring state you have to manually join it to the availability group.
 
 ```sql  
-ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```  
   
 ## <a name="failover"></a> Fail over to a secondary availability group  

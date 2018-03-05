@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_syscollector_delete_collecton_set"
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_delete_collection_set (Transact-SQL)

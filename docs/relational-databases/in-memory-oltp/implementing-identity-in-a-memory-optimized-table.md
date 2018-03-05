@@ -16,7 +16,7 @@ ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Implementing IDENTITY in a Memory-Optimized Table

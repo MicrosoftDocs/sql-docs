@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "groups [SQL Server], server"
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

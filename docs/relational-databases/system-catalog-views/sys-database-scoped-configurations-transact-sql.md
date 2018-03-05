@@ -23,7 +23,7 @@ ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 caps.latest.revision: 13
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_scoped_configurations (Transact-SQL)

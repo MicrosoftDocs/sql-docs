@@ -22,7 +22,7 @@ ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify Field Length by Using bcp (SQL Server)

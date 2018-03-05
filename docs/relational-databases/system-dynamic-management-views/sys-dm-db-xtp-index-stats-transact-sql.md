@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_index_stats dynamic management view"
 ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_xtp_index_stats (Transact-SQL)

@@ -24,7 +24,7 @@ ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Columns Collection (ADOX)

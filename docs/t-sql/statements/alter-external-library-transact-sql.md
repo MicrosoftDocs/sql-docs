@@ -1,7 +1,7 @@
 ---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/05/2017"
+ms.date: "02/25/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -9,7 +9,6 @@ ms.component: "t-sql|statements"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -31,7 +30,7 @@ Modifies the content of an existing external package library.
 
 ## Syntax
 
-```
+```text
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -59,6 +58,8 @@ WITH ( LANGUAGE = 'R' )
 
 Specifies the name of an existing package library. Libraries are scoped to the user. That is, library names are considered unique within the context of a specific user or owner.
 
+The library name cannot be arbitrarily assigned. That is, you must use the name that the calling runtime expects when it loads the package.
+
 **owner_name**
 
 Specifies the name of the user or role that owns the external library.
@@ -80,7 +81,11 @@ Specifies the name of the external data source that contains the location of the
 
 **library_bits**
 
-Specifies the content of the package as a hex literal, similar to assemblies. This option allows users to create a library to alter the library if they have the required permission, but do not have file path access to any folder the server can access.
+Specifies the content of the package as a hex literal, similar to assemblies. 
+
+This option is useful if you have the required permission to alter a library, but file access on the server is restricted and you cannot save the contents to a path the server can access.
+
+Instead, you can pass the package contents as a variable in binary format.
 
 **PLATFORM = WINDOWS**
 
@@ -90,7 +95,7 @@ Specifies the platform for the content of the library. This value is required wh
 
 For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. Currently, only the Windows platform is supported.  
 
-The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the database. The modified library is not actually installed until a user runs an external script afterwards, by executing [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the database. The modified library is installed when a user runs code in  [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) that calls the library.
 
 ## Permissions
 
@@ -98,31 +103,26 @@ Requires the `ALTER ANY EXTERNAL LIBRARY` permission. Users who created an exter
 
 ## Examples
 
-The following examples modifies an external library called customPackage.
+The following examples modifies an external library called `customPackage`.
 
 ### A. Replace the contents of a library using a file
 
-The following example modifies an external library called customPackage, using a zipped file containing the updated bits.
+The following example modifies an external library called `customPackage`, using a zipped file containing the updated bits.
 
 ```sql
 ALTER EXTERNAL LIBRARY customPackage 
 SET 
   (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
-```  
+```
 
 To install the updated library, execute the stored procedure `sp_execute_external_script`.
 
-```sql   
+```sql
 EXEC sp_execute_external_script 
 @language =N'R', 
-@script=N'
-# load customPackage
-library(customPackage)
-# call customPackageFunc
-OutputDataSet <- customPackageFunc()
-'
-WITH RESULT SETS (([result] int));
+@script=N'library(customPackage)'
+;
 ```
 
 ### B. Alter an existing library using a byte stream
@@ -133,9 +133,11 @@ The following example alters the existing library by passing the new bits as a h
 ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-## See also  
+In this code sample, the variable contents are truncated for readability.
+
+## See also
 
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 

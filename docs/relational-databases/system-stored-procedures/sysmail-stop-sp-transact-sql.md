@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_stop_sp"
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_stop_sp (Transact-SQL)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.syscolumns compatibility view"
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.syscolumns (Transact-SQL)

@@ -23,13 +23,15 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Add Features to an Instance of SQL Server (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components or services are specific to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], along with the shared components of if they are not already installed. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ This article provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components or services are specific to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], along with the shared components of if they are not already installed. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  To add features to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command prompt, see [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
 ## Prerequisites  
- Before you continue, review topics in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
+ Before you continue, review articles in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
 >  For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read permissions on the remote share.  
@@ -63,7 +65,7 @@ manager: "craigg"
   
 9. The Disk Space Requirements page calculates the required disk space for the features you specify, and compares requirements to the available disk space on the computer where Setup is running.  
   
-10. Work flow for the remainder of this topic depends on the features you have specified for your installation. You might not see all of the pages, depending on your selections.  
+10. Work flow for the remainder of this article depends on the features you have specified for your installation. You might not see all of the pages, depending on your selections.  
   
 11. On the Server Configuration — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install.  
   

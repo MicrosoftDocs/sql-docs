@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysdac_instances"
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data-tier Application Views - dbo.sysdac_instances

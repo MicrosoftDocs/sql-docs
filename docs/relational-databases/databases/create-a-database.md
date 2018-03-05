@@ -26,6 +26,9 @@ ms.workload: "Active"
 # Create a Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+
+> [!NOTE]
+> To create a database in Azure SQL Database using T-SQL, see [Create database in Azure SQL Database](https://docs.microsoft.com/sql/t-sql/statements/create-database-azure-sql-database).
   
  **In This Topic**  
   

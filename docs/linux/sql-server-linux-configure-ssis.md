@@ -10,13 +10,15 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.workload: "Inactive"
 ---
 # Configure SQL Server Integration Services on Linux with ssis-conf
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 You run the `ssis-conf` configuration script when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. For more info about installing SSIS, see [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md).
 
@@ -138,3 +140,9 @@ enabled = Y
                        
 lcid = 2052
 ```
+
+## Related content about SSIS on Linux
+-   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
+-   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+-   [Limitations and known issues for SSIS on Linux](sql-server-linux-ssis-known-issues.md)
+-   [Schedule SQL Server Integration Services package execution on Linux with cron](sql-server-linux-schedule-ssis-packages.md)

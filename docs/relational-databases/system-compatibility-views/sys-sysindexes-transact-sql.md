@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysindexes compatibility view"
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.sysindexes (Transact-SQL)

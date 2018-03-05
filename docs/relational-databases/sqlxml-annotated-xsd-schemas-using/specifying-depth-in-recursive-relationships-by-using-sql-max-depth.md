@@ -27,7 +27,7 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specifying Depth in Recursive Relationships by Using sql:max-depth

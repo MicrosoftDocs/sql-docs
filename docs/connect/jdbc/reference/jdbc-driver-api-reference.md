@@ -1,7 +1,7 @@
 ---
 title: "JDBC Driver API Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -40,12 +40,14 @@ ms.workload: "Inactive"
 >   
 >  API details for Using Table-Valued Parameters, available starting with  Microsoft JDBC Driver 6.0 for SQL Server, are not found in this section. See [Using Table-Valued Parameters](../../../connect/jdbc/using-table-valued-parameters.md)  
 >   
+>  Microsoft JDBC Driver 6.4 supports compilation with JDK 7.0, 8.0, and 9.0.  
+>   
+>  Microsoft JDBC Driver 6.2 supports compilation with JDK 7.0, and 8.0.  
+>   
 >  Microsoft JDBC Drivers 6.0 and 4.2 support compilation with JDK 5.0, 6.0, 7.0, and 8.0.  
 >   
 >  Microsoft JDBC Driver 4.1 supports compilation with JDK 5.0, 6.0, and 7.0.  
->   
->  Microsoft JDBC Driver 4.0 supports compilation with JDK 5.0 and 6.0.  
-  
+
 ## Interfaces  
   
 |Interface Name|Description|  

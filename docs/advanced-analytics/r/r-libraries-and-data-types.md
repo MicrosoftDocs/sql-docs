@@ -20,6 +20,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # R Libraries and R Data Types
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic describes the R libraries that are included and the data types that are supported in the following products:
 

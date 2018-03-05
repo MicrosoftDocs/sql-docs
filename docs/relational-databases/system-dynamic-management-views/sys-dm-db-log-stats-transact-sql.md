@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_log_stats dynamic management function"
 ms.assetid: 
 caps.latest.revision: 
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   

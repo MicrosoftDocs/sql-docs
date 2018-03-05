@@ -20,6 +20,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Common issues with external script execution in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article contains a list of known issues and common problems with running R or Python code in SQL Server.
 

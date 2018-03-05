@@ -24,7 +24,7 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Examples of Bulk Import and Export of XML Documents (SQL Server)

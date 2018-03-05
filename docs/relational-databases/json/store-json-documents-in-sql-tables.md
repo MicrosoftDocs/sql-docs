@@ -161,5 +161,18 @@ This natively compiled procedure takes the query and creates .DLL code that runs
 
 Native JSON functions in SQL Server and SQL Database enable you to process JSON documents just like in NoSQL databases. Every database - relational or NoSQL - has some pros and cons for JSON data processing. The key benefit of storing JSON documents in SQL Server or SQL Database is full SQL language support. You can use the rich Transact-SQL language to process data and to configure a variety of storage options (from columnstore indexes for high compression and fast analytics to memory-optimized tables for lock-free processing). At the same time, you get the benefit of mature security and internationalization features which you can easily reuse in your NoSQL scenario. The reasons described in this article are excellent reasons to consider storing JSON documents in SQL Server or SQL Database.
 
-## Learn more about the built-in JSON support in SQL Server  
-For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft blog posts  
+  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)

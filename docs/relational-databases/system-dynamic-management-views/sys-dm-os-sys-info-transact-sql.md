@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "starting time"
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_os_sys_info (Transact-SQL)

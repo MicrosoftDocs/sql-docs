@@ -23,7 +23,7 @@ ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_fulltext_tables (Transact-SQL)

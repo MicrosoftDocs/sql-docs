@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # What's new in Machine Learning Services in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In SQL Server 2016, Microsoft introduced SQL Server R Services, a feature that supports enterprise-scale data science, by integrating the R language with the SQL Server database engine.
 

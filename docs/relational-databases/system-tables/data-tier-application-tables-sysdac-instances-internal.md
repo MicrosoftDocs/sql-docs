@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysdac_instances_internal"
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data-tier Application Tables - sysdac_instances_internal

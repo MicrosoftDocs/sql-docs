@@ -27,7 +27,7 @@ ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Introduction to Annotated XSD Schemas (SQLXML 4.0)

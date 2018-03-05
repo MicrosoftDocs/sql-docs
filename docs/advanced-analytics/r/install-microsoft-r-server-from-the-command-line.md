@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Install Machine Learning Server (Standalone) or Microsoft R Server (Standalone) from the command line
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to use SQL Server command-line arguments to install the following SQL Server features by using the command line:
 

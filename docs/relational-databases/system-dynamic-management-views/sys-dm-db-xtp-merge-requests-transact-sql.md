@@ -17,7 +17,7 @@ ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_xtp_merge_requests (Transact-SQL)

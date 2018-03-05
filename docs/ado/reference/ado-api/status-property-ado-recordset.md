@@ -22,7 +22,7 @@ ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Status Property (ADO Recordset)

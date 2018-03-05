@@ -18,7 +18,7 @@ ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_database_mappings (Transact-SQL)

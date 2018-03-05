@@ -23,7 +23,7 @@ ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Context Property (SecurityCertificate Class)

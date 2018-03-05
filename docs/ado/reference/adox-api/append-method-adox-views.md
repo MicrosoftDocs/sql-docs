@@ -22,7 +22,7 @@ ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Append Method (ADOX Views)

@@ -21,7 +21,7 @@ ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Views and Fields Collections Example (VB)

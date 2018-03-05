@@ -26,7 +26,7 @@ ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fulltext_languages (Transact-SQL)

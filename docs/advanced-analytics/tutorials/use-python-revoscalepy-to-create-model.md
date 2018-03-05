@@ -18,6 +18,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # Use Python with revoscalepy to create a model
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This example demonstrates how you can create a linear regression model in SQL Server, using an algorithm from the **revoscalepy** package.
 

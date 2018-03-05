@@ -88,7 +88,7 @@ Before you begin, back up each database.
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. After failover, upgrade SQL Server on the old primary replica by repeating the same procedure described in steps b.1-b.3.
+1. After failover, upgrade SQL Server on the old primary replica by repeating the preceding procedure.
 
    The following example upgrades `mssql-server` and `mssql-server-ha` packages.
 

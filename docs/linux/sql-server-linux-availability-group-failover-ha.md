@@ -35,15 +35,15 @@ Use the cluster management tools to fail over an AG managed by an external clust
 
 To fail over, the secondary replica that will become the primary replica must be synchronous. If a secondary replica is asynchronous, [change the availability mode](../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).
 
-Manually fail over in two steps. 
+Manually fail over in two steps.
 
-1. Manually fail over by moving AG resource from the cluster node that owns the resources to a new node.
+   First,[ manually fail over by moving AG resource](#manualMove) from the cluster node that owns the resources to a new node.
 
    The cluster fails the AG resource over and adds a location constraint. This constraint configures the resource to run on the new node. Remove this constraint in order to successfully fail over in the future.
 
-2. Remove the location constraint.
+   Second, [remove the location constraint](#removeLocConstraint).
 
-#### 1. Manually fail over by moving availability group resource
+#### <a name="manualMove">Step 1. Manually fail over by moving availability group resource
 
 To manually fail over an AG resource named *ag_cluster* to cluster node named *nodeName2*, run the appropriate command for your distribution:
 
@@ -62,7 +62,7 @@ To manually fail over an AG resource named *ag_cluster* to cluster node named *n
 >[!IMPORTANT]
 >After you manually fail over a resource, you need to remove a location constraint that is automatically added.
 
-#### 2. Remove the location constraint
+#### <a name="removeLocConstraint"> Step 2. Remove the location constraint
 
 During a manual failover, the `pcs` command `move` or `crm` command `migrate` adds a location constraint for the resource to be placed on the new target node. To see the new constraint, run the following command after manually moving the resource:
 

@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/25/2018"
+ms.date: "03/05/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -62,7 +62,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Libraries are added to the database scoped to the user. That is, library names are considered unique within the context of a specific user or owner, and library names must be unique per user. For example, two users **RUser1** and **RUser2** can both individually and separately upload the R library `ggplot2`.
+Libraries are added to the database scoped to the user. Library names must be unique within the context of a specific user or owner. For example, two users **RUser1** and **RUser2** can both individually and separately upload the R library `ggplot2`. However, if **RUser1** wanted to upload a newer version of `ggplot2`, the second instance must be named differently or must replace the existing library. 
 
 Library names cannot be arbitrarily assigned; the library name should be the same as the name required to load the R library from R.
 
@@ -106,7 +106,7 @@ You cannot use blobs as a data source in the SQL Server 2017 release.
 
 ## Permissions
 
-Requires the `CREATE ANY EXTERNAL LIBRARY` permission.
+Requires the `CREATE ANY EXTERNAL LIBRARY` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to execute CREATE EXTERNAL LIBRARY. For all other users, you must explicitly give them permission using a [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) statement, specifying CREATE EXTERNAL LIBRARY as the privilege.
 
 To modify a library requires the separate permission, `ALTER ANY EXTERNAL LIBRARY`.
 
@@ -119,7 +119,7 @@ The following example adds an external library called `customPackage` to a datab
 ```sql
 CREATE EXTERNAL LIBRARY customPackage
 FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip') WITH (LANGUAGE = 'R');
-```  
+```
 
 After the library has been successfully uploaded to the instance, a user executes the `sp_execute_external_script` procedure, to install the library.
 
@@ -140,9 +140,9 @@ For example, assume you want to install a new package, `packageA`:
 
 To succeed in installing `packageA`, you must create libraries for `packageB` and `packageC` at the same time that you add `packageA` to SQL Server. Be sure to check the required package versions as well.
 
-In practice, package dependencies for popular packages are usually much more complicated than this simple example. For example, ggplot2 might require over 30 packages, and those packages might require additional packages that are not available on the server. Any missing package or wrong package version can cause installation to fail.
+In practice, package dependencies for popular packages are usually much more complicated than this simple example. For example, **ggplot2** might require over 30 packages, and those packages might require additional packages that are not available on the server. Any missing package or wrong package version can cause installation to fail.
 
-Because it can be difficult to determine all dependencies just from looking at the  package manifest, we recommend that you use a package such as [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) or [iGraph](http://igraph.org/redirect.html) to identify all packages that might be required to complete installation successfully.
+Because it can be difficult to determine all dependencies just from looking at the  package manifest, we recommend that you use a package such as [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) to identify all packages that might be required to complete installation successfully.
 
 + Upload the target package and its dependencies. All files must be in a folder that is accessible to the server.
 
@@ -178,18 +178,16 @@ Because it can be difficult to determine all dependencies just from looking at t
     # call function from package
     OutputDataSet <- packageA.function()
     '
-    with result sets (([result] int));    
+    WITH RESULT SETS (([result] int));    
     ```
 
 ### C. Create a library from a byte stream
 
-If you do not have the ability to save the package files in a location on the server, you can also pass the package contents in a variable. The following example creates a library by passing the bits as a hexidecimal literal.
+If you do not have the ability to save the package files in a location on the server, you can  pass the package contents in a variable. The following example creates a library by passing the bits as a hexidecimal literal.
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
-
-Here the hexadecimal values have been truncated for readability.
 
 ### D. Change an existing package library
 
@@ -206,7 +204,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 > [!NOTE]
-> Unlike other `DROP` statements in [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], this statement supports an optional parameter that specifies the user authority. This option allows users with ownership roles to delete libraries uploaded by regular users.
+> Unlike other `DROP` statements in [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], this statement supports an optional parameter that specifies the user authority. This option allows users with ownership roles to delete libraries that were uploaded by regular users.
 
 ## See also
 

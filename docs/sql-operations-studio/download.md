@@ -2,7 +2,7 @@
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "02/15/2018"
+ms.date: "03/05/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -68,8 +68,19 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    ```
 
    > [!NOTE]
-   > On Ubuntu and Redhat, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
+   > On Debian, Redhat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
    
+
+   **Debian:** 
+   ```bash
+   sudo apt-get install libuwind8
+   ```
+
+   **Redhat:** 
+   ```bash
+   yum install libXScrnSaver
+   ```
+
    **Ubuntu:** 
    ```bash
    sudo apt-get install libxss1
@@ -79,10 +90,6 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    sudo apt-get install libunwind8
    ```
 
-   **Redhat:** 
-   ```bash
-   yum install libXScrnSaver
-   ```
 
 ## Uninstall SQL Operations Studio (preview)
 

@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.newsubwizard.addnonsqlsubscriber.f1"
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 caps.latest.revision: 11
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "mashathomas"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

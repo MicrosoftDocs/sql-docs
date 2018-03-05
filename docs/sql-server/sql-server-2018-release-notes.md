@@ -15,7 +15,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server vNext Release Notes
-This topic describes limitations and issues with SQL Server vNext on Windows and SQL Server vNExt on Linux. For related information, see:
+This article describes limitations and issues with SQL Server vNext on Windows and SQL Server vNExt on Linux. For related information, see:
 - [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-2018.md)
 
 **Try SQL Server!**
@@ -23,7 +23,22 @@ This topic describes limitations and issues with SQL Server vNext on Windows and
 
 ## SQL Server vNext Community Technology Preview (CTP 1.4 - March 2018)
 
-## Master Data Services (MDS)
+### Database Engine
+
+> - **Issue and customer impact:** <enter info here>
+> - **Workaround:** <enter info here>
+> - **Applies to:** Windows | Linux
+
+> - **Issue and customer impact:** <enter info here>
+> - **Workaround:** <enter info here>
+> - **Applies to:** Windows only
+
+### Setup
+> - **Issue and customer impact:** <enter info here>
+> - **Workaround:** <enter info here>
+> - **Applies to:** Windows | Linux
+
+### Master Data Services (MDS)
 **Issue and customer impact:** In the Master Data Services (MDS) portal, the Silverlight components on the following pages have been replaced with HTML controls:
 -   Function Explore
     -   Entities
@@ -37,26 +52,6 @@ On the modified **Explore** pages, the operators `Matches` and `Does not match` 
 **Workaround:** No workaround is available.
 
 **Applies to:** Windows
-
-## SQL Server vNext Community Technology Preview (CTP 1.1 - December 2017)
-
-### Database Engine
-
-> - **Issue and customer impact:** ??
-> - **Workaround:** ???
-> - **Applies to:** Windows | Linx
-
----
-
-> - **Issue and customer impact:** ??
-> - **Workaround:** ???
-> - **Applies to:** Windows only
-
-### Setup
-> - **Issue and customer impact:** ??
-> - **Workaround:** ???
-> - **Applies to:** Windows | Linx
-
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

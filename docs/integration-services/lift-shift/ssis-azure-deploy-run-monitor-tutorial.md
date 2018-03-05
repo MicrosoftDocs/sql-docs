@@ -26,7 +26,11 @@ Also make sure that you have set up the SSISDB database and provisioned the Azur
 
 ## Connect to the SSISDB database
 
-Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQL Database server. For more info, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
+Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQL Database server. For more info and screenshots, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
+
+Here are the two most important things to remember. These steps are described in the following procedure.
+-   Enter the fully-qualified name of the Azure SQL Database server in the format **mysqldbserver.database.windows.net**.
+-   Select `SSISDB` as the database for the connection.
 
 > [!IMPORTANT]
 > An Azure SQL Database server listens on port 1433. If you are attempting to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
@@ -51,12 +55,18 @@ Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQ
 
 ## Deploy a project with the Deployment Wizard
 
+To learn more about deploying packages and about the Deployment Wizard, see [Deploy Integration Services (SSIS) Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md) and [Integration Services Deployment Wizard](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+
 ### Start the Integration Services Deployment Wizard
 1. In Object Explorer in SSMS, with the **Integration Services Catalogs** node and the **SSISDB** node expanded, expand a project folder.
 
 2.  Select the **Projects** node.
 
 3.  Right-click on the **Projects** node and select **Deploy project**. The Integration Services Deployment Wizard opens. You can deploy a project from an SSIS Catalog database or from the file system.
+
+    ![Deploy a project from SSMS](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![The SSIS Deployment Wizard dialog box opens](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### Deploy a project with the Deployment Wizard
 1. On the **Introduction** page of the Deployment Wizard, review the introduction. Select **Next** to open the **Select Source** page.

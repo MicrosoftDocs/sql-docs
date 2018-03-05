@@ -50,14 +50,20 @@ Before you start, make sure you have version 17.2 or later of SQL Server Managem
    | **Login** | The server admin account | This is the account that you specified when you created the server. |
    | **Password** | The password for your server admin account | This is the password that you specified when you created the server. |
 
+    ![Connect to the server with SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
+
 3. **Connect to the SSISDB database**. Select **Options** to expand the **Connect to Server** dialog box. In the expanded **Connect to Server** dialog box, select the **Connection Properties** tab. In the **Connect to database** field, select or enter `SSISDB`.
 
     > [!IMPORTANT]
     > If you don't select `SSISDB` when you connect, you may not see the SSIS Catalog in Object Explorer.
 
+    ![Select the SSISDB database for the connection](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-2.png)
+
 4. Then select **Connect**.
 
 5. In Object Explorer, expand **Integration Services Catalogs** and then expand **SSISDB** to view the objects in the SSIS Catalog database.
+
+    ![Find the SSISDB database in Object Explorer in SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 
 ## Next steps
 - Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).

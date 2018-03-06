@@ -26,7 +26,7 @@ In this lesson, you learn how to run Python code from a remote development clien
 
 + To run Python code using SQL Server as a compute context requires SQL Server 2017 or later. Moreover, you must explicitly install and then enable the feature, **Machine Learning Services**, choosing the Python language option.
 
-    If you installed a pre-release version of SQL Server 2017, you should update to at least the RTM version. Later service releases continue to upgrade and expand on Python functionality. Some features of this tutorial might not work in early pre-release versions.
+    If you installed a pre-release version of SQL Server 2017, you should update to at least the RTM version. Later service releases have continued to expand and improve Python functionality. Some features of this tutorial might not work in early pre-release versions.
 
 + This example uses a predefined Python environment, named `PYTEST_SQL_SERVER`. The environment has been configured to contain **revoscalepy** and other required libraries. 
 
@@ -44,7 +44,7 @@ This lesson also demonstrates the basics of how to set up and then use a **SQL S
 
 ## Prepare the database and sample data
 
-1. This lesson uses the database `sqlpy`. If you have not completed any of the previous lessons, you can create the database by running the following code.
+1. This lesson uses the database `sqlpy`. If you have not completed any of the previous lessons, you can create the database by running the following code:
 
         ```sql
         CREATE DATABASE sqlpy;
@@ -62,7 +62,7 @@ This lesson also demonstrates the basics of how to set up and then use a **SQL S
 
 ## Run the sample code
 
-After you have prepared the database and have the data for training stored in a table, open a Python development environment and run the following code.
+After you have prepared the database and have the data for training stored in a table, open a Python development environment and run the code sample.
 
 The code performs the following steps:
 
@@ -155,13 +155,13 @@ There are two ways to set the active compute context:
     
     `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
 
-    In the call to **rxsummary**, the compute context is reused.
+    In the call to [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary), the compute context is reused.
 
     `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
 + By calling `rx_set_computecontext`
 
-    Use the function [rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context) to toggle between compute contexts that have already been defined.
+    Use the function [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) to toggle between compute contexts that have already been defined.
 
     After you have set the active compute context, it remains active until you change it.
 

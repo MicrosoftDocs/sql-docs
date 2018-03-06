@@ -196,7 +196,7 @@ For now, let's look at just the default input and output variables, `InputDataSe
 
 5. Now let's look at a typical Python error. Change the line in the previous example from `@input_data_1_name = N'MyInput'` to `@input_data_1_name = N'myinput'`.
 
-    Python errors are passed to you as messages, by the satellite service used by SQL Server. Messages can be long and include SQL Server errors or Launchpad errors in addition to Pyton errors, so be patient in digging through the text. The key message is in this line:
+    Python errors are passed to you as messages, by the satellite service used by SQL Server. Messages can be long and include SQL Server errors or Launchpad errors in addition to Python errors, so be patient in digging through the text. The key message is in this line:
 
     ```text
     MyOutput = MyInput
@@ -256,7 +256,7 @@ So how would you expose the single result of a calculation as a data frame, if a
     '
     ```
 
-    If you do not specify an index, **pandas** generates an index having values starting with 0 and ending with the length of the array.
+    If you do not specify an index, an index is generated that has values starting with 0 and ending with the length of the array.
 
     **Results**
 

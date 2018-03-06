@@ -46,12 +46,12 @@ This lesson also demonstrates the basics of how to set up and then use a **SQL S
 
 1. This lesson uses the database `sqlpy`. If you have not completed any of the previous lessons, you can create the database by running the following code:
 
-        ```sql
-        CREATE DATABASE sqlpy;
-        GO;
-        USE sqlpy;
-        GO;
-        ```
+    ```sql
+    CREATE DATABASE sqlpy;
+    GO;
+    USE sqlpy;
+    GO;
+    ```
 
     > [!IMPORTANT]
     > If you want to use a different database, be sure to edit the sample code and change the database name in the connection string.
@@ -148,22 +148,24 @@ After you define a compute context, you must set the **active compute context**.
 By default, most operations are run locally, which means that if you don't specify a different compute context, the data will be fetched from the data source, and the code will run in your current Python environment.
 
 There are two ways to set the active compute context:
-
 + As an argument of a method or function
-
-    In this example, you set the compute context by using an argument of the individual **rx** function.
-    
-    `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
-
-    In the call to [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary), the compute context is reused.
-
-    `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
-
 + By calling `rx_set_computecontext`
 
-    Use the function [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) to toggle between compute contexts that have already been defined.
+#### Set compute context as an argument of a method or function
 
-    After you have set the active compute context, it remains active until you change it.
+In this example, you set the compute context by using an argument of the individual **rx** function.
+    
+`linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
+
+This compute context is reused in the call to [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary):.
+
+`summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
+
+#### Set a compute context explicitly using rx_set_compute_context
+
+The function [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) lets you toggle between compute contexts that have already been defined.
+
+After you have set the active compute context, it remains active until you change it.
 
 ### Using parallel processing and streaming
 

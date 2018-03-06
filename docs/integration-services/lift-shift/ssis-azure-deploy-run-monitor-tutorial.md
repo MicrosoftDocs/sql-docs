@@ -24,6 +24,9 @@ Before you start, make sure you have version 17.2 or later of SQL Server Managem
 
 Also make sure that you have set up the SSISDB database and provisioned the Azure-SSIS Integration Runtime. For info about how to provision SSIS on Azure, see [Deploy SSIS packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
+> [!NOTE]
+> Deployment to Azure only supports the project deployment model.
+
 ## Connect to the SSISDB database
 
 Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQL Database server. For more info and screenshots, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).

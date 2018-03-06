@@ -4,7 +4,7 @@ hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
 author: "barbkess" 
-ms.author: "barbkess"
+ms.author: "hub-page"
 ms.topic: "article"
 ms.technology: 
   - "database-engine"

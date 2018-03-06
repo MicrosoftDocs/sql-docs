@@ -19,13 +19,13 @@ ms.workload: "Inactive"
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 ## Applicable to
- -   Microsoft Dirvers 5.2 for PHP for SQL Server
+ -   Microsoft Drivers 5.2 for PHP for SQL Server
  
 ## Introduction
 
 This article provides information on how to develop PHP applications using [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and the [PHP Drivers for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
 
-Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver for SQL Server, transparently encrypts and decrypts sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). The PHP Drivers for SQL Server utilizes the ODBC Driver for SQL Server to encrypt sensitive data.
+Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver for SQL Server, transparently encrypts and decrypts sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). The PHP Drivers for SQL Server utilize the ODBC Driver for SQL Server to encrypt sensitive data.
 
 ## Prerequisites
 
@@ -87,7 +87,7 @@ CREATE TABLE [dbo].[Patients](
 The following examples demonstrate how to use the SQLSRV and PDO_SQLSRV drivers to insert a row into the Patient table. Note the following points:
  -   There is nothing specific to encryption in the sample code. The driver automatically detects and encrypts the values of the SSN and BirthDate parameters, which target encrypted columns. This mechanism makes encryption transparent to the application.
  -   The values inserted into database columns, including the encrypted columns, are passed as bound parameters. While using parameters is optional when sending values to non-encrypted columns (although it is highly recommended because it helps prevent SQL injection), it is required for values targeting encrypted columns. If the values inserted in the SSN or BirthDate columns were passed as literals embedded in the query statement, the query would fail because the driver does not attempt to encrypt or otherwise process literals in queries. As a result, the server would reject them as incompatible with the encrypted columns.
- -   When inserting values using bind parameters, a SQL type that is identical to the data type of the target column or whose conversion to the data type of the target column is supported must be passed to the database. This requirement is because Always Encrypted supports few type conversions (for details, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)). The two PHP drivers, SQLSRV and PDO_SQLSRV, each has a mechanism to help the user determine the SQL type of the value, thus the user does not have to provide the SQL type explicitly.
+ -   When inserting values using bind parameters, a SQL type that is identical to the data type of the target column or whose conversion to the data type of the target column is supported must be passed to the database. This requirement is because Always Encrypted supports few type conversions (for details, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)). The two PHP drivers, SQLSRV and PDO_SQLSRV, each has a mechanism to help the user determine the SQL type of the value. Therefore, the user does not have to provide the SQL type explicitly.
   -   For the SQLSRV driver, the user has two options:
    -   Rely on the PHP driver to determine and set the right SQL type. In this case, the user must use `sqlsrv_prepare` and `sqlsrv_execute` to execute a parameterized query.
    -   Set the SQL type explicitly.
@@ -150,10 +150,10 @@ $stmt->execute();
 
 ### Plaintext Data Retrieval Example
 
-The following examples demonstrates filtering data based on encrypted values, and retrieving plaintext data from encrypted columns using the SQLSRV and PDO_SQLSRV drivers. Note the following points:
+The following examples demonstrate filtering data based on encrypted values, and retrieving plaintext data from encrypted columns using the SQLSRV and PDO_SQLSRV drivers. Note the following points:
  -   The value used in the WHERE clause to filter on the SSN column needs to be passed using bind parameter, so that the driver can transparently encrypt it before sending it to the server.
  -   When executing a query  with bound parameters, the PHP drivers automatically determines the SQL type for the user unless the user explicitly specifies the SQL type when using the SQLSRV driver.
- -   All values printed by the program is in plaintext, since the driver transparently decrypts the data retrieved from the SSN and BirthDate columns.
+ -   All values printed by the program are in plaintext, since the driver transparently decrypts the data retrieved from the SSN and BirthDate columns.
  
 Note: Queries can perform equality comparisons on encrypted columns only if the encryption is deterministic. For more information, see [Selecting Deterministic or Randomized encryption](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
@@ -216,7 +216,8 @@ This section describes common categories of errors when querying encrypted colum
 #### Unsupported data type conversion errors
 
 Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) for the detailed list of supported type conversions. Do the following to avoid data type conversion errors:
- -   When using the SQLSRV driver with `sqlsrv_prepare` and `sqlsrv_execute` or when using the PDO_SQLSRV driver to execute a query, the SQL type, along with the column size and the number of decimal digits of the parameter is automatically determined.
+ -   When using the SQLSRV driver with `sqlsrv_prepare` and `sqlsrv_execute` the SQL type, along with the column size and the number of decimal digits of the parameter is automatically determined.
+ -   When using the PDO_SQLSRV driver to execute a query, the SQL type with the column size and the number of decimal digits of the parameter is also automatically determined
  -   When using the SQLSRV driver with `sqlsrv_query` to execute a query:
   -   The SQL type of the parameter is either exactly the same as the type of the targeted column, or the conversion from the SQL type to the type of the column is supported.
   -   The precision and scale of the parameters targeting columns of the `decimal` and `numeric` SQL Server data types is the same as the precision and scale configure for the target column.
@@ -244,15 +245,15 @@ If Always Encrypted is enabled for a connection, the ODBC Driver will, by defaul
 
 Since the PHP drivers allow the user to bind a parameter in a prepared statement without providing the SQL type, when binding a parameter in an Always Encrypted enabled connection, the PHP Drivers call [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) on the parameter to get the SQL type, column size, and decimal digits. The metadata is then used to call [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). These extra `SQLDescribeParam` calls do not require extra round-trip to the database as the ODBC Driver has already stored the information on the client side when `sys.sp_describe_parameter_encryption` was called.
 
-The preceding behaviors ensure a high-level of transparency to the client application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
+The preceding behaviors ensure a high level of transparency to the client application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
 
-Unlike the ODBC Driver for SQL Server, enabling Always Encrypted at the statement/query-level is not yet support in the PHP drivers. 
+Unlike the ODBC Driver for SQL Server, enabling Always Encrypted at the statement/query-level is not yet supported in the PHP drivers. 
 
 ### Column Encryption Key Caching
 
 To reduce the number of calls to a column master key store to decrypt column encryption keys (CEK), the driver caches the plaintext CEKs in memory. After receiving the encrypted CEK (ECEK) from database metadata, the ODBC driver first tries to find the plaintext CEK corresponding to the encrypted key value in the cache. The driver calls the key store containing the CMK only if it cannot find the corresponding plaintext CEK in the cache.
 
-Note: In the ODBC Driver for SQL Server, the entries in the cache are evicted after a two hour timeout. This behaviour means that for a given ECEK, the driver contacts the key store only once during the lifetime of the application or every two hours, whichever is less.
+Note: In the ODBC Driver for SQL Server, the entries in the cache are evicted after a two-hour timeout. This behavior means that for a given ECEK, the driver contacts the key store only once during the lifetime of the application or every two hours, whichever is less.
 
 ## Working with Column Master Key Stores
 

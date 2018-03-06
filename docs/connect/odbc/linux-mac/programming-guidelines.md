@@ -1,5 +1,5 @@
 ---
-title: "Programming Guidelines | Microsoft Docs"
+title: "Programming Guidelines (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2018"
 ms.prod: "sql-non-specified"
@@ -23,7 +23,7 @@ ms.workload: "On Demand"
 
 The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
 
-An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] specific features by including `/usr/local/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-specific items that you would in your Windows ODBC applications.
+An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] specific features by including `/usr/local/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-specific items that you would use in your Windows ODBC applications.
 
 ## Available Features  
 The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) are valid when using the ODBC driver on macOS and Linux:  
@@ -50,7 +50,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 The following features have not been verified to work correctly in this release of the ODBC driver on macOS and Linux:
 
 -   Failover Cluster Connection
--   [Transparent Network IP Resolution](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)
+-   [Transparent Network IP Resolution](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (before ODBC Driver 17)
 -   [Advanced Driver Tracing](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 The following features are not available in this release of the ODBC driver on macOS and Linux: 
@@ -102,15 +102,15 @@ For ODBC Driver 17, SQLCHAR data in one of the following character sets/encoding
 |ISO-8859-13|Latin-7|
 |ISO-8859-15|Latin-9|
 
-Upon connection, the driver detects the current locale of the process it is loaded in. If it uses one of the encodings above, the driver will use that encoding for SQLCHAR (narrow-character) data; otherwise, it defaults to UTF-8. Since all processes start in the "C" locale by default (and thus cause the driver to default to UTF-8), if an application needs to use one of the encodings above, it should use the **setlocale** function to set the locale appropriately before connecting; either by specifying the desired locale explicitly, or using an empty string e.g. `setlocale(LC_ALL, "")` to use the locale settings of the environment.
+Upon connection, the driver detects the current locale of the process it is loaded in. If it uses one of the encodings above, the driver uses that encoding for SQLCHAR (narrow-character) data; otherwise, it defaults to UTF-8. Since all processes start in the "C" locale by default (and thus cause the driver to default to UTF-8), if an application needs to use one of the encodings above, it should use the **setlocale** function to set the locale appropriately before connecting; either by specifying the desired locale explicitly, or using an empty string for example `setlocale(LC_ALL, "")` to use the locale settings of the environment.
 
-Thus, in a typical Linux or Mac environment where the encoding is UTF-8, users of ODBC Driver 17 upgrading from 13 or 13.1 will not observe any differences. However, applications which use a non-UTF-8 encoding in the above list via `setlocale()` will need to use that encoding for data to/from the driver instead of UTF-8.
+Thus, in a typical Linux or Mac environment where the encoding is UTF-8, users of ODBC Driver 17 upgrading from 13 or 13.1 will not observe any differences. However, applications that use a non-UTF-8 encoding in the above list via `setlocale()` need to use that encoding for data to/from the driver instead of UTF-8.
 
 SQLWCHAR data must be UTF-16LE (Little Endian).
 
 When binding input parameters with SQLBindParameter, if a narrow character SQL type such as SQL_VARCHAR is specified, the driver converts the supplied data from the client encoding to the default (typically codepage 1252) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] encoding. For output parameters, the driver converts from the encoding specified in the collation information associated with the data to the client encoding. However, data loss is possible --- characters in the source encoding not representable in the target encoding will convert to a question mark ('?').
 
-To avoid this data loss when binding input parameters, specify a Unicode SQL character type such as SQL_NVARCHAR. In this case, the driver will convert from the client encoding to UTF-16, which can represent all Unicode characters. Furthermore, the target column or parameter on the server must also be either a Unicode type (**nchar**, **nvarchar**, **ntext**) or one with a collation/encoding which can represent all the characters of the original source data. For avoiding data loss with output parameters, specify a Unicode SQL type, and either a Unicode C type (SQL_C_WCHAR), causing the driver to return data as UTF-16; or a narrow C type, and ensure that the client encoding can represent all the characters of the source data (this is always possible with UTF-8.)
+To avoid this data loss when binding input parameters, specify a Unicode SQL character type such as SQL_NVARCHAR. In this case, the driver converts from the client encoding to UTF-16, which can represent all Unicode characters. Furthermore, the target column or parameter on the server must also be either a Unicode type (**nchar**, **nvarchar**, **ntext**) or one with a collation/encoding, which can represent all the characters of the original source data. For avoiding data loss with output parameters, specify a Unicode SQL type, and either a Unicode C type (SQL_C_WCHAR), causing the driver to return data as UTF-16; or a narrow C type, and ensure that the client encoding can represent all the characters of the source data (this is always possible with UTF-8.)
 
 For more information about collations and encodings, see [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
 

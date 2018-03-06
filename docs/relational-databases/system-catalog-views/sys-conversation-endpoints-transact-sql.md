@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.conversation_endpoints catalog view"
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.conversation_endpoints (Transact-SQL)

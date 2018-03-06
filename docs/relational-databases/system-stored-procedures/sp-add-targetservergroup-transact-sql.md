@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_targetservergroup"
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_targetservergroup (Transact-SQL)

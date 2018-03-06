@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Installing SQL Server machine learning features on an Azure virtual machine
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 If you deploy an Azure virtual machine that includes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can now select machine learning as a feature to be added to the instance when the VM is created.
 

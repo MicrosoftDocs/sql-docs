@@ -17,7 +17,7 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Targets for Extended Events in SQL Server

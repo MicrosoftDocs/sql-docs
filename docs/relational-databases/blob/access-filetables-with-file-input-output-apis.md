@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "FileTables [SQL Server], accessing files with file APIs"
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Access FileTables with File Input-Output APIs

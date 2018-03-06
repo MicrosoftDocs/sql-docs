@@ -16,7 +16,7 @@ ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_health_component_status_mappings (Transact-SQL)

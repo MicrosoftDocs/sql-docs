@@ -19,7 +19,7 @@ ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Understanding Cursors and Locks

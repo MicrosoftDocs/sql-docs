@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.trace_event_bindings catalog view"
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.trace_event_bindings (Transact-SQL)

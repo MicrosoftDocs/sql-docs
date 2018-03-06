@@ -18,7 +18,7 @@ ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)

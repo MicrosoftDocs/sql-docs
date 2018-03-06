@@ -18,6 +18,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # Getting Started with Machine Learning Server (Standalone)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 In SQL Server 2016, Microsoft R Server (Standalone) helped bring the popular open source R language into the enterprise, to enable high-performance analytics solutions and integration with other business applications.  
 

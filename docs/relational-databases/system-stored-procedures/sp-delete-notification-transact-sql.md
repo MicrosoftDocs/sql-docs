@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_delete_notification"
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_delete_notification (Transact-SQL)

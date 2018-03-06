@@ -93,7 +93,9 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Install SQL Server from the Command Prompt
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   Before you run SQL Server Setup, review [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
   
  Installing a new instance of SQL Server at the command prompt enables you to specify the features to install and how they should be configured. You can also specify silent, basic, or full interaction with the Setup user interface.  
@@ -484,10 +486,10 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERVER  
 ```  
   
- To remove a named instance, specify the name of the instance instead of "MSSQLSERVER" in the example that was mentioned earlier in this topic. 
+ To remove a named instance, specify the name of the instance instead of "MSSQLSERVER" in the example that was mentioned earlier in this article. 
   
 ##  <a name="ClusterInstall"></a> Failover Cluster Parameters  
- Before you install a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] failover cluster instance, review the following topics:  
+ Before you install a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] failover cluster instance, review the following articles:  
   
 -   [Hardware and Software Requirements for Installing [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

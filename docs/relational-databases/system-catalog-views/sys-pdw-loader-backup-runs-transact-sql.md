@@ -18,7 +18,7 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_loader_backup_runs (Transact-SQL)

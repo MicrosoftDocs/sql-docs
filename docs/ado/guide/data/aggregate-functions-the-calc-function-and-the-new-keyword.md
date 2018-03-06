@@ -21,7 +21,7 @@ ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Aggregate Functions, the CALC Function, and the NEW Keyword

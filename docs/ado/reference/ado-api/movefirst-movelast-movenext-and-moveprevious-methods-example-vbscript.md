@@ -23,7 +23,7 @@ ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VBScript)

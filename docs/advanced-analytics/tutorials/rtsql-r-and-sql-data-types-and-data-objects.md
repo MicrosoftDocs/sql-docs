@@ -22,6 +22,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # R and SQL data types and data objects (R in SQL quickstart)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this step, you learn about some common issues that arise when moving data between R and SQL Server:
 

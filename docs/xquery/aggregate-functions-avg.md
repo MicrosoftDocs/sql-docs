@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "avg function [XQuery]"
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Aggregate Functions - avg

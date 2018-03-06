@@ -18,7 +18,7 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using RDS with ODBC Connection Pooling

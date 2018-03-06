@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "sys.fn_cdc_get_max_lsn"
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_cdc_get_max_lsn (Transact-SQL)

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "DDL triggers, EVENTDATA function"
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use the EVENTDATA Function

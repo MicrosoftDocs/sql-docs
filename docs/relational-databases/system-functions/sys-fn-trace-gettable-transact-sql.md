@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sys.fn_trace_gettable function"
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.fn_trace_gettable (Transact-SQL)

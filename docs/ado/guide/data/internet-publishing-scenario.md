@@ -20,7 +20,7 @@ ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Internet Publishing Scenario

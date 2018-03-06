@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "XQuery, about XQuery"
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # XQuery Basics

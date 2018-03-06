@@ -3,21 +3,21 @@ title: Configure a SQL Server container in Kubernetes for high availability | Mi
 description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Container Service.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: "mvc"
+ms.custom: "sql-linux,mvc"
 ms.technology: database-engine
 ms.workload: "Inactive"
 ---
 # Configure a SQL Server container in Kubernetes for high availability
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Learn how to configure a SQL Server instance on Kubernetes in Azure Container Service (AKS), with persistent storage for high availability (HA). The solution provides resiliency. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. AKS provides resiliency against a Kubernetes node failure. 
 
@@ -247,6 +247,8 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
    ![Screenshot of get pod command](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
+   In the preceding image, the pod has a status of `Running`. This status indicates that the container is ready. This may take several minutes.
+
    >[!NOTE]
    >After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image from the Docker hub. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it. 
 
@@ -260,7 +262,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
    ![Screenshot of get service command](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
 
-   For additional information about the status of the objects in the Kubernetes cluster, run:
+   For more information about the status of the objects in the Kubernetes cluster, run:
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>

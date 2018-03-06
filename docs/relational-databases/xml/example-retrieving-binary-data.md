@@ -18,7 +18,7 @@ ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Retrieving Binary Data

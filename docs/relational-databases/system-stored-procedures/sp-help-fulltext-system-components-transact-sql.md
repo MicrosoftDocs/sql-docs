@@ -23,7 +23,7 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_fulltext_system_components (Transact-SQL)

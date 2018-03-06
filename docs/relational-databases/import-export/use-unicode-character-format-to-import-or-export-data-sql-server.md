@@ -19,7 +19,7 @@ ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use Unicode Character Format to Import or Export Data (SQL Server)

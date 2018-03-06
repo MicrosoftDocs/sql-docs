@@ -21,7 +21,7 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use the PowerShell Provider for Extended Events

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_broker_queue_monitors dynamic management view"
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_broker_queue_monitors (Transact-SQL)

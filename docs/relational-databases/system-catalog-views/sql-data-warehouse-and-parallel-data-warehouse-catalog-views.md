@@ -18,7 +18,7 @@ ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
 caps.latest.revision: 5
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Data Warehouse and Parallel Data Warehouse Catalog Views

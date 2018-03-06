@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "adding users [Master Data Services]"
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

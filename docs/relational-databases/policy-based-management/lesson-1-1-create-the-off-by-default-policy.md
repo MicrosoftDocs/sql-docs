@@ -16,8 +16,8 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

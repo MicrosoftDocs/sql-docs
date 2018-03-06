@@ -22,7 +22,7 @@ ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Ordinal Property (ADO MD Cell)

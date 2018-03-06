@@ -13,6 +13,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # SQL Server Python tutorials
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides a list of tutorials and samples that demonstrate the use of Python with SQL Server 2017. Through these samples and demos, you will learn:
 

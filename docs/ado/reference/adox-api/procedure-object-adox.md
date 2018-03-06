@@ -21,7 +21,7 @@ ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Procedure Object (ADOX)

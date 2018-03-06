@@ -24,7 +24,7 @@ ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Use PATH Mode with FOR XML

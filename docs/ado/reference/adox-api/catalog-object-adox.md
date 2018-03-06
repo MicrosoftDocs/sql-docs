@@ -21,7 +21,7 @@ ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Catalog Object (ADOX)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.dm_exec_compute_node_status management view"
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_compute_node_status (Transact-SQL)

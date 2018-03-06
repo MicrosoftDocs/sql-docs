@@ -20,6 +20,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Getting Started with SQL Server Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning Services in SQL Server is designed to support data science tasks without exposing your data to security risks or moving data unnecesarily.
 

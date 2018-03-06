@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "implicit casting"
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Type Casting Rules in XQuery

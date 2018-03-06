@@ -21,7 +21,7 @@ ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Dialect Property

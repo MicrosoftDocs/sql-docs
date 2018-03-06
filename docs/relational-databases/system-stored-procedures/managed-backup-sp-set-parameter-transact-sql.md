@@ -26,7 +26,7 @@ ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # managed_backup.sp_set_parameter (Transact-SQL)

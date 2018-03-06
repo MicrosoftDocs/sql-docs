@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "log_shipping_secondary_databases system table"
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # log_shipping_secondary_databases (Transact-SQL)

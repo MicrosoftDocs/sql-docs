@@ -3,22 +3,22 @@ title: Configure SQL Server Always On Availability Group for high availability o
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
-ms.date: 01/24/2018
+manager: craigg
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: "On Demand"
 ---
 # Configure SQL Server Always On Availability Group for high availability on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article describes how to create a SQL Server Always On Availability Group (AG) for high availability on Linux. There are two configuration types for AGs. A *high availability* configuration uses a cluster manager to provide business continuity. This configuration can also include read-scale replicas. This document explains how to create the AG for high availability.
 
@@ -85,7 +85,7 @@ Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP
 * Set Primary and secondary replicas `FAILOVER_MODE = EXTERNAL`. 
    Specifies that the replica interacts with an external cluster manager, like Pacemaker. 
 
-The following Transact-SQL scripts create an AG for high availability named `ag1`. The script configures the AG replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, `**<node2>**`, or `**<node3>**` values with the names of the SQL Server instances that host the replicas. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. To create the AG, run the following Transact-SQL on the SQL Server instance that hosts the primary replica.
+The following Transact-SQL scripts create an AG for high availability named `ag1`. The script configures the AG replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `<node1>`, `<node2>`, or `<node3>` values with the names of the SQL Server instances that host the replicas. Replace the `<5022>` with the port you set for the data mirroring endpoint. To create the AG, run the following Transact-SQL on the SQL Server instance that hosts the primary replica.
 
 Run **only one** of the following scripts: 
 
@@ -101,23 +101,23 @@ Run **only one** of the following scripts:
    CREATE AVAILABILITY GROUP [ag1]
        WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
        FOR REPLICA ON
-           N'**<node1>**' 
+           N'<node1>' 
    	      	WITH (
-		       ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+		       ENDPOINT_URL = N'tcp://<node1>:<5022>',
 		       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		       FAILOVER_MODE = EXTERNAL,
 		       SEEDING_MODE = AUTOMATIC
 		       ),
-           N'**<node2>**' 
+           N'<node2>' 
 		    WITH ( 
-		       ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+		       ENDPOINT_URL = N'tcp://<node2>:<5022>', 
 		       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		       FAILOVER_MODE = EXTERNAL,
 		       SEEDING_MODE = AUTOMATIC
 		       ),
-		   N'**<node3>**'
+		   N'<node3>'
            WITH( 
-		      ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+		      ENDPOINT_URL = N'tcp://<node3>:<5022>', 
 		      AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		      FAILOVER_MODE = EXTERNAL,
 		      SEEDING_MODE = AUTOMATIC
@@ -138,20 +138,20 @@ Run **only one** of the following scripts:
    CREATE AVAILABILITY GROUP [ag1] 
       WITH (CLUSTER_TYPE = EXTERNAL) 
       FOR REPLICA ON 
-       N'**<node1>**' WITH ( 
-          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**', 
+       N'<node1>' WITH ( 
+          ENDPOINT_URL = N'tcp://<node1>:<5022>', 
           AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = EXTERNAL, 
           SEEDING_MODE = AUTOMATIC 
           ), 
-       N'**<node2>**' WITH (  
-          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',  
+       N'<node2>' WITH (  
+          ENDPOINT_URL = N'tcp://<node2>:<5022>',  
           AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = EXTERNAL, 
           SEEDING_MODE = AUTOMATIC 
           ), 
-       N'**<node3>**' WITH ( 
-          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+       N'<node3>' WITH ( 
+          ENDPOINT_URL = N'tcp://<node3>:<5022>', 
           AVAILABILITY_MODE = CONFIGURATION_ONLY  
           );
    ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "subscription views [Master Data Services], deleting"
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

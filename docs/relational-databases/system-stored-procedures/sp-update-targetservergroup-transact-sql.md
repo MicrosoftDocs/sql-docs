@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_update_targetservergroup"
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_update_targetservergroup (Transact-SQL)

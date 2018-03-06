@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_helpdevice"
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_helpdevice (Transact-SQL)

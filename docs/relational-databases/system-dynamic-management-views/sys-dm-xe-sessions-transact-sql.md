@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_xe_sessions (Transact-SQL)

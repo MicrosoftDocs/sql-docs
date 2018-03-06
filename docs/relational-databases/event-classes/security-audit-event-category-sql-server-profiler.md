@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "SQL Server event classes, Security Audit event category"
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Security Audit Event Category (SQL Server Profiler)

@@ -22,6 +22,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # End-to-end data science walkthrough for R and SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this walkthrough, you develop an end-to-end solution for predictive modeling based on Microsoft R with SQL Server 2016 or SQL Server 2017.
 

@@ -1,7 +1,7 @@
 ---
 title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/31/2017"
+ms.date: "02/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
@@ -26,6 +26,11 @@ ms.workload: "Active"
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON is a popular textual data format that's used for exchanging data in modern web and mobile applications. JSON is also used for storing unstructured data in log files or NoSQL databases such as Microsoft Azure Cosmos DB. Many REST web services return results that are formatted as JSON text or accept data that's formatted as JSON. For example, most Azure services, such as Azure Search, Azure Storage, and Azure Cosmos DB, have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between webpages and web servers by using AJAX calls. 
+
+JSON functions in SQL Server enable you to combine NoSQL and relational concepts in the same database. Now you can combine classic relational columns with columns that contain documents formatted as JSON text in the same table, parse and import JSON documents in relational structures, or format relational data to JSON text. You see see how JSON functions connect relational and NoSQL concepts in SQL Server and Azure SQL Database in the following video:
+
+*JSON as a bridge between NoSQL and relational worlds*
+> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
  
 Here's an example of JSON text: 
  
@@ -39,7 +44,7 @@ Here's an example of JSON text:
 }]
 ``` 
  
-By using SQL Server built-in functions and operators, you can do the following with JSON text: 
+By using SQL Server built-in functions and operators, you can do the following things with JSON text: 
  
 - Parse JSON text and read or modify values.  
 - Transform arrays of JSON objects into table format.  
@@ -49,7 +54,10 @@ By using SQL Server built-in functions and operators, you can do the following w
 ![Overview of built-in JSON support](../../relational-databases/json/media/jsonslides1overview.png "Overview of built-in JSON support")  
   
 ## Key JSON capabilities of SQL Server and SQL Database
-The next sections discuss the key capabilities that SQL Server provides with its built-in JSON support.
+The next sections discuss the key capabilities that SQL Server provides with its built-in JSON support. You can see how to use JSON functions and operators in the following video:
+
+*SQL Server 2016 and JSON Support*
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
 
 ### Extract values from JSON text and use them in queries
 If you have JSON text that's stored in database tables, you can read or modify values in the JSON text by using the following built-in functions:  
@@ -164,7 +172,7 @@ For more information, see [Format query results as JSON with FOR JSON (SQL Serve
 ## Combine relational and JSON data
 SQL Server provides a hybrid model for storing and processing both relational and JSON data by using standard Transact-SQL language. You can organize collections of your JSON documents in tables, establish relationships between them, combine strongly typed scalar columns stored in tables with flexible key/value pairs stored in JSON columns, and query both scalar and JSON values in one or more tables by using full Transact-SQL.
  
-JSON text is usually stored in varchar or nvarchar columns and is indexed as plain text. Any SQL Server feature or component that supports text supports JSON, so there are almost no constraints on interaction between JSON and other SQL Server features. You can store JSON in In-memory or Temporal tables, apply Row-Level Security predicates on JSON text, and so on.
+JSON text is stored in varchar or nvarchar columns and is indexed as plain text. Any SQL Server feature or component that supports text supports JSON, so there are almost no constraints on interaction between JSON and other SQL Server features. You can store JSON in In-memory or Temporal tables, apply Row-Level Security predicates on JSON text, and so on.
 
 If you have pure JSON workloads where you want to use a query language that's customized for the processing of JSON documents, consider Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/).  
   
@@ -282,7 +290,7 @@ After you restore the sample database to an instance of SQL Server 2016, extract
   
 Here's what you can do with the scripts that are included in the file:  
   
-* Denormalize the existing schema to create columns of JSON data by doing the following:  
+* Denormalize the existing schema to create columns of JSON data.
   
     * Store information from SalesReasons, SalesOrderDetails, SalesPerson, Customer, and other tables that contain information related to sales order into JSON columns in the SalesOrder_json table.  
   
@@ -298,13 +306,23 @@ Here's what you can do with the scripts that are included in the file:
   
 * Clean up scripts. Don't run this part if you want to keep the stored procedures and views that you created in steps 2 and 4.  
   
-## Learn more about built-in JSON support  
+## Learn more about JSON in SQL Server and Azure SQL Database  
   
 ### Microsoft blog posts  
   
--   For specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and Azure SQL Database.  
-  
-### Reference topics  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following video:
+
+*Using JSON in SQL Server 2016 and Azure SQL Database*
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+
+*Building REST API with SQL Server using JSON functions*
+> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+
+### Reference articles  
   
 -   [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
 -   [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  
@@ -313,5 +331,3 @@ Here's what you can do with the scripts that are included in the file:
     -   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)  
     -   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)  
     -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)  
-  
-  

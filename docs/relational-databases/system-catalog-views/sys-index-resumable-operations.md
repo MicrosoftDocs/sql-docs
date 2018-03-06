@@ -24,7 +24,7 @@ ms.assetid:
 caps.latest.revision: 1
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 
 ms.workload: "Inactive"
 ---

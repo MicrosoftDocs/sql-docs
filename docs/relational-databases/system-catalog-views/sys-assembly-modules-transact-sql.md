@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.assembly_modules catalog view"
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.assembly_modules (Transact-SQL)

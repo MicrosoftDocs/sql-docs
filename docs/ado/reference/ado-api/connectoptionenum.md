@@ -21,7 +21,7 @@ ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ConnectOptionEnum

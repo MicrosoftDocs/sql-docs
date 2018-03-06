@@ -23,7 +23,7 @@ ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # NumberOfFlags Property (SInstance Class)

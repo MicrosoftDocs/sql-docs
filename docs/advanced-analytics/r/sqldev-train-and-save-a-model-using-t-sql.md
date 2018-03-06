@@ -24,6 +24,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Lesson 5: Train and save a model using T-SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 

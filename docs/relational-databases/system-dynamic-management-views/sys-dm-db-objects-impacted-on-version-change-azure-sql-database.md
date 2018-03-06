@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.dm_db_objects_impacted_on_version_change"
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)

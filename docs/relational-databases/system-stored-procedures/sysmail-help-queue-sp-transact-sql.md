@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_help_queue_sp"
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_help_queue_sp (Transact-SQL)

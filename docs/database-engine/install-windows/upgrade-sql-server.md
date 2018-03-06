@@ -21,15 +21,17 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Upgrade SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- You can upgrade instances of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ss2016](../../includes/sssql15-md.md)], to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Before running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following topics about the upgrade process and the release notes.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ You can upgrade instances of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ss2016](../../includes/sssql15-md.md)], to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Before running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following articles about the upgrade process and the release notes.  
   
    - For information about upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], see [Are you upgrading from SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).  
    - [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
    - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
   
 ## In This Section  
-This section contains the following topics:  
+This section contains the following articles:  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Prepare for upgrade by running Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  

@@ -20,7 +20,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Integration Services 10.0 (SQL Server Configuration Manager)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   This is the service that supports [!INCLUDE[ssIS](../../includes/ssis-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
   
  For information about [!INCLUDE[ssIS](../../includes/ssis-md.md)], see Books Online.  

@@ -20,7 +20,7 @@ ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DefinedSize Property Example (VC++)

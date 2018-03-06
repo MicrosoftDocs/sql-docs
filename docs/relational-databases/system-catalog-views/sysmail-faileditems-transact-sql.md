@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_faileditems database mail view"
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_faileditems (Transact-SQL)

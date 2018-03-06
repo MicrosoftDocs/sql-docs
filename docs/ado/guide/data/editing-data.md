@@ -20,7 +20,7 @@ ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Editing Data

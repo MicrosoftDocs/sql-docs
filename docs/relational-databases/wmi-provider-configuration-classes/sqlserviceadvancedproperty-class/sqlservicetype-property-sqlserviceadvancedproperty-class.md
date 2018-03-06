@@ -23,7 +23,7 @@ ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 caps.latest.revision: 42
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SqlServiceType Property (SqlServiceAdvancedProperty Class)

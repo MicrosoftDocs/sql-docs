@@ -26,7 +26,7 @@ ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 caps.latest.revision: 42
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.availability_groups (Transact-SQL)

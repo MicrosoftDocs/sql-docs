@@ -25,7 +25,7 @@ ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Working with the WMI Provider for Configuration Management

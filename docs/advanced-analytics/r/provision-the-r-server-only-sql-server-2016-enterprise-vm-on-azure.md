@@ -18,6 +18,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # Provision a virtual machine for machine learning on Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Virtual machines on Azure are a convenient option for quickly configuring a complete server environment for machine learning solutions.
 

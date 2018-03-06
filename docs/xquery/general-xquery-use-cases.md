@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "XQuery, general usage cases"
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # General XQuery Use Cases

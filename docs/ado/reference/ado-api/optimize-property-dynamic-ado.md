@@ -19,7 +19,7 @@ ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Optimize Property-Dynamic (ADO)

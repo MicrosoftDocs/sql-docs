@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_attach_single_file_db"
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 caps.latest.revision: 68
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_attach_single_file_db (Transact-SQL)

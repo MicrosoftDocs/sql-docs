@@ -18,6 +18,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Install pretrained machine learning models on SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to add pretrained models to an instance of SQL Server that already has R Services or Machine Learning Services installed.
 

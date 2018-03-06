@@ -1,7 +1,7 @@
 ---
 title: "SQL Server vNext Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/05/2018"
+ms.date: "03/06/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,21 +22,6 @@ This article describes limitations and issues with SQL Server vNext on Windows a
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 
 ## SQL Server vNext Community Technology Preview (CTP 1.4 - March 2018)
-
-### Database Engine
-
-> - **Issue and customer impact:** <enter info here>
-> - **Workaround:** <enter info here>
-> - **Applies to:** Windows | Linux
-
-> - **Issue and customer impact:** <enter info here>
-> - **Workaround:** <enter info here>
-> - **Applies to:** Windows only
-
-### Setup
-> - **Issue and customer impact:** <enter info here>
-> - **Workaround:** <enter info here>
-> - **Applies to:** Windows | Linux
 
 ### Master Data Services (MDS)
 **Issue and customer impact:** In the Master Data Services (MDS) portal, the Silverlight components on the following pages have been replaced with HTML controls:

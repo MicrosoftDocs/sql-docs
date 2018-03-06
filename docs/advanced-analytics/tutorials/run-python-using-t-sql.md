@@ -24,15 +24,28 @@ manager: "cgronlund"
 
 This tutorial explains how you can run Python code in SQL Server 2017. It walks you through the process of moving data between SQL Server and Python, and explains how to wrap well-formed Python code in a stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to build, train, and use machine learning models in SQL Server.
 
-To complete this tutorial, install and enable Machine Learning Services on the instance, as described in [this article](../python/setup-python-machine-learning-services.md). You should also install SQL Server Management Studio or another tool that can connect to a server and database, and run a T-SQL query or stored procedure.
+## Prerequisites
 
-After you have completed setup, return to this tutorial, to learn how to execute Python code in the context of a stored procedure.
+To complete this tutorial, you must first install SQL Server 2017 and enable Machine Learning Services on the instance, as described in [this article](../python/setup-python-machine-learning-services.md). 
+
+You should also install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). Alternatively, you can use another database management or query tool, as long as it can connect to a server and database, and run a T-SQL query or stored procedure.
+
+After you have completed setup, return to this tutorial, to learn how to execute Python code in the context of a stored procedure. 
+
+## Overview
+
+This tutorial includes four lessons:
+
++ The basics of moving data between SQL Server and Python: learn the basic requirements, data structures, inputs, and outputs.
++ Practice using stored procedures for simple Python tasks, like loading sample data.
++ Use stored procedures to create a Python machine learning model, and generate scores from the model.
++ An optional lesson for users who intend to run Python from a remote client, using SQL Server as the _compute context_. Includes code for building a model; however, requires that you are already somewhat familiar with Python environments and Python tools.
 
 Additional Python samples specific to SQL Server 2017 are provided here: [SQL Server Python tutorials](../tutorials/sql-server-python-tutorials.md)
 
-## Check that Python is enabled and the Launchpad is running
+## Verify that Python is enabled and the Launchpad is running
 
-1. In SSMS, run this statement to make sure the service has been enabled.
+1. In Management Studio, run this statement to make sure the service has been enabled.
 
     ```sql
     sp_configure 'external scripts enabled'
@@ -58,16 +71,16 @@ Additional Python samples specific to SQL Server 2017 are provided here: [SQL Se
 
     If you get errors, there are a variety of things you can do to ensure that the server and Python can communicate. For example, typically you must add the Windows user group `SQLRUserGroup` as a login on the instance, to ensure that Launchpad can provide communication between Python and SQL Server. (The same group is used for both R and Python code execution.) For more information, see [Enabled implied authentication](../r/add-sqlrusergroup-to-database.md).
     
-    Additionally, you might need to enable network protocols that have been disabed, or open the firewall. For more information, see [Troubleshooting setup](../common-issues-external-script-execution.md).
+    Additionally, you might need to enable network protocols that have been disabled, or open the firewall so that SQL Server can communicate with external clients. For more information, see [Troubleshooting setup](../common-issues-external-script-execution.md).
 
 ## Basic Python interaction
 
 There are two ways to run Python code in SQL Server:
 
-+ Add a Python script as an argument of the system stored procedure, sp_execute_external_script
-+ From a remote Python client, connect to SQL Server using [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver), and execute code using the SQL Server as the compute context.
++ Add a Python script as an argument of the system stored procedure, **sp_execute_external_script**
++ From a remote Python client, connect to SQL Server, and execute code using the SQL Server as the compute context. This requires [revoscalepy](../python/what-is-revoscalepy.md).
 
-The goal of this tutorial is to ensure that you can use Python in a stored procedure.
+The primary goal of this tutorial is to ensure that you can use Python in a stored procedure.
 
 For now, assuming that you have everything set up correctly, and Python and SQL Server are talking to each other, run some simple code to see how data is passed back and forth between SQL Server and Python.
 
@@ -83,7 +96,7 @@ print(c, d)
 '
 ```
 
-+ Everything inside the `@script` argument must be valid Python code. That means following all Pythonic rules regarding indentation, variable names, and so forth. when yo get an error, check your white space and casing. 
++ Everything inside the `@script` argument must be valid Python code. That means following all Pythonic rules regarding indentation, variable names, and so forth. When you get an error, check your white space and casing.
 + If you are using any libraries not loaded by default, you must use an import statement at the beginning of your script to load them. If the library is not installed, stop, and install the Python package outside of SQL Server, as described here: [Install new Python packages on SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
 SQL Server passes the code to Python, and returns results and messages.
@@ -353,15 +366,18 @@ WITH RESULT SETS (( ResultValue float ))
 |------|
 |0.5|
 
-From this exercise, you can see that outputting a single value as a data frame might be more trouble than its worth. Fortunately, you can easily pass all kinds of values in and out of the stored procedure as variables. That's covered in the next lesson.
+From this exercise, you can see that outputting a single value as a data frame might be more trouble than its worth. Fortunately, you can easily pass all kinds of values in and out of the stored procedure as variables. That's covered in the next lesson. 
 
+## Tips
 
-## Tips and resources
++ Among programming languages, Python is one of the most flexible with regard to single quotes vs. double quotation marks; they're pretty much interchangeable. 
 
-Among programming languages, Python is one of the most flexible with regard to single quotes vs. double quotation marks; they're pretty much interchangeable. is accepted. However, T-SQL uses single quotes for only certain things, and because the `@script` argument uses single quotes to enclose the Python code as a Unicode string, it is a good idea to avoid single quotes inside your Python code.
+    However, T-SQL uses single quotes for only certain things, and the `@script` argument uses single quotes to enclose the Python code as a Unicode string. Therefore, you might need to review your Python code and change some single quotes to double quotes.
 
-If you can't find the stored procedure, `sp_execute_external_script`, it means you probably haven't finished configuring the instance to support external script execution. After running SQL Server 2017 setup and selecting Python as the machine learning language, you must also explicitly enable the feature using `sp_configure`, and then restart the instance. For details, see [Setup Machine Learning Services with Python](../python/setup-python-machine-learning-services.md).
++ Can't find the stored procedure, `sp_execute_external_script`? It means you probably haven't finished configuring the instance to support external script execution. After running SQL Server 2017 setup and selecting Python as the machine learning language, you must also explicitly enable the feature using `sp_configure`, and then restart the instance. 
+
+    For details, see [Setup Machine Learning Services with Python](../python/setup-python-machine-learning-services.md).
 
 ## Next steps
 
-[Running Python in a SQL stored procedure](running-python-in-sql-stored-procedure.md)
+[Wrap Python code in a SQL stored procedure](wrap-python-in-tsql-stored-procedure.md)

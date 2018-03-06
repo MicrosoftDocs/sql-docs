@@ -102,11 +102,9 @@ The `CREATE EXTERNAL LIBRARY` statement uploads the library bits to the database
 
 Libraries uploaded to the instance can be either public or private. If the library is created by a member of `dbo`, the library is public and can be shared with all users. Otherwise, the library is private to that user only.
 
-You cannot use blobs as a data source in the SQL Server 2017 release.
-
 ## Permissions
 
-Requires the `CREATE ANY EXTERNAL LIBRARY` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to execute CREATE EXTERNAL LIBRARY. For all other users, you must explicitly give them permission using a [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) statement, specifying CREATE EXTERNAL LIBRARY as the privilege.
+Requires the `CREATE EXTERNAL LIBRARY` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to create an external library. For all other users, you must explicitly give them permission using a [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) statement, specifying CREATE EXTERNAL LIBRARY as the privilege.
 
 To modify a library requires the separate permission, `ALTER ANY EXTERNAL LIBRARY`.
 
@@ -175,10 +173,8 @@ Because it can be difficult to determine all dependencies just from looking at t
     @script=N'
     # load the desired package packageA
     library(packageA)
-    # call function from package
-    OutputDataSet <- packageA.function()
+    print(packageVersion("packageA"))
     '
-    WITH RESULT SETS (([result] int));    
     ```
 
 ### C. Create a library from a byte stream
@@ -197,17 +193,6 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 The `ALTER EXTERNAL LIBRARY` DDL statement can be used to add new library content or modify existing library content. To modify an existing library requires the `ALTER ANY EXTERNAL LIBRARY` permission.
 
 For more information, see [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md).
-
-### E. Delete a package library
-
-To delete a package library from the database, run the statement:
-
-```sql
-DROP EXTERNAL LIBRARY customPackage <user_name>;
-```
-
-> [!NOTE]
-> Unlike other `DROP` statements in [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], this statement supports an optional parameter that specifies the user authority. This option allows users with ownership roles to delete libraries that were uploaded by regular users.
 
 ## See also
 

@@ -72,13 +72,6 @@ The file can be specified in the form of a local path or network path. If the da
 
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
 
-**DATA_SOURCE = external_data_source_name**
-
-Specifies the name of the external data source that contains the location of the library file. This location should reference an Azure blob storage path. To create an external data source, use [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
-
-> [!IMPORTANT] 
-> Currently, blobs are not supported as a data source in the SQL Server 2017 release.
-
 **library_bits**
 
 Specifies the content of the package as a hex literal, similar to assemblies. 
@@ -99,13 +92,11 @@ The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the data
 
 ## Permissions
 
-Requires the `ALTER ANY EXTERNAL LIBRARY` permission. 
-
 By default, the **dbo** user or any member of the role **db_owner** has permission to run ALTER EXTERNAL LIBRARY. Additionally, the user who created the external library can alter that external library.
 
 ## Examples
 
-The following examples modifies an external library called `customPackage`.
+The following examples change an external library called `customPackage`.
 
 ### A. Replace the contents of a library using a file
 
@@ -132,7 +123,8 @@ EXEC sp_execute_external_script
 The following example alters the existing library by passing the new bits as a hexidecimal literal.
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
 > [!NOTE]

@@ -1,6 +1,6 @@
 ---
 title: "Install additional R packages on SQL Server | Microsoft Docs"
-ms.date: "02/20/2018"
+ms.date: "03/05/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -36,7 +36,7 @@ There are multiple methods for installing new R packages, depending on which ver
 
 + [Install packages using the CREATE EXTERNAL LIBRARY statement](#bkmk_createlibrary) 
 
-    The CREATE EXTERNAL LIBRARY statement is provided in SQL Server 2017, to make it possible for a DBA to create a package library without running R or Python code directly. However, this method requires that you prepare all required packages in advance.  
+    The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement is provided in SQL Server 2017, to make it possible to create a package library without running R or Python code directly. However, this method requires that you prepare all required packages in advance, and requires additional database permissions.
 
     **Applies to:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; other restrictions apply
 
@@ -128,7 +128,7 @@ This procedure assumes that you have prepared all the packages that you need, in
 
 ## <a name="bkmk_createlibrary"></a> Use a DDL statement to install a package 
 
-In SQL Server 2017, you can use the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement to add a package or set of packages to an instance or a specific database. This DDL statement and the supporting database roles are intended to facilitate installation and management of packages by a BA without having to use R or Python tools.
+In SQL Server 2017, you can use the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement to add a package or set of packages to an instance or a specific database. This DDL statement and the supporting database roles are intended to facilitate installation and management of packages by a database owner without having to use R or Python tools.
 
 This process requires some preparation, in comparison to installing packages using conventional R or Python methods.
 
@@ -137,6 +137,8 @@ This process requires some preparation, in comparison to installing packages usi
     If you do not have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 + The statement fails if required packages are not available. You must analyze dependencies of the package you want to install and make sure that the packages are uploaded to the server and database. We recommend using **miniCRAN** or **igraph** for analyzing packages dependencies.
+
++ You must have the necessary permissions on the database. For details, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
 ### Prepare the packages in archive format
 

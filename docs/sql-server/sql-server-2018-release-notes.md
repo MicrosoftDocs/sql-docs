@@ -1,7 +1,7 @@
 ---
 title: "SQL Server vNext Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/19/2017"
+ms.date: "03/06/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,30 +15,28 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server vNext Release Notes
-This topic describes limitations and issues with SQL Server vNext on Windows and SQL Server vNExt on Linux. For related information, see:
+This article describes limitations and issues with SQL Server vNext on Windows and SQL Server vNExt on Linux. For related information, see:
 - [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-2018.md)
 
 **Try SQL Server!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 
-## SQL Server vNext Community Technology Preview (CTP 1.1 - December 2017)
-### Database Engine
+## SQL Server vNext Community Technology Preview (CTP 1.4 - March 2018)
 
-> - **Issue and customer impact:** ??
-> - **Workaround:** ???
-> - **Applies to:** Windows | Linx
+### Master Data Services (MDS)
+**Issue and customer impact:** In the Master Data Services (MDS) portal, the Silverlight components on the following pages have been replaced with HTML controls:
+-   Function Explore
+    -   Entities
+    -   Entity Dependencies
+    -   Hierarchies
+-   Function System Administration 
+    -   Manage Derived Hierarchies - Edit Derived Hierarchy - Preview 
 
----
+On the modified **Explore** pages, the operators `Matches` and `Does not match` are not supported for filtering grid data in the function **Filter**. Support for these operators will be restored in later CTP releases.
 
-> - **Issue and customer impact:** ??
-> - **Workaround:** ???
-> - **Applies to:** Windows only
+**Workaround:** No workaround is available.
 
-### Setup
-> - **Issue and customer impact:** ??
-> - **Workaround:** ???
-> - **Applies to:** Windows | Linx
-
+**Applies to:** Windows
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

@@ -40,11 +40,13 @@ The T-SQL PREDICT statement was introduced in SQL Server 2017.
 
 |name |object_type|description| 
 |----|----|----|
-|predict_function_completed	|event	|Builtin Execution Time Breakdown|
+|predict_function_completed	|event	|Builtin execution time breakdown|
 |predict_model_cache_hit |event|Occurs when a model is retrieved from the PREDICT function model cache. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.|
 |predict_model_cache_insert	|event	|	Occurs when a model is insert into the PREDICT function model cache. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.	|
 |predict_model_cache_miss	|event|Occurs when a model is not found in the PREDICT function model cache. Frequent occurrences of this event could indicate that SQL Server needs more memory. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.|
 |predict_model_cache_remove	|event| Occurs when a model is removed from model cache for PREDICT function. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.|
+
+## Query for related events
 
 To view a list of all columns returned for these events, run the following query in SQL Server Management Studio:
 
@@ -61,14 +63,10 @@ To capture information about performance of a scoring session using PREDICT:
 3. Start the extended event session.
 4. Run the query that uses PREDICT.
 
-**Results**
-
-|sample data|sample value|
-|----|----|
-|nnnn|0000|
+In the results, review these columns:
 
 + The value for `predict_function_completed` shows how much time the query spent on loading the model and scoring.
-+ `predict_model_cache_hit` indicates whether the query used a cached model or not. 
++ The boolean value for `predict_model_cache_hit` indicates whether the query used a cached model or not. 
 
 ### Native scoring model cache
 

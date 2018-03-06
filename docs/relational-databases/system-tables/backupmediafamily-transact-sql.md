@@ -40,7 +40,7 @@ ms.workload: "Inactive"
 |**media_count**|**int**|Number of media in the media family. Can be NULL.|  
 |**logical_device_name**|**nvarchar(128)**|Name of this backup device in **sys.backup_devices.name**. If this is a temporary backup device (as opposed to a permanent backup device that exists in **sys.backup_devices**), the value of **logical_device_name** is NULL.|  
 |**physical_device_name**|**nvarchar(260)**|Physical name of the backup device. Can be NULL.|  
-|**device_type**|**tinyint**|Type of backup device:<br /><br /> 2 = Disk<br /><br /> 5 = Tape<br /><br /> 7 = Virtual device<br /><br /> 105 = A permanent backup device.<br /><br /> Can be NULL.<br /><br /> All permanent device names and device numbers can be found in **sys.backup_devices**.|  
+|**device_type**|**tinyint**|Type of backup device:<br /><br /> 2 = Disk<br /><br /> 5 = Tape<br /><br /> 7 = Virtual device<br /><br /> 9 = Azure Storage<br /><br /> 105 = A permanent backup device.<br /><br /> Can be NULL.<br /><br /> All permanent device names and device numbers can be found in **sys.backup_devices**.|  
 |**physical_block_size**|**int**|Physical block size used to write the media family. Can be NULL.|  
 |**mirror**|**tinyint**|Mirror number (0-3).|  
   

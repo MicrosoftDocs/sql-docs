@@ -87,6 +87,8 @@ To deploy projects and run packages on SQL Database, you can use one of several 
 -   PowerShell
 -   C# and the SSIS management object model
 
+To get started, see [Deploy, run, and monitor an SSIS package on Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+
 ### Monitor packages
 To monitor running packages in SSMS, you can use one of the following reporting tools in SSMS.
 -   Right-click **SSISDB**, and then select **Active Operations** to open the **Active Operations** dialog box.

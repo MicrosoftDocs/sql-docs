@@ -27,7 +27,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Secondary to primary replica connection redirection (Always On Availability Groups)
-<!--[!INCLUDE[appliesto-sssqlv15-xxxx-xxxx-xxx-md](../../../includes/appliesto-sssqlv15-xxxx-xxxx-xxx-md.md)]-->
+[!INCLUDE[appliesto-sssqlv15-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
 An availability group (AG) listener and the corresponding cluster resource directs user traffic to the primary replica to ensure transparent reconnection after failover. In some cases, this capability is not available. For example:
 - Service fabric

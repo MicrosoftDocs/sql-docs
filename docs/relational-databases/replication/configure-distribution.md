@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], configuring distribution"
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 caps.latest.revision: 44
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "updateable transactional subscriptions, T-SQL"
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
 caps.latest.revision: 6
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

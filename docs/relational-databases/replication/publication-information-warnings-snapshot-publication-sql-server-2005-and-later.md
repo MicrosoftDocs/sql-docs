@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.monitor.publicationinfo.warningsandagents.snapshot.f1"
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

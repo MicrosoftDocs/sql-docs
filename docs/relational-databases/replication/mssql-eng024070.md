@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSSQL_ENG024070 error"
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

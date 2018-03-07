@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "tools [SQL Server replication]"
 ms.assetid: 41921d45-8a3c-4b69-b397-4b02b3b62160
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

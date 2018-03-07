@@ -31,7 +31,7 @@ ms.workload: "On Demand"
 
 When an availability group (AG) listener does not exist, or cannot reliably redirect connections to a primary replica after failover you can configure *secondary to primary replica connection redirection* for an availability group. 
 
-Normally, the AG listener and the corresponding cluster resource direct user traffic to the primary replica to ensure reconnection after failover. When an availability group is not managed by a cluster (`CLUSTER_TYPE = NONE`) or when the environment does not effectively enable listener redirection, configure the availability group to redirect connections from secondary to primary replicas. 
+Normally, the AG listener and the corresponding cluster resource direct user traffic to the primary replica. This behavior ensures reconnection after failover. When an availability group has no listener, for example when `CLUSTER_TYPE = NONE`, you can configure secondary to primary replica connection redirection to allow the availability group to redirect connections. You can also configure redirection for an availablity group in an environment that does not effectively enable listener redirection. 
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces secondary to primary replica connection redirection. This feature allows client applications to connect to any of the replicas of the availability group and the connection is redirected to the primary replica, according to the AG configuration.
 

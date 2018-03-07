@@ -84,7 +84,10 @@
 ## [Python tutorials](tutorials/sql-server-python-tutorials.md)
 
 ### [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
-### [Python: Create a model using revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [Wrap Python in a stored procedure](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [Train and score from a Python model in SQL Server](tutorials/train-score-using-python-in-tsql.md)
+#### [Create a model using revoscalepy in a SQL Server compute context](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python: In-database analytics for SQL developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [Download sample data](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -94,7 +97,7 @@
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: Deploy and consume models](../advanced-analytics/python/publish-consume-python-code.md)
+### [Python: Deploy and consume models using a Standalone server](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [Machine Learning Server - Standalone](r/r-server-standalone.md)
 ## [Getting started](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -163,7 +166,7 @@
 ### [Resource governance for Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Create a resource pool for machine learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Extended events for Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
-
+### [Extended events for monitoring PREDICT statements](xe-event-predict-tsql.md)
 ### [DMVs for Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
 ### [Using R code profiling functions](r/using-r-code-profiling-functions.md)
 ### [Monitor Machine Learning Services using custom reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)

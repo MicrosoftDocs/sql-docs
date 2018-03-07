@@ -6,11 +6,11 @@ manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
-ms.custom: UpdArt.exe
+ms.custom: "sql-linux,UpdArt.exe"
 ms.suite: sql
 ms.prod_service: sql-non-specified
 
-ms.component: linux
+ms.component: ""
 ms.date: 02/03/2018
 ---
 # New and Recently Updated: SQL Server on Linux docs

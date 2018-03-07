@@ -20,7 +20,7 @@ ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using the SQLXMLOLEDB Provider (SQLXML 4.0)

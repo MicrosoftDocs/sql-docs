@@ -19,7 +19,7 @@ ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XSD Annotations (SQLXML 4.0)

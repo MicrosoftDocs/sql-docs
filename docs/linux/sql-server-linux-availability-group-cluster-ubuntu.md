@@ -9,9 +9,9 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: "Inactive"
@@ -24,7 +24,7 @@ This document explains how to create a three-node cluster on Ubuntu and add a pr
 For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in, and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
+> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in, and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
 
 The following sections walk through the steps to set up a failover cluster solution. 
 
@@ -112,7 +112,7 @@ sudo systemctl enable pacemaker
 1. Create the cluster. 
 
    >[!WARNING]
-   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') fails with below error. This is because the log file configured in /etc/corosync/corosync.conf which is created when the cluster setup command is run, is wrong. To work around this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
+   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') fails with following error. This is because the log file configured in /etc/corosync/corosync.conf which is created when the cluster setup command is run, is wrong. To work around this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -136,7 +136,7 @@ The following command creates a three-node cluster. Before you run the script, r
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again. 
 Resource level fencing ensures mainly that there is no data corruption in case of an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down. 
 Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, e.g. an uninterruptible power supply or management interface cards for servers. 
-For more details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
+For more information, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
 Because the node level fencing configuration depends heavily on your environment, we disable it for this tutorial (it can be configured at a later time). Run the following script on the primary node: 
 

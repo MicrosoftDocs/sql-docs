@@ -29,7 +29,7 @@ ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OPENXML (SQL Server)

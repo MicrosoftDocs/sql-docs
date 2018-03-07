@@ -20,7 +20,7 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 caps.latest.revision: 20
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # PolyBase scale-out groups

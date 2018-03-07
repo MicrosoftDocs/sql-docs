@@ -19,7 +19,7 @@ ms.assetid: d6f7661e-6c14-4d31-9541-4520ca0f82b2
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Make Partial Updates to FILESTREAM Data

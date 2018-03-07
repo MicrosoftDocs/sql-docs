@@ -147,7 +147,6 @@ GO
 [SQL Server 2012 Security Best Practices - Operational and Administrative Tasks](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [SQL Server Security Blog](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Security Best Practice and Label Security Whitepapers](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
-[Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 [Row-Level Security](../../relational-databases/security/row-level-security.md)   
 [Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   

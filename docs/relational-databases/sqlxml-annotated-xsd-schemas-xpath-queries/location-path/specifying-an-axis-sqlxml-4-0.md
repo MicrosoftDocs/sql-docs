@@ -26,7 +26,7 @@ ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specifying an Axis (SQLXML 4.0)

@@ -107,7 +107,7 @@ For other tools that run on Windows but connect to SQL Server on Linux, see:
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## Next steps
+## Additional resources
 
 For other installation scenarios, see the following resources:
 
@@ -118,6 +118,21 @@ For other installation scenarios, see the following resources:
 | [Unattended install](../linux/sql-server-linux-setup.md#unattended) | Learn how to script the installation without prompts |
 | [Offline install](../linux/sql-server-linux-setup.md#offline) | Learn how to manually download the packages for offline installation |
 
-To explore other ways to connect and manage SQL Server, see [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) and  [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+To explore other ways to connect and manage SQL Server, explore the following tools:
+
+|||
+|---|---|
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | A cross-platform GUI code editor that run Transact-SQL statements with the mssql extension. |
+| [SQL Server Operations Studio](../sql-operations-studio/index.md) | A cross-platform GUI database management utility. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | A cross-platform command-line interface for running Transact-SQL commands. |
+| [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) | A Windows-based GUI database management utility that can connect to and manage SQL Server instances on Linux. |
 
 To learn more about writing Transact-SQL statements and queries, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
+
+> [!TIP]
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md).
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Explore the tutorials for SQL Server on Linux](../linux/sql-server-linux-migrate-restore-database.md)

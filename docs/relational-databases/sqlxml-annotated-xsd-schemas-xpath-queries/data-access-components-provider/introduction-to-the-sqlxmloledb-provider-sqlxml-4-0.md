@@ -20,7 +20,7 @@ ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Introduction to the SQLXMLOLEDB Provider (SQLXML 4.0)

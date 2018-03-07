@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "importing registered server information"
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

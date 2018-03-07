@@ -9,9 +9,9 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: "Inactive"
@@ -25,7 +25,7 @@ SQL Server Log shipping is a HA configuration where a database from a primary se
   ![Logshipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-As described in the picture above, a log shipping session involves the following steps:
+As described in the this picture, a log shipping session involves the following steps:
 
 - Backing up the transaction log file on the primary SQL Server instance
 - Copying the transaction log backup file across the network to one or more secondary SQL Server instances

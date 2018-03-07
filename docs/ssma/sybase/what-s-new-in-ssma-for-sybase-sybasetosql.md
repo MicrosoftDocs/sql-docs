@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/30/2017"
+ms.date: "03/01/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -24,6 +24,14 @@ ms.workload: "Inactive"
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 This topic lists SSMA for SAP ASE (formerly SSMA for Sybase) changes in each release. 
+
+## SSMA v7.7
+The v7.7 release of SSMA for SAP ASE contains the following changes:
+- SSMA for SAP ASE has been enhanced with targeted fixes that improve quality and conversion metrics.
+- Based on the popular demand, the 32-bit version of SSMA for SAP ASE is back. Compared to the previous implementation (prior to v7.4), there are two installer packages, but they cannot be installed side by side. As a result, you must choose the most appropriate version based on the connectivity components you have. It is always preferable to use the 64-bit version, if possible.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v7.6
 The v7.6 release of SSMA for SAP ASE contains the following changes:

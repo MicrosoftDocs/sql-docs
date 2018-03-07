@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "linked servers [SQL Server], creating"
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Create Linked Servers (SQL Server Database Engine)

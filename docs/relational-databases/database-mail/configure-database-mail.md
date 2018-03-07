@@ -43,9 +43,9 @@ f1_keywords:
   - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Configure Database Mail

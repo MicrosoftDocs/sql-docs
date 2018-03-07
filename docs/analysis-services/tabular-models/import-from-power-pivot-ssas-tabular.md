@@ -1,5 +1,5 @@
 ---
-title: "Import from Power Pivot (SSAS Tabular) | Microsoft Docs"
+title: "Import from Power Pivot | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: analysis-services
@@ -23,9 +23,9 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Import from Power Pivot (SSAS Tabular)
+# Import from Power Pivot 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  This topic describes how to create a new tabular model project by importing the metadata and data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook by using the Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] project template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  This article describes how to create a new tabular model project by importing the metadata and data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook by using the Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] project template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## Create a new Tabular Model from a Power Pivot for Excel file  
  When creating a new tabular model project by importing from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, the metadata that defines the structure of the workbook is used to create and define the structure of the tabular model project in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Objects such as tables, columns, measures, and relationships are retained and will appear in the tabular model project as they are in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook. No changes are made to the .xlsx workbook file.  
@@ -52,7 +52,7 @@ ms.workload: "Inactive"
 4.  In the **Open** dialog box, select the [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] file that contains the model metadata and data you want to import, and then click **Open**.  
   
 ## See Also  
- [Workspace Database &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
- [Copy and Paste Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
+ [Workspace Database](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
+ [Copy and Paste Data](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   

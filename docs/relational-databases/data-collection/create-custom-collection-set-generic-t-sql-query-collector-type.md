@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "collection sets [SQL Server], creating custom"
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Custom Collection Set - Generic T-SQL Query Collector Type

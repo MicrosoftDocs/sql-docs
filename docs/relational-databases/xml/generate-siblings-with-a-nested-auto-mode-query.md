@@ -19,7 +19,7 @@ ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Generate Siblings with a Nested AUTO Mode Query

@@ -4,19 +4,19 @@ description:  This quickstart shows how to install SQL Server 2017 on SUSE Linux
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/09/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: "On Demand"
 ---
-# Install SQL Server and create a database on SUSE Linux Enterprise Server
+# Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

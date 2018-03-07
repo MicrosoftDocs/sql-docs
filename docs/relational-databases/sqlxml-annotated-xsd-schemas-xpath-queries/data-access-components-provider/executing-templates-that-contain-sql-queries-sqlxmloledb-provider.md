@@ -22,7 +22,7 @@ ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing Templates That Contain SQL Queries (SQLXMLOLEDB Provider)

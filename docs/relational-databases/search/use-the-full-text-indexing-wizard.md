@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "full-text search [SQL Server], Full-Text Indexing Wizard"
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use the Full-Text Indexing Wizard

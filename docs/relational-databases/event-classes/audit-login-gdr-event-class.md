@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Login GDR event class"
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Login GDR Event Class

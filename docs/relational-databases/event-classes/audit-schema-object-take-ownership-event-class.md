@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Schema Object Take Ownership event class"
 ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Schema Object Take Ownership Event Class

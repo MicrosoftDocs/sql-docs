@@ -20,7 +20,7 @@ ms.assetid:
 caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale;barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create a graph database and run some pattern matching queries using T-SQL

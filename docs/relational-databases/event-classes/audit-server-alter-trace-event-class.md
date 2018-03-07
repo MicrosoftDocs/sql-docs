@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Server Alter Trace event class"
 ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Server Alter Trace Event Class

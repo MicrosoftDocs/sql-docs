@@ -22,7 +22,7 @@ ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Applying an XSL Transformation (SQLXMLOLEDB Provider)

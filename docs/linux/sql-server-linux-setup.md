@@ -1,6 +1,6 @@
 ---
 title: Install SQL Server 2017 on Linux | Microsoft Docs
-description: Install, update, and uninstall SQL Server on Linux. This topic covers online, offline, and unattended scenarios. 
+description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios. 
 author: rothja 
 ms.author: jroth 
 manager: craigg
@@ -9,9 +9,9 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: "Active"
@@ -20,10 +20,12 @@ ms.workload: "Active"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+This article explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
 
 > [!TIP]
 > To get started quickly, jump to one of the quickstarts for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), or [Docker](quickstart-install-connect-docker.md).
+
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
@@ -35,6 +37,9 @@ SQL Server 2017 is supported on the following Linux platforms:
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> It is sometimes possible to install and run SQL Server on other closely-related Linux platforms, but SQL Server is only tested and supported on the platforms listed in the preceding table.
 
 Microsoft supports deploying and managing SQL Server containers by using OpenShift and Kubernetes.
 
@@ -159,7 +164,7 @@ For a more detailed sample script, see the following examples:
 If your Linux machine does not have access to the online repositories used in the [quick starts](#platforms), you can download the package files directly. These packages are located in the Microsoft repository, [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]
-> If you successfully installed with the steps in the quick starts, you do not need to download or manually install the package(s) below. This section is only for the offline scenario.
+> If you successfully installed with the steps in the quick starts, you do not need to download or manually install the SQL Server package(s). This section is only for the offline scenario.
 
 1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release Notes](sql-server-linux-release-notes.md).
 

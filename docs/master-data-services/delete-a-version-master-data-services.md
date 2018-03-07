@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "deleting versions [Master Data Services]"
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

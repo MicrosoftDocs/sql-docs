@@ -4,19 +4,21 @@ description: This article provides answers to frequently asked questions about S
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.workload: "Active"
 ---
 
 # SQL Server on Linux Frequently Asked Questions (FAQ)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 The following sections provide common questions and answers for SQL Server running on Linux.
 
@@ -24,7 +26,11 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **What Linux platforms are supported?**
 
-   SQL Server is currently supported on Red Hat Enterprise Server, SUSE Linux Enterprise Server, and Ubuntu. For the latest information about the supported versions, see [Supported platforms](sql-server-linux-setup.md#supportedplatforms).
+   SQL Server is currently supported on Red Hat Enterprise Server, SUSE Linux Enterprise Server, and Ubuntu. It also runs in a container with Docker. For the latest information about the supported versions, see [Supported platforms](sql-server-linux-setup.md#supportedplatforms).
+
+1. **Will SQL Server on Linux work on other platforms**?
+
+   You can possibly install and run SQL Server on other distributions of Linux. For example, CentOS is closely related to Red Hat Enterprise Server, so you might be able to install the RPM SQL Server packages. This might be true for other closely related distributions as well. The main issue is testing and support. SQL Server has only been tested and is only supported on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu.
 
 1. **What SQL Server features are supported on Linux?**
 
@@ -90,7 +96,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Does SQL Server on Linux support multiple instances on the same host?**
 
-   We recommend running multiple containers on a host to have multiple distinct instances. Each container will need to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   We recommend running multiple containers on a host to have multiple distinct instances. Each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
 
 1. **Is Active Directory Authentication supported on Linux?**
 
@@ -124,6 +130,4 @@ The following sections provide common questions and answers for SQL Server runni
 
    We do not support changing the ownership of SQL Server directory and files from the default installation. The mssql account and group is specifically used for SQL Server and has no interactive login access.
 
-## Next steps
-
-For more information about running SQL Server on Linux, see the [Overview of SQL Server on Linux](sql-server-linux-overview.md).
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

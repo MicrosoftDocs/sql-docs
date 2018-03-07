@@ -9,9 +9,9 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: "On Demand"
@@ -66,7 +66,7 @@ sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/m
 ```
 
 > [!TIP]
-> If you accidentally use NORECOVERY but do not have additional log file backups, run the command `RESTORE DATABASE demodb` with no additional parameters. This will finish the restore and leave your database operational.
+> If you accidentally use NORECOVERY but do not have additional log file backups, run the command `RESTORE DATABASE demodb` with no additional parameters. This finishes the restore and leaves your database operational.
 
 ### Restore the transaction log
 

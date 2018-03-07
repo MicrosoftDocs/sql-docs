@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "ErrorLog event class"
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ErrorLog Event Class

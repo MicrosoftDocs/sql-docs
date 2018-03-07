@@ -18,7 +18,7 @@ ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Retrieving Employee Information

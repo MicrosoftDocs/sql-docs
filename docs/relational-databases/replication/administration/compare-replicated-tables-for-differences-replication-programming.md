@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "comparing replicated tables"
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

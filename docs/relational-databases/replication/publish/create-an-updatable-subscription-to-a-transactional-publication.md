@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "updateable transactional subscriptions, SSMS"
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 caps.latest.revision: 51
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

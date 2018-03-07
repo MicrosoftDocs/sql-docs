@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "deprecated features [SQL Server replication]"
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 caps.latest.revision: 67
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

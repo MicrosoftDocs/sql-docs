@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "refreshing data"
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 caps.latest.revision: 17
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

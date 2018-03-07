@@ -166,7 +166,7 @@
 ### [Resource governance for Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Create a resource pool for machine learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Extended events for Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
-
+### [Extended events for monitoring PREDICT statements](xe-event-predict-tsql.md)
 ### [DMVs for Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
 ### [Using R code profiling functions](r/using-r-code-profiling-functions.md)
 ### [Monitor Machine Learning Services using custom reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)

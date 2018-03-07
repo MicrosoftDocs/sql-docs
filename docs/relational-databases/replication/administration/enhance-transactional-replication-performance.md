@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "Log Reader Agent, performance"
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

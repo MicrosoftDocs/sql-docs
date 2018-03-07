@@ -44,7 +44,7 @@ curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
+sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -69,7 +69,7 @@ curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/m
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install msodbcsql
+sudo ACCEPT_EULA=Y yum install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y yum install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -94,7 +94,7 @@ zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 exit
-sudo ACCEPT_EULA=Y zypper install msodbcsql
+sudo ACCEPT_EULA=Y zypper install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y zypper install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -123,7 +123,7 @@ curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sou
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql
+sudo ACCEPT_EULA=Y apt-get install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -139,7 +139,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql mssql-tools
+brew install --no-sandbox msodbcsql17 mssql-tools
 ```
 
 ## Microsoft ODBC Driver 13.1 for SQL Server 

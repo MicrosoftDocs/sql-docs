@@ -1,7 +1,7 @@
 ---
 title: "Change log for SQL Server Reporting Services (2017 and later) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/07/2017"
+ms.date: "02/28/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""

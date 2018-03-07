@@ -20,9 +20,9 @@ ms.workload: "Inactive"
 # Publish and consume Python web services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-You can deploy a working Python solution to a web service by using the operationalization feature on a [SQL Server Machine Learning Server (Standalone)](../r/r-server-standalone.md) instance. This topic describes the steps to successfully publish and then run your solution.
+You can deploy a working Python solution to a web service by using the operationalization feature on a [SQL Server Machine Learning Server (Standalone)](../r/r-server-standalone.md) instance. This article describes the steps to successfully publish and then run your solution.
 
-The target audience for this article is data scientists who want to learn how to publish Python code or models on a Machine Learning Server. The article also explains how applications can consume the the code or models. 
+The target audience is data scientists who want to learn how to publish Python code or models to a Machine Learning Server, and how to consume the code or models in a custom application. 
 
 This article assumes that you are proficient in Python. You should also have a standalone server, which is installed independently of other SQL Server features. Your server must be [configured for operationalization](../operationalization-with-mrsdeploy.md) to enable web service hosting. 
 
@@ -290,7 +290,7 @@ This section describes how the code works in more detail.
 
 ### <a name="prereq"></a> Step 1. Create prerequisite client libraries
 
-Before you can start publishing your Python code and models thorugh Microsoft Machine Learning Server, you must generate a client library using the Swagger document provided for this release.
+Before you can start publishing your Python code and models through Machine Learning Server, you must generate a client library using the Swagger document provided for this release.
 
 1. Install a Swagger code generator on your local machine and familiarize yourself with it. You will use it to generate the API client libraries in Python. Popular tools include [Azure AutoRest](https://github.com/Azure/autorest) (requires Node.js) and [Swagger Codegen](https://github.com/swagger-api/swagger-codegen). 
 
@@ -484,7 +484,7 @@ After authentication, you can start a Python session and create a model for publ
 
 After your client library has been generated and you've built the authentication logic into your application, you can interact with the core APIs to create a Python session, create a model, and then publish a web service using that model.
 
-Some things to remeber:
+Some things to remember:
 
 + You must be authenticated before you make any API calls. Therefore, include `headers` in all requests.
 + To ensure that the web service is registered as a Python service, be sure to specify `runtime_type="Python"`. If you don't set the runtime type to Python, it defaults to R.

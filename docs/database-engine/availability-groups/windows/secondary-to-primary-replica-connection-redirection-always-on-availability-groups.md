@@ -29,16 +29,17 @@ ms.workload: "On Demand"
 # Secondary to primary replica connection redirection (Always On Availability Groups)
 [!INCLUDE[appliesto-sssqlv15-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
-An availability group (AG) listener and the corresponding cluster resource directs user traffic to the primary replica to ensure transparent reconnection after failover. In some cases, this capability is not available. For example:
-- Service fabric
-- Complex, error-prone architectures, like a multi-subnet cloud configuration or multi-subnet floating IP with Pacemaker
-- The AG is configured with cluster-type `NONE` for read scale-out or DR
+When an availability group (AG) listener does not exist, or cannot reliably redirect connections to a primary replica after failover you can configure *secondary to primary replica connection redirection* for an availability group. 
 
-To solve these challenges, [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces *secondary to primary replica connection redirection*. This feature allows client applications to connect to any of the replicas of the availability group and the connection will be redirected to the primary replica, according to the AG configuration.
+Normally, the AG listener and the corresponding cluster resource directs user traffic to the primary replica to ensure reconnection after failover. When an availability group is not managed by a cluster (`CLUSTER_TYPE = NONE`) or when the environment does not effectively enable listener redirection, configure the availability group to redirect connections from secondary to primary replicas. 
+
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces secondary to primary replica connection redirection. This feature allows client applications to connect to any of the replicas of the availability group and the connection will be redirected to the primary replica, according to the AG configuration.
 
 ## READ_WRITE_ROUTING_URL option
 
-When you create the AG, set the read/write routing URL for the primary replica to indicate how to route this replica when it becomes primary. To enable this use `READ_WRITE_ROUTING_URL`.
+To configure secondary to primary connection redirection, set `READ_WRITE_ROUTING_URL` for the primary replica when you create the AG. 
+
+`READ_WRITE_ROUTING_URL` has been added to the `<add_replica_option>` specification in [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)].
 
 ```sql
   <add_replica_option>::=  
@@ -56,7 +57,7 @@ When you create the AG, set the read/write routing URL for the primary replica t
      | SESSION_TIMEOUT = integer
 ```
 
-See [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md).
+See [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md) or [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md).
 
 ## PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set (View 1)
 

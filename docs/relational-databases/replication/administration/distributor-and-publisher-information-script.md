@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Distributors [SQL Server replication], information scripts"
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

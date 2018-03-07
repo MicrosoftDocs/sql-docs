@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "replication [SQL Server], administering"
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

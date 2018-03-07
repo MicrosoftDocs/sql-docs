@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "breaking changes [SQL Server replication]"
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

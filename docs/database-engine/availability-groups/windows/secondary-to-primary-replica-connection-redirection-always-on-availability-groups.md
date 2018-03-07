@@ -59,32 +59,35 @@ To configure secondary to primary connection redirection, set `READ_WRITE_ROUTIN
 
 See [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md) or [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md).
 
-## PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set
 
-### (View 1)
+## (View 1)
+
+### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connections fail|Connections fail|Connections succeed<br/>Reads succeed<br/>Writes fail|
 |`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
 
-### (View 2)
-
-|`SECONDARY_ROLE (ALLOW CONNECTIONS = )`|`NO`|`READ_ONLY`|`ALL`|
-|-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connections fail|Connections fail|Connections succeed<br/>Reads succeed<br/>Writes fail|
-|`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
-
-## PRIMARY_ROLE(READ_WRITE_ROUTING_URL) set 
-
-### (View 1)
+### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) set 
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connections fail|Connections fail|Connections route to primary|
 |`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
 
-### (View 2)
+
+## (View 2)
+
+### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set
+
+|`SECONDARY_ROLE (ALLOW CONNECTIONS = )`|`NO`|`READ_ONLY`|`ALL`|
+|-----|-----|-----|-----|
+|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connections fail|Connections fail|Connections succeed<br/>Reads succeed<br/>Writes fail|
+|`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
+
+
+### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) set 
 
 |`SECONDARY_ROLE (ALLOW CONNECTIONS = )`|`NO`|`READ_ONLY`|`ALL`|
 |-----|-----|-----|-----|

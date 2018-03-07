@@ -32,7 +32,7 @@ ms.workload: "On Demand"
 An availability group (AG) listener and the corresponding cluster resource directs user traffic to the primary replica to ensure transparent reconnection after failover. In some cases, this capability is not available. For example:
 - Service fabric
 - Complex, error-prone architectures, like a multi-subnet cloud configuration or multi-subnet floating IP with Pacemaker
-- The AG is configured ith cluster-type NONE for read scale-out or DR
+- The AG is configured with cluster-type `NONE` for read scale-out or DR
 
 To solve these challenges, [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces *secondary to primary replica connection redirection*. This feature allows client applications to connect to any of the replicas of the availability group and the connection will be redirected to the primary replica, according to the AG configuration.
 

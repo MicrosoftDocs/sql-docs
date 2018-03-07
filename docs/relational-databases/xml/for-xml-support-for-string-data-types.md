@@ -18,7 +18,7 @@ ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FOR XML Support for String Data Types

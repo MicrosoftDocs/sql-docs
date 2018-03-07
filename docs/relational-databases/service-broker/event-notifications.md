@@ -19,7 +19,7 @@ ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Event Notifications

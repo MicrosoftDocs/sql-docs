@@ -20,7 +20,7 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Absolute and Relative URLs

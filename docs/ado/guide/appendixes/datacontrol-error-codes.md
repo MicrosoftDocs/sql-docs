@@ -19,7 +19,7 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DataControl Object Error Codes

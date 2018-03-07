@@ -16,7 +16,7 @@ ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create, Alter, and Drop Selective XML Indexes

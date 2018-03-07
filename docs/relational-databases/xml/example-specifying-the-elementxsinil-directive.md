@@ -18,7 +18,7 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Specifying the ELEMENTXSINIL Directive

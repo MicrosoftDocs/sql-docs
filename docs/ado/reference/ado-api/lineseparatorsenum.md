@@ -21,7 +21,7 @@ ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LineSeparatorsEnum

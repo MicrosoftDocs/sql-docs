@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "local-name-from-QName function"
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions Related to QNames - local-name-from-QName

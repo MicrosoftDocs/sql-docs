@@ -20,7 +20,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Analysis Server Properties (Advanced Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   This service is the Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. If custom properties are defined, they appear on this tab, with their values.  
   
 ## Options  

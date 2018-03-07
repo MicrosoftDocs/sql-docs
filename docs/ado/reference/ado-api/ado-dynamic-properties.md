@@ -22,7 +22,7 @@ ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Dynamic Properties

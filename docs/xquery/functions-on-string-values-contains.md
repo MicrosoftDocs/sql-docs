@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:contains function"
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on String Values - contains

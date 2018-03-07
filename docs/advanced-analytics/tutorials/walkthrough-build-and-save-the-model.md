@@ -23,6 +23,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Build an R model and save to SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In this step, you'll learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -47,7 +48,7 @@ The model you build is a binary classifier that predicts whether the taxi driver
      *Results*
 
      *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
+     direct_distance* 
      <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
      <br/>*Dependent variable(s): tipped*
      <br/>*Total independent variables: 5*

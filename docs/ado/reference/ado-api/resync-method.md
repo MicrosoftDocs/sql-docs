@@ -24,7 +24,7 @@ ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Resync Method

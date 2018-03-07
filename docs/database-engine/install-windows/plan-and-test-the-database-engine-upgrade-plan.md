@@ -19,20 +19,22 @@ ms.author: "mikeray"
 manager: "craigg"
 ---
 # Plan and test the database engine upgrade plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  To perform a successful [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] upgrade, regardless of approach, appropriate planning is required.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ To perform a successful [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] upgrade, regardless of approach, appropriate planning is required.  
   
 ## Release notes and known upgrade issues  
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review:
 
 - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md) topic.  
+- [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md) article.  
   
 ## Pre-upgrade planning checklist  
- Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review the following checklist and the associated topics. These topics apply to all upgrades, regardless of upgrade method and will help you determine the most appropriate upgrade method: Rolling upgrade, new installation upgrade, or in-place upgrade. For example, you may not be able to perform an upgrade in-place or a rolling upgrade if you are upgrading the operating system, upgrading from SQL Server 2005, or upgrading from a 32-bit version of SQL Server. For a decision tree, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+ Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review the following checklist and the associated articles. These articles apply to all upgrades, regardless of upgrade method and will help you determine the most appropriate upgrade method: Rolling upgrade, new installation upgrade, or in-place upgrade. For example, you may not be able to perform an upgrade in-place or a rolling upgrade if you are upgrading the operating system, upgrading from SQL Server 2005, or upgrading from a 32-bit version of SQL Server. For a decision tree, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
--   **Hardware and software requirements:** Review the hardware and software requirements to for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These requirements can be found at: [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). A part of any upgrade planning cycle is to consider upgrading hardware (newer hardware is faster and may reduce licensing either due to fewer processors or due to database and server consolidation)and upgrading the operating system. These types of hardware and software changes will affect the type of upgrade method you choose.  
+-   **Hardware and software requirements:** Review the hardware and software requirements to for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These requirements can be found at: [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). A part of any upgrade planning cycle is to consider upgrading hardware (newer hardware is faster and may reduce licensing either due to fewer processors or due to database and server consolidation) and upgrading the operating system. These types of hardware and software changes will affect the type of upgrade method you choose.  
   
 -   **Current environment:** Research your current environment to understand the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that are being used and the clients that connect to your environment.  
   
@@ -47,9 +49,9 @@ manager: "craigg"
        -   SSL Security update  
 
    >[!NOTE]
-   >The preceeding list also applies to [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)].
+   >The preceding list also applies to [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)].
   
--   **Third party components:** Determine the compatibility of third party components, such as integrated backup.  
+-   **Third-party components:** Determine the compatibility of third-party components, such as integrated backup.  
   
 -   **Target environment:** Verify that your target environment meets the hardware and software requirements, and can support the original system's requirements. For example, your upgrade may involve the consolidation of multiple SQL Server instances to a single, new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instance, or the virtualization of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment to a private or public cloud.  
   
@@ -58,7 +60,7 @@ manager: "craigg"
     > [!NOTE]  
     >  When you upgrade [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] from a prior version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choose between Enterprise Edition: Core-based Licensing and Enterprise Edition. These Enterprise editions differ only with respect to the licensing modes. For more information, see [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Backward compatibility:** Review the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] database engine  backward compatibility topic to review changes in behavior between [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version from which you are upgrading. See [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+-   **Backward compatibility:** Review the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] database engine  backward compatibility article to review changes in behavior between [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version from which you are upgrading. See [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
 -   **Upgrade advisor:**  Run the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] Upgrade Advisor to assist in diagnosing issues that might either block the upgrade process or require modification to existing scripts or applications due to a breaking change. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] contains a new version of the Upgrade Advisor to assist customers preparing to upgrade an existing system.  This tool also contains an ability to check your existing databases to see if they can leverage new features, such as Stretch Tables, after upgrade is complete.   
     You can download [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]Upgrade Advisor  [here](https://www.microsoft.com/en-us/download/details.aspx?id=48119).  

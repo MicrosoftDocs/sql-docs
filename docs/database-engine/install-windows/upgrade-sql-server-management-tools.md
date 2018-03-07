@@ -21,8 +21,10 @@ ms.author: "sstein"
 manager: "craigg"
 ---
 # Upgrade SQL Server Management Tools
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later. This topic documents support and behavior for upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools and management components such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Database Mail, Maintenance Plans, XPStar, and XPWeb.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later. This article documents support and behavior for upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Tools and management components such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, Database Mail, Maintenance Plans, XPStar, and XPWeb.  
   
 > [!IMPORTANT]  
 >  For local installations, you must run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup as an administrator. If you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup from a remote share, you must use a domain account that has read and execute permissions on the remote share.  

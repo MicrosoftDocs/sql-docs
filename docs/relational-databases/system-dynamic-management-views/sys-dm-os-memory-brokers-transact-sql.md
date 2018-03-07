@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_memory_brokers dynamic management view"
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_memory_brokers (Transact-SQL)

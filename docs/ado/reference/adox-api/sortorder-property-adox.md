@@ -25,7 +25,7 @@ ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SortOrder Property (ADOX)

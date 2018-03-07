@@ -19,7 +19,7 @@ ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Namespace Support in PATH Mode

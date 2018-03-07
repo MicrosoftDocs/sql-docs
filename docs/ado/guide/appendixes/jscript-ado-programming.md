@@ -21,7 +21,7 @@ ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # JScript ADO Programming

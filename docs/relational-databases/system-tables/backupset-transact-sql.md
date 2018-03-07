@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "backup sets [SQL Server]"
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 caps.latest.revision: 70
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # backupset (Transact-SQL)

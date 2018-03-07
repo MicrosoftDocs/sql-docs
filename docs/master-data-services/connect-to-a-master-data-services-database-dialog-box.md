@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.mds.configmanager.srvconnect.f1"
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

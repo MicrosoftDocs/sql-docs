@@ -18,7 +18,7 @@ ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Columns without a Name

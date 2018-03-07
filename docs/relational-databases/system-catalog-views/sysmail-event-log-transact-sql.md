@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_event_log database mail view"
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_event_log (Transact-SQL)

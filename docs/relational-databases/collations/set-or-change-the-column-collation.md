@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "collations [SQL Server], column"
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Set or Change the Column Collation

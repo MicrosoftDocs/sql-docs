@@ -18,7 +18,7 @@ ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_network_credentials (Transact-SQL)

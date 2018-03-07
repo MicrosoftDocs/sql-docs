@@ -21,7 +21,7 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 caps.latest.revision: 13
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.internal_partitions (Transact-SQL)

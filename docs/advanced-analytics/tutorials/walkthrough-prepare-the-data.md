@@ -23,6 +23,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Prepare the data using PowerShell (walkthrough)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 By this time, you should have one of the following installed:
 

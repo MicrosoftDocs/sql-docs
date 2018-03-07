@@ -18,7 +18,7 @@ ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AUTO Mode Heuristics in Shaping Returned XML

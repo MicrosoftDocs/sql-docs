@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_delete_account_sp"
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_delete_account_sp (Transact-SQL)

@@ -23,7 +23,7 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Administer Multiple Servers Using Central Management Servers

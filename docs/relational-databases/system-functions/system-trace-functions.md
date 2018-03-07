@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
 caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # System Trace Functions

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.service_contract_message_usages catalog view"
 ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.service_contract_message_usages (Transact-SQL)

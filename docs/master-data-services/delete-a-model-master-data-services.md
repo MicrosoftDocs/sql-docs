@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "models [Master Data Services], deleting models"
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -31,18 +31,6 @@ ms.workload: "Inactive"
   
  For information on installing the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 Configuration tool, see [Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
- This topic contains the following sections:  
-  
- [Run Power Pivot for SharePoint 2016 configuration](#bkmk_run_configuration_tool)  
-  
- [Verify Power Pivot Configuration](#bkmk_verify_powerpivot)  
-  
- [Troubleshoot Issues](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
-  
 ##  <a name="bkmk_run_configuration_tool"></a> Run Power Pivot for SharePoint 2016 configuration  
  **Note:** To complete the following steps, you must be a farm administrator. If you see an error message similar to the following:  
   

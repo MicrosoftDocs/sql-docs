@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_query_memory_grants dynamic management view"
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_exec_query_memory_grants (Transact-SQL)

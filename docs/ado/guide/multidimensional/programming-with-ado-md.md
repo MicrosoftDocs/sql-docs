@@ -18,7 +18,7 @@ ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Programming with ADO MD

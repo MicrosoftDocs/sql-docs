@@ -1,7 +1,7 @@
 ---
 title: "Installing machine learning components without internet access | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/08/2018"
+ms.date: "03/05/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Installing machine learning components without internet access
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Because the R and Python components provided with SQL Server 2016 and SQL Server 2017 are open source, Microsoft does not install R or Python components by default. Instead, we provide the related installers and bundled packages as a convenience on the Microsoft Download Center and other trusted sites. You must consent to the appropriate license, and then SQL Server setup installs R or Python components for you.
 
@@ -42,16 +43,18 @@ Typically, setup of the machine components used in SQL Server 2016 and SQL Serve
 
 ### Step 1. Obtain additional installers
 
+In general, separate installers are provided for open source and proprietary components. The SQL Server setup wizard ensures that they are installed in the correct order. Some releases, however, might update only one set of components. See the [table of installers](#bkmk_2017Installers) per release for details.
+
 **For R**
 
-The R language is supported in both SQL Server 2016 and SQL Server 2017. Two different installers are required, for open source and proprietary components. The SQL Server setup wizard ensures that they are installed in the correct order.
+The R language is supported in SQL Server 2016 and later. 
 
 + Installers with **SRO** in the name provide the open source components.
 + Installers with **SRS** in the name contain components provided by Microsoft, including those for database integration.
 
 **For Python**
 
-The Python language is supported only in SQL Server 2017. Again there are two separate installers that you must download.
+The Python language requires SQL Server 2017 or later. 
 
 + Installers with **SPO** in the name are for Microsoft Python Open, and provide the open source components.
 + Installers with **SPS** in the name are for Microsoft Python Server, and contain components provided by Microsoft, including those for database integration.
@@ -74,19 +77,18 @@ For a step-by-step walkthrough of the offline installation process for R Service
 3. A dialog box opens that prompts you for the **Install Path** of the required packages.
 4. click **Browse** to locate the folder containing the installer files you copied earlier.
 5. If the correct files are found, you can click **Next** to indicate that the components are available.
-10. Complete the SQL Server setup wizard.
-11. Perform the required post-installation steps to make sure the service is enabled.
+6. Complete the SQL Server setup wizard.
+7. Perform the required post-installation steps to make sure the service is enabled.
 
 ## <a name="installerlocs"></a>Where to download machine learning components
 
-> [!NOTE]
-> Be sure to get the files that match the version of SQL Server you are installing.
-> 
-> Support for Python is provided beginning with SQL Server 2017 CTP 2.0. Earlier versions, including SQL Server 2016, do not support Python.
+Be sure to get the files that match the version of SQL Server you are installing.
 
 + [To get R components for SQL Server 2016](#bkmk_2016Installers)
 
 + [To get R or Python components for SQL Server 2017](#bkmk_2017Installers)
+
+Support for Python is provided beginning with SQL Server 2017 CTP 2.0. Earlier versions, including SQL Server 2016, do not support Python.
 
 ### <a name="bkmk_2017Installers"></a>Downloads for SQL Server 2017
 
@@ -136,6 +138,11 @@ Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?
 Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 Microsoft Python Open     |no change; use previous|
 Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+**SQL Server 2017 CU4** |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+Microsoft Python Open     |no change; use previous|
+Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
 
@@ -230,7 +237,7 @@ Slipstream setup refers to the ability to apply a patch or update to a failed in
 
 + If the server does not have Internet access, you must download the SQL Server installer, and then download matching versions of the R component installers **before** beginning the update process.  The R components are not included by default with SQL Server.
 
-+ If you are *adding* these components to an *existing* installation, use the updated version of the SQL Server installer, and the corresponding updated version of the additional components. When you specify that the R feature is to be installed, the installer looks for the matching version of the installers for the machine learning components.
++ If you are adding these components to an existing installation, use the updated version of the SQL Server installer, and the corresponding updated version of the additional components. When you specify that the R feature is to be installed, the installer looks for the matching version of the installers for the machine learning components.
 
 ## Command-line arguments for specifying component locations
 
@@ -258,7 +265,6 @@ When performing an offline setup from the command line, you must provide the fol
 - `/ADVANCEDANALYTICS` to get engine support for external scripts
 - `/SQL_INST_MPY` to use Python
 - `/IACCEPTPYTHONLICENSETERMS="True"` to accept the separate Python licensing agreement
-
 
 > [!NOTE]
 > You cannot change the service account for Launchpad by using parameters in SQL Server setup. We recommend that you install using the default service accounts, and then modify the service account using SQL Server Configuration Manager. After doing so, be sure to restart the Launchpad service.

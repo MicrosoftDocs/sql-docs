@@ -16,7 +16,7 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # The Memory Optimized Filegroup

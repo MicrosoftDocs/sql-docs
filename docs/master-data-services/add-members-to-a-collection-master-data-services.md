@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "collections [Master Data Services], adding members"
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

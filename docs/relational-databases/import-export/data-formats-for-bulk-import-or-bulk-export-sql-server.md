@@ -19,7 +19,7 @@ ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Data Formats for Bulk Import or Bulk Export (SQL Server)

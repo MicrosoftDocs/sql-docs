@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "elastic_pool_resource_stats"
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)

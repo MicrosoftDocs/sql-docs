@@ -1,6 +1,6 @@
 ---
 title: "Install new Python packages on SQL Server | Microsoft Docs"
-ms.date: "01/04/2018"
+ms.date: "02/20/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -18,14 +18,15 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Install new Python packages on SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to install new Python packages on an instance of SQL Server 2017.
 
-It also describes how to list packages that are installed in the current environment.
+In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
+
+For help figuring out where packages are installed, or which packages are installed, see [Viewing installed R or Python packages](../r/determine-which-packages-are-installed-on-sql-server.md).
 
 ## Prerequisites
-
-The process for installing new packages is much like that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
 + You must have installed Machine Learning Services (In-Database) with the Python language option. For instructions, see [Set up Python Machine Learning Services](setup-python-machine-learning-services.md).
 
@@ -33,7 +34,11 @@ The process for installing new packages is much like that in a standard Python e
 
 + Determine whether the package you intend to use will work with Python 3.5 and in the Windows environment. 
 
-    In general, there are few limitations on the packages that you can import and use in the SQL Server environment. Possible problems include packages that use networking functionality that is blocked on the server or by the firewall, or packages with dependencies that cannot be installed on a Windows computer.
++ Assess whether the package is a good fit for use in the SQL Server environment. Typically a database server supports multiple services and applications, and resources on the file system might be limited, as well as connections to the server. In many cases Internet access is blocked entirely.
+
+    Other common problems include the use of networking functionality that is blocked on the server or by the firewall, or packages with dependencies that cannot be installed on a Windows computer. 
+
+    Some popular Python packages (like Flask) perform tasks such as web development that run better in a standalone environment. We recommend that you use Python in-database for tasks such as machine learning, that require intensive data processing that benefit from tight integration with the database engine, rather than simply querying the database.
 
 + Administrative access to the server is required to install packages.
 
@@ -56,28 +61,31 @@ The package installed in this example is [CNTK](https://docs.microsoft.com/cogni
 
     For example, on a separate computer, you can download the WHL file from this site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), and then copy the file `cntk-2.1-cp35-cp35m-win_amd64.whl` to a local folder on the SQL Server computer.
 
-+ SQL Server 2017 uses Python 3.5. Be sure to get the Windows version of the package, and a version that is compatible with Python 3.5.
++ SQL Server 2017 uses Python 3.5. 
+
+> [!IMPORTANT]
+> Make sure that you get the Windows version of the package. If the file ends in .gz, it's probably not the right version.
 
 This page contains downloads for multiple platforms and for multiple Python versions: [Set up CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### Step 2. Open a Python command prompt
 
-Locate the default Python library location used by SQL Server. If you have installed multiple instances, be sure to locate the PYTHON_SERVICE folder for the instance where you want to add the package.
+Locate the default Python library location used by SQL Server. If you have installed multiple instances, locate the PYTHON_SERVICE folder for the instance where you want to add the package.
 
 For example, if Machine Learning Services has been installed using defaults, and machine learning is enabled on the default instance, the path would be as follows:
 
-    `C:\Program Files\Microsoft SQL  Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
+    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 Open the Python command prompt associated with the instance.
 
 > [!TIP]
-> We recommend that you set up a Python environment specific to Machine Learning Server or SQL Server.
+> For future debugging and testing, you might want to set up a Python environment specific to the instance library.
 
 ### Step 3. Install the package using pip
 
 + If you are accustomed to using the Python command line, use PIP.exe to install new packages. You can find the **pip** installer in the `Scripts` subfolder. 
 
-    If you get an error that **pip** is not recognized as an internal or external command, you can add the path of the Python executable and the Python scripts folder to the PATH variable in Windows.
+    If you get an error that `pip` is not recognized as an internal or external command, you can add the path of the Python executable and the Python scripts folder to the PATH variable in Windows.
 
     The full path of the **Scripts** folder in a default installation is as follows:
 
@@ -85,9 +93,11 @@ Open the Python command prompt associated with the instance.
 
 + If you are using Visual Studio 2017, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`; it is filled in for you automatically. 
 
-    - If the computer has Internet access, provide the name of the package, or the URL of a specific package and version. For example, to install the version of CNTK that is supported for Windows and Python 3.5, you coudl specify the download URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+    - If the computer has Internet access, provide the name of the package, or the URL of a specific package and version. 
+    
+    For example, to install the version of CNTK that is supported for Windows and Python 3.5, specify the download URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
-    - If the computer does not have internet access, you should have downloaded the WHL file in advance. Then, specify the local file path and name. For example, paste the following path and file to install the WHL file downloaded from the site: 
+    - If the computer does not have internet access, you must download the WHL file before beginning installation. Then, specify the local file path and name. For example, paste the following path and file to install the WHL file downloaded from the site: 
     `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
 You might be prompted to elevate permissions to complete the install.
@@ -103,7 +113,6 @@ Collecting cntk==2.1 from https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp3
 Installing collected packages: cntk
 Successfully installed cntk-2.1
 ```
-
 
 
 ### Step 4. Load the package or its functions as part of your script
@@ -126,7 +135,7 @@ There are different ways that you can get a list of installed packages. For exam
 
 If you are using the Python command line, you can use the **conda** package manager, which is included with the Anaconda Python environment added by SQL Server setup.
 
-To view Python packages that have been installed in the current environment, run this command from the command prompt windows:
+To view Python packages that have been installed in the current environment, run this command from the command prompt:
 
 ```python
 conda list

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "xe"
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_xe_map_values (Transact-SQL)

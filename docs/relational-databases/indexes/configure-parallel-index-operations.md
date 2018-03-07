@@ -22,7 +22,7 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 caps.latest.revision: 43
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configure Parallel Index Operations

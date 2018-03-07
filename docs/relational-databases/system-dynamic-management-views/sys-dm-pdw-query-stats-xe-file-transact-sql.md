@@ -18,7 +18,7 @@ ms.assetid: e0cd402f-04d0-4a5b-b725-88b31bb7862e
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_query_stats_xe_file (Transact-SQL)

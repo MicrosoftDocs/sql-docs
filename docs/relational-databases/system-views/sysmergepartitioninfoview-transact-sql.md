@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysmergepartitioninfoview view"
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmergepartitioninfoview (Transact-SQL)

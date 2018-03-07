@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_cycle_errorlog"
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_cycle_errorlog (Transact-SQL)

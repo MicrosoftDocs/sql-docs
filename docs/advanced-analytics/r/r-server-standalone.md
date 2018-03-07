@@ -21,6 +21,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # R Server (Standalone)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In SQL Server 2016, Microsoft released **R Server (Standalone)**, as part of its platform for supporting enterprise-class analytics.  Microsoft R Server provides scalability and security for the R language, and addresses the in-memory limitations of open source R. Like SQL Server R Services, Microsoft R Server (Standalone) provides parallel and chunked processing of data, enabling R users to use data much bigger than can fit in memory.
 

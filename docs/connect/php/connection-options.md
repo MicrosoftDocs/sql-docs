@@ -1,7 +1,7 @@
 ---
 title: "Connection Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/16/2018"
+ms.date: "02/08/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -30,9 +30,8 @@ This topic lists the options that are permitted in the associative array (when u
 |ApplicationIntent|String|Declares the application workload type when connecting to a server. Possible values are ReadOnly and ReadWrite.<br /><br />For more information about [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support for [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
 |AttachDBFileName|String|Specifies which database file the server should attach.|No value set.|  
 |Authentication|One of the following strings:<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|Specifies the authentication mode.|Not set.|  
-|CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|String|Specify the path, the name and the encryption key to a Custom Keystore Provider for the Always Encrypted feature. All three values must be set in order to properly configure the Custom Keystore Provider when making a connection. |No value set.|
 |CharacterSet<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the character set used to send data to the server.<br /><br />Possible values are SQLSRV_ENC_CHAR and UTF-8. For more information, see [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
-|ColumnEncryption|**Enabled** or **Disabled**|Specifies whether the Always Encrypted feature is enabled or not. |Disabled|  
+|ColumnEncryption<br /><br />(only supported in Windows)|**Enabled** or **Disabled**|Specifies whether the Always Encrypted feature is enabled or not. |Disabled|  
 |ConnectionPooling|1 or **true** for connection pooling on.<br /><br />0 or **false** for connection pooling off.|Specifies whether the connection is assigned from a connection pool (1 or **true**) or not (0 or **false**).<sup>1</sup>|**true** (1)|  
 |Database|String|Specifies the name of the database in use for the connection being established<sup>2</sup>.|The default database for the login being used.|  
 |Driver|String|Specifies the Microsoft ODBC driver used to communicate with SQL Server.<br /><br />Possible values are:<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (Windows only).|When the Driver keyword is not specified, the Microsoft Drivers for PHP for SQL Server attempt to find the existence of the supported Microsoft ODBC driver(s) in the system, starting with the latest version of ODBC and so on.|  

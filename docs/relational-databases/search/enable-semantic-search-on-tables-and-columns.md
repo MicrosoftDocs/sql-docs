@@ -18,7 +18,7 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Enable Semantic Search on Tables and Columns

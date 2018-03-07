@@ -21,7 +21,7 @@ ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Generate Elements for NULL Values with the XSINIL Parameter

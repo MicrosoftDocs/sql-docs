@@ -20,7 +20,7 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Annotation Interpretation - sql:relationship and Key Ordering Rule

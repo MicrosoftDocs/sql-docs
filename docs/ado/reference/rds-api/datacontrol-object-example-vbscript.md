@@ -20,7 +20,7 @@ ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DataControl Object Example (VBScript)

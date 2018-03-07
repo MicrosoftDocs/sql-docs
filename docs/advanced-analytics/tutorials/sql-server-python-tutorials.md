@@ -1,9 +1,17 @@
 ---
 title: "SQL Server Python tutorials | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/19/2017"
-vapplies_to: 
+titleSuffix: "SQL Server"
+ms.custom: ""
+ms.date: "03/06/2018"
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
+ms.tgt_pltfrm: ""
+ms.topic: "tutorial"
+applies_to: 
   - "SQL Server 2017"
 dev_langs: 
   - "Python"
@@ -13,6 +21,7 @@ ms.author: "jeannt"
 manager: "cgronlund"
 ---
 # SQL Server Python tutorials
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides a list of tutorials and samples that demonstrate the use of Python with SQL Server 2017. Through these samples and demos, you will learn:
 
@@ -32,15 +41,15 @@ For information about requirements and setup, see [Prerequisites](#bkmk_Prerequi
 
 + [Create a machine learning model in Python using revoscalepy](use-python-revoscalepy-to-create-model.md)
 
-   You'll create a model using **rxLinMod**, from the new **revoscalepy** library. You'll launch the code from a remote Python terminal but the modeling will take place in the SQL Server compute context.
+   This lesson demonstrates how you can run code from a remote Python terminal, using SQL Server compute context. You should be somewhat familiar with Python tools and environments. Sample code is provided that creates a model using **rxLinMod**, from the new **revoscalepy** library. 
 
 + [In-Database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md)
 
-  NEW! Build a complete Python solution using T-SQL stored procedures. All Python code is included.
+    This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL stored procedures. All Python code is included.
 
 + [Deploy and consume a Python model](..\python\publish-consume-python-code.md)
 
-  Learn how to deploy a Python model using the latest version of Microsoft Machine Learning Server.
+  Learn how to deploy a Python model as a web service, using the latest version of Microsoft Machine Learning Server.
 
 ## Python samples
 
@@ -59,22 +68,26 @@ These samples and demos provided by the SQL Server development team highlight wa
 
 ## <a name="bkmk_Prerequisites"></a>Prerequisites
 
-To use these tutorials, you must have installed SQL Server 2017 Machine Learning Services (In-Database). SQL Server 2017 supports either R or Python. However, you must install the extensibility framework that supports machine learning, and select Python as the language to install. You can install both R and Python on the same computer.
+To use these tutorials, you must have SQL Server 2017, and you must explicitly install and then enable the feature, Machine Learning Services (In-Database). 
 
-> [!NOTE]
->
-> Support for Python is a new feature in SQL Server 2017, and requires CTP 2.0 or later. Although the feature is in pre-release and not supported for production environments, we invite you to try it out and send feedback.
+SQL Server 2017 supports both the R and Python languages, but neither is installed or enabled by default. Running Python requires that the extensibility framework be enabled, and that you select Python as the language to install. 
 
-**SQL Server 2017**
+### Post-installation configuration tips
 
-After running SQL Server setup, don't forget these important steps:
+After running SQL Server setup, you might need to perform some additional steps to ensure that Python and SQL Server are communicating:
 
 + Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`.
-+ Restart the server.
-+ Ensure that the service that calls the external runtime has necessary permissions.
++ Restart the server. 
++ Open the **Services** panel to check whether Launchpad has started. 
++ Ensure that the service that calls the external runtime has necessary permissions. For more information, see [Enable implied authentication](../r/add-sqlrusergroup-to-database.md).
++ Open a port on the firewall for SQL Server, and enable required network protocols.
 + Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample.
 
-If you run into trouble, see this article for some common issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
+See this article for some common issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
+
+### Resource management
+
+You can install both R and Python on the same computer, but running both can require substantial resources. If you get "out of memory" errors, or if running machine learning jobs is the principal intended use of the server, you can reduce the amount of memory that is allocated to the database engine. For more information, see [Managing and monitoring Python in SQL Server](../python/managing-and-monitoring-python-solutions.md).
 
 ## See also
 

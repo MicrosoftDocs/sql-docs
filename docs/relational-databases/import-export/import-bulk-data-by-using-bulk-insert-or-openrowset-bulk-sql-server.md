@@ -27,7 +27,7 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...) (SQL Server)

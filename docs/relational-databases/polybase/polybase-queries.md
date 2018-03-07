@@ -24,13 +24,13 @@ ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 caps.latest.revision: 18
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  This article provides examples of queries using the [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server 2016. Before using these examples, you must also understand the T-SQL statements required to set up PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)
+  This article provides examples of queries using the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature of SQL Server 2016. Before using these examples, you must also understand the T-SQL statements required to set up PolyBase (See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).)
   
 ## Queries  
  Run Transact-SQL statements against external tables or use BI tools to query external tables.

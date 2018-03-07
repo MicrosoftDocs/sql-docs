@@ -32,7 +32,14 @@ ms.workload: "On Demand"
 # CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Creates a PolyBase external table that references data stored in a Hadoop cluster or Azure blob storage. Can also be used to create an external table for [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
+  Creates an external table for PolyBase, or Elastic Database queries. Depending on the scenario, the syntax differs significantly. An external table created for PolyBase cannot be used for Elastic Database queries.  Similarly, an external table created for Elastic Database queries cannot be used for PolyBase, etc. 
+  
+> [!NOTE]  
+>  PolyBase is supported only on SQL Server 2016 (or higher), Azure SQL Data Warehouse, and Parallel Data Warehouse. Elastic Database queries are supported only on Azure SQL Database v12 or later.  
+
+
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses external tables to access
+data stored in a Hadoop cluster or Azure blob storagea PolyBase external table that references data stored in a Hadoop cluster or Azure blob storage. Can also be used to create an external table for [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
  Use an external table to:  
   
@@ -365,7 +372,7 @@ WITH (
   
 CREATE EXTERNAL FILE FORMAT myfileformat_rc  
 WITH (  
-    FORMAT = RCFILE,  
+    FORMAT_TYPE = RCFILE,  
     SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
 )  
 ;  

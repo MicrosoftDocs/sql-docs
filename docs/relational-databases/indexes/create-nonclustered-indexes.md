@@ -22,7 +22,7 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Create Nonclustered Indexes

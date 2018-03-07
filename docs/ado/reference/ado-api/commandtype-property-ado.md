@@ -21,7 +21,7 @@ ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CommandType Property (ADO)

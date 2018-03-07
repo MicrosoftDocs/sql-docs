@@ -2,7 +2,7 @@
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "01/17/2018"
+ms.date: "03/05/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -19,13 +19,13 @@ ms.workload: "Inactive"
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
 
-Download and install the latest release, the *January Public Preview*:
+Download and install the latest release, the *February Public Preview*:
 
-|Platform|Download|Release date|
-|:---|:---|:---|
-|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|January 17, 2018 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|January 17, 2018 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|January 17, 2018|
+|Platform|Download|Release date| Version |
+|:---|:---|:---|:---|
+|Windows|[Installer](https://go.microsoft.com/fwlink/?linkid=867998)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=867997)|February 15, 2018 |0.26.7|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|February 15, 2018 |0.26.7|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=868001)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|February 15, 2018|0.26.7|
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -35,41 +35,50 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 **Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=866480).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] installer for Windows](https://go.microsoft.com/fwlink/?linkid=867998).
 1. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=867997).
 2. Browse to the downloaded file and extract it.
 3. Run `\sqlops-windows\sqlops.exe`
 
 
 ## Get SQL Operations Studio (preview) for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=866481).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=867999).
 2. To expand the contents of the zip, double-click it.
 3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
 
 ## Get SQL Operations Studio (preview) for Linux
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=866482).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=868000).
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    ```bash
    cd ~
-   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~
-   tar -xvf ~/sqlops-linux-<version string>.tar.gz
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
-   source ~/.bashrc
+   sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
+
    sqlops
    ```
 
    > [!NOTE]
-   > On Ubuntu and Redhat, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
+   > On Debian, Redhat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
    
+
+   **Debian:** 
+   ```bash
+   sudo apt-get install libuwind8
+   ```
+
+   **Redhat:** 
+   ```bash
+   yum install libXScrnSaver
+   ```
+
    **Ubuntu:** 
    ```bash
    sudo apt-get install libxss1
@@ -79,10 +88,6 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    sudo apt-get install libunwind8
    ```
 
-   **Redhat:** 
-   ```bash
-   yum install libXScrnSaver
-   ```
 
 ## Uninstall SQL Operations Studio (preview)
 

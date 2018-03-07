@@ -18,7 +18,7 @@ ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RDS API Reference

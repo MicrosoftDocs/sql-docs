@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "consolidated members [Master Data Services], creating"
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 caps.latest.revision: 12
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

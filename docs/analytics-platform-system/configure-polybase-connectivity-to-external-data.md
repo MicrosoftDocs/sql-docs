@@ -49,7 +49,7 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
     RECONFIGURE;  
     ```  
   
-    Running sp_configure with RECONFIGURE sets the config value. Restarting the region is needed to set the run value. Since a restart is required after the next stop also, you don’t need to do the restart until after the next step which changes core-site.xml.  
+    Running sp_configure with RECONFIGURE sets the config value. Restarting the region is needed to set the run value. Since a restart is required after the next stop also, you don’t need to do the restart until after the next step, which changes core-site.xml.  
   
 4.  To enable Microsoft Azure blob storage as an external data source, add one or more Microsoft Azure storage account access keys to PDW core-site.xml file. To add a key:  
   
@@ -57,7 +57,7 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
         ![Windows Azure storage account name](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
   
-    2.  Find your Azure storage account access key. To do this, click your storage account name, and on the Settings blade click **Keys**. This will show you your account name and storage keys.  
+    2.  Find your Azure storage account access key. To do this, click your storage account name, and on the Settings blade click **Keys**. This shows you your account name and storage keys.  
   
         ![Windows Azure storage account access keys](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountAccessKey.png "APS_PDW_AzureStorageAccountAccessKey")  
   
@@ -84,7 +84,7 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
         ```  
   
         > [!CAUTION]  
-        > Take security precautions before storing the access key in core-site.xml. Any user who has CONTROL SERVER or ALTER ANY EXTERNAL DATA SOURCE permission can create an external data source that accesses this account. Once the external data source is created, all SQL Server PDW users who have permission to create tables can create an external table that accesses this storage account. The users will then be able to access account data and consume resources in the account.  
+        > Take security precautions before storing the access key in core-site.xml. Any user who has CONTROL SERVER or ALTER ANY EXTERNAL DATA SOURCE permission can create an external data source that accesses this account. Once the external data source is created, all SQL Server PDW users with CREATE TABLE permissions can create an external table that accesses this storage account. The users can then access account data and consume resources in the account.  
   
     6.  Save the changes to core-site.xml.  
   
@@ -113,13 +113,13 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
       </property>  
     ```  
   
-    Once any property is defined in yarn-site.xml, PolyBase will use those property settings when it runs queries against the HDInsight Region. If you plan to run PolyBase queries against both the HDInsight Region and an external Hadoop 2.0 Cluster on Windows, there must be consistency among all of the yarn-site.xml files, or else the PolyBase queries will fail.  
+    Once any property is defined in yarn-site.xml, PolyBase uses those property settings when it runs queries against the HDInsight Region. If you plan to run PolyBase queries against both the HDInsight Region and an external Hadoop 2.0 Cluster on Windows, there must be consistency among all of the yarn-site.xml files, or else the PolyBase queries will fail.  
   
     To run PolyBase against both the HDInsight Region and an external Hadoop 2.0 Cluster, use the yarn-site.xml default settings on your external Hadoop Cluster.  
   
 6.  Restart the PDW region. To do this, use the Configuration Manager tool. See [Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
-7.  Verify security settings for Hadoop connections. If the **weak authentication** on Hadoop side is enabled by using `dfs.permission = true`, you must create a Hadoop user **pdw_user** and grant full read and write permissions to this user. SQL Server PDW and the corresponding calls from SQL Server PDW are always issued as **pdw_user** which is a fixed user name and cannot be changed in this version of Hadoop connectivity and SQL Server PDW release. If security on Hadoop is disabled by using `dfs.permission = false`, then no further actions need to be taken.  
+7.  Verify security settings for Hadoop connections. If the **weak authentication** on Hadoop side is enabled by using `dfs.permission = true`, you must create a Hadoop user **pdw_user** and grant full read and write permissions to this user. SQL Server PDW and the corresponding calls from SQL Server PDW are always issued as **pdw_user**.  This is a fixed user name and cannot be changed in this version of Hadoop connectivity and SQL Server PDW release. If security on Hadoop is disabled by using `dfs.permission = false`, then no further actions need to be taken.  
   
 8.  Decide which users can create an external data source to the Microsoft Azure blob storage. Give each of these users the storage account name and also **ALTER ANY EXTERNAL DATA SOURCE** or **CONTROL SERVER** permission.  
   
@@ -130,9 +130,9 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
 Authorized users can now create external data sources, external file formats, and external tables. They can use these to integrate data from multiple sources including Hadoop, Microsoft Azure blob storage, and SQL Server PDW.  
 
 ## Kerberos configuration  
-Please note, that when PolyBase authenticates to a Kerberos secured cluster, we require the hadoop.rpc.protection setting to be set to authentication. This will leave the data communication between Hadoop nodes unencrypted. 
+Note, that when PolyBase authenticates to a Kerberos secured cluster, the hadoop.rpc.protection setting must be set to authentication. This leaves the data communication between Hadoop nodes unencrypted. 
 
- To connect to a Kerberos-secured Hadoop cluster [using MIT KDC] :
+ To connect to a Kerberos-secured Hadoop cluster [using MIT KDC]:
    
   
 1.  Find the Hadoop configuration directory in the installation path on the Control node:  
@@ -143,7 +143,7 @@ Please note, that when PolyBase authenticates to a Kerberos secured cluster, we 
   
 2.  Find the Hadoop side configuration value of the configuration keys listed in the table. (On the Hadoop machine, find the files in the Hadoop configuration directory.)  
   
-3.  Copy the configuration values into the value property in the corresponding files on the SQL Server machine.  
+3.  Copy the configuration values into the value property in the corresponding files on the Control node.  
   
     |**#**|**Configuration file**|**Configuration key**|**Action**|  
     |------------|----------------|---------------------|----------|   
@@ -155,7 +155,9 @@ Please note, that when PolyBase authenticates to a Kerberos secured cluster, we 
     |6|mapred-site.xml|mapreduce.jobhistory.address|Find the Hadoop side configuration and copy to SQL Server machine. For example: 10.193.26.174:10020|  
     |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: yarn/_HOST@YOUR-REALM.COM|  
   
-4.  Create a database-scoped credential object to specify the authentication information for each Hadoop user. See [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md).  
+4. Create a database-scoped credential object to specify the authentication information for each Hadoop user. See [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md).  
+
+5. Restart the PDW region. To do this, use the Configuration Manager tool. See [Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).
  
 ## See Also  
 [Appliance Configuration &#40;Analytics Platform System&#41;](appliance-configuration.md)  

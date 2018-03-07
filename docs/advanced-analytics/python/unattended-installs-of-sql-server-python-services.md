@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Unattended installation of Python Machine Learning Services (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic describes how to use the command-line arguments in SQL Server 2017 setup to install the SQL Server database engine with Machine Learning Services and Python, using quiet mode.
 

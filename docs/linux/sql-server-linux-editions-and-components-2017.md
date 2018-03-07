@@ -1,11 +1,11 @@
 ---
 title: "Editions and supported features of SQL Server 2017 ~ Linux | Microsoft Docs"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.date: "09/14/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
@@ -34,9 +34,11 @@ ms.assetid:
 caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Editions and supported features of SQL Server 2017 on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This article provides details of features supported by the various editions of SQL Server 2017 on Linux. For editions and supported features of SQL Server on Windows, see [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -76,7 +78,7 @@ SQL Server 2017 on Linux supports the SQL Server database engine. The following 
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE[ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, full-text search, tools for managing relational and XML data, and in database analytics integration.|  
 
 **Developer, Enterprise Core, and  Evaluation editions**  
-For features supported by Developer, Enterprise Core, and Evaluation editions, see features listed for the SQL Server Enterprise edition in the tables below.
+For features supported by Developer, Enterprise Core, and Evaluation editions, see features listed for the SQL Server Enterprise edition in the following tables.
 
 The Developer edition continues to support only 1 client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   

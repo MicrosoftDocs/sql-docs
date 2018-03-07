@@ -20,7 +20,7 @@ ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Clone Method Example (VBScript)

@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LOCALDB_ERROR_INVALID_INSTANCE_NAME

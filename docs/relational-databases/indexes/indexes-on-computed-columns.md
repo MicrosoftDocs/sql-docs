@@ -22,7 +22,7 @@ ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 caps.latest.revision: 41
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Indexes on Computed Columns

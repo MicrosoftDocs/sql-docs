@@ -18,7 +18,7 @@ ms.assetid: a33f12bd-15c4-42a8-b343-de44c3e87729
 caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # WMI Provider Error 0x8007052f

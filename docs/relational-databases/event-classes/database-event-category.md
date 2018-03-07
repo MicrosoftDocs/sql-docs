@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "SQL Server event classes, Database event category"
 ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Event Category

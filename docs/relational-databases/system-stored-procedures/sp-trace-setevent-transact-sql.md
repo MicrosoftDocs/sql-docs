@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_trace_setevent"
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_trace_setevent (Transact-SQL)

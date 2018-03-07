@@ -18,7 +18,7 @@ ms.assetid: 639a7475-7c92-41e0-a8ab-ad630eb5aea3
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_table_distribution_properties (Transact-SQL)

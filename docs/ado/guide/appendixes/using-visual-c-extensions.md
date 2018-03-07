@@ -21,7 +21,7 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Visual C++ Extensions

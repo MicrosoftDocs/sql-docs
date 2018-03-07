@@ -22,7 +22,7 @@ ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ParentSameAsPrev Property (ADO MD)

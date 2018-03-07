@@ -23,7 +23,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Local Audit for SQL Server Usage Feedback Collection
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 ## Introduction
 
 Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device ("standard computer information") to Microsoft. The Local Audit component of [SQL Server Usage Feedback collection](http://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  

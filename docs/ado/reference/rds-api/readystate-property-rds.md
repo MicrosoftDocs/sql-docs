@@ -18,7 +18,7 @@ ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ReadyState Property (RDS)

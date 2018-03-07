@@ -232,8 +232,8 @@ Suppose statistics were last gathered for OrderTable on 2016-04-30, when the max
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01';  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01';  
 ```  
   
 ### Example B. CE understands that filtered predicates on the same table are often correlated  
@@ -244,30 +244,27 @@ The level 120 CE understands there might be a correlation between the two column
   
 ```sql  
 SELECT Model, Purchase_Price  
-    FROM dbo.Hardware  
-    WHERE  
-        Model  = 'Xbox'  AND  
-        ModelVariant = 'One';  
+FROM dbo.Hardware  
+WHERE Model  = 'Xbox'  AND  
+      ModelVariant = 'One';  
 ```  
   
-### Example C. CE no longer assumes any correlation between filtered predicates from different tablescc 
+### Example C. CE no longer assumes any correlation between filtered predicates from different tables 
 With extense new research on modern workloads and actual business data reveal that predicate filters from different tables usually do not correlate with each other. In the following query, the CE assumes there is no correlation between s.type and r.date. Therefore the CE makes a lower estimate of the number of rows returned.  
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-    FROM  
-                   dbo.Sales    AS s  
-        CROSS JOIN dbo.Returns  AS r  
-    WHERE  
-        s.ticket = r.ticket  AND  
-        s.type   = 'toy'     AND  
-        r.date   = '2016-05-11';  
+FROM dbo.Sales    AS s  
+CROSS JOIN dbo.Returns  AS r  
+WHERE s.ticket = r.ticket  AND  
+      s.type   = 'toy'     AND  
+      r.date   = '2016-05-11';  
 ```  
   
   
 ## See Also  
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx)  
- [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)  
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
+ [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)    
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)   

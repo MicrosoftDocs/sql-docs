@@ -18,7 +18,7 @@ ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Specifying the HIDE Directive

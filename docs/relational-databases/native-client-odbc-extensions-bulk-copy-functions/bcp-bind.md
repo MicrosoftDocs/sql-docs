@@ -123,6 +123,50 @@ bcp_bind(hdbc, szName, 0,
  The *eDataType* parameter is enumerated by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type tokens in sqlncli.h, not the ODBC C data type enumerators. For example, you can specify a two-byte integer, ODBC type SQL_C_SHORT, using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type SQLINT2.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the ***eDataType*** paramenter.  
+ 
+ The following table lists valid enumerated data types and the corresponding ODBC C data types.
+  
+|eDataType|C type|  
+|-----------------------|------------|  
+|SQLTEXT|char *|  
+|SQLNTEXT|wchar_t *|  
+|SQLCHARACTER|char *|  
+|SQLBIGCHAR|char *|  
+|SQLVARCHAR|char *|  
+|SQLBIGVARCHAR|char *|  
+|SQLNCHAR|wchar_t *|  
+|SQLNVARCHAR|wchar_t *|  
+|SQLBINARY|unsigned char *|  
+|SQLBIGBINARY|unsigned char *|  
+|SQLVARBINARY|unsigned char *|  
+|SQLBIGVARBINARY|unsigned char *|  
+|SQLBIT|char|  
+|SQLBITN|char|  
+|SQLINT1|char|  
+|SQLINT2|short int|  
+|SQLINT4|int|  
+|SQLINT8|_int64|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
+|SQLFLT4|float|  
+|SQLFLT8|float|  
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
+|SQLDECIMALN|SQL_NUMERIC_STRUCT|  
+|SQLNUMERICN|SQL_NUMERIC_STRUCT|  
+|SQLMONEY|DBMONEY|  
+|SQLMONEY4|DBMONEY4|  
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|  
+|SQLTIMEN|SQL_SS_TIME2_STRUCT|  
+|SQLDATEN|SQL_DATE_STRUCT|  
+|SQLDATETIM4|DBDATETIM4|  
+|SQLDATETIME|DBDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
+|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
+|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
+|SQLIMAGE|unsigned char *|  
+|SQLUDT|unsigned char *|  
+|SQLUNIQUEID|SQLGUID|  
+|SQLVARIANT|*Any data type except:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLXML|*Supported C data types:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
   
  *idxServerCol*  
  Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  

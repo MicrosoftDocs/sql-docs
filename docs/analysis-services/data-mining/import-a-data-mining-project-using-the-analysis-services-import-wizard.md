@@ -63,6 +63,6 @@ ms.workload: "Inactive"
      The new project is automatically opened using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## See Also  
- [Project Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
+ [Project Properties](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

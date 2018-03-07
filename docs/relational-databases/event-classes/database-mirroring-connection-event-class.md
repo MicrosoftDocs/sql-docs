@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Mirroring Connection Event Class

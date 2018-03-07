@@ -25,7 +25,7 @@ ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.xml_schema_facets (Transact-SQL)

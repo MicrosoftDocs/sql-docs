@@ -20,7 +20,7 @@ ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Source Property Example (VC++)

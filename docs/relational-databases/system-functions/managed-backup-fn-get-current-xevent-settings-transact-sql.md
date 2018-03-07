@@ -26,7 +26,7 @@ ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 caps.latest.revision: 11
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # managed_backup.fn_get_current_xevent_settings (Transact-SQL)

@@ -16,9 +16,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.periods (Transact-SQL)

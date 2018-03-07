@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "syspublications view"
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # syspublications (System View) (Transact-SQL)

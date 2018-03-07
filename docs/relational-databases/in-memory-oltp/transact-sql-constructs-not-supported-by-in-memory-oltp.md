@@ -16,7 +16,7 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 51
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Transact-SQL Constructs Not Supported by In-Memory OLTP

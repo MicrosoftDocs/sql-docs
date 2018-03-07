@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "IHextendedSubscriptionView view"
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IHextendedSubscriptionView (Transact-SQL)

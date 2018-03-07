@@ -22,7 +22,7 @@ ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Indexes Collection (ADOX)

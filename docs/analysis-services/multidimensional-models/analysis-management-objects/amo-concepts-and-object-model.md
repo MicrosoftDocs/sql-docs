@@ -1,7 +1,7 @@
 ---
 title: "AMO Concepts and Object Model | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "02/14/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
@@ -32,7 +32,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AMO Concepts and Object Model
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topic provides a definition of Analysis Management Objects (AMO), how AMO is related to other tools and libraries provided in the architecture of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], and a conceptual explanation of all major objects in AMO.  
   
  AMO is a complete collection of management classes for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that can be used programmatically, under the namespace of <xref:Microsoft.AnalysisServices>, in a managed environment. The classes are included in the AnalysisServices.dll file, which is usually found where the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs the files, under the folder \100\SDK\Assemblies\\. To use the AMO classes, include a reference to this assembly in your projects.  

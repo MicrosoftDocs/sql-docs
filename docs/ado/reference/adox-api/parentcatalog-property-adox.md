@@ -46,7 +46,7 @@ ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ParentCatalog Property (ADOX)

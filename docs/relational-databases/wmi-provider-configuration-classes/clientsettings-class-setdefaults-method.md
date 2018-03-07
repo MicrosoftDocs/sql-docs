@@ -23,7 +23,7 @@ ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ClientSettings Class - SetDefaults Method

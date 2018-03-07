@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.mds.configmanager.srvinfopg.f1"
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 caps.latest.revision: 11
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

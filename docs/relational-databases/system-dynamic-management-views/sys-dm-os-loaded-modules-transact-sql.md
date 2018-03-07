@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_os_loaded_modules dynamic management view"
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_loaded_modules (Transact-SQL)

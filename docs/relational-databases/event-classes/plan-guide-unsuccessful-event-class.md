@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Plan Guide Unsuccessful event class"
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Plan Guide Unsuccessful Event Class

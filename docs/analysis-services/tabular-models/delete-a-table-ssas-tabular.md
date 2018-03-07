@@ -1,7 +1,7 @@
 ---
-title: "Delete a Table (SSAS Tabular) | Microsoft Docs"
+title: "Delete a Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "02/22/2018"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Delete a Table (SSAS Tabular)
+# Delete a table
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   In the model designer, you can delete tables in your model workspace database that you no longer need. Deleting a table does not affect the original source data, only the data that you imported and were working with. You cannot undo the deletion of a table.  
   
@@ -37,7 +37,7 @@ ms.workload: "Inactive"
   
 -   If you created any calculated columns using that table, columns in that table are also deleted; any calculated columns in other tables that use columns from the deleted table will display an error.  
   
-## See Also  
- [Tables and Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
+## See also  
+ [Tables and columns](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

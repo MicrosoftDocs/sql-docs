@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:substring function"
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on String Values - substring

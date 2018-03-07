@@ -21,7 +21,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Planning a SQL Server Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   To install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], follow these steps:  
   
 -   Review installation requirements, system configuration checks, and security considerations for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
@@ -39,25 +40,25 @@ manager: "jhubbard"
   
 ## In This Section  
  [What's New in SQL Server Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
- This topic describes the details about the new or improved features of installation in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ This article describes the details about the new or improved features of installation in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- This topic lists the minimum hardware and software requirements to install and run an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ This article lists the minimum hardware and software requirements to install and run an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- This topic describes some security best practices that you should consider before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ This article describes some security best practices that you should consider before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
- This topic describes the default configuration of services in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and configuration options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services that you can set during and after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
+ This article describes the default configuration of services in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and configuration options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services that you can set during and after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
  [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)  
- This topic describes the default configuration of network protocols in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the configuration options available.  
+ This article describes the default configuration of network protocols in this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the configuration options available.  
   
  [Work with Multiple Versions and Instances of SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
- This topic describes the considerations for installing multiple versions and instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ This article describes the considerations for installing multiple versions and instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)  
- This topic describes about the localized versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ This article describes about the localized versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Related Sections  
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  

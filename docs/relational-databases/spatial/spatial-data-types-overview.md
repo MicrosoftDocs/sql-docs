@@ -21,7 +21,7 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Spatial Data Types Overview

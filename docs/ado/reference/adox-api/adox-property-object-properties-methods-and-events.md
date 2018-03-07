@@ -18,7 +18,7 @@ ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADOX Property Object Properties, Methods, and Events

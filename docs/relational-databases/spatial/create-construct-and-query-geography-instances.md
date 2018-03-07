@@ -20,7 +20,7 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create, Construct, and Query geography Instances

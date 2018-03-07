@@ -24,7 +24,7 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Define the Serialization of XML Data

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_syscollector_delete_collector_type"
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_delete_collector_type (Transact-SQL)

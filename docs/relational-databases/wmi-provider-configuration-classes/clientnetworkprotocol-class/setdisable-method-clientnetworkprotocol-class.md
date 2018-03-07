@@ -23,7 +23,7 @@ ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetDisable Method (ClientNetworkProtocol Class)

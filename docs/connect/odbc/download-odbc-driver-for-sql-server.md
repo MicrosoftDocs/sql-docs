@@ -21,23 +21,33 @@ ms.workload: "Active"
 ---
 # Download ODBC Driver for SQL Server
 
-## Microsoft ODBC Driver 13.1 for SQL Server
+## Microsoft ODBC Driver 17 and 13.1 for SQL Server
 
 ### Windows
 
+- [Download the Microsoft ODBC Driver 17 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=56567)
 - [Download the Microsoft ODBC Driver 13.1 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=53339)
 - [Download the Microsoft Command Line Utilities 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
 
 ### Linux and macOS
 
 - [Debian 8 .deb packages](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
+- [Debian 9 .deb packages (v17+ only)](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql/)
+
 - [RedHat 6 .rpm packages](https://packages.microsoft.com/rhel/6.8/prod/)
 - [RedHat 7 .rpm packages](https://packages.microsoft.com/rhel/7/prod/)
+
+- [SuSE 11 .rpm packages (v17+ only)](https://packages.microsoft.com/sles/12/prod/)
 - [SuSE 12 .rpm packages](https://packages.microsoft.com/sles/12/prod/)
-- [Ubuntu 15.10 .deb packages](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
+
+- [Ubuntu 14.04 .deb packages (v17+ only)](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
+- [Ubuntu 15.10 .deb packages (v13.1 only)](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
 - [Ubuntu 16.04 .deb packages](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.10 .deb packages](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
-- [OS X 10.11 and macOS 10.12 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
+- [Ubuntu 16.10 .deb packages (v13.1 only)](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
+- [Ubuntu 17.04 .deb packages (v13.1 only)](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
+- [Ubuntu 17.10 .deb packages (v17+ only)](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql/)
+
+- [OS X 10.11 and macOS 10.12, 10.13 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
 
 See also [Installing the Driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 

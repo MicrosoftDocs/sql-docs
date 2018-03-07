@@ -16,7 +16,7 @@ ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Comparing Disk-Based Table Storage to Memory-Optimized Table Storage

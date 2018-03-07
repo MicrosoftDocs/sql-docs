@@ -29,7 +29,7 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Disable Indexes and Constraints

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysdatatypemappings view"
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysdatatypemappings (Transact-SQL)

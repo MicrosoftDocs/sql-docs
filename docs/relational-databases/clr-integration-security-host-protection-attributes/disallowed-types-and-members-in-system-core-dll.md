@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Disallowed Types and Members in System.Core.dll

@@ -22,7 +22,7 @@ ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing Template Files by Using the CommandText Property

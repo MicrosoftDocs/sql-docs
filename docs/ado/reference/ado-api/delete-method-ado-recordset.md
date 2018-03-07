@@ -22,7 +22,7 @@ ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Delete Method (ADO Recordset)

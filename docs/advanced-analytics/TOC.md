@@ -162,13 +162,97 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
+<<<<<<< HEAD
 ## [Deploy and consume models](../advanced-analytics/python/publish-consume-python-code.md)
+=======
+## [Python tutorials](tutorials/sql-server-python-tutorials.md)
+
+### [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
+#### [Wrap Python in a stored procedure](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [Train and score from a Python model in SQL Server](tutorials/train-score-using-python-in-tsql.md)
+#### [Create a model using revoscalepy in a SQL Server compute context](tutorials/use-python-revoscalepy-to-create-model.md)
+
+### [Python: In-database analytics for SQL developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
+
+#### [Download sample data](tutorials/sqldev-py1-download-the-sample-data.md)
+#### [Import data to SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
+#### [Explore and visualize data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
+#### [Create data features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
+#### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
+#### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
+
+### [Python: Deploy and consume models using a Standalone server](../advanced-analytics/python/publish-consume-python-code.md)
+
+# [Machine Learning Server - Standalone](r/r-server-standalone.md)
+## [Getting started](r/getting-started-with-microsoft-r-server-standalone.md)
+## [Set up Machine Learning Server Standalone](r/create-a-standalone-r-server.md)
+### [Install Microsoft Machine Learning Server from the command line](r/install-microsoft-r-server-from-the-command-line.md)
+### [Provision the Data Science Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+
+# [How To](r/sql-server-machine-learning-tasks.md)
+
+## [R package management for SQL Server](r/r-package-management-for-sql-server-r-services.md)
+
+### [Install new R packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
+
+### [Install new Python packages on SQL Server](python/install-additional-python-packages-on-sql-server.md)
+
+### [Enable R package management for a SQL Server instance](r/r-package-how-to-enable-or-disable.md)
+
+### [Determine which packages are installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
+
+### [Use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md)
+
+### [Synchronize R packages installed on SQL Server](r/package-install-uninstall-and-sync.md)
+
+### [R packages installed with SQL Server](r/installing-and-managing-r-packages.md)
+
+### [Use miniCRAN to create a local package repository](r/create-a-local-package-repository-using-minicran.md)
+
+### [Avoid errors with user package libraries for R](r/packages-installed-in-user-libraries.md)
+
+## Data exploration and modeling
+
+### [R libraries and data types](r/r-libraries-and-data-types.md)
+### [Python libraries and data types](python/python-libraries-and-data-types.md)
+### [Native scoring](sql-native-scoring.md)
+### [Real-time scoring](real-time-scoring.md)
+### [Predictive modeling with R](r/data-exploration-and-predictive-modeling-with-r.md)
+### [How to perform real-time or native scoring](r/how-to-do-realtime-scoring.md)
+### [Load R objects using ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md)
+### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)
+### [Creating multiple models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)
+### [Install pretrained models](r/install-pretrained-models-sql-server.md)
+### [Use data from OLAP cubes in R](r/using-data-from-olap-cubes-in-r.md)
+### [Create a stored procedure using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+
+## Performance
+
+### [Performance tuning for R - Overview](r/sql-server-r-services-performance-tuning.md)
+### [Performance tuning for R - SQL Server configuration)](r/sql-server-configuration-r-services.md)
+### [Performance tuning for R - R and data optimization](r/r-and-data-optimization-r-services.md)
+### [Performance tuning for R - Results](r/performance-case-study-r-services.md)
+### [Use R code profiling functions](r/using-r-code-profiling-functions.md)
+
+
+## Administration
+
+### [Configure and manage R](r/configuration-sql-server-r-services.md)
+### [Advanced configuration options for Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
+### [Security considerations for the R runtime in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
+### [Modify the user account pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
+
+>>>>>>> cd13852e2739eb5bb80a4213f6089fcc37d626de
 ### [Add SQLRUserGroup as a database user](r/add-sqlrusergroup-to-database.md)
 ### [Deploy and consume models using web services](operationalization-with-mrsdeploy.md)
 ### [Managing and monitoring machine learning solutions](r/managing-and-monitoring-r-solutions.md)
 ### [Resource governance for Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Create a resource pool for machine learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Extended events for Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
+<<<<<<< HEAD
+=======
+### [Extended events for monitoring PREDICT statements](xe-event-predict-tsql.md)
+>>>>>>> cd13852e2739eb5bb80a4213f6089fcc37d626de
 ### [DMVs for Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
 ### [Using R code profiling functions](r/using-r-code-profiling-functions.md)
 ### [Monitor Machine Learning Services using custom reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)

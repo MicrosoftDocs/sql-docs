@@ -12,7 +12,7 @@ ms.technology:
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-f1_keywords: 
+f1_keywords:
   - "sp_cursor_prepare_TSQL"
   - "sp_cursor_prepare"
 dev_langs: 
@@ -31,7 +31,7 @@ ms.workload: "Inactive"
 
   Prepares a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and returns a statement *handle* for execution. sp_prepare is invoked by specifying ID = 11 in a tabular data stream (TDS) packet.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +51,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  Defines the cursor result set. The *stmt* parameter is required and calls for an **ntext**, **nchar**, or **nvarchar** input value.  
   
  *options*  
- An optional parameter that returns a description of the cursor result set columns. *options* requires the following **int** input value.  
+ An optional parameter that returns a description of the cursor result set columns. *options* requires the following int input value:  
   
 |Value|Description|  
 |-----------|-----------------|  

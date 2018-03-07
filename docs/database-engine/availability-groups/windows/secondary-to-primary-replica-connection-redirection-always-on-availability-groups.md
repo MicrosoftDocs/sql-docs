@@ -58,6 +58,15 @@ When you create the AG, set the read/write routing URL for the primary replica t
 
 See [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md).
 
+## PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set
+
+||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|-----|-----|-----|-----|
+|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connection fail|Connection fail|Connection succeed<br/>Reads succeeds<br/>Writes fail|
+
+|`SECONDARY_ROLE (ALLOW CONNECTIONS = )`|`NO`|`READ_ONLY`|`ALL`|
+|-----|-----|-----|-----|
+|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connection fail|Connection fail|Connection succeed<br/>Reads succeeds<br/>Writes fail|
 
 
 ## See Also  

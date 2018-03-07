@@ -4,19 +4,19 @@ description: This quickstart shows how to use Docker to run the SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: "Active"
 ---
-# Run the SQL Server 2017 container image with Docker
+# Quickstart: Run the SQL Server 2017 container image with Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -39,7 +39,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 1. Pull the SQL Server 2017 Linux container image from Docker Hub.
 
    ```bash
-   docker pull microsoft/mssql-server-linux:2017-latest
+   sudo docker pull microsoft/mssql-server-linux:2017-latest
    ```
 
    ```PowerShell
@@ -47,11 +47,13 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
    ```
 
    The previous command pulls the latest SQL Server 2017 container image. If you want to pull a specific image, you add a colon and the tag name (for example, `microsoft/mssql-server-linux:2017-GA`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   
+   For the bash commands in this article, `sudo` is used. On MacOS, `sudo` might not be required. On Linux, if you do not want to use `sudo` to run Docker, you can configure a **docker** group and add users to that group. For more information, see [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
 1. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS) or elevated PowerShell command prompt.
 
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1401:1433 --name sql1 \
       -d microsoft/mssql-server-linux:2017-latest
    ```
@@ -81,7 +83,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 1. To view your Docker containers, use the `docker ps` command.
 
    ```bash
-   docker ps -a
+   sudo docker ps -a
    ```
 
    ```PowerShell
@@ -116,7 +118,7 @@ The following steps use the SQL Server command-line tool, **sqlcmd**, inside the
 1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `sql1` is name specified by the `--name` parameter when you created the container.
 
    ```bash
-   docker exec -it sql1 "bash"
+   sudo docker exec -it sql1 "bash"
    ```
 
    ```PowerShell
@@ -246,8 +248,8 @@ Other common tools to connect to SQL Server include:
 If you want to remove the SQL Server container used in this tutorial, run the following commands:
 
 ```bash
-docker stop sql1
-docker rm sql1
+sudo docker stop sql1
+sudo docker rm sql1
 ```
 
 ```PowerShell

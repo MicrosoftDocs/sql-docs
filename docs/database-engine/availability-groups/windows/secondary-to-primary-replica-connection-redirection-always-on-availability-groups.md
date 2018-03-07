@@ -34,7 +34,7 @@ An availability group (AG) listener and the corresponding cluster resource direc
 - Complex, error-prone architectures, like a multi-subnet cloud configuration or multi-subnet floating IP with Pacemaker
 - The AG is configured ith cluster-type NONE for read scale-out or DR
 
-To solve these challenges, [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md) introduces *secondary to primary replica connection redirection*. This feature allows client applications to connect to any of the replicas of the availability group and the connection will be redirected to the primary replica, according to the AG configuration.
+To solve these challenges, [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces *secondary to primary replica connection redirection*. This feature allows client applications to connect to any of the replicas of the availability group and the connection will be redirected to the primary replica, according to the AG configuration.
 
 ## READ_WRITE_ROUTING_URL option
 
@@ -56,7 +56,7 @@ When you create the AG, set the read/write routing URL for the primary replica t
      | SESSION_TIMEOUT = integer
 ```
 
-See [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
+See [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md).
 
 
 

@@ -28,8 +28,6 @@ This topic explains how to install the [!INCLUDE[msCoName](../../../includes/msc
 
 ## Microsoft ODBC Driver 17 for SQL Server 
 
-**Important Note:** The version 17 ODBC driver packages for Linux and Mac are currently unavailable due to issues when updating existing installations. We are working on providing updated packages as soon as possible. Running the installation commands for version 17 will currently install the version 13.1 driver.
-
 ### Debian 8 and 9
 ```
 sudo su 

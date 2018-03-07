@@ -59,22 +59,37 @@ To configure secondary to primary connection redirection, set `READ_WRITE_ROUTIN
 
 See [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md) or [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md).
 
-## PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set (View 1)
+## PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set
+
+### (View 1)
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connection fail|Connection fail|Connection succeed<br/>Reads succeeds<br/>Writes fail|
-|`ApplicationIntent=ReadOnly`|Connection fail|Connection succeed|Connection succeed
+|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connections fail|Connections fail|Connections succeed<br/>Reads succeed<br/>Writes fail|
+|`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
 
-
-
-## PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set (View 2)
+### (View 2)
 
 |`SECONDARY_ROLE (ALLOW CONNECTIONS = )`|`NO`|`READ_ONLY`|`ALL`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connection fail|Connection fail|Connection succeed<br/>Reads succeeds<br/>Writes fail|
-|`ApplicationIntent=ReadOnly`|Connection fail|Connection succeed|Connection succeed
+|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connections fail|Connections fail|Connections succeed<br/>Reads succeed<br/>Writes fail|
+|`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
 
+## PRIMARY_ROLE(READ_WRITE_ROUTING_URL) set 
+
+### (View 1)
+
+||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|-----|-----|-----|-----|
+|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connections fail|Connections fail|Connections route to primary|
+|`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
+
+### (View 2)
+
+|`SECONDARY_ROLE (ALLOW CONNECTIONS = )`|`NO`|`READ_ONLY`|`ALL`|
+|-----|-----|-----|-----|
+|`ApplicationIntent=ReadWrite`<br/>or<br/>`ApplicationIntent` not set|Connections fail|Connections fail|Connections route to primary|
+|`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
 
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

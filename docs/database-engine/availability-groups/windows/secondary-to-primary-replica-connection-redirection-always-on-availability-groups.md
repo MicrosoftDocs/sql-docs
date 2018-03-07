@@ -31,9 +31,9 @@ ms.workload: "On Demand"
 
 When an availability group (AG) listener does not exist, or cannot reliably redirect connections to a primary replica after failover you can configure *secondary to primary replica connection redirection* for an availability group. 
 
-Normally, the AG listener and the corresponding cluster resource directs user traffic to the primary replica to ensure reconnection after failover. When an availability group is not managed by a cluster (`CLUSTER_TYPE = NONE`) or when the environment does not effectively enable listener redirection, configure the availability group to redirect connections from secondary to primary replicas. 
+Normally, the AG listener and the corresponding cluster resource direct user traffic to the primary replica to ensure reconnection after failover. When an availability group is not managed by a cluster (`CLUSTER_TYPE = NONE`) or when the environment does not effectively enable listener redirection, configure the availability group to redirect connections from secondary to primary replicas. 
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces secondary to primary replica connection redirection. This feature allows client applications to connect to any of the replicas of the availability group and the connection will be redirected to the primary replica, according to the AG configuration.
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces secondary to primary replica connection redirection. This feature allows client applications to connect to any of the replicas of the availability group and the connection is redirected to the primary replica, according to the AG configuration.
 
 ## READ_WRITE_ROUTING_URL option
 
@@ -95,9 +95,11 @@ See [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-gr
 |`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
 
 ## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Statistics](../../../relational-databases/statistics/statistics.md)  
+[Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ 
+[About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
+
+[Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+
   
   

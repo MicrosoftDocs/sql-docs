@@ -2,7 +2,7 @@
 title: "Quickstart: Connect and query an Azure SQL Data Warehouse using SQL Operations Studio (preview) | Microsoft Docs"
 description: This quickstart shows how to use SQL Operations Studio (preview) to connect to a SQL database and run a query
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "03/08/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -33,11 +33,11 @@ Remember the server name, and login credentials!
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Data Warehouse server.
 
-1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** sidebar:
+1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If you don't see the **Connection** page, click **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
    
    ![New Connection Icon](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows:
+2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows using the server name, user name, and password for *your* Azure SQL server:
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -51,14 +51,16 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
    ![New Connection Icon](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. If you get an error about the firewall, you need to create a firewall rule. To create a firewall rule, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. If your server doesn't have a firewall rule allowing SQL Operations Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
-4. After successfully connecting your server will appear in the object explorer.
+   ![New firewall rule](media/quickstart-sql-dw/firewall.png)  
+
+4. After successfully connecting your server opens in the *Servers* sidebar.
 
 ## Create the tutorial data warehouse
 1. Right click on your server, in the object explorer and select **New Query.**
 
-1. Paste the following snippet into the query editor:
+1. Paste the following snippet into the query editor and click **Run**:
 
    ```sql
     IF NOT EXISTS (
@@ -73,7 +75,6 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
     GO
    ```
 
-1. To execute the query, click **Run**.
 
 ## Create a table
 
@@ -84,7 +85,10 @@ The query editor is still connected to the *master* database, but we want to cre
    ![Change context](media/quickstart-sql-database/change-context.png)
 
 
-1. Paste the following snippet into the query editor:
+1. Paste the following snippet into the query editor and click **Run**:
+
+   > [!NOTE]
+   > You can append this to, or overwrite the previous query in the editor. Note that clicking **Run** executes only the query that is selected. If nothing is selected, clicking **Run** executes all queries in the editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -103,11 +107,10 @@ The query editor is still connected to the *master* database, but we want to cre
    GO
    ```
 
-1. To execute the query, click **Run**.
 
 ## Insert rows
 
-1. Paste the following snippet into the query editor:
+1. Paste the following snippet into the query editor and click **Run**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -119,17 +122,16 @@ The query editor is still connected to the *master* database, but we want to cre
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-1. To execute the query, click **Run**.
 
 ## View the result
-1. Paste the following snippet into the query editor:
+1. Paste the following snippet into the query editor and click **Run**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. To execute the query, click **Run**.
+1. The results of the query are displayed:
 
    ![Select results](media/quickstart-sql-dw/select-results.png)
 

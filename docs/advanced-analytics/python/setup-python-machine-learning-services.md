@@ -34,7 +34,7 @@ After the installation is complete, reconfigure the instance to allow execution 
 + SQL Server 2017 is required. Python integration is not supported on previous versions of SQL Server.
 + Be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database.
 + Prerequisites are installed as part of the Python component setup.
-+ You cannot install machine learning with Python services on a failover cluster. The security mechanism used for isolating Python processes is not compatible with a Windows Server failover cluster environment.
++ You cannot install SQL Server 2017 Machine Learning Services on a failover cluster. The security mechanism used for isolating Python processes is not compatible with a Windows Server failover cluster environment.
    
   As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance that uses Python services. Alternatively, you can install machine learning with Python services on a standalone computer that uses the AlwaysOn setting, and is part of an availability group.
 

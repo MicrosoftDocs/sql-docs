@@ -29,7 +29,7 @@ The focus of this release cycle is integration and parity so that you can run Py
 
 | Release | Date | Feature update |
 |---------|------|----------------|
-| CTP 1.4 | March 2018 | Failover cluster support. You can install SQL Server 2018 Machine Learning Services (In-Database) on a Windows failover cluster to meet your requirements for redundancy and uptime in the event your primary server fails over. |
+| CTP 1.4 | March 2018 | Failover cluster support. You can install SQL Server 2018 Machine Learning Services (In-Database) on a Windows failover cluster to meet your requirements for redundancy and uptime in the event your primary server fails over. SQL Server Setup provides a workflow for install features in a failover cluster, and SQL Server Machine Learning Services (In-Database) is now included in that workflow. |
 | CTP 1.4 | March 2018 | Process data at the partition level using new parameters added to [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) in this CTP release.  |
 
 ## New in SQL Server 2017

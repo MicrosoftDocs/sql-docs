@@ -33,11 +33,11 @@ Remember the server name, and login credentials!
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Data Warehouse server.
 
-1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** sidebar:
+1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If you don't see the **Connection** page, click **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
    
    ![New Connection Icon](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows:
+2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows using the server name, user name, and password for *your* Azure SQL server:
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -51,13 +51,11 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
    ![New Connection Icon](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. If your server doesn't have a firewall rule allowing SQL Operations Studio to connect, the**Create new firewall rule** dialog opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. If your server doesn't have a firewall rule allowing SQL Operations Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![New firewall rule](media/quickstart-sql-dw/firewall.png)  
 
 4. After successfully connecting your server opens in the *Servers* sidebar.
-
-4. After successfully connecting your server will appear in the object explorer.
 
 ## Create the tutorial data warehouse
 1. Right click on your server, in the object explorer and select **New Query.**

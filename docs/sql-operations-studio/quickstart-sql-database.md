@@ -54,7 +54,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
    ![New Connection Icon](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. If your server doesn't have a firewall rule allowing SQL Operations Studio to connect, the**Create new firewall rule** dialog opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. If your server doesn't have a firewall rule allowing SQL Operations Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![New firewall rule](media/quickstart-sql-database/firewall.png)  
 
@@ -134,7 +134,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 
 ## View the result
-1. Paste the following snippet into the query editor and click **Run**.
+1. Paste the following snippet into the query editor and click **Run**:
 
    ```sql
    -- Select rows from table 'Customers'

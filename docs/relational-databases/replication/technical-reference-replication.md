@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "technical reference [SQL Server replication]"
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

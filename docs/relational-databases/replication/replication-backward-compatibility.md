@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "compatibility [SQL Server replication]"
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 caps.latest.revision: 56
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

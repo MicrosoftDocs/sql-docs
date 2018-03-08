@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Snapshot Agent Security dialog box"
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

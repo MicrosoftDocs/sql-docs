@@ -1,7 +1,7 @@
 ---
-title: "Publish and consume Python code| Microsoft Docs"
+title: "Publish and consume Python code - SQL Server Machine Learning Server (Standalone) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/09/2017"
+ms.date: "03/07/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -13,35 +13,30 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "cgronlund"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 
 # Publish and consume Python web services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-You can deploy a working Python solution to a web service by using the operationalization feature in Microsoft Machine Learning Server. This topic describes the steps to successfully publish and then run your solution.
+You can deploy a working Python solution to a web service by using the operationalization feature on a [SQL Server Machine Learning Server (Standalone)](../r/r-server-standalone.md) instance. This article describes the steps to successfully publish and then run your solution.
 
-The target audience for this article is data scientists who want to learn how to publish Python code or models as web services hosted in Microsoft Machine Learning Server. The article also explains how applications can consume the the code or models. This article assumes that you are proficient in Python.
+The target audience is data scientists who want to learn how to publish Python code or models to a Machine Learning Server, and how to consume the code or models in a custom application. 
 
-> [!IMPORTANT]
->
-> This sample was developed for the version of Python that is included with Machine Learning Server (Standalone), and uses features in Machine Learning Server version **9.1.0**.
- > 
- > Cick the following link to see the same sample, republished using the newer libraries in Machine Learning Server. See [Deploy and manage web services in Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
-
-**Applies to: Microsoft R Server (Standalone)**
+This article assumes that you are proficient in Python. You should also have a standalone server, which is installed independently of other SQL Server features. Your server must be [configured for operationalization](../operationalization-with-mrsdeploy.md) to enable web service hosting. 
 
 ## Overview of workflow
 
 The workflow from publishing to consuming a Python web service can be summarized as follows:
 
-1. Fulfill the [prerequisite](#prereq) of generating the Python client library from the core API Swagger document.
-2. Add authentication and header logic to your Python script.
-3. Create a Python session, prepare the environment, and create a snapshot to preserve the environment.
-4. Publish the web service and embed this snapshot.
-5. Try out the web service by consuming it in your session.
-6. Manage these services.
+1. Verify you have the standalone server installation of Machine Learning Server with Python.
+2. Fulfill the [prerequisite](#prereq) of generating the Python client library from the core API Swagger document.
+3. Add authentication and header logic to your Python script.
+4. Create a Python session, prepare the environment, and create a snapshot to preserve the environment.
+5. Publish the web service and embed this snapshot.
+6. Try out the web service by consuming it in your session.
+7. Manage these services.
 
 ![Swagger workflow](./media/data-scientist-python-workflow.png)
 
@@ -49,9 +44,9 @@ This article discusses each step of the workflow, and includes sample Python cod
 
 ## Sample code
 
-This sample code assumes you have satisfied the [prerequisites](#prereq) to generate a Python client library from that Swagger file and that you've used Autorest.
+This sample code assumes you have [generated the prerequisite Python client library](#prereq) from Swagger and that you've used Autorest. Run this code on a SQL Server Machine Learning Server (Standalone) instance that has been configured for operationalization.
 
-After the code block, you'll find a step-by-step walkthrough with more detailed descriptions of the complete process.
+To explore this code in depth, skip ahead to the [step-by-step walkthrough](#walkthrough) for more detailed descriptions of the complete process.
 
 > [!IMPORTANT]
 > This example uses the local `admin` account for authentication. However, you should substitute the credentials and [authentication method](#python-auth) configured by your administrator.
@@ -286,6 +281,8 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+<a name="walkthrough"></a>
+
 ## Walkthrough
 
 This section describes how the code works in more detail.
@@ -293,7 +290,7 @@ This section describes how the code works in more detail.
 
 ### <a name="prereq"></a> Step 1. Create prerequisite client libraries
 
-Before you can start publishing your Python code and models thorugh Microsoft Machine Learning Server, you must generate a client library using the Swagger document provided for this release.
+Before you can start publishing your Python code and models through Machine Learning Server, you must generate a client library using the Swagger document provided for this release.
 
 1. Install a Swagger code generator on your local machine and familiarize yourself with it. You will use it to generate the API client libraries in Python. Popular tools include [Azure AutoRest](https://github.com/Azure/autorest) (requires Node.js) and [Swagger Codegen](https://github.com/swagger-api/swagger-codegen). 
 
@@ -487,7 +484,7 @@ After authentication, you can start a Python session and create a model for publ
 
 After your client library has been generated and you've built the authentication logic into your application, you can interact with the core APIs to create a Python session, create a model, and then publish a web service using that model.
 
-Some things to remeber:
+Some things to remember:
 
 + You must be authenticated before you make any API calls. Therefore, include `headers` in all requests.
 + To ensure that the web service is registered as a Python service, be sure to specify `runtime_type="Python"`. If you don't set the runtime type to Python, it defaults to R.

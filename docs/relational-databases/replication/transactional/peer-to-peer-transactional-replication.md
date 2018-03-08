@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "peer-to-peer transactional replication"
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 71
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

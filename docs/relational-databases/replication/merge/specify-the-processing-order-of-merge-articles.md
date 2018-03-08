@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], article processing order"
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

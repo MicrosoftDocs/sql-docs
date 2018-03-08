@@ -1,13 +1,10 @@
 # [Getting started](getting-started-with-machine-learning-services.md)
 
 # Overview
-## [What is Microsoft Machine Learning Services](r/r-services.md)
-## [What's new in machine learning](what-s-new-in-sql-server-machine-learning-services.md)
-## [New and updated articles](new-updated-advanced-analytics.md)
+## [What is SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md)
+## [What's new in Machine Learning](what-s-new-in-sql-server-machine-learning-services.md)
 ## [Architecture and overview](architecture-overview-machine-learning.md)
-## [Differences in machine learning features between editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
+## [Editions and features](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 
@@ -175,6 +172,8 @@
 
 ## [Known issues](known-issues-for-sql-server-machine-learning-services.md)
 ## [Release notes](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [New and updated articles](new-updated-advanced-analytics.md)
+## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
 
 ## [Setup and troubleshooting tips](machine-learning-troubleshooting-faq.md)
 ### [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md)

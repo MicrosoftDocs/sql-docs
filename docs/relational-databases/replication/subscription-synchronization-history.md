@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.monitor.subscription.synchhistory.f1"
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

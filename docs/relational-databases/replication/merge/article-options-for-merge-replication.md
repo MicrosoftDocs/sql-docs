@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "articles [SQL Server replication], merge replication options"
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

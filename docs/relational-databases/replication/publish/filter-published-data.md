@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "column filters [SQL Server replication]"
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 50
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

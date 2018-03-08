@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server replication], publishing"
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

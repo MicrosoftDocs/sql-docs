@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], updatable"
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

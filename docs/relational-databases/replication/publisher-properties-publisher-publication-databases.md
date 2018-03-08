@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Publisher Properties dialog box"
 ms.assetid: 574ea2e7-4e7b-4733-ab52-429ca93c7b0a
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

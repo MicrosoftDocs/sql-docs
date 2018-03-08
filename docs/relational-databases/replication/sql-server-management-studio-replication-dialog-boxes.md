@@ -14,8 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

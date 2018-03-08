@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sp_addtabletocontents"
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

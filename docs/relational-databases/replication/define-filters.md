@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Define Filters dialog box"
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

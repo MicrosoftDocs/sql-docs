@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "articles [SQL Server replication], conflict resolution"
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

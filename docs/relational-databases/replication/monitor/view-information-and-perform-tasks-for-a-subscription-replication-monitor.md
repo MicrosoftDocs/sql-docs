@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "viewing subscription information"
 ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

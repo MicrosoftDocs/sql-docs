@@ -61,7 +61,7 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-Now the login Jerry can create more logins, and the user Jerry can create more users.
+Now the login Larry can create more logins, and the user Jerry can create more users.
 
 
 ## Granting access with least privileges

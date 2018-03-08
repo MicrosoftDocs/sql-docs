@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "administering replication, backing up"
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

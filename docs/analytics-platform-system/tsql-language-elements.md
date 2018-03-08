@@ -73,7 +73,7 @@ Transact-SQL (T-SQL) language elements for Analytic Platform System (APS) SQL Se
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [IS [NOT](../t-sql/queries/is-null-transact-sql.md)
+* [IS NOT](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
 * [OR](../t-sql/language-elements/or-transact-sql.md)

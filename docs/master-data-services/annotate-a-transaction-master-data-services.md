@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "annotations [Master Data Services], for transactions"
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

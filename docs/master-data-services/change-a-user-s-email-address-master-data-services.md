@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "users [Master Data Services], changing e-mail address"
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

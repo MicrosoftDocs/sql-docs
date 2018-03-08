@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.newpubwizard.addeditjoin.f1"
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

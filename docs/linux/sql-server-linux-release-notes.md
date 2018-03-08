@@ -34,13 +34,9 @@ The following release notes apply to SQL Server 2017 running on Linux. This arti
 > [!TIP]
 > For more information, review the [system requirements](sql-server-linux-setup.md#system) for SQL Server on Linux. For the latest support policy for SQL Server 2017, see the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
-## Supported client tools
+## Tools
 
-| Tool | Minimum version |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest |
+Most existing client tools that target SQL Server can seamlessly target SQL Server running on Linux. Some tools might have a specific version requirement to work well with Linux. For a full list of SQL Server tools, see [SQL Tools and Utilities for SQL Server](../tools/overview-sql-tools.md).
 
 ## Release history
 
@@ -175,6 +171,7 @@ The following features and services are not available on Linux at the time of th
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
+| &nbsp; | Distributed Transaction Coordinator (DTC) |
 
 ## Known issues
 
@@ -327,3 +324,5 @@ To get started, see the following quickstarts:
 - [Run on Docker](quickstart-install-connect-ubuntu.md)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
+
+For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).

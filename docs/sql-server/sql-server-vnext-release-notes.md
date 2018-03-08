@@ -1,7 +1,7 @@
 ---
 title: "SQL Server vNext Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2018"
+ms.date: "03/07/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,13 +15,15 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server vNext Release Notes
-This article describes limitations and issues with SQL Server vNext on Windows and SQL Server vNExt on Linux. For related information, see:
-- [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-2018.md)
+This article describes limitations and known issues for the SQL Server vNext Community Technology Preview (CTP) releases. For related information, see:
+- [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
 
-**Try SQL Server!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+**Try SQL Server vNext!**
+- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server vNext to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
+- [Run on SQL Server vNext on Docker](../linux/quickstart-install-connect-docker.md).
 
-## SQL Server vNext Community Technology Preview (CTP 1.4 - March 2018)
+## CTP 1.4 (March 2018)
 
 ### Master Data Services (MDS)
 **Issue and customer impact:** In the Master Data Services (MDS) portal, the Silverlight components on the following pages have been replaced with HTML controls:
@@ -38,6 +40,6 @@ On the modified **Explore** pages, the operators `Matches` and `Does not match` 
 
 **Applies to:** Windows
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

@@ -1,8 +1,8 @@
 # [Welcome](sql-server-technical-documentation.md)
 
 # Overview
+## [What's New in SQL Server vNext](what-s-new-in-sql-server-vnext.md)
 ## [What's New in SQL Server 2017](what-s-new-in-sql-server-2017.md)
-## [What's New in SQL Server vNext](what-s-new-in-sql-server-2018.md)
 ## [What's New in SQL Server 2016](what-s-new-in-sql-server-2016.md)
 ## [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 ## [Editions and supported features of SQL Server 2017](editions-and-components-of-sql-server-2017.md)
@@ -10,6 +10,7 @@
 ## [Compute Capacity Limits by Edition of SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Customer Experience Improvement Program](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [Configure SQL Server to send feedback to Microsoft](sql-server-customer-feedback.md)
+
 ### Partners
 #### [Monitoring](partner-monitor-sql-server.md)
 #### [High availability and disaster recovery](partner-hadr-sql-server.md)
@@ -19,11 +20,11 @@
 # [New and updated articles](new-updated-sql-server.md)
 
 # Release Notes
+## [SQL Server vNext Notes](sql-server-vnext-release-notes.md)
 ## [SQL Server 2017 Notes](sql-server-2017-release-notes.md)
-## [SQL Server vNext Notes](sql-server-2018-release-notes.md)
 ## [SQL Server 2016 Notes](sql-server-2016-release-notes.md)
 ## [SQL Server 2014 Notes](sql-server-2014-release-notes.md)
-## [SQL Server 2012 Service Pack release notes](sql-server-2012-sp4-release-notes.md)
+## [SQL Server 2012 SP notes](sql-server-2012-sp4-release-notes.md)
 ## [SQL Server 2012 Notes](sql-server-2012-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Notes](sql-server-2008-r2-sp2-release-notes.md)
 

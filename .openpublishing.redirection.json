@@ -1506,16 +1506,6 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/sql-server/sql-server-vnext-release-notes.md",
-            "redirect_url": "/sql/sql-server/sql-server-2017-release-notes",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "docs/sql-server/what-s-new-in-sql-server-vnext.md",
-            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2017",
-            "redirect_document_id": true
-        },
-        {
             "source_path": "docs/integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md",
             "redirect_url": "/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2017",
             "redirect_document_id": true

@@ -2,7 +2,7 @@
 
 # Overview
 ## [What is SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md)
-## [What's new in Machine Learning](what-s-new-in-sql-server-machine-learning-services.md)
+## [What's new ](what-s-new-in-sql-server-machine-learning-services.md)
 ## [Architecture and overview](architecture-overview-machine-learning.md)
 ## [Editions and features](r/differences-in-r-features-between-editions-of-sql-server.md)
 

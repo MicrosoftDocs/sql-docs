@@ -25,10 +25,10 @@ SQL Server Machine Learning Services is an embedded, predictive analytics and da
 
 The key value proposition of Machine Learning Services is the power of its proprietary packages to deliver advanced analytics at scale, and the ability to bring calculations and processing to where the data resides, eliminating the need to pull data across the network.
 
-There are two options for using machine learning capabilities in SQL Server. 
+There are two options for using machine learning capabilities in SQL Server: 
 
 + **SQL Server Machine Learning Services (In-Database)** operates within the database engine instance, where the calculation engine is fully integrated with the database engine. Most installations are this option.
-+ **SQL Server Machine Learning Server (Standalone)** is a non-SQL installation. Although you use SQL Server Setup to install the server, it is completely separate from SQL Server.
++ **SQL Server Machine Learning Server (Standalone)** is a non-SQL installation. Although you use SQL Server Setup to install the server, it is completely decoupled from SQL Server.
 
 ## R and Python packages
 
@@ -40,9 +40,9 @@ Support for each language is through proprietary Microsoft packages used for cre
 | [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Industry-leading machine learning algorithms for image featurization, classification problems  |
 | [olapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Build or execute an MDX query in R script.
 | [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.
-| [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Primarily used on a non-SQL installation of Machine Learning Server, such as as the [(Standalone) version](r/r-server-standalone.md). Use these packages to deploy and host web services, build scale-out topologies with dedicated web and compute nodes, toggle between local and remote sessions, run diagnostics, and more. For an (In-Database) installation, use these packages in a client capacity: for example, to access a web service on a remote server that is dedicated to running just Machine Learning Services workloads. |
+| [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Primarily used on a non-SQL installation of Machine Learning Server, such as the [(Standalone) version](r/r-server-standalone.md). Use these packages to deploy and host web services, build scale-out topologies with dedicated web and compute nodes, toggle between local and remote sessions, run diagnostics, and more. For an (In-Database) installation, use these packages in a client capacity: for example, to access a web service on a remote server that is dedicated to running just Machine Learning Services workloads. |
 
-The same packages that ship in SQL Server are also available in several other Microsoft products and services, including a non-SQL version called [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/), [Azure virtual machines](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux), Azure Machine Learning, and Azure services like [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight). Because our proprietary packages are built on open-source R and Python distributions, script or code that you run in SQL Server can also call base functions and use third-party packages compatible with the language version provided in SQL Server (Python 3.5 and recent versions of R, currently 3.3.3).
+The same packages that ship in SQL Server are also available in several other Microsoft products and services, including a non-SQL version called [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Packages are also available on several [Azure virtual machines](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux), Azure Machine Learning, and Azure services like [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight). Because the proprietary packages are built on open-source R and Python distributions, script or code that you run in SQL Server can also call base functions and use third-party packages compatible with the language version provided in SQL Server (Python 3.5 and recent versions of R, currently 3.3.3).
 
 ## Use cases
 

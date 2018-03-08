@@ -1,7 +1,7 @@
 ---
 title: "SQL Server vNext Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2018"
+ms.date: "03/07/2018"
 ms.prod: "sql-server-2018"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,7 @@ This article describes limitations and issues with SQL Server vNext on Windows a
 - [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-2018.md)
 
 **Try SQL Server!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server vNext](http://go.microsoft.com/fwlink/?LinkID=829477)
 
 ## SQL Server vNext Community Technology Preview (CTP 1.4 - March 2018)
 
@@ -38,6 +38,6 @@ On the modified **Explore** pages, the operators `Matches` and `Does not match` 
 
 **Applies to:** Windows
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

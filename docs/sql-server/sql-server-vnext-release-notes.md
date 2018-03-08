@@ -15,11 +15,11 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server vNext Release Notes
-This article describes limitations and issues with SQL Server vNext on Windows and SQL Server vNext on Linux. For related information, see:
+This article describes limitations and issues with SQL Server vNext. For related information, see:
 - [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
 
 **Try SQL Server vNext!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server vNext for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server vNext to install on Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server vNext on Docker](../linux/quickstart-install-connect-docker.md).
 

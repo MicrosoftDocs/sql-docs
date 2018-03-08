@@ -19,8 +19,8 @@
 # [New and updated articles](new-updated-sql-server.md)
 
 # Release Notes
+## [SQL Server vNext Notes](sql-server-vnext-release-notes.md)
 ## [SQL Server 2017 Notes](sql-server-2017-release-notes.md)
-## [SQL Server vNext Notes](sql-server-2018-release-notes.md)
 ## [SQL Server 2016 Notes](sql-server-2016-release-notes.md)
 ## [SQL Server 2014 Notes](sql-server-2014-release-notes.md)
 ## [SQL Server 2012 Service Pack release notes](sql-server-2012-sp4-release-notes.md)

@@ -68,6 +68,13 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 - Locate only the **/var/opt/mssql** directories on the NFS mount. Other files, such as the SQL Server system binaries, are not supported.
 - Ensure that NFS clients use the 'nolock' option when mounting the remote share.
 
+## <a id="repositories"></a> Configure source repositories
+
+When you install or upgrade SQL Server, you get the latest version of SQL Server 2017 from your configured Microsoft repository. The quickstarts use the **Cumulative Update (CU)** respository. But you can instead configure the **GDR** repository. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+
+> [!IMPORTANT]
+> If you previously installed a CTP or RC version of SQL Server 2017, you must remove the preview repository and register a General Availability (GA) one. For more information, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+
 ## <a id="platforms"></a> Install SQL Server
 
 You can install SQL Server on Linux from the command line. For instructions, see one of the following quickstarts:
@@ -77,13 +84,6 @@ You can install SQL Server on Linux from the command line. For instructions, see
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
-
-## <a id="repositories"></a> Configure source repositories
-
-When you install or upgrade SQL Server, you get the latest version of SQL Server 2017 from your configured Microsoft repository. The quickstarts use the **Cumulative Update (CU)** respository. But you can instead configure the **GDR** repository. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
-
-> [!IMPORTANT]
-> If you previously installed a CTP or RC version of SQL Server 2017, you must remove the preview repository and register a General Availability (GA) one. For more information, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
 ## <a id="upgrade"></a> Update SQL Server
 
@@ -201,11 +201,12 @@ If your Linux machine does not have access to the online repositories used in th
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-## Optional SQL Server packages
+## Optional SQL Server features
 
-After installation, you can also install other optional SQL Server packages.
+After installation, you can also install or enable optional SQL Server features.
 
 - [SQL Server command-line tools](sql-server-linux-setup-tools.md)
+- [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 - [SQL Server Full Text Search](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 

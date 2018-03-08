@@ -1,5 +1,5 @@
 ---
-title: Configure repositories for SQL Server on Linux | Microsoft Docs
+title: Configure Linux repositories for SQL Server 2017 and vNext | Microsoft Docs
 description: Check and configure source repositories for SQL Server vNext and SQL Server 2017 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
 author: rothja 
 ms.author: jroth 
@@ -19,7 +19,7 @@ ms.workload: "Active"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure the correct repository for SQL Server 2017 installations and upgrades on Linux.
+This article describes how to configure the correct repository for SQL Server 2017 and SQL Server vNext installations and upgrades on Linux.
 
 > [!TIP]
 > SQL Server nNext CTP 1.4 is now available! To try it, use this article to configure the new **mssql-server-preview** repository. Then upgrade or install using the instructions in the [installation guide](sql-server-linux-setup.md).
@@ -30,7 +30,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 
 | Repository | Name | Description |
 |---|---|---|
-| **Preview (2017)** | **mssql-server** | Old preview repository for SQL Server 2017 CTP and RC releases. This repository no longer exists. It is included here for removal instrucitons only. |
+| **Preview (2017)** | **mssql-server** | SQL Server 2017 CTP and RC repository (discontinued). |
 | **Preview (vNext)** | **mssql-server-preview** | SQL Server vNext CTP and RC repository. |
 | **CU** | **mssql-server-2017** | SQL Server 2017 Cumulative Update (CU) repository. |
 | **GDR** | **mssql-server-2017-gdr** | SQL Server 2017 GDR repository for critical updates only. |
@@ -92,9 +92,9 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 | Repository | Version | Command |
 |---|---|---|
-| **Preview (vNext)** | SQL Server vNext | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
-| **CU** | SQL Server 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | SQL Server 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| **Preview (vNext)** | vNext | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
 ## <a id="sles"></a> Configure SLES repositories
 Use the following steps to configure repositories on SLES.
@@ -125,9 +125,9 @@ Configure the new repository to use for SQL Server installations and upgrades. U
 
 | Repository | Version | Command |
 |---|---|---|
-| **Preview (vNext)** | SQL Server vNext | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
-| **CU** | SQL Server 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | SQL Server 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+| **Preview (vNext)** | vNext | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
 ## <a id="ubuntu"></a> Configure Ubuntu repositories
 Use the following steps to configure repositories on Ubuntu.
@@ -166,9 +166,9 @@ Configure the new repository to use for SQL Server installations and upgrades.
 
    | Repository | Version | Command |
    |---|---|---|
-   | **Preview (vNext) | SQL Server vNext | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
-   | **CU** | SQL Server 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **GDR** | SQL Server 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | **Preview (vNext)** | vNext | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
+   | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 3. Run **apt-get update**.
 

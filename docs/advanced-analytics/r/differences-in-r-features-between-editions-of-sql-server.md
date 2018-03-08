@@ -27,7 +27,7 @@ ms.workload: "Inactive"
  > [!NOTE]
  > In general, SQL Server Machine Learning (In-Database) does not include the [operationalization](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) features that are included in a standalone R Server or Machine Learning Server installation. Operationalization includes web service deployment and hosting, and thus competes for the same resources as other SQL Server operations.
  > 
- > For this reason, we recommend that you can install SQL Server 2016 R Server or SQL Server 2017 Machine Learning Server (Standalone) on a different physcial server to support deployment of predictive models as a web service. 
+ > For this reason, we recommend that you can install SQL Server 2016 R Server or SQL Server 2017 Machine Learning Server (Standalone) on a different physical server to support deployment of predictive models as a web service. 
 
 ## SQL Server 2017 Machine Learning Services (In-Database) and (Standalone)
 
@@ -38,7 +38,7 @@ The Developer Edition provides performance equivalent to that of Enterprise Edit
 | R interpreter & proprietary packages | Yes | Yes | No | No | No | 
 | Python interpreter & client libraries | Yes | Yes | No | No | No | 
 | Data chunking (process large amounts of data, in excess of what fits in memory) | Yes | No | No | No | No |
-| Scaleable processing (more than 2 processors) | Yes | No | No | No | No |
+| Scale-up processing (more than 2 processors) | Yes | No | No | No | No |
 | Resource Governor | Yes | No | No | No | No |
 | [PREDICT](../../t-sql/queries/predict-transact-sql.md) function to perform [native scoring](../sql-native-scoring.md) on a pre-trained model. saved in the required binary format. | Yes | Yes | Yes | Yes | Yes |
 | R Client compatible | Yes | Yes | No | No | No | 

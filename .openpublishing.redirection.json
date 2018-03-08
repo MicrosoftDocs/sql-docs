@@ -11,7 +11,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/advanced-analytics/r/r-services",
+            "source_path": "docs/advanced-analytics/r/r-services.md",
             "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
             "redirect_document_id": false
         },

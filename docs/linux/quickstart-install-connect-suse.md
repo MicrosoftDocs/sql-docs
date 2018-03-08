@@ -1,6 +1,6 @@
 ---
-title: Get started with SQL Server 2017 on SUSE Linux Enterprise Server | Microsoft Docs
-description:  This quickstart shows how to install SQL Server 2017 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
+title: Get started with SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
+description:  This quickstart shows how to install SQL Server 2017 or SQL Server vNext on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: rothja 
 ms.author: jroth 
 manager: craigg

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "custom resolvers [SQL Server replication]"
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

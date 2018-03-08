@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSSQL_ENG018456 error"
 ms.assetid: 3daa8144-d81f-445a-b6c3-4bb3e9fd1526
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

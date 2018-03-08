@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "alternate snapshot folders [SQL Server replication]"
 ms.assetid: 9293f0eb-5531-47ec-b6e2-0392823ce5cc
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

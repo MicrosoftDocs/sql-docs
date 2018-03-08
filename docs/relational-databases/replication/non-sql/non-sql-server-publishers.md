@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Publishers [SQL Server replication], Oracle"
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

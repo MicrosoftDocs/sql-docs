@@ -76,7 +76,7 @@ Jump to [Simple Examples](#Simple) to skip the details of the syntax and get to 
   
 ## Syntax  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -95,7 +95,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for CLR Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -108,7 +108,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Natively Compiled Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -132,7 +132,7 @@ sql_statement [;] [ ... n ]
   | [ DELAYED_DURABILITY = { OFF | ON } ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in Azure SQL Data Warehouse
 -- and Parallel Data Warehouse  
   
@@ -421,7 +421,7 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
   
  You cannot specify a function name as a parameter default value or as the value passed to a parameter when executing a procedure. However, you can pass a function as a variable as shown in the following example.  
   
-```  
+```sql
 -- Passing the function value as a variable.  
 DECLARE @CheckDate datetime = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;   
@@ -584,7 +584,7 @@ GO
   
  The `uspGetEmployees` procedure can be executed in the following ways:  
   
-```  
+```sql
 EXECUTE HumanResources.uspGetEmployees N'Ackerman', N'Pilar';  
 -- Or  
 EXEC HumanResources.uspGetEmployees @LastName = N'Ackerman', @FirstName = N'Pilar';  

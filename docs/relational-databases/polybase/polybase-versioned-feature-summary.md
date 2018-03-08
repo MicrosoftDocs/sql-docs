@@ -20,7 +20,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PolyBase Versioned Feature Summary
-[!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/appliesto-ss2016-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 Summary of PolyBase features available for SQL Server products and services.  
   
 ## Feature Summary for Product Releases  

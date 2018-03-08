@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server replication], Oracle publishing"
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 caps.latest.revision: 62
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

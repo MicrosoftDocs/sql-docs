@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.newsubwizard.subscriptiontype.f1"
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

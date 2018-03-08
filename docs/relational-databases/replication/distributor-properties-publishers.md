@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Distributor Properties dialog box"
 ms.assetid: 31c81898-11ca-4d2f-afea-2fbc71e19ce4
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "replication [SQL Server], how-to topics"
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

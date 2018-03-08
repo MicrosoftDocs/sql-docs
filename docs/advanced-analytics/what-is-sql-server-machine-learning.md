@@ -34,19 +34,24 @@ There are two options for using machine learning capabilities in SQL Server:
 
 Support for each language is through proprietary Microsoft packages used for creating and training models of various types, scoring data, and processing in parallel using the underlying system resources.
 
+Because the proprietary packages are built on open-source R and Python distributions, script or code that you run in SQL Server can also call base functions and use third-party packages compatible with the language version provided in SQL Server (Python 3.5 and recent versions of R, currently 3.3.3).
+
 | R  | Python | Description |
 |-----------|----------------|-------------|
 | [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | Functions in these libraries are among the most widely used. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling and analyses are found in these libraries. Additionally, functions in these libraries automatically distribute workloads across available cores for parallel processing, with the ability to work on chunks of data that are coordinated and managed by the calculation engine. |
 | [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Industry-leading machine learning algorithms for image featurization, classification problems  |
 | [olapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Build or execute an MDX query in R script.
 | [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.
-| [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Primarily used on a non-SQL installation of Machine Learning Server, such as the [(Standalone) version](r/r-server-standalone.md). Use these packages to deploy and host web services, build scale-out topologies with dedicated web and compute nodes, toggle between local and remote sessions, run diagnostics, and more. For an (In-Database) installation, use these packages in a client capacity: for example, to access a web service on a remote server that is dedicated to running just Machine Learning Services workloads. |
+| [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Primarily used on a non-SQL installation of Machine Learning Server, such as the [(Standalone) version](r/r-server-standalone.md). Use this package to deploy and host web services, build scale-out topologies with dedicated web and compute nodes, toggle between local and remote sessions, run diagnostics, and more. For an (In-Database) installation, use this package in a client capacity: for example, to access a web service on a remote server dedicated to running just Machine Learning Services workloads. |
 
-The same packages that ship in SQL Server are also available in several other Microsoft products and services, including a non-SQL version called [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Packages are also available on several [Azure virtual machines](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux), Azure Machine Learning, and Azure services like [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight). Because the proprietary packages are built on open-source R and Python distributions, script or code that you run in SQL Server can also call base functions and use third-party packages compatible with the language version provided in SQL Server (Python 3.5 and recent versions of R, currently 3.3.3).
+Portability of your custom R and Python code is addressed through package distribution and interpreters that are built into multiple products. The same packages that ship in SQL Server are also available in several other Microsoft products and services, including a non-SQL version called [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Free clients that include our R and Pyton interpreters include [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) and the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
+
+Packages and interpreters are also available on several [Azure virtual machines](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux), Azure Machine Learning, and Azure services like [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight). 
+
 
 ## Use cases
 
-Develop on a client workstation using the same libraries and interpreters, and then deploy production code on SQL Server Machine Learning Services. 
+Develop on a client workstation using the same libraries and interpreters, and then deploy production code on SQL Server Machine Learning Services (In-Database). 
 
 Use the SQL Server computer as the *remote compute context* for jobs launched from a remote development environment.
 
@@ -67,9 +72,15 @@ Recent releases of SQL Server documentation are version-agnostic. For SQL Server
 
 ## How to get started
 
-**Step 1:** Install and configure the software. For instructions, see [Install SQL Server 2017 Machine Learning Services (In-Database)](/python/setup-python-machine-learning-services.md#bkmk_installPythonInDatabase).
+**Step 1:** Install and configure the software. 
+
++ [Install SQL Server 2017 Machine Learning Services (In-Database)](python/setup-python-machine-learning-services.md#bkmk_installPythonInDatabase)
 
 **Step 2:** Get started with code using either one of these tutorials:
 
 + [Tutorial: Run Python in T-SQL](/tutorials/run-python-using-t-sql.md)
 + [Tutorial: Run R in T-SQL](/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
+
+**Step 3:** Add your favorite R and Python packages and use them together with packages provided by Microsoft
+
++ [R Package management for SQL Server](r/r-package-management-for-sql-server-r-services.md)

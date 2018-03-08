@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  Also, it is useful to check the two performance objects `SQL Server:Availability Replica > Flow Control Time (ms/sec)` and `SQL Server:Availability Replica > Flow Control/sec`. Multiplying these two values shows you in the last second how much time was spent waiting for flow control to clear. The longer the flow control wait time, the lower the send rate.  
   
- The following metrics are useful in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe**, [Resource Monitor](http://technet.microsoft.com/video/Video/ff710685), and [Network Monitor](http://www.microsoft.com/download/details.aspx?id=4865) to evaluate latency and network utilization.  
+ The following metrics are useful in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe** and [Network Monitor](http://www.microsoft.com/download/details.aspx?id=4865) to evaluate latency and network utilization.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

@@ -68,7 +68,7 @@ The following sections describe the common causes of changes on the primary repl
   
  Also, it is useful to check the two performance objects [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md). Multiplying these two values shows you in the last second how much time was spent waiting for flow control to clear. The longer the flow control wait time, the lower the send rate.  
   
- Below is a list of useful metrics in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe** and [Resource Monitor](http://technet.microsoft.com/video/Video/ff710685) to evaluate network utilization.  
+ Below is a list of useful metrics in diagnosing network latency and throughput. You can use other Windows tools such as **ping.exe** to evaluate network utilization.  
   
 -   DMV [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   

@@ -15,8 +15,8 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server vNext Release Notes
-This article describes limitations and issues with SQL Server vNext on Windows and SQL Server vNExt on Linux. For related information, see:
-- [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-2018.md)
+This article describes limitations and issues with SQL Server vNext on Windows and SQL Server vNext on Linux. For related information, see:
+- [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
 
 **Try SQL Server!**
 [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server vNext](http://go.microsoft.com/fwlink/?LinkID=829477)

@@ -20,7 +20,7 @@ ms.workload: "On Demand"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In this quickstart, you first install SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2. Then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server vNext on SUSE Linux Enterprise Server (SLES) v12 SP2. You then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -49,8 +49,12 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    ```
 
-   > [!NOTE]
-   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+   > [!TIP]
+   > If you want to try SQL Server vNext, you must instead register the **Preview (vNext)** repository. Use the following command for SQL Server vNext installations:
+   >
+   > ```bash
+   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   > ```
 
 1. Refresh your repositories.
 

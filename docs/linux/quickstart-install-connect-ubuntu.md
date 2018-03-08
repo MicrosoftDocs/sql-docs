@@ -1,6 +1,6 @@
 ---
-title: Get started with SQL Server 2017 on Ubuntu | Microsoft Docs
-description: This quickstart shows how to install SQL Server 2017 on Ubuntu and then create and query a database with sqlcmd.
+title: Get started with SQL Server on Ubuntu | Microsoft Docs
+description: This quickstart shows how to install SQL Server 2017 or SQL Server vNext on Ubuntu and then create and query a database with sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -20,7 +20,7 @@ ms.workload: "Active"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In this quickstart, you first install SQL Server 2017 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
+In this quickstart, you install SQL Server 2017 or SQL Server vNext on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -55,8 +55,12 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
-   > [!NOTE]
-   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+   > [!TIP]
+   > If you want to try SQL Server vNext, you must instead register the **Preview (vNext)** repository. Use the following command for SQL Server vNext installations:
+   >
+   > ```bash
+   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   > ```
 
 1. Run the following commands to install SQL Server:
 

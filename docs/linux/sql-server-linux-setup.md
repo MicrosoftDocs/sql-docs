@@ -1,10 +1,10 @@
 ---
-title: Install SQL Server 2017 on Linux | Microsoft Docs
+title: Installation guidance for SQL Server 2017 on Linux | Microsoft Docs
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios. 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -20,16 +20,20 @@ ms.workload: "Active"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+This article provides guidance for installing, updating, and uninstalling SQL Server 2017 on Linux.
 
 > [!TIP]
-> To get started quickly, jump to one of the quickstarts for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), or [Docker](quickstart-install-connect-docker.md).
+> This guide coves several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
+> - [RHEL quickstart](quickstart-install-connect-red-hat.md)
+> - [SLES quickstart](quickstart-install-connect-suse.md)
+> - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
+> - [Docker quickstart](quickstart-install-connect-docker.md)
 
 For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
-SQL Server 2017 is supported on the following Linux platforms:
+SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
 
 | Platform | Supported version(s) | Get
 |-----|-----|-----
@@ -197,18 +201,15 @@ If your Linux machine does not have access to the online repositories used in th
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-## Next steps
+## Optional SQL Server packages
 
 After installation, you can also install other optional SQL Server packages.
 
 - [SQL Server command-line tools](sql-server-linux-setup-tools.md)
-- [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 - [SQL Server Full Text Search](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-Connect to your SQL Server instance to begin creating and managing databases. To get started, see the quickstarts:
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
-- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-ubuntu.md)
+> [!TIP]
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).

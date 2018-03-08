@@ -25,7 +25,7 @@ Machine learning capabilities are added to SQL Server in each release as we cont
 
 ## New in SQL Server vNext
 
-The focus of this release cycle is integration and parity so that you can run Python and R workloads within SQL Server using the same methodologies as other workloads.
+The focus of this release cycle is integration and parity so that you can run Python and R workloads within SQL Server using the same methodologies as other workloads. To learn more about this release, see [What's new in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
 
 | Release | Date | Feature update |
 |---------|------|----------------|
@@ -61,7 +61,7 @@ Additionally, **SQL Server 2016 R Server (Standalone)** was released as a way to
 
 | Release |Feature update |
 |---------|----------------|
-| Initial release | R packages and interpreter for calling R functions in T-SQL, and vice versa.<br/>RevoScaleR functions provide R analytics at scale by chunking data into component parts, coordinatng and managing distributed processing, and aggregating results. In SQL Server 2016 R Services (In-Database), the RevoScaleR engine is integrated with a database engine instance, brining data and analytics together in the same processing context. |
+| Initial release | R packages and interpreter for calling R functions in T-SQL, and vice versa.<br/>RevoScaleR functions provide R analytics at scale by chunking data into component parts, coordinating and managing distributed processing, and aggregating results. In SQL Server 2016 R Services (In-Database), the RevoScaleR engine is integrated with a database engine instance, brining data and analytics together in the same processing context. |
 
 ## Linux support roadmap
 

@@ -70,7 +70,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 ## <a id="repositories"></a> Configure source repositories
 
-When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. The quickstarts use the SQL Server 2017 Cumulatie Update **CU** respository. But you can instead configure the **GDR** repository or the **Preview (vNext)** respository. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. The quickstarts use the SQL Server 2017 Cumulative Update **CU** repository. But you can instead configure the **GDR** repository or the **Preview (vNext)** repository. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
 > [!IMPORTANT]
 > If you previously installed a CTP or RC version of SQL Server 2017, you must remove the preview repository and register a General Availability (GA) one. For more information, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).

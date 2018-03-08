@@ -15,7 +15,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server vNext Release Notes
-This article describes limitations and issues with SQL Server vNext. For related information, see:
+This article describes limitations and known issues for the SQL Server vNext Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
 
 **Try SQL Server vNext!**
@@ -23,7 +23,7 @@ This article describes limitations and issues with SQL Server vNext. For related
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server vNext on Docker](../linux/quickstart-install-connect-docker.md).
 
-## SQL Server vNext Community Technology Preview (CTP 1.4 - March 2018)
+## CTP 1.4 (March 2018)
 
 ### Master Data Services (MDS)
 **Issue and customer impact:** In the Master Data Services (MDS) portal, the Silverlight components on the following pages have been replaced with HTML controls:

@@ -102,9 +102,6 @@ You can also install [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md
 
    An end-to-end solution for SQL developers provides all the code you need to run Python from SQL Server Management Studio.
 
-+ [Publish and consume Python Code](../advanced-analytics/python/publish-consume-python-code.md)
-
-  This walkthrough comes with all code needed to deploy a model to a web service using Machine Learning Server.
 
 ### Product samples with code
 

@@ -92,8 +92,6 @@
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: Deploy and consume models using a Standalone server](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [Machine Learning Server - Standalone](r/r-server-standalone.md)
 ## [Getting started](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [Set up Machine Learning Server Standalone](r/create-a-standalone-r-server.md)

@@ -4,7 +4,7 @@ description:  This quickstart shows how to install SQL Server 2017 or SQL Server
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -31,16 +31,15 @@ You must have a RHEL 7.3 or 7.4 machine with **at least 2 GB** of memory.
 
 To install Red Hat Enterprise Linux on your own machine, go to [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
+If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and vNext](sql-server-linux-change-repo.md).
+
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## <a id="install"></a>Install SQL Server
 
 To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
 
-> [!IMPORTANT]
-> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md).
-
-1. Download the Microsoft SQL Server Red Hat repository configuration file for SQL Server 2017:
+1. Download the Microsoft SQL Server 2017 Red Hat repository configuration file:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo

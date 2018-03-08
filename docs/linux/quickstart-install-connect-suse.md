@@ -4,7 +4,7 @@ description:  This quickstart shows how to install SQL Server 2017 or SQL Server
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -31,6 +31,8 @@ You must have a SLES v12 SP2 machine with **at least 2 GB** of memory. The file 
 
 To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image SLES` in the call to `az vm create`.
 
+If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and vNext](sql-server-linux-change-repo.md).
+
 > [!NOTE]
 > At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
 
@@ -40,10 +42,7 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 
 To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
 
-> [!IMPORTANT]
-> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md).
-
-1. Download the Microsoft SQL Server SLES repository configuration file:
+1. Download the Microsoft SQL Server 2017 SLES repository configuration file:
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo

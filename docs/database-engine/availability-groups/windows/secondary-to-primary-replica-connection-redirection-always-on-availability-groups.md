@@ -29,11 +29,11 @@ ms.workload: "On Demand"
 # Secondary to primary replica connection redirection (Always On Availability Groups)
 [!INCLUDE[appliesto-sssqlv15-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
-When an availability group (AG) listener does not exist, or cannot reliably redirect connections to a primary replica after failover you can configure *secondary to primary replica connection redirection* for an availability group. 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces new functionality with Availability Groups called *secondary to primary replica connection redirection*. This feature allows for client applications based on a READ_WRITE_ROUTING_URL configuration to be redirected to the primary replica after failover.
 
-Normally, the AG listener and the corresponding cluster resource direct user traffic to the primary replica. This behavior ensures reconnection after failover. When an availability group has no listener, for example when `CLUSTER_TYPE = NONE`, you can configure secondary to primary replica connection redirection to allow the availability group to redirect connections. You can also configure redirection for an availablity group in an environment that does not effectively enable listener redirection. 
+Normally, the availability group (AG) listener and the corresponding cluster resource redirect user traffic to the primary replica to ensure reconnection after failover. However, when an AG listener does not exist, or cannot reliably redirect connections to a primary replica after failover you can configure secondary to primary replica connection redirection for an availability group.
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces secondary to primary replica connection redirection. This feature allows client applications to connect to any of the replicas of the availability group and the connection is redirected to the primary replica, according to the AG configuration.
+There are cases where the cluster technology that SQL Server availability groups integrates with does not offer a listener like capability. For example, in a multi-subnet configuration like Azure or multi-subnet floating IP with Pacemaker, configurations become complex, prone to errors and difficult to troubleshoot due to multiple components involved. In addition, when the AG is configured for read scale-out or disaster recovery and cluster type is `NONE`, there is no straightforward mechanism to ensure transparent reconnection upon manual failover.
 
 ## READ_WRITE_ROUTING_URL option
 

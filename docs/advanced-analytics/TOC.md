@@ -1,5 +1,3 @@
-# [Getting started](getting-started-with-machine-learning-services.md)
-
 # Overview
 ## [What is SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md)
 ## [What's new ](what-s-new-in-sql-server-machine-learning-services.md)

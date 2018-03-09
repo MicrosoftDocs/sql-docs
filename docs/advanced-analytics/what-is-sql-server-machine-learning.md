@@ -61,10 +61,12 @@ SQL Server 2017 Machine Learning Services is the next generation of SQL Server 2
 
 | Product name | Engine version | Release date |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (In-Database) | R Server 9.2 <br/> Python Server 9.2 | October 2017 |
-| SQL Server 2017 Machine Learning Server (Standalone) | R Server 9.2 <br/> Python Server 9.2 | October 2017 |
+| SQL Server 2017 Machine Learning Services (In-Database) | R Server 9.2.1 <br/> Python Server 9.2 | October 2017 |
+| SQL Server 2017 Machine Learning Server (Standalone) | R Server 9.2.1 <br/> Python Server 9.2 | October 2017 |
 | SQL Server 2016 R Services (In-Database) | R Server 9.1  | July 2017  |
 | SQL Server 2016 R Server (Standalone)  |  R Server 9.1 | July 2017 |
+
+
 
 ## Documentation for each version
 

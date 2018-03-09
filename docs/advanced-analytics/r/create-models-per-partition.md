@@ -21,15 +21,17 @@ ms.workload: "Inactive"
 
 **(Not for production workloads)**
 
-The most common approach for executing R or Python code on your data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure. Periodically, we add parameters to this procedure to make it more useful for R and Python scripting. In this release, SQL Server vNext CTP 1.4 adds new parameters to `sp_execute_external_script` to allow parallel processing of partitions:
+The most common approach for executing R or Python code on your data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure. Periodically, parameters are added to this procedure to make it more useful for R and Python scripting. In this release, SQL Server vNext CTP 1.4 adds new parameters to `sp_execute_external_script` to allow parallel processing of partitions:
 
 + **input_data_1_partition_by_columns**, specifying which columns to partition by
 + **input_data_1_order_by_columns**, specifying which columns to order by
 
-Partitions are an organizational mechanism for stratified data that naturally segments into an arbitrary classification, such as by geography, by date and time, by age or gender, and so forth. Given the existance of partitioned data, you might want to execute script over the entire data set, with the ability to model, train, and score partitions that remain intact over all these operations. Calling `sp_execute_external_script` with the new parameters allows you to do just that.
+Partitions are an organizational mechanism for stratified data that naturally segments into an arbitrary classification, such as by geography, by date and time, by age or gender, and so forth. Given the existence of partitioned data, you might want to execute script over the entire data set, with the ability to model, train, and score partitions that remain intact over all these operations. Calling `sp_execute_external_script` with the new parameters allows you to do just that.
 
-For training scenarios, this means that rather than training one large model based on the entire dataset, you can create many small models, each model specific to a partition. The **input_data_1_partition_by_columns** parameter can also be used to perform scoring per partition, or execute any general purpose script per partition. If the scenario is training, one advantage is that any arbitrary training script (using non-rx algorithms) can be parallelized by also using the @parallel parameter. This is a very positive advantage since you typically cannot parallelize any arbitrary training script. Typically you have to use RevoScaleR algorithms (with the rx prefix) to obtain parallelism in training scenarios in SQL Server.
+When the scenario is training, one advantage is that any arbitrary training script, using non-Microsoft-rx algorithms, can be parallelized by also using the @parallel parameter. Typically you have to use RevoScaleR algorithms (with the rx prefix) to obtain parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions not specifically engineered with that capability.
 
+> [!Note]
+> If the input query can be parallelized, set `@parallel=1` as part of your arguments to `sp_execute_external_script`.
 
 ## R Example
  

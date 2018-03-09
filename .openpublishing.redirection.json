@@ -1,6 +1,26 @@
 {
     "redirections": [
         {
+            "source_path": "docs/advanced-analytics/python/index.md",
+            "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/index.md",
+            "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/publish-consume-python-code.md",
+            "redirect_url": "/sql/advanced-analytics/operationalization-with-mrsdeploy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/r-services.md",
+            "redirect_url": "/sql/advanced-analytics/what-is-sql-server-machine-learning",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
             "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
             "redirect_document_id": false

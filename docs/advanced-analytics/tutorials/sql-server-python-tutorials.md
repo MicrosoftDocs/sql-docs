@@ -47,9 +47,6 @@ For information about requirements and setup, see [Prerequisites](#bkmk_Prerequi
 
     This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL stored procedures. All Python code is included.
 
-+ [Deploy and consume a Python model](..\python\publish-consume-python-code.md)
-
-  Learn how to deploy a Python model as a web service, using the latest version of Microsoft Machine Learning Server.
 
 ## Python samples
 

@@ -26,7 +26,7 @@ The most common approach for executing R or Python code on your data is providin
 + **input_data_1_partition_by_columns**, specifying which columns to partition by
 + **input_data_1_order_by_columns**, specifying which columns to order by
 
-Partitions are an organizational mechanism for stratified data that naturally segments into a given classification scheme, for example by geographic regions, by date and time, by age or gender, and so forth. Given the existence of partitioned data, you might want to execute script over the entire data set, with the ability to model, train, and score partitions that remain intact over all these operations. Calling `sp_execute_external_script` with the new parameters allows you to do just that.
+Partitions are an organizational mechanism for stratified data that naturally segments into a given classification scheme. Common examples include partitioning by geographic region, by date and time, by age or gender, and so forth. Given the existence of partitioned data, you might want to execute script over the entire data set, with the ability to model, train, and score partitions that remain intact over all these operations. Calling `sp_execute_external_script` with the new parameters allows you to do just that.
 
 When the scenario is training, one advantage is that any arbitrary training script, using non-Microsoft-rx algorithms, can be parallelized by also using the @parallel parameter. Typically you have to use RevoScaleR algorithms (with the rx prefix) to obtain parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions not specifically engineered with that capability.
 
@@ -41,7 +41,7 @@ For more information about the data set, see (LINK)
  
 INSERT TRAINING SCRIPT HERE
  
-In the same way, partition by can be used to for scoring. The below sample contains an R script that will score using the correct model for the partition it is currently processing.
+In the same way, partition by can be used to for scoring. The following sample contains an R script that will score using the correct model for the partition it is currently processing.
  
 INSERT SCORING SCRIPT HERE
 

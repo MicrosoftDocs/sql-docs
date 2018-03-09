@@ -29,13 +29,13 @@ ms.workload: "On Demand"
 # Secondary to primary replica connection redirection (Always On Availability Groups)
 [!INCLUDE[appliesto-sssqlv15-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces new functionality with Availability Groups called *secondary to primary replica connection redirection*. This feature allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces new functionality for Always On Availability Groups called *secondary to primary replica connection redirection* - or replica connection redirection. Replica connection redirection allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
 
 For  example, the connection string can target a secondary replica. Depending on the configuration of the availability group (AG) replica and the settings in the connection string, the connection can be automatically redirected to the primary replica. 
 
 ## Use cases
 
-Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG listener and the corresponding cluster resource redirect user traffic to the primary replica to ensure reconnection after failover. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continues to support the AG listener functionality and adds replica connection redirection for scearios that cannot include a listener. For example:
+Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG listener and the corresponding cluster resource redirect user traffic to the primary replica to ensure reconnection after failover. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continues to support the AG listener functionality and adds replica connection redirection for scenarios that cannot include a listener. For example:
 
 * The cluster technology that SQL Server availability groups integrates with does not offer a listener like capability 
 * A multi-subnet configuration like in the cloud or multi-subnet floating IP with Pacemaker where configurations become complex, prone to errors, and difficult to troubleshoot due to multiple components involved
@@ -43,7 +43,7 @@ Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG liste
 
 When an AG listener cannot be configured, you can configure secondary to primary replica connection redirection for an availability group.
 
-## READ_WRITE_ROUTING_URL option
+## Set READ_WRITE_ROUTING_URL option
 
 To configure secondary to primary connection redirection, set `READ_WRITE_ROUTING_URL` for the primary replica when you create the AG. 
 
@@ -75,16 +75,18 @@ After you set connection redirection, the way the replica handles connection req
 
 The preceding table shows that when the primary replica has `READ_WRITE_ROUTING_URL` set, the secondary replica will redirect connections to the primary replica when `SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`,  the and the connection specifies `ReadWrite`.
 
-### Example 
+## Example 
 
 In this example, an availability group has three replicas:
 * A primary replica on COMPUTER01
 * A synchronous secondary replica on COMPUTER02
 * An asynchronous secondary replica on COMPUTER03
 
-The replica specs for COMPUTER01 and COMPUTER02 specify `READ_WRITE_ROUTING_URL`. 
+The following picture represents the availability group.
 
-The following transact-SQL script creates this AG. 
+![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+
+The following transact-SQL script creates this AG. In this example, the replica specs for each replica specifies the `READ_WRITE_ROUTING_URL`. COMPUTER03 is an asynchronouse secondary replica, that is not configured for read-only queries.
 
 ```sql
 CREATE AVAILABILITY GROUP MyAg   
@@ -99,51 +101,54 @@ CREATE AVAILABILITY GROUP MyAg
    REPLICA ON   
       'COMPUTER01' WITH   
          (  
-         ENDPOINT_URL = 'TCP://COMPUTER01:5022',  
+         ENDPOINT_URL = 'TCP://COMPUTER01.<domain>.<tld>:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC,  
          BACKUP_PRIORITY = 30,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = NO,   
-            READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01:1433' ),
+            READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
             READ_ONLY_ROUTING_LIST = (COMPUTER03),
-            READ_WRITE_ROUTING_URL = (COMPUTER01) )   
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )   
          SESSION_TIMEOUT = 10  
          ),   
 
       'COMPUTER02' WITH   
          (  
-         ENDPOINT_URL = 'TCP://COMPUTER02:5022',  
+         ENDPOINT_URL = 'TCP://COMPUTER02.<domain>.<tld>:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC,  
          BACKUP_PRIORITY = 30,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = NO,   
-            READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02:1433' ),  
+            READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
             READ_ONLY_ROUTING_LIST = (COMPUTER03),  
-            READ_WRITE_ROUTING_URL = (COMPUTER02) )   
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' )   
          SESSION_TIMEOUT = 10  
          ),   
 
       'COMPUTER03' WITH   
          (  
-         ENDPOINT_URL = 'TCP://COMPUTER03:5022',  
+         ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE =  MANUAL,  
          BACKUP_PRIORITY = 90,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = READ_ONLY,   
-            READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03:1433' ),  
+            READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = NONE )  
+            READ_ONLY_ROUTING_LIST = NONE,  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' )  
          SESSION_TIMEOUT = 10  
          );
 GO  
 ```
+   - `<domain>.<tld>`
+      - Domain and top level domain of the fully qualified domain name. For example, `corporation.com`.
 
 
 ## SQL Server instance offline
 
-If the instance of SQL Server specified in the connection string is not available (has an outage) the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string to avoid having to change the connection string and minimize the downtime. The application has to implement retry logic to accommodate primary and secondary replicase not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](http://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
+If the instance of SQL Server specified in the connection string is not available (has an outage) the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string. The application has to implement retry logic to accommodate primary and secondary replicas not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](http://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
 
 
  

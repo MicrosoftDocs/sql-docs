@@ -59,27 +59,27 @@ ms.workload: "Active"
 ## Multipart Names  
  Unless specified otherwise, all [!INCLUDE[tsql](../../includes/tsql-md.md)] references to the name of a database object can be a four-part name in the following form:  
   
- *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
+*server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
  | *database_name***.**[*schema_name*]**.***object_name*  
   
  | *schema_name***.***object_name*  
   
- *| object_name*  
+ | *object_name*  
   
- *server_name*  
- Specifies a linked server name or remote server name.  
+*server_name*  
+Specifies a linked server name or remote server name.  
   
- *database_name*  
- Specifies the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database when the object resides in a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When the object is in a linked server, *database_name* specifies an OLE DB catalog.  
+*database_name*  
+Specifies the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database when the object resides in a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When the object is in a linked server, *database_name* specifies an OLE DB catalog.  
   
- *schema_name*  
- Specifies the name of the schema that contains the object if the object is in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. When the object is in a linked server, *schema_name* specifies an OLE DB schema name.  
+*schema_name*  
+Specifies the name of the schema that contains the object if the object is in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. When the object is in a linked server, *schema_name* specifies an OLE DB schema name.  
   
- *object_name*  
- Refers to the name of the object.  
+*object_name*  
+Refers to the name of the object.  
   
- When referencing a specific object, you do not always have to specify the server, database, and schema for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to identify the object. However, if the object cannot be found, an error is returned.  
+When referencing a specific object, you do not always have to specify the server, database, and schema for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to identify the object. However, if the object cannot be found, an error is returned.  
   
 > [!NOTE]  
 > To avoid name resolution errors, we recommend specifying the schema name whenever you specify a schema-scoped object.  
@@ -98,7 +98,7 @@ To omit intermediate nodes, use periods to indicate these positions. The followi
 |*object*|Server, database, and schema name are omitted.|  
   
 ## Code Example Conventions  
- Unless stated otherwise, the examples provided in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference were tested by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and its default settings for the following options:  
+Unless stated otherwise, the examples provided in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference were tested by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and its default settings for the following options:  
   
 -   ANSI_NULLS  
 -   ANSI_NULL_DFLT_ON  
@@ -107,12 +107,13 @@ To omit intermediate nodes, use periods to indicate these positions. The followi
 -   CONCAT_NULL_YIELDS_NULL  
 -   QUOTED_IDENTIFIER  
   
- Most code examples in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference have been tested on servers that are running a case-sensitive sort order. The test servers were typically running the ANSI/ISO 1252 code page.  
+Most code examples in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference have been tested on servers that are running a case-sensitive sort order. The test servers were typically running the ANSI/ISO 1252 code page.  
   
- Many code examples prefix Unicode character string constants with the letter **N**. Without the **N** prefix, the string is converted to the default code page of the database. This default code page may not recognize certain characters.  
+Many code examples prefix Unicode character string constants with the letter **N**. Without the **N** prefix, the string is converted to the default code page of the database. This default code page may not recognize certain characters.  
   
 ## "Applies to" References  
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] reference includes articles related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+
 Near the top of each article is a section indicating which products support the subject of the article. If a product is omitted, then the feature described by the article is not available in that product. For example, availability groups were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. The **CREATE AVAILABILITY GROUP** article indicates it applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) because it does not apply to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 In some cases, the general subject of the article can be used in a product, but all of the arguments are not supported. For example, contained database users were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. The **CREATE USER** statement can be used in any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product, however the **WITH PASSWORD** syntax cannot be used with older versions. In this case, additional **Applies to** sections are inserted into the appropriate argument descriptions in the body of the article.  

@@ -33,14 +33,14 @@ ms.workload: "Inactive"
 
 The Developer Edition provides performance equivalent to that of Enterprise Edition. Use of Developer Edition is not supported for production environments.
 
-|Feature      |Enterprise      |Standard      |Web      |Express with Advanced Services      |Express                 | 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
+|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
+|-------|----------|--------|---|------------------------------|-------|
 | R interpreter & proprietary packages | Yes | Yes | No | No | No | 
 | Python interpreter & client libraries | Yes | Yes | No | No | No | 
-| Data chunking (process large amounts of data, in excess of what fits in memory) | Yes | No | No | No | No |
-| Scale-up processing (more than 2 processors) | Yes | No | No | No | No |
+| Data chunking <br/>(process large amounts of data, in excess of what fits in memory) | Yes | No | No | No | No |
+| Scale-up processing <br/>(more than 2 processors) | Yes | No | No | No | No |
 | Operationalization | Yes | No | No | No | No |
-| Use of the [PREDICT](../../t-sql/queries/predict-transact-sql.md) function to perform [native scoring](../sql-native-scoring.md) on a pre-trained model, previously saved in the required binary format. | Yes | Yes | Yes | Yes | Yes |
+| [PREDICT](../../t-sql/queries/predict-transact-sql.md) function <br/>(performs [native scoring](../sql-native-scoring.md) on a pre-trained model, previously saved in the required binary format) | Yes | Yes | Yes | Yes | Yes |
 | R Client compatibility | Yes | Yes | No | No | No | 
 | Microsoft R Open | Yes | Yes | No | No | No | 
 | Anaconda Python 3.5 | Yes | Yes | No | No | No | 

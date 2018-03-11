@@ -35,26 +35,22 @@ ms.workload: "Active"
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1  includes all the fixes up to SQL Server 2016 RTM CU3 including Security Update MS16-136. It contains a roll-up of solutions provided in SQL Server 2016 cumulative updates up to and including the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016. 
 
-Except for a few exceptions, the following features are availabe in the Standard, Web, Express, and Local DB editions of SQL Server SP1:
+The following features are availabe in the Standard, Web, Express, and Local DB editions of SQL Server SP1 (except as noted):
 - Always encrypted
-- Changed data capture
+- Changed data capture (not available in Express)
 - Columnstore
 - Compression
 - Dynamic data masking
 - Fine grain auditing
-- In Memory OLTP
-- Muliple filestream containers
+- In Memory OLTP (not availabe in Local DB)
+- Multiple filestream containers (not available in Local DB)
 - Partitioning
 - Polybase
 - Row level security
 
-Exceptions:
-- Change data capture requires SQL Server agent, which is not included in SQL Server Express Editions.
-- In Memory OLTP and Multiple filestream containers are not available in Local DB because of permission constraints.
+The following table summarizes the improvements provided in SQL Server 2016 SP1.
 
-The following table summarizes the improvements introduced in SQL Server 2016 SP1.
-
-|Feature|Description or Improvement|For more information|
+|Feature|Description|For more information|
 |---|---|---|
 |Bulk insert into heaps with auto TABLOCK under TF 715| Trace Flag 715 enables table lock for bulk load operations into heap with no non-clustered indexes.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE OR ALTER|Deploy objects such as Stored Procedures, Triggers, User-Defined Functions, and Views.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -81,14 +77,11 @@ In addition:
 
 The SQL Server 2016 SP1 installation may require reboot post installation. As a best practice, we recommend to plan and perform a reboot following the installation of SQL Server 2016 SP1.
 
-- [SQL Server 2016 SP1 download page](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545) Lists the individual bug #s and issues that were fixed or changed in SP1.
-- ![info_tip](../sql-server/media/info-tip.png) See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
-
+### Download pages and more information
 
 - [SQL Server 2016 SP1 download page](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545) Lists the individual bug #s and issues that were fixed or changed in SP1.
- - ![info_tip](../sql-server/media/info-tip.png) See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+- [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545)
+- ![info_tip](../sql-server/media/info-tip.png) [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Database Engine (GA)](#bkmk_ga_instalpatch) 

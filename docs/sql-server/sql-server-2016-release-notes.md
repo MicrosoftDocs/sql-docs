@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
-ms.date: "03/10/2018"
+ms.date: "03/12/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -33,50 +33,45 @@ ms.workload: "Active"
 > [![Download SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 also includes all the fixes up to SQL Server 2016 RTM CU3 including Security Update MS16-136.  It contains a roll-up of solutions provided in SQL Server 2016 cumulative updates up to and including the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016. 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1  includes all the fixes up to SQL Server 2016 RTM CU3 including Security Update MS16-136. It contains a roll-up of solutions provided in SQL Server 2016 cumulative updates up to and including the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016. 
 
-The following table compares the list of features which were only available in Enterprise edition which are now enabled in Standard, Web, Express, and LocalDB editions with SQL Server 2016 SP1. 
+Except for a few exceptions, the following features are availabe in the Standard, Web, Express, and Local DB editions of SQL Server SP1:
+- Always encrypted
+- Changed data capture
+- Columnstore
+- Compression
+- Dynamic data masking
+- Fine grain auditing
+- In Memory OLTP
+- Muliple filestream containers
+- Partitioning
+- Polybase
+- Row level security
 
-|Feature|Standard|Web|Express|Local DB|
-|---|---|---|---|---|---|
-|Row-level-security|Yes|Yes|Yes|Yes|
-|Dynamic data masking|Yes|Yes|Yes|Yes|
-|Change data capture|Yes|Yes|No|No|
-|Database snapshot|Yes|Yes|Yes|Yes|
-|Columnstore|Yes|Yes|Yes|Yes|
-|Partitioning|Yes|Yes|Yes|Yes|
-|Compression|Yes|Yes|Yes|Yes|
-|In Memory OLTP|Yes|Yes|Yes|No|
-|Always encrypted|Yes|Yes|Yes|Yes|
-|Polybase|Yes|Yes|Yes|No|
-|Fine grain auditing|Yes|Yes|Yes|Yes|
-|Multiple filestream containers|Yes|Yes|Yes|No|
-
-Change data capture requires SQL Server agent, which is not included in SQL Server Express Editions.
-
-In Memory OLTP and Multiple filestream containers are not available in Local DB because of permission constraints.
+Exceptions:
+- Change data capture requires SQL Server agent, which is not included in SQL Server Express Editions.
+- In Memory OLTP and Multiple filestream containers are not available in Local DB because of permission constraints.
 
 The following table summarizes the improvements introduced in SQL Server 2016 SP1.
 
 |Feature|Description or Improvement|For more information|
 |---|---|---|
-|Storage class memory|Boosted the transaction processing using Storage Class Memory in Windows Server 2016, resulting in the ability to accelerate transaction commit times by orders of magnitude.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|Database cloning|You can use the new DBCC command to troubleshoot existing production databases by cloning the schema and metadata, statistics without the data. Cloned databases are not meant to be used in production environments.|[KB 3177838](https://support.microsoft.com/en-us/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)|
-|CREATE OR ALTER| Deploy  objects like Stored Procedures, Triggers, User-Defined Functions, and Views.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
-|USE HINT| Use a query option, `OPTION(USE HINT('<option>'))`  to alter query optimizer behavior using supported query level hints. Unlike QUERYTRACEON, the USE HINT option does not require sysadmin privileges.|[Developers Choice: USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
-|Programmatically identify LPIM to SQL service account| Allow DBAs to programmatically identify if Lock Pages in Memory (LPIM) privilege is in effect at the service startup time.|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
-|Identify IFI privilege to SQL service account|Allow DBAs to programmatically identify if Instant File initialization (IFI) is in effect at the SQL Server service startup.|[Database File Initialization](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)|
-|Tempdb supportability | Use a new Errorlog message for the number of tempdb files and notifying different size/autogrowth of tempdb data files at server startup.|[KB 2963384](https://support.microsoft.com/en-us/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)|
-|Extended diagnostics in showplan XML| Showplan XML extended to support Memory grant warning, expose max memory enabled for the query, information about enabled trace flags, memory fractions for optimized nested loop joins, query CPU time, query elapsed time, top waits, and information about parameters data type. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
-|Lightweight per-operator query execution profiling | Dramatically reduces performance overhead of collecting per-operator query execution statistics such as actual number of rows. This feature can be enabled either using global startup TF 7412, or is automatically turned on when an XE session containing query_thread_profile is enabled.|[Developers Choice: Query progress â€“ anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)|
-|New DMF for incremental statistics|New DMF sys.dm_db_incremental_stats_properties to expose information per-partition for incremental stats.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)|
-|New XEvents | New XEvents and Perfmon diagnostics capability added to troubleshoot latency more efficiently.|[Extended Events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
-|Manual Change Tracking Cleanup|New cleanup stored procedure cleans the change tracking internal table on demand.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
-|DROP TABLE support for replication| DROP TABLE DDL support for replication to allow replication articles to be dropped.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
-|Signed Filestream RsFx Driver|The Filestream RsFx driver introduced with SQL Server 2016 SP1 is signed and certified using Windows Hardware Developer Center Dashboard portal (Dev Portal) allowing SQL Server 2016 SP1 Filestream RsFx driver to be installed on Windows Server 2016/Windows 10 without any issue.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|Bulk insert into heaps with auto TABLOCK under TF 715| Trace Flag 715 enables table lock for bulk load operations into heap with no non-clustered indexes.| [Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|Parallel INSERT..SELECT Changes for Local temp tables|SQL Server 2016 introduces Parallel INSERT in INSERT..SELECT operations.|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
-
+|Bulk insert into heaps with auto TABLOCK under TF 715| Trace Flag 715 enables table lock for bulk load operations into heap with no non-clustered indexes.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|CREATE OR ALTER|Deploy objects such as Stored Procedures, Triggers, User-Defined Functions, and Views.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|Database cloning|Use the new DBCC command to troubleshoot existing production databases by cloning the schema and metadata, statistics without the data. Cloned databases are not meant to be used in production environments.|[KB 3177838](https://support.microsoft.com/en-us/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)|
+|DMF additions|New DMF sys.dm_db_incremental_stats_properties expose information per-partition for incremental statistics.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)|
+|DROP TABLE support for replication|DROP TABLE DDL support for replication to allow replication articles to be dropped.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
+|Filestream RsFx Driver signing|The Filestream RsFx driver is signed and certified using Windows Hardware Developer Center Dashboard portal (Dev Portal) allowing SQL Server 2016 SP1 Filestream RsFx driver to be installed on Windows Server 2016/Windows 10 without any issue.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|IFI privilege to SQL service account|Determine whether Instant File initialization (IFI) is in effect at the SQL Server service startup.|[Database File Initialization](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)|
+|Lightweight per-operator query execution profiling |Optimizes collecting per-operator query execution statistics such as actual number of rows.|[Developers Choice: Query progress â€“ anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)|
+|LPIM to SQL service account - programmatic identification|Allow DBAs to programmatically identify if Lock Pages in Memory (LPIM) privilege is in effect at the service startup time.|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|Manual Change Tracking Cleanup|New stored procedure cleans the change tracking internal table on demand.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
+|Parallel INSERT..SELECT Changes for Local temp tables|New Parallel INSERT in INSERT..SELECT operations.|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|Showplan XML|Extended diagnostics including grant warning and maximum memory enabled for a query, enabled trace flags, and also surfaces other diagnostic information. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
+|Storage class memory|Boost the transaction processing using Storage Class Memory in Windows Server 2016, resulting in the ability to accelerate transaction commit times by orders of magnitude.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
+|Tempdb supportability |Use a new Errorlog message for the number of tempdb files and notifying different size/autogrowth of tempdb data files at server startup.|[KB 2963384](https://support.microsoft.com/en-us/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)|
+|USE HINT|Use the query option, `OPTION(USE HINT('<option>'))` to alter query optimizer behavior using supported query level hints. Unlike QUERYTRACEON, the USE HINT option does not require sysadmin privileges.|[Developers Choice: USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|XEvent additions|New XEvents and Perfmon diagnostics capabilities improve latency troubleshooting.|[Extended Events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
 
 In addition:
 

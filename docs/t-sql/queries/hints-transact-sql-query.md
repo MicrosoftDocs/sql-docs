@@ -198,7 +198,7 @@ ms.workload: "Active"
  Overrides the **max degree of parallelism** configuration option of **sp_configure** and Resource Governor for the query specifying this option. The MAXDOP query hint can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the **max degree of parallelism** configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]  
-> If MAXDOP is set to zero then the server chooses the max degree of parallelism.  
+> If MAXDOP is set to zero, then the server chooses the max degree of parallelism.  
   
  MAXRECURSION *number*  
  Specifies the maximum number of recursions allowed for this query. *number* is a nonnegative integer between 0 and 32767. When 0 is specified, no limit is applied. If this option is not specified, the default limit for the server is 100.  
@@ -212,7 +212,7 @@ ms.workload: "Active"
  NO_PERFORMANCE_SPOOL  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). In some scenarios, the spool operator may reduce performance. For example, the spool uses tempdb and tempdb contention can occur if a there are many concurrent queries running with the spool operations.  
+ Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). In some scenarios, the spool operator may reduce performance. For example, the spool uses tempdb and tempdb contention can occur if there are many concurrent queries running with the spool operations.  
   
  OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )  
  Instructs the query optimizer to use a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution.  
@@ -221,7 +221,7 @@ ms.workload: "Active"
  Is the name of a local variable used in a query, to which a value may be assigned for use with the OPTIMIZE FOR query hint.  
   
  *UNKNOWN*  
- Specifies that the query optimizer use statistical data instead of the initial value to determine the value for a local variable during query optimization.  
+ Specifies that the query optimizer uses statistical data instead of the initial value to determine the value for a local variable during query optimization.  
   
  *literal_constant*  
  Is a literal constant value to be assigned *@variable_name* for use with the OPTIMIZE FOR query hint. *literal_constant* is used only during query optimization, and not as the value of *@variable_name* during query execution. *literal_constant* can be of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type that can be expressed as a literal constant. The data type of *literal_constant* must be implicitly convertible to the data type that *@variable_name* references in the query.  
@@ -312,7 +312,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
  Query hints can be specified only in the top-level query, not in subqueries. When a table hint is specified as a query hint, the hint can be specified in the top-level query or in a subquery; however, the value specified for *exposed_object_name* in the TABLE HINT clause must match exactly the exposed name in the query or subquery.  
   
 ## Specifying Table Hints as Query Hints  
- We recommend using the INDEX, FORCESCAN or FORCESEEK table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). Plan guides are useful when you cannot modify the original query, for example, because it is a third-party application. The query hint specified in the plan guide is added to the query before it is compiled and optimized. For ad-hoc queries, use the TABLE HINT clause only when testing plan guide statements. For all other ad-hoc queries, we recommend specifying these hints only as table hints.  
+ We recommend using the INDEX, FORCESCAN, or FORCESEEK table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). Plan guides are useful when you cannot modify the original query, for example, because it is a third-party application. The query hint specified in the plan guide is added to the query before it is compiled and optimized. For ad-hoc queries, use the TABLE HINT clause only when testing plan guide statements. For all other ad-hoc queries, we recommend specifying these hints only as table hints.  
   
  When specified as a query hint, the INDEX, FORCESCAN, and FORCESEEK table hints are valid for the following objects:  
   

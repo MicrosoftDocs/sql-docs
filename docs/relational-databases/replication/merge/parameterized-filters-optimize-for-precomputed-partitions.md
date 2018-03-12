@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "merge replication precomputed partitions [SQL Server replication], about precomputed partitions"
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

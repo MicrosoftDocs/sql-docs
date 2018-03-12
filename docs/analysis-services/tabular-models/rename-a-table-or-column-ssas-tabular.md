@@ -1,5 +1,5 @@
 ---
-title: "Rename a Table or Column (SSAS Tabular) | Microsoft Docs"
+title: "Rename a Table or Column | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2017"
 ms.prod: analysis-services
@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Rename a Table or Column (SSAS Tabular)
+# Rename a Table or Column 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   You can change the name of a table during the import process by typing a **Friendly Name** in the **Select Tables and Views** page of the **Table Import Wizard**. You can also change table and column names if you import data by specifying a query on the **Specify a SQL Query** page of the **Table Import Wizard**.  
   

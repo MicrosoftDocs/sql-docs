@@ -33,7 +33,7 @@ SSDT 15.5.2 is a standalone web installation experience for SQL Server Database,
 |||
 
 > [!IMPORTANT]
-> Before installing SSDT for Visual Studio 2017 (15.5.2), uninstall the "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed on VS 2017, andclose all VS instances. 
+> Before installing SSDT for Visual Studio 2017 (15.5.2), uninstall the "Microsoft Analysis Services Projects" and "Microsoft Reporting Services Projects" extensions if they are already installed on VS 2017, and close all VS instances. 
 > 
 > Non-English versions of SSDT for Visual Studio 2017 15.5.x do not support upgrading from the English 15.4.0 Preview, you must uninstall the English 15.4.0 Preview before installing 15.5.x in other languages. 
 
@@ -128,7 +128,7 @@ If you already have Visual Studio 2015 (or above) installed, installing SSDT wil
   
 |Project Templates|SQL Platforms Supported|  
 |-------------------|--------------------|  
-Relational databases|  SQL Server 2005* - SQL Server 2017 <br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse (supports queries only; database projects are not yet supported)<br /><br />  * SQL Server 2005 support is deprecated,<br /><br /> please move to an officially supported SQL version|
+Relational databases|  SQL Server 2005* - SQL Server 2017<br> (use SSDT 17.x or SSDT for Visual Studio 2017 to connect to [SQL Server on Linux](../linux/sql-server-linux-overview.md))<br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse (supports queries only; database projects are not yet supported)<br /><br />  * SQL Server 2005 support is deprecated,<br /><br /> please move to an officially supported SQL version|
   |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 – SQL Server 2017|
   |Integration Services packages| SQL Server 2012 – SQL Server 2017    |
   

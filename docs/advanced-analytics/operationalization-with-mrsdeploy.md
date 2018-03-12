@@ -53,10 +53,6 @@ This deployment feature of R Server provides these benefits:
   
   You can use realtime scoring with a supported R model object to improve the speed of scoring operations.
 
-+ Publish Python code as a web service
-
-  For examples, see [Publish and consume Python code](./python/publish-consume-python-code.md).
-
 + Asynchronous batch consumption
 
   Web services that call for large input data can now be consumed asynchronously via batch execution.

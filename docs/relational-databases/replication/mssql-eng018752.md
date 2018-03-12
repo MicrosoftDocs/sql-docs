@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSSQL_ENG018752 error"
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

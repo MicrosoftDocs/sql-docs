@@ -2,9 +2,10 @@
 
 # Overview
 ## [Release notes](sql-server-linux-release-notes.md)
-## [What's new in this release?](sql-server-linux-whats-new.md)
+## [What's new?](sql-server-linux-whats-new.md)
 ## [New and updated articles](new-updated-linux.md)
 ## [Editions and supported features](sql-server-linux-editions-and-components-2017.md)
+## [FAQ](sql-server-linux-faq.md)
 
 # Quickstarts
 ## [Install & Connect - Red Hat](quickstart-install-connect-red-hat.md)
@@ -82,13 +83,15 @@
 ##### [Configure on RHEL](sql-server-linux-availability-group-cluster-rhel.md)
 ##### [Configure on SLES](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Configure on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
-##### [Operate](sql-server-linux-availability-group-failover-ha.md)
+##### [Failover](sql-server-linux-availability-group-failover-ha.md)
+##### [Operate](sql-server-linux-availability-group-operate-ha.md)
 #### [Create for read-scale only]()
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
 #### [Configure cross-platform (Windows and Linux)](sql-server-linux-availability-group-cross-platform.md)
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)
+### [Active Directory authentication](sql-server-linux-active-directory-auth-overview.md)
 ### [Encrypting connections](sql-server-linux-encrypted-connections.md)
 
 ## Performance
@@ -102,7 +105,6 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Resources
-## [FAQ](sql-server-linux-faq.md)
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server Documentation](../sql-server/sql-server-technical-documentation.md)
 ## Partners

@@ -88,7 +88,7 @@ This system is extremely flexible, which means it can be complicated if the peop
 
 The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. In this topic, the poster is far to small to read. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
   
- [![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### Security Classes
 

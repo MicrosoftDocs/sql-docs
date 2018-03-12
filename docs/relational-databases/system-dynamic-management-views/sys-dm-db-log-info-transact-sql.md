@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_log_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/16/2017"
+ms.date: "03/11/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""

@@ -26,7 +26,6 @@ This page provides information on how to develop Java applications using [Always
 
 Always Encrypted allows clients to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the Microsoft JDBC Driver 6.0 (or higher) for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and  encrypts the values of those parameters before passing the values to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, visit [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
-
 ## Prerequisites
 
 - Make sure Microsoft JDBC Driver 6.0 (or higher) for SQL Server is installed on your development machine. 
@@ -205,6 +204,7 @@ WITH
 > The built-in SQL Server management Studio functionality cannot create column master key definitions for the Java Key Store. You must use T-SQL commands programmatically.
 
 ### Creating a Column Encryption Key for the Java Key Store
+
 Note that the SQL Server Management Studio or any other tool can not be used to create column encryption keys using column master keys in the Java Key Store. The client application must create the column encryption key programmatically using the SQLServerColumnEncryptionJavaKeyStoreProvider class. For more details see [Using Column Master Key Store Providers for Programmatic Key Provisioning](#using-column-master-key-store-providers-for-programmatic-key-provisioning).
 
 ### Implementing a custom column master key store provider
@@ -248,6 +248,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 ## Using Column Master Key Store Providers for Programmatic Key Provisioning
 
 When accessing encrypted columns, the Microsoft JDBC Driver for SQL Server transparently finds and calls the right column master key store provider to decrypt column encryption keys. Typically, your normal application code does not directly call column master key store providers. You may, however, instantiate and call a provider explicitly to programmatically provision and manage Always Encrypted keys to generate an encrypted column encryption key and decrypt a column encryption key (e.g. as part column master key rotation). For more information, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
+
 Note that implementing your own key management tools may be required only if you use a custom keystore provider. When using keys stored in Windows Certificate Store or in Azure Key Vault, you can use existing tools, such as SQL Server Management Studio or PowerShell, to manage and provision keys. When using keys stored in the Java Key Store, you need to provision keys programatically. The below example, illustrates using SQLServerColumnEncryptionJavaKeyStoreProvider Class to encrypt the key with a key stored in the Java Key Store.
 
 ```
@@ -425,6 +426,7 @@ The below table summarizes the behavior of queries depending on whether Always E
 | Queries retrieving data from encrypted columns without parameters targeting encrypted columns.| Results from encrypted columns are transparently decrypted. The application receives plaintext values of the JDBC datatypes corresponding to the SQL Server types configured for the encrypted columns. | Error | Results from encrypted columns are not decrypted. The application receives encrypted values as byte arrays (byte[]).
 
 ### Inserting and Retrieving Encrypted Data Examples 
+
 The following examples illustrate retrieving and modifying data in encrypted columns. The examples assume the target table with the below schema. Note that the SSN and BirthDate columns are encrypted. If you have configured a Column Master Key named "MyCMK" and a Column Encryption Key named "MyCEK" (as described in the keystore providers sections above), you can create the table using this script:
 
 ```

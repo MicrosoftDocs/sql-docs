@@ -100,9 +100,9 @@ FROM <backup_device>
 |BackupSizeInBytes|**bigint**|Size of the backup for this file in bytes.|  
 |SourceBlockSize|**int**|Block size of the physical device containing the file in bytes (not the backup device).|  
 |FileGroupID|**int**|ID of the filegroup.|  
-|LogGroupGUID|**uniqueidentifier NULL**|NULL.|  
+|LogGroupGUID|**uniqueidentifier** NULL|NULL.|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|For differential backups, changes with log sequence numbers greater than or equal to **DifferentialBaseLSN** are included in the differential.<br /><br /> For other backup types, the value is NULL.|  
-|DifferentialBaseGUID|**uniqueidentifier**|For differential backups, the unique identifier of the differential base.<br /><br /> For other backup types, the value is NULL.|  
+|DifferentialBaseGUID|**uniqueidentifier** NULL|For differential backups, the unique identifier of the differential base.<br /><br /> For other backup types, the value is NULL.|  
 |IsReadOnly|**bit**|**1** = The file is read-only.|  
 |IsPresent|**bit**|**1** = The file is present in the backup.|  
 |TDEThumbprint|**varbinary(32)**|Shows the thumbprint of the Database Encryption Key. The encryptor thumbprint is a SHA-1 hash of the certificate with which the key is encrypted. For information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  

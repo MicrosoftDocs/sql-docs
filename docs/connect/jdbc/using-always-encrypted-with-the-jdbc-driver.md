@@ -156,7 +156,7 @@ These settings can also be set/get using the SQLServerDataSource object. See [Al
 The JDBC driver automatically instantiates the SQLServerColumnEncryptionJavaKeyStoreProvider when these credentials are present in connection properties.
 
 ### Creating a Column Master Key for the Java Key Store
-The SQLServerColumnEncryptionJavaKeyStoreProvider can be used with JKS or PKCS12 keystore types. To create or import a key to use with this provider use the Java [keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) utility. Please note that the key must have the same password as the keystore itself. Here is an example of how to create a public key and its associated private key using the keytool utility.
+The SQLServerColumnEncryptionJavaKeyStoreProvider can be used with JKS or PKCS12 keystore types. To create or import a key to use with this provider use the Java [keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) utility. Please note that the key must have the same password as the keystore itself. Here is an example of how to create a public key and its associated private key using the keytool utility:
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
@@ -164,7 +164,7 @@ keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks
 
 This command creates a public key and wraps it in an X.509 self signed certificate which is then stored in the keystore 'keystore.jks' along with its associated private key. This entry in the keystore is identified by the alias 'AlwaysEncryptedKey'.
 
-Here is an example of the same using a PKCS12 storetype. 
+Here is an example of the same using a PKCS12 storetype:
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.pfx -storepass mypassword -validity 360 -keysize 2048 -storetype pkcs12 -keypass mypassword
@@ -379,7 +379,7 @@ String connectionString = "jdbc:sqlserver://localhost;user=<user>;password=<pass
 SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionString);
 ```
 
-The following is an equivalent example using the SQLServerDataSource object.
+The following is an equivalent example using the SQLServerDataSource object:
 
 ```
 SQLServerDataSource ds = new SQLServerDataSource();
@@ -597,7 +597,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 
 To prevent such errors, make sure:
 - always Encrypted is enabled for application queries targeting encrypted columns (for the connection string or for a specific query).
-- you use prepared statements and parameters to send data targeting encrypted columns. The below example shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN), instead of passing the literal inside as a parameter. This query will fail.
+- you use prepared statements and parameters to send data targeting encrypted columns. The below example shows a query that incorrectly filters by a literal/constant on an encrypted column (SSN), instead of passing the literal inside as a parameter. This query will fail:
 
 ```
 ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customers WHERE SSN='795-73-9838'");
@@ -673,7 +673,7 @@ You can configure a time-to-live value for the column encryption key entries in 
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (int columnEncryptionKeyCacheTTL, TimeUnit unit)
 ```
 
-For example, to set a time-to-live value of 10 minutes, use
+For example, to set a time-to-live value of 10 minutes, use:
 
 ```
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
@@ -688,7 +688,8 @@ With SQLServerBulkCopy, you can copy data which is already encrypted and stored 
 - Configure both database connections to the source table and to the target table without Always Encrypted enabled.
 - Set the allowEncryptedValueModifications option. See [Using Bulk Copy with the JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md) for more information.
 
-> [!NOTE] Use caution when specifying AllowEncryptedValueModifications as this may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted or if it is correctly encrypted using the same encryption type, algorithm, and key as the target column.
+> [!NOTE]
+> Use caution when specifying AllowEncryptedValueModifications as this may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted or if it is correctly encrypted using the same encryption type, algorithm, and key as the target column.
 
 ## See Also
 [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

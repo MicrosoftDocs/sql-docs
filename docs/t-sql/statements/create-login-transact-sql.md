@@ -249,7 +249,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>'
     MUST_CHANGE,  CHECK_EXPIRATION = ON;
 GO  
 ```  
-**Note!** The MUST_CHANGE option cannot be used when CHECK_EXPIRATION is OFF.
+[!NOTE] The MUST_CHANGE option cannot be used when CHECK_EXPIRATION is OFF.
   
 ### C. Creating a login mapped to a credential  
  The following example creates the login for a particular user, using the user. This login is mapped to the credential.  

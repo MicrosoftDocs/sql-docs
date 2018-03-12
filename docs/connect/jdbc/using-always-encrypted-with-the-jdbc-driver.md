@@ -60,7 +60,7 @@ All of these keystore providers are described in more detail below. You only nee
 ### Using Azure Key Vault Provider
 Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The Microsoft JDBC Driver for SQL Server includes a built in provider, SQLServerColumnEncryptionAzureKeyVaultProvider, for applications that have keys stored in Azure Key Vault. The name of this provider is AZURE_KEY_VAULT. In order to use the Azure Key Vault store provider, an application developer needs to create the vault and the keys in Azure Key Vault and create an App registration in Azure Active Directory. The registered application must be granted Get, Decrpyt, Encrypt, Unwrap Key, Wrap Key, and Verify permissions in the Access policies defined for the key vault created for use with Always Encrypted. For more information on how to setup the key vault and create a column master key refer to [Azure Key Vault – Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
-For the examples on this page, if you have created an Azure Key Vault based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this with its own specific `KEY_PATH` and `ENCRYPTED_VALUE`:
+For the examples on this page, if you have created an Azure Key Vault based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
 
 ```
 CREATE COLUMN MASTER KEY [MyCMK]
@@ -87,7 +87,7 @@ Here is an example of initializing SQLServerColumnEncryptionAzureKeyVaultProvide
 SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
 ```
 
-`clientID` is the Application ID of an App registration in an Azure Active Directory instance. `clientKey` is a Key Password registered under that Application which provides API access to the Azure Key Vault.
+**clientID** is the Application ID of an App registration in an Azure Active Directory instance. **clientKey** is a Key Password registered under that Application which provides API access to the Azure Key Vault.
 
 After the application creates an instance of SQLServerColumnEncryptionAzureKeyVaultProvider, the application must register the instance within Microsoft JDBC Driver for SQL Server using the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method. It is highly recommended that the instance is registered using the default lookup name, AZURE_KEY_VAULT, which can be obtained by calling the SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API. Using the default name will allow you to use tools such as SQL Server Management Studio or PowerShell to provision and manage Always Encrypted keys (the tools use the default name to generate the metadata object to column master key). The below example shows registering the Azure Key Vault provider. For more details on the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method, see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
@@ -111,7 +111,7 @@ The SQLServerColumnEncryptionCertificateStoreProvider can be used to store colum
 
 The name of the SQLServerColumnEncryptionCertificateStoreProvider is MSSQL_CERTIFICATE_STORE and can be queried by the getName() API of the provider object. It is automatically registered by the driver and can be used seamlessly without any application change.
 
-For the examples on this page, if you have created a Windows Certificate Store based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this with its own specific `KEY_PATH` and `ENCRYPTED_VALUE`:
+For the examples on this page, if you have created a Windows Certificate Store based column master key and column encryption key by using SQL Server Management Studio, the T-SQL script to re-create them might look similar to this with its own specific **KEY_PATH** and **ENCRYPTED_VALUE**:
 
 ```
 CREATE COLUMN MASTER KEY [MyCMK]

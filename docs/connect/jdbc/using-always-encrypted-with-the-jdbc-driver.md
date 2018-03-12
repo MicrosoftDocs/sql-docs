@@ -688,7 +688,7 @@ With SQLServerBulkCopy, you can copy data which is already encrypted and stored 
 - Configure both database connections to the source table and to the target table without Always Encrypted enabled.
 - Set the allowEncryptedValueModifications option. See [Using Bulk Copy with the JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md) for more information.
 
-> [!NOTE:] Use caution when specifying AllowEncryptedValueModifications as this may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted or if it is correctly encrypted using the same encryption type, algorithm, and key as the target column.
+> [!NOTE] Use caution when specifying AllowEncryptedValueModifications as this may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted or if it is correctly encrypted using the same encryption type, algorithm, and key as the target column.
 
 ## See Also
 [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

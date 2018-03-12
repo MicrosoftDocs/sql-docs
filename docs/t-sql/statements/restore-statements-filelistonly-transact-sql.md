@@ -88,7 +88,7 @@ FROM <backup_device>
 |LogicalName|**nvarchar(128)**|Logical name of the file.|  
 |PhysicalName|**nvarchar(260)**|Physical or operating-system name of the file.|  
 |Type|**char(1)**|The type of file, one of:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data file<br /><br /> **F** = Full Text Catalog<br /><br /> **S** = FileStream, FileTable, or [!INCLUDE[hek_2](../../includes/hek-2-md.md)] container|  
-|FileGroupName|**nvarchar(128)**|Name of the filegroup that contains the file.|  
+|FileGroupName|**nvarchar(128)** NULL|Name of the filegroup that contains the file.|  
 |Size|**numeric(20,0)**|Current size in bytes.|  
 |MaxSize|**numeric(20,0)**|Maximum allowed size in bytes.|  
 |FileID|**bigint**|File identifier, unique within the database.|  
@@ -105,7 +105,7 @@ FROM <backup_device>
 |DifferentialBaseGUID|**uniqueidentifier** NULL|For differential backups, the unique identifier of the differential base.<br /><br /> For other backup types, the value is NULL.|  
 |IsReadOnly|**bit**|**1** = The file is read-only.|  
 |IsPresent|**bit**|**1** = The file is present in the backup.|  
-|TDEThumbprint|**varbinary(32)**|Shows the thumbprint of the Database Encryption Key. The encryptor thumbprint is a SHA-1 hash of the certificate with which the key is encrypted. For information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
+|TDEThumbprint|**varbinary(32)** NULL|Shows the thumbprint of the Database Encryption Key. The encryptor thumbprint is a SHA-1 hash of the certificate with which the key is encrypted. For information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)** NULL|The URL for the Azure snapshot of the database file contained in the FILE_SNAPSHOT backup. Returns NULL if no FILE_SNAPSHOT backup.|  
   
 ## Security  

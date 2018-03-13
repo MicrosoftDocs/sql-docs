@@ -27,18 +27,18 @@ There are two main workflows you can use to contribute:
 
 |||
 |---|---|
-| [Edit in your browser](#githubui) | Good for small, quick edits of any topic. |
-| [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple files, and frequent contributions to docs.microsoft.com. |
+| [Edit in your browser](#githubui) | Good for small, quick edits of any article. |
+| [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple articles, and frequent contributions to docs.microsoft.com. |
 
 ## <a id="githubui"></a> Edit in your browser
 
-The following steps provide an overview of making simple edits to SQL erver content in your browser. The complete process is documented in the article, [GitHub contribution workflow for minor or infrequent changes](https://docs.microsoft.com/contribute/contribute/light-workflow).
+The following steps provide an overview of making simple edits to SQL Server content in your browser. The complete process is documented in the article, [GitHub contribution workflow for minor or infrequent changes](https://docs.microsoft.com/contribute/contribute/light-workflow).
 
 1. Every article, including this one, has an **Edit** button on the right. Click **Edit** to get started.
 
    ![Edit button for SQL article](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
-   All of the content on docs.microsoft.com is managed in various GitHub Repositories. When you click the edit button, you are taken to the article in either the **sql-docs** or **azure-docs** repositories depending on the topic you are editing. 
+   All of the content on docs.microsoft.com is managed in various GitHub Repositories. When you click the edit button, you are taken to the article in the **sql-docs** repository. Or, if you are editing a SQL article in the Azure documentation, you are taken to the **azure-docs** repository. 
 
 1. Next, click on the pencil icon at the top-right of the article in GitHub.
 
@@ -59,7 +59,7 @@ At this point, you should be guided through the rest of the process in the comme
 
 ## <a id="tools"></a> Edit locally with tools
 
-Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. This workflows is good for edits that are more complex or involve multiple files. It is also good for frequent contributors to docs.microsoft.com.
+Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. This workflow is good for edits that are more complex or involve multiple files. It is also good for frequent contributors to docs.microsoft.com.
 
 To contribute with this method, see the following articles:
 
@@ -75,7 +75,7 @@ If you submit a pull request with significant changes to documentation, you will
 This section provides some additional guidance on working in the **sql-docs** repository.
 
 > [!IMPORTANT]
-> The informartion in this section is specific to **sql-docs**. If you are editing a SQL topic in the Azure documentation, see [the Readme for the azure-docs repository on GitHub](https://github.com/MicrosoftDocs/azure-docs/blob/master/README.md).
+> The information in this section is specific to **sql-docs**. If you are editing a SQL article in the Azure documentation, see [the Readme for the azure-docs repository on GitHub](https://github.com/MicrosoftDocs/azure-docs/blob/master/README.md).
 
 ### Repository basics
 
@@ -84,7 +84,7 @@ The [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository uses severa
 | Folder | Description |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | Contains all published SQL Server content. Subfolders logically organize different areas of the content. |
-| [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Contains include files. These are portions of content that can be included in one or more other topics. |
+| [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Contains include files. These files are blocks of content that can be included in one or more other topics. |
 | **./media** | There are multiple **media** subfolders in the repository that contain article images. |
 | **TOC.MD** | A table-of-contents file. Each subfolder has the option of using one TOC.MD file. |
 
@@ -107,12 +107,12 @@ To find the correct applies-to include for your article, use the following tips:
 - Look at other articles that cover the same feature or a related task. If you edit that article, you can copy the Markdown for the applies-to include link (you can cancel the edit without submitting it).
 - Search the [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) directory for files containing the text "applies-to". You can use the **Find** button in github to quickly filter. Click on the file to see how it is rendered.
 - Pay attention to the naming convention. If there are x's in the name, they are usually placeholders indicating the lack of support for a service. For example, **appliesto-xx-xxxx-asdw-xxx-md.md** indicates support for only Azure SQL Data Warehouse, because only **asdw** is spelled out, whereas the other fields have x's.
-- Some includes specify a version number, such as **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Only use these when you know the feature was introduced with a specific version of SQL Server. 
+- Some includes specify a version number, such as **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Only use these includes when you know the feature was introduced with a specific version of SQL Server. 
 
 ## Contributor resources
 
 - [Contributor guide for docs.microsoft.com](https://docs.microsoft.com/en-us/contribute/)
-- [Micrsofot Style Guide](https://docs.microsoft.com/en-us/teamblog/style-guide)
+- [Microsoft Style Guide](https://docs.microsoft.com/en-us/teamblog/style-guide)
 - [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

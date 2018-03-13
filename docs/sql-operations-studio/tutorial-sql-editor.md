@@ -49,7 +49,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 1. On the dashboard, right-click **dbo.Customers** (in the search widget) and select **Edit Data**.
    
    > [!TIP]
-   > For databases with many objects use the search widget to quickly locate the table, view, etc. that you're looking for.
+   > For databases with many objects, use the search widget to quickly locate the table, view, etc. that you're looking for.
 
    ![quick search widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
@@ -59,7 +59,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 ## Use T-SQL snippets to create stored procedures
 
-SQL Operations Studio proivides many built-in T-SQL snippets for quickly creating statements.
+SQL Operations Studio provides many built-in T-SQL snippets for quickly creating statements.
 
 
 1. Open a new query editor by pressing **Ctrl+N**.
@@ -68,12 +68,12 @@ SQL Operations Studio proivides many built-in T-SQL snippets for quickly creatin
 
    ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
-3. The create stored procedure snippet has two fields set up for quick edit, *StoredProcedureName* and *SchemaName*. Select *StoredProcedureName*, right-click and select **Change All Occurrences**. Now type *getCustomer* and all *StoredProcedureName* entries change to *getCustomer*.
+3. The create stored procedure snippet has two fields set up for quick edit, *StoredProcedureName* and *SchemaName*. Select *StoredProcedureName*, right-click, and select **Change All Occurrences**. Now type *getCustomer* and all *StoredProcedureName* entries change to *getCustomer*.
 
    ![snippet](./media/tutorial-sql-editor/snippet.png)
 
 5. Change all occurrences of *SchemaName* to *dbo*. 
-6. The snippet contains placeholder parameters and body text that needs updating. The *EXECUTE* statement also contains placeholder text because it doesn't know how many parameters your procedure will ultimately have. For this tutorial update the snippet so it looks like the following:
+6. The snippet contains placeholder parameters and body text that needs updating. The *EXECUTE* statement also contains placeholder text because it doesn't know how many parameters the procedure will have. For this tutorial update the snippet so it looks like the following code:
 
 	```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -108,7 +108,7 @@ SQL Operations Studio proivides many built-in T-SQL snippets for quickly creatin
     
 5. To create the stored procedure and give it a test run, press **F5**.
 
-The stored procedure is now created, and the **RESULTS** pane displays the returned customer in JSON. Click the returned record to see formatted JSON. 
+The stored procedure is now created, and the **RESULTS** pane displays the returned customer in JSON. To see formatted JSON, click the returned record. 
 
 
 ## Use Peek Definition 
@@ -126,7 +126,7 @@ SQL Operations Studio provides the ability to view an objects definition using t
    @json_val nvarchar(max)
    ```
 
-4. Replace the body of the stored procedure with the following:
+4. Replace the body of the stored procedure with the following code:
    ```sql
    INSERT INTO dbo.Customers
    ```
@@ -148,7 +148,7 @@ SQL Operations Studio provides the ability to view an objects definition using t
     )
    ```
 7. Delete (or comment out) the *EXECUTE* command at the bottom of the query.
-8. The entire statement should be the following ():
+8. The entire statement should look like the following code:
 
    ```sql
    -- Create a new stored procedure called 'setCustomer' in schema 'dbo'
@@ -179,7 +179,7 @@ SQL Operations Studio provides the ability to view an objects definition using t
 
 8. To create the *setCustomer* stored procedure, press **F5**.
 
-## Use save query results as JSON to test our stored procedure
+## Use save query results as JSON to test the setCustomer stored procedure
 
 The *setCustomer* stored procedure created in the previous section requires JSON data be passed into the *@json_val* parameter. This section shows how to get a properly formatted bit of JSON to pass into the parameter so you can test the stored procedure.
 
@@ -225,7 +225,7 @@ In this tutorial, you learned how to:
 > * Learn about database object details using Peek Definition and Go to Definition
 
 
-To learn how to enable the **five slowest queries** sample insight, complete the next tutorial:
+To learn how to enable the **five slowest queries** widget, complete the next tutorial:
 
 > [!div class="nextstepaction"]
 > [Enable the slow queries sample insight widget](tutorial-qds-sql-server.md)

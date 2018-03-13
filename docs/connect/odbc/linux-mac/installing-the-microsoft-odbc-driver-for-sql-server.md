@@ -1,7 +1,7 @@
 ---
 title: "Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/13/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -27,6 +27,9 @@ ms.workload: "Active"
 This article explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS, as well as the optional Command Line Tools for SQL Server (`bcp` and `sqlcmd`) and the unixODBC Development Headers.
 
 ## Microsoft ODBC Driver 17 for SQL Server 
+
+> [!IMPORTANT]
+> If you installed the version 17 msodbcsql package that was briefly available, you should remove it before installing the msodbcsql17 package to avoid conflicts. The msodbcsql17 package can be installed side by side with the msodbcsql version 13.x package.
 
 ### Debian 8 and 9
 ```

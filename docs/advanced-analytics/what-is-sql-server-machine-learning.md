@@ -53,7 +53,7 @@ Packages and interpreters are also available on several [Azure virtual machines]
 
 **In-database analytics**
 
-Developers and analysts often have code running on top of a local SQL Server instance. If you have SQL Server and an IDE such as [Visual Studio with R](https://docs.microsoft.com/visualstudio/rtvs/) or [Visual Studio with Python](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio) on the same computer, you can build, train, and test models locally in eithe language. Local access simplifies package management: as an admin, you can load additional third-party packages using built-in permissions for that role.
+Developers and analysts often have code running on top of a local SQL Server instance. If you have SQL Server and an IDE such as [Visual Studio with R](https://docs.microsoft.com/visualstudio/rtvs/) or [Visual Studio with Python](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio) on the same computer, you can build, train, and test models locally in either language. Local access simplifies package management: as an admin, you can load additional third-party packages using built-in permissions for that role.
 
 The most common approach for in-database analytics is to use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to run R or Python script. The tutorials listed in [Next steps](#next-steps) will get you started.
 

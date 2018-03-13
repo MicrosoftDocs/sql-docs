@@ -39,7 +39,7 @@ Because the proprietary packages are built on open-source R and Python distribut
 | R  | Python | Description |
 |-----------|----------------|-------------|
 | [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | Functions in these libraries are among the most widely used. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling and analyses are found in these libraries. Additionally, functions in these libraries automatically distribute workloads across available cores for parallel processing, with the ability to work on chunks of data that are coordinated and managed by the calculation engine. |
-| [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Industry-leading machine learning algorithms for image featurization, classification problems  |
+| [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Industry-leading machine learning algorithms for image featurization, classification problems, and more. |
 | [olapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Build or execute an MDX query in R script.
 | [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Functions for putting R scripts into a T-SQL stored procedure, registering a stored procedure with a database, and running the stored procedure from an R development environment.
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Primarily used on a non-SQL installation of Machine Learning Server, such as the [(Standalone) version](r/r-server-standalone.md). Use this package to deploy and host web services, build scale-out topologies with dedicated web and compute nodes, toggle between local and remote sessions, run diagnostics, and more. For an (In-Database) installation, use this package in a client capacity: for example, to access a web service on a remote server dedicated to running just Machine Learning Services workloads. |
@@ -55,7 +55,7 @@ Packages and interpreters are also available on several [Azure virtual machines]
 
 Developers and analysts often have code running on top of a local SQL Server instance. If you have SQL Server and an IDE such as [Visual Studio with R](https://docs.microsoft.com/visualstudio/rtvs/) or [Visual Studio with Python](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio) on the same computer, you can build, train, and test models locally in eithe language. Local access simplifies package management: as an admin, you can load additional third-party packages using built-in permissions for that role.
 
-The most common approach for in-database analytics is to use [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to run R or Python script. The tutorials listed in [Next steps](#next-steps) will get you started
+The most common approach for in-database analytics is to use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to run R or Python script. The tutorials listed in [Next steps](#next-steps) will get you started.
 
 **Client-server configurations**
 

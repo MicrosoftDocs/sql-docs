@@ -2,7 +2,7 @@
 title: "Tutorial: Use the SQL Operations Studio (preview) Transact-SQL editor to create database objects | Microsoft Docs"
 description: This tutorial demonstrates the key features in SQL Operations Studio (preview) that simplify using T-SQL.
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "03/13/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -42,12 +42,14 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 1. Open the SERVERS sidebar (**Ctrl+G**), expand **Databases**, and select **TutorialDB**. 
 
-1. Open the *TutorialDB Dashboard* by selecting **Manage** from the context menu.
+1. Open the *TutorialDB Dashboard* by right-clicking **TutorialDB** and selecting **Manage** from the context menu:
 
    ![context menu - Manage](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
-1. Locate the *Customers* table by typing *cus* in the search widget.
-1. Right-click **dbo.Customers** and select **Edit data**.
+1. On the dashboard, right-click **dbo.Customers** (in the search widget) and select **Edit Data**.
+   
+   > [!TIP]
+   > For databases with many objects use the search widget to quickly locate the table, view, etc. that you're looking for.
 
    ![quick search widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
@@ -55,21 +57,23 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
    ![edit data](./media/tutorial-sql-editor/edit-data.png)
 
-## Use T-SQL snippets to create a stored procedure
+## Use T-SQL snippets to create stored procedures
 
-### Use snippets in [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
+SQL Operations Studio proivides many built-in T-SQL snippets for quickly creating statements.
+
 
 1. Open a new query editor by pressing **Ctrl+N**.
 
-2. Type **sql** in the editor, arrow down to **sqlCreateStoredProcedure**, and press the *Tab* key to load the new stored procedure snippet.
+2. Type **sql** in the editor, arrow down to **sqlCreateStoredProcedure**, and press the *Tab* key (or *Enter*) to load the create stored procedure snippet.
 
    ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
-3. Type *getCustomer* and all *StoredProcedureName* entries change to *getCustomer*. 
+3. The create stored procedure snippet has two fields set up for quick edit, *StoredProcedureName* and *SchemaName*. Select *StoredProcedureName*, right-click and select **Change All Occurrences**. Now type *getCustomer* and all *StoredProcedureName* entries change to *getCustomer*.
 
    ![snippet](./media/tutorial-sql-editor/snippet.png)
 
-4. Replace the rest of the stored procedure with the T-SQL below:
+5. Change all occurrences of *SchemaName* to *dbo*. 
+6. The snippet contains placeholder parameters and body text that needs updating. The *EXECUTE* statement also contains placeholder text because it doesn't know how many parameters your procedure will ultimately have. For this tutorial update the snippet so it looks like the following:
 
 	```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -88,12 +92,12 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
     -- add more stored procedure parameters here
     AS
     -- body of the stored procedure
-    SELECT  c.CustomerID, 
+    SELECT  c.CustomerId, 
     c.Name, 
     c.Location, 
     c.Email
     FROM dbo.Customers c
-    WHERE c.CustomerID = @ID
+    WHERE c.CustomerId = @ID
     FOR JSON PATH
 
     GO
@@ -104,40 +108,47 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
     
 5. To create the stored procedure and give it a test run, press **F5**.
 
-## Use Peek Definition and Go to Definition 
+The stored procedure is now created, and the **RESULTS** pane displays the returned customer in JSON. Click the returned record to see formatted JSON. 
+
+
+## Use Peek Definition 
+
+SQL Operations Studio provides the ability to view an objects definition using the peek definition feature. This section creates a second stored procedure and uses peek definition to see what columns are in a table to quickly create the body of the stored procedure.
 
 1. Open a new editor by pressing **Ctrl+N**. 
 
-2. Type and select **sqlCreateStoredProcedure** from the snippet suggestion list. Type in **setCustomer** for **StoredProcedureName** and **dbo** for **SchemaName**
+2. Type *sql* in the editor, arrow down to *sqlCreateStoredProcedure*, and press the *Tab* key (or *Enter*) to load the create stored procedure snippet.
+3. Type in *setCustomer* for *StoredProcedureName* and *dbo* for *SchemaName*
 
-3. Replace the @param lines with the following parameter definition:
+3. Replace the @param placeholders with the following parameter definition:
 
    ```sql
-       @json_val nvarchar(max)
+   @json_val nvarchar(max)
    ```
 
 4. Replace the body of the stored procedure with the following:
    ```sql
-   -- body of the stored procedure
    INSERT INTO dbo.Customers
    ```
 
-5. Right-click **dbo.Customers** and select **Peek Definition**.
+5. In the *INSERT* line you just added, right-click **dbo.Customers** and select **Peek Definition**.
 
    ![peek definition](./media/tutorial-sql-editor/peek-definition.png)
 
-6. Use the table definition to complete the following insert statement:
+6. The table definition appears so you can quickly see what columns are in the table. Refer to the column list to easily complete the statements for your stored procedure. Finish creating the INSERT statement you added previously to complete the body of the stored procedure, and close the peek definition window:
 
    ```sql
-   INSERT INTO dbo.Customers (CustomerID, Name, Location, Email)
-       SELECT CustomerID, Name, Location, Email
+   INSERT INTO dbo.Customers (CustomerId, Name, Location, Email)
+       SELECT CustomerId, Name, Location, Email
        FROM OPENJSON (@json_val)
-       WITH(   CustomerID int, 
+       WITH(   CustomerId int, 
                Name nvarchar(50), 
                Location nvarchar(50), 
                Email nvarchar(50)
+    )
    ```
-7. The final statement should be:
+7. Delete (or comment out) the *EXECUTE* command at the bottom of the query.
+8. The entire statement should be the following ():
 
    ```sql
    -- Create a new stored procedure called 'setCustomer' in schema 'dbo'
@@ -155,10 +166,10 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
        @json_val nvarchar(max) 
    AS
        -- body of the stored procedure
-       INSERT INTO dbo.Customers (CustomerID, Name, Location, Email)
-       SELECT CustomerID, Name, Location, Email
+       INSERT INTO dbo.Customers (CustomerId, Name, Location, Email)
+       SELECT CustomerId, Name, Location, Email
        FROM OPENJSON (@json_val)
-       WITH(   CustomerID int, 
+       WITH(   CustomerId int, 
                Name nvarchar(50), 
                Location nvarchar(50), 
                Email nvarchar(50)
@@ -166,27 +177,29 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
    GO
    ```
 
-8. To execute the script, press **F5**.
+8. To create the *setCustomer* stored procedure, press **F5**.
 
 ## Use save query results as JSON to test our stored procedure
 
-1. **SELECT TOP 1000 Rows** from the *dbo.Customers* table.
+The *setCustomer* stored procedure created in the previous section requires JSON data be passed into the *@json_val* parameter. This section shows how to get a properly formatted bit of JSON to pass into the parameter so you can test the stored procedure.
 
-2. Select the first row in the results view and click **Save as JSON**.  
-3. Click **Save**, and it opens the highlighted row in JSON format.
+1. In the **SERVERS** sidebar right-click the *dbo.Customers* table and click **SELECT TOP 1000 Rows**.
+
+2. Select the first row in the results view, make sure the entire row is selected (click the number 1 in the left-most column), and select **Save as JSON**.  
+3. Change the folder to a location you'll remember so you can delete the file later (for example desktop) and click **Save**. The JSON formatted file opens.
 
    ![save as JSON](./media/tutorial-sql-editor/save-as-json.png)
 
-4. Select the JSON data and copy it.
-
-5. Open a new query for *TutorialDB* and complete the following test script using the JSON data as a template from the previous step. Modify the values for *CustomerID*, *Name*, *Location*, and *Email*.
+4. Select the JSON data in the editor and copy it.
+5. Open a new editor by pressing **Ctrl+N**.
+6. The previous steps show how you can easily get the properly formatted data to complete the call to the *setCustomer* procedure. You can see the following code uses the same JSON format with new customer details so we can test the *setCustomer* procedure. The statement includes syntax to declare the parameter and run the new get and set procedures. You can paste the copied data from the previous section and edit it so it is the same as the following example, or simply paste the following statement into the query editor.
 
    ```sql
    -- example to execute the stored procedure we just created
    declare @json nvarchar(max) =
    N'[
        {
-           "CustomerID": 5,
+           "CustomerId": 5,
            "Name": "Lucy",
            "Location": "Canada",
            "Email": "lucy0@adventure-works.com"

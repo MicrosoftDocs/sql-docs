@@ -19,32 +19,40 @@ ms.workload: "Active"
 
 # How to contribute to SQL Server Documentation
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Anyone can contribute to SQL Server documentation. This includes correcting typos, suggesting better explanations, and improving technical accuracy. This article explains how to get started with content contributions and how the process works.
 
 ## <a id="githubui"></a> Edit in your browser
 
-You can submit simple changes to articles in your browser. Every article, including this one, has an edit button on the right.
+The following steps provide an overview of making simple edits to SQL erver content in your browser. The complete process is documented in the article, [GitHub contribution workflow for minor or infrequent changes](https://docs.microsoft.com/contribute/contribute/light-workflow).
 
-![Edit button for SQL article](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. Every article, including this one, has an **Edit** button on the right. Click **Edit** to get started.
 
-All of the content on docs.microsoft.com is managed in various GitHub Repositories. When you click the edit button, you are taken to the article in the **sql-docs** repository. To start your edit in the browser, you have to click on the pencil icon at the top-right of the article in GitHub.
+   ![Edit button for SQL article](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
-![Edit button](./media/sql-server-docs-contribute/edit-button.png)
+   All of the content on docs.microsoft.com is managed in various GitHub Repositories. When you click the edit button, you are taken to the article in either the **sql-docs** or **azure-docs** repositories depending on the topic you are editing. 
 
-> [!NOTE]
-> You must be signed in to GitHub to edit an article. If you do not have a GitHub account, see [GitHub account setup](https://docs.microsoft.com/contribute/contribute/get-started-setup-github). After creating a new account, you must also verify your email address with GitHub before you can edit.
+1. Next, click on the pencil icon at the top-right of the article in GitHub.
 
-All of the articles are written in Markdown. If you need help with Markdown, you can review [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/) or just observe how published articles render existing Markdown.
+   ![Edit button](./media/sql-server-docs-contribute/edit-button.png)
 
-To complete your edits, you must propose your changes, create a pull request, and interact with Microsoft to review and sign off. For step-by-step instructions, see the following article:
+   > [!NOTE]
+   > You must be signed in to GitHub to edit an article. If you do not have a GitHub account, see [GitHub account setup](https://docs.microsoft.com/contribute/contribute/get-started-setup-github). After creating a new account, you must also verify your email address with GitHub before you can edit.
 
-- [GitHub contribution workflow for minor or infrequent changes](https://docs.microsoft.com/contribute/contribute/light-workflow)
+1. Edit the article in the browser. All of the articles are written in Markdown. If you need help with Markdown, you can review [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/). You can also learn by observing how published articles render existing Markdown.
+
+1. Scroll down to the bottom of the edit window, enter a title for your change, and click the green **Propose file change** button.
+
+1. On the next page, click **Create pull request**.
+
+1. Enter a title and description for the pull request. Then click **Create pull request** again.
+
+At this point, you should be guided through the rest of the process in the comments of the pull request. The complete process and additional details can be found in the [contributor guide](https://docs.microsoft.com/contribute/contribute/light-workflow).
 
 ## <a id="tools"></a> Edit locally with tools
 
-Another editing option is to fork the **sql-docs** repository and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. 
+Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. 
 
 To contribute with this method, see the following articles:
 
@@ -62,6 +70,9 @@ If you submit a pull request with significant changes to documentation, you will
 ## SQL Server documentation guidance
 
 This section provides some additional guidance on working in the **sql-docs** repository.
+
+> [!IMPORTANT]
+> The informartion in this section is specific to **sql-docs**. If you are editing a SQL topic in the Azure documentation, see [the Readme for the azure-docs repository on GitHub](https://github.com/MicrosoftDocs/azure-docs/blob/master/README.md).
 
 ### Repository basics
 

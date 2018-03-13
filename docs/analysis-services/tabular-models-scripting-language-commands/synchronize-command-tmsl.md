@@ -21,7 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Synchronize command (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Synchronizes an Analysis Services database with another existing database.  
   

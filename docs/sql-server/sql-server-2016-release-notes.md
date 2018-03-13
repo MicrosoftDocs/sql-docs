@@ -33,9 +33,9 @@ ms.workload: "Active"
 > [![Download SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1  includes all the fixes up to SQL Server 2016 RTM CU3 including Security Update MS16-136. It contains a roll-up of solutions provided in SQL Server 2016 cumulative updates up to and including the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016. 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1  includes all the fixes up to SQL Server 2016 RTM CU3 including Security Update MS16-136. It contains a roll-up of solutions provided in SQL Server 2016 cumulative updates up to and includes the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016. 
 
-The following features are availabe in the Standard, Web, Express, and Local DB editions of SQL Server SP1 (except as noted):
+The following features are available in the Standard, Web, Express, and Local DB editions of SQL Server SP1 (except as noted):
 - Always encrypted
 - Changed data capture (not available in Express)
 - Columnstore
@@ -48,7 +48,7 @@ The following features are availabe in the Standard, Web, Express, and Local DB 
 - Polybase
 - Row level security
 
-The following table summarizes the improvements provided in SQL Server 2016 SP1.
+The following table summarizes key improvements provided in SQL Server 2016 SP1.
 
 |Feature|Description|For more information|
 |---|---|---|

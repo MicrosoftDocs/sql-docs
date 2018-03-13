@@ -42,17 +42,17 @@ This article describes how to configure a Python environment on a Windows comput
 
 Regardless of which tools you use to develop your Python code, the following requirements apply whenever you run Python code in SQL Server or use SQL Server data:
 
-+ To use Python, SQL Server 2017 or later is required. You must also install the feature that supports Machine Learning Services (In-Database), and explicitly enable the feature. For more information, see LINK.
++ To use Python, SQL Server 2017 or later is required. You must also install the feature that supports Machine Learning Services (In-Database), and explicitly enable the feature. For more information, see [Set up SQL Server 2017](../r/set-up-sql-server-r-services-in-database.md).
 
-    If you installed an early release SQL Server 2017, you might get errors if you try to run Python commands from this command line utility. We recommend that you [upgrade to the latest version](#bkmk_update) if possible. 
+    If you installed an early release of SQL Server 2017, you might get errors if you try to run Python commands from this command line utility. We recommend that you [upgrade to the latest version](#bkmk_update) if possible. 
 
-+ You must ensure that the account you use to run the code has permission to connect to the database and to run Python code. The special permission EXECUTE ANY EXTERNAL SCRIPT is required for all accounts that use R or Python script. 
++ You must ensure that the account you use to run the code has permission to connect to the database and to run Python code. The special permission `EXECUTE ANY EXTERNAL SCRIPT` is required for all accounts that use R or Python script. 
 
 + You must ensure that the account has any database permissions that might be required to  read data or create new objects. 
 
-+ If your code requires packages not installed with SQL Server by default, arrange with the database administrator beforehand to have the packages installed in the Python environment that is used by the instance. SQL Server is a secured environment and there are restrictions on where packages can be installed. 
++ If your code requires packages that are not installed by default with SQL Server, arrange with the database administrator to have the packages installed in the Python environment that is used by the instance. SQL Server is a secured environment and there are restrictions on where packages can be installed. 
 
-    Ad hoc installation of packages as part of your code is not recommended, even if you have rights. Always carefully consider the security implications before installing new packages in the server library.
+    Ad hoc installation of packages as part of your code is not recommended, even if you have rights. Also, always carefully consider the security implications before installing new packages in the server library.
 
 > [!NOTE]
 > If you intend to use Python with Machine Learning Server, which supports additional compute contexts, such as Linux or Spark clusters, see these articles:
@@ -173,9 +173,13 @@ EXEC sp_execute_external_script @language = N'Python',
 @script = N'
 import os
 from pandas import DataFrame
-from revoscalepy import rx_summary, RxOptions, RxXdfData
+from revoscalepy import rx_summary
+from revoscalepy import RxXdfData
+from revoscalepy import RxOptions
+
 sample_data_path = RxOptions.get_option("sampleDataDir")
 print(sample_data_path)
+
 ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
 summary = rx_summary("ArrDelay + DayOfWeek", ds)
 print(summary)

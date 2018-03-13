@@ -23,6 +23,13 @@ ms.workload: "Active"
 
 Anyone can contribute to SQL Server documentation. This includes correcting typos, suggesting better explanations, and improving technical accuracy. This article explains how to get started with content contributions and how the process works.
 
+There are two main workflows.
+
+| Editing workflow | Good for... |
+|---|---|
+| [Edit in your browser](#githubui) | Small, quick edits of any topic. |
+| [Edit locally with tools](#tools) | More complex edits, edits involving multiple files, and frequent contributions to docs.microsoft.com. |
+
 ## <a id="githubui"></a> Edit in your browser
 
 The following steps provide an overview of making simple edits to SQL erver content in your browser. The complete process is documented in the article, [GitHub contribution workflow for minor or infrequent changes](https://docs.microsoft.com/contribute/contribute/light-workflow).
@@ -64,7 +71,7 @@ To contribute with this method, see the following articles:
 If you submit a pull request with significant changes to documentation, you will get a comment in GitHub asking you to submit an online **Contribution License Agreement (CLA)**. You must complete the online form before your pull request can be accepted.
 
 > [!TIP] 
-> This is a good option for large submissions, such as a change involving multiple articles. It is also useful for frequent contributors. For small or infrequent changes, [use the GitHub UI]()#githubui).
+> This is a good option for large submissions, such as a change involving multiple articles. It is also useful for frequent contributors. For small or infrequent changes, [use the GitHub UI](#githubui).
 
 
 ## SQL Server documentation guidance

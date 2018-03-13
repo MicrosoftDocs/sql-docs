@@ -95,10 +95,21 @@ To find the correct applies-to include for your article, use the following tips:
 - Pay attention to the naming convention. If there are x's in the name, they are usually placeholders indicating the lack of support for a service. For example, **appliesto-xx-xxxx-asdw-xxx-md.md** indicates support for only Azure SQL Data Warehouse, because only **asdw** is spelled out, whereas the other fields have x's.
 - Some includes specify a version number, such as **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Only use these when you know the feature was introduced with a specific version of SQL Server. 
 
+## Contributor resources
+
+- [Contributor guide for docs.microsoft.com](https://docs.microsoft.com/en-us/contribute/)
+- [Micrsofot Style Guide](https://docs.microsoft.com/en-us/teamblog/style-guide)
+- [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
+
+> [!TIP]
+> If you have product feedback rather than documentation feedback, [provide feedback on the SQL Server product here](https://feedback.azure.com/forums/908035-sql-server).
+
 ## Next steps
 
-Find an article, submit a change, and help the SQL Server community. Thank you!
+Explore the [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs) on GitHub.
 
-- [sql-docs repository](https://github.com/MicrosoftDocs/sql-docs)
-- [Documentation contributor guide](https://docs.microsoft.com/en-us/contribute/)
-- [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
+Find an article, submit a change, and help the SQL Server community. 
+
+Thank you!
+
+

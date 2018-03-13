@@ -51,9 +51,17 @@ Packages and interpreters are also available on several [Azure virtual machines]
 
 ## Use cases
 
-Develop on a client workstation using the same libraries and interpreters, and then deploy production code on SQL Server Machine Learning Services (In-Database). 
+**In-database analytics**
 
-Use the SQL Server computer as the *remote compute context* for jobs launched from a remote development environment.
+Developers and analysts often have code running on top of a local SQL Server instance. If you have SQL Server and an IDE such as [Visual Studio with R](https://docs.microsoft.com/visualstudio/rtvs/) or [Visual Studio with Python](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio) on the same computer, you can build, train, and test models locally in eithe language. Local access simplifies package management: as an admin, you can load additional third-party packages using built-in permissions for that role.
+
+The most common approach for in-database analytics is to use [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to run R or Python script. The tutorials listed in [Next steps](#next-steps) will get you started
+
+**Client-server configurations**
+
+From any client workstation that has an IDE, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) or the [Python libraries](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), and then write code that pushes execution (referred to as a *remote compute context*) to data and operations to a remote SQL Server. 
+
+Similarly, if you are using the Developer edition, you can build solutions on a client workstation using the same libraries and interpreters, and then deploy production code on SQL Server Machine Learning Services (In-Database). 
 
 ## Version history
 
@@ -72,7 +80,8 @@ SQL Server 2017 Machine Learning Services is the next generation of SQL Server 2
 
 Recent releases of SQL Server documentation are version-agnostic. For SQL Server Machine Learning Services, Python is only available in 2017 and later, while R support is in all versions. Unless noted otherwise, you can assume R documentation applies to both 2016 and 2017 versions.
 
-## How to get started
+<a name="next-steps"></a>
+## Next steps
 
 **Step 1:** Install and configure the software. 
 
@@ -80,8 +89,8 @@ Recent releases of SQL Server documentation are version-agnostic. For SQL Server
 
 **Step 2:** Get started with code using either one of these tutorials:
 
-+ [Tutorial: Run Python in T-SQL](/tutorials/run-python-using-t-sql.md)
-+ [Tutorial: Run R in T-SQL](/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Run Python in T-SQL](tutorials/run-python-using-t-sql.md)
++ [Tutorial: Run R in T-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 
 **Step 3:** Add your favorite R and Python packages and use them together with packages provided by Microsoft
 

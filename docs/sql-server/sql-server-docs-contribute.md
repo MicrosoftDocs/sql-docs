@@ -23,12 +23,12 @@ ms.workload: "Active"
 
 Anyone can contribute to SQL Server documentation. This includes correcting typos, suggesting better explanations, and improving technical accuracy. This article explains how to get started with content contributions and how the process works.
 
-There are two main workflows.
+There are two main workflows you can use to contribute:
 
-| Editing workflow | Good for... |
+|||
 |---|---|
-| [Edit in your browser](#githubui) | Small, quick edits of any topic. |
-| [Edit locally with tools](#tools) | More complex edits, edits involving multiple files, and frequent contributions to docs.microsoft.com. |
+| [Edit in your browser](#githubui) | Good for small, quick edits of any topic. |
+| [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple files, and frequent contributions to docs.microsoft.com. |
 
 ## <a id="githubui"></a> Edit in your browser
 
@@ -74,7 +74,7 @@ If you submit a pull request with significant changes to documentation, you will
 > This is a good option for large submissions, such as a change involving multiple articles. It is also useful for frequent contributors. For small or infrequent changes, [use the GitHub UI](#githubui).
 
 
-## SQL Server documentation guidance
+## Understanding sql-docs
 
 This section provides some additional guidance on working in the **sql-docs** repository.
 
@@ -89,8 +89,8 @@ The [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository uses severa
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | Contains all published SQL Server content. Subfolders logically organize different areas of the content. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Contains include files. These are portions of content that can be included in one or more other topics. |
-| **./media** | Contains article images are in various **media** subfolders relative to the article location. |
-| **TOC.MD** | Table of contents file in each subfolder. |
+| **./media** | There are multiple **media** subfolders in the repository that contain article images. |
+| **TOC.MD** | A table-of-contents file. Each subfolder has the option of using one TOC.MD file. |
 
 ### Applies-to includes
 

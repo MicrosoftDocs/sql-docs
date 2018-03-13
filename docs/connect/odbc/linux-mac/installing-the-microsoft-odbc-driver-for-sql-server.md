@@ -24,12 +24,12 @@ ms.workload: "Active"
 # Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This article explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS, as well as the optional Command Line Tools for SQL Server (`bcp` and `sqlcmd`) and the unixODBC Development Headers.
+This article explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS, as well as the optional Command-Line Tools for SQL Server (`bcp` and `sqlcmd`) and the unixODBC Development Headers.
 
 ## Microsoft ODBC Driver 17 for SQL Server 
 
 > [!IMPORTANT]
-> If you installed the version 17 msodbcsql package that was briefly available, you should remove it before installing the msodbcsql17 package to avoid conflicts. The msodbcsql17 package can be installed side by side with the msodbcsql version 13.x package.
+> If you installed the v17 `msodbcsql` package that was briefly available, you should remove it before installing the `msodbcsql17` package. This will avoid conflicts. The `msodbcsql17` package can be installed side by side with the `msodbcsql` v13 package.
 
 ### Debian 8 and 9
 ```
@@ -403,7 +403,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 ## Microsoft ODBC Driver 11 for SQL Server on Linux
 
-Before you can use the driver, install the unixODBC driver manager. See [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) for more information.  
+Before you can use the driver, install the unixODBC driver manager. For more information, see [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md).
 
 **Installation Steps**  
 

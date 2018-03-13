@@ -59,7 +59,7 @@ At this point, you should be guided through the rest of the process in the comme
 
 ## <a id="tools"></a> Edit locally with tools
 
-Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. 
+Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. This workflows is good for edits that are more complex or involve multiple files. It is also good for frequent contributors to docs.microsoft.com.
 
 To contribute with this method, see the following articles:
 
@@ -69,10 +69,6 @@ To contribute with this method, see the following articles:
 - [Use tools to contribute](https://docs.microsoft.com/contribute/contribute/full-workflow)
 
 If you submit a pull request with significant changes to documentation, you will get a comment in GitHub asking you to submit an online **Contribution License Agreement (CLA)**. You must complete the online form before your pull request can be accepted.
-
-> [!TIP] 
-> This is a good option for large submissions, such as a change involving multiple articles. It is also useful for frequent contributors. For small or infrequent changes, [use the GitHub UI](#githubui).
-
 
 ## Understanding sql-docs
 

@@ -21,7 +21,7 @@ ms.workload: "On Demand"
 # Install SQL Server 2016 R Server (Standalone)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to use SQL Server 2016 setup to install the standalone version of SQL Server 2016 R Server. If you have an Enterprise Edition or Software Assurance, installing the standalone R Server on a production server is free.
+This article describes how to use SQL Server 2016 setup to install the standalone version of **SQL Server 2016 R Server**. If you have an Enterprise Edition or Software Assurance, installing the standalone R Server on a production server is free.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
@@ -29,7 +29,7 @@ If you installed any previous version of the Revolution Analytics tools or packa
 
 ## Run Setup
 
-1. Run SQL Server 2016 setup. We recommend that you install Service Pack 1 or later.
+1. Start the setup wizard for SQL Server 2016. We recommend that you install Service Pack 1 or later.
 
 2. On the **Installation** tab, click **New R Server (Standalone) installation**.
     
@@ -69,19 +69,7 @@ You might upgrade to use newer versions of the R components or to change the sup
 
 2. Run the installer and follow the on-screen prompts. On the page where you select the features to install, select each instance of R Server that you want to upgrade.
 
-## <a name ="bkmk_tips"></a> Installation tips
-
-This section provides additional information related to setup.
-
-### Which version should I install?
-
-+ **Microsoft R Server** was first offered as a part of SQL Server 2016 and supports the R language. The last version of Microsoft R Server was 9.2.1.
-
-+ **Microsoft Machine Learning Server** is the next generation of R Server, renamed to reflect the support for Python. Cumulative Update 1 for SQL Server 2017 includes version 9.2.1.24 of Machine Learning Server. We recommend installing Cumulative Update 1 to get the latest Python APIs.
-
-+ **Upgrading in place**: Setup requires a SQL Server license and upgrades are typically aligned with the SQL Server release cadence. This ensures that your development tools are in synch with the version running in the SQL Server compute context. However, you can use the separate Windows-based installer to get more frequent updates, under the Modern Software Lifecycle support policy. You can also use this  installer to upgrade an instance of SQL Server 2016 or SQL Server 2017.
-
-### Default installation folders
+## Default installation folders
 
 When you install R Server using SQL Server setup, the R libraries are installed in a folder associated with the SQL Server version that you used for setup. In this folder, you will also find sample data, documentation for the R base packages, and documentation of the R tools and runtime.
 
@@ -101,68 +89,19 @@ The following table lists the paths for each installation.
 |R Services (In-Database) |SQL Server 2016 setup wizard|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 |Machine Learning Services (In-Database) |SQL Server 2017 setup wizard, with R language option|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  |
 |Machine Learning Services (In-Database) |SQL Server 2017 setup wizard, with Python language option| `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-### Development tools
+
+## Development tools
 
 A development IDE is not installed as part of setup. Additional tools are not required, as all the standard tools are included that would be provided with a distribution of R or Python.
 
-We recommend that you try the new release of [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]. Visual Studio supports both R and Python, as well as database development tools, connectivity with SQL Server, and BI tools. However, you can use any preferred development environment, including RStudio.
-
-## Troubleshooting
-
-This section lists some common issues to be aware of when installing SQL Server R Server (Standalone).
-
-### Incompatible version of R Client and R Server
-
-If you install Microsoft R Client and use it to run R in a remote SQL Server compute context, you might get an  error like this:
-
-*You are running version 9.0.0 of Microsoft R client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
-
-In SQL Server 2016, it was required that the version of R that was running in SQL Server R Services be exactly the same as the libraries in Microsoft R Client. That requirement has been removed in later versions. However, we recommend that you always get the latest versions of the machine learning components, and install all service packs. 
-
-If you have an earlier version of Microsoft R Server and need to ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262).
-
-### Installing Microsoft R Server on an instance of SQL Server installed on Windows Core
-
-In the RTM version of SQL Server 2016, there was a known issue when adding Microsoft R Server to an instance on Windows Server Core edition. This has been fixed.
-
-If you encounter this issue, you can apply the fix described in [KB3164398](https://support.microsoft.com/kb/3164398) to add the R feature to the existing instance on Windows Server Core.   For more information, see [Can't install Microsoft R Server Standalone on a Windows Server Core operating system](https://support.microsoft.com/kb/3168691).
-
-###  <a name="bkmk_Uninstall"></a> Upgrading from an older version of Microsoft R Server
-
-If you installed a pre-release version of Microsoft R Server, you must uninstall it before you can upgrade to a newer version.
-
-**To uninstall R Server (Standalone)**
-
-1.  In **Control Panel**, click **Add/Remove Programs**, and select `Microsoft SQL Server 2016 <version number>`.
-
-2.  In the dialog box with options to **Add**, **Repair**, or **Remove** components, select **Remove**.
+We recommend that you try the new release of [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] or [Python for Visual Studio](https://docs.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio). Visual Studio supports both R and Python, as well as database development tools, connectivity with SQL Server, and BI tools. However, you can use any preferred development environment, including RStudio.
   
-3.  On the **Select Features** page, under **Shared Features**, select **R Server (Standalone)**. Click **Next**, and then click **Finish** to uninstall just the selected components.
+## Get Help
 
-### Installation fails with error "Only one Revolution Enterprise product can be installed at a time."
+Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
 
-You might encounter this error if you have an older installation of the Revolution Analytics products, or a pre-release version of SQL Server R Services. You must uninstall any previous versions before you can install a newer version of Microsoft R Server. Side-by-side installation with other versions of the Revolution Enterprise tools is not supported.
+* [Upgrade and installation FAQ - Machine Learning Services](upgrade-and-installation-faq-sql-server-r-services.md)
 
-However, side-by-side installs are supported when using R Server Standalone with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] or SQL Server 2016.
+To check the installation status of the instance and fix common issues, try these custom reports.
 
-### Unable to uninstall older components
-
-If you have problems removing an older version, you might need to edit the registry to remove related keys.
-
-> [!IMPORTANT]
-> This issue applies only if you installed a pre-release version of Microsoft R Server or a CTP version of SQL Server 2016 R Services.
-  
-1. Open the Windows Registry, and locate this key: `HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall`.
-2. Delete any of the following entries if present, and if the key contains only the value `sEstimatedSize2`:
-  
-    -   E0B2C29E-B8FC-490B-A043-2CAE75634972        (for 8.0.2)
-  
-    -   46695879-954E-4072-9D32-1CC84D4158F4        (for 8.0.1)
-  
-    -   2DF16DF8-A2DB-4EC6-808B-CB5A302DA91B        (for 8.0.0)
-  
-    -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (for 7.5.0)
-  
-## See also
-
-[Machine Learning Server (Standalone)](../../advanced-analytics/r/r-server-standalone.md)
+* [Custom reports for SQL Server R Services](\r\monitor-r-services-using-custom-reports-in-management-studio.md)

@@ -23,6 +23,8 @@ This article explains how to install the machine learning component by running t
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
+SQL Server 2017 is required. If you have SQL Server 2016, please install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) instead.
+
 A database engine instance is required.
 
 Do not install Machine Learning Services on a failover cluster. The security mechanism used for isolating R and Python processes is not compatible with a Windows Server failover cluster environment.
@@ -31,13 +33,13 @@ Do not install Machine Learning Services on a domain controller. The Machine Lea
 
 Do not install the **Machine Learning Server (Standalone)** in **Shared Features** on the same computer running an in-database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
 
-Side-by-side installation with other versions of R and Python are possible because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. However, running code that uses Python on the SQL Server computer outside SQL Server can lead to various problems:
+Side-by-side installation with other versions of R and Python are possible because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. However, running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
     
-    - You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
-    - Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
+  + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
+  + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
   
 > [!IMPORTANT]
-> After setup is complete, be sure to complete the additional post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run Python jobs on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
+> After setup is complete, be sure to complete the additional post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run R and Python jobs on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
 
 ## Run Setup
 
@@ -260,7 +262,7 @@ You might create a machine learning solution on a data science client computer. 
 
 + For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
-## Additional optimizations
+## Suggested optimizations
 
 Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models.
 
@@ -311,3 +313,14 @@ See the following tutorials for some examples of how you can use Python with SQL
 [Using Python in T-SQL](../tutorials/run-python-using-t-sql.md)
 
 [Create a Python model using revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
+
+### Get Help
+
+Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
+
+* [Upgrade and installation FAQ - Machine Learning Services](upgrade-and-installation-faq-sql-server-r-services.md)
+
+To check the installation status of the instance and fix common issues, try these custom reports.
+
+* [Custom reports for SQL Server R Services](\r\monitor-r-services-using-custom-reports-in-management-studio.md)
+

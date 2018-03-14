@@ -26,31 +26,33 @@ ms.workload: "Active"
 # Install SQL Server 2016 R Services (In-Database) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to install and configure **SQL Server 2016 R Services (In-Database)**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server. Requires the database engine.
-
-> [!div class="checklist"]
-> * Install database engine and R Services features
-> * Required post-installation steps: enable R Services, and restart
-> * Optional post-installation steps: add firewall rules, add users, change or configure service accounts, set up a remote data science client
+This article explains how to install and configure **SQL Server 2016 R Services (In-Database)**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ R Services in-database requires SQL Server 2016. If you have SQL Server 2017, please install [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) instead.
+SQL Server 2016 is required. If you have SQL Server 2016, please install [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) instead.
 
-+ If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Side-by-side installation is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+A database engine instance is required.
 
-+ You cannot install SQL Server 2016 R Services on a domain controller. The R Services portion of setup will fail.
+Do not install R Services on a failover cluster. The security mechanism used for isolating R processes is not compatible with a Windows Server failover cluster environment.
 
-+ You cannot install SQL Server 2016 R Services on a failover cluster. The security mechanism used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can do either of the following:
-    * Use replication to copy necessary tables to a SQL Server instance with R Services.
-    * Install R Services on a standalone computer that uses AlwaysOn and is part of an availability group.
+Do not install R Services on a domain controller. The R Services portion of setup will fail.
 
-+ The R Services framework requires additional configuration after setup is complete. The exact steps depend on your organization and security policies, server configuration, and intended users. We recommend that you review all steps and determine additional configuration that might be required in your environment.
+Do not install the **R Server (Standalone)** in **Shared Features** on the same computer running an in-database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
 
-## <a name="bkmk2016top"></a> ## Run Setup
+Side-by-side installation with other versions of R and Python are possible because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. However, running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
+    
+  + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
+  + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
+  
+If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Running older and newer versions of RevoScaleR and other proprietary packages is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
+> [!IMPORTANT]
+> After setup is complete, be sure to complete the additional post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run R jobs on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
 
-1. Run the SQL Server setup wizard.
+## <a name="bkmk2016top"></a>Run Setup
+
+1. Start the setup wizard for SQL Server 2016.
 
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
@@ -81,9 +83,6 @@ This article describes how to install and configure **SQL Server 2016 R Services
    + R Services (In-Database)
 
 7. When installation is complete, restart your computer.
-
-
-
 
 ###  <a name="bkmk_enableFeature"></a>Required post-installation step
 
@@ -291,9 +290,9 @@ To get started with some simple examples, and learn the basics of how R works wi
 
 To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
 
-### Troubleshooting
+## Get Help
 
-Run into trouble? Trying to upgrade? For answers to common questions and known issues, see the following article:
+Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
 
 * [Upgrade and installation FAQ - Machine Learning Services](upgrade-and-installation-faq-sql-server-r-services.md)
 

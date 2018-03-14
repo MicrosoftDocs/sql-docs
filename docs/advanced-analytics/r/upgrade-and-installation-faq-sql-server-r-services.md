@@ -1,6 +1,6 @@
 ---
 title: "Upgrade and installation FAQ for SQL Server Machine Learning | Microsoft Docs"
-ms.date: "10/31/2017"
+ms.date: "03/15/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -10,14 +10,14 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
+ms.assetid: 
 caps.latest.revision: 59
 author: "jeannt"
 ms.author: "jeannt"
 manager: "cgronlund"
 ms.workload: "On Demand"
 ---
-# Upgrade and installation FAQ for SQL Server Machine Learning
+# Upgrade and installation FAQ for SQL Server Machine Learning or R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades.
@@ -27,19 +27,7 @@ This topic provides answers to some common questions about installation of machi
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
 
-## Performing setup for the first time
-
-Follow the procedures for setting up [!INCLUDE[sscurrent_md](../../includes/sscurrent_md.md)] and the R components, as described here: 
-
-+ [Set up SQL Server R Services or Machine Learning Services In-Database](../r/set-up-sql-server-r-services-in-database.md)
-+ [Set up SQL Server 2017 with Python](../python/setup-python-machine-learning-services.md)
-+ [Create a standalone R Server](../r/create-a-standalone-r-server.md)
-
-> [!IMPORTANT]
-> 
-> After you have installed SQL Server and the machine learning features, before you can use R or Python scripts, you must complete some additional configuration steps. That is because the external script execution feature is not enabled by default.
-
-### Requirements and restrictions
+## Requirements and restrictions on older versions
 
 Depending on the build of SQL Server that you are installing, some of the following limitations might apply:
 
@@ -55,11 +43,22 @@ Depending on the build of SQL Server that you are installing, some of the follow
 
 - Disable virus scanning before beginning setup. After setup is completed, we recommend suspending virus scanning on the folders used by [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. Preferably, suspend scanning on the entire [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] tree.
 
-### Licensing agreements for unattended installs
+ - Installing Microsoft R Server on an instance of SQL Server installed on Windows Core. In the RTM version of SQL Server 2016, there was a known issue when adding Microsoft R Server to an instance on Windows Server Core edition. This has been fixed. If you encounter this issue, you can apply the fix described in [KB3164398](https://support.microsoft.com/kb/3164398) to add the R feature to the existing instance on Windows Server Core. For more information, see [Can't install Microsoft R Server Standalone on a Windows Server Core operating system](https://support.microsoft.com/kb/3168691).
 
-If you use the command line to upgrade an instance of SQL Server, make sure that the command line includes both the [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] licensing agreement parameter, and the new license agreement parameters for R and Python.
 
-### Offline installation of machine learning components for a localized version of SQL Server
+##  <a name="bkmk_Uninstall"></a> Uninstall prior to upgrading from an older version of Microsoft R Server
+
+If you installed a pre-release version of Microsoft R Server, you must uninstall it before you can upgrade to a newer version.
+
+**To uninstall R Server (Standalone)**
+
+1.  In **Control Panel**, click **Add/Remove Programs**, and select `Microsoft SQL Server 2016 <version number>`.
+
+2.  In the dialog box with options to **Add**, **Repair**, or **Remove** components, select **Remove**.
+  
+3.  On the **Select Features** page, under **Shared Features**, select **R Server (Standalone)**. Click **Next**, and then click **Finish** to uninstall just the selected components.
+
+## Offline installation of machine learning components for a localized version of SQL Server
 
 When you install [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] machine learning components on a computer that does not have internet access, you must take some additional steps:
 
@@ -69,13 +68,9 @@ When you install [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] machine 
 
 For more information, see [Installing machine learning components without internet access](../r/installing-ml-components-without-internet-access.md).
 
-## Post-installation configuration
+## Licensing agreements for unattended installs
 
-To use machine learning with R or Python, some additional configuration is required after running SQL Server setup. The precise steps that are required depend on the security level of the server, and how you have configured your SQL Server instance and databases.
-
-Review all options in the list of post-installation instructions to see which additional steps might be required in your environment.
-
-+ [Set up SQL Server machine learning in database](set-up-sql-server-r-services-in-database.md) 
+If you use the command line to upgrade an instance of SQL Server, make sure that the command line includes both the [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] licensing agreement parameter, and the new license agreement parameters for R and Python.
 
 ## Upgrades or uninstallation
 
@@ -181,6 +176,41 @@ If this procedure fails to resolve the problem, try the following workaround:
 4. Run SQL Server setup, and add the R Services (In-Database) feature only. Do not select **R Server (Standalone)**.
 
 Generally, we recommend that you do not install both R Services (In-Database) and R Server (Standalone) on the same computer. However, assuming the server has sufficient capacity, you might find R Server Standalone might be useful as a development tool. Another possible scenario is that you need to use the operationalization features of R Server, but also want to access SQL Server data without data movement.
+
+## Incompatible version of R Client and R Server
+
+If you install Microsoft R Client and use it to run R in a remote SQL Server compute context, you might get an  error like this:
+
+*You are running version 9.0.0 of Microsoft R client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
+
+In SQL Server 2016, it was required that the version of R that was running in SQL Server R Services be exactly the same as the libraries in Microsoft R Client. That requirement has been removed in later versions. However, we recommend that you always get the latest versions of the machine learning components, and install all service packs. 
+
+If you have an earlier version of Microsoft R Server and need to ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262).
+
+
+## Installation fails with error "Only one Revolution Enterprise product can be installed at a time."
+
+You might encounter this error if you have an older installation of the Revolution Analytics products, or a pre-release version of SQL Server R Services. You must uninstall any previous versions before you can install a newer version of Microsoft R Server. Side-by-side installation with other versions of the Revolution Enterprise tools is not supported.
+
+However, side-by-side installs are supported when using R Server Standalone with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] or SQL Server 2016.
+
+## Unable to uninstall older components
+
+If you have problems removing an older version, you might need to edit the registry to remove related keys.
+
+> [!IMPORTANT]
+> This issue applies only if you installed a pre-release version of Microsoft R Server or a CTP version of SQL Server 2016 R Services.
+  
+1. Open the Windows Registry, and locate this key: `HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall`.
+2. Delete any of the following entries if present, and if the key contains only the value `sEstimatedSize2`:
+  
+    -   E0B2C29E-B8FC-490B-A043-2CAE75634972        (for 8.0.2)
+  
+    -   46695879-954E-4072-9D32-1CC84D4158F4        (for 8.0.1)
+  
+    -   2DF16DF8-A2DB-4EC6-808B-CB5A302DA91B        (for 8.0.0)
+  
+    -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (for 7.5.0)
 
 ## See also
 

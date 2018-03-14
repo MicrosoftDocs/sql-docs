@@ -37,7 +37,7 @@ If you don't have access to a SQL Server, select your platform from the followin
 
     - Server type: Database Engine (should be selected by default)
     - Authentication: Windows Authentication
-    - Options: you can also modify your connection options, such as the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values. 
+    - Options: you can also modify your connection options, such as the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values 
    
    ![Connection](media/connect-query-sql-server/connection.png)
 
@@ -80,11 +80,11 @@ After the query completes, the new **TutorialDB** appears in the list of databas
 ## Create a Table
 The query editor is still connected to the *master* database, but you want to create a table in the *TutorialDB*. 
 
-1. Change the connection context of your query from the master to **TutorialDB** by selecting the database you want from the drop-down on the top left. 
+1. Change the connection context of your query from the master database to **TutorialDB** by selecting the database you want from the drop-down on the top left. 
 
    ![Change database](media/connect-query-sql-server/changedb.png)
 
-1. Paste the following snippet into the query window, highlight it, and hit **Execute**: 
+1. Paste the following snippet into the query window, highlight it, and hit **Execute** (or F5 on your keyboard): 
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -102,7 +102,7 @@ The query editor is still connected to the *master* database, but you want to cr
    );
    GO
    ```
-After the query completes, the new **Customers** table appears in the list of tables. You might need to right-click the **TutorialDB > Tables** node and select **Refresh**.
+After the query completes, the new **Customers** table appears in the list of tables. You might need to right-click the **TutorialDB > Tables** node in **Object Explorer** and select **Refresh**.
 
 ## Insert rows
 1. Paste the following snippet into the query window and **Execute**: 
@@ -131,7 +131,7 @@ After the query completes, the new **Customers** table appears in the list of ta
    ![Query Results](media/connect-query-sql-server/queryresults.png)
 
 
-1.  You can modify the way results are presented by selecting one of these options
+1.  You can modify the way results are presented by selecting one of these options:
 
      ![results](media/connect-query-sql-server/results.png)
 
@@ -148,7 +148,7 @@ You can find information about the connection properties under the results of yo
     In this image, the results are displayed as text as an example. 
 
 ## Change the server the query window is connected to
-If you need to quickly change the server your query is connected to, you can do so within the query window.
+If you need to quickly change the server your query window is connected to, you can do so within the query window.
 1. Right click within the query window > Connection > Change connection
 1. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to. 
     - Note that this does not change which server your **Object Explorer** is connected to, just the current query window. 

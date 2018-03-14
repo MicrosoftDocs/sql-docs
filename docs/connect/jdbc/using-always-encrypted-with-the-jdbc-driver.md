@@ -303,7 +303,7 @@ public class AlwaysEncrypted
 
                 /**
                  * Create column encryption key
-                 * For more details on the syntax refer:
+                 * For more details on the syntax, see:
                  * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql
                  * Encrypted column encryption key first needs to be converted into varbinary_literal from bytes, 
                  * for which DatatypeConverter.printHexBinary is used

@@ -91,7 +91,7 @@ The [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository uses severa
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | Contains all published SQL Server content. Subfolders logically organize different areas of the content. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Contains include files. These files are blocks of content that can be included in one or more other topics. |
-| **./media** | There are multiple **media** subfolders in the repository that contain article images. |
+| **./media** | Each folder can have one **media** subfolder for article images. The **media** folder in turn has subfolders with the same name as the topics that the image appears in. Images should be .png files with all lower-case letters and no spaces. |
 | **TOC.MD** | A table-of-contents file. Each subfolder has the option of using one TOC.MD file. |
 
 ### Applies-to includes

@@ -622,11 +622,11 @@ To control the performance impact of retrieving encryption metadata for paramete
 
 To control the Always Encrypted behavior of individual queries, you need to configure individual statement objects by passing an Enum, SQLServerStatementColumnEncryptionSetting, which specifies how data will be sent and received when reading and writing encrypted columns for that specific statement. Here are some useful guidelines:
 - If most queries a client application sends over a database connection access encrypted columns, use these guidelines:
-    - Set the columnEncryptionSetting connection string keyword to Enabled.
+    - Set the **columnEncryptionSetting** connection string keyword to **Enabled**.
     - Set SQLServerStatementColumnEncryptionSetting.Disabled for individual queries that do not access any encrypted columns. This setting will disable both calling sys.sp_describe_parameter_encryption as well as an attempt to decrypt any values in the result set.
     - Set SQLServerStatementColumnEncryptionSetting.ResultSet for individual queries that do not have any parameters requiring encryption but retrieve data from encrypted columns. This setting will disable calling sys.sp_describe_parameter_encryption and parameter encryption. The query will be able to decrypt the results from encryption columns.
 - If most queries a client application sends over a database connection do not access encrypted columns, use these guidelines:
-    - Set the columnEncryptionSetting connection string keyword to Disabled.
+    - Set the **columnEncryptionSetting** connection string keyword to **Disabled**.
     - Set SQLServerStatementColumnEncryptionSetting.Enabled for individual queries that have any parameters that need to be encrypted. This setting will enable both calling sys.sp_describe_parameter_encryption as well as the decryption of any query results retrieved from encrypted columns.
     - Set SQLServerStatementColumnEncryptionSetting.ResultSet for queries that do not have any parameters requiring encryption but retrieve data from encrypted columns. This setting will disable calling sys.sp_describe_parameter_encryption and parameter encryption. The query will be able to decrypt the results from encryption columns.
 

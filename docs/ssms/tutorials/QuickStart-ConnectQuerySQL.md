@@ -1,9 +1,5 @@
 ---
-<!-- All articles need the metadata header along with the required values for reporting.</br>
-Detailed instructions for completing this template are available in the </br>
-Contributor Guide:https://review.docs.microsoft.com/en-us/help/contribute/mock-template-quickstart?branch=master -->
-
-Title: "Quickstart: Connect and Query SQL Server using SQL Server Management Studio"
+<!-- Title: "Quickstart: Connect and Query SQL Server using SQL Server Management Studio"
 description: A Quickstart for connecting to SQL Server using SQL Server Management Studio and running basic T-SQL queries.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -13,7 +9,9 @@ ms.topic: Quickstart
 ms.suite:"sql"
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: craigg -->
+
+
 ---
 
 # Quickstart: Connect and query SQL Server using SQL Server Management Studio
@@ -35,19 +33,21 @@ If you don't have access to a SQL Server, select your platform from the followin
 2. The first time  you run SSMS the **Connect to Server** dialog opens. 
     a. If the **Connection** dialog doesn't open, Object Explorer > Connect button / connect icon > Database Engine.
 
- ![Connect in Object Explorer](media/QuickStartConnect/ConnectObjExp.PNG)
+     ![Connect in Object Explorer](media/QuickStartConnect/ConnectObjExp.PNG)
 
 3. In the **Connect to Server** dialog box, select your connection options and hit connect. This article uses *Windows Authentication* but *SQL Login* is also supported. The remaining fields should be as follows:
-    a. Server type: Database Engine (should be selected by default)
-    b. Authentication: Windows Authentication
-    c. Options: you can also modify your connection options, such as the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values. 
+
+    - Server type: Database Engine (should be selected by default)
+    - Authentication: Windows Authentication
+    - Options: you can also modify your connection options, such as the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values. 
    
    ![Connection](media/QuickStartConnect/Connection.PNG)
 
 4. Once the fields have been filled out, hit **Connect**. 
 
 5. You are now connected to your SQL Server, and  you can verify this by exploring the objects available within Object Explorer: 
-  ![Successful Connection](media/QuickStartConnect/SuccessfulConnection.PNG)
+
+   ![Successful Connection](media/QuickStartConnect/SuccessfulConnection.PNG)
 
 
 ## Create a database
@@ -73,7 +73,7 @@ The following steps create a database named TutorialDB.
    GO
    ```
 
-3. To execute the query, highlight the text you want to run and hit Execute (or F5 on your keyboard). If you want to execute everything in the window at once, then hit Execute without highlighting anything.  
+3. To execute the query, hit **Execute** (or F5 on your keyboard). If you want to execute a portion of the text, highlight that portion and then hit **Execute**.  Executing without highlighting anything will run everything in the query window. 
    ![Execute Query](media/QuickStartConnect/Execute.PNG)
 
    After the query completes, the new **TutorialDB** appears in the list of databases. If you don’t see it, right-click the Databases node and select **Refresh**.  
@@ -131,24 +131,25 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 
 3. You can modify the way results are presented by selecting one of these options
-    a. By default, the results will be in **Grid**, which shows a table and is the middle option
-    b. The first option will display your results via text
-    c. The third option will save your results to a file
+- By default, the results will be in **Grid**, which shows a table and is the middle option
+- The first option will display your results via text
+- The third option will save your results to a file
 
 ## Verify your query window connection properties
 You can find information about the connection properties under the results of your query. 
 1. After running the aforementioned query from the step above, review the connection properties at the bottom of the query window.   
-    a. You can determine which server and database you're connected to, and the user  you're logged in with. 
-    b. You can also see the query duration and the number of rows returned by the query executed earlier. 
+- You can determine which server and database you're connected to, and the user  you're logged in with.
+- You can also see the query duration and the number of rows returned by the query executed earlier.
     ![Connection Properties](media/QuickStartConnect/ConnectionProperties.PNG)  
-    In this image, the results are displayed as text for educational purposes. 
+    In this image, the results are displayed as text as an example. 
 
 ## Change the server the query window is connected to
 If you need to quickly change the server your query is connected to, you can do so within the query window.
 1. Right click within the query window > Connection > Change connection
-2. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to
-- Note that this does not change which server your **Object Explorer** is connected to, just the current query window. 
-    ![Change Connection](media/QuickStartConnect/ChangeConnection.png)
+2. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to. 
+    - Note that this does not change which server your **Object Explorer** is connected to, just the current query window. 
+
+  ![Change Connection](media/QuickStartConnect/ChangeConnection.png)
 
 
 Advance to the next article to learn more

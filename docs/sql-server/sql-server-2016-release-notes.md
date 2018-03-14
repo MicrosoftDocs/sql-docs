@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
-ms.date: "03/12/2018"
+ms.date: "03/14/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -74,7 +74,8 @@ The SQL Server 2016 SP1 installation may require reboot post installation. As a 
 
 ### Download pages and more information
 
-- [SQL Server 2016 SP1 download page](https://www.microsoft.com/download/details.aspx?id=54276)
+- [Download Service Pack 1 for Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=54276)
+- [SQL Server 2016 Service Pack 1 (SP1) Released](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
 - [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545)
 - ![info_tip](../sql-server/media/info-tip.png) [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
 

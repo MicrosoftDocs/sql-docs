@@ -1,6 +1,6 @@
 ---
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
-ms.date: "03/12/2018"
+ms.date: "03/14/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""

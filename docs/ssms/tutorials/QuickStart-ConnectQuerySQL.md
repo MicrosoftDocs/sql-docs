@@ -53,14 +53,9 @@ If you don't have access to a SQL Server, select your platform from the followin
 ## Create a database
 The following steps create a database named TutorialDB. 
 
-1. Right-click your server in **Object Explorer** and select **New Query**. 
-
-
+1. Right-click your server in **Object Explorer** and select **New Query**: 
    ![New Query](media/QuickStartConnect/NewQuery.PNG)
-
 1. Paste the following snippet into the query window: 
-
-
    ```sql
    USE master
    GO
@@ -75,10 +70,8 @@ The following steps create a database named TutorialDB.
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
-
 1. To execute the query, hit **Execute** (or F5 on your keyboard). If you want to execute a portion of the text, highlight that portion and then hit **Execute**.  Executing without highlighting anything will run everything in the query window. 
    ![Execute Query](media/QuickStartConnect/Execute.PNG)
-
    After the query completes, the new **TutorialDB** appears in the list of databases. If you don’t see it, right-click the Databases node and select **Refresh**.  
 
 ## Create a Table

@@ -30,12 +30,12 @@ If you don't have access to a SQL Server, select your platform from the followin
 ## Connect to a SQL Server
 
 1. Start SQL Server Management Studio (SSMS)
-2. The first time  you run SSMS the **Connect to Server** dialog opens. 
-    a. If the **Connection** dialog doesn't open, Object Explorer > Connect button / connect icon > Database Engine.
+1. The first time  you run SSMS the **Connect to Server** dialog opens. 
+      - If the **Connection** dialog doesn't open, Object Explorer > Connect button / connect icon > Database Engine.
 
      ![Connect in Object Explorer](media/QuickStartConnect/ConnectObjExp.PNG)
 
-3. In the **Connect to Server** dialog box, select your connection options and hit connect. This article uses *Windows Authentication* but *SQL Login* is also supported. The remaining fields should be as follows:
+1. In the **Connect to Server** dialog box, select your connection options and hit connect. This article uses *Windows Authentication* but *SQL Login* is also supported. The remaining fields should be as follows:
 
     - Server type: Database Engine (should be selected by default)
     - Authentication: Windows Authentication
@@ -43,9 +43,9 @@ If you don't have access to a SQL Server, select your platform from the followin
    
    ![Connection](media/QuickStartConnect/Connection.PNG)
 
-4. Once the fields have been filled out, hit **Connect**. 
+1. Once the fields have been filled out, hit **Connect**. 
 
-5. You are now connected to your SQL Server, and  you can verify this by exploring the objects available within Object Explorer: 
+1. You are now connected to your SQL Server, and  you can verify this by exploring the objects available within Object Explorer: 
 
    ![Successful Connection](media/QuickStartConnect/SuccessfulConnection.PNG)
 
@@ -55,7 +55,9 @@ The following steps create a database named TutorialDB.
 
 1. Right-click your server in **Object Explorer** and select **New Query**. 
 
+
    ![New Query](media/QuickStartConnect/NewQuery.PNG)
+
 1. Paste the following snippet into the query window: 
 
 
@@ -74,7 +76,7 @@ The following steps create a database named TutorialDB.
    GO
    ```
 
-3. To execute the query, hit **Execute** (or F5 on your keyboard). If you want to execute a portion of the text, highlight that portion and then hit **Execute**.  Executing without highlighting anything will run everything in the query window. 
+1. To execute the query, hit **Execute** (or F5 on your keyboard). If you want to execute a portion of the text, highlight that portion and then hit **Execute**.  Executing without highlighting anything will run everything in the query window. 
    ![Execute Query](media/QuickStartConnect/Execute.PNG)
 
    After the query completes, the new **TutorialDB** appears in the list of databases. If you don’t see it, right-click the Databases node and select **Refresh**.  
@@ -127,11 +129,11 @@ After the query completes, the new **Customers** table appears in the list of ta
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
-2. The results of the query are displayed under the area where text was entered: 
+1. The results of the query are displayed under the area where text was entered: 
    ![Query Results](media/QuickStartConnect/QueryResults.PNG)
 
 
-3. You can modify the way results are presented by selecting one of these options
+1.  You can modify the way results are presented by selecting one of these options
 - By default, the results will be in **Grid**, which shows a table and is the middle option
 - The first option will display your results via text
 - The third option will save your results to a file
@@ -147,7 +149,7 @@ You can find information about the connection properties under the results of yo
 ## Change the server the query window is connected to
 If you need to quickly change the server your query is connected to, you can do so within the query window.
 1. Right click within the query window > Connection > Change connection
-2. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to. 
+1. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to. 
     - Note that this does not change which server your **Object Explorer** is connected to, just the current query window. 
 
   ![Change Connection](media/QuickStartConnect/ChangeConnection.png)

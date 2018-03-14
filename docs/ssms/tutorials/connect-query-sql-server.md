@@ -31,7 +31,7 @@ If you don't have access to a SQL Server, select your platform from the followin
 1. The first time  you run SSMS the **Connect to Server** dialog opens. 
       - If the **Connection** dialog doesn't open, Object Explorer > Connect button / connect icon > Database Engine.
 
-     ![Connect in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
+        ![Connect in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
 
 1. In the **Connect to Server** dialog box, select your connection options and hit connect. This article uses *Windows Authentication* but *SQL Login* is also supported. The remaining fields should be as follows:
 
@@ -39,7 +39,7 @@ If you don't have access to a SQL Server, select your platform from the followin
     - Authentication: Windows Authentication
     - Options: you can also modify your connection options, such as the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values 
    
-   ![Connection](media/connect-query-sql-server/connection.png)
+      ![Connection](media/connect-query-sql-server/connection.png)
 
 1. Once the fields have been filled out, hit **Connect**. 
 
@@ -105,7 +105,7 @@ The query editor is still connected to the *master* database, but you want to cr
 After the query completes, the new **Customers** table appears in the list of tables in Object Explorer. You might need to right-click the **TutorialDB > Tables** node in **Object Explorer** and select **Refresh**.
 
 ## Insert rows
-1. Paste the following snippet into the query window and **Execute**: 
+- Paste the following snippet into the query window and **Execute**: 
 
 
    ```sql
@@ -141,7 +141,7 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 ## Verify your query window connection properties
 You can find information about the connection properties under the results of your query. 
-1. After running the aforementioned query from the step above, review the connection properties at the bottom of the query window.   
+- After running the aforementioned query from the step above, review the connection properties at the bottom of the query window.
     - You can determine which server and database you're connected to, and the user  you're logged in with.
     - You can also see the query duration and the number of rows returned by the query executed earlier.
     ![Connection Properties](media/connect-query-sql-server/connectionproperties.png)  
@@ -151,9 +151,9 @@ You can find information about the connection properties under the results of yo
 If you need to quickly change the server your query window is connected to, you can do so within the query window.
 1. Right click within the query window > Connection > Change connection.
 1. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to. 
-    - Note that this does not change which server your **Object Explorer** is connected to, just the current query window. 
-
-  ![Change Connection](media/connect-query-sql-server/changeconnection.png)
+ 
+   ![Change Connection](media/connect-query-sql-server/changeconnection.png)
+   - Note that this does not change which server your **Object Explorer** is connected to, just the current query window. 
 
 
 

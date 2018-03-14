@@ -52,7 +52,7 @@ The Microsoft JDBC Driver for SQL Server comes with the following built-in colum
 
 For the pre-registered keystore providers, you do not need to make any application code changes to use these providers but note the following items:
 
-- You (or your DBA) need to make sure the provider name configured in the column master key metadata is correct and the column master key path complies with the key path format that is valid for a given provider. It is recommended that you configure the keys using tools, such as SQL Server Management Studio, which automatically generate the valid provider names and key paths when issuing the CREATE COLUMN MASTER KEY (Transact-SQL) statement.
+- You (or your DBA) need to make sure the provider name configured in the column master key metadata is correct and the column master key path complies with the key path format that is valid for a given provider. It is recommended that you configure the keys using tools, such as SQL Server Management Studio, which automatically generates the valid provider names and key paths when issuing the CREATE COLUMN MASTER KEY (Transact-SQL) statement.
 - Ensure your application can access the key in the keystore. This task may involve granting your application access to the key and/or the keystore, depending on the keystore, or performing other keystore-specific configuration steps. For example, for using the SQLServerColumnEncryptionJavaKeyStoreProvider, you need to provide the location and the password of the keystore in the connection properties. 
 
 All of these keystore providers are described in more detail in the sections that follow. You only need to implement one keystore provider to use Always Encrypted.

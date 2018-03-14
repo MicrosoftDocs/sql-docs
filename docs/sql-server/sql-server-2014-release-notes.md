@@ -24,18 +24,16 @@ This Release Notes document describes known issues that you should read about be
 
 ## SQL Server 2014 Service Pack 2 (SP2)
 
-SQL Server 2014 SP2 contains rollups of released hotfixes SQL Server 2014 SP1 CU7. It contains improvements centered around performance, scalability aIt contains improvements centered around performance, scalability, and diagnostics based on the feedback from customers and SQL community. and diagnostics based on the feedback from customers and SQL community. I
-
-Following is the detailed list of improvements introduced in SQL 2014 SP2.
+SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP1 CU7. It contains improvements centered around performance, scalability, and diagnostics based on the feedback from customers and the SQL community.
 
 ### Performance and Scalability Improvements in SP2
 
 |Feature|Description|For more information|
 |---|---|---|
-|Automatic Soft NUMA partitioning|You can automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
+|Automatic Soft NUMA partitioning|You can automatically configure Soft NUMA on systems reporting 8 or more CPUs per NUMA node.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |Buffer Pool Extension|Enables SQL Server Buffer Pool to scale beyond 8 TB.|[Buffer Pool Extension](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
 |Dynamic Memory Object Scaling| Dynamically partition memory object based on number of nodes and cores. This enhancement eliminates the need of Trace Flag 8048 post SQL 2014 SP2.|[Dynamic Memory Object Scaling](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)|
-|MAXDOP hint for DBCC CHECK* commands|This improvement addresses one of the connect feedback from customers and is useful to run DBCC CHECKDB with MAXDOP setting other than the sp_configure value.|[Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
+|MAXDOP hint for DBCC CHECK* commands|This improvement is useful to run DBCC CHECKDB with a MAXDOP setting other than the sp_configure value.|[Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
 |SOS_RWLock spinlock improvement|Removes the need for spinlock for SOS_RWLock and instead uses lock-free techniques similar to in-memory OLTP. |[SOS_RWLock Redesign](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
 |Spatial Native Implementation|Significant improvement in spatial query performance.|[Spatial performance improvements in SQL Server 2012 and 2014](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
@@ -54,13 +52,13 @@ Following is the detailed list of improvements introduced in SQL 2014 SP2.
 |Memory Grants - Handling issues|You can leverage diagnostic hints while running queries by capping their memory grants to prevent memory contention.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
 |Query execution lightweight per-operator profiling |Optimizes collecting per-operator query execution statistics such as actual number of rows.|[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
 |Query execution diagnostics|Actual rows read are now  reported in the query execution plans to help improve query performance troubleshooting.|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
-|Query execution diagnostics for tempdb spill|Hash Warning and Sort Warnings now have additional columns to track physical I/O statistics, memory used and rows affected. |[Improve temptdb spill diagnostics](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
+|Query execution diagnostics for tempdb spill|Hash Warning and Sort Warnings now have additional columns to track physical I/O statistics, memory used, and rows affected. |[Improve temptdb spill diagnostics](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Tempdb supportability |Use a new Errorlog message for the number of tempdb files, and tempdb data file changes, at server startup.|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
 
 
-In addition:
-- The Xevent callstack now include modules names and offset instead of absolute addresses.
-- Better correlation between diagnostics XE and DMVs – Query_hash and query_plan_hash are used for identifying a query uniquely. DMV defines them as varbinary(8), while XEvent defines them as UINT64. Since SQL server does not have "unsigned bigint", casting does not always work. This improvement introduces new XEvent action/filter columns equivalent to query_hash and query_plan_hash except when they are defined as INT64. This helps correlating queries between XE and DMVs.
+In addition, note the following fixes:
+- The Xevent call stack now include modules names and offset instead of absolute addresses.
+- Better correlation between diagnostics XE and DMVs – Query_hash and query_plan_hash are used for identifying a query uniquely. DMV defines them as varbinary(8), while XEvent defines them as UINT64. Since SQL server does not have "unsigned bigint", casting does not always work. This improvement introduces new XEvent action/filter columns equivalent to query_hash and query_plan_hash except when they are defined as INT64. This fix helps correlating queries between XE and DMVs.
 - Support for UTF-8 in BULK INSERT and BCP – Support for export and import of data encoded in UTF-8 character set is now enabled in BULK INSERT and BCP.
 
 ### Download pages and more information for SP2
@@ -76,12 +74,9 @@ In addition:
 
 ## SQL Server Service Pack 1 (SP1)
 
-SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2. For highlights of the release, read the Knowledge Base Article for Microsoft SQL Server 2014 SP1. 
+SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2.  
 
 >[NOTE] If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/).
-
-
-SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2. For highlights of the release, read the Knowledge Base Article for Microsoft SQL Server 2014 SP1. 
 
 ### Download pages and more information for SP1
 
@@ -102,20 +97,16 @@ SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and in
 **Workaround:** None.  
   
 ### Upgrading from SQL Server 2014 CTP 2 to SQL Server RTM
-Upgrading is full supported, specifically, you can:  
+Upgrading is fullly supported, specifically, you can:  
   
-1.  Attach a SQL Server 2014 CTP 2 database to an instance of SQL Server 2014 RTM.  
-  
-2.  Restore a database backup taken on SQL Server 2014 CTP 2 to an instance of SQL Server 2014 RTM.  
-  
-3.  In-place upgrade to SQL Server 2014 RTM.  
-  
-4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](http://msdn.microsoft.com/library/dn178483.aspx) for details.  
-  
-5.  Data collected by Transaction Performance Collection Sets installed in SQL Server 2014 CTP 2 cannot be viewed through SQL Server Management Studio in SQL Server 2014 RTM, and vice versa. Use SQL Server Management Studio in SQL Server 2014 CTP 2 to view data collected by the Collection Set installed in SQL Server 2014 CTP 2, and use SQL Server Management Studio in SQL Server 2014 RTM to view data collected by the Collection Set installed in SQL Server 2014 RTM.  
+1.  Attach a SQL Server 2014 CTP 2 database to an instance of SQL Server 2014 RTM.    
+2.  Restore a database backup taken on SQL Server 2014 CTP 2 to an instance of SQL Server 2014 RTM.    
+3.  In-place upgrade to SQL Server 2014 RTM.    
+4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](http://msdn.microsoft.com/library/dn178483.aspx) for details.    
+5.  Data collected by Transaction Performance Collection Sets installed in SQL Server 2014 CTP 2 cannot be viewed through SQL Server Management Studio in SQL Server 2014 RTM, and vice versa.
   
 ### Downgrading from SQL Server 2014 RTM to SQL Server 2014 CTP 2  
-This is not supported.  
+This action is not supported.  
   
 **Workaround:** There is no workaround for downgrade. We recommend that you back up the database before upgrading to SQL Server 2014 RTM.  
   
@@ -128,7 +119,7 @@ The wrong version of StreamInsight.msi and StreamInsightClient.msi is located in
   
 Report Builder and PowerPivit content are not available in some languages. 
 
-**Issue:** Report Builder content is not available in the following languages.  
+**Issue:** Report Builder content is not available in the following languages:  
   
 -   Greek (el-GR)  
 -   Norwegian (Bokmal) (nb-NO)  
@@ -139,7 +130,7 @@ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], this content was available in
   
 **Workaround:** None.  
   
-**Issue:** Power Pivot content is not available in the following languages.  
+**Issue:** Power Pivot content is not available in the following languages:
   
 -   Greek (el-GR)  
 -   Norwegian (Bokmal) (nb-NO)  
@@ -162,12 +153,11 @@ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], this content was available on
 ### Changes made for Standard Edition in SQL Server 2014 RTM  
 SQL Server 2014 Standard has the following changes:  
   
--   The Buffer Pool Extension feature allows using the maximum size of up to 4x times of configured memory.  
-  
--   The maximum memory has been raised from 64GB to 128GB.  
+-   The Buffer Pool Extension feature allows using the maximum size of up to 4x times of configured memory.    
+-   The maximum memory has been raised from 64 GB to 128 GB.  
  
 ### Memory Optimization Advisor flags default constraints as incompatible  
-**Issue:** The Memory Optimized Advisor in SQL Server Management Studio flags all default constraints as incompatible. Not all default constraints are supported in a memory-optimized table; the Advisor does not distinguish between supported and unsupported types of default constraints. Supported default constraints include all constants, expressions and built-in functions supported within natively compiled stored procedures. To see the list of functions supported in natively compiled stored procedures, refer to [Supported Constructs in Natively Compiled Stored Procedures](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Issue:** The Memory Optimized Advisor in SQL Server Management Studio flags all default constraints as incompatible. Not all default constraints are supported in a memory-optimized table; the Advisor does not distinguish between supported and unsupported types of default constraints. Supported default constraints include all constants, expressions, and built-in functions supported within natively compiled stored procedures. To see the list of functions supported in natively compiled stored procedures, refer to [Supported Constructs in Natively Compiled Stored Procedures](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Workaround:** If you want to use the advisor to identify blockers, ignore the compatible default constraints. To use the Memory Optimization Advisor to migrate tables that have compatible default constraints, but no other blockers, follow these steps:  
   
@@ -184,7 +174,7 @@ SQL Server 2014 Standard has the following changes:
 Server\....old.dll. This error may be due to a previous failure to unload   
 memory-optimized table DLLs.  
 ```  
-This is, in fact, an informational message and no user action is required.  
+This message is actually informational and no user action is required.  
   
 **Workaround:** None. This is an informational message.  
   
@@ -193,7 +183,7 @@ This is, in fact, an informational message and no user action is required.
   
 **Workaround:** Do not specify the INCLUDE clause with indexes on memory-optimized tables.  
   
-### Missing index details omit missing indexes if a hash index exists but is not suitable for the query  
+### Missing index details omit missing indexes when a hash index exists but is not suitable for the query  
 **Issue:** If you have a HASH index on columns of a memory-optimized table referenced in a query, but the index cannot be used for the query, SQL Server 2014 will not always report a missing index in SHOWPLAN_XML and in the DMV sys.dm_db_missing_index_details.  
   
 In particular, if a query contains equality predicates that involve a subset of the index key columns or if it contains inequality predicates that involve the index key columns, the HASH index cannot be used as is, and a different index would be required to execute the query efficiently.  
@@ -281,7 +271,7 @@ DATEPART(weekday, @d)
   
 **Workaround:** This issue is fixed with the feature pack redistribution of the [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295).  After the update is applied, all new history entries will use the value listed for the instance_id in the sysdac_instances_internal table.  
   
-If you already have the issue with mismatched instance_id values, the only way to correct the mismatched values is to connect to the server as a user with privileges to write to MSDB database and update the instance_id values to match.  If there have been multiple register and unregister events of the same database, you may need to look at the time/date to see what records match with the current instance_id values.  
+If you already have the issue with mismatched instance_id values, the only way to correct the mismatched values is to connect to the server as a user with privileges to write to MSDB database and update the instance_id values to match.  If you get several register and unregister events from the same database, you may need to look at the time/date to see which records match with the current instance_id value.  
   
 1.  Connect to the server in SQL Server Management Studio using a login that has update permissions to MSDB.    
 2.  Open a new query using the MSDB database.    
@@ -301,19 +291,18 @@ If you already have the issue with mismatched instance_id values, the only way t
 ## <a name="SSRS"></a>Reporting Services (RTM)
   
 ### The SQL Server 2012 Reporting Services Native Mode report server cannot run side-by-side with SQL Server 2014 Reporting Services SharePoint Components  
-**Issue:** The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode Windows service ‘SQL Server Reporting Services’ (ReportingServicesService.exe) fails to start if there are [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components installed on the same server.  
+**Issue:** The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode Windows service ‘SQL Server Reporting Services’ (ReportingServicesService.exe) fails to start when there are [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components installed on the same server.  
   
 **Workaround:** Uninstall [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components and restart Microsoft SQL Server 2012 Reporting Services Windows service.  
   
 **More Information:**  
   
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native Mode cannot run side-by-side with either of the following:  
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native Mode cannot run side-by-side in either of the following conditions:  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products  
-  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products    
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Shared Service  
   
-The side-by-side installation prevents the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native Mode Windows Service from starting. Error messages similar to the following will be seen in the Windows Event log:  
+The side-by-side installation prevents the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native Mode Windows Service from starting. Error messages, similar to the those depicted here, will be seen in the Windows Event log:  
   
 ```  
 Log Name:   Application  
@@ -350,22 +339,22 @@ For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and 
 ### The Add Azure Replica Wizard returns an error when configuring an Availability Group Listener in Windows Azure  
 **Issue:** If an Availability Group has a Listener, the Add Azure Replica Wizard will return an error when trying to configure the Listener in Windows Azure.  
   
-This is because Availability Group Listeners require assigning one IP address in every subnet hosting Availability Group replicas, including the Azure subnet.  
+This issue is because Availability Group Listeners require assigning one IP address in every subnet hosting Availability Group replicas, including the Azure subnet.  
   
 **Workaround:**  
   
 1.  In the Listener page, assign a free static IP address in the Azure subnet that will host the Availability Group replica to the Availability Group Listener.  
   
-    This will allow the Wizard to complete adding the replica in Windows Azure.  
+    This workaround will allow the Wizard to complete adding the replica in Windows Azure.  
   
 2.  After the Wizard completes, you will need to finish the configuration of the Listener in Windows Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Windows Azure](http://msdn.microsoft.com/library/dn376546.aspx)  
   
 ## <a name="SSAS"></a>Analysis Services (RTM)
   
-### MSOLAP.5 must be downloaded, installed and registered for a SharePoint 2010 new farm configured with SQL Server 2014  
+### MSOLAP.5 must be downloaded, installed, and registered for a SharePoint 2010 new farm configured with SQL Server 2014  
 **Issue:**  
   
--   For a SharePoint 2010 farm configured with a SQL Server 2014 RTM deployment, PowerPivot workbooks cannot connect to data models because the provider referenced in the connection string is not installed.  
+-   For a SharePoint 2010 MSOLAP.5 must be downloaded, installed and registered for a SharePoint 2013 new farm configured with SQL Server 2014farm configured with a SQL Server 2014 RTM deployment, PowerPivot workbooks cannot connect to data models because the provider referenced in the connection string is not installed.  
   
 **Workaround:**  
   
@@ -399,11 +388,11 @@ This is because Availability Group Listeners require assigning one IP address in
   
 **Workaround:**  
   
-1.  In Microsoft Excel, clear the custom advanced properties. Please see the “Workaround” section of the following knowledge base article [KB 2927748](http://support.microsoft.com/kb/2927748).  
+1.  In Microsoft Excel, clear the custom advanced properties. See the “Workaround” section of the following knowledge base article [KB 2927748](http://support.microsoft.com/kb/2927748).  
   
 **More Information:**  
   
--   When you update a data refresh schedule for a workbook, if the serialized length of the refresh schedule is smaller than the original schedule, the buffer size is not correctly updated and the new schedule information is merged with the old schedule information resulting in a corrupt schedule.  
+-    If the serialized length of the refresh schedule is smaller than the original schedule, when you update a data refresh schedule for a workbook the buffer size is not correctly updated and the new schedule information is merged with the old schedule information resulting in a corrupt schedule.  
   
 ## <a name="DQS"></a>Data Quality Services (RTM)
   

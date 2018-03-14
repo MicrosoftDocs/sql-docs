@@ -64,8 +64,7 @@ The following table summarizes key improvements provided in SQL Server 2016 SP1.
 |USE HINT|Use the query option, `OPTION(USE HINT('<option>'))` to alter query optimizer behavior using supported query level hints. Unlike QUERYTRACEON, the USE HINT option does not require sysadmin privileges.|[Developers Choice: USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
 |XEvent additions|New XEvents and Perfmon diagnostics capabilities improve latency troubleshooting.|[Extended Events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
-In addition:
-
+In addition, note the following fixes:
 - Based on feedback from DBAs and SQL community, starting SQL 2016 SP1, the Hekaton logging messages are reduced to minimal.
 - Review new [Trace flags](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
 - The full versions of the WideWorldImporters sample databases now work with Standard Edition and Express Edition, starting SQL Server 2016 SP1 and are available on [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). No changes are needed in the sample. The database backups created at RTM for Enterprise edition work with Standard and Express in SP1. 

@@ -54,6 +54,7 @@
 ### [How to: Specify SQL Server Data Types When Using the SQLSRV Driver](how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)
 ### [How to: Specify PHP Data Types](how-to-specify-php-data-types.md)
 ### [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+### [How to: Send and Retrieve ASCII Data in Linux and macOS](how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 ## [Handling Errors and Warnings](handling-errors-and-warnings.md)
 ### [How to: Configure Error and Warning Handling Using the SQLSRV Driver](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [How to: Handle Errors and Warnings Using the SQLSRV Driver](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)

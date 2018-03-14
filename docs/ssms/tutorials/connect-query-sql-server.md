@@ -74,7 +74,7 @@ The following steps create a database named TutorialDB.
    ![Execute Query](media/connect-query-sql-server/execute.png)
   
  
-After the query completes, the new **TutorialDB** appears in the list of databases. If you don’t see it, right-click the Databases node and select **Refresh**.  
+After the query completes, the new **TutorialDB** appears in the list of databases within **Object Explorer**. If you don’t see it, right-click the Databases node and select **Refresh**.  
 
 
 ## Create a Table
@@ -102,7 +102,7 @@ The query editor is still connected to the *master* database, but you want to cr
    );
    GO
    ```
-After the query completes, the new **Customers** table appears in the list of tables. You might need to right-click the **TutorialDB > Tables** node in **Object Explorer** and select **Refresh**.
+After the query completes, the new **Customers** table appears in the list of tables in Object Explorer. You might need to right-click the **TutorialDB > Tables** node in **Object Explorer** and select **Refresh**.
 
 ## Insert rows
 1. Paste the following snippet into the query window and **Execute**: 

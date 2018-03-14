@@ -13,7 +13,7 @@ manager: craigg
 ---
 
 # Quickstart: Connect and query SQL Server using SQL Server Management Studio
-This Quickstart shows how to use SQL Server Management Studio (SSMS) connect to SQL and run some basic Transact-SQL (T-SQL) commands to create a database.  
+This Quickstart shows how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands to create a database.  
 
 ## Prerequisites
 To complete this Quickstart, you need SQL Server Management Studio and access to a SQL Server. 
@@ -152,9 +152,5 @@ If you need to quickly change the server your query is connected to, you can do 
 
   ![Change Connection](media/connect-query-sql-server/changeconnection.png)
 
-<!----
-Advance to the next article to learn more
-> [!div class="nextstepaction"]
-> [Next steps button](contribute-get-started-mvc.md)/]---!>
 
 

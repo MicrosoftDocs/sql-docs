@@ -1,5 +1,5 @@
 # [Tutorials: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
-## [QuickStart: Connect to + Query SQL]
+## [Quickstart: Connect and query SQL Server using SQL Server Management Studio](QuickStart-ConnectQuerySQL.md)
 
 # Lessons
 ## [Lesson 1: Basic Navigation in SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  

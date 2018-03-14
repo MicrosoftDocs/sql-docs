@@ -132,6 +132,9 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 
 1.  You can modify the way results are presented by selecting one of these options
+
+     ![results](media/connect-query-sql-server/results.png)
+
     - By default, the results will be in **Grid**, which shows a table and is the middle option
     - The first option will display your results via text
     - The third option will save your results to a file

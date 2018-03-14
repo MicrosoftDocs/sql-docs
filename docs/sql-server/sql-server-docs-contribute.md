@@ -34,7 +34,7 @@ There are two main workflows you can use to contribute:
 
 The following steps provide an overview of making simple edits to SQL Server content in your browser. The complete process is documented in the article, [GitHub contribution workflow for minor or infrequent changes](https://docs.microsoft.com/contribute/contribute/light-workflow).
 
-1. Every article, including this one, has an **Edit** button on the right. Click **Edit** to get started.
+1. Every article, including this one, has an **Edit** button on the right. Find an article you want to change, and click the **Edit** button to get started.
 
    ![Edit button for SQL article](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
@@ -49,11 +49,17 @@ The following steps provide an overview of making simple edits to SQL Server con
 
 1. Edit the article in the browser. All of the articles are written in Markdown. If you need help with Markdown, you can review [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/). You can also learn by observing how published articles render existing Markdown.
 
-1. Scroll down to the bottom of the edit window, enter a title for your change, and click the green **Propose file change** button.
+1. Scroll down to the bottom of the edit window, enter a title for your change, and click the **Propose file change** button.
+
+   ![Propose pull request](./media/sql-server-docs-contribute/propose-file-change.png)
 
 1. On the next page, click **Create pull request**.
 
+   ![Create pull request](./media/sql-server-docs-contribute/create-pull-request.png)
+
 1. Enter a title and description for the pull request. Then click **Create pull request** again.
+
+   ![Create pull request](./media/sql-server-docs-contribute/create-pull-request2.png)
 
 At this point, you should be guided through the rest of the process in the comments of the pull request. The complete process and additional details can be found in the [contributor guide](https://docs.microsoft.com/contribute/contribute/light-workflow).
 

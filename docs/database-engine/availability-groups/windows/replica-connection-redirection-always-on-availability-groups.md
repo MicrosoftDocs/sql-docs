@@ -90,25 +90,19 @@ The following transact-SQL script creates this AG. In this example, the replica 
 
 ```sql
 CREATE AVAILABILITY GROUP MyAg   
-   WITH (  
-      AUTOMATED_BACKUP_PREFERENCE = SECONDARY,  
-      FAILURE_CONDITION_LEVEL  =  3,   
-      HEALTH_CHECK_TIMEOUT = 600000  
-       )  
-
+     WITH ( CLUSTER_TYPE =  NONE )  
    FOR   
-      DATABASE  ThisDatabase, ThatDatabase   
+     DATABASE  <Database1>   
    REPLICA ON   
       'COMPUTER01' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER01.<domain>.<tld>:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
-         FAILOVER_MODE = AUTOMATIC,  
-         BACKUP_PRIORITY = 30,  
-         SECONDARY_ROLE (ALLOW_CONNECTIONS = NO,   
+         FAILOVER_MODE = MANUAL,  
+         SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER03),
+            READ_ONLY_ROUTING_LIST = (COMPUTER02,COMPUTER01),
             READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )   
          SESSION_TIMEOUT = 10  
          ),   
@@ -117,13 +111,12 @@ CREATE AVAILABILITY GROUP MyAg
          (  
          ENDPOINT_URL = 'TCP://COMPUTER02.<domain>.<tld>:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
-         FAILOVER_MODE = AUTOMATIC,  
-         BACKUP_PRIORITY = 30,  
-         SECONDARY_ROLE (ALLOW_CONNECTIONS = NO,   
+         FAILOVER_MODE = MANUAL, 
+         SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER03),  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' )   
+            READ_ONLY_ROUTING_LIST = (COMPUTER01,COMPUTER02),  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )   
          SESSION_TIMEOUT = 10  
          ),   
 
@@ -131,13 +124,12 @@ CREATE AVAILABILITY GROUP MyAg
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
-         FAILOVER_MODE =  MANUAL,  
-         BACKUP_PRIORITY = 90,  
+         FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = READ_ONLY,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
-         PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
+         PRIMARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_LIST = NONE,  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' )  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )  
          SESSION_TIMEOUT = 10  
          );
 GO  

@@ -21,36 +21,24 @@ ms.workload: "On Demand"
 
   This article describes how to install the components required for Python by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the interactive prompts.
 
-## Machine learning options in SQL Server setup
+## Use SQL Server setup
 
-Choose the **Machine Learning Services** feature, and select **Python** as the language.
+SQL Server 2017 is required. Python integration is not supported on previous versions of SQL Server. Be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database.
 
-The **Shared Features** section contains a separate installation option, **Machine Learning Server (Standalone)**. This option supports operationalization of Python code on a server that does not have SQL Server, or that does not require use of SQL Server compute contexts. Thus, we recommend that you *do not* install this on the same computer as a SQL Server instance. Instead, install Machine Learning Server (Standalone) on a separate computer.
+Do not install machine learning with Python services on a failover cluster. The security mechanism used for isolating Python processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance that uses Python services. Alternatively, you can install machine learning with Python services on a standalone computer that uses the AlwaysOn setting, and is part of an availability group.
 
-After the installation is complete, reconfigure the instance to allow execution of scripts that use an external executable. You might need to make additional changes to the server to support machine learning workloads. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
+Side-by-side installation with other versions of Python is possible, because the SQL Server instance uses its own copy of the Anaconda distribution. However, running code that uses Python on the SQL Server computer outside SQL Server can lead to various problems:
 
-### Prerequisites
+- You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
+- Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
 
-+ SQL Server 2017 is required. Python integration is not supported on previous versions of SQL Server.
-+ Be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database.
-+ Prerequisites are installed as part of the Python component setup.
-+ You cannot install machine learning with Python services on a failover cluster. The security mechanism used for isolating Python processes is not compatible with a Windows Server failover cluster environment.
-   
-  As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance that uses Python services. Alternatively, you can install machine learning with Python services on a standalone computer that uses the AlwaysOn setting, and is part of an availability group.
+> [!NOTE]
+> The **Shared Features** section contains a separate installation option, **Machine Learning Server (Standalone)**. This option supports operationalization of Python code on a server that does not have SQL Server, or that does not require use of SQL Server compute contexts. Thus, we recommend that you *do not* install this on the same computer as a SQL Server instance. Instead, install Machine Learning Server (Standalone) on a separate computer.
 
-+ Side-by-side installation with other versions of Python is possible, because the SQL Server instance uses its own copy of the Anaconda distribution. However, running code that uses Python on the SQL Server computer outside SQL Server can lead to various problems:
-    
-    - You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
-    - Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
-  
 > [!IMPORTANT]
 > After setup is complete, be sure to complete the additional post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run Python jobs on your behalf.
 
-### Unattended installation
-
-To perform an unattended installation, use the command-line options for SQL Server setup and the arguments specific to Python. For more information, see [Unattended installs of SQL Server with Python Machine Learning Services](unattended-installs-of-sql-server-python-services.md).
-
-##  <a name="bkmk_installPythonInDatabase"></a> Step 1: Install Machine Learning Services (In-Database) on SQL Server
+###  <a name="bkmk_installPythonInDatabase"></a> Step 1: Install Machine Learning Services (In-Database) on SQL Server
 
 1. Run the setup wizard for SQL Server 2017.
   
@@ -60,15 +48,16 @@ To perform an unattended installation, use the command-line options for SQL Serv
    
 3. On the **Feature Selection** page, select these options:
   
-    -   **Database Engine Services**
+    - **Database Engine Services**
   
-         To use Python with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+        To use Python with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
   
-    -   **Machine Learning Services (In-Database)**
+    - **Machine Learning Services (In-Database)**
   
-         This option installs the database services that support Python script execution.
+        This option installs the database services that support Python script execution.
 
-    -   **Python**
+    - **Python**
+
         Check this option to get the Python 3.5 executable and select libraries from the Anaconda distribution. Install only one language per instance.
         
         ![Feature options for Python](media/ml-svcs-features-python-highlight.png "Setup options for Python")
@@ -77,22 +66,20 @@ To perform an unattended installation, use the command-line options for SQL Serv
         > 
         > Do not select the option for **Machine Learning Server (Standalone)**. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer. For example, you might want to install the same version of the machine learning components on a different computer that is used for project development, such as your data scientist's laptop.
 
-4. On the **Consent to Install Python** page, select **Accept**.
+4. On the **Consent to Install Python** page, select **Accept**, and then select **Next**.
   
-     This license agreement is required to download the Python executable, Python packages from Anaconda.
+    This license agreement is required to download the Python executable, Python packages from Anaconda.
      
-     ![Agreement to Python license](media/ml-svcs-license-python.png "License agreement for Python")
+    ![Agreement to Python license](media/ml-svcs-license-python.png "License agreement for Python")
   
     > [!NOTE]
     >  If the computer you are using does not have internet access, you can pause setup at this point to download the installers separately. For more information, see [Installing components without internet access](../r/installing-ml-components-without-internet-access.md).
-  
-     Select **Accept**, wait until the **Next** button becomes active, and then select **Next**.
-  
+    
 5. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
-     + Database Engine Services
-     + Machine Learning Services (In-Database)
-     + Python
+    - Database Engine Services
+    - Machine Learning Services (In-Database)
+    - Python
   
     These selections represent the minimum configuration required to use Python with [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)].
     
@@ -102,7 +89,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
 
 6. When installation is complete, restart the computer.
 
-##  <a name="bkmk_enableFeature"></a> Step 2: Enable Python script execution
+###  <a name="bkmk_enableFeature"></a> Step 2: Enable Python script execution
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
@@ -111,11 +98,12 @@ To perform an unattended installation, use the command-line options for SQL Serv
     > 
     > You can also try out the preview release of [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is), which supports administrative tasks and queries against SQL Server.
   
-2. Connect to the instance where you installed Machine Learning Services, and run the following command:
+2. Connect to the instance where you installed Machine Learning Services.
+3. Open a new query pane, and run the following command:
 
-   ```SQL
-   sp_configure
-   ```
+    ```SQL
+    sp_configure
+    ```
 
     The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default. The feature must be explicitly enabled by an administrator before you can run R or Python scripts.
     
@@ -132,7 +120,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
 
     You can restart the service by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-## Step 3: Verify that the external script execution feature is running
+### Step 3: Verify that the external script execution feature is running
 
 Take a moment to verify that all components used to launch the Python script are running.
 
@@ -153,7 +141,8 @@ Take a moment to verify that all components used to launch the Python script are
 3. If Launchpad is running, you should be able to run simple Python scripts like the following in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
     
     ```SQL
-    EXEC sp_execute_external_script  @language =N'Python',
+    EXEC sp_execute_external_script
+    @language =N'Python',
     @script=N'OutputDataSet = InputDataSet',
     @input_data_1 = N'SELECT 1 AS col'
     ```
@@ -168,9 +157,9 @@ Take a moment to verify that all components used to launch the Python script are
 > 
 > For example, you can add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
 
-## Step 4: Additional configuration
+### Step 4: Additional configuration
 
-If the previous command was successful, you can run Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
+If the previous command was successful, you can run Python commands from SQL Server Management Studio, [Visual Studio Code](https://code.visualstudio.com/), or any other client that can send T-SQL statements to the server.
 
 If you got an error when running the command, review the following list. You might need to make additional appropriate configurations to the service or database.
 
@@ -178,7 +167,7 @@ If you got an error when running the command, review the following list. You mig
 > 
 > Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
 
-###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for Launchpad account group
+####  <a name="bkmk_configureAccounts"></a> Enable implied authentication for Launchpad account group
 
 During setup, a number of new Windows user accounts are created for the purpose of running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends a Python or R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account. Then it maps it to the identity of the calling user, and runs the script on behalf of the user.
 
@@ -202,7 +191,7 @@ If you need to run scripts from a remote data science client, and you are using 
 > [!NOTE]
 > If you use a **SQL login** for running scripts in a SQL Server compute context, this extra step is not required.
 
-### Give users permission to run external scripts
+#### Give users permission to run external scripts
 
 If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself, and you are running Python scripts in your own instance, you typically execute scripts as an administrator. Thus, you have implicit permission over various operations and all data in the database.
 
@@ -217,7 +206,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > [!NOTE]
 > Permissions are not specific to the supported script language. In other words, there are not separate permission levels for R script versus Python script. If you need to maintain separate permissions for these languages, install R and Python on separate instances.
 
-### Give your users read, write, or data definition language (DDL) permissions to databases
+#### Give your users read, write, or data definition language (DDL) permissions to databases
 
 While a user is running scripts, the user might need to read data from other databases. The user might also need to create new tables to store results, and write data into tables.
 
@@ -233,17 +222,22 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 For more information about the permissions included in each role, see [Database-level roles](../../relational-databases/security/authentication-access/database-level-roles.md).
 
-### Ensure that the SQL Server installation supports remote connections
+#### Ensure that the SQL Server installation supports remote connections
 
 If you cannot connect from a remote computer, check whether the firewall allows access to SQL Server. In a default installation, remote connections might be disabled, or the specific port used by SQL Server might be blocked by the firewall. For more information, see [Configure Windows Firewall for database engine access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).
 
-### Create an ODBC data source for the instance on your data science client
+#### Create an ODBC data source for the instance on your data science client
 
 You might create a machine learning solution on a data science client computer. If you need to run code by using the SQL Server computer as the compute context, you have two options: access the instance by using a SQL login, or by using a Windows account.
 
 + For SQL logins: Ensure that the login has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. To create objects, assign `DDL_admin` rights. If you must save data to tables, add to the `db_datawriter` role.
 
 + For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
+
+
+## Use unattended installation
+
+To perform an unattended installation, use the command-line options for SQL Server setup and the arguments specific to Python. For more information, see [Unattended installs of SQL Server with Python Machine Learning Services](unattended-installs-of-sql-server-python-services.md).
 
 ## Additional optimizations
 

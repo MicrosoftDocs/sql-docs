@@ -86,7 +86,7 @@ The following picture represents the availability group.
 
 ![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
-The following transact-SQL script creates this AG. In this example, the replica specs for each replica specifies the `READ_WRITE_ROUTING_URL`. COMPUTER03 is an asynchronouse secondary replica, that is not configured for read-only queries.
+The following transact-SQL script creates this AG. In this example, Each replica specifies the `READ_WRITE_ROUTING_URL`. COMPUTER03 is an asynchronouse secondary replica, that is not configured for read-only queries.
 
 ```sql
 CREATE AVAILABILITY GROUP MyAg   
@@ -102,11 +102,10 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER02,COMPUTER01),
+            READ_ONLY_ROUTING_LIST = (COMPUTER02),
             READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )   
          SESSION_TIMEOUT = 10  
          ),   
-
       'COMPUTER02' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER02.<domain>.<tld>:5022',  
@@ -115,11 +114,10 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER01,COMPUTER02),  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )   
+            READ_ONLY_ROUTING_LIST = (COMPUTER01),  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' )   
          SESSION_TIMEOUT = 10  
          ),   
-
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
@@ -129,7 +127,7 @@ CREATE AVAILABILITY GROUP MyAg
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_LIST = NONE,  
-            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )  
+            READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' )  
          SESSION_TIMEOUT = 10  
          );
 GO  
@@ -140,9 +138,11 @@ GO
 
 ### Connection behaviors
 
-| Application connection string | |
-|-----|-----
-|Connect to COMPUTER02<br/>`ApplicationIntent=ReadWrite`|
+In the following diagram, a client application connects to COMPUTER02, with `ApplicationIntent=ReadWrite`. The connection is redirected. to the primary replica. 
+
+![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+
+The availability group redirects read/write calls to either secondary replica to the primary replia. 
 
 ## SQL Server instance offline
 

@@ -6,10 +6,10 @@
 
 # Install 
 
-## [SQL Server 2017 Machine Learning Services (In-Database) on Windows](install/sql-machine-learning-services-windows-install.md)
-## [SQL Server 2017 Machine Learning Server (Standalone) on Windows](install/sql-machine-learning-standalone-windows-install.md)
-## [SQL Server 2016 R Services (In-Database)](install/sql-r-services-windows-install.md)
-## [SQL Server 2016 R Server (Standalone)](install/sql-r-standalone-windows-install.md)
+## [SQL Server Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
+## [SQL Server Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md)
+## [SQL Server R Services (In-Database)](install/sql-r-services-windows-install.md)
+## [SQL Server R Server (Standalone)](install/sql-r-standalone-windows-install.md)
 
 ## OLD
 ## [Set up Python Machine Learning Services (In-Database)](python/setup-python-machine-learning-services.md)

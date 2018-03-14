@@ -3,29 +3,26 @@
 Detailed instructions for completing this template are available in the </br>
 Contributor Guide:https://review.docs.microsoft.com/en-us/help/contribute/mock-template-quickstart?branch=master -->
 
----
-# Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Quickstart: Connect and Query SQL Server using SQL Server Management Studio
-description: A Quickstart for connecting to SQL Server using SQL Server Management Studio and running basic T-SQL queries. 
+Title: "Quickstart: Connect and Query SQL Server using SQL Server Management Studio"
+description: A Quickstart for connecting to SQL Server using SQL Server Management Studio and running basic T-SQL queries.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Quickstart
-ms.suite: "sql"
+ms.suite:"sql"
 ms.prod_service: sql-tools
-# Optional fields. Don't forget to remove # if you need a field.
 ms.reviewer: sstein
 manager: craigg
 ---
 
 # Quickstart: Connect and query SQL Server using SQL Server Management Studio
-This Quickstart gets users familiar with using SQL Server Management studio to connect to SQL and run some basic Transact-SQL (T-SQL) commands to create a database.  
+This Quickstart shows how to use SQL Server Management Studio (SSMS) connect to SQL and run some basic Transact-SQL (T-SQL) commands to create a database.  
 
 ## Prerequisites
 To complete this Quickstart, you need SQL Server Management Studio and access to a SQL Server. 
 
-- Install [!INCLUDE[name-ssms]../includes/download-sql-server-management-studio-ssms.md].
+- Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
 If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password!):
 - [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
@@ -36,28 +33,28 @@ If you don't have access to a SQL Server, select your platform from the followin
 
 1. Start SQL Server Management Studio (SSMS)
 2. The first time  you run SSMS the **Connect to Server** dialog opens. 
-   - If the **Connection** dialog doesn't open, Object Explorer > Connect button / connect icon > Database Engine. 
+    a. If the **Connection** dialog doesn't open, Object Explorer > Connect button / connect icon > Database Engine.
 
-   ![Connect in Object Explorer][media/QuickStartConnect/ConnectObjExp.png]
+ ![Connect in Object Explorer](media/QuickStartConnect/ConnectObjExp.PNG)
 
 3. In the **Connect to Server** dialog box, select your connection options and hit connect. This article uses *Windows Authentication* but *SQL Login* is also supported. The remaining fields should be as follows:
-   - Server type: Database Engine (should be selected by default)
-   - Authentication: Windows Authentication
-   - Options: you can also modify your connection options, such as the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values. 
+    a. Server type: Database Engine (should be selected by default)
+    b. Authentication: Windows Authentication
+    c. Options: you can also modify your connection options, such as the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values. 
    
-   ![New Connection][media/QuickStartConnect/Connection.png]
+   ![Connection](media/QuickStartConnect/Connection.PNG)
 
 4. Once the fields have been filled out, hit **Connect**. 
 
 5. You are now connected to your SQL Server, and  you can verify this by exploring the objects available within Object Explorer: 
-   ![Connected to SQL][media/QuickStartConnect/SuccessfulConnection.png]
+  ![Successful Connection](media/QuickStartConnect/SuccessfulConnection.PNG)
 
 
 ## Create a database
 The following steps create a database named TutorialDB. 
 
 1. Right-click your server in **Object Explorer** and select **New Query**. 
-   ![New Query][media/QuickStartConnect/NewQuery.png]
+   ![New Query](media/QuickStartConnect/NewQuery.PNG)
 2. Paste the following snippet into the query window: 
 
 
@@ -77,7 +74,7 @@ The following steps create a database named TutorialDB.
    ```
 
 3. To execute the query, highlight the text you want to run and hit Execute (or F5 on your keyboard). If you want to execute everything in the window at once, then hit Execute without highlighting anything.  
-   ![Execute Query][media/QuickStartConnect/Execute.png]
+   ![Execute Query](media/QuickStartConnect/Execute.PNG)
 
    After the query completes, the new **TutorialDB** appears in the list of databases. If you don’t see it, right-click the Databases node and select **Refresh**.  
 
@@ -85,8 +82,8 @@ The following steps create a database named TutorialDB.
 The query editor is still connected to the *master* database, but you want to create a table in the *TutorialDB*. 
 
 1. Change the connection context of your query from the master to **TutorialDB** by selecting the database you want from the drop-down on the top left. 
-   ![Change Database][media/QuickStartConnect/ChangeDB.png]
-2. Paste the following snippet into the query window, highlight it, and hit **Execute**: 
+   ![Change database](media/QuickStartConnect/ChangeDB.PNG)
+1. Paste the following snippet into the query window, highlight it, and hit **Execute**: 
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -130,21 +127,20 @@ After the query completes, the new **Customers** table appears in the list of ta
    SELECT * FROM dbo.Customers;
    ```
 2. The results of the query are displayed under the area where text was entered: 
-   ![Query Results][media/QuickStartConnect/QueryResults.png]
+   ![Query Results](media/QuickStartConnect/QueryResults.PNG)
 
 
 3. You can modify the way results are presented by selecting one of these options
-   ![Results][media/QuickStartConnect/Results.png]
-   - By default, the results will be in **Grid**, which shows a table and is the middle option
-   - The first option will display your results via text
-   - The third option will save your results to a file
+    a. By default, the results will be in **Grid**, which shows a table and is the middle option
+    b. The first option will display your results via text
+    c. The third option will save your results to a file
 
 ## Verify your query window connection properties
 You can find information about the connection properties under the results of your query. 
 1. After running the aforementioned query from the step above, review the connection properties at the bottom of the query window.   
-   - You can determine which server and database you're connected to, and the user  you're logged in with. 
-   - You can also see the query duration and the number of rows returned by the query executed earlier. 
-    ![Connection Properties][media/QuickStartConnect/ConnectionProperties.png] 
+    a. You can determine which server and database you're connected to, and the user  you're logged in with. 
+    b. You can also see the query duration and the number of rows returned by the query executed earlier. 
+    ![Connection Properties](media/QuickStartConnect/ConnectionProperties.PNG)  
     In this image, the results are displayed as text for educational purposes. 
 
 ## Change the server the query window is connected to
@@ -152,7 +148,7 @@ If you need to quickly change the server your query is connected to, you can do 
 1. Right click within the query window > Connection > Change connection
 2. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to
 - Note that this does not change which server your **Object Explorer** is connected to, just the current query window. 
-    ![Change Connection][media/QuickStartConnect/ChangeConnection.png] 
+    ![Change Connection](media/QuickStartConnect/ChangeConnection.png)
 
 
 Advance to the next article to learn more

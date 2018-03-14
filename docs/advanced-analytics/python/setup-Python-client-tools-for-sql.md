@@ -13,14 +13,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs:   - "Python"
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 132
+caps.latest.revision: 0
 author: "jeannt"
 ms.author: "jeannt"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Set up Python client tools for use with SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../..includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to configure a Python environment on a Windows computer to support running Python code in SQL Server. This includes the following scenarios:
 

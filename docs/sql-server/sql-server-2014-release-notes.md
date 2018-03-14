@@ -67,7 +67,7 @@ In addition:
 
 - [Download Service Pack 2 for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=53168)
 - [SQL Server 2014 Service Pack 2 is now available](https://www.microsoft.com/download/details.aspx?id=53167)
-- [SQL Server 2012 SP2 Express](Microsoft SQL Server 2014 Service Pack 2 (SP2) Express)
+- [SQL Server 2012 SP2 Express](https://www.microsoft.com/download/details.aspx?id=53167)
 - [SQL Server 2014 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164)
 - [SQL Server 2014 SP2 Report Builder](https://www.microsoft.com/download/details.aspx?id=53163)
 - [SQL Server 2014 SP2 Reporting Services Add-in for Microsoft Sharepoint](https://www.microsoft.com/download/details.aspx?id=53162)

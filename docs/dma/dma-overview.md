@@ -1,7 +1,7 @@
 ---
 title: "Overview of Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/07/2018"
+ms.date: "03/15/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "dma"
 ms.service: ""
@@ -41,27 +41,20 @@ The Data Migration Assistant (DMA) enables you to upgrade to a modern data platf
 - Discover issues that can affect an upgrade to an on-premises SQL Server. These are described as compatibility issues and are organized in the following categories:
 
   - Breaking changes
-
   - Behavior changes
-
   - Deprecated features
 
 - Discover new features in the target SQL Server platform that the database can benefit from after an upgrade. These are described as feature recommendations and are organized in the following categories:
 
   - Performance
-
   - Security
-
   - Storage
 
 - Migrate an on-premises SQL Server instance to a modern SQL Server instance, hosted on premises or on an Azure virtual machine (VM) that is accessible from your on-premises network. The Azure VM can be accessed using VPN or other technologies. The migration workflow helps you to migrate the following components:
 
   - Schema of databases
-
   - Data and users
-
   - Server roles
-
   - SQL Server and Windows logins
 
 - After the successful migration, applications can connect to the target SQL server databases seamlessly.
@@ -85,6 +78,9 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2016
 - SQL Server 2017 on Windows and Linux
 - Azure SQL Database
+
+> [!NOTE] 
+> DMA does not currently support Azure SQL Database Managed Instance as a target.
 
 ## Installation
 

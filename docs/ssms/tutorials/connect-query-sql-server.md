@@ -27,7 +27,7 @@ If you don't have access to a SQL Server, select your platform from the followin
 
 ## Connect to a SQL Server
 
-1. Start SQL Server Management Studio (SSMS)
+1. Start SQL Server Management Studio (SSMS).
 1. The first time  you run SSMS the **Connect to Server** dialog opens. 
       - If the **Connection** dialog doesn't open, Object Explorer > Connect button / connect icon > Database Engine.
 
@@ -135,9 +135,9 @@ After the query completes, the new **Customers** table appears in the list of ta
 
      ![results](media/connect-query-sql-server/results.png)
 
-    - By default, the results will be in **Grid**, which shows a table and is the middle option
-    - The first option will display your results via text
-    - The third option will save your results to a file
+    - By default, the results will be in **Grid**, which shows a table and is the middle option.
+    - The first option will display your results via text.
+    - The third option will save your results to a file.
 
 ## Verify your query window connection properties
 You can find information about the connection properties under the results of your query. 
@@ -149,7 +149,7 @@ You can find information about the connection properties under the results of yo
 
 ## Change the server the query window is connected to
 If you need to quickly change the server your query window is connected to, you can do so within the query window.
-1. Right click within the query window > Connection > Change connection
+1. Right click within the query window > Connection > Change connection.
 1. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to. 
     - Note that this does not change which server your **Object Explorer** is connected to, just the current query window. 
 

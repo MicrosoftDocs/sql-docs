@@ -146,6 +146,12 @@ GO
       - Domain and top level domain of the fully qualified domain name. For example, `corporation.com`.
 
 
+### Connection behaviors
+
+| Application connection string | |
+|-----|-----
+|Connect to COMPUTER02<br/>`ApplicationIntent=ReadWrite`|
+
 ## SQL Server instance offline
 
 If the instance of SQL Server specified in the connection string is not available (has an outage) the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string. The application has to implement retry logic to accommodate primary and secondary replicas not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](http://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).

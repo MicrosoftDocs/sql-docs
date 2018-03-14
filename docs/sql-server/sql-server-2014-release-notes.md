@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2014 Release Notes | Microsoft Docs"
+title: "SQL Server 2014 Release and Service Pack Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2018"
 ms.prod: "sql-non-specified"
@@ -26,7 +26,7 @@ This Release Notes document describes known issues that you should read about be
 
 SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP1 CU7. It contains improvements centered around performance, scalability, and diagnostics based on the feedback from customers and the SQL community.
 
-### Performance and Scalability Improvements in SP2
+### Performance and scalability improvements in SP2
 
 |Feature|Description|For more information|
 |---|---|---|
@@ -37,7 +37,7 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 |SOS_RWLock spinlock improvement|Removes the need for spinlock for SOS_RWLock and instead uses lock-free techniques similar to in-memory OLTP. |[SOS_RWLock Redesign](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
 |Spatial Native Implementation|Significant improvement in spatial query performance.|[Spatial performance improvements in SQL Server 2012 and 2014](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
-### Supportability and Diagnostics Improvements in SP2
+### Supportability and dagnostics improvements in SP2
 
 |Feature|Description|For more information|
 |---|---|---|

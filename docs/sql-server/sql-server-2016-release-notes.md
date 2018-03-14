@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2016 Release Notes | Microsoft Docs"
+title: "SQL Server 2016 Release and Service Pack Notes | Microsoft Docs"
 ms.date: "03/14/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"

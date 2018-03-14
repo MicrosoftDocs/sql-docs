@@ -34,7 +34,10 @@ After the installation is complete, reconfigure the instance to allow execution 
 + SQL Server 2017 is required. Python integration is not supported on previous versions of SQL Server.
 + Be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database.
 + Prerequisites are installed as part of the Python component setup.
+
 + You cannot install machine learning with Python services on a failover cluster. The security mechanism used for isolating Python processes is not compatible with a Windows Server failover cluster environment.
+
++ You cannot install SQL Server 2017 Machine Learning Services on a domain controller. The R Services or Machine Learning Services portion of setup will fail.
    
   As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance that uses Python services. Alternatively, you can install machine learning with Python services on a standalone computer that uses the AlwaysOn setting, and is part of an availability group.
 
@@ -152,16 +155,38 @@ Take a moment to verify that all components used to launch the Python script are
    
 3. If Launchpad is running, you should be able to run simple Python scripts like the following in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
     
+    + For R
+    
+    ```SQL
+    EXEC sp_execute_external_script  @language =N'R',
+    @script=N'
+	OutputDataSet <- InputDataSet;
+	',
+    @input_data_1 =N'SELECT 1 AS hello'
+    WITH RESULT SETS (([hello] int not null));
+    GO
+    ```
+
+    + For Python
+    
     ```SQL
     EXEC sp_execute_external_script  @language =N'Python',
-    @script=N'OutputDataSet = InputDataSet',
-    @input_data_1 = N'SELECT 1 AS col'
+    @script=N'
+	OutputDataSet = InputDataSet;
+	',
+    @input_data_1 =N'SELECT 1 AS hello'
+    WITH RESULT SETS (([hello] int not null));
+    GO
     ```
-    
-    **Results**
-    
-    *<code>&nbsp;&nbsp;</code>*
-    *1*
+   
+ **Results**
+
+    The script can take a little while to run, the first time the external script runtime is loaded. The results should be something like this:
+
+    | hello |
+    |----|
+    | 1|
+
 
 > [!NOTE]
 > Columns or headings used in the Python script are not returned, by design. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
@@ -296,3 +321,53 @@ See the following tutorials for some examples of how you can use Python with SQL
 [Using Python in T-SQL](../tutorials/run-python-using-t-sql.md)
 
 [Create a Python model using revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
+
+
+
+
+
+
+## <a name="bkmk2017top"></a> Install SQL Server 2017 Machine Learning Services (In-Database)
+
+> [!div class="checklist"]
+> * Install database engine and machine learning features
+> * Required post-installation steps: enable machine learning, and restart
+> * Optional post-installation steps: add firewall rules, add users, change or configure service accounts, set up a remote data science client.
+
+**Get started**
+
+1. Run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup.
+  
+2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+
+     ![Install Machine Learning Services (In-Database)](media/2017setup-installation-page-mlsvcs.png "Start installation of database engine with Machine Learning Services")
+
+3. On the **Feature Selection** page, select the following options:
+   
+    + Select **Database Engine Services**. The database engine is required in each instance that uses machine learning.
+
+    + Select **Machine Learning Services (In-Database)**. This option installs support for in-database use of R. After you select this option, you can select the machine learning language. You can select only R, or you can add both R and Python.
+   
+    ![Machine Learning Services feature selection](media/2017setup-features-page-mls-rpy.png "Select these features for R Services In-Database")
+
+    If you do not select either the R or Python language options, the setup wizard installs only the extensibility framework, which includes SQL Server Trusted Launchpad, and does not install any language-specific components.  Generally we recommend that you install at least one language to start with. However, you might use this option if you intend to immediately use the binding process to upgrade the machine learning components. For more information, see [Use SqlBindR to upgrade an instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+    We recommend that you **do not** install the Standalone and In-Database features on the same computer, and never install them at the same time. You would ordinarily install Machine Learning Server (Standalone) to create an environment that a data scientist or developer uses to connect to SQL Server when deploying solutions. Therefore, there is no need to install both on the same computer.
+
+4.  License agreements for machine learning: Depending on which languages you're installing, you must accept the license agreements for R or Python, or both.
+
+    + License terms for R: This license agreement covers Microsoft R Open, which includes a distribution of the open source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
+  
+    + License terms for Python. The Python open source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
+
+    Click **Accept** to indicate your agreement. There is a brief pause while the components are prepared, then the **Next** button becomes available.
+
+    If the computer that you're using does not have internet access, you can pause setup at this point to download the installers separately, as described here: [Install machine learning components without internet access](installing-ml-components-without-internet-access.md).
+
+6. On the **Ready to Install** page, verify that the following items are included, and then select **Install**.
+
+   - Database Engine Services
+   - Machine Learning Services (In-Database)
+   - R or Python, or both
+
+7. When the installation is complete, make a note of the setup log location, and then restart your computer.

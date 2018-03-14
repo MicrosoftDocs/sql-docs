@@ -24,7 +24,7 @@ This Release Notes document describes known issues that you should read about be
 
 ## SQL Server 2014 Service Pack 2 (SP2)
 
-SQL Server 2014 SP2 contains rollups of released hotfixes SQL Server 2014 SP1 CU7. It contains improvements centered around performance, scalability and diagnostics based on the feedback from customers and SQL community. These improvements enable SQL Server 2014 to perform faster and scale out of the box on modern hardware design. I
+SQL Server 2014 SP2 contains rollups of released hotfixes SQL Server 2014 SP1 CU7. It contains improvements centered around performance, scalability aIt contains improvements centered around performance, scalability, and diagnostics based on the feedback from customers and SQL community. and diagnostics based on the feedback from customers and SQL community. I
 
 Following is the detailed list of improvements introduced in SQL 2014 SP2.
 
@@ -32,10 +32,10 @@ Following is the detailed list of improvements introduced in SQL 2014 SP2.
 
 |Feature|Description|For more information|
 |---|---|---|
-|Automatic Soft NUMA partitioning|You can automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)|
+|Automatic Soft NUMA partitioning|You can automatically configures Soft NUMA on systems reporting 8 or more CPUs per NUMA node.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |Buffer Pool Extension|Enables SQL Server Buffer Pool to scale beyond 8 TB.|[Buffer Pool Extension](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
 |Dynamic Memory Object Scaling| Dynamically partition memory object based on number of nodes and cores. This enhancement eliminates the need of Trace Flag 8048 post SQL 2014 SP2.|[Dynamic Memory Object Scaling](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)|
-|MAXDOP hint for DBCC CHECK* commands|This improvement addresses one of the connect feedback from customers and is useful to run DBCC CHECKDB with MAXDOP setting other than the sp_configure value.|[Hints (Transact-SQL) - Query](https://docs.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql-query)|
+|MAXDOP hint for DBCC CHECK* commands|This improvement addresses one of the connect feedback from customers and is useful to run DBCC CHECKDB with MAXDOP setting other than the sp_configure value.|[Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
 |SOS_RWLock spinlock improvement|Removes the need for spinlock for SOS_RWLock and instead uses lock-free techniques similar to in-memory OLTP. |[SOS_RWLock Redesign](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
 |Spatial Native Implementation|Significant improvement in spatial query performance.|[Spatial performance improvements in SQL Server 2012 and 2014](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
@@ -65,29 +65,29 @@ In addition:
 
 ### Download pages and more information for SP2
 
--[Download Service Pack 2 for Microsoft SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=53168)
--[SQL Server 2014 Service Pack 2 is now Available](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-2014-service-pack-2-is-now-available/)
--[SQL Server 2012 SP2 Express](Microsoft SQL Server 2014 Service Pack 2 (SP2) Express)
--[SQL Server 2014 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164)
--[SQL Server 2014 SP2 Report Builder](https://www.microsoft.com/download/details.aspx?id=53163)
--[SQL Server 2014 SP2 Reporting Services Add-in for Microsoft Sharepoint](https://www.microsoft.com/download/details.aspx?id=53162)
--[SQL Server 2014 SP2 Semantic Language Statistics](https://www.microsoft.com/download/details.aspx?id=53165)
--[SQL Server 2014 Service Pack 2 Release Information](https://support.microsoft.com/help/3171021/sql-server-2014-service-pack-2-release-information)
+- [Download Service Pack 2 for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=53168)
+- [SQL Server 2014 Service Pack 2 is now available](https://www.microsoft.com/download/details.aspx?id=53167)
+- [SQL Server 2012 SP2 Express](Microsoft SQL Server 2014 Service Pack 2 (SP2) Express)
+- [SQL Server 2014 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164)
+- [SQL Server 2014 SP2 Report Builder](https://www.microsoft.com/download/details.aspx?id=53163)
+- [SQL Server 2014 SP2 Reporting Services Add-in for Microsoft Sharepoint](https://www.microsoft.com/download/details.aspx?id=53162)
+- [SQL Server 2014 SP2 Semantic Language Statistics](https://www.microsoft.com/download/details.aspx?id=53165)
+- [SQL Server 2014 Service Pack 2 Release Information](https://support.microsoft.com/help/3171021/sql-server-2014-service-pack-2-release-information)
 
 ## SQL Server Service Pack 1 (SP1)
 
-SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2. For highlights of the release, please read the Knowledge Base Article for Microsoft SQL Server 2014 SP1. 
+SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2. For highlights of the release, read the Knowledge Base Article for Microsoft SQL Server 2014 SP1. 
 
 >[NOTE] If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/).
 
 
-SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2. For highlights of the release, please read the Knowledge Base Article for Microsoft SQL Server 2014 SP1. 
+SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2. For highlights of the release, read the Knowledge Base Article for Microsoft SQL Server 2014 SP1. 
 
 ### Download pages and more information for SP1
 
 - [Download Service Pack 1 for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
 - [SQL Server 2014 Service Pack 1 has released – Updated](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
-- [Microsoft SQL Server 2014 SP1 Express][(https://www.microsoft.com/download/details.aspx?id=46697)
+- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
 
@@ -102,7 +102,7 @@ SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and in
 **Workaround:** None.  
   
 ### Upgrading from SQL Server 2014 CTP 2 to SQL Server RTM
-Upgrading is full supportd, specifically, you can:  
+Upgrading is full supported, specifically, you can:  
   
 1.  Attach a SQL Server 2014 CTP 2 database to an instance of SQL Server 2014 RTM.  
   
@@ -110,14 +110,14 @@ Upgrading is full supportd, specifically, you can:
   
 3.  In-place upgrade to SQL Server 2014 RTM.  
   
-4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Please refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](http://msdn.microsoft.com/library/dn178483.aspx) for details.  
+4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](http://msdn.microsoft.com/library/dn178483.aspx) for details.  
   
 5.  Data collected by Transaction Performance Collection Sets installed in SQL Server 2014 CTP 2 cannot be viewed through SQL Server Management Studio in SQL Server 2014 RTM, and vice versa. Use SQL Server Management Studio in SQL Server 2014 CTP 2 to view data collected by the Collection Set installed in SQL Server 2014 CTP 2, and use SQL Server Management Studio in SQL Server 2014 RTM to view data collected by the Collection Set installed in SQL Server 2014 RTM.  
   
 ### Downgrading from SQL Server 2014 RTM to SQL Server 2014 CTP 2  
 This is not supported.  
   
-**Workaround:** There is no workaround for downgrade. We recommend that you back-up the database before upgrading to SQL Server 2014 RTM.  
+**Workaround:** There is no workaround for downgrade. We recommend that you back up the database before upgrading to SQL Server 2014 RTM.  
   
 ### Incorrect version of StreamInsight Client on SQL Server 2014 media/ISO/CAB  
 The wrong version of StreamInsight.msi and StreamInsightClient.msi is located in the following path on the SQL Server media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
@@ -126,7 +126,7 @@ The wrong version of StreamInsight.msi and StreamInsightClient.msi is located in
   
 ## <a name="ProdDoc"></a>Product Documentation RTM
   
-Report Builder and PowerPivit content is not available in some languages. 
+Report Builder and PowerPivit content are not available in some languages. 
 
 **Issue:** Report Builder content is not available in the following languages.  
   
@@ -169,7 +169,7 @@ SQL Server 2014 Standard has the following changes:
 ### Memory Optimization Advisor flags default constraints as incompatible  
 **Issue:** The Memory Optimized Advisor in SQL Server Management Studio flags all default constraints as incompatible. Not all default constraints are supported in a memory-optimized table; the Advisor does not distinguish between supported and unsupported types of default constraints. Supported default constraints include all constants, expressions and built-in functions supported within natively compiled stored procedures. To see the list of functions supported in natively compiled stored procedures, refer to [Supported Constructs in Natively Compiled Stored Procedures](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
-**Workaround:** If you want to use the advisor to identify blockers, please ignore the compatible default constraints. To use the Memory Optimization Advisor to migrate tables that have compatible default constraints, but no other blockers, follow these steps:  
+**Workaround:** If you want to use the advisor to identify blockers, ignore the compatible default constraints. To use the Memory Optimization Advisor to migrate tables that have compatible default constraints, but no other blockers, follow these steps:  
   
 1.  Remove the default constraints from the table definition.    
 2.  Use the Advisor to produce a migration script on the table.    
@@ -262,7 +262,7 @@ optimized table or natively compiled stored procedure with object ID
     ```  
   
 ### Using a string parameter or variable with DATEPART and related functions in a natively compiled stored procedure results in an error  
-**Issue:** When using a parameter or variable that has a string datatype such as (var)char or n(var)char with the built-in functions DATEPART, DAY, MONTH, and YEAR inside a natively compiled stored procedure, you will see an error message stating that the datatype datetimeoffset is not supported with natively compiled stored procedures.  
+**Issue:** When using a natively compiled stored procedure that uses string parameter or variable with the built-in functions DATEPART, DAY, MONTH, and YEAR, an error message shows that datetimeoffset is not supported with natively compiled stored procedures.  
   
 **Workaround:** Assign the string parameter or variable to a new variable of type datetime2, and use that variable in the function DATEPART, DAY, MONTH, or YEAR. For example:  
   
@@ -281,7 +281,7 @@ DATEPART(weekday, @d)
   
 **Workaround:** This issue is fixed with the feature pack redistribution of the [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295).  After the update is applied, all new history entries will use the value listed for the instance_id in the sysdac_instances_internal table.  
   
-If you already have the issue with mismatched instance_id values, the only way to correct the mismatched values is to connect to the server as a user with privileges to write to MSDB database and update the instance_id values to match.  If there has been multiple register and unregister events of the same database, you may need to look at the time/date to see what records match with the current instance_id values.  
+If you already have the issue with mismatched instance_id values, the only way to correct the mismatched values is to connect to the server as a user with privileges to write to MSDB database and update the instance_id values to match.  If there have been multiple register and unregister events of the same database, you may need to look at the time/date to see what records match with the current instance_id values.  
   
 1.  Connect to the server in SQL Server Management Studio using a login that has update permissions to MSDB.    
 2.  Open a new query using the MSDB database.    

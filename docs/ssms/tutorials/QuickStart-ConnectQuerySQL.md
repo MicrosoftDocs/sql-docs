@@ -54,8 +54,9 @@ If you don't have access to a SQL Server, select your platform from the followin
 The following steps create a database named TutorialDB. 
 
 1. Right-click your server in **Object Explorer** and select **New Query**. 
+
    ![New Query](media/QuickStartConnect/NewQuery.PNG)
-2. Paste the following snippet into the query window: 
+1. Paste the following snippet into the query window: 
 
 
    ```sql

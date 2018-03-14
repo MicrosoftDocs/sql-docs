@@ -1,13 +1,8 @@
-# [Getting started](getting-started-with-machine-learning-services.md)
-
 # Overview
-## [What is Microsoft Machine Learning Services](r/r-services.md)
-## [What's new in machine learning](what-s-new-in-sql-server-machine-learning-services.md)
-## [New and updated articles](new-updated-advanced-analytics.md)
-## [Architecture and overview](architecture-overview-machine-learning.md)
-## [Differences in machine learning features between editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
+## [What is SQL Server Machine Learning Services?](what-is-sql-server-machine-learning.md)
+## [New features](what-s-new-in-sql-server-machine-learning-services.md)
+## [Architecture overview](architecture-overview-machine-learning.md)
+## [Features by edition](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 
@@ -97,8 +92,6 @@
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: Deploy and consume models using a Standalone server](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [Machine Learning Server - Standalone](r/r-server-standalone.md)
 ## [Getting started](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [Set up Machine Learning Server Standalone](r/create-a-standalone-r-server.md)
@@ -175,6 +168,8 @@
 
 ## [Known issues](known-issues-for-sql-server-machine-learning-services.md)
 ## [Release notes](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [New and updated articles](new-updated-advanced-analytics.md)
+## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
 
 ## [Setup and troubleshooting tips](machine-learning-troubleshooting-faq.md)
 ### [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md)

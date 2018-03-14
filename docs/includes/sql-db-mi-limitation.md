@@ -1,2 +1,2 @@
-> [!Important]
-> On [Azure SQL Database Managed Instance]( https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance),
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance), this T-SQL feature has certain behavior changes. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](sql-database-managed-instance-transact-sql-information.md) for details for all T-SQL behavior changes.

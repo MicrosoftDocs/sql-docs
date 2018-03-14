@@ -28,7 +28,12 @@ ms.workload: "Active"
 
 This article describes how to install and configure **SQL Server 2016 R Services (In-Database)**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server. Requires the database engine.
 
-## <a name="bkmk_prereqs"> </a> Preinstallation checklist
+> [!div class="checklist"]
+> * Install database engine and R Services features
+> * Required post-installation steps: enable R Services, and restart
+> * Optional post-installation steps: add firewall rules, add users, change or configure service accounts, set up a remote data science client
+
+## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
 + R Services in-database requires SQL Server 2016. If you have SQL Server 2017, please install [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) instead.
 
@@ -42,14 +47,8 @@ This article describes how to install and configure **SQL Server 2016 R Services
 
 + The R Services framework requires additional configuration after setup is complete. The exact steps depend on your organization and security policies, server configuration, and intended users. We recommend that you review all steps and determine additional configuration that might be required in your environment.
 
-## <a name="bkmk2016top"></a> Install SQL Server 2016 R Services (In-Database)
+## <a name="bkmk2016top"></a> ## Run Setup
 
-> [!div class="checklist"]
-> * Install database engine and R Services features
-> * Required post-installation steps: enable R Services, and restart
-> * Optional post-installation steps: add firewall rules, add users, change or configure service accounts, set up a remote data science client
-
-**Using the SQL Server 2016 setup wizard**
 
 1. Run the SQL Server setup wizard.
 

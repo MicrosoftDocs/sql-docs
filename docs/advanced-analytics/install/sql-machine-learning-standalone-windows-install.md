@@ -25,11 +25,13 @@ SQL Server setup includes the option to install a machine learning server that r
   
 This article describes how to use SQL Server setup to install the standalone version of Machine Learning Server. If you have an Enterprise Edition or Software Assurance, installing the standalone machine learning server is free.
 
-If you have installed a previous version of Microsoft R Server, we recommend that you uninstall it first.
+## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-If the computer does not have Internet access, you should download the component installers in advance. For more information, see [Installing machine learning components without internet access](./installing-ml-components-without-internet-access.md).
+If you installed a previous version of Microsoft R Server, we recommend that you uninstall it first.
 
-1. Run SQL Server 2017 setup.
+## Run Setup
+
+1. Start the setup wizard for SQL Server 2017.
 
 2. Click the **Installation** tab, and select **New Machine Learning Server (Standalone) installation**.
     

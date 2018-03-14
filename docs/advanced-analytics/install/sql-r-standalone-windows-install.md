@@ -23,7 +23,11 @@ ms.workload: "On Demand"
 
 This article describes how to use SQL Server 2016 setup to install the standalone version of SQL Server 2016 R Server. If you have an Enterprise Edition or Software Assurance, installing the standalone R Server on a production server is free.
 
-If you have installed any previous version of the Revolution Analytics tools or packages, you must uninstall them first. 
+## <a name="bkmk_prereqs"> </a> Pre-install checklist
+
+If you installed any previous version of the Revolution Analytics tools or packages, you must uninstall them first. 
+
+## Run Setup
 
 1. Run SQL Server 2016 setup. We recommend that you install Service Pack 1 or later.
 

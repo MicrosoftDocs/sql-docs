@@ -71,6 +71,7 @@ The following steps create a database named TutorialDB.
    GO
    ```
 1. To execute the query, hit **Execute** (or F5 on your keyboard). If you want to execute a portion of the text, highlight that portion and then hit **Execute**.  Executing without highlighting anything will run everything in the query window. 
+
    ![Execute Query](media/connect-query-sql-server/execute.png)
   
  
@@ -128,6 +129,7 @@ After the query completes, the new **Customers** table appears in the list of ta
    SELECT * FROM dbo.Customers;
    ```
 1. The results of the query are displayed under the area where text was entered: 
+
    ![Query Results](media/connect-query-sql-server/queryresults.png)
 
 
@@ -144,6 +146,7 @@ You can find information about the connection properties under the results of yo
 - After running the aforementioned query from the step above, review the connection properties at the bottom of the query window.
     - You can determine which server and database you're connected to, and the user  you're logged in with.
     - You can also see the query duration and the number of rows returned by the query executed earlier.
+    
     ![Connection Properties](media/connect-query-sql-server/connectionproperties.png)  
     In this image, the results are displayed as text as an example. 
 

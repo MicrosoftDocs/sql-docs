@@ -85,7 +85,9 @@ The following steps create a database named TutorialDB.
 The query editor is still connected to the *master* database, but you want to create a table in the *TutorialDB*. 
 
 1. Change the connection context of your query from the master to **TutorialDB** by selecting the database you want from the drop-down on the top left. 
+
    ![Change database](media/QuickStartConnect/ChangeDB.PNG)
+
 1. Paste the following snippet into the query window, highlight it, and hit **Execute**: 
   
    ```sql
@@ -134,15 +136,15 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 
 1.  You can modify the way results are presented by selecting one of these options
-- By default, the results will be in **Grid**, which shows a table and is the middle option
-- The first option will display your results via text
-- The third option will save your results to a file
+    - By default, the results will be in **Grid**, which shows a table and is the middle option
+    - The first option will display your results via text
+    - The third option will save your results to a file
 
 ## Verify your query window connection properties
 You can find information about the connection properties under the results of your query. 
 1. After running the aforementioned query from the step above, review the connection properties at the bottom of the query window.   
-- You can determine which server and database you're connected to, and the user  you're logged in with.
-- You can also see the query duration and the number of rows returned by the query executed earlier.
+    - You can determine which server and database you're connected to, and the user  you're logged in with.
+    - You can also see the query duration and the number of rows returned by the query executed earlier.
     ![Connection Properties](media/QuickStartConnect/ConnectionProperties.PNG)  
     In this image, the results are displayed as text as an example. 
 

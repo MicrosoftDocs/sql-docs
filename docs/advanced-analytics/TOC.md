@@ -14,9 +14,6 @@
 ### [R Server (Standalone)](install/sql-r-standalone-windows-install.md)
 
 ## OLD
-## [Set up Python Machine Learning Services (In-Database)](python/setup-python-machine-learning-services.md)
-## [Set up SQL Server Machine Learning Services (In-Database)](r/set-up-sql-server-r-services-in-database.md)
-## [Set up Machine Learning Server Standalone](r/create-a-standalone-r-server.md)
 ## [Unattended installation of Python Machine Learning Services (In-Database)](python/unattended-installs-of-sql-server-python-services.md)
 ## [Unattended installs of Machine Learning Services](r/unattended-installs-of-sql-server-r-services.md)
 ## [Installing machine learning components without Internet access](r/installing-ml-components-without-internet-access.md)

@@ -25,7 +25,13 @@ This article describes how to use SQL Server 2016 setup to install the standalon
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
+SQL Server 2016 is required. If you have SQL Server 2017, please install [SQL Server 2017 Machine Learning Server (Standalone)](sql-machine-learning-standalone-windows-install.md) instead.
+
 If you installed any previous version of the Revolution Analytics tools or packages, you must uninstall them first. 
+
+## Get the installation media
+
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## Run Setup
 

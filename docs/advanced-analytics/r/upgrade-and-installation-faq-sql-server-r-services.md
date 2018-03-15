@@ -46,17 +46,7 @@ Depending on the build of SQL Server that you are installing, some of the follow
  - Installing Microsoft R Server on an instance of SQL Server installed on Windows Core. In the RTM version of SQL Server 2016, there was a known issue when adding Microsoft R Server to an instance on Windows Server Core edition. This has been fixed. If you encounter this issue, you can apply the fix described in [KB3164398](https://support.microsoft.com/kb/3164398) to add the R feature to the existing instance on Windows Server Core. For more information, see [Can't install Microsoft R Server Standalone on a Windows Server Core operating system](https://support.microsoft.com/kb/3168691).
 
 
-##  <a name="bkmk_Uninstall"></a> Uninstall prior to upgrading from an older version of Microsoft R Server
 
-If you installed a pre-release version of Microsoft R Server, you must uninstall it before you can upgrade to a newer version.
-
-**To uninstall R Server (Standalone)**
-
-1.  In **Control Panel**, click **Add/Remove Programs**, and select `Microsoft SQL Server 2016 <version number>`.
-
-2.  In the dialog box with options to **Add**, **Repair**, or **Remove** components, select **Remove**.
-  
-3.  On the **Select Features** page, under **Shared Features**, select **R Server (Standalone)**. Click **Next**, and then click **Finish** to uninstall just the selected components.
 
 ## Offline installation of machine learning components for a localized version of SQL Server
 
@@ -144,6 +134,16 @@ For more information, see:
 
 + [Support timeline for Microsoft R Server and Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)
 + [Use SqlBindR to upgrade an instance of SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+##  <a name="bkmk_Uninstall"></a> Uninstall prior to upgrading from an older version of Microsoft R Server
+
+If you installed a pre-release version of Microsoft R Server, you must uninstall it before you can upgrade to a newer version.
+
+1.  In **Control Panel**, click **Add/Remove Programs**, and select `Microsoft SQL Server 2016 <version number>`.
+
+2.  In the dialog box with options to **Add**, **Repair**, or **Remove** components, select **Remove**.
+  
+3.  On the **Select Features** page, under **Shared Features**, select **R Server (Standalone)**. Click **Next**, and then click **Finish** to uninstall just the selected components.
 
 ## R Server (Standalone)
 

@@ -27,7 +27,13 @@ This article describes how to use SQL Server setup to install the standalone ver
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
+SQL Server 2017 is required. If you have SQL Server 2016, please install [SQL Server 2016 R Server (Standalone)](sql-r-standalone-windows-install.md) instead.
+
 If you installed a previous version of Microsoft R Server, we recommend that you uninstall it first.
+
+## Get the installation media
+
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## Run Setup
 
@@ -63,10 +69,6 @@ If you installed a previous version of Microsoft R Server, we recommend that you
     Installation of these components, and any prerequisites they might require, might take a while. When the **Accept** button becomes unavailable, you can click **Next**.
 
 6.  On the **Ready to Install** page, verify your selections, and click **Install**.
-
-For more information about automated or off-line installation, see [Install Microsoft R Server from the command line](../../advanced-analytics/r/install-microsoft-r-server-from-the-command-line.md).
-
-
 
 ### Default installation folders
 

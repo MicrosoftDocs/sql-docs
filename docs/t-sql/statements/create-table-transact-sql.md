@@ -60,7 +60,7 @@ ms.workload: "Active"
 
   Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-[!INCLUDE[ssMIlimitation]](../../includes/sql-db-mi-limitation.md)
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]   
 >  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).

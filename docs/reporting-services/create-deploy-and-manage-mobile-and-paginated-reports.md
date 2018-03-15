@@ -7,7 +7,6 @@ ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "reporting-services-native"
 
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"

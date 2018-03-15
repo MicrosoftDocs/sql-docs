@@ -19,21 +19,23 @@ ms.workload: "On Demand"
 # Install SQL Server 2017 Machine Learning Services (In-Database) on Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to install the machine learning component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the interactive prompts.
+The Machine Learning Services component of SQL Server adds in-database predictive analytics, statistical analysis, visualization, and machine learning algorithms. Function libraries are available in R and Python and run as external script on a database engine instance. 
+
+This article explains how to install the machine learning component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the on-screen prompts.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-SQL Server 2017 is required. If you have SQL Server 2016, please install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) instead.
++ SQL Server 2017 is required. If you have SQL Server 2016, please install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) instead.
 
-A database engine instance is required.
++ A database engine instance is required.
 
-Do not install Machine Learning Services on a failover cluster. The security mechanism used for isolating R and Python processes is not compatible with a Windows Server failover cluster environment.
++ Do not install Machine Learning Services on a failover cluster. The security mechanism used for isolating R and Python processes is not compatible with a Windows Server failover cluster environment.
 
-Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
++ Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
-Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running an in-database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
++ Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running an in-database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
 
-Side-by-side installation with other versions of R and Python is supported but not recommended. It's supported because SQL Server instance uses its own copies of the open-source R and Anaconda distributions. But it's not recommended because running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
++ Side-by-side installation with other versions of R and Python is supported but not recommended. It's supported because SQL Server instance uses its own copies of the open-source R and Anaconda distributions. But it's not recommended because running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
     
   + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
   + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
@@ -46,6 +48,8 @@ Side-by-side installation with other versions of R and Python is supported but n
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## Run Setup
+
+For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
 1. Start the setup wizard for SQL Server 2017. You can download 
   
@@ -64,7 +68,7 @@ Side-by-side installation with other versions of R and Python is supported but n
          This option installs the database services that support R and Python script execution.
 
     -   **R**
-- 
+
         Check this option to add the Microsoft R packages, interpreter, and open-source R. 
 
     -   **Python**
@@ -90,18 +94,13 @@ Side-by-side installation with other versions of R and Python is supported but n
   
 6. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
-     + Database Engine Services
-     + Machine Learning Services (In-Database)
-     + R
-     + Python
-  
-    These selections represent the minimum configuration required to use Python with [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)].
-    
-    ![Ready to install Python](media/ready-to-install-python.png "Required components for Python install")
+    + Database Engine Services
+    + Machine Learning Services (In-Database)
+    + R or Python, or both
 
-    Optionally, make a note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
+    Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-7. When the installation is complete, make a note of the setup log location, and then restart your computer.
+7. When the installation is complete, restart your computer.
 
 ##  <a name="bkmk_enableFeature"></a>Enable external script execution
 
@@ -145,11 +144,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
     
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify that the Launchpad service for your instance is running. If the Launchpad is not running, restart the service.
-  
-    If you have installed multiple instances of SQL Server, any instance that has either R or Python enabled has its own Launchpad service.
-
-    If you install both R and Python on a single instance, only one Launchpad is installed. A separate, language-specific launcher DLL is added for each language. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md). 
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. Restart the service if is not running. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md). 
    
 3. If Launchpad is running, you should be able to run simple R and Python scripts to verify that external scripting runtimes can communicate with SQL Server.
 
@@ -318,7 +313,7 @@ See the following tutorials for some examples of how you can use Python with SQL
 + [Using Python in T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Create a Python model using revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
 
-### Get Help
+## Get Help
 
 Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
 

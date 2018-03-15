@@ -37,6 +37,8 @@ If you installed a previous version of Microsoft R Server, we recommend that you
 
 ## Run Setup
 
+For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
+
 1. Start the setup wizard for SQL Server 2017.
 
 2. Click the **Installation** tab, and select **New Machine Learning Server (Standalone) installation**.
@@ -98,8 +100,8 @@ We recommend that you try the new release of [!INCLUDE[rsql_rtvs](../../includes
 
 Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
 
-* [Upgrade and installation FAQ - Machine Learning Services](upgrade-and-installation-faq-sql-server-r-services.md)
+* [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 To check the installation status of the instance and fix common issues, try these custom reports.
 
-* [Custom reports for SQL Server R Services](\r\monitor-r-services-using-custom-reports-in-management-studio.md)
+* [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)

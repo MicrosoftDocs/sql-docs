@@ -8,6 +8,7 @@
 
 ## [Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
 ## [Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md)
+## [Offline (disconnected) setup](install/sql-ml-component-install-without-internet-access.md)
 
 ## SQL Server 2016
 ### [R Services (In-Database)](install/sql-r-services-windows-install.md)
@@ -16,7 +17,6 @@
 ## OLD
 ## [Unattended installation of Python Machine Learning Services (In-Database)](python/unattended-installs-of-sql-server-python-services.md)
 ## [Unattended installs of Machine Learning Services](r/unattended-installs-of-sql-server-r-services.md)
-## [Installing machine learning components without Internet access](r/installing-ml-components-without-internet-access.md)
 ## [Install Microsoft Machine Learning Server from the command line](r/install-microsoft-r-server-from-the-command-line.md)
 ## [Use sqlBindR.exe to upgrade an instance](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 

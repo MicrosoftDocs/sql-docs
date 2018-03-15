@@ -46,17 +46,12 @@ Depending on the build of SQL Server that you are installing, some of the follow
  - Installing Microsoft R Server on an instance of SQL Server installed on Windows Core. In the RTM version of SQL Server 2016, there was a known issue when adding Microsoft R Server to an instance on Windows Server Core edition. This has been fixed. If you encounter this issue, you can apply the fix described in [KB3164398](https://support.microsoft.com/kb/3164398) to add the R feature to the existing instance on Windows Server Core. For more information, see [Can't install Microsoft R Server Standalone on a Windows Server Core operating system](https://support.microsoft.com/kb/3168691).
 
 
+## Offline installation of machine learning components for a localized version of SQL Server 2016
 
+Early-release versions of SQL Server 2016 failed to install locale-specific .cab files during offline setup without an internet connection. This issue was fixed in later releases, but if the installer returns a message stating it cannot install the correct language, you can edit the filename to allow setup to continue.
 
-## Offline installation of machine learning components for a localized version of SQL Server
-
-When you install [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] machine learning components on a computer that does not have internet access, you must take some additional steps:
-
-+ Download the R or Python component installers to a local folder before you run SQL Server setup.
-+ In some cases, you might need to edit the installer file to ensure that the correct language is installed.
++ Manually edit the installer file to ensure that the correct language is installed. For example, to install the Japanese version of SQL Server, you would change the name of the file from SRS_8.0.3.0_**1033**.cab to SRS_8.0.3.0_**1041**.cab.
 + The language identifier used for the machine learning components must be the same as the SQL Server setup language, or you cannot complete setup.
-
-For more information, see [Installing machine learning components without internet access](../r/installing-ml-components-without-internet-access.md).
 
 ## Licensing agreements for unattended installs
 

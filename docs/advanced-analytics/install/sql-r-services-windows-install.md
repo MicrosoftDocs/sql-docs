@@ -30,17 +30,17 @@ This article explains how to install and configure **SQL Server 2016 R Services 
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-SQL Server 2016 is required. If you have SQL Server 2016, please install [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) instead.
++ SQL Server 2016 is required. If you have SQL Server 2016, please install [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) instead.
 
-A database engine instance is required.
++ A database engine instance is required.
 
-Do not install R Services on a failover cluster. The security mechanism used for isolating R processes is not compatible with a Windows Server failover cluster environment.
++ Do not install R Services on a failover cluster. The security mechanism used for isolating R processes is not compatible with a Windows Server failover cluster environment.
 
-Do not install R Services on a domain controller. The R Services portion of setup will fail.
++ Do not install R Services on a domain controller. The R Services portion of setup will fail.
 
-DDo not install **Shared Features** > **R Server (Standalone)** on the same computer running an in-database instance. 
++ Do not install **Shared Features** > **R Server (Standalone)** on the same computer running an in-database instance. 
 
-Side-by-side installation with other versions of R and Python are possible because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. However, running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
++ Side-by-side installation with other versions of R and Python are possible because the SQL Server instance uses its own copies of the open-source R and Anaconda distributions. However, running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
     
   + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
   + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
@@ -54,7 +54,13 @@ If you used any earlier versions of the Revolution Analytics development environ
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
+ ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement 
+
+Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server. If this update to the VC runtime binaries is not installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server follow the instructions at [SQL Server Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries.  
+
 ## <a name="bkmk2016top"></a>Run Setup
+
+For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
 1. Start the setup wizard for SQL Server 2016.
 
@@ -83,7 +89,9 @@ If you used any earlier versions of the Revolution Analytics development environ
    + Database Engine Services
    + R Services (In-Database)
 
-7. When the installation is complete, make a note of the setup log location, and then restart your computer.
+    Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
+
+7. When the installation is complete, restart your computer.
 
 ##  <a name="bkmk_enableFeature"></a>Enable external script execution
 
@@ -124,7 +132,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
 
-6. Open the **Services** panel, and verify that the Launchpad service for your instance is running. If you install multiple instances, each instance has its own Launchpad service.
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. Restart the service if is not running. For more information, see [Components to support Python integration](../python/new-components-in-sql-server-to-support-python-integration.md).
 
 7. If Launchpad is running, you should be able to run simple R to verify that external scripting runtimes can communicate with SQL Server. 
 

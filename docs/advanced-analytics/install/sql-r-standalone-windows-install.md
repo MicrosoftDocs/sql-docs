@@ -33,7 +33,13 @@ If you installed any previous version of the Revolution Analytics tools or packa
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
+ ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement 
+
+Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server. If this update to the VC runtime binaries is not installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server follow the instructions at [SQL Server Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries.  
+
 ## Run Setup
+
+For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
 1. Start the setup wizard for SQL Server 2016. We recommend that you install Service Pack 1 or later.
 
@@ -61,19 +67,6 @@ If you installed any previous version of the Revolution Analytics tools or packa
     Installation of these components, and any prerequisites they might require, might take a while.
     
 5.  On the **Ready to Install** page, verify your selections, and click **Install**.
-
-## <a name="bkmk_upgrade"></a> Upgrade R Server
-
-A standalone server is independent of the database engine and can be upgraded to newer versions of the software that are outside of SQL Server. Specifically, you can upgrade to the newest release of Microsoft Machine Learning Server for Windows. 
-
-You might upgrade to use newer versions of the R components or to change the support policy from SQL Server to the Modern Software Lifecycle Support policy. This allows the instance to be updated more frequently, on a different schedule than the SQL Server releases.
-
-1. Download the separate Windows-based installer from the locations listed here: 
-
-    + [Install Machine Learning Server 9.3 or 9.2.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
-    + [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
-
-2. Run the installer and follow the on-screen prompts. On the page where you select the features to install, select each instance of R Server that you want to upgrade.
 
 ## Default installation folders
 
@@ -106,8 +99,8 @@ We recommend that you try the new release of [!INCLUDE[rsql_rtvs](../../includes
 
 Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
 
-* [Upgrade and installation FAQ - Machine Learning Services](upgrade-and-installation-faq-sql-server-r-services.md)
+* [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 To check the installation status of the instance and fix common issues, try these custom reports.
 
-* [Custom reports for SQL Server R Services](\r\monitor-r-services-using-custom-reports-in-management-studio.md)
+* [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)

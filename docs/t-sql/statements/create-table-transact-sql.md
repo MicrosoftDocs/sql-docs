@@ -60,12 +60,14 @@ ms.workload: "Active"
 
   Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
+[!INCLUDE[ssMIlimitation]](../../includes/sql-db-mi-limitation.md)
+
 > [!NOTE]   
 >  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Simple Syntax  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -75,7 +77,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## Syntax  
+## Full Syntax  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  

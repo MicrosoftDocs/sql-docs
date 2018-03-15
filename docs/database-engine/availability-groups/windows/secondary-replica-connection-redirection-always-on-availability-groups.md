@@ -43,6 +43,10 @@ Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG liste
 
 When an AG listener cannot be configured, you can configure secondary to primary replica connection redirection for an availability group.
 
+## Requirement
+
+In order for a secondary replica to redirect read/write connection requests, the secondary replica must be online. 
+
 ## Set READ_WRITE_ROUTING_URL option
 
 To configure secondary to primary connection redirection, set `READ_WRITE_ROUTING_URL` for the primary replica when you create the AG. 
@@ -138,19 +142,20 @@ GO
 
 ### Connection behaviors
 
-In the following diagram, a client application connects to COMPUTER02, with `ApplicationIntent=ReadWrite`. The connection is redirected. to the primary replica. 
+In the following diagram, a client application connects to COMPUTER02, with `ApplicationIntent=ReadWrite`. The connection is redirected to the primary replica. 
 
 ![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
-The availability group redirects read/write calls to either secondary replica to the primary replia. 
+The secondary replica redirects read/write calls to the primary replia. A read write connection to either replica will redirect to the primary replica. 
+
+In the following diagram, the primary replica has been manually failed over to COMPUTER02. A cliente application connects to COMPUTER01, with `ApplicationIntent=ReadWrite`. The connection is redirecrected to the primary replica. 
+
+![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
+
 
 ## SQL Server instance offline
 
 If the instance of SQL Server specified in the connection string is not available (has an outage) the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string. The application has to implement retry logic to accommodate primary and secondary replicas not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](http://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
-
-
- 
-
 
 ## See Also  
 [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

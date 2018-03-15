@@ -62,7 +62,7 @@
 ### [Configure for distributed transactions](configure-availability-group-for-distributed-transactions.md)
 ### [Configure read-only access replica](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [Configure read-only routing](configure-read-only-routing-for-an-availability-group-sql-server.md) 
-### [Configure replica redirection](replica-connection-redirection-always-on-availability-groups.md) 
+### [Configure secondary replica redirection](secondary-replica-connection-redirection-always-on-availability-groups.md) 
 ### [Remove listener](remove-an-availability-group-listener-sql-server.md)  
 ### [Join a secondary database](join-a-secondary-database-to-an-availability-group-sql-server.md)  
 ### [Start data movement](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  

@@ -13,37 +13,39 @@ manager: craigg
 ---
 
 # Quickstart: Connect and query SQL Server using SQL Server Management Studio
-This Quickstart shows how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands to create a database.  
+This Quickstart shows how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance, and populate a database with data using basic Transact-SQL (T-SQL) commands. 
+
 
 ## Prerequisites
 To complete this Quickstart, you need SQL Server Management Studio and access to a SQL Server. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
-If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password!):
+If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password if you choose SQL Authentication!):
 - [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - Download SQL Server 2017 on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - You only need to follow the steps up to *Create and Query Data*.
+
 
 ## Connect to a SQL Server
 
 1. Start SQL Server Management Studio (SSMS).
-1. The first time  you run SSMS the **Connect to Server** dialog opens. 
-      - If the **Connection** dialog doesn't open, Object Explorer > Connect button / connect icon > Database Engine.
+1. The first time you run SSMS the **Connect to Server** dialog box opens. 
+      - If the **Connect to Server** dialog doesn't open, it can be opened manually in  **Object Explorer** > **Connect**  (or icon next to it) > Database Engine.
 
         ![Connect in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
 
-1. In the **Connect to Server** dialog box, select your connection options and hit connect. This article uses *Windows Authentication* but *SQL Login* is also supported. The remaining fields should be as follows:
+1. In the **Connect to Server** dialog box, fill out your connection options. This article uses *Windows Authentication* but *SQL Login* is also supported. The remaining fields should be as follows:
 
-    - Server type: Database Engine (should be selected by default)
-    - Authentication: Windows Authentication
-    - Options: you can also modify your connection options, such as the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values 
-   
+    - **Server type**: Database Engine (typically selected by default)
+    - **Authentication**: Windows Authentication
+
       ![Connection](media/connect-query-sql-server/connection.png)
 
-1. Once the fields have been filled out, hit **Connect**. 
+        You can also modify additional connection options (such as the database you're connecting to, the connection timeout value, and the network protocol) by clicking the **Options** button. For the purpose of this article, everything was left at the default values. 
 
-1. You are now connected to your SQL Server, and  you can verify this by exploring the objects available within Object Explorer: 
+1. Once the fields have been filled out, click on **Connect**. 
+
+1. You can verify that your connection succeeded to your SQL Server by exploring the objects in **Object Explorer**: 
 
    ![Successful Connection](media/connect-query-sql-server/successfulconnection.png)
 
@@ -55,7 +57,7 @@ The following steps create a database named TutorialDB.
 
    ![New Query](media/connect-query-sql-server/newquery.png)
    
-1. Paste the following snippet into the query window: 
+1. Paste the following T-SQL code snippet into the query window: 
    ```sql
    USE master
    GO
@@ -70,7 +72,7 @@ The following steps create a database named TutorialDB.
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
-1. To execute the query, hit **Execute** (or F5 on your keyboard). If you want to execute a portion of the text, highlight that portion and then hit **Execute**.  Executing without highlighting anything will run everything in the query window. 
+1. To execute the query, click on **Execute** (or press F5 on your keyboard). 
 
    ![Execute Query](media/connect-query-sql-server/execute.png)
   
@@ -79,13 +81,14 @@ After the query completes, the new **TutorialDB** appears in the list of databas
 
 
 ## Create a Table
-The query editor is still connected to the *master* database, but you want to create a table in the *TutorialDB*. 
+The following steps will now create a table in the newly created **TutorialDB** database. However, the query editor is still in the context of the *master* database, and you want to create a table in the *TutorialDB*. 
 
-1. Change the connection context of your query from the master database to **TutorialDB** by selecting the database you want from the drop-down on the top left. 
+1. Change the connection context of your query from the master database to **TutorialDB** by selecting the database you want from the database drop-down. 
 
    ![Change database](media/connect-query-sql-server/changedb.png)
 
-1. Paste the following snippet into the query window, highlight it, and hit **Execute** (or F5 on your keyboard): 
+1. Paste the following T-SQL code snippet into the query window, highlight it, and click  **Execute** (or press F5 on your keyboard): 
+    - You can either replace the existing text in the query window or append it to the end. If you want to execute everything in the query window, click **Execute**. If you want to execute a portion of the text, highlight that portion, and then click **Execute**.  
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -103,10 +106,12 @@ The query editor is still connected to the *master* database, but you want to cr
    );
    GO
    ```
-After the query completes, the new **Customers** table appears in the list of tables in Object Explorer. You might need to right-click the **TutorialDB > Tables** node in **Object Explorer** and select **Refresh**.
+After the query completes, the new **Customers** table appears in the list of tables in **Object Explorer**. If the table is not visible, right-click the **TutorialDB > Tables** node in **Object Explorer** and select **Refresh**.
 
 ## Insert rows
-- Paste the following snippet into the query window and **Execute**: 
+The following step will insert some rows into the **Customers** table that was created. 
+
+Paste the following T-SQL code snippet into the query window and click **Execute**: 
 
 
    ```sql
@@ -121,8 +126,10 @@ After the query completes, the new **Customers** table appears in the list of ta
    GO
    ```
 
-## View the data returned by a query
-1. Paste the following snippet into the query window and click **Execute**: 
+## View Query Results
+The results of a query are visible underneath the query text window. The below steps will allow you to query the **Customers** table and view the rows that were just inserted.  
+
+1. Paste the following T-SQL code snippet into the query window and click **Execute**: 
 
    ```sql
    -- Select rows from table 'Customers'
@@ -137,23 +144,23 @@ After the query completes, the new **Customers** table appears in the list of ta
 
      ![results](media/connect-query-sql-server/results.png)
 
-    - By default, the results will be in **Grid**, which shows a table and is the middle option.
-    - The first option will display your results via text.
-    - The third option will save your results to a file.
+    - By default, the results will be in **Grid View**, which is the middle button and shows the results in a table. 
+    - The first button will display your results in **Text View**, as shown in the image in the next section.
+    - The third button will allow you to save your results to a file, a file ending in *.rpt by default.
 
 ## Verify your query window connection properties
 You can find information about the connection properties under the results of your query. 
-- After running the aforementioned query from the step above, review the connection properties at the bottom of the query window.
+- After running the aforementioned query from the previous step, review the connection properties at the bottom of the query window.
     - You can determine which server and database you're connected to, and the user  you're logged in with.
     - You can also see the query duration and the number of rows returned by the query executed earlier.
     
     ![Connection Properties](media/connect-query-sql-server/connectionproperties.png)  
     In this image, the results are displayed as text as an example. 
 
-## Change the server the query window is connected to
-If you need to quickly change the server your query window is connected to, you can do so within the query window.
+## Change server connection within Query Window
+You can change which server your current query window is connected to by following these steps.
 1. Right click within the query window > Connection > Change connection.
-1. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to. 
+2. This will open the **Connect to Server** dialog box again, allowing you to change which server your query is connected to. 
  
    ![Change Connection](media/connect-query-sql-server/changeconnection.png)
    - Note that this does not change which server your **Object Explorer** is connected to, just the current query window. 

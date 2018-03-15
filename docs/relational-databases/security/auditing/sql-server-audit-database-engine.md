@@ -25,7 +25,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server Audit (Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   *Auditing* an instance of the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] or an individual database involves tracking and logging events that occur on the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit lets you create server audits, which can contain server audit specifications for server level events, and database audit specifications for database level events. Audited events can be written to the event logs or to audit files.  
   

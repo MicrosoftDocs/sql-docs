@@ -30,14 +30,14 @@ If you don't have access to a SQL Server, select your platform from the followin
 
 1. Start SQL Server Management Studio (SSMS).
 1. The first time you run SSMS the **Connect to Server** dialog box opens. 
-      - If the **Connect to Server** dialog doesn't open, it can be opened manually in  **Object Explorer** > **Connect**  (or icon next to it) > Database Engine.
+      - If the **Connect to Server** dialog doesn't open, it can be opened manually in  **Object Explorer** > **Connect**  (or icon next to it) > **Database Engine**.
 
         ![Connect in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
 
-1. In the **Connect to Server** dialog box, fill out your connection options. This article uses *Windows Authentication* but *SQL Login* is also supported. The remaining fields should be as follows:
+1. In the **Connect to Server** dialog box, fill out your connection options: 
 
     - **Server type**: Database Engine (typically selected by default)
-    - **Authentication**: Windows Authentication
+    - **Authentication**: Windows Authentication (this article uses Windows Auth, but SQL Login is supported and will prompt you for a username / password if selected))
 
       ![Connection](media/connect-query-sql-server/connection.png)
 
@@ -68,11 +68,8 @@ The following steps create a database named TutorialDB.
    )
    CREATE DATABASE [TutorialDB]
    GO
-
-   ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-   GO
    ```
-1. To execute the query, click on **Execute** (or press F5 on your keyboard). 
+2. To execute the query, click on **Execute** (or press F5 on your keyboard). 
 
    ![Execute Query](media/connect-query-sql-server/execute.png)
   
@@ -81,7 +78,7 @@ After the query completes, the new **TutorialDB** appears in the list of databas
 
 
 ## Create a Table
-The following steps will now create a table in the newly created **TutorialDB** database. However, the query editor is still in the context of the *master* database, and you want to create a table in the *TutorialDB*. 
+The following steps will now create a table in the newly created **TutorialDB** database. However, the query editor is still in the context of the *master* database, and you want to create a table in the *TutorialDB* database. 
 
 1. Change the connection context of your query from the master database to **TutorialDB** by selecting the database you want from the database drop-down. 
 
@@ -109,7 +106,7 @@ The following steps will now create a table in the newly created **TutorialDB** 
 After the query completes, the new **Customers** table appears in the list of tables in **Object Explorer**. If the table is not visible, right-click the **TutorialDB > Tables** node in **Object Explorer** and select **Refresh**.
 
 ## Insert rows
-The following step will insert some rows into the **Customers** table that was created. 
+The following step will insert some rows into the **Customers** table that was previously created. 
 
 Paste the following T-SQL code snippet into the query window and click **Execute**: 
 
@@ -127,7 +124,7 @@ Paste the following T-SQL code snippet into the query window and click **Execute
    ```
 
 ## View Query Results
-The results of a query are visible underneath the query text window. The below steps will allow you to query the **Customers** table and view the rows that were just inserted.  
+The results of a query are visible underneath the query text window. The below steps will allow you to query the **Customers** table and view the rows that were previously inserted.  
 
 1. Paste the following T-SQL code snippet into the query window and click **Execute**: 
 
@@ -155,7 +152,7 @@ You can find information about the connection properties under the results of yo
     - You can also see the query duration and the number of rows returned by the query executed earlier.
     
     ![Connection Properties](media/connect-query-sql-server/connectionproperties.png)  
-    In this image, the results are displayed as text as an example. 
+    In this image, the results are displayed in **Text View**.  
 
 ## Change server connection within Query Window
 You can change which server your current query window is connected to by following these steps.

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2016 Release and Service Pack Notes | Microsoft Docs"
+title: "SQL Server 2016 Release Notes | Microsoft Docs"
 ms.date: "03/14/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
@@ -24,7 +24,7 @@ ms.workload: "Active"
 ---
 # SQL Server 2016 Release Notes
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-  This article describes limitations and issues with SQL Server 2016 releases. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
+  This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
 > [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 >

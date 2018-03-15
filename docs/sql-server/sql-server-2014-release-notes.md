@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 2014 Release and Service Pack Notes | Microsoft Docs"
+title: "SQL Server 2014 Release Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2018"
 ms.prod: "sql-non-specified"
@@ -20,7 +20,7 @@ ms.workload: "Inactive"
 ---
 # SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
-This Release Notes document describes known issues that you should read about before you install or troubleshoot [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+This article describes known issues with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] releases, including related service packs.
 
 ## SQL Server 2014 Service Pack 2 (SP2)
 
@@ -37,7 +37,7 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 |SOS_RWLock spinlock improvement|Removes the need for spinlock for SOS_RWLock and instead uses lock-free techniques similar to in-memory OLTP. |[SOS_RWLock Redesign](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
 |Spatial Native Implementation|Significant improvement in spatial query performance.|[Spatial performance improvements in SQL Server 2012 and 2014](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
-### Supportability and dagnostics improvements in SP2
+### Supportability and diagnostics improvements in SP2
 
 |Feature|Description|For more information|
 |---|---|---|
@@ -74,9 +74,9 @@ In addition, note the following fixes:
 
 ## SQL Server Service Pack 1 (SP1)
 
-SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2.  
+SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2.
 
->[NOTE] If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/).
+> [!NOTE] If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/).
 
 ### Download pages and more information for SP1
 
@@ -86,7 +86,7 @@ SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and in
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
 
-## <a name="BeforeInstall"></a>Before You Install SQL Server 2014 RTM 
+## Before You Install SQL Server 2014 RTM
   
 ### Limitations and Restrictions in SQL Server 2014 RTM  
   
@@ -96,7 +96,7 @@ SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and in
   
 **Workaround:** None.  
   
-### Upgrading from SQL Server 2014 CTP 2 to SQL Server RTM
+#### Upgrading from SQL Server 2014 CTP 2 to SQL Server RTM
 Upgrading is fullly supported, specifically, you can:  
   
 1.  Attach a SQL Server 2014 CTP 2 database to an instance of SQL Server 2014 RTM.    
@@ -105,17 +105,17 @@ Upgrading is fullly supported, specifically, you can:
 4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](http://msdn.microsoft.com/library/dn178483.aspx) for details.    
 5.  Data collected by Transaction Performance Collection Sets installed in SQL Server 2014 CTP 2 cannot be viewed through SQL Server Management Studio in SQL Server 2014 RTM, and vice versa.
   
-### Downgrading from SQL Server 2014 RTM to SQL Server 2014 CTP 2  
+#### Downgrading from SQL Server 2014 RTM to SQL Server 2014 CTP 2  
 This action is not supported.  
   
 **Workaround:** There is no workaround for downgrade. We recommend that you back up the database before upgrading to SQL Server 2014 RTM.  
   
-### Incorrect version of StreamInsight Client on SQL Server 2014 media/ISO/CAB  
+#### Incorrect version of StreamInsight Client on SQL Server 2014 media/ISO/CAB  
 The wrong version of StreamInsight.msi and StreamInsightClient.msi is located in the following path on the SQL Server media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
   
 **Workaround:** Download and install the correct version from the [SQL Server 2014 Feature Pack download page](http://go.microsoft.com/fwlink/?LinkID=306709).  
   
-## <a name="ProdDoc"></a>Product Documentation RTM
+### <a name="ProdDoc"></a>Product Documentation RTM
   
 Report Builder and PowerPivit content are not available in some languages. 
 
@@ -148,15 +148,15 @@ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], this content was available on
   
 **Workaround:** None.  
   
-## <a name="DBEngine"></a>Database Engine (RTM)
+### <a name="DBEngine"></a>Database Engine (RTM)
   
-### Changes made for Standard Edition in SQL Server 2014 RTM  
+#### Changes made for Standard Edition in SQL Server 2014 RTM  
 SQL Server 2014 Standard has the following changes:  
   
 -   The Buffer Pool Extension feature allows using the maximum size of up to 4x times of configured memory.    
 -   The maximum memory has been raised from 64 GB to 128 GB.  
  
-### Memory Optimization Advisor flags default constraints as incompatible  
+#### Memory Optimization Advisor flags default constraints as incompatible  
 **Issue:** The Memory Optimized Advisor in SQL Server Management Studio flags all default constraints as incompatible. Not all default constraints are supported in a memory-optimized table; the Advisor does not distinguish between supported and unsupported types of default constraints. Supported default constraints include all constants, expressions, and built-in functions supported within natively compiled stored procedures. To see the list of functions supported in natively compiled stored procedures, refer to [Supported Constructs in Natively Compiled Stored Procedures](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Workaround:** If you want to use the advisor to identify blockers, ignore the compatible default constraints. To use the Memory Optimization Advisor to migrate tables that have compatible default constraints, but no other blockers, follow these steps:  
@@ -166,7 +166,7 @@ SQL Server 2014 Standard has the following changes:
 3.  Add back the default constraints in the migration script.    
 4.  Execute the migration script.  
   
-### Informational message “file access denied” incorrectly reported as an error in the SQL Server 2014 error log  
+#### Informational message “file access denied” incorrectly reported as an error in the SQL Server 2014 error log  
 **Issue:** When restarting a server that has databases that contain memory-optimized tables, you may see the following type of error messages in the SQL Server 2014 error log:  
   
 ```  
@@ -178,19 +178,19 @@ This message is actually informational and no user action is required.
   
 **Workaround:** None. This is an informational message.  
   
-### Missing index details incorrectly report included columns for memory-optimized table  
+#### Missing index details incorrectly report included columns for memory-optimized table  
 **Issue:** If SQL Server 2014 detects a missing index for a query on a memory-optimized table, it will report a missing index in the SHOWPLAN_XML, as well as in the missing index DMVs such as sys.dm_db_missing_index_details. In some cases, the missing index details will contain included columns. As all columns are implicitly included with all indexes on memory-optimized tables, it is not allowed to explicitly specify included columns with memory-optimized indexes.  
   
 **Workaround:** Do not specify the INCLUDE clause with indexes on memory-optimized tables.  
   
-### Missing index details omit missing indexes when a hash index exists but is not suitable for the query  
+#### Missing index details omit missing indexes when a hash index exists but is not suitable for the query  
 **Issue:** If you have a HASH index on columns of a memory-optimized table referenced in a query, but the index cannot be used for the query, SQL Server 2014 will not always report a missing index in SHOWPLAN_XML and in the DMV sys.dm_db_missing_index_details.  
   
 In particular, if a query contains equality predicates that involve a subset of the index key columns or if it contains inequality predicates that involve the index key columns, the HASH index cannot be used as is, and a different index would be required to execute the query efficiently.  
   
 **Workaround:** In case you are using hash indexes, inspect the queries and query plans to determine if the queries could benefit from Index Seek operations on a subset of the index key, or Index Seek operations on inequality predicates. If you need to seek on a subset of the index key, either use a NONCLUSTERED index, or use a HASH index on exactly the columns you need to seek on. If you need to seek on an inequality predicate, use a NONCLUSTERED index instead of HASH.  
   
-### Failure when using a memory-optimized table and memory-optimized table variable in the same query, if the database option READ_COMMITTED_SNAPSHOT is set to ON  
+#### Failure when using a memory-optimized table and memory-optimized table variable in the same query, if the database option READ_COMMITTED_SNAPSHOT is set to ON  
 **Issue:** If the database option READ_COMMITTED_SNAPSHOT is set to ON, and you access both a memory-optimized table and a memory-optimized table variable in the same statement outside the context of a user transaction, you may encounter this error message:  
   
 ```  
@@ -208,12 +208,12 @@ ALTER DATABASE CURRENT
 SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 ```  
   
-### Procedure and query execution statistics for natively compiled stored procedures record worker time in multiples of 1000  
+#### Procedure and query execution statistics for natively compiled stored procedures record worker time in multiples of 1000  
 **Issue:** After enabling the collection of procedure or query execution statistics collection for natively compiled stored procedures using sp_xtp_control_proc_exec_stats or sp_xtp_control_query_exec_stats, you will see the *_worker_time reported in multiples of 1000, in the DMVs sys.dm_exec_procedure_stats and sys.dm_exec_query_stats. Query executions that have a worker time of less than 500 microseconds will be reported as having a worker_time of 0.  
   
 **Workaround:** None. Do not rely on worker_time reported in the execution stats DMVs for short-running queries in natively compiled stored procedures.  
   
-### Error with SHOWPLAN_XML for natively compiled stored procedures that contain long expressions  
+#### Error with SHOWPLAN_XML for natively compiled stored procedures that contain long expressions  
 **Issue:** If a natively compiled stored procedure contains a long expression, obtaining the SHOWPLAN_XML for the procedure, either using the T-SQL option SET SHOWPLAN_XML ON or using the option 'Display Estimated Execution Plan' in Management Studio, may result in the following error:  
   
 ```  
@@ -251,7 +251,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 +@v1  
     ```  
   
-### Using a string parameter or variable with DATEPART and related functions in a natively compiled stored procedure results in an error  
+#### Using a string parameter or variable with DATEPART and related functions in a natively compiled stored procedure results in an error  
 **Issue:** When using a natively compiled stored procedure that uses string parameter or variable with the built-in functions DATEPART, DAY, MONTH, and YEAR, an error message shows that datetimeoffset is not supported with natively compiled stored procedures.  
   
 **Workaround:** Assign the string parameter or variable to a new variable of type datetime2, and use that variable in the function DATEPART, DAY, MONTH, or YEAR. For example:  
@@ -261,12 +261,12 @@ DECLARE @d datetime2 = @string
 DATEPART(weekday, @d)  
 ```  
   
-### Native Compilation Advisor flags DELETE FROM clauses incorrectly  
+#### Native Compilation Advisor flags DELETE FROM clauses incorrectly  
 **Issue:** Native Compilation Advisor flags DELETE FROM clauses inside a stored procedure incorrectly as incompatible.  
   
 **Workaround:** None.  
   
-### Register through SSMS adds DAC meta-data with mismatched instance IDs  
+#### Register through SSMS adds DAC meta-data with mismatched instance IDs  
 **Issue:** When registering or deleting a Data-Tier Application package (.dacpac) through SQL Server Management Studio, the sysdac* tables are not updated correctly to allow a user to query dacpac history for the database.  The instance_id for sysdac_history_internal and sysdac_instances_internal do not match to allow for a join.  
   
 **Workaround:** This issue is fixed with the feature pack redistribution of the [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295).  After the update is applied, all new history entries will use the value listed for the instance_id in the sysdac_instances_internal table.  
@@ -288,9 +288,9 @@ If you already have the issue with mismatched instance_id values, the only way t
   
     `update` sysdac_history_internal `set` instance_id = '\<value from step 3\>' `where` \<expression that matches the rows you want to update\>  
   
-## <a name="SSRS"></a>Reporting Services (RTM)
+### <a name="SSRS"></a>Reporting Services (RTM)
   
-### The SQL Server 2012 Reporting Services Native Mode report server cannot run side-by-side with SQL Server 2014 Reporting Services SharePoint Components  
+#### The SQL Server 2012 Reporting Services Native Mode report server cannot run side-by-side with SQL Server 2014 Reporting Services SharePoint Components  
 **Issue:** The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode Windows service ‘SQL Server Reporting Services’ (ReportingServicesService.exe) fails to start when there are [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components installed on the same server.  
   
 **Workaround:** Uninstall [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint components and restart Microsoft SQL Server 2012 Reporting Services Windows service.  
@@ -324,7 +324,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkID=391254).  
   
-### Required Upgrade Order for Multi-node SharePoint Farm to SQL Server 2014 Reporting Services  
+#### Required Upgrade Order for Multi-node SharePoint Farm to SQL Server 2014 Reporting Services  
 **Issue:** Report rendering in a multi-node farm fails if instances of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint Shared Service are upgraded before all instances of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products.  
   
 **Workaround:** In a multi-node SharePoint farm:  
@@ -334,9 +334,9 @@ For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and 
   
 For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkID=391254)  
   
-## <a name="AzureVM"></a>SQL Server 2014 RTM on Windows Azure Virtual Machines  
+### <a name="AzureVM"></a>SQL Server 2014 RTM on Windows Azure Virtual Machines  
   
-### The Add Azure Replica Wizard returns an error when configuring an Availability Group Listener in Windows Azure  
+#### The Add Azure Replica Wizard returns an error when configuring an Availability Group Listener in Windows Azure  
 **Issue:** If an Availability Group has a Listener, the Add Azure Replica Wizard will return an error when trying to configure the Listener in Windows Azure.  
   
 This issue is because Availability Group Listeners require assigning one IP address in every subnet hosting Availability Group replicas, including the Azure subnet.  
@@ -349,9 +349,9 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 2.  After the Wizard completes, you will need to finish the configuration of the Listener in Windows Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Windows Azure](http://msdn.microsoft.com/library/dn376546.aspx)  
   
-## <a name="SSAS"></a>Analysis Services (RTM)
+### <a name="SSAS"></a>Analysis Services (RTM)
   
-### MSOLAP.5 must be downloaded, installed, and registered for a SharePoint 2010 new farm configured with SQL Server 2014  
+#### MSOLAP.5 must be downloaded, installed, and registered for a SharePoint 2010 new farm configured with SQL Server 2014  
 **Issue:**  
   
 -   For a SharePoint 2010 MSOLAP.5 must be downloaded, installed and registered for a SharePoint 2013 new farm configured with SQL Server 2014farm configured with a SQL Server 2014 RTM deployment, PowerPivot workbooks cannot connect to data models because the provider referenced in the connection string is not installed.  
@@ -366,7 +366,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] includes MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks use MSOLAP.5. If MSOLAP.5 is not installed on the computer running Excel Services, Excel Services cannot load the data models.  
   
-### MSOLAP.5 must be downloaded, installed and registered for a SharePoint 2013 new farm configured with SQL Server 2014  
+#### MSOLAP.5 must be downloaded, installed and registered for a SharePoint 2013 new farm configured with SQL Server 2014  
 **Issue:**  
   
 -   For a SharePoint 2013 farm configured with a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] deployment, Excel workbooks referencing the MSOLAP.5 provider cannot connect to tabula data models because the provider referenced in the connection string is not installed.  
@@ -381,7 +381,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] includes MSOLAP.6. but SQL Server 2014 PowerPivot workbooks use MSOLAP.5. If MSOLAP.5 is not installed on the computer running Excel Services, Excel Services cannot load the data models.  
   
-### Corrupt Data Refresh Schedules (RTM)
+#### Corrupt Data Refresh Schedules (RTM)
 **Issue:**  
   
 -   You update a refresh schedule and the schedule becomes corrupt and unusable.  
@@ -394,9 +394,9 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 -    If the serialized length of the refresh schedule is smaller than the original schedule, when you update a data refresh schedule for a workbook the buffer size is not correctly updated and the new schedule information is merged with the old schedule information resulting in a corrupt schedule.  
   
-## <a name="DQS"></a>Data Quality Services (RTM)
+### <a name="DQS"></a>Data Quality Services (RTM)
   
-### No cross-version support for Data Quality Services in Master Data Services  
+#### No cross-version support for Data Quality Services in Master Data Services  
 **Issue:** The following scenarios are not supported:  
   
 -   Master Data Services 2014 hosted in a SQL Server Database Engine database in SQL Server 2012 with Data Quality Services 2012 installed.  
@@ -405,14 +405,14 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **Workaround:** Use the same version of Master Data Services as the Database Engine database and Data Quality Services.  
   
-## <a name="UA"></a>Upgrade Advisor Issues (RTM)
+### <a name="UA"></a>Upgrade Advisor Issues (RTM)
   
-### SQL Server 2014 Upgrade Advisor reports irrelevant upgrade issues for SQL Server Reporting Services  
+#### SQL Server 2014 Upgrade Advisor reports irrelevant upgrade issues for SQL Server Reporting Services  
 **Issue:** SQL Server Upgrade Advisor (SSUA) shipped with the SQL Server 2014 media incorrectly reports multiple errors when analyzing SQL Server Reporting Services server.  
   
 **Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
   
-### SQL Server 2014 Upgrade Advisor reports an error when analyzing SQL Server Integration Services server  
+#### SQL Server 2014 Upgrade Advisor reports an error when analyzing SQL Server Integration Services server  
 **Issue:** SQL Server Upgrade Advisor (SSUA) shipped with the SQL Server 2014 media reports an error when analyzing SQL Server Integration Services server.  The error that is displayed to the user is:  
   
 ```  

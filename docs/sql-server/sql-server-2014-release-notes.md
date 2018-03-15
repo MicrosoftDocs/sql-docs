@@ -76,8 +76,8 @@ In addition, note the following fixes:
 
 SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2.
 
->
-> [!NOTE] If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/).
+> [!NOTE]
+> If your SQL Server instance has SSISDB catalog enabled, and if you get an installation error when you upgrade to SP1, follow the instructions described for this issue on [Error 912 or 3417 when you install SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/).
 
 ### Download pages and more information for SP1
 
@@ -89,7 +89,7 @@ SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and in
 
 ## Before You Install SQL Server 2014 RTM
 
-### Limitations and Restrictions in SQL Server 2014 RTM  
+### Limitations and Restrictions in SQL Server 2014 RTM
 
 1.  Upgrading from SQL Server 2014 CTP 1 to SQL Server 2014 RTM is NOT supported.  
 2.  Installing SQL Server 2014 CTP 1 side-by-side with SQL Server 2014 RTM is NOT supported.  

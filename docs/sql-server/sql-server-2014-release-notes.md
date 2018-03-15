@@ -72,7 +72,7 @@ In addition, note the following fixes:
 - [SQL Server 2014 SP2 Semantic Language Statistics](https://www.microsoft.com/download/details.aspx?id=53165)
 - [SQL Server 2014 Service Pack 2 Release Information](https://support.microsoft.com/help/3171021/sql-server-2014-service-pack-2-release-information)
 
-## SQL Server Service Pack 1 (SP1)
+## SQL Server 2014 Service Pack 1 (SP1)
 
 SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and including CU 5, as well as a rollup of fixes previously shipped in SQL Server 2012 SP2.
 
@@ -87,21 +87,21 @@ SQL Server 2014 SP1 contains fixes provided in SQL Server 2014 CU 1 up to and in
 
 
 ## Before You Install SQL Server 2014 RTM
-  
+
 ### Limitations and Restrictions in SQL Server 2014 RTM  
-  
+
 1.  Upgrading from SQL Server 2014 CTP 1 to SQL Server 2014 RTM is NOT supported.  
 2.  Installing SQL Server 2014 CTP 1 side-by-side with SQL Server 2014 RTM is NOT supported.  
 3.  Attaching or restoring a SQL Server 2014 CTP 1 database to SQL Server 2014 RTM is NOT supported.  
-  
-**Workaround:** None.  
-  
+
+**Workaround:** None.
+
 #### Upgrading from SQL Server 2014 CTP 2 to SQL Server RTM
-Upgrading is fullly supported, specifically, you can:  
-  
+Upgrade is fully supported. Specifically, you can:
+
 1.  Attach a SQL Server 2014 CTP 2 database to an instance of SQL Server 2014 RTM.    
 2.  Restore a database backup taken on SQL Server 2014 CTP 2 to an instance of SQL Server 2014 RTM.    
-3.  In-place upgrade to SQL Server 2014 RTM.    
+3.  In-place upgrade to SQL Server 2014 RTM.
 4.  Rolling upgrade to SQL Server 2014 RTM. You are required to switch to manual failover mode before initiating the rolling upgrade. Refer to [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](http://msdn.microsoft.com/library/dn178483.aspx) for details.    
 5.  Data collected by Transaction Performance Collection Sets installed in SQL Server 2014 CTP 2 cannot be viewed through SQL Server Management Studio in SQL Server 2014 RTM, and vice versa.
   

@@ -120,7 +120,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-## Verify external script execution
+## Verify installation
 
 Use the following steps to verify that all components used to launch external script are running.
 
@@ -162,14 +162,12 @@ If you got an error when running the command, review the additional configuratio
 
 Common scenarios that require additional changes include:
 
-* [Configure Windows firewall](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) to allow inbound connections to SQL Server.
-* [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
-* [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md).
-* Enable *implied authentication*, if users access SQL Server data from a remote data science client and execute code by using the RODBC package or other ODBC provider.
-* Giver users permission to run external scripts.
-* Give users access to individual databases.
-* Fix security issues that prevent communication with the Launchpad service.
-* Ensureusers have permission to run code or install packages.
+* [Configure Windows firewall for in-bound connections](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
+* [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [Extend built-in permissions to remote users](#bkmk_configureAccounts)
+* [Grant permission to run external scripts](#bkmk_AllowLogon)
+* [Grant access to individual databases](#permissions-db)
 
 > [!NOTE]
 > Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
@@ -214,7 +212,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > 
 > [Monitor Machine Learning Services using Custom Reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-### Give your users read, write, or DDL permissions to the database
+### <a name="permissions-db"></a> Give your users read, write, or DDL permissions to the database
 
 The user account that is used to run R might need to read data from other databases, create new tables to store results, and write data into tables. Therefore, for each user who will be executing R scripts, ensure that the user has the appropriate permissions on the database: *db_datareader*, *db_datawriter*, or *db_ddladmin*.
 
@@ -268,7 +266,7 @@ Packages that you want to use from SQL Server must be installed in the default l
 The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Package management](../r/r-package-management-for-sql-server-r-services.md).
 
 
-### Tutorials
+## Tutorial resources
 
 To get started with some simple examples, and learn the basics of how R works with SQL Server, see [Using R code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
 

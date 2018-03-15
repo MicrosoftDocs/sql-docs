@@ -48,15 +48,15 @@ The following examples show different combinations of machine learning component
 
 | Arguments | Description |
 |-----------|-------------|
-| **/FEATURES = AdvancedAnalytics** | Installs the in-database version: SQL Server 2017 Machine Learning Services (In-Database) or SQL Server 2016 R Services (In-Database). This option installs the prerequisites, but the installation is not usable unless you also add R or Python. |
-| **/FEATURES = SQL_SHARED_MR** | Installs the standalone version: SQL Server 2017 Machine Learning Server (Standalone) or SQL Server 2016 R Server (Standalone). This option installs the prerequisites, but the installation is not usable unless you also add R or Python. |
-| **/FEATURES = SQL_INST_MR** | Installs Microsoft R Open and the proprietary R packages.|
-| **/FEATURES = SQL_INST_MPY** | Installs Anaconda and the proprietary Python packages. |
-| **/IACCEPTROPENLICENSETERMS="True"**  | Indicates you have accepted the license terms for using the open source R components. |
-| **/IACCEPTPYTHONLICENSETERMS="True"** | Indicates you have accepted the license terms for using the Python components. |
-| */*IACCEPTSQLSERVERLICENSETERMS="True"** | Indicates you have accepted the license terms for using SQL Server.|
-| **/MRCACHEDIRECTORY** | For offline setup, sets the folder containing the R component CAB files. |
-| **/MPYCACHEDIRECTORY** | For offline setup, sets the folder containing the Python component CAB files. |
+| /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server 2017 Machine Learning Services (In-Database) or SQL Server 2016 R Services (In-Database). This option installs the prerequisites, but the installation is not usable unless you also add R or Python. |
+| /FEATURES = SQL_SHARED_MR | Installs the standalone version: SQL Server 2017 Machine Learning Server (Standalone) or SQL Server 2016 R Server (Standalone). This option installs the prerequisites, but the installation is not usable unless you also add R or Python. |
+| /FEATURES = SQL_INST_MR | Installs Microsoft R Open and the proprietary R packages.|
+| /FEATURES = SQL_INST_MPY | Installs Anaconda and the proprietary Python packages. |
+| /IACCEPTROPENLICENSETERMS="True"  | Indicates you have accepted the license terms for using the open source R components. |
+| /IACCEPTPYTHONLICENSETERMS="True" | Indicates you have accepted the license terms for using the Python components. |
+| /IACCEPTSQLSERVERLICENSETERMS="True" | Indicates you have accepted the license terms for using SQL Server.|
+| /MRCACHEDIRECTORY | For offline setup, sets the folder containing the R component CAB files. |
+| /MPYCACHEDIRECTORY | For offline setup, sets the folder containing the Python component CAB files. |
 
 ### Full installation (database engine, R, Python, pre-trained models) in quiet mode
 

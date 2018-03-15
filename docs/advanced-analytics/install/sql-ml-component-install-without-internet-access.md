@@ -159,33 +159,6 @@ Slipstream setup refers to the ability to apply a patch or update to a failed in
 
 + If you are adding these components to an existing installation, use the updated version of the SQL Server installer, and the corresponding updated version of the additional components. When you specify that the R feature is to be installed, the installer looks for the matching version of the installers for the machine learning components.
 
-## Command-line arguments for specifying component locations
-
-When performing an offline setup from the command line, you must provide the following command-line arguments to specify the location of components that you downloaded in advance. However, you do not need to set any additional flags to install additional required components; prerequisites such as .NET core are installed silently by default.
-
-**Location of installers**
-
-- `/UPDATESOURCE` to specify the location of the local file containing the SQL Server update installer
-- `/MRCACHEDIRECTORY` to specify the folder containing the R component CAB files
-- `/MPYCACHEDIRECTORY` to specify the folder containing the Python component CAB files
-
-**R components in SQL Server 2016**
-
-- `/ADVANCEDANALYTICS` to get engine support for external scripts
-- `/IACCEPTROPENLICENSETERMS="True"` to accept the separate R licensing agreement
-
-**R components in SQL Server 2017**
-
-- `/ADVANCEDANALYTICS` to get engine support for external scripts
-- `/SQL_INST_MR` to use R
-- `/IACCEPTROPENLICENSETERMS="True"` to accept the separate R licensing agreement
-
-**Python components in SQL Server 2017**
-
-- `/ADVANCEDANALYTICS` to get engine support for external scripts
-- `/SQL_INST_MPY` to use Python
-- `/IACCEPTPYTHONLICENSETERMS="True"` to accept the separate Python licensing agreement
-
 ## See also
 
 This article by the R Services Support team demonstrates how to perform an unattended install or upgrade of R services in SQL Server 2016: [Deploying R Services on Computers without Internet Access](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).

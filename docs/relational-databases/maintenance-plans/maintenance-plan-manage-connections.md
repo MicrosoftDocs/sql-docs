@@ -33,7 +33,7 @@ ms.workload: "Inactive"
  Indicates whether the connection is made with Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
 
 > [!IMPORTANT]  
-> The package is stored in **msdb** database its ProtectionLevel is **ServerStorage**; when SQL Server Authentication is used, the password will not be encrypted in **msdb**. You can use SQL Server Authentication as long as **msdb** is secured, but we recommend using Windows Authentication.  
+> The package is stored in **msdb** database with its **ProtectionLevel** set to **ServerStorage**, so when *SQL Server Authentication* is used, the password will not be encrypted in **msdb**. You can use *SQL Server Authentication* as long as **msdb** is secured, but using *Windows Authentication* is recommended
 
 ## See Also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)  

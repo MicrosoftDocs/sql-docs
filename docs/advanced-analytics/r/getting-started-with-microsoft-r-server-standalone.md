@@ -38,7 +38,7 @@ The operationalization features of Machine Learning Server support deploying and
 
 + Install Microsoft R Server (Standalone) from SQL Server 2016 setup.
 
-    This option creates a standalone server that is entirely independent from R Services (In-Database). This version supports R only. Setup of a standalone server is included in your SQL Server Enterprise Edition support policy. For more information, see [Create a Standalone R Server](../../advanced-analytics/r/create-a-standalone-r-server.md).
+    This option creates a standalone server that is entirely independent from R Services (In-Database). This version supports R only. Setup of a standalone server is included in your SQL Server Enterprise Edition support policy. For more information, see [Install SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md).
 
 + Install R Server using the separate Windows installer.
 
@@ -50,7 +50,7 @@ The operationalization features of Machine Learning Server support deploying and
 
 + Install Machine Learning Server (Standalone) from SQL Server 2017 setup. 
 
-    This option creates a standalone server to support operationalization of machine learning in R, Python, or both. Setup of a standalone server is included in your SQL Server Enterprise Edition support policy. For more information, see [Create a Standalone R Server](../../advanced-analytics/r/create-a-standalone-r-server.md).  
+    This option creates a standalone server to support operationalization of machine learning in R, Python, or both. Setup of a standalone server is included in your SQL Server Enterprise Edition support policy. For more information, see [Install SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md).  
 
 + Use the new standalone Windows installer.
 

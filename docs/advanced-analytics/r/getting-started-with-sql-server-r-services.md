@@ -42,12 +42,6 @@ Applies to: SQL Server 2016 R Services, SQL Server 2017 Machine Learning Service
 3. In SQL Server 2016, R is added by default. In SQL Server 2017, you must select a language to add. You can select either R or Python, or enable both.
 4. When setup is done, perform some additional steps to enable external script execution, and restart the server.
 
-**Resources**
-
-+ [Set up SQL Server with Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
-
-> [!TIP]  
-> Need to create a server for R jobs but don't need SQL Server? Try [Microsoft R Server](https://msdn.microsoft.com/library/mt674874.aspx).  
 
 ## Step 2. Develop Your R or Python Solutions
 

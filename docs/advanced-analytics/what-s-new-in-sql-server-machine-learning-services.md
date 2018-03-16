@@ -61,5 +61,5 @@ However, on Linux you can perform [native scoring](sql-native-scoring.md) using 
 
 ### Next steps
 
-+ [Install SQL Server Machine Learning Services](../advanced-analytics/python/setup-python-machine-learning-services.md)
++ [Install SQL Server 2017 Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
 + [Machine learning tutorials and samples](tutorials/machine-learning-services-tutorials.md)

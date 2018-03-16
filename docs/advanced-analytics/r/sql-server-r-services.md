@@ -56,7 +56,7 @@ SQL Server setup provides two options:
 + Install the in-database analytics feature that is integrated with SQL Server, or
 + Install the standalone version of Machine Learning Server (or Microsoft R Server) that supports at-scale machine learning without an instance of SQL Server.
 
-If you need to run your R code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], either by using stored procedures or by using the SQL Server instance as the compute context, you must install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] as described in the [setup guide](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md). This option provides maximum data security and integration with SQL Server tools.
+If you need to run your R code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], either by using stored procedures or by using the SQL Server instance as the compute context, you must install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] as described in the [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). This option provides maximum data security and integration with SQL Server tools.
 
 Microsoft Machine Learning Server (Standalone) is a separate option designed for using the [Microsoft R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) and [related Python libraries](../python/what-is-revoscalepy.md) on a Windows computer that is not running SQL Server. This option requires an Enterprise Edition license for SQL Server.
     
@@ -70,9 +70,9 @@ You can also use the **mrsdeploy** package that is installed with Machine Learni
  
     Describes common scenarios for uses of R with SQL Server
 
-+ [Set up SQL Server Machine Learning Services or R Services In-Database](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
++ [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
-    Install R and associated database components as part of SQL Server setup
++ [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
   
 + [SQL Server and R tutorials](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 

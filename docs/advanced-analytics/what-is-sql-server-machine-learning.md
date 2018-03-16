@@ -85,7 +85,7 @@ Recent releases of SQL Server documentation are version-agnostic. For SQL Server
 
 **Step 1:** Install and configure the software. 
 
-+ [Install SQL Server 2017 Machine Learning Services (In-Database)](python/setup-python-machine-learning-services.md#bkmk_installPythonInDatabase)
++ [Install SQL Server 2017 Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
 
 **Step 2:** Get started with code using either one of these tutorials:
 

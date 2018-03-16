@@ -50,7 +50,7 @@ Enterprise users of SQL Server Machine Learning can use the downloadable install
 
 + Use the SQL Server setup wizard
 
-  [Create a Standalone R Server](../r/create-a-standalone-r-server.md)
+  [Install SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md) or [Install SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md)
 
   Run SQL Server 2016 setup to install **Microsoft R Server (Standalone)**. The R language is added by default.
   Or, run SQL Server 2017 setup to install **Machine Learning Server (Standalone)** and select either R or Python, or both.
@@ -62,7 +62,7 @@ Enterprise users of SQL Server Machine Learning can use the downloadable install
 
 + Use command-line options for SQL Server setup
 
-  [Install Microsoft R Server from the Command Line](../r/install-microsoft-r-server-from-the-command-line.md)
+  [Install Microsoft R Server from the Command Line](../install/sql-ml-component-commandline-install.md)
 
   SQL Server setup supports unattended installs via a rich set of command-line arguments.
 

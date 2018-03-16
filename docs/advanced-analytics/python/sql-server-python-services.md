@@ -39,6 +39,6 @@ You can install everything you need to get started with Python through SQL Serve
 
 ## Additional resources
 
-[Set Up Python Machine Learning Services In-Database](setup-python-machine-learning-services.md)
+[Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
 
 [Python Tutorials](../tutorials/sql-server-python-tutorials.md)

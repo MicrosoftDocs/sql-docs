@@ -18,7 +18,7 @@ ms.author: "heidist"
 manager: "cgronlun"
 ms.workload: "Inactive"
 ---
-# Install machine learning components from the command line
+# Install SQL Server machine learning components from the command line
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to use SQL Server command-line arguments to install the following SQL Server features by using the command line:
@@ -47,11 +47,11 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 
 | Arguments | Description |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server 2017 Machine Learning Services (In-Database) or SQL Server 2016 R Services (In-Database). This option installs the prerequisites, but the installation is not usable unless you also add R or Python. |
-| /FEATURES = SQL_INST_MR | Use with AdvancedAnalytics. Installs the (In-Database) R feature, including Microsoft R Open and the proprietary R packages. Applies to SQL Server 2017 only, where there is a choice between languages. The SQL Server 2016 R feature is R-only, so there is no parameter for that release.|
-| /FEATURES = SQL_INST_MPY | Use with AdvancedAnalytics. Installs the (In-Database) Python feature, including Anaconda and the proprietary Python packages. Applies to SQL Server 2017 only.|
+| /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server 2017 Machine Learning Services (In-Database) or SQL Server 2016 R Services (In-Database).  |
+| /FEATURES = SQL_INST_MR | Applies to SQL Server 2017 only. Pair this with AdvancedAnalytics. Installs the (In-Database) R feature, including Microsoft R Open and the proprietary R packages. The SQL Server 2016 R Services feature is R-only, so there is no parameter for that release.|
+| /FEATURES = SQL_INST_MPY | Applies to SQL Server 2017 only. Pair this with AdvancedAnalytics. Installs the (In-Database) Python feature, including Anaconda and the proprietary Python packages. |
 | /FEATURES = SQL_SHARED_MR | Installs the R feature for the standalone version: SQL Server 2017 Machine Learning Server (Standalone) or SQL Server 2016 R Server (Standalone). |
-| /FEATURES = SQL_SHARED_MPY | Installs the Python feature for the standalone version: SQL Server 2017 Machine Learning Server (Standalone).|
+| /FEATURES = SQL_SHARED_MPY | Applies to SQL Server 2017 only. Installs the Python feature for the standalone version: SQL Server 2017 Machine Learning Server (Standalone).|
 | /IACCEPTROPENLICENSETERMS  | Indicates you have accepted the license terms for using the open source R components. |
 | /IACCEPTPYTHONLICENSETERMS | Indicates you have accepted the license terms for using the Python components. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indicates you have accepted the license terms for using SQL Server.|

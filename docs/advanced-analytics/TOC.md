@@ -5,7 +5,6 @@
 ## [Features by edition](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # Install 
-
 ## [Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
 ## [Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md)
 ## SQL Server 2016

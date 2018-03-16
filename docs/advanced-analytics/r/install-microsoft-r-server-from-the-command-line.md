@@ -13,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
 caps.latest.revision: 4
-author: "jeannt"
-ms.author: "jeannt"
+author: "HeidiSteen"
+ms.author: "heidist"
 manager: "cgronlund"
 ms.workload: "Inactive"
 ---

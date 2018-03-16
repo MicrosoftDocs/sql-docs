@@ -44,7 +44,7 @@ If you don't have access to a SQL Server, select your platform from the followin
 1. In the **Connect to Server** dialog box, fill out your connection options: 
 
     - **Server type**: Database Engine (typically selected by default)
-    - **Authentication**: Windows Authentication (this article uses Windows Authentication, but SQL Login is supported and will prompt you for a username / password if selected))
+    - **Authentication**: Windows Authentication (this article uses Windows Authentication, but SQL Login is supported and will prompt you for a username / password if selected)
 
       ![Connection](media/connect-query-sql-server/connection.png)
 

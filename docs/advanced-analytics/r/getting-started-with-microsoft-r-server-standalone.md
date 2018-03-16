@@ -13,8 +13,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 52347d0d-ce60-4bb8-98d2-6163e87716b0
 caps.latest.revision: 21
-author: "jeannt"
-ms.author: "jeannt"
+author: "HeidiSteen"
+ms.author: "heidist"
 manager: "cgronlund"
 ---
 # Getting Started with Machine Learning Server (Standalone)

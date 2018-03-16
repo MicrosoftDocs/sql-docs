@@ -71,6 +71,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/r/getting-started-with-microsoft-r-server-standalone.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-server-standalone",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
             "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
             "redirect_document_id": false

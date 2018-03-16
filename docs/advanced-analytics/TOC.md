@@ -93,8 +93,6 @@
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
 
 # [Machine Learning Server - Standalone](r/r-server-standalone.md)
-## [Getting started](r/getting-started-with-microsoft-r-server-standalone.md)
-
 
 # [How To](r/sql-server-machine-learning-tasks.md)
 

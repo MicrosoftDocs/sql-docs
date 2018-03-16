@@ -42,9 +42,8 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 
 + Do not install standalone and in-database instances on the same computer. A standalone server will compete for the same resources, undermining the performance of both installations.
 
-## <a name="mls2017-indb"></a> SQL Server 2017 Machine Learning Services (In-Database)
 
-The following examples show different combinations of machine learning components. In all cases, the database engine instance is required. The FEATURES argument is required, as are licensing term agreements.
+## Command line arguments
 
 | Arguments | Description |
 |-----------|-------------|
@@ -59,9 +58,12 @@ The following examples show different combinations of machine learning component
 | /MRCACHEDIRECTORY | For offline setup, sets the folder containing the R component CAB files. |
 | /MPYCACHEDIRECTORY | For offline setup, sets the folder containing the Python component CAB files. |
 
-### Full installation (database engine, R, Python) in quiet mode
 
-To view progress information without the interactive on-screen prompts, use the /qs argument.
+## <a name="mls2017-indb"></a> SQL Server 2017 Machine Learning Services (In-Database)
+
+The following examples show different combinations of machine learning components. In all cases, the database engine instance is required. The FEATURES argument is required, as are licensing term agreements.
+
+Full installation (database engine, R, Python) includes the following commands. To view progress information without the interactive on-screen prompts, use the /qs argument.
 
 ```  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS

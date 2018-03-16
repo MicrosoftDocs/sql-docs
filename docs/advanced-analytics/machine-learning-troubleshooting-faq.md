@@ -47,18 +47,18 @@ The following article provides a list of information that facilitates self-help 
 
 Start here if you have not set up machine learning with SQL Server, or if you want to add the feature:
 
-+ [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
-+ [Install SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
-+ [Install SQL Server 2016 R Services (In-Database)](../install/sql-r-services-windows-install.md)
-+ [Install SQL Server 2016R Server (Standalone)](../install/sql-r-standalone-windows-install.md)
-+ [Command prompt setup](../install/sql-ml-component-commandline-install.md)
-+ [Offline setup (no internet)](../install/sql-ml-component-install-without-internet-access.md)
++ [Install SQL Server 2017 Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
++ [Install SQL Server 2017 Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md)
++ [Install SQL Server 2016 R Services (In-Database)](install/sql-r-services-windows-install.md)
++ [Install SQL Server 2016R Server (Standalone)](install/sql-r-standalone-windows-install.md)
++ [Command prompt setup](install/sql-ml-component-commandline-install.md)
++ [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
 
 ### Configuration
 
 The following articles contain information about defaults, and how to customize the configuration for machine learning on an instance:
 
 + [Modify the user account pool for SQL Server R Services](../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)  
-+ [Configure and manage advanced analytics extensions](../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)  
++ [Configure and manage advanced analytics extensions](../advanced-analytics/r/configure-manage-advanced-analytics-extensions.md)  
 + [How to create a resource pool](r/how-to-create-a-resource-pool-for-r.md)
 + [Optimization for R workloads](r/operationalizing-your-r-code.md)

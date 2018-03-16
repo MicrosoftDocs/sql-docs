@@ -108,7 +108,7 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 To run these tutorials, you must download and install the SQL Server machine learning components, as described here:
 
 + [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
-+ [Install SQL Server 2016 R Services (In-Database)](install/sql-r-services-windows-install.md)
++ [Install SQL Server 2016 R Services (In-Database)](../install/sql-r-services-windows-install.md)
 
 With SQL Server 2017, you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
 

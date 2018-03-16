@@ -34,7 +34,7 @@ This article provides links to resources for each product in the Microsoft Machi
   Beginning with SQL Server 2017, you can now use Python code in SQL Server. To reflect the broader support for solutions in multiple languages (with more to come!), and the name was changed to [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]. Now you can automate machine learning tasks by using SQL tools to run either R or Python code. Or, use the SQL Server computer as the _compute context_ for jobs launched from a remote development environment.
 
     + [Architecture Overview for Python in SQL Server](../advanced-analytics/python/architecture-overview-sql-server-python.md)
-    + [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
+    + [Install SQL Server 2017 Machine Learning Services](install/sql-machine-learning-services-windows-install.md)
 
 + SQL Server 2016
 
@@ -43,7 +43,7 @@ This article provides links to resources for each product in the Microsoft Machi
   This integration provides security for your data and lets you manage and balance resources used by R.
 
     + [Getting Started wth SQL Server R Services](r/getting-started-with-sql-server-r-services.md)
-    + [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
+    + [Install SQL Server 2016 R Services](install/sql-r-services-windows-install.md)
 
 ## Microsoft Machine Learning Server (Microsoft R Server)
 

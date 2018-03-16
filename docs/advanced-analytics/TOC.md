@@ -197,7 +197,7 @@
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [RevoScalePy](python/what-is-revoscalepy.md)
 
-# [Tutorials, templates, and samples](tutorials/machine-learning-services-tutorials.md)
+# [Templates and samples](tutorials/machine-learning-services-tutorials.md)
 
 ## [Data science solution templates](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [SQL Server samples](https://github.com/Microsoft/sql-server-samples)

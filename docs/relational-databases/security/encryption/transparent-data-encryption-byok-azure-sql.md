@@ -110,6 +110,12 @@ In the second case, it is required to configure redundant Azure Key Vaults based
 
 To ensure that continuous access to the TDE protector in Azure Key Vault is guaranteed during a failover, this must be configured before a database is replicated or failed over to a secondary server. Both, primary and secondary servers have to store copies of the TDE protectors in all other Azure Key Vaults, which means in this example the same keys are stored in both key vaults.
 
+A secondary database with a secondary key vault is required for redundancy in the geo-dr scenario, and up to four secondaries are supported.  Chaining, which means creating a secondary for a secondary is not supported.  During initial setup time, the service confirms that the permissions are setup correctly for both primary and secondary key vault.  It is important to maintain these permissions and test that they are still in place regularly.
+
+>[!NOTE]
+>When assigning the server identity to a primary and a secondary server, the identity has to be assigned to the secondary server first.
+>
+
 To add an existing key from one key vault to another key vault, use the [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet.
 
  ```powershell

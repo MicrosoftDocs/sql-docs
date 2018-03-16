@@ -12,7 +12,7 @@ ms.reviewer: sstein
 manager: craigg
 ---
 
-# Quickstart: Connect and query SQL Server using SQL Server Management Studio
+# Quickstart: Connect and Query SQL Server using SQL Server Management Studio
 This Quickstart shows how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance, and run some basic Transact-SQL (T-SQL) commands. This article demonstrates how to do the following:
     - [Connect to a SQL Server](#connect-to-a-sql-server)
     - [Create a new database (**TutorialDB**)](#create-a-database)
@@ -44,7 +44,7 @@ If you don't have access to a SQL Server, select your platform from the followin
 1. In the **Connect to Server** dialog box, fill out your connection options: 
 
     - **Server type**: Database Engine (typically selected by default)
-    - **Authentication**: Windows Authentication (this article uses Windows Auth, but SQL Login is supported and will prompt you for a username / password if selected))
+    - **Authentication**: Windows Authentication (this article uses Windows Authentication, but SQL Login is supported and will prompt you for a username / password if selected))
 
       ![Connection](media/connect-query-sql-server/connection.png)
 

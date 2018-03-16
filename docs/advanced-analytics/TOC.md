@@ -20,8 +20,6 @@
 ### [Components that support R integration](r/new-components-in-sql-server-to-support-r.md)
 ### [Security for R](r/security-overview-sql-server-r.md)
 
-## [Monitoring](r/monitoring-r-services.md)
-
 ## [R Tutorials for SQL Server](tutorials/sql-server-r-tutorials.md)
 
 ### [R: Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
@@ -73,7 +71,6 @@
 ### [Python interoperability](python/python-interoperability.md)
 ### [Components to support Python](python/new-components-in-sql-server-to-support-python-integration.md)
 ### [Python security](python/security-overview-sql-server-python-services.md)
-## [Monitoring](python/managing-and-monitoring-python-solutions.md)
 <!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
 <!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
@@ -156,7 +153,7 @@
 
 ### [Deploy and consume models using web services](operationalization-with-mrsdeploy.md)
 
-### [Managing and monitoring machine learning solutions](r/managing-and-monitoring-r-solutions.md)
+### [Managing and monitorin solutions](r/managing-and-monitoring-r-solutions.md
 ### [Resource governance for Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Create a resource pool for machine learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Extended events for Machine Learning Services](r/extended-events-for-sql-server-r-services.md)

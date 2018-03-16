@@ -114,6 +114,6 @@ The product samples repository in GitHub currently includes the following report
 
 ## See also
 
-[Monitoring R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
+[Monitoring services](managing-andmonitoring-r-solutions.md)
 
-[Extended events for R Services](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
+[Extended events for R Services](extended-events-for-sql-server-r-services.md)

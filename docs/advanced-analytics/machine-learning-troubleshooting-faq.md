@@ -58,7 +58,7 @@ Start here if you have not set up machine learning with SQL Server, or if you wa
 
 The following articles contain information about defaults, and how to customize the configuration for machine learning on an instance:
 
-+ [Modify the user account pool for SQL Server R Services](../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)  
-+ [Configure and manage advanced analytics extensions](../advanced-analytics/r/configure-manage-advanced-analytics-extensions.md)  
++ [Modify the user account pool for SQL Server R Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
++ [Configure and manage advanced analytics extensions](r/configure-manage-advanced-analytics-extensions.md)  
 + [How to create a resource pool](r/how-to-create-a-resource-pool-for-r.md)
 + [Optimization for R workloads](r/operationalizing-your-r-code.md)

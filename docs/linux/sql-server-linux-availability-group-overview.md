@@ -71,7 +71,7 @@ To change the value of `required_synchronized_secondaries_to_commit`, use the fo
 **Red Hat Enterprise Linux (RHEL) and Ubuntu**
 
 ```bash
-sudo pcs resource update <AGResourceName>-master required_synchronized_secondaries_to_commit=<Value>
+sudo pcs resource update <AGResourceName> required_synchronized_secondaries_to_commit=<Value>
 ```
 
 **SUSE Linux Enterprise Server (SLES)**

@@ -46,9 +46,7 @@ public int[] executeBatch()
   
 ## Remarks  
  This executeBatch method is specified by the executeBatch method in the java.sql.Statement interface.  
-  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 is compliant with the JDBC 4.0 recommendation that a call to the CallableStatement.executeBatch method (inherited from PreparedStatement) will throw a BatchUpdateException if the stored procedure accepts OUT or INOUT parameters or returns something other than an update count.  
-  
+    
  This method overrides [SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md).  
   
 ## See Also  

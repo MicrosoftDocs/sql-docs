@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Privacy Supplement | Microsoft Docs"
-ms.date: "2/19/2018"
+ms.date: "2/22/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -100,7 +100,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 - Browser name/version
 - SQL Server version
 - Language Code
-- An IP Address with specific octets removed
+- An IP Address with certain octets removed
 - Map Data
 
 ### Permitted Usage Scenarios

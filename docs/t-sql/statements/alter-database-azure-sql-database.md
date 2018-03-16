@@ -270,8 +270,8 @@ ALTER DATABASE current
  ADD SECONDARY ON SERVER \<partner_server_name>  
  Creates a geo-replication secondary database with the same name  on a partner server, making the local database into a geo-replication primary, and begins asynchronously replicating data from the primary to the new secondary. If a database with the same name already exists on the secondary, the command fails. The command is executed on the master database on the server hosting the local database that becomes the primary.  
   
- WITH ALLOW_CONNECTIONS { ALL | **NO** }  
- When ALLOW_CONNECTIONS is not specified, it is set to NO by default. If it is set ALL, it is a read-only database that allows all logins with the appropriate permissions to connect.  
+ WITH ALLOW_CONNECTIONS { **ALL** | NO }  
+ When ALLOW_CONNECTIONS is not specified, it is set to ALL by default. If it is set ALL, it is a read-only database that allows all logins with the appropriate permissions to connect.  
   
  WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' }  
  When SERVICE_OBJECTIVE is not specified, the secondary database is created at the same service level as the primary database. When SERVICE_OBJECTIVE is  specified, the secondary database is created at the specified level. This option supports creating geo-replicated secondaries with less expensive service levels. The SERVICE_OBJECTIVE specified must be within the same edition as the source. For example, you cannot specify S0 if the edition is premium.  
@@ -369,12 +369,12 @@ MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;
 ```  
   
 ### C. Add a Geo-Replication Secondary  
- Creates a non-readable secondary database db1 on server `secondaryserver` of the db1 on the local server.  
+ Creates a readable secondary database db1 on server `secondaryserver` of the db1 on the local server.  
   
 ```  
 ALTER DATABASE db1   
 ADD SECONDARY ON SERVER secondaryserver   
-WITH ( ALLOW_CONNECTIONS = NO )  
+WITH ( ALLOW_CONNECTIONS = ALL )  
 ```  
   
 ### D. Remove a Geo-Replication Secondary  

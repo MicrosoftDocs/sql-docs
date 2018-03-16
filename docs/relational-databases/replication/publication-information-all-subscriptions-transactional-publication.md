@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.monitor.publicationinfo.allsubscriptions.tran.f1"
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

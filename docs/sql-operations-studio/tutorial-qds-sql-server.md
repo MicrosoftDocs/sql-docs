@@ -2,7 +2,7 @@
 title: "Tutorial: Enable the five slowest queries sample widget - SQL Operations Studio (preview)  | Microsoft Docs"
 description: This tutorial demonstrates how to enable the five slowest queries sample widget on the database dashboard.
 ms.custom: "tools|sos"
-ms.date: "11/16/2017"
+ms.date: "03/15/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -39,18 +39,21 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 ## Turn on Query Store for your database
 
-The widget in this example requires *Query Store* to be enabled so run the following Transact-SQL (T-SQL) statement against your database:
+The widget in this example requires *Query Store* to be enabled.
+
+1. Right click the **TutorialDB** database (in the **SERVERS** sidebar) and select **New Query**.
+2. Paste the following Transact-SQL (T-SQL) statement in the query editor, and click **Run**:
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
    ```
 
-## Add an insight widget to your Database Dashboard
+## Add the slow queries widget to your database dashboard
 
-To add an insight widget to your dashboard, edit the *dashboard.database.widgets* setting in your *User Settings* file.
+To add the *slow queries widget* to your dashboard, edit the *dashboard.database.widgets* setting in your *User Settings* file.
 
 1. Open *User Settings* by pressing **Ctrl+Shift+P** to open the *Command Palette*.
-2. Type *settings* in the search box and from the available settings files, select **Preferences: Open User Settings**.
+2. Type *settings* in the search box and select **Preferences: Open User Settings**.
 
    ![Open user settings command](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -58,19 +61,11 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
    ![Search settings](./media/tutorial-qds-sql-server/search-settings.png)
 
-3. To customize the **dashboard.database.widgets** setting, hover over the pencil icon to the left of the **dashboard.database.widgets** text, click **Edit** > **Copy to Settings**.
+3. To customize the **dashboard.database.widgets** settings you need to edit the **dashboard.database.widgets** entry in the **USER SETTINGS** section (the column in the right side). If there is no **dashboard.database.widgets** in the **USER SETTINGS** section, hover over the **dashboard.database.widgets** text in the DEFAULT SETTINGS column and click the pencil icon that appears to the left of the text and click **Copy to Settings**. If the pop-up says **Replace in Settings**, don't click it! Go to the **USER SETTINGS** column to the right and locate the **dashboard.database.widgets** section and advance to the next step.
 
-4. After copying the settings for **dashboard.database.widgets**, place your cursor at the end of the line after the opening bracket, press **Enter**, and add a curly brace like the following (the closing brace will automatically appear):
-
-   ```json
-   "dashboard.database.widgets": [
-   {}
-   ```
-5. With your cursor inside the curly braces, press **Ctrl+Space** and select **name**. 
-6. Finish setting up the widget so it looks like the following:
+4. In the **dashboard.database.widgets** section, add the following:
 
    ```json
-    "dashboard.database.widgets": [
         {
             "name": "slow queries widget",
             "gridItemConfig": {
@@ -80,13 +75,48 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
             "widget": {
                 "query-data-store-db-insight": null
             }
-        }
-    ...
+        },
     ```
 
-5. Press **Ctrl+S** to save the modified **User Settings**.
+1. If this is the first time adding a new widget, the **dashboard.database.widgets** section should look similar to this:
 
-6. Open the *Database dashboard* by navigating to **TutorialDB** in the *Servers* sidebar, right-click, and select **Manage**.
+   ```json
+   "dashboard.database.widgets": [
+       {
+           "name": "slow queries widget",
+           "gridItemConfig": {
+               "sizex": 2,
+               "sizey": 1
+           },
+           "widget": {
+               "query-data-store-db-insight": null
+           }
+       },
+       {
+           "name": "Tasks",
+           "gridItemConfig": {
+               "sizex": 1,
+               "sizey": 1
+           },
+           "widget": {
+               "tasks-widget": {}
+           }
+       },
+       {
+           "gridItemConfig": {
+               "sizex": 1,
+               "sizey": 2
+           },
+           "widget": {
+               "explorer-widget": {}
+           }
+       }
+   ]
+   ```
+
+1. Press **Ctrl+S** to save the modified **User Settings**.
+
+6. Open the *Database dashboard* by navigating to **TutorialDB** in the **SERVERS** sidebar, right-click, and select **Manage**.
 
    ![Open dashboard](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -102,7 +132,7 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
    ![Insight detail dialog](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. Right-click **query_sql_txt** in **Item Details** and click **Copy Cell**.
+3. Right-click the cell to the right of **query_sql_txt** in **Item Details** and click **Copy Cell**.
 
 4. Close the **Insights** pane.
 
@@ -132,7 +162,7 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
 4. Paste the copied plan into the editor.
 
-5. Press **Ctrl+S** to save the file, and change the file extension to *.sqlplan*. For this tutorial, name the file *slowquery.sqlplan*.
+5. Press **Ctrl+S** to save the file, and change the file extension to *.sqlplan*. *.sqlplan* does not appear in the file extension dropdown, so just type it in. For this tutorial, name the file *slowquery.sqlplan*.
 
 6. The query plan opens in [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s query plan viewer:
 

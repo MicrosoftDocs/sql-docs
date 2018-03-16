@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 caps.latest.revision: 35
 author: "stevestein"
-author: "sstein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
 ---

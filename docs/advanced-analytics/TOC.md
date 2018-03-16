@@ -14,7 +14,6 @@
 ## [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
-## [Getting Started](r/getting-started-with-sql-server-r-services.md)
 ## [Architecture](r/architecture-overview-sql-server-r.md)
 ### [R interoperability](r/r-interoperability-in-sql-server.md)
 ### [Components that support R integration](r/new-components-in-sql-server-to-support-r.md)

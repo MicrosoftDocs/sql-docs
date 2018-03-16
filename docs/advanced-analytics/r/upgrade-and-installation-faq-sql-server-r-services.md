@@ -162,6 +162,6 @@ If you have problems removing an older version, you might need to edit the regis
 
 ## See also
 
- [Getting started with SQL Server R Services](../r/getting-started-with-sql-server-r-services.md)
+ [SQL Server Machine Learning Services (In-Database)](../r/sql-server-r-services.md)
 
- [Getting started with Microsoft R Server Standalone](../r/getting-started-with-microsoft-r-server-standalone.md)
+ [SQL Server Machine Learning Server (Standalone)](../r/r-server-standalone.md)

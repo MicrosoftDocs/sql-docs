@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
 caps.latest.revision: 34
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Getting Started with SQL Server Machine Learning

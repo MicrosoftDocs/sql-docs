@@ -139,7 +139,7 @@ FROM { <table_source> [ ,...n ] }
 }  
   
 <tablesample_clause> ::=
-TABLESAMPLE ( sample_number [ PERCENT ] )   
+TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
  
 <joined_table> ::=   
 {  

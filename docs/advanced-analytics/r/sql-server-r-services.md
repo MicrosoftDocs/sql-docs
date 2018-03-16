@@ -49,15 +49,19 @@ SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following 
 | Python tools | The built-in Python command line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
 | Anaconda | Anaconda is an open-source distribution of Python and essential packages. |
 | Python samples and scripts | As with R, Python includes built-in data sets  and scripts. Find the revoscalepy data at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
-| Pre-trained models in R and Python | Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. The setup program for Microsoft Machine Learning Server provides the models, which you can install free of charge. For more information, see [Install pretrained machine learning models on SQL Server](install-pretained-models-sql-server.md). |
+| Pre-trained models in R and Python | Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. The setup program for Microsoft Machine Learning Server provides the models, which you can install free of charge. For more information, see [Install pretrained machine learning models on SQL Server](install-pretrained-models-sql-server.md). |
 
 ## Get started step-by-step
 
-### Step 1: Install
-
 Start with setup, attach the binaries to your favorite development tool, and write your first script.
 
- + Install the server: [SQL Server 2017 Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md) or [SQL Server 2016 R Services (In-Database)](install/sql-r-services-windows-install.md)
+### Step 1: Install the software
+
+Install either one of these versions:
+
++ [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
+
++ [SQL Server 2016 R Services (In-Database) - R only](../install/sql-r-services-windows-install.md)
  
 ### Step 2: Configure a development tool
 
@@ -79,14 +83,16 @@ With in-database analytics in SQL Server, there is no need to change this proces
 
 Call R or Python functions from within T-SQL script:
   
-  + [R: Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md) 
-  + [R: In-database analytics for SQL developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
-  + [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
-  + [Python: In-database analytics for SQL developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
+  + [R: Use R code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md) 
+  + [R: In-database analytics for SQL developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+  + [Python: Run Python using T-SQL](../tutorials/run-python-using-t-sql.md)
+  + [Python: In-database analytics for SQL developers](../tutorials/sqldev-in-database-python-for-sql-developers.md)
+
+Choose the best language for the task. R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
 
 ### Step 4: Optimize your solution
 
-When the model is ready to scale on enterprise data, the data scientist will often work with the DBA or SQL developer to optimize processes such as:
+When the model is ready to scale on enterprise data, the data scientist often works with the DBA or SQL developer to optimize processes such as:
 
 + Feature engineering
 + Data ingestion and data transformation
@@ -98,14 +104,12 @@ Traditionally data scientists using R have had problems with both performance an
 
 + **revoscalepy**. This Python library, available in SQL Server 2017, implements the most popular functions in RevoScaleR, such as remote compute contexts, and many algorithms that support distributed processing.
 
-+ Choose the best language for the task.  R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
-
 **Resources**
 
 + [Performance Case Study](../../advanced-analytics/r/performance-case-study-r-services.md)
 + [R and Data Optimization](../../advanced-analytics/r/r-and-data-optimization-r-services.md)
 
-## Step 5: Deploy and Consume
+### Step 5: Deploy and Consume
 
 After the script or model is ready for production use, a database developer might embed the code or model in a stored procedure, so that the saved R or Python code can be called from an application. Storing and running R code from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has many benefits: you can use the convenient [!INCLUDE[tsql](../../includes/tsql-md.md)] interface, and all computations take place in the database, avoiding unnecessary data movement.
 

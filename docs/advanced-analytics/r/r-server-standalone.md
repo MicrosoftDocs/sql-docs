@@ -45,20 +45,22 @@ SQL Server 2016 is R only. SQL Server 2017 supports R and Python. The following 
 | Python tools | The built-in Python command line tool is useful for ad hoc testing and tasks. Find the tool at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
 | Anaconda | Anaconda is an open-source distribution of Python and essential packages. |
 | Python samples and scripts | As with R, Python includes built-in data sets  and scripts. Find the revoscalepy data at \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
-| Pre-trained models in R and Python | Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. The setup program for Microsoft Machine Learning Server provides the models, which you can install free of charge. For more information, see [Install pretrained machine learning models on SQL Server](install-pretained-models-sql-server.md). |
+| Pre-trained models in R and Python | Pre-trained models are supported and usable on a standalone server, but you cannot install them through SQL Server Setup. The setup program for Microsoft Machine Learning Server provides the models, which you can install free of charge. For more information, see [Install pretrained machine learning models on SQL Server](install-pretrained-models-sql-server.md). |
 
 ## Get started step-by-step
 
-### Step 1: Install
-
 Start with setup, attach the binaries to your favorite development tool, and write your first script.
 
-+ [SQL Server 2017 Machine Learning Server (standalone)](../install/sql-machine-learning-standalone-windows-install.md) or [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md)
+### Step 1: Install the software
+
+Install either one of these versions:
+
++ [SQL Server 2017 Machine Learning Server (standalone)](../install/sql-machine-learning-standalone-windows-install.md)
++ [SQL Server 2016 R Server (Standalone) - R only](../install/sql-r-standalone-windows-install.md)
 
 ### Step 2: Configure a development tool
 
 Configure your development tools to use the Machine Learning Server binaries. For more information about Python, see [Link Python binaries](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools). For instructions on how to connect in R Studio, see [Using Different Versions of R](https://support.rstudio.com/hc/en-us/articles/200486138-Using-Different-Versions-of-R) and point the tool to C:\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64. You could also try [R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation). 
-
 
 ### Step 3: Write your first script
 
@@ -68,8 +70,7 @@ Write R or Python script using functions from RevoScaleR, revoscalepy, and the m
 
   + [Quickstart: An example of binary classification with the microsoftml Python package](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): Create a binary classification model using the functions from microsoftml and the well-known breast cancer dataset.
 
-
-   
+Choose the best language for the task. R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
 
 ## Related machine learning products
 

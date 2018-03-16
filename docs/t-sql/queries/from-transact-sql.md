@@ -334,6 +334,8 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Is a table source as defined in the previous argument. For more information, see the Remarks section.  
   
+### PIVOT clause
+
  *table_source* PIVOT \<pivot_clause>  
  Specifies that the *table_source* is pivoted based on the *pivot_column*. *table_source* is a table or table expression. The output is a table that contains all columns of the *table_source* except the *pivot_column* and *value_column*. The columns of the *table_source*, except the *pivot_column* and *value_column*, are called the grouping columns of the pivot operator. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   

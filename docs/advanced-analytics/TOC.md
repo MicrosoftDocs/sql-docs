@@ -13,7 +13,6 @@
 ### [R Server (Standalone)](install/sql-r-standalone-windows-install.md)
 ## [Command prompt setup](install/sql-ml-component-commandline-install.md)
 ## [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
-## [Bind to Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 ## [Getting Started](r/getting-started-with-sql-server-r-services.md)
@@ -176,12 +175,13 @@
 
 ## [Setup and troubleshooting tips](machine-learning-troubleshooting-faq.md)
 ### [Provision the Data Science Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-### [Installing SQL Server Machine Learning Services on an Azure Virtual Machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md)
-### [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [Upgrade and install FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
 ### [Common issues for external script execution](common-issues-external-script-execution.md)
-### [Set up data science tools](r/setup-or-configure-r-tools.md)
-### [Set Up a data science client](r/set-up-a-data-science-client.md)
+## [Bind to Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## [Set up data science tools](r/setup-or-configure-r-tools.md)
+## [Set up a data science client](r/set-up-a-data-science-client.md)
+## [Set up a virtual machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 
 ## Blogs
 

@@ -50,27 +50,33 @@ The following examples show different combinations of machine learning component
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Installs the in-database version: SQL Server 2017 Machine Learning Services (In-Database) or SQL Server 2016 R Services (In-Database). This option installs the prerequisites, but the installation is not usable unless you also add R or Python. |
 | /FEATURES = SQL_SHARED_MR | Installs the standalone version: SQL Server 2017 Machine Learning Server (Standalone) or SQL Server 2016 R Server (Standalone). This option installs the prerequisites, but the installation is not usable unless you also add R or Python. |
-| /FEATURES = SQL_INST_MR | Installs Microsoft R Open and the proprietary R packages.|
-| /FEATURES = SQL_INST_MPY | Installs Anaconda and the proprietary Python packages. |
+| /FEATURES = SQL_INST_MR | Installs Microsoft R Open and the proprietary R packages. Applies to SQL Server 2017 only, where there is a choice between languages. The SQL Server 2016 R features is R-only, so there is no parameter for that release.|
+| /FEATURES = SQL_INST_MPY | Installs Anaconda and the proprietary Python packages. Applies to SQL Server 2017 only.|
 | /IACCEPTROPENLICENSETERMS="True"  | Indicates you have accepted the license terms for using the open source R components. |
 | /IACCEPTPYTHONLICENSETERMS="True" | Indicates you have accepted the license terms for using the Python components. |
 | /IACCEPTSQLSERVERLICENSETERMS="True" | Indicates you have accepted the license terms for using SQL Server.|
 | /MRCACHEDIRECTORY | For offline setup, sets the folder containing the R component CAB files. |
 | /MPYCACHEDIRECTORY | For offline setup, sets the folder containing the Python component CAB files. |
 
-### Full installation (database engine, R, Python, pre-trained models) in quiet mode
+### Full installation (database engine, R, Python) in quiet mode
 
 To view progress and prompts, remove the _/q_ argument.
 
-    ```  
-    Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
-    ```
+```  
+Setup.exe /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
+```
+Silent install (/qs) introduces requirements for .cab file locations.
+```  
+Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+```
 
 Adds R only, to an existing default database engine instance.
 
 ```
 Setup.exe /q /ACTION=Install /FEATURES=ADVANCEDANALYTICS,SQL_INST_MR  /INSTANCENAME=MSSQLSERVER /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
+
+When setup is finished, you have a database engine instance with R and Python Services, the Microsoft R and Python packages, Microsoft R Open, Anacondam, tools, samples, and scripts that are part of the distribution. You must now enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) as your next step.
 
 ## <a name="mls2017-standalone"></a> SQL Server 2017 Machine Learning Server (Standalone)
 
@@ -79,31 +85,44 @@ Run the following command from an elevated command prompt to install only Machin
 This example shows the arguments used to install R.
 
 ```
-Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR, SQL_INST_MR  /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
+Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR  /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 This example shows the arguments used to install Python.
 
 ```
-Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR, SQL_INST_MPY  /IACCEPTPYTHONOPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
+Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_INST_MPY  /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
+
+When setup is finished, you have servers, proprietary packages, open-source packages, tools, samples, and scripts that are part of the distribution. 
+
+To open an R console window, go to \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 and double-click **RGui.exe**.
+
+To open a Python command, go to \Program files\Microsoft SQL Server\140\PYTHON_SERVER\bin\x64 and double-click **python.exe**.
+
+New to R? Try this tutorial: [Basic R commands and RevoScaleR functions: 25 common examples](https://docs.microsoft.com/en-us/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 ## <a name="mrs2016-indb"></a> SQL Server 2016 R Services (In-Database)
 
-Run the following command from an elevated command prompt to install SQL Server 2016 R Services (In-Database) with a default database engine instance.
+Run the following command from an elevated command prompt to install SQL Server 2016 R Services (In-Database) with a default database engine instance. The instance name and administrator login are required. R Services includes R implicitly, so there is no provision for adding an R-specific parameter.
 
 ```
-Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR  /INSTANCENAME=MSSQLSERVER /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
+Setup.exe /q /ACTION=Install /FEATURES=SQL,ADVANCEDANALYTICS /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS
 ```
+When setup is finished, you have a database engine instance with R Services, the Microsoft R packages, Microsoft R Open, and the R tools, samples, and scripts that are part of the distribution. You must now enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) as your next step.
 
 ## <a name="mrs2016-standalone"></a> SQL Server 2016 R Server (Standalone)
 
-Run the following command from an elevated command prompt to install Microsoft R Server (Standalone) and its prerequisites. 
+Run the following command from an elevated command prompt to install Microsoft R Server (Standalone) and its prerequisites. The database engine is not installed. 
 
 ```
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
+When setup is finished, you have R Server, the Microsoft R packages, Microsoft R Open, and the R tools, samples, and scripts that are part of the distribution. 
 
+To open an R console window, go to \Program files\Microsoft SQL Server\130\R_SERVER\bin\x64 and double-click **RGui.exe**.
+
+New to R? Try this tutorial: [Basic R commands and RevoScaleR functions: 25 common examples](https://docs.microsoft.com/en-us/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 
 

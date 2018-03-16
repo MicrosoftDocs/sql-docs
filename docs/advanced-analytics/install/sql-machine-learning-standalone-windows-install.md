@@ -29,7 +29,7 @@ This article describes how to use SQL Server setup to install the standalone ver
 
 SQL Server 2017 is required. If you have SQL Server 2016, please install [SQL Server 2016 R Server (Standalone)](sql-r-standalone-windows-install.md) instead.
 
-If you installed a previous version of Microsoft R Server, we recommend that you uninstall it first.
+If you installed a previous version, such as SQL Server 2016 R Server (Standalone) or Microsoft R Server, uninstall the existing installation before continuing.
 
 ## Get the installation media
 

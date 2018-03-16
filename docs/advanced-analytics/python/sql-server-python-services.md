@@ -28,11 +28,11 @@ This release includes the Anaconda distribution of Python, as well as the [revos
 
 You can install everything you need to get started with Python through SQL Server 2017 setup:
 
-+ [**Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md):** Install this feature, together with the SQL Server database engine, to enable secure execution of Python scripts on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
++ [**Machine Learning Services (In-Database)**](../install/sql-machine-learning-services-windows-install.md): Install this feature, together with the SQL Server database engine, to enable secure execution of Python scripts on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
   
      When you select this feature, extensions are installed in the database engine to support execution of Python scripts, and a new service is created, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], to manage communications between the Python runtime and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
-+ [**Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md):** If you do not need SQL Server integration, install this feature to get Python and R support for distributed machine learning.
++ [**Machine Learning Server (Standalone)**](../install/sql-machine-learning-standalone-windows-install.md): If you do not need SQL Server integration, install this feature to get Python and R support for distributed machine learning.
 
 ## See also
 

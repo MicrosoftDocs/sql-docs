@@ -18,7 +18,7 @@ ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 caps.latest.revision: 5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: "erikre"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Language Reference

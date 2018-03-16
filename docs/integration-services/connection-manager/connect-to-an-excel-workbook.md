@@ -18,7 +18,7 @@ ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connect to an Excel Workbook

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sp_mergemetadataretentioncleanup"
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Clean Up Merge Metadata (Replication Transact-SQL Programming)

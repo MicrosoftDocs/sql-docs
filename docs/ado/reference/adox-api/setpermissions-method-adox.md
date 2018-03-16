@@ -24,7 +24,7 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetPermissions Method (ADOX)

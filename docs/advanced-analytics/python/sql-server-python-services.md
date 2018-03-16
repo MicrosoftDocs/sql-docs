@@ -7,7 +7,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
@@ -18,6 +18,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Machine Learning Services with Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python is a language that offers great flexibility and power for a variety of machine learning tasks. Open source libraries for Python include several platforms for customizable neural networks, as well as popular libraries for natural language processing. Now, this widely used language is supported in SQL Server 2017 CTP 2.0 and later.
 

@@ -23,7 +23,7 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Comparing the Script Task and the Script Component

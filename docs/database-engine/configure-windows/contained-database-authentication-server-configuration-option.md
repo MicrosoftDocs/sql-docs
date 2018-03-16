@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "contained database authentication option"
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # contained database authentication Server Configuration Option

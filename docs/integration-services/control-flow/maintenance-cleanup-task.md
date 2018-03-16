@@ -22,7 +22,7 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Maintenance Cleanup Task

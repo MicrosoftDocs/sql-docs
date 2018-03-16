@@ -21,7 +21,7 @@ ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Client-side XML Formatting (SQLXML 4.0)

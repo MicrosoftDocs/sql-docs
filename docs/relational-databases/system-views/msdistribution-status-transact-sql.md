@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "MSdistribution_status view"
 ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSdistribution_status (Transact-SQL)

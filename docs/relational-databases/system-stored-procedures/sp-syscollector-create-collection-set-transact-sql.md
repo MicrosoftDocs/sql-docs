@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_syscollector_create_collection_set"
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_create_collection_set (Transact-SQL)

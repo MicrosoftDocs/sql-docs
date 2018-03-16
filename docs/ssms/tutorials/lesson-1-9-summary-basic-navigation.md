@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-9 - Summary - Basic Navigation

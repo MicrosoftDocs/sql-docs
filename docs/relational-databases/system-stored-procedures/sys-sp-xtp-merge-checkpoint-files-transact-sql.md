@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sys.sp_xtp_merge_checkpoint_files"
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_xtp_merge_checkpoint_files (Transact-SQL)

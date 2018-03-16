@@ -24,7 +24,7 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # replace value of (XML DML)

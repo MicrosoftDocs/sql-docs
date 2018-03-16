@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "schemas [SQL Server replication], replicating changes"
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transactional Articles - Regenerate to Reflect Schema Changes

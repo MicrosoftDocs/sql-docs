@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Policy-Based Management, evaluate policy"
 ms.assetid: b9e9d646-4894-4dee-a02a-0c71a8dc020e
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Evaluate a Policy-Based Management Policy from an Object

@@ -21,7 +21,7 @@ ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Rename Solutions and Project Items

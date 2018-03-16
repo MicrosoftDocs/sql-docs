@@ -23,7 +23,8 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Disable Stretch Database and bring back remote data
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   To disable Stretch Database for a table, select **Stretch** for a table in SQL Server Management Studio. Then select one of the following options.  
   

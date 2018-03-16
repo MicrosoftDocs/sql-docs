@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 2-3 - Maximizing Query Editor

@@ -22,7 +22,7 @@ ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Value Property (ADO)

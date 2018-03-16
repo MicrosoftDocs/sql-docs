@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STIsSimple (geometry Data Type)"
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIsSimple (geometry Data Type)

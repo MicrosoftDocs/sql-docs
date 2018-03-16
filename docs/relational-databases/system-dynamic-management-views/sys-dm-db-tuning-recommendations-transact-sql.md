@@ -27,7 +27,7 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 caps.latest.revision: 37
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)

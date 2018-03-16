@@ -18,7 +18,7 @@ ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Proxy Account Properties - New Proxy Account (General Page)

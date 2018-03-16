@@ -19,7 +19,7 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Microsoft Cursor Service for OLE DB Overview

@@ -18,7 +18,7 @@ ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create a SQL Server Agent Proxy

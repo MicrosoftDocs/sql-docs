@@ -18,7 +18,7 @@ ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # The SQL Server Management Studio Environment

@@ -18,7 +18,7 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_exec_requests (Transact-SQL)

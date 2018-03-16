@@ -19,7 +19,7 @@ ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)

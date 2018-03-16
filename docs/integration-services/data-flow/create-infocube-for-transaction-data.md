@@ -16,7 +16,7 @@ ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create InfoCube for Transaction Data

@@ -23,7 +23,7 @@ ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetProtocolsOrder Method (ClientNetworkProtocol Class)

@@ -21,7 +21,7 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specifying a Node Test in the Location Path (SQLXML 4.0)

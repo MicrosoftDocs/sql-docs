@@ -19,7 +19,7 @@ ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Description Property Dialog Box (Visual Database Tools)

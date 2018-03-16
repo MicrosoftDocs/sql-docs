@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "logical records [SQL Server replication]"
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Group Changes to Related Rows with Logical Records

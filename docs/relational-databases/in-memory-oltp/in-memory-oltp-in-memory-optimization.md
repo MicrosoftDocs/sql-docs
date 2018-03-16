@@ -19,7 +19,7 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 106
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # In-Memory OLTP (In-Memory Optimization)

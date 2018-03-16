@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Secondary Database Settings

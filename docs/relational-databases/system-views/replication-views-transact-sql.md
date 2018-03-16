@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "system views [SQL Server], replication"
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Views (Transact-SQL)

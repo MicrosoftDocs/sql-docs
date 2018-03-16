@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "systaskids system table"
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.systaskids (Transact-SQL)

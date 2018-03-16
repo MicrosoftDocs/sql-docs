@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "CurveToLineWithTolerance method (geometry)"
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CurveToLineWithTolerance (geometry Data Type)

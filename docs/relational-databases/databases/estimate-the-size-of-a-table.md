@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "calculating table size"
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Estimate the Size of a Table

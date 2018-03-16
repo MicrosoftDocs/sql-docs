@@ -16,7 +16,7 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.validate_project (SSISDB Database)

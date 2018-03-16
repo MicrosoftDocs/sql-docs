@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.monitor.Distributor.Publications.f1"
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Distributor Information, Publications

@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, stored procedures"
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stored Procedures - Calling

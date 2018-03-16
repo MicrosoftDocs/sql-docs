@@ -21,7 +21,7 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Identify Similar Data Rows by Using the Fuzzy Grouping Transformation

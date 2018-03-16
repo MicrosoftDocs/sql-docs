@@ -19,7 +19,7 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CDC Control Task

@@ -21,20 +21,18 @@ helpviewer_keywords:
   - "External"
   - "External, data source"
   - "PolyBase, create data source"
-ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: 58
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Creates an external data source for PolyBase, Elastic Database queries, or Azure Blob storage. Depending on the scenario, the syntax differs significantly. A data source created for PolyBase cannot be used for Elastic Database queries.  Similarly, a data source created for Elastic Database queries cannot be used for PolyBase, etc. 
+  Creates an external data source for PolyBase, or Elastic Database queries. Depending on the scenario, the syntax differs significantly. An external data source created for PolyBase cannot be used for Elastic Database queries.  Similarly, an external data source created for Elastic Database queries cannot be used for PolyBase, etc. 
   
 > [!NOTE]  
->  PolyBase is supported only on SQL Server 2016, Azure SQL Data Warehouse, and Parallel Data Warehouse. Elastic Database queries are supported only on Azure SQL Database v12 or later.  
+>  PolyBase is supported only on SQL Server 2016 (or higher), Azure SQL Data Warehouse, and Parallel Data Warehouse. Elastic Database queries are supported only on Azure SQL Database v12 or later.  
   
  For PolyBase scenarios, the external data source is either a Hadoop File System (HDFS), an Azure storage blob container, or Azure Data Lake Store. For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   

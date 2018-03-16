@@ -22,7 +22,7 @@ ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SaveToFile Method

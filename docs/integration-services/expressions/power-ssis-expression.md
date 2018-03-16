@@ -18,7 +18,7 @@ ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # POWER (SSIS Expression)

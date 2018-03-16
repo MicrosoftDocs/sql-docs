@@ -28,7 +28,7 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 caps.latest.revision: 63
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Error Handling in Data

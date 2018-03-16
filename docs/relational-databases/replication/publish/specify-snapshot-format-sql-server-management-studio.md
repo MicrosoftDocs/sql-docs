@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], formats"
 ms.assetid: 7c95f545-731a-4743-9acb-0b325ef9b98b
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify Snapshot Format (SQL Server Management Studio)

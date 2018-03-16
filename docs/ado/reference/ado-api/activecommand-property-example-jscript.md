@@ -20,7 +20,7 @@ ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ActiveCommand Property Example (JScript)

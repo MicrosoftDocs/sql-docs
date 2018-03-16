@@ -2,16 +2,16 @@
 title: "Schedule SSAS Administrative Tasks with SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
@@ -32,7 +32,7 @@ ms.workload: "On Demand"
 ## Prerequisites  
  SQL Server Agent service must be installed.  
   
- By default, jobs run under the service account. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the default account for SQL Server Agent is NT Service\SQLAgent$\<instancename>. To perform a backup or processing task, this account must be a system administrator on the Analysis Services instance. For more information, see [Grant server admin rights to an  Analysis Services instance](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ By default, jobs run under the service account. The default account for SQL Server Agent is NT Service\SQLAgent$\<instancename>. To perform a backup or processing task, this account must be a system administrator on the Analysis Services instance. For more information, see [Grant server admin rights to an  Analysis Services instance](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  You should also have a test database to work with. You can deploy the AdventureWorks multidimensional sample database or a project from the Analysis Services multidimensional tutorial to use in this walkthrough. For more information, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md).  
   

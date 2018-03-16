@@ -2,15 +2,15 @@
 title: "Related Projects for Data Mining Solutions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
@@ -205,7 +205,7 @@ ms.workload: "Inactive"
 -   Not all of the full-text languages support semantic indexing. For a list of supported languages, see [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## See Also  
- [Multidimensional Model Solutions &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Tabular Model Solutions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Multidimensional Model Solutions ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

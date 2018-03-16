@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "business logic handlers [SQL Server replication]"
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execute Business Logic During Merge Synchronization

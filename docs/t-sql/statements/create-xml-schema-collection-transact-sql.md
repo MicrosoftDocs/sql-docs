@@ -31,7 +31,7 @@ ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)

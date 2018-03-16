@@ -9,7 +9,7 @@ ms.component: "building-packages-programmatically"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -29,7 +29,7 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Selecting Input Columns Programmatically

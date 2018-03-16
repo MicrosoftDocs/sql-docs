@@ -18,7 +18,7 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Column Value Distribution Profile Request Options (Data Profiling Task)

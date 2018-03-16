@@ -18,7 +18,7 @@ ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Job Properties - New Job (Notifications Page)

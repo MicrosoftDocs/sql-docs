@@ -1,16 +1,16 @@
 ---
 title: "Retrieving Data Using the AdomdDataReader | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "analysis-services"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -27,7 +27,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Retrieving Data Using the AdomdDataReader
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   When retrieving analytical data, the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> object provides a good balance between overhead and interactivity. The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> object retrieves a read-only, forward-only, flattened stream of data from an analytical data source. This unbuffered stream of data enables procedural logic to efficiently process results from an analytical data source sequentially. This makes the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> a good choice when retrieving large amounts of data for display purposes because the data is not cached in memory.  
   
  The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> can also increase application performance by retrieving data as soon as it is available, instead of waiting for the complete results of the query to be returned. The <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> also reduces system overhead because, by default, this reader stores only one row at a time in memory.  

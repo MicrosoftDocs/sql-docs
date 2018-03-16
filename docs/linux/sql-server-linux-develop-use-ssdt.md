@@ -9,18 +9,18 @@ ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.workload: "On Demand"
 ---
 # Use Visual Studio to create databases for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test and publish your database from a source controlled project, just like you develop your application code.
+SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test, and publish your database from a source-controlled project, just like you develop your application code.
 
 ## Install Visual Studio and SQL Server Data Tools
 
@@ -98,11 +98,11 @@ SQL Server 2017 on Linux is supported by SSDT version 17.0 RC or later.
 
 5. Check the publish status in the **Data Tools Operations** window.
 
-6. Click **View Reulst** or **View Script** to see details of the databsae publish result on your SQL Server on Linux.
+6. Click **View Reulst** or **View Script** to see details of the database publish result on your SQL Server on Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-You have successfully created a new database on SQL Server instance on Linux and learned the basics of developing a database with a source controlled database project.
+You have successfully created a new database on SQL Server instance on Linux and learned the basics of developing a database with a source-controlled database project.
 
 ## Next steps
 

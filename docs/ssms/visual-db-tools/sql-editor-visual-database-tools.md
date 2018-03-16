@@ -27,7 +27,7 @@ ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Editor (Visual Database Tools)

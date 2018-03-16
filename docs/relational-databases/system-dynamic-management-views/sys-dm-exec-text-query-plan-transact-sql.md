@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_text_query_plan dynamic management function"
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_exec_text_query_plan (Transact-SQL)

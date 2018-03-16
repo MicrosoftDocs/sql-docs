@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "change data capture [SQL Server], jobs"
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Administer and Monitor Change Data Capture (SQL Server)

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "transactional replication, article options"
 ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Article Options for Transactional Replication

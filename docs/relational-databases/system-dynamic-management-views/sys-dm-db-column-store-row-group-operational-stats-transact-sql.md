@@ -18,7 +18,7 @@ ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 caps.latest.revision: 6
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)

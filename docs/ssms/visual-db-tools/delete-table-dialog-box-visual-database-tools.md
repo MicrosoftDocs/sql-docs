@@ -19,7 +19,7 @@ ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete Table Dialog Box (Visual Database Tools)

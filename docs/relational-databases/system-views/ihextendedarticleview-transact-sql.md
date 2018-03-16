@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "IHextendedArticleView view"
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IHextendedArticleView (Transact-SQL)

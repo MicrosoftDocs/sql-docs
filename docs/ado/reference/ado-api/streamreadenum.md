@@ -21,7 +21,7 @@ ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # StreamReadEnum

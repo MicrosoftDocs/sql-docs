@@ -22,7 +22,7 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configure Always Encrypted using SQL Server Management Studio

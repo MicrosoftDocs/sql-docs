@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_query_optimizer_info dynamic management view"
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_query_optimizer_info (Transact-SQL)

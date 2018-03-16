@@ -21,7 +21,7 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Derive Column Values by Using the Derived Column Transformation

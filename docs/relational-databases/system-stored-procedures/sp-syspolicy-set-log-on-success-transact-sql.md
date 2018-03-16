@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_set_log_on_success"
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_set_log_on_success (Transact-SQL)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DBCC HELP statement"
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DBCC HELP (Transact-SQL)

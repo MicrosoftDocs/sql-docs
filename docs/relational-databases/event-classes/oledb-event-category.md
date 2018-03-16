@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "event classes [SQL Server], OLEDB event category"
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OLEDB Event Category

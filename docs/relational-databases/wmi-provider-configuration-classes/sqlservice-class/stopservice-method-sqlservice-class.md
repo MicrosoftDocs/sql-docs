@@ -23,7 +23,7 @@ ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # StopService Method (SqlService Class)

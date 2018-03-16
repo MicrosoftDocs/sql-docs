@@ -1,7 +1,7 @@
 ---
 title: "CREATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "01/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -62,9 +62,10 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
-          | STATS_STREAM = stats_stream ] ]   
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -81,6 +82,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -136,11 +142,11 @@ CREATE STATISTICS statistics_name
   
  Here are some examples of filter predicates for the Production.BillOfMaterials table:  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  For more information about filter predicates, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
@@ -182,28 +188,39 @@ CREATE STATISTICS statistics_name
  If per partition statistics are not supported an error is generated. Incremental stats are not supported for following statistics types:  
   
 -   Statistics created with indexes that are not partition-aligned with the base table.  
-  
 -   Statistics created on Always On readable secondary databases.  
-  
 -   Statistics created on read-only databases.  
-  
 -   Statistics created on filtered indexes.  
-  
 -   Statistics created on views.  
-  
 -   Statistics created on internal tables.  
-  
 -   Statistics created with spatial indexes or XML indexes.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
+MAXDOP = *max_degree_of_parallelism*  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
+  
+ *max_degree_of_parallelism* can be:  
+  
+ 1  
+ Suppresses parallel plan generation.  
+  
+ \>1  
+ Restricts the maximum number of processors used in a parallel statistic operation to the specified number or fewer based on the current system workload.  
+  
+ 0 (default)  
+ Uses the actual number of processors or fewer based on the current system workload.  
+  
+ \<update_stats_stream_option> 
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
 ## Permissions  
  Requires one of these permissions:  
   
 -   ALTER TABLE  
-  
 -   User is the table owner  
-  
 -   Membership in the **db_ddladmin** fixed database role  
   
 ## General Remarks  
@@ -222,8 +239,9 @@ CREATE STATISTICS statistics_name
  The [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) catalog view tracks each column in the filtered statistics predicate as a referencing dependency. Consider the operations that you perform on table columns before creating filtered statistics because you cannot drop, rename, or alter the definition of a table column that is defined in a filtered statistics predicate.  
   
 ## Limitations and Restrictions  
-*  Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
-*  You can list up to 64 columns per statistics object.
+* Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
+* You can list up to 64 columns per statistics object.
+* The MAXDOP option is not compatible with STATS_STREAM, ROWCOUNT and PAGECOUNT options.
   
 ## Examples  
 

@@ -9,7 +9,7 @@ ms.component: "extended-stored-procedures"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "messages [SQL Server], extended stored procedures"
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating Extended Stored Procedures

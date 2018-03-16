@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "data function [XQuery]"
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Accessor Functions - data (XQuery)

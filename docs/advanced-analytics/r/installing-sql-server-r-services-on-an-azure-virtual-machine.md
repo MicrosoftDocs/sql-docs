@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
@@ -19,6 +19,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Installing SQL Server machine learning features on an Azure virtual machine
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 If you deploy an Azure virtual machine that includes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can now select machine learning as a feature to be added to the instance when the VM is created.
 

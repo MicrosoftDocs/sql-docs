@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "sys.fn_builtin_permissions function"
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_builtin_permissions (Transact-SQL)
@@ -335,7 +335,7 @@ The following graphic shows the permissions and their relationships to each othe
 ![Database Engine Permissions](../../relational-databases/security/media/database-engine-permissions.PNG) 
 
 >[!NOTE]
-> As part of this topic the poster is far to small to read. Download the Database Engine Permissions Poster from [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+> As part of this topic the poster is far to small to read. Download the Database Engine Permissions Poster from [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
    
   
 ## Permissions  

@@ -2,15 +2,15 @@
 title: "The Role of SOAP in Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "report-server-web-service"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], SOAP"
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
-author: "guyinacube"
-author: "guyinacube"
-ms.author: "asaxton"
+author: "markingmyname"
+author: "markingmyname"
+ms.author: "maghan"
 ms.workload: "Inactive"
 ---
 # The Role of SOAP in Reporting Services

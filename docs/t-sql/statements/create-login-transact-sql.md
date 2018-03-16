@@ -193,6 +193,8 @@ ASYMMETRIC KEY *asym_key_name*
  For a script to transfer logins, see [How to transfer the logins and the passwords between instances of SQL Server 2005 and SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  Creating a login automatically enables the new login and grants the login the server level **CONNECT SQL** permission.  
+ 
+ The server's [authentication mode](../../relational-databases/security/choose-an-authentication-mode.md) must match the login type to permit access.
   
  For information about designing a permissions system, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -237,15 +239,17 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO  
 ```  
   
-### B. Creating a login with a password  
+### B. Creating a login with a password that must be changed
  The following example creates a login for a particular user and assigns a password. The `MUST_CHANGE` option requires users to change this password the first time they connect to the server.  
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' MUST_CHANGE;  
+CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' 
+    MUST_CHANGE,  CHECK_EXPIRATION = ON;
 GO  
 ```  
+[!NOTE] The MUST_CHANGE option cannot be used when CHECK_EXPIRATION is OFF.
   
 ### C. Creating a login mapped to a credential  
  The following example creates the login for a particular user, using the user. This login is mapped to the credential.  

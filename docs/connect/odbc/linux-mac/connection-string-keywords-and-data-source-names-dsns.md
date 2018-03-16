@@ -1,5 +1,5 @@
 ---
-title: "Connection String Keywords and Data Source Names (DSNs) | Microsoft Docs"
+title: "Connecting to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
@@ -23,25 +23,17 @@ ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Connection String Keywords and Data Source Names (DSNs)
+# Connecting to SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This topic discusses how you can create a connection to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.  
   
 ## Connection Properties  
-For this release of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux or macOS, you can use the following connection keywords:  
-  
-||||||  
-|-|-|-|-|-|  
-|`Addr`|`Address`|`ApplicationIntent`|`AutoTranslate`|`Database`|
-|`Driver`|`DSN`|`Encrypt`|`FileDSN`|`MARS_Connection`|  
-|`MultiSubnetFailover`|`PWD`|`Server`|`Trusted_Connection`|`TrustServerCertificate`|  
-|`UID`|`WSID`|`ColumnEncryption`|`TransparentNetworkIPResolution`||  
+
+See [DSN and Connection String Keywords and Attributes](../../../connect/odbc/dsn-connection-string-attribute.md) for all the connection string keywords and attributes supported on Linux and Mac
 
 > [!IMPORTANT]  
 > When connecting to a database that uses database mirroring (has a failover partner), do not specify the database name in the connection string. Instead, send a **use** *database_name* command to connect to the database before executing your queries.  
-  
-For more information about these keywords, see the ODBC section of [Using Connection String Keywords with SQL Server Native Client](http://go.microsoft.com/fwlink/?LinkID=126696).  
   
 The value passed to the **Driver** keyword can be one of the following:  
   
@@ -96,15 +88,18 @@ SSL uses the OpenSSL library. The following table shows the minimum supported ve
 
 |Platform|Minimum OpenSSL Version|Default Certificate Trust Store Location|  
 |------------|---------------------------|--------------------------------------------|
-|Debian 8.71 |1.0.1t|/etc/ssl/certs|
-|macOS 10.12|1.0.2k|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2j|/usr/local/etc/openssl/certs|
-|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|  
-|Red Hat Enterprise Linux 7|1.0.1e|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1i|/etc/ssl/certs|
-|Ubuntu 15.10 |1.0.2d|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2g|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2g|/etc/ssl/certs|
+|Debian 9|1.1.0|/etc/ssl/certs|
+|Debian 8.71 |1.0.1|/etc/ssl/certs|
+|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
+|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
+|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
+|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
+|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
 You can also specify encryption in the connection string using the `Encrypt` option when using **SQLDriverConnect** to connect.
 

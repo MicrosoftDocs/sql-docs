@@ -20,7 +20,7 @@ ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Post-Save Notifications Dialog Box (Visual Database Tools)

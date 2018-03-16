@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_jobcount"
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_jobcount (Transact-SQL)

@@ -2,14 +2,14 @@
 title: "Pin Reporting Services items to Power BI Dashboards | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/16/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "power bi integration"
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Pin Reporting Services items to Power BI Dashboards

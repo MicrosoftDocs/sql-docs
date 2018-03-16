@@ -37,9 +37,9 @@ helpviewer_keywords:
   - "page count accuracy [SQL Server]"
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC UPDATEUSAGE (Transact-SQL)

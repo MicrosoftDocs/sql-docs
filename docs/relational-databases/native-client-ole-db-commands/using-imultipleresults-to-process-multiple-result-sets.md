@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-commands"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "multiple-rowset results"
 ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using IMultipleResults to Process Multiple Result Sets

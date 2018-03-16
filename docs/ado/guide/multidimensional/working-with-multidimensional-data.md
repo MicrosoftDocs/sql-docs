@@ -18,7 +18,7 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Working with Multidimensional Data

@@ -1,16 +1,16 @@
 ---
 title: "Executing Commands Against an Analytical Data Source | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "analysis-services"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -27,7 +27,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Executing Commands Against an Analytical Data Source
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   After establishing a connection to an analytical data source, you can use an <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> object to run commands against and return results from that data source. These commands can retrieve data by using Multidimensional Expressions (MDX), Data Mining Extensions (DMX), or even a limited syntax of SQL. Additionally, you can use Analysis Services Scripting Language (ASSL) commands to modify the underlying database.  
   
 ## Creating a Command  

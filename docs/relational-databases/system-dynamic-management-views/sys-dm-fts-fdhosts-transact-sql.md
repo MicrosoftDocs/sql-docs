@@ -26,7 +26,7 @@ ms.assetid: d42a6334-4362-4361-83da-f8324fe55ec7
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_fdhosts (Transact-SQL)

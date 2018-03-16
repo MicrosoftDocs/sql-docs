@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn:max function"
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Aggregate Functions - max

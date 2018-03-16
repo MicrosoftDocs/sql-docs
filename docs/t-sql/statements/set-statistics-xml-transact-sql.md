@@ -27,7 +27,7 @@ ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SET STATISTICS XML (Transact-SQL)

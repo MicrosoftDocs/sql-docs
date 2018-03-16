@@ -16,7 +16,7 @@ ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.move_environment (SSISDB Database)

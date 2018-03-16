@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "data formats [SQL Server], prefix length"
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify Prefix Length in Data Files by Using bcp (SQL Server)

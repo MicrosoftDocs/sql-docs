@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysjobactivity system table"
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # dbo.sysjobactivity (Transact-SQL)

@@ -21,7 +21,7 @@ ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Open and Close Methods Example (VBScript)

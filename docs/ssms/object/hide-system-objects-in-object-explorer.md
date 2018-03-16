@@ -21,7 +21,7 @@ ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Hide System Objects in Object Explorer

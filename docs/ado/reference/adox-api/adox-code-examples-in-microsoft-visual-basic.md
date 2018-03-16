@@ -20,7 +20,7 @@ ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADOX Code Examples in Microsoft Visual Basic

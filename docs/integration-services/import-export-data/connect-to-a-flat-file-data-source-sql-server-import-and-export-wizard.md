@@ -16,7 +16,7 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connect to a Flat File Data Source (SQL Server Import and Export Wizard)

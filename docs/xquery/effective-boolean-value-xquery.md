@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "EBV"
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Effective Boolean Value (XQuery)

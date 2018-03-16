@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysprotects system table"
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysprotects (Transact-SQL)

@@ -20,7 +20,7 @@ ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OpenSchema Method Example (VB)

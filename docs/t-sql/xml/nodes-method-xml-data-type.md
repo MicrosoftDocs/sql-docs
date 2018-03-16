@@ -21,7 +21,7 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # nodes() Method (xml Data Type)

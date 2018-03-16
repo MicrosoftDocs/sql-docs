@@ -23,7 +23,7 @@ ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetValue Method (ServerSettingsGeneralFlag Class)

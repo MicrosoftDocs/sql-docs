@@ -18,7 +18,7 @@ ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete Operator

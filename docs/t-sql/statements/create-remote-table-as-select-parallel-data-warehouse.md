@@ -16,7 +16,7 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)

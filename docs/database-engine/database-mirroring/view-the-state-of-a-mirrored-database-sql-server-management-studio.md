@@ -19,7 +19,7 @@ ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 caps.latest.revision: 25
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View the State of a Mirrored Database (SQL Server Management Studio)

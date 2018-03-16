@@ -2,7 +2,7 @@
 title: "Install Analysis Services in Power Pivot Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
@@ -23,28 +23,6 @@ ms.workload: "On Demand"
 # Install Analysis Services in Power Pivot Mode
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The procedures in this topic guide you through a single server installation of a [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode for a SharePoint deployment. The steps include running the SQL Server installation wizard as well as configuration tasks that use SharePoint Central Administration.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
-  
- **In this topic:**  
-  
- [Background](#bkmk_background)  
-  
- [Prerequisites](#bkmk_prereq)  
-  
- [Step 1: Install Power Pivot for SharePoint](#InstallSQL)  
-  
- [Step 2: Configure Basic Analysis Services SharePoint Integration](#bkmk_config)  
-  
- [Step 3: Verify the Integration](#bkmk_verify)  
-  
- [Configure the Windows Firewall to Allow Analysis Services Access](#bkmk_firewall)  
-  
- [Upgrade Workbooks and Scheduled Data Refresh](#bkmk_upgrade_workbook)  
-  
- [Beyond the Single-Server Installation – Power Pivot for Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> Background  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint is a collection of middle-tier and backend services that provide [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data access in a SharePoint 2016, or SharePoint 2013, farm.  
@@ -302,11 +280,11 @@ ms.workload: "On Demand"
   
  **Redundancy and server load:** Installing a second, or more [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servers in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode will provide redundancy of the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server functionality. Additional servers will also spread the load across servers. For more information, see the following:  
   
--   [Configure Analysis Services for processing data models in Excel Services (SharePoint 2013)](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Configure Analysis Services for processing data models in Excel Services (SharePoint 2013)](http://technet.microsoft.com/library/jj614437(v=office.15)).  
   
--   [Manage Excel Services data model settings (SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15)).  
+-   [Manage Excel Services data model settings (SharePoint 2013)](http://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![SharePoint Settings](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint Settings](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through SQL Server Feedback](https://feedback.azure.com/forums/908035-sql-server).  
   
 ## See Also  
  [Migrate Power Pivot to SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

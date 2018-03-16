@@ -18,7 +18,7 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SubmitChanges Method (RDS)

@@ -20,7 +20,7 @@ ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Choose Name Dialog Box (Visual Database Tools)

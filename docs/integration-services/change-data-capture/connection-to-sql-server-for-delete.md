@@ -16,7 +16,7 @@ ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connection to SQL Server for Delete

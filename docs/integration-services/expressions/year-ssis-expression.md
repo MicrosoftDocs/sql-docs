@@ -19,7 +19,7 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # YEAR (SSIS Expression)

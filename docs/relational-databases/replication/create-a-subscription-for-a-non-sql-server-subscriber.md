@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "non-SQL Server Subscribers, subscriptions"
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Subscription for a Non-SQL Server Subscriber

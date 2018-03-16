@@ -21,7 +21,7 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Update Statistics Task

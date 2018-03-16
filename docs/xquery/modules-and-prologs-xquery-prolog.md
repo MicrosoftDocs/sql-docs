@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "default namespace declarations"
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Modules and Prologs - XQuery Prolog

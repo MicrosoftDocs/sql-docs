@@ -23,7 +23,7 @@ ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Close Method (ADO)

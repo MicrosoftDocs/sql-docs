@@ -16,7 +16,7 @@ ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.set_folder_description (SSISDB Database)

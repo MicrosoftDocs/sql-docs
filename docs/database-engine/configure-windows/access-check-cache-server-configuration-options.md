@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "access check cache option"
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # access check cache Server Configuration Options

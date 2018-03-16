@@ -1,13 +1,8 @@
-# [Getting started](getting-started-with-machine-learning-services.md)
-
 # Overview
-## [What is Microsoft Machine Learning Services](r/r-services.md)
-## [What's new in machine learning](what-s-new-in-sql-server-machine-learning-services.md)
-## [New and updated articles](new-updated-advanced-analytics.md)
-## [Architecture and overview](architecture-overview-machine-learning.md)
-## [Differences in machine learning features between editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
+## [What is SQL Server Machine Learning Services?](what-is-sql-server-machine-learning.md)
+## [New features](what-s-new-in-sql-server-machine-learning-services.md)
+## [Architecture overview](architecture-overview-machine-learning.md)
+## [Features by edition](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 
@@ -84,7 +79,10 @@
 ## [Python tutorials](tutorials/sql-server-python-tutorials.md)
 
 ### [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
-### [Python: Create a model using revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [Wrap Python in a stored procedure](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [Train and score from a Python model in SQL Server](tutorials/train-score-using-python-in-tsql.md)
+#### [Create a model using revoscalepy in a SQL Server compute context](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python: In-database analytics for SQL developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [Download sample data](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -93,8 +91,6 @@
 #### [Create data features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
-
-### [Python: Deploy and consume models](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [Machine Learning Server - Standalone](r/r-server-standalone.md)
 ## [Getting started](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -107,6 +103,8 @@
 ## [R package management for SQL Server](r/r-package-management-for-sql-server-r-services.md)
 
 ### [Install new R packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
+
+### [Install new Python packages on SQL Server](python/install-additional-python-packages-on-sql-server.md)
 
 ### [Enable R package management for a SQL Server instance](r/r-package-how-to-enable-or-disable.md)
 
@@ -161,7 +159,7 @@
 ### [Resource governance for Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Create a resource pool for machine learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Extended events for Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
-
+### [Extended events for monitoring PREDICT statements](xe-event-predict-tsql.md)
 ### [DMVs for Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
 ### [Using R code profiling functions](r/using-r-code-profiling-functions.md)
 ### [Monitor Machine Learning Services using custom reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)
@@ -170,6 +168,8 @@
 
 ## [Known issues](known-issues-for-sql-server-machine-learning-services.md)
 ## [Release notes](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [New and updated articles](new-updated-advanced-analytics.md)
+## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
 
 ## [Setup and troubleshooting tips](machine-learning-troubleshooting-faq.md)
 ### [Data collection for troubleshooting](data-collection-ml-troubleshooting-process.md)

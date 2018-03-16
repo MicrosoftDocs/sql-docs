@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "restore system tables [SQL Server]"
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Backup and Restore Tables (Transact-SQL)

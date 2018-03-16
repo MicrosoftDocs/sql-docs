@@ -18,7 +18,7 @@ ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Recordset, SourceRecordset Properties (RDS)

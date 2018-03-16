@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_exec_requests dynamic management view"
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_exec_requests (Transact-SQL)

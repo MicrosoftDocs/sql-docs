@@ -21,7 +21,7 @@ ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Append Method (ADOX Indexes)

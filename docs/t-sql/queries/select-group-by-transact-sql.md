@@ -37,7 +37,7 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 caps.latest.revision: 80
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SELECT - GROUP BY- Transact-SQL

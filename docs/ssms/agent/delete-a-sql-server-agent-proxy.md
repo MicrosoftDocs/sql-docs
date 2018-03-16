@@ -20,7 +20,7 @@ ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete a SQL Server Agent Proxy

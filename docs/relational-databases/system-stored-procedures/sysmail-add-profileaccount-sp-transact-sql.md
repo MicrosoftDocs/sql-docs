@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_add_profileaccount_sp"
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_add_profileaccount_sp (Transact-SQL)

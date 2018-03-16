@@ -18,7 +18,7 @@ ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Agent Properties (Advanced Page)

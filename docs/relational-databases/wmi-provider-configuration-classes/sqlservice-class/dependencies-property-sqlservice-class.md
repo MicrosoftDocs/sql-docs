@@ -23,7 +23,7 @@ ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Dependencies Property (SqlService Class)

@@ -34,7 +34,7 @@ ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Explicit Mapping XSD Elements and Attributes to Tables and Columns

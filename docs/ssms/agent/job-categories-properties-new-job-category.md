@@ -18,7 +18,7 @@ ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Job Categories Properties - New Job Category

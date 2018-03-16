@@ -16,7 +16,7 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 caps.latest.revision: 23
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Columnstore indexes - Query performance

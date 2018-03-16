@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Crawl Stopped event class"
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FT:Crawl Stopped Event Class

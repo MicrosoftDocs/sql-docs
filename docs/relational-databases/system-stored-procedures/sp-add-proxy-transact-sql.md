@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_add_proxy"
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_proxy (Transact-SQL)

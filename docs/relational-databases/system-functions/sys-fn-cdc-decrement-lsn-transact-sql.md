@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "sys.fn_cdc_decrement_lsn"
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.fn_cdc_decrement_lsn (Transact-SQL)

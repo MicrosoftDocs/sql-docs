@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "multiply operator (*)"
 ms.assetid: 34beb660-db19-46ca-ac90-2218471457bf
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 

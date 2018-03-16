@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "replication [SQL Server], administering"
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1: Creating Windows Accounts for Replication

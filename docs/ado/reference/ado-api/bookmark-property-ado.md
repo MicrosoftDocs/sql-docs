@@ -21,7 +21,7 @@ ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Bookmark Property (ADO)

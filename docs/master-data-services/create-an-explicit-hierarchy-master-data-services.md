@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "explicit hierarchies, creating"
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 caps.latest.revision: 10
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

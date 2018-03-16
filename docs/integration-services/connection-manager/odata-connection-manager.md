@@ -19,7 +19,7 @@ f1_keywords:
   - "sql13.dts.designer.odataconnectionmanager.f1"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # OData Connection Manager

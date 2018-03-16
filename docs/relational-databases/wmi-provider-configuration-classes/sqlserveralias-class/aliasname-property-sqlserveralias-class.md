@@ -22,7 +22,7 @@ ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # AliasName Property (SqlServerAlias Class)

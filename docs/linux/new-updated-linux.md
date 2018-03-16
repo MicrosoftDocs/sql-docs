@@ -1,21 +1,17 @@
 ---
 title: Updated - SQL Server on Linux docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Microsoft SQL Server on Linux.
-services: na
-documentationcenter: ''
+
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: rothja
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: linux-sql
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 12/02/2017
 ms.author: genemi
+ms.topic: article
+ms.custom: "sql-linux,UpdArt.exe"
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: ""
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: SQL Server on Linux docs
 
@@ -29,7 +25,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
+- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
 - *Subject area:* &nbsp; **Microsoft SQL Server on Linux**.
 
 
@@ -42,16 +38,12 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Run the SQL Server 2017 in the cloud](quickstart-install-connect-clouds.md)
-2. [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md)
-3. [Performance best practices and configuration guidelines for SQL Server 2017 on Linux](sql-server-linux-performance-best-practices.md)
-4. [Failover Cluster Instances - SQL Server on Linux](sql-server-linux-shared-disk-cluster-concepts.md)
-5. [Configure failover cluster instance - iSCSI - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-6. [Configure failover cluster instance - NFS - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-7. [Configure failover cluster instance - SMB - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
-8. [Operate failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)
-9. [Limitations and known issues for SSIS on Linux](sql-server-linux-ssis-known-issues.md)
-10. [Restore a SQL Server database in a Linux Docker container](tutorial-restore-backup-in-sql-server-container.md)
+1. [Configure multiple-subnet Always On Availability Groups and failover cluster instances](sql-server-linux-configure-multiple-subnet.md)
+2. [Create and configure an availability group for SQL Server on Linux](sql-server-linux-create-availability-group.md)
+3. [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)
+4. [SQL Server on Linux Frequently Asked Questions (FAQ)](sql-server-linux-faq.md)
+5. [SQL Server availability basics for Linux deployments](sql-server-linux-ha-basics.md)
+6. [Configure a SQL Server container in Kubernetes for high availability](tutorial-sql-server-containers-kubernetes.md)
 
 
 
@@ -77,15 +69,8 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Run the SQL Server 2017 container image with Docker](#TitleNum_1)
-2. [Configure Always On availability group for SQL Server on Linux](#TitleNum_2)
-3. [High availability and data protection for availability group configurations](#TitleNum_3)
-4. [Configure SQL Server 2017 container images on Docker](#TitleNum_4)
-5. [Encrypting Connections to SQL Server on Linux](#TitleNum_5)
-6. [Create and run SQL Server Agent jobs on Linux](#TitleNum_6)
-7. [Installation guidance for SQL Server on Linux](#TitleNum_7)
-8. [Configure failover cluster instance - SQL Server on Linux (RHEL)](#TitleNum_8)
-9. [Troubleshoot SQL Server on Linux](#TitleNum_9)
+1. [Always On Availability Groups on Linux](#TitleNum_1)
+2. [Extract, transform, and load data on Linux with SSIS](#TitleNum_2)
 
 
 
@@ -96,37 +81,34 @@ This compact list provides links to all the updated articles that are listed in 
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Run the SQL Server 2017 container image with Docker](quickstart-install-connect-docker.md)
+### 1. &nbsp; [Always On Availability Groups on Linux](sql-server-linux-availability-group-overview.md)
 
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 261.  ms.author= jroth.  -->
+<!-- Source markdown line 85.  ms.author= mikeray.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 2aaf953c2f1fb675b1304186108fbef1eebf6f8f f7cd42bb320a8892a5ec63ce999186438097636a  (PR=4150  ,  Filename=quickstart-install-connect-docker.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
+<!-- git diff --ignore-all-space --unified=0 85685bc8ad3528aa26ca3f2bba7b0112808ad6f9 51aff6e55104c8f775d2b4f4461e44f689a9ee6b  (PR=4768  ,  Filename=sql-server-linux-availability-group-overview.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=d4d880dd9c247d1e7fb7a728d5231bc9ac61c989) -->
 
 
 
-**Remove your container**
+Automatic failover of an AG is possible when the following conditions are met:
+
+-   The primary and the secondary replica are set to synchronous data movement.
+-   The secondary has a state of synchronized (not synchronizing), meaning the two are at the same data point.
+-   The cluster type is set to External. Automatic failover is not possible with a cluster type of None.
+-   The `sequence_number` of the secondary replica to become the primary has the highest sequence number – in other words, the secondary replica's `sequence_number` matches the one from the original primary replica.
+
+If these conditions are met and the server hosting the primary replica fails, the AG will change ownership to a synchronous replica. The behavior for synchronous replicas (of which there can be three total: one primary and two secondary replicas) can further be controlled by `required_synchronized_secondaries_to_commit`. This works with AGs on both Windows and Linux, but is configured completely differently. On Linux, the value is configured automatically by the cluster on the AG resource itself.
+
+**Configuration-only replica and quorum**
 
 
-If you want to remove the SQL Server container used in this tutorial, run the following commands:
+Also new in SQL Server 2017 as of CU1 is a configuration-only replica. Because Pacemaker is different than a WSFC, especially when it comes to quorum and requiring STONITH, having just a two-node configuration will not work when it comes to an AG. For an FCI, the quorum mechanisms provided by Pacemaker can be fine, because all FCI failover arbitration happens at the cluster layer. For an AG, arbitration under Linux happens in SQL Server, where all the metadata is stored. This is where the configuration-only replica comes into play.
 
-```
-sudo docker stop sql1
-sudo docker rm sql1
-```
-
-```
-docker stop sql1
-docker rm sql1
-```
-
-> [!WARNING]
-> Stopping and removing a container permanently deletes any SQL Server data in the container. If you need to preserve your data, [create and copy a backup file out of the container--tutorial-restore-backup-in-sql-server-container.md) or use a [container data persistence technique--sql-server-linux-configure-docker.md#persist).
-
+Without anything else, a third node and at least one synchronized replica would be required. This would not work for SQL Server Standard, since it can only have two replicas participating in an AG. The configuration-only replica stores the AG configuration in the master database, same as the other replicas in the AG configuration. The configuration-only replica does not have the user databases participating in the AG. The configuration data is sent synchronously from the primary. This configuration data is then used during failovers, whether they are automatic or manual.
 
 
 
@@ -138,461 +120,91 @@ docker rm sql1
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp; [Configure Always On availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+### 2. &nbsp; [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
 
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
+*Updated: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
 
-<!-- Source markdown line 129.  ms.author= mikeray.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 3c7e6bc862e5b062a855918efbeee5fe748b7236 6900c9a30ce04ce54e7aaa270ef7d276c18f9afd  (PR=4150  ,  Filename=sql-server-linux-availability-group-configure-ha.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
-
-
-
-- Create availability group with two synchronous replicas and a configuration replica:
-
-   >[!IMPORTANT]
-   >This architecture allows any edition of SQL Server to host the third replica. For example, the third replica can be hosted on SQL Server Enterprise Edition. On Enterprise Edition, the only valid endpoint type is `WITNESS`.
-
-```sql
-   CREATE AVAILABILITY GROUP [ag1]
-      WITH (CLUSTER_TYPE = EXTERNAL)
-      FOR REPLICA ON
-       N'**<node1>**' WITH (
-          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**',
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-          FAILOVER_MODE = EXTERNAL,
-          SEEDING_MODE = AUTOMATIC
-          ),
-       N'**<node2>**' WITH (
-          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-          FAILOVER_MODE = EXTERNAL,
-          SEEDING_MODE = AUTOMATIC
-          ),
-       N'**<node3>**' WITH (
-          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**',
-          AVAILABILITY_MODE = CONFIGURATION_ONLY
-          );
-   ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
-```
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_3"/>
-
-### 3. &nbsp; [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md)
-
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
-
-<!-- Source markdown line 106.  ms.author= "mikeray".  -->
+<!-- Source markdown line 50.  ms.author= lle.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 e6bee794ce19f1ed62298b4a0cce7207550f1595 b64726cd6e91721850721786d26c170d59fc320a  (PR=4150  ,  Filename=sql-server-linux-availability-group-ha.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
+<!-- git diff --ignore-all-space --unified=0 9bba002ae3955ebb8376c7c85b7ec1ac8c706073 1533a8e0bfe553e5404de79129119b3f93185ee9  (PR=4768  ,  Filename=sql-server-linux-migrate-ssis.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=d4d880dd9c247d1e7fb7a728d5231bc9ac61c989) -->
 
 
 
-The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior.
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
 
-| |High availability & </br> data protection | Data protection
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Primary outage | Automatic failover. New primary is R/W. | Automatic failover. New primary is not available for user transactions.
-|Secondary replica outage | Primary is R/W, running exposed to data loss (if primary fails and cannot be recovered). No automatic failover if primary fails as well. | Primary is not available for user transactions. No replica to fail over to if primary fails as well.
-|Configuration only replica outage | Primary is R/W. No automatic failover if primary fails as well. | Primary is R/W. No automatic failover if primary fails as well.
-|Synchronous secondary + configuration only replica outage| Primary is not available for user transactions. No automatic failover. | Primary is not available for user transactions. No replica to failover to if primary fails as well.
-<sup>*</sup> Default
+2.  Specify the `/de[crypt]` option to enter the password interactively, as shown in the following example:
 
->[!NOTE]
->The instance of SQL Server that hosts the configuration only replica can also host other databases. It can also participate as a configuration only database for more than one availability group.
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
 
-**Requirements**
+    Enter decryption password:
+    ```
 
+3.  Specify the `/de` option to provide the password on the command line, as shown in the following example. This method is not recommended because it stores the decryption password with the command in the command history.
 
-* All replicas in an availability group with a configuration only replica must be SQL Server 2017 CU 1 or later.
-* Any edition of SQL Server can host a configuration only replica, including SQL Server Express.
-* The availability group needs at least one secondary replica - in addition to the primary replica.
-* Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to three replicas, SQL Server Enterprise Edition allows up to 9.
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
 
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
 
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
+    ```
 
-&nbsp;
+**Design packages**
 
-&nbsp;
 
----
+**Connect to ODBC data sources**. With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
-<a name="TitleNum_4"/>
 
-### 4. &nbsp; [Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md)
 
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3) | [Next](#TitleNum_5))
 
-<!-- Source markdown line 34.  ms.author= jroth.  -->
 
-&nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c759fb88ae8d654414202f28c5fc58dfd02581bf fd270118f2f4608fceaf563fc143951b41097bdb  (PR=4150  ,  Filename=sql-server-linux-configure-docker.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
-
-
-
-This configuration topic provides additional usage scenarios in the sections below.
-
-**<a id="production"></a> Run production container images**
-
-
-The quickstart in the previous section runs the free Developer edition of SQL Server from Docker Hub. Most of the information still applies if you want to run production container images, such as Enterprise, Standard, or Web editions. However, there are a few differences that are outlined here.
-
-- You can only use SQL Server in a production environment if you have a valid license. You can obtain a free SQL Server Express production license [here](https://go.microsoft.com/fwlink/?linkid=857693). SQL Server Standard and Enterprise Edition licenses are available through [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
-
-- Production SQL Server container images must be pulled from [Docker Store](https://store.docker.com). If you don't already have one, create an account on Docker Store.
-
-- The Developer container image on Docker Store can be configured to run the production editions as well. Use the following steps to run production editions:
-
-   1. First, log in to your docker id from the command line.
-
-```
-      docker login
-```
-
-   1. Next, you need to obtain the free Developer container image on Docker Store. Go to [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), click **Proceed to Checkout**, and follow the instructions.
-
-   1. Review the requirements and run procedures in the [quickstart--quickstart-install-connect-docker.md). But there are two differences. You must pull the image **store/microsoft/mssql-server-linux:\<tag-name\>** from Docker Store. And you must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_5"/>
-
-### 5. &nbsp; [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
-
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4) | [Next](#TitleNum_6))
-
-<!-- Source markdown line 45.  ms.author= meetb;rickbyh.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 7e3187866df060903e30000d60d673edad46d210 bcb1f2771e6c29b535a30b9f23ac296954509187  (PR=4150  ,  Filename=sql-server-linux-encrypted-connections.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
-
-
-
-        sudo chown mssql:mssql mssql.pem mssql.key
-        sudo chmod 600 mssql.pem mssql.key
-        sudo mv mssql.pem /etc/ssl/certs/
-        sudo mv mssql.key /etc/ssl/private/
-
-- **Configure SQL Server**
-
-        systemctl stop mssql-server
-        cat /var/opt/mssql/mssql.conf
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key
-        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2
-        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0
-
-- **Register the certificate on your client machine (Windows, Linux or macOS)**
-
-    -   If you are using CA signed certificate you have to copy the Certificate Authority (CA) certificate instead of the user certificate to the client machine.
-    -   If you are using the self-signed certificate just copy the .pem file to the following folders respective to distribution and execute the commands to enable them
-
-        - **Windows**:  Import the .pem file as a certificate under current user -> trusted root certification authorities -> certificates
-        - **macOS**:
-
--	**Example connection strings**
-
-    - **..!NCLUDE-NotShown--ssmanstudiofull-md--../includes/ssmanstudiofull-md.md)]**
-  ![SSMS connection dialog--media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "SSMS connection dialog")
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_6"/>
-
-### 6. &nbsp; [Create and run SQL Server Agent jobs on Linux](sql-server-linux-run-sql-server-agent-job.md)
-
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_5) | [Next](#TitleNum_7))
-
-<!-- Source markdown line 35.  ms.author= jroth.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 1598129bb5f98434435d8ad02336a9adf76c7870 6fe3fe7df3a60dbac31f1df59aac9860d293421a  (PR=4150  ,  Filename=sql-server-linux-run-sql-server-agent-job.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
-
-
-
-The following prerequisites are required to complete this tutorial:
-
-* Linux machine with the following prerequisites:
-  * SQL Server 2017 ([RHEL--quickstart-install-connect-red-hat.md), [SLES--quickstart-install-connect-suse.md), or [Ubuntu--quickstart-install-connect-ubuntu.md)) with command-line tools.
-
-The following prerequisites are optional:
-
-* Windows machine with SSMS:
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) for optional SSMS steps.
-
-**Install SQL Server Agent**
-
-
-To use SQL Server Agent on Linux, you must first install the **mssql-server-agent** package on a machine that already has SQL Server 2017 installed.
-
-1. Install **mssql-server-agent** with the appropriate command for your Linux OS.
-
-   | Platform | Installation command(s) |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
-
-1. Restart SQL Server with the following command:
-
-```
-   sudo systemctl restart mssql-server
-```
-
-**Create a sample database**
-
-
-Use the following steps to create a sample database named **SampleDB**. This database is used for the daily backup job.
-
-1. On your Linux machine, open a bash terminal session.
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_7"/>
-
-### 7. &nbsp; [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md)
-
-*Updated: 2017-12-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_6) | [Next](#TitleNum_8))
-
-<!-- Source markdown line 125.  ms.author= jroth.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 8ba2bf6f9cf4b5f54a6ee0f4d16d4437d5724880 eedddcfb64c6432215f56b74dc91700d9804fce8  (PR=4160  ,  Filename=sql-server-linux-setup.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=085dd05d56afecbb454206ed8402cfbaa597cfbe) -->
-
-
-
-**<a id="repositories"></a> Configure source repositories**
-
-
-When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository.
-
-**Repository options**
-
-
-There are two main types of repositories for each distribution:
-
-- **Cumulative Updates (CU)**: The Cumulative Update (CU) repository contains packages for the base SQL Server release and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as SQL Server 2017. They are released on a regular cadence.
-
-- **GDR**: The GDR repository contains packages for the base SQL Server release and only critical fixes and security updates since that release. These updates are also added to the next CU release.
-
-Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade--#rollback) to any release within your major version (ex: 2017). Updating from a CU release to a GDR release is not supported.
-
-**Check your configured repository**
-
-
-If you want to verify what repository is configured, use the following platform-dependent techniques.
-
-| Platform | Procedure |
-|-----|-----|
-| RHEL | 1. View the files in the **/etc/yum.repos.d** directory: `sudo ls /etc/yum.repos.d`<br/>2. Look for a file that configures the SQL Server directory, such as **mssql-server.repo**.<br/>3. Print out the contents of the file: `sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4. The **name** property is the configured repository.|
-| SLES | 1. Run the following command: `sudo zypper info mssql-server`<br/>2. The **Repository** property is the configured repository. |
-| Ubuntu | 1. Run the following command: `sudo cat /etc/apt/sources.list`<br/>2. Examine the package URL for mssql-server. |
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_8"/>
-
-### 8. &nbsp; [Configure failover cluster instance - SQL Server on Linux (RHEL)](sql-server-linux-shared-disk-cluster-configure.md)
-
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_7) | [Next](#TitleNum_9))
-
-<!-- Source markdown line 25.  ms.author= mikeray.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 308fa1809c80a009f7f15b5ca6917f6b76588c3e 71f18baa320041ff10c94e8c7668e40dff45cac3  (PR=4150  ,  Filename=sql-server-linux-shared-disk-cluster-configure.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
-
-
-
-> [!div class="checklist"]
-> * Set up and configure Linux
-> * Install and configure SQL Server
-> * Configure the hosts file
-> * Configure shared storage and move the database files
-> * Install and configure Pacemaker on each cluster node
-> * Configure the failover cluster instance
-
-This article explains how to create a two-node shared disk failover cluster instance (FCI) for SQL Server. The article includes instructions and script examples for Red Hat Enterprise Linux (RHEL). Ubuntu distributions are similar to RHEL so the script examples will normally also work on Ubuntu.
-
-For conceptual information, see [SQL Server Failover Cluster Instance (FCI) on Linux--sql-server-linux-shared-disk-cluster-concepts.md).
-
-**Prerequisites**
-
-
-To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server for storage. Below steps outline how these servers will be configured.
-
-**Set up and configure Linux**
-
-
-The first step is to configure the operating system on the cluster nodes. On each node in the cluster, configure a linux distribution. Use the same distribution and version on both nodes. Use either one or the other of the following distributions:
-
-* RHEL with a valid subscription for the HA add-on
-
-**Install and configure SQL Server**
-
-
-1. Install and set up SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux--sql-server-linux-setup.md).
-1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.
-1. On the secondary node, stop and disable SQL Server.
-    The following example stops and disables SQL Server:
-```
-    sudo systemctl stop mssql-server
-    sudo systemctl disable mssql-server
-```
-
-    > [!NOTE]
-    > At set up time, a Server Master Key is generated for the SQL Server instance and placed at `var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it's a local account, its identity isn't shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key.
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_9"/>
-
-### 9. &nbsp; [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)
-
-*Updated: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_8))
-
-<!-- Source markdown line 125.  ms.author= anshrest.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 5f8557a34b38e028ff6e5ac370b6d2d6bf315091 196e56187b57bdd79cc5cdc5e6fce3d41e82af0c  (PR=4150  ,  Filename=sql-server-linux-troubleshooting-guide.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=578bd1c2760866ddeb3523f830cfc3cb6b4ab9af) -->
-
-
-
-**Start SQL Server in Minimal Configuration or in Single User Mode**
-
-
-**Start SQL Server in Minimal Configuration Mode**
-
-This is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting.
-
-```
-   sudo -u mssql /opt/mssql/bin/sqlservr -f
-```
-
-**Start SQL Server in Single User Mode**
-
-Under certain circumstances, you may have to start an instance of SQL Server in single-user mode by using the startup option -m. For example, you may want to change server configuration options or recover a damaged master database or other system database. For example, you may want to change server configuration options or recover a damaged master database or other system database
-
-Start SQL Server in Single User Mode
-```
-   sudo -u mssql /opt/mssql/bin/sqlservr -m
-```
-
-Start SQL Server in Single User Mode with SQLCMD
-```
-   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
-```
-
-> [!WARNING]
->  Start SQL Server on Linux with the "mssql" user to prevent future startup issues. Example "sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]"
-
-If you have accidentally started SQL Server with another user, you will need to change ownership of SQL Server database files back to the 'mssql' user prior to starting SQL Server with systemd. For example, to change ownership of all database files under /var/opt/mssql to the 'mssql' user, run the following command
-
-```
-   chown -R mssql:mssql /var/opt/mssql/
-```
-
-
-
-
-
-
-
-## Similar Articles
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## Similar articles about new or updated articles
 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### Subject areas which do have new or recently updated articles
 
-- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+#### Subject areas that *do* have new or recently updated articles
 
-#### Subject areas which have no new or recently updated articles
+
+- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### Subject areas that do *not* have any new or recently updated articles
+
 
 - [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

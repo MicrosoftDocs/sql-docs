@@ -9,17 +9,18 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
 caps.latest.revision: 34
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Getting Started with SQL Server Machine Learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning Services in SQL Server is designed to support data science tasks without exposing your data to security risks or moving data unnecesarily.
 

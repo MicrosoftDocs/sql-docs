@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysmessages compatibility view"
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysmessages (Transact-SQL)

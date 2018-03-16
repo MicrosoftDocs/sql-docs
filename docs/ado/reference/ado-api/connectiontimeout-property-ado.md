@@ -21,7 +21,7 @@ ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # ConnectionTimeout Property (ADO)

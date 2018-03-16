@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_update_schedule"
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sp_update_schedule (Transact-SQL)

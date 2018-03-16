@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "tape backup devices, creating"
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Define a Logical Backup Device for a Tape Drive (SQL Server)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ordered expressions [XQuery]"
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XQueries Involving Order

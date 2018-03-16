@@ -8,15 +8,16 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Resource Governance for Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Because Python is enabled through the the same extensibility architecture that was implemented for the R language in SQL Server 2016, you can use existing tools in SQL Server such as Resource Governor, DMVs, and extended events, to monitor the execution of Python scripts in SQL Server.
 

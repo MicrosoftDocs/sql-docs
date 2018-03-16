@@ -16,7 +16,7 @@ ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
 caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Partitioning with Temporal Tables

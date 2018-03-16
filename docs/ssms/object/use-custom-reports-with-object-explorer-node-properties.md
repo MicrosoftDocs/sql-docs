@@ -18,7 +18,7 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use Custom Reports with Object Explorer Node Properties

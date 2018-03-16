@@ -2,22 +2,22 @@
 title: "Troubleshoot Processing of Reporting Services Reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "troubleshooting"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 caps.latest.revision: 4
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Troubleshoot Processing of Reporting Services Reports

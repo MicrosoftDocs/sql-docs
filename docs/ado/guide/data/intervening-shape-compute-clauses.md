@@ -20,7 +20,7 @@ ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Intervening Shape COMPUTE Clauses

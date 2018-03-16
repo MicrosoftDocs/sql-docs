@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "data collector [SQL Server], security"
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Collector Security

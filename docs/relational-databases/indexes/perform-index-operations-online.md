@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ONLINE option"
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.suite: "sql"
 ms.prod_service: "database-engine, sql-database"

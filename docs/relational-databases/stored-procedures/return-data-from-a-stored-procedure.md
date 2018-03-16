@@ -17,16 +17,43 @@ helpviewer_keywords:
   - "returning data from stored procedure"
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Return Data from a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > For content related to previous versions of SQL Server, see [Return Data from a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
-  There are two ways of returning result sets or data from a procedure to a calling program: output parameters and return codes. This topic provides information on both approaches.  
+  There are three ways of returning data from a procedure to a calling program: result sets, output parameters, and return codes. This topic provides information on the three approaches.  
+  
+  ## Returning Data Using Result Sets
+ If you include a SELECT statement in the body of a stored procedure (but not a SELECT ... INTO or INSERT ... SELECT), the rows specified by the SELECT statement will be sent directly to the client.  For large result sets the stored procedure execution will not continue to the next statement until the result set has been completely sent to the client.  For small result sets the results will be spooled for return to the client and execution will continue.  If multiple such SELECT statements are run during the exeuction of the stored proceudre, multiple result sets will be sent to the client.  This behavior also applies to nested TSQL batches, nested stored procedures and top-level TSQL batches.
+ 
+ 
+ ### Examples of Returning Data Using a Result Set 
+  The following example shows a stored procedure that returns the LastName and SalesYTD values for all SalesPerson rows that also appear in the vEmployee view.
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## Returning Data Using an Output Parameter  
  If you specify the OUTPUT keyword for a parameter in the procedure definition, the procedure can return the current value of the parameter to the calling program when the procedure exits. To save the value of the parameter in a variable that can be used in the calling program, the calling program must use the OUTPUT keyword when executing the procedure. For more information about what data types can be used as output parameters, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
@@ -110,7 +137,7 @@ GO
   
 ### Examples of Cursor Output Parameters  
  In the following example, a procedure is created that specified an output parameter, `@currency_cursor` using the **cursor** data type. The procedure is then called in a batch.  
-  
+ 
  First, create the procedure that declares and then opens a cursor on the Currency table.  
   
 ```  
@@ -157,7 +184,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the @@ERROR function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement.  
+ Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the @@ERROR function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement.  Before the introduction of TRY/CATCH/THROW error handling in TSQL return codes were sometimes required to determine the success or failure of stored procedures.  Stored Procedures should always indicate failure with an error (generated with THROW/RAISERROR if neccessary), and not rely on a return code to indicate the failure.  Also you should avoid using the return code to return application data.
   
 ### Examples of Return Codes  
  The following example shows the `usp_GetSalesYTD` procedure with error handling that sets special return code values for various errors. The following table shows the integer value that is assigned by the procedure to each possible error, and the corresponding meaning for each value.  

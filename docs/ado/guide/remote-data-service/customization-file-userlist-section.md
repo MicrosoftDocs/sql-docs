@@ -19,7 +19,7 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Customization File UserList Section

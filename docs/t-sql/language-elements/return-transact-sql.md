@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "RETURN statement"
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # RETURN (Transact-SQL)

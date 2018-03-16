@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "xs prefix [XML in SQL Server]"
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Type System (XQuery)

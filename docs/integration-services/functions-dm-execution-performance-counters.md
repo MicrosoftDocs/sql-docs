@@ -16,7 +16,7 @@ ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions - dm_execution_performance_counters

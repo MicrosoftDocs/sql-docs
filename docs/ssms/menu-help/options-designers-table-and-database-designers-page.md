@@ -18,7 +18,7 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Options (Designers - Table and Database Designers Page)

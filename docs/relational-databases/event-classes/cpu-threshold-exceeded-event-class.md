@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "CPU Threshold Exceeded Event Class"
 ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CPU Threshold Exceeded Event Class

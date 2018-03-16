@@ -19,7 +19,7 @@ ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)

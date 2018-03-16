@@ -2,21 +2,21 @@
 title: "Get data from shared datasets in Reporting Services mobile reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 caps.latest.revision: 18
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Get data from shared datasets in Reporting Services mobile reports

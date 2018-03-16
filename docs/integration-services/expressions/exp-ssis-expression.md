@@ -19,7 +19,7 @@ ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # EXP (SSIS Expression)

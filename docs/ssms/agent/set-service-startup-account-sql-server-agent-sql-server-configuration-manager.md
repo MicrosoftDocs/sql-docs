@@ -20,7 +20,7 @@ ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)

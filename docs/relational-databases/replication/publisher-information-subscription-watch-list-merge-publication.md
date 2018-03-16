@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.monitor.publisherinfo.subscriptionssummary.merge.f1"
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Publisher Information, Subscription Watch List (Merge Publication)

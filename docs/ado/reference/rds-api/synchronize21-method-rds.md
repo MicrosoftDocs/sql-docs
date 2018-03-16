@@ -18,7 +18,7 @@ ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Synchronize21 Method (RDS)

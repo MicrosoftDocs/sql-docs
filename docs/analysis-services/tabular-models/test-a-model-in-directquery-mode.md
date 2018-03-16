@@ -2,14 +2,14 @@
 title: "Test a model in DirectQuery mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 11260792-ff8b-4d0e-b845-ca210dd3fced

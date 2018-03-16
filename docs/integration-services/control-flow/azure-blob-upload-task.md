@@ -19,7 +19,7 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure Blob Upload Task

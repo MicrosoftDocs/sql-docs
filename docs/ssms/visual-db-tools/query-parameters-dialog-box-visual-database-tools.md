@@ -19,7 +19,7 @@ ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Query Parameters Dialog Box (Visual Database Tools)

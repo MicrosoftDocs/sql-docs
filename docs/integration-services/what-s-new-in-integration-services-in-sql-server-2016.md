@@ -20,7 +20,7 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 caps.latest.revision: 183
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # What&#39;s New in Integration Services in SQL Server 2016

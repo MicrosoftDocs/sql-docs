@@ -18,7 +18,7 @@ ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Proxy Account Properties - New Proxy Account (Principals Tab)

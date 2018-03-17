@@ -23,18 +23,18 @@ ms.workload: "Inactive"
 
 This article provides instructions for intalling SQL Server machine learning components from a command line:
 
-+ [In-database instance installations](#indb)
-+ [Add advanced analytics to an existing database engine instance](#add-existing)
++ [In-database instance](#indb)
++ [Add to an existing database engine instance](#add-existing)
 + [Silent install](#silent)
-+ [Standalone server installations](#shared-feature)
++ [Standalone server](#shared-feature)
 
-You can specify silent, basic, or full interaction with the Setup user interface. This article supplements [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), covering the parameters specific to machine learning components.
+You can specify silent, basic, or full interaction with the Setup user interface. This article supplements [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), covering the parameters unique to R and Python machine learning components.
 
 ## Pre-install checklist
 
 + Run commands from an elevated command prompt. 
 
-+ A database engine instance is required for an in-database installation. You cannot install just R or Python features, although you can add them incrementally to an existing instance. If you want just R and Python without the database engine, install the standalone server.
++ A database engine instance is required for in-database installations. You cannot install just R or Python features, although you can [add them incrementally to an existing instance](#add-existing). If you want just R and Python without the database engine, install the [standalone server](#shared-feature).
 
 + Do not install on a failover cluster. The security mechanism used for isolating R and Python processes is not compatible with a Windows Server failover cluster environment.
 
@@ -83,7 +83,8 @@ This the same command, but with a SQL Server login on a database engine using mi
 
 ```
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
-/INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<sql-username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
+/INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<sql-username>" 
+/IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
 ```
 
 This example is Python only, showing that you can add one language by omitting a feature.
@@ -112,7 +113,7 @@ When setup is finished, you have a database engine instance with R and Python, t
 
 You must now enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) as your next step. 
 
-For SQL Server 2016, use this article instead [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows.md).
+For SQL Server 2016, use this article instead [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md).
 
 ## <a name="add-existing"></a> Add advanced analytics to an existing database engine instance
 

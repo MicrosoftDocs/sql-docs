@@ -23,11 +23,13 @@ manager: "cgronlun"
 # SQL Server Machine Learning Server (Standalone) and R Server (Standalone)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-A standalone server is an installation of machine learning components, articulated as R and Python features, that run independently of SQL Server database engine instances. You can install a standalone server by itself, with no dependencies or requirements on the database engine. Because the server is independent of SQL Server, configuration and administration tasks and tools are more similar to a non-SQL version of Machine Learning Server, which you can read about in [this article](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server).
+A standalone server is an installation of machine learning components, articulated as R and Python features, that run independently of SQL Server database engine instances. You can install a standalone server by itself, with no dependencies on SQL Server. Because a standalone server is independent of SQL Server, configuration and administration tasks and tools are more similar to a non-SQL version of Machine Learning Server, which you can read about in [this article](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server).
 
-The objective of a standalone machine learning server is to provide a rich development environment, with distributed and parallel processing of R and Python workloads, equipped to handle small-to-large data sets, using the proprietary packages and calculation engines installed with the server. The primary reason developers choose a standalone machine learning server is to move beyond the memory and processing constraints of open-source R and Python. Standalone servers can load and process large amounts of data on multiple cores and aggregate the results into a single consolidated output. The functions and algorithms are engineered for both scale and utility: delivering predictive analytics, statistical modeling, data visualizations, and leading-edge machine learning algorithms in a commercial server product engineered and supported by Microsoft.
+The objective of a standalone machine learning server is to provide a rich development environment, with distributed and parallel processing of R and Python workloads over small-to-large data sets, using the proprietary packages and calculation engines installed with the server. The R and Python packages on a standalone server are the same as those provided in a SQL Server (In-Database) installation, allowing for code portability and [compute-context switching](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
 
-Generally, we recommend that you treat (Standalone) and (In-Database) installations as mutually exclusive to avoid resource contention, but if you have sufficient resources, there are no prohibitions against installing them both on the same physical computer.
+The primary reason developers choose a standalone machine learning server is to move beyond the memory and processing constraints of open-source R and Python. Standalone servers can load and process large amounts of data on multiple cores and aggregate the results into a single consolidated output. The functions and algorithms are engineered for both scale and utility: delivering predictive analytics, statistical modeling, data visualizations, and leading-edge machine learning algorithms in a commercial server product engineered and supported by Microsoft.
+
+Generally, we recommend that you treat (Standalone) and (In-Database) installations as mutually exclusive to avoid resource contention, but if you have sufficient resources, there is no prohibition against installing them both on the same physical computer.
 
 You can only have one standalone server on the computer: either [SQL Server 2017 Machine Learning Server (standalone)](../install/sql-machine-learning-standalone-windows-install.md) or [SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md). You must manually uninstall one version before installing a different version.
 
@@ -72,18 +74,9 @@ Write R or Python script using functions from RevoScaleR, revoscalepy, and the m
 
 Choose the best language for the task. R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
 
-## Related machine learning products
+### Step 4: Operationalize your solution
 
-> [!Tip]
-> Review [solution templates](https://docs.microsoft.com/machine-learning-server/r/sample-solutions) to apply machine learning in specific industries. Current scenarios are in retail, finance, health care, and marketing.
-
- +  [Provision an Azure Virtual Machine](provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-  
-  The Azure marketplace includes multiple virtual machine images that include Machine Learning Server or R Server. Creating a virtual machine in Microsoft Azure is the fastest way to get to development and deployment of predictive models. Images come with features for scaling and sharing already configured, which makes it easier to embed analytics inside applications and to integrate with backend systems.
-
-+ [Data Science Virtual Machine](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
-
-  The latest version of the Data Science Virtual machine includes Machine Learning Server, SQL Server, plus an array of the most popular tools for machine learning, all preinstalled and tested. Create Jupyter notebooks, develop solutions in Julia, and use GPU-enabled deep learning libraries like MXNet, CNTK, and TensorFlow.
+Standalone servers can use the [operationalization](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) functionality of the non-SQL-branded [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). You can configure a standalone server for operationalization, which gives you these benefits: deploy and host your code as web services, run diagnostics, test web service capacity.
 
 ## See also
 

@@ -20,17 +20,17 @@ ms.workload: "Active"
 # SQL Server Machine Learning and R Services (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-An in-database installation of machine learning components operates within the context of a SQL Server database engine instance, providing R and Python external script support for resident data in your SQL Server instance. Because machine learning is integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can keep analytics close to the data and eliminate the costs and security risks associated with data movement.
+An in-database installation of machine learning  operates within the context of a SQL Server database engine instance, providing R and Python external script support for resident data in your SQL Server instance. Because machine learning is integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can keep analytics close to the data and eliminate the costs and security risks associated with data movement.
 
-Because the database engine is multi-instance, you can install more than one instance of the same version, or even older and newer versions side-by-side. Choices include either [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-standalone-windows-install.md) with R and Python, or [SQL Server 2016 R Services (In-Datatbase)](../install/sql-r-standalone-windows-install.md) wtih just R. 
+Because the database engine is multi-instance, you can install more than one instance of in-database analytics, or even older and newer versions side-by-side. Choices include either [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-standalone-windows-install.md) with R and Python, or [SQL Server 2016 R Services (In-Datatbase)](../install/sql-r-standalone-windows-install.md) with just R. 
 
-Machine learning components can also be installed as instance-agnostic standalone servers. Generally, we recommend that you treat (Standalone) and (In-Database) installations as mutually exclusive to avoid resource contention, but if you have sufficient resources, there are no prohibitions against installing them both on the same physical computer.
+Machine learning components can also be installed as instance-agnostic [standalone servers](r-server-standalone.md). Generally, we recommend that you treat (Standalone) and (In-Database) installations as mutually exclusive to avoid resource contention, but if you have sufficient resources, there are no prohibitions against installing them both on the same physical computer.
 
 ## Choosing between in-database and standalone analytics
 
 Understanding your development requirements can help you choose between (In-Database) and (Standalone) approaches. A standalone server is simpler to configure and manage if you want maximum flexibility in how it is used, or if you want to also connect to a variety of data sources outside of SQL Server. 
 
-In-database analytics are designed for deep integration with data within SQL Server. You can write T-SQL queries that call R or Python functions and execute the script in SQL Server Management Studio or any tool or app used for external or embedded T-SQL. If you need to run R or Python code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], either by using stored procedures or by using the SQL Server instance as the compute context, you must install in-database analytics. This option provides maximum data security and integration with SQL Server tools.
+In-database analytics are designed for deep integration with data within SQL Server. You can write T-SQL queries that call R or Python functions and execute the script in SQL Server Management Studio or any tool or app used for external or embedded T-SQL. If you need to run R or Python code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], either by using stored procedures or by using the SQL Server instance as the [compute context](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context), you must install in-database analytics. This option provides maximum data security and integration with SQL Server tools.
 
 Both in-database and standalone servers can alleviate the memory and processing constraints of open-source R and Python. Both options include the same packages and tools, with the ability to load and process large amounts of data on multiple cores and aggregate the results into a single consolidated output. The functions and algorithms are engineered for both scale and utility: delivering predictive analytics, statistical modeling, data visualizations, and leading-edge machine learning algorithms in a commercial server product engineered and supported by Microsoft. 
 
@@ -129,16 +129,6 @@ To take advantages of the resource management and securty features in SQL Server
 
 + [Resource Governance for R](resource-governance-for-r-services.md)
 + [R Package Management for SQL Server](r-package-management-for-sql-server-r-services.md)
-
-## Related machine learning products
-
- +  [Provision an Azure Virtual Machine](provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-  
-  The Azure marketplace includes multiple virtual machine images that include Machine Learning Server or R Server. Creating a virtual machine in Microsoft Azure is the fastest way to get to development and deployment of predictive models. Images come with features for scaling and sharing already configured, which makes it easier to embed analytics inside applications and to integrate with backend systems.
-
-+ [Data Science Virtual Machine](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
-
-  The latest version of the Data Science Virtual machine includes Machine Learning Server, SQL Server, plus an array of the most popular tools for machine learning, all preinstalled and tested. Create Jupyter notebooks, develop solutions in Julia, and use GPU-enabled deep learning libraries like MXNet, CNTK, and TensorFlow.
 
 ## See also
 

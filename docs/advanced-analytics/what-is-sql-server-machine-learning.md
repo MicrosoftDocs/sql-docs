@@ -80,6 +80,17 @@ SQL Server 2017 Machine Learning Services is the next generation of SQL Server 2
 
 Recent releases of SQL Server documentation are version-agnostic. For SQL Server Machine Learning Services, Python is only available in 2017 and later, while R support is in all versions. Unless noted otherwise, you can assume R documentation applies to both 2016 and 2017 versions.
 
+
+## Related machine learning products
+
+ +  [Provision an Azure Virtual Machine](provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+  
+  The Azure marketplace includes multiple virtual machine images that include Machine Learning Server or R Server. Creating a virtual machine in Microsoft Azure is the fastest way to get to development and deployment of predictive models. Images come with features for scaling and sharing already configured, which makes it easier to embed analytics inside applications and to integrate with backend systems.
+
++ [Data Science Virtual Machine](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
+
+  The latest version of the Data Science Virtual machine includes Machine Learning Server, SQL Server, plus an array of the most popular tools for machine learning, all preinstalled and tested. Create Jupyter notebooks, develop solutions in Julia, and use GPU-enabled deep learning libraries like MXNet, CNTK, and TensorFlow.
+
 <a name="next-steps"></a>
 ## Next steps
 

@@ -29,7 +29,7 @@ ms.workload: "Inactive"
 
 Enterprise and Developer editions have the same feature coverage so that you can build solutions for an Enterprise installation without incurring the same cost. Although the editions are functionally equivlanet, use of the Developer Edition is not supported for production environments.
 
-The difference between basic and advanced integration is scale. Advanced integration can use all available cores for parallel processing of data sets that your computer can accommodate. Basic integration is limited to 2 cores and to data sets that fit in memory. 
+The difference between basic and advanced integration is scale. Advanced integration can use all available cores for parallel processing of data sets at any size your computer can accommodate. Basic integration is limited to 2 cores and to data sets fitting in memory. 
 
 Basic and advanced integration applies to the (In-Database) instances. A standalone server is not a database engine instance feature and is offered as an installation option only in Developer and Enterprise editions.
 

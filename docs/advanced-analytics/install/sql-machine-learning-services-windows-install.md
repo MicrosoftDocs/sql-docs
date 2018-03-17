@@ -85,7 +85,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 5. On the **Consent to Install Python** page, select **Accept**. The Python open source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
      
-     ![Agreement to Python license](media/ml-svcs-license-python.png "License agreement for Python")
+     ![Agreement to Python license](media/2017setup-python-license.png "License agreement for Python")
   
     > [!NOTE]
     >  If the computer you are using does not have internet access, you can pause setup at this point to download the installers separately. For more information, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md).

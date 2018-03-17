@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 79
 author: "stevestein"
-author: "sstein"
+ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
 ---

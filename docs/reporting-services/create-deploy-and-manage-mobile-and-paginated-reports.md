@@ -34,7 +34,7 @@ ms.workload: "Active"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Create, deploy, and manage mobile and paginated Reporting Services reports and Power BI reports on premises with the range of ready-to-use tools and services that SQL Server Reporting Services (SSRS) and Power BI provide.
+Create, deploy, and manage mobile and paginated Reporting Services reports on premises with the range of ready-to-use tools and services that SQL Server Reporting Services (SSRS) provides.
 
 ![SQL Server Reporting Services all together](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services all together")
 
@@ -46,7 +46,7 @@ For SQL Server 2016, Reporting Services offers an updated suite of products:
 
 * **“Traditional” paginated reports** brought up to date, so you can create modern-looking reports, with updated tools and new features for creating them.
 * **New mobile reports** with a responsive layout that adapts to different devices and the different ways you hold them.
-* **A modern web portal** you can view in any modern browser. In the new portal, you can organize and display mobile and paginated Reporting Services reports and KPIs plus Power BI Desktop reports. You can also store Excel workbooks on the portal.
+* **A modern web portal** you can view in any modern browser. In the new portal, you can organize and display mobile and paginated Reporting Services reports and KPIs. You can also store Excel workbooks on the portal.
 
 Read on for more about each.
 
@@ -88,13 +88,13 @@ You create these mobile reports in the new [Mobile Report Publisher](../reportin
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-For end users of native-mode Reporting Services, the front door is a modern web portal you can view in any modern browser. You can access all your Reporting Services mobile and paginated reports and KPIs in the new portal, plus Power BI Desktop reports. Read more about [Power BI reports in Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md).  
+For end users of native-mode Reporting Services, the front door is a modern web portal you can view in any modern browser. You can access all your Reporting Services mobile and paginated reports and KPIs in the new portal.
 
 You can apply your own custom branding to your web portal. And you can create KPIs right in the web portal. KPIs can surface key business metrics at a glance in the browser, without having to open a report. 
 
 The new web portal is a complete rewrite of Report Manager. Now it’s a single-page, standards-based HTML5 app, which modern browsers are optimized for: Edge, Internet Explorer 10 and 11, Chrome, Firefox, Safari, and all the major browsers.
 
-The content on the web portal is organized by type: Reporting Services mobile and paginated reports and KPIs, plus Power BI Desktop reports, Excel workbooks, shared datasets, and shared data sources to use as building blocks for your reports. You can store and manage them securely here, in the traditional folder hierarchy. You can tag your favorites, and you can manage the content if you have that role.
+The content on the web portal is organized by type: Reporting Services mobile and paginated reports and KPIs, Excel workbooks, shared datasets, and shared data sources to use as building blocks for your reports. You can store and manage them securely here, in the traditional folder hierarchy. You can tag your favorites, and you can manage the content if you have that role.
 
 And you can still schedule report processing, access reports on demand,and subscribe to published reports in the new web portal.
 
@@ -117,6 +117,5 @@ More [Reporting Services Developer Documentation](../reporting-services/reportin
 * [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)   
 * [Download SQL Server Data Tools (SSDT)](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [Power BI reports in Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "log size, manage"
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Active"
 ---

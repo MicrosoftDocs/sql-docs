@@ -39,7 +39,9 @@ ms.workload: "On Demand"
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Adds a certificate to a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  This feature is incompatible with database export using Data Tier Application Framework (DACFx). You must drop all certificates before exporting.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

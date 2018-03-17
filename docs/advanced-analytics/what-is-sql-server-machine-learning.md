@@ -83,7 +83,7 @@ Recent releases of SQL Server documentation are version-agnostic. For SQL Server
 
 ## Related machine learning products
 
- +  [Provision an Azure Virtual Machine](provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+ +  [Provision an Azure Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
   
   The Azure marketplace includes multiple virtual machine images that include Machine Learning Server or R Server. Creating a virtual machine in Microsoft Azure is the fastest way to get to development and deployment of predictive models. Images come with features for scaling and sharing already configured, which makes it easier to embed analytics inside applications and to integrate with backend systems.
 
@@ -92,6 +92,7 @@ Recent releases of SQL Server documentation are version-agnostic. For SQL Server
   The latest version of the Data Science Virtual machine includes Machine Learning Server, SQL Server, plus an array of the most popular tools for machine learning, all preinstalled and tested. Create Jupyter notebooks, develop solutions in Julia, and use GPU-enabled deep learning libraries like MXNet, CNTK, and TensorFlow.
 
 <a name="next-steps"></a>
+
 ## Next steps
 
 **Step 1:** Install and configure the software. 

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Machine Learning Services - Feature availability across editions | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2018"
+ms.date: "03/17/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -13,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 
@@ -42,7 +42,9 @@ Basic and advanced integration applies to the (In-Database) instances. A standal
 |Machine Learning Server (Standalone)|Yes|No|No|No|No|   
 
  > [!NOTE]
- > Only a (Standalone) server offers the [operationalization](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) features that are included in a Microsoft (non-SQL-branded) R Server or Machine Learning Server installation. Operationalization includes web service deployment and hosting capabilities. If you have an (In-Database) installation, "operationalization" is built on the capabilities of the database engine when you convert code to a function that can run in a stored procedure.
+ > Only a (Standalone) server offers the [operationalization](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) features that are included in a Microsoft (non-SQL-branded) R Server or Machine Learning Server installation. Operationalization includes web service deployment and hosting capabilities.
+>
+> For an (In-Database) installation, the equivalent approach to operationalizing solutions is leveraging the capabilities of the database engine, when you convert code to a function that can run in a stored procedure.
 
 
 ## SQL Server 2016 R features

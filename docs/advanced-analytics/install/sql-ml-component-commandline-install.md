@@ -131,7 +131,10 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 A silent installation suppresses the check for .cab file locations. For this reason, you must specify the location where .cab files are to be unpacked. You can the temp directory for this.
  
 ```  
-Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
+/INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
+/IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
+/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
 ```
 
 ## <a name="shared-feature"></a> Standalone server installations
@@ -141,13 +144,15 @@ A standalone server is a "shared feature" not bound to a database engine instanc
 SQL Server 2017 supports Python and R on a standalone server:
 
 ```
-Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
+Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  
+/IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 SQL Server 2016 is R-only:
 
 ```
-Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
+Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
+/IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 When setup is finished, you have a server, Microsoft packages, open-source distributions of R and Python, tools, samples, and scripts that are part of the distribution. 

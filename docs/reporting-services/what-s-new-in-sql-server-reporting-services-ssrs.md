@@ -1,6 +1,6 @@
 ---
 title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
-ms.date: "10/10/2017"
+ms.date: "03/16/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
@@ -13,8 +13,8 @@ ms.technology:
 
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-author: "markingmyname"
-ms.author: "maghan"
+author: "maggiesMSFT"
+ms.author: "maggies"
 manager: "kfile"
 ms.workload: "Active"
 ---
@@ -31,7 +31,9 @@ Learn about what's new in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsno
 
 - To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
-For the current release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md) or [Power BI Report Server release notes](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+For the current release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). 
+
+For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ## What's new in SQL Server 2017
 
@@ -188,12 +190,10 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 ## Next steps
 
 [What's New in Analysis Services](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[Technical Preview of Power BI reports in SSRS - Release notes](../reporting-services/reporting-services-release-notes.md)  
 [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)   
 [Backward Compatibility](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
 [Reporting Services Features Supported by the Editions of SQL Server 2016](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Upgrade and Migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-[Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

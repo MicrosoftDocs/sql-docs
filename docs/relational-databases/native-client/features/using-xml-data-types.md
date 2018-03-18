@@ -36,7 +36,7 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: 44
 author: "MightyPen"
 ms.author: "genemi"
-manager: "craigg""
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using XML Data Types

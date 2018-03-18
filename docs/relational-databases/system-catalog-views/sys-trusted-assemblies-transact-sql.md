@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: "tmullaney"
-ms.author: "thmullan;rickbyh"
+ms.author: "thmullan"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

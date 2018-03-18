@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], development"
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

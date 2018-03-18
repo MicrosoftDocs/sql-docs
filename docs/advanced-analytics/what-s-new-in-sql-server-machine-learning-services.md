@@ -25,9 +25,9 @@ Machine learning capabilities are added to SQL Server in each release as we cont
 
 ## New in SQL Server 2017
 
-This release added Python support and industry-leading machine learning algorithms. Renamed to reflect the new scope, SQL Server 2017 marked the introduction of SQL Server Machine Learning Services (In-Database), with language support for both Python and R. 
+This release added Python support and industry-leading machine learning algorithms. Renamed to reflect the new scope, SQL Server 2017 marked the introduction of **SQL Server Machine Learning Services (In-Database)**, with language support for both Python and R. 
 
-This release also introduced SQL Server Machine Learning Server (Standalone), fully independent of SQL Server, for R and Python workloads that you want to run on a dedicated system. With the standalone server, you can distribute and scale R or Python code without using SQL Server.
+This release also introduced **SQL Server Machine Learning Server (Standalone)**, fully independent of SQL Server, for R and Python workloads that you want to run on a dedicated system. With the standalone server, you can distribute and scale R or Python solutions without using SQL Server.
 
 | Release | Feature update |
 |---------|---------------|

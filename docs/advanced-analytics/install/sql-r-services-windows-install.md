@@ -116,7 +116,11 @@ For local installations, you must run Setup as an administrator. If you install 
     RECONFIGURE WITH OVERRIDE
     ```
   
-4. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+## Restart the service
+
+When the installation is complete, restart the database engine before continuing to the next, enabling script execution.
+
+Restarting the ervice also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
     You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 

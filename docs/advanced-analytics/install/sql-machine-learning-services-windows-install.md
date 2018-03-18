@@ -100,9 +100,15 @@ For local installations, you must run Setup as an administrator. If you install 
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-7. When the installation is complete, restart your computer.
+## Restart the service
 
-##  <a name="bkmk_enableFeature"></a>Enable external script execution
+When the installation is complete, restart the database engine before continuing to the next, enabling script execution.
+
+Restarting the ervice also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+
+    You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+
+## <a name="bkmk_enableFeature"></a>Enable external script execution
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 

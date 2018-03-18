@@ -149,7 +149,7 @@ When you run SQL Server setup on a computer disconnected from the internet, Setu
 + In the **Offline installation** page, in **Install Path**, specify the folder containing the .cab files you copied earlier.
 + Continue following the on-screen prompts to complete the installation.
 
-After installation is finished, configure the server to enable script execution as described in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md).
+After installation is finished, restart the service and then configure the server to enable script execution as described in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md).
 
 ## Slipstream upgrades for offline servers
 

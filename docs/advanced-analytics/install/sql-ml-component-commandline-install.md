@@ -69,6 +69,9 @@ In-database analytics are available for database engine instances, required for 
 
 To view progress information without the interactive on-screen prompts, use the /qs argument.
 
+> [Important]
+> After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation tasks](#post-install) for instructions.
+
 ### SQL Server 2017: database engine, advanced analytics with Python and R
 
 For a concurrent installation of the database engine instance, provide the instance name and an administrator (Windows) login. Include features for installing core and language components, as well as acceptance of all licensing terms.
@@ -111,7 +114,11 @@ Applies to in-database installations only.
 
 When setup is finished, you have a database engine instance with R and Python, the Microsoft R and Python packages, Microsoft R Open, Anaconda, tools, samples, and scripts that are part of the distribution. 
 
-You must now enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) as your next step. 
+Two more tasks are required to complete the installation:
+
+1. Restart the database engine service.
+
+1. Enable external scripts before you can use the feature. Follow the instructions in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) as your next step. 
 
 For SQL Server 2016, use this article instead [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md).
 

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "DisplayName property"
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

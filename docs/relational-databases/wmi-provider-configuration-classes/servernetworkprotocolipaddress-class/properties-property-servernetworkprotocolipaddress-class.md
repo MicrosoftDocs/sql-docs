@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Properties property"
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "AcceptPause property"
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

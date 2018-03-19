@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "AcceptStop property"
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

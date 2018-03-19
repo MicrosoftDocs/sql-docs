@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ServerSettings class"
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

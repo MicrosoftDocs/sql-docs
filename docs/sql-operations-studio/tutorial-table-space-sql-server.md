@@ -38,12 +38,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 1. Open *User Settings* by pressing **Ctrl+Shift+P** to open the *Command Palette*.
 2. Type *settings* in the search box and select **Preferences: Open User Settings**.
-
-   ![Open user settings command](./media/tutorial-table-space-sql-server/open-user-settings.png)
-
 2. Type *dashboard* in Settings Search input box and locate **dashboard.database.widgets**.
-
-   ![Search settings](./media/tutorial-table-space-sql-server/search-settings.png)
 
 3. To customize the **dashboard.database.widgets** settings you need to edit the **dashboard.database.widgets** entry in the **USER SETTINGS** section (the column in the right side). If there is no **dashboard.database.widgets** in the **USER SETTINGS** section, hover over the **dashboard.database.widgets** text in the DEFAULT SETTINGS column and click the pencil icon that appears to the left of the text and click **Copy to Settings**. If the pop-up says **Replace in Settings**, don't click it! Go to the **USER SETTINGS** column to the right and locate the **dashboard.database.widgets** section and advance to the next step.
 
@@ -51,7 +46,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
    ```json
         {
-            "name": "Table space usage",
+            "name": "Space Used by Tables",
             "gridItemConfig": {
                 "sizex": 2,
                 "sizey": 1
@@ -61,12 +56,15 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
             }
         },
     ```
+The **dashboard.database.widgets** section should look similar to the follwing image:
+
+   ![Search settings](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 5. Press **Ctrl+S** to save the settings.
 
 6. Open database dashboard by right-clicking **TutorialDB** and click **Manage**.
 
-7. View *Space used by tables* as shown in the following screenshot: 
+7. View the *table space* insight widget as shown in the following image: 
 
    ![Widget](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 

@@ -48,8 +48,8 @@ SSMS 17.x is the latest generation of *SQL Server Management Studio* and provide
 
 **Version Information**
 
-Release number: 17.6
-Build number: 14.0.17230.0
+Release number: 17.6<br>
+Build number: 14.0.17230.0<br>
 Release date: March 20, 2018
 
 The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.

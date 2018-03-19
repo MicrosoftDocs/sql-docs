@@ -108,6 +108,7 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 ## Replication
 ### [Configure SQL Server replication](sql-server-linux-replication-configure.md)
+### [Examples](sql-server-linux-replication-examples.md)
 
 # Resources
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)

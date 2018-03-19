@@ -15,7 +15,7 @@ ms.topic: "article"
 helpviewer_keywords: 
 ms.assetid: 
 author: "joesackmsft"
-ms.author: "josack;monicar"
+ms.author: "josack"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

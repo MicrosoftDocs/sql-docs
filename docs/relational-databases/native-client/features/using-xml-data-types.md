@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "COLUMNS rowset"
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "MightyPen"
+ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

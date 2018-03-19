@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "RemoveCertificate method"
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

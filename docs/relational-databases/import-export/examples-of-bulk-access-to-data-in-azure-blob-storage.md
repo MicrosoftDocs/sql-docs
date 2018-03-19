@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "OPENROWSET, Azure blob storage"
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

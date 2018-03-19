@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "viewing filter information"
 ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

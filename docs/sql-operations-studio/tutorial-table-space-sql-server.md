@@ -2,7 +2,7 @@
 title: "Tutorial: Enable the table space usage sample insight widget in SQL Operations Studio (preview) | Microsoft Docs"
 description: This tutorial demonstrates how to enable the table space usage sample insight widget on the SQL Operations Studio (preview) database dashboard.
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "03/19/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -36,7 +36,8 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 ## Turn on a management insight on [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s database dashboard
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] has a built-in sample widget to monitor the space used by tables in a database.
 
-1. Open **User Settings** by pressing **Ctrl+Shift+P** to open *Command Palette*, type *settings* in the search box and select **Preferences: Open User Settings**.
+1. Open *User Settings* by pressing **Ctrl+Shift+P** to open the *Command Palette*.
+2. Type *settings* in the search box and select **Preferences: Open User Settings**.
 
    ![Open user settings command](./media/tutorial-table-space-sql-server/open-user-settings.png)
 
@@ -44,17 +45,26 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
    ![Search settings](./media/tutorial-table-space-sql-server/search-settings.png)
 
-3. To customize the **dashboard.database.widgets** setting, hover over the pencil icon to the left of the **dashboard.database.widgets** text, click **Edit** > **Copy to Settings**.
+3. To customize the **dashboard.database.widgets** settings you need to edit the **dashboard.database.widgets** entry in the **USER SETTINGS** section (the column in the right side). If there is no **dashboard.database.widgets** in the **USER SETTINGS** section, hover over the **dashboard.database.widgets** text in the DEFAULT SETTINGS column and click the pencil icon that appears to the left of the text and click **Copy to Settings**. If the pop-up says **Replace in Settings**, don't click it! Go to the **USER SETTINGS** column to the right and locate the **dashboard.database.widgets** section and advance to the next step.
 
-4. Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight settings IntelliSense, configure *name* for the widget title, *gridItemConfig* for the widget size, and *widget* by selecting **table-space-db-insight** from the drop-down list as shown in the following screenshot:
+4. In the **dashboard.database.widgets** section, add the following:
 
-   ![Insight settings](./media/tutorial-table-space-sql-server/insight-table-space.png)
+   ```json
+        {
+            "name": "Table space usage",
+            "gridItemConfig": {
+                "sizex": 2,
+                "sizey": 1
+            },
+            "widget": {
+                "table-space-db-insight": null
+            }
+        },
+    ```
 
 5. Press **Ctrl+S** to save the settings.
 
 6. Open database dashboard by right-clicking **TutorialDB** and click **Manage**.
-
-   ![Open dashboard](./media/tutorial-table-space-sql-server/insight-open-dashboard.png)
 
 7. View *Space used by tables* as shown in the following screenshot: 
 

@@ -24,7 +24,7 @@ ms.workload: "Inactive"
 # PolyBase Connectivity Configuration (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
-  Displays or changes global configuration settings for PolyBase Hadoop and Azure blob storage connectivity.  
+  Displays or changes global configuration settings for PolyBase Hadoop and Azure blob storage connectivity.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

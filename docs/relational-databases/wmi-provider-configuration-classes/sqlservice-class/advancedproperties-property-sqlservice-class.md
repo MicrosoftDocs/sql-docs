@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "AdvancedProperties property"
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

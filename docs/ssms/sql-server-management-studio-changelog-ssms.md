@@ -26,10 +26,8 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## [SSMS 17.6](download-sql-server-management-studio-ssms.md)
 
-Release number: 17.6
-
-Build number: 14.0.17230.0
-
+Release number: 17.6<br>
+Build number: 14.0.17230.0<br>
 Release date: March 20, 2018
 
 ### What's new

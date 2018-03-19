@@ -1,5 +1,5 @@
 ---
-Title: "Tutorial: Scripting Objects in SQL Server Management Studio"
+Title: "Tutorial: Script Objects in SQL Server Management Studio"
 description: "A Tutorial for scripting out objects in SSMS." 
 keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
 author: MashaMSFT
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "scripts [SQL Server], SQL Server Management Studio"
 ---
 
-# Tutorial: Scripting Objects in SQL Server Management Studio
+# Tutorial: Script Objects in SQL Server Management Studio
 This tutorial will teach you how to generate Transact-SQL (T-SQL) scripts for various  objects found within SQL Server Management Studio.  In this tutorial, you will find examples of how to script the following objects: 
  - Queries when performing actions within the GUI
  - Databases in two different ways ("Script As" and "Generate Script")
@@ -41,17 +41,17 @@ To complete this Tutorial, you need SQL Server Management Studio, access to a SQ
     - Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
-## Scripting Queries from GUI
-Any time you perform a task using the GUI in SSMS, you can also generate the T-SQL code associated with that task. The following examples show how to do so when taking a backup of a database, and when shrinking the transaction log.  These same steps can be applied to any action that's completed via the GUI. 
+## Script Queries from GUI
+Any time you perform a task using the GUI in SSMS, you can also generate the T-SQL code associated with that task. The following examples show how to do so when taking a backup of a database, and when  you shrink the transaction log.  These same steps can be applied to any action that's completed via the GUI. 
 
-### Scripting T-SQL when backing up a database
+### ScriptT-SQL when backing up a database
 1. Connect to your SQL Server.
 2. Expand the **Databases** node.
 3. Right-click the database > **Tasks** > **Back up**:
 
     ![Back up Database](media/scripting-ssms/backupdb.png)
 
-4. Configure the backup the way you want. For the purpose of this Tutorial, everything was left blank. However, any changes made in the window will also be reflected in the script. 
+4. Configure the backup the way you want. For the purpose of this Tutorial, everything was left at default. However, any changes made in the window will also be reflected in the script. 
 5. Click the option to **Script** > **Script Action to Query Window**:
  
     ![Script DB Backup](media/scripting-ssms/scriptdbbackup.PNG)
@@ -60,7 +60,7 @@ Any time you perform a task using the GUI in SSMS, you can also generate the T-S
     ![Script for DB Backup](media/scripting-ssms/dbbackupscript.PNG)
 
 
-### Scripting T-SQL when shrinking the transaction log
+### Script T-SQL when shrinking the transaction log
 1. Right-click the database > **Tasks** > **Shrink** > **Files**:
 
      ![Shrink Files](media/scripting-ssms/shrinkfiles.png)
@@ -78,11 +78,11 @@ Any time you perform a task using the GUI in SSMS, you can also generate the T-S
     ![Paste Script](media/scripting-ssms/paste.png)
 
 
-## Scripting databases
-The following section teaches you how to script out the database, both using the **Script As** option and the **Generate Scripts** option.  The **Script As** option will recreate the database and the configuration options for it. The **Generate Scripts** option will script out all of the objects in the database, but not the data. To script out the data as well, you will need to you use the [Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/start-the-sql-server-import-and-export-wizard).  
+## Script databases
+The following section teaches you how to script out the database, both using the **Script As** option and the **Generate Scripts** option.  The **Script As** option will recreate the database and the configuration options for it. The **Generate Scripts** option will script out all of the objects in the database, but not the data. To script the data as well, you will need to you use the [Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/start-the-sql-server-import-and-export-wizard).  
 
 
-### Scripting database using Script option
+### Script database using Script option
 1. Connect to your SQL Server.
 2. Expand the **Databases** node.
 3. Right-click the database > **Script Database As**:
@@ -94,7 +94,7 @@ The following section teaches you how to script out the database, both using the
     ![Scripted out DB](media/scripting-ssms/scriptedoutdb.png)
     - This option will only script out the database configuration options.  
 
-### Scripting database using Generate Scripts option
+### Script database using Generate Scripts option
 1. Connect to your SQL Server.
 2. Expand the **Databases** node.
 3. Right-click the database > **Tasks** > **Generate Scripts**:
@@ -113,7 +113,7 @@ The following section teaches you how to script out the database, both using the
 6. Once you're ready to proceed, keep hitting **Next** until the scripts are generated and you get to the **Finish**. Your database script will be located where it was saved in Step 5. 
     - This will script out the schema and various objects within the database, but not the data. 
  
-## Scripting Tables
+## Script Tables
 This section covers how to script out tables from your database.
 
 1. Connect to your SQL Server.
@@ -125,7 +125,7 @@ This section covers how to script out tables from your database.
     
     ![Script Table](media/scripting-ssms/scripttable.png)
  
-## Scripting Stored Procedures
+## Script Stored Procedures
 This section covers how to script out stored procedures. 
 
 1. Connect to your SQL Server.
@@ -136,7 +136,7 @@ This section covers how to script out stored procedures.
     
     ![Script Stored Procedures](media/scripting-ssms/scriptstoredprocedure.PNG)
 
-## Scripting Extended Events
+## Script Extended Events
 This section covers how to script out [extended events](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events). 
 
 1. Connect to your SQL Server.

@@ -38,31 +38,32 @@ ms.workload: "Active"
 The SQL Server Management Studio (SSMS) tutorial introduces you to the integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presents a graphical interface for configuring, monitoring, and administering instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also allows you to deploy, monitor, and upgrade the data-tier components used by your applications, such as databases. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] also provides [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, and XML language editors for editing and debugging scripts.  
   
 ## What You Will Learn  
-This tutorial will help you understand the presentation of information in SSMS and how to take advantage of its features.
+
+These tutorials will help you understand the presentation of information in SSMS and how to take advantage of its features.
   
-The best way to get acquainted with SSMS is through hands-on practice. This tutorial will teach you how to manage the components of SSMS and how to find the features that you use regularly.  
+The best way to get acquainted with SSMS is through hands-on practice. These tutorials will familiarize you with the various features avaialable within SSMS.  These tutorials will teach you how to manage the components of SSMS and how to find the features that you use regularly.  
+
+Here is what the tutorials will cover: 
 
   
-This tutorial is divided into several sections:  
-  
-- [Connect & Query SQL Server using SSMS](connect-query-sql-server.md)
+- [Tutorial: Connect & Query SQL Server using SSMS](connect-query-sql-server.md)
 
     In this section, you will learn how to connect to your SQL Server instance. You will also learn some basic Transact-SQL (T-SQL) commands to create and then query a new database. 
 
-- [Scripting Objects in SSMS](scripting-ssms.md)
+- [Tutorial: Scripting Objects in SSMS](scripting-ssms.md)
 
     In this section, you will learn how to script out various objects in SSMS, including databases and queries. 
 
-- [Using Templates in SSMS](templates-ssms.md)
+- [Tutorial: Using Templates in SSMS](templates-ssms.md)
    
     In this section, you will learn how to work with the pre-built Templates within SSMS. 
 
-- [SSMS Configuration](ssms-configuration.md)
+- [Tutorial: SSMS Configuration](ssms-configuration.md)
 
     In this section, you will learn the basics of configuring your SSMS environment. 
   
 
-- [Additional Tips and Tricks for using SSMS](ssms-tricks.md)
+- [Tutorial: Additional Tips and Tricks for using SSMS](ssms-tricks.md)
 
     In this section, you will learn additional tips and tricks for using SSMS. The tutorial includes the following:
     - Commenting and uncommenting text

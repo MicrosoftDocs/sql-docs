@@ -17,6 +17,7 @@ manager: craigg
 This Tutorial describes the  different window components within SQL Server Management Studio (SSMS) and some basic configuration options for your workspace. In this article, you will learn how about: 
 - The different components that make up the SSMS environment
 - Changing the environmental layout and resetting it to default
+- Maximizing the query editor
 - Changing some basic settings such as
     - Changing the font
     - Configuring startup options
@@ -87,6 +88,13 @@ This section discusses manipulating the environmental layout, such as moving the
  
     ![Restore Window Layout](media/ssms-configuration/resetwindowlayout.png)
     
+## Maximizing Query Editor
+The query editor can be maximized to full screen mode.
+
+1. Click anywhere within the Query Editor Window.
+2. Press SHIFT + ALT + ENTER to toggle between full-screen mode and regular mode. 
+
+This keyboard shortcut works with any document window. 
 
 
 

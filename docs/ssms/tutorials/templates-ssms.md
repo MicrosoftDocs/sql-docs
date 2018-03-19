@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "scripts [SQL Server], SQL Server Management Studio"
 ---
 
-# Tutorial: Scripting Objects in SQL Server Management Studio
+# Tutorial: Using Templates within SQL Server Management Studio
 This tutorial will introduce you to the pre-built Transact-SQL (T-SQL) templates that are available within SQL Server Management Studio (SSMS). In this article, you will learn how to:
     - Use the Template Browser to generate T-SQL Scripts
     - Edit an existing Template 
@@ -81,7 +81,7 @@ This should open your explorer to where the templates are stored on disk:
   
 
 ## Create a new Template
-Within the Template Browser,** you also have the ability to create new templates. The following steps walk  you through creating a new folder and then creating a new template within the folder.  You can also create a custom template within the existing folders. 
+Within the **Template Browser** you also have the ability to create new templates. These steps will teach you to create a new folder, and then create a new template within that folder. However, with these steps, you can also create a custom template within the existing folders. 
 
 1. Open **Template Browser**
 2. Right-click SQL Server Templates > **New** > **Folder** 

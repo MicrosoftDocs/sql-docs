@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SetOrderValue method"
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

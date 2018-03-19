@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Date property"
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

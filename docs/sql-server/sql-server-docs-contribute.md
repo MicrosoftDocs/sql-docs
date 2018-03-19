@@ -1,6 +1,6 @@
 ---
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
-ms.date: "03/14/2018"
+ms.date: "03/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -75,6 +75,12 @@ To contribute with this method, see the following articles:
 - [Use tools to contribute](https://docs.microsoft.com/contribute/contribute/full-workflow)
 
 If you submit a pull request with significant changes to documentation, you will get a comment in GitHub asking you to submit an online **Contribution License Agreement (CLA)**. You must complete the online form before your pull request can be accepted.
+
+## Recognition
+
+If your changes are accepted, you are recognized as a contributor at the top of the article.
+
+![Content contribution recognition](./media/sql-server-docs-contribute/contribution-recognition.png)
 
 ## Understanding sql-docs
 

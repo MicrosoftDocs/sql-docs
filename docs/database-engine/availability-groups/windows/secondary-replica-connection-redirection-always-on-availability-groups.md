@@ -26,10 +26,10 @@ ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
-# Secondary to primary replica connection redirection (Always On Availability Groups)
+# Secondary to primary replica read/write connection redirection (Always On Availability Groups)
 [!INCLUDE[appliesto-sssqlv15-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces new functionality for Always On Availability Groups called *secondary to primary replica connection redirection* - or replica connection redirection. You can configure replica connection redirection on any availability group, regardless of operating system platform. Replica connection redirection allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces *secondary to primary read/write connection redirection* for Always On Availability Groups. Read/write connection redirection is available on any operating system platform. Read/write connection redirection allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
 
 For  example, the connection string can target a secondary replica. Depending on the configuration of the availability group (AG) replica and the settings in the connection string, the connection can be automatically redirected to the primary replica. 
 
@@ -45,12 +45,9 @@ Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG liste
 ## Requirement
 
 In order for a secondary replica to redirect read/write connection requests:
-* Secondary replica must be online. 
-* Replica spec `PRIMARY_ROLE` must include `READ_WRITE_ROUTING_URL`.
-* Connection string must define `ApplicationIntent` as `ReadWrite` which is the default.
-
-
-
+* The secondary replica must be online. 
+* The replica spec `PRIMARY_ROLE` must include `READ_WRITE_ROUTING_URL`.
+* The connection string must define `ApplicationIntent` as `ReadWrite`- which is the default.
 
 ## Set READ_WRITE_ROUTING_URL option
 

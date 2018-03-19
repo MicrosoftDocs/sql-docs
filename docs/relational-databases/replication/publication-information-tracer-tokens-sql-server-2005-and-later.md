@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.monitor.publicationinfo.tracertokens.f1"
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 caps.latest.revision: 24
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

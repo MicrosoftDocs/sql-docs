@@ -1,7 +1,7 @@
 ---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/25/2018"
+ms.date: "03/05/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -56,7 +56,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Specifies the name of an existing package library. Libraries are scoped to the user. That is, library names are considered unique within the context of a specific user or owner.
+Specifies the name of an existing package library. Libraries are scoped to the user. Library names are must be unique within the context of a specific user or owner.
 
 The library name cannot be arbitrarily assigned. That is, you must use the name that the calling runtime expects when it loads the package.
 
@@ -71,13 +71,6 @@ Specifies the content of the package for a specific platform. Only one file arti
 The file can be specified in the form of a local path or network path. If the data source option is specified, the file name can be a relative path with respect to the container referenced in the `EXTERNAL DATA SOURCE`.
 
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
-
-**DATA_SOURCE = external_data_source_name**
-
-Specifies the name of the external data source that contains the location of the library file. This location should reference an Azure blob storage path. To create an external data source, use [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
-
-> [!IMPORTANT] 
-> Currently, blobs are not supported as a data source in the SQL Server 2017 release.
 
 **library_bits**
 
@@ -99,11 +92,11 @@ The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the data
 
 ## Permissions
 
-Requires the `ALTER ANY EXTERNAL LIBRARY` permission. Users who created an external library, can alter that external library.
+By default, the **dbo** user or any member of the role **db_owner** has permission to run ALTER EXTERNAL LIBRARY. Additionally, the user who created the external library can alter that external library.
 
 ## Examples
 
-The following examples modifies an external library called `customPackage`.
+The following examples change an external library called `customPackage`.
 
 ### A. Replace the contents of a library using a file
 
@@ -130,10 +123,12 @@ EXEC sp_execute_external_script
 The following example alters the existing library by passing the new bits as a hexidecimal literal.
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-In this code sample, the variable contents are truncated for readability.
+> [!NOTE]
+> This code sample only demonstrates the syntax; the binary value in `CONTENT =` has been truncated for readability and does not create a working library. The actual contents of the binary variable would be much longer.
 
 ## See also
 

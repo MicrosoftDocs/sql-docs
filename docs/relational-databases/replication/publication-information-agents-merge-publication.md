@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.monitor.publicationinfo.downlevelagents.merge.f1"
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

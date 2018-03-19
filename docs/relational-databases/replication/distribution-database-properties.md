@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Distribution Database Properties dialog box"
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

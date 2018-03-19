@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "filters [SQL Server replication], static row"
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

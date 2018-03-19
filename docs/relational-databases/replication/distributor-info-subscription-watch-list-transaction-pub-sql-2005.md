@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.monitor.Distributor.SubscriptionSummary.tran.f1"
 ms.assetid: f569444d-c53f-4a22-bf4f-fff450c092de
 caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

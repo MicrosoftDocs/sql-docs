@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "derived hierarchies, deleting"
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 caps.latest.revision: 6
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -82,14 +82,12 @@ If your changes are accepted, you are recognized as a contributor at the top of 
 
 ![Content contribution recognition](./media/sql-server-docs-contribute/contribution-recognition.png)
 
-## Understanding sql-docs
+## sql-docs overview
 
 This section provides some additional guidance on working in the **sql-docs** repository.
 
 > [!IMPORTANT]
 > The information in this section is specific to **sql-docs**. If you are editing a SQL article in the Azure documentation, see [the Readme for the azure-docs repository on GitHub](https://github.com/MicrosoftDocs/azure-docs/blob/master/README.md).
-
-### Repository basics
 
 The [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository uses several standard folders to organize the content.
 
@@ -100,7 +98,7 @@ The [sql-docs](https://github.com/MicrosoftDocs/sql-docs) repository uses severa
 | **./media** | Each folder can have one **media** subfolder for article images. The **media** folder in turn has subfolders with the same name as the topics that the image appears in. Images should be .png files with all lower-case letters and no spaces. |
 | **TOC.MD** | A table-of-contents file. Each subfolder has the option of using one TOC.MD file. |
 
-### Applies-to includes
+#### Applies-to includes
 
 Each SQL Server article contains an **applies-to** include file after the title. This indicates what areas or versions of SQL Server the article applies to.
 

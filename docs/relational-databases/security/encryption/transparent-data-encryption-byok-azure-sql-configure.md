@@ -203,7 +203,7 @@ Check the following if an issue occurs:
    - Able to perform *get*, *wrap key*, *unwrap key* operations
    
 ## Step 1. Create a server and assign an AAD identity to your server
-      ```azurecli-interactive
+      ```cli
       # create server (with identity) and database
       az sql server create -n "ServerName" -g "ResourceGroupName" -l "westus" -u "cloudsa" -p "YourFavoritePassWord99@34" -I 
       az sql db create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
@@ -211,7 +211,7 @@ Check the following if an issue occurs:
 
  
 ## Step 2. Grant Key Vault permissions to your server
-      ```azurecli-interactive
+      ```cli
       # create key vault, key and grant permission
       az keyvault create -n "VaultName" -g "ResourceGroupName" 
       az keyvault key create -n myKey -p software --vault-name "VaultName" 
@@ -221,7 +221,7 @@ Check the following if an issue occurs:
  
 ## Step 3. Add the Key Vault key to the server and set the TDE Protector
   
-     ```azurecli-interactive
+     ```cli
      # add server key and update encryption protector
       az sql server key create -g "ResourceGroupName" -s "ServerName" -t "AzureKeyVault" -u "FullVersionedKeyUri 
       az sql server tde-key update -g "ResourceGroupName" -s "ServerName" -t AzureKeyVault -u "FullVersionedKeyUri" 
@@ -236,7 +236,7 @@ Check the following if an issue occurs:
 >
   
 ## Step 4. Turn on TDE 
-      ```azurecli-interactive
+      ```cli
       # enable encryption
       az sql db tde create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" --status Enabled 
       ```
@@ -245,7 +245,7 @@ Now the database or data warehouse has TDE enabled with an encryption key in Key
 
 ## Step 5. Check the encryption state and encryption activity of the database or data warehouse
 
-     ```azurecli-interactive
+     ```cli
       # get encryption scan progress
       az sql db tde show-activity -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
 

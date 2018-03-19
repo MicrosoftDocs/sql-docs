@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "deleting traces"
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Description property"
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SecurityCertificate class"
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

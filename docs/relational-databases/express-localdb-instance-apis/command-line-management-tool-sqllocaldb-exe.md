@@ -16,8 +16,8 @@ apilocation:
   - "sqluserinstance.dll"
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

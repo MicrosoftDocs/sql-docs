@@ -29,9 +29,10 @@ ms.workload: "On Demand"
 # Secondary to primary replica connection redirection (Always On Availability Groups)
 [!INCLUDE[appliesto-sssqlv15-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces new functionality for Always On Availability Groups called *secondary to primary replica connection redirection* - or replica connection redirection. Replica connection redirection allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces new functionality for Always On Availability Groups called *secondary to primary replica connection redirection* - or replica connection redirection. You can configure replica connection redirection on any availability group, regardless of operating system platform. Replica connection redirection allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
 
 For  example, the connection string can target a secondary replica. Depending on the configuration of the availability group (AG) replica and the settings in the connection string, the connection can be automatically redirected to the primary replica. 
+
 
 ## Use cases
 
@@ -41,11 +42,15 @@ Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG liste
 * A multi-subnet configuration like in the cloud or multi-subnet floating IP with Pacemaker where configurations become complex, prone to errors, and difficult to troubleshoot due to multiple components involved
 * Read scale-out, or disaster recovery and cluster type is `NONE`, because there is no straightforward mechanism to ensure transparent reconnection upon manual failover
 
-When an AG listener cannot be configured, you can configure secondary to primary replica connection redirection for an availability group.
-
 ## Requirement
 
-In order for a secondary replica to redirect read/write connection requests, the secondary replica must be online. 
+In order for a secondary replica to redirect read/write connection requests:
+* Secondary replica must be online. 
+* Replica spec `PRIMARY_ROLE` must include `READ_WRITE_ROUTING_URL`.
+* Connection string must define `ApplicationIntent` as `ReadWrite` which is the default.
+
+
+
 
 ## Set READ_WRITE_ROUTING_URL option
 
@@ -59,7 +64,7 @@ In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTIN
 
 ### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set (default) 
 
-By default, replica connection redirection is is not set for a replica. The way a secondary replica handles connection requests depends on whether or not the secondary replica is set to allow connections and on the `ApplicationIntent` setting in the connection string. The following table shows how the replica handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`. 
+By default, replica connection redirection is is not set for a replica. The way a secondary replica handles connection requests depends on whether or not the secondary replica is set to allow connections and on the `ApplicationIntent` setting in the connection string. The following table shows how the a secondary replica handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`. 
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
@@ -70,7 +75,7 @@ The preceding table shows the default behavior, which is the same as versions of
 
 ### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) set 
 
-After you set connection redirection, the way the replica handles connection requests behaves differently. The connection behavior still depends on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent` setting. The following table shows how a replica with `READ_WRITE_ROUTING` set handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`.
+After you set connection redirection, the way the replica handles connection requests behaves differently. The connection behavior still depends on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent` setting. The following table shows how a secondary replica with `READ_WRITE_ROUTING` set handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|

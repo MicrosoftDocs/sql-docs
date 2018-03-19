@@ -86,7 +86,7 @@ You can update the Python components by downloading and installing a more recent
 > 
 > The installer downloaded by the script is [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054&clcid=1033). If you need a different version, see [Installing machine learning components without internet access](http://bing.com)
 
-## Adding a Python development environment
+## Set up a Python development environment
 
 If you are simply debugging scripts from the command line, you can get by with the standard Python tools installed with Machine Learning Services, or use a text editor. However, if you are developing new solutions, or working from a remote client, we recommend use of a full-featured Python IDE. Popular options are:
 

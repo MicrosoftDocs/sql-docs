@@ -46,6 +46,12 @@ SSMS 17.x is the latest generation of *SQL Server Management Studio* and provide
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.6 Upgrade Package (upgrades 17.x to 17.6)](https://go.microsoft.com/fwlink/?linkid=867672)**
 
+**Version Information**
+
+Release number: 17.6<br>
+Build number: 14.0.17230.0<br>
+Release date: March 20, 2018
+
 The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 17*, and has a new icon: 
  
@@ -70,13 +76,6 @@ SQL Server Management Studio 17.6 Upgrade Package (upgrades 17.x to 17.6):<br>
 > The SQL Server PowerShell module is now a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
 ## SQL Server Management Studio
 
-**Version Information**
-
-Release number: 17.6
-
-Build number for this release: 14.0.17230.0
-
-Release date: March 20, 2018
 
 ## New in this Release
 

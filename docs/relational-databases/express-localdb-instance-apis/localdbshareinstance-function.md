@@ -19,8 +19,8 @@ apilocation:
 apitype: "DLLExport"
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

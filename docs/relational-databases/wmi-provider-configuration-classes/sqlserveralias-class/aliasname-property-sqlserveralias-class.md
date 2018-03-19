@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "AliasName property"
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

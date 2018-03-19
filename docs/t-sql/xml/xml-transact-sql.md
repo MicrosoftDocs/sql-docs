@@ -60,11 +60,11 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
 ## Examples  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
-DECLARE @y xml (Sales.IndividualSurveySchemaCollection);  
-SET @y =  (SELECT TOP 1 Demographics FROM Sales.Individual);  
-SELECT @y;  
+DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+SELECT @DemographicData;  
 GO  
 ```  
   

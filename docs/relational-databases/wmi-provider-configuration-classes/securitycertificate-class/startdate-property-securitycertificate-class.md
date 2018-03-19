@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "StartDate property"
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

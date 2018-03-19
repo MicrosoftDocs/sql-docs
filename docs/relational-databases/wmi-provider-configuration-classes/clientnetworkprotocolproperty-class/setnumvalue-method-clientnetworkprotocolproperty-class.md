@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SetNumValue method"
 ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ProcessId property"
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

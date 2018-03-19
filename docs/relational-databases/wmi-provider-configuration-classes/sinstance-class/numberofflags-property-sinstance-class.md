@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "NumberOfFlags property"
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

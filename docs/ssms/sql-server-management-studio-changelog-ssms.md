@@ -26,7 +26,11 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ## [SSMS 17.6](download-sql-server-management-studio-ssms.md)
 
-Generally available | Build number: 14.0.17230.0
+Release number: 17.6
+
+Build number: 14.0.17230.0
+
+Release date: March 20, 2018
 
 ### What's new
 
@@ -100,15 +104,15 @@ Database Mail:
 
 - Fixed an issue where SSMS did not show SSIS catalog node and reports when connected to SQL Database Managed Instance
 
-## Known issues
+### Known issues
 
-This release has no known issues.
+There are currently no known issues this release.
 
 ## Previous SSMS releases
 
 Download previous SSMS versions by clicking the title links in the following sections.
 
-## [![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
+## ![download](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Generally available | Build number: 14.0.17224.0
 
 [Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)

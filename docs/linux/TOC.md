@@ -98,11 +98,16 @@
 ### [Best practices](sql-server-linux-performance-best-practices.md)
 ### [Get started with performance features](sql-server-linux-performance-get-started.md)
 
+## Replication
+### [Configure replication](sql-server-linux-replication.md)
+
 # Samples
 ## Unattended install
 ### [Red Hat Enterprise Linux (RHEL)](sample-unattended-install-redhat.md)
 ### [SUSE Linux Enterprise Server (SLES)](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
+## Replication
+### [Configure SQL Server replication](sql-server-linux-replication-configure.md)
 
 # Resources
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)

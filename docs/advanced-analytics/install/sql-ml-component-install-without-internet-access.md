@@ -180,7 +180,7 @@ This article by the R Services Support team demonstrates how to perform an unatt
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
 + [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: In-database analytics for R developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 

@@ -10,7 +10,7 @@
 ## SQL Server 2016
 ### [R Services (In-Database)](install/sql-r-services-windows-install.md)
 ### [R Server (Standalone)](install/sql-r-standalone-windows-install.md)
-## [Command prompt setup](install/sql-ml-component-commandline-install.md)
+## [Command-prompt setup](install/sql-ml-component-commandline-install.md)
 ## [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)
@@ -150,7 +150,7 @@
 
 ### [Deploy and consume models using web services](operationalization-with-mrsdeploy.md)
 
-### [Managing and monitorin solutions](r/managing-and-monitoring-r-solutions.md
+### [Manage and monitor solutions](r/managing-and-monitoring-r-solutions.md
 ### [Resource governance for Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Create a resource pool for machine learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Extended events for Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
@@ -189,7 +189,7 @@
 # [Reference](r/machine-learning-services-r-reference.md)
 ## [MicrosoftML](using-the-microsoftml-package.md)
 ## [RevoScaleR](r/revoscaler-overview.md)
-### [RevoScaleR Functions for SQL Server Data](r/scaler-functions-for-working-with-sql-server-data.md)
+### [RevoScaleR functions for SQL Server data](r/scaler-functions-for-working-with-sql-server-data.md)
 ## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [RevoScalePy](python/what-is-revoscalepy.md)

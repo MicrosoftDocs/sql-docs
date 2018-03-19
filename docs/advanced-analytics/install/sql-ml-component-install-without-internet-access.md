@@ -144,10 +144,13 @@ Put the en_sql_server_2017.iso file in a convenient folder. Double-click **setup
 
 When you run SQL Server setup on a computer disconnected from the internet, Setup adds an **Offline installation** page to the wizard so that you can specify the location of the .cab files you copied in the previous step.
 
-+ Start the SQL Server setup wizard.
-+ When the setup wizard displays the licensing page for open source R or Python components, click  **Accept**. Acceptance of licensing terms allows you to proceed to the next step.
-+ In the **Offline installation** page, in **Install Path**, specify the folder containing the .cab files you copied earlier.
-+ Continue following the on-screen prompts to complete the installation.
+1. Start the SQL Server setup wizard.
+
+2. When the setup wizard displays the licensing page for open source R or Python components, click  **Accept**. Acceptance of licensing terms allows you to proceed to the next step.
+
+3. In the **Offline installation** page, in **Install Path**, specify the folder containing the .cab files you copied earlier.
+
+4. Continue following the on-screen prompts to complete the installation.
 
 After installation is finished, restart the service and then configure the server to enable script execution as described in [Install SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md).
 
@@ -159,6 +162,30 @@ Slipstream setup refers to the ability to apply a patch or update to a failed in
 
 + If you are adding these components to an existing installation, use the updated version of the SQL Server installer, and the corresponding updated version of the additional components. When you specify that the R feature is to be installed, the installer looks for the matching version of the installers for the machine learning components.
 
-## See also
+## Get help
+
+Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
+
+* [Upgrade and installation FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+
+To check the installation status of the instance and fix common issues, try these custom reports.
+
+* [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
 This article by the R Services Support team demonstrates how to perform an unattended install or upgrade of R services in SQL Server 2016: [Deploying R Services on Computers without Internet Access](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
+
+
+## Next steps
+
+R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+
++ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
++ [Tutorial: In-database analytics for R developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
+
+Python developers can learn how to use Python with SQL Server to build and deploy machine learning solutions:
+
++ [Tutorial: Run Python in T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutorial: In-database analytics for Python developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
+
+To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
+

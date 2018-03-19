@@ -270,13 +270,7 @@ Packages that you want to use from SQL Server must be installed in the default l
 The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Package management](../r/r-package-management-for-sql-server-r-services.md).
 
 
-## Tutorial resources
-
-To get started with some simple examples, and learn the basics of how R works with SQL Server, see [Using R code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
-
-To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
-
-## Get Help
+## Get help
 
 Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
 
@@ -285,3 +279,14 @@ Need help with installation or upgrade? For answers to common questions and know
 To check the installation status of the instance and fix common issues, try these custom reports.
 
 * [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
+
+## Next steps
+
+R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+
++ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
++ [Tutorial: In-database analytics for R developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
+
+To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Command prompt installation of SQL Server machine learning components | Microsoft Docs"
+title: "Command-prompt installation of SQL Server machine learning components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2018"
 ms.reviewer: 
@@ -69,7 +69,7 @@ In-database analytics are available for database engine instances, required for 
 
 To view progress information without the interactive on-screen prompts, use the /qs argument.
 
-> [Important]
+> [!Important]
 > After installation, two additional configuration steps remain. Integration is not complete until these tasks are performed. See [Post-installation tasks](#post-install) for instructions.
 
 ### SQL Server 2017: database engine, advanced analytics with Python and R
@@ -168,13 +168,7 @@ To open an R console window, go to \Program files\Microsoft SQL Server\140 (or 1
 
 To open a Python command, go to \Program files\Microsoft SQL Server\140\PYTHON_SERVER\bin\x64 and double-click **python.exe**.
 
-## Next steps
-
-To get started with some simple examples, and learn the basics of how R works with SQL Server, see [Using R code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
-
-To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
-
-## Get Help
+## Get help
 
 Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
 
@@ -183,3 +177,17 @@ Need help with installation or upgrade? For answers to common questions and know
 To check the installation status of the instance and fix common issues, try these custom reports.
 
 * [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
+
+## Next steps
+
+R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+
++ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
++ [Tutorial: In-database analytics for R developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
+
+Python developers can learn how to use Python with SQL Server to build and deploy machine learning solutions:
+
++ [Tutorial: Run Python in T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutorial: In-database analytics for Python developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
+
+To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).

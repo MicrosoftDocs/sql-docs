@@ -95,7 +95,7 @@ A development IDE is not installed as part of setup. Additional tools are not re
 
 We recommend that you try the new release of [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] or [Python for Visual Studio](https://docs.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio). Visual Studio supports both R and Python, as well as database development tools, connectivity with SQL Server, and BI tools. However, you can use any preferred development environment, including RStudio.
   
-## Get Help
+## Get help
 
 Need help with installation or upgrade? For answers to common questions and known issues, see the following article:
 
@@ -104,3 +104,13 @@ Need help with installation or upgrade? For answers to common questions and know
 To check the installation status of the instance and fix common issues, try these custom reports.
 
 * [Custom reports for SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
+
+## Next steps
+
+R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+
++ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
++ [Tutorial: In-database analytics for R developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
+
+To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
+

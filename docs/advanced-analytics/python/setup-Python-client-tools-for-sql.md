@@ -11,7 +11,7 @@ ms.suite: "sql"
 ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-dev_langs:   - "Python"
+dev_langs: "Python"
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
 caps.latest.revision: 0
 author: "jeannt"
@@ -124,7 +124,7 @@ You can also run the `-InstallFolder` command-line argument and specify the new 
 If you get an error, you might need to suspend execution policies for a specific file, the duration of the session, as follows: 
 
 ```ps1
-powershell -ExecutionPolicy Bypass -File "C:\<instllation_path>\Install-PyForMLS.ps1"
+powershell -ExecutionPolicy Bypass -File "C:\<installation_path>\Install-PyForMLS.ps1"
 ```
 
 You can also suspend execution policies for the duration of the session. With this statement, the execution policy  is set to `Unrestricted` for the duration of the session, and does not change the configuration or write the change to disk.
@@ -157,7 +157,7 @@ The sample data path is printed so that you can determine which instance of Pyth
 
 ### Verify that Python can be called from SQL Server
 
-To verify that Python is communicating with SQL Server, open SQL Server Management Studio, or another similar tool, such as [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is). Open a new **Query** window and run any simple Python command in the context of a stored procedure:
+To verify that Python is communicating with SQL Server, open SQL Server Management Studio. (You can use another similar tool, such as [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is).) Open a new **Query** window and run any simple Python command in the context of a stored procedure:
 
 ```SQL
 EXEC sp_execute_external_script @language = N'Python', 
@@ -166,7 +166,7 @@ EXEC sp_execute_external_script @language = N'Python',
 
 It can take a while to launch the Python run-time for the first time, but if there are no errors, you know that the SQL Server Launchpad is working, and Python can be started from SQL Server.
 
-To verify that **revoscalepy** is available in the SQL Server instance library, run the script based on [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary), with some slight modifications to generate results compatible with SQL Server. Because rx_summary returns an object of type `class revoscalepy.functions.RxSummary.RxSummaryResults`, which contains multiple elements, this extracts just the data frame in a format compatible with SQL.
+To verify that **revoscalepy** is available in the SQL Server instance library, run the script based on [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary), with some slight modifications to generate results compatible with SQL Server. 
 
 ```SQL
 EXEC sp_execute_external_script @language = N'Python', 
@@ -189,13 +189,12 @@ OutputDataSet = dfsummary
 WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
 ```
 
+Because rx_summary returns an object of type `class revoscalepy.functions.RxSummary.RxSummaryResults`, which contains multiple elements, to handle the results in SQL Server, you can extract just the data frame in a tabular format.
+
 ### Verify Python execution in SQL Server as remote compute context
 
 If you have installed **revoscalepy** in your local Python development environment, you should be able to connect to an instance of SQL Server 2017 where Python has been enabled, and run a similar code sample using the server as the compute context. 
 
-In this sample, the summary object is returned to the console, rather than returning well-formed tabular data to SQL Server. 
-
-Also, because [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) has been invoked, the sample data is loaded from the samples folder on the SQL Server computer, and not from your local samples folder.
 
 ```Python
 import os
@@ -223,4 +222,6 @@ summary = rx_summary("ArrDelay+DayOfWeek", ds)
 print(summary)
 ```
 
-## See also
+In this sample, the summary object is returned to the console, rather than returning well-formed tabular data to SQL Server. 
+
+Also, because [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) has been invoked, the sample data is loaded from the samples folder on the SQL Server computer, and not from your local samples folder.

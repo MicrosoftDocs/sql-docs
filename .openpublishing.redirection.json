@@ -21,6 +21,66 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/python/setup-python-machine-learning-services.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-services-windows-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/set-up-sql-server-r-services-in-database.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-r-services-windows-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/create-a-standalone-r-server.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/installing-ml-components-without-internet-access.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/unattended-installs-of-sql-server-python-services.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-ml-component-commandline-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/unattended-installs-of-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-ml-component-commandline-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/install-microsoft-r-server-from-the-command-line.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-ml-component-commandline-install",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/monitoring-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/monitoring-python-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/managing-and-monitoring-python-solutions.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/getting-started-with-microsoft-r-server-standalone.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-server-standalone",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/getting-started-with-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
             "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
             "redirect_document_id": false

@@ -1,7 +1,7 @@
 ---
 title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/19/2018"
+ms.date: "03/20/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -23,7 +23,7 @@ ms.workload: "On Demand"
   Summary of columnstore features available for each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and the latest releases of [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in SQL Database Premium Tier, and Standard Tier (S3 and above). For SQL Server (2016 SP1 and above), columnstore indexes are available in all editions. For SQL Server (2016 and earlier), columnstore indexes are only available in Enterprise Edition.
+ > For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], columnstore indexes are available in SQL Database Premium Tier and Standard Tier (S3 and above). For SQL Server (2016 SP1 and above), columnstore indexes are available in all editions. For SQL Server (2016 and earlier), columnstore indexes are only available in Enterprise Edition.
  
 ## Feature Summary for Product Releases  
  This table summarizes key features for columnstore indexes and the products in which they are available.  

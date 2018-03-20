@@ -1,5 +1,5 @@
 ---
-title: "PowerShell and CLI: Enable TDE using your own Azure Key Vault key | Microsoft Docs"
+title: "PowerShell and CLI: Enable SQL TDE using your own Azure Key Vault key | Microsoft Docs"
 description: "Learn how to configure an Azure SQL Database and Data Warehouse to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell or CLI."
 keywords:
 documentationcenter:
@@ -39,9 +39,9 @@ This how-to guide walks through how to use a key from Azure Key Vault for Transp
    - Not disabled
    - Able to perform *get*, *wrap key*, *unwrap key* operations
 
-## Step 1. Assign an AAD identity to your server 
+## Step 1. Assign an Azure AD identity to your server 
 
-If you have an existing server, use the following to add an AAD identity to your server:
+If you have an existing server, use the following to add an Azure AD identity to your server:
 
    ```powershell
    $server = Set-AzureRmSqlServer `
@@ -50,7 +50,7 @@ If you have an existing server, use the following to add an AAD identity to your
    -AssignIdentity
    ```
 
-If you are creating a server, use the [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) cmdlet with the tag -Identity to add an AAD identity during server creation:
+If you are creating a server, use the [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) cmdlet with the tag -Identity to add an Azure AD identity during server creation:
 
    ```powershell
    $server = New-AzureRmSqlServer `
@@ -121,7 +121,7 @@ Use the [Set-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azu
 
 Now the database or data warehouse has TDE enabled with an encryption key in Key Vault.
 
-## Step 5. Check the encryption state and encryption activity of the database or data warehouse
+## Step 5. Check the encryption state and encryption activity
 
 Use the [Get-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) to get the encryption state and the [Get-AzureRMSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) to check the encryption progress for a database or data warehouse.
 
@@ -202,7 +202,7 @@ Check the following if an issue occurs:
    - Not disabled
    - Able to perform *get*, *wrap key*, *unwrap key* operations
    
-## Step 1. Create a server and assign an AAD identity to your server
+## Step 1. Create a server and assign an Azure AD identity to your server
       ```cli
       # create server (with identity) and database
       az sql server create -n "ServerName" -g "ResourceGroupName" -l "westus" -u "cloudsa" -p "YourFavoritePassWord99@34" -I 
@@ -243,7 +243,7 @@ Check the following if an issue occurs:
 
 Now the database or data warehouse has TDE enabled with an encryption key in Key Vault.
 
-## Step 5. Check the encryption state and encryption activity of the database or data warehouse
+## Step 5. Check the encryption state and encryption activity
 
      ```cli
       # get encryption scan progress

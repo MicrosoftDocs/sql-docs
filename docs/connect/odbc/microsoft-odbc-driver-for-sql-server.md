@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
-ms.service: ""
 ms.component: "odbc"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Microsoft ODBC Driver for SQL Server

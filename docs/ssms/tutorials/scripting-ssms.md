@@ -23,11 +23,13 @@ helpviewer_keywords:
 
 # Tutorial: Script Objects in SQL Server Management Studio
 This tutorial will teach you how to generate Transact-SQL (T-SQL) scripts for various  objects found within SQL Server Management Studio.  In this tutorial, you will find examples of how to script the following objects: 
- - Queries when performing actions within the GUI
- - Databases in two different ways ("Script As" and "Generate Script")
- - Tables
- - Stored procedures
- - Extended events
+
+> [!div class="checklist"]
+> * Queries when performing actions within the GUI
+> * Databases in two different ways ("Script As" and "Generate Script")
+> * Tables
+> * Stored procedures
+> * Extended events
 
 The summary of this tutorial is that any object in **Object Explorer** can be scripted by right-clicking on it and selecting the **Script Object As** option. 
 

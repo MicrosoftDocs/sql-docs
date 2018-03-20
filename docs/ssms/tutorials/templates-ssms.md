@@ -22,10 +22,12 @@ helpviewer_keywords:
 
 # Tutorial: Using Templates within SQL Server Management Studio
 This tutorial will introduce you to the pre-built Transact-SQL (T-SQL) templates that are available within SQL Server Management Studio (SSMS). In this article, you will learn how to:
-    - Use the Template Browser to generate T-SQL Scripts
-    - Edit an existing Template 
-    - Locate the templates on disk
-    - Create a new Template
+
+> [!div class="checklist"]
+> * Use the Template Browser to generate T-SQL Scripts
+> * Edit an existing Template 
+> * Locate the templates on disk
+> * Create a new Template
    
 
 ## Prerequisites

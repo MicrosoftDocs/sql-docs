@@ -23,11 +23,12 @@ helpviewer_keywords:
 # Tutorial: Additional Tips and Tricks for using SSMS
 This tutorial will provide you with some additional tricks for using SQL Server Management Studio. This article will teach you how to: 
 
-   - Comment / Uncomment your Transact-SQL (T-SQL) text
-   - Indent your text
-   - Filter Objects in Object Explorer
-   - Access your SQL Server Error log
-   - Find the name of your SQL Server Instance
+> [!div class="checklist"]
+> * Comment / Uncomment your Transact-SQL (T-SQL) text
+> * Indent your text
+> * Filter Objects in Object Explorer
+> * Access your SQL Server Error log
+> * Find the name of your SQL Server Instance
 
 ## Prerequisites
 To complete this Tutorial, you need SQL Server Management Studio, access to a SQL Server, and an AdventureWorks database. 

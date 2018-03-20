@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
-ms.service: ""
 ms.component: "php"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Microsoft PHP Driver for SQL Server

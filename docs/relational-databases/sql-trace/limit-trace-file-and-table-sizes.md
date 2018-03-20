@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "size [SQL Server], files"
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

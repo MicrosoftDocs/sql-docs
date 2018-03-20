@@ -77,7 +77,7 @@ ms.workload: "On Demand"
  > For SharePoint 2016, the SharePoint server that Reporting Services will be installed on needs to have the **Custom** server role. The deployment of Reporting Services will succeed on a SharePoint server that is not in the **Custom** role, but during the next SharePoint maintenance window, MinRole will stop the Reporting Services service because it detects that Reporting Services in SharePoint-integrated mode does not indicate support for any of the other SharePoint server roles. The Reporting Services service application only supports the **Custom** role.
  
  > [!NOTE]
- > If you plan to install the Power Pivot service as well, on SharePoint 2016, install that prior to installing Reporting Services. The Power Pivot service cannot be installed on a SharePoint server in the **Custom** role. This will avoid having to switch roles multiple times.
+ > If you plan to install the Power Pivot service as well, on SharePoint 2016, install that prior to installing Reporting Services. The Power Pivot service can only be installed on a SharePoint server in the **Custom** role.
  
  ### Apply the custom server role to a SharePoint 2016 server
  

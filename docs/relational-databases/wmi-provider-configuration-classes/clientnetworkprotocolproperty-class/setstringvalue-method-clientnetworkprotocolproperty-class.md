@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SetStringValue method"
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

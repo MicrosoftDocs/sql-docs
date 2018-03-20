@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "InstanceName property"
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

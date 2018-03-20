@@ -29,7 +29,7 @@ manager: "kfile"
   
  The following additional requirements must also be met:  
   
--   The RSeportServer.config files must have **AuthenticationType** set to **RSWindowsNegotiate**, **RSWindowsKerberos**, or **RSWindowsNTLM**. By default, the RSReportServer.config file includes the **RSWindowsNegotiate** setting if the Report Server service account is either NetworkService or LocalSystem; otherwise, the **RSWindowsNTLM** setting is used. You can add **RSWindowsKerberos** if you have applications that only use Kerberos authentication.  
+-   The RSReportServer.config files must have **AuthenticationType** set to **RSWindowsNegotiate**, **RSWindowsKerberos**, or **RSWindowsNTLM**. By default, the RSReportServer.config file includes the **RSWindowsNegotiate** setting if the Report Server service account is either NetworkService or LocalSystem; otherwise, the **RSWindowsNTLM** setting is used. You can add **RSWindowsKerberos** if you have applications that only use Kerberos authentication.  
   
     > [!IMPORTANT]  
     >  Using **RSWindowsNegotiate** will result in a Kerberos authentication error if you configured the Report Server service to run under a domain user account and you did not register a Service Principal Name (SPN) for the account. For more information, see [Resolving Kerberos Authentication Errors When Connecting to a report server](#proxyfirewallRSWindowsNegotiate) in this topic.  

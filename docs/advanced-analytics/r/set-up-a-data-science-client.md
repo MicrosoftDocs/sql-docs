@@ -34,13 +34,13 @@ To get these libraries, install any of the following:
 
 + Microsoft R Server (for SQL Server 2016)
 
-    - To install from SQL Server setup, see [Create a standalone R Server](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - To install from SQL Server setup, see [Install SQL Server 2016 R Server (Standalone)](../install/sql-r-standalone-windows-install.md)
 
     - To use the separate Windows-based installer, see [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + Machine Learning Server (for SQL Server 2017)
 
-    - To install from SQL Server setup, see [Create a standalone R Server](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - To install from SQL Server setup, see [Install SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
 
     - To use the separate Windows-based installer, see [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 

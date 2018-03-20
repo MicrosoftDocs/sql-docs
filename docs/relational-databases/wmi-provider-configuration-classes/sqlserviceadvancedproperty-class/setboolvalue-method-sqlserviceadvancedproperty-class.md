@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SetBoolValue method"
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

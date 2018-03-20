@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, about WMI Provider for Configuration Management"
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

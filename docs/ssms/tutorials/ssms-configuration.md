@@ -99,7 +99,7 @@ This keyboard shortcut works with any document window.
 
 
 
-## Changing Basic Settings
+## Change Basic Settings
 This section discusses how to modify some basic settings within SSMS. These options are found within the **Tools** menu option:
 
   ![Tools Menu](media/ssms-configuration/tools.png)
@@ -109,14 +109,17 @@ This section discusses how to modify some basic settings within SSMS. These opti
 
     ![Customize Toolbar](media/ssms-configuration/toolbar.png)
 
+### Change the font
 - The font can be changed from the menu: **Tools** > **Options** > **Fonts and Colors**:
 
      ![Fonts and Colors](media/ssms-configuration/fontsandcolors.png)
 
+### Change the Startup Options
 - The startup options determine what your workspace looks like when you first launch SSMS. These can be configured from the menu: **Tools** > **Options** > **Startup**:
  
     ![Startup Options](media/ssms-configuration/startup.png)
 
+### Reset Settings to Default
 - All of these settings can be exported and imported from the menu: **Tools** > **Import and Export Settings** 
 
     ![Import + Export Settings](media/ssms-configuration/settings.png)

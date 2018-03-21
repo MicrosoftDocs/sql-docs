@@ -45,7 +45,7 @@ In this section, you will learn how to locate and use the **Template Browser**.
 2. From the **View** Menu > **Template Browser** (Ctrl + Alt + T): 
 
     ![Template Browser](media/templates-ssms/templatebrowser.png)
-    - You can also see recently used templates at the bottom of the **Template Browser**
+    - You can also see recently used templates at the bottom of the **Template Browser**.
 
 3. Expand the node you're interested in > Right click the Template > Open:
 
@@ -61,13 +61,13 @@ In this section, you will learn how to locate and use the **Template Browser**.
 ## Edit an Existing Template
 You can also edit the existing templates within **Template Browser**.  
 
-1. Locate the template of interest in the **Template Browser**
-2. Right-click the template > **Edit**
+1. Locate the template of interest in the **Template Browser**.
+2. Right-click the template > **Edit**:
 
     ![Edit Template](media/templates-ssms/edittemplate.png)
 
 3. Make the desired changes in the query window that opens.
-4. Save the template by going to **File** > **Save** (Ctrl + S)
+4. Save the template by going to **File** > **Save** (Ctrl + S).
 5. Close the query window.
 6. Reopen the Template you saved > your new edits should be there.
  
@@ -85,9 +85,9 @@ This should open your explorer to where the templates are stored on disk:
 ## Create a new Template
 Within the **Template Browser** you also have the ability to create new templates. These steps will teach you to create a new folder, and then create a new template within that folder. However, with these steps, you can also create a custom template within the existing folders. 
 
-1. Open **Template Browser**
-2. Right-click SQL Server Templates > **New** > **Folder** 
-3. Name this folder **Custom Templates**
+1. Open **Template Browser**.
+2. Right-click SQL Server Templates > **New** > **Folder**.
+3. Name this folder **Custom Templates**:
 
     ![Creating Custom Templates](media/templates-ssms/creatingcustomtemplate.png)
 
@@ -97,7 +97,7 @@ Within the **Template Browser** you also have the ability to create new template
    
 5. Right-click the template you just created > **Edit**. This will open a **New Query Window**.
 6. Type in the T-SQL text you want to save. 
-7. Save the file by going to the **File** menu > **Save**
+7. Save the file by going to the **File** menu > **Save**.
 8. Close the existing **Query Window** and open your new custom template. 
 
     

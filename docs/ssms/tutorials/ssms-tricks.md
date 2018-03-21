@@ -79,7 +79,7 @@ Portions of your text can be commented and uncommented by using the comment butt
 
     ![Uncomment](media/ssms-tricks/uncomment.png)
     
-9. Click **Execute** to run the uncommented portion of the text 
+9. Click **Execute** to run the uncommented portion of the text. 
 
 ## Indent your Text
 The indentation buttons allow you to increase and decrease the indent of your text. 
@@ -108,7 +108,7 @@ The indentation buttons allow you to increase and decrease the indent of your te
     GO
  ``` 
  
-3. Highlight the **Alter Database** portion of the text and press **Increase Indent** in the toolbar to move this text forward
+3. Highlight the **Alter Database** portion of the text and press **Increase Indent** in the toolbar to move this text forward:
 
     ![Increase Indent](media/ssms-tricks/increaseindent.png)
 
@@ -191,7 +191,7 @@ The error log is a file that contains details about things occurring within your
    
     ![Query Error Log](media/ssms-tricks/queryerrorlog.png)
 
-## Determine SQL Server Instance Name..
+## Determine SQL Server Instance Name...
 There are different ways to determine the name of your instance before and after you connect to your SQL Server.  
 
 ### ...When you don't know it

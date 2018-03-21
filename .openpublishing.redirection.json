@@ -3452,8 +3452,7 @@
       },
 
 	  {
-	  "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",
-	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+	  "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
 	  "redirect_document_id": false
       },
 
@@ -3471,7 +3470,7 @@
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-2-4-using-comments.md",
-	  "redirect_url": "/sql/ssms/tutorials/ssms-tricks.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-tricks",
 	  "redirect_document_id": false
       },
 

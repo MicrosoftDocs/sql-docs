@@ -47,37 +47,40 @@ Portions of your text can be commented and uncommented by using the comment butt
 4. Paste the following T-SQL code snippet into your text window: 
 
   ```sql
-  USE master
-GO
+    USE master
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-	SELECT name 
-		FROM sys.databases 
-		WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+	    SELECT name 
+		    FROM sys.databases 
+		    WHERE name = N'TutorialDB'
+            )
 
-CREATE DATABASE TutorialDB
-GO
+    DROP DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    CREATE DATABASE TutorialDB
+    GO
+
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. Highlight the **Alter Database** portion of the text and click **Comment** in the toolbar: 
+
+
+5. Highlight the **Alter Database** portion of the text and click **Comment** in the toolbar: 
 
     ![Comment](media/ssms-tricks/comment.png)
-3. Click **Execute** to run the uncommented portion of the text. 
-4. Highlight everything other than the **Alter Database** command and click **Comment** in the toolbar:
+6. Click **Execute** to run the uncommented portion of the text. 
+7. Highlight everything other than the **Alter Database** command and click **Comment** in the toolbar:
 
     ![Comment Everything](media/ssms-tricks/commenteverything.png)
 
-5. Highlight the **Alter Database** portion and click **Uncomment** to uncomment it:
+8. Highlight the **Alter Database** portion and click **Uncomment** to uncomment it:
 
     ![Uncomment](media/ssms-tricks/uncomment.png)
     
-6. Click **Execute** to run the uncommented portion of the text 
+9. Click **Execute** to run the uncommented portion of the text 
 
 ## Indent your Text
 The indentation buttons allow you to increase and decrease the indent of your text. 

@@ -20,10 +20,9 @@ This Tutorial describes the  different window components within SQL Server Manag
 > * The different components that make up the SSMS environment
 > * Changing the environmental layout and resetting it to default
 > * Maximizing the query editor
-> * Changing some basic settings such as
-> *  - Changing the font
-> *  - Configuring startup options
-> *  - Resetting the configuration back to default
+> * Changing the font
+> * Configuring startup options
+> * Resetting the configuration back to default
 
 ## Prerequisites
 To complete this Tutorial, you need SQL Server Management Studio.  

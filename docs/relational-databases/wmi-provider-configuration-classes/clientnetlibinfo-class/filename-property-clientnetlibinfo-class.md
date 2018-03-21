@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "FileName property"
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/31/2017"
+ms.date: "02/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
@@ -23,9 +23,14 @@ ms.workload: "Active"
 ---
 
 # JSON data in SQL Server
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON is a popular textual data format that's used for exchanging data in modern web and mobile applications. JSON is also used for storing unstructured data in log files or NoSQL databases such as Microsoft Azure Cosmos DB. Many REST web services return results that are formatted as JSON text or accept data that's formatted as JSON. For example, most Azure services, such as Azure Search, Azure Storage, and Azure Cosmos DB, have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between webpages and web servers by using AJAX calls. 
+
+JSON functions in SQL Server enable you to combine NoSQL and relational concepts in the same database. Now you can combine classic relational columns with columns that contain documents formatted as JSON text in the same table, parse and import JSON documents in relational structures, or format relational data to JSON text. You see see how JSON functions connect relational and NoSQL concepts in SQL Server and Azure SQL Database in the following video:
+
+*JSON as a bridge between NoSQL and relational worlds*
+> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
  
 Here's an example of JSON text: 
  
@@ -49,7 +54,10 @@ By using SQL Server built-in functions and operators, you can do the following t
 ![Overview of built-in JSON support](../../relational-databases/json/media/jsonslides1overview.png "Overview of built-in JSON support")  
   
 ## Key JSON capabilities of SQL Server and SQL Database
-The next sections discuss the key capabilities that SQL Server provides with its built-in JSON support.
+The next sections discuss the key capabilities that SQL Server provides with its built-in JSON support. You can see how to use JSON functions and operators in the following video:
+
+*SQL Server 2016 and JSON Support*
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
 
 ### Extract values from JSON text and use them in queries
 If you have JSON text that's stored in database tables, you can read or modify values in the JSON text by using the following built-in functions:  
@@ -306,17 +314,14 @@ For specific solutions, use cases, and recommendations, see these [blog posts](h
 
 ### Microsoft videos
 
-For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
-
-*SQL Server 2016 and JSON Support*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following video:
 
 *Using JSON in SQL Server 2016 and Azure SQL Database*
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
-*JSON as a bridge between NoSQL and relational worlds*
-> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
-   
+*Building REST API with SQL Server using JSON functions*
+> [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
+
 ### Reference articles  
   
 -   [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
@@ -326,5 +331,3 @@ For a visual introduction to the built-in JSON support in SQL Server and Azure S
     -   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)  
     -   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)  
     -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)  
-  
-  

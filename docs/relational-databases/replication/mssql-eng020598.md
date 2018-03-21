@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "MSSQL_ENG020598 error"
 ms.assetid: 1c3032f2-23d1-4ead-94ee-16ac4d75cd0c
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -16,8 +16,8 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

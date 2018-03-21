@@ -17,8 +17,8 @@ keywords:
   - "sample"
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 caps.latest.revision: 21
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

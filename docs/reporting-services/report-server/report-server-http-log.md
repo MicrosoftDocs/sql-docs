@@ -1,7 +1,7 @@
 ---
 title: "Report Server HTTP Log | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "03/02/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
@@ -40,7 +40,7 @@ ms.workload: "Inactive"
 ## Configuration Settings for Report Server HTTP Log  
  To configure the Report Server HTTP log, use Notepad to modify the ReportingServicesService.exe.config file. The configuration file is located in the \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin folder.  
   
- To enable the HTTP server, you must add **http:4** to the RStrace section of the ReportingServicesService.exe.config file. All other HTTP log file entries are optional. The following example includes all settings so that you can paste the whole section over the RStrace section, and then delete the settings you do not need.  
+ To enable the HTTP server, you must add **http:4** to the RStrace section of the ReportingServicesService.exe.config file. All other HTTP log file entries are optional. The following example includes all settings so that you can paste the whole section over the RStrace section, and then delete the settings you do not need.
   
 ```  
    <RStrace>  
@@ -51,7 +51,7 @@ ms.workload: "Inactive"
          <add name="TraceListeners" value="debugwindow, file" />  
          <add name="TraceFileMode" value="unique" />  
          <add name="HttpTraceFileName" value="ReportServerService_HTTP_" />  
-         <add name="HttpTraceSwitches" value="date,time, clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
+         <add name="HttpTraceSwitches" value="date,time,clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
          <add name="Components" value="all:3,http:4" />  
    </RStrace>  
 ```  

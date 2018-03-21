@@ -96,6 +96,7 @@ For example, when you compile an ODBC application with `msodbcsql11.lib` and `ms
 |Component|Description|  
 |---------------|-----------------|  
 |msodbcsql17.dll or <br> msodbcsql13.dll or <br> msodbcsql11.dll|The dynamic-link library (DLL) file that contains all of the driver's functionality. This file is installed in %SYSTEMROOT%\System32.|  
+|msodbcdiag17.dll or <br> msodbcdiag13.dll or <br> msodbcdiag11.dll|The dynamic-link library (DLL) file that contains the driver's diagnostics (tracing) interface. This file is installed in %SYSTEMROOT%\System32.|
 |msodbcsqlr17.rll or <br> msodbcsqlr13.rll or <br> msodbcsqlr11.rll|The accompanying resource file for the driver library. This file is installed in %SYSTEMROOT%\System32\1033.| 
 |s13ch_msodbcsql.chm or <br> s11ch_msodbcsql.chm |The Data Source Wizard help file that documents how to create a data source for the driver. This file is installed in %SYSTEMROOT%\System32\1033 <br /> <br /> **NOTE:** There is no chm file for ODBC Driver 17. |  
 |msodbcsql.h|The header file that contains all of the new definitions needed to use the driver.<br /><br /> **Note:**  You cannot reference msodbcsql.h and odbcss.h in the same program.<br /><br /> msodbcsql.h for ODBC Driver 17 or 13 is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK. <br /> msodbcsql.h for ODBC Driver 11 is installed in %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 

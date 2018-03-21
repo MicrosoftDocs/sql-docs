@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SqlServiceType property"
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

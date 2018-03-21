@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Documentation | Microsoft Docs"
-ms.date: "10/30/2017"
+ms.date: "02/28/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -28,6 +28,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ms.workload: "Active"
 ---
+
 # SQL Server Documentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -38,19 +39,21 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
 |[What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
-   
+
+
 **Try SQL Server!**
+> [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server](http://go.microsoft.com/fwlink/?LinkID=829477)
+>
+> [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+>
+> [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+>
+> [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+## SQL Server Technologies
+
 
 |||
-|-|-|
-|[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477) | [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [Download SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) |
-|[![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) |
-| [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | |
-
-    
-## SQL Server Technologies    
-    
-|||    
 |-|-|    
 |![SQL database engine](../sql-server/media/sql-database-engine.png "SQL database engine")|**[Database Engine](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> The Database Engine is the core service for storing, processing, and securing data. The Database Engine provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications within your enterprise. The Database Engine also provides rich support for sustaining high availability.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building high performance data integration solutions, including packages that provide extract, transform, and load (ETL) processing for data warehousing.|    
@@ -62,21 +65,26 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis is based on the right information. Using [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.|
 
 ## Migrate and move data
+
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## Earlier SQL Server versions
+
 - [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 - [SQL Server 2014 documentation](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [SQL Server 2012 documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-- [SQL Server 2008 R2 documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-- [SQL Server 2008 documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
-- [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+- [SQL Server 2012 documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
+- [SQL Server 2008 R2 documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)
+- [SQL Server 2008 documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
+- [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
-## Samples  
-- [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+## Samples
+
+- [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
-- [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
-   
+- [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples)
+
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

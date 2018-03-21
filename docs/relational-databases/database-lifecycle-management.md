@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "Database connectivity"
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

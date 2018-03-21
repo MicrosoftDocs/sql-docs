@@ -26,7 +26,7 @@ ms.workload: "Inactive"
   
 ## Syntax  
   
-```vb  
+``` 
 public Java.util.UUID SQLServerConnection.getClientConnectionID();  
 ```  
   

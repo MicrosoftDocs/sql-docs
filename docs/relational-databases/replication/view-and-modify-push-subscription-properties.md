@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "modifying subscriptions, SQL Server Management Studio"
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 caps.latest.revision: 37
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

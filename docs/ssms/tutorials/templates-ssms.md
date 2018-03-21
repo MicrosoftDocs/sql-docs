@@ -34,7 +34,7 @@ This tutorial will introduce you to the pre-built Transact-SQL (T-SQL) templates
 To complete this Tutorial, you need SQL Server Management Studio, and access to a SQL Server. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 
  
 
@@ -72,7 +72,7 @@ You can also edit the existing templates within **Template Browser**.
 6. Reopen the Template you saved > your new edits should be there.
  
 
-## Locate the templates on disk
+## Locate the Templates on Disk
 Once a template is open, you can then locate it on disk.
 
 1. Select a template in **Template Browser** > **Edit**.
@@ -82,7 +82,7 @@ This should open your explorer to where the templates are stored on disk:
     ![Templates On Disk](media/templates-ssms/templatesondisk.png)
   
 
-## Create a new Template
+## Create a New Template
 Within the **Template Browser** you also have the ability to create new templates. These steps will teach you to create a new folder, and then create a new template within that folder. However, with these steps, you can also create a custom template within the existing folders. 
 
 1. Open **Template Browser**.
@@ -91,7 +91,7 @@ Within the **Template Browser** you also have the ability to create new template
 
     ![Creating Custom Templates](media/templates-ssms/creatingcustomtemplate.png)
 
-4. Right-click the newly created **Custom Templates** folder > **New** > **Template** > name your template. 
+4. Right-click the newly created **Custom Templates** folder > **New** > **Template** > name your template:
  
     ![Create Custom Template](media/templates-ssms/createnewtemplate.png)
    
@@ -107,4 +107,4 @@ The next article will provide some additional tips and tricks for using SQL Serv
 
 Advance to the next article to learn more
 > [!div class="nextstepaction"]
-> [Next steps button](ssms-tricks.md))
+> [Next steps button](ssms-tricks.md)

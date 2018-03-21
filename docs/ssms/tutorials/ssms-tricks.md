@@ -34,7 +34,7 @@ This tutorial will provide you with some additional tricks for using SQL Server 
 To complete this Tutorial, you need SQL Server Management Studio, access to a SQL Server, and an AdventureWorks database. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 - Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## Comment / Uncomment your T-SQL Code
@@ -158,8 +158,8 @@ The error log is a file that contains details about things occurring within your
 6. Open this file in Notepad. 
 
 ### Find your error log if you're connected to SQL
-1. Connect to  your SQL Server
-2. Open a **New Query** window 
+1. Connect to  your SQL Server.
+2. Open a **New Query** window.
 3. Paste the following T-SQL code snippet into your query window and click **Execute**:
 
 
@@ -179,8 +179,8 @@ The error log is a file that contains details about things occurring within your
     ![View Error log within SSMS](media/ssms-tricks/viewerrorloginssms.png)
 
 ### Query error log within SSMS
-1. Connect to your SQL Server
-2. Open a **New Query** window
+1. Connect to your SQL Server.
+2. Open a **New Query** window.
 3. Paste the following T-SQL code snippet into your query Window:
 
  ```sql
@@ -195,23 +195,23 @@ The error log is a file that contains details about things occurring within your
 There are different ways to determine the name of your instance before and after you connect to your SQL Server.  
 
 ### ...When you don't know it
-1. Follow the steps to locate the [SQL Server Error log on disk.](#finding-your-error-log-if-you-cannot-connect-to-sql) 
+1. Follow the steps to locate the [SQL Server Error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). 
 2. Open the errorlog.log in Notepad. 
-3. Navigate through it until you find the text "Server name is"
+3. Navigate through it until you find the text "Server name is":
   - Whatever is listed in the single quotes is the name of the instance and what you'll be connecting to: 
     ![Server Name in Error Log](media/ssms-tricks/servernameinlog.png)
 
 ### ...Once you're connected to SQL 
 There are three places to find which instance you're connected to. 
 
-1. The name of the server will be listed in **Object Explorer**
+1. The name of the server will be listed in **Object Explorer**:
 
     ![Instance Name in Object Explorer](media/ssms-tricks/nameinobjectexplorer.png)
 2. The name of the server will be listed in the query window:
 
     ![Name in Query Window](media/ssms-tricks/nameinquerywindow.png)
 3. . The name of the server will also be listed in the **Properties window**.
-    - To access this open the **View** Menu > **Properties Window**
+    - To access this open the **View** Menu > **Properties Window**:
 
     ![Name in Properties](media/ssms-tricks/nameinproperties.png)
 

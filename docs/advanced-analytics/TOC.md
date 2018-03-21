@@ -18,9 +18,9 @@
 ## [Install pre-trained models](r/install-pretrained-models-sql-server.md)
 ## [Set up a data science client](r/set-up-a-data-science-client.md)
 
-# Tutorials
+# [Tutorials and samples](tutorials/machine-learning-services-tutorials.md)
 
-## [R Tutorials for SQL Server](tutorials/sql-server-r-tutorials.md)
+## [R](tutorials/sql-server-r-tutorials.md)
 ### [R: Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 #### [Working with inputs and outputs](tutorials/rtsql-working-with-inputs-and-outputs.md)
 #### [R and SQL data types and data objects](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
@@ -60,7 +60,7 @@
 #### [Step 5: Train and save a model using T-SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
 #### [Step 6: Operationalize the model](tutorials/sqldev-operationalize-the-model.md)
 
-## [Python tutorials](tutorials/sql-server-python-tutorials.md)
+## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
 #### [Wrap Python in a stored procedure](tutorials/wrap-python-in-tsql-stored-procedure.md)
 #### [Train and score from a Python model in SQL Server](tutorials/train-score-using-python-in-tsql.md)
@@ -72,17 +72,18 @@
 #### [Create data features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
-
+## [Data science solution templates](tutorials/data-science-scenarios-and-solution-templates.md)
+## [SQL Server samples](https://github.com/Microsoft/sql-server-samples)
 
 # Architecture
 
 ## [In-database analytics](r/sql-server-r-services.md)
 ## [Standalone server](r/r-server-standalone.md)
-## [R Architecture](r/architecture-overview-sql-server-r.md)
+## [R architecture](r/architecture-overview-sql-server-r.md)
 ### [R interoperability](r/r-interoperability-in-sql-server.md)
 ### [Components that support R integration](r/new-components-in-sql-server-to-support-r.md)
 ### [Security for R](r/security-overview-sql-server-r.md)
-## [Python Architecture](python/architecture-overview-sql-server-python.md)
+## [Python architecture](python/architecture-overview-sql-server-python.md)
 ### [Python in Machine Learning Services](python/sql-server-python-services.md)
 ### [Python interoperability](python/python-interoperability.md)
 ### [Components to support Python](python/new-components-in-sql-server-to-support-python-integration.md)
@@ -155,7 +156,6 @@
 ### [Common issues for external script execution](common-issues-external-script-execution.md)
 
 ## Blogs
-
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [Machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
@@ -165,15 +165,10 @@
 ### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
 
 # [Reference](r/machine-learning-services-r-reference.md)
+
 ## [MicrosoftML](using-the-microsoftml-package.md)
 ## [RevoScaleR](r/revoscaler-overview.md)
 ### [RevoScaleR functions for SQL Server data](r/scaler-functions-for-working-with-sql-server-data.md)
 ## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [RevoScalePy](python/what-is-revoscalepy.md)
-
-# [Templates and samples](tutorials/machine-learning-services-tutorials.md)
-
-## [Data science solution templates](tutorials/data-science-scenarios-and-solution-templates.md)
-## [SQL Server samples](https://github.com/Microsoft/sql-server-samples)
-

@@ -2,20 +2,38 @@
 
 ## [What is SQL Server Machine Learning Services?](what-is-sql-server-machine-learning.md)
 ## [New features](what-s-new-in-sql-server-machine-learning-services.md)
-## [Architecture overview](architecture-overview-machine-learning.md)
 ## [Features by edition](r/differences-in-r-features-between-editions-of-sql-server.md)
+
+# Architecture
+
+## [In-database analytics](r/sql-server-r-services.md)
+## [Standalone server](r/r-server-standalone.md)
+## [Core architecture](architecture-overview-machine-learning.md)
+## [R](r/architecture-overview-sql-server-r.md)
+### [R interoperability](r/r-interoperability-in-sql-server.md)
+### [Components that support R integration](r/new-components-in-sql-server-to-support-r.md)
+### [Security for R](r/security-overview-sql-server-r.md)
+## [Python](python/architecture-overview-sql-server-python.md)
+### [Python in Machine Learning Services](python/sql-server-python-services.md)
+### [Python interoperability](python/python-interoperability.md)
+### [Components to support Python](python/new-components-in-sql-server-to-support-python-integration.md)
+### [Python security](python/security-overview-sql-server-python-services.md)
+<!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
+<!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
+<!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
+<!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
 # Install 
 
-## [Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
-## [Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md)
+## [In-Database analytics](install/sql-machine-learning-services-windows-install.md)
+## [Standalone server](install/sql-machine-learning-standalone-windows-install.md)
+## [Pre-trained models](r/install-pretrained-models-sql-server.md)
 ## SQL Server 2016
 ### [R Services (In-Database)](install/sql-r-services-windows-install.md)
 ### [R Server (Standalone)](install/sql-r-standalone-windows-install.md)
 ### [Bind to Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [Command-prompt setup](install/sql-ml-component-commandline-install.md)
 ## [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
-## [Install pre-trained models](r/install-pretrained-models-sql-server.md)
 ## [Set up a data science client](r/set-up-a-data-science-client.md)
 
 # [Tutorials and samples](tutorials/machine-learning-services-tutorials.md)
@@ -74,24 +92,6 @@
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
 ## [Data science solution templates](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [SQL Server samples](https://github.com/Microsoft/sql-server-samples)
-
-# Architecture
-
-## [In-database analytics](r/sql-server-r-services.md)
-## [Standalone server](r/r-server-standalone.md)
-## [R architecture](r/architecture-overview-sql-server-r.md)
-### [R interoperability](r/r-interoperability-in-sql-server.md)
-### [Components that support R integration](r/new-components-in-sql-server-to-support-r.md)
-### [Security for R](r/security-overview-sql-server-r.md)
-## [Python architecture](python/architecture-overview-sql-server-python.md)
-### [Python in Machine Learning Services](python/sql-server-python-services.md)
-### [Python interoperability](python/python-interoperability.md)
-### [Components to support Python](python/new-components-in-sql-server-to-support-python-integration.md)
-### [Python security](python/security-overview-sql-server-python-services.md)
-<!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
-<!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
-<!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
-<!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
 # [How To](r/sql-server-machine-learning-tasks.md)
 

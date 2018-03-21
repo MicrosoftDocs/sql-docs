@@ -37,7 +37,7 @@ To complete this Tutorial, you need SQL Server Management Studio, access to a SQ
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
-## Commenting / Uncommenting your T-SQL
+## Comment / Uncomment your T-SQL Code
 Portions of your text can be commented and uncommented by using the comment button in the toolbar. Text that is commented out will not be executed. 
 
 1. Open SQL Server Management Studio. 
@@ -116,7 +116,7 @@ The indentation buttons allow you to increase and decrease the indent of your te
     ![Decrease Indent](media/ssms-tricks/decreaseindent.png)
 
 
-## Filtering Objects in Object Explorer
+## Filter Objects in Object Explorer
 When a database has many objects, finding a specific object can prove difficult. To make this easier, you have the ability to filter objects. This section explains how to filter tables, but the same steps can be applied to any other node within **Object Explorer**
 
 1. Connect to your SQL Server.
@@ -140,10 +140,10 @@ When a database has many objects, finding a specific object can prove difficult.
     
 
 
-## Accessing your SQL Server Error log
+## Access your SQL Server Error log
 The error log is a file that contains details about things occurring within your SQL Server. It can be browsed and queried within SSMS. It can also be found as a .log file on disk.
 
-### Finding your error log if you cannot connect to SQL
+### Find your error log if you cannot connect to SQL
 1. Open your SQL Server Configuration Manager. 
 2. Expand the **Services** node.
 3. Right click on your SQL Server instance > **Properties**:
@@ -157,7 +157,7 @@ The error log is a file that contains details about things occurring within your
     - You'll notice that there are several errorlog.* in this location. The one ending with *.log is the current one. The ones ending with numbers are previous logs, as a new log is created every time the SQL Server restarts. 
 6. Open this file in Notepad. 
 
-### Finding your error log if you're connected to SQL
+### Find your error log if you're connected to SQL
 1. Connect to  your SQL Server
 2. Open a **New Query** window 
 3. Paste the following T-SQL code snippet into your query window and click **Execute**:
@@ -201,7 +201,7 @@ There are different ways to determine the name of your instance before and after
   - Whatever is listed in the single quotes is the name of the instance and what you'll be connecting to: 
     ![Server Name in Error Log](media/ssms-tricks/servernameinlog.png)
 
-### ...Once you're connected
+### ...Once you're connected to SQL 
 There are three places to find which instance you're connected to. 
 
 1. The name of the server will be listed in **Object Explorer**

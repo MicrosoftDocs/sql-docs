@@ -45,7 +45,7 @@ To complete this Tutorial, you need SQL Server Management Studio, access to a SQ
 ## Script Queries from GUI
 Any time you perform a task using the GUI in SSMS, you can also generate the T-SQL code associated with that task. The following examples show how to do so when taking a backup of a database, and when  you shrink the transaction log.  These same steps can be applied to any action that's completed via the GUI. 
 
-### ScriptT-SQL when backing up a database
+### Script T-SQL when backing up a database
 1. Connect to your SQL Server.
 2. Expand the **Databases** node.
 3. Right-click the database > **Tasks** > **Back up**:

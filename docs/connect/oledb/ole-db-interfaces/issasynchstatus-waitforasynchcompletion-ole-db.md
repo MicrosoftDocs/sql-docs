@@ -45,10 +45,10 @@ HRESULT WaitForAsynchCompletion(
  The method succeeded.  
   
  E_UNEXPECTED  
- A rowset is in an unused state because **ITransaction::Commit** or **ITransaction::Abort** has been called or the rowset was cancelled during its initialization phase.  
+ A rowset is in an unused state because **ITransaction::Commit** or **ITransaction::Abort** has been called or the rowset was canceled during its initialization phase.  
   
  DB_E_CANCELED  
- Asynchronous processing was cancelled during rowset population or data source object initialization.  
+ Asynchronous processing was canceled during rowset population or data source object initialization.  
   
  DB_S_ASYNCHRONOUS  
  The operation has not yet completed even though specified time-out has been reached.  
@@ -64,7 +64,7 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  When the OLE DB Service Components are used, S_OK may be returned when DB_S_ASYNCHRONOUS is expected, so applications should call [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) to check for completion when S_OK or DB_S_ASYNCHRONOUS is returned.  
   
- If the *dwMillisecTimeOut* value is set to INFINITE, the **ISSAsynchStatus::WaitForAsynchCompletion** method blocks until the operation is done. If the *dwMillisecTimeOut* value is set to 0, then the method will return immediately with the status of the pending operation. If the time-out expires before the operation is complete DB_S_ASYNCHRONOUS will be returned.  
+ If the *dwMillisecTimeOut* value is set to INFINITE, the **ISSAsynchStatus::WaitForAsynchCompletion** method blocks until the operation is done. If the *dwMillisecTimeOut* value is set to 0, then the method will return immediately with the status of the pending operation. If the time-out expires before the operation is complete, DB_S_ASYNCHRONOUS will be returned.  
   
  If the operation completes before the time-out expires, the returned HRESULT will be the HRESULT returned by the operation (the HRESULT that would have been returned had the operation been performed synchronously).  
   

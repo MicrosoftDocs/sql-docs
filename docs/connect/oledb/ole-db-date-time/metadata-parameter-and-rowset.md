@@ -24,7 +24,7 @@ ms.workload: "Inactive"
 # Metadata - Parameter and Rowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  This topic provides information about the following type and type members, related to the OLE DB date and time enhancements.  
+  This article provides information about the following type and type members, related to the OLE DB date and time enhancements.  
   
 -   DBBINDING structure  
   
@@ -45,8 +45,8 @@ ms.workload: "Inactive"
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Set|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  Notice that in some cases value ranges are not continuous. This is due to the addition of a decimal point when fractional precision is greater than zero.  
   
@@ -68,9 +68,9 @@ ms.workload: "Inactive"
   
  The *bPrecision* parameter is ignored.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE" is ignored when sending data to the server. Applications can force the use of legacy tabular-data stream (TDS) types by using the provider-specific type names "**datetime**" and "**smalldatetime**". When connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later) servers, "**datetime2**" format will be used and an implicit server conversion will occur, if necessary, when the type name is "**datetime2**" or "DBTYPE_DBTIMESTAMP". *bScale* is ignored if the provider specific type names "**datetime**" or "**smalldatetime**" are used. Otherwise, appications must ensure that *bScale* is set correctly. Applications upgraded from MDAC and OLE DB Driver for SQL Server from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] that use "DBTYPE_DBTIMESTAMP" will fail if they do not set *bScale* correctly. When connected to server instances earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a *bScale* value other than 0 or 3 with "DBTYPE_DBTIMESTAMP" is an error and E_FAIL will be returned.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE" is ignored when sending data to the server. Applications can force the use of legacy tabular-data stream (TDS) types by using the provider-specific type names "**datetime**" and "**smalldatetime**". When connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later) servers, "**datetime2**" format will be used and an implicit server conversion will occur, if necessary, when the type name is "**datetime2**" or "DBTYPE_DBTIMESTAMP". *bScale* is ignored if the provider specific type names "**datetime**" or "**smalldatetime**" are used. Otherwise, applications must ensure that *bScale* is set correctly. Applications upgraded from MDAC and OLE DB Driver for SQL Server from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] that use "DBTYPE_DBTIMESTAMP" will fail if they do not set *bScale* correctly. When connected to server instances earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], a *bScale* value other than 0 or 3 with "DBTYPE_DBTIMESTAMP" is an error and E_FAIL will be returned.  
   
- When ICommandWithParameters::SetParameterInfo is not called, the provider imples the server type from the binding type as specified in IAccessor::CreateAccessor as follows:  
+ When ICommandWithParameters::SetParameterInfo is not called, the provider implies the server type from the binding type as specified in IAccessor::CreateAccessor as follows:  
   
 |Binding Type|*pwszDataSourceType*<br /><br /> (provider specific)|  
 |------------------|----------------------------------------------------|  

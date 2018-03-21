@@ -24,7 +24,7 @@ ms.workload: "Inactive"
 # OLE DB Table-Valued Parameter Type Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  This topic describes OLE DB type support for table-value parameters.  
+  This article describes OLE DB type support for table-value parameters.  
   
 ## Table-Valued Parameter Rowset Object  
  You can create a specialized rowset object for table-valued parameters. You create the table-valued parameter rowset object by using ITableDefinitionWithConstraints::CreateTableWithConstraints or IOpenRowset::OpenRowset. To do this, set the *eKind* member of the *pTableID* parameter to DBKIND_GUID_NAME, and provide the CLSID_ROWSET_INMEMORY as the *guid* member. The server type name for the table-valued parameter must be specified in the *pwszName* member of *pTableID* when using IOpenRowset::OpenRowset. The table-valued parameter rowset object behaves like a regular OLE DB Driver for SQL Server object.  
@@ -53,15 +53,15 @@ CoType RowsetTVP
 #define DBTYPE_TABLE (143)  
 ```  
   
- DBTYPE_TABLE has the same format as DBTYPE_IUNKNOWN. It is a pointer to an object in the data buffer. For complete specification in the bindings, the consumer fills up the DBOBJECT buffer, with *iid* set to one of the rowset object interfaces (IID_IRowset). If no DBOBJECT is specified in the bindings, IID_IRowset will be assumed.  
+ DBTYPE_TABLE has the same format as DBTYPE_IUNKNOWN. It's a pointer to an object in the data buffer. For complete specification in the bindings, the consumer fills up the DBOBJECT buffer, with *iid* set to one of the rowset object interfaces (IID_IRowset). If no DBOBJECT is specified in the bindings, IID_IRowset will be assumed.  
   
- Conversions to and from DBTYPE_TABLE for any other types are not supported. IConvertType::CanConvert will return S_FALSE for unsupported conversion for any request other than DBTYPE_TABLE to DBTYPE_TABLE conversion. This assumes DBCONVERTFLAGS_PARAMETER on the Command object.  
+ Conversions to and from DBTYPE_TABLE for any other types aren't supported. IConvertType::CanConvert will return S_FALSE for unsupported conversion for any request other than DBTYPE_TABLE to DBTYPE_TABLE conversion. This assumes DBCONVERTFLAGS_PARAMETER on the Command object.  
   
 ## Methods  
  For information about OLE DB methods that support table-valued parameters, see [OLE DB Table-Valued Parameter Type Support &#40;Methods&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## Properties  
- For infornation about about OLE DB properties that support table-valued parameters, see [OLE DB Table-Valued Parameter Type Support &#40;Properties&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ For information about OLE DB properties that support table-valued parameters, see [OLE DB Table-Valued Parameter Type Support &#40;Properties&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## See Also  
  [Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

@@ -24,7 +24,7 @@ ms.workload: "Inactive"
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  This topic describes the date/time enhancements to support bulk copy functionality in OLE DB Driver for SQL Server.  
+  This article describes the date/time enhancements to support bulk copy functionality in OLE DB Driver for SQL Server.  
   
 ## Format Files  
  When building format files interactively, the following table describes the input used to specify date/time types and the corresponding host-file data type names.  
@@ -66,7 +66,7 @@ ms.workload: "Inactive"
 ## Character Data Files  
  In character data files, date and time values are represented as described in the "Data Formats: Strings and Literals" section of [Data Type Support for OLE DB Date and Time Improvements](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) for OLE DB.  
   
- In native data fles, date and time values for the four new types are represented as their TDS representations with a scale of 7 (because this is the maximum supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and bcp data files do not store the scale of these columns). There is no change to the storage of the existing **datetime** and **smalldatetime** type or their tabular data stream (TDS) representations.  
+ In native data files, date and time values for the four new types are represented as their TDS representations with a scale of 7 (because this is the maximum supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and bcp data files do not store the scale of these columns). There is no change to the storage of the existing **datetime** and **smalldatetime** type or their tabular data stream (TDS) representations.  
   
  The storage sizes for the different storage types are as follows for OLE DB:  
   
@@ -99,16 +99,16 @@ ms.workload: "Inactive"
   
 |To --><br /><br /> From|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
-|Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
-|Datetime2|1,2|1,4,10|1,12|1,10|1,10|1,5,10|1,3|1,3|  
-|Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6,12|9,6,12|9,6|9,5,6|N/A|N/A|  
-|Char/wchar (time)|-|9,10|9,7,10,12|9,7,10, 12|9,7,10|9,5,7,10|N/A|N/A|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10,12|9,10,12|9,10|9,5,10|N/A|N/A|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10,12|9,8,10,12|9,8,10|9,10|N/A|N/A|  
+|Date|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
+|Time|N/A|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
+|Smalldatetime|1, 2|1, 4, 10|1|1|1, 10|1, 5, 10|1, 11|1, 11|  
+|Datetime|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
+|Datetime2|1, 2|1, 4, 10|1, 12|1, 10|1, 10|1, 5, 10|1, 3|1, 3|  
+|Datetimeoffset|1, 2, 8|1, 4, 8, 10|1, 8, 10|1, 8, 10|1, 8, 10|1, 10|1, 3|1, 3|  
+|Char/wchar (date)|9|-|9, 6, 12|9, 6, 12|9, 6|9, 5, 6|N/A|N/A|  
+|Char/wchar (time)|-|9, 10|9, 7, 10, 12|9, 7, 10, 12|9, 7, 10|9, 5, 7, 10|N/A|N/A|  
+|Char/wchar (datetime)|9, 2|9, 4, 10|9, 10, 12|9, 10, 12|9, 10|9, 5, 10|N/A|N/A|  
+|Char/wchar (datetimeoffset)|9, 2, 8|9, 4, 8, 10|9, 8, 10, 12|9, 8, 10, 12|9, 8, 10|9, 10|N/A|N/A|  
   
 #### Key to Symbols  
   
@@ -117,13 +117,13 @@ ms.workload: "Inactive"
 |-|No conversion is supported.<br />|  
 |1|If the data supplied is not valid, an ODBC  diagnostic record is generated with SQLSTATE 22007 and the message "Invalid datetime format". For datetimeoffset values, the time portion must be within range after conversion to UTC, even if no conversion to UTC is requested. This is because TDS and the server always normalize the time in datetimeoffset values for UTC. So the client must check that time components are within the range supported after conversion to UTC.|  
 |2|The time component is ignored.|  
-|3|For ODBC, If truncation with data loss occurs, a diagnostic record is generated with SQLSTATE 22001 and message 'String data, right truncated' The number of fractional seconds digits (the scale) is determined from the destination column’s size according to the following table. For column sizes larger than the range in the table, a scale of 7 is implied. This conversion should allow for up to nine fractional second digits, the maximum allowed by ODBC.<br /><br /> **Type:** DBTIME2<br /><br /> **Implied scale 0** 8<br /><br /> **Implied scale 1..7** 10,16<br /><br /> <br /><br /> **Type:** DBTIMESTAMP<br /><br /> **Implied scale 0:** 19<br /><br /> **Implied scale 1..7:** 21..27<br /><br /> <br /><br /> **Type:** DBTIMESTAMPOFFSET<br /><br /> **Implied scale 0:** 26<br /><br /> **Implied scale 1..7:** 28..34<br /><br /> For OLE DB, if truncation with data loss occurs, an error is posted. For datetime2, the number of fractional seconds digits (the scale) is determined from the destination column’s size according to the following table. For column sizes larger than the range in the table a scale of 9 is implied. This conversion should allow for up to nine fractional second digits, the maximum allowed by OLE DB.<br /><br /> **Type:** DBTIME2<br /><br /> **Implied scale 0** 8<br /><br /> **Implied scale 1..9** 1..9<br /><br /> <br /><br /> **Type:** DBTIMESTAMP<br /><br /> **Implied scale 0:** 19<br /><br /> **Implied scale 1..9:** 21..29<br /><br /> <br /><br /> **Type:** DBTIMESTAMPOFFSET<br /><br /> **Implied scale 0:** 26<br /><br /> **Implied scale 1..9:** 28..36|  
+|3|For ODBC, If truncation with data loss occurs, a diagnostic record is generated with SQLSTATE 22001 and message 'String data, right truncated' The number of fractional seconds digits (the scale) is determined from the destination column’s size according to the following table. For column sizes larger than the range in the table, a scale of 7 is implied. This conversion should allow for up to nine fractional second digits, the maximum allowed by ODBC.<br /><br /> **Type:** DBTIME2<br /><br /> **Implied scale 0** 8<br /><br /> **Implied scale 1..7** 10,16<br /><br /> <br /><br /> **Type:** DBTIMESTAMP<br /><br /> **Implied scale 0:** 19<br /><br /> **Implied scale 1..7:** 21..27<br /><br /> <br /><br /> **Type:** DBTIMESTAMPOFFSET<br /><br /> **Implied scale 0:** 26<br /><br /> **Implied scale 1..7:** 28..34<br /><br /> For OLE DB, if truncation with data loss occurs, an error is posted. For datetime2, the number of fractional seconds digits (the scale) is determined from the destination column’s size according to the following table. For column sizes larger than the range in the table, a scale of 9 is implied. This conversion should allow for up to nine fractional second digits, the maximum allowed by OLE DB.<br /><br /> **Type:** DBTIME2<br /><br /> **Implied scale 0** 8<br /><br /> **Implied scale 1..9** 1..9<br /><br /> <br /><br /> **Type:** DBTIMESTAMP<br /><br /> **Implied scale 0:** 19<br /><br /> **Implied scale 1..9:** 21..29<br /><br /> <br /><br /> **Type:** DBTIMESTAMPOFFSET<br /><br /> **Implied scale 0:** 26<br /><br /> **Implied scale 1..9:** 28..36|  
 |4|The date component is ignored.|  
 |5|The timezone is set to UTC (for example, 00:00).|  
 |6|The time is set to zero.|  
 |7|The date is set to 1900-01-01.|  
 |8|The timezone offset is ignored.|  
-|9|The string is parsed and converted to a date, datetime, datetimeoffset, or time value, depending on the first punctuation character encountered and presence of remaining components. The string is then converted to the target type, following the rules in the table at the end of this topic for the source type discovered by this process. If the data supplied cannot be parsed without error, or if any component part is outside the range allowed, or if there is no conversion from the literal type to target type, an error is posted (OLE DB) or an ODBC diagnostic record is generated with SQLSTATE 22018 and the message "Invalid character value for cast specification". For datetime and smalldatetime parameters, if the year is outside the range these types support, an error is posted (OLE DB) or an ODBC diagnostic record is generated with SQLSATE 22007 and the message "Invalid datetime format".<br /><br /> For datetimeoffset, the value must be within range after conversion to UTC, even if no conversion to UTC is requested. This is because TDS and the server always normalize the time in datetimeoffset values for UTC, so the client must verify that time components are within the range supported after conversion to UTC. If the value is not within the supported UTC range, an error is posted (OLE DB), or an ODBC diagnostic record is generated with SQLSTATE 22007 and the message "Invalid datetime format".|  
+|9|The string is parsed and converted to a date, datetime, datetimeoffset, or time value, depending on the first punctuation character encountered and presence of remaining components. The string is then converted to the target type, following the rules in the table at the end of this article for the source type discovered by this process. If the data supplied cannot be parsed without error, or if any component part is outside the range allowed, or if there is no conversion from the literal type to target type, an error is posted (OLE DB) or an ODBC diagnostic record is generated with SQLSTATE 22018 and the message "Invalid character value for cast specification". For datetime and smalldatetime parameters, if the year is outside the range these types support, an error is posted (OLE DB) or an ODBC diagnostic record is generated with SQLSATE 22007 and the message "Invalid datetime format".<br /><br /> For datetimeoffset, the value must be within range after conversion to UTC, even if no conversion to UTC is requested. This is because TDS and the server always normalize the time in datetimeoffset values for UTC, so the client must verify that time components are within the range supported after conversion to UTC. If the value is not within the supported UTC range, an error is posted (OLE DB), or an ODBC diagnostic record is generated with SQLSTATE 22007 and the message "Invalid datetime format".|  
 |10|If truncation with data loss occurs on a client to server conversion, an error is posted (OLE DB) or an ODBC diagnostic record is generated with SQLSTATE 22008 and the message "Datetime field overflow". This error also occurs if the value falls outside the range that can be represented by the UTC range used by the server. If seconds or fractional seconds truncation occurs in a server to client conversion, there is only a warning.|  
 |11|If truncation with data loss occurs, a diagnostic record is generated.<br /><br /> On a server-to-client conversion, this is a warning (ODBC SQLSTATE S1000).<br /><br /> On a client-to-server conversion, this is an error (ODBC SQLSTATE 22001).|  
 |12|Seconds are set to zero and fractional seconds are discarded. No truncation error is possible.|  

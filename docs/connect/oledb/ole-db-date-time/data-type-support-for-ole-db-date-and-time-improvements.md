@@ -25,7 +25,7 @@ ms.workload: "Inactive"
 # Data Type Support for OLE DB Date and Time Improvements
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  This topic provides information about OLE DB (OLE DB Driver for SQL Server) types that support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date/time data types.  
+  This article provides information about OLE DB (OLE DB Driver for SQL Server) types that support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date/time data types.  
   
 ## Data Type Mapping in Rowsets and Parameters  
  OLE DB provides two new data types to support the new server types: DBTYPE_DBTIME2 and DBTYPE_DBTIMESTAMPOFFSET. The following table shows the complete server type mapping:  
@@ -44,7 +44,7 @@ ms.workload: "Inactive"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type|OLE DB data type|String format for client conversions|  
 |-----------------------------------------|----------------------|------------------------------------------|  
 |datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports up to three fractional second digits for Datetime.|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> This data type has an accuracy of one minute. The seconds component will be zero on output and will be rounded by the server on input.|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> This data type has accuracy of one minute. The seconds component will be zero on output and will be rounded by the server on input.|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Fractional seconds can optionally be specified using up to seven digits.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> Fractional seconds can optionally be specified using up to seven digits.|  

@@ -522,7 +522,7 @@ The ODBC Driver on Linux and MacOS consists of the following components:
 
 ## Resource File Loading
 
-The driver needs to load the resource file in order to function. This file is called `msodbcsqlr17.rll` or `msodbcsqlr13.rll` depending on the driver version. The location of the `.rll` file is relative to the location of the driver itself (`so` or `dylib`), as noted in the table above. As of version 17.1 the driver will also attempt to load the `.rll` from the default directory if loading from relative path fails. The default resource file paths are:
+The driver needs to load the resource file in order to function. This file is called `msodbcsqlr17.rll` or `msodbcsqlr13.rll` depending on the driver version. The location of the `.rll` file is relative to the location of the driver itself (`so` or `dylib`), as noted in the table above. As of version 17.1 the driver will also attempt to load the `.rll` from the default directory if loading from the relative path fails. The default resource file paths are:
 
 Linux: `/opt/microsoft/msodbcsql17/share/resources/en_US/`
 

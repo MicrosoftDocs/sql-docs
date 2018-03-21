@@ -11,11 +11,11 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
+ms.assetid: 
 caps.latest.revision: 9
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # R tools included with SQL Server setup

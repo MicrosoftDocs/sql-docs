@@ -35,8 +35,7 @@ To complete this Tutorial, you need SQL Server Management Studio, access to a SQ
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). 
-    - Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## Commenting / Uncommenting your T-SQL
 Portions of your text can be commented and uncommented by using the comment button in the toolbar. Text that is commented out will not be executed. 
@@ -90,28 +89,28 @@ The indentation buttons allow you to increase and decrease the indent of your te
 
   ```sql
   USE master
-GO
+    GO
 
--- Drop the database if it already exists
-IF  EXISTS (
-	SELECT name 
-		FROM sys.databases 
-		WHERE name = N'TutorialDB'
-)
-DROP DATABASE TutorialDB
-GO
+    -- Drop the database if it already exists
+    IF  EXISTS (
+	    SELECT name 
+		    FROM sys.databases 
+		    WHERE name = N'TutorialDB'
+        )
+    DROP DATABASE TutorialDB
+    GO
 
-CREATE DATABASE TutorialDB
-GO
+    CREATE DATABASE TutorialDB
+    GO
 
-ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-GO
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
  ``` 
-2. Highlight the **Alter Database** portion of the text and press **Increase Indent** in the toolbar to move this text forward
+3. Highlight the **Alter Database** portion of the text and press **Increase Indent** in the toolbar to move this text forward
 
     ![Increase Indent](media/ssms-tricks/increaseindent.png)
 
-3. Highlight the **Alter Database** portion of the text again and this time click **Decrease Indent** to move this text back. 
+4. Highlight the **Alter Database** portion of the text again and this time click **Decrease Indent** to move this text back. 
     ![Decrease Indent](media/ssms-tricks/decreaseindent.png)
 
 

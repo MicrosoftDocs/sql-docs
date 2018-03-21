@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Machine Learning Services - Feature availability across editions | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2018"
+ms.date: "03/17/2018"
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -13,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 
@@ -24,40 +24,40 @@ ms.workload: "Inactive"
  
  Machine learning features are available in SQL Server 2016 and SQL Server 2017. This article lists the editions providing the feature, describes limitations that apply in specific editions, and lists capabilities available only in certain editions.
 
+
+## SQL Server 2017 Machine Learning features
+
+Enterprise and Developer editions have the same feature coverage so that you can build solutions for an Enterprise installation without incurring the same cost. Although the editions are functionally equivlanet, use of the Developer Edition is not supported for production environments.
+
+The difference between basic and advanced integration is scale. Advanced integration can use all available cores for parallel processing of data sets at any size your computer can accommodate. Basic integration is limited to 2 cores and to data sets fitting in memory. 
+
+Basic and advanced integration applies to the (In-Database) instances. A standalone server is not a database engine instance feature and is offered as an installation option only in Developer and Enterprise editions.
+
+|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express 
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Basic R integration|Yes|Yes|Yes|Yes|No|   
+|Advanced R integration|Yes|No|No|No|No| 
+|Basic Python integration|Yes|Yes|Yes|Yes|No|
+|Advanced Python integration|Yes|No|No|No|No| 
+|Machine Learning Server (Standalone)|Yes|No|No|No|No|   
+
  > [!NOTE]
- > In general, SQL Server Machine Learning (In-Database) does not include the [operationalization](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) features that are included in a standalone R Server or Machine Learning Server installation. Operationalization includes web service deployment and hosting, and thus competes for the same resources as other SQL Server operations.
- > 
- > For this reason, we recommend installing SQL Server 2016 R Server (Standalone) or SQL Server 2017 Machine Learning Server (Standalone) on a different physical server to support deployment of predictive models as a web service. 
+ > Only a (Standalone) server offers the [operationalization](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) features that are included in a Microsoft (non-SQL-branded) R Server or Machine Learning Server installation. Operationalization includes web service deployment and hosting capabilities.
+>
+> For an (In-Database) installation, the equivalent approach to operationalizing solutions is leveraging the capabilities of the database engine, when you convert code to a function that can run in a stored procedure.
 
-## SQL Server 2017 Machine Learning Services (In-Database) and (Standalone)
 
-The Developer Edition provides performance equivalent to that of Enterprise Edition. Use of Developer Edition is not supported for production environments.
+## SQL Server 2016 R features
 
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------|----------|--------|---|------------------------------|-------|
-| R interpreter & proprietary packages | Yes | Yes | No | No | No | 
-| Python interpreter & client libraries | Yes | Yes | No | No | No | 
-| Data chunking <br/>(process large amounts of data, in excess of what fits in memory) | Yes | No | No | No | No |
-| Scale-up processing <br/>(more than 2 processors) | Yes | No | No | No | No |
-| Operationalization | Yes | No | No | No | No |
-| [PREDICT](../../t-sql/queries/predict-transact-sql.md) function <br/>(performs [native scoring](../sql-native-scoring.md) on a pre-trained model, previously saved in the required binary format) | Yes | Yes | Yes | Yes | Yes |
-| R Client compatibility | Yes | Yes | No | No | No | 
-| Microsoft R Open | Yes | Yes | No | No | No | 
-| Anaconda Python 3.5 | Yes | Yes | No | No | No | 
-
-## SQL Server 2016 R Services (In-Database) and R Server (Standalone)
-
-Feature availability is the same as 2017, minus Python support which was not part of the first 2016 release.
+SQL Server 2016 includes R integration only. In SQL Server 2016, basic and advanced R integration are equivalent to SQL Server 2017.
 
 ## R feature availability in Azure SQL Database
   
-After an initial test release, R Services is currently **not** available in Azure SQL Database, pending further development. 
+After an initial test release, R Services was removed from Azure SQL Database, pending further development. 
 
 ## Performance expectations for Enterprise Edition
 
 Performance of machine learning solutions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is expected to generally surpass implementations using conventional R, given the same hardware. That is because, in SQL Server, R solutions can be run using server resources and sometimes distributed to multiple processes using the **RevoScaleR** functions. 
-
-Performance has not been assessed for Python solutions, as the feature is still under development, but some of the same benefits are expected to apply.
 
 Users can also expect to see considerable differences in performance and scalability for the same machine learning solution if run in Enterprise Edition vs. Standard Edition. Reasons include support for parallel processing, increased threads available for machine learning, and streaming (or chunking), which allows the RevoScaleR functions to handle more data than can fit in memory. 
 

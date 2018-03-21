@@ -7,7 +7,7 @@ ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/20/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
@@ -30,9 +30,9 @@ Indicates a filter for data in a [Recordset](../../../ado/reference/ado-api/reco
 ## Settings and Return Values  
  Sets or returns a **Variant** value, which can contain one of the following:  
   
--   **Criteria string** ??? a string made up of one or more individual clauses concatenated with **AND** or **OR** operators.  
+-   **Criteria string:** A string made up of one or more individual clauses concatenated with **AND** or **OR** operators.  
   
--   **Array of bookmarks** ??? an array of unique bookmark values that point to records in the **Recordset** object.  
+-   **Array of bookmarks:** An array of unique bookmark values that point to records in the **Recordset** object.  
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) value.  
   

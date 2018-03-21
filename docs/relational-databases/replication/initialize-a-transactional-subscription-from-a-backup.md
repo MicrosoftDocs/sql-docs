@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

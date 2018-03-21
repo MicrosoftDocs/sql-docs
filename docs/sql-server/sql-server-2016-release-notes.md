@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
-ms.date: "02/27/2018"
+ms.date: "03/14/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -24,7 +24,7 @@ ms.workload: "Active"
 ---
 # SQL Server 2016 Release Notes
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-  This article describes limitations and issues with SQL Server 2016 releases. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
+  This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
 > [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 >
@@ -32,12 +32,51 @@ ms.workload: "Active"
 >
 > [![Download SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) available
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP1. In addition to the fixes that are listed in this article, SQL Server 2016 SP1 includes hotfixes that were included in SQL Server 2016 Cumulative Update 1 (CU1) to SQL Server 2016 CU3.
+## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1  includes all the fixes up to SQL Server 2016 RTM CU3 including Security Update MS16-136. It contains a roll-up of solutions provided in SQL Server 2016 cumulative updates up to and includes the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016. 
 
-- [SQL Server 2016 SP1 download page](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545) Lists the individual bug #s and issues that were fixed or changed in SP1.
- - ![info_tip](../sql-server/media/info-tip.png) See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+The following features are available in the Standard, Web, Express, and Local DB editions of SQL Server SP1 (except as noted):
+- Always encrypted
+- Changed data capture (not available in Express)
+- Columnstore
+- Compression
+- Dynamic data masking
+- Fine grain auditing
+- In Memory OLTP (not availabe in Local DB)
+- Multiple filestream containers (not available in Local DB)
+- Partitioning
+- Polybase
+- Row level security
+
+The following table summarizes key improvements provided in SQL Server 2016 SP1.
+
+|Feature|Description|For more information|
+|---|---|---|
+|Bulk insert into heaps with auto TABLOCK under TF 715| Trace Flag 715 enables table lock for bulk load operations into heap with no non-clustered indexes.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|CREATE OR ALTER|Deploy objects such as Stored Procedures, Triggers, User-Defined Functions, and Views.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|DROP TABLE support for replication|DROP TABLE DDL support for replication to allow replication articles to be dropped.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
+|Filestream RsFx Driver signing|The Filestream RsFx driver is signed and certified using Windows Hardware Developer Center Dashboard portal (Dev Portal) allowing SQL Server 2016 SP1 Filestream RsFx driver to be installed on Windows Server 2016/Windows 10 without any issue.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|LPIM to SQL service account - programmatic identification|Allow DBAs to programmatically identify if Lock Pages in Memory (LPIM) privilege is in effect at the service startup time.|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|Manual Change Tracking Cleanup|New stored procedure cleans the change tracking internal table on demand.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
+|Parallel INSERT..SELECT Changes for Local temp tables|New Parallel INSERT in INSERT..SELECT operations.|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|Showplan XML|Extended diagnostics including grant warning and maximum memory enabled for a query, enabled trace flags, and also surfaces other diagnostic information. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
+|Storage class memory|Boost the transaction processing using Storage Class Memory in Windows Server 2016, resulting in the ability to accelerate transaction commit times by orders of magnitude.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
+|USE HINT|Use the query option, `OPTION(USE HINT('<option>'))` to alter query optimizer behavior using supported query level hints. Unlike QUERYTRACEON, the USE HINT option does not require sysadmin privileges.|[Developers Choice: USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|XEvent additions|New XEvents and Perfmon diagnostics capabilities improve latency troubleshooting.|[Extended Events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+
+In addition, note the following fixes:
+- Based on feedback from DBAs and SQL community, starting SQL 2016 SP1, the Hekaton logging messages are reduced to minimal.
+- Review new [Trace flags](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
+- The full versions of the WideWorldImporters sample databases now work with Standard Edition and Express Edition, starting SQL Server 2016 SP1 and are available on [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). No changes are needed in the sample. The database backups created at RTM for Enterprise edition work with Standard and Express in SP1. 
+
+The SQL Server 2016 SP1 installation may require reboot post installation. As a best practice, we recommend to plan and perform a reboot following the installation of SQL Server 2016 SP1.
+
+### Download pages and more information
+
+- [Download Service Pack 1 for Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=54276)
+- [SQL Server 2016 Service Pack 1 (SP1) Released](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545)
+- ![info_tip](../sql-server/media/info-tip.png) [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Database Engine (GA)](#bkmk_ga_instalpatch) 

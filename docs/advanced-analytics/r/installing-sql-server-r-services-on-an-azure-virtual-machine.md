@@ -70,11 +70,10 @@ You can also enable or disable the feature on an existing SQL Server virtual mac
 If you created an Azure virtual machine that included SQL Server without machine learning, you can add the feature by following these steps:
 
 1. Re-run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup and add the feature on the **Server Configuration** page of the wizard.
-2. Enable execution of external scripts and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Set up SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+2. Enable execution of external scripts and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 3. (Optional) Configure database access for R worker accounts, if needed for remote script execution.
-   For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
-3. (Optional) Modify a firewall rule on the Azure virtual machine, if you intend to allow R script execution from remote data science clients. For more information, see [Unblock firewall](#firewall).
-4. Install or enable required network libraries. For more information, see [Add network protocols](#network).
+4. (Optional) Modify a firewall rule on the Azure virtual machine, if you intend to allow R script execution from remote data science clients. For more information, see [Unblock firewall](#firewall).
+5. Install or enable required network libraries. For more information, see [Add network protocols](#network).
 
 ## Additional steps
 
@@ -97,7 +96,7 @@ To enable access from remote data science clients:
 ### Enable ODBC callbacks for remote clients
 
 If you expect that clients calling the server will need to issue ODBC queries as part of their machine learning solutions, you must ensure that the Launchpad can make ODBC calls on behalf of the remote client. To do this, you must allow the SQL worker accounts that are used by Launchpad to log into the instance.
-   For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+   For more information, see [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 ### <a name="network"></a>Add network protocols
 

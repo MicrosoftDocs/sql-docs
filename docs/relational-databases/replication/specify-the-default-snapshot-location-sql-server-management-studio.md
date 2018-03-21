@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "default snapshot locations"
 ms.assetid: 27c5d9ad-a915-4c59-a8b7-82e3af61ac4d
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.rep.configuredistributionwizard.distributiondatabase.f1"
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 caps.latest.revision: 26
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

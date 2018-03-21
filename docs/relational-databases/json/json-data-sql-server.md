@@ -320,7 +320,7 @@ For a visual introduction to the built-in JSON support in SQL Server and Azure S
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
 *Building REST API with SQL Server using JSON functions*
-> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+> [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
 ### Reference articles  
   

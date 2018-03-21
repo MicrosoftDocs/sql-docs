@@ -33,7 +33,7 @@ To configure SQL Server 2017 to allow Python script execution is a multi-step pr
 
 Additional steps might be required to support remote script execution.
 
-For more information, see [Set up Machine Learning Services](setup-python-machine-learning-services.md)
+For more information, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 
 ### Launchpad
 

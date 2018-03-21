@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], about Oracle publishing"
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: "MashaMSFT"
+ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

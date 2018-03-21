@@ -1,8 +1,8 @@
 ---
-title: "Reporting Services (SSRS) | Microsoft Docs"
-description: "Learn about tools and services for mobile and paginated Reporting Services reports and Power BI reports on premises."
+title: "What is SQL Server Reporting Services (SSRS) | Microsoft Docs"
+description: "Learn about tools and services for mobile and paginated Reporting Services reports on premises."
 ms.custom: ""
-ms.date: "07/01/2017"
+ms.date: "03/16/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
@@ -32,7 +32,7 @@ ms.workload: "Active"
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Looking for Power BI Report Server? See [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 Create, deploy, and manage mobile and paginated Reporting Services reports on premises with the range of ready-to-use tools and services that SQL Server Reporting Services (SSRS) provides.
 
@@ -49,9 +49,6 @@ For SQL Server 2016, Reporting Services offers an updated suite of products:
 * **A modern web portal** you can view in any modern browser. In the new portal, you can organize and display mobile and paginated Reporting Services reports and KPIs. You can also store Excel workbooks on the portal.
 
 Read on for more about each.
-
-> [!NOTE]
-> Looking for Power BI Report Server? See [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ### What's new in Reporting Services
 

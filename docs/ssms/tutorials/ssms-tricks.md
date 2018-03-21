@@ -88,7 +88,7 @@ The indentation buttons allow you to increase and decrease the indent of your te
 2. Paste the following T-SQL code snippet into your text window: 
 
   ```sql
-  USE master
+    USE master
     GO
 
     -- Drop the database if it already exists
@@ -96,7 +96,8 @@ The indentation buttons allow you to increase and decrease the indent of your te
 	    SELECT name 
 		    FROM sys.databases 
 		    WHERE name = N'TutorialDB'
-        )
+            )
+
     DROP DATABASE TutorialDB
     GO
 
@@ -106,6 +107,7 @@ The indentation buttons allow you to increase and decrease the indent of your te
     ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
     GO
  ``` 
+ 
 3. Highlight the **Alter Database** portion of the text and press **Increase Indent** in the toolbar to move this text forward
 
     ![Increase Indent](media/ssms-tricks/increaseindent.png)

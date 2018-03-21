@@ -23,11 +23,13 @@ helpviewer_keywords:
 
 # Tutorial: Script Objects in SQL Server Management Studio
 This tutorial will teach you how to generate Transact-SQL (T-SQL) scripts for various  objects found within SQL Server Management Studio.  In this tutorial, you will find examples of how to script the following objects: 
- - Queries when performing actions within the GUI
- - Databases in two different ways ("Script As" and "Generate Script")
- - Tables
- - Stored procedures
- - Extended events
+
+> [!div class="checklist"]
+> * Queries when performing actions within the GUI
+> * Databases in two different ways ("Script As" and "Generate Script")
+> * Tables
+> * Stored procedures
+> * Extended events
 
 The summary of this tutorial is that any object in **Object Explorer** can be scripted by right-clicking on it and selecting the **Script Object As** option. 
 
@@ -36,15 +38,14 @@ The summary of this tutorial is that any object in **Object Explorer** can be sc
 To complete this Tutorial, you need SQL Server Management Studio, access to a SQL Server, and an AdventureWorks database. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). 
-    - Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## Script Queries from GUI
 Any time you perform a task using the GUI in SSMS, you can also generate the T-SQL code associated with that task. The following examples show how to do so when taking a backup of a database, and when  you shrink the transaction log.  These same steps can be applied to any action that's completed via the GUI. 
 
-### ScriptT-SQL when backing up a database
+### Script T-SQL when backing up a database
 1. Connect to your SQL Server.
 2. Expand the **Databases** node.
 3. Right-click the database > **Tasks** > **Back up**:
@@ -78,7 +79,7 @@ Any time you perform a task using the GUI in SSMS, you can also generate the T-S
     ![Paste Script](media/scripting-ssms/paste.png)
 
 
-## Script databases
+## Script Databases
 The following section teaches you how to script out the database, both using the **Script As** option and the **Generate Scripts** option.  The **Script As** option will recreate the database and the configuration options for it. The **Generate Scripts** option will script out all of the objects in the database, but not the data. To script the data as well, you will need to you use the [Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/start-the-sql-server-import-and-export-wizard).  
 
 
@@ -120,7 +121,7 @@ This section covers how to script out tables from your database.
 2. Expand your **Databases** node.
 3. Expand your **AdventureWorks** database node. 
 4. Expand your **Tables** node.
-5. Right-click the table you want to script out > **Script Table as**
+5. Right-click the table you want to script out > **Script Table as**:
     - From here, there are various options such as creating the table, or inserting data into it: 
     
     ![Script Table](media/scripting-ssms/scripttable.png)
@@ -132,7 +133,7 @@ This section covers how to script out stored procedures.
 2. Expand your **Databases** node.
 3. Expand your **Programmability** node. 
 4. Expand your **Stored Procedure** node.
-5. Right-click the stored procedure you're interested in > **Script Stored Procedure As**
+5. Right-click the stored procedure you're interested in > **Script Stored Procedure As**:
     
     ![Script Stored Procedures](media/scripting-ssms/scriptstoredprocedure.PNG)
 

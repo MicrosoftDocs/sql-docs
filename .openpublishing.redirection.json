@@ -3393,7 +3393,7 @@
       
       {
 	  "source_path": "docs/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md",
-	  "redirect_url": "/ssms/tutorials/connect-query-sql-server",
+	  "redirect_url": "sql/ssms/tutorials/connect-query-sql-server",
 	  "redirect_document_id": false
 	  },
       

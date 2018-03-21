@@ -3393,134 +3393,133 @@
       
       {
 	  "source_path": "docs/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md",
-	  "redirect_url": "docs/ssms/tutorials/connect-query-sql-server",
+	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
 	  "redirect_document_id": false
 	  },
       
       {
 	  "source_path": "docs/ssms/tutorials/lesson-1-1-start-sql-server-management-studio.md",
-	  "redirect_url": "docs/ssms/tutorials/connect-query-sql-server",
+	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
 	  "redirect_document_id": false
       },
 
 	  {
         "source_path": "docs/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
-        "redirect_url": "docs/ssms/tutorials/connect-query-sql-server",
+        "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
         "redirect_document_id": false
       }  ,  
 
 	  {
         "source_path": "docs/ssms/tutorials/lesson-1-3-change-the-environment-layout.md",
-        "redirect_url": "docs/ssms/tutorials/ssms-configuration",
+        "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
         "redirect_document_id": false
         },
     
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-1-4-display-the-query-window.md",
-	  "redirect_url": "docs/ssms/tutorials/ssms-configuration",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
 	  "redirect_document_id": false
       },
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-1-5-show-the-object-explorer-details-page.md",
-	  "redirect_url": "docs/ssms/tutorials/ssms-configuration",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
 	  "redirect_document_id": false
       },
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md",
-	  "redirect_url": "docs/ssms/tutorials/ssms-configuration",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
 	  "redirect_document_id": false
       },
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-1-7-set-the-startup-options.md",
-	  "redirect_url": "docs/ssms/tutorials/ssms-configuration",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
 	  "redirect_document_id": false
       },
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md",
-	  "redirect_url": "docs/ssms/tutorials/ssms-configuration",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
 	  "redirect_document_id": false
       },
 
       	  {
 	  "source_path": "docs/ssms/tutorials/lesson-1-9-summary-basic-navigation.md",
-	  "redirect_url": "docs/ssms/tutorials/ssms-configuration",
+	  "redirect_url": "/sql/docs/ssms/tutorials/ssms-configuration",
 	  "redirect_document_id": false
       },
 
 	  {
-	  "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",
-	  "redirect_url": "docs/ssms/tutorials/connect-query-sql-server",
+	  "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
 	  "redirect_document_id": false
       },
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-2-1-connecting-with-query-editor.md",
-	  "redirect_url": "docs/ssms/tutorials/connect-query-sql-server",
+	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
 	  "redirect_document_id": false
       },
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-2-3-maximizing-query-editor.md",
-	  "redirect_url": "docs/ssms/tutorials/ssms-configuration",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
 	  "redirect_document_id": false
       },
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-2-4-using-comments.md",
-	  "redirect_url": "docs/ssms/tutorials/ssms-tricks.md",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-tricks",
 	  "redirect_document_id": false
       },
 
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md",
-	  "redirect_url": "docs/ssms/tutorials/ssms-configuration",
+	  "redirect_url": "/sql/ssms/tutorials/ssms-configuration",
 	  "redirect_document_id": false
       },
 
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-2-6-script-a-table.md",
-	  "redirect_url": "docs/ssms/tutorials/scripting-ssms",
+	  "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
 	  "redirect_document_id": false
       },
 
 
       	  {
 	  "source_path": "docs/ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md",
-	  "redirect_url": "docs/ssms/tutorials/templates-ssms",
+	  "redirect_url": "/sql/ssms/tutorials/templates-ssms",
 	  "redirect_document_id": false
       },
 
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-3-1-create-scripts-using-templates.md",
-	  "redirect_url": "docs/ssms/tutorials/templates-ssms",
+	  "redirect_url": "/sql/ssms/tutorials/templates-ssms",
 	  "redirect_document_id": false
       },
 
 
       	  {
 	  "source_path": "docs/ssms/tutorials/lesson-3-2-create-custom-templates.md",
-	  "redirect_url": "docs/ssms/tutorials/templates-ssms",
+	  "redirect_url": "/sql/ssms/tutorials/templates-ssms",
 	  "redirect_document_id": false
       },
 
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md",
-	  "redirect_url": "docs/ssms/tutorials/scripting-ssms",
+	  "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
 	  "redirect_document_id": false
       },
 
 
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-3-4-summary-solutions-and-script-projects.md",
-	  "redirect_url": "docs/ssms/tutorials/scripting-ssms",
+	  "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
 	  "redirect_document_id": false
       }
     ]

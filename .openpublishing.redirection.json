@@ -3487,39 +3487,34 @@
 	  "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
 	  "redirect_document_id": false
       },
-
-
-      	  {
+      {
 	  "source_path": "docs/ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md",
 	  "redirect_url": "/sql/ssms/tutorials/templates-ssms",
 	  "redirect_document_id": false
       },
-
-
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-3-1-create-scripts-using-templates.md",
 	  "redirect_url": "/sql/ssms/tutorials/templates-ssms",
 	  "redirect_document_id": false
       },
-
-
-      	  {
+      {
 	  "source_path": "docs/ssms/tutorials/lesson-3-2-create-custom-templates.md",
 	  "redirect_url": "/sql/ssms/tutorials/templates-ssms",
 	  "redirect_document_id": false
       },
-
-
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md",
 	  "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
 	  "redirect_document_id": false
       },
-
-
 	  {
 	  "source_path": "docs/ssms/tutorials/lesson-3-4-summary-solutions-and-script-projects.md",
 	  "redirect_url": "/sql/ssms/tutorials/scripting-ssms",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/relational-databases/server-management-objects-smo/link-to-programming-samples.md",
+	  "redirect_url": "/sql/relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net",
 	  "redirect_document_id": false
       }
     ]

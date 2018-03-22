@@ -20,7 +20,7 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Run a Matching Project

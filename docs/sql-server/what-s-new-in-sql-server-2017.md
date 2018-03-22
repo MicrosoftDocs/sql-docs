@@ -126,4 +126,6 @@ For more information, see [What's new in SQL Server Machine Learning Services](~
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

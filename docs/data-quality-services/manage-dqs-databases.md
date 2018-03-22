@@ -16,7 +16,7 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage DQS Databases

@@ -101,6 +101,8 @@
 
 ### [Install new Python packages on SQL Server](python/install-additional-python-packages-on-sql-server.md)
 
+### [Configure Python tools for use with SQL Server](python/setup-python-client-tools-sql.md)
+
 ### [Enable R package management for a SQL Server instance](r/r-package-how-to-enable-or-disable.md)
 
 ### [Determine which packages are installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)

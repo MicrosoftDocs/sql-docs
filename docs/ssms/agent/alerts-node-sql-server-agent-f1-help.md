@@ -28,5 +28,3 @@ ms.workload: "Inactive"
 This section contains the F1 Help for the **Alerts** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 
-> [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.

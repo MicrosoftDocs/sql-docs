@@ -57,23 +57,23 @@ It is possible to use the new Azure AD authentication options when creating or e
 
 `Authentication=ActiveDirectoryIntegrated` for Azure Active Directory Integrated authentication to SQL Azure
 
-![CreateNewDSN3.png](windows/CreateNewDSN3.png)
+![CreateNewDSN_ADIntegrated.png](windows/CreateNewDSN_ADIntegrated.png)
 
 `Authentication=ActiveDirectoryPassword` for Azure Active Directory username/password authentication to SQL Azure
 
-![CreateNewDSN4.png](windows/CreateNewDSN4.png)
+![CreateNewDSN_ADPassword.png](windows/CreateNewDSN_ADPassword.png)
 
 `Authentication=ActiveDirectoryInteractive` for Azure Active Directory interactive authentication to SQL Azure
 
-![CreateNewDSN4.png](windows/CreateNewDSN5.png)
+![CreateNewDSN_ADInteractive.png](windows/CreateNewDSN_ADInteractive.png)
 
 `Authentication=SqlPassword` for username/password authentication to SQL Server (Azure or otherwise)
 
-![CreateNewDSN.png](windows/CreateNewDSN.png)
+![CreateNewDSN_SQLServer.png](windows/CreateNewDSN_SQLServer.png)
 
 `Trusted_Connection=Yes` for Windows legacy SSPI integrated authentication
 
-![CreateNewDSN2.png](windows/CreateNewDSN2.png)
+![CreateNewDSN_winSSPI.png](windows/CreateNewDSN_winSSPI.png)
 
 The five options correspond to `Trusted_Connection=Yes` (existing legacy Windows SSPI-only integrated authentication) and `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, `ActiveDirectoryPassword`, and `ActiveDirectoryInteractive`, respectively.
 
@@ -81,7 +81,7 @@ The five options correspond to `Trusted_Connection=Yes` (existing legacy Windows
 
 The prompt dialog displayed by SQLDriverConnect when it requests information required to complete the connection contains three new options for Azure AD authentication:
 
-![SQLServerLogin.png](windows/SQLServerLogin.png)
+![ServerLogin.png](windows/ServerLogin.png)
 
 These options correspond to the same five available in the DSN setup UI above.
 

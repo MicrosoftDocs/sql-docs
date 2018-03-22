@@ -23,7 +23,11 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)].  
   
 **In This Topic**  

@@ -60,6 +60,4 @@ For more information, see these resources:
 
 + [Resource governance for R Services](../r/resource-governance-for-r-services.md)
 
-+ [Monitoring R Services](../r/monitoring-r-services.md)
-
 + [Configure and manage Advanced Analytics Extensions](../r/configure-and-manage-advanced-analytics-extensions.md)

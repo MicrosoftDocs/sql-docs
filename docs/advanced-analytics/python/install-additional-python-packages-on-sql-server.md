@@ -28,7 +28,7 @@ For help figuring out where packages are installed, or which packages are instal
 
 ## Prerequisites
 
-+ You must have installed Machine Learning Services (In-Database) with the Python language option. For instructions, see [Set up Python Machine Learning Services](setup-python-machine-learning-services.md).
++ You must have installed Machine Learning Services (In-Database) with the Python language option. For instructions, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 
 + For each server instance, you must install a separate copy of the package. Packages cannot be shared across instances.
 

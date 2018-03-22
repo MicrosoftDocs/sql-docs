@@ -18,7 +18,7 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Domain Management: Domain List

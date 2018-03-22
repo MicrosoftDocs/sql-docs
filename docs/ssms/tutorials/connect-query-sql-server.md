@@ -1,30 +1,32 @@
 ---
-Title: "Quickstart: Connect and Query SQL Server using SQL Server Management Studio"
-description: A Quickstart for connecting to SQL Server using SQL Server Management Studio and running basic T-SQL queries.
+Title: "Tutorial: Connect and Query SQL Server using SQL Server Management Studio"
+description: A Tutorial for connecting to SQL Server using SQL Server Management Studio and running basic T-SQL queries.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Quickstart
+ms.topic: tutorial
 ms.suite: "sql"
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
 ---
 
-# Quickstart: Connect and Query SQL Server using SQL Server Management Studio
-This Quickstart shows how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance, and run some basic Transact-SQL (T-SQL) commands. This article demonstrates how to do the following:
-    - [Connect to a SQL Server](#connect-to-a-sql-server)
-    - [Create a new database (**TutorialDB**)](#create-a-database)
-    - [Create a table (**Customers**) in your new database](#create-a-table)
-    - [Insert rows into your new **Customers** table](#insert-rows)
-    - [Query the **Customers** table and view the results](#view-query-results)
-    - [Use the query window table to verify your connection properties](#verify-your-query-window-connection-properties)
-    - [Change which server your query window is connected to](#change-server-connection-within-query-window)
+# Tutorial: Connect and Query SQL Server using SQL Server Management Studio
+This Tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance, and run some basic Transact-SQL (T-SQL) commands. This article demonstrates how to do the following:
+
+> [!div class="checklist"]
+> * [Connect to a SQL Server](#connect-to-a-sql-server)
+> * [Create a new database (**TutorialDB**)](#create-a-database)
+> * [Create a table (**Customers**) in your new database](#create-a-table)
+> * [Insert rows into your new **Customers** table](#insert-rows)
+> * [Query the **Customers** table and view the results](#view-query-results)
+> * [Use the query window table to verify your connection properties](#verify-your-query-window-connection-properties)
+> * [Change which server your query window is connected to](#change-server-connection-within-query-window)
 
 
 ## Prerequisites
-To complete this Quickstart, you need SQL Server Management Studio and access to a SQL Server. 
+To complete this Tutorial, you need SQL Server Management Studio and access to a SQL Server. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 

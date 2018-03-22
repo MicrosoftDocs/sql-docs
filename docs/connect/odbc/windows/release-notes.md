@@ -28,7 +28,7 @@ manager: "jhubbard"
 **Features Added**:
 
 Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes
-- `SQL_COPT_SS_CEKCACHETTL` Allows to control the time that local cache of Column Encryption Keys exist, as well as flushing it
+- `SQL_COPT_SS_CEKCACHETTL` Allows to control the time that the local cache of Column Encryption Keys exist, as well as flushing it
 - `SQL_COPT_SS_TRUSTEDCMKPATHS` Allows setting the local paths to Column Master Keys
 
 Azure Active Directory Interactive Authentication Support

@@ -19,7 +19,7 @@ ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Knowledge Base

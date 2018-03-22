@@ -19,7 +19,7 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure Advanced Settings for DQS Log Files

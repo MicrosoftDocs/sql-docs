@@ -16,7 +16,7 @@ ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Quality Services Features and Tasks

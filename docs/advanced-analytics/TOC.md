@@ -141,6 +141,15 @@
 ### [Using R code profiling functions](r/using-r-code-profiling-functions.md)
 ### [Monitor Machine Learning Services using custom reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
+# [Reference](r/machine-learning-services-r-reference.md)
+
+## [MicrosoftML](using-the-microsoftml-package.md)
+## [RevoScaleR](r/revoscaler-overview.md)
+### [RevoScaleR functions for SQL Server data](r/scaler-functions-for-working-with-sql-server-data.md)
+## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
+## [revscalepy](python/what-is-revoscalepy.md)
+
 # Resources
 
 ## [Known issues](known-issues-for-sql-server-machine-learning-services.md)
@@ -162,12 +171,3 @@
 ## Feedback Forums
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
 ### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
-
-# [Reference](r/machine-learning-services-r-reference.md)
-
-## [MicrosoftML](using-the-microsoftml-package.md)
-## [RevoScaleR](r/revoscaler-overview.md)
-### [RevoScaleR functions for SQL Server data](r/scaler-functions-for-working-with-sql-server-data.md)
-## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
-## [RevoScalePy](python/what-is-revoscalepy.md)

@@ -27,7 +27,7 @@ ms.workload: "Inactive"
 
 ## SQL Server 2017 features
 
-Enterprise and Developer editions have the same feature coverage so that you can build solutions for an Enterprise installation without incurring the same cost. Although the editions are functionally equivlanet, use of the Developer Edition is not supported for production environments.
+Enterprise and Developer editions have the same feature coverage so that you can build solutions for an Enterprise installation without incurring the same cost. Although the editions are functionally equivalent, use of the Developer Edition is not supported for production environments.
 
 The difference between basic and advanced integration is scale. Advanced integration can use all available cores for parallel processing of data sets at any size your computer can accommodate. Basic integration is limited to 2 cores and to data sets fitting in memory. 
 

@@ -19,12 +19,12 @@ ms.workload: "Inactive"
 # Python Libraries and Data Types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes the Python libraries that are included with the following products:
+This article describes the Python libraries that are included with the following products:
 
 + SQL Server Machine Learning Services (In-Database)
 + Microsoft Machine Learning Server (Standalone)
 
-This topic also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
+This article also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
 
 ## Python Version
 

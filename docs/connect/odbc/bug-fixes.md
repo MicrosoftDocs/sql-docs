@@ -19,8 +19,8 @@
 - Fixed inability to retrieve data in an encrypted varbinary(max) column without conversion
 - Fixed a problem where after a null varchar(max) encrypted column is fetched using SQLGetData() on a static cursor, the following column is also nulled even if it has data
 - Fixed an issue with fetching varbinary(max) field with AE on
-- Fixed a problem of setlocale not working with AE
-- Fixed an issue with SQLDescribeParam() returning error when callen on XML-type stored procedure parameter with AE on
+- Fixed a problem of setlocale() not working with AE
+- Fixed an issue with SQLDescribeParam() returning error when called on XML-type stored procedure parameter with AE on
 - Fixed escaped underscores not working in SQLTables
 - Fixed a bug where Hebrew data (varchar) is chopped when returned as wide chars on Linux
 - Fixed an issue with querying Shift-JIS encoded char/varchar from UTF-8 application

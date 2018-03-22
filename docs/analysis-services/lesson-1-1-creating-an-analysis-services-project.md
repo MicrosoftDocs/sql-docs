@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 1-1 - Creating an Analysis Services Project
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 In the following task, you use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project named **Analysis Services Tutorial**, based on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Project template. A *project* is a collection of related objects. Projects exist within a solution, which includes one or more projects. For more information, see [Create an Analysis Services Project &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### To create a new Analysis Services project  

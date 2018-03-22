@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Distributor Settings dialog box"
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Distributor Settings

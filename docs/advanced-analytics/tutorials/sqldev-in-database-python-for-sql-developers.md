@@ -20,9 +20,10 @@ ms.assetid:
 caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # In-Database Python analytics for SQL developers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The goal of this walkthrough is to provide SQL programmers with hands-on experience building a machine learning solution using Python that runs in SQL Server. In this walkthrough, you'll learn how to add Python code to stored procedures and run stored procedures to build and predict from models.
 
@@ -75,7 +76,7 @@ All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored p
 
 ### Prerequisites
 
-+ Install an instance of SQL Server 2017 with Machine Learning Services and Python enabled. For more information, see [Set up SQL Server Machine Learning Services with Python](../python/setup-python-machine-learning-services.md).
++ Install an instance of SQL Server 2017 with Machine Learning Services and Python enabled. For more information, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 + The login that you use for this walkthrough must have permissions to create databases and other objects, to upload data, select data, and run stored procedures.
 
 ### Experience level

@@ -16,7 +16,7 @@ ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Connection Required Permissions for the CDC Service

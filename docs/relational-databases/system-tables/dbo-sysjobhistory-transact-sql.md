@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysjobhistory system table"
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # dbo.sysjobhistory (Transact-SQL)

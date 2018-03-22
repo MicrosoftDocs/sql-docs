@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "administering replication, backing up"
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Back Up and Restore Replicated Databases

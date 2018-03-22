@@ -34,7 +34,7 @@ ms.workload: "Active"
   
 The total number of permissions for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] is 237. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on SQL Database, and a few permissions only make sense on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) topic specifies which topics are new in recent versions. The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
   
-[![Database Engine Permissions](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Database Engine Permissions](../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 Once you understand the permissions, apply server level permissions to logins and database level permissions users with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:   
 ```sql
@@ -97,7 +97,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
      The REFERENCES permission is needed on an object to create a FUNCTION or VIEW with the `WITH SCHEMABINDING` clause that references that object.  
   
 ## Chart of SQL Server Permissions  
- For a poster sized chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions in pdf format, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For a poster sized chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions in pdf format, see [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  The following table lists major classes of permissions and the kinds of securables to which they may be applied.  
@@ -417,7 +417,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
   
 7.  Pass the permission check if the **required permission** was not denied and the **required permission** contains a GRANT or a GRANT WITH GRANT permission either directly or implicitly to any of the identities in the **security context** for any object in the **permission space**.  
 
-## Secial considerations for column level permissions
+## Special considerations for column level permissions
 
 Column level permissions are granted with the syntax *<table_name>(\<column _name>)*. For example:
 ```sql

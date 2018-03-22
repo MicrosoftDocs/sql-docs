@@ -21,7 +21,7 @@ ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Recordset Positioning

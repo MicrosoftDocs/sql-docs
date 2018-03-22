@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_post_msx_operation"
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_post_msx_operation (Transact-SQL)

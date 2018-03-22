@@ -17,9 +17,9 @@ f1_keywords:
   - "sql14.dts.designer.afpadlsdest.f1"
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure Data Lake Store Destination

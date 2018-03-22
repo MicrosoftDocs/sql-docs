@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "ssbdiagnose"
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER BROKER PRIORITY (Transact-SQL)

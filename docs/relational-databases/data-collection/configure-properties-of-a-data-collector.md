@@ -17,9 +17,9 @@ f1_keywords:
   - "sql13.swb.dc.datacollectionprop.advanced.f1"
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure Properties of a Data Collector

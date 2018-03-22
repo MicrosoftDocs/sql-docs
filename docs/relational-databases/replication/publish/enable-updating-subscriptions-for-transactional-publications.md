@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "subscriptions [SQL Server replication], updatable"
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Enable Updating Subscriptions for Transactional Publications

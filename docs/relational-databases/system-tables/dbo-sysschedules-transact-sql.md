@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysschedules system table"
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # dbo.sysschedules (Transact-SQL)

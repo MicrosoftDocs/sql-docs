@@ -21,7 +21,7 @@ ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LOWER (SSIS Expression)

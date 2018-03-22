@@ -23,7 +23,7 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_rda_reconcile_columns (Transact-SQL)

@@ -28,7 +28,7 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP XML SCHEMA COLLECTION (Transact-SQL)

@@ -18,7 +18,7 @@ ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Fields Collection Properties, Methods, and Events

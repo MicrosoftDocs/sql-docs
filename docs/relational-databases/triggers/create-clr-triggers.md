@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DDL triggers, CLR triggers"
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create CLR Triggers

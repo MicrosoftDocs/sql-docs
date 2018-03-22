@@ -19,7 +19,7 @@ ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Run Queries (Visual Database Tools)

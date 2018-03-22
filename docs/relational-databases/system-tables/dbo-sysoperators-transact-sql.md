@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysoperators system table"
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.sysoperators (Transact-SQL)

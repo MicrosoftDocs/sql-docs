@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ISQLServerErrorInfo interface"
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Error Detail

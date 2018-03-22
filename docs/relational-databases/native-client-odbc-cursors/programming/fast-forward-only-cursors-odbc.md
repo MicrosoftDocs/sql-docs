@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "ODBC cursors, fast forward-only"
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Fast Forward-Only Cursors (ODBC)

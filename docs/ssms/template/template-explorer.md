@@ -25,7 +25,7 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Template Explorer

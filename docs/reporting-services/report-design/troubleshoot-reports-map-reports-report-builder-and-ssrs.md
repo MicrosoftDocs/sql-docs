@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Reports: Map Reports (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "01/17/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
@@ -26,9 +26,9 @@ ms.workload: "Inactive"
    ## Need more help?  
    
   Try:  
- *  MSDN forum for [SQL Server 2016](https://social.msdn.microsoft.com/forums/sqlserver/en-us/home?forum=sqlserver2016)  
- * [SQL Server 2016](http://stackoverflow.com/questions/tagged/sql-server-2016) on Stack Overflow  
- * Log an issue or suggestion at [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+ * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) on Stack Overflow  
+ * Log an issue or suggestion at [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
+
   
 ##  <a name="Embedded"></a> Report Definition Size Issues  
  Use this section to help solve issues that relate to report definition size.  

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "Windows System Monitor [SQL Server], logs"
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Charts, Alerts, Logs, and Reports

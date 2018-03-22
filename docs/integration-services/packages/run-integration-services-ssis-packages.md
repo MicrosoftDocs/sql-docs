@@ -27,7 +27,7 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 65
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Run Integration Services (SSIS) Packages

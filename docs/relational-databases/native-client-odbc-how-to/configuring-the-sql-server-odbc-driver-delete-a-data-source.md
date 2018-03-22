@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "data sources [ODBC]"
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Configuring the SQL Server ODBC Driver - Delete a Data Source

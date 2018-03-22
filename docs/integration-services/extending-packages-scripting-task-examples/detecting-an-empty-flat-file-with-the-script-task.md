@@ -23,7 +23,7 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Detecting an Empty Flat File with the Script Task

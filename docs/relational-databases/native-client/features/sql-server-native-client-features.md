@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], features"
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Native Client Features

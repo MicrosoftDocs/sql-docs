@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "checking database objects"
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)

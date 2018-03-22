@@ -14,9 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Natively Compiled Stored Procedures and Execution Set Options

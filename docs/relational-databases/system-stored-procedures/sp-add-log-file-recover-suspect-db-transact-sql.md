@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_log_file_recover_suspect_db"
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_log_file_recover_suspect_db (Transact-SQL)

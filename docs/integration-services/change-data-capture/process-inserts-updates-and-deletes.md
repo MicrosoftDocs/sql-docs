@@ -18,7 +18,7 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Process Inserts, Updates, and Deletes

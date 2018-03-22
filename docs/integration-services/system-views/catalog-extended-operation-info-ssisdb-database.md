@@ -16,7 +16,7 @@ ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.extended_operation_info (SSISDB Database)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], objects created"
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Objects Created on the Oracle Publisher

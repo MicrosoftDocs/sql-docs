@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted API Reference for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/10/2016"
+ms.date: "1/19/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -27,6 +27,8 @@ ms.workload: "Inactive"
 > [!NOTE]  
 >  Always Encrypted is supported only by Microsoft JDBC Driver 6.0 or higher for SQL Server with SQL Server 2016.  
   
+ ## Always Encrypted API References
+ 
  There are several new additions and modifications to the JDBC driver API for use in client applications that use Always Encrypted.  
   
  **SQLServerConnection Class**  
@@ -86,7 +88,7 @@ ms.workload: "Inactive"
   
 |Name|Description|  
 |----------|-----------------|  
-|public SQLServerColumnEncryptionAzureKeyVaultProvider (SQLServerKeyVaultAuthenticationCallback authenticationCallback, ExecutorService executorService)|Key store provider for Azure Key Vault.  You need to provide an implementation for the SQLServerKeyVaultAuthenticationCallback interface to retrieve an access token for the key in Azure Key Vault.|  
+|public SQLServerColumnEncryptionAzureKeyVaultProvider (String clientId, String clientKey)|Key store provider for Azure Key Vault.  You need to provide the identifier and the key of the client requesting the token to authenticate to Azure Key Vault.|  
   
  Methods  
   
@@ -191,7 +193,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  If Always Encrypted is disabled for a query and the query returns results from encrypted columns, the query will return encrypted values. The encrypted values will have the varbinary datatype.  
   
-## See Also  
+ ## See Also  
  [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
-  
+

@@ -26,7 +26,7 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # managed_backup.sp_backup_config_basic (Transact-SQL)

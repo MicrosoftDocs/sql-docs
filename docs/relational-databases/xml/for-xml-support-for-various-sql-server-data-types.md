@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "data types [SQL Server], FOR XML clause"
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FOR XML Support for Various SQL Server Data Types

@@ -15,7 +15,7 @@ ms.topic: "article"
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage certificates for SQL Server Integration Services Scale Out
@@ -134,7 +134,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker
 #### 4. Update the Scale Out Worker service configuration file
 Update the Scale Out Worker service configuration file, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, on the Worker node. Update **WorkerHttpsCertThumbprint** to the thumbprint of the new certificate.
 
-#### 5. Install the client certificate to the Root store of the local computer on the Worker node
+#### 5. Install the client certificate to the Root store of the local computer on the Master node
 
 #### 6. Restart the Scale Out Worker service
 

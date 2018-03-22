@@ -37,7 +37,7 @@ ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server XML Bulk Load Object Model (SQLXML 4.0)

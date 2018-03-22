@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "guide, list"
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Guides
@@ -33,6 +33,6 @@ The following guides are available. They discuss general concepts and apply to a
 [Pages and Extents Architecture Guide](../relational-databases/pages-and-extents-architecture-guide.md)  
 [Post-migration Validation and Optimization Guide](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md)  
-[SQL Server Transaction Locking and Row Versioning Guide](https://msdn.microsoft.com/library/jj856598)  
+[SQL Server Transaction Locking and Row Versioning Guide](../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md)  
 [SQL Server Transaction Log Architecture and Management Guide](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
 [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md)

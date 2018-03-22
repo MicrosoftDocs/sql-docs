@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sample applications [WMI]"
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sample: Creating a SQL Server Agent Alert with the WMI Provider

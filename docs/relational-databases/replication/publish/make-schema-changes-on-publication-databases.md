@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "publishing [SQL Server replication], schema changes"
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Make Schema Changes on Publication Databases

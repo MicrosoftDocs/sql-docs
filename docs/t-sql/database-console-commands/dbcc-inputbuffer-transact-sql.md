@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "DBCC INPUTBUFFER statement"
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC INPUTBUFFER (Transact-SQL)

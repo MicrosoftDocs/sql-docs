@@ -26,7 +26,7 @@ ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
 caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Adding the Data Flow Task Programmatically

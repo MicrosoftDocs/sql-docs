@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Track Data Changes (SQL Server)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STEquals method"
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STEquals (geography Data Type)

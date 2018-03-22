@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "replication [SQL Server], development"
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Developer Documentation

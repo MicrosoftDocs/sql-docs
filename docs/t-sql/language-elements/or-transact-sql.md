@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "OR operator"
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OR (Transact-SQL)

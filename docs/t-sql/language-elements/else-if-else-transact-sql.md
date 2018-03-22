@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "IF keyword"
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # ELSE (IF...ELSE) (Transact-SQL)

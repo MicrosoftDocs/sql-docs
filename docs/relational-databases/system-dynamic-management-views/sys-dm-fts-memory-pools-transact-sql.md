@@ -25,7 +25,7 @@ ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
 caps.latest.revision: 29 
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_memory_pools (Transact-SQL)

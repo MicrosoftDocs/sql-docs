@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ODBC applications, stored procedures"
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Procedures

@@ -22,7 +22,7 @@ ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Method (ADOX)

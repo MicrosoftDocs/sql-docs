@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "command prompt [SQL Server replication]"
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Agent Executables Concepts

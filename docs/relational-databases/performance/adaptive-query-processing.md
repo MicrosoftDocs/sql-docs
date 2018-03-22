@@ -15,8 +15,8 @@ ms.topic: "article"
 helpviewer_keywords: 
 ms.assetid: 
 author: "joesackmsft"
-ms.author: "josack;monicar"
-manager: "jhubbard"
+ms.author: "josack"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Adaptive query processing in SQL databases

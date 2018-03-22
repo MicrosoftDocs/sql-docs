@@ -24,7 +24,7 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Excel Source

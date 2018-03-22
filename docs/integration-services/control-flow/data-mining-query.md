@@ -18,7 +18,7 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Mining Query

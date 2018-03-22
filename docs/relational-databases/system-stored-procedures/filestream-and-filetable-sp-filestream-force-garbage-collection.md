@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_filestream_force_garbage_collection"
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filestream and FileTable - sp_filestream_force_garbage_collection

@@ -23,7 +23,7 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 caps.latest.revision: 6
 author: "pmasl"
 ms.author: "pelopes"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_query_statistics_xml (Transact-SQL)

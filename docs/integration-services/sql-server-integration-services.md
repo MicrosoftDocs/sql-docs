@@ -26,7 +26,7 @@ ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server Integration Services
@@ -40,12 +40,9 @@ ms.workload: "Active"
 - [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
-##  ![info_tip](../sql-server/media/info-tip.png) Get Help
- 
-- [MSDN forum for SSIS - ask questions](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-- [MSDN forum for SSDT and SSMS - ask questions](https://social.msdn.microsoft.com/Forums/home?forum=sqltool)
-- [Stack Overflow (tag *ssis*) - ask questions](http://stackoverflow.com/questions/tagged/ssis)
-- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - general discussion about SSIS](https://www.reddit.com/r/SQLServer/search?q=ssis&restrict_sr=on)
-- [Microsoft support options for business users](https://support.microsoft.com/gp/support-options-for-business)
-- [Contact Microsoft options for business user](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
+##  ![info_tip](../sql-server/media/info-tip.png) Resources
+-   [Get help in the SSIS forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+-   [Get help on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+-   [Follow the SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
+-   [Report issues & request features](https://feedback.azure.com/forums/908035-sql-server)
+-   [Get the docs on your PC](../sql-server/sql-server-help-installation.md)

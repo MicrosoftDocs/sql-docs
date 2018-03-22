@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "TSQL_Replay template [SQL Server]"
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replay Requirements

@@ -71,9 +71,9 @@ Congratulations! You're finished authoring and deploying your first Analysis Ser
   
   
 ## See also  
-[DirectQuery Mode &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
-[Tabular Model Databases &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
+[DirectQuery Mode](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
+[Configure default data modeling and deployment properties](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[Tabular Model Databases](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
   ## What's next?

@@ -16,7 +16,7 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # catalog.set_execution_parameter_value (SSISDB Database)

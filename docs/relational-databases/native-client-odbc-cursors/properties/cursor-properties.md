@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "ODBC cursors, cursor behaviors"
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Cursor Properties

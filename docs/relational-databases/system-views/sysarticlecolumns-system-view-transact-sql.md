@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysarticlecolumns view"
 ms.assetid: a8dd8d13-c827-45c4-87ba-802725301382
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysarticlecolumns (System View) (Transact-SQL)

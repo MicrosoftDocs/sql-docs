@@ -16,7 +16,7 @@ ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
 caps.latest.revision: 11
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # BACKUP DATABASE (Parallel Data Warehouse)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "agents [SQL Server replication], command prompt parameters"
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View and Modify Replication Agent Command Prompt Parameters

@@ -18,7 +18,7 @@ ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SAP BW Destination Editor (Error Output Page)

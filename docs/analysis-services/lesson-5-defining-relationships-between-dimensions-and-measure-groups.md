@@ -23,6 +23,7 @@ ms.workload: "On Demand"
 ---
 # Lesson 5: Defining Relationships Between Dimensions and Measure Groups
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 In the previous lessons in this tutorial, you learned that database dimensions added to a cube can be used as the basis for one or more cube dimensions. In this lesson, you learn to define different types of relationships between cube dimensions and measure groups, and to specify the properties of these relationships.  
   
 For more information, see [Dimension Relationships](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  

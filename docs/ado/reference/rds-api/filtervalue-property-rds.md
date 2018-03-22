@@ -19,7 +19,7 @@ ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FilterValue Property (RDS)

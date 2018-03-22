@@ -18,7 +18,7 @@ ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.database_event_session_targets (Azure SQL Database)

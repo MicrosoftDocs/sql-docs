@@ -20,7 +20,7 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Profiling Task Editor (General Page)

@@ -16,7 +16,7 @@ ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.set_environment_property (SSISDB Database)

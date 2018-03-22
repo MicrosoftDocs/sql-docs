@@ -21,7 +21,7 @@ ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ColumnAttributesEnum

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "srv_setcollen"
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # srv_setcollen (Extended Stored Procedure API)

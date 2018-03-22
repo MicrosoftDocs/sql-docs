@@ -1,7 +1,7 @@
 ---
 title: "PolyBase installation | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/31/2016"
+ms.date: "02/23/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -14,11 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
   - "PolyBase, installation"
-ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 25
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # PolyBase installation
@@ -32,7 +30,7 @@ ms.workload: "On Demand"
   
 -   Microsoft .NET Framework 4.5.  
   
--   Oracle Java SE RunTime Environment (JRE) version 7.51 or higher (64-bit) (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present.  
+-   Oracle Java SE RunTime Environment (JRE) version 7.51 or 8 (64-bit) (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present. JRE 9 or higher does not work unless you have SQL Server 2017 Cumulative Update 4 or higher. You can install JRE 8, install PolyBase, and then upgrade to JRE 9. 
   
 -   Minimum memory: 4GB  
   
@@ -49,7 +47,8 @@ Before you start installing PolyBase on your SQL Server Instances, it is good to
 For a PolyBase Scaleout group, you will need to make sure that: 
 - All of the machines are on the same domain.
 - You use the same service account and password during installation.
-- That your SQL Server Instances can communicate with one another over the network.
+- Your SQL Server Instances can communicate with one another over the network.
+- The SQL Server Instances are all the same version of SQL Server.
 
 Once you have installed PolyBase as either stand alone or in a scaleout group, you cannot change. You will have to uninstall and reinstall the feature to change this setting.
 

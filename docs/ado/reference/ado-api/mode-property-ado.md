@@ -23,7 +23,7 @@ ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mode Property (ADO)

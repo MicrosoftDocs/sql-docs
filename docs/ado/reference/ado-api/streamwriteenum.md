@@ -21,7 +21,7 @@ ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # StreamWriteEnum

@@ -16,7 +16,7 @@ ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Visual Database Tools

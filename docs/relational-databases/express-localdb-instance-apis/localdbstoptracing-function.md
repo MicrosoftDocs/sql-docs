@@ -19,9 +19,9 @@ apilocation:
 apitype: "DLLExport"
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LocalDBStopTracing Function

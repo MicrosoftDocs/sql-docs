@@ -18,7 +18,7 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create and Edit an Oracle CDC Service
@@ -32,7 +32,7 @@ ms.workload: "Inactive"
   
  Enter the following information in the New Oracle CDC Windows Service dialog box or the CDC Service Properties dialog box.  
   
-** Service Name**  
+**Service Name**  
  Type the name of the new Oracle CDC Windows Service. You should not use long names, if possible. The characters / and \ cannot be used in the service name.  
   
 > [!NOTE]  

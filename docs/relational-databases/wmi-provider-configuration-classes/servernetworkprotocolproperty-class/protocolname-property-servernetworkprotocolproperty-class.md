@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ProtocolName property"
 ms.assetid: b28d7e40-5fd8-4aad-a2a6-b4131d8152b2
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ProtocolName Property (ServerNetworkProtocolProperty Class)

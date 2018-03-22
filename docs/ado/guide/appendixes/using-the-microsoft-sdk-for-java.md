@@ -19,7 +19,7 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Using the Microsoft SDK for Java

@@ -25,7 +25,7 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Partition Processing Destination

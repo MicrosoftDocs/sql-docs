@@ -18,7 +18,7 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Print Dialog Box

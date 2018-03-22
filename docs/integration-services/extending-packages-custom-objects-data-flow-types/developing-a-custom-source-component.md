@@ -29,7 +29,7 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 caps.latest.revision: 64
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Developing a Custom Source Component

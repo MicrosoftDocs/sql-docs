@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "refreshing data"
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Refresh Data in Replication Monitor

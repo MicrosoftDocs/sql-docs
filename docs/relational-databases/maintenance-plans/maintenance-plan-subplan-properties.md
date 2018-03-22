@@ -17,9 +17,9 @@ f1_keywords:
   - "sql13.swb.maint.subplanproperties.f1"
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Maintenance Plan (Subplan Properties)

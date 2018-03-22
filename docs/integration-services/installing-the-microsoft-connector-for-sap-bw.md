@@ -16,7 +16,7 @@ ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Installing the Microsoft Connector for SAP BW

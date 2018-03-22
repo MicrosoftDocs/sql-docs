@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "HasM geometry"
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # HasM (geometry DataType)

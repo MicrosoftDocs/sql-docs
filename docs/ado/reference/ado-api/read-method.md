@@ -25,7 +25,7 @@ ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Read Method

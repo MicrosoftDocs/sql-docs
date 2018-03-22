@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SetEnable method"
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetEnable Method (ClientNetworkProtocol Class)

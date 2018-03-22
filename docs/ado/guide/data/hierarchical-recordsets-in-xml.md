@@ -18,7 +18,7 @@ ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Hierarchical Recordsets in XML

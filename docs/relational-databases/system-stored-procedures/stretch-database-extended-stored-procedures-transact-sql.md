@@ -20,7 +20,7 @@ ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Stretch Database Extended Stored Procedures (Transact-SQL)

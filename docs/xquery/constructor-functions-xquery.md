@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "constructor functions [XQuery]"
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Constructor Functions (XQuery)

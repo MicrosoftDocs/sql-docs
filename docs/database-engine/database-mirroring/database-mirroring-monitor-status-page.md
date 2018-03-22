@@ -18,7 +18,7 @@ ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 caps.latest.revision: 36
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Mirroring Monitor (Status Page)

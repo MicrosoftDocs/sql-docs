@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "predefined namespaces [XML in SQL Server]"
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sequence and QNames (XQuery)

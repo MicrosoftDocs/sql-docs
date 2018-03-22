@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Publishers [SQL Server replication]"
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Enable a Remote Publisher at a Distributor (SQL Server Management Studio)

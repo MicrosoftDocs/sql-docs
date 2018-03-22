@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "extensions [CLR integration]"
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server In-Process Specific Extensions to ADO.NET

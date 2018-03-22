@@ -23,7 +23,7 @@ ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_fulltext_tables_cursor (Transact-SQL)

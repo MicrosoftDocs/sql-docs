@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STGeometryType (geometry Data Type)"
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STGeometryType (geometry Data Type)

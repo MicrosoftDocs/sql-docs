@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Symmetric Keys on System Databases

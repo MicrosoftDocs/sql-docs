@@ -16,10 +16,11 @@ ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
 caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Managing and monitoring machine learning solutions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes features in SQL Server Machine Learning Services that are relevant to database administrators who need to begin working with R and Python solutions.
 
@@ -58,7 +59,5 @@ Database administrators must integrate competing projects and priorities into a 
 For more information, see these resources:
 
 + [Resource governance for R Services](../r/resource-governance-for-r-services.md)
-
-+ [Monitoring R Services](../r/monitoring-r-services.md)
 
 + [Configure and manage Advanced Analytics Extensions](../r/configure-and-manage-advanced-analytics-extensions.md)

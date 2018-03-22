@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "index deletions [SQL Server]"
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Delete an Index

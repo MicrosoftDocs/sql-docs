@@ -26,7 +26,7 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 72
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Integration Services (SSIS) Packages

@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "SQLNCLI, library files"
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Using the SQL Server Native Client Header and Library Files

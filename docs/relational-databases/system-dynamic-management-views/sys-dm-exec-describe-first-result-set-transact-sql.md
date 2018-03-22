@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sys.dm_exec_describe_first_result_set catalog view"
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.dm_exec_describe_first_result_set (Transact-SQL)
@@ -40,7 +40,7 @@ ms.workload: "On Demand"
   
 ```  
   
-sys.dm_exec_describe_first_result(@tsql, @params, @include_browse_information)  
+sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_information)  
 ```  
   
 ## Arguments  

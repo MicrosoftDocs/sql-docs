@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "dropping assemblies"
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Dropping an Assembly

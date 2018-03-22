@@ -23,19 +23,8 @@ ms.workload: "Inactive"
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   No [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] installation or recovery operation is complete without a solid verification test pass that confirms your services and data are operational. In this article, we show you how to perform these steps using Windows PowerShell. We put each step into its own section so that you can go straight to specific tasks. For example, run the script in the [Databases](#bkmk_databases) section of this topic to verify the name of the service application and content databases if you want to schedule them for maintenance or backup.  
   
-|||  
-|-|-|  
-|![PowerShell related content](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")|A full PowerShell script is included at the bottom of the topic. Use the full script as a starting point to build a custom script for auditing your full [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] deployment.|  
+![PowerShell related content](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") A full PowerShell script is included at the bottom of the topic. Use the full script as a starting point to build a custom script for auditing your full [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] deployment.
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
-  
- **In this topic**: The lettered items in the following the TOC correspond to areas of the diagram. The diagram illustrates the  
-  
-|||  
-|-|-|  
-|[Prepare your PowerShell environment](#bkmk_prerequisites)<br /><br /> [Symptoms and Recommended Actions](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows Service](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService and PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Power Pivot Service Application(s) and proxies](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Databases](#bkmk_databases)<br /><br /> [SharePoint Features](#bkmk_features)<br /><br /> [Timer Jobs](#bkmk_timer_jobs)<br /><br /> [Health Rules](#bkmk_health_rules)<br /><br /> **(E)** [Windows and ULS Logs](#bkmk_logs)<br /><br /> [MSOLAP Provider](#bkmk_msolap)<br /><br /> [ADOMD.Net client Library](#bkmk_adomd)<br /><br /> [Health Data Collection Rules](#bkmk_health_collection)<br /><br /> [Solutions](#bkmk_solutions)<br /><br /> [Manual Verification Steps](#bkmk_manual)<br /><br /> [More Resources](#bkmk_more_resources)<br /><br /> [Full PowerShell Script](#bkmk_full_script)|![powershell verification of powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powershell verification of powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a> Prepare your PowerShell environment  
  The steps in this section prepare your PowerShell environment. The steps may not be required, depending on how your scripting environment is currently configured.  

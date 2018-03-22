@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "IRow interface"
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)

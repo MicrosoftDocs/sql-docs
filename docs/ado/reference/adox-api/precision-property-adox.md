@@ -25,7 +25,7 @@ ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Precision Property (ADOX)

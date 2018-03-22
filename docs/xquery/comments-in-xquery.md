@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "XQuery, comments"
 ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Comments in XQuery

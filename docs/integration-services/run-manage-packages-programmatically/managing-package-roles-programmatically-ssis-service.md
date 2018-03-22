@@ -22,7 +22,7 @@ ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Managing Package Roles Programmatically (SSIS Service)

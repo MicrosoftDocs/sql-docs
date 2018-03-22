@@ -19,7 +19,7 @@ ms.assetid: 49456201-b085-4851-9686-e814136b07be
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specifying Connection Properties

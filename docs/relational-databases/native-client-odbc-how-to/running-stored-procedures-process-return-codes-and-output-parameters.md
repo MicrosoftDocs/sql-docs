@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "output parameters [ODBC]"
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Running Stored Procedures - Process Return Codes and Output Parameters

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STPointFromWKB (geometry Data Type)"
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STPointFromWKB (geometry Data Type)

@@ -18,7 +18,7 @@ ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Synchronize Method (RDS)

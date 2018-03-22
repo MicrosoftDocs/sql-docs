@@ -16,10 +16,11 @@ ms.topic: "article"
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Common issues with external script execution in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article contains a list of known issues and common problems with running R or Python code in SQL Server.
 
@@ -157,7 +158,7 @@ If the Windows group for R users (also used for Python) cannot log on to the ins
 
     * *Security logs indicate that the account NT SERVICE was unable to log on*
 
-For information about how to grant this user group the necessary permissions, see [Set up SQL Server R Services](r/set-up-sql-server-r-services-in-database.md).
+For information about how to grant this user group the necessary permissions, see [Install SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > This limitation does not apply if you use SQL logins to run R scripts from a remote workstation.

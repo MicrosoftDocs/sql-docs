@@ -23,7 +23,7 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_repl_tranhash dynamic management view"
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_repl_tranhash (Transact-SQL)

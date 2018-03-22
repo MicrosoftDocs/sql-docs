@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "IIS server configuration [SQL Server replication]"
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Topologies for Web Synchronization

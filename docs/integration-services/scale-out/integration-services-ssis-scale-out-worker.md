@@ -16,7 +16,7 @@ ms.topic: "article"
 caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Integration Services (SSIS) Scale Out Worker
@@ -38,8 +38,8 @@ StoreName|The store name that worker certificate is in.|My
 AgentHeartbeatInterval|The interval of the Scale Out Worker heartbeat.|00:01:00         
 TaskHeartbeatInterval|The interval of the Scale Out Worker reporting task state.|00:00:10         
 HeartbeatErrorTollerance|After this time period from last successful task heartbeat, the task is terminated if error response of heartbeat is received.|00:10:00      
-TaskRequestMaxCPU|The upper limit of CPU for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|70.0         
-TaskRequestMinMemory|The lower limit of memory in MB for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|100.0         
+TaskRequestMaxCPU|The upper limit of CPU for Scale Out Worker to request tasks.|70.0         
+TaskRequestMinMemory|The lower limit of memory in MB for Scale Out Worker to request tasks.|100.0         
 MaxTaskCount|The max number of tasks the Scale Out Worker can hold.|10         
 LeaseInternval|The lease interval of a task holding by the Scale Out Worker.|00:01:00         
 TasksRootFolder|The folder of task logs. If the value is empty, the `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` folder path is used. [account] is the account running Scale Out Worker service. By default, the account is SSISScaleOutWorker140.|Empty         

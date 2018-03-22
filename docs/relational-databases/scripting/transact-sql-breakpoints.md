@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Transact-SQL debugger, breakpoints"
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transact-SQL Breakpoints

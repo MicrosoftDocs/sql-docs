@@ -27,7 +27,7 @@ ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Type Coercions and the sql:datatype Annotation (SQLXML 4.0)

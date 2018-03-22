@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "natively compiled stored procedures"
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Natively Compiled Stored Procedures

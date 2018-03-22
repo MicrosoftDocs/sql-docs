@@ -20,7 +20,7 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Folder Properties Dialog Box

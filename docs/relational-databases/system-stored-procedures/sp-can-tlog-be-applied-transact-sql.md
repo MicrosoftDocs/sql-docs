@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_can_tlog_be_applied"
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_can_tlog_be_applied (Transact-SQL)

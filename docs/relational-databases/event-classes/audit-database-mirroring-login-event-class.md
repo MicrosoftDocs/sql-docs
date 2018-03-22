@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], event notifications"
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Database Mirroring Login Event Class

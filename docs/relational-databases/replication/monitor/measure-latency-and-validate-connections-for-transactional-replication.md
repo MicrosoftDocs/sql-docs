@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "monitoring performance [SQL Server replication], tracer tokens"
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Measure Latency and Validate Connections for Transactional Replication

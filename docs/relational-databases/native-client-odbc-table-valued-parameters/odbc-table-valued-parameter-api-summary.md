@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "table-valued parameters (ODBC), API support"
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ODBC Table-Valued Parameter API Summary

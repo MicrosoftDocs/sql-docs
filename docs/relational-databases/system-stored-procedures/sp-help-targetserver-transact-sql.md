@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_targetserver"
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_targetserver (Transact-SQL)

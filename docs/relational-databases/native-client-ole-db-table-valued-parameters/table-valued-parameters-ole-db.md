@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB)"
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Table-Valued Parameters (OLE DB)

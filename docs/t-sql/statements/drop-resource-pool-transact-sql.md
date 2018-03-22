@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "DROP RESOURCE POOL"
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP RESOURCE POOL (Transact-SQL)

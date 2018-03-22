@@ -21,7 +21,7 @@ ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Accessing SQLXML Functionality in the .NET Environment

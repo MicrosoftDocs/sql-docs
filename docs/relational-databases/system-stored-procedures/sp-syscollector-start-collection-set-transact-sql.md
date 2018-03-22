@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_syscollector_start_collection_set"
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syscollector_start_collection_set (Transact-SQL)

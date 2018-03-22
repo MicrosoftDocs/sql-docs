@@ -19,7 +19,7 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Microsoft OLE DB Provider for ODBC Overview

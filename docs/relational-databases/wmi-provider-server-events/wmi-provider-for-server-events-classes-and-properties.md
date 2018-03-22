@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "classes [WMI]"
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # WMI Provider for Server Events Classes and Properties

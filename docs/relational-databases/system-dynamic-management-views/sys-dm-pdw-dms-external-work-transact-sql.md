@@ -18,7 +18,7 @@ ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 caps.latest.revision: 5
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_dms_external_work (Transact-SQL)

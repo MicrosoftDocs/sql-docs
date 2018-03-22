@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.rep.monitor.subscription.disttosub.f1"
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Subscription, Distributor to Subscriber History (Transactional Subscription)

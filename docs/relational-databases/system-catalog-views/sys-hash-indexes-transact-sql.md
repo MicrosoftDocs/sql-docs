@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.hash_indexes catalog view"
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.hash_indexes (Transact-SQL)

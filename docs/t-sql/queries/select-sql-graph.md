@@ -21,7 +21,7 @@ ms.assetid:
 caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SELECT (Transact-SQL)

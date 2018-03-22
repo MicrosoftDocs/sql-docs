@@ -28,7 +28,7 @@ ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Name Property (ADO MD)

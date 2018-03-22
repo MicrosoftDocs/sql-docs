@@ -15,9 +15,10 @@ ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
 caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # Provision a virtual machine for machine learning on Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Virtual machines on Azure are a convenient option for quickly configuring a complete server environment for machine learning solutions.
 
@@ -81,9 +82,7 @@ For more information, see [Installing SQL Server R Services on an Azure virtual 
 
 ### Using machine learning in Azure SQL database
 
-Beginning in fall 2017, Azure SQL Database supports using R to train models and use them for prediction. 
-
-R Services in-database is available as a preview feature only, and has some limitations compared to the on-premises edition of SQL Server. For more information, see [Azure SQL DB](../r/using-r-in-azure-sql-database.md).
+Currently, the preview of R support in Azure SQL is suspended for ongoing development work. For more information, see [Azure SQL DB](../r/using-r-in-azure-sql-database.md).
 
 ### Can I upgrade the SQL Server version on a virtual machine?
 

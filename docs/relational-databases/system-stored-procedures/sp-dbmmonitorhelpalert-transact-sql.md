@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_dbmmonitorhelpalert (Transact-SQL)

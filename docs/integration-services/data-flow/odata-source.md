@@ -21,7 +21,7 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OData Source

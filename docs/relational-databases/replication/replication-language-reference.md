@@ -16,9 +16,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 caps.latest.revision: 5
-author: "MikeRayMSFT"
-ms.author: "mblythe"
-manager: "erikre"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replication Language Reference

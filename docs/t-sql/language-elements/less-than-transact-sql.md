@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "< (less than operator)"
 ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # &lt; (Less Than) (Transact-SQL)

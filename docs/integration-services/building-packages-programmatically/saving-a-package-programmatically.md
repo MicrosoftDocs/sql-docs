@@ -21,7 +21,7 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Saving a Package Programmatically

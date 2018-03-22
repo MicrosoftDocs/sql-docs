@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Data File Auto Grow event class"
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data File Auto Grow Event Class

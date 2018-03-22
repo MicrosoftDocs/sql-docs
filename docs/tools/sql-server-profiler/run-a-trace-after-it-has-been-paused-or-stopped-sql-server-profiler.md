@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "stopping traces"
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler)

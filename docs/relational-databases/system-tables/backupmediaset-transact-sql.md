@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "backupmediaset system table"
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # backupmediaset (Transact-SQL)

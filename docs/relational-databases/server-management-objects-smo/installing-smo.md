@@ -17,16 +17,16 @@ helpviewer_keywords:
   - "SQL Server Management Objects, installing"
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 
 ms.workload: "On Demand"
 ---
 
 #Installing SMO
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 This page provides information on how to install SMO for use by applications and the system requirements to use SMO.
 

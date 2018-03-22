@@ -21,7 +21,7 @@ ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # UPPER (SSIS Expression)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "MultiIpConfigurationSupport property"
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)

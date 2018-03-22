@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "bcp_setbulkmode function"
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # bcp_setbulkmode

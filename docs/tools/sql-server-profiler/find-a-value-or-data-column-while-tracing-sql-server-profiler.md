@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "traces [SQL Server], searching while trace running"
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Find a Value or Data Column While Tracing (SQL Server Profiler)

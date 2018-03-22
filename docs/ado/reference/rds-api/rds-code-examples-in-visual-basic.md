@@ -20,7 +20,7 @@ ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RDS Code Examples in Visual Basic

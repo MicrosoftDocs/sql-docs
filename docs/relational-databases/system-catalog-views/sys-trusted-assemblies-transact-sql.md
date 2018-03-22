@@ -24,8 +24,8 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: "tmullaney"
-ms.author: "thmullan;rickbyh"
-manager: "jhubbard"
+ms.author: "thmullan"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.trusted_assemblies (Transact-SQL)  

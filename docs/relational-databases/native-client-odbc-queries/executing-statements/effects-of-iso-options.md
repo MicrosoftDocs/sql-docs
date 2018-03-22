@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "statements [ODBC], ISO options"
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Effects of ISO Options

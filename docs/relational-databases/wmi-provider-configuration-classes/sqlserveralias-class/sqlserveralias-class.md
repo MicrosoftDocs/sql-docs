@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SqlServerAlias class"
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SqlServerAlias Class

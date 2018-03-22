@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.databaseproperties.changetracking.f1"
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Properties (ChangeTracking Page)

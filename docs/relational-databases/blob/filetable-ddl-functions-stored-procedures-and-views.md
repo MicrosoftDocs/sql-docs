@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "FileTables [SQL Server], database objects"
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FileTable DDL, Functions, Stored Procedures, and Views

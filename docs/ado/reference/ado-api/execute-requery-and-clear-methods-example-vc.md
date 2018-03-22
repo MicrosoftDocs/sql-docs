@@ -22,7 +22,7 @@ ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execute, Requery, and Clear Methods Example (VC++)

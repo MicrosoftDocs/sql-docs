@@ -16,7 +16,7 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Step 2: Initialize the Main List Box

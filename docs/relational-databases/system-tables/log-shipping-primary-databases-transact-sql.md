@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "log_shipping_primary_databases system table"
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # log_shipping_primary_databases (Transact-SQL)

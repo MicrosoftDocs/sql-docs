@@ -20,7 +20,7 @@ ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Add Related Tables to Diagrams (Visual Database Tools)

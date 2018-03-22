@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "matching,threshold value"
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure Threshold Values for Cleansing and Matching

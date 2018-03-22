@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STDisjoint"
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STDisjoint (geography Data Type)

@@ -20,7 +20,7 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Microsoft OLE DB Remoting Provider Overview

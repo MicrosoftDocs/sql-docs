@@ -16,7 +16,7 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Destination Custom Properties

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "GetPathLocator function"
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetPathLocator (Transact-SQL)

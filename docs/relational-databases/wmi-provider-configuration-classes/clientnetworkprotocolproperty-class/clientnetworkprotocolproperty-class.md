@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ClientNetworkProtocolProperty class"
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ClientNetworkProtocolProperty Class

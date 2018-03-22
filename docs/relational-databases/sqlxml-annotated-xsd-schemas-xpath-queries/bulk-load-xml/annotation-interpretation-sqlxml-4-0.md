@@ -22,7 +22,7 @@ ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Annotation Interpretation (SQLXML 4.0)

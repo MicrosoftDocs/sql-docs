@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "abbreviated syntax [XQuery]"
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Path Expressions - Using Abbreviated Syntax

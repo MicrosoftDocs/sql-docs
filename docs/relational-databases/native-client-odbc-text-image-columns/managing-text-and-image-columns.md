@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "image columns [ODBC]"
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Managing Text and Image Columns

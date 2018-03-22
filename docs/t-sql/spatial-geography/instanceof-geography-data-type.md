@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "InstanceOf method"
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InstanceOf (geography Data Type)

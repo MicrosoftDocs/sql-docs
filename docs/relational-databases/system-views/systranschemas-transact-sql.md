@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "systranschemas system table"
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # systranschemas (Transact-SQL)

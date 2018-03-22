@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "GO command"
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: 155
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # sqlcmd Utility
@@ -40,11 +40,14 @@ ms.workload: "Active"
 
  > For SQL Server 2014 and lower, see [sqlcmd Utility](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
+ > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
 
   The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt, in **Query Editor** in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a  SQL Server  Agent job. This utility uses ODBC to execute Transact-SQL batches. 
   
 > [!NOTE]
 > The most recent versions of the sqlcmd utility is available as a web release from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643). You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
+
+You can try the sqlcmd utility from Azure Cloud Shell as it is pre-installed by default: [![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com)
 
   To run sqlcmd statements in SSMS, select SQLCMD Mode from the top navigation Query Menu dropdown.  
   
@@ -56,7 +59,7 @@ ms.workload: "Active"
  
  Other topics:
 - [Start the sqlcmd Utility](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## Syntax  
   

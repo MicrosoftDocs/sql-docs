@@ -31,9 +31,9 @@ helpviewer_keywords:
   - "databases [SQL Server], moving"
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 62
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Move System Databases

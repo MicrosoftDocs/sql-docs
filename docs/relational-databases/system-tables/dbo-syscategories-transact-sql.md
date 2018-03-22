@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "syscategories system table"
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.syscategories (Transact-SQL)

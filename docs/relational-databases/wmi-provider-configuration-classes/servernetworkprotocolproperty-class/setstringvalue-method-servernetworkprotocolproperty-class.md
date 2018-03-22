@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SetStringValue method"
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetStringValue Method (ServerNetworkProtocolProperty Class)

@@ -18,7 +18,7 @@ ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save (Not Permitted) Dialog Box

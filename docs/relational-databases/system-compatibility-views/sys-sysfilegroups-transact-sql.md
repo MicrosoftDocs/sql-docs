@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysfilegroups compatibility view"
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysfilegroups (Transact-SQL)

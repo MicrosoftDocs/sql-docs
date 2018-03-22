@@ -24,7 +24,7 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)

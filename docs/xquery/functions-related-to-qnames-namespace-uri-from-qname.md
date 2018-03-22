@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "namespace-uri-from-QName function"
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions Related to QNames - namespace-uri-from-QName

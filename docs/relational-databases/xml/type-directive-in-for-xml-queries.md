@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "TYPE directive"
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # TYPE Directive in FOR XML Queries

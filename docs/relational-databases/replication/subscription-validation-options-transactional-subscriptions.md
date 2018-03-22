@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Subscription Validation Options dialog box"
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Subscription Validation Options (Transactional Subscriptions)

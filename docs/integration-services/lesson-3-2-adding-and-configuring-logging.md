@@ -18,7 +18,7 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 3-2 - Adding and Configuring Logging

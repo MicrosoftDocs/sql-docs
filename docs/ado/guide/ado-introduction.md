@@ -16,8 +16,8 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "MightyPen"
-manager: "jhubbard"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ADO Overview and Benefits

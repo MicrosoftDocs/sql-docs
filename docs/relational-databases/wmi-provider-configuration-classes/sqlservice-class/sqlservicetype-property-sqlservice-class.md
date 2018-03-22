@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SqlServiceType property"
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SqlServiceType Property (SqlService Class)

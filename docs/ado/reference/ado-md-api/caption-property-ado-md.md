@@ -23,7 +23,7 @@ ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Caption Property (ADO MD)

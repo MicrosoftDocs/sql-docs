@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.backup_devices catalog view"
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.backup_devices (Transact-SQL)

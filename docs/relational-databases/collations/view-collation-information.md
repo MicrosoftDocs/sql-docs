@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "collations [SQL Server], view"
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View Collation Information

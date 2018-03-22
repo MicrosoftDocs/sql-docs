@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STY (geometry Data Type)"
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STY (geometry Data Type)

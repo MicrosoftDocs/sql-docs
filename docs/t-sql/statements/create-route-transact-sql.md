@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "CREATE ROUTE statement"
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CREATE ROUTE (Transact-SQL)

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "SQL_SS_TABLE"
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ODBC SQL Type for Table-Valued Parameters

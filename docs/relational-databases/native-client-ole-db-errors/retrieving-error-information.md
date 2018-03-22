@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "OLE DB error handling, examples"
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Retrieving Error Information

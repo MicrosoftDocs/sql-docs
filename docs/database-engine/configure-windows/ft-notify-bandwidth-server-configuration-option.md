@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "memory [SQL Server], buffers"
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ft notify bandwidth Server Configuration Option

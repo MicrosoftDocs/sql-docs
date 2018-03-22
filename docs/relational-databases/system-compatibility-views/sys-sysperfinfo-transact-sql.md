@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysperfinfo system table"
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysperfinfo (Transact-SQL)

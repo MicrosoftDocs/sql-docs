@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "offline log files"
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View Offline Log Files

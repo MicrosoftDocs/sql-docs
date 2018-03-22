@@ -1,4 +1,4 @@
-### Bug fixes in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
 - Fixed 1-second delay upon SQLFreeHandle with Encrypt and MARS
 - Fixed an error 22003 crash in SQLGetData on Windows
@@ -7,7 +7,7 @@
 - Fixed an issue where inserting double into decimal field with AE on would no return data truncation error
 - Fixed a warning on MacOS installer
 
-### Bug fixes in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
 - Fixed unexpected Session Recovery parsing errors when using Connection Resiliency and Connection Pooling at the same time
 - Fixed a bulk insert problem where "access denied" was issue, due to not handling SPNs correctly

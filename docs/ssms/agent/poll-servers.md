@@ -52,7 +52,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 Issue this command keeps the target servers synchronized with the current job definition.  
   
-You do not have to post operations explicitly if you use the following:  
+If you use the following items, you do not have to post operations explicitly:  
   
 -   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] to control multiserver jobs.  
   

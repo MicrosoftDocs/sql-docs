@@ -49,7 +49,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 ## <a name="SSMS"></a>Using SQL Server Management Studio  
   
-#### To resize the job history log based on raw size  
+*To resize the job history log based on raw size*
   
 1.  In **Object Explorer,** connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
   
@@ -61,7 +61,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 5.  In the **Maximum job history rows per job** box, enter the maximum number of job history rows to allow for a job.  
   
-#### To resize the job history log based on time  
+**To resize the job history log based on time:**
   
 1.  In **Object Explorer**, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], and then expand that instance.  
   
@@ -69,5 +69,5 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 3.  Select the **History** page, and then click **Automatically remove agent history**.  
   
-4.  Select the appropriate number of **Days(s)**, **Week(s)**, or **Month(s)**.  
+4.  Select the appropriate number of **Days**, **Weeks**, or **Months**.  
   

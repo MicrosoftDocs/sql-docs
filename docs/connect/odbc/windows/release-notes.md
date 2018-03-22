@@ -23,6 +23,19 @@ manager: "jhubbard"
 
   Release Notes for Microsoft ODBC Driver for SQL Server on Windows.  
 
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows
+
+**Features Added**:
+
+Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes
+- `SQL_COPT_SS_CEKCACHETTL` Allows to control the time that local cache of Column Encryption Keys exist, as well as flushing it
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` Allows setting the local paths to Column Master Keys
+
+Azure Active Directory Interactive Authentication Support
+
+Numerous bug fixes
+
+
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows
 
 **Features Added**:

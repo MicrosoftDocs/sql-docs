@@ -20,6 +20,20 @@ ms.workload: "Inactive"
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows
+
+**Features Added**:
+
+Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes
+- `SQL_COPT_SS_CEKCACHETTL` Allows to control the time that the local cache of Column Encryption Keys exist, as well as flushing it
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` Allows setting the local paths to Column Master Keys
+
+Support for loading the `.rll` from default location
+
+Numerous bug fixes
+
+
+
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS
 
 **New distributions supported**:

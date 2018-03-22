@@ -4,7 +4,7 @@ description: Install, update, and uninstall SQL Server on Linux. This article co
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -42,12 +42,10 @@ SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Ente
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
 
+Microsoft also supports deploying and managing SQL Server containers by using OpenShift and Kubernetes.
+
 > [!NOTE]
-> It is sometimes possible to install and run SQL Server on other closely-related Linux platforms, but SQL Server is only tested and supported on the platforms listed in the preceding table.
-
-Microsoft supports deploying and managing SQL Server containers by using OpenShift and Kubernetes.
-
-For the latest support policy for SQL Server 2017, see [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> SQL Server is tested and supported on Linux for the previously listed distributions. If you choose to install SQL Server on an unsupported operating system, please review the **Support policy** section of the [Technical support policy for Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) to understand the support implications.
 
 ## <a id="system"></a> System requirements
 

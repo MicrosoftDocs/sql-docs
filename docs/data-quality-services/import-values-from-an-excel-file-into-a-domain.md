@@ -20,7 +20,7 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Import Values from an Excel File into a Domain

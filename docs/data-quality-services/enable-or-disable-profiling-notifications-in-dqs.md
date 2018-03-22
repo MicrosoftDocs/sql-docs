@@ -20,7 +20,7 @@ ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Enable or Disable Profiling Notifications in DQS

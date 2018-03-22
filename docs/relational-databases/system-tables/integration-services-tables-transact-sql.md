@@ -23,7 +23,7 @@ ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
 caps.latest.revision: 21
 author: "douglasl"
 ms.author: "douglasl"
-manager: "erikre"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Integration Services Tables (Transact-SQL)

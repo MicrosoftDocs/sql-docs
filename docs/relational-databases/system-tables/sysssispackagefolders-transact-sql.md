@@ -23,7 +23,7 @@ ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
 caps.latest.revision: 22
 author: "douglasl"
 ms.author: "douglasl"
-manager: "erikre"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysssispackagefolders (Transact-SQL)

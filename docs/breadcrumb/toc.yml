@@ -118,7 +118,7 @@
           homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
         - name: OLE DB
           href: /sql/connect/oledb/ole-db/
-          homepage: /sql/connect/oledb/ole-db/sql-server-native-client-ole-db
+          homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-ole-db
           items:
           - name: Driver
             href: /sql/connect/oledb/ole-db-driver/

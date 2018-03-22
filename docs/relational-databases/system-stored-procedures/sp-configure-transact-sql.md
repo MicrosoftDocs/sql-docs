@@ -27,7 +27,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # sp_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-asdbmi-xxxx-pwd-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
 
   Displays or changes global configuration settings for the current server.
 

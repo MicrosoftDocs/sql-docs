@@ -27,13 +27,14 @@ manager: "jhubbard"
 
 **Features Added**:
 
-Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes
-- `SQL_COPT_SS_CEKCACHETTL` Allows to control the time that the local cache of Column Encryption Keys exist, as well as flushing it
-- `SQL_COPT_SS_TRUSTEDCMKPATHS` Allows setting the local paths to Column Master Keys
+Support for `SQL_COPT_SS_CEKCACHETTL` and `SQL_COPT_SS_TRUSTEDCMKPATHS` connection attributes (See [Using Always Encrypted with the ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md) for more information)
+- `SQL_COPT_SS_CEKCACHETTL` Allows controlling the time that the local cache of Column Encryption Keys exist, as well as flushing it
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` Allows the application to restrict AE operations to only use the specified list of Column Master Keys
+
 
 Azure Active Directory Interactive Authentication Support
 
-Numerous bug fixes
+[Bug fixes](../bug-fixes.md)
 
 
 ## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows

@@ -25,21 +25,21 @@ Pre-trained models exist to help customers who need to perform tasks such as sen
 
 For an example of how to use the pre-trained models with SQL Server data, see this blog by the SQL Server Machine Learning team: [Sentiment analysis with Python in SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
-## Install the pre-trained models
+## Pre-trained model availability
 
 Pre-trained models are installed using the installation media of Microsoft Machine Learning Server (or Microsoft R Server, if you are adding models to a SQL Server 2016 installation). You can use the free Developer edition to install the models. There is no extra cost associated with model installation. 
 
-Pre-trained models work with the following products and languages.
+Pre-trained models work with the following products and languages. The Setup program detects language integration, the MicrosoftML or microsoftml library, and then inserts the pre-trained models into the respective library. When model installation is finished, you access the models through library functions.
 
-+ SQL Server 2016 R Services (In-Database), R only, with the [MicrosoftML library](../using-the-microsoftml-package)
-+ SQL Server 2016 R Server (Standalone)
-+ SQL Server 2017 Machine Learning Services (In-Database)
-+ SQL Server 2017 Machine Learning Server (Standalone)
++ SQL Server 2016 R Services (In-Database) - R only, with the [MicrosoftML library](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2016 R Server (Standalone) - R only, with the [MicrosoftML library](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 Machine Learning Services (In-Database) - R with the [MicrosoftML library] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python with the [microsoftml library](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 Machine Learning Server (Standalone) - R with the [MicrosoftML library] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python with the [microsoftml library](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 The installation process differs slightly depending on your version of SQL Server. See the following sections for instructions for each version.
 
 > [!NOTE]
-> It is not possible to read or modify the pre-trained models, because they are compressed using a native format, to improve performance.
+> It is not possible to read or modify the pre-trained models. They are compressed using a native format to improve performance.
 
 ## Obtain files for an offline installation
 
@@ -51,11 +51,11 @@ See this page for the download links for all R Server and Machine Learning Serve
 
 With SQL Server 2016, you can install and use the pre-trained R models only if you first upgrade the machine learning components, in a process called **binding**. 
 
-You do this by running the separate Windows installer for Microsoft R Server or Machine Learning Server, and selecting an instance or instances to **bind**. Binding an instance means that the support policy associated with the instance is changed to allow more frequent updates to R. 
+You do this by running the separate Windows installer for Microsoft R Server or Machine Learning Server on a computer having a SQL Server 2016 R Services installation, and selecting an instance or instances to **bind**. Binding an instance means that the support policy associated with the instance is changed to allow more frequent updates to R. 
 
 1. Launch the separate Windows-based installer for either [R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server) or [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
-2. Select the instance to upgrade, and then select the option to get the pretrained models.
+2. Select the instance to upgrade, and then select the option to get the pre-trained models.
 
     For more information, see [Upgrade machine learning components used by SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
@@ -111,16 +111,16 @@ With SQL Server 2016, you must perform some additional steps to register the mod
 
 ## Install pre-trained models on SQL Server Machine Learning Services (In-Database)
 
-If you have already installed SQL Server 2017, you can get the pretrained models in two ways:
+If you have already installed SQL Server 2017, you can get the pre-trained models in two ways:
 
-+ Upgrade the Python and R components by using binding, and install the pretrained models at the same time
++ Upgrade the Python and R components by using binding, and install the pre-trained models at the same time
 + Install just the pre-trained models
 
 The following instructions describe the process for upgrading the machine learning components and getting the pre-trained models at the same time.
 
 1. Run the Windows-based installer for Machine Learning Server. You can download the installer from the links on this page: [Install machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
-2. If you are installing the models to a server that does not have internet access, make sure to also download the installer for the pretrained models from this page: [Offline install for Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline).
+2. If you are installing the models to a server that does not have internet access, make sure to also download the installer for the pre-trained models from this page: [Offline install for Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline).
 
 3. Run the installer.
 
@@ -140,7 +140,7 @@ With SQL Server 2017, no additional configuration is required.
 
 If you installed an early version of R Server (Standalone) using SQL Server 2016 setup, you can add the ability to use the pre-trained models by upgrading R Server using the newer Windows-based installer. 
 
-The pretrained models first became available as an option with [Microsoft R Server 9.1](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/introducing-microsoft-r-server-9-1-release/), but upgrades have been added with each release. We recommend getting the latest version possible, but previous releases are listed here [R Server releases](https://docs.microsoft.com/machine-learning-server/install/r-server-install)
+The pre-trained models first became available as an option with [Microsoft R Server 9.1](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/introducing-microsoft-r-server-9-1-release/), but upgrades have been added with each release. We recommend getting the latest version possible, but previous releases are listed here [R Server releases](https://docs.microsoft.com/machine-learning-server/install/r-server-install)
 
 The following instructions describe how to upgrade the R components, and at the same time add the pre-trained models.
 
@@ -175,11 +175,11 @@ After installation is complete, you must perform some additional steps to regist
     + Cumulative Update 1: **9.2.0.24**
     + Cumulative Update 4: **9.3.0**
 
-    For example, to enable use of the latest version of the pretrained models for R, in a default installation of R Server (Standalone), you would run this statement:
+    For example, to enable use of the latest version of the pre-trained models for R, in a default installation of R Server (Standalone), you would run this statement:
 
     `RSetup.exe /install /component MLM /version 9.3.0 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
 
-## Install pretrained models with SQL Server 2017 standalone server
+## Install pre-trained models with SQL Server 2017 standalone server
 
 If you installed Machine Learning Server using SQL Server 2017 setup, you add the pre-trained models by running the Windows-based installer. You can select the option to upgrade the R or Python components, and at the same time add the pre-trained models. 
 
@@ -204,11 +204,11 @@ For more information about the algorithms used in these deep learning models, an
 
 ## How to use pre-trained models for text analysis
 
-See the following sample for a demonstration of how to use the pretrained text featurization model for text classification:
+See the following sample for a demonstration of how to use the pre-trained text featurization model for text classification:
 
 [Sentiment Analysis using Text Featurizer](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
-## How to use pretrained models for image detection
+## How to use pre-trained models for image detection
 
 The pre-trained model for images supports featurization of images that you supply. To use the model, you call the  **featurizeImage** transform. The image is loaded, resized, and featurized by the trained model. The output of the DNN featurizer is then used to train a linear model for image classification.
 

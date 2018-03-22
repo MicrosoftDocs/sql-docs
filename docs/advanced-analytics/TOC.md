@@ -1,17 +1,17 @@
 # Overview
 
 ## [What is SQL Server Machine Learning Services?](what-is-sql-server-machine-learning.md)
+### [In-Database analytics](r/sql-server-r-services.md)
+### [Standalone server](r/r-server-standalone.md)
 ## [New features](what-s-new-in-sql-server-machine-learning-services.md)
 ## [Features by edition](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Architecture](architecture-overview-machine-learning.md)
-## [In-Database analytics](r/sql-server-r-services.md)
-## [Standalone server](r/r-server-standalone.md)
-## [R integration](r/architecture-overview-sql-server-r.md)
+## [R](r/architecture-overview-sql-server-r.md)
 ### [R interoperability](r/r-interoperability-in-sql-server.md)
 ### [Components that support R integration](r/new-components-in-sql-server-to-support-r.md)
 ### [Security for R](r/security-overview-sql-server-r.md)
-## [Python integration](python/architecture-overview-sql-server-python.md)
+## [Python](python/architecture-overview-sql-server-python.md)
 ### [Python in Machine Learning Services](python/sql-server-python-services.md)
 ### [Python interoperability](python/python-interoperability.md)
 ### [Components to support Python](python/new-components-in-sql-server-to-support-python-integration.md)
@@ -34,7 +34,7 @@
 ## [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
 ## [Set up a data science client](r/set-up-a-data-science-client.md)
 
-# [Tutorials and samples](tutorials/machine-learning-services-tutorials.md)
+# [Tutorials, samples, solutions](tutorials/machine-learning-services-tutorials.md)
 
 ## [R](tutorials/sql-server-r-tutorials.md)
 ### [R: Use R code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
@@ -88,8 +88,8 @@
 #### [Create data features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
 #### [Train and save the model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalize the model](tutorials/sqldev-py6-operationalize-the-model.md)
-## [Data science solution templates](tutorials/data-science-scenarios-and-solution-templates.md)
-## [SQL Server samples](https://github.com/Microsoft/sql-server-samples)
+## [Samples](https://github.com/Microsoft/sql-server-samples)
+## [Solutions](tutorials/data-science-scenarios-and-solution-templates.md)
 
 # [How To](r/sql-server-machine-learning-tasks.md)
 

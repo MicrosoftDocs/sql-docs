@@ -28,7 +28,7 @@ ms.workload: "Inactive"
 
   The following table lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) programming samples available in the [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO directory. These samples are available in both [!INCLUDE[csprcs](../../includes/csprcs-md.md)] and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   
- For more information about how to install samples, see [AdventureWorks for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
+ For more information about how to install samples, you can try to look through [these samples](https://github.com/Microsoft/sql-server-samples), but the ones below do not appear to be present in any of the non BAK files. Also that repo seems to have been abandoned. 
   
 |Title|Description|  
 |-----------|-----------------|  

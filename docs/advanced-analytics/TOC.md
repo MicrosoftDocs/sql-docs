@@ -33,7 +33,7 @@
 ## [Command-prompt setup](install/sql-ml-component-commandline-install.md)
 ## [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
 ## [Set up a data science client](r/set-up-a-data-science-client.md)
-## [Configure Python tools for use with SQL Server](python/setup-python-client-tools-sql.md)
+## [Set up Python tools](python/setup-python-client-tools-sql.md)
 
 # [Tutorials, samples, solutions](tutorials/machine-learning-services-tutorials.md)
 

@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], bulk copy operations"
   - "OLE DB Driver for SQL Server, bulk copy operations"
   - "MSOLEDBSQL, bulk copy operations"
-ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

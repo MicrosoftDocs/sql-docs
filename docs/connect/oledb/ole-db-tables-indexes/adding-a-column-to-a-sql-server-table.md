@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "AddColumn function"
   - "OLE DB Driver for SQL Server, columns"
   - "adding columns"
-ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -16,10 +16,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server"
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
   - "data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server"
-ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

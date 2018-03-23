@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, initialization properties"
   - "OLE DB Driver for SQL Server, authorization properties"
   - "initialization properties [OLE DB]"
-ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
-caps.latest.revision: 59
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

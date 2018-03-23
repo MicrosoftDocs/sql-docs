@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, updating data"
   - "OLE DB Driver for SQL Server, data updates"
   - "data updates [SQL Server], OLE DB"
-ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, data source connections"
   - "CoCreateInstance method"
   - "OLE DB data sources [OLE DB Driver for SQL Server]"
-ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "Open method"
   - "ISequentialStream interface"
   - "BLOBs, fetching"
-ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

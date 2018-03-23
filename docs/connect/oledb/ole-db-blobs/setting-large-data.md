@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "pointer passing [OLE DB]"
   - "OLE DB Driver for SQL Server, BLOBs"
   - "large data, OLE objects"
-ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

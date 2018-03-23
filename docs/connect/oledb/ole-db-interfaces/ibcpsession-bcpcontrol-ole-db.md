@@ -17,10 +17,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "BCPControl method"
-ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
-caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

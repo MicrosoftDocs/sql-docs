@@ -12,10 +12,8 @@ ms.technology:
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
-ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

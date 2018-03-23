@@ -14,10 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, inserting data into"
-ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

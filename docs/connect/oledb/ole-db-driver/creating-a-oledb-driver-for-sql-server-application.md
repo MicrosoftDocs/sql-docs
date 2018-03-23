@@ -16,10 +16,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, application creation"
   - "applications [OLE DB Driver for SQL Server]"
   - "OLE DB, creating applications"
-ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

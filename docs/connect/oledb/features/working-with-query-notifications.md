@@ -23,10 +23,8 @@ helpviewer_keywords:
   - "MSOLEDBSQL, query notifications"
   - "OLE DB Driver for SQL Server, query notifications"
   - "consumer notification for rowset changes [OLE DB Driver for SQL Server]"
-ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

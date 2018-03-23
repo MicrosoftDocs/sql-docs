@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "stored procedures [OLE DB]"
   - "OLE DB Driver for SQL Server, stored procedures"
   - "stored procedures [OLE DB], about OLE DB stored procedures"
-ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "LINKEDSERVERS rowset"
   - "enumerating data sources [OLE DB]"
-ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

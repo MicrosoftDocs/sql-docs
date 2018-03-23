@@ -20,10 +20,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, transactions"
   - "ITransactionJoin interface"
   - "MS DTC, about distributed transaction support"
-ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

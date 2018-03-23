@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "dropping indexes"
   - "OLE DB Driver for SQL Server, indexes"
   - "indexes [OLE DB]"
-ms.assetid: add3ba14-10b1-4723-b7c0-3e83689e9fdd
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

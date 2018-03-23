@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, rowsets"
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
-ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

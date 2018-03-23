@@ -17,10 +17,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "BCPWriteFmt method"
-ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "OLE DB, processing results"
   - "rowsets [SQL Server], results processing"
   - "results [OLE DB Driver for SQL Server]"
-ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

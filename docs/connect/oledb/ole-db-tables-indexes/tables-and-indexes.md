@@ -21,10 +21,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, tables"
   - "OLE DB Driver for SQL Server, indexes"
   - "indexes [OLE DB]"
-ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

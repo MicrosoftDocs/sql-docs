@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, data types"
   - "data types [OLE DB]"
   - "OLE DB, data types"
-ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

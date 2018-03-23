@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "OLE DB error handling, retrieving information"
   - "errors [OLE DB], retrieving information"
   - "OLE DB error handling, examples"
-ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

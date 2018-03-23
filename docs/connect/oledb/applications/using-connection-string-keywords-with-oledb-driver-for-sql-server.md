@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "MSOLEDBSQL, connection string keywords"
   - "connection strings [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, connection string keywords"
-ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
-caps.latest.revision: 81
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Active"
 ---

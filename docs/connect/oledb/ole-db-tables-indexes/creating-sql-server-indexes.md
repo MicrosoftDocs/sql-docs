@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, indexes"
   - "indexes [OLE DB]"
   - "adding indexes"
-ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, tables"
   - "removing tables"
   - "dropping tables"
-ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

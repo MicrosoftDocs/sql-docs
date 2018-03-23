@@ -17,10 +17,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "ISSCommandWithParameters interface"
-ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

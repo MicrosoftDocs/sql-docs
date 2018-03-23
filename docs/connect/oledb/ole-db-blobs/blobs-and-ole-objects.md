@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "storage object [OLE DB]"
   - "OLE DB Driver for SQL Server, BLOBs"
   - "large data, OLE objects"
-ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
-caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

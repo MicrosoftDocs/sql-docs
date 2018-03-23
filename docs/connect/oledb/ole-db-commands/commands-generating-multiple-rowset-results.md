@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, multiple rowsets"
   - "commands [OLE DB]"
   - "multiple-rowset results"
-ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, large value types"
   - "data access [OLE DB Driver for SQL Server], large value types"
   - "OLE DB Driver for SQL Server, large value data types"
-ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 53
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

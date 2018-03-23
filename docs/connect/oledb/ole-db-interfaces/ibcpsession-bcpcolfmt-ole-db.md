@@ -17,10 +17,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "BCPColFmt method"
-ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -22,10 +22,8 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], library files"
   - "OLE DB Driver for SQL Server, library files"
   - "MSOLEDBSQL, library files"
-ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, fetching"
   - "rowsets [OLE DB], fetching"
   - "OLE DB Driver for SQL Server, fetching"
-ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -16,10 +16,8 @@ helpviewer_keywords:
   - "OLE DB, transactions"
   - "transactions [OLE DB]"
   - "OLE DB Driver for SQL Server, transactions"
-ms.assetid: 3b41e33a-c1ca-4b2a-9464-312b0ed3ca89
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

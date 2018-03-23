@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], OLE DB Driver for SQL Server"
   - "OLE DB Driver for SQL Server [FILESTREAM support]"
-ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

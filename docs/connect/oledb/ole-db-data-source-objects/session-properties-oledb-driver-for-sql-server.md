@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "sessions [OLE DB]"
   - "OLE DB Driver for SQL Server, sessions"
-ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

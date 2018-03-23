@@ -12,10 +12,8 @@ ms.technology:
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
-ms.assetid: e35d37ed-dd9b-4a34-a76a-bc9251f06c4f
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -16,10 +16,8 @@ f1_keywords:
   - "SSVARIANT"
 helpviewer_keywords: 
   - "SSVARIANT struct"
-ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

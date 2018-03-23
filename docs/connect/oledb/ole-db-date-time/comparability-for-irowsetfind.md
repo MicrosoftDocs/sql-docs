@@ -14,10 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IRowsetFind comparability"
-ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -16,10 +16,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, SPNs"
   - "OLE DB, SPNs"
   - "SPNs [SQL Server]"
-ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

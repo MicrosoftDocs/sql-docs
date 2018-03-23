@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], ADO"
   - "ADO [OLE DB Driver for SQL Server]"
   - "MSOLEDBSQL, ADO"
-ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

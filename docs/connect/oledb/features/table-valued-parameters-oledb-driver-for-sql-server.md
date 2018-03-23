@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB Driver for SQL Server, table-valued parameters"
   - "table-valued parameters (OLE DB Driver for SQL Server)"
-ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

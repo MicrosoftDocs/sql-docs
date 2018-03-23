@@ -14,10 +14,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [OLE DB]"
-ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "DBPROP_ACCESSORDER property"
   - "OLE DB Driver for SQL Server, BLOBs"
   - "large data, OLE objects"
-ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

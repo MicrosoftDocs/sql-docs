@@ -20,10 +20,8 @@ helpviewer_keywords:
   - "OLE DB data source objects [OLE DB Driver for SQL Server]"
   - "data source objects [OLE DB]"
   - "CLSID"
-ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

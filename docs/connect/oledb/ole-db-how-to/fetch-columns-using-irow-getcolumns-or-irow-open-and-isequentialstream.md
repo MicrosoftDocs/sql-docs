@@ -16,10 +16,8 @@ helpviewer_keywords:
   - "Open method"
   - "ISequentialStream interface, samples"
   - "GetColumns method"
-ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

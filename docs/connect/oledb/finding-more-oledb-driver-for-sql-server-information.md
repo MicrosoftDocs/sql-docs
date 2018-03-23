@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "MSOLEDBSQL, additional resources"
   - "OLE DB Driver for SQL Server, additional resources"
-ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

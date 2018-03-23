@@ -17,10 +17,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "BCPDone method"
-ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

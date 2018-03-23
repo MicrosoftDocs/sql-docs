@@ -23,10 +23,8 @@ helpviewer_keywords:
   - "SQLGetInfo function"
   - "concurrency [OLE DB Driver for SQL Server]"
   - "SQLSetConnectAttr function"
-ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

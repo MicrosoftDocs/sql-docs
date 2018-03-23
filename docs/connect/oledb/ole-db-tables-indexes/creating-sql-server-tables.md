@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "DBCOLUMNDESC usage"
   - "adding tables"
   - "CreateTable function"
-ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

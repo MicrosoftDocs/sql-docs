@@ -16,10 +16,8 @@ helpviewer_keywords:
   - "conversions [OLE DB]"
   - "bindings [OLE DB]"
   - "OLE DB, bindings and conversions"
-ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

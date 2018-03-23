@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "RPC syntax"
   - "stored procedures [SQL Server], RPC syntax"
-ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

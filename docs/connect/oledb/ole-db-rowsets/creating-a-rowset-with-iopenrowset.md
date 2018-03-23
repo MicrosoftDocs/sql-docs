@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "rowsets [OLE DB], creating"
   - "OLE DB Driver for SQL Server, rowsets"
   - "OLE DB rowsets, creating"
-ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

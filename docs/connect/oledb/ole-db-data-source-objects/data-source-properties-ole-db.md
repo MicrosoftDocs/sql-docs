@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "data source properties [OLE DB]"
   - "OLE DB data source properties [OLE DB Driver for SQL Server]"
-ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

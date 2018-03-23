@@ -23,10 +23,8 @@ helpviewer_keywords:
   - "SSPROP_ALLOWNATIVEVARIANT property"
   - "GetParameterInfo function"
   - "OLE DB, data types"
-ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
-caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

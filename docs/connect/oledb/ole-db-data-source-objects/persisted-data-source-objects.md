@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "data source objects [OLE DB]"
   - "OLE DB Driver for SQL Server, persisted data source objects"
   - "persisted data source objects"
-ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

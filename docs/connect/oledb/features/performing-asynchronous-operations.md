@@ -21,10 +21,8 @@ helpviewer_keywords:
   - "rowsets [SQL Server], initializing"
   - "MSOLEDBSQL, asynchronous operations"
   - "OLE DB Driver for SQL Server, asynchronous operations"
-ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

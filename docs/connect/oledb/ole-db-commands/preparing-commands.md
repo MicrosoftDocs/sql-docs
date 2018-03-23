@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "prepared statements [OLE DB Driver for SQL Server]"
   - "commands [OLE DB]"
   - "command preparation [OLE DB Driver for SQL Server]"
-ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

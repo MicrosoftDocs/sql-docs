@@ -20,10 +20,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server"
   - "MSOLEDBSQL"
   - "native data access [OLE DB Driver for SQL Server]"
-ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-caps.latest.revision: 66
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

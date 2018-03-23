@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, commands"
   - "parameters [OLE DB Driver for SQL Server], OLE DB"
   - "commands [OLE DB]"
-ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

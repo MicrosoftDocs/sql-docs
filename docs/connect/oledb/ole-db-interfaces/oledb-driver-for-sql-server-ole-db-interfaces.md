@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "OLE DB, programmer's reference"
   - "MSOLEDBSQL, OLE DB"
   - "OLE DB Driver for SQL Server, OLE DB"
-ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

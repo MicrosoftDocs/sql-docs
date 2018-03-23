@@ -32,10 +32,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server OLE DB interfaces"
   - "XML [SQL Server], OLE DB Driver for SQL Server"
   - "COLUMNS rowset"
-ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

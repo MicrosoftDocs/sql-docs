@@ -22,10 +22,8 @@ helpviewer_keywords:
   - "expired passwords [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, password expiration"
   - "modifying passwords"
-ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

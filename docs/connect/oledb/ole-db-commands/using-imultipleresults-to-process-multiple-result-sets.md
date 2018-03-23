@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "rowsets [OLE DB], multiple"
   - "IMultipleResults interface"
   - "multiple-rowset results"
-ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

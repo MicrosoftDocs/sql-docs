@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "ITransactionLocal interface"
   - "OLE DB Driver for SQL Server, transactions"
   - "local transactions [OLE DB]"
-ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

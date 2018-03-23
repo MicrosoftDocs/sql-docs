@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "IErrorInfo interface"
   - "OLE DB error handling, error details"
   - "ISQLServerErrorInfo interface"
-ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

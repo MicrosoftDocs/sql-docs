@@ -15,10 +15,8 @@ ms.topic: "reference"
 apitype: "COM"
 helpviewer_keywords: 
   - "IBCPSession interface"
-ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

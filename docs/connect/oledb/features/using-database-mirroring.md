@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], connecting clients to"
   - "MSOLEDBSQL, database mirroring"
   - "OLE DB Driver for SQL Server, database mirroring"
-ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

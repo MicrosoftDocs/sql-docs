@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "rowsets [OLE DB], cursors"
   - "properties [OLE DB]"
   - "cursors [OLE DB]"
-ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

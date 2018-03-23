@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "MSOLEDBSQL, encryption"
   - "encryption [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, encryption"
-ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

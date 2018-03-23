@@ -20,10 +20,8 @@ helpviewer_keywords:
   - "data types [OLE DB]"
   - "CreateTable function"
   - "OLE DB, data types"
-ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

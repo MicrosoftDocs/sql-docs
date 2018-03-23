@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB [FILESTREAM support]"
   - "FILESTREAM [SQL Server], OLE DB"
-ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

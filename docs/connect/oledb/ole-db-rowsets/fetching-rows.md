@@ -18,10 +18,8 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
   - "IRowset interface"
   - "OLE DB Driver for SQL Server, fetching"
-ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

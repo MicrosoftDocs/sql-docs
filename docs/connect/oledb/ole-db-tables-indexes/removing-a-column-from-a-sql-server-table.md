@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "removing columns"
   - "DropColumn function"
   - "OLE DB Driver for SQL Server, columns"
-ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "ISequentialStream interface"
   - "GetColumns method"
   - "BLOBs, fetching"
-ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

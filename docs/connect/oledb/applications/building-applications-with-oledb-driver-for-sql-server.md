@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "MSOLEDBSQL, building applications"
   - "applications [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, building applications"
-ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

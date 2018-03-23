@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [OLE DB]"
   - "OLE DB, date/time improvements"
-ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

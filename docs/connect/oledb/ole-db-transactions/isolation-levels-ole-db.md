@@ -17,10 +17,8 @@ helpviewer_keywords:
   - "isolation levels [OLE DB]"
   - "transactions [OLE DB]"
   - "OLE DB Driver for SQL Server, transactions"
-ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

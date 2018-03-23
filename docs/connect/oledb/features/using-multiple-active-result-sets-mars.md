@@ -19,10 +19,8 @@ helpviewer_keywords:
   - "Multiple Active Result Sets"
   - "OLE DB Driver for SQL Server, MARS"
   - "MARS [SQL Server]"
-ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
-caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---

@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [ODBC]"
   - "ODBC CALL syntax"
-ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

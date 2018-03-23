@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "bookmarks [OLE DB]"
   - "rows [OLE DB]"
-ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

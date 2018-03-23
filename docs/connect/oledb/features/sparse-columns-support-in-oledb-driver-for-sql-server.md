@@ -15,10 +15,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "sparse columns, OLE DB Driver for SQL Server"
   - "sparse columns, OLE DB"
-ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "pmasl"
+ms.author: "Pedro.Lopes"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---

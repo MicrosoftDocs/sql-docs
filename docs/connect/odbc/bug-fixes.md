@@ -9,12 +9,12 @@
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Fixed unexpected Session Recovery parsing errors when using Connection Resiliency and Connection Pooling at the same time
+- Fixed sending incorrect state to SQL Server during Session Recovery attempt when Connection Resiliency and Connection Pooling both are enabled, causing session to be dropped by the Server
 - Fixed a bug where when using Kerberos authentication, bulk insert could fail with "access denied" error
 - Removed workaround for a unixODBC bug present in version below 2.3.1 (driver doubled the sizes of certain buffers passed to unixODBC)
 - Fixed Connection Resiliency (reconnect) hanging when using ColumnEncryption=enabled
 - Fixed DSN creation bug, where when using "Active Directory Interactive authentication" option Azure Authentication window could become unresponsive (Windows)
-- Fixed a rare crash during ODBC shutdown with asynchronous execution is enabled (happened when clearing connection handle)
+- Fixed a rare crash during ODBC shutdown when asynchronous execution is enabled (happened when clearing connection handle)
 - Fixed an issue where SQL Driver caused high CPU consumption while executing long stored procedures
 - Fixed inability to retrieve data in an encrypted varbinary(max) column without conversion
 - Fixed a problem where after a null varchar(max) encrypted column is fetched using SQLGetData() on a static cursor, the following column is also nulled even if it has data

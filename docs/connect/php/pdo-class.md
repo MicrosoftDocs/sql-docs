@@ -1,7 +1,7 @@
 ---
 title: "PDO Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -65,10 +65,15 @@ The PDO class contains the following methods:
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## See Also  
-[PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[Overview of the PHP SQL Driver](../../connect/php/overview-of-the-php-sql-driver.md)  
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[Getting Started with the PHP SQL Driver](../../connect/php/getting-started-with-the-php-sql-driver.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)
+
+[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+
+[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

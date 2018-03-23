@@ -94,7 +94,7 @@
 
 # [How To](r/sql-server-machine-learning-tasks.md)
 
-## [R package management for SQL Server](r/r-package-management-for-sql-server-r-services.md)
+## [Package management](r/r-package-management-for-sql-server-r-services.md)
 ### [Install new R packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
 ### [Install new Python packages on SQL Server](python/install-additional-python-packages-on-sql-server.md)
 ### [Enable R package management for a SQL Server instance](r/r-package-how-to-enable-or-disable.md)

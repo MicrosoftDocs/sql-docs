@@ -1,7 +1,7 @@
 ---
 title: "sqlsrv_num_fields | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/23/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -28,7 +28,7 @@ ms.workload: "Inactive"
 # sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Retrieves the number of fields in an active result set. Note that **sqlsrv_num_fields** can be called on any prepared statement, before or after execution.  
+Retrieves the number of fields in an active result set. This function can be called on any prepared statement, before or after execution.  
   
 ## Syntax  
   
@@ -44,7 +44,7 @@ sqlsrv_num_fields( resource $stmt)
 An integer value that represents the number of fields in the active result set. If an error occurs, the Boolean value **false** is returned.  
   
 ## Example  
-The following example executes a query to retrieve all fields for the top three rows in the *HumanResources.Department* table of the Adventureworks database. The **sqlsrv_num_fields** function determines the number of fields in the result set. This allows data to be displayed by iterating through the fields in each returned row.  
+The following example executes a query to retrieve all fields for the top three rows in the *HumanResources.Department* table of the AdventureWorks database. The **sqlsrv_num_fields** function determines the number of fields in the result set. This allows data to be displayed by iterating through the fields in each returned row.  
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   

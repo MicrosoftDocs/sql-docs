@@ -1,28 +1,28 @@
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Fixed 1-second delay upon SQLFreeHandle with Encrypt and MARS
-- Fixed an error 22003 crash in SQLGetData on Windows
+- Fixed 1-second delay when calling SQLFreeHandle with MARS enabled and connection attribute "Encrypt=yes"
+- Fixed an error 22003 crash in SQLGetData when the size of the buffer passed in is smaller then the data being retrieved (Windows)
 - Fixed truncated ADAL error messages
-- Fixed a rare floating point conversion bug on 32-bit Windows
-- Fixed an issue where inserting double into decimal field with AE on would no return data truncation error
+- Fixed a rare bug on 32-bit Windows when converting a floating point number to an integer
+- Fixed an issue where inserting double into decimal field with Always Encrypted on would no return data truncation error
 - Fixed a warning on MacOS installer
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
 - Fixed unexpected Session Recovery parsing errors when using Connection Resiliency and Connection Pooling at the same time
-- Fixed a bulk insert problem where "access denied" was issue, due to not handling SPNs correctly
-- Removed workaround for a unixODBC bug present in version below 2.3.1
+- Fixed a bug where when using Kerberos authentication, bulk insert could fail with "access denied" error
+- Removed workaround for a unixODBC bug present in version below 2.3.1 (driver doubled the sizes of certain buffers passed to unixODBC)
 - Fixed Connection Resiliency (reconnect) hanging when using ColumnEncryption=enabled
-- Fixed DSN creation bug, where window could become unresponsive (Windows)
-- Fixed a rare crash during ODBC shutdown
+- Fixed DSN creation bug, where when using "Active Directory Interactive authentication" option Azure Authentication window could become unresponsive (Windows)
+- Fixed a rare crash during ODBC shutdown with asynchronous execution is enabled (happened when clearing connection handle)
 - Fixed an issue where SQL Driver caused high CPU consumption while executing long stored procedures
 - Fixed inability to retrieve data in an encrypted varbinary(max) column without conversion
 - Fixed a problem where after a null varchar(max) encrypted column is fetched using SQLGetData() on a static cursor, the following column is also nulled even if it has data
-- Fixed an issue with fetching varbinary(max) field with AE on
-- Fixed a problem of setlocale() not working with AE
-- Fixed an issue with SQLDescribeParam() returning error when called on XML-type stored procedure parameter with AE on
+- Fixed an issue with fetching varbinary(max) field with Always Encrypted on
+- Fixed a problem of setlocale() not working with Always Encrypted
+- Fixed an issue with SQLDescribeParam() returning error when called on XML-type stored procedure parameter with Always Encrypted on
 - Fixed escaped underscores not working in SQLTables
-- Fixed a bug where Hebrew data (varchar) is chopped when returned as wide chars on Linux
+- Fixed a bug where Hebrew data (varchar) is truncated when returned as wide chars on Linux
 - Fixed an issue with querying Shift-JIS encoded char/varchar from UTF-8 application
-- Fixed the name property issue of the SQL Login dialog
-- Fixed multiple large file import failing with BCP API
+- Fixed the bug where calling SQLGetInfo with SQL_DRIVER_NAME parameter returned Linux-style filename on MacOS
+- Fixed an issue where loading Windows-1252 character data, using input files larger then 32k bytes into VARCHAR columns using the BCP utility would result in failures

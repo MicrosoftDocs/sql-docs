@@ -43,9 +43,9 @@ If the call succeeds, PDO::query returns a PDOStatement object. If the call fail
 PDOException.  
   
 ## Remarks  
-A query executed with PDO::query can execute either a prepared statement or directly, depending on the setting of PDO::SQLSRV_ATTR_DIRECT_QUERY; see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) for more information.  
+A query executed with PDO::query can execute either a prepared statement or directly, depending on the setting of PDO::SQLSRV_ATTR_DIRECT_QUERY. For more information, see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
-PDO::SQLSRV_ATTR_QUERY_TIMEOUT also affects the behavior of PDO::exec; see [PDO::setAttribute](../../connect/php/pdo-setattribute.md) for more information.  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT also affects the behavior of PDO::exec; for more information, see [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 You can specify the following options for $*fetch_style*.  
   

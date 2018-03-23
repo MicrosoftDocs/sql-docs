@@ -1,7 +1,7 @@
 ---
 title: "Retrieving Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -82,6 +82,7 @@ You can see how many rows are in a result set if you specify a scrollable cursor
 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## See Also  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [Retrieving Data](../../connect/php/retrieving-data.md)  
   

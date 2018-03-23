@@ -1,7 +1,7 @@
 ---
-title: "Code Samples for PHP SQL Driver | Microsoft Docs"
+title: "Code Samples for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -19,7 +19,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Code Samples for PHP SQL Driver
+# Code Samples for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 

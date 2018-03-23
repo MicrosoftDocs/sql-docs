@@ -43,14 +43,16 @@ If you don't have access to a SQL Server, select your platform from the followin
 
         ![Connect in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
 
-1. In the **Connect to Server** dialog box, fill out your connection options: 
+ 1. In the **Connect to Server** dialog box, fill out your connection options: 
 
     - **Server type**: Database Engine (typically selected by default)
+    - **Server Name**: [Your Server Name](ssms-tricks.md#when-you-dont-know-it) (This article uses the instance name SQL2016ST on the hostname NODE5, but you'll need to type in your own server name here)
     - **Authentication**: Windows Authentication (this article uses Windows Authentication, but SQL Login is supported and will prompt you for a username / password if selected)
 
       ![Connection](media/connect-query-sql-server/connection.png)
 
         You can also modify additional connection options (such as the database you're connecting to, the connection timeout value, and the network protocol) by clicking the **Options** button. For the purpose of this article, everything was left at the default values. 
+
 
 1. Once the fields have been filled out, click on **Connect**. 
 

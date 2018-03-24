@@ -1,7 +1,7 @@
 ---
-title: "PHP Driver for SQL Server Support for LocalDB | Microsoft Docs"
+title: "Support for LocalDB | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/03/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -18,17 +18,17 @@ ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# PHP Driver for SQL Server Support for LocalDB
+# Support for LocalDB
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Beginning in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], a lightweight version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], called LocalDB, will be available. This topic discusses how to connect to a database in a LocalDB instance.
+LocalDB is a lightweight version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] which has been available since [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. This topic discusses how to connect to a database in a LocalDB instance.
 
 ## Remarks
 
 For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online topic on [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 
-To summarize, LocalDB allows you to:
+In brief, LocalDB allows you to:
 
 -   Use **sqllocaldb.exe i** to discover the name of the default instance.
 
@@ -77,7 +77,7 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-You can download LocalDB from the [SQL Server 2012 feature pack page](http://go.microsoft.com/fwlink/?LinkID=236805), or from the [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express edition. If you will use sqlcmd.exe to modify data in your LocalDB instance, you will need sqlcmd from [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], which you can get from the Command Line Utilities download in the [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Feature Pack page.
+For instructions on installing LocalDB, see the [LocalDB documentation](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). If you use sqlcmd.exe to modify data in your LocalDB instance, you will need the [sqlcmd utility](../../tools/sqlcmd-utility.md).
 
 ## See Also
 

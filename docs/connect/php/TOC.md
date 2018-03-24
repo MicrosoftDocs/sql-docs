@@ -59,6 +59,7 @@
 ### [How to: Configure Error and Warning Handling Using the SQLSRV Driver](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [How to: Handle Errors and Warnings Using the SQLSRV Driver](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)
 ## [Logging Activity](logging-activity.md)
+## [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
 ## [Constants (Microsoft Drivers for PHP for SQL Server)](constants-microsoft-drivers-for-php-for-sql-server.md)
 ## [SQLSRV Driver API Reference](sqlsrv-driver-api-reference.md)
 ### [sqlsrv_begin_transaction](sqlsrv-begin-transaction.md)

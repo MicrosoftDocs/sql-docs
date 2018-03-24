@@ -48,7 +48,7 @@ ms.workload: "On Demand"
 |Microsoft PHP Drivers 1.0 for SQL Server|1.0|April 28, 2014|
 
 ## SQL Server Version Certified Compatibility
- The following matrix lists SQL Server versions that have been tested and certified as compatible with the corresponding driver version. Future SQL Server releases strive to maintain backward compatibility with previous driver versions; however, only the latest supported driver is tested and certified with new SQL Server versions as SQL Server is released.
+ The following matrix lists SQL Server versions that have been tested and certified as compatible with the corresponding driver version. We strive to maintain backward compatibility with previous driver versions, but only the latest supported driver is tested and certified with new SQL Server versions as SQL Server is released.
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; SQL Server version|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3.0<br />&nbsp;|2.0<br />&nbsp;|
 |---|---|---|---|---|---|---|---|
@@ -110,3 +110,9 @@ ms.workload: "On Demand"
 |macOS Sierra (64-bit)               |Y  |Y  |   |   |   |   |   |
 |macOS El Capitan (64-bit)           |Y  |Y  |   |   |   |   |   |
 
+## See Also  
+[Release Notes](../../connect/php/release-notes-for-the-php-sql-driver.md)
+
+[Support Resources](../../connect/php/support-resources-for-the-php-sql-driver.md)
+
+[System Requirements](../../connect/php/system-requirements-for-the-php-sql-driver.md)

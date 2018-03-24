@@ -127,7 +127,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-For information about storing Unicode data, see [Working with Unicode Data](https://msdn.microsoft.com/en-us/library/ms175180.aspx).  
+For information about storing Unicode data, see [Working with Unicode Data](https://msdn.microsoft.com/library/ms175180.aspx).  
   
 ## Example  
 The following example is similar to the first sample but instead of specifying the UTF-8 character set on the connection, this sample shows how to specify the UTF-8 character set on the column.  

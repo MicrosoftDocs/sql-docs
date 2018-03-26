@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Configure development environment for PHP development | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -19,13 +19,13 @@ ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Step 1: Configure development environment for PHP development
+# Step 1: Configure environment for PHP development
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 
 
 
-* Identify which version of the PHP driver you will use, based on your environment, as noted here:  [System Requirements for the PHP SQL Driver](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+* Identify which version of the PHP driver you will use, based on your environment, as noted here:  [System Requirements for the Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
 * Download and install applicable PHP Driver here: [Download Microsoft PHP Driver](https://www.microsoft.com/download/details.aspx?id=20098)  
 * Download and install applicable ODBC Driver here:  [Download ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)  
 * Configure the PHP driver and web server for your specific operating system:
@@ -33,8 +33,8 @@ ms.workload: "On Demand"
 ### Windows  
   
 
-* Configure loading the PHP driver, as noted here: [Loading the PHP SQL Driver](../../connect/php/loading-the-php-sql-driver.md) 
-* Configure IIS to host PHP applications, as noted here: [Configuring IIS for PHP SQL Driver](../../connect/php/configuring-iis-for-php-sql-driver.md)
+* Configure loading the PHP driver, as noted here: [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) 
+* Configure IIS to host PHP applications, as noted here: [Configuring IIS for the Microsoft Drivers for PHP for SQL Server](../../connect/php/configuring-iis-for-php-sql-driver.md)
 
 ### Linux and Mac
 

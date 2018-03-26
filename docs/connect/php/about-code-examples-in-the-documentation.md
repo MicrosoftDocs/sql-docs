@@ -1,7 +1,7 @@
 ---
 title: "About Code Examples in the Documentation | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/16/2018"
+ms.date: "03/23/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""

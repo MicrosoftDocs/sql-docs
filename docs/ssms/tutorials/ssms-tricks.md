@@ -169,8 +169,6 @@ The error log is a file that contains details about things occurring within your
 1. Connect to  your SQL Server.
 2. Open a **New Query** window.
 3. Paste the following T-SQL code snippet into your query window and click **Execute**:
-
-
   ```sql
    SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
   ```

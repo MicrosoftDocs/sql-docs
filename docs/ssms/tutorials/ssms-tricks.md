@@ -174,9 +174,9 @@ The error log is a file that contains details about things occurring within your
   ```sql
    SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
   ```
-3. The results show you the location of the error log within the file system: 
+4. The results show you the location of the error log within the file system: 
 
-![Find Error Log by Query](media/ssms-tricks/finderrorlogquery.png)
+    ![Find Error Log by Query](media/ssms-tricks/finderrorlogquery.png)
 
 ### Find error log location if you cannot connect to SQL
 1. Open your SQL Server Configuration Manager. 
@@ -212,7 +212,7 @@ There are three places to find which SQL Server you're connected to.
 2. The name of the server will be listed in the query window:
 
     ![Name in Query Window](media/ssms-tricks/nameinquerywindow.png)
-3. . The name of the server will also be listed in the **Properties window**.
+3. The name of the server will also be listed in the **Properties window**.
     - To access this open the **View** Menu > **Properties Window**:
 
     ![Name in Properties](media/ssms-tricks/nameinproperties.png)

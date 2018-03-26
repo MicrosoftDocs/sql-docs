@@ -60,7 +60,7 @@ To create a policy on container and generate a Shared Access Signature (SAS) key
 2.  Edit and then execute the following script.  
   
     ```  
-    \<#   
+    <#   
     This script uses the Azure Resource model and creates a new ARM storage account.  
     Modify this script to use an existing ARM or classic storage account   
     using the instructions in comments within this script  
@@ -73,7 +73,7 @@ To create a policy on container and generate a Shared Access Signature (SAS) key
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
     $policyName = $prefixName + 'policy' # the name of the SAS policy  
   
-    \<#   
+    <#   
     Using Azure Resource Manager deployment model  
     Comment out this entire section and use the classic storage account name to use an existing classic storage account  
     #>  
@@ -99,7 +99,7 @@ To create a policy on container and generate a Shared Access Signature (SAS) key
     # Create a new storage account context using an ARM storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value 
   
-    \<#  
+    <#  
     Using the Classic deployment model  
     Use the following four lines to use an existing classic storage account  
     #>  

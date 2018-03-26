@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "03/27/2018"
+ms.date: "03/28/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -21,17 +21,16 @@ ms.workload: "Inactive"
 
 ## March 2018 (March Public Preview)
 
-release date: March 27, 2018  
-version: 0.27.0
+release date: March 28, 2018  
+version: 0.27.3
 
 The *March Public Preview* continues to address the top GitHub issues and is focused on improving our extensibility story. Specifically enabling Extension Manager, improving dashboard management, and providing SQL Agent and insights extensions. This release includes the following enhancements:
 
 - Enhance the Manage Dashboard extensibility model to support tabbed insights and configuration panes.
-- Dashboard Insights extensions for sp_whoisactive from [whoisactive.com](http://www.whoisactive.com).
 - Extension Manager enables simple acquisition of 1st-party and 3rd-party extensions.
+- Dashboard extensions for sp_whoisactive from [whoisactive.com](http://www.whoisactive.com).
 - Add additional Extensibility APIs for connection and object explorer management.
-- Early Preview of SQL Agent Management Extension.
-- Community Localization open for 10 languages.
+- Early preview of SQL Agent dashboard extension.
 - Continue to fix important customer impacting [GitHub issues](https://github.com/Microsoft/sqlopsstudio/issues).
 
 For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).

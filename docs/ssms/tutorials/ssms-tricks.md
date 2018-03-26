@@ -192,18 +192,19 @@ The error log is a file that contains details about things occurring within your
     - You'll notice that there are several errorlog.* in this location. The one ending with *.log is the current one. The ones ending with numbers are previous logs, as a new log is created every time the SQL Server restarts. 
 6. Open this file in Notepad. 
 
-## Determine SQL Server Instance Name...
-There are different ways to determine the name of your instance before and after you connect to your SQL Server.  
+## Determine SQL Server Name...
+There are different ways to determine the name of your SQL Server before and after you connect to your SQL Server.  
 
 ### ...When you don't know it
 1. Follow the steps to locate the [SQL Server Error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). 
 2. Open the errorlog.log in Notepad. 
 3. Navigate through it until you find the text "Server name is":
-  - Whatever is listed in the single quotes is the name of the instance and what you'll be connecting to: 
+  - Whatever is listed in the single quotes is the name of the SQL Server and what you'll be connecting to: 
     ![Server Name in Error Log](media/ssms-tricks/servernameinlog.png)
+    The format of the name is 'HOSTNAME\SERVERNAME'. If all you see is the hostname, then you've installed the default intsance, and your instance name is 'MSSQLSERVER'. When connecting to a default instance, the hostname is all you need to type in to connect to  your SQL Server. 
 
 ### ...Once you're connected to SQL 
-There are three places to find which instance you're connected to. 
+There are three places to find which SQL Server you're connected to. 
 
 1. The name of the server will be listed in **Object Explorer**:
 

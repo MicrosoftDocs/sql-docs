@@ -73,9 +73,9 @@ The following table lists the SQL Server data type (the data type being retrieve
 |xml|Stream<sup>2</sup>|8-bit character<sup>1</sup>|  
   
 
-1.  Data is returned in 8-bit characters as specified in the code page of the Windows locale set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single byte question mark (?) character.  
+1.  Data is returned in 8-bit characters as specified in the code page of the Windows locale set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single-byte question mark (?) character.  
   
-2.  If [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) or [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) is used to retrieve data that has a default PHP type of Stream, the data will be returned as a string with the same encoding as the stream. For example, if a SQL Server binary type is retrieved by using **sqlsrv_fetch_array**, the default return type will be a binary string.  
+2.  If [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) or [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) is used to retrieve data that has a default PHP type of Stream, the data is returned as a string with the same encoding as the stream. For example, if a SQL Server binary type is retrieved by using **sqlsrv_fetch_array**, the default return type is a binary string.  
   
 3.  Data is returned as a raw byte stream from the server without performing encoding or translation.  
 
@@ -95,7 +95,7 @@ The following table lists the SQL Server data type (the data type being retrieve
  
  
 ## Other New SQL Server 2008 Data Types and Features  
-Data types that are new in SQL Server 2008 and that exist outside of columns (such as table-valued parameters) are not supported in the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. The table below summarizes the PHP support for new SQL Server 2008 features.  
+Data types that are new in SQL Server 2008 and that exist outside of columns (such as table-valued parameters) are not supported in the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. The following table summarizes the PHP support for new SQL Server 2008 features.  
   
 |Feature|PHP Support|  
 |-----------|---------------|  
@@ -110,9 +110,13 @@ Data types that are new in SQL Server 2008 and that exist outside of columns (su
 Partial type support means that you cannot programmatically query for the type of the column.  
   
 ## See Also  
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[PHP Types](http://go.microsoft.com/fwlink/?LinkId=109071)  
-[Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
+[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Converting Data Types](../../connect/php/converting-data-types.md)
+
+[PHP Types](http://php.net/manual/en/language.types.php)
+
+[Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
   

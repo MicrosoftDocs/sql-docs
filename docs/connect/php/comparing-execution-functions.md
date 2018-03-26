@@ -1,7 +1,7 @@
 ---
 title: "Comparing Execution Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/16/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -25,9 +25,11 @@ ms.workload: "Inactive"
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] provides several options for executing functions.  
-  
+
+## SQLSRV Execution Functions  
 If you are using the SQLSRV driver, use [sqlsrv_query](../../connect/php/sqlsrv-query.md) to execute a single query and [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) with [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) to execute a prepared statement multiple times with different parameter values for each execution.  
-  
+
+## PDO_SQLSRV Execution Functions 
 If you are using the PDO_SQLSRV driver, you can execute a query with one of the following:  
   
 -   [PDO::exec](../../connect/php/pdo-exec.md)  

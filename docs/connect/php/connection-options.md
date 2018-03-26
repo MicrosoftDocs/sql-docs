@@ -1,7 +1,7 @@
 ---
 title: "Connection Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/16/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -24,6 +24,7 @@ ms.workload: "On Demand"
 
 This topic lists the options that are permitted in the associative array (when using [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) in the SQLSRV driver) or the keywords that are permitted in the data source name (dsn) (when using [PDO::__construct](../../connect/php/pdo-construct.md) in the PDO_SQLSRV driver).  
 
+## Table of Connection Options
 |Key|Value|Description|Default|  
 |-------|---------|---------------|-----------|  
 |APP|String|Specifies the application name used in tracing.|No value set.|  

@@ -1,7 +1,7 @@
 ---
 title: "About Code Examples in the Documentation | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/23/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -22,6 +22,7 @@ ms.workload: "Inactive"
 # About Code Examples in the Documentation
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
+## Remarks about the code examples
 There are several points to note when you execute the code examples in the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] documentation:  
   
 -   Nearly all the examples assume that SQL Server 2008 or later and the AdventureWorks database are installed on the local computer.  

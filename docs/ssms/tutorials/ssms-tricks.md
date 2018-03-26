@@ -143,20 +143,6 @@ When a database has many objects, finding a specific object can prove difficult.
 ## Access your SQL Server Error log
 The error log is a file that contains details about things occurring within your SQL Server. It can be browsed and queried within SSMS. It can also be found as a .log file on disk.
 
-### Find your error log if you cannot connect to SQL
-1. Open your SQL Server Configuration Manager. 
-2. Expand the **Services** node.
-3. Right click on your SQL Server instance > **Properties**:
-
-    ![Config Manager Server Properties](media/ssms-tricks/serverproperties.PNG)
-
-4. Select the **Startup Parameters** tab.
-5. In the **Existing Parameters** area, the path after the "-e" is the location of the error log: 
-    
-    ![Error Log](media/ssms-tricks/errorlog.png)
-    - You'll notice that there are several errorlog.* in this location. The one ending with *.log is the current one. The ones ending with numbers are previous logs, as a new log is created every time the SQL Server restarts. 
-6. Open this file in Notepad. 
-
 ### Find your error log if you're connected to SQL
 1. Connect to  your SQL Server.
 2. Open a **New Query** window.
@@ -190,6 +176,20 @@ The error log is a file that contains details about things occurring within your
 5. Execute the query and review the results:
    
     ![Query Error Log](media/ssms-tricks/queryerrorlog.png)
+
+### Find your error log if you cannot connect to SQL
+1. Open your SQL Server Configuration Manager. 
+2. Expand the **Services** node.
+3. Right click on your SQL Server instance > **Properties**:
+
+    ![Config Manager Server Properties](media/ssms-tricks/serverproperties.PNG)
+
+4. Select the **Startup Parameters** tab.
+5. In the **Existing Parameters** area, the path after the "-e" is the location of the error log: 
+    
+    ![Error Log](media/ssms-tricks/errorlog.png)
+    - You'll notice that there are several errorlog.* in this location. The one ending with *.log is the current one. The ones ending with numbers are previous logs, as a new log is created every time the SQL Server restarts. 
+6. Open this file in Notepad. 
 
 ## Determine SQL Server Instance Name...
 There are different ways to determine the name of your instance before and after you connect to your SQL Server.  

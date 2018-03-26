@@ -46,7 +46,7 @@ If you don't have access to a SQL Server, select your platform from the followin
  1. In the **Connect to Server** dialog box, fill out your connection options: 
 
         - **Server type**: Database Engine (typically selected by default).
-        - **Server Name**: [Your Server Name](ssms-tricks.md#when-you-dont-know-it) (This article uses the instance name SQL2016ST on the hostname NODE5, but you'll need to type in your own server name here).
+        - **Server Name**: This article uses the instance name SQL2016ST on the hostname NODE5 (NODE5\SQL2016ST), but you'll need to type in your own server name here. If you're not sure how to determine your SQL Server name, you can find more information [here](ssms-tricks.md#determine-sql-server-name). 
         - **Authentication**: Windows Authentication (this article uses Windows Authentication, but SQL Login is supported and will prompt you for a username and password if selected). More information on authentication types can be found [here](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
 
       ![![Connection](media/connect-query-sql-server/connection.png)](media/connect-query-sql-server/connection2.png)

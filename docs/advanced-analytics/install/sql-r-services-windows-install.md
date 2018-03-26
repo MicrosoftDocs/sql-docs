@@ -30,7 +30,7 @@ This article explains how to install and configure **SQL Server 2016 R Services 
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ SQL Server 2016 is required. If you have SQL Server 2016, please install [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) instead.
++ SQL Server 2016 is required. If you have SQL Server 2017, please install [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) instead.
 
 + A database engine instance is required. You cannot install just R, athough you can add it incrementally to an existing instance.
 

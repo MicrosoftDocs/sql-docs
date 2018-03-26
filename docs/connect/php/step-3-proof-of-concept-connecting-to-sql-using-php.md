@@ -167,4 +167,5 @@ This code example demonstrates the use of transactions in which you:
 ## Additional Examples  
   
 [Example Application (SQLSRV Driver)](../../connect/php/example-application-sqlsrv-driver.md)  
+
 [Example Application (PDO_SQLSRV Driver)](../../connect/php/example-application-pdo-sqlsrv-driver.md)

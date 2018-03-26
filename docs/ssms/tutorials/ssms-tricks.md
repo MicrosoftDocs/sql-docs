@@ -143,19 +143,6 @@ When a database has many objects, finding a specific object can prove difficult.
 ## Access your SQL Server Error log
 The error log is a file that contains details about things occurring within your SQL Server. It can be browsed and queried within SSMS. It can also be found as a .log file on disk.
 
-### Find your error log if you're connected to SQL
-1. Connect to  your SQL Server.
-2. Open a **New Query** window.
-3. Paste the following T-SQL code snippet into your query window and click **Execute**:
-
-
-  ```sql
-   SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
-  ```
-3. The results show you the location of the error log within the file system: 
-
-![Find Error Log by QUery](media/ssms-tricks/finderrorlogquery.png)
-
 ### Open Error log within SSMS
 1. Connect to your SQL Server.
 2. Expand the **Management** node. 
@@ -176,6 +163,20 @@ The error log is a file that contains details about things occurring within your
 5. Execute the query and review the results:
    
     ![Query Error Log](media/ssms-tricks/queryerrorlog.png)
+
+
+### Find your error log if you're connected to SQL
+1. Connect to  your SQL Server.
+2. Open a **New Query** window.
+3. Paste the following T-SQL code snippet into your query window and click **Execute**:
+
+
+  ```sql
+   SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
+  ```
+3. The results show you the location of the error log within the file system: 
+
+![Find Error Log by Query](media/ssms-tricks/finderrorlogquery.png)
 
 ### Find your error log if you cannot connect to SQL
 1. Open your SQL Server Configuration Manager. 

@@ -183,7 +183,7 @@ Managed service accounts, group managed service accounts, and virtual accounts a
   
     To use a group managed service account for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](http://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.  
   
-    For more information, see [Group Manged Service Accounts](http://technet.microsoft.com/library/hh831782.aspx)  
+    For more information, see [Group Managed Service Accounts](http://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  The group managed service account must be created in the Active Directory by the domain administrator before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup can use it for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  

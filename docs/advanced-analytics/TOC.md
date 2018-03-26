@@ -148,7 +148,7 @@
 ### [RevoScaleR functions for SQL Server data](r/scaler-functions-for-working-with-sql-server-data.md)
 ## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
-## [revscalepy](python/what-is-revoscalepy.md)
+## [revoscalepy](python/what-is-revoscalepy.md)
 
 # Resources
 

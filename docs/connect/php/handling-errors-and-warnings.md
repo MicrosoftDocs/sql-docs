@@ -1,7 +1,7 @@
 ---
 title: "Handling Errors and Warnings | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -22,7 +22,7 @@ ms.workload: "Inactive"
 # Handling Errors and Warnings
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-If you are using the PDO_SQLSRV driver, you can find more information about errors and error handling on the [PDO](http://go.microsoft.com/fwlink/?LinkID=187441) website.  
+If you are using the PDO_SQLSRV driver, you can find more information about errors and error handling on the [PDO](http://php.net/manual/book.pdo.php) website.  
   
 Topics in this section provide information about handling errors and warnings with the SQLSRV driver of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -41,5 +41,5 @@ Topics in this section provide information about handling errors and warnings wi
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
 ## See Also  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

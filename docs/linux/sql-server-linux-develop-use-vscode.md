@@ -92,7 +92,7 @@ The following steps show how to connect to SQL Server with VS Code.
 
    | Setting | Description |
    |-----|-----|
-   | **Server name** | The SQL Server instance name. For this tutorial, use **localhost** to connect to the local SQL Server instance on your machine. If connecting to a remote SQL Server, enter the name of the target SQL Server machine or its IP address. |
+   | **Server name** | The SQL Server instance name. For this tutorial, use **localhost** to connect to the local SQL Server instance on your machine. If connecting to a remote SQL Server, enter the name of the target SQL Server machine or its IP address. If you need to specify a port for your SQL Server instance, use a comma to separate it from the name. For example for a local server running on port 1401 you would enter **localhost,1401**. |
    | **[Optional] Database name** | The database that you want to use. For purposes of this tutorial, don't specify a database and press **ENTER** to continue. |
    | **User name** | Enter the name of a user with access to a database on the server. For this tutorial, use the default **SA** account created during the SQL Server setup. |
    | **Password (SQL Login)** | Enter the password for the specified user. | 

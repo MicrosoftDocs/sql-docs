@@ -201,7 +201,7 @@ There are different ways to determine the name of your SQL Server before and aft
 3. Navigate through it until you find the text "Server name is":
   - Whatever is listed in the single quotes is the name of the SQL Server and what you'll be connecting to: 
     ![Server Name in Error Log](media/ssms-tricks/servernameinlog.png)
-    The format of the name is 'HOSTNAME\SERVERNAME'. If all you see is the hostname, then you've installed the default intsance, and your instance name is 'MSSQLSERVER'. When connecting to a default instance, the hostname is all you need to type in to connect to  your SQL Server. 
+    The format of the name is 'HOSTNAME\SERVERNAME'. If all you see is the hostname, then you've installed the default instance, and your instance name is 'MSSQLSERVER'. When connecting to a default instance, the hostname is all you need to type in to connect to  your SQL Server. 
 
 ### ...Once you're connected to SQL 
 There are three places to find which SQL Server you're connected to. 

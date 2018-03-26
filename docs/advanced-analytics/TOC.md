@@ -32,7 +32,7 @@
 ### [Bind to Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [Command-prompt setup](install/sql-ml-component-commandline-install.md)
 ## [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
-## [Set up a data science client](r/set-up-a-data-science-client.md)
+## [Set up R tools](r/set-up-a-data-science-client.md)
 ## [Set up Python tools](python/setup-python-client-tools-sql.md)
 
 # [Tutorials, samples, solutions](tutorials/machine-learning-services-tutorials.md)

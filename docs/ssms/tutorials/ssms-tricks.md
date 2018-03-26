@@ -170,9 +170,10 @@ The error log is a file that contains details about things occurring within your
 2. Open a **New Query** window.
 3. Paste the following T-SQL code snippet into your query window and click **Execute**:
 
-  ```sql
-   SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
-  ```
+ ```sql
+    SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
+  ``` 
+
 4. The results show you the location of the error log within the file system: 
 
     ![Find Error Log by Query](media/ssms-tricks/finderrorlogquery.png)

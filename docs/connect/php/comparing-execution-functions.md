@@ -1,7 +1,7 @@
 ---
 title: "Comparing Execution Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -37,7 +37,9 @@ If you are using the PDO_SQLSRV driver, you can execute a query with one of the 
 -   [PDO::prepare](../../connect/php/pdo-prepare.md) and [PDOStatement::execute](../../connect/php/pdostatement-execute.md).  
   
 ## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)
+
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

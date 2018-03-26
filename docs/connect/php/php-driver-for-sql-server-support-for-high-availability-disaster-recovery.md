@@ -1,7 +1,7 @@
 ---
-title: "PHP Driver for SQL Server High Availability, Disaster Recovery | Microsoft Docs"
+title: "Support for High Availability, Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -19,7 +19,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# PHP Driver for SQL Server Support for High Availability, Disaster Recovery
+# Support for High Availability, Disaster Recovery
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This topic discusses [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support (added in version 3.0) for high-availability, disaster recovery -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] support was added in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. For more information about [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
@@ -34,11 +34,11 @@ If you are not connecting to an availability group listener, and if multiple IP 
 ## Connecting With MultiSubnetFailover  
 The **MultiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance by trying to connect to all the IP addresses. When **MultiSubnetFailover=true** is specified for a connection, the client retries TCP connection attempts faster than the operating system’s default TCP retransmit intervals. This enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
   
-Always specify **MultiSubnetFailover=True** when connecting to a SQL Server 2012 availability group listener or SQL Server 2012 Failover Cluster Instance. **MultiSubnetFailover** enables faster failover for all Availability Groups and failover cluster instance in SQL Server 2012 and will significantly reduce failover time for single and multi-subnet AlwaysOn topologies. During a multi-subnet failover, the client will attempt connections in parallel. During a subnet failover, the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] will aggressively retry the TCP connection.  
+Always specify **MultiSubnetFailover=True** when connecting to a SQL Server 2012 availability group listener or SQL Server 2012 Failover Cluster Instance. **MultiSubnetFailover** enables faster failover for all Availability Groups and failover cluster instance in SQL Server 2012 and significantly reduces failover time for single and multi-subnet AlwaysOn topologies. During a multi-subnet failover, the client will attempt connections in parallel. During a subnet failover, the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] will aggressively retry the TCP connection.  
   
 For more information about connection string keywords in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], see [Connection Options](../../connect/php/connection-options.md).  
   
-Specifying **MultiSubnetFailover=true** when connecting to something other than a availability group listener or Failover Cluster Instance may result in a negative performance impact, and is not supported.  
+Specifying **MultiSubnetFailover=true** when connecting to something other than an availability group listener or Failover Cluster Instance may result in a negative performance impact, and is not supported.  
   
 Use the following guidelines to connect to a server in an availability group:  
   
@@ -79,7 +79,7 @@ A database can allow or disallow read workloads on the targeted AlwaysOn databas
 The **ApplicationIntent** keyword is used to enable read-only routing.  
   
 ## Read-Only Routing  
-Read-only routing is a feature that can ensure the availability of a read only replica of a database. To enable read-only routing:  
+Read-only routing is a feature that can ensure the availability of a read-only replica of a database. To enable read-only routing:  
   
 1.  You must connect to an Always On Availability Group availability group listener.  
   
@@ -89,7 +89,7 @@ Read-only routing is a feature that can ensure the availability of a read only r
   
 It is possible that multiple connections using read-only routing will not all connect to the same read-only replica. Changes in database synchronization or changes in the server's routing configuration can result in client connections to different read-only replicas. To ensure that all read-only requests connect to the same read-only replica, do not pass an availability group listener to the **Server** connection string keyword. Instead, specify the name of the read-only instance.  
   
-Read-only routing may take longer than connecting to the primary because read only routing first connects to the primary and then looks for the best available readable secondary. Because of this, you should increase your login timeout.  
+Read-only routing may take longer than connecting to the primary because read-only routing first connects to the primary and then looks for the best available readable secondary. In this case, the login timeout should be increased.  
   
 ## See Also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)  

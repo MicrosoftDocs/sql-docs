@@ -21,7 +21,7 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Perform Knowledge Discovery

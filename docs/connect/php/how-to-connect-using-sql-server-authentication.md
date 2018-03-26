@@ -1,7 +1,7 @@
 ---
 title: "How to: Connect Using SQL Server Authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -54,7 +54,7 @@ The following precautions should be taken when you use SQL Server Authentication
 ## Example  
 The following example uses the SQLSRV driver with SQL Server Authentication to connect to a local instance of SQL Server. The values for the required *UID* and *PWD* connection attributes are taken from application-specific text files, *uid.txt* and *pwd.txt*, in the *C:\AppData* directory. After the connection has been established, the server is queried to verify the user login.  
   
-The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
+The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the browser when the example is run from the browser.  
   
 ```  
 <?php  
@@ -132,13 +132,21 @@ This sample uses the PDO_SQLSRV driver to demonstrate how to connect with SQL Se
 ```  
   
 ## See Also  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[SUSER_SNAME (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106382)  
-[How to: Create a SQL Server Login](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[How to: Create a Database User](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[Managing Users, Roles, and Logins](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[User-Schema Separation](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[Grant Object Permissions (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+
+[How to: Create a SQL Server Login](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[How to: Create a Database User](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[Managing Users, Roles, and Logins](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[User-Schema Separation](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Grant Object Permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

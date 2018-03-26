@@ -1,7 +1,7 @@
 ---
 title: "PDF Device Information Settings | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "03/16/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
@@ -28,12 +28,13 @@ ms.workload: "Inactive"
   
 |Setting|Value|  
 |-------------|-----------|  
+| **AccessiblePDF** | Indicates whether to render an accessible/tagged PDF, which is larger in size but easier for screen readers and other assistive technologies to read and navigate. The default value is **false**. [Available in Power BI Report Server (March 2018) and later] |
 |**Columns**|The number of columns to set for the report. This value overrides the report's original settings.|  
 |**ColumnSpacing**|The column spacing to set for the report. This value overrides the report's original settings.|  
 |**DpiX**|The resolution of the output device in x-direction.|  
 |**DpiY**|The resolution of the output device in y-direction.|  
 |**EndPage**|The last page of the report to render. The default value is the value for **StartPage**.|  
-|**HumanReadablePDF**|Indicates whether the PDF should be compressed, which allows the source to be more readable. The default value is **false.**|  
+|**HumanReadablePDF**|Indicates whether to render an uncompressed PDF file, which is larger in size but more human-readable in a plain-text editor. The default value is **false.**|  
 |**MarginBottom**|The bottom margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.|  
 |**MarginLeft**|The left margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.|  
 |**MarginRight**|The right margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.|  

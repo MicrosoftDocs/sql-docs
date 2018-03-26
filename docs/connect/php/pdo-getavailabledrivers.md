@@ -50,6 +50,7 @@ print_r(PDO::getAvailableDrivers());
 ```  
   
 ## See Also  
-[PDO Class](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO Class](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

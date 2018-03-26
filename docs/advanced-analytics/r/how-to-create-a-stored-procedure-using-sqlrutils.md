@@ -23,13 +23,13 @@ ms.workload: "Inactive"
 # Create a Stored Procedure Using sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes the steps for converting your R code to run as a T-SQL stored procedure. For best possible results, your code might need to be modified somewhat, to ensure that all inputs can be parameterized.
+This article describes the steps for converting your R code to run as a T-SQL stored procedure. For best possible results, your code might need to be modified somewhat, to ensure that all inputs can be parameterized.
 
 ## <a name="bkmk_rewrite"></a>Step 1. Rewrite R Script
 
 For the best results, you should rewrite your R code to encapsulate it as a single function.
 
-All variables used by the function should be defined inside the function, or should be defined as input parameters. See the [sample code](#samples) in this topic.
+All variables used by the function should be defined inside the function, or should be defined as input parameters. See the [sample code](#samples) in this article.
 
 Also, because the input parameters for the R function will become the input parameters of the SQL stored procedure, you must ensure that your inputs and outputs conform to the following type requirements:
 

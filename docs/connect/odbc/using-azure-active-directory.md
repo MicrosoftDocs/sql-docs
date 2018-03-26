@@ -155,6 +155,10 @@ The following sample shows the code required to connect to SQL Server using Azur
     ...
     free(pAccToken);
 ~~~
+The following is a sample connection string for use with Azure Active Directory Interactive Authentication. Note that it does not contain PWD field as the password would be entered using Windows Azure Authentication screen.
+~~~
+SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
+~~~
 
 ## See Also
 [Token-based authentication support for Azure SQL DB using Azure AD auth](https://blogs.msdn.microsoft.com/sqlsecurity/2016/02/09/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)

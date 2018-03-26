@@ -65,11 +65,13 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis is based on the right information. Using [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.|
 
 ## Migrate and move data
+
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## Earlier SQL Server versions
+
 - [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 - [SQL Server 2014 documentation](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [SQL Server 2012 documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
@@ -77,9 +79,12 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [SQL Server 2008 documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
 - [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
-## Samples  
+## Samples
+
 - [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
-- [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
-   
+- [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples)
+
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

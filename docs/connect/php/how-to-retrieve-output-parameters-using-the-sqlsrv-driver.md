@@ -24,7 +24,7 @@ ms.workload: "Inactive"
 # How to: Retrieve Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-This topic demonstrates how to call a stored procedure in which one parameter has been defined as an output parameter. Note that when retrieving an output or input/output parameter, all results returned by the stored procedure must be consumed before the returned parameter value is accessible.  
+This topic demonstrates how to call a stored procedure in which one parameter has been defined as an output parameter. When retrieving an output or input/output parameter, all results returned by the stored procedure must be consumed before the returned parameter value is accessible.  
   
 > [!NOTE]  
 > Variables that are initialized or updated to **null**, **DateTime**, or stream types cannot be used as output parameters.  
@@ -40,9 +40,9 @@ The following example calls a stored procedure that returns the year-to-date sal
 Because only one result is returned by the stored procedure, *$salesYTD* contains the returned value of the output parameter immediately after the stored procedure is executed.  
   
 > [!NOTE]  
-> Calling stored procedures using canonical syntax is the recommended practice. For more information about canonical syntax, see [Calling a Stored Procedure](http://go.microsoft.com/fwlink/?linkid=119517).  
+> Calling stored procedures using canonical syntax is the recommended practice. For more information about canonical syntax, see [Calling a Stored Procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -123,7 +123,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## See Also  
-[How to: Specify Parameter Direction Using the SQLSRV Driver](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)  
-[How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[How to: Specify Parameter Direction Using the SQLSRV Driver](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+
+[How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+
 [Retrieving Data](../../connect/php/retrieving-data.md)  
   

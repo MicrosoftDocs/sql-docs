@@ -25,9 +25,7 @@ This article explains how to install the machine learning component by running t
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ SQL Server 2017 is required. If you have SQL Server 2016, please install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) instead.
-
-+ SQL Server 2017 is required if you want to install Machine Learning Services with language support for R, Python, or both. If instead you have SQL Server 2016 installation media, you must install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md). Python support for machine learning workloads is not available in SQL Server 2016.
++ SQL Server 2017 is required if you want to install Machine Learning Services with language support for R, Python, or both. If instead you have SQL Server 2016 installation media, you canit  install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) to get R language support.
 
 + A database engine instance is required. You cannot install just R or Python features, athough you can add them incrementally to an existing instance.
 

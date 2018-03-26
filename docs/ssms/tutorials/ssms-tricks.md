@@ -165,7 +165,7 @@ The error log is a file that contains details about things occurring within your
     ![Query Error Log](media/ssms-tricks/queryerrorlog.png)
 
 
-### Find your error log if you're connected to SQL
+### Find error log location if you're connected to SQL
 1. Connect to  your SQL Server.
 2. Open a **New Query** window.
 3. Paste the following T-SQL code snippet into your query window and click **Execute**:
@@ -178,7 +178,7 @@ The error log is a file that contains details about things occurring within your
 
 ![Find Error Log by Query](media/ssms-tricks/finderrorlogquery.png)
 
-### Find your error log if you cannot connect to SQL
+### Find error log location if you cannot connect to SQL
 1. Open your SQL Server Configuration Manager. 
 2. Expand the **Services** node.
 3. Right click on your SQL Server instance > **Properties**:

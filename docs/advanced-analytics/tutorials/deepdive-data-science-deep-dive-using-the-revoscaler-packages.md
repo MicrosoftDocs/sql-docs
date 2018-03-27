@@ -17,9 +17,9 @@ dev_langs:
   - "R"
 ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
 caps.latest.revision: 18
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Data science deep dive: Using the RevoScaleR packages with SQL Server

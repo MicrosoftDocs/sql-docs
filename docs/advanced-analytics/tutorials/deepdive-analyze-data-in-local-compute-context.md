@@ -17,9 +17,9 @@ dev_langs:
   - "R"
 ms.assetid: 787bb526-4a13-40fa-9343-75d3bf5ba6a2
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Analyze data in local compute context (SQL and R deep dive)

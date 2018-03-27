@@ -14,9 +14,9 @@ dev_langs:
   - "R"
 ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Converting R code for execution in-database

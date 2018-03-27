@@ -16,9 +16,9 @@ dev_langs:
   - "R"
 ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
 caps.latest.revision: 3
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # How to create MDX queries using olapR

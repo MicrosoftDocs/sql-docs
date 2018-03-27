@@ -17,9 +17,9 @@ applies_to:
 dev_langs: 
   - "R"
 caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # SQL Server R tutorials

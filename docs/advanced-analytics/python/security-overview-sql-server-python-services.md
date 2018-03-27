@@ -13,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
 caps.latest.revision: 9
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Security overview for Python in SQL Server

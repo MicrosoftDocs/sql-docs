@@ -16,9 +16,9 @@ keywords:
   - "SQLRUserGroup"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
 caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Active"
 ---
 # Add SQLRUserGroup as a database user

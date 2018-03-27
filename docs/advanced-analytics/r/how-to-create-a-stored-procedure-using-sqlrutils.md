@@ -15,9 +15,9 @@ dev_langs:
   - "R"
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
 caps.latest.revision: 10
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Create a Stored Procedure Using sqlrutils

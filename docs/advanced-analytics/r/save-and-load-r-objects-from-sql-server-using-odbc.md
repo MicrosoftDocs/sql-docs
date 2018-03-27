@@ -15,9 +15,9 @@ dev_langs:
   - "R"
 ms.assetid: 6ac2e971-6b4f-4c73-ba57-29c716abd057
 caps.latest.revision: 8
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Save and load R objects from SQL Server using ODBC

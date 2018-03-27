@@ -14,9 +14,9 @@ dev_langs:
  
 ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Using data from OLAP cubes in R

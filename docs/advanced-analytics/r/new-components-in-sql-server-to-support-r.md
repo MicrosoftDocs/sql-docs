@@ -13,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
 caps.latest.revision: 9
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Components in SQL Server to support R

@@ -16,9 +16,9 @@ dev_langs:
   - "SQL"
 ms.assetid: 75480e5c-f37f-45b9-a176-67e08e9a9daf
 caps.latest.revision: 7
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Working with inputs and outputs (R in SQL quickstart)

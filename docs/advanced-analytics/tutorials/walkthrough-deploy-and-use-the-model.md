@@ -17,9 +17,9 @@ dev_langs:
   - "R"
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
 caps.latest.revision: 18
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Deploy the R model and use it in SQL

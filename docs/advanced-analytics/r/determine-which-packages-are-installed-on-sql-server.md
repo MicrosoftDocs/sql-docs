@@ -13,9 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Viewing R or Python packages installed on SQL Server

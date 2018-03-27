@@ -14,9 +14,9 @@ dev_langs:
   - "R"
 ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
 caps.latest.revision: 7
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Installing and managing machine learning packages in SQL Server

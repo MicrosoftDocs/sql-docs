@@ -16,9 +16,9 @@ dev_langs:
   - "SQL"
 ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
 caps.latest.revision: 8
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Using R functions with SQL Server data (R in SQL quickstart)

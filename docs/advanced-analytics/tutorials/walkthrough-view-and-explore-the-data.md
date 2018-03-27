@@ -17,9 +17,9 @@ dev_langs:
   - "R"
 ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
 caps.latest.revision: 33
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # View and explore the data using SQL (walkthrough)

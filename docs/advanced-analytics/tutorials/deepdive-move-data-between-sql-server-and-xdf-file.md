@@ -18,9 +18,9 @@ dev_langs:
   - "R"
 ms.assetid: 40887cb3-ffbb-4769-9f54-c006d7f4798c
 caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Move data between SQL Server and XDF file (SQL and R deep dive)

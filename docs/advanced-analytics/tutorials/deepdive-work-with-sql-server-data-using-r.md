@@ -17,9 +17,9 @@ dev_langs:
   - "R"
 ms.assetid: 0a3d7ba0-4113-4cde-9645-debba45cae8f
 caps.latest.revision: 20
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Work with SQL Server Data using R (SQL and R deep dive)

@@ -18,9 +18,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
 caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # In-database R analytics for SQL developers (tutorial)

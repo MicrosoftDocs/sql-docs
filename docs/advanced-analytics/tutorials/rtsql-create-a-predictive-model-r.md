@@ -16,9 +16,9 @@ dev_langs:
   - "SQL"
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Create a predictive model (R in SQL quickstart)

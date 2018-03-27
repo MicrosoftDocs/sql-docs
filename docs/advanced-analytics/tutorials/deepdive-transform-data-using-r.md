@@ -17,9 +17,9 @@ dev_langs:
   - "R"
 ms.assetid: 0327e788-94cc-4a47-933b-7c5c027b9208
 caps.latest.revision: 19
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Transform data using R (SQL and R deep dive)

@@ -18,9 +18,9 @@ dev_langs:
   - "R"
 ms.assetid: bcf5f7ff-795b-4815-b163-bcddd496efce
 caps.latest.revision: 18
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Create SQL Server data objects using RxSqlServerData (SQL and R deep dive)

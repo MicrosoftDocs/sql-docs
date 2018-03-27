@@ -18,9 +18,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: 32a5d5ad-c58a-4669-a90d-ef296b48fcd8
 caps.latest.revision: 10
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Lesson 1: Download the sample data

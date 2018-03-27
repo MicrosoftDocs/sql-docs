@@ -16,9 +16,9 @@ dev_langs:
   - "R"
 ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Prerequisites for the data science walkthrough for SQL Server and R

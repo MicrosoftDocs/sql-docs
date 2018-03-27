@@ -34,7 +34,7 @@ The latest version of the components can open files created by earlier versions 
 
 If the computer already has a 32-bit version of Office, then you have to install the 32-bit version of the components. You also have to ensure that you run the SSIS package in 32-bit mode, or run the 32-bit version of the Import and Export Wizard.
 
-Make sure that you download the Access Database Engine 2016 Redistributable and not the Microsoft Access 2016 Runtime. If you have an Office 365 subscription, you may see an error message When you run the installer. The error indicates that you can't install the download side-by-side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
+Make sure that you download the Access Database Engine 2016 Redistributable and not the Microsoft Access 2016 Runtime. If you have an Office 365 subscription, you may see an error message when you run the installer. The error indicates that you can't install the download side by side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -85,7 +85,7 @@ You may not be able to select newer Excel versions in the list if you only have 
 
 If you're importing data from Excel, the next step is to indicate whether the first row of the data contains column names. You provide this info in the **Excel Connection Manager Editor** in an SSIS package, or on the **Choose a Data Source** page of the Import and Export Wizard.
 
--   If you disable this option because the source data doesn't contain column names, the wizard uses F1, F2, and so forth as column headings.
+-   If you disable this option because the source data doesn't contain column names, the wizard uses F1, F2, and so forth, as column headings.
 -   If the data contains column names, but you disable this option, the wizard imports the column names as the first row of data.
 -   If the data does not contain column names, but you enable this option, the wizard uses the first row of source data as the column names. In this case, the first row of source data is no longer included in the data itself.
 
@@ -95,7 +95,7 @@ There are three types of Excel objects that you can use as the source or destina
 
 -   **Worksheet.** To specify a worksheet, append the `$` character to the end of the sheet name and add delimiters around the string - for example, **[Sheet1$]**. Or, look for a name that ends with the `$` character in the list of existing tables and views.
 
--   **Named range.** To specify a named range, simply use the range name - for example, **MyDataRange**. Or, look for a name that does not end with the `$` character in the list of existing tables and views.
+-   **Named range.** To specify a named range, provide the range name - for example, **MyDataRange**. Or, look for a name that does not end with the `$` character in the list of existing tables and views.
     
 -   **Unnamed range.** To specify a range of cells that you haven't named, append the $ character to the end of the sheet name, add the range specification, and add delimiters around the string - for example, **[Sheet1$A1:B4]**.
 
@@ -163,7 +163,7 @@ The Excel driver recognizes only a limited set of data types. For example, all n
 
 SSIS does not implicitly convert data types. As a result, you may have to use Derived Column or Data Conversion transformations to convert Excel data explicitly before loading it into a non-Excel destination, or to convert non-Excel data before loading it into an Excel destination.
 
-Some examples of the conversions that may be required include the following:  
+Here are some examples of the conversions that may be required:  
   
 -   Conversion between Unicode Excel string columns and non-Unicode string columns with specific codepages  
   
@@ -182,7 +182,7 @@ When you specify a worksheet or a named range as the source, the driver reads th
 
 ### Missing values
 
-The Excel driver reads a certain number of rows (by default, 8 rows) in the specified source to guess at the data type of each column. When a column appears to contain mixed data types, especially numeric data mixed with text data, the driver decides in favor of the majority data type, and returns null values for cells that contain data of the other type. (In a tie, the numeric type wins.) Most cell formatting options in the Excel worksheet do not seem to affect this data type determination.
+The Excel driver reads a certain number of rows (by default, eight rows) in the specified source to guess at the data type of each column. When a column appears to contain mixed data types, especially numeric data mixed with text data, the driver decides in favor of the majority data type, and returns null values for cells that contain data of the other type. (In a tie, the numeric type wins.) Most cell formatting options in the Excel worksheet do not seem to affect this data type determination.
 
 You can modify this behavior of the Excel driver by specifying Import Mode. To specify Import Mode, add `IMEX=1` to the value of **Extended Properties** in the connection string of the Excel connection manager in the Properties window. 
 
@@ -218,7 +218,7 @@ Before you can successfully save strings longer than 255 characters to an Excel 
 
 -   If an existing destination table already contains rows of data, then the first few rows that are sampled by the driver must contain at least one instance of a value longer than 255 characters in the memo column.
 
--   If a new destination table is created during package design or at run time or by the Import and Export Wizard, then the `CREATE TABLE` statement must use LONGTEXT (or one of its synonyms) as the data type of the the destination memo column. In the wizard, check the `CREATE TABLE` statement and revise it, if necessary, by clicking **Edit SQL** next to the **Create destination table** option on the **Column Mappings** page.
+-   If a new destination table is created during package design or at run time or by the Import and Export Wizard, then the `CREATE TABLE` statement must use LONGTEXT (or one of its synonyms) as the data type of the destination memo column. In the wizard, check the `CREATE TABLE` statement and revise it, if necessary, by clicking **Edit SQL** next to the **Create destination table** option on the **Column Mappings** page.
 
 ## Related content
 

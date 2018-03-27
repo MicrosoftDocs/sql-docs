@@ -24,14 +24,14 @@ ms.workload: "On Demand"
   This article discusses how various data-access components can be used with OLE DB Driver for SQL Server.  
 
 ## Server Support  
- OLE DB Driver for SQL Server supports connections to, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)],  [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)],  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)],[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)],  [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
+ OLE DB Driver for SQL Server supports connections to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)],  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)],[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)],  [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ## Supported Operating System Versions  
  The following table lists which operating systems support OLE DB Driver for SQL Server.  
 
 |OLE DB Driver for SQL Server|Supported operating systems|  
 |--------------------------------------|---------------------------------|   
-|OLE DB Driver for SQL Server ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)],  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], and [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] )|Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2<br /><br /> Microsoft Windows 7<br /><br /> Microsoft Windows 8<br /><br /> Microsoft Windows Server 2012<br /><br />Microsoft Windows 10<br /><br />Microsoft Windows Server 2016|  
+|OLE DB Driver for SQL Server ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)],  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], and [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] )|Microsoft Windows 8.1<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012<br /><br />Windows Server 2012 R2<br /><br />Microsoft Windows Server 2016|  
 
 ## ADO Support Policies  
  ADO applications can use the SQLOLEDB OLE DB provider that is included with Windows if they do not require any of the features of [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later.  

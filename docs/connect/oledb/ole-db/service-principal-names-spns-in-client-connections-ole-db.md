@@ -1,7 +1,8 @@
 ---
 title: "Service Principal Names (SPNs) in Client Connections (OLE DB) | Microsoft Docs"
+description: "Service Principal Names (SPNs) in client connections (OLE DB)"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "02/28/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

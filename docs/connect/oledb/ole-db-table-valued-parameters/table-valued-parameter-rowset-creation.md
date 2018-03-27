@@ -1,7 +1,8 @@
 ---
 title: "Table-Valued Parameter Rowset Creation | Microsoft Docs"
+description: "Static and dynamic Table-Valued Parameter rowset creation"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "02/28/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

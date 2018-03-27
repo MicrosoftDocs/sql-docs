@@ -168,7 +168,31 @@ The **FOR JSON** clause formats SQL results as JSON text that can be provided to
 ```  
   
 For more information, see [Format query results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) and [FOR Clause (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md).  
-  
+
+## Use cases for JSON data in SQL Server
+
+JSON support in SQL Server and Azure SQL Database lets you combine relational and NoSQL concepts. You can easily transform relational to semi-structured data and vice-versa. JSON is not a replacement for existing relational models, however. Here are some specific use cases that benefit from the JSON support in SQL Server and in SQL Database. For more info, see [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+
+### Simplify complex data models
+
+Consider denormalizing your data model with JSON fields in place of multiple child tables. For more info, see [Simplify data access using de-normalized models](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/).
+
+### Store retail and e-commerce data
+
+Store info about products with a wide range of variable attributes in a denormalized model for flexibility. For more info, see [Designing Product Catalogs in SQL Server using JSON](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/) and [Indexing data in JSON product catalogs](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/).
+
+### Process log and telemetry data
+
+Load, query, and analyze log data stored as JSON files with all the power of the Transact-SQL language. For more info, see the section *Log and telemetry data analysis* in [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+
+### Store semi-structured IoT data
+
+When you need real-time analysis of IoT data, load the incoming data directly into the database instead of staging it in a storage location. For more info, see [Working with Azure IoT data in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/).
+
+### Simplify REST API development
+
+Transform relational data from your database easily into the JSON format used by the REST APIs that support your web site. For more info, see [Simplify REST API development for modern Single-page apps with SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/).
+
 ## Combine relational and JSON data
 SQL Server provides a hybrid model for storing and processing both relational and JSON data by using standard Transact-SQL language. You can organize collections of your JSON documents in tables, establish relationships between them, combine strongly typed scalar columns stored in tables with flexible key/value pairs stored in JSON columns, and query both scalar and JSON values in one or more tables by using full Transact-SQL.
  
@@ -320,7 +344,7 @@ For a visual introduction to the built-in JSON support in SQL Server and Azure S
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
 *Building REST API with SQL Server using JSON functions*
-> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+> [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
 ### Reference articles  
   

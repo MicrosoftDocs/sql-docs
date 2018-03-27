@@ -1559,7 +1559,7 @@ CREATE SCHEMA History
 GO  
 CREATE TABLE dbo.Department   
 (  
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,   
+    DepartmentNumber char(10) NOT NULL PRIMARY KEY NONCLUSTERED,   
     DepartmentName varchar(50) NOT NULL,   
     ManagerID int  NULL,   
     ParentDepartmentNumber char(10) NULL,   

@@ -18,7 +18,7 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use Value Relations in a Composite Domain

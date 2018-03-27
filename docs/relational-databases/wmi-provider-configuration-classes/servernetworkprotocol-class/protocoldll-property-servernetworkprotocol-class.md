@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ProtocolDLL property"
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

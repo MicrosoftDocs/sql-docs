@@ -57,9 +57,9 @@ ms.workload: "Inactive"
   
 |Value|Description|  
 |-----------|-----------------|  
-|**0**|Returns the server name converted to NetBIOS format, for example:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDB`<br /><br /> This is the default value.|  
-|**1**|Returns the server name without conversion, for example:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDB`|  
-|**2**|Returns the complete server path, for example:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDB`|  
+|**0**|Returns the server name converted to NetBIOS format, for example:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> This is the default value.|  
+|**1**|Returns the server name without conversion, for example:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
+|**2**|Returns the complete server path, for example:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## Return Type  
  **nvarchar(max)**  
@@ -79,7 +79,7 @@ ms.workload: "Inactive"
  To keep code and applications independent of the current computer and database, avoid writing code that relies on absolute file paths. Instead, get the complete path for a file at run time by using the **FileTableRootPath** and **GetFileNamespacePath** functions together, as shown in the following example. By default, the **GetFileNamespacePath** function returns the relative path of the file under the root path for the database.  
   
 ```sql  
-USE MyDocumentDB;  
+USE MyDocumentDatabase;  
 @root varchar(100)  
 SELECT @root = FileTableRootPath();  
   
@@ -98,7 +98,7 @@ WHERE Name = N’document.docx’;
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
 WHERE Name = N’document.docx’;  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDB\MyFileTable\MyDocDirectory\document.docx”  
+-- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
 WHERE Name = N’document.docx’;  
 ```  

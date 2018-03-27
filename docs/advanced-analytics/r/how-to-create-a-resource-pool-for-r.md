@@ -21,7 +21,7 @@ ms.workload: "Inactive"
 # Create a resource pool for machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes how you can create a resource pool specifically for managing machine learning workloads in SQL Server. It assumes that you have already installed and enabled the machine learning features, and want to reconfigure the instance to support more fine-grained management of the resources used by external process such as R or Python.
+This article describes how you can create a resource pool specifically for managing machine learning workloads in SQL Server. It assumes that you have already installed and enabled the machine learning features, and want to reconfigure the instance to support more fine-grained management of the resources used by external process such as R or Python.
 
 The process includes multiple steps:
 

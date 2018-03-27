@@ -60,7 +60,7 @@ For a good introduction to terminology and general concepts, see [Resource Gover
 
 ## Resource Management using Resource Governor
 
-If you are new to Resource Governor, see this topic for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [How To: Create a Resource Pool for R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
+If you are new to Resource Governor, see this article for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [How To: Create a Resource Pool for R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 You can use the *external resource pool* mechanism to manage the resources used by the following supported executables:
 

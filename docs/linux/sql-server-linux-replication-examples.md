@@ -20,7 +20,7 @@ ms.workload: "On Demand"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 1.5 introduces SQL Server Replication for instances of SQL Server on Linux. At this time, SQL Server Replication on Linux is a preview feature.
+[!INCLUDE[sqlservervnext](../includes/sssqlv15-md.md)] CTP 2.0 introduces SQL Server Replication for instances of SQL Server on Linux. At this time, SQL Server Replication on Linux is a preview feature.
 
 Configure replication on Linux with [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md). You cannot configure replication for SQL Server on Linux with SQL Server Management Studios (SSMS).  
 

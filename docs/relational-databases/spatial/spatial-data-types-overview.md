@@ -30,9 +30,6 @@ ms.workload: "On Demand"
 There are two types of spatial data. The **geometry** data type supports planar, or Euclidean (flat-earth), data. The **geometry** data type both conforms to the Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 and is compliant with SQL MM (ISO standard).
 In addition, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the **geography** data type, which stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.
 
-> [!IMPORTANT]  
->  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], including enhancements to the spatial data types, download the white paper, [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
-
 ##  <a name="objects"></a> Spatial Data Objects  
 The **geometry** and **geography** data types support sixteen spatial data objects, or instance types. However, only eleven of these instance types are *instantiable*; you can create and work with these instances (or instantiate them) in a database. These instances derive certain properties from their parent data types that distinguish them as **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** or as multiple **geometry** or **geography** instances in a **GeometryCollection**. **Geography** type has an additional instance type, **FullGlobe**.  
 

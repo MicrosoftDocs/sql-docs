@@ -324,7 +324,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 ## <a name="IS"></a> Integration Services
 
-For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services Features Supported by the Editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
+For info about SQL Server Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services Features Supported by the Editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
 ##  <a name="MDS"></a> Master Data Services  
  For information about the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] and Data Quality Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server](../master-data-services/master-data-services-and-data-quality-services-features-support.md). 

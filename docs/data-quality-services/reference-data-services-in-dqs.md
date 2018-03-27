@@ -16,7 +16,7 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Reference Data Services in DQS

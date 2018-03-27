@@ -1,7 +1,7 @@
 ---
 title: "Converting Data Types | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/16/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -22,7 +22,7 @@ ms.workload: "Inactive"
 # Converting Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] allows you to specify data types when you send data to or retrieve data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Specifying data types is optional. If data types are not specified, default types will be used. The topics in this section describe how to specify data types and provide details about default data types.  
+The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] allows you to specify data types when you send data to or retrieve data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Specifying data types is optional. If data types are not specified, default types are used. The topics in this section describe how to specify data types and provide details about default data types.  
   
 ## In This Section  
   
@@ -36,8 +36,11 @@ The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] allows you to spec
 |[How to: Send and Retrieve ASCII Data in Linux and macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Demonstrates how to use [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]'s support for ASCII data in Linux or macOS.<br /><br />Support for ASCII characters in non-Windows environments was added in version 5.2 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
   
 ## See Also  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   

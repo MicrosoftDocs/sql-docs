@@ -16,7 +16,7 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Import a Domain from a .dqs File

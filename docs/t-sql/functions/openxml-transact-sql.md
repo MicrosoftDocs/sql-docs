@@ -1,7 +1,7 @@
 ---
 title: "OPENXML (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/20/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-database"
 ms.service: ""
@@ -29,7 +29,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   OPENXML provides a rowset view over an XML document. Because OPENXML is a rowset provider, OPENXML can be used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in which rowset providers such as a table, view, or the OPENROWSET function can appear.  
   

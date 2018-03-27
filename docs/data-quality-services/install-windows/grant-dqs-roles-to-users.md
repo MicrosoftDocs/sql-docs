@@ -16,7 +16,7 @@ ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Grant DQS Roles to Users

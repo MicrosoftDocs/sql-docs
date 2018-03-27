@@ -1,5 +1,5 @@
 ---
-title: "Secondary to primary replica connection redirection-Always On Availability Groups | Microsoft Docs"
+title: "SQL Server secondary to primary replica read/write connection redirection-Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2018"
 ms.prod: "sql-non-specified"
@@ -29,10 +29,9 @@ ms.workload: "On Demand"
 # Secondary to primary replica read/write connection redirection (Always On Availability Groups)
 [!INCLUDE[appliesto-sssqlv15-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] introduces *secondary to primary read/write connection redirection* for Always On Availability Groups. Read/write connection redirection is available on any operating system platform. Read/write connection redirection allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 introduces *secondary to primary replica read/write connection redirection* for Always On Availability Groups. Read/write connection redirection is available on any operating system platform. It allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
 
 For  example, the connection string can target a secondary replica. Depending on the configuration of the availability group (AG) replica and the settings in the connection string, the connection can be automatically redirected to the primary replica. 
-
 
 ## Use cases
 
@@ -51,7 +50,7 @@ In order for a secondary replica to redirect read/write connection requests:
 
 ## Set READ_WRITE_ROUTING_URL option
 
-To configure secondary to primary connection redirection, set `READ_WRITE_ROUTING_URL` for the primary replica when you create the AG. 
+To configure read/write connection redirection, set `READ_WRITE_ROUTING_URL` for the primary replica when you create the AG. 
 
 In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTING_URL` has been added to the `<add_replica_option>` specification. See the following topics: 
 
@@ -61,7 +60,7 @@ In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTIN
 
 ### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set (default) 
 
-By default, replica connection redirection is is not set for a replica. The way a secondary replica handles connection requests depends on whether or not the secondary replica is set to allow connections and on the `ApplicationIntent` setting in the connection string. The following table shows how the a secondary replica handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`. 
+By default, read/write replica connection redirection is is not set for a replica. The way a secondary replica handles connection requests depends on whether or not the secondary replica is set to allow connections and on the `ApplicationIntent` setting in the connection string. The following table shows how the a secondary replica handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`. 
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
@@ -72,7 +71,7 @@ The preceding table shows the default behavior, which is the same as versions of
 
 ### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) set 
 
-After you set connection redirection, the way the replica handles connection requests behaves differently. The connection behavior still depends on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent` setting. The following table shows how a secondary replica with `READ_WRITE_ROUTING` set handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`.
+After you set read/write connection redirection, the way the replica handles connection requests behaves differently. The connection behavior still depends on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent` setting. The following table shows how a secondary replica with `READ_WRITE_ROUTING` set handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
@@ -86,14 +85,13 @@ The preceding table shows that when the primary replica has `READ_WRITE_ROUTING_
 In this example, an availability group has three replicas:
 * A primary replica on COMPUTER01
 * A synchronous secondary replica on COMPUTER02
-* An asynchronous secondary replica on COMPUTER03
+* A synchronous secondary replica on COMPUTER03
 
 The following picture represents the availability group.
 
 ![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
-The following transact-SQL script creates this AG. In this example, Each replica specifies the `READ_WRITE_ROUTING_URL`. COMPUTER03 is an asynchronouse secondary replica, that is not configured for read-only queries.
-
+The following transact-SQL script creates this AG. In this example, Each replica specifies the `READ_WRITE_ROUTING_URL`.
 ```sql
 CREATE AVAILABILITY GROUP MyAg   
      WITH ( CLUSTER_TYPE =  NONE )  
@@ -108,7 +106,7 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' ),
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER02),
+            READ_ONLY_ROUTING_LIST = (COMPUTER02, COMPUTER03),
             READ_WRITE_ROUTING_URL = 'TCP://COMPUTER01.<domain>.<tld>:1433' )   
          SESSION_TIMEOUT = 10  
          ),   
@@ -120,19 +118,19 @@ CREATE AVAILABILITY GROUP MyAg
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' ),  
          PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
-            READ_ONLY_ROUTING_LIST = (COMPUTER01),  
+            READ_ONLY_ROUTING_LIST = (COMPUTER01, COMPUTER03),  
             READ_WRITE_ROUTING_URL = 'TCP://COMPUTER02.<domain>.<tld>:1433' )   
          SESSION_TIMEOUT = 10  
          ),   
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
-         SECONDARY_ROLE (ALLOW_CONNECTIONS = READ_ONLY,   
+         SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
-         PRIMARY_ROLE (ALLOW_CONNECTIONS = ALL,   
-            READ_ONLY_ROUTING_LIST = NONE,  
+         PRIMARY_ROLE (ALLOW_CONNECTIONS = READ_WRITE,   
+            READ_ONLY_ROUTING_LIST = (COMPUTER01, COMPUTER02),  
             READ_WRITE_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' )  
          SESSION_TIMEOUT = 10  
          );
@@ -150,7 +148,7 @@ In the following diagram, a client application connects to COMPUTER02, with `App
 
 The secondary replica redirects read/write calls to the primary replia. A read write connection to either replica will redirect to the primary replica. 
 
-In the following diagram, the primary replica has been manually failed over to COMPUTER02. A cliente application connects to COMPUTER01, with `ApplicationIntent=ReadWrite`. The connection is redirecrected to the primary replica. 
+In the following diagram, the primary replica has been manually failed over to COMPUTER02. A client application connects to COMPUTER01, with `ApplicationIntent=ReadWrite`. The connection is redirecrected to the primary replica. 
 
 ![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
@@ -165,6 +163,3 @@ If the instance of SQL Server specified in the connection string is not availabl
 [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
 [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
-
-  
-  

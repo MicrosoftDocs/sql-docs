@@ -29,8 +29,10 @@
 #### [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
 ### [Configure IIS for Web Synchronization](configure-iis-for-web-synchronization.md)  
 ### [Configure IIS 7 for Web Synchronization](configure-iis-7-for-web-synchronization.md)  
+
 ## [Configure Distribution](configure-distribution.md)  
-### [Configure Publishing and Distribution](configure-publishing-and-distribution.md)  
+### [Configure Publishing and Distribution](configure-distribution.md)  
+### [Configure Distribution in AG](configure-distribution-availability-group.md)
 ### [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
 ### [Disable Publishing and Distribution](disable-publishing-and-distribution.md)  
 ### [Enable a Database for Replication (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [Specify the Default Snapshot Location (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [Set the Distribution Retention Period for Transactional Publications (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [Set the History Retention Period (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [Subscribe to Publications](subscribe-to-publications.md)  
 ### [Create a Pull Subscription](create-a-pull-subscription.md)  
 ### [Create a Push Subscription](create-a-push-subscription.md)  

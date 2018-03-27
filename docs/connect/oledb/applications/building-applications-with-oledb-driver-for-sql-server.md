@@ -53,9 +53,6 @@ ms.workload: "On Demand"
  [Support Policies for OLE DB Driver for SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  Discusses how various data-access components can be used with different versions of OLE DB Driver for SQL Server.  
 
- [Connecting to a Windows Azure SQL Database Using OLE DB Driver for SQL Server](../../oledb/applications/connecting-to-a-windows-azure-sql-database-using-oledb-driver-for-sql-server.md)  
- Discusses how to connect to a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] using OLE DB Driver for SQL Server.  
-
 ## See Also  
  [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)     
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

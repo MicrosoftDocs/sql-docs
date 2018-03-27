@@ -26,11 +26,11 @@ version: 0.27.3
 
 The *March Public Preview* continues to address the top GitHub issues and is focused on improving our extensibility story. Specifically enabling Extension Manager, improving dashboard management, and providing SQL Agent and insights extensions. This release includes the following enhancements:
 
-- Enhance the Manage Dashboard extensibility model to support tabbed insights and configuration panes.
-- Extension Manager enables simple acquisition of 1st-party and 3rd-party extensions.
-- Dashboard extensions for sp_whoisactive from [whoisactive.com](http://www.whoisactive.com).
-- Add additional Extensibility APIs for connection and object explorer management.
-- Early preview of SQL Agent dashboard extension.
+- Enhance the dashboard extensibility model to support tabbed insights and configuration panes.
+   - Extension Manager enables simple acquisition of extensions.
+   - Dashboard extensions for sp_whoisactive from [whoisactive.com](http://www.whoisactive.com).
+   - For details, see [Extend the functionality of SQL Operations Studio](extensions.md).
+- Add additional [extensibility APIs for connection and object explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) management.
 - Continue to fix important customer impacting [GitHub issues](https://github.com/Microsoft/sqlopsstudio/issues).
 
 For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).

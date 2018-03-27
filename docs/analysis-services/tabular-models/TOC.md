@@ -85,10 +85,10 @@
 ## [Analyze in Excel](analyze-in-excel-ssas-tabular.md)  
 ### [Analyze a tabular model in Excel](analyze-a-tabular-model-in-excel-ssas-tabular.md)  
 
-## [Tabular model solution deployment](tabular-model-solution-deployment-ssas-tabular.md)  
-### [Deploy From SQL Server Data Tools](deploy-from-sql-server-data-tools-ssas-tabular.md)  
-
 ## [String storage and collation in tabular models](string-storage-and-collation-in-tabular-models.md)  
+
+# [Tabular model solution deployment](tabular-model-solution-deployment-ssas-tabular.md)  
+## [Deploy From SQL Server Data Tools](deploy-from-sql-server-data-tools-ssas-tabular.md)  
 
 # [Manage Tabular Model Databases](tabular-model-databases-ssas-tabular.md)  
 ## [Process Database, Table, or Partition](process-database-table-or-partition-analysis-services.md)  

@@ -18,7 +18,7 @@ This tutorial teaches you how to use SQL Server Management Studio (SSMS) to conn
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server instance. 
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) (SSMS).
+- Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
 If you don't have access to a SQL Server instance, select your platform from the following links (if you choose SQL Authentication, use your SQL login and password):
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
@@ -34,9 +34,9 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 2. In the **Connect to Server** window, do the following: 
 
-    - Under **Server type**, select **Database Engine** (usually the default option).
-    - Under **Server Name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](ssms-tricks.md#determine-sql-server-name).  
-    - Under **Authentication**, select **Windows Authentication**. (This article uses Windows Authentication, but SQL Login is also supported. If you select **SQL Login**, you will be prompted for a username and password.) For more information about authentication types, see [Connect to server (database engine)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
+    - For **Server type**, select **Database Engine** (usually the default option).
+    - For **Server Name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](ssms-tricks.md#determine-sql-server-name).  
+    - For **Authentication**, select **Windows Authentication**. (This article uses Windows Authentication, but SQL Login is also supported. If you select **SQL Login**, you will be prompted for a username and password.) For more information about authentication types, see [Connect to server (database engine)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
 
     ![![Connection options](media/connect-query-sql-server/connection.png)](media/connect-query-sql-server/connection2.png)
 

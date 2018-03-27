@@ -19,9 +19,9 @@ ms.workload: "On Demand"
 ---
 # Load data from or to Excel with SQL Server Integration Services (SSIS)
 
-This article describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). The article also describes prerequisites, known issues, and limitations.
+This article describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). The article also describes prerequisites, limitations, and known issues.
 
-You can import data from Excel or export data to Excel by creating an SSIS package and using the Excel Connection Manager and the Excel Source or the Excel Destination. You can also use the SQL Server Import and Export Wizard, which uses SSIS.
+You can import data from Excel or export data to Excel by creating an SSIS package and using the Excel Connection Manager and the Excel Source or the Excel Destination. You can also use the SQL Server Import and Export Wizard, which is built on SSIS.
 
 ## Get the files you need to connect to Excel
 
@@ -32,9 +32,11 @@ Download the latest version of the connectivity components for Excel here:
   
 The latest version of the components can open files created by earlier versions of Excel.
 
+Make sure that you download the Access Database Engine 2016 *Redistributable* and not the Microsoft Access 2016 *Runtime*.
+
 If the computer already has a 32-bit version of Office, then you have to install the 32-bit version of the components. You also have to ensure that you run the SSIS package in 32-bit mode, or run the 32-bit version of the Import and Export Wizard.
 
-Make sure that you download the Access Database Engine 2016 Redistributable and not the Microsoft Access 2016 Runtime. If you have an Office 365 subscription, you may see an error message when you run the installer. The error indicates that you can't install the download side by side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
+If you have an Office 365 subscription, you may see an error message when you run the installer. The error indicates that you can't install the download side by side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -70,7 +72,7 @@ Enter the path and file name in the following format:
 
 Or, click **Browse** to locate the spreadsheet by using the **Open** dialog box.  
   
-> [!NOTE]
+> [!IMPORTANT]
 > You can't connect to a password-protected Excel file.
 
 ## Excel version
@@ -79,7 +81,7 @@ The second piece of info to provide is the version of the Excel file. You provid
 
 Select the version of Microsoft Excel that was used to create the file, or another compatible version. For example, if you had trouble installing the 2016 connectivity components, you can install the 2010 components and select **Microsoft Excel 2007-2010** in this list.
 
-You may not be able to select newer Excel versions in the list if you only have older versions of the connectivity components installed. The **Excel version** list includes all the versions of Excel supported by SSIS. The presence of items in this list does not indicate that the required connectivity components are installed. For example, you see **Microsoft Excel 2016** in the list even if you have not installed the 2016 connectivity components.
+You may not be able to select newer Excel versions in the list if you only have older versions of the connectivity components installed. The **Excel version** list includes all the versions of Excel supported by SSIS. The presence of items in this list does not indicate that the required connectivity components are installed. For example, **Microsoft Excel 2016** appears in the list even if you have not installed the 2016 connectivity components.
 
 ## First row has column names
 
@@ -98,9 +100,6 @@ There are three types of Excel objects that you can use as the source or destina
 -   **Named range.** To specify a named range, provide the range name - for example, **MyDataRange**. Or, look for a name that does not end with the `$` character in the list of existing tables and views.
     
 -   **Unnamed range.** To specify a range of cells that you haven't named, append the $ character to the end of the sheet name, add the range specification, and add delimiters around the string - for example, **[Sheet1$A1:B4]**.
-
-> [!IMPORTANT]
-> When you specify a range as the destination, an error occurs if the range has fewer *columns* than the source data. However, if the range that you specify has fewer *rows* than the source data, the wizard continues writing rows and extends the range definition to match the new number of rows.
 
 To select or specify the type of Excel object that you want to use as the source or destination for your data, do one of the following things:
 
@@ -161,34 +160,38 @@ The Excel driver recognizes only a limited set of data types. For example, all n
 
 ### Data type and length conversions
 
-SSIS does not implicitly convert data types. As a result, you may have to use Derived Column or Data Conversion transformations to convert Excel data explicitly before loading it into a non-Excel destination, or to convert non-Excel data before loading it into an Excel destination.
+SSIS does not implicitly convert data types. As a result, you may have to use Derived Column or Data Conversion transformations to convert Excel data explicitly before loading it into a destination other than Excel, or to convert data from a source other than Excel before loading it into an Excel destination.
 
 Here are some examples of the conversions that may be required:  
   
--   Conversion between Unicode Excel string columns and non-Unicode string columns with specific codepages  
+-   Conversion between Unicode Excel string columns and non-Unicode string columns with specific codepage.
   
--   Conversion between 255-character Excel string columns and string columns of different lengths  
+-   Conversion between 255-character Excel string columns and string columns of different lengths.
   
--   Conversion between double-precision Excel numeric columns and numeric columns of other types  
+-   Conversion between double-precision Excel numeric columns and numeric columns of other types.
 
 > [!TIP]
-> If you're using the Import and Export Wizard, and your data requires some of these conversions, the wizard configures the necessary conversions for you. As a result, even when you want to use SSIS, it may be useful to create the initial package by using the Import and Export Wizard. You can let the wizard create and configure connection managers, sources, transformations, and destinations for you.
+> If you're using the Import and Export Wizard, and your data requires some of these conversions, the wizard configures the necessary conversions for you. As a result, even when you want to use an SSIS package, it may be useful to create the initial package by using the Import and Export Wizard. Let the wizard create and configure connection managers, sources, transformations, and destinations for you.
 
 ## Issues with importing
 
 ### Empty rows
 
-When you specify a worksheet or a named range as the source, the driver reads the *contiguous* block of cells starting with the first non-empty cell in the upper-left corner of the worksheet or range. As a result, your data doesn't have to start in row 1, but you can't have empty rows in the source data. For example, you can't have an empty row between the column headers and the data rows. If you have a title followed by empty rows at the top of the worksheet above your data, you can't query the data as a worksheet. In Excel, you have to select your range of data (without the title) and assign a range name to it, and query the named range instead of the worksheet.
+When you specify a worksheet or a named range as the source, the driver reads the *contiguous* block of cells starting with the first non-empty cell in the upper-left corner of the worksheet or range. As a result, your data doesn't have to start in row 1, but you can't have empty rows in the source data. For example, you can't have an empty row between the column headers and the data rows, or a title followed by empty rows at the top of the worksheet.
+
+If there are empty rows above your data, you can't query the data as a worksheet. In Excel, you have to select your range of data and assign a name to the range, and then query the named range instead of the worksheet.
 
 ### Missing values
 
 The Excel driver reads a certain number of rows (by default, eight rows) in the specified source to guess at the data type of each column. When a column appears to contain mixed data types, especially numeric data mixed with text data, the driver decides in favor of the majority data type, and returns null values for cells that contain data of the other type. (In a tie, the numeric type wins.) Most cell formatting options in the Excel worksheet do not seem to affect this data type determination.
 
-You can modify this behavior of the Excel driver by specifying Import Mode. To specify Import Mode, add `IMEX=1` to the value of **Extended Properties** in the connection string of the Excel connection manager in the Properties window. 
+You can modify this behavior of the Excel driver by specifying Import Mode to import all values as text. To specify Import Mode, add `IMEX=1` to the value of **Extended Properties** in the connection string of the Excel connection manager in the Properties window. 
 
 ### Truncated text
 
-When the driver determines that an Excel column contains text data, the driver selects the data type (string or memo) based on the longest value that it samples. If the driver does not discover any values longer than 255 characters in the rows that it samples, it treats the column as a 255-character string column instead of a memo column. Therefore, values longer than 255 characters may be truncated. To import data from a memo column without truncation, you have two options:
+When the driver determines that an Excel column contains text data, the driver selects the data type (string or memo) based on the longest value that it samples. If the driver does not discover any values longer than 255 characters in the rows that it samples, it treats the column as a 255-character string column instead of a memo column. Therefore, values longer than 255 characters may be truncated.
+
+To import data from a memo column without truncation, you have two options:
 
 -   Make sure that the memo column in at least one of the sampled rows contains a value longer than 255 characters
 
@@ -206,11 +209,15 @@ When the driver determines that an Excel column contains text data, the driver s
 
 #### In SSIS
 
-Create an Excel Connection Manager with the path and file name of the new Excel file that you want to create. Then, in the **Excel Destination Editor**, for **Name of the Excel sheet**, select **New** to create the destination worksheet. At this point, SSIS creates the new Excel file.
+Create an Excel Connection Manager with the path and file name of the new Excel file that you want to create. Then, in the **Excel Destination Editor**, for **Name of the Excel sheet**, select **New** to create the destination worksheet. At this point, SSIS creates the new Excel file with the specified worksheet.
 
 #### In the SQL Server Import and Export Wizard
 
-On the **Choose a Destination** page, select **Browse**. In the **Open** dialog box, navigate to the folder where you want the new Excel file to be created, provide a name for the new file, then select **Open**.
+On the **Choose a Destination** page, select **Browse**. In the **Open** dialog box, navigate to the folder where you want the new Excel file to be created, provide a name for the new file, and then select **Open**.
+
+### Export to a large enough range
+
+When you specify a range as the destination, an error occurs if the range has fewer *columns* than the source data. However, if the range that you specify has fewer *rows* than the source data, the wizard continues writing rows without error and extends the range definition to match the new number of rows.
 
 ### Export long text values
 
@@ -225,15 +232,15 @@ Before you can successfully save strings longer than 255 characters to an Excel 
 For more information about the components and procedures described in this article, see the following articles:
 
 ### About SSIS
-[Excel Connection Manager](connection-manager/excel-connection-manager.md)
-[Excel Source](data-flow/excel-source.md)
-[Excel Destination](data-flow/excel-destination.md)
-[Loop through Excel Files and Tables by Using a Foreach Loop Container](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)
+[Excel Connection Manager](connection-manager/excel-connection-manager.md)  
+[Excel Source](data-flow/excel-source.md)  
+[Excel Destination](data-flow/excel-destination.md)  
+[Loop through Excel Files and Tables by Using a Foreach Loop Container](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
 [Working with Excel Files with the Script Task](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### About the SQL Server Import and Export Wizard
-[Connect to an Excel Data Source](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
+[Connect to an Excel Data Source](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
 [Get started with this simple example of the Import and Export Wizard](import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 ### Other articles
-[Import data from Excel to SQL Server or Azure SQL Database](../relational-databases/import-export/import-data-from-excel-to-sql.md)
+[Import data from Excel to SQL Server or Azure SQL Database](../relational-databases/import-export/import-data-from-excel-to-sql.md)  

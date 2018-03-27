@@ -236,4 +236,4 @@ For more information about the components and procedures described in this artic
 [Get started with this simple example of the Import and Export Wizard](import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 ### Other articles
-[Import data from Excel to SQL Server or Azure SQL Database](import-export/import-data-from-excel-to-sql.md)
+[Import data from Excel to SQL Server or Azure SQL Database](../relational-databases/import-export/import-data-from-excel-to-sql.md)

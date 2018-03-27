@@ -1,7 +1,6 @@
 # [Building Applications with OLE DB Driver for SQL Server](building-applications-with-oledb-driver-for-sql-server.md)
 # [Components of OLE DB Driver for SQL Server](components-of-oledb-driver-for-sql-server.md)
 # [Connecting to a Windows Azure SQL Database Using OLE DB Driver for SQL Server](connecting-to-a-windows-azure-sql-database-using-oledb-driver-for-sql-server.md)
-# [ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory](connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md)
 # [Installing OLE DB Driver for SQL Server](installing-oledb-driver-for-sql-server.md)
 # [Support Policies for OLE DB Driver for SQL Server](support-policies-for-oledb-driver-for-sql-server.md)
 # [Updating an Application from SQL Server 2005 Native Client](updating-an-application-from-sql-server-2005-native-client.md)

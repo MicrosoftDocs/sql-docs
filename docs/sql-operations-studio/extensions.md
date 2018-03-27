@@ -1,6 +1,6 @@
 ---
-title: Extend the functionality (add extensions) of SQL Operations Studio (preview) | Microsoft Docs
-description: Extend the functionality (add extensions) of SQL Operations Studio (preview)
+title: Extend the functionality of SQL Operations Studio (preview) | Microsoft Docs
+description: Add extensions to SQL Operations Studio (preview)
 ms.custom: "tools|sos"
 ms.date: "03/28/2018"
 ms.reviewer: "alayu; erickang; sstein"
@@ -15,7 +15,7 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Extend the functionality (add extensions) of [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Extend the functionality of [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation. 
 

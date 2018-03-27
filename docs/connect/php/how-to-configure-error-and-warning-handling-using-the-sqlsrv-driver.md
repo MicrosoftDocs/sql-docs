@@ -1,7 +1,7 @@
 ---
 title: "Configure Error and Warning Handling Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/16/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""

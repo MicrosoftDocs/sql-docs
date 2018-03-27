@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Configure development environment for PHP development | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/16/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""

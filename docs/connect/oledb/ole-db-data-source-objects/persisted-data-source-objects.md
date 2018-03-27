@@ -1,7 +1,8 @@
 ---
 title: "Persisted Data Source Objects | Microsoft Docs"
+description: "Persisted data source objects"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "02/28/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

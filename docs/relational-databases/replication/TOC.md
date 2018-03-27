@@ -31,7 +31,7 @@
 ### [Configure IIS 7 for Web Synchronization](configure-iis-7-for-web-synchronization.md)  
 
 ## [Configure Distribution](configure-distribution.md)  
-### [Configure Publishing and Distribution](configure-distribution.md)  
+### [Configure Publishing and Distribution](configure-publishing-and-distribution.md)  
 ### [Configure Distribution in AG](configure-distribution-availability-group.md)
 ### [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
 ### [Disable Publishing and Distribution](disable-publishing-and-distribution.md)  

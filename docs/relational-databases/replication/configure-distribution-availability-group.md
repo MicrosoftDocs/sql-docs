@@ -1,5 +1,5 @@
 ---
-title: "Configure distribution database in availability group | Microsoft Docs"
+title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2018"
 ms.prod: "sql-non-specified"
@@ -396,9 +396,12 @@ EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL
  /* For security reasons the linked server remote logins password is changed with ######## */
 EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
-  
+
 ## See Also  
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)  
   
-  
+## Next steps
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
+ [Disable Publishing and Distribution](disable-publishing-and-distribution.md)  
+ [Enable a Database for Replication (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md) 

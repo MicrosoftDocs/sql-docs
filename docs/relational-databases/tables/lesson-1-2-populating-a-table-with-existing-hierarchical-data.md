@@ -92,31 +92,24 @@ This task creates a new table and populates it with the data in the **EmployeeDe
     ```  
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-    `EmployeeID ManagerID Num`  
-  
-    `---------- --------- ---`  
-  
-    `1        NULL       1`  
-  
-    `2         1         1`  
-  
-    `16        1         2`  
-  
-    `25        1         3`  
-  
-    `234       1         4`  
-  
-    `263       1         5`  
-  
-    `273       1         6`  
-  
-    `3         2         1`  
-  
-    `4         3         1`  
-  
-    `5         3         2`  
-  
+
+    ```
+    EmployeeID	ManagerID	Num
+    1	NULL	1
+    2	1	1
+    16	1	2
+    25	1	3
+    234	1	4
+    263	1	5
+    273	1	6
+    3	2	1
+    4	3	1
+    5	3	2
+    6	3	3
+    7	3	4
+    ```
+
+
 3.  Populate the **NewOrg** table. Use the GetRoot and ToString methods to concatenate the **Num** values into the **hierarchyid** format, and then update the **OrgNode** column with the resultant hierarchical values:  
   
     ```  

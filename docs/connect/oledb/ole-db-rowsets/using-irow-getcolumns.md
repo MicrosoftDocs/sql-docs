@@ -1,7 +1,8 @@
 ---
 title: "Using IRow::GetColumns | Microsoft Docs"
+description: "Using IRow::GetColumns to access all the columns in a row"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "02/28/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

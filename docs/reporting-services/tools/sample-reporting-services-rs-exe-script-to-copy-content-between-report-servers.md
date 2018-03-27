@@ -1,7 +1,7 @@
 ---
 title: "Sample Reporting Services rs.exe Script to Copy Content between Report Servers | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2015"
+ms.date: "03/26/2018"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
@@ -21,58 +21,18 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Sample Reporting Services rs.exe Script to Copy Content between Report Servers
-  This topic includes and describes a sample [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS script that copies content items and settings from one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe is installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], both native and SharePoint mode. The script copies [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] items, for example reports and subscriptions, from server to another server. The script supports both SharePoint mode and Native mode report servers.  
-  
-  
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode 
-  
-## In this Topic:  
-  
--   [To Download the ssrs_migration.rss Script](#bkmk_download_script)  
-  
--   [Supported Scenarios](#bkmk_supported_scenarios)  
-  
--   [Items and resources the script migrates](#bkmk_what_is_migrated)  
-  
--   [Required Permissions](#bkmk_required_permissions)  
-  
--   [How to use the script](#bkmk_how_to_use_the_script)  
-  
--   [Parameter Description](#bkmk_parameter_description)  
-  
--   [More Examples](#bkmk_more_examples)  
-  
-    -   [Native Mode Report Server to Native Mode Report Server](#bkmk_native_2_native)  
-  
-    -   [Native Mode to SharePoint Mode – root site](#bkmk_native_2_sharepoint_root)  
-  
-    -   [Native mode to SharePoint Mode –‘bi’ site collection](#bkmk_native_2_sharepoint_with_site)  
-  
-    -   [SharePoint Mode to SharePoint Mode –‘bi’ site collection](#bkmk_sharepoint_2_sharepoint)  
-  
-    -   [Native Mode to Native Mode – Windows Azure Virtual Machine](#bkmk_native_to_native_Azure_vm)  
-  
-    -   [SharePoint Mode –‘bi’ site collection to a Native Mode Server on Windows Azure Virtual Machine](#bkmk_sharepoint_site_to_native_Azure_vm)  
-  
--   [Verification](#bkmk_verification)  
-  
--   [Troubleshooting](#bkmk_troubleshoot)  
-  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
+
+This topic includes and describes a sample [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS script that copies content items and settings from one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe is installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], both native and SharePoint mode. The script copies [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] items, for example reports and subscriptions, from server to another server. The script supports both SharePoint mode and Native mode report servers.  
+
 ##  <a name="bkmk_download_script"></a> To Download the ssrs_migration.rss Script  
- Download the script from the CodePlex site [Reporting Services RS.exe script migrates content](https://azuresql.codeplex.com/releases/view/115207) to a local folder. See the section [How to use the script](#bkmk_how_to_use_the_script) in this topic for more information.  
+ Download the script from the GitHub site [Reporting Services RS.exe migration script](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss) to a local folder. See the section [How to use the script](#bkmk_how_to_use_the_script) in this topic for more information.  
   
 ##  <a name="bkmk_supported_scenarios"></a> Supported Scenarios  
- The script supports both SharePoint mode and Native mode report servers. The script supports the following report server versions:  
+ The script supports both SharePoint mode and Native mode report servers. The script supports the report server versions [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and later, and Power BI Report Server.  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
-  
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
-  
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
- The script can be used to copy content between report servers of the same mode or different modes. For example, you can run the script to copy content from a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] native mode report server to a [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint mode report server. You can run the script from any server where RS.exe is installed. For example, in the following deployment, you can:  
+The script can be used to copy content between report servers of the same mode or different modes. For example, you can run the script to copy content from a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] native mode report server to a [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint mode report server. You can run the script from any server where RS.exe is installed. For example, in the following deployment, you can:  
   
 -   Run RS.exe and the script **ON** Server A.  
   

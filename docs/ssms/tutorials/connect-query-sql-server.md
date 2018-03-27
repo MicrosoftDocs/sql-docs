@@ -32,7 +32,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
     ![Connect in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
 
- 2. In the **Connect to Server** window, select the following connection options: 
+2. In the **Connect to Server** window, do the following: 
 
     - Under **Server type**, select **Database Engine** (usually the default option).
     - Under **Server Name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](ssms-tricks.md#determine-sql-server-name).  
@@ -40,7 +40,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
     ![![Connection options](media/connect-query-sql-server/connection.png)](media/connect-query-sql-server/connection2.png)
 
-    You can also modify additional connection options (such as the database you're connecting to, the connection timeout value, and the network protocol) by selecting the **Options** button. This article uses the default values. 
+    You can also modify additional connection options (such as the database you're connecting to, the connection timeout value, and the network protocol) by selecting the **Options** button. This article uses the default values for all the options. 
 
 3. After you've completed all the fields, select **Connect**. 
 
@@ -55,7 +55,7 @@ Create a database named TutorialDB by doing the following:
 
    ![New Query](media/connect-query-sql-server/newquery.png)
    
-1. Into the query window, paste the following T-SQL code snippet: 
+2. Into the query window, paste the following T-SQL code snippet: 
    ```sql
    USE master
    GO
@@ -71,11 +71,11 @@ Create a database named TutorialDB by doing the following:
 
    ![Execute Query](media/connect-query-sql-server/execute.png)
   
-    After the query is complete, the new **TutorialDB** appears in the list of databases in **Object Explorer**. If it isn't displayed, right-click the **Databases** node and then select **Refresh**.  
+    After the query is complete, the new **TutorialDB** appears in the list of databases in **Object Explorer**. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.  
 
 
 ## Create a table
-In this section, you create a table in the newly created **TutorialDB** database. However, the query editor is still in the context of the *master* database. To switch the connection context to the *TutorialDB* database, do the following: 
+In this section, you create a table in the newly created **TutorialDB** database. Because the query editor is still in the context of the *master* database, switch the connection context to the *TutorialDB* database by doing the following: 
 
 1. In the database drop-down list, select the database that you want, as shown here: 
 
@@ -119,8 +119,8 @@ Insert some rows into the **Customers** table that you created previously. To do
    GO
    ```
 
-## View Query Results
-The results of a query are visible underneath the query text window. The below steps will allow you to query the **Customers** table and view the rows that were previously inserted.  
+## View query results
+The results of a query are visible below the query text window. To query the **Customers** table and view the rows that were previously inserted, do the following:  
 
 1. Paste the following T-SQL code snippet into the query window, and then select **Execute**: 
 

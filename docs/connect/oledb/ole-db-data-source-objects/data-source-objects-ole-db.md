@@ -1,5 +1,6 @@
 ---
 title: "Data Source Objects (OLE DB) | Microsoft Docs"
+description: "Data Source Objects (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

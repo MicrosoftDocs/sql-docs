@@ -1,5 +1,6 @@
 ---
 title: "Using Encryption Without Validation | Microsoft Docs"
+description: "Using encryption without validation"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

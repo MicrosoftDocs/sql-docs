@@ -1,5 +1,6 @@
 ---
 title: "Command Syntax | Microsoft Docs"
+description: "Command syntax and Stored Procedures"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

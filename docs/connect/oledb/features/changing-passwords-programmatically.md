@@ -1,5 +1,6 @@
 ---
 title: "Changing Passwords Programmatically | Microsoft Docs"
+description: "Changing passwords programmatically using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

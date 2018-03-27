@@ -1,5 +1,6 @@
 ---
 title: "Commands | Microsoft Docs"
+description: "Commands in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

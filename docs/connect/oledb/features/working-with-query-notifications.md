@@ -1,5 +1,6 @@
 ---
 title: "Working with Query Notifications | Microsoft Docs"
+description: "Working with query notifications in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

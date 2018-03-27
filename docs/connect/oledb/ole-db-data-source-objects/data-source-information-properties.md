@@ -1,5 +1,6 @@
 ---
 title: "Data Source Information Properties | Microsoft Docs"
+description: "Data Source information properties"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

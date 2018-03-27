@@ -1,5 +1,6 @@
 ---
 title: "Using Multiple Active Result Sets (MARS) | Microsoft Docs"
+description: "Using Multiple Active Result Sets (MARS)"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

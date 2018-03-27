@@ -1,5 +1,6 @@
 ---
 title: "Using Large Value Types | Microsoft Docs"
+description: "Using large value types with OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

@@ -1,5 +1,6 @@
 ---
 title: "Updating an Application to OLE DB Driver for SQL Server from MDAC | Microsoft Docs"
+description: "Updating an application to OLE DB Driver for SQL Server from MDAC"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

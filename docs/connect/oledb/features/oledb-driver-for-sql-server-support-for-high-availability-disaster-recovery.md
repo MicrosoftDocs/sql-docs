@@ -1,5 +1,6 @@
 ---
 title: "OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery | Microsoft Docs"
+description: "OLE DB Driver for SQL Server support for high availability, disaster recovery"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

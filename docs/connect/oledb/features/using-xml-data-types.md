@@ -1,5 +1,6 @@
 ---
 title: "Using XML Data Types | Microsoft Docs"
+description: "Using XML Data Types with OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"

@@ -68,7 +68,7 @@ Transact-SQL (T-SQL) language elements for Analytic Platform System (APS) SQL Se
 * [>= (Great than or equal to)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [<= (Less than or equal to)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (Not equal to)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [!= (Not equal to)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [\!= (Not equal to)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)

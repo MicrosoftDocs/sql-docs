@@ -2,7 +2,7 @@
 title: "Processing Results How-to Topics (OLE DB) | Microsoft Docs"
 description: "Processing results how-to topics (OLE DB)"
 ms.custom: ""
-ms.date: "02/28/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

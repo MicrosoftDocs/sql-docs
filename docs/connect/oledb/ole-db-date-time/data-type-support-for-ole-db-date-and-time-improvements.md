@@ -2,7 +2,7 @@
 title: "Data Type Support for OLE DB Date and Time Improvements | Microsoft Docs"
 description: "Data type support for OLE DB date and time improvements"
 ms.custom: ""
-ms.date: "02/28/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

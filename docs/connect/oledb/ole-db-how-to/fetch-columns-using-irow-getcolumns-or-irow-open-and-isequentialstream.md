@@ -2,7 +2,7 @@
 title: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream | Microsoft Docs"
 description: "Fetch columns using IRow::GetColumns (or IRow::Open) and ISequentialStream"
 ms.custom: ""
-ms.date: "02/28/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

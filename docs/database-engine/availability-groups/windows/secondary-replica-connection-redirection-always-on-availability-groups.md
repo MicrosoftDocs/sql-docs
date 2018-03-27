@@ -146,9 +146,9 @@ In the following diagram, a client application connects to COMPUTER02, with `App
 
 ![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
-The secondary replica redirects read/write calls to the primary replia. A read write connection to either replica will redirect to the primary replica. 
+The secondary replica redirects read/write calls to the primary replica. A read write connection to either replica will redirect to the primary replica. 
 
-In the following diagram, the primary replica has been manually failed over to COMPUTER02. A client application connects to COMPUTER01, with `ApplicationIntent=ReadWrite`. The connection is redirecrected to the primary replica. 
+In the following diagram, the primary replica has been manually failed over to COMPUTER02. A client application connects to COMPUTER01, with `ApplicationIntent=ReadWrite`. The connection is redirected to the primary replica. 
 
 ![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 

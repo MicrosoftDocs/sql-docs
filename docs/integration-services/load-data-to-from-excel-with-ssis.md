@@ -118,21 +118,21 @@ In SSIS, on the **Connection manager** page of the **Excel Source Editor** or of
 ### In the SQL Server Import and Export Wizard
 In the Import and Export Wizard, do one of the following things:
 
--   To use a **worksheet** or a **named range**, do one of the following things:
+-   When you're **importing** from Excel, do one of the following things:
 
-    - When you're **importing** from Excel, on the **Specify table copy or query** page, select **Copy data from one or more tables or views**. Then, on the **Select Source Tables and Views** page, in the **Source** column, select the source worksheets and named ranges.
+    -   To use a **worksheet** or a **named range**, on the **Specify table copy or query** page, select **Copy data from one or more tables or views**. Then, on the **Select Source Tables and Views** page, in the **Source** column, select the source worksheets and named ranges.
 
-    - When you're **exporting** to Excel, on the **Select Source Tables and Views** page, in the **Destination** column, select the destination worksheets and named ranges.
-
--   To use an **unnamed range** that you specify with its address, do one of the following things:
-
-    - When you're **importing** from Excel, on the **Specify table copy or query** page, select **Write a query to specify the data to transfer**. Then, on the **Provide a Source Query** page, provide a query similar to the following example:
+    -   To use an **unnamed range** that you specify with its address, on the **Specify table copy or query** page, select **Write a query to specify the data to transfer**. Then, on the **Provide a Source Query** page, provide a query similar to the following example:
 
         ```sql
         SELECT * FROM [Sheet1$A1:B5]
         ```
 
-    - When you're **exporting** to Excel, on the **Select Source Tables and Views** page, in the **Destination** column, enter the range in the following format without delimiters: `Sheet1$A1:B5`. The wizard adds the delimiters.
+-   When you're **exporting** to Excel, do one of the following things:
+
+    -   To use a **worksheet** or a **named range**, on the **Select Source Tables and Views** page, in the **Destination** column, select the destination worksheets and named ranges.
+
+    -   To use an **unnamed range** that you specify with its address, on the **Select Source Tables and Views** page, in the **Destination** column, enter the range in the following format without delimiters: `Sheet1$A1:B5`. The wizard adds the delimiters.
 
 After you select or enter the Excel objects to import or export, you can also do the following things on the **Select Source Tables and Views** page of the wizard:
 

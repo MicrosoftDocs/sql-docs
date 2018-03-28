@@ -1,7 +1,7 @@
 ---
 title: "DDL Event Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/28/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -33,9 +33,8 @@ ms.workload: "Inactive"
 ## Events  
  The events listed under DDL_DATABASE_LEVEL_EVENTS execute at the server (instance) or database level. Events listed under DDL_SERVER_LEVEL_EVENTS execute only at the server level.  
   
-||||  
-|-|-|-|  
 |parent_type|type|name|  
+|-|-|-|
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|   DDL_DATABASE_LEVEL_EVENTS|  

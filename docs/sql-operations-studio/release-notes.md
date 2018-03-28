@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) release notes| Microsoft Docs
 description: 'Microsoft SQL Operations Studio (preview) release notes'
 ms.custom: "tools|sos"
-ms.date: "02/15/2018"
+ms.date: "03/28/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -17,7 +17,24 @@ ms.workload: "Inactive"
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download the February Public Preview](download.md)**
+**[Download the March Public Preview](download.md)**
+
+## March 2018 (March Public Preview)
+
+release date: March 28, 2018  
+version: 0.27.3
+
+The *March Public Preview* continues to address the top GitHub issues and is focused on improving our extensibility story. Specifically enabling Extension Manager, improving dashboard management, and providing SQL Agent and insights extensions. This release includes the following enhancements:
+
+- Enhance the dashboard extensibility model to support tabbed insights and configuration panes.
+   - Extension Manager enables simple acquisition of extensions.
+   - Dashboard extensions for sp_whoisactive from [whoisactive.com](http://www.whoisactive.com).
+   - For details, see [Extend the functionality of SQL Operations Studio](extensions.md).
+- Add additional [extensibility APIs for connection and object explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) management.
+- Continue to fix important customer impacting [GitHub issues](https://github.com/Microsoft/sqlopsstudio/issues).
+
+For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+
 
 ## February 2018 (February Public Preview)
 
@@ -58,8 +75,6 @@ The *January Public Preview* includes some feature suggestions and high-priority
 - Fix drag-and-drop breaking scripting bug.
 - Fix incorrect pinned Start Menu icon.
 - Fix missing Azure Account branding icon.
-
-For more information, see the [Change Log](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 
 ## December 2017 (December Public Preview)

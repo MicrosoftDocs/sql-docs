@@ -1,6 +1,7 @@
 # [Overview](tabular-models-ssas.md)  
 
 # [Create Tabular Models](tabular-model-solutions-ssas-tabular.md)  
+## [Data sources supported in tabular 1400 models](data-sources-supported-ssas-tabular-1400.md)  
 ## [Data sources supported in tabular 1200 models](data-sources-supported-ssas-tabular.md)  
 ## [Data types supported](data-types-supported-ssas-tabular.md)  
 ## [Tabular Model Designer](tabular-model-designer-ssas.md)  
@@ -23,6 +24,8 @@
 ### [Configure default data modeling and deployment properties](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
 
 ## Import Data
+
+### [Data sources supported in tabular 1400 models](data-sources-supported-ssas-tabular-1400.md)  
 ### [Data sources supported in tabular 1200 models](data-sources-supported-ssas-tabular.md)  
 ### [Data types supported](data-types-supported-ssas-tabular.md)  
 ### [Impersonation](impersonation-ssas-tabular.md)  

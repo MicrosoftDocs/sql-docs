@@ -20,7 +20,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] support [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options that reduce typing, provide quick access to syntax information, or make it easier to view the delimiters of complex expressions.  
   
 ## Benefits of IntelliSense  

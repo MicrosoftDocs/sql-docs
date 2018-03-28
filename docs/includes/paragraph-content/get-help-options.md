@@ -1,6 +1,6 @@
 ##  ![info_tip](../media/info-tip.png) Get Help 
 - [UserVoice - Suggestion to improve SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
-- [Stack Overflow (tag sql-server) - ask SQL development questions](http://stackoverflow.com/questions/tagged/sql-server)
+- [DBA Stack Exchange (tag sql-server) - ask SQL Server questions](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Setup and Upgrade -  MSDN Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - MSDN forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
 - [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/)

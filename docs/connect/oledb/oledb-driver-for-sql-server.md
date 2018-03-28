@@ -44,7 +44,7 @@ It was [announced as deprecated in 2011](https://blogs.msdn.microsoft.com/sqlnat
 
 OLE DB was [announced as undeprecated in 2017](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/). A new planned release was announced for 2018.
 
-The new OLE DB provider is called the [Microsoft OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md) (MSOLEDBSQL). The new provider will be updated with the most recent server features going forward.
+The new OLE DB provider is called the Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL). The new provider will be updated with the most recent server features going forward.
 
 Information on the OLE DB Driver for SQL Server features:
 

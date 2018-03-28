@@ -1,7 +1,8 @@
 ---
 title: "IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs"
+description: "Using IBCPSession::BCPReadFmt for reading data from a format file (OLE DB)"
 ms.custom: ""
-ms.date: "02/28/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

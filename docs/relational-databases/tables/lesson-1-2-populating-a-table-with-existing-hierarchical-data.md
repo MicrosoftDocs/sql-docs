@@ -38,7 +38,7 @@ This task creates a new table and populates it with the data in the **EmployeeDe
 -   In a Query Editor window, run the following code to create a new table named **HumanResources.NewOrg**:  
   
     ```  
-    CREATE TABLE NewOrg  
+    CREATE TABLE HumanResources.NewOrg  
     (  
       OrgNode hierarchyid,  
       EmployeeID int,  
@@ -79,9 +79,8 @@ This task creates a new table and populates it with the data in the **EmployeeDe
     INSERT #Children (EmployeeID, ManagerID, Num)  
     SELECT EmployeeID, ManagerID,  
       ROW_NUMBER() OVER (PARTITION BY ManagerID ORDER BY ManagerID)   
-    FROM EmployeeDemo  
-    GO  
-  
+    FROM HumanResources.EmployeeDemo  
+    GO 
     ```  
   
 2.  Review the **#Children** table. Note how the **Num** column contains sequential numbers for each manager.  
@@ -93,31 +92,24 @@ This task creates a new table and populates it with the data in the **EmployeeDe
     ```  
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-    `EmployeeID ManagerID Num`  
-  
-    `---------- --------- ---`  
-  
-    `1        NULL       1`  
-  
-    `2         1         1`  
-  
-    `3         1         2`  
-  
-    `4         2         1`  
-  
-    `5         2         2`  
-  
-    `6         2         3`  
-  
-    `7         3         1`  
-  
-    `8         3         2`  
-  
-    `9         4         1`  
-  
-    `10        4         2`  
-  
+
+    ```
+    EmployeeID	ManagerID	Num
+    1	NULL	1
+    2	1	1
+    16	1	2
+    25	1	3
+    234	1	4
+    263	1	5
+    273	1	6
+    3	2	1
+    4	3	1
+    5	3	2
+    6	3	3
+    7	3	4
+    ```
+
+
 3.  Populate the **NewOrg** table. Use the GetRoot and ToString methods to concatenate the **Num** values into the **hierarchyid** format, and then update the **OrgNode** column with the resultant hierarchical values:  
   
     ```  
@@ -127,7 +119,7 @@ This task creates a new table and populates it with the data in the **EmployeeDe
     SELECT hierarchyid::GetRoot() AS OrgNode, EmployeeID   
     FROM #Children AS C   
     WHERE ManagerID IS NULL   
-  
+
     UNION ALL   
     -- This section provides values for all nodes except the root  
     SELECT   
@@ -137,23 +129,21 @@ This task creates a new table and populates it with the data in the **EmployeeDe
     JOIN paths AS p   
        ON C.ManagerID = P.EmployeeID   
     )  
-    INSERT NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
+    INSERT HumanResources.NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
     SELECT P.path, O.EmployeeID, O.LoginID, O.ManagerID  
-    FROM EmployeeDemo AS O   
+    FROM HumanResources.EmployeeDemo AS O   
     JOIN Paths AS P   
        ON O.EmployeeID = P.EmployeeID  
-    GO  
-  
+    GO 
     ```  
   
 4.  A **hierarchyid** column is more understandable when you convert it to character format. Review the data in the **NewOrg** table by executing the following code, which contains two representations of the **OrgNode** column:  
   
     ```  
     SELECT OrgNode.ToString() AS LogicalNode, *   
-    FROM NewOrg   
+    FROM HumanResources.NewOrg   
     ORDER BY LogicalNode;  
     GO  
-  
     ```  
   
     The **LogicalNode** column converts the **hierarchyid** column into a more readable text form that represents the hierarchy. In the remaining tasks, you will use the `ToString()` method to show the logical format of the **hierarchyid** columns.  

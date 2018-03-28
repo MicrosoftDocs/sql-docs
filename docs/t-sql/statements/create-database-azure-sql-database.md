@@ -2,7 +2,7 @@
 title: "CREATE DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 
-ms.date: "02/13/2018"
+ms.date: "04/04/2018"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -44,7 +44,7 @@ ms.workload: "On Demand"
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 ## Syntax  
-  
+<!--question for Sasha here -->    
 ``` 
   
 CREATE DATABASE database_name [ COLLATE collation_name ]  
@@ -58,10 +58,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | ( EDITION = {  'basic' | 'standard' | 'premium' }   
+    | ( EDITION = {  'basic' | 'standard' | 'premium' | 'general purpose' | ' business critical' }   
     | SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
             | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
+            | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' 
+            | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
 
@@ -77,6 +79,8 @@ CREATE DATABASE database_name
     [ ( SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
             | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'  
+            | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' 
+            | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
     ]  
  [;] 
@@ -100,50 +104,50 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 *SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation.  This is the default setting on Azure SQL Database if unspecified.
 
  *EDITION*  
- Specifies the service tier of the database. The available values are: 'basic', 'standard', and 'premium'. Support for 'premiumrs' has been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
+ Specifies the service tier of the database. The available values are: 'basic', 'standard', 'premium', 'general purpose', and 'business critical'. Support for 'premiumrs' has been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
   
  When EDITION is specified but MAXSIZE is not specified, MAXSIZE is set to the most restrictive size that the edition supports.  
   
  *MAXSIZE*  
  Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.  
-  
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** 
-|-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
-|100 MB|√|√|√|√|√|  
-|250 MB|√|√|√|√|√|  
-|500 MB|√|√|√|√|√|  
-|1 GB|√|√|√|√|√|  
-|2 GB|√ (D)|√|√|√|√|  
-|5 GB|N/A|√|√|√|√|  
-|10 GB|N/A|√|√|√|√|  
-|20 GB|N/A|√|√|√|√|  
-|30 GB|N/A|√|√|√|√|  
-|40 GB|N/A|√|√|√|√|  
-|50 GB|N/A|√|√|√|√|  
-|100 GB|N/A|√|√|√|√|  
-|150 GB|N/A|√|√|√|√|  
-|200 GB|N/A|√|√|√|√|  
-|250 GB|N/A|√ (D)|√ (D)|√|√|  
-|300 GB|N/A|N/A|√|√|√|  
-|400 GB|N/A|N/A|√|√|√|
-|500 GB|N/A|N/A|√|√ (D)|√|
-|750 GB|N/A|N/A|√|√|√|
-|1024 GB|N/A|N/A|√|√|√ (D)|
+<!--questions re: vCore values for this table -->  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** | **General Purpose** | **Business Critical** |
+|-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|---|---| 
+|100 MB|√|√|√|√|√|N/A|N/A|  
+|250 MB|√|√|√|√|√|N/A|N/A|  
+|500 MB|√|√|√|√|√|N/A|N/A|  
+|1 GB|√|√|√|√|√|N/A|N/A|  
+|2 GB|√ (D)|√|√|√|√|N/A|N/A|  
+|5 GB|N/A|√|√|√|√|N/A|N/A|  
+|10 GB|N/A|√|√|√|√|√|√|  
+|20 GB|N/A|√|√|√|√|√|√|
+|30 GB|N/A|√|√|√|√|√|√|
+|40 GB|N/A|√|√|√|√|√|√|
+|50 GB|N/A|√|√|√|√|√|√|
+|100 GB|N/A|√|√|√|√|√|√|
+|150 GB|N/A|√|√|√|√|√|√|
+|200 GB|N/A|√|√|√|√|√|√|
+|250 GB|N/A|√ (D)|√ (D)|√|√|√|√|
+|300 GB|N/A|N/A|√|√|√|√|√|
+|400 GB|N/A|N/A|√|√|√|√|√|
+|500 GB|N/A|N/A|√|√ (D)|√|√|√|
+|750 GB|N/A|N/A|√|√|√|√|√|
+|1024 GB|N/A|N/A|√|√|√ (D)|√|√|
 |From 1024 GB up to 4096 GB in increments of 256 GB* |N/A|N/A|N/A|N/A|√|√|  
   
- \* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size.  P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
-<!---Loc Comment: Link [Single databases] is not working---> 
+ \* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size.  P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).  
+ 
   
  The following rules apply to MAXSIZE and EDITION arguments:  
   
 -   The MAXSIZE value, if specified, has to be a valid value shown in the table above.  
   
 -   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, if the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 250 MB.  
-  
+<!--question for Sasha here -->    
 -   If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
-  
+<!--question for Sasha here -->      
  SERVICE_OBJECTIVE  
- Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) and [SQL Database resource limits](https://azure.microsoft.com/documentation/articles/sql-database-resource-limits). If the specified SERVICE_OBJECTIVE is not supported by the EDITION you receive an error.  
+ Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). If the specified SERVICE_OBJECTIVE is not supported by the EDITION you receive an error.  
   
  ELASTIC_POOL (name = \<elastic_pool_name>) 
  To create a new database in an elastic database pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the pool. For more information, see [Create and manage a SQL Database elastic database pool (preview)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  
@@ -207,7 +211,7 @@ The CATALOG_COLLATION argument is only available during database creation.
  For more information, see [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
   
 ## Permissions  
- To create a database a login must be one of the following:  
+ To create a database, a login must be one of the following:  
   
 -   The server-level principal login  
   

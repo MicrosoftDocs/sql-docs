@@ -25,7 +25,8 @@ ms.workload: "Active"
 
 SNAC, or SQL Server Native Client, is a term that has been used interchangeably to refer to ODBC and OLE DB drivers for SQL Server.
 
-[!INCLUDE[different-incarnations-of-oledb-drivers](../../connect/oledb/different-incarnations-of-oledb-drivers.md)]
+**NOTE:**  It is not recommended to use this driver for new development. The new OLE DB provider is called the [Microsoft OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features going forward.
+
 
 **For more information and to download the SNAC or ODBC Drivers, visit [SNAC lifecycle explained](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).**
 

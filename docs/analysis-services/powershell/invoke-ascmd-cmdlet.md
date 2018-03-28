@@ -2,14 +2,14 @@
 title: "Invoke-ASCmd cmdlet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8

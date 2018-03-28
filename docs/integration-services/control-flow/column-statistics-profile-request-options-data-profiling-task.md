@@ -18,7 +18,7 @@ ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Column Statistics Profile Request Options (Data Profiling Task)

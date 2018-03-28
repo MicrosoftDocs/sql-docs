@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], backward compatibility"
 ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SQL Server Database Engine Backward Compatibility

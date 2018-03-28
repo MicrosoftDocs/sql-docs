@@ -1,7 +1,7 @@
 ---
 title: "SQLSRV Driver API Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -57,11 +57,14 @@ The SQLSRV driver contains the following functions:
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Provides information about the server.|  
   
 ## Reference  
-[PHP Manual](http://go.microsoft.com/fwlink/?LinkId=105500)  
+[PHP Manual](http://php.net/manual)  
   
 ## See Also  
-[Overview of the PHP SQL Driver](../../connect/php/overview-of-the-php-sql-driver.md)
-[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Getting Started with the PHP SQL Driver](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+
+[Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

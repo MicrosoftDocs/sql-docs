@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "data formats [SQL Server], native"
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use Native Format to Import or Export Data (SQL Server)

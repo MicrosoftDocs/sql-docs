@@ -29,7 +29,7 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Access Control for Sensitive Data in Packages

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STOverlaps (geometry Data Type)"
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STOverlaps (geometry Data Type)

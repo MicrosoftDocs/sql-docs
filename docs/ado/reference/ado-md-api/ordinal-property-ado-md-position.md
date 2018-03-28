@@ -22,7 +22,7 @@ ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Ordinal Property (ADO MD Position)

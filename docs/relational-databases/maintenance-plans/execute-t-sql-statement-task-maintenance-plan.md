@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Execute T-SQL Statement Task dialog box"
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Execute T-SQL Statement Task (Maintenance Plan)

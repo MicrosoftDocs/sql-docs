@@ -42,7 +42,7 @@ ms.workload: "Active"
   
 ```  
   
-SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }  
+SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }  
 ```  
   
 ## Arguments  

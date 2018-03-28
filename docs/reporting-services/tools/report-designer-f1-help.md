@@ -2,24 +2,24 @@
 title: "Report Designer F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/31/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "tools"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], dialog boxes"
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 caps.latest.revision: 63
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Report Designer F1 Help

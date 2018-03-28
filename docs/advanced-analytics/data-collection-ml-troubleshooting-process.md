@@ -9,7 +9,7 @@ ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,10 +17,11 @@ dev_langs:
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Troubleshoot data collection for machine learning
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article discusses the kind of data that you should collect when you attempt to resolve problems with the setup, configuration, or performance of machine learning in SQL Server. Such data includes logs, error messages, and system information.
 
@@ -47,7 +48,7 @@ If you need help to determine which edition and version you have, see this artic
 
 Depending on the edition of SQL Server you're using, some machine learning functionality might be unavailable, or limited.
 
-See the following topics for a list of machine learning features in Enterprise, Developer, Standard, and Express editions.
+See the following articles for a list of machine learning features in Enterprise, Developer, Standard, and Express editions.
 
 * [Editions and supported features of SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [Differences in R features between editions of SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)

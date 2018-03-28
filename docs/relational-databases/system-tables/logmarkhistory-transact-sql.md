@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "logmarkhistory system table"
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # logmarkhistory (Transact-SQL)

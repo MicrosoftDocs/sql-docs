@@ -1,15 +1,15 @@
 ---
 title: "Add sample data to a DirectQuery model in Design Mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
-ms.prod: "analysis-services"
+ms.date: "02/21/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322

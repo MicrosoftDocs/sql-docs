@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], minimal logging"
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Prerequisites for Minimal Logging in Bulk Import

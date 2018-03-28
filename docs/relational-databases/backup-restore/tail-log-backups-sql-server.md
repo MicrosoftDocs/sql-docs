@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "backups [SQL Server], tail-log backups"
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Tail-Log Backups (SQL Server)
@@ -49,10 +49,10 @@ ms.workload: "On Demand"
   
 |BACKUP LOG option|Comments|  
 |-----------------------|--------------|  
-|NORECOVERY|Use NORECOVERY whenever you intend to continue with a restore operation on the database. NORECOVERY takes the database into the restoring state. This guarantees that the database does not change after the tail-log backup. The log will be truncated unless the NO_TRUNCATE option or COPY_ONLY option is also specified.<br /><br /> **\*\* Important \*\*** Avoid using NO_TRUNCATE, except when the database is damaged.|  
+|NORECOVERY|Use NORECOVERY whenever you intend to continue with a restore operation on the database. NORECOVERY takes the database into the restoring state. This guarantees that the database does not change after the tail-log backup. The log will be truncated unless the NO_TRUNCATE option or COPY_ONLY option is also specified.<br /><br /> **Important:** Avoid using NO_TRUNCATE, except when the database is damaged.|  
 |CONTINUE_AFTER_ERROR|Use CONTINUE_AFTER_ERROR only if you are backing up the tail of a damaged database.<br /><br /> When you use back up the tail of the log on a damaged database, some of the metadata ordinarily captured in log backups might be unavailable. For more information, see [Tail-Log Backups That Have Incomplete Backup Metadata](#IncompleteMetadata), in this topic.|  
   
-##  <a name="IncompleteMetadata"></a> Tail-Log Backups That Have Incomplete Backup Metadata  
+##  <a name="IncompleteMetadata"></a> Tail-Log backups that have incomplete backup metadata  
  Tail log backups capture the tail of the log even if the database is offline, damaged, or missing data files. This might cause incomplete metadata from the restore information commands and **msdb**. However, only the metadata is incomplete; the captured log is complete and usable.  
   
  If a tail-log backup has incomplete metadata, in the [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) table, **has_incomplete_metadata** is set to **1**. Also, in the output of [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), **HasIncompleteMetadata** is set to **1**.  
@@ -60,13 +60,9 @@ ms.workload: "On Demand"
  If the metadata in a tail-log backup is incomplete, the [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) table will be missing most of the information about filegroups at the time of the tail-log backup. Most of the **backupfilegroup** table columns are NULL; the only meaningful columns are as follows:  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **type**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
@@ -80,6 +76,6 @@ ms.workload: "On Demand"
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   

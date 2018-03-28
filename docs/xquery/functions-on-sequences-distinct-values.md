@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "fn:distinct-values function"
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Functions on Sequences - distinct-values

@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "unloading DLLs"
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DBCC dllname (FREE) (Transact-SQL)

@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.swb.selectbackupdevice.f1"
 ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Select Backup Device

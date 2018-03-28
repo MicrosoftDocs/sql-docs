@@ -16,7 +16,7 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # System-Versioned Temporal Tables with Memory-Optimized Tables

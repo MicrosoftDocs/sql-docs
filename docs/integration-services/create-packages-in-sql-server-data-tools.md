@@ -21,7 +21,7 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create Packages in SQL Server Data Tools

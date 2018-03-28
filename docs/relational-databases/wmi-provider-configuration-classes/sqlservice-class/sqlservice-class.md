@@ -9,7 +9,7 @@ ms.component: "wmi"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SqlService class"
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SqlService Class

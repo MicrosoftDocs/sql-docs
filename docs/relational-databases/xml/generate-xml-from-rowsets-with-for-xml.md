@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "FOR XML clause, generating XML from rowsets"
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Generate XML from Rowsets with FOR XML

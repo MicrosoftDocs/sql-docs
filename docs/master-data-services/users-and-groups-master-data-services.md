@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "groups [Master Data Services], about groups"
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 caps.latest.revision: 8
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

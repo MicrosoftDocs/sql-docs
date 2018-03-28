@@ -23,7 +23,7 @@ ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_rda_set_query_mode (Transact-SQL)

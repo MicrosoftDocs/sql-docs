@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ExitCode property"
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ExitCode Property (SqlService Class)

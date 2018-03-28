@@ -1,7 +1,7 @@
 ---
-title: "Getting Started with the PHP SQL Driver | Microsoft Docs"
+title: "Getting Started with the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -19,7 +19,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# Getting Started with the PHP SQL Driver
+# Getting Started with the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This section provides information about the system requirements for using the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], and for loading the driver into the PHP process space.  
@@ -31,7 +31,9 @@ This section provides information about the system requirements for using the [!
 * [Step 4: Connect resiliently to SQL with PHP](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## See Also  
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
   

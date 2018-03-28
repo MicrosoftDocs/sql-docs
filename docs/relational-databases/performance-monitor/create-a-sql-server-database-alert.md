@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "server performance [SQL Server], alerts"
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create a SQL Server Database Alert

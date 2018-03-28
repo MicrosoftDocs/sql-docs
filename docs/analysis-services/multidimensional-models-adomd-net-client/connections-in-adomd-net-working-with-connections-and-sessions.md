@@ -1,16 +1,16 @@
 ---
 title: "Working with Connections and Sessions in ADOMD.NET | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "analysis-services"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -26,7 +26,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Connections in ADOMD.NET - Working with Connections and Sessions
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In XML for Analysis (XMLA), sessions provide support for stateful operations during analytical data access. Sessions frame the scope and context of commands and transactions for an analytical data source. The XMLA elements used to manage sessions are [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md), and [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md).  
   
  ADOMD.NET uses these three XMLA session elements when you start a session, perform queries or retrieve data during the session, and close a session.  

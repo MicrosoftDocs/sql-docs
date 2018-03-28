@@ -18,7 +18,7 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_datatype_info_90 (SQL Data Warehouse)

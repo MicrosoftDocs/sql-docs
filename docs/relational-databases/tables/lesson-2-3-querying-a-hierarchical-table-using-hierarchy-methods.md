@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: 3b4f7dae-65b5-4d8d-8641-87aba9aa692d
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 2-3 - Querying a Hierarchical Table Using Hierarchy Methods

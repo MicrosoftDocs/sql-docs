@@ -9,7 +9,7 @@ ms.component: "native-client-ole-db-table-valued-parameters"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)"
 ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Schema Rowsets Changed for OLE DB Table-Valued Parameters

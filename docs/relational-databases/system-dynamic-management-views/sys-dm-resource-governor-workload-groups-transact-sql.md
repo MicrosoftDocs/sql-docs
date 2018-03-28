@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_workload_groups dynamic management view"
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_resource_governor_workload_groups (Transact-SQL)

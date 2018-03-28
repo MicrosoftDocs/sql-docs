@@ -1,15 +1,15 @@
 ---
 title: "Change log for SQL Server Reporting Services (2017 and later) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/07/2017"
-ms.prod: "reporting-services"
+ms.date: "02/28/2018"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "casualoak"
@@ -25,9 +25,21 @@ ms.workload: "Active"
 This article describes changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
 
 ## SQL Server 2017 Reporting Services 
+  - *Version 14.0.600.689, Released: February 28, 2018* 
+    - Bug Fixes:
+      - Report Parameter visibility in a linked report is reverted after editing its properties
+      - URL Parameter rc:Toolbar=false doesn't work in Express edition
+      - Having expressions in Textbox with CanGrow property set to false is resulting in values not showing
+      - Added "Learn more" link for product key in setup
+      - Web portal with custom forms authentication is ignoring sliding expiration cookie
+      - Export to Word creates unequal row height if row content is empty
+
+  - *Version 14.0.600.594, Released: January 9, 2018*
+    - Security Updates
+
   - *Version 14.0.600.490, Released: November 1, 2017* 
     - Bug Fixes:
-        - Resolved issues with SKU upgrade
+      - Resolved issues with SKU upgrade
 
   - *Version 14.0.600.451, Released: September 30, 2017* 
     - Initial release

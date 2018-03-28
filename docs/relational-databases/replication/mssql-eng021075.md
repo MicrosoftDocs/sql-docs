@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG021075 error"
 ms.assetid: c8c29543-d1f6-49d5-b6c8-e8c3aa373090
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG021075

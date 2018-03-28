@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Object Explorer [SQL Server Management Studio]"  
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
 caps.latest.revision: 1
-author: "shueybubbles"
-ms.author: "davidshi"
-manager: "kenvh"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Output Window in SQL Server Management Studio

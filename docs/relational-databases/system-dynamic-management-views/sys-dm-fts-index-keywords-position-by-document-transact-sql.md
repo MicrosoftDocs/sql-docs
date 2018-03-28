@@ -25,7 +25,7 @@ ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_index_keywords_position_by_document (Transact-SQL)

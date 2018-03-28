@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_add_log_shipping_primary_database"
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_add_log_shipping_primary_database (Transact-SQL)

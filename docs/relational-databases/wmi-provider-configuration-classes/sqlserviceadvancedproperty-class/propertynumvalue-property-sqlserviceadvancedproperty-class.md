@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "PropertyNumValue property"
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PropertyNumValue Property (SqlServiceAdvancedProperty Class)

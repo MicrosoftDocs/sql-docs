@@ -2,15 +2,15 @@
 title: "How to: Deploy a Data Processing Extension to a Report Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "extensions"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], data processing extension deployments"
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Deploying a Data Processing Extension to a Report Server

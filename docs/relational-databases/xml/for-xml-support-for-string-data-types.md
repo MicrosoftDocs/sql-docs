@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "strings [SQL Server], XML"
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FOR XML Support for String Data Types

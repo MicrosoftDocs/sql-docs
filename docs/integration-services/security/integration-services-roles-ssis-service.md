@@ -26,7 +26,7 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Integration Services Roles (SSIS Service)

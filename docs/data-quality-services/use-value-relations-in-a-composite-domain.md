@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.dqs.dm.cdvaluerelations.f1"
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use Value Relations in a Composite Domain

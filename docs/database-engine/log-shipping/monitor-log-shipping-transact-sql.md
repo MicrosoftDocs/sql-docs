@@ -24,7 +24,7 @@ ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: 29
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Monitor Log Shipping (Transact-SQL)

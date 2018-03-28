@@ -2,14 +2,14 @@
 title: "Verify a Reporting Services Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "Setup [Reporting Services], verifying installations"
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "kfile"
 ms.workload: "On Demand"
 ---

@@ -2,14 +2,14 @@
 title: "Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
@@ -26,23 +26,6 @@ ms.workload: "Inactive"
  **Note:** This topic describes installing the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] solution files and [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 Configuration tool. After the installation, see the following topic for information on the configuration tool and additional features, [Configure Power Pivot and Deploy Solutions &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
  For information on how to download **spPowerPivot16.msi**, see [Microsoft® SQL Server® 2016 Power Pivot® for Microsoft SharePoint®](https://www.microsoft.com/download/details.aspx?id=52675).  
-  
- **In this topic:**  
-  
--   [Background](#bkmk_background)  
-  
--   [Where to Install spPowerPivot16.msi?](#bkmk_where_to_install)  
-  
--   [Requirements and Prerequisites](#bkmk_prereq)  
-  
--   [To Install Power Pivot for SharePoint](#bkmk_install)  
-  
--   [Deploy the SharePoint Solution Files with the Power Pivot for SharePoint 2016 Configuration Tool](#bkmk_deploy_solution)  
-  
--   [Uninstall or repair the add-in](#bkmk_remove_addin)  
-  
-
-**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 
   
 ##  <a name="bkmk_background"></a> Background  
   

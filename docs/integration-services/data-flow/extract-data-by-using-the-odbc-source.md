@@ -16,7 +16,7 @@ ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extract Data by Using the ODBC Source

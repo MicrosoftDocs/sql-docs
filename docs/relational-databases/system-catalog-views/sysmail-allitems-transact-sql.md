@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_allitems database mail view"
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sysmail_allitems (Transact-SQL)

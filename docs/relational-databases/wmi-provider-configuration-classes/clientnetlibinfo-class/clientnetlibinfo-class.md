@@ -9,7 +9,7 @@ ms.component: "wmi"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ClientNetLibInfo class"
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ClientNetLibInfo Class

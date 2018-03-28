@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "security [SQL Server replication], modifying settings"
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View and Modify Replication Security Settings

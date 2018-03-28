@@ -37,7 +37,7 @@ ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XML Bulk Load Examples (SQLXML 4.0)

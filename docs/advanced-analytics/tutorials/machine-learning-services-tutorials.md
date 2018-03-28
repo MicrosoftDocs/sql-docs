@@ -7,7 +7,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 applies_to: 
@@ -24,6 +24,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Tutorials for SQL Server Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides a comprehensive list of the tutorials, demos, and sample applications that use machine learning features in SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, how to use remote and local compute contexts, and how to optimize your R and Python code for a SQL production environment.
 
@@ -106,8 +107,8 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 
 To run these tutorials, you must download and install the SQL Server machine learning components, as described here:
 
-+ [Set up SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services](../r/set-up-sql-server-r-services-in-database.md)
-+ [Set up SQL Server 2017 Python Services](../python/setup-python-machine-learning-services.md)
++ [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
++ [Install SQL Server 2016 R Services (In-Database)](../install/sql-r-services-windows-install.md)
 
 With SQL Server 2017, you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
 

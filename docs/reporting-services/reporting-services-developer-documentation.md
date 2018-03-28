@@ -2,15 +2,15 @@
 title: "Reporting Services Developer Documentation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "reporting-services"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "programming [Reporting Services]"
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 caps.latest.revision: 21
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Reporting Services Developer Documentation

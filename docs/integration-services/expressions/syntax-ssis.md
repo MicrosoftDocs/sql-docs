@@ -19,7 +19,7 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Syntax (SSIS)

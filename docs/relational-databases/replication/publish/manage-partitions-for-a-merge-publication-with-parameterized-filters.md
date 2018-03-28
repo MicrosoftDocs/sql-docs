@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "parameterized filters [SQL Server replication], partition management"
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage Partitions for a Merge Publication with Parameterized Filters

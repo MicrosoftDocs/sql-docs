@@ -19,7 +19,7 @@ ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Update Table Dialog Box (Visual Database Tools)

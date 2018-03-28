@@ -8,28 +8,29 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Python Libraries and Data Types
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes the Python libraries that are included with the following products:
+This article describes the Python libraries that are included with the following products:
 
 + SQL Server Machine Learning Services (In-Database)
 + Microsoft Machine Learning Server (Standalone)
 
-This topic also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
+This article also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
 
 ## Python Version
 
 SQL Server 2017 CTP 2.0 includes a portion of the Anaconda distribution and Python 3.6.
 
-A subset of the RevoScaleR functionality (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, maybe a few others) is provided using Python APIS, using a new Python package **RevoScalePy**. You can use this packages to work with data using Pandas data frames, .XDF files, or SQL data queries.
+A subset of the RevoScaleR functionality (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, maybe a few others) is provided using Python APIs, using a new Python package **revoscalepy**. You can use this package to work with data using Pandas data frames, XDF files, or SQL data queries.
 
 For more information, see [What Is revoscalepy?](what-is-revoscalepy.md).
 

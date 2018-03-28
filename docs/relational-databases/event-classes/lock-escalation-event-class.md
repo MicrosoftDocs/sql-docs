@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "lock escalation [SQL Server], event class"
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lock:Escalation Event Class

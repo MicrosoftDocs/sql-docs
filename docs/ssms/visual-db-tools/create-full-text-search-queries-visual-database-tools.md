@@ -20,7 +20,7 @@ ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create Full-Text Search Queries (Visual Database Tools)

@@ -19,7 +19,7 @@ ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connect to an Access Database

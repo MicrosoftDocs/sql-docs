@@ -28,7 +28,7 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Supported Query Types (Visual Database Tools)

@@ -16,7 +16,7 @@ ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.rename_folder (SSISDB Database)

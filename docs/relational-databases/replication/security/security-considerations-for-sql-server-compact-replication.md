@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "security [SQL Server replication], SQL Server Compact"
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Security Considerations for SQL Server Compact Replication

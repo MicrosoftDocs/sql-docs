@@ -2,14 +2,14 @@
 title: "SQL Server mobile reports: End-to-end walk-through | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/07/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd

@@ -2,21 +2,21 @@
 title: "Prepare Excel data for Reporting Services mobile reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/08/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 caps.latest.revision: 14
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Prepare Excel data for Reporting Services mobile reports
@@ -52,7 +52,7 @@ When preparing an Excel file as a dataset for a mobile report, make sure you hav
   
 As you can see in the example above, the first row contains the name of the metric in that column. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] preserves these column headers for easy reference in gallery element settings. Column headers aren't required, however. If missing, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] generates headings using the Excel A,B,C,...,AA,BB,... convention.  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]automatically detects first-row headers when importing Excel worksheets by comparing the data types of the first two cells in each column. If the data types of the first two cells in any column don't match, the first row is determined to contain column headers. Thus, if a table has numeric column headers, prefix the header names with a string so they're detected as headers in the import process.  
+[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] automatically detects first-row headers when importing Excel worksheets by comparing the data types of the first two cells in each column. If the data types of the first two cells in any column don't match, the first row is determined to contain column headers. Thus, if a table has numeric column headers, prefix the header names with a string so they're detected as headers in the import process.  
   
 ## Cells  
   

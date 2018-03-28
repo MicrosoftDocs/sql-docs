@@ -45,7 +45,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## Arguments  
 
-For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)], `sp_spacedused` must specify named parameters (for example `sp_spacedused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
+For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
 
  [ **@objname=**] **'***objname***'** 
    
@@ -82,7 +82,7 @@ If *objname* is not specified, results are returned for the whole database.
  *oneresultset* is **bit**, with a default of **0**.  
 
 [ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
-**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+**Applies to:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  When @oneresultset=1, the parameter @include_total_xtp_storage determines whether the single resultset includes columns for MEMORY_OPTIMIZED_DATA storage. The default value is 0, that is, by default (if the parameter is omitted) the XTP columns are not included in the resultset.  
 

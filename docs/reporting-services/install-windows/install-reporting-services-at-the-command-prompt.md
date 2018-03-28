@@ -1,27 +1,27 @@
 ---
-title: "Install Reporting Services at the Command Prompt | Microsoft Docs"
+title: "Install Reporting Services 2016 at the Command Prompt - SSRS | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/17/2017"
-ms.prod: "reporting-services"
+ms.date: "01/09/2018"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
   - "command line"
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Install Reporting Services at the Command Prompt
+# Install Reporting Services 2016 at the Command Prompt
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 

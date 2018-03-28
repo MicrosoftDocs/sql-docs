@@ -16,7 +16,7 @@ ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)

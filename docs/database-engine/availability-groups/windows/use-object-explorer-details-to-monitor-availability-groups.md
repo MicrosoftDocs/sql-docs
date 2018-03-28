@@ -22,7 +22,7 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Use Object Explorer Details to Monitor Availability Groups

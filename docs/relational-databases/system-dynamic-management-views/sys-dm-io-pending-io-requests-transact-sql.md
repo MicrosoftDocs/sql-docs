@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_io_pending_io_requests dynamic management view"
 ms.assetid: d1fb46dd-5c74-4c04-9ecf-8934b1bedb5b 
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_io_pending_io_requests (Transact-SQL)

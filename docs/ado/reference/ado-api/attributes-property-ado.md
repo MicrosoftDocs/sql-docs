@@ -23,7 +23,7 @@ ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Attributes Property (ADO)

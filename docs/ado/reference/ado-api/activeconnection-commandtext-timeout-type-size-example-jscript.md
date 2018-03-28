@@ -24,7 +24,7 @@ ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (JScript)

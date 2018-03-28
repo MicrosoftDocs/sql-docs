@@ -21,7 +21,7 @@ ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Rename a Database Diagram (Visual Database Tools)

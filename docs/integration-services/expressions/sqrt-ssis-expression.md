@@ -19,7 +19,7 @@ ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQRT (SSIS Expression)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "dqs log files"
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage DQS Log Files

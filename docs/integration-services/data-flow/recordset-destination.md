@@ -23,7 +23,7 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Recordset Destination

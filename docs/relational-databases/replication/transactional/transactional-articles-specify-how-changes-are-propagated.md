@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "transactional replication, propagation methods"
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Transactional Articles - Specify How Changes Are Propagated

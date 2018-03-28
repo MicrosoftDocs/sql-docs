@@ -2,15 +2,15 @@
 title: "Analysis Services Developer Documentation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/24/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -25,6 +25,7 @@ ms.workload: "Inactive"
 ---
 # Analysis Services Developer Documentation
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
 In Analysis Services, almost every object and workload is programmable, and often there is more than one approach to choose from.  Options include writing managed code, script, or using open standards like XMLA and MSOLAP if your solution requirements preclude using the .NET framework.
 
 ## What you can accomplish in code
@@ -88,5 +89,5 @@ TMSL is a JSON representation of Tabular models at compatibility level 1200 and 
 Documents the cmdlets used for administrative functions, plus the general-purpose **Invoke-ASCmd** cmdlet that accepts any script or query as input.
 
 ## See Also
-[Technical Reference &#40;SSAS&#41;](../analysis-services/powershell/technical-reference-ssas.md)
+[Technical Reference ](../analysis-services/powershell/technical-reference-ssas.md)
 [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

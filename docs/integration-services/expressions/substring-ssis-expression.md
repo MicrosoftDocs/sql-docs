@@ -19,7 +19,7 @@ ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # SUBSTRING (SSIS Expression)

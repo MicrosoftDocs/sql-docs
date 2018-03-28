@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "fn_syscollector_get_execution_details function"
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # fn_syscollector_get_execution_details (Transact-SQL)

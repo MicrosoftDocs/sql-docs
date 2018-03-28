@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "02/15/2018"
 ms.prod: ""
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
 caps.latest.revision: 20
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # ALTER DATABASE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ MODIFY NAME = *new_database_name*
 Renames the database with the name specified as *new_database_name*.  
   
 MAXSIZE  
-The default is 10,240 GB (10 TB).  
+The default is 245,760 GB (240 TB).  
 
 **Applies to:** Optimized for Elasticity performance tier
 

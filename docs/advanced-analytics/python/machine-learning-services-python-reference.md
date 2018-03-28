@@ -8,15 +8,16 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This section contains links to API reference specific to Machine Learning Services in SQL Server 2017.
 
@@ -30,7 +31,6 @@ This section contains links to API reference specific to Machine Learning Servic
 **Samples**
 
 + [Run Python from T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Publish and Consume Python Models](publish-consume-python-code.md)
 + [Use revoscalepy to Create a Model](../tutorials/use-python-revoscalepy-to-create-model.md)
 
 

@@ -2,15 +2,15 @@
 title: "Enter Data Source Credentials Dialog Box (Report Builder) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "report-data"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
@@ -18,9 +18,9 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.runtimecredentials.f1"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)

@@ -21,7 +21,7 @@ ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PageSize Property (ADO)

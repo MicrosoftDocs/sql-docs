@@ -18,7 +18,7 @@ ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Generate Mirror Tables and CDC Capture Instances

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "sys.dm_exec_distributed_request_steps management view"
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_exec_distributed_request_steps (Transact-SQL)

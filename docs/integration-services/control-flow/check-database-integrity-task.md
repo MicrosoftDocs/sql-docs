@@ -25,7 +25,7 @@ ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Check Database Integrity Task

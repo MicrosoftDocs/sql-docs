@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "RIP (Residual Information Protection)"
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # common criteria compliance enabled Server Configuration Option

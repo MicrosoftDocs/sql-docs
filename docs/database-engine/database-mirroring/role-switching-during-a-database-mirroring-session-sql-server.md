@@ -25,7 +25,7 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: 50
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Role Switching During a Database Mirroring Session (SQL Server)

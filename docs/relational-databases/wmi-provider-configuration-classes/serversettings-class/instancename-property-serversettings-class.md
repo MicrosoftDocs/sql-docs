@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "InstanceName property"
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # InstanceName property (ServerSettings Class)

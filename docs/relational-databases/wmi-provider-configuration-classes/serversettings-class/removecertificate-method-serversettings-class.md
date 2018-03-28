@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "RemoveCertificate method"
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RemoveCertificate Method (ServerSettings Class)

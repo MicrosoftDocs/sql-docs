@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ft crawl bandwidth option"
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ft crawl bandwidth Server Configuration Option

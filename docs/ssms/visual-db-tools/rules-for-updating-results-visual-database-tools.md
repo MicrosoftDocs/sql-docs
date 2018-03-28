@@ -21,7 +21,7 @@ ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Rules for Updating Results (Visual Database Tools)

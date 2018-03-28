@@ -1,17 +1,17 @@
 ---
-title: "Tabular Model Databases (SSAS Tabular) | Microsoft Docs"
+title: "Tabular Model Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
@@ -32,14 +32,14 @@ ms.workload: "On Demand"
   
  [Tabular Model Partitions](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)  
   
- [Connect to a Tabular Model Database](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [Connect to a tabular model database](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
  [Restore from Power Pivot](../../analysis-services/tabular-models/restore-from-power-pivot.md)  
   
 
     
 ## Related Content  
- [Tabular Model Solutions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
  [Tabular Model Data Access](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 

@@ -1,17 +1,17 @@
 ---
 title: Encrypting Connections to SQL Server on Linux | Microsoft Docs
-description: This topic describes Encrypting Connections to SQL Server on Linux.
+description: This article describes Encrypting Connections to SQL Server on Linux.
 author: tmullaney 
-ms.date: 10/02/2017
-ms.author: meetb;rickbyh 
-manager: jhubbard
+ms.date: 01/30/2018
+ms.author: meetb 
+manager: craigg
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords: 
@@ -20,23 +20,23 @@ ms.workload: "Inactive"
 ---
 # Encrypting Connections to SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux can use Transport Layer Security (TLS) to encrypt data that is transmitted across a network between a client application and an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports the same TLS protocols on both Windows and Linux: TLS 1.2, 1.1, and 1.0. However, the steps to configure TLS are specific to the operating system on which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running.  
 
 ## Requirements for Certificates 
-Before we get started, you need to make sure your certificates follow these requirements:
+Before getting started, you need to make sure your certificates follow these requirements:
 - The current system time must be after the Valid from property of the certificate and before the Valid to property of the certificate.
 - The certificate must be meant for server authentication. This requires the Enhanced Key Usage property of the certificate to specify Server Authentication (1.3.6.1.5.5.7.3.1).
-- The certificate must be created by using the KeySpec option of AT_KEYEXCHANGE. Usually, the certificate's key usage property (KEY_USAGE) will also include key encipherment (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
+- The certificate must be created by using the KeySpec option of AT_KEYEXCHANGE. Usually, the certificate's key usage property (KEY_USAGE) also includes key encipherment (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
 - The Subject property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. Note: Wild Card Certificates are supported. 
 
 ## Overview
-TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When configured correctly, TLS provides both privacy and data integrity for communications between the client and the server.  TLS connections can either be client intiated or server initited. 
+TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When configured correctly, TLS provides both privacy and data integrity for communications between the client and the server.  TLS connections can either be client initiated or server initiated. 
 
 
 ## Client Initiated Encryption 
-- **Generate certificate** (/CN should match your SQL Server host fully-qualified domain name)
+- **Generate certificate** (/CN should match your SQL Server host fully qualified domain name)
 
 > [!NOTE]
 > For this example we use a Self-Signed Certificate, this should not be used for production scenarios. You should use CA certificates. 
@@ -56,13 +56,13 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
-- **Register the certificate on your client machine (Windows, Linux or macOS)**
+- **Register the certificate on your client machine (Windows, Linux, or macOS)**
 
-    -   If you are using CA signed certificate you have to copy the Certificate Authority (CA) certificate instead of the user certificate to the client machine. 
-    -   If you are using the self-signed certificate just copy the .pem file to the following folders respective to distribution and execute the commands to enable them 
-        - **Ubuntu** : Copy cert to ```/usr/share/ca-certificates/```  rename extension to .crt  use dpkg-reconfigure ca-certificates to enable it as system CA certificate. 
-        - **RHEL** : Copy cert to ```/etc/pki/ca-trust/source/anchors/``` use ```update-ca-trust``` to enable it as system CA certificate.
-        - **SUSE** : Copy cert to ```/usr/share/pki/trust/anchors/``` use ```update-ca-certificates``` to enable its as system CA certificate.
+    -   If you are using CA signed certificate, you have to copy the Certificate Authority (CA) certificate instead of the user certificate to the client machine. 
+    -   If you are using the self-signed certificate, just copy the .pem file to the following folders respective to distribution and execute the commands to enable them 
+        - **Ubuntu**: Copy cert to ```/usr/share/ca-certificates/```  rename extension to .crt  use dpkg-reconfigure ca-certificates to enable it as system CA certificate. 
+        - **RHEL**: Copy cert to ```/etc/pki/ca-trust/source/anchors/``` use ```update-ca-trust``` to enable it as system CA certificate.
+        - **SUSE**: Copy cert to ```/usr/share/pki/trust/anchors/``` use ```update-ca-certificates``` to enable it as system CA certificate.
         - **Windows**:  Import the .pem file as a certificate under current user -> trusted root certification authorities -> certificates
         - **macOS**: 
            - Copy the cert to ```/usr/local/etc/openssl/certs```

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "StorageBoundInMB element"
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # StorageBoundInMB Element (DTA)

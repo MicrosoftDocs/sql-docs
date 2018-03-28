@@ -2,15 +2,15 @@
 title: "Introduction to the Tabular Object Model (TOM) in Analysis Services AMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
@@ -51,7 +51,7 @@ In contrast, when you manage objects that are part of Tabular metadata (such as 
 
 ### TOM and XMLA
 
-On the wire, TOM uses the XMLA protocol to communicate with the Analysis Services server and to manage objects. When managing non-tabular objects, TOM uses [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), the Analysis Services Scripting Language extension of XMLA. When managing tabular objects, TOM uses the SSAS tabular protocol, also an extension of XMLA. See [MS-SSAS-T SQL Server Analysis Services Tabular protocol documentation](https://msdn.microsoft.com/library/mt719260.aspx) for more information.
+On the wire, TOM uses the XMLA protocol to communicate with the Analysis Services server and to manage objects. When managing non-tabular objects, TOM uses [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), the Analysis Services Scripting Language extension of XMLA. When managing tabular objects, TOM uses the MS-SSAS tabular protocol, also an extension of XMLA. See [MS-SSAS-T SQL Server Analysis Services Tabular protocol documentation](https://msdn.microsoft.com/library/mt719260.aspx) for more information.
 
 ### TOM and JSON
 

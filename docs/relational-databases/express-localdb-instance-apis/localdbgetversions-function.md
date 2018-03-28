@@ -19,9 +19,9 @@ apilocation:
 apitype: "DLLExport"
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LocalDBGetVersions Function

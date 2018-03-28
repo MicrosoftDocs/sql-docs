@@ -16,7 +16,7 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.set_object_parameter_value (SSISDB Database)

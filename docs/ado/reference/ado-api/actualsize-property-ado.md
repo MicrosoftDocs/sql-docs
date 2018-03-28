@@ -7,7 +7,7 @@ ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/20/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
@@ -21,11 +21,11 @@ ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ActualSize Property (ADO)
-Indicates the actual length of a field???s value in bytes.  
+Indicates the actual length of a field's value in bytes.  
   
 ## Settings and Return Values  
  Returns a **Long** value.  

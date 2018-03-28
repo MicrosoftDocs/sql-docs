@@ -23,7 +23,7 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSMQ Connection Manager

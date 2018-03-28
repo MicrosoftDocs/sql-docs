@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "dynamic filters [SQL Server replication]"
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: 69
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Parameterized Filters - Parameterized Row Filters

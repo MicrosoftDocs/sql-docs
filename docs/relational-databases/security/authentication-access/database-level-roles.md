@@ -64,7 +64,7 @@ To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBE
 
 The permissions of user-defined database roles can be customized by using the GRANT, DENY, and REVOKE statements. For more information, see [Permissions (Database Engine)](../../../relational-databases/security/permissions-database-engine.md).
 
-For a list of all the permissions, see the [Database Engine Permissions](http://go.microsoft.com/fwlink/?LinkId=229142) poster. (Server-level permissions cannot be granted to database roles. Logins and other server-level principals (such as server roles) cannot be added to database roles. For server-level security in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [server roles](../../../relational-databases/security/authentication-access/server-level-roles.md) instead. Server-level permissions cannot be granted through roles in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+For a list of all the permissions, see the [Database Engine Permissions](https://aka.ms/sql-permissions-poster) poster. (Server-level permissions cannot be granted to database roles. Logins and other server-level principals (such as server roles) cannot be added to database roles. For server-level security in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [server roles](../../../relational-databases/security/authentication-access/server-level-roles.md) instead. Server-level permissions cannot be granted through roles in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
 
 ## Fixed-Database Roles
   

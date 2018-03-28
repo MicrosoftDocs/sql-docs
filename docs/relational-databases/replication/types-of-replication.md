@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "replication [SQL Server], types"
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Types of Replication

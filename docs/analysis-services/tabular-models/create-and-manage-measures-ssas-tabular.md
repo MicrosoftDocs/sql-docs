@@ -1,17 +1,17 @@
 ---
-title: "Create and Manage Measures (SSAS Tabular) | Microsoft Docs"
+title: "Create and Manage Measures | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "analysis-services"
+ms.date: "02/22/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
@@ -21,21 +21,9 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
 ---
-# Create and Manage Measures (SSAS Tabular)
+# Create and manage measures 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   A measure is a formula that is created for use in a report or Excel PivotTable (or PivotChart). Measures can be based on standard aggregation functions, such as COUNT or SUM, or you can define your own formula by using DAX. The tasks in this topic describe how to create and manage measures by using a table’s measure grid.  
-  
- This topic includes the following tasks:  
-  
--   [To create a measure using a standard aggregation formula](#bkmk_create_stand)  
-  
--   [To create a measure using a custom formula](#bkmk_create_custom)  
-  
--   [To edit measure properties](#bkmk_edit)  
-  
--   [To rename a measure](#bkmk_rename)  
-  
--   [To delete a measure](#bkmk_delete)  
   
 ## Tasks  
  To create and manage measures, you will use a table’s measure grid. You can view the measure grid for a table in the model designer in Data View only. You cannot create measures or view the measure grid when in Diagram View; however, you can view existing measures in Diagram View. To show the measure grid for a table, click the **Table** menu, and then click **Show Measure Grid**.  
@@ -65,8 +53,8 @@ ms.workload: "On Demand"
 -   In the measure grid, right-click a measure, and then click **Delete**.  
   
 ## See Also  
- [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Calculated columns](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

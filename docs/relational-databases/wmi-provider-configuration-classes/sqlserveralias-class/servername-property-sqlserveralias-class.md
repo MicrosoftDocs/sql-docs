@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ServerName property"
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ServerName Property (SqlServerAlias Class)

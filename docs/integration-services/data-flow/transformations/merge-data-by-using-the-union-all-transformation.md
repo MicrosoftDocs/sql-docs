@@ -22,7 +22,7 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Merge Data by Using the Union All Transformation

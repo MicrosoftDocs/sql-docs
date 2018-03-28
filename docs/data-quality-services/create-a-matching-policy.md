@@ -18,9 +18,9 @@ f1_keywords:
   - "sql13.dqs.kb.kbmatchingresults.f1"
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Matching Policy

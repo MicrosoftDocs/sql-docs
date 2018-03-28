@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_jobsteplog"
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_jobsteplog (Transact-SQL)

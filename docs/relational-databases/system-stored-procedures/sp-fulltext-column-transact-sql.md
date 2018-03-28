@@ -23,7 +23,7 @@ ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_fulltext_column (Transact-SQL)

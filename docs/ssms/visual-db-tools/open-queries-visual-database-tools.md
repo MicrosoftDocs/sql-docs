@@ -19,7 +19,7 @@ ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Open Queries (Visual Database Tools)

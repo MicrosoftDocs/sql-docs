@@ -18,7 +18,7 @@ ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RDS Programming Model in Detail

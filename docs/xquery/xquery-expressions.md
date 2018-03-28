@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "expressions [XQuery], listed"
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # XQuery Expressions

@@ -21,7 +21,7 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ODBC Source
@@ -51,7 +51,7 @@ ms.workload: "Inactive"
  Depending on the error behavior setting, the ODBC source supports returning errors (data conversion, truncation) that occur during the extraction process in the error output. For more information, see [ODBC Destination Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
 ## Data Type Support  
- For information about the data types supported by the ODBC source, see Connector for Open Database Connectivity (ODBC) by Attunity.  
+ For information about the data types supported by the ODBC source, see Connector for Open Database Connectivity (ODBC).  
   
 ## Extract Options  
  The ODBC source operates in either **Batch** or **Row-by-Row** mode. The mode used is determined by the **FetchMethod** property. The following list describes the modes.  

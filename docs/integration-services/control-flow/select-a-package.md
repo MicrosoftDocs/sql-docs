@@ -20,7 +20,7 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Select a Package

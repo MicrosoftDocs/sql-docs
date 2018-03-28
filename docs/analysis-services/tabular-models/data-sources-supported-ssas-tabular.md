@@ -1,17 +1,17 @@
 ---
 title: "Data sources supported in SQL Server Analysis Services tabular models | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/16/2017"
-ms.prod: "analysis-services"
+ms.date: "02/22/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
@@ -25,7 +25,7 @@ ms.workload: "On Demand"
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 For Azure Analysis Services, see [Data sources supported in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
 
-  This topic describes the types of data sources that can be used with tabular models.  
+  This article describes the types of data sources that can be used with tabular models.  
   
 ##  <a name="bkmk_supported_ds"></a> Supported data sources for in-memory tabular models  
 When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], setup does not install the providers that are listed for each data source. Some providers might be installed with other applications on your computer. In other cases, you may need to download and install the provider.  

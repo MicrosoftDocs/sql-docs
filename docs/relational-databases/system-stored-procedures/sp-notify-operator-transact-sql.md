@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_notify_operator"
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_notify_operator (Transact-SQL)

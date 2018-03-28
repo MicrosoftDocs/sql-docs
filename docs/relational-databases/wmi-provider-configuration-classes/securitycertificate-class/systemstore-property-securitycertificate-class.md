@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SystemStore property"
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SystemStore Property (SecurityCertificate Class)

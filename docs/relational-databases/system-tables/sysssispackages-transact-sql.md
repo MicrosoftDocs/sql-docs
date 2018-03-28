@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysssispackages system table"
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 caps.latest.revision: 43
-author: "spelluru"
-ms.author: "spelluru"
-manager: "jhubbard"
+author: "douglasl"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysssispackages (Transact-SQL)

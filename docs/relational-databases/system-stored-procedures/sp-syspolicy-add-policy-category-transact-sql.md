@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_add_policy_category"
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_add_policy_category (Transact-SQL)

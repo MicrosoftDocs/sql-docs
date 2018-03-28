@@ -2,19 +2,19 @@
 title: "Install the first Report Server in SharePoint mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
 ms.service: ""
 ms.component: "install-windows"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Install the first Report Server in SharePoint mode
@@ -77,7 +77,7 @@ ms.workload: "On Demand"
  > For SharePoint 2016, the SharePoint server that Reporting Services will be installed on needs to have the **Custom** server role. The deployment of Reporting Services will succeed on a SharePoint server that is not in the **Custom** role, but during the next SharePoint maintenance window, MinRole will stop the Reporting Services service because it detects that Reporting Services in SharePoint-integrated mode does not indicate support for any of the other SharePoint server roles. The Reporting Services service application only supports the **Custom** role.
  
  > [!NOTE]
- > If you plan to install the Power Pivot service as well, on SharePoint 2016, install that prior to installing Reporting Services. The Power Pivot service cannot be installed on a SharePoint server in the **Custom** role. This will avoid having to switch roles multiple times.
+ > If you plan to install the Power Pivot service as well, on SharePoint 2016, install that prior to installing Reporting Services. The Power Pivot service can only be installed on a SharePoint server in the **Custom** role.
  
  ### Apply the custom server role to a SharePoint 2016 server
  

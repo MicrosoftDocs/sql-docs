@@ -20,7 +20,7 @@ ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Resync Method Example (VB)

@@ -20,7 +20,7 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 39
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Select Initial Data Synchronization Page (Always On Availability Group Wizards)

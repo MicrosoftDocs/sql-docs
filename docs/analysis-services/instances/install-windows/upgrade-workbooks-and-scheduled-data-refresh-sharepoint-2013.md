@@ -2,7 +2,7 @@
 title: "Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
@@ -26,17 +26,6 @@ ms.workload: "Inactive"
 > [!WARNING]  
 >  You cannot rollback upgrade for workbooks that are upgraded automatically on the server. Once a workbook is upgraded, it remains upgraded. To use a previous version, you can republish the previous workbook to SharePoint, restore a previous version, or recycle the workbook. For more information about restoring or recycling a document in SharePoint, see [Plan to protect content by using recycle bins and versioning](http://go.microsoft.com/fwlink/?LinkId=238669).  
   
- This topic contains the following sections:  
-  
--   [Overview of Upgrading Workbooks](#bkmk_overview)  
-  
--   [Upgrade to SQL Server 2012 Service Pack 1 (SP1) workbooks from 2008 R2 Workbooks](#bkmk_to_2012sp1_from_2008r2)  
-  
--   [Upgrade to Office 2013 workbooks from Versions created by using the 2012 Power Pivot Add-In for Excel](#bkmk_to_2012sp1_from_2012)  
-  
--   [Upgrade to SQL Server 2012 workbooks from Versions created by using the 2008 R2 Power Pivot Add-In for Excel 2010](#bkmk_to_2012_from_2008R2)  
-  
--   [Running Multiple Workbook Versions on a Newer Server](#bkmk_runold)  
   
 ##  <a name="bkmk_overview"></a> Overview of Upgrading Workbooks  
  A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbook is an Excel workbook that contains embedded [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data. Upgrading a workbook has two benefits:  

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sysnotifications system table"
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # dbo.sysnotifications (Transact-SQL)

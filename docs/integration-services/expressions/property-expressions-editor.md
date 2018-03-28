@@ -20,7 +20,7 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Property Expressions Editor

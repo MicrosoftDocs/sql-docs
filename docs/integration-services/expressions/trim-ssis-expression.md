@@ -20,7 +20,7 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # TRIM (SSIS Expression)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "incremental searches [SQL Server Management Studio]"
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Search an Active Document Incrementally

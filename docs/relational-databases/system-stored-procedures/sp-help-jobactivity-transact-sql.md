@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_help_jobactivity"
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_help_jobactivity (Transact-SQL)

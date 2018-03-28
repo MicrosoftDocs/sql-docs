@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "revoking permissions [SQL Server]"
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Revoke Permissions on an XML Schema Collection

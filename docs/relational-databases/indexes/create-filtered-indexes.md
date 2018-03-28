@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "indexes [SQL Server], filtered"
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Create Filtered Indexes

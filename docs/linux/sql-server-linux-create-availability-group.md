@@ -3,22 +3,22 @@ title: Create and configure an availability group for SQL Server on Linux | Micr
 description: This tutorial shows how to create and configure availability groups for SQL Server on Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "sql-linux"
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.workload: "On Demand"
 ---
 
 # Create and configure an availability group for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 This tutorial covers how to create and configure an availability group (AG) for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Unlike [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] and earlier on Windows, you can enable AGs with or without creating the underlying Pacemaker cluster first. Integration with the cluster, if needed, is not done until later.
 
@@ -361,7 +361,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 12. Click **Next**.
 
-13. Choose how the secondary replica(s) will be initialized. The default is to use [automatic seeding](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), which requires the same path on all servers participating in the AG. You can also have the wizard do a backup, copy, and restore (the second option); have it join if you have manually backed up, copied, and restored the database on the replica(s) (third option); or add the database later (last option). As with certificates, if you are manually making backups and copying them, permissions on the backup files will need to be set on the other replica(s). Click **Next**.
+13. Choose how the secondary replica(s) will be initialized. The default is to use [automatic seeding](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), which requires the same path on all servers participating in the AG. You can also have the wizard do a backup, copy, and restore (the second option); have it join if you have manually backed up, copied, and restored the database on the replica(s) (third option); or add the database later (last option). As with certificates, if you are manually making backups and copying them, permissions on the backup files needs to be set on the other replica(s). Click **Next**.
 
 14. On the Validation dialog, if everything does not come back as Success, investigate. Some warnings are acceptable and not fatal, such as if you do not create a listener. Click **Next**.
 
@@ -411,7 +411,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -422,7 +422,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
     
     GO
-    ```
+   ```
 
 #### Example Two – Three replicas with read-only routing (External cluster type)
 
@@ -475,7 +475,7 @@ This example shows three full replicas and how read-only routing can be configur
     
     GO
     
-    ALTER AVAILABLITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
+    ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE;
     
     GO
     ```
@@ -547,7 +547,7 @@ A Pacemaker high availability cluster underlying [!INCLUDE[ssnoversion-md](../in
     
     GO
     
-    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABLITY GROUP::<AGThatWasCreated> TO PMLogin;
+    GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::<AGThatWasCreated> TO PMLogin;
     
     GO
     ```

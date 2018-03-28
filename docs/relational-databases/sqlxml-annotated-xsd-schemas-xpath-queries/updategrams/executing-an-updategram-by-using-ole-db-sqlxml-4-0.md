@@ -21,7 +21,7 @@ ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing an Updategram by Using OLE DB (SQLXML 4.0)

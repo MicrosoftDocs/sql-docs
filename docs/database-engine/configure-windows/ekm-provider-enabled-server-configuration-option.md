@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "EKM provider enabled option"
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # EKM provider enabled Server Configuration Option

@@ -16,7 +16,7 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.validations (SSISDB Database)

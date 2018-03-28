@@ -2,15 +2,15 @@
 title: "Configure Windows Authentication on the Report Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.service: ""
 ms.component: "security"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Reporting Services, configuration"
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 caps.latest.revision: 25
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Configure Windows Authentication on the Report Server
   By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication. If your deployment includes client applications and browsers that use these security providers, you can use the default values without additional configuration. If you want to use a different security provider for Windows integrated security (for example, if you want to use Kerberos directly), or if you modified the default values and want to restore the original settings, you can use the information in this topic to specify authentication settings on the report server.  
@@ -29,7 +29,7 @@ manager: "erikre"
   
  The following additional requirements must also be met:  
   
--   The RSeportServer.config files must have **AuthenticationType** set to **RSWindowsNegotiate**, **RSWindowsKerberos**, or **RSWindowsNTLM**. By default, the RSReportServer.config file includes the **RSWindowsNegotiate** setting if the Report Server service account is either NetworkService or LocalSystem; otherwise, the **RSWindowsNTLM** setting is used. You can add **RSWindowsKerberos** if you have applications that only use Kerberos authentication.  
+-   The RSReportServer.config files must have **AuthenticationType** set to **RSWindowsNegotiate**, **RSWindowsKerberos**, or **RSWindowsNTLM**. By default, the RSReportServer.config file includes the **RSWindowsNegotiate** setting if the Report Server service account is either NetworkService or LocalSystem; otherwise, the **RSWindowsNTLM** setting is used. You can add **RSWindowsKerberos** if you have applications that only use Kerberos authentication.  
   
     > [!IMPORTANT]  
     >  Using **RSWindowsNegotiate** will result in a Kerberos authentication error if you configured the Report Server service to run under a domain user account and you did not register a Service Principal Name (SPN) for the account. For more information, see [Resolving Kerberos Authentication Errors When Connecting to a report server](#proxyfirewallRSWindowsNegotiate) in this topic.  

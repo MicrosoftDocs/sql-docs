@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], stored procedures"
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Maintenance Plan Stored Procedures (Transact-SQL)

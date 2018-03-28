@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Transact-SQL debugger, breakpoint hit count"
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify a Hit Count

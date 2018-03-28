@@ -24,7 +24,7 @@ helpviewer_keywords:
 caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard" 
+manager: "craigg" 
 ms.workload: "On Demand"
 ---
 # Get started with PolyBase

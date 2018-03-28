@@ -19,7 +19,7 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure Subscription Connection Manager

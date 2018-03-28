@@ -1,22 +1,24 @@
 ---
 title: Get started with SQL Server security on Linux | Microsoft Docs 
-description: This topic describes typical security actions.  
-author: BYHAM   
-ms.author: rickbyh   
-manager: jhubbard  
+description: This article describes typical security actions.  
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"  
 ms.date: 10/02/2017
 ms.topic: article  
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
 ms.technology: database-engine  
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0  
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.workload: "Inactive"
 ---
 # Walkthrough for the security features of SQL Server on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the security tasks. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the in-depth documentation for that area.
 
@@ -33,7 +35,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  Always use a strong password in place of the asterisks above.
+>  Always use a strong password in place of the asterisks in the previous command.
 
 Logins can connect to SQL Server and have access (with limited permissions) to the master database. To connect to a user-database, a login needs a corresponding identity at the database level, called a database user. Users are specific to each database and must be separately created in each database to grant them access. The following example moves you into the AdventureWorks2014 database, and then uses the [CREATE USER](../t-sql/statements/create-user-transact-sql.md) statement to create a user named Larry that is associated with the login named Larry. Though the login and the user are related (mapped to each other), they are different objects. The login is a server-level principle. The user is a database-level principal.
 
@@ -59,7 +61,7 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-Now the login Jerry can create more logins, and the user Jerry can create more users.
+Now the login Larry can create more logins, and the user Jerry can create more users.
 
 
 ## Granting access with least privileges
@@ -96,7 +98,7 @@ For more information about the permission system, see [Getting Started with Data
 
 [Row-Level Security](../relational-databases/security/row-level-security.md) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
 
-The steps below walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
+The following steps walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
 
 Create two user accounts to test the row level security:    
    

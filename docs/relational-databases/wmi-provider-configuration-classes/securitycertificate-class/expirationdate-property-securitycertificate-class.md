@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ExpirationDate property"
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ExpirationDate Property (SecurityCertificate Class)

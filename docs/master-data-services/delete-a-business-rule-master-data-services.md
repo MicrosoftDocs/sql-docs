@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "business rules [Master Data Services], deleting"
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 caps.latest.revision: 7
-author: "smartysanthosh"
-ms.author: "nagavo"
+author: "leolimsft"
+ms.author: "lle"
 manager: "craigg"
 ms.workload: "Inactive"
 ---

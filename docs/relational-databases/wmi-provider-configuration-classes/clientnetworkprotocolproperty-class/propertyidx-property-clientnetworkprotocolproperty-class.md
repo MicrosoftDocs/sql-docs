@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "PropertyIdx property"
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PropertyIdx Property (ClientNetworkProtocolProperty Class)

@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-text-image-columns"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "image columns [ODBC]"
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Bound vs. Unbound Text and Image Columns

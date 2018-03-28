@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "dqs log files,advanced settings"
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure Advanced Settings for DQS Log Files

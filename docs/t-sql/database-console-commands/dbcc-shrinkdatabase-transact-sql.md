@@ -31,9 +31,9 @@ helpviewer_keywords:
   - "reducing database size"
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC SHRINKDATABASE (Transact-SQL)
@@ -62,14 +62,14 @@ DBCC SHRINKDATABASE
  Is the percentage of free space that you want left in the database file after the database has been shrunk.  
   
  NOTRUNCATE  
- Compacts the data in data files by moving allocated pages from the end of a file to unallocated pages in the front of the file. *target_percent* is optional.  
+ Compacts the data in data files by moving allocated pages from the end of a file to unallocated pages in the front of the file. *target_percent* is optional. This option is not supported with Azure SQL Data Warehouse. 
   
  The free space at the end of the file is not returned to the operating system, and the physical size of the file does not change. Therefore, when NOTRUNCATE is specified, the database appears not to shrink.  
   
  NOTRUNCATE is applicable only to data files. The log file is not affected.  
   
  TRUNCATEONLY  
- Releases all free space at the end of the file to the operating system but does not perform any page movement inside the file. The data file is shrunk only to the last allocated extent. *target_percent* is ignored if specified with TRUNCATEONLY.  
+ Releases all free space at the end of the file to the operating system but does not perform any page movement inside the file. The data file is shrunk only to the last allocated extent. *target_percent* is ignored if specified with TRUNCATEONLY. This option is not supported with Azure SQL Data Warehouse.
   
  TRUNCATEONLY affects the log file. To truncate only the data file, use DBCC SHRINKFILE.  
   
@@ -105,6 +105,9 @@ Running DBCC SHRINKDATABASE without specifying either the NOTRUNCATE option or t
 The database being shrunk does not have to be in single user mode; other users can be working in the database when it is shrunk. This includes system databases.
   
 You cannot shrink a database while the database is being backed up. Conversely, you cannot backup a database while a shrink operation on the database is in process.
+
+>[!NOTE]
+> Currently, Azure SQL Data Warehouse does not support DBCC SHRINKDATABASE with TDE enabled.
   
 ## How DBCC SHRINKDATABASE Works  
 DBCC SHRINKDATABASE shrinks data files on a per-file basis, but shrinks log files as if all the log files existed in one contiguous log pool. Files are always shrunk from the end.

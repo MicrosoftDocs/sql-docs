@@ -14,7 +14,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Replication Monitor, about Replication Monitor"
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Overview of the Replication Monitor Interface

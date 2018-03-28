@@ -16,9 +16,9 @@ f1_keywords:
   - "sql13.dqs.kb.importprojectvalues.f1"
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Import Cleansing Project Values into a Domain

@@ -28,7 +28,7 @@ ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Sort and Group Query Results (Visual Database Tools)

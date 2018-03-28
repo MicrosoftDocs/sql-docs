@@ -21,7 +21,7 @@ ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Size Property (ADO Parameter)

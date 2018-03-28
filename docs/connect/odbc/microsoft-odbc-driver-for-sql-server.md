@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
-ms.service: ""
 ms.component: "odbc"
 ms.reviewer: ""
 ms.suite: "sql"
@@ -16,7 +15,7 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Microsoft ODBC Driver for SQL Server
@@ -39,13 +38,21 @@ We have a small .zip file that contains the source code of a C++ program which u
 
 ## Documentation  
 
+### Features
+
+- [Custom Keystore Providers](../../connect/odbc/custom-keystore-providers.md)
+- [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md)
+- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (the features available also apply, without OLEDB, to the ODBC Driver for SQL Server)
+- [Using Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Using Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
+- [Using Transparent Network IP Resolution](../../connect/odbc/using-transparent-network-ip-resolution.md)
+
 ### Linux and macOS
 
 - [Installing the Driver](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Connecting to SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Connecting with **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Connecting with **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
-- [Using Integrated Authentication (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
-- [Connection String Keywords and Data Source Names](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Data Access Tracing](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [Frequently Asked Questions](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [Installing the Driver Manager](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
@@ -53,6 +60,7 @@ We have a small .zip file that contains the source code of a C++ program which u
 - [Programming Guidelines](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [Release Notes](../../connect/odbc/linux-mac/release-notes.md)
 - [Support for High Availability and Disaster Recovery](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+- [Using Integrated Authentication (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 
 ### Windows
 
@@ -63,13 +71,7 @@ We have a small .zip file that contains the source code of a C++ program which u
 - [Release Notes](../../connect/odbc/windows/release-notes.md)
 - [System Requirements, Installation, and Driver Files](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
-### Features
 
-- [Custom Keystore Providers](../../connect/odbc/custom-keystore-providers.md)
-- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (the features available also apply, without OLEDB, to the ODBC Driver for SQL Server)
-- [Using Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
-- [Using Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
-- [Using Transparent Network IP Resolution](../../connect/odbc/using-transparent-network-ip-resolution.md)
 
 ## Community  
 - [Microsoft ODBC Driver For SQL Server Team blog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  

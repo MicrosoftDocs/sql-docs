@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "data formats [SQL Server], Unicode native"
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use Unicode Native Format to Import or Export Data (SQL Server)

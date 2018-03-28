@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "PropertyValueType property"
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PropertyValueType Property (SqlServiceAdvancedProperty Class)

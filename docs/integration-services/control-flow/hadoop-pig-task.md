@@ -18,7 +18,7 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Hadoop Pig Task

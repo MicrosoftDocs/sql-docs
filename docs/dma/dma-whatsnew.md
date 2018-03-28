@@ -1,7 +1,7 @@
 ---
 title: "What's new in Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/03/2017"
+ms.date: "02/02/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "dma"
 ms.service: ""
@@ -26,6 +26,11 @@ ms.workload: "Inactive"
 # What's new in Data Migration Assistant
 
 This topic lists the additions in each release of Data Migration Assistant (DMA).
+
+## DMA v3.4
+The v3.4 release of DMA includes the following additions:
+- Support for SQL Server 2017 as a source for migrations to Azure SQL Database.
+- Enhancements to stability, performance, and assessment rule correctness.
 
 ## DMA v3.3
 The v3.3 release of DMA enables migration of an on-premises SQL Server instance to the new version of SQL Server 2017, on both Windows and Linux. While the overall migration workflow for Windows and Linux is the same, the move to SQL Server 2017 for Linux requires a couple of additional considerations.

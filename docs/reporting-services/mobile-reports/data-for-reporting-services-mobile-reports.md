@@ -2,21 +2,21 @@
 title: "Data for Reporting Services mobile reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/08/2016"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "mobile-reports"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
 caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Data for Reporting Services mobile reports

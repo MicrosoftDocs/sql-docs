@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sp_xtp_unbind_db_resource_pool"
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)

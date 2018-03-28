@@ -19,7 +19,7 @@ ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # REVERSE (SSIS Expression)

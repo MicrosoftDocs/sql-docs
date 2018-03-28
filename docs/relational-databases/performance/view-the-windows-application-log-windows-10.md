@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "logs [SQL Server], viewing"
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # View the Windows application log (Windows 10)

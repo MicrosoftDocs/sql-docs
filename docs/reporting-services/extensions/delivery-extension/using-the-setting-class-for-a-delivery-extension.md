@@ -2,15 +2,15 @@
 title: "Using the Setting Class for a Delivery Extension | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "extensions"
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Setting class"
 ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
 caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Using the Setting Class for a Delivery Extension

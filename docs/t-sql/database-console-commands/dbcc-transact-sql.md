@@ -40,9 +40,9 @@ helpviewer_keywords:
   - "informational statements [SQL Server]"
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # DBCC (Transact-SQL)

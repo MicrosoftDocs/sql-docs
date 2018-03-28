@@ -22,7 +22,7 @@ ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # LevelName Property (ADO MD)

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Database Engine Tuning Advisor [SQL Server], starting"
 ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1-1 - Launching Database Engine Tuning Advisor

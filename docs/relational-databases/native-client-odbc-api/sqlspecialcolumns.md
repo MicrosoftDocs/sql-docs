@@ -9,7 +9,7 @@ ms.component: "native-client-odbc-api"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "DLLExport"
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "SQLSpecialColumns function"
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLSpecialColumns

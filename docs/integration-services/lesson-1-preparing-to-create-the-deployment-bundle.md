@@ -18,7 +18,7 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1: Preparing to Create the Deployment Bundle

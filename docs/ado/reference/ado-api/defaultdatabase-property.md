@@ -21,7 +21,7 @@ ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DefaultDatabase Property

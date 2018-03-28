@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sysprocesses system table"
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # sys.sysprocesses (Transact-SQL)

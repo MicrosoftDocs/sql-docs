@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], dragging and dropping text"
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Drag and Drop Text

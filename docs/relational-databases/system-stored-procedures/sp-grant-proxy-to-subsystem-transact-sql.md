@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_grant_proxy_to_subsystem"
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_grant_proxy_to_subsystem (Transact-SQL)

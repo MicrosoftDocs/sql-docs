@@ -20,7 +20,7 @@ ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete Objects

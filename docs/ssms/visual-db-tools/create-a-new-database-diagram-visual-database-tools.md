@@ -19,7 +19,7 @@ ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Create a New Database Diagram (Visual Database Tools)

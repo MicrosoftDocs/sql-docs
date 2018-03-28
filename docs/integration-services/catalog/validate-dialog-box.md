@@ -19,7 +19,7 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Validate Dialog Box

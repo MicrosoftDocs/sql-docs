@@ -20,7 +20,7 @@ ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Version Property Example (VC++)

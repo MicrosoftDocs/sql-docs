@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "data [SQL Server], changing"
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Enable and Disable Change Tracking (SQL Server)

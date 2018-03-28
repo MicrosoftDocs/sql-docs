@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
@@ -17,6 +17,7 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Components in SQL Server to support Python integration
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Beginning in SQL Server 2017, Machine Learning Services supports Python as an external language that can be executed from T-SQL, or executed remotely using SQL Server as the compute context.
 
@@ -32,7 +33,7 @@ To configure SQL Server 2017 to allow Python script execution is a multi-step pr
 
 Additional steps might be required to support remote script execution.
 
-For more information, see [Set up Machine Learning Services](setup-python-machine-learning-services.md)
+For more information, see [Install SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 
 ### Launchpad
 

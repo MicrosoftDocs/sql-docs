@@ -29,7 +29,7 @@ ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Logging in the Script Task

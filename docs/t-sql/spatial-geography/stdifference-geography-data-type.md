@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STDifference (geography Data Type)"
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STDifference (geography Data Type)

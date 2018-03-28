@@ -3,22 +3,22 @@ title: Create and run jobs for SQL Server on Linux | Microsoft Docs
 description: This tutorial shows how to run SQL Server Agent job on Linux.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: sql-linux
+ms.component: ""
 ms.suite: "sql"
-ms.custom: ""
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: "Inactive"
 ---
 # Create and run SQL Server Agent jobs on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server jobs are used to regularly perform the same sequence of commands in your SQL Server database. This tutorial provides an example of how to create a SQL Server Agent job on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
 
@@ -42,23 +42,22 @@ The following prerequisites are optional:
 * Windows machine with SSMS:
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) for optional SSMS steps.
 
-## Install SQL Server Agent
+## Enable SQL Server Agent
 
-To use SQL Server Agent on Linux, you must first install the **mssql-server-agent** package on a machine that already has SQL Server 2017 installed.
+To use SQL Server Agent on Linux, you must first enable SQL Server Agent on a machine that already has SQL Server 2017 installed.
 
-1. Install **mssql-server-agent** with the appropriate command for your Linux OS.
-
-   | Platform | Installation command(s) |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. To enable SQL Server Agent, follow the step below.
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. Restart SQL Server with the following command:
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> Starting with SQL Server 2017 CU4, SQL Server Agent is included with the **mssql-server** package and is disabled by default. For Agent set up prior to CU4 visit, [Install SQL Server Agent on Linux](sql-server-linux-setup-sql-agent.md).
 
 ## Create a sample database
 

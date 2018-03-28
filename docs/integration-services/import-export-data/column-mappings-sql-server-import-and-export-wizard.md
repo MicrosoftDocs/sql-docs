@@ -18,7 +18,7 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Column Mappings (SQL Server Import and Export Wizard)

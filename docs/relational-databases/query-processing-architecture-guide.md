@@ -1,7 +1,7 @@
 ---
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/07/2017"
+ms.date: "02/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "query processing architecture guide"
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Query Processing Architecture Guide
@@ -30,6 +30,40 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries
 ## SQL Statement Processing
 
 Processing a single SQL statement is the most basic way that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes SQL statements. The steps used to process a single `SELECT` statement that references only local base tables (no views or remote tables) illustrates the basic process.
+
+#### Logical Operator Precedence
+
+When more than one logical operator is used in a statement, `NOT` is evaluated first, then `AND`, and finally `OR`. Arithmetic, and bitwise, operators are handled before logical operators. For more information, see [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md).
+
+In the following example, the color condition pertains to product model 21, and not to product model 20, because `AND` has precedence over `OR`.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+You can change the meaning of the query by adding parentheses to force evaluation of the `OR` first. The following query finds only products under models 20 and 21 that are red.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+Using parentheses, even when they are not required, can improve the readability of queries, and reduce the chance of making a subtle mistake because of operator precedence. There is no significant performance penalty in using parentheses. The following example is more readable than the original example, although they are syntactically the same.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### Optimizing SELECT statements
 
@@ -44,7 +78,6 @@ A `SELECT` statement defines only the following:
 * The tables that contain the source data. This is specified in the `FROM` clause.
 * How the tables are logically related for the purposes of the `SELECT` statement. This is defined in the join specifications, which may appear in the `WHERE` clause or in an `ON` clause following `FROM`.
 * The conditions that the rows in the source tables must satisfy to qualify for the `SELECT` statement. These are specified in the `WHERE` and `HAVING` clauses.
-
 
 A query execution plan is a definition of the following: 
 
@@ -1045,4 +1078,5 @@ GO
  [Extended Events](../relational-databases/extended-events/extended-events.md)  
  [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Adaptive query processing](../relational-databases/performance/adaptive-query-processing.md)
+ [Adaptive query processing](../relational-databases/performance/adaptive-query-processing.md)   
+ [Operator Precedence](../t-sql/language-elements/operator-precedence-transact-sql.md)

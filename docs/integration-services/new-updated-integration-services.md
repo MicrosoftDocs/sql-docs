@@ -1,21 +1,17 @@
 ---
 title: Updated - Integration Services for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Integration Services for Microsoft SQL Server.
-services: na
-documentationcenter: ''
+
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: ''
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: updart-autogen
-ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: integration-services
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+
+ms.component: ssis
+ms.date: 02/03/2018
 ---
 # New and Recently Updated: Integration Services for SQL Server
 
@@ -29,7 +25,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-09-28** &nbsp; -to- &nbsp; **2017-12-02**
+- *Date range of updates:* &nbsp; **2017-12-03** &nbsp; -to- &nbsp; **2018-02-03**
 - *Subject area:* &nbsp; **Integration Services for SQL Server**.
 
 
@@ -42,8 +38,18 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Store and retrieve files on file shares on premises and in Azure with SSIS](lift-shift/ssis-azure-files-file-shares.md)
-2. [Validate SSIS packages deployed to Azure](lift-shift/ssis-azure-validate-packages.md)
+1. [Browse All Principals Dialog Box](catalog/browse-all-principals-dialog-box.md)
+2. [Configure Dialog Box](catalog/configure-dialog-box.md)
+3. [Folder Properties Dialog Box](catalog/folder-properties-dialog-box.md)
+4. [Integration Services (SSIS) Catalog Transact-SQL Reference](catalog/integration-services-ssis-catalog-transact-sql-reference.md)
+5. [Integration Services (SSIS) Server and Catalog](catalog/integration-services-ssis-server-and-catalog.md)
+6. [Package Properties Dialog Box](catalog/package-properties-dialog-box.md)
+7. [Project Properties Dialog Box](catalog/project-properties-dialog-box.md)
+8. [Project Versions Dialog Box](catalog/project-versions-dialog-box.md)
+9. [Set Parameter Value Dialog Box](catalog/set-parameter-value-dialog-box.md)
+10. [SSIS Catalog](catalog/ssis-catalog.md)
+11. [Validate Dialog Box](catalog/validate-dialog-box.md)
+12. [View the List of Packages on the Integration Services Server](catalog/view-the-list-of-packages-on-the-integration-services-server.md)
 
 
 
@@ -69,8 +75,7 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Hadoop Connection Manager](#TitleNum_1)
-2. [Connect to on-premises data sources and Azure file shares with Windows Authentication](#TitleNum_2)
+1. [Schedule the execution of an SSIS package on Azure](#TitleNum_1)
 
 
 
@@ -81,141 +86,53 @@ This compact list provides links to all the updated articles that are listed in 
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Hadoop Connection Manager](connection-manager/hadoop-connection-manager.md)
+### 1. &nbsp; [Schedule the execution of an SSIS package on Azure](lift-shift/ssis-azure-schedule-packages.md)
 
-*Updated: 2017-11-28* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2018-01-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 65.  ms.author= "douglasl".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 2d68f4e884304f1a28045b42b680c15cc6a41ec5 fb2429466ea4d545682975d8dbea47451ce98ec7  (PR=4113  ,  Filename=hadoop-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=28cccac53767db70763e5e705b8cc59a83c77317) -->
-
-
-
-**Connect with Kerberos authentication**
-
-There are two options to set up the on-premises environment so you can use Kerberos Authentication with the Hadoop Connection Manager. You can choose the option that better fits your circumstances.
--   Option 1: [Join the SSIS computer to the Kerberos realm--#kerberos-join-realm)
--   Option 2: [Enable mutual trust between the Windows domain and the Kerberos realm--#kerberos-mutual-trust)
-
-**<a name="kerberos-join-realm"></a>Option 1: Join the SSIS computer to the Kerberos realm**
-
-
-**Requirements:**
-
-
--   The gateway computer needs to join the Kerberos realm and can't join any Windows domain.
-
-**How to configure:**
-
-
-**On the SSIS computer:**
-
-1.	Run the **Ksetup** utility to configure the Kerberos KDC server and realm.
-
-    The computer must be configured as a member of a workgroup since a Kerberos realm is different from a Windows domain. Set the Kerberos realm and add a KDC server as shown in the following example. Replace *REALM.COM* with your own respective realm as needed.
-
-```
-    C:> Ksetup /setdomain REALM.COM`
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-```
-
-	Restart the computer after executing these two commands.
-
-2.	Verify the configuration with **Ksetup** command. The output should look like the following sample:
-
-```
-    C:> Ksetup
-    default realm = REALM.COM (external)
-    REALM.com:
-        kdc = <your_kdc_server_address>
-```
-
-**<a name="kerberos-mutual-trust"></a>Option 2: Enable mutual trust between the Windows domain and the Kerberos realm**
-
-
-**Requirements:**
-
--   The gateway computer must join a Windows domain.
--   You need permission to update the domain controller's settings.
-
-**How to configure:**
-
-
-> [!NOTE]
-> Replace REALM.COM and AD.COM in the following tutorial with your own respective realm and domain controller as needed.
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [Connect to on-premises data sources and Azure file shares with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
-
-*Updated: 2017-11-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
-
-<!-- Source markdown line 66.  ms.author= "douglasl".  -->
+<!-- Source markdown line 28.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 673386fca53cb60b983e0cb3cd4b9e2ee1dee0de 65458b4dceb92d01184c5e9c6f68ec0e8f16ba08  (PR=4104  ,  Filename=ssis-azure-connect-with-windows-auth.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=19e1c4067142d33e8485cb903a7a9beb7d894015) -->
+<!-- git diff --ignore-all-space --unified=0 be778f8096559da9b84670382deb11f56c129971 640dd3cb59a88ccbc4cf6eab363a45e284f6b873  (PR=4662  ,  Filename=ssis-azure-schedule-packages.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
 
 
 
-**Connect to an on-premises SQL Server**
+Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server to your on-premises SQL Server as a linked server.
 
-To check whether you can connect to an on-premises SQL Server, do the following things:
+1.  **Set up the linked server**
 
-1.  To run this test, find a non-domain-joined computer.
+    ```
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location='',
+        @provstr='',
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
 
-2.  On the non-domain-joined computer, run the following command to start SQL Server Management Studio (SSMS) with the domain credentials that you want to use:
+2.  **Set up linked server credentials**
 
-```
-    runas.exe /netonly /user:<domain>\<username> SSMS.exe
-```
+    ```
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer',
+        @useself = 'false',
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
 
-3.  From SSMS, check whether you can connect to the on-premises SQL Server that you want to use.
+3.  **Set up linked server options**
 
-**Connect to an on-premises file share**
+    ```
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
 
-To check whether you can connect to an on-premises file share, do the following things:
-
-1.  To run this test, find a non-domain-joined computer.
-
-2.  On the non-domain-joined computer, run the following command. This command opens a command prompt window with the domain credentials that you want to use, and then tests connectivity to the file share by getting a directory listing.
-
-```
-    runas.exe /netonly /user:<domain>\<username> cmd.exe
-    dir \\fileshare
-```
-
-3.  Check whether the directory listing is returned for the on-premises file share that you want to use.
-
-**Connect to a file share on an Azure VM**
-
-To connect to a file share on an Azure virtual machine, do the following things:
-
-1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB).
-
-2.  With SSISDB as the current database, open a query window.
-
-3.  Run the `catalog.set_execution_credential` stored procedure as described in the following options:
-
-```
-    catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
-```
-
-**Connect to a file share in Azure Files**
-
-For more info about Azure Files, see [Azure Files](https://azure.microsoft.com/services/storage/files/).
+For more info, see [Create Linked Servers](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 
 
@@ -223,45 +140,44 @@ For more info about Azure Files, see [Azure Files](https://azure.microsoft.com/s
 
 
 
-## Similar Articles
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## Similar articles about new or updated articles
 
 This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### Subject areas which do have new or recently updated articles
 
-- [New + Updated (3+14): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (87+0): **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [New + Updated (5+4):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (0+1):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (2+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (10+9): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (2+4):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (4+2):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1):  **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (21+0): **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [New + Updated (5+1):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (1+0):  **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (0+2):  **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+#### Subject areas that *do* have new or recently updated articles
 
-#### Subject areas which have no new or recently updated articles
+
+- [New + Updated (1+3):&nbsp; **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1):&nbsp; **Analytics Platform System for SQL** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [New + Updated (0+1):&nbsp; **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (0+1):&nbsp; **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (12+1): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (6+2):&nbsp; **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (15+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (2+9):&nbsp; **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (1+0):&nbsp; **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (1+1):&nbsp; **SQL Operations Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [New + Updated (1+1):&nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):&nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (1+2):&nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+2):&nbsp; **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+
+
+
+#### Subject areas that do *not* have any new or recently updated articles
+
 
 - [New + Updated (0+0): **Data Migration Assistant (DMA) for SQL** docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 

@@ -15,8 +15,9 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 author: "ronortloff"
-ms.author: "rortloff;barbkess"
-manager: "jhubbard"
+ms.author: "rortloff"
+manager: "craigg"
+ms.reviewer: "barbkess"
 ms.workload: "Inactive"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "expressions [XQuery], path"
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Path Expressions (XQuery)

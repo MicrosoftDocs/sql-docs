@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_update_profileaccount_sp"
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_update_profileaccount_sp (Transact-SQL)

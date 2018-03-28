@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "witness [SQL Server], sys.database_mirroring_witnesses catalog view"
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses

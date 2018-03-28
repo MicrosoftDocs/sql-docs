@@ -16,7 +16,7 @@ ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.event_message_context

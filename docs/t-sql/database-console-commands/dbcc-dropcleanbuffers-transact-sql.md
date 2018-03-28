@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "DBCC DROPCLEANBUFFERS statement"
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # DBCC DROPCLEANBUFFERS (Transact-SQL)
@@ -57,10 +57,10 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
  COMPUTE  
- Purge the query plan cache from each Compute node.  
+ Purge the data cache in memory from each Compute node.  
   
  ALL  
- Purge the query plan cache from each Compute node and from the Control node. This is the default if you do not specify a value.  
+ Purge the data cache in memory from each Compute node and from the Control node. This is the default if you do not specify a value.  
   
 ## Remarks  
 Use DBCC DROPCLEANBUFFERS to test queries with a cold buffer cache without shutting down and restarting the server.

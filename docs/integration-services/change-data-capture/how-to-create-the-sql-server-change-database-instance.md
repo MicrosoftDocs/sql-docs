@@ -16,7 +16,7 @@ ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # How to Create the SQL Server Change Database Instance

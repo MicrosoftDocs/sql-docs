@@ -19,7 +19,7 @@ ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change the Default Location for Projects

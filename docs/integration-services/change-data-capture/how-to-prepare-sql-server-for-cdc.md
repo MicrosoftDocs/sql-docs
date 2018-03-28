@@ -16,7 +16,7 @@ ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # How to Prepare SQL Server for CDC

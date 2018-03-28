@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], initial snapshots"
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create and Apply the Initial Snapshot

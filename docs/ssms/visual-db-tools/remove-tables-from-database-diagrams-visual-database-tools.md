@@ -20,7 +20,7 @@ ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Remove Tables from Database Diagrams (Visual Database Tools)

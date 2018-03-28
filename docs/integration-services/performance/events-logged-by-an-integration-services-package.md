@@ -19,7 +19,7 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Events Logged by an Integration Services Package

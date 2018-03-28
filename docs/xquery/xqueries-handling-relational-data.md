@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "XQuery, relational data"
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XQueries Handling Relational Data

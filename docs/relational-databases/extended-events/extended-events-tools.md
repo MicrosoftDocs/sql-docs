@@ -20,7 +20,7 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extended Events Tools

@@ -1,17 +1,17 @@
 ---
-title: "Partitions (SSAS Tabular) | Microsoft Docs"
+title: "Partitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58

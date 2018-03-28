@@ -1,5 +1,5 @@
 ---
-Title: "Tutorial: Connect and query a SQL Server instance by using SQL Server Management Studio"
+Title: "Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio"
 description: A tutorial for connecting to a SQL Server instance by using SQL Server Management Studio and running basic T-SQL queries.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -12,7 +12,7 @@ ms.reviewer: sstein
 manager: craigg
 ---
 
-# Tutorial: Connect and query a SQL Server instance by using SQL Server Management Studio
+# Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio
 This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands.
 
 ## Prerequisites
@@ -48,8 +48,8 @@ If you don't have access to a SQL Server instance, select your platform from the
 
    ![Successful connection](media/connect-query-sql-server/successfulconnection.png)
 
-## Create a database
-Create a database named TutorialDB by doing the following: 
+## Create a *TutorialDB* database
+Create a database named *TutorialDB* by doing the following: 
 
 1. Right-click your server instance in **Object Explorer**, and then select **New Query**:
 
@@ -74,7 +74,7 @@ Create a database named TutorialDB by doing the following:
     After the query is complete, the new **TutorialDB** appears in the list of databases in **Object Explorer**. If it isn't displayed, right-click the **Databases** node, and then select **Refresh**.  
 
 
-## Create a table
+## Create a *Customers* table in the new database
 In this section, you create a table in the newly created **TutorialDB** database. Because the query editor is still in the context of the *master* database, switch the connection context to the *TutorialDB* database by doing the following: 
 
 1. In the database drop-down list, select the database that you want, as shown here: 
@@ -103,7 +103,7 @@ In this section, you create a table in the newly created **TutorialDB** database
 
 After the query is complete, the new **Customers** table is displayed in the list of tables in **Object Explorer**. If the table is not visible, right-click the **TutorialDB > Tables** node in **Object Explorer**, and then select **Refresh**.
 
-## Insert rows
+## Insert rows into the new table
 Insert some rows into the **Customers** table that you created previously. To do so, paste the following T-SQL code snippet into the query window, and then select **Execute**: 
 
 
@@ -119,7 +119,7 @@ Insert some rows into the **Customers** table that you created previously. To do
    GO
    ```
 
-## View query results
+## Query the table and view the results
 The results of a query are visible below the query text window. To query the **Customers** table and view the rows that were previously inserted, do the following:  
 
 1. Paste the following T-SQL code snippet into the query window, and then select **Execute**: 
@@ -137,22 +137,22 @@ The results of a query are visible below the query text window. To query the **C
 
      ![Results options](media/connect-query-sql-server/results.png)
 
-    - By default, the middle button displays the results in **Grid View** in a table. 
+    - The middle button displays the results in **Grid View**, which is the default option. 
     - The first button displays the results in **Text View**, as shown in the image in the next section.
     - The third button lets you save the results to a file whose extension is \**.rpt* by default.
 
-## Verify your query window connection properties
+## Verify your connection properties by using the query window table
 You can find information about the connection properties under the results of your query. After you run the previously mentioned query in the preceding step, review the connection properties at the bottom of the query window.
 
 - You can determine which server and database you're connected to, and the username that you're logged in with.
 - You can also view the query duration and the number of rows that are returned by the previously executed query.
 
-    In the following image, the results are displayed in **Text View**: 
-   
-    ![Connection Properties](media/connect-query-sql-server/connectionproperties.png)  
+    ![Connection Properties](media/connect-query-sql-server/connectionproperties.png)
+    
+    In the image, note that the results are displayed in **Text View**. 
 
-## Change the server connection within the query window
-You can change which server your current query window is connected to by doing the following:
+## Change the server that the query window is connected to
+You can change the server that your current query window is connected to by doing the following:
 
 1. Right-click in the query window, and then select **Connection** > **Change connection**.  
     The **Connect to Server** window opens again.
@@ -161,7 +161,7 @@ You can change which server your current query window is connected to by doing t
    ![Change Connection](media/connect-query-sql-server/changeconnection.png)
 
     > [!NOTE]
-    > This action changes only the current query window, not which server your **Object Explorer** is connected to. 
+    > This action changes only the server that the query window is connected to, not the server that **Object Explorer** is connected to. 
 
 
 

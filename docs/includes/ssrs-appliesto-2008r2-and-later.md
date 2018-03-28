@@ -11,4 +11,4 @@
 ---
 
 
-![no](media/no.png)SQL Server Reporting Services (2017)
+![yes](media/yes.png)SQL Server Reporting Services (2008 R2 and later)

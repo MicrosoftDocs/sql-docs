@@ -34,13 +34,13 @@ The following are important points to note about connection pooling in the [!INC
   
 -   Closing the connection returns the connection to the pool.  
   
-For more information about connection pooling, see [Driver Manager Connection Pooling](http://go.microsoft.com/fwlink/?linkid=119622).  
+For more information about connection pooling, see [Driver Manager Connection Pooling](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
 ## Enabling/Disabling connection pooling
 ### Windows
 You can force the driver to create a new connection (instead of looking for an equivalent connection in the connection pool) by setting the value of the *ConnectionPooling* attribute in the connection string to **false** (or 0).  
   
-If the *ConnectionPooling* attribute is omitted from the connection string or if it is set to **true** (or 1), the driver will only create a new connection if an equivalent connection does not exist in the connection pool.  
+If the *ConnectionPooling* attribute is omitted from the connection string or if it is set to **true** (or 1), the driver only creates a new connection if an equivalent connection does not exist in the connection pool.  
   
 For information about other connection attributes, see [Connection Options](../../connect/php/connection-options.md).  
 ### Linux and Mac OS X
@@ -63,6 +63,7 @@ Pooling=No
 ```
   
 ## See Also  
-[How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md)  
+[How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md)
+
 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

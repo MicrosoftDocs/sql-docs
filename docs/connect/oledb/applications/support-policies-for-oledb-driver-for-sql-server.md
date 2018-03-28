@@ -29,17 +29,14 @@ ms.workload: "On Demand"
 ## Supported Operating System Versions  
  The following table lists which operating systems support OLE DB Driver for SQL Server.  
 
-|OLE DB Driver for SQL Server|Supported operating systems|  
+|Supported operating systems|  
 |--------------------------------------|---------------------------------|   
-|OLE DB Driver for SQL Server ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)],  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], and [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] )|Microsoft Windows 8.1<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012<br /><br />Windows Server 2012 R2<br /><br />Microsoft Windows Server 2016|  
+|Microsoft Windows 8.1<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012<br /><br />Microsoft Windows Server 2012 R2<br /><br />Microsoft Windows Server 2016|  
 
 ## ADO Support Policies  
  ADO applications can use the SQLOLEDB OLE DB provider that is included with Windows if they do not require any of the features of [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later.  
 
  ADO applications can use the OLE DB Driver for SQL Server, but if they do so they must specify `DataTypeCompatibility=80` in the connection strings. Only features from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] are available when `DataTypeCompatibility=80` is present in the connection strings.  
-
-## BCP Support Policies  
- Beginning in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], bcp.exe supports data files that are no more than three [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions older than the version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in which bcp.exe shipped.    
 
 ## OLE DB Support Policies  
 Applications can use the OLE DB provider (SQLOLEDB) included with the Windows operating system. 

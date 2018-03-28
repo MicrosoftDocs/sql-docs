@@ -30,7 +30,7 @@ There are three distinct incarnations of Microsoft OLE DB providers for SQL Serv
 
 ### 1. Microsoft OLE DB Provider for SQL Server (SQLOLEDB)
 
-The Microsoft OLE DB Provider for SQL Server (SQLOLEDB) still ships as part of [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907). It is not recommended to use this driver for new development.
+The Microsoft OLE DB Provider for SQL Server (SQLOLEDB) still ships as part of [Windows Data Access Components](https://msdn.microsoft.com/en-us/library/ms692897.aspx). It is not recommended to use this driver for new development.
 
 
 ### 2. SQL Server Native Client (SNAC)

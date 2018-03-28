@@ -40,7 +40,7 @@ Returns the edition (service tier), service objective (pricing tier) and elastic
 |-----------------|---------------|-----------------|  
 |database_id|int|The ID of the database, unique within an instance of Azure SQL Database server. Joinable with [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|The service tier for the database or data warehouse: **Basic**, **Standard**, **Premium** or **Data Warehouse**.|  
-|service_objective|sysname|The pricing tier of the database. If the database is in an elastic pool, returns **ElasticPool**.<br /><br /> On the **Basic** tier, returns **Basic**.<br /><br /> **Single database in a standard service tier** returns one of the following: S0, S1, S2, or S3.<br /><br /> **Single database in a premium tier** returns of the following: P1, P2, P4, P6/P3, or P11.<br /><br /> **SQL Data Warehouse** returns DW100 through DW2000.|  
+|service_objective|sysname|The pricing tier of the database. If the database is in an elastic pool, returns **ElasticPool**.<br /><br /> On the **Basic** tier, returns **Basic**.<br /><br /> **Single database in a standard service tier** returns one of the following: S0, S1, S2, or S3.<br /><br /> **Single database in a premium tier** returns of the following: P1, P2, P4, P6/P3, or P11.<br /><br /> **SQL Data Warehouse** returns DW100 through DW10000c.|  
 |elastic_pool_name|sysname|The name of the [elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) that the database belongs to. Returns **NULL** if the database is a single database or a data warehoue.|  
   
 ## Permissions  

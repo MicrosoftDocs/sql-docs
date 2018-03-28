@@ -1,7 +1,8 @@
 ---
 title: "Using the OLE DB Driver for SQL Server Header and Library Files | Microsoft Docs"
+description: "Using the OLE DB Driver for SQL Server header and library files"
 ms.custom: ""
-ms.date: "02/28/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -48,7 +49,7 @@ ms.workload: "On Demand"
  To use the OLE DB Driver for SQL Server header file, you must use an **include** statement within your C/C++ programming code. The following sections describe how to do this OLE DB applications.  
   
 > [!NOTE]  
->  The OLE DB Driver for SQL Server header and library files can only be compiled using Visual Studio C++ 2010 or later.  
+>  The OLE DB Driver for SQL Server header and library files can only be compiled using Visual Studio C++ 2012 or later.  
   
 ### OLE DB  
  To use the OLE DB Driver for SQL Server header file in an OLE DB application, using the following lines of programming code:  

@@ -1,7 +1,8 @@
 ---
 title: "Accessing Diagnostic Information in the Extended Events Log | Microsoft Docs"
+description: "Tracing OLE DB Driver for SQL Server and accessing diagnostic information in the extended events log"
 ms.custom: ""
-ms.date: "02/28/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

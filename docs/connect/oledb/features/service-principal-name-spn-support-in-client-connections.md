@@ -1,7 +1,8 @@
 ---
 title: "Service Principal Name (SPN) Support in Client Connections | Microsoft Docs"
+description: "Service Principal Name (SPN) support in client connections"
 ms.custom: ""
-ms.date: "02/28/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""

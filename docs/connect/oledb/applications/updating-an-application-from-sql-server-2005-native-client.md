@@ -1,18 +1,19 @@
 ---
 title: "Updating an Application from SQL Server 2005 Native Client | Microsoft Docs"
+description: "Updating an application from SQL Server 2005 Native Client"
 ms.custom: ""
-ms.date: "02/28/2018"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "oledb|applications"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
+ms.technology:
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "OLE DB Driver for SQL Server, updating applications"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
@@ -23,11 +24,11 @@ ms.workload: "Inactive"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   This topic discusses the breaking changes in OLE DB Driver for SQL Server since [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
-  
+
  When you upgrade from Microsoft Data Access Components (MDAC) to OLE DB Driver for SQL Server, you might also see some behavior differences. For more information, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
-  
+
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 shipped with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 shipped with [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 shipped with [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 shipped with [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
-  
+
 |Changed behavior in OLE DB Driver for SQL Server compared to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB pads only to the defined scale.|For conversions where converted data is sent to the server, OLE DB Driver for SQL Server pads trailing zeros in data only up to the maximum length of **datetime** values. SQL Server Native Client 9.0 padded to 9 digits.|  
@@ -41,13 +42,9 @@ ms.workload: "Inactive"
 |Possible trunction of seconds for **datetime** value.|An application built with OLE DB Driver for SQL Server that connects to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 server will truncate seconds and fractional seconds for time portion of data sent to the server if you bind to a datetime column with a type identifier of DBTYPE_DBTIMESTAMP (OLE DB) or SQL_TIMESTAMP (ODBC) and a scale of 0.<br /><br /> For example:<br /><br /> Input data: 1994-08-21 21:21:36.000<br /><br /> Inserted data: 1994-08-21 21:21:00.000|  
 |OLE DB data conversion from DBTYPE_DBTIME to DBTYPE_DATE no longer can cause the day to change.|Prior to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, if the time part of a DBTYPE_DATE was within a half second of midnight, OLE DB conversion code caused the day to change. In OLE DB Driver for SQL Server, the day will not change (fractional seconds are truncated and not rounded).|  
 |IBCPSession::BCColFmt conversion changes.|In OLE DB Driver for SQL Server, when you use IBCPSession::BCOColFmt to convert SQLDATETIME or SQLDATETIME to a string type, a fractional value is exported. For example, when converting type SQLDATETIME to type SQLNVARCHARMAX, versions prior to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 returned<br /> 1989-02-01 00:00:00.<br />OLE DB Driver for SQL Server returns <br />1989-02-01 00:00:00.0000000.|  
-|Size of data sent must match length specified in SQL_LEN_DATA_AT_EXEC.|When using SQL_LEN_DATA_AT_EXEC, the size of the data must match the length that you specified with SQL_LEN_DATA_AT_EXEC. You can use SQL_DATA_AT_EXEC but there are potential performance benefits to using SQL_LEN_DATA_AT_EXEC.|  
 |Custom applications that use the BCP API can now see a warning.|The BCP API will generate a warning message if data length is greater than the specified length for a field for all types. Previously, this warning was only given for character types, but will not be issued for all types.|  
 |Inserting an empty string into a **sql_variant** bound as a date/time type generates an error.|In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0, inserting an empty string into a **sql_variant** bound as a date/time type did not generate an error. OLE DB Driver for SQL Server correctly generates an error in this situation.|  
-|Stricter SQL_C_TYPE _TIMESTAMP and DBTYPE_DBTIMESTAMP parameter validation.|Prior to [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client, **datetime** values were rounded to fit the scale of **datetime** and **smalldatetime** columns by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. OLE DB Driver for SQL Server applies the stricter validation rules for fractional seconds. If a parameter value cannot be converted to the SQL type by using the scale specified or implied by the client binding without truncation of trailing digits, an error is returned.|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] might return different results when a trigger runs.|Changes introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] might cause an application to have different results returned from a statement that caused a trigger to run when **NOCOUNT OFF** was in effect. In this situation, your application might generate an error. To resolve this error, set **NOCOUNT ON** in the trigger or call SQLMoreResults to advance to the next result.|  
-  
+
 ## See Also   
  [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)
-  
-  

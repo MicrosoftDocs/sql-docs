@@ -48,17 +48,16 @@ ms.workload: "Active"
 
 Converts an expression of one data type to another.  
 **Example.** Change the input datatype.
+
 **Cast**
 ```sql  
 SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
     CAST(9.5 AS decimal(6,4)) AS decimal;
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+
 ```  
 **Convert**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+
 SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "filegroups [SQL Server], switching"
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Move an Existing Index to a Different Filegroup

@@ -19,7 +19,7 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Parsing Data

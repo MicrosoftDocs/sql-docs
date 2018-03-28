@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "publishing [SQL Server replication], encrypted columns"
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Replicate Data in Encrypted Columns (SQL Server Management Studio)

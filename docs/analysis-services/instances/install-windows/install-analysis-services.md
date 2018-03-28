@@ -2,14 +2,14 @@
 title: "Install Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
@@ -78,6 +78,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## See Also  
  [Determine the Server Mode of an Analysis Services Instance](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Tabular Modeling (SSAS Tabular)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
+ [Tabular Modeling](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   

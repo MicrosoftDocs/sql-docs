@@ -38,7 +38,7 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # CONTAINSTABLE (Transact-SQL)

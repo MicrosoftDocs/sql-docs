@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "min function [XQuery]"
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Aggregate Functions - min

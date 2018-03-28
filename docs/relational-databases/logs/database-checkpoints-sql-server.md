@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "active logs"
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Database Checkpoints (SQL Server)

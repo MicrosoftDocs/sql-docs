@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STArea method"
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STArea (geography Data Type)

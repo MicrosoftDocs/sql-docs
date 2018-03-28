@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Database element"
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Element for Configuration (DTA)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 1: Publishing Data Using Transactional Replication

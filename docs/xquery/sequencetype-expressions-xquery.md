@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "cast as operator"
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SequenceType Expressions (XQuery)

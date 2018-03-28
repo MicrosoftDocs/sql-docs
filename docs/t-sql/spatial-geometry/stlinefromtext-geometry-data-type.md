@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STLineFromText (geometry Data Type)"
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STLineFromText (geometry Data Type)

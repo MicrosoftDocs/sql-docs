@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Audit Login event class"
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Audit Login Event Class

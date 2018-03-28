@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STMPolyFromText method"
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STMPolyFromText (geography Data Type)

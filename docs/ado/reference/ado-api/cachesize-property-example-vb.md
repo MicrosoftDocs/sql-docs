@@ -20,7 +20,7 @@ ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CacheSize Property Example (VB)

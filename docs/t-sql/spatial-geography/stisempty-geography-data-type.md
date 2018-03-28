@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STIsEmpty method"
 ms.assetid: 4cbc66e3-9035-4ecf-8f5a-6301f168c26c
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIsEmpty (geography Data Type)

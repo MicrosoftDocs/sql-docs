@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "context item expressions [XQuery]"
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Primary Expressions (XQuery)

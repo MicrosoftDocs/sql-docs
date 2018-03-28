@@ -1,17 +1,17 @@
 ---
-title: "Roles (SSAS Tabular) | Microsoft Docs"
+title: "Roles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334

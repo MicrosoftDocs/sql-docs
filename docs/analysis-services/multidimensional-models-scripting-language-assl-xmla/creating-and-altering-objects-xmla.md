@@ -1,16 +1,16 @@
 ---
 title: "Creating and Altering Objects (XMLA) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -31,7 +31,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Creating and Altering Objects (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Major objects can be independently created, altered, and deleted. Major objects include the following objects:  
   
 -   Servers  

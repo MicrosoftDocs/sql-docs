@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "sys.dm_db_session_space_usage dynamic management view"
 ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_db_session_space_usage (Transact-SQL)

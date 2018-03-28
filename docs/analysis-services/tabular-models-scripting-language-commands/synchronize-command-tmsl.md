@@ -1,16 +1,16 @@
 ---
 title: "Synchronize command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
-ms.prod: "analysis-services"
+ms.date: "03/13/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
@@ -21,7 +21,7 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Synchronize command (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Synchronizes an Analysis Services database with another existing database.  
   

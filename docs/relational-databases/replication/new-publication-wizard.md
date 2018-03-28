@@ -44,9 +44,9 @@ helpviewer_keywords:
   - "New Publication Wizard"
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # New Publication Wizard

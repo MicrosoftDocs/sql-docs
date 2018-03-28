@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Configure Peer-to-Peer Topology Wizard"
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure Peer-to-Peer Topology Wizard

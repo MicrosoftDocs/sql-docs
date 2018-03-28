@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "suspect pages [SQL Server]"
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # suspect_pages (Transact-SQL)

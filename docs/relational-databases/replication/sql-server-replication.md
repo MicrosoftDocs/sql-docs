@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "replication [SQL Server]"
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # SQL Server Replication

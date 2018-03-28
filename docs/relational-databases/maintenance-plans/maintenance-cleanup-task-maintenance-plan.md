@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Maintenance Cleanup Task dialog box"
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Maintenance Cleanup Task (Maintenance Plan)

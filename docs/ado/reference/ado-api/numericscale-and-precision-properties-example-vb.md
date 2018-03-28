@@ -21,7 +21,7 @@ ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # NumericScale and Precision Properties Example (VB)

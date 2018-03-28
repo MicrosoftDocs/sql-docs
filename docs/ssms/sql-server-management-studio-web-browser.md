@@ -20,7 +20,7 @@ ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Management Studio Web Browser

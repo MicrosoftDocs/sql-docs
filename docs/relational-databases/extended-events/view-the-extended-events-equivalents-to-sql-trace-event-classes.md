@@ -21,7 +21,7 @@ ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # View the Extended Events Equivalents to SQL Trace Event Classes

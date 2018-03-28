@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STGeomCollFromWKB (geometry Data Type)"
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STGeomCollFromWKB (geometry Data Type)

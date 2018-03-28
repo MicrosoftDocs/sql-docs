@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STIsEmpty (geometry Data Type)"
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STIsEmpty (geometry Data Type)

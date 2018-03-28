@@ -16,7 +16,7 @@ ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connection to SQL Server

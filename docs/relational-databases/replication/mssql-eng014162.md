@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG014162 error"
 ms.assetid: a15eef3f-219f-45d3-8286-6a864c85a723
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG014162

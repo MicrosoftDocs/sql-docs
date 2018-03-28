@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_detach_schedule"
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_detach_schedule (Transact-SQL)

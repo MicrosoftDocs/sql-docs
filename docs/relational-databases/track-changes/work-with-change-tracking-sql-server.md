@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "change tracking [SQL Server], handling changes"
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Work with Change Tracking (SQL Server)

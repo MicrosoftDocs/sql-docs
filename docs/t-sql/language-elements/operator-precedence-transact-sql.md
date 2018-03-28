@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "precedence [SQL Server], operators"
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Operator Precedence (Transact-SQL)
@@ -37,7 +37,7 @@ ms.workload: "On Demand"
 |-----------|---------------|  
 |1|~ (Bitwise NOT)|  
 |2|* (Multiplication), / (Division), % (Modulus)|  
-|3|+ (Positive), - (Negative), + (Addition), (+ Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
+|3|+ (Positive), - (Negative), + (Addition), + (Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
 |4|=, >, \<, >=, <=, <>, !=, !>, !< (Comparison operators)|  
 |5|NOT|  
 |6|AND|  

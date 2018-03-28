@@ -16,7 +16,7 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Get started with this simple example of the Import and Export Wizard
@@ -113,7 +113,7 @@ While the **Column Mappings** dialog box is open, optionally click the **Edit SQ
 For more info about this page of the wizard, see [Create Table SQL Statement](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md).
 
 ## Optional step 9 - Preview the data to copy
-After you click **OK** to close the **Create Table SQL Statement** dialog box, then click **OK** again to close the **Column Mappings** dialog box, you're back on the **Select Source Tables and Views** page. Optionally click the **Preview** button to see a sample of the data that the the wizard is going to copy. In this example, it looks OK.
+After you click **OK** to close the **Create Table SQL Statement** dialog box, then click **OK** again to close the **Column Mappings** dialog box, you're back on the **Select Source Tables and Views** page. Optionally click the **Preview** button to see a sample of the data that the wizard is going to copy. In this example, it looks OK.
 
 ![Preview data to copy](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 

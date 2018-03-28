@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "srv_getbindtoken"
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # srv_getbindtoken (Extended Stored Procedure API)

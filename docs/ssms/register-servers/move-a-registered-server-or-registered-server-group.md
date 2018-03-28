@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "groups [SQL Server], server"
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Move a Registered Server or Registered Server Group

@@ -7,7 +7,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 applies_to: 
@@ -22,6 +22,7 @@ manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # View and summarize data using R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Now let's work with the same data using R code. In this lesson, you learn how to use the functions in the **RevoScaleR** package.
 

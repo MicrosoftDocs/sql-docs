@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "signing stored procedures tutorial [SQL Server]"
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Tutorial: Signing Stored Procedures with a Certificate

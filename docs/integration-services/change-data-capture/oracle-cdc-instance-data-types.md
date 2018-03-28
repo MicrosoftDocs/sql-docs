@@ -16,7 +16,7 @@ ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Oracle CDC Instance Data Types

@@ -54,8 +54,8 @@ helpviewer_keywords:
   - "accounts [SQL Server], user"
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: 207
-author: "BYHAM"
-ms.author: "BYHAM"
+author: "MikeRayMSFT"
+ms.author: "MikeRay"
 manager: "craigg"
 ms.workload: "Active"
 ---
@@ -183,14 +183,14 @@ Managed service accounts, group managed service accounts, and virtual accounts a
   
     To use a group managed service account for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](http://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.  
   
-    For more information, see [Group Manged Service Accounts](http://technet.microsoft.com/library/hh831782.aspx)  
+    For more information, see [Group Managed Service Accounts](http://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  The group managed service account must be created in the Active Directory by the domain administrator before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup can use it for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-    Virtual accounts (beginning with Windows Server 2008 R2 and Windows 7) are *managed local accounts* that provide the following features to simplify service administration. The virtual account is auto-managed, and the virtual account can access the network in a domain environment. If the default value is used for the service accounts during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, a virtual account using the instance name as the service name is used, in the format **NT SERVICE\\***\<SERVICENAME>*. Services that run as virtual accounts access network resources by using the credentials of the computer account in the format *<domain_name>***\\***<computer_name>***$**.  When specifying a virtual account to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], leave the password blank. If the virtual account fails to register the Service Principal Name (SPN), register the SPN manually. For more information on registering a SPN manually, see [Manual SPN Registration](https://msdn.microsoft.com/library/ms191153.aspx).  
+    Virtual accounts (beginning with Windows Server 2008 R2 and Windows 7) are *managed local accounts* that provide the following features to simplify service administration. The virtual account is auto-managed, and the virtual account can access the network in a domain environment. If the default value is used for the service accounts during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, a virtual account using the instance name as the service name is used, in the format **NT SERVICE\\***\<SERVICENAME>*. Services that run as virtual accounts access network resources by using the credentials of the computer account in the format *<domain_name>*__\\__*<computer_name>*__$__.  When specifying a virtual account to start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], leave the password blank. If the virtual account fails to register the Service Principal Name (SPN), register the SPN manually. For more information on registering a SPN manually, see [Manual SPN Registration](https://msdn.microsoft.com/library/ms191153.aspx).  
   
     > [!NOTE]  
     >  Virtual accounts cannot be used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance, because the virtual account would not have the same SID on each node of the cluster.  

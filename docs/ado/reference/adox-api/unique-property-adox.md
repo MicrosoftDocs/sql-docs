@@ -23,7 +23,7 @@ ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Unique Property (ADOX)

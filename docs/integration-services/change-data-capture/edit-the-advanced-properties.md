@@ -18,7 +18,7 @@ ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit the Advanced Properties

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "FileTables [SQL Server], dynamic management views"
 ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filestream and FileTable Dynamic Management Views (Transact-SQL)

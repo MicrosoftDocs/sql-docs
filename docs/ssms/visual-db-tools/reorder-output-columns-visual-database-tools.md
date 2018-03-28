@@ -19,7 +19,7 @@ ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Reorder Output Columns (Visual Database Tools)

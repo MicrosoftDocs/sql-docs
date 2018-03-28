@@ -16,7 +16,7 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 caps.latest.revision: 72
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Local Audit for SSMS Usage Feedback Collection

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ProtocolDLL property"
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ProtocolDLL Property (ClientNetworkProtocol Class)

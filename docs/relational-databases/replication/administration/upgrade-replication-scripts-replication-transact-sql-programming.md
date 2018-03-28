@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "upgrading replicated databases"
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Upgrade Replication Scripts (Replication Transact-SQL Programming)

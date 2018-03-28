@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "system stored functions [SQL Server]"
 ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # System Functions for Transact-SQL

@@ -18,7 +18,7 @@ ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Levels Collection Properties, Methods, and Events

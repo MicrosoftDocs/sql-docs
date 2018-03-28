@@ -32,9 +32,9 @@ helpviewer_keywords:
   - "defunct file state"
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # File States

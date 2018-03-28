@@ -19,7 +19,7 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Azure Blob Download Task

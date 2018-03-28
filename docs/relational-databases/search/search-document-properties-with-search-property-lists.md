@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "property searching [SQL Server]"
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Search Document Properties with Search Property Lists
@@ -40,7 +40,7 @@ ms.workload: "Inactive"
   
  When a property is registered for a search list, the Full-Text Engine arbitrarily assigns an *internal property ID* to the property. The internal property ID is an integer that uniquely identifies the property in that search property list.  
   
- The following illustration shows a logical view of a search property list that specifies two properties, Title and Keywords. The property-list name for Keywords is "Tags". These properties belong to the same property set, whose GUID is F29F85E0-4FF9-1068-AB91-08002B27B3D9. The property integer identifiers are 2 for Title and 5 for Tags (Keywords). The Full-Text Engine arbitrarily maps each property to an internal property ID that is unique to the search property list. The internal property ID for the Title property is 1, and the internal property ID for the Tags property is 2.  
+ The following illustration shows a logical view of a search property list that specifies two properties, Title and Keywords. The property-list name for Keywords is "Tags." These properties belong to the same property set, whose GUID is F29F85E0-4FF9-1068-AB91-08002B27B3D9. The property integer identifiers are 2 for Title and 5 for Tags (Keywords). The Full-Text Engine arbitrarily maps each property to an internal property ID that is unique to the search property list. The internal property ID for the Title property is 1, and the internal property ID for the Tags property is 2.  
   
  ![Mapping of search property list to internal table](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Mapping of search property list to internal table")  
   
@@ -53,7 +53,7 @@ ms.workload: "Inactive"
   
  ![Full-text index that uses a search property list](../../relational-databases/search/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
   
- Search terms in the Title property—"Favorite," "Biking," and "Trails"—are associated with the internal property ID assigned to Title for this index, 1. Search terms in the Keywords property—"biking" and "mountain"—are associated with the internal property ID assigned to Tags for this index, 2. For search terms n the Author property—"Jane" and "Doe"—and search terms in the document body, the internal property ID is 0. Note that the term "biking" occurs in the Title property, in the Keywords (Tags) property, and in the document body. A property search for "biking" in the Title or Keywords (Tags) property would return this document in the results. A generic full-text query for "biking" would also return this document, just as if the index were not configured for property searching. A property search for "biking" in the Author property would not return this document.  
+ Search terms in the Title property—"Favorite," "Biking," and "Trails"—are associated with the internal property ID assigned to Title for this index, 1. Search terms in the Keywords property—"biking" and "mountain"—are associated with the internal property ID assigned to Tags for this index, 2. For search terms n the Author property—"Jane" and "Doe"—and search terms in the document body, the internal property ID is 0. The term "biking" occurs in the Title property, in the Keywords (Tags) property, and in the document body. A property search for "biking" in the Title or Keywords (Tags) property would return this document in the results. A generic full-text query for "biking" would also return this document, as if the index were not configured for property searching. A property search for "biking" in the Author property would not return this document.  
   
  A property-scoped full-text query uses the internal property IDs registered for the current search property list of the full-text index.  
   
@@ -102,7 +102,7 @@ ms.workload: "Inactive"
   
 -   Property integer identifier  
   
-     Each search property possesses an identifier that is unique within the property set. Note that for a given property, the identifier could be either an integer or a string, however full-text search supports only integer identifiers.  
+     Each search property possesses an identifier that is unique within the property set. For a given property, the identifier could be either an integer or a string, however full-text search supports only integer identifiers.  
   
 -   Property name  
   
@@ -127,7 +127,7 @@ ms.workload: "Inactive"
   
  **To add a property to a search property list with Transact-SQL**  
   
- Use the [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) statement with the values that you obtained by using one of the methods described in the topic, [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ Use the [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) statement with the values that you obtained by using one of the methods described in the article, [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  The following example demonstrates the use of these values when adding a property to a search property list:  
   
@@ -198,7 +198,7 @@ GO
   
 6.  In the **Search Property List Editor** dialog box, use the Properties grid to add or remove search properties:  
   
-    1.  To remove a document property, click the row header to the left of the property, and press DEL .  
+    1.  To remove a document property, click the row header to the left of the property, and press DEL.  
   
     2.  To add a document property, click in the empty row at the bottom of the list, to the right of the **\***, and enter the values for the new property.  
   

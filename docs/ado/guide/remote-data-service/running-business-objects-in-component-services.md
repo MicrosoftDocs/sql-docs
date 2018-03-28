@@ -18,7 +18,7 @@ ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Running Business Objects in Component Services

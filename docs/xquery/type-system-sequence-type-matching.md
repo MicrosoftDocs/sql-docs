@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "XQuery, sequence type matching"
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Type System - Sequence Type Matching

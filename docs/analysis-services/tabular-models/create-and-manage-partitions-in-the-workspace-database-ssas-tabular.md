@@ -1,17 +1,17 @@
 ---
-title: "Create and Manage Partitions in the Workspace Database (SSAS Tabular) | Microsoft Docs"
+title: "Create and Manage Partitions in the Workspace Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "analysis-services"
+ms.date: "02/22/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -23,19 +23,11 @@ ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
 ---
-# Create and Manage Partitions in the Workspace Database (SSAS Tabular)
+# Create and manage partitions in the workspace database 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independently or in parallel with other partitions. Partitions can improve scalability and manageability of large databases. By default, each table has one partition that includes all columns. Tasks in this topic describe how to create and manage partitions in the model workspace database by using the **Partition Manager** dialog box in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
- After a model has been deployed to another Analysis Services instance, database administrators can create and manage partitions in the (deployed) model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
-  
- This topic includes the following tasks:  
-  
--   [To create a new partition](#bkmk_create_new)  
-  
--   [To copy a partition](#bkmk_copy)  
-  
--   [To delete a partition](#bkmk_delete)  
+ After a model has been deployed to another Analysis Services instance, database administrators can create and manage partitions in the (deployed) model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Create and Manage Tabular Model Partitions](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  You cannot merge partitions in the model workspace database by using the Partition Manager dialog box. Partitions can be merged in a deployed model only by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -73,8 +65,8 @@ ms.workload: "Inactive"
   
 2.  In the **Partitions** list, select the partition you want to delete and then click **Delete**.  
   
-## See Also  
- [Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
- [Process Partitions in the Workspace Databse &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+## See also  
+ [Partitions](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
+ [Process partitions in the workspace databse](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   
   

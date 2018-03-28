@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "columns [XML in SQL Server], null default value"
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Columns that Contain a Null Value By Default

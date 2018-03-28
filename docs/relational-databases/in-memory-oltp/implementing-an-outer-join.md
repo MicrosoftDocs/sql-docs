@@ -16,7 +16,7 @@ ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Implementing an Outer Join

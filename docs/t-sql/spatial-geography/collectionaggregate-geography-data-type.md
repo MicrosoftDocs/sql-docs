@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "CollectionAggregate method (geography)"
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CollectionAggregate (geography Data Type)

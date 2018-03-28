@@ -1,17 +1,17 @@
 ---
 title: "Running the Analysis Services Deployment Wizard | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "analysis-services"
+ms.date: "03/27/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -24,8 +24,9 @@ manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Running the Analysis Services Deployment Wizard
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  When you use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard to deploy a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, you can run the wizard in the following ways:  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard can be run the following ways:  
   
 -   **Interactively** When run interactively, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard generates a deployment script based on the input files, as modified interactively by user input. The wizard applies any user modifications only to the deployment script. The wizard does not modify the input files. For more information about the input files, see [Understanding the Input Files Used to Create the Deployment Script](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md).  
   
@@ -41,7 +42,7 @@ ms.workload: "On Demand"
   
 #### To run the Analysis Services Deployment Wizard interactively  
   
--   Click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, point to **Analysis Services**, and then click **Deployment Wizard**.  
+-   Click **Start** > **Microsoft SQL Server** > **Deployment Wizard**.  
   
      —or—  
   
@@ -73,7 +74,7 @@ ms.workload: "On Demand"
   
 #### To run the Analysis Services Deployment Wizard at the command prompt  
   
-1.  Open a command prompt and navigate to the C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio  
+1.  Open a command prompt and navigate to the C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio  
   
 2.  Type **Microsoft.AnalysisServices.Deployment.exe** followed by the switches that correspond to the mode in which you want to run the wizard.  
   

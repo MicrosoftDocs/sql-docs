@@ -19,7 +19,7 @@ ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Close a Solution

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_change_log_shipping_secondary_primary"
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_change_log_shipping_secondary_primary (Transact-SQL)

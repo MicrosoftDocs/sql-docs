@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STLineFromText method"
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # STLineFromText (geography Data Type)

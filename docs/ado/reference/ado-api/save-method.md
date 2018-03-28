@@ -22,7 +22,7 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save Method

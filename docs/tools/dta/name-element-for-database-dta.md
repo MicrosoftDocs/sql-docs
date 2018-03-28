@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Name element"
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Name Element for Database (DTA)

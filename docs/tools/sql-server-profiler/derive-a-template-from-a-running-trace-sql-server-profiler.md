@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "trace templates [SQL Server]"
 ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Derive a Template from a Running Trace (SQL Server Profiler)

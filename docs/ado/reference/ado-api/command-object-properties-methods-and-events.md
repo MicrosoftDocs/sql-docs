@@ -18,7 +18,7 @@ ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Command Object Properties, Methods, and Events

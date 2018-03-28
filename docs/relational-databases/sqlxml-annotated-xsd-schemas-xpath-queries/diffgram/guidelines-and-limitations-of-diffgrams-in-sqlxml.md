@@ -9,7 +9,7 @@ ms.component: "sqlxml"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,7 +18,7 @@ ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Guidelines and Limitations of DiffGrams in SQLXML

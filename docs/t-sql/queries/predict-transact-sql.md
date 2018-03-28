@@ -1,7 +1,7 @@
 ---
 title: "PREDICT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "02/25/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-database"
 ms.service: ""
@@ -9,7 +9,6 @@ ms.component: "t-sql|queries"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "r-services"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,7 +20,7 @@ helpviewer_keywords:
   - "PREDICT clause"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -67,12 +66,12 @@ The DATA parameter is used to specify the data used for scoring or prediction. D
 
 The PARAMETERS parameter is used to specify optional user-defined parameters used for scoring or prediction.
 
-The name of each parameter is specific to the model type. For example, the rxPredict function in RevoScaleR supports the parameter _@computeResiduals bit_ to support computation of residuals when scoring a logistic regression model. YOu could pass that parameter name and it value to the `PREDICT` function.
+The name of each parameter is specific to the model type. For example, the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function in RevoScaleR supports the parameter `@computeResiduals`, which indicates whether residuals should be computed when scoring a logistic regression model. If you are calling a compatible model, you could pass that parameter name and a TRUE or FALSE value to the `PREDICT` function.
 
-> [NOTE]
-> This option is not supported in the pre-release of SQL Server 2017 and is included for forward-compatibility purposes only.
+> [!NOTE]
+> This option does not work in pre-release versions of SQL Server 2017.
 
-**WITH ( \<result_set_definition> )**
+**WITH ( <result_set_definition> )**
 
 The WITH clause is used to specify the schema of the output returned by the `PREDICT` function.
 
@@ -80,19 +79,21 @@ In addition to the columns returned by the `PREDICT` function itself, all the co
 
 ### Return values
 
-No predefined schema is available; SQL Server does not validate the contents of the model and does not validate the returned column values.  
-- The `PREDICT` function passes through columns as input  
-- The `PREDICT` function also generates new columns, but the number of columns and their data types depends on the type of model that was used for prediction.  
+No predefined schema is available; SQL Server does not validate the contents of the model and does not validate the returned column values.
 
-Any error messages related to the data, the model, or the column format are returned by the underlying prediction function associated with the model.  
-- For RevoScaleR, the equivalent function is [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict)  
-- For MicrosoftML, the equivalent function is [rxPredict.mlModel](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxpredict)  
+- The `PREDICT` function passes through columns as input.
+- The `PREDICT` function also generates new columns, but the number of columns and their data types depends on the type of model that was used for prediction.
+
+Any error messages related to the data, the model, or the column format are returned by the underlying prediction function associated with the model.
+
+- For RevoScaleR, the equivalent function is [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)  
+- For MicrosoftML, the equivalent function is [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict)  
 
 It is not possible to view the internal model structure using `PREDICT`. If you want to understand the contents of the model itself, you must load the model object, deserialize it, and use appropriate R code to parse the model.
 
 ## Remarks
 
-The `PREDICT` function is supported in all editions of SQL Server, including Linux.
+The `PREDICT` function is supported in all editions of SQL Server, including Linux, and in Azure SQL Database, regardless of whether other machine learning features are enabled. However, SQL Server 2017 or later is required. 
 
 It is not necessary that R, Python, or another machine learning language be installed on the server to use the `PREDICT` function. You can train the model in another environment and save it to a SQL Server table for use with `PREDICT`, or call the model from another instance of SQL Server that has the saved model.
 
@@ -113,7 +114,7 @@ The following examples demonstrate the syntax for calling `PREDICT`.
 This example calls an existing logistic regression model stored in table [models_table]. It gets the latest trained model, using a SELECT statement, and then passes the binary model to the PREDICT function. The input values represent features; the output represents the classification assigned by the model.
 
 ```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 @model from [models_table]";
+DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
@@ -131,7 +132,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-The alias **d** specified for table source in the _DATA_ parameter is used to reference the columns belonging to dbo.mytable. The alias **p** specified for the **PREDICT** function is used to reference the columns returned by the PREDICT function.
+The alias **d** specified for table source in the `DATA` parameter is used to reference the columns belonging to dbo.mytable. The alias **p** specified for the **PREDICT** function is used to reference the columns returned by the PREDICT function.
 
 ### Combining PREDICT with an INSERT statement
 
@@ -180,7 +181,7 @@ logitObj <- rxLogit(Kyphosis ~ Age + Start + Number, data = kyphosis, covCoef = 
 
 If you store the model in SQL Server in binary format, you can use the PREDICT function to generate not just predictions, but additional information supported by the model type, such as error or confidence intervals.
 
-The following code shows the equivalent call from R to rxPredict:
+The following code shows the equivalent call from R to [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict):
 
 ```R
 rxPredict(logitObj, data = new_kyphosis_data, computeStdErr = TRUE, interval = "confidence")
@@ -195,5 +196,3 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
-
-

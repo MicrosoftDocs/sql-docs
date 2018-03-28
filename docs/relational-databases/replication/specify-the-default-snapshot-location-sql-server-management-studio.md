@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "default snapshot locations"
 ms.assetid: 27c5d9ad-a915-4c59-a8b7-82e3af61ac4d
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Specify the Default Snapshot Location (SQL Server Management Studio)

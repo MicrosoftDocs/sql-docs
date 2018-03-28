@@ -1,7 +1,7 @@
 ---
 title: "Distributed availability groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "01/12/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -18,7 +18,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "allanhirt"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Distributed availability groups
@@ -145,7 +145,11 @@ The following figure shows AG 1 as the primary replica for two different distrib
 
 In both preceding examples, there can be up to 27 total replicas across the three availability groups, all of which can be used for read-only queries. 
 
-[Read-only routing]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) currently does not work with distributed availability groups. All queries, if they use the listener to connect, go to the primary replica. Otherwise, you need to configure each replica to allow all connections as a secondary replica and access them directly. This behavior might be changed in an update to SQL Server 2016 or in a future version of SQL Server.
+[Read-only routing]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) does not completely work with Distributed Availability Groups. More specifically,
+
+1. Read-Only Routing can be configured and will work for the primary availability group of the distributed availability group. 
+2. Read-Only Routing can be configured, but will not work for the secondary availability group of the distributed availability group. All queries, if they use the listener to connect to the secondary availability group, go to the primary replica of the secondary availability group. Otherwise, you need to configure each replica to allow all connections as a secondary replica and access them directly. However, read-only routing will work if the secondary availability group becomes primary after a failover. This behavior might be changed in an update to SQL Server 2016 or in a future version of SQL Server.
+
 
 ## Initialize secondary availability groups in a distributed availability group
 

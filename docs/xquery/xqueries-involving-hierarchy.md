@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "XQuery, hierarchies"
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # XQueries Involving Hierarchy

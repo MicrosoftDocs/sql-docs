@@ -51,16 +51,17 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Modifies the files and filegroups associated with the database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Adds or removes files and filegroups from a database, and changes the attributes of a database or its files and filegroups. For other ALTER DATABASE options, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+  Modifies the files and filegroups associated with the database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Adds or removes files and filegroups from a database, and changes the attributes of a database or its files and filegroups. For other ALTER DATABASE options, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 ALTER DATABASE database_name   
 {  
     <add_or_modify_files>  
@@ -132,7 +133,7 @@ ALTER DATABASE database_name
  Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file.  
   
 > [!WARNING]  
->  Removing a database file that has FILE_SNAPSHOT backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+> Removing a database file that has FILE_SNAPSHOT backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  MODIFY FILE  
  Specifies the file that should be modified. Only one \<filespec> property can be changed at a time. NAME must always be specified in the \<filespec> to identify the file to be modified. If SIZE is specified, the new size must be larger than the current file size.  
@@ -185,7 +186,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  SIZE, MAXSIZE, and FILEGROWTH parameters cannot be set when a UNC path is specified for the file.  
   
 > [!NOTE]  
->  System databases cannot reside on UNC share directories.  
+> System databases cannot reside in UNC share directories.  
   
  Data files should not be put on compressed file systems unless the files are read-only secondary files, or if the database is read-only. Log files should never be put on compressed file systems.  
   
@@ -234,12 +235,12 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  A value of 0 indicates that automatic growth is set to off and no additional space is allowed.  
   
- If FILEGROWTH is not specified, the default values  are:  
+ If FILEGROWTH is not specified, the default values are:  
   
 |Version|Default values|  
 |-------------|--------------------|  
-|Beginning [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|  
-|Beginning [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|  
+|Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Data 64 MB. Log files 64 MB.|  
+|Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 1 MB. Log files 10%.|  
 |Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Data 10%. Log files 10%.|  
   
  OFFLINE  
@@ -249,7 +250,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 >  Use this option only when the file is corrupted and can be restored. A file set to OFFLINE can only be set online by restoring the file from backup. For more information about restoring a single file, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 > [!NOTE]  
->  \<filespec> options are not available in a Contained Database.  
+> \<filespec> options are not available in a Contained Database.  
   
  **\<add_or_modify_filegroups>::=**  
   
@@ -263,13 +264,13 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Specifies that the filegroup stores memory optimized data in the file system. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Only one MEMORY_OPTIMIZED_DATA filegroup is allowed per database. For creating memory optimized tables, the filegroup cannot be empty. There must be at least one file. *filegroup_name* refers to a path. The path up to the last folder must exist, and the last folder must not exist.  
   
  The following example creates a filegroup that is added to a database named xtp_db, and adds a file to the filegroup. The filegroup stores memory_optimized data.  
   
-```  
+```sql  
 ALTER DATABASE xtp_db ADD FILEGROUP xtp_fg CONTAINS MEMORY_OPTIMIZED_DATA;  
 GO  
 ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
@@ -279,7 +280,7 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
  Removes a filegroup from the database. The filegroup cannot be removed unless it is empty. Remove all files from the filegroup first. For more information, see "REMOVE FILE *logical_file_name*," earlier in this topic.  
   
 > [!NOTE]  
->  Unless the FILESTREAM Garbage Collector has removed all the files from a FILESTREAM container, the ALTER DATABASE REMOVE FILE operation to remove a FILESTREAM container will fail and return an error. See the "Remove FILESTREAM Container" section in Remarks later in this topic.  
+> Unless the FILESTREAM Garbage Collector has removed all the files from a FILESTREAM container, the ALTER DATABASE REMOVE FILE operation to remove a FILESTREAM container will fail and return an error. See the "Remove FILESTREAM Container" section in Remarks later in this topic.  
   
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* }
  Modifies the filegroup by setting the status to READ_ONLY or READ_WRITE, making the filegroup the default filegroup for the database, or changing the filegroup name.  
@@ -294,13 +295,13 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
  Changes the filegroup name to the *new_filegroup_name*.  
   
  AUTOGROW_SINGLE_FILE  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  When a file in the filegroup meets the autogrow threshold, only that file grows. This is the default.  
   
  AUTOGROW_ALL_FILES  
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow.  
   
@@ -314,9 +315,7 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
  Because a read-only database does not allow data modifications:  
   
 -   Automatic recovery is skipped at system startup.  
-  
 -   Shrinking the database is not possible.  
-  
 -   No locking occurs in read-only databases. This can cause faster query performance.  
   
 > [!NOTE]  
@@ -326,42 +325,39 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
  Specifies the group is READ_WRITE. Updates are enabled for the objects in the filegroup. To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.  
   
 > [!NOTE]  
->  The keyword READWRITE will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using READWRITE in new development work, and plan to modify applications that currently use READWRITE. Use READ_WRITE instead.  
+>  The keyword `READWRITE` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using `READWRITE` in new development work, and plan to modify applications that currently use `READWRITE` to use `READ_WRITE` instead.  
   
- The status of these options can be determined by examining the **is_read_only** column in the **sys.databases** catalog view or the **Updateability** property of the DATABASEPROPERTYEX function.  
+ The status of these options can be determined by examining the **is_read_only** column in the **sys.databases** catalog view or the **Updateability** property of the `DATABASEPROPERTYEX` function.  
   
 ## Remarks  
  To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
- You cannot add or remove a file while a BACKUP statement is running.  
+You cannot add or remove a file while a `BACKUP` statement is running.  
   
- A maximum of 32,767 files and 32,767 filegroups can be specified for each database.  
+A maximum of 32,767 files and 32,767 filegroups can be specified for each database.  
   
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later, the state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. If a filegroup is offline, any try to access the filegroup by an SQL statement will fail with an error. When you build query plans for SELECT statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the SELECT statements fail. Additionally, any INSERT, UPDATE, or DELETE statement that modifies a table with any index in an offline filegroup will fail.  
+Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the state of a database file (for example, online or offline), is maintained independently from the state of the database. For more information, see [File States](../../relational-databases/databases/file-states.md). 
+-  The state of the files within a filegroup determines the availability of the whole filegroup. For a filegroup to be available, all files within the filegroup must be online. 
+-  If a filegroup is offline, any try to access the filegroup by an SQL statement will fail with an error. When you build query plans for `SELECT` statements, the query optimizer avoids nonclustered indexes and indexed views that reside in offline filegroups. This enables these statements to succeed. However, if the offline filegroup contains the heap or clustered index of the target table, the `SELECT` statements fail. Additionally, any `INSERT`, `UPDATE`, or `DELETE` statement that modifies a table with any index in an offline filegroup will fail.  
   
 ## Moving Files  
- You can move system or user-defined data and log files by specifying the new location in FILENAME. This may be useful in the following scenarios:  
+You can move system or user-defined data and log files by specifying the new location in FILENAME. This may be useful in the following scenarios:  
   
--   Failure recovery. For example, the database is in suspect mode or shutdown caused by hardware failure  
+-   Failure recovery. For example, the database is in suspect mode or shutdown caused by hardware failure.  
+-   Planned relocation.  
+-   Relocation for scheduled disk maintenance.  
   
--   Planned relocation  
-  
--   Relocation for scheduled disk maintenance  
-  
- For more information, see [Move Database Files](../../relational-databases/databases/move-database-files.md).  
+For more information, see [Move Database Files](../../relational-databases/databases/move-database-files.md).  
   
 ## Initializing Files  
- By default, data and log files are initialized by filling the files with zeros when you perform one of the following operations:  
+By default, data and log files are initialized by filling the files with zeros when you perform one of the following operations:  
   
--   Create a database  
+-   Create a database.   
+-   Add files to an existing database.   
+-   Increase the size of an existing file.   
+-   Restore a database or filegroup.   
   
--   Add files to an existing database  
-  
--   Increase the size of an existing file  
-  
--   Restore a database or filegroup  
-  
- Data files can be initialized instantaneously. This enables for fast execution of these file operations.  
+Data files can be initialized instantaneously. This enables for fast execution of these file operations. For more information, see [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md). 
   
 ## Removing a FILESTREAM Container  
  Even though FILESTREAM container may have been emptied using the “DBCC SHRINKFILE” operation, the database may still need to maintain references to the deleted files for various system maintenance reasons. [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) will run the FILESTREAM Garbage Collector to remove these files when it is safe to do so. Unless the FILESTREAM Garbage Collector has removed all the files from a FILESTREAM container, the ALTER DATABASEREMOVE FILE operation will fail to remove a FILESTREAM container and will return an error. The following process is recommended to remove a FILESTREAM container.  
@@ -385,7 +381,7 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
 ### A. Adding a file to a database  
  The following example adds a 5-MB data file to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -404,7 +400,7 @@ GO
 ### B. Adding a filegroup with two files to a database  
  The following example creates the filegroup `Test1FG1` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and adds two 5-MB files to the filegroup.  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -434,7 +430,7 @@ GO
 ### C. Adding two log files to a database  
  The following example adds two 5-MB log files to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -460,20 +456,19 @@ GO
 ### D. Removing a file from a database  
  The following example removes one of the files added in example B.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 REMOVE FILE test1dat4;  
 GO  
-  
 ```  
   
 ### E. Modifying a file  
 The following example increases the size of one of the files added in example B.  
  The ALTER DATABASE with MODIFY FILE command can only make a file size bigger, so if you need to make the file size smaller you need to use DBCC SHRINKFILE.  
   
-```  
+```sql  
 USE master;  
 GO
   
@@ -486,7 +481,7 @@ GO
 
 This example shrinks the size of a data file to 100 MB, and then specifies the size at that amount. 
 
-```
+```sql
 USE AdventureWorks2012;
 GO
 
@@ -508,9 +503,9 @@ GO
  The following example moves the `Test1dat2` file created in example A to a new directory.  
   
 > [!NOTE]  
->  You must physically move the file to the new directory before running this example. Afterward, stop and start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or take the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database OFFLINE and then ONLINE to implement the change.  
+> You must physically move the file to the new directory before running this example. Afterward, stop and start the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or take the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database OFFLINE and then ONLINE to implement the change.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -527,7 +522,7 @@ GO
   
 1.  Determine the logical file names of the `tempdb` database and their current location on disk.  
   
-    ```  
+    ```sql  
     SELECT name, physical_name  
     FROM sys.master_files  
     WHERE database_id = DB_ID('tempdb');  
@@ -536,7 +531,7 @@ GO
   
 2.  Change the location of each file by using `ALTER DATABASE`.  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     ALTER DATABASE tempdb   
@@ -551,7 +546,7 @@ GO
   
 4.  Verify the file change.  
   
-    ```  
+    ```sql  
     SELECT name, physical_name  
     FROM sys.master_files  
     WHERE database_id = DB_ID('tempdb');  
@@ -562,7 +557,7 @@ GO
 ### H. Making a filegroup the default  
  The following example makes the `Test1FG1` filegroup created in example B the default filegroup. Then, the default filegroup is reset to the `PRIMARY` filegroup. Note that `PRIMARY` must be delimited by brackets or quotation marks.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -571,13 +566,12 @@ GO
 ALTER DATABASE AdventureWorks2012   
 MODIFY FILEGROUP [PRIMARY] DEFAULT;  
 GO  
-  
 ```  
   
 ### I. Adding a Filegroup Using ALTER DATABASE  
  The following example adds a `FILEGROUP` that contains the `FILESTREAM` clause to the `FileStreamPhotoDB` database.  
   
-```  
+```sql  
 --Create and add a FILEGROUP that CONTAINS the FILESTREAM clause to  
 --the FileStreamPhotoDB database.  
 ALTER DATABASE FileStreamPhotoDB  
@@ -599,7 +593,7 @@ GO
 ### J. Change filegroup so that when a file in the filegroup meets the autogrow threshold, all files in the filegroup grow
  The following example generates the required `ALTER DATABASE` statements to modify read-write filegroups with the `AUTOGROW_ALL_FILES` setting.  
   
-```  
+```sql  
 --Generate ALTER DATABASE ... MODIFY FILEGROUP statements  
 --so that all read-write filegroups grow at the same time.  
 SET NOCOUNT ON;
@@ -659,5 +653,6 @@ GO
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
  [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
+ [Database File Initialization](../../relational-databases/databases/database-instant-file-initialization.md)    
   
   

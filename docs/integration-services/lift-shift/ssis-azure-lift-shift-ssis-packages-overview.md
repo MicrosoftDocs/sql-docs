@@ -60,11 +60,11 @@ These capabilities require the following versions of SQL Server Data Tools (SSDT
 > [!NOTE]
 > When you deploy packages to Azure, the Package Deployment Wizard always upgrades the packages to the latest package format.
 
-For more info about prerequisites in Azure, see [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+For more info about prerequisites in Azure, see [Deploy SSIS packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ## SSIS features on Azure
 
-When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to **Excel and Access** files and to various **Azure** data sources, in addition to the data sources supported by the built-in components. You can't install **third-party components** for SSIS (including third-party components from Microsoft, such as the Attunity and SAP BI components) at this time.
+When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to **Excel and Access** files and to various **Azure** data sources, in addition to the data sources supported by the built-in components. You can't install **third-party components** for SSIS at this time (including third-party components from Microsoft, such as the Oracle and Teradata components by Attunity and the SAP BI components).
 
 The **name of the SQL Database** that hosts SSISDB becomes the first part of the four-part name to use when you deploy and manage packages from SSDT and SSMS - `<sql_database_name>.database.windows.net`.
 
@@ -77,7 +77,7 @@ For info about how to connect to **on-premises data sources** from the cloud wit
 ## Common tasks
 
 ### Provision
-Before you can deploy and run SSIS packages in Azure, you have to provision the SSISDB Catalog database and the Azure SSIS Integration Runtime. Follow the provisioning steps in this article: [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Before you can deploy and run SSIS packages in Azure, you have to provision the SSISDB Catalog database and the Azure SSIS Integration Runtime. Follow the provisioning steps in this article: [Deploy SSIS packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 ### Deploy and run packages
 To deploy projects and run packages on SQL Database, you can use one of several familiar tools and scripting options:
@@ -86,6 +86,8 @@ To deploy projects and run packages on SQL Database, you can use one of several 
 -   A command-line tool
 -   PowerShell
 -   C# and the SSIS management object model
+
+To get started, see [Deploy, run, and monitor an SSIS package on Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### Monitor packages
 To monitor running packages in SSMS, you can use one of the following reporting tools in SSMS.
@@ -101,5 +103,5 @@ For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedul
 
 ## Next steps
 To get started with SSIS workloads on Azure, see the following articles:
--   [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
+-   [Deploy SSIS packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
 -   [Deploy, run, and monitor an SSIS package on Azure](ssis-azure-deploy-run-monitor-tutorial.md)

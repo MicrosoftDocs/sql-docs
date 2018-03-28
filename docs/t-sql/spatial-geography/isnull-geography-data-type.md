@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "IsNull method"
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # IsNull (geography Data Type)

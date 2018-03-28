@@ -22,7 +22,7 @@ ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # FilterAxis Property (ADO MD)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_update_operator"
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_update_operator (Transact-SQL)

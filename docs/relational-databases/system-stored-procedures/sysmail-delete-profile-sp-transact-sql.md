@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sysmail_delete_profile_sp"
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sysmail_delete_profile_sp (Transact-SQL)

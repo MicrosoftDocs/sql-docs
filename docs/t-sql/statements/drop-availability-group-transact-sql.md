@@ -26,7 +26,7 @@ ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 caps.latest.revision: 44
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # DROP AVAILABILITY GROUP (Transact-SQL)

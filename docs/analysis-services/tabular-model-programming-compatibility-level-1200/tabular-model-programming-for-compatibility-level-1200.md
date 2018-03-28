@@ -2,15 +2,15 @@
 title: "Tabular Model Programming for Compatibility Level 1200 | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
-ms.prod: "analysis-services"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services, azure-analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
@@ -55,7 +55,7 @@ Upgrading an existing Tabular solution is recommended but not required. Existing
 ## See Also  
  [Analysis Services Developer Documentation](../../analysis-services/analysis-services-developer-documentation.md)   
  [Tabular Model Programming for Compatibility Levels 1050 through 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Technical Reference &#40;SSAS&#41;](../../analysis-services/powershell/technical-reference-ssas.md)[Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [Technical Reference ](../../analysis-services/powershell/technical-reference-ssas.md)[Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [Compatibility levels of Tabular models and databases](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

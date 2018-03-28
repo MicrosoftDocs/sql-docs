@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SetServiceAccountPassword method"
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetServiceAccountPassword Method (SqlService Class)

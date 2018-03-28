@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Extended Static Geometry Methods [SQL Server]"
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Extended Static Geometry Methods

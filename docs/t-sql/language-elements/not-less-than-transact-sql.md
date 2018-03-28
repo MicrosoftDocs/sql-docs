@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "not less than operator (!<)"
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # !&lt; (Not Less Than) (Transact-SQL)

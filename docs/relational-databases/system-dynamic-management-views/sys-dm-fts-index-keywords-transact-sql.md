@@ -27,7 +27,7 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_fts_index_keywords (Transact-SQL)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "GetCurrentCertificate method"
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # GetCurrentCertificate Method (ServerSettings Class)

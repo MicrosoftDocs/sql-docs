@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication

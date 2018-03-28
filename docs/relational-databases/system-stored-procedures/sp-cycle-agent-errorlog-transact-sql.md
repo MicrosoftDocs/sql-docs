@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_cycle_agent_errorlog"
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_cycle_agent_errorlog (Transact-SQL)

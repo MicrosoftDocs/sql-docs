@@ -16,7 +16,7 @@ ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Prepare SQL Server for Oracle CDC-View Script

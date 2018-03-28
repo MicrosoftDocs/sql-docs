@@ -16,10 +16,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: 29
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Install SQL Server with SysPrep
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep related setup actions can be accessed through the Installation Center. The **Advanced** Page of the **Installation Center** has two options - **Image preparation of a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** and **Image completion of a prepared stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. The [Prepare](#prepare) and [Complete](#complete) sections describe the installation process in detail. For more information, see [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 You can also prepare and complete an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the command prompt or a configuration file. For more information, see:  
@@ -29,7 +31,7 @@ You can also prepare and complete an instance of [!INCLUDE[ssNoVersion](../../in
 - [Install SQL Server Using a Configuration File](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
 ## Prerequisites  
-Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], review the topics in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). 
+Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], review the articles in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions and the hardware and software requirements, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
@@ -169,7 +171,7 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
      **Installed instances** — The grid shows instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. 
   
-10. Work flow for the rest of this topic depends on the features that were selected during the prepare step. You might not see all the pages, depending on the selections. 
+10. Work flow for the rest of this article depends on the features that were selected during the prepare step. You might not see all the pages, depending on the selections. 
   
 11. On the **Server Configuration** — Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install. 
   
@@ -297,7 +299,7 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 10. Repeat steps 1 to 9 until all components of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] have been removed. 
   
 ##  <a name="bk_Modifying_Uninstalling"></a> Modifying or Uninstalling a Completed Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
- The process to add or remove features or to uninstall a completed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is similar to the process to an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see the following topics:  
+ The process to add or remove features or to uninstall a completed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is similar to the process to an installed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see the following articles:  
   
 - [Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   

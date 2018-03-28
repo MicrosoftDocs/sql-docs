@@ -1,16 +1,16 @@
 ---
 title: "Retrieving Data Using the CellSet | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "analysis-services"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -27,7 +27,6 @@ manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Retrieving Data Using the CellSet
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   When retrieving analytical data, the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object provides the most interactivity and flexibility. The <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object is an in-memory cache of hierarchical data and metadata that retains the original dimensionality of the data. The <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object can also be traversed in either a connected or disconnected state. Because of this disconnected ability, the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object can be used to view data and metadata in any order and provides the most comprehensive object model for data retrieval. This disconnected capability also causes the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object to have the most overhead, and to be the slowest ADOMD.NET data retrieval object model to populate.  
   
 ## Retrieving Data in a Connected State  

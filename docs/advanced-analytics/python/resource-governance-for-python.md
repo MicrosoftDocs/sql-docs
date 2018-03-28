@@ -8,15 +8,16 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Resource Governance for Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Because Python is enabled through the the same extensibility architecture that was implemented for the R language in SQL Server 2016, you can use existing tools in SQL Server such as Resource Governor, DMVs, and extended events, to monitor the execution of Python scripts in SQL Server.
 
@@ -59,7 +60,7 @@ For a good introduction to terminology and general concepts, see [Resource Gover
 
 ## Resource Management using Resource Governor
 
-If you are new to Resource Governor, see this topic for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [How To: Create a Resource Pool for R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
+If you are new to Resource Governor, see this article for a quick walkthrough of how to modify the instance default resources and create a new external resource pool:  [How To: Create a Resource Pool for R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 You can use the *external resource pool* mechanism to manage the resources used by the following supported executables:
 

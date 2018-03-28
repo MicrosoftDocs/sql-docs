@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysindexkeys compatibility view"
 ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysindexkeys (Transact-SQL)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SetStringValue method"
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetStringValue Method (SqlServiceAdvancedProperty Class )

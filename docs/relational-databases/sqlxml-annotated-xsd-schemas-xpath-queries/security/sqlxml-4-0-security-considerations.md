@@ -19,7 +19,7 @@ ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLXML 4.0 Security Considerations

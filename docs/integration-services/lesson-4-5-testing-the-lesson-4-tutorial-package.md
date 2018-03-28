@@ -18,7 +18,7 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lesson 4-5 - Testing the Lesson 4 Tutorial Package

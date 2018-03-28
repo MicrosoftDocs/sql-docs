@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "srv_convert"
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # srv_convert (Extended Stored Procedure API)

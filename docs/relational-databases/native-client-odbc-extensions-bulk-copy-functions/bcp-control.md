@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "bcp_control function"
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # bcp_control
@@ -115,7 +115,7 @@ RETCODE bcp_control (
  Is the number of errors allowed before the bulk copy operation fails. The default is 10; a value less than 1 resets this option to its default. Bulk copy imposes a maximum of 65,535 errors. An attempt to set this option to a value larger than 65,535 results in the option being set to 65,535.  
   
  BCPODBC  
- When TRUE, specifies that **datetime** and **smalldatetime** values saved in character format will use the ODBC timestamp escape sequence prefix and suffix. The BCPODBC option only applies to BCP_OUT.  
+ When TRUE, specifies that **datetime** and **smalldatetime** values saved in character format will use the ODBC timestamp escape sequence prefix and suffix. The BCPODBC option only applies to DB_OUT.  
   
  When FALSE, a **datetime** value representing January 1, 1997 is converted to the character string: 1997-01-01 00:00:00.000. When TRUE, the same **datetime** value is represented as: {ts '1997-01-01 00:00:00.000'}.  
   

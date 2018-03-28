@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SetNumericalValue method"
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetNumericalValue Method (ServerNetworkProtocolProperty Class)

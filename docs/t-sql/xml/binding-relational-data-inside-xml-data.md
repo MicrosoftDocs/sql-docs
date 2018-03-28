@@ -25,7 +25,7 @@ ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Binding Relational Data Inside XML Data

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "local-name function"
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Functions on Nodes - local-name

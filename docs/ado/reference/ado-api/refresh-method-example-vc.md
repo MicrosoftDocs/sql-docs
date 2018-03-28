@@ -20,7 +20,7 @@ ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Refresh Method Example (VC++)

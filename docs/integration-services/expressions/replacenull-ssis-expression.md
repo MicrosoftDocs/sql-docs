@@ -16,7 +16,7 @@ ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # REPLACENULL (SSIS Expression)

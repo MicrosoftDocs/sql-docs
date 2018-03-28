@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "sp_update_proxy"
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_update_proxy (Transact-SQL)

@@ -2,7 +2,7 @@
 title: "Quickstart: Connect and query SQL Server using SQL Operations Studio (preview) | Microsoft Docs"
 description: This quickstart shows how to use SQL Operations Studio (preview) to connect to SQL Server and run a query
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "03/08/2018"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -88,7 +88,10 @@ The query editor is still connected to the *master* database, but we want to cre
 
 
 
-1. Paste the following snippet into the query window:
+1. Paste the following snippet into the query window  and click **Run**:
+
+   > [!NOTE]
+   > You can append this to, or overwrite the previous query in the editor. Note that clicking **Run** executes only the query that is selected. If nothing is selected, clicking **Run** executes all queries in the editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -111,7 +114,8 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 ## Insert rows
 
-1. Paste the following snippet into the query window:
+- Paste the following snippet into the query window and click **Run**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -124,18 +128,17 @@ After the query completes, the new **Customers** table appears in the list of ta
    GO
    ```
 
-1. To execute the query, click **Run**.
 
 
 ## View the data returned by a query
-1. Paste the following snippet into the query window:
+1. Paste the following snippet into the query window and click **Run**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. To execute the query, click **Run**.
+1. The results of the query are displayed:
 
    ![Select results](media/quickstart-sql-server/select-results.png)
 

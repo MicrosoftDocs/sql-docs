@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "maximum table size for traces"
 ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set a Maximum Table Size for a Trace Table (SQL Server Profiler)

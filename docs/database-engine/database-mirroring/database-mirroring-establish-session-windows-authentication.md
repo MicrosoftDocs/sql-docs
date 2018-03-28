@@ -19,7 +19,7 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 caps.latest.revision: 77
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Mirroring - Establish Session - Windows Authentication

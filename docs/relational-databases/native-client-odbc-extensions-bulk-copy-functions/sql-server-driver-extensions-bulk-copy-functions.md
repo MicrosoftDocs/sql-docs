@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "functions [ODBC]"
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server Driver Extensions - Bulk Copy Functions

@@ -20,7 +20,7 @@ ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Query Definitions Differ Dialog Box (Visual Database Tools)

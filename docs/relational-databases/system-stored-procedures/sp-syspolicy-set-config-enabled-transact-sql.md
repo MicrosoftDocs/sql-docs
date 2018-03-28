@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_set_config_enabled"
 ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_set_config_enabled (Transact-SQL)

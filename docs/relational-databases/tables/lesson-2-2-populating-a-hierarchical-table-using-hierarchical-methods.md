@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "HierarchyID"
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Lesson 2-2 - Populating a Hierarchical Table Using Hierarchical Methods

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "administering replication, publications"
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Maintain Publications

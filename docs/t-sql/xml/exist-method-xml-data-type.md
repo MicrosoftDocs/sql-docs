@@ -21,7 +21,7 @@ ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # exist() Method (xml Data Type)

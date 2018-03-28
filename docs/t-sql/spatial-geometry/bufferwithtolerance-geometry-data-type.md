@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "BufferWithTolerance (geometry Data Type)"
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # BufferWithTolerance (geometry Data Type)

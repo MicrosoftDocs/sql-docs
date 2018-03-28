@@ -18,7 +18,7 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Guidelines and Limitations of SQLXML 4.0

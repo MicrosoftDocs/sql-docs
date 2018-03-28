@@ -8,7 +8,7 @@ ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
@@ -17,8 +17,9 @@ manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # How to perform realtime scoring or native scoring in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic provides instructions and sample code for how to execute the realtime scoring and native scoring features in SQL Server 2017 and SQL Server 2016. The goal of both realtime scoring and native scoring is to improve the performance of scoring operations in small batches.
+This article provides instructions and sample code for how to execute the realtime scoring and native scoring features in SQL Server 2017 and SQL Server 2016. The goal of both realtime scoring and native scoring is to improve the performance of scoring operations in small batches.
 
 Both realtime scoring and native scoring are designed to let you use a machine learning model without having to install R. All you need to do is obtain a pretrained model in a compatible format, and save it in a SQL Server database.
 

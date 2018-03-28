@@ -1,7 +1,7 @@
 ---
 title: "ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2016"
+ms.date: "01/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-database"
 ms.service: ""
@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ALTER WORKLOAD GROUP statement"
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)
@@ -36,7 +36,6 @@ ms.workload: "Inactive"
 ## Syntax  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -55,24 +54,22 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Is the name of an existing user-defined workload group or the Resource Governor default workload group.  
   
 > [!NOTE]  
->  Resource Governor creates the "default" and internal groups when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
+> Resource Governor creates the "default" and internal groups when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
  The option "default" must be enclosed by quotation marks ("") or brackets ([]) when used with ALTER WORKLOAD GROUP to avoid conflict with DEFAULT, which is a system reserved word. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Predefined workload groups and resource pools all use lowercase names, such as "default". This should be taken into account for servers that use case-sensitive collation. Servers with case-insensitive collation, such as SQL_Latin1_General_CP1_CI_AS, will treat "default" and "Default" as the same.  
+> Predefined workload groups and resource pools all use lowercase names, such as "default". This should be taken into account for servers that use case-sensitive collation. Servers with case-insensitive collation, such as SQL_Latin1_General_CP1_CI_AS, will treat "default" and "Default" as the same.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  Specifies the relative importance of a request in the workload group. Importance is one of the following:  
   
 -   LOW  
-  
 -   MEDIUM (default)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  Internally each importance setting is stored as a number that is used for calculations.  
+> Internally each importance setting is stored as a number that is used for calculations.  
   
  IMPORTANCE is local to the resource pool; workload groups of different importance inside the same resource pool affect each other, but do not affect workload groups in another resource pool.  
   
@@ -80,7 +77,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum amount of memory that a single request can take from the pool. This percentage is relative to the resource pool size specified by MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  The amount specified only refers to query execution grant memory.  
+> The amount specified only refers to query execution grant memory.  
   
  *value* must be 0 or a positive integer. The allowed range for *value* is from 0 through 100. The default setting for *value* is 25.  
   
@@ -103,7 +100,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Specifies the maximum amount of CPU time, in seconds, that a request can use. *value* must be 0 or a positive integer. The default setting for *value* is 0, which means unlimited.  
   
 > [!NOTE]  
->  Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+
+> [!IMPORTANT]
+> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and using [trace flag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifies the maximum time, in seconds, that a query can wait for memory grant (work buffer memory) to become available.  

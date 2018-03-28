@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], setting up on a failover cluster"
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Set Up FILESTREAM on a Failover Cluster

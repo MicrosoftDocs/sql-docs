@@ -18,7 +18,7 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.dm_pdw_exec_sessions (Transact-SQL)

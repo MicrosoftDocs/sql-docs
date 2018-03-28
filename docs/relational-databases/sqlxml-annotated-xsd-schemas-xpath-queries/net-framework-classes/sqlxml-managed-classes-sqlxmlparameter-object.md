@@ -22,7 +22,7 @@ ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQLXML Managed Classes - SqlXmlParameter Object

@@ -18,7 +18,7 @@ ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RDS Tutorial

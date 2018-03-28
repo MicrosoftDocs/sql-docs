@@ -31,7 +31,7 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connecting to Data Sources in the Script Task
@@ -58,14 +58,14 @@ ms.workload: "On Demand"
     Public Sub Main()
 
         Dim myADONETConnection As SqlClient.SqlConnection =
-        DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction),
-            SqlClient.SqlConnection)
+            DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction),
+                SqlClient.SqlConnection)
         MsgBox(myADONETConnection.ConnectionString,
             MsgBoxStyle.Information, "ADO.NET Connection")
 
         Dim myFlatFileConnection As String =
-        DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction),
-            String)
+            DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction),
+                String)
         MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")
 
         Dts.TaskResult = ScriptResults.Success

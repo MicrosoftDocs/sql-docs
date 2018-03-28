@@ -21,7 +21,7 @@ ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete a Database Diagram (Visual Database Tools)

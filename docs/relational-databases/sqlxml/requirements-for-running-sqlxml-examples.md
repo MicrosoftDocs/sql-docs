@@ -21,7 +21,7 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Requirements for Running SQLXML Examples

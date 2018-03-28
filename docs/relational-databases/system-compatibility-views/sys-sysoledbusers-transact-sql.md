@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.sysoledbusers compatibility view"
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sysoledbusers (Transact-SQL)

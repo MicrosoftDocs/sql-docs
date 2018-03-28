@@ -19,7 +19,7 @@ ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # CancelUpdate Method (RDS)

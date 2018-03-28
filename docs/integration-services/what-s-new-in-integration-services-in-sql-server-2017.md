@@ -16,7 +16,7 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # What&#39;s New in Integration Services in SQL Server 2017

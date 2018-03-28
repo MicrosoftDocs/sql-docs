@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Reinitialize Subscription(s) dialog box"
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Reinitialize Subscription(s) - One Subscription

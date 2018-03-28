@@ -16,7 +16,7 @@ ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # catalog.deploy_packages

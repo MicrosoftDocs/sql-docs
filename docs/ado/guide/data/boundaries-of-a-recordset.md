@@ -20,7 +20,7 @@ ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Boundaries of a Recordset

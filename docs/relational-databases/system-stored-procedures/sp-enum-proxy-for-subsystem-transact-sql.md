@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_enum_proxy_for_subsystems"
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_enum_proxy_for_subsystem (Transact-SQL)

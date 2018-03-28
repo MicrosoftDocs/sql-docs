@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_syspolicy_rename_policy_category"
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sp_syspolicy_rename_policy_category (Transact-SQL)

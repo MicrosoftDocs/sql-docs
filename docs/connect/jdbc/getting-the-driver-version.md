@@ -28,17 +28,17 @@ ms.workload: "Inactive"
   
 -   The version is displayed in the readme.txt file of the product distribution.  
   
- In addition, the JDBC driver name can be returned from the [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) method call on the SQLServerDatabaseMetaData class. It will return, for example, "Microsoft JDBC Driver 4.0 for SQL Server".  
+ In addition, the JDBC driver name can be returned from the [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) method call on the SQLServerDatabaseMetaData class. It will return, for example, "Microsoft JDBC Driver 6.4 for SQL Server".  
   
  The following is an example of the output from calls to the methods of the SQLServerDatabaseMetaData class:  
   
- `getDriverName = Microsoft JDBC Driver 4.0 for SQL Server`  
+ `getDriverName = Microsoft JDBC Driver 6.4 for SQL Server`  
   
- `getDriverMajorVersion = 4`  
+ `getDriverMajorVersion = 6`  
   
- `getDriverMinorVersion = 0`  
+ `getDriverMinorVersion = 4`  
   
- `getDriverVersion = 4.0.` *xxx.x*  
+ `getDriverVersion = 6.4.` *xxx.x*  
   
  Where "xxx.x" is the final version number.  
   

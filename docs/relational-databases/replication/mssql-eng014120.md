@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG014120 error"
 ms.assetid: 6b169a3b-30da-4981-b998-b52d61811572
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG014120

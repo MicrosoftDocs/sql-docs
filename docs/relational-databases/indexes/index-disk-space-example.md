@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "offline index disk space [SQL Server]"
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Index Disk Space Example

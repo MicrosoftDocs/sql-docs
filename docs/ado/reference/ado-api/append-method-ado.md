@@ -21,7 +21,7 @@ ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Append Method (ADO)

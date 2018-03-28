@@ -22,7 +22,7 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Open Method (ADO Recordset)

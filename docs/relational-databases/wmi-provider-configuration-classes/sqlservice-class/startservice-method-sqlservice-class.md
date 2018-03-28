@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "StartService method"
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # StartService Method (SqlService Class)

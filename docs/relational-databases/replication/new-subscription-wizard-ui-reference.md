@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "New Subscription Wizard"
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # New Subscription Wizard (UI Reference)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "ph timeout option"
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # PH timeout Server Configuration Option

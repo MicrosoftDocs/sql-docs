@@ -27,7 +27,7 @@ ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Identifying Key Columns Using sql:key-fields (SQLXML 4.0)

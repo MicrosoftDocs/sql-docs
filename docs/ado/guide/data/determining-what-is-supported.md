@@ -19,7 +19,7 @@ ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Determining What is Supported

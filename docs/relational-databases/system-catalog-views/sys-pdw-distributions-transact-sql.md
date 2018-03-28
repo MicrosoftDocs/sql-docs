@@ -18,7 +18,7 @@ ms.assetid: 572b5187-9753-4063-adf8-65dea87d11f8
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.pdw_distributions (Transact-SQL)

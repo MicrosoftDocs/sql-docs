@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "MSSQL_ENG020557 error"
 ms.assetid: c43c6952-5b60-4347-b881-11a0004dce24
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # MSSQL_ENG020557

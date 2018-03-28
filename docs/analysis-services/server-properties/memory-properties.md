@@ -1,15 +1,15 @@
 ---
 title: "Memory Properties | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "analysis-services"
+ms.date: "01/23/2018"
+ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -37,8 +37,10 @@ ms.workload: "On Demand"
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preallocates a modest amount of memory at start up so that requests can be handled immediately. Additional memory is allocated as query and processing workloads increase. 
   
   By specifying configuration settings, you can control the thresholds at which memory is released. For example, the **HardMemoryLimit** setting specifies a self-imposed out-of-memory condition (by default, this threshold is not enabled), where new requests are rejected outright until more resources become available.
+
+To learn more about maximum memory utilized per Analysis Services instance by edition, see [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- **Applies to:** Multidimensional and Tabular server mode, unless noted otherwise.  
+ The following settings apply to both multidimensional and tabular server mode unless noted otherwise.  
  
 ## Default memory configuration
 
@@ -143,5 +145,3 @@ When set to 1, processing is less likely to fail due to memory constraints becau
 ## See Also  
  [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)
-  

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sys.sp_xtp_checkpoint_force_garbage_collection"
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)

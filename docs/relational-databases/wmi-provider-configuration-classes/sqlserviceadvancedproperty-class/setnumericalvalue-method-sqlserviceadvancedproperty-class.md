@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SetNumericalValue method"
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SetNumericalValue Method (SqlServiceAdvancedProperty Class)

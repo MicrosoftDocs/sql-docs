@@ -1,7 +1,7 @@
 ---
 title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/20/2017"
+ms.date: "01/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -62,7 +62,8 @@ UPDATE STATISTICS table_or_indexed_view_name
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ] 
     ] ;  
   
 <update_stats_stream_option> ::=  
@@ -154,29 +155,43 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  If per partition statistics are not supported an error is generated. Incremental stats are not supported for following statistics types:  
   
 -   Statistics created with indexes that are not partition-aligned with the base table.  
-  
 -   Statistics created on Always On readable secondary databases.  
-  
 -   Statistics created on read-only databases.  
-  
 -   Statistics created on filtered indexes.  
-  
 -   Statistics created on views.  
-  
 -   Statistics created on internal tables.  
-  
 -   Statistics created with spatial indexes or XML indexes.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+MAXDOP = *max_degree_of_parallelism*  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
+  
+ *max_degree_of_parallelism* can be:  
+  
+ 1  
+ Suppresses parallel plan generation.  
+  
+ \>1  
+ Restricts the maximum number of processors used in a parallel statistic operation to the specified number or fewer based on the current system workload.  
+  
+ 0 (default)  
+ Uses the actual number of processors or fewer based on the current system workload.  
   
  \<update_stats_stream_option> 
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
-  
+
 ## Remarks  
   
 ## When to Use UPDATE STATISTICS  
  For more information about when to use UPDATE STATISTICS, see [Statistics](../../relational-databases/statistics/statistics.md).  
-  
+
+## Limitations and Restrictions  
+* Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
+* The MAXDOP option is not compatible with STATS_STREAM, ROWCOUNT and PAGECOUNT options.
+
 ## Updating All Statistics with sp_updatestats  
  For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). For example, the following command calls sp_updatestats to update all statistics for the database.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server Reporting Services (2017 and later) | Microsoft Docs"
 ms.date: "12/20/2017"
-ms.prod: "reporting-services"
+ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.service: ""
 ms.component: "install-windows"
@@ -9,11 +9,11 @@ ms.reviewer: ""
 ms.suite: "pro-bi"
 ms.custom: ""
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-author: "guyinacube"
-ms.author: "asaxton"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "kfile"
 ms.workload: "Active"
 ---
@@ -34,7 +34,7 @@ Before you install Reporting Services, review the [Hardware and software require
 
 ## Install your report server
 
-Installing a report server is straight forward. There are only a few steps to install the files.
+Installing a report server is straightforward. There are only a few steps to install the files.
 
 > [!NOTE]
 > You do not need a SQL Server Database Engine server available at the time of install. You will need one to configure Reporting Services after install.

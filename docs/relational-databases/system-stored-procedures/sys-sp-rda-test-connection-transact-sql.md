@@ -23,7 +23,7 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # sys.sp_rda_test_connection (Transact-SQL)

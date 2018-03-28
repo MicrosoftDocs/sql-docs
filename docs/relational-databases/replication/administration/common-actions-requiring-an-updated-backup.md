@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "backups [SQL Server replication], actions requiring a backup"
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Common Actions Requiring an Updated Backup

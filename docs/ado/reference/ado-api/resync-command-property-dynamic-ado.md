@@ -19,7 +19,7 @@ ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Resync Command Property-Dynamic (ADO)

@@ -18,7 +18,7 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Copy Query Results (Visual Database Tools)

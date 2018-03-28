@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "restore sequences [SQL Server], online"
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Example: Online Restore of a Read-Write File (Full Recovery Model)

@@ -18,7 +18,7 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # SQL Server, Catalog Metadata Object

@@ -24,7 +24,7 @@ ms.workload: "Inactive"
 # sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contains a row for each column in a columnstore index.  
+Contains a row for each column in a columnstore index.  
 
 | Column name                 | Data type  | Description                              |
 | --------------------------- | ---------- | ---------------------------------------- |

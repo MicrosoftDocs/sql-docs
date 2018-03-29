@@ -30,7 +30,7 @@ ms.workload: "Active"
   This topic describes how to delete table columns in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!CAUTION]  
->  When you delete a column from a table, it and all the data it contains are deleted from the database. This action cannot be undone.  
+>  When you delete a column from a table, it and all the data it contains are deleted.
   
  **In This Topic**  
   

@@ -58,7 +58,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | ( EDITION = {  'basic' | 'standard' | 'premium' | 'general purpose' | ' business critical' }   
+    | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' }   
     | SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
             | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  

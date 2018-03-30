@@ -1,4 +1,4 @@
-# [Overview](tabular-models-ssas.md)  
+# [Tabular models](tabular-models-ssas.md)  
 ## [Compatibility level](compatibility-level-for-tabular-models-in-analysis-services.md)  
 ## [Data sources supported in tabular 1400 models](data-sources-supported-ssas-tabular-1400.md)  
 ## [Data sources supported in tabular 1200 models](data-sources-supported-ssas-tabular.md)  

@@ -1,1 +1,1 @@
- Master Data Services Configuration Manager 
+Master Data Services Configuration Manager

@@ -1,1 +1,1 @@
- SQL Server 2008 Analysis Services (SSAS) 
+SQL Server 2008 Analysis Services \(SSAS\)

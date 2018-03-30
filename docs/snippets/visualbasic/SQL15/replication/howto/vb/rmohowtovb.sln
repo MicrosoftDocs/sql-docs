@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RMOHowToVB", "RMOHowToVB.vbproj", "{710D41C2-2164-4ED6-A54B-A15C96A8D7B1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EMB_VB", "..\EMB_VB\EMB_VB.vbproj", "{F49AE564-FFD6-4288-8963-098522772CC2}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BLH_VB", "..\BLH_VB\BLH_VB.vbproj", "{6C68E921-7C73-4E47-BC10-DA859CBAF46A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{710D41C2-2164-4ED6-A54B-A15C96A8D7B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710D41C2-2164-4ED6-A54B-A15C96A8D7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710D41C2-2164-4ED6-A54B-A15C96A8D7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710D41C2-2164-4ED6-A54B-A15C96A8D7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49AE564-FFD6-4288-8963-098522772CC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49AE564-FFD6-4288-8963-098522772CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49AE564-FFD6-4288-8963-098522772CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49AE564-FFD6-4288-8963-098522772CC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C68E921-7C73-4E47-BC10-DA859CBAF46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C68E921-7C73-4E47-BC10-DA859CBAF46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C68E921-7C73-4E47-BC10-DA859CBAF46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C68E921-7C73-4E47-BC10-DA859CBAF46A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

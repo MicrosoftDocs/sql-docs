@@ -1,1 +1,1 @@
- C:\\Program Files\\Microsoft SQL Server\\120\\SDK\\Assemblies\\ 
+C:\\Program Files\\Microsoft SQL Server\\120\\SDK\\Assemblies\\

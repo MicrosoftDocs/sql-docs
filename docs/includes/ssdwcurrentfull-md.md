@@ -1,1 +1,1 @@
- SQL Server 2016 Parallel Data Warehouse 
+SQL Server 2014 Parallel Data Warehouse

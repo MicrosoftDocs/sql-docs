@@ -1,1 +1,1 @@
- SQL Server Compact 3.5 Service Pack 1 
+SQL Server Compact 3.5 Service Pack 1

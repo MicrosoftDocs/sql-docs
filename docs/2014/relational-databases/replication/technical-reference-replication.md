@@ -1,0 +1,80 @@
+---
+title: "Technical Reference (Replication) | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "technical reference [SQL Server replication]"
+ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
+caps.latest.revision: 13
+author: "craigg-msft"
+ms.author: "rickbyh"
+manager: "jhubbard"
+---
+# Technical Reference (Replication)
+  This section contains links to technical reference documentation for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication.  
+  
+ ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Errors and Events**  
+ [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+  
+ ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Feature Reference**  
+ [Configure Distribution Wizard](../../../2014/relational-databases/replication/configure-distribution-wizard.md)  
+  
+ [New Subscription Wizard &#40;UI Reference&#41;](../../../2014/relational-databases/replication/new-subscription-wizard-ui-reference.md)  
+  
+ [New Publication Wizard](../../../2014/relational-databases/replication/new-publication-wizard.md)  
+  
+ [More…](../../../2014/relational-databases/replication/properties-reference-replication.md)  
+  
+ ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Agents**  
+ [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)  
+  
+ [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)  
+  
+ [More…](../../../2014/relational-databases/replication/replication-agents.md)  
+  
+ ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Stored Procedures**  
+ [sp_addarticle &#40;Transact-SQL&#41;](../Topic/sp_addarticle%20\(Transact-SQL\).md)  
+  
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](../Topic/sp_adddistributiondb%20\(Transact-SQL\).md)  
+  
+ [sp_adddistributor &#40;Transact-SQL&#41;](../Topic/sp_adddistributor%20\(Transact-SQL\).md)  
+  
+ [sp_addpublication &#40;Transact-SQL&#41;](../Topic/sp_addpublication%20\(Transact-SQL\).md)  
+  
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../Topic/sp_addsubscriber%20\(Transact-SQL\).md)  
+  
+ [More…](../Topic/Replication%20Stored%20Procedures%20\(Transact-SQL\).md)  
+  
+ ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Tables**  
+ [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../Topic/MSmerge_conflicts_info%20\(Transact-SQL\).md)  
+  
+ [MSpeer_response &#40;Transact-SQL&#41;](../Topic/MSpeer_response%20\(Transact-SQL\).md)  
+  
+ [syssubscriptions &#40;Transact-SQL&#41;](../Topic/syssubscriptions%20\(Transact-SQL\).md)  
+  
+ [More…](../Topic/Replication%20Tables%20\(Transact-SQL\).md)  
+  
+ ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Views**  
+ [syspublications &#40;System View&#41; &#40;Transact-SQL&#41;](../Topic/syspublications%20\(System%20View\)%20\(Transact-SQL\).md)  
+  
+ [syssubscriptions &#40;System View&#41; &#40;Transact-SQL&#41;](../Topic/syssubscriptions%20\(System%20View\)%20\(Transact-SQL\).md)  
+  
+ [More…](../Topic/Replication%20Views%20\(Transact-SQL\).md)  
+  
+ ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Class Library**  
+ <xref:Microsoft.SqlServer.Replication>  
+  
+ <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
+  
+## See Also  
+ [Replication Features and Tasks](../../../2014/relational-databases/replication/replication-features-and-tasks.md)   
+ [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+  
+  

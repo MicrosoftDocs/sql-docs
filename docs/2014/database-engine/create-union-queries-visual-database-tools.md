@@ -1,0 +1,56 @@
+---
+title: "Create UNION Queries (Visual Database Tools) | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dbe-cross-instance"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "queries [SQL Server], types"
+  - "UNION queries"
+  - "Select query"
+  - "combining query results"
+  - "merged SELECT query [SQL Server]"
+ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
+caps.latest.revision: 12
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+---
+# Create UNION Queries (Visual Database Tools)
+  The UNION keyword enables you to include the results of two SELECT statements in one resulting table. All rows returned from either SELECT statement are combined into the result of the UNION expression. For examples, see [SELECT Examples &#40;Transact-SQL&#41;](../Topic/SELECT%20Examples%20\(Transact-SQL\).md).  
+  
+> [!NOTE]  
+>  The Diagram pane can only display one SELECT clause. Therefore, when you are working with a UNION query, Query Designer hides the Table Operations pane.  
+  
+### To create a Merged SELECT query  
+  
+1.  Open a query or create a new one.  
+  
+2.  In the SQL pane, type a valid UNION expression.  
+  
+     The following example is a valid UNION expression.  
+  
+    ```  
+    SELECT ProductModelID, Name  
+    FROM Production.ProductModel  
+    UNION  
+    SELECT ProductModelID, Name   
+    FROM dbo.Gloves;  
+    ```  
+  
+3.  On the **Query Designer** menu, click **Execute SQL** to run the query.  
+  
+     Your UNION query is now formatted by Query Designer.  
+  
+## See Also  
+ [Supported Query Types &#40;Visual Database Tools&#41;](../../2014/database-engine/supported-query-types-visual-database-tools.md)   
+ [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../../2014/database-engine/design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Perform Basic Operations with Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/perform-basic-operations-with-queries-visual-database-tools.md)   
+ [UNION &#40;Transact-SQL&#41;](../Topic/UNION%20\(Transact-SQL\).md)  
+  
+  

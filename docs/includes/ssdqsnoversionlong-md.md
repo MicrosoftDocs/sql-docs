@@ -1,1 +1,1 @@
- SQL Server Data Quality Services 
+SQL Server Data Quality Services

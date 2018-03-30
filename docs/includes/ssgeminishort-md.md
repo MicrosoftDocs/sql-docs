@@ -1,1 +1,1 @@
- Power Pivot for SharePoint 
+PowerPivot for SharePoint

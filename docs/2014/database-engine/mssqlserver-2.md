@@ -1,0 +1,49 @@
+---
+title: "MSSQLSERVER_2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/06/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "2"
+helpviewer_keywords: 
+  - "2 (Database Engine error)"
+ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
+caps.latest.revision: 10
+author: "craigg-msft"
+ms.author: "rickbyh"
+manager: "jhubbard"
+---
+# MSSQLSERVER_2
+    
+## Details  
+  
+|||  
+|-|-|  
+|Product Name|SQL Server|  
+|Event ID|2|  
+|Event Source|MSSQLSERVER|  
+|Component|SQLEngine|  
+|Symbolic Name||  
+|Message Text|An error has occurred while establishing a connection to the server.  When connecting to SQL Server, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) (.Net SqlClient Data Provider)|  
+  
+## Explanation  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] did not respond to the client request because the server is probably not started.  
+  
+## User Action  
+ Make sure that the server is started.  
+  
+## See Also  
+ [Manage the Database Engine Services](../../2014/database-engine/manage-the-database-engine-services.md)   
+ [Configure Client Protocols](../../2014/database-engine/configure-client-protocols.md)   
+ [Network Protocols and Network Libraries](../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
+ [Client Network Configuration](../../2014/database-engine/client-network-configuration.md)   
+ [Configure Client Protocols](../../2014/database-engine/configure-client-protocols.md)   
+ [Enable or Disable a Server Network Protocol](../../2014/database-engine/enable-or-disable-a-server-network-protocol.md)  
+  
+  

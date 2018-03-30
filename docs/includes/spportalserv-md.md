@@ -1,1 +1,1 @@
- SharePoint Portal Server 
+SharePoint Portal Server

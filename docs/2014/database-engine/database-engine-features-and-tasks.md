@@ -1,0 +1,35 @@
+---
+title: "Database Engine Features and Tasks | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Database Engine [SQL Server], development"
+  - "development [SQL Server Database Engine]"
+ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
+caps.latest.revision: 23
+author: "craigg-msft"
+ms.author: "rickbyh"
+manager: "jhubbard"
+---
+# Database Engine Features and Tasks
+  Find information that anyone—designer, developer, analyst, or administrator—requires to build [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
+  
+## In This Section  
+ [Database Engine Instances &#40;SQL Server&#41;](../../2014/database-engine/database-engine-instances-sql-server.md)  
+  
+ [Database Features](../../2014/database-engine/database-features.md)  
+  
+ [Database Engine Cross-Instance Features](../../2014/database-engine/database-engine-cross-instance-features.md)  
+  
+ [High Availability Solutions &#40;SQL Server&#41;](../../2014/database-engine/high-availability-solutions-sql-server.md)  
+  
+ [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+  
+  

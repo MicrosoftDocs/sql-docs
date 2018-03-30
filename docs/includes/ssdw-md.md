@@ -1,1 +1,1 @@
- SQL Data Warehouse 
+SQL Server PDW

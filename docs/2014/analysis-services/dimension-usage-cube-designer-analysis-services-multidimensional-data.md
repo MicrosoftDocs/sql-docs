@@ -1,0 +1,42 @@
+---
+title: "Dimension Usage (Cube Designer) (Analysis Services - Multidimensional Data) | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "analysis-services"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql12.asvs.cubeeditor.dimensionusagepane.f1"
+ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
+caps.latest.revision: 18
+author: "Minewiskan"
+ms.author: "owend"
+manager: "mblythe"
+---
+# Dimension Usage (Cube Designer) (Analysis Services - Multidimensional Data)
+  Use the **Dimension Usage** tab in Cube Designer to view and edit the dimension relationships between cube dimensions and measure groups in the cube.  
+  
+## Panes  
+  
+|Pane|Definition|  
+|----------|----------------|  
+|**Toolbar**|Use the toolbar to perform common operations on this tab. For more information about this pane, see [Toolbar &#40;Dimension Usage Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Grid**|Use the grid to view and edit dimension relationships between cube dimensions and measure groups in the cube. For more information about this pane, see [Grid &#40;Dimension Usage Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+  
+## See Also  
+ [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)   
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
+ [Cube Structure &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [KPIs &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Actions &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Partitions &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/partitions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Perspectives &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/perspectives-cube-designer-analysis-services-multidimensional-data.md)   
+ [Translations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/translations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Browser &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/browser-cube-designer-analysis-services-multidimensional-data.md)  
+  
+  

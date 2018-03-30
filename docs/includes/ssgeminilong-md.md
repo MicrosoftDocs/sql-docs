@@ -1,1 +1,1 @@
- Microsoft SQL Server 2016 Power Pivot for SharePoint 
+Microsoft SQL Server 2014 PowerPivot for SharePoint

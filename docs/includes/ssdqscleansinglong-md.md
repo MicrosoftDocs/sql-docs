@@ -1,1 +1,1 @@
- DQS Cleansing component in Integration Services 
+DQS Cleansing component in Integration Services

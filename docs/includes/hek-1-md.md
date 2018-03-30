@@ -1,1 +1,1 @@
- SQL Server In-Memory OLTP 
+SQL Server In\-Memory OLTP

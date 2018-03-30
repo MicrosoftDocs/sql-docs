@@ -1,0 +1,48 @@
+---
+title: "Call Stored Procedures (ODBC) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/06/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+  - "docset-sql-devref"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+helpviewer_keywords: 
+  - "stored procedures [ODBC], calling"
+ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
+caps.latest.revision: 12
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+---
+# Call Stored Procedures (ODBC)
+  When a SQL statement calls a stored procedure using the ODBC CALL escape clause, the Microsoft® SQL Server™ driver sends the procedure to SQL Server using the remote stored procedure call (RPC) mechanism. RPC requests bypass much of the statement parsing and parameter processing in SQL Server and are faster than using the Transact-SQL EXECUTE statement.  
+  
+ For a sample application that demonstrates this feature, see [Process Return Codes and Output Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/process-return-codes-and-output-parameters-odbc.md).  
+  
+### To run a procedure as an RPC  
+  
+1.  Construct a SQL statement that uses the ODBC CALL escape sequence. The statement uses parameter markers for each input, input/output, and output parameter, and for the procedure return value (if any):  
+  
+    ```  
+    {? = CALL procname (?,?)}  
+    ```  
+  
+2.  Call [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) for each input, input/output, and output parameter, and for the procedure return value (if any).  
+  
+3.  Execute the statement with [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+  
+> [!NOTE]  
+>  If an application submits a procedure using the Transact-SQL EXECUTE syntax (as opposed to the ODBC CALL escape sequence), the SQL Server ODBC driver passes the procedure call to SQL Server as a SQL statement rather than as an RPC. Also, output parameters are not returned if the Transact-SQL EXECUTE statement is used.  
+  
+## See Also  
+ [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [Batching Stored Procedure Calls](../../../2014/database-engine/dev-guide/batching-stored-procedure-calls.md)   
+ [Running Stored Procedures](../../../2014/database-engine/dev-guide/running-stored-procedures.md)   
+ [Calling a Stored Procedure](../../../2014/database-engine/dev-guide/calling-a-stored-procedure.md)   
+ [Procedures](../../../2014/database-engine/dev-guide/procedures.md)  
+  
+  

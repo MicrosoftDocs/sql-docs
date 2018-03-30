@@ -1,1 +1,1 @@
- SharePoint Server 2007 
+SharePoint Server 2007

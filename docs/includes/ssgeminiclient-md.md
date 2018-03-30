@@ -1,1 +1,1 @@
- Power Pivot for Excel 
+PowerPivot for Excel

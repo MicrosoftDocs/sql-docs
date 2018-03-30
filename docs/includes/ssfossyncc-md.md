@@ -1,1 +1,1 @@
- Synchronous-commit failover set 
+Synchronous\-commit failover set

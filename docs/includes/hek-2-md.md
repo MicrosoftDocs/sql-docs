@@ -1,1 +1,1 @@
- In-Memory OLTP 
+In\-Memory OLTP

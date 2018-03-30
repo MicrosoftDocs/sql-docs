@@ -1,0 +1,84 @@
+---
+title: "Quiesce a Replication Topology (Replication Transact-SQL Programming) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/08/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "TSQL"
+helpviewer_keywords: 
+  - "administering replication, quiescing"
+  - "quiesce [SQL Server replication]"
+  - "transactional replication, backup and restore"
+ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
+caps.latest.revision: 33
+author: "craigg-msft"
+ms.author: "rickbyh"
+manager: "jhubbard"
+---
+# Quiesce a Replication Topology (Replication Transact-SQL Programming)
+  *Quiescing* a system involves stopping activity on published tables at all nodes and ensuring that each node has received all changes from all other nodes. This topic explains how to quiesce a replication topology, which is required for a number of administrative tasks, and how to ensure that a node has received all changes from other nodes.  
+  
+### To quiesce a transactional replication topology with read-only subscriptions  
+  
+1.  Stop activity on all published tables at the Publisher.  
+  
+2.  At the Publisher on the publication database, execute [sp_posttracertoken &#40;Transact-SQL&#41;](../Topic/sp_posttracertoken%20\(Transact-SQL\).md).  
+  
+3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory](../Topic/sp_helptracertokenhistory%20\(Transact-SQL\).md).  
+  
+4.  Ensure that each Subscriber has received the tracer token.  
+  
+### To quiesce a transactional replication topology with updatable subscriptions  
+  
+1.  Stop activity on all published tables at the Publisher and all Subscribers.  
+  
+2.  If any Subscribers use queued updating subscriptions:  
+  
+    1.  If the Queue Reader Agent is not running in continuous mode, run the agent. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+  
+    2.  To verify that the queue is empty, execute [sp_replqueuemonitor](../Topic/sp_replqueuemonitor%20\(Transact-SQL\).md) at each Subscriber.  
+  
+3.  At the Publisher on the publication database, execute [sp_posttracertoken](../Topic/sp_posttracertoken%20\(Transact-SQL\).md).  
+  
+4.  At the Publisher on the publication database, execute [sp_helptracertokenhistory](../Topic/sp_helptracertokenhistory%20\(Transact-SQL\).md).  
+  
+5.  Ensure that each Subscriber has received the tracer token.  
+  
+### To quiesce a peer-to-peer transactional replication topology  
+  
+1.  Stop activity on all published tables at all nodes.  
+  
+2.  Execute [sp_requestpeerresponse](../Topic/sp_requestpeerresponse%20\(Transact-SQL\).md) on each publication database in the topology.  
+  
+3.  If the Log Reader Agent or Distribution Agent is not running in continuous mode, run the agent. The Log Reader Agent must be started before the Distribution Agent. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+  
+4.  Execute [sp_helppeerresponses](../Topic/sp_helppeerresponses%20\(Transact-SQL\).md) on each publication database in the topology. Ensure that the result set contains responses from each of the other nodes.  
+  
+### To ensure a peer-to-peer node has received all prior changes  
+  
+1.  Execute [sp_requestpeerresponse](../Topic/sp_requestpeerresponse%20\(Transact-SQL\).md) on the publication database at the node you are checking.  
+  
+2.  If the Log Reader Agent or Distribution Agent is not running in continuous mode, run the agent. The Log Reader Agent must be started before the Distribution Agent. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+  
+3.  Execute [sp_helppeerresponses](../Topic/sp_helppeerresponses%20\(Transact-SQL\).md) on the publication database at the node you are checking. Ensure that the result set contains responses from each of the other nodes.  
+  
+### To quiesce a merge replication topology  
+  
+1.  Stop activity on all published tables at the Publisher and at all Subscribers.  
+  
+2.  Run the Merge Agent for each subscription two times: synchronize all subscriptions once and then synchronize each subscription a second time. This ensures that all changes are replicated to all nodes. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+  
+    > [!NOTE]  
+    >  If conflicts occur during synchronization, it is possible that changes required by conflict resolution will not be propagated to all nodes after running the Merge Agent two times.  
+  
+## See Also  
+ [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md)  
+  
+  

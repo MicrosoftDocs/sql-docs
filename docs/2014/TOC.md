@@ -1,0 +1,7 @@
+# [Developer Reference for SQL Server 2014](developer-reference-for-sql-server-2014.md)
+# [Glossary](glossary.md)
+# [SQL Server Index Design Guide](sql-server-index-design-guide.md)
+# [SQL Server Transaction Locking and Row Versioning Guide](sql-server-transaction-locking-and-row-versioning-guide.md)
+# [SQL Server Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management.md)
+# [Books Online for SQL Server 2014](books-online-for-sql-server-2014.md)
+# [Case Study: Building an Enterprise Ecosystem with Microsoft Dynamics ERP and SQL Server 2014 Replication for Scalability and Performance](case-study-building-an-enterprise-ecosystem.md)

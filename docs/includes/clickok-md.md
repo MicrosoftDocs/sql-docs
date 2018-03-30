@@ -1,2 +1,1 @@
-  Click **OK**.
-   
+Click **OK**.

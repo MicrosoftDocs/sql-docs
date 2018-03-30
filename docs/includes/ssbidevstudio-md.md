@@ -1,1 +1,1 @@
- SQL Server Data Tools 
+SQL Server Data Tools

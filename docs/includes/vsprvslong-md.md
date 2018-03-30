@@ -1,1 +1,1 @@
- Visual Studio 2005 
+Visual Studio 2005

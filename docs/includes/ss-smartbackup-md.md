@@ -1,1 +1,1 @@
- SQL Server Managed Backup to Microsoft Azure 
+SQL Server Managed Backup to Microsoft Azure

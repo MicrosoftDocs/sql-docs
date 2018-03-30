@@ -30,8 +30,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # RESTORE Statements - LABELONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md )]
   Returns a result set containing information about the backup media identified by the given backup device.  
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]

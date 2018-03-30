@@ -540,10 +540,12 @@ NOREWIND implies NOUNLOAD, and these options are incompatible within a single BA
 > [!NOTE]  
 > `UNLOAD` and `NOUNLOAD` are session settings that persist for the life of the session or until it is reset by specifying the alternative.  
   
-UNLOAD  
+UNLOAD
+**Applies to:** SQL Server   
  Specifies that the tape is automatically rewound and unloaded when the backup is finished. UNLOAD is the default when a session begins. 
   
-NOUNLOAD  
+NOUNLOAD
+**Applies to:** SQL Server 
  Specifies that after the BACKUP operation the tape remains loaded on the tape drive.  
   
 > [!NOTE]  
@@ -557,12 +559,14 @@ These options are only used with `BACKUP LOG`.
 > If you do not want to take log backups, use the simple recovery model. For more information, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
 { NORECOVERY | STANDBY **=** *undo_file_name* }  
-  NORECOVERY  
+  NORECOVERY 
+**Applies to:** SQL Server   
   Backs up the tail of the log and leaves the database in the RESTORING state. NORECOVERY is useful when failing over to a secondary database or when saving the tail of the log before a RESTORE operation.  
   
   To perform a best-effort log backup that skips log truncation and then take the database into the RESTORING state atomically, use the `NO_TRUNCATE` and `NORECOVERY` options together.  
   
-  STANDBY **=** *standby_file_name*  
+  STANDBY **=** *standby_file_name* 
+**Applies to:** SQL Server   
   Backs up the tail of the log and leaves the database in a read-only and STANDBY state. The STANDBY clause writes standby data (performing rollback, but with the option of further restores). Using the STANDBY option is equivalent to BACKUP LOG WITH NORECOVERY followed by a RESTORE WITH STANDBY.  
   
   Using standby mode requires a standby file, specified by *standby_file_name*, whose location is stored in the log of the database. If the specified file already exists, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] overwrites it; if the file does not exist, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates it. The standby file becomes part of the database.  
@@ -570,6 +574,7 @@ These options are only used with `BACKUP LOG`.
   This file holds the rolled back changes, which must be reversed if RESTORE LOG operations are to be subsequently applied. There must be enough disk space for the standby file to grow so that it can contain all the distinct pages from the database that were modified by rolling back uncommitted transactions.  
   
 NO_TRUNCATE  
+**Applies to:** SQL Server  
 Specifies that the is log not truncated and causes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to attempt the backup regardless of the state of the database. Consequently, a backup taken with `NO_TRUNCATE` might have incomplete metadata. This option allows backing up the log in situations where the database is damaged.  
   
 The NO_TRUNCATE option of BACKUP LOG is equivalent to specifying both COPY_ONLY and CONTINUE_AFTER_ERROR.  
@@ -735,7 +740,16 @@ By default, every successful backup operation adds an entry in the [!INCLUDE[ssN
 -   Shrink database or shrink file operations. This includes auto-shrink operations.  
   
 If a backup operation overlaps with a file-management or shrink operation, a conflict arises. Regardless of which of the conflicting operation began first, the second operation waits for the lock set by the first operation to time out (the time-out period is controlled by a session timeout setting). If the lock is released during the time-out period, the second operation continues. If the lock times out, the second operation fails.  
-  
+
+## Limitations for SQL Database Managed Instance
+SQL Database Managed Instance can back up a database to a backup with up to 32 stripes, which is enough for the databases up to 4 TB if backup compression is used.
+
+Max backup stripe size is 195 GB (maximum blob size). Increase the number of stripes in the backup command to reduce individual stripe size and stay within this limit.
+
+> [!NOTE]
+> To work around this limitation on-premises, backup to `DISK` instead of backup to `URL`, upload backup file to blob, then restore. Restore supports bigger files because a different blob type is used.
+
+ 
 ## Metadata  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following backup history tables that track backup activity:  
   
@@ -760,7 +774,8 @@ When a restore is performed, if the backup set was not already recorded in the *
   
 -   A. [Backing up a complete database](#backing_up_db)  
 -   B. [Backing up the database and log](#backing_up_db_and_log)  
--   C. [Creating a full file backup of the secondary filegroups](#full_file_backup)  
+-   C. [Creating a full file backup of the secondary filegroups](#full_
+-   file_backup)  
 -   D. [Creating a differential file backup of the secondary filegroups](#differential_file_backup)  
 -   E. [Creating and backing up to a single-family mirrored media set](#create_single_family_mirrored_media_set)  
 -   F. [Creating and backing up to a multifamily mirrored media set](#create_multifamily_mirrored_media_set)  

@@ -49,7 +49,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # RESTORE Statements (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restores backups taken using the BACKUP command. This command enables you to perform the following restore scenarios:  
   
@@ -65,7 +65,7 @@ ms.workload: "Active"
   
 -   Revert a database to the point in time captured by a database snapshot.  
   
-[!INCLUDE[sql-db-mi-limitation](../../includes/sql-db-mi-limitation.md)
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restore scenarios, see [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  For more information about descriptions of the arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).   When restoring a database from another instance, consider the information from [Manage Metadata When Making a Database Available on Another Server Instance (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   

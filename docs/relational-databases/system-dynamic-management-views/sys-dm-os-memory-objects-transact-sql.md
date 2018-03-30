@@ -59,10 +59,11 @@ ms.workload: "Inactive"
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**, and **exclusive_access_count** are not yet implemented in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-## Permissions  
+## Permissions
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
-  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ## Remarks  
  Memory objects are heaps. They provide allocations that have a finer granularity than those provided by memory clerks. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components use memory objects instead of memory clerks. Memory objects use the page allocator interface of the memory clerk to allocate pages. Memory objects do not use virtual or shared memory interfaces. Depending on the allocation patterns, components can create different types of memory objects to allocate regions of arbitrary size.  
   

@@ -49,7 +49,7 @@ manager: "craigg"
 ms.workload: "Active"
 ---
 # RESTORE Statements (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md )]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Restores backups taken using the BACKUP command. This command enables you to perform the following restore scenarios:  
   
